@@ -1,0 +1,10 @@
+# Сборочные артефакты (дистрибутивные zip'ы; генерятся tools/build/build_pack.py)
+dist/
+
+# Python
+__pycache__/
+*.pyc
+
+# Ren'Py (компиляции и рантайм-диагностика)
+*.rpyc
+voice_debug.log

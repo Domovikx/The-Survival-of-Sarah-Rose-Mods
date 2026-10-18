@@ -20,6 +20,27 @@
 2. Скопировать `environment.txt.sample` как `environment.txt` в корень игры и поправить
    путь под свою установку.
 
+## Сборка дистрибутива (zip'ы)
+
+```
+python patches/ai-voice-pack/tools/build/build_pack.py   # -> dist/*.zip
+```
+
+- `TSSR-AI-Voice-Pack-main.zip` — ядро (раскладка zip = раскладка установки: распаковка
+  в корень папки игры). Состав: `mod/`, `game/voice_config.rpy`, `game/tl/<lang>/` (все
+  языки сразу), рантайм-каталог `catalog/` (label_arc.json + voice_list.json),\n  `environment.txt` (предзаполнен стандартным Steam-путём), `INSTALL.txt`.
+- `TSSR-AI-Voice-Pack-voice-<lang>.zip` — озвучка языка: `ai_voice/<lang>/` (отдельный
+  zip на язык, опционально к main).
+- `dist/` в `.gitignore` — артефакты в git не коммитятся.
+
+## Точки врезки в игру (все аддитивные)
+
+1. `environment.txt` в корне игры — внешний searchpath на `mod/` (без него игра не стартует,
+   если `mod/` существует; см. `mod/README.md`).
+2. `mod/` — аддитивный слой (gui-патч, настройки, шрифты).
+3. `game/voice_config.rpy` — рантайм-конфиг озвучки (`config.auto_voice`), лежит ВНУТРИ
+   официального `game/` (иначе игра молчит).
+
 ## Compat-матрица (патч ↔ версия игры)
 
 - AI Voice Pack RU+EN ↔ игра 0.79 — `[ЗАПОЛНИТЬ ПОСЛЕ ПРИЁМОЧНОГО ПРОГОНА]`
