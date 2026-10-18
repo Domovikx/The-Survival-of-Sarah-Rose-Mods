@@ -6,6 +6,7 @@
     "esbenp.prettier-vscode",
     "DavidAnson.vscode-markdownlint",
     "streetsidesoftware.code-spell-checker",
-    "streetsidesoftware.code-spell-checker-russian"
+    "streetsidesoftware.code-spell-checker-russian",
+    "timheuer.vscode-zip-viewer"
   ]
 }
