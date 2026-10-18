@@ -8,7 +8,7 @@ import sys
 import pytest
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0, os.path.join(ROOT, 'tools'))
+sys.path.insert(0, os.path.join(ROOT, 'tools', 'generate', 'scripts'))
 
 from voicekit import paths  # noqa: E402
 
@@ -34,7 +34,7 @@ def full_project(tmp_path, monkeypatch):
         ('VOICE_CANDIDATES', tmp_path / 'voice_candidates'),
         ('CATALOG_DIR', tmp_path / 'catalog'),
         ('CONFIG_DIR', tmp_path / 'config'),
-        ('VOICES_JSON', tmp_path / 'catalog' / 'voices.json'),
+        ('VOICES_JSONL', tmp_path / 'catalog' / 'voices.jsonl'),
         ('AI_VOICE_DIR', tmp_path / 'ai_voice'),
     ):
         monkeypatch.setattr(paths, attr, str(val))
@@ -47,7 +47,7 @@ def full_project(tmp_path, monkeypatch):
         'name: TestVoice\nwho_codes: [tv]\n', encoding='utf-8')
 
     import json
-    with open(paths.VOICES_JSON, 'w', encoding='utf-8') as f:
+    with open(paths.VOICES_JSONL, 'w', encoding='utf-8') as f:
         json.dump({'entries': [], 'characters': {'tv': 'TestVoice'}}, f)
     return tmp_path
 

@@ -1,5 +1,5 @@
 /**
- * Tests for dedup_translations.mjs
+ * Tests for dedup_translations.mts
  * =================================
  * Проверяем поиск и удаление дублирующихся old строк.
  *
@@ -8,7 +8,7 @@
  * - Никаких внешних зависимостей
  *
  * Запуск:
- *   node --test dedup_translations.test.mjs
+ *   node --test dedup_translations.test.mts
  */
 
 import { describe, it } from "node:test";
@@ -25,7 +25,7 @@ import {
   OLD_RE,
   NEW_RE,
   VERSION,
-} from "./dedup_translations.mjs";
+} from "./dedup_translations.mts";
 
 const SAMPLE_RPY = [
   "# -*- encoding: utf-8 -*-",
@@ -79,12 +79,18 @@ const SAMPLE_MULTIPLE_BLOCKS = [
   "",
 ].join("\n");
 
+/** Описание временной директории. */
+interface TempDir {
+  path: string;
+  cleanup: () => void;
+}
+
 /**
  * Создаёт временную структуру game/tl/ru/ с тестовыми .rpy файлами.
  * @param {string} basePath
  * @returns {string} путь к tl/ru/
  */
-function createTlDir(basePath) {
+function createTlDir(basePath: string): string {
   const tlRu = join(basePath, "game", "tl", "ru");
   mkdirSync(tlRu, { recursive: true });
   writeFileSync(join(tlRu, "file1.rpy"), SAMPLE_RPY, "utf-8");
@@ -96,7 +102,7 @@ function createTlDir(basePath) {
  * @param {string} prefix
  * @returns {{ path: string, cleanup: () => void }}
  */
-function makeTempDir(prefix = "dedup-test-") {
+function makeTempDir(prefix = "dedup-test-"): TempDir {
   const dir = mkdtempSync(join(tmpdir(), prefix));
   return {
     path: dir,
@@ -215,8 +221,8 @@ describe("findDuplicates", () => {
       const tlRu = createTlDir(tmp.path);
       const entries = findAllEntries(tlRu);
       const duplicates = findDuplicates(entries);
-      assert.equal(duplicates.get("Raza").length, 2);
-      assert.equal(duplicates.get("Hello world").length, 2);
+      assert.equal(duplicates.get("Raza")!.length, 2);
+      assert.equal(duplicates.get("Hello world")!.length, 2);
     } finally {
       tmp.cleanup();
     }
@@ -228,7 +234,7 @@ describe("findDuplicates", () => {
       const tlRu = createTlDir(tmp.path);
       const entries = findAllEntries(tlRu);
       const duplicates = findDuplicates(entries);
-      const firstRaza = duplicates.get("Raza")[0];
+      const firstRaza = duplicates.get("Raza")![0];
       assert.ok(firstRaza.file.includes("file1.rpy"));
     } finally {
       tmp.cleanup();

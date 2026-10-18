@@ -6,7 +6,7 @@
   Для каждого выбранного персонажа генерирует N реплик-кандидатов
   (Qwen3-TTS-12Hz-1.7B-VoiceDesign, инструкция = instruct_en из YAML-каста)
   и кладёт их в voice_candidates/{Имя}/generated/{NN}.mp3.
-  После прогона пишет статистику в voice_candidates/voice_candidates.yaml
+  После прогона пишет статистику в voice_candidates/voice_candidates.jsonl
   (секция generation: дата, ok/skip/give_up/fail по каждому персонажу).
 
 ИСТОЧНИК КАСТА (YAML):
@@ -44,7 +44,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from voicekit import catalog, paths, tts_env  # noqa: E402
 
 LOG_PATH = os.path.join(paths.OUTPUT_DIR, 'voice', 'design.log')
-STATS_PATH = paths.CAST_SUMMARY_YAML
+STATS_PATH = paths.CAST_SUMMARY_JSONL
 
 from voicekit import config as _cfg
 
@@ -101,21 +101,16 @@ def log(msg):
 
 
 def load_stats():
-    if not os.path.exists(STATS_PATH):
-        return {}
+    """Сводка каста (voice_candidates.jsonl) -> dict ({} если нет)."""
     try:
-        import yaml
-        with open(STATS_PATH, encoding="utf-8") as f:
-            d = yaml.safe_load(f)
-        return d if isinstance(d, dict) else {}
+        return catalog.load_cast_summary()
     except Exception:
         return {}
 
 
 def write_stats(stats, n):
-    """Обновить voice_candidates.yaml: дата прогона + результат по персонажам."""
+    """Обновить voice_candidates.jsonl: дата прогона + результат по персонажам."""
     import datetime
-    import yaml
     now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
     doc = load_stats()
     if not doc or "generation" not in doc:
@@ -126,9 +121,7 @@ def write_stats(stats, n):
         per = dict(per)
         per["last_run"] = now
         doc["generation"][char] = per
-    os.makedirs(os.path.dirname(STATS_PATH), exist_ok=True)
-    with open(STATS_PATH, "w", encoding="utf-8") as f:
-        yaml.safe_dump(doc, f, allow_unicode=True, sort_keys=False)
+    catalog.save_cast_summary(doc)
     log("stats -> {}".format(STATS_PATH))
 
 

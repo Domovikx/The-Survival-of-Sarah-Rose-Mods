@@ -31,7 +31,7 @@ metadata:
 ## Использование
 
 ```bash
-node .opencode/skills/list-translation-files/list_translation_files.mjs [mode] [--all]
+node .opencode/skills/list-translation-files/list_translation_files.mts [mode] [--all]
 ```
 
 ### Режимы
@@ -50,16 +50,16 @@ node .opencode/skills/list-translation-files/list_translation_files.mjs [mode] [
 
 ```bash
 # Обзор: что осталось перевести
-node .opencode/skills/list-translation-files/list_translation_files.mjs
+node .opencode/skills/list-translation-files/list_translation_files.mts
 
 # Полный отчёт, включая готовые файлы
-node .opencode/skills/list-translation-files/list_translation_files.mjs status --all
+node .opencode/skills/list-translation-files/list_translation_files.mts status --all
 
 # Список арок для translate-arc.md
-node .opencode/skills/list-translation-files/list_translation_files.mjs arcs
+node .opencode/skills/list-translation-files/list_translation_files.mts arcs
 
 # Список непереведённых файлов для orchestrator
-node .opencode/skills/list-translation-files/list_translation_files.mjs files-untranslated
+node .opencode/skills/list-translation-files/list_translation_files.mts files-untranslated
 ```
 
 ## Формат вывода
@@ -78,5 +78,5 @@ game/tl/ru/SailorPath/SailorPath10.rpy
 
 ## Файлы скила
 
-- `list_translation_files.mjs` — скрипт, который сканирует и форматирует
-- `list_translation_files.test.mjs` — тесты (запуск: `node --test`)
+- `list_translation_files.mts` — скрипт, который сканирует и форматирует
+- `list_translation_files.test.mts` — тесты (запуск: `node --test`)

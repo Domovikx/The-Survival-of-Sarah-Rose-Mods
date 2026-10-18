@@ -1,5 +1,5 @@
 /**
- * Tests for clear_cache.mjs
+ * Tests for clear_cache.mts
  * ==========================
  * Проверяем что кэш-файлы корректно находим и удаляем.
  *
@@ -8,8 +8,8 @@
  * - Никаких внешних зависимостей
  *
  * Запуск:
- *   node --test clear_cache.test.mjs
- *   node --test .opencode/skills/renpy-clear-cache/clear_cache.test.mjs
+ *   node --test clear_cache.test.mts
+ *   node --test .opencode/skills/renpy-clear-cache/clear_cache.test.mts
  */
 
 import { describe, it, before, after } from "node:test";
@@ -26,13 +26,18 @@ import {
   CACHE_DIRS,
   sizeStr,
   VERSION,
-} from "./clear_cache.mjs";
+} from "./clear_cache.mts";
+
+/** Временная директория: путь и функция очистки. */
+interface TempDir {
+  path: string;
+  cleanup: () => void;
+}
 
 /**
- * @param {string} prefix
- * @returns {{ path: string, cleanup: () => void }}
+ * @param prefix - префикс имени временной директории
  */
-function makeTempDir(prefix = "cc-test-") {
+function makeTempDir(prefix: string = "cc-test-"): TempDir {
   const dir = mkdtempSync(join(tmpdir(), prefix));
   return {
     path: dir,
@@ -42,10 +47,10 @@ function makeTempDir(prefix = "cc-test-") {
 
 /**
  * Создаёт временную директорию с имитацией игры и кэша.
- * @param {string} basePath
- * @returns {string} путь к game/
+ * @param basePath - базовый путь
+ * @returns путь к game/
  */
-function createGameDir(basePath) {
+function createGameDir(basePath: string): string {
   const game = join(basePath, "game");
   mkdirSync(game, { recursive: true });
 
@@ -90,7 +95,7 @@ describe("findCacheFiles", () => {
     try {
       const game = createGameDir(tmp.path);
       const files = findCacheFiles(game);
-      const names = files.map((f) => f.split(/[\\/]/).pop());
+      const names = files.map((f: string) => f.split(/[\\/]/).pop());
       assert.ok(names.includes("script.rpyc"));
       assert.ok(names.includes("screens.rpyc"));
       assert.ok(names.includes("module.rpyc"));
@@ -104,7 +109,7 @@ describe("findCacheFiles", () => {
     try {
       const game = createGameDir(tmp.path);
       const files = findCacheFiles(game);
-      const names = files.map((f) => f.split(/[\\/]/).pop());
+      const names = files.map((f: string) => f.split(/[\\/]/).pop());
       assert.ok(names.includes("error.log"));
     } finally {
       tmp.cleanup();
@@ -116,7 +121,7 @@ describe("findCacheFiles", () => {
     try {
       const game = createGameDir(tmp.path);
       const files = findCacheFiles(game);
-      const names = files.map((f) => f.split(/[\\/]/).pop());
+      const names = files.map((f: string) => f.split(/[\\/]/).pop());
       assert.ok(names.includes("script.cpython-314.pyc"));
       assert.ok(names.includes("module.cpython-314.pyc"));
     } finally {
@@ -129,7 +134,7 @@ describe("findCacheFiles", () => {
     try {
       const game = createGameDir(tmp.path);
       const files = findCacheFiles(game);
-      const names = files.map((f) => f.split(/[\\/]/).pop());
+      const names = files.map((f: string) => f.split(/[\\/]/).pop());
       assert.ok(!names.includes("script.rpy"));
       assert.ok(!names.includes("screens.rpy"));
     } finally {
@@ -146,7 +151,7 @@ describe("findCacheFiles", () => {
       writeFileSync(join(gitDir, "config"), "git config", "utf-8");
       mkdirSync(join(gitDir, "hooks"));
       const files = findCacheFiles(game);
-      const hasGit = files.some((f) => f.includes(".git"));
+      const hasGit = files.some((f: string) => f.includes(".git"));
       assert.ok(!hasGit);
     } finally {
       tmp.cleanup();
@@ -162,7 +167,7 @@ describe("findCacheDirs", () => {
     try {
       const game = createGameDir(tmp.path);
       const dirs = findCacheDirs(game);
-      const dirNames = dirs.map((d) => d.split(/[\\/]/).pop());
+      const dirNames = dirs.map((d: string) => d.split(/[\\/]/).pop());
       assert.ok(dirNames.includes("__pycache__"));
     } finally {
       tmp.cleanup();
@@ -174,7 +179,7 @@ describe("findCacheDirs", () => {
     try {
       const game = createGameDir(tmp.path);
       const dirs = findCacheDirs(game);
-      const dirNames = dirs.map((d) => d.split(/[\\/]/).pop());
+      const dirNames = dirs.map((d: string) => d.split(/[\\/]/).pop());
       assert.ok(dirNames.includes(".pytest_cache"));
     } finally {
       tmp.cleanup();

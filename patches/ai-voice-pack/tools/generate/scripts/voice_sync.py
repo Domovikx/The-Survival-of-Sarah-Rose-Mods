@@ -2,14 +2,14 @@
 """voice_sync — актуализатор и мигратор voice-структуры TSSR.
 
 Слои (источники правды):
-  catalog/voices.json          кто есть в игре (собирается voice_catalog.py)
+  catalog/voices.jsonl         кто есть в игре (собирается voice_catalog.py)
   voice_candidates/{Name}/     кто в работе (контракт + подпапки)
   каст-yaml (who_codes)      кого озвучиваем (озвучен = есть реф {Name}.wav)
 
 КОМАНДЫ:
   status                       сводка слоёв и расхождений (console)
   update  [--apply]            создать структуру+заглушки новым персонажам,
-                               пересобрать сводку voice_candidates.yaml
+                               пересобрать сводку voice_candidates.jsonl
   migrate [--apply]            одноразовый переезд: refs/*.wav -> папки
                                персонажей, mp3 -> generated/gen_selected,
                                обновление структуры кастов
@@ -23,15 +23,12 @@
 
 import argparse
 import datetime
-import json
 import os
 import re
 import sys
 from collections import defaultdict
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-
-import yaml
 
 from voicekit import catalog, contract, fs, paths
 
@@ -175,9 +172,8 @@ def cmd_update(args):
     summary = build_summary()
     ops.ensure_dir(paths.CATALOG_DIR)
     if args.apply:
-        with open(paths.CAST_SUMMARY_YAML, 'w', encoding='utf-8') as f:
-            yaml.dump(summary, f, allow_unicode=True, sort_keys=False)
-        print('-> {}'.format(paths.CAST_SUMMARY_YAML))
+        catalog.save_cast_summary(summary)
+        print('-> {}'.format(paths.CAST_SUMMARY_JSONL))
     else:
         print('сводка готова к записи ({} персонажей)'.format(len(summary['cast'])))
     if args.apply:

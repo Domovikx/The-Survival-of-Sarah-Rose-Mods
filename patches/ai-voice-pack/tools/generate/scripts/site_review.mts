@@ -6,10 +6,11 @@ import { mkdir } from "node:fs/promises";
  * Из tools/tmp (временные снимки) перенесён в tools/ при уборке 2026-10-16.
  *
  * Использование (превью должно быть поднято: cd site && npm run preview):
- *   node tools/site_review.mjs [индекс_тюмба=3]
+ *   node site_review.mts [индекс_тюмба=3]
  *
- * Выход: tools/tmp/gallery_grid.png + gallery_lightbox{N}.png.
- * Браузер — локальный Chrome (playwright channel из site/node_modules).
+ * Выход: tools/tmp/gallery_grid.png + gallery_lightbox{N}.png (пути — в OUT,
+ * исторически указывают на папку игры). Браузер — локальный Chrome
+ * (playwright channel из site/node_modules).
  */
 const SITE = "C:/Program Files (x86)/Steam/steamapps/common/The Survival of Sarah Rose/site";
 const OUT = "C:/Program Files (x86)/Steam/steamapps/common/The Survival of Sarah Rose/tools/tmp";
@@ -33,8 +34,8 @@ await grid.screenshot({ path: `${OUT}/gallery_grid.png` });
 await page.getByTestId(`screenshot-img-${idx}`).click();
 await page.waitForSelector('[data-testid="lightbox"]');
 await page.waitForFunction(() => {
-  const img = document.querySelector('[data-testid="lightbox-img"]');
-  return img && img.naturalWidth > 0;
+  const img = document.querySelector<HTMLImageElement>('[data-testid="lightbox-img"]');
+  return img !== null && img.naturalWidth > 0;
 });
 await page.waitForTimeout(350);
 await page.screenshot({ path: `${OUT}/gallery_lightbox${idx}.png` });

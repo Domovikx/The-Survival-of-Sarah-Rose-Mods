@@ -9,44 +9,56 @@
  * - Никаких внешних зависимостей — только встроенные модули node:fs, node:path, node:process
  *
  * Использование:
- *   node clear_cache.mjs                    # Очистить game/
- *   node clear_cache.mjs /path/to/game      # Указать путь
- *   node clear_cache.mjs --dry-run          # Показать что будет удалено без удаления
- *   node clear_cache.mjs --verbose          # Подробный вывод
+ *   node clear_cache.mts                    # Очистить game/
+ *   node clear_cache.mts /path/to/game      # Указать путь
+ *   node clear_cache.mts --dry-run          # Показать что будет удалено без удаления
+ *   node clear_cache.mts --verbose          # Подробный вывод
  *
  * @see {@link https://nodejs.org/docs/latest-v18.x/api/fs.html|Node.js fs docs}
  */
 
 import { readdirSync, statSync, unlinkSync, rmdirSync, existsSync } from "node:fs";
+import type { Dirent } from "node:fs";
 import { join, relative, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 
-/** @constant {number} */
-export const VERSION = 1;
+export const VERSION: number = 1;
 
-/** Расширения файлов для удаления @type {Set<string>} */
-export const CACHE_EXTENSIONS = new Set([".rpyc", ".log", ".tmp"]);
+/** Расширения файлов для удаления */
+export const CACHE_EXTENSIONS: Set<string> = new Set([".rpyc", ".log", ".tmp"]);
 
-/** Имена директорий для удаления @type {Set<string>} */
-export const CACHE_DIRS = new Set(["__pycache__", ".pytest_cache", ".mypy_cache", ".ruff_cache"]);
+/** Имена директорий для удаления */
+export const CACHE_DIRS: Set<string> = new Set(["__pycache__", ".pytest_cache", ".mypy_cache", ".ruff_cache"]);
+
+/** Опции очистки кэша. */
+interface ClearCacheOptions {
+  /** Если true — только показать, не удалять @default false */
+  dryRun?: boolean;
+  /** Подробный вывод @default false */
+  verbose?: boolean;
+}
+
+/** Результат очистки кэша. */
+interface ClearCacheResult {
+  filesRemoved: number;
+  dirsRemoved: number;
+  spaceFreed: number;
+}
 
 /**
  * Нормализовать расширение файла (нижний регистр).
- * @param {string} filepath
- * @returns {string}
  */
-function extname(filepath) {
+function extname(filepath: string): string {
   const dot = filepath.lastIndexOf(".");
   return dot === -1 ? "" : filepath.slice(dot).toLowerCase();
 }
 
 /**
  * Рекурсивный обход директории, пропуская .git.
- * @param {string} dir - абсолютный путь
- * @param {(filepath: string, isDir: boolean) => void} fn
+ * @param dir - абсолютный путь
  */
-function walk(dir, fn) {
-  let entries;
+function walk(dir: string, fn: (filepath: string, isDir: boolean) => void): void {
+  let entries: Dirent[];
   try {
     entries = readdirSync(dir, { withFileTypes: true });
   } catch {
@@ -64,21 +76,20 @@ function walk(dir, fn) {
 
 /**
  * Находит все файлы кэша в директории игры.
- * @param {string} gameDir - абсолютный путь к game/
- * @returns {string[]} список путей к файлам кэша
+ * @param gameDir - абсолютный путь к game/
+ * @returns список путей к файлам кэша
  */
-export function findCacheFiles(gameDir) {
-  /** @type {string[]} */
-  const cacheFiles = [];
+export function findCacheFiles(gameDir: string): string[] {
+  const cacheFiles: string[] = [];
 
-  walk(gameDir, (filepath, isDir) => {
+  walk(gameDir, (filepath: string, isDir: boolean): void => {
     if (!isDir) {
       if (CACHE_EXTENSIONS.has(extname(filepath))) {
         cacheFiles.push(filepath);
       }
       return;
     }
-    if (CACHE_DIRS.has(filepath.split(sep).pop())) {
+    if (CACHE_DIRS.has(filepath.split(sep).pop() ?? "")) {
       try {
         const sub = readdirSync(filepath, { withFileTypes: true });
         for (const subEntry of sub) {
@@ -98,16 +109,15 @@ export function findCacheFiles(gameDir) {
 
 /**
  * Находит все директории кэша в директории игры.
- * @param {string} gameDir - абсолютный путь к game/
- * @returns {string[]} список путей к директориям кэша
+ * @param gameDir - абсолютный путь к game/
+ * @returns список путей к директориям кэша
  */
-export function findCacheDirs(gameDir) {
-  /** @type {string[]} */
-  const cacheDirs = [];
+export function findCacheDirs(gameDir: string): string[] {
+  const cacheDirs: string[] = [];
 
-  walk(gameDir, (filepath, isDir) => {
+  walk(gameDir, (filepath: string, isDir: boolean): void => {
     if (isDir) {
-      const name = filepath.split(sep).pop();
+      const name = filepath.split(sep).pop() ?? "";
       if (CACHE_DIRS.has(name)) {
         cacheDirs.push(filepath);
       }
@@ -119,10 +129,8 @@ export function findCacheDirs(gameDir) {
 
 /**
  * Форматирует размер в читаемый вид.
- * @param {number} sizeBytes
- * @returns {string}
  */
-export function sizeStr(sizeBytes) {
+export function sizeStr(sizeBytes: number): string {
   if (sizeBytes < 1024) {
     return `${sizeBytes} B`;
   } else if (sizeBytes < 1024 * 1024) {
@@ -135,13 +143,10 @@ export function sizeStr(sizeBytes) {
 /**
  * Очищает кэш Ren'Py.
  *
- * @param {string} gameDir - Путь к game/
- * @param {object} [options]
- * @param {boolean} [options.dryRun=false] - Если true — только показать, не удалять
- * @param {boolean} [options.verbose=false] - Подробный вывод
- * @returns {{ filesRemoved: number, dirsRemoved: number, spaceFreed: number }}
+ * @param gameDir - Путь к game/
+ * @param options - Если dryRun=true — только показать, не удалять; verbose — подробный вывод
  */
-export function clearCache(gameDir, options = {}) {
+export function clearCache(gameDir: string, options: ClearCacheOptions = {}): ClearCacheResult {
   const { dryRun = false, verbose = false } = options;
 
   if (!existsSync(gameDir)) {
@@ -161,7 +166,7 @@ export function clearCache(gameDir, options = {}) {
     }
   }
 
-  const results = { filesRemoved: 0, dirsRemoved: 0, spaceFreed: 0 };
+  const results: ClearCacheResult = { filesRemoved: 0, dirsRemoved: 0, spaceFreed: 0 };
 
   if (cacheFiles.length === 0 && cacheDirs.length === 0) {
     console.log("Кэш не найден — всё чисто! [OK]");
@@ -192,7 +197,7 @@ export function clearCache(gameDir, options = {}) {
         unlinkSync(f);
         results.filesRemoved++;
       } catch (e) {
-        console.error(`    ОШИБКА: ${e.message}`);
+        console.error(`    ОШИБКА: ${e instanceof Error ? e.message : String(e)}`);
       }
     }
   }
@@ -215,7 +220,7 @@ export function clearCache(gameDir, options = {}) {
         }
       } catch (e) {
         if (verbose) {
-          console.log(`  [SKIP DIR] ${rel}: ${e.message}`);
+          console.log(`  [SKIP DIR] ${rel}: ${e instanceof Error ? e.message : String(e)}`);
         }
       }
     }
@@ -238,10 +243,8 @@ export function clearCache(gameDir, options = {}) {
 
 /**
  * Находит корень проекта (где лежит game/).
- * @param {string} gameDir
- * @returns {string}
  */
-function findProjectRoot(gameDir) {
+function findProjectRoot(gameDir: string): string {
   const parts = gameDir.split(sep);
   const gameIdx = parts.lastIndexOf("game");
   if (gameIdx > 0) {
@@ -253,13 +256,13 @@ function findProjectRoot(gameDir) {
 /**
  * CLI entry point.
  */
-function main() {
+function main(): void {
   const args = process.argv.slice(2);
 
   const dryRun = args.includes("--dry-run");
   const verbose = args.includes("--verbose") || args.includes("-v");
 
-  const positionalArgs = args.filter((a) => !a.startsWith("-"));
+  const positionalArgs = args.filter((a: string) => !a.startsWith("-"));
 
   const scriptDir = join(fileURLToPath(new URL(".", import.meta.url)));
   const projectRoot = join(scriptDir, "..", "..", "..");

@@ -6,13 +6,15 @@ import sys
 import pytest
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0, os.path.join(ROOT, 'tools'))
+sys.path.insert(0, os.path.join(ROOT, 'tools', 'generate', 'scripts'))
 
 from voicekit import catalog, contract, fs, paths  # noqa: E402
 
 
 def test_paths_layout():
-    assert paths.ROOT == ROOT
+    assert paths.ROOT == os.path.join(ROOT, 'tools', 'generate')
+    assert paths.CONFIG_DIR == os.path.join(
+        os.path.dirname(os.path.dirname(ROOT)), 'config')
     assert os.path.normpath(paths.char_dir('Alaric')).endswith(
         os.path.normpath('voice_candidates/Alaric'))
     assert os.path.normpath(paths.ref_active('Alaric')).endswith(

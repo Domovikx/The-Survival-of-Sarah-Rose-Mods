@@ -54,7 +54,7 @@ RULES = [
      'With a mocking chuckle'),
 ]
 
-EMOTIONS_JSON = paths.VOICES_JSON.replace('voices.json', 'emotions.json')
+EMOTIONS_JSON = os.path.join(paths.CATALOG_DIR, 'emotions.json')
 
 
 def tag_phrase(text_ru, text_en):
@@ -146,7 +146,7 @@ def main():
                 print('  ... {}/{} ({:.0f}/мин), размечено {}'.format(
                     i, len(voiced), rate * 60, n_tagged), flush=True)
                 with open(EMOTIONS_JSON, 'w', encoding='utf-8') as f:
-                    json.dump(out, f, ensure_ascii=False, indent=1)
+                    json.dump(out, f, ensure_ascii=False, indent=1, sort_keys=True)
         print('LLM-разметка завершена: новых {}'.format(n_tagged))
     else:
         n_tagged = 0
@@ -166,7 +166,7 @@ def main():
         return 0
     os.makedirs(os.path.dirname(EMOTIONS_JSON), exist_ok=True)
     with open(EMOTIONS_JSON, 'w', encoding='utf-8') as f:
-        json.dump(out, f, ensure_ascii=False, indent=1)
+        json.dump(out, f, ensure_ascii=False, indent=1, sort_keys=True)
     print('-> {}'.format(EMOTIONS_JSON))
     return 0
 

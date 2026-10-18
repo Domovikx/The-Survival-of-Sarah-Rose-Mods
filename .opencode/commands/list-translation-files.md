@@ -7,7 +7,7 @@ description: "Показать статус перевода Ren'Py: какие 
 Запусти скрипт:
 
 ```text
-node .opencode/skills/list-translation-files/list_translation_files.mjs $ARGUMENTS
+node .opencode/skills/list-translation-files/list_translation_files.mts $ARGUMENTS
 ```
 
 Верни результат пользователю в читаемом виде. Если результат пустой — сообщи, что все файлы переведены.

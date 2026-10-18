@@ -2,7 +2,7 @@
 """Voice batch generator for TSSR (по мотивам W40KRT tools/cosyvoice3_batch.py).
 
 ВХОД:
-  - catalog/voices.json     каталог реплик (uid, old, new, who, arc, category)
+  - catalog/voices.jsonl    каталог реплик (uid, old, new, who, arc, category)
   - касты: озвучен = есть реф {Голос}.wav (иначе пропуск)
 
 ВЫХОД:

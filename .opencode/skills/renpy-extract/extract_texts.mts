@@ -19,24 +19,23 @@
  * - Никаких внешних зависимостей — только встроенные модули
  *
  * Использование:
- *   node extract_texts.mjs extract            Scan game/ -> .rpy в tl/ru/
- *   node extract_texts.mjs extract-builtins   Scan Ren'Py engine built-in strings
- *   node extract_texts.mjs verify             Check game/ vs tl/ru/
- *   node extract_texts.mjs stats              Show translation statistics
+ *   node extract_texts.mts extract            Scan game/ -> .rpy в tl/ru/
+ *   node extract_texts.mts extract-builtins   Scan Ren'Py engine built-in strings
+ *   node extract_texts.mts verify             Check game/ vs tl/ru/
+ *   node extract_texts.mts stats              Show translation statistics
  *
  * @see {@link https://nodejs.org/docs/latest-v18.x/api/fs.html|Node.js fs docs}
  */
 
 import { readFileSync, writeFileSync, readdirSync, existsSync, mkdirSync } from "node:fs";
+import type { Dirent } from "node:fs";
 import { join, relative, sep } from "node:path";
 import { createHash } from "node:crypto";
 import { fileURLToPath } from "node:url";
 
-/** @constant {number} */
 export const VERSION = 4;
 
-/** @type {Array<[RegExp, string]>} */
-export const ARC_PATTERNS = [
+export const ARC_PATTERNS: Array<[RegExp, string]> = [
   [/^Opening/, "Prologue"],
   [
     /^(DayOfTheFuneral|SecondPartOfFuneral|MeetingOnTheBattlements|MeetingKateInTheGarden|SarahsBedroomAfterFuneral|TheMorningAfterKate|SarahAndThomasSpeak|TheInsidePathBegins|ChooseThePath|CoronationDay)/,
@@ -64,29 +63,23 @@ export const ARC_PATTERNS = [
 
 /**
  * MD5 хэш (первые 8 символов).
- * @param {string} text
- * @returns {string}
  */
-export function _hash(text) {
+export function _hash(text: string): string {
   return createHash("md5").update(text, "utf-8").digest("hex").slice(0, 8);
 }
 
 /**
  * Экранирование для old/new строк в .rpy.
- * @param {string} text
- * @returns {string}
  */
-export function _esc(text) {
+export function _esc(text: string): string {
   return text.replace(/\\/g, "\\\\").replace(/"/g, '\\"');
 }
 
 /**
  * Обратное экранирование из .rpy формата.
- * @param {string} text
- * @returns {string}
  */
-export function _unescape(text) {
-  const result = [];
+export function _unescape(text: string): string {
+  const result: string[] = [];
   let i = 0;
   while (i < text.length) {
     if (text.slice(i, i + 2) === "\\\\") {
@@ -105,15 +98,12 @@ export function _unescape(text) {
 
 /**
  * Собирает old строки из всех .rpy файлов в tlDir (кроме exclude).
- * @param {string} tlDir
- * @param {string} [exclude]
- * @returns {Set<string>}
  */
-export function _collectOldStringsInTl(tlDir, exclude) {
-  const olds = new Set();
+export function _collectOldStringsInTl(tlDir: string, exclude?: string): Set<string> {
+  const olds = new Set<string>();
 
-  function walk(dir) {
-    let entries;
+  function walk(dir: string): void {
+    let entries: Dirent[];
     try {
       entries = readdirSync(dir, { withFileTypes: true });
     } catch {
@@ -149,10 +139,8 @@ export function _collectOldStringsInTl(tlDir, exclude) {
 
 /**
  * Находит директорию Ren'Py SDK common/.
- * @param {string} projectRoot
- * @returns {string|null}
  */
-export function _findRenpyCommonDir(projectRoot) {
+export function _findRenpyCommonDir(projectRoot: string): string | null {
   const candidates = [join(projectRoot, "renpy", "common"), join(projectRoot, "renpy-8.5.2-sdk", "renpy", "common")];
 
   for (const c of candidates) {
@@ -160,7 +148,7 @@ export function _findRenpyCommonDir(projectRoot) {
   }
 
   const parent = join(projectRoot, "..");
-  let entries;
+  let entries: string[];
   try {
     entries = readdirSync(parent);
   } catch {
@@ -176,7 +164,7 @@ export function _findRenpyCommonDir(projectRoot) {
 
   return null;
 
-  function has00Files(dir) {
+  function has00Files(dir: string): boolean {
     try {
       return readdirSync(dir).some((e) => e.startsWith("00") && e.endsWith(".rpy"));
     } catch {
@@ -186,30 +174,52 @@ export function _findRenpyCommonDir(projectRoot) {
 }
 
 /**
- * @typedef {object} BlockEntry
- * @property {string} id
- * @property {string} original
- * @property {string} translated
- * @property {string} type
- * @property {string|null} character
- * @property {string} sourceFile
- * @property {number} sourceLine
+ * Один переводимый блок (строка).
  */
+export interface BlockEntry {
+  id: string;
+  original: string;
+  translated: string;
+  type: string;
+  character?: string | null;
+  sourceFile: string;
+  sourceLine: number;
+}
 
-/**
- * @typedef {object} ExtractResult
- * @property {{ version: number, extractedAt: string, totalArcBlocks: number, totalUiStrings: number, totalCharacterNames: number, totalDefineStrings: number, arcsCount: number }} meta
- * @property {Object<string, Object<string, { sourceFile: string, sourceLine: number, blocks: Object<string, BlockEntry> }>>} arcs
- * @property {Object<string, BlockEntry[]>} uiByFile
- * @property {Object<string, BlockEntry[]>} charactersByFile
- * @property {Object<string, BlockEntry[]>} definesByFile
- */
+interface ArcScene {
+  sourceFile: string;
+  sourceLine: number;
+  blocks: Record<string, BlockEntry>;
+}
+
+interface ExtractMeta {
+  version: number;
+  extractedAt: string;
+  totalArcBlocks: number;
+  totalUiStrings: number;
+  totalCharacterNames: number;
+  totalDefineStrings: number;
+  arcsCount: number;
+}
+
+interface ExtractResult {
+  meta: ExtractMeta;
+  arcs: Record<string, Record<string, ArcScene>>;
+  uiByFile: Record<string, BlockEntry[]>;
+  charactersByFile: Record<string, BlockEntry[]>;
+  definesByFile: Record<string, BlockEntry[]>;
+}
 
 export class RenPyExtractor {
-  /**
-   * @param {string} gameDir - путь к game/
-   */
-  constructor(gameDir) {
+  gameDir: string;
+  arcs: Record<string, Record<string, ArcScene>>;
+  uiBlocks: Record<string, BlockEntry>;
+  characterBlocks: Record<string, BlockEntry>;
+  defineBlocks: Record<string, BlockEntry>;
+  _seenOriginals: Set<string>;
+  _existingTranslations: Record<string, string>;
+
+  constructor(gameDir: string) {
     this.gameDir = gameDir;
     this.arcs = {};
     this.uiBlocks = {};
@@ -219,19 +229,11 @@ export class RenPyExtractor {
     this._existingTranslations = {};
   }
 
-  /**
-   * @param {string} text
-   * @returns {string}
-   */
-  static _norm(text) {
+  static _norm(text: string): string {
     return text.trim();
   }
 
-  /**
-   * @param {string} label
-   * @returns {string}
-   */
-  _getArc(label) {
+  _getArc(label: string): string {
     for (const [pattern, arcName] of ARC_PATTERNS) {
       if (pattern.test(label)) {
         return arcName;
@@ -242,14 +244,13 @@ export class RenPyExtractor {
 
   /**
    * Читает существующие .rpy файлы в tl/ru/ и извлекает переводы.
-   * @param {string} tlDir
    */
-  setExistingTranslations(tlDir) {
-    const existing = {};
+  setExistingTranslations(tlDir: string): void {
+    const existing: Record<string, string> = {};
     if (!existsSync(tlDir)) return;
 
-    function walk(dir) {
-      let entries;
+    function walk(dir: string): void {
+      let entries: Dirent[];
       try {
         entries = readdirSync(dir, { withFileTypes: true });
       } catch {
@@ -263,7 +264,7 @@ export class RenPyExtractor {
           try {
             const content = readFileSync(fullPath, "utf-8");
             let inTranslate = false;
-            let currentOrig = null;
+            let currentOrig: string | null = null;
             for (const line of content.split("\n")) {
               const s = line.trim();
               if (s.startsWith("translate ru strings:")) {
@@ -304,31 +305,22 @@ export class RenPyExtractor {
     this._existingTranslations = existing;
   }
 
-  /**
-   * @param {string} original
-   * @returns {string}
-   */
-  _existing(original) {
+  _existing(original: string): string {
     return this._existingTranslations[RenPyExtractor._norm(original)] || "";
   }
 
-  /**
-   * @param {string} text
-   * @returns {string}
-   */
-  _dedupKey(text) {
+  _dedupKey(text: string): string {
     return text.trim();
   }
 
   /**
    * Парсит один .rpy файл и добавляет найденные строки.
-   * @param {string} filePath
    */
-  parseFile(filePath) {
+  parseFile(filePath: string): void {
     const sourceFile = filePath;
-    const fileName = filePath.split(/[\\/]/).pop();
+    const fileName = filePath.split(/[\\/]/).pop() ?? "";
     let currentLabel = fileName.replace(/\.rpy$/, "");
-    let content;
+    let content: string;
     try {
       content = readFileSync(filePath, "utf-8");
     } catch {
@@ -473,7 +465,7 @@ export class RenPyExtractor {
           "Return",
         ]);
         const re = /_\(p?"([^"]+)"\)/g;
-        let dm;
+        let dm: RegExpExecArray | null;
         while ((dm = re.exec(stripped)) !== null) {
           const text = dm[1];
           if (text && !skip.has(text)) {
@@ -497,7 +489,7 @@ export class RenPyExtractor {
 
       // ── 7. UI: _("text") — catch-all ──
       const uiRE = /_\("([^"]+)"\)/g;
-      let um;
+      let um: RegExpExecArray | null;
       while ((um = uiRE.exec(stripped)) !== null) {
         const text = um[1];
         if (text) {
@@ -518,7 +510,7 @@ export class RenPyExtractor {
       }
 
       const uiSingleRE = /_\('([^']+)'\)/g;
-      let us;
+      let us: RegExpExecArray | null;
       while ((us = uiSingleRE.exec(stripped)) !== null) {
         const text = us[1];
         if (text) {
@@ -540,10 +532,15 @@ export class RenPyExtractor {
     }
   }
 
-  /**
-   * @private
-   */
-  _addToArc(arcName, sceneName, sourceFile, sourceLine, original, blockType, character) {
+  _addToArc(
+    arcName: string,
+    sceneName: string,
+    sourceFile: string,
+    sourceLine: number,
+    original: string,
+    blockType: string,
+    character: string | null,
+  ): void {
     const dk = this._dedupKey(original);
     if (this._seenOriginals.has(dk)) return;
     this._seenOriginals.add(dk);
@@ -565,12 +562,10 @@ export class RenPyExtractor {
 
   /**
    * Scan Ren'Py common/ directory for _("text") built-in strings.
-   * @param {string} renpyCommonDir
-   * @returns {BlockEntry[]}
    */
-  scanEngineBuiltins(renpyCommonDir) {
-    const engineBlocks = {};
-    const commonFiles = [];
+  scanEngineBuiltins(renpyCommonDir: string): BlockEntry[] {
+    const engineBlocks: Record<string, BlockEntry> = {};
+    const commonFiles: string[] = [];
 
     try {
       const entries = readdirSync(renpyCommonDir, { withFileTypes: true });
@@ -587,7 +582,7 @@ export class RenPyExtractor {
     console.log(`Found ${commonFiles.length} common files\n`);
 
     for (const f of commonFiles) {
-      let content;
+      let content: string;
       try {
         content = readFileSync(f, "utf-8");
       } catch {
@@ -602,7 +597,7 @@ export class RenPyExtractor {
       for (let i = 0; i < lines.length; i++) {
         const re = /_\("([^"]+)"\)/g;
         const stripped = lines[i].trim();
-        let m;
+        let m: RegExpExecArray | null;
         while ((m = re.exec(stripped)) !== null) {
           const text = m[1];
           if (text) {
@@ -630,13 +625,12 @@ export class RenPyExtractor {
 
   /**
    * Основной метод сканирования.
-   * @returns {ExtractResult}
    */
-  scan() {
-    const files = [];
+  scan(): ExtractResult {
+    const files: string[] = [];
 
-    function walk(dir) {
-      let entries;
+    function walk(dir: string): void {
+      let entries: Dirent[];
       try {
         entries = readdirSync(dir, { withFileTypes: true });
       } catch {
@@ -681,13 +675,10 @@ export class RenPyExtractor {
     return this._buildResult();
   }
 
-  /**
-   * @returns {ExtractResult}
-   */
-  _buildResult() {
-    const uiByFile = {};
-    const charByFile = {};
-    const defineByFile = {};
+  _buildResult(): ExtractResult {
+    const uiByFile: Record<string, BlockEntry[]> = {};
+    const charByFile: Record<string, BlockEntry[]> = {};
+    const defineByFile: Record<string, BlockEntry[]> = {};
 
     for (const [, b] of Object.entries(this.uiBlocks)) {
       const sf = b.sourceFile;
@@ -730,21 +721,16 @@ export class RenPyExtractor {
 
 /**
  * Получить имя файла из пути.
- * @param {string} path
- * @returns {string}
  */
-function entryName(path) {
-  return path.split(/[\\/]/).pop();
+function entryName(path: string): string {
+  return path.split(/[\\/]/).pop() ?? "";
 }
 
 /**
  * Генерация .rpy файлов переводов из данных.
- * @param {ExtractResult} data
- * @param {string} outputDir
- * @returns {string[]}
  */
-export function generateRpy(data, outputDir) {
-  const generated = [];
+export function generateRpy(data: ExtractResult, outputDir: string): string[] {
+  const generated: string[] = [];
 
   // Arc files
   for (const [arcName, scenes] of Object.entries(data.arcs || {})) {
@@ -772,7 +758,7 @@ export function generateRpy(data, outputDir) {
         mkdirSync(outDir, { recursive: true });
         writeFileSync(out, content, "utf-8");
       } catch (e) {
-        console.error(`  [ERROR] Cannot write ${out}: ${e.message}`);
+        console.error(`  [ERROR] Cannot write ${out}: ${(e as Error).message}`);
       }
 
       generated.push(relative(outputDir, out).split(sep).join("/"));
@@ -783,7 +769,7 @@ export function generateRpy(data, outputDir) {
   const uiData = data.uiByFile || {};
   if (Object.keys(uiData).length > 0) {
     const out = join(outputDir, "screens.rpy");
-    const allBlocks = [];
+    const allBlocks: BlockEntry[] = [];
     for (const blocks of Object.values(uiData)) {
       for (const b of blocks) allBlocks.push(b);
     }
@@ -804,13 +790,13 @@ export function generateRpy(data, outputDir) {
       mkdirSync(outputDir, { recursive: true });
       writeFileSync(out, content, "utf-8");
     } catch (e) {
-      console.error(`  [ERROR] Cannot write ${out}: ${e.message}`);
+      console.error(`  [ERROR] Cannot write ${out}: ${(e as Error).message}`);
     }
     generated.push("screens.rpy");
   }
 
   // Characters + Defines → misc_strings.rpy
-  const extraBlocks = [];
+  const extraBlocks: BlockEntry[] = [];
   for (const blocks of Object.values(data.charactersByFile || {})) {
     for (const b of blocks) extraBlocks.push(b);
   }
@@ -837,7 +823,7 @@ export function generateRpy(data, outputDir) {
       mkdirSync(outputDir, { recursive: true });
       writeFileSync(out, content, "utf-8");
     } catch (e) {
-      console.error(`  [ERROR] Cannot write ${out}: ${e.message}`);
+      console.error(`  [ERROR] Cannot write ${out}: ${(e as Error).message}`);
     }
     generated.push("misc_strings.rpy");
   }
@@ -855,19 +841,18 @@ export function generateRpy(data, outputDir) {
  * 3. оригинальный текст (fallback)
  *
  * Пропускает old строки, которые уже есть в других tl/ru/ .rpy файлах.
- *
- * @param {BlockEntry[]} engineBlocks
- * @param {string} tlDir
- * @param {Object<string, string>} [existingTranslations]
- * @returns {string[]}
  */
-export function generateEngineRpy(engineBlocks, tlDir, existingTranslations) {
+export function generateEngineRpy(
+  engineBlocks: BlockEntry[],
+  tlDir: string,
+  existingTranslations?: Record<string, string>,
+): string[] {
   if (!engineBlocks || engineBlocks.length === 0) return [];
 
   const existingOlds = _collectOldStringsInTl(tlDir, "renpy_common.rpy");
 
   let skipped = 0;
-  const filtered = [];
+  const filtered: BlockEntry[] = [];
   for (const bd of engineBlocks) {
     const origText = bd.original.trim();
     if (existingOlds.has(origText)) {
@@ -891,12 +876,12 @@ export function generateEngineRpy(engineBlocks, tlDir, existingTranslations) {
   const out = join(tlDir, "renpy_common.rpy");
   const generated = ["renpy_common.rpy"];
 
-  const existingFromFile = {};
+  const existingFromFile: Record<string, string> = {};
   if (existsSync(out)) {
     try {
       const content = readFileSync(out, "utf-8");
       let inTranslate = false;
-      let currentOrig = null;
+      let currentOrig: string | null = null;
       for (const line of content.split("\n")) {
         const s = line.trim();
         if (s.startsWith("translate ru strings:")) {
@@ -954,7 +939,7 @@ export function generateEngineRpy(engineBlocks, tlDir, existingTranslations) {
     mkdirSync(tlDir, { recursive: true });
     writeFileSync(out, content, "utf-8");
   } catch (e) {
-    console.error(`  [ERROR] Cannot write ${out}: ${e.message}`);
+    console.error(`  [ERROR] Cannot write ${out}: ${(e as Error).message}`);
   }
 
   return generated;
@@ -962,14 +947,13 @@ export function generateEngineRpy(engineBlocks, tlDir, existingTranslations) {
 
 /**
  * Удаление built-in confirm строк из screens.rpy если они есть в renpy_common.rpy.
- * @param {string} tlDir
  */
-export function _cleanEngineDuplicatesFromScreens(tlDir) {
+export function _cleanEngineDuplicatesFromScreens(tlDir: string): void {
   const screensPath = join(tlDir, "screens.rpy");
   const commonPath = join(tlDir, "renpy_common.rpy");
   if (!existsSync(screensPath) || !existsSync(commonPath)) return;
 
-  const commonOlds = new Set();
+  const commonOlds = new Set<string>();
   try {
     const content = readFileSync(commonPath, "utf-8");
     for (const line of content.split("\n")) {
@@ -985,7 +969,7 @@ export function _cleanEngineDuplicatesFromScreens(tlDir) {
 
   if (commonOlds.size === 0) return;
 
-  let content;
+  let content: string;
   try {
     content = readFileSync(screensPath, "utf-8");
   } catch {
@@ -993,7 +977,7 @@ export function _cleanEngineDuplicatesFromScreens(tlDir) {
   }
 
   const lines = content.split("\n");
-  const newLines = [];
+  const newLines: string[] = [];
   let skipNext = false;
   let removed = 0;
 
@@ -1022,10 +1006,8 @@ export function _cleanEngineDuplicatesFromScreens(tlDir) {
 
 /**
  * Подсчёт переведённых строк в renpy_common.rpy.
- * @param {string} tlDir
- * @returns {[number, number]} [total, done]
  */
-export function countEngineTranslations(tlDir) {
+export function countEngineTranslations(tlDir: string): [number, number] {
   const f = join(tlDir, "renpy_common.rpy");
   if (!existsSync(f)) return [0, 0];
 
@@ -1035,7 +1017,7 @@ export function countEngineTranslations(tlDir) {
   try {
     const content = readFileSync(f, "utf-8");
     let inTranslate = false;
-    let currentOrig = null;
+    let currentOrig: string | null = null;
 
     for (const line of content.split("\n")) {
       const s = line.trim();
@@ -1073,12 +1055,8 @@ export function countEngineTranslations(tlDir) {
 
 /**
  * Проверка целостности: game/ vs tl/ru/.
- * @param {string} originalDir
- * @param {string} tlDir
- * @param {string} [renpyCommonDir]
- * @returns {[number, number]}
  */
-export function verifyIntegrity(originalDir, tlDir, renpyCommonDir) {
+export function verifyIntegrity(originalDir: string, tlDir: string, renpyCommonDir?: string): [number, number] {
   const extractor = new RenPyExtractor(originalDir);
   extractor.setExistingTranslations(tlDir);
   const data = extractor.scan();
@@ -1144,7 +1122,7 @@ export function verifyIntegrity(originalDir, tlDir, renpyCommonDir) {
 /**
  * CLI entry point.
  */
-function main() {
+function main(): void {
   const args = process.argv.slice(2);
 
   if (args.length < 1) {

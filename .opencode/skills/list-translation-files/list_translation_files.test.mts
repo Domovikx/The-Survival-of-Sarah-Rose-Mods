@@ -4,9 +4,9 @@ import { mkdtempSync, writeFileSync, readFileSync, rmSync } from "node:fs";
 import { join } from "node:path";
 import { tmpdir } from "node:os";
 
-import { analyzeContent, formatStatus, formatCopyReady } from "./list_translation_files.mjs";
+import { analyzeContent, formatStatus, formatCopyReady } from "./list_translation_files.mts";
 
-function makeTempDir() {
+function makeTempDir(): { path: string; cleanup: () => void } {
   const dir = mkdtempSync(join(tmpdir(), "ltf-test-"));
   return {
     path: dir,

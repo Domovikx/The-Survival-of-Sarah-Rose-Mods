@@ -20,7 +20,7 @@ cosyvoice_modules = [
 for mod in cosyvoice_modules:
     sys.modules[mod] = MagicMock()
 
-sys.path.insert(0, os.path.join(ROOT, 'tools'))
+sys.path.insert(0, os.path.join(ROOT, 'tools', 'generate', 'scripts'))
 
 from voicekit import paths  # noqa: E402
 
@@ -33,7 +33,7 @@ def mock_config(tmp_path, monkeypatch):
         ('VOICE_CANDIDATES', tmp_path / 'voice_candidates'),
         ('CATALOG_DIR', tmp_path / 'catalog'),
         ('CONFIG_DIR', tmp_path / 'config'),
-        ('VOICES_JSON', tmp_path / 'catalog' / 'voices.json'),
+        ('VOICES_JSONL', tmp_path / 'catalog' / 'voices.jsonl'),
         ('VOICE_LIST_JSON', tmp_path / 'catalog' / 'voice_list.json'),
         ('AI_VOICE_DIR', tmp_path / 'ai_voice'),
     ):
@@ -66,9 +66,12 @@ def mock_config(tmp_path, monkeypatch):
         'characters': {'tv': 'TestVoice', 'nr': 'NoRefVoice'}
     }
     import json
-    with open(tmp_path / 'catalog' / 'voices.json', 'w',
+    entries = catalog.pop('entries')
+    with open(tmp_path / 'catalog' / 'voices.jsonl', 'w',
               encoding='utf-8') as f:
-        json.dump(catalog, f, ensure_ascii=False)
+        f.write(json.dumps(catalog, ensure_ascii=False) + '\n')
+        for e in entries:
+            f.write(json.dumps(e, ensure_ascii=False) + '\n')
 
     wav = ref_dir / 'TestVoice.wav'
     wav.write_bytes(b'RIFF$\x00\x00\x00WAVEfmt \x10\x00\x00\x00\x01\x00'

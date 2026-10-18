@@ -11,16 +11,17 @@
  * - Никаких внешних зависимостей — только встроенные модули node:fs, node:path, node:process
  *
  * Использование:
- *   node dedup_translations.mjs                          # дедупликация ru (по умолчанию)
- *   node dedup_translations.mjs --lang de                # другой язык
- *   node dedup_translations.mjs --dry-run                # предпросмотр
- *   node dedup_translations.mjs --verbose                # подробный вывод
- *   node dedup_translations.mjs --project /path          # указать проект
+ *   node dedup_translations.mts                          # дедупликация ru (по умолчанию)
+ *   node dedup_translations.mts --lang de                # другой язык
+ *   node dedup_translations.mts --dry-run                # предпросмотр
+ *   node dedup_translations.mts --verbose                # подробный вывод
+ *   node dedup_translations.mts --project /path          # указать проект
  *
  * @see {@link https://nodejs.org/docs/latest-v18.x/api/fs.html|Node.js fs docs}
  */
 
 import { readFileSync, writeFileSync, readdirSync } from "node:fs";
+import type { Dirent } from "node:fs";
 import { join, relative, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -33,6 +34,29 @@ export const OLD_RE = /^[ \t]*old +"((?:[^"\\]|\\.)*)"[ \t]*$/;
 /** Регулярка для строк new "...". @type {RegExp} */
 export const NEW_RE = /^[ \t]*new +"((?:[^"\\]|\\.)*)"[ \t]*$/;
 
+/** Запись old/new-пары из .rpy файла. */
+interface TranslationEntry {
+  file: string;
+  line: number;
+  old: string;
+  new: string;
+}
+
+/** Опции дедупликации. */
+interface DeduplicateOptions {
+  lang?: string;
+  dryRun?: boolean;
+  verbose?: boolean;
+}
+
+/** Итоговая статистика дедупликации. */
+interface DeduplicateResult {
+  totalEntries: number;
+  totalDuplicates: number;
+  duplicatesRemoved: number;
+  filesModified: number;
+}
+
 /**
  * Парсит translate <lang> strings: блоки, возвращает массив
  * [lineNumber, oldText, newText].
@@ -41,14 +65,13 @@ export const NEW_RE = /^[ \t]*new +"((?:[^"\\]|\\.)*)"[ \t]*$/;
  * @param {string} text - содержимое .rpy файла
  * @returns {Array<[number, string, string]>}
  */
-export function parseTranslateBlocks(text) {
-  /** @type {Array<[number, string, string]>} */
-  const results = [];
+export function parseTranslateBlocks(text: string): Array<[number, string, string]> {
+  const results: Array<[number, string, string]> = [];
   const lines = text.split("\n");
   let inBlock = false;
-  let currentOld = null;
-  let currentNew = null;
-  let oldLineno = null;
+  let currentOld: string | null = null;
+  let currentNew: string | null = null;
+  let oldLineno: number | null = null;
   let i = 0;
 
   while (i < lines.length) {
@@ -82,7 +105,7 @@ export function parseTranslateBlocks(text) {
     // Достигнут конец translate блока — начинается новый translate
     if (stripped.startsWith("translate ")) {
       if (currentOld !== null && currentNew !== null) {
-        results.push([oldLineno, currentOld, currentNew]);
+        results.push([oldLineno!, currentOld, currentNew]);
         currentOld = null;
         currentNew = null;
         oldLineno = null;
@@ -98,7 +121,7 @@ export function parseTranslateBlocks(text) {
     if (oldMatch) {
       // Если был предыдущий незавершённый — сохраняем
       if (currentOld !== null && currentNew !== null) {
-        results.push([oldLineno, currentOld, currentNew]);
+        results.push([oldLineno!, currentOld, currentNew]);
       }
       currentOld = oldMatch[1];
       currentNew = null;
@@ -112,7 +135,7 @@ export function parseTranslateBlocks(text) {
 
   // Последняя пара
   if (currentOld !== null && currentNew !== null) {
-    results.push([oldLineno, currentOld, currentNew]);
+    results.push([oldLineno!, currentOld, currentNew]);
   }
 
   return results;
@@ -124,15 +147,13 @@ export function parseTranslateBlocks(text) {
  * @param {string} tlDir - путь к tl/<lang>/
  * @returns {Array<{ file: string, line: number, old: string, new: string }>}
  */
-export function findAllEntries(tlDir) {
-  /** @type {Array<{ file: string, line: number, old: string, new: string }>} */
-  const entries = [];
+export function findAllEntries(tlDir: string): TranslationEntry[] {
+  const entries: TranslationEntry[] = [];
 
-  /** @type {string[]} */
-  const rpyFiles = [];
+  const rpyFiles: string[] = [];
 
-  function walk(dir) {
-    let dirEntries;
+  function walk(dir: string): void {
+    let dirEntries: Dirent[];
     try {
       dirEntries = readdirSync(dir, { withFileTypes: true });
     } catch {
@@ -157,14 +178,14 @@ export function findAllEntries(tlDir) {
   }
 
   for (const rpyFile of rpyFiles) {
-    let text;
+    let text: string;
     try {
       text = readFileSync(rpyFile, "utf-8");
     } catch {
       try {
-        text = readFileSync(rpyFile, "utf-8-sig");
+        text = readFileSync(rpyFile, "utf-8-sig" as BufferEncoding);
       } catch (e) {
-        console.log(`  [ERROR] Не удалось прочитать ${rpyFile}: ${e.message}`);
+        console.log(`  [ERROR] Не удалось прочитать ${rpyFile}: ${(e as { message?: string }).message}`);
         continue;
       }
     }
@@ -190,20 +211,18 @@ export function findAllEntries(tlDir) {
  * @param {Array<{ file: string, line: number, old: string, new: string }>} entries
  * @returns {Map<string, Array<{ file: string, line: number, old: string, new: string }>>}
  */
-export function findDuplicates(entries) {
-  /** @type {Map<string, Array<{ file: string, line: number, old: string, new: string }>>} */
-  const groups = new Map();
+export function findDuplicates(entries: TranslationEntry[]): Map<string, TranslationEntry[]> {
+  const groups = new Map<string, TranslationEntry[]>();
 
   for (const entry of entries) {
     const key = entry.old;
     if (!groups.has(key)) {
       groups.set(key, []);
     }
-    groups.get(key).push(entry);
+    groups.get(key)!.push(entry);
   }
 
-  /** @type {Map<string, Array<{ file: string, line: number, old: string, new: string }>>} */
-  const duplicates = new Map();
+  const duplicates = new Map<string, TranslationEntry[]>();
 
   for (const [key, group] of groups) {
     if (group.length > 1) {
@@ -228,7 +247,7 @@ export function findDuplicates(entries) {
  * @param {boolean} [options.verbose=false] - Подробный вывод
  * @returns {{ totalEntries: number, totalDuplicates: number, duplicatesRemoved: number, filesModified: number }}
  */
-export function deduplicate(tlDir, options = {}) {
+export function deduplicate(tlDir: string, options: DeduplicateOptions = {}): DeduplicateResult {
   const { lang = "ru", dryRun = false, verbose = false } = options;
 
   const projectRoot = findProjectRoot(tlDir);
@@ -264,8 +283,7 @@ export function deduplicate(tlDir, options = {}) {
   }
 
   // Собираем статистику по файлам
-  /** @type {Map<string, Array<[number, string]>>} */
-  const filesToModify = new Map();
+  const filesToModify = new Map<string, Array<[number, string]>>();
 
   for (const [oldText, group] of duplicates) {
     // Первый экземпляр — оставляем
@@ -284,7 +302,7 @@ export function deduplicate(tlDir, options = {}) {
       if (!filesToModify.has(key)) {
         filesToModify.set(key, []);
       }
-      filesToModify.get(key).push([entry.line, oldText]);
+      filesToModify.get(key)!.push([entry.line, oldText]);
     }
   }
 
@@ -306,14 +324,14 @@ export function deduplicate(tlDir, options = {}) {
 
   for (const [filepathStr, linesToRemove] of filesToModify) {
     const rel = relativize(filepathStr, projectRoot);
-    let text;
+    let text: string;
     try {
       text = readFileSync(filepathStr, "utf-8");
     } catch {
       try {
-        text = readFileSync(filepathStr, "utf-8-sig");
+        text = readFileSync(filepathStr, "utf-8-sig" as BufferEncoding);
       } catch (e) {
-        console.log(`  [ERROR] Не удалось прочитать для записи ${filepathStr}: ${e.message}`);
+        console.log(`  [ERROR] Не удалось прочитать для записи ${filepathStr}: ${(e as { message?: string }).message}`);
         continue;
       }
     }
@@ -322,8 +340,8 @@ export function deduplicate(tlDir, options = {}) {
 
     // Сортируем строки для удаления в обратном порядке (с конца файла)
     // чтобы не сбивать номера строк
-    const seen = new Set();
-    const uniqueToRemove = [];
+    const seen = new Set<string>();
+    const uniqueToRemove: Array<[number, string]> = [];
     for (const [ln, old] of linesToRemove) {
       const key = `${ln}:${old}`;
       if (!seen.has(key)) {
@@ -356,7 +374,7 @@ export function deduplicate(tlDir, options = {}) {
 
     if (fileModified) {
       // Чистим множественные пустые строки (оставляем максимум 2 подряд)
-      const cleaned = [];
+      const cleaned: string[] = [];
       let emptyCount = 0;
       for (const line of lines) {
         if (line.trim() === "") {
@@ -379,7 +397,7 @@ export function deduplicate(tlDir, options = {}) {
     }
   }
 
-  const result = {
+  const result: DeduplicateResult = {
     totalEntries: entries.length,
     totalDuplicates: totalDupEntries,
     duplicatesRemoved: removedCount,
@@ -402,7 +420,7 @@ export function deduplicate(tlDir, options = {}) {
  * @param {string} tlDir
  * @returns {string}
  */
-function findProjectRoot(tlDir) {
+function findProjectRoot(tlDir: string): string {
   const parts = tlDir.split(sep);
   const tlIdx = parts.lastIndexOf("tl");
   if (tlIdx >= 2) {
@@ -417,7 +435,7 @@ function findProjectRoot(tlDir) {
  * @param {string} projectRoot
  * @returns {string}
  */
-function relativize(filepath, projectRoot) {
+function relativize(filepath: string, projectRoot: string): string {
   try {
     return relative(projectRoot, filepath).split(sep).join("/");
   } catch {
@@ -428,13 +446,13 @@ function relativize(filepath, projectRoot) {
 /**
  * CLI entry point.
  */
-function main() {
+function main(): void {
   const args = process.argv.slice(2);
 
   let lang = "ru";
   let dryRun = false;
   let verbose = false;
-  let projectPath = null;
+  let projectPath: string | null = null;
 
   for (let i = 0; i < args.length; i++) {
     const arg = args[i];
@@ -449,7 +467,7 @@ function main() {
     }
   }
 
-  let projectDir;
+  let projectDir: string;
   if (projectPath) {
     projectDir = projectPath;
   } else {

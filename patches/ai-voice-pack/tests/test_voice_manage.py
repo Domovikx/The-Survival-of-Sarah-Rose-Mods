@@ -10,7 +10,7 @@ import yaml
 import pytest
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0, os.path.join(ROOT, 'tools'))
+sys.path.insert(0, os.path.join(ROOT, 'tools', 'generate', 'scripts'))
 
 from voicekit import paths  # noqa: E402
 
@@ -23,7 +23,7 @@ def tmp_project(tmp_path, monkeypatch):
         ('VOICE_CANDIDATES', tmp_path / 'voice_candidates'),
         ('CATALOG_DIR', tmp_path / 'catalog'),
         ('CONFIG_DIR', tmp_path / 'config'),
-        ('VOICES_JSON', tmp_path / 'catalog' / 'voices.json'),
+        ('VOICES_JSONL', tmp_path / 'catalog' / 'voices.jsonl'),
     ):
         monkeypatch.setattr(paths, attr, str(val))
 
@@ -42,7 +42,7 @@ def tmp_project(tmp_path, monkeypatch):
     wav_v2.write_bytes(b'RIFFvariant2')
 
     import json
-    with open(tmp_path / 'catalog' / 'voices.json', 'w',
+    with open(tmp_path / 'catalog' / 'voices.jsonl', 'w',
               encoding='utf-8') as f:
         json.dump({'entries': [], 'characters': {}}, f)
     return tmp_path

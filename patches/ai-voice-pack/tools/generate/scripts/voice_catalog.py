@@ -4,15 +4,17 @@
 Строит каталог озвучки из tl/ru переводов и script.rpy:
 
   - uid = md5(old) — полный 32-hex (язык-независимый ключ)
-  - catalog/voices.json   — uid, old, new, who, arc, scene, category
+  - catalog/voices.jsonl  — uid, old, new, who, arc, scene, category
+                            (JSONL: строка 1 = метаданные, далее по записи)
   - catalog/label_arc.json — label -> arc (рантайм-мапа для auto_voice)
 
 Категории: dialogue / narration / menu / ui (ui и menu не озвучиваются).
 
 Запуск:
-  python tools/voice_catalog.py
+  python tools/voice_catalog.py [game_dir] [--out DIR]
 """
 
+import argparse
 import glob
 import hashlib
 import json
@@ -152,7 +154,18 @@ def parse_script():
     return old_who, old_labels, menu_texts, labels, char_names
 
 
-def build():
+def build(game_dir=None, out_dir=None):
+    """Сборка каталога.
+
+    game_dir — папка установки игры (по умолчанию — рядом со скриптом);
+    out_dir — куда писать catalog/ (по умолчанию — реальный каталог).
+    """
+    global TL_RU, SCRIPT, CATALOG_DIR
+    if game_dir:
+        TL_RU = os.path.join(game_dir, 'game', 'tl', 'ru')
+        SCRIPT = os.path.join(game_dir, 'game', 'script.rpy')
+    if out_dir:
+        CATALOG_DIR = out_dir
     print('parsing tl/ru ...')
     tl_entries = parse_tl()
     print('  tl entries: {}'.format(len(tl_entries)))
@@ -231,15 +244,17 @@ def build():
 
     os.makedirs(CATALOG_DIR, exist_ok=True)
 
-    voices_path = os.path.join(CATALOG_DIR, 'voices.json')
-    with open(voices_path, 'w', encoding='utf-8') as f:
-        json.dump(dict(
-            version=1,
-            uid_source='md5(old utf-8) hexdigest 32',
-            characters=char_names,
-            totals=dict(total=len(entries), **cats),
-            entries=entries,
-        ), f, ensure_ascii=False, indent=1)
+    voices_path = os.path.join(CATALOG_DIR, 'voices.jsonl')
+    meta = dict(
+        version=1,
+        uid_source='md5(old utf-8) hexdigest 32',
+        characters=char_names,
+        totals=dict(total=len(entries), **cats),
+    )
+    with open(voices_path, 'w', encoding='utf-8', newline='\n') as f:
+        f.write(json.dumps(meta, ensure_ascii=False) + '\n')
+        for e in entries:
+            f.write(json.dumps(e, ensure_ascii=False) + '\n')
     print('wrote {} ({:,} entries)'.format(voices_path, len(entries)))
 
     la_path = os.path.join(CATALOG_DIR, 'label_arc.json')
@@ -268,4 +283,10 @@ def build():
 
 
 if __name__ == '__main__':
-    build()
+    ap = argparse.ArgumentParser(description='Сборка каталога озвучки TSSR')
+    ap.add_argument('game_dir', nargs='?', default=None,
+                    help='папка игры (по умолчанию — рядом со скриптом)')
+    ap.add_argument('--out', default=None,
+                    help='куда писать catalog/ (по умолчанию — реальный)')
+    a = ap.parse_args()
+    build(game_dir=a.game_dir, out_dir=a.out)

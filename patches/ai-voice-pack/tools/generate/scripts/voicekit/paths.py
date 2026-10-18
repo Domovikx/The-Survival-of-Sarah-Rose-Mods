@@ -3,7 +3,7 @@
 Структура voice_candidates/{Name}/:
   generated/     сырьё от voice_design (01.mp3, 02.mp3, ...)
   gen_selected/  отобранные вручную ({Name}.mp3, {Name}_1.mp3)
-  {Name}.wav     АКТИВНЫЙ реф в корне каста (voices.yaml ссылается сюда);
+  {Name}.wav     АКТИВНЫЙ реф в корне каста (его ищет система: load_voices);
                  варианты A/B рядом: {Name}_1.wav, {Name}_2.wav (неактивные)
 
 Правило: скриптам запрещено хардкодить пути — только через этот модуль.
@@ -12,18 +12,21 @@
 import os
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+# Корень репы: пресеты живут в config/ на уровне репы (см. AGENTS.md).
+PKG_ROOT = os.path.dirname(os.path.dirname(ROOT))       # patches/ai-voice-pack
+REPO_ROOT = os.path.dirname(os.path.dirname(PKG_ROOT))  # корень репы
 
 TOOLS_DIR = os.path.join(ROOT, 'tools')
 VOICE_CANDIDATES = os.path.join(ROOT, 'voice_candidates')
 CATALOG_DIR = os.path.join(ROOT, 'catalog')
-CONFIG_DIR = os.path.join(ROOT, 'config')
+CONFIG_DIR = os.path.join(REPO_ROOT, 'config')
 OUTPUT_DIR = os.path.join(ROOT, 'output')
 AI_VOICE_DIR = os.path.join(ROOT, 'ai_voice')
 
-VOICES_JSON = os.path.join(CATALOG_DIR, 'voices.json')
+VOICES_JSONL = os.path.join(CATALOG_DIR, 'voices.jsonl')
 VOICE_LIST_JSON = os.path.join(CATALOG_DIR, 'voice_list.json')
 LABEL_ARC_JSON = os.path.join(CATALOG_DIR, 'label_arc.json')
-CAST_SUMMARY_YAML = os.path.join(VOICE_CANDIDATES, 'voice_candidates.yaml')
+CAST_SUMMARY_JSONL = os.path.join(VOICE_CANDIDATES, 'voice_candidates.jsonl')
 MISSING_VOICES_MD = os.path.join(CATALOG_DIR, 'missing_voices.md')
 SYNC_REPORT_MD = os.path.join(CATALOG_DIR, 'voice_sync_report.md')
 

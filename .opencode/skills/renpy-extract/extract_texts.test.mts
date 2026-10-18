@@ -1,5 +1,5 @@
 /**
- * Tests for extract_texts.mjs v4
+ * Tests for extract_texts.mts v4
  * Practical tests that document and verify the extractor behavior.
  *
  * Требования:
@@ -7,12 +7,13 @@
  * - Никаких внешних зависимостей
  *
  * Запуск:
- *   node --test extract_texts.test.mjs
+ *   node --test extract_texts.test.mts
  */
 
 import { describe, it } from "node:test";
 import assert from "node:assert/strict";
 import { mkdtempSync, writeFileSync, readFileSync, mkdirSync, rmSync, existsSync, readdirSync } from "node:fs";
+import type { Dirent } from "node:fs";
 import { join } from "node:path";
 import { tmpdir } from "node:os";
 
@@ -27,11 +28,17 @@ import {
   _unescape,
   VERSION,
   ARC_PATTERNS,
-} from "./extract_texts.mjs";
+} from "./extract_texts.mts";
+import type { BlockEntry } from "./extract_texts.mts";
 
 // ─── Helpers ──────────────────────────────────────────────────
 
-function makeTempDir(prefix = "ext-test-") {
+interface TempDir {
+  path: string;
+  cleanup: () => void;
+}
+
+function makeTempDir(prefix: string = "ext-test-"): TempDir {
   const dir = mkdtempSync(join(tmpdir(), prefix));
   return {
     path: dir,
@@ -41,7 +48,7 @@ function makeTempDir(prefix = "ext-test-") {
 
 // ─── Fixtures ─────────────────────────────────────────────────
 
-function sampleScript(basePath) {
+function sampleScript(basePath: string): string {
   const gameDir = join(basePath, "test_game");
   mkdirSync(gameDir, { recursive: true });
   const content = [
@@ -66,7 +73,7 @@ function sampleScript(basePath) {
   return gameDir;
 }
 
-function dupScript(basePath) {
+function dupScript(basePath: string): string {
   const gameDir = join(basePath, "test_game");
   mkdirSync(gameDir, { recursive: true });
   const content = [
@@ -87,7 +94,7 @@ function dupScript(basePath) {
   return gameDir;
 }
 
-function multiFileScript(basePath) {
+function multiFileScript(basePath: string): string {
   const gameDir = join(basePath, "test_game");
   mkdirSync(gameDir, { recursive: true });
   const subdir = join(gameDir, "subdir");
@@ -105,7 +112,7 @@ function multiFileScript(basePath) {
   return gameDir;
 }
 
-function quotedDialogueScript(basePath) {
+function quotedDialogueScript(basePath: string): string {
   const gameDir = join(basePath, "test_game");
   mkdirSync(gameDir, { recursive: true });
   writeFileSync(
@@ -253,7 +260,7 @@ describe("TestDeduplication", () => {
       const ext = new RenPyExtractor(gameDir);
       ext.parseFile(join(gameDir, "script.rpy"));
 
-      const seen = new Set();
+      const seen = new Set<string>();
       for (const arc of Object.values(ext.arcs)) {
         for (const scene of Object.values(arc)) {
           for (const bd of Object.values(scene.blocks)) {
@@ -393,7 +400,7 @@ describe("TestTranslationPreservation", () => {
       ext.setExistingTranslations(join(tmp.path, "tl", "ru"));
       ext.scan();
 
-      let found = null;
+      let found: BlockEntry | null = null;
       for (const arc of Object.values(ext.arcs)) {
         for (const scene of Object.values(arc)) {
           for (const bd of Object.values(scene.blocks)) {
@@ -419,7 +426,7 @@ describe("TestTranslationPreservation", () => {
       const ext = new RenPyExtractor(gameDir);
       ext.scan();
 
-      let found = null;
+      let found: BlockEntry | null = null;
       for (const arc of Object.values(ext.arcs)) {
         for (const scene of Object.values(arc)) {
           for (const bd of Object.values(scene.blocks)) {
@@ -762,8 +769,8 @@ describe("TestQuotedDialogue", () => {
       const ext = new RenPyExtractor(gameDir);
       ext.parseFile(join(gameDir, "script.rpy"));
 
-      const razaLines = [];
-      const narrationLines = [];
+      const razaLines: BlockEntry[] = [];
+      const narrationLines: BlockEntry[] = [];
 
       for (const arc of Object.values(ext.arcs)) {
         for (const scene of Object.values(arc)) {
@@ -824,7 +831,7 @@ describe("TestQuotedDialogue", () => {
       const ext = new RenPyExtractor(gameDir);
       ext.parseFile(join(gameDir, "script.rpy"));
 
-      const razaLines = [];
+      const razaLines: BlockEntry[] = [];
       for (const arc of Object.values(ext.arcs)) {
         for (const scene of Object.values(arc)) {
           for (const bd of Object.values(scene.blocks)) {
@@ -843,7 +850,7 @@ describe("TestQuotedDialogue", () => {
       assert.ok(!("s" in ext.characterBlocks));
 
       // Guard Captain
-      let gcLines = [];
+      let gcLines: BlockEntry[] = [];
       for (const arc of Object.values(ext.arcs)) {
         for (const scene of Object.values(arc)) {
           for (const bd of Object.values(scene.blocks)) {
@@ -870,8 +877,8 @@ describe("TestQuotedDialogue", () => {
       const outDir = join(tmp.path, "tl", "ru");
       generateRpy(data, outDir);
 
-      function walk(dir) {
-        let entries;
+      function walk(dir: string): void {
+        let entries: Dirent[];
         try {
           entries = readdirSync(dir, { withFileTypes: true });
         } catch {
@@ -911,8 +918,8 @@ describe("TestQuotedDialogue", () => {
       generateRpy(data, outDir);
 
       let foundGood = false;
-      function walk(dir) {
-        let entries;
+      function walk(dir: string): void {
+        let entries: Dirent[];
         try {
           entries = readdirSync(dir, { withFileTypes: true });
         } catch {
@@ -982,14 +989,14 @@ describe("TestEscapedQuotesRoundtrip", () => {
       const outDir = join(tmp.path, "tl", "ru");
       generateRpy(data, outDir);
 
-      function walk(dir) {
-        let entries;
+      function walk(dir: string): string[] {
+        let entries: Dirent[];
         try {
           entries = readdirSync(dir, { withFileTypes: true });
         } catch {
           return [];
         }
-        const files = [];
+        const files: string[] = [];
         for (const e of entries) {
           const fp = join(dir, e.name);
           if (e.isFile() && e.name.endsWith(".rpy")) files.push(fp);

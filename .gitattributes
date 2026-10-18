@@ -21,4 +21,5 @@
 *.yml text
 *.py text
 *.ts text
+*.mts text
 *.mjs text

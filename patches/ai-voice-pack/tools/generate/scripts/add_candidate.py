@@ -80,13 +80,11 @@ def cut_and_clean(name, mp3_path, variant=None, preset=None):
 
 
 def load_who_map():
-    """Из catalog/voices.json достаём {имя: [who]}."""
-    import json
-    path = paths.VOICES_JSON
-    if not os.path.exists(path):
+    """Из catalog/voices.jsonl достаём {имя: [who]} (единая загрузка)."""
+    try:
+        data = catalog.load_catalog()
+    except Exception:
         return {}
-    with open(path, encoding='utf-8') as f:
-        data = json.load(f)
     chars = data.get('characters', {})
     who_map = {}
     for who, name in chars.items():

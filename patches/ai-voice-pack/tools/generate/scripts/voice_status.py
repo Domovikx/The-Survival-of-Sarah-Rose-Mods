@@ -2,7 +2,7 @@
 """Статус и прогноз генерации озвучки TSSR.
 
 Считает: сделано реплик (стем с .opus/.wav, RU/EN), % от плана
-(voices.json: dialogue+narration), завершённые арки, размер, скорость
+(voices.jsonl: dialogue+narration), завершённые арки, размер, скорость
 (замер прироста), прогноз до конца, здоровье процессов и tmp-сирот.
 
 ЗАПУСК:
@@ -58,7 +58,7 @@ _CATALOG_CACHE = None
 
 
 def _catalog_data():
-    """Кэш voices.json: план/статус дергают его десятки раз (42 вызова = 8.6с)."""
+    """Кэш voices.jsonl: план/статус дергают его десятки раз (42 вызова = 8.6с)."""
     global _CATALOG_CACHE
     if _CATALOG_CACHE is None:
         try:

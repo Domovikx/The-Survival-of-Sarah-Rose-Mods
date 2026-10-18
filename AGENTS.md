@@ -72,7 +72,7 @@ wav не пишется; `--keep-wav` = старая цепочка), легас
 
 ```text
 catalog/
-  voices.json                  # 68 254 записей: uid, old, new, who, arc, scene, category
+  voices.jsonl                 # 68 254 записей: uid, old, new, who, arc, scene, category
   label_arc.json               # label -> Arc (рантайм-мапа для voice_config.rpy)
   missing_voices.md            # ЗАГЛУШКИ: кто без голоса (генерится voice_sync.py report)
   voice_sync_report.md         # расхождения слоёв: NEW/BROKEN/ORPHAN
@@ -101,7 +101,7 @@ tools/
                                #   fs (безопасные операции), tts_env (пути моделей)
   voice_sync.py                # АКТУАЛИЗАТОР: status/update/migrate/report
                                #   (создаёт структуру новым, чинит пути, отчёты)
-  voice_catalog.py             # tl/ru + script.rpy -> voices.json + label_arc.json
+  voice_catalog.py             # tl/ru + script.rpy -> voices.jsonl + label_arc.json
   voice_design.py              # VoiceDesign-генерация кандидатов -> generated/
   add_candidate.py             # gen_selected/*.mp3 -> корень каста: {Имя}[_{v}].wav
                                #   (нарезка + чистка одномерным прогоном)
@@ -189,7 +189,7 @@ tools/
    (одним прогоном: mp3 -> ПЕРВЫЕ 10с -> чистка -> loudnorm -16/TP -1.5 ->
    корень каста: {Имя}.wav). Единый уровень громкости для ВСЕХ рефов.
 
-Категории (voices.json): dialogue 22 326, narration 44 941, menu 491, ui 496.
+Категории (voices.jsonl): dialogue 22 326, narration 44 941, menu 491, ui 496.
 Озвучиваются только dialogue + narration, и только касты с активным рефом
 {Имя}.wav (остальные — пропуск, видны в missing_voices.md).
 
@@ -240,7 +240,7 @@ C:\tools\cosyvoice3\.venv\Scripts\python.exe tools/voice_batch.py \
 PY="C:\pinokio\api\Qwen3-TTS-Pinokio.git\app\venv\Scripts\python.exe"
 "$PY" tools/voice_design.py --list                # каст
 "$PY" tools/voice_design.py --char Carolyn --n 6  # 6 кандидатов -> generated/01..06.mp3
-python tools/voice_sync.py report                 # сводка -> voice_candidates.yaml
+python tools/voice_sync.py report                 # сводка -> voice_candidates.jsonl
 ```
 
 Правила: каст в `voice_candidates/{Имя}/{Имя}.yaml` (instruct_en — ФИЗИОГНОМИКА + СОЦИАЛЬНАЯ РОЛЬ для генерации:
@@ -252,7 +252,7 @@ texts — рус. фразы с ЯВНЫМ признаком пола; файл
 <10с (не годится в реф), длиннее — риск дрейфа голоса внутри клипа
 (voice_design.py печатает WARN для коротких); клип должен быть ≥10с — тул сам добирает длину (slow-инструкция →
 +вторая фраза); резюмабелен (существующие файлы пропускает). Итоги прогона и
-сводка каста — в `voice_candidates/voice_candidates.yaml`
+сводка каста — в `voice_candidates/voice_candidates.jsonl`
 (summary/cast/generation; --char принимает ОДНО имя — повторяй флаг; параллельно
 можно гнать 2 процесса по OMP_NUM_THREADS=8, ~8 ГБ RAM на процесс).
 Подробнее: .opencode/skills/tssr-voice-design/SKILL.md.

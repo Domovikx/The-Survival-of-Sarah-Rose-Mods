@@ -5,17 +5,39 @@ import { join, relative, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 
 /**
+ * Translation counters for a single file.
+ */
+export interface FileStats {
+  total: number;
+  translated: number;
+}
+
+/**
+ * A single analyzed .rpy file entry.
+ */
+export interface FileEntry {
+  path: string;
+  filepath?: string;
+  stats: FileStats;
+}
+
+/**
+ * Map of arc name -> analyzed files.
+ */
+export type ArcsMap = Record<string, FileEntry[]>;
+
+/**
  * Analyze a single .rpy file content.
  * Counts old/new pairs and detects if translation is present (old !== new).
  *
- * @param {string} content - The file content
- * @returns {{ total: number, translated: number }}
+ * @param content - The file content
+ * @returns Total and translated counters
  */
-export function analyzeContent(content) {
+export function analyzeContent(content: string): FileStats {
   let total = 0;
   let translated = 0;
   let inTranslate = false;
-  let currentOld = null;
+  let currentOld: string | null = null;
 
   for (const rawLine of content.split("\n")) {
     const s = rawLine.trim();
@@ -58,14 +80,14 @@ export function analyzeContent(content) {
  * Recursively collect all .rpy files from tlDir,
  * analyze each, group by arc folder.
  *
- * @param {string} tlDir - Absolute path to game/tl/ru/
- * @param {string} projectRoot - Absolute path to project root
- * @returns {object} arcs map
+ * @param tlDir - Absolute path to game/tl/ru/
+ * @param projectRoot - Absolute path to project root
+ * @returns arcs map
  */
-export function collectFiles(tlDir, projectRoot) {
-  const arcs = {};
+export function collectFiles(tlDir: string, projectRoot: string): ArcsMap {
+  const arcs: ArcsMap = {};
 
-  function walk(dir) {
+  function walk(dir: string): void {
     const entries = readdirSync(dir, { withFileTypes: true });
     for (const entry of entries.sort((a, b) => a.name.localeCompare(b.name))) {
       const fullPath = join(dir, entry.name);
@@ -90,12 +112,12 @@ export function collectFiles(tlDir, projectRoot) {
 /**
  * Format human-readable status report.
  *
- * @param {object} arcs - arcs map from collectFiles
- * @param {boolean} showAll - show fully translated files too
- * @returns {string} formatted status text
+ * @param arcs - arcs map from collectFiles
+ * @param showAll - show fully translated files too
+ * @returns formatted status text
  */
-export function formatStatus(arcs, showAll = false) {
-  const lines = [];
+export function formatStatus(arcs: ArcsMap, showAll = false): string {
+  const lines: string[] = [];
   lines.push("=== Translation status: game/tl/ru/ ===");
   lines.push("");
 
@@ -113,7 +135,7 @@ export function formatStatus(arcs, showAll = false) {
 
     const label = arcName === "__root__" ? "(root files: misc_strings.rpy, screens.rpy)" : arcName;
 
-    let status;
+    let status: string;
     if (totalStrings === 0) status = "EMPTY";
     else if (translatedStrings === totalStrings) status = "DONE";
     else if (translatedStrings === 0) status = "NOT_STARTED";
@@ -151,12 +173,12 @@ export function formatStatus(arcs, showAll = false) {
 /**
  * Format copy-ready paths depending on mode.
  *
- * @param {object} arcs - arcs map from collectFiles
- * @param {string} mode - 'arcs' | 'files-untranslated' | 'files-all' | 'arcs-untranslated'
- * @returns {string} newline-separated paths
+ * @param arcs - arcs map from collectFiles
+ * @param mode - 'arcs' | 'files-untranslated' | 'files-all' | 'arcs-untranslated'
+ * @returns newline-separated paths
  */
-export function formatCopyReady(arcs, mode) {
-  const lines = [];
+export function formatCopyReady(arcs: ArcsMap, mode: string): string {
+  const lines: string[] = [];
   const sortedArcs = Object.keys(arcs).sort();
 
   if (mode === "arcs") {
@@ -202,7 +224,7 @@ export function formatCopyReady(arcs, mode) {
 /**
  * CLI entry point.
  */
-function main() {
+function main(): void {
   const args = process.argv.slice(2);
 
   const mode = args[0] || "status";

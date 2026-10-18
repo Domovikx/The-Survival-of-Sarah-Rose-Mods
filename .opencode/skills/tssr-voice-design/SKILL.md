@@ -21,7 +21,7 @@ voice_candidates/{Имя}/    # сюда падают кандидаты (+ {И�
   generated/NN.mp3         # кандидаты: 01.mp3, 02.mp3, ... (сырьё)
   gen_selected/            # отобранные вручную (add_candidate делает рефы)
 voice_candidates/
-  voice_candidates.yaml    # СВОДНАЯ СТАТИСТИКА каста (summary/cast/generation)
+  voice_candidates.jsonl   # СВОДНАЯ СТАТИСТИКА каста (summary/cast/generation)
 voice_candidates/cast.md   # обзорный документ «кто озвучивает» (справка)
 ```
 
@@ -29,7 +29,7 @@ voice_candidates/cast.md   # обзорный документ «кто озву
 Добавил/поправил yaml → персонаж сразу появился в `--list` и генерации.
 Старый `voice_design_cast.py` удалён при миграции (2026-09-02).
 
-**Статистика** — `voice_candidates/voice_candidates.yaml`:
+**Статистика** — `voice_candidates/voice_candidates.jsonl`:
 
 - `summary`: всего / с голосом / с кандидатами / без ничего
 - `cast`: по каждому персонажу статус (voice_ready/candidates/need_generation)
@@ -70,7 +70,7 @@ OMP_NUM_THREADS=8 "$PY" tools/voice_design.py \
 
 Внимание: `--char` принимает ОДНО имя — повторяй флаг для нескольких
 персонажей. Итоги прогона (ok/skip/give_up/fail по каждому) — в
-`voice_candidates/voice_candidates.yaml` → `generation`.
+`voice_candidates/voice_candidates.jsonl` → `generation`.
 
 ## Формат каста (voice_candidates/{Имя}/{Имя}.yaml)
 

@@ -13,12 +13,12 @@ voice_candidates/{Name}/
   {Name}.yaml              # КОНТРАКТ (pydantic) + отчёт-поля скриптов
   generated/               # СЫРЬЁ: voice_design.py пишет сюда 01.mp3..NN.mp3
   gen_selected/            # ОТБОР: вручную лучшие ({Name}.mp3 — один топ-файл)
-  in_progress/             # РАБОЧИЕ рефы: add_candidate (нарезка 10с + чистка),
-                           #   A/B-варианты, эксперименты с фильтрами
-  ref/                     # ФИНАЛ: {Name}.wav — единственное, что видит система
+  {Name}.wav               # АКТИВНЫЙ реф — единственное, что видит система
+                           #   (пишет add_candidate, выбирает voice_manage select)
+  {Name}_1.wav, ...        # рабочие варианты A/B (по умолчанию неактивны)
 ```
 
-Конвейер строго односторонний: `generated → gen_selected → in_progress → ref`.
+Конвейер строго односторонний: `generated → gen_selected → корень каста (рефы)`.
 
 ## Схема потока
 
@@ -32,24 +32,23 @@ voice_candidates/{Name}/
  gen_selected/  Alaric.mp3               ← отбор (вручную, один топ-файл)
         │  add_candidate --only Alaric (нарезка 10с + чистка)
         ▼
- in_progress/  Alaric_1.wav ...          ← рабочие (A/B, фильтры)
-        │  A/B: voice_batch --ref .../in_progress/Alaric_1.wav
+ Alaric_1.wav ... (корень каста)         ← рабочие (A/B, фильтры)
+        │  A/B: voice_batch --ref voice_candidates/Alaric/Alaric_1.wav
         ▼
- ref/  Alaric.wav                        ← финал (voice_manage select)
-        │  config/voices.yaml:
-        │    ref: voice_candidates/Alaric/ref/Alaric.wav
+ Alaric.wav (корень каста)               ← финал (voice_manage select)
+        │  каст Alaric.yaml: who_codes — кого озвучиваем (рубильник)
         ▼
  voice_batch --char Alaric → ai_voice/ru/{arc}/{uid}__Alaric.opus
 ```
 
 ## Роли папок
 
-| Стадия       | Папка           | Кто пишет                 | Кто читает                                             |
-| ------------ | --------------- | ------------------------- | ------------------------------------------------------ |
-| Сырьё        | `generated/`    | voice_design (авто)       | человек                                                |
-| Отбор        | `gen_selected/` | человек                   | add_candidate                                          |
-| Рабочие рефы | `in_progress/`  | add_candidate, clean_refs | voice_batch `--ref`, voice_manage, voice_preview       |
-| Финал        | `ref/`          | voice_manage `select`     | voice_batch (voices.yaml), voice_manage, voice_preview |
+| Стадия       | Папка           | Кто пишет                 | Кто читает                                                 |
+| ------------ | --------------- | ------------------------- | ---------------------------------------------------------- |
+| Сырьё        | `generated/`    | voice_design (авто)       | человек                                                    |
+| Отбор        | `gen_selected/` | человек                   | add_candidate                                              |
+| Рабочие рефы | корень каста    | add_candidate, clean_refs | voice_batch `--ref`, voice_manage, voice_preview           |
+| Финал        | корень каста    | voice_manage `select`     | voice_batch (реф + who_codes), voice_manage, voice_preview |
 
 ## Контракт {Name}.yaml
 
@@ -63,14 +62,14 @@ voice_candidates/{Name}/
 
 ## Актуализатор: voice_sync.py
 
-Слои-источники: каталог (`catalog/voices.json` — кто есть в игре),
-`voice_candidates/` (кто в работе), `config/voices.yaml` (кого озвучиваем —
-единственный рубильник генерации).
+Слои-источники: каталог (`catalog/voices.jsonl` — кто есть в игре),
+`voice_candidates/` (кто в работе), реф + who_codes активных кастов
+(кого озвучиваем — единственный рубильник генерации).
 
 | Команда             | Что делает                                                                 |
 | ------------------- | -------------------------------------------------------------------------- |
 | `status`            | сводка слоёв + расхождения (console)                                       |
-| `update [--apply]`  | структура + yaml-заглушки новым персонажам, сводка voice_candidates.yaml   |
+| `update [--apply]`  | структура + yaml-заглушки новым персонажам, сводка voice_candidates.jsonl  |
 | `migrate [--apply]` | переезд refs/ → папки (одноразовый, выполнен 2026-09-02)                   |
 | `report`            | missing_voices.md + voice_sync_report.md (NEW/READY/BROKEN/FOREIGN/ORPHAN) |
 
@@ -82,7 +81,7 @@ voice_candidates/{Name}/
 | Модуль        | Роль                                                             |
 | ------------- | ---------------------------------------------------------------- |
 | `paths.py`    | ВСЯ раскладка в одном месте (скриптам запрещено хардкодить пути) |
-| `catalog.py`  | voices.json / voices.yaml / каст — единая загрузка без дублей    |
+| `catalog.py`  | voices.jsonl / каст — единая загрузка без дублей                 |
 | `contract.py` | pydantic-модель каста, валидация, экспорт JSON Schema            |
 | `fs.py`       | безопасные операции: create-if-missing, dry-run, лог             |
 | `tts_env.py`  | пути моделей/приложений (env-переопределяемые)                   |

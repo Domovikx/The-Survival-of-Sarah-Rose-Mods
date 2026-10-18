@@ -6,7 +6,7 @@ import sys
 import pytest
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0, os.path.join(ROOT, 'tools'))
+sys.path.insert(0, os.path.join(ROOT, 'tools', 'generate', 'scripts'))
 
 import yaml  # noqa: E402
 
@@ -51,10 +51,10 @@ def patch_all_paths(monkeypatch, tmp_path):
         ('VOICE_CANDIDATES', tmp_path / 'voice_candidates'),
         ('CATALOG_DIR', tmp_path / 'catalog'),
         ('CONFIG_DIR', tmp_path / 'config'),
-        ('VOICES_JSON', tmp_path / 'catalog' / 'voices.json'),
+        ('VOICES_JSONL', tmp_path / 'catalog' / 'voices.jsonl'),
         ('VOICE_LIST_JSON', tmp_path / 'catalog' / 'voice_list.json'),
-        ('CAST_SUMMARY_YAML', tmp_path / 'voice_candidates'
-         / 'voice_candidates.yaml'),
+        ('CAST_SUMMARY_JSONL', tmp_path / 'voice_candidates'
+         / 'voice_candidates.jsonl'),
         ('MISSING_VOICES_MD', tmp_path / 'catalog' / 'missing_voices.md'),
         ('SYNC_REPORT_MD', tmp_path / 'catalog' / 'voice_sync_report.md'),
     ):
@@ -85,7 +85,7 @@ def tmp_layout(tmp_path, monkeypatch):
     (vc / 'Samayra' / 'ref' / 'Carolyn.wav').write_bytes(b'RIFF')
 
     (tmp_path / 'catalog').mkdir()
-    with open(tmp_path / 'catalog' / 'voices.json', 'w',
+    with open(tmp_path / 'catalog' / 'voices.jsonl', 'w',
               encoding='utf-8') as f:
         import json
         json.dump({'entries': [], 'characters': {}}, f)
@@ -132,7 +132,7 @@ def test_update_creates_structure(tmp_path, monkeypatch):
     os.makedirs(paths.CONFIG_DIR, exist_ok=True)
     os.makedirs(paths.CATALOG_DIR, exist_ok=True)
     import json
-    with open(paths.VOICES_JSON, 'w', encoding='utf-8') as f:
+    with open(paths.VOICES_JSONL, 'w', encoding='utf-8') as f:
         json.dump({'entries': [], 'characters': {'zz': 'Zed'}}, f)
 
     voice_sync.cmd_update(type('A', (), {'apply': True})())
