@@ -1,0 +1,14 @@
+node_modules/
+**/node_modules/
+.husky/_
+dist/
+**/dist/
+tmp/
+**/tmp/
+site/
+package-lock.json
+patches/ai-voice-pack/audio/
+patches/ai-voice-pack/tools/generate/voice_candidates/
+patches/ai-voice-pack/tools/generate/output/
+site/public/
+manifest.json

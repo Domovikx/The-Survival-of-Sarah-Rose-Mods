@@ -1,0 +1,69 @@
+{
+  // cSpell: корневой словарь репы (подхватывается расширением автоматически;
+  // settings.json не раздуваем). Русский словарь — code-spell-checker-russian.
+  // Каталоги с именами персонажей/арк и аудио-индексами в спелл-проверку
+  // не входят — см. ignorePaths.
+  "version": "0.2",
+  "language": "en,ru",
+  "import": ["@cspell/dict-ru_ru/cspell-ext.json"],
+  "dictionaryDefinitions": [
+    {
+      "name": "tssr-project",
+      "path": "./cspell-project-words.txt",
+      "addWords": true
+    }
+  ],
+  "dictionaries": ["tssr-project"],
+  "ignorePaths": [
+    "node_modules/**",
+    "**/node_modules/**",
+    ".husky/**",
+    ".git/**",
+    "dist/**",
+    "**/dist/**",
+    "tmp/**",
+    "**/tmp/**",
+    "site/public/**",
+    "patches/ai-voice-pack/audio/**",
+    "patches/ai-voice-pack/tools/generate/voice_candidates/**",
+    "patches/ai-voice-pack/tools/generate/output/**",
+    "manifest.json",
+    "package-lock.json"
+  ],
+  "words": [
+    "alahaem",
+    "alaric",
+    "atilla",
+    "bagrad",
+    "belmont",
+    "calshure",
+    "caliban",
+    "domovikx",
+    "gahaem",
+    "gilead",
+    "hassar",
+    "hinterlands",
+    "hyral",
+    "jaeid",
+    "lethram",
+    "maeiv",
+    "marion",
+    "marius",
+    "miriam",
+    "naydeen",
+    "opus",
+    "rahayal",
+    "razaphel",
+    "renpy",
+    "rpy",
+    "rpyc",
+    "sakar",
+    "samayra",
+    "sigmund",
+    "tirion",
+    "tssr",
+    "vaelen",
+    "varga",
+    "xanthippe"
+  ]
+}

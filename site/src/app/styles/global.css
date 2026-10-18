@@ -1,0 +1,94 @@
+/* Единственный css-файла проекта (канон kubica): документ/body/токены +
+
+* хост инъекции @stylexjs/unplugin — unplugin дописывает собранный stylex
+* в первый css-ассет билда, импорт в main.tsx обязателен. UI-стили — stylex. */
+@layer base, stylex;
+
+/* Токены тем: тёмная — дефолт (атрибут data-theme на <html> пишет ThemeToggle
+
+* до первого рендера через inline-скрипт в index.html — здесь тем же значением). */
+:root,
+:root[data-theme='dark'] {
+  --bg: #141824;
+  --panel: #1d2333;
+  --panel-2: #232b3f;
+  --text: #e8ebf2;
+  --muted: #9aa4bc;
+  /* Акцент — индиго (холодный, в одной гамме со Steam-синим,
+  * 2026-10-15: красный и янтарь убраны — диссонировали) */
+  --accent: #5563d8;
+  --accent-fg: #9aa6f5;
+  --accent-hover: #4653c4;
+  /* Ссылки в индиго-гамме */
+  --link: #9aa6f5;
+  --border: #2d3550;
+  --steam-fg: #ffffff;
+  --steam-bg: #1b2838;
+  --steam-border: #66c0f4;
+  --age-fg: #9aa6f5;
+  --age-bg: #1b2140;
+  --age-border: #384180;
+}
+
+:root[data-theme='light'] {
+  --bg: #f4f6fb;
+  --panel: #ffffff;
+  --panel-2: #eef1f8;
+  --text: #1a2030;
+  --muted: #5a6478;
+  /*Акцент — индиго (см. тёмную тему) */
+  --accent: #3f4dbf;
+  --accent-fg: #3f4dbf;
+  --accent-hover: #33409b;
+  /* Ссылки в индиго-гамме*/
+  --link: #3f4dbf;
+  --border: #d7dcea;
+  --steam-fg: #ffffff;
+  --steam-bg: #1b2838;
+  --steam-border: #2a475e;
+  --age-fg: #3f4dbf;
+  --age-bg: #e9ebfa;
+  --age-border: #bcc3f0;
+}
+
+/* ВАЖНО: правила документа — ТОЛЬКО в @layer base: вне слоёв они бьют
+
+* stylex (он в @layer stylex) и убивают цвета кнопок-ссылок. */
+@layer base {
+  html {
+    color-scheme: dark;
+  }
+  html[data-theme='light'] {
+    color-scheme: light;
+  }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font:
+      16px/1.6 -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  a {
+    color: var(--link);
+  }
+  /* Кнопкам (классы есть) hover задают их собственные stylex-стили —
+
+* глобальный фильтр бьёт только по «голым» текстовым ссылкам. */
+  a:not([class]):hover {
+    filter: brightness(1.15);
+  }
+
+  code {
+    background: var(--panel-2);
+    padding: 1px 6px;
+    border-radius: 6px;
+    font-size: 14px;
+    word-break: break-all;
+  }
+
+  img {
+    max-width: 100%;
+  }
+}

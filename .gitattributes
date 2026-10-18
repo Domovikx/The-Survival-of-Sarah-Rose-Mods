@@ -1,0 +1,24 @@
+# Текст/бинарь: автоопределение, но бинарные форматы зафиксированы явно —
+# защита opus/png/ttf/wav от случайной CRLF-конвертации и «грязных» диффов.
+* text=auto
+
+*.opus binary
+*.wav binary
+*.mp3 binary
+*.ogg binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webm binary
+*.mp4 binary
+*.ttf binary
+*.zip binary
+
+*.rpy text
+*.json text
+*.md text
+*.yaml text
+*.yml text
+*.py text
+*.ts text
+*.mjs text

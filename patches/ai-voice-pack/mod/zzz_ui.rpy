@@ -486,7 +486,7 @@ screen tssr_mod_menu():
                 style "tssr_mod_section"
 
             textbutton _("Site"):
-                action OpenURL("https://domovikx.github.io/The-Survival-of-Sarah-Rose/")
+                action OpenURL("https://domovikx.github.io/The-Survival-of-Sarah-Rose-Mods/")
                 style "tssr_link"
 
             # TODO(Boosty): раскомментировать, когда будет постоянный адрес:

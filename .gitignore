@@ -1,5 +1,12 @@
 # Сборочные артефакты (дистрибутивные zip'ы; генерятся tools/build/build_pack.py)
 dist/
+site/dist/
+site/test-results/
+site/preview.log
+
+# Node
+node_modules/
+**/node_modules/
 
 # Python
 __pycache__/
@@ -8,3 +15,5 @@ __pycache__/
 # Ren'Py (компиляции и рантайм-диагностика)
 *.rpyc
 voice_debug.log
+log.txt
+traceback.txt

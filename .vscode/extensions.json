@@ -1,0 +1,11 @@
+{
+  // Рекомендуемые расширения VSCode для репы (промпт «Install all recommended
+  // extensions» при первом открытии). cSpell с русским словарём ловит опечатки
+  // в md-доках; markdownlint ругается по .markdownlint-cli2.jsonc.
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "DavidAnson.vscode-markdownlint",
+    "streetsidesoftware.code-spell-checker",
+    "streetsidesoftware.code-spell-checker-russian"
+  ]
+}

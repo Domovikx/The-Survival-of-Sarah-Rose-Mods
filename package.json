@@ -1,0 +1,39 @@
+{
+  "name": "tssr-mods",
+  "private": true,
+  "type": "module",
+  "description": "The Survival of Sarah Rose — мод-патчи (AI Voice Pack + переводы): пайплайн и лендинг",
+  "scripts": {
+    "prepare": "husky",
+    "extract": "node .opencode/skills/renpy-extract/extract_texts.mjs extract",
+    "extract-builtins": "node .opencode/skills/renpy-extract/extract_texts.mjs extract-builtins",
+    "verify": "node .opencode/skills/renpy-extract/extract_texts.mjs verify",
+    "dedup": "node .opencode/skills/renpy-dedup/dedup_translations.mjs",
+    "dedup-dry": "node .opencode/skills/renpy-dedup/dedup_translations.mjs --dry-run",
+    "clearcache": "node .opencode/skills/renpy-clear-cache/clear_cache.mjs",
+    "tlstat": "node .opencode/skills/list-translation-files/list_translation_files.mjs",
+    "build:pack": "python patches/ai-voice-pack/tools/build/build_pack.py",
+    "lint:md": "markdownlint-cli2",
+    "lint:md:fix": "markdownlint-cli2 --fix",
+    "spell": "cspell lint \"**/*.md\" --no-progress",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "lint-staged": {
+    "*.{js,mjs,cjs,ts,tsx,mts,cts}": [
+      "prettier --write"
+    ],
+    "*.{json,css,html,md,yml,yaml}": [
+      "markdownlint-cli2 --fix",
+      "prettier --write"
+    ]
+  },
+  "devDependencies": {
+    "@cspell/dict-ru_ru": "^2.3.4",
+    "cspell": "^9.0.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.6.0",
+    "markdownlint-cli2": "^0.23.3",
+    "prettier": "^3.9.10"
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "meta": {
+    "title": "The Survival of Sarah Rose — AI Voice Pack + RU localization",
+    "description": "Unofficial fan mod: the original English text fully voiced by 75+ AI-cloned voices — plus a complete Russian localization with Russian voice acting. Free, 18+."
+  },
+  "header": {
+    "brand": "TSSR · AI voice pack",
+    "steam": "Steam page",
+    "github": "GitHub",
+    "download": "Download ZIP",
+    "langLabel": "Language",
+    "themeLabel": "Toggle theme"
+  },
+  "hero": {
+    "title": "The Survival of Sarah Rose — AI voice pack",
+    "subtitle": "Unofficial fan mod: the original English text fully voiced — 75+ cloned voices with emotion-aware delivery for every line. A complete Russian localization is included as well.",
+    "badgeTranslate": "Original English text — 100% voiced",
+    "badgeVoice": "Voice acting 100% complete (EN + RU, 134 534 lines)",
+    "badgeFormat": "Opus 24 kbps — pack is only ~1.7 GB",
+    "badgeEngine": "Ren'Py 7.4.11 · Steam",
+    "badgeAge": "18+ adult content",
+    "ctaSteam": "The Survival of Sarah Rose on Steam",
+    "ctaDownload": "Download ZIP (voice pack + mod)",
+    "ctaGithub": "Source on GitHub",
+    "installHint": "Requires a purchased copy of the game on Steam. Free, CC BY-NC 4.0."
+  },
+  "features": {
+    "title": "What you get",
+    "translateTitle": "Russian localization included",
+    "translateText": "A full translation of 68 254 lines — switch the game to Russian and play the whole story localized.",
+    "voiceTitle": "AI voice acting (EN + RU)",
+    "voiceText": "Cloned voices for every character via CosyVoice3 — the original English text becomes fully voiced, with a parallel Russian voice version.",
+    "emotionTitle": "Emotion-aware delivery",
+    "emotionText": "Every line carries the narrator's state: anger, desire, whisper, sarcasm — not a monotone reading.",
+    "voicesTitle": "75+ unique voices",
+    "voicesText": "Sarah, Narrator, King Orwell, Kate, Thomas, Varga and dozens of other characters."
+  },
+  "demo": {
+    "title": "Hear it in action",
+    "lead": "Real in-game lines with AI voice acting: cloned voices, live emotions. Hit a line — and hear the result.",
+    "play": "Play: {{name}}",
+    "pause": "Pause: {{name}}",
+    "phrases": [
+      { "speaker": "Sarah", "text": "It's always so quiet here. It feels wrong." },
+      { "speaker": "Thomas", "text": "Sarah...I try to put on this front of the perfect king. Even on the battlefield, I cover up my fears." },
+      { "speaker": "Carolyn", "text": "Aah, should I give up my secrets so easily to you?" },
+      { "speaker": "Sarah", "text": "You're not asking me, I'm asking you...stay with me...please. Nobody else in this world has ever been so true a friend to me...more than a friend." },
+      { "speaker": "Garret", "text": "And as for the blood on your hands, what is a few drops more? Surely you don't mean to tell me that you have not killed others before?" },
+      { "speaker": "Sarah", "text": "Each night when I touch myself, my only fantasies are memories of our encounters." },
+      { "speaker": "Narrator", "text": "When he would come to her, her heart ran fast in her chests. When he failed to show, she felt herself nearing to tears." }
+    ]
+  },
+  "voice": {
+    "title": "Voice acting — complete",
+    "total": "100% voiced — all 134 534 lines in both languages (finished 2026-10-18).",
+    "ru": "Russian (RU): 100% — all 19 arcs done",
+    "en": "English (EN): 100% — all 19 arcs done",
+    "missing": "If a line has no voice file yet — the game just plays it silently (no errors, no crashes)."
+  },
+  "install": {
+    "title": "Installation",
+    "step1": "Download the ZIP and unpack its contents into the game folder (Steam: C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Survival of Sarah Rose), replacing files",
+    "step2": "Launch the game and choose the language in the mod settings (the badge in the top-right corner): English — the voiced original, Russian — the full localization with Russian voices",
+    "step3": "Done. The first launch may be slightly slower — Ren'Py rebuilds its cache",
+    "note": "Requires the game bought on Steam. The project is unofficial and not affiliated with the developers or publishers."
+  },
+  "shots": {
+    "title": "Screenshots",
+    "cap1": "Main menu",
+    "cap2": "Opening dialogue",
+    "cap3": "Patch page: language, voice, fonts",
+    "cap4": "Narration and character lines",
+    "cap5": "Narration over the royal capital",
+    "cap6": "Sara runs into her father's arms",
+    "prev": "Previous screenshot",
+    "next": "Next screenshot",
+    "close": "Close",
+    "open": "open full size"
+  },
+  "faq": {
+    "title": "FAQ",
+    "q1": "Is this an official mod?",
+    "a1": "No — an unofficial fan project, not affiliated with the developers or publishers.",
+    "q2": "Is there adult content?",
+    "a2": "Yes — the game is 18+. Download and play only if you are 18 or older.",
+    "q3": "License?",
+    "a3": "The voice pack and translation are CC BY-NC 4.0: free to share and adapt with attribution, non-commercial only.",
+    "q4": "How to help?",
+    "a4": "Star the repository on GitHub, send a pull request or open an issue."
+  },
+  "footer": {
+    "disclaimer": "Unofficial fan work. All rights to the original game belong to its rights holders. Use at your own risk.",
+    "linksLabel": "Links",
+    "linkGithub": "GitHub",
+    "linkSteam": "Steam",
+    "linkIssues": "Issues",
+    "linkLicense": "CC BY-NC 4.0",
+    "age": "18+"
+  }
+}
