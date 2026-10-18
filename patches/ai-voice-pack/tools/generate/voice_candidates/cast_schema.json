@@ -1,0 +1,49 @@
+{
+  "additionalProperties": true,
+  "properties": {
+    "name": {
+      "title": "Name",
+      "type": "string"
+    },
+    "gender": {
+      "default": "?",
+      "title": "Gender",
+      "type": "string"
+    },
+    "age": {
+      "default": "?",
+      "title": "Age",
+      "type": "string"
+    },
+    "who": {
+      "default": "",
+      "title": "Who",
+      "type": "string"
+    },
+    "who_codes": {
+      "items": {},
+      "title": "Who Codes",
+      "type": "array"
+    },
+    "instruct_en": {
+      "default": "",
+      "title": "Instruct En",
+      "type": "string"
+    },
+    "instruct_ru": {
+      "default": "",
+      "title": "Instruct Ru",
+      "type": "string"
+    },
+    "texts": {
+      "items": {},
+      "title": "Texts",
+      "type": "array"
+    }
+  },
+  "required": [
+    "name"
+  ],
+  "title": "CastContract",
+  "type": "object"
+}

@@ -1,0 +1,527 @@
+generation:
+  Alaric:
+    n: 6
+    ok: 0
+    skip: 6
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 05:02
+  Albert:
+    n: 6
+    ok: 0
+    skip: 6
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 05:02
+  Ayaka:
+    n: 6
+    ok: 0
+    skip: 6
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 05:02
+  Barion:
+    n: 6
+    ok: 0
+    skip: 6
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 05:02
+  Captain Belmont:
+    n: 10
+    ok: 10
+    skip: 0
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 10:55
+  Alfred:
+    n: 6
+    ok: 0
+    skip: 6
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 05:02
+  Arthur:
+    n: 6
+    ok: 6
+    skip: 0
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 05:02
+  Atilla:
+    n: 6
+    ok: 0
+    skip: 6
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 05:02
+  Basilisk:
+    n: 6
+    ok: 6
+    skip: 0
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 05:02
+  Bran:
+    n: 6
+    ok: 6
+    skip: 0
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 05:02
+  Caleb:
+    n: 6
+    ok: 0
+    skip: 6
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 05:02
+  Carolyn:
+    n: 6
+    ok: 0
+    skip: 6
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 05:02
+  Cassius:
+    n: 6
+    ok: 0
+    skip: 6
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 05:02
+  Daemon:
+    n: 6
+    ok: 0
+    skip: 6
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 05:02
+  Dalia:
+    n: 6
+    ok: 0
+    skip: 6
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 05:02
+  Damian:
+    n: 6
+    ok: 6
+    skip: 0
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 05:02
+  Dio:
+    n: 6
+    ok: 0
+    skip: 6
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 05:02
+  Duke Antonio:
+    n: 6
+    ok: 0
+    skip: 6
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 05:02
+  Elsa:
+    n: 6
+    ok: 0
+    skip: 6
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 05:02
+  Enya:
+    n: 6
+    ok: 6
+    skip: 0
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 05:02
+  Ephraim:
+    n: 6
+    ok: 0
+    skip: 6
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 05:02
+  Eula:
+    n: 6
+    ok: 0
+    skip: 6
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 05:02
+  Gabriel:
+    n: 6
+    ok: 0
+    skip: 6
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 05:02
+  Garret:
+    n: 6
+    ok: 0
+    skip: 6
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 05:02
+  Generic Female Mature:
+    n: 10
+    ok: 5
+    skip: 5
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 14:06
+  Generic Female Young:
+    n: 6
+    ok: 0
+    skip: 6
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 05:02
+  Generic Male Mature:
+    n: 6
+    ok: 0
+    skip: 6
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 05:02
+  Generic Male Young:
+    n: 6
+    ok: 0
+    skip: 6
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 05:02
+  Gideon:
+    n: 6
+    ok: 0
+    skip: 6
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 05:02
+  Gilead:
+    n: 6
+    ok: 0
+    skip: 6
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 05:02
+  Gorak:
+    n: 10
+    ok: 10
+    skip: 0
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 14:21
+  Hassar:
+    n: 6
+    ok: 0
+    skip: 6
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 05:02
+  Hecate:
+    n: 6
+    ok: 0
+    skip: 6
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 05:02
+  Hugh:
+    n: 6
+    ok: 0
+    skip: 6
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 05:02
+  Jacob:
+    n: 6
+    ok: 0
+    skip: 6
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 05:02
+  Jaeid:
+    n: 6
+    ok: 0
+    skip: 6
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 05:02
+  Jasmine:
+    n: 6
+    ok: 6
+    skip: 0
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 16:15
+  Kamal:
+    n: 6
+    ok: 0
+    skip: 6
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 05:02
+  Kate:
+    n: 6
+    ok: 0
+    skip: 6
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 05:02
+  Kim:
+    n: 6
+    ok: 0
+    skip: 6
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 05:02
+  King Orwell Rose:
+    n: 6
+    ok: 0
+    skip: 6
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 05:02
+  Kravel:
+    n: 6
+    ok: 0
+    skip: 6
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 05:02
+  Krip:
+    n: 6
+    ok: 1
+    skip: 5
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 05:02
+  Lily:
+    n: 6
+    ok: 6
+    skip: 0
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 05:02
+  Maeiv:
+    n: 6
+    ok: 6
+    skip: 0
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 05:02
+  Marion:
+    n: 6
+    ok: 6
+    skip: 0
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 05:02
+  Marius:
+    n: 6
+    ok: 6
+    skip: 0
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 05:02
+  Marshal Edmond:
+    n: 6
+    ok: 6
+    skip: 0
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 05:02
+  Mary:
+    n: 6
+    ok: 6
+    skip: 0
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 05:02
+  Matthew:
+    n: 6
+    ok: 6
+    skip: 0
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 05:02
+  Metis:
+    n: 6
+    ok: 6
+    skip: 0
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 05:02
+  Miriam:
+    n: 6
+    ok: 6
+    skip: 0
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 05:02
+  Narrator:
+    n: 6
+    ok: 6
+    skip: 0
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 05:02
+  Nathan:
+    n: 6
+    ok: 6
+    skip: 0
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 05:02
+  Naydeen:
+    n: 6
+    ok: 6
+    skip: 0
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 05:02
+  Nickolas:
+    n: 6
+    ok: 6
+    skip: 0
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 05:02
+  Orc:
+    n: 6
+    ok: 6
+    skip: 0
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 05:02
+  Orwen:
+    n: 6
+    ok: 6
+    skip: 0
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 05:02
+  Ramsey:
+    n: 6
+    ok: 6
+    skip: 0
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 05:02
+  Raza:
+    n: 6
+    ok: 6
+    skip: 0
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 05:02
+  Razaphel:
+    n: 6
+    ok: 6
+    skip: 0
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 05:02
+  Sakar:
+    n: 6
+    ok: 6
+    skip: 0
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 05:02
+  Samayra:
+    n: 6
+    ok: 6
+    skip: 0
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 05:02
+  Sarah:
+    n: 10
+    ok: 4
+    skip: 6
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 16:37
+  Shah Mahda:
+    n: 6
+    ok: 6
+    skip: 0
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 05:02
+  Sigmund:
+    n: 6
+    ok: 6
+    skip: 0
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 05:02
+  Sophia:
+    n: 10
+    ok: 10
+    skip: 0
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 17:04
+  Synara:
+    n: 6
+    ok: 6
+    skip: 0
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 05:02
+  Thomas:
+    n: 10
+    ok: 10
+    skip: 0
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 16:52
+  Tirion:
+    n: 6
+    ok: 6
+    skip: 0
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 05:02
+  Took:
+    n: 6
+    ok: 6
+    skip: 0
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 05:02
+  Vaelen:
+    n: 6
+    ok: 6
+    skip: 0
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 05:02
+  Varga:
+    n: 6
+    ok: 6
+    skip: 0
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 05:02
+  Woodland Spirit:
+    n: 6
+    ok: 6
+    skip: 0
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 05:02
+  Xanthippe:
+    n: 6
+    ok: 6
+    skip: 0
+    give_up: 0
+    fail: 0
+    last_run: 2026-09-04 05:02
+updated: 2026-09-04 17:04

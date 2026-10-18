@@ -1,0 +1,478 @@
+"sox" не является внутренней или внешней
+командой, исполняемой программой или пакетным файлом.
+SoX could not be found!
+
+    If you do not have SoX, proceed here:
+     - - - http://sox.sourceforge.net/ - - -
+
+    If you do (or think that you should) have SoX, double-check your
+    path variables.
+    
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:2150 for open-end generation.
+
+********
+Warning: flash-attn is not installed. Will only run the manual PyTorch version. Please install flash-attn for faster inference.
+********
+ 
+loading model from C:\Users\Domo\.cache\huggingface\hub\models--Qwen--Qwen3-TTS-12Hz-1.7B-VoiceDesign\snapshots\5ecdb67327fd37bb2e042aab12ff7391903235d3
+model loaded
+== Naydeen #1/10 try1
+SHORT try1 raw 5.8s -> 5.7s
+== Naydeen #1/10 try2
+SHORT try2 raw 6.5s -> 6.3s
+== Naydeen #1/10 try3
+OK try3 gen 68.6s raw 11.4s -> 11.3s
+== Naydeen #2/10 try1
+SHORT try1 raw 4.5s -> 4.4s
+== Naydeen #2/10 try2
+SHORT try2 raw 6.5s -> 6.3s
+== Naydeen #2/10 try3
+OK try3 gen 61.7s raw 10.3s -> 10.1s
+== Naydeen #3/10 try1
+SHORT try1 raw 4.4s -> 4.2s
+== Naydeen #3/10 try2
+SHORT try2 raw 4.2s -> 4.1s
+== Naydeen #3/10 try3
+OK try3 gen 67.8s raw 11.7s -> 11.6s
+== Naydeen #4/10 try1
+SHORT try1 raw 4.3s -> 4.1s
+== Naydeen #4/10 try2
+SHORT try2 raw 4.7s -> 4.5s
+== Naydeen #4/10 try3
+SHORT try3 raw 9.3s -> 9.1s
+GIVE UP Naydeen #4/10
+== Naydeen #5/10 try1
+SHORT try1 raw 3.7s -> 3.5s
+== Naydeen #5/10 try2
+SHORT try2 raw 3.3s -> 3.2s
+== Naydeen #5/10 try3
+OK try3 gen 66.4s raw 11.0s -> 10.9s
+== Naydeen #6/10 try1
+SHORT try1 raw 6.5s -> 6.3s
+== Naydeen #6/10 try2
+SHORT try2 raw 6.5s -> 6.4s
+== Naydeen #6/10 try3
+OK try3 gen 80.0s raw 13.4s -> 13.2s
+== Naydeen #7/10 try1
+SHORT try1 raw 4.1s -> 3.9s
+== Naydeen #7/10 try2
+SHORT try2 raw 3.8s -> 3.7s
+== Naydeen #7/10 try3
+OK try3 gen 65.2s raw 11.0s -> 10.9s
+== Naydeen #8/10 try1
+SHORT try1 raw 5.1s -> 4.9s
+== Naydeen #8/10 try2
+SHORT try2 raw 4.0s -> 3.8s
+== Naydeen #8/10 try3
+OK try3 gen 64.2s raw 11.4s -> 11.2s
+== Naydeen #9/10 try1
+SHORT try1 raw 4.1s -> 3.9s
+== Naydeen #9/10 try2
+SHORT try2 raw 4.5s -> 4.3s
+== Naydeen #9/10 try3
+OK try3 gen 62.3s raw 10.2s -> 10.1s
+== Naydeen #10/10 try1
+SHORT try1 raw 3.3s -> 3.1s
+== Naydeen #10/10 try2
+SHORT try2 raw 3.8s -> 3.6s
+== Naydeen #10/10 try3
+SHORT try3 raw 9.1s -> 8.9s
+GIVE UP Naydeen #10/10
+== Ramsey #1/10 try1
+SHORT try1 raw 6.0s -> 5.8s
+== Ramsey #1/10 try2
+SHORT try2 raw 5.7s -> 5.5s
+== Ramsey #1/10 try3
+OK try3 gen 76.9s raw 12.9s -> 12.7s
+== Ramsey #2/10 try1
+SHORT try1 raw 5.0s -> 4.8s
+== Ramsey #2/10 try2
+SHORT try2 raw 6.6s -> 6.5s
+== Ramsey #2/10 try3
+OK try3 gen 80.4s raw 13.4s -> 13.2s
+== Ramsey #3/10 try1
+SHORT try1 raw 5.3s -> 5.1s
+== Ramsey #3/10 try2
+SHORT try2 raw 5.6s -> 5.4s
+== Ramsey #3/10 try3
+OK try3 gen 72.5s raw 12.0s -> 11.8s
+== Ramsey #4/10 try1
+SHORT try1 raw 6.5s -> 6.3s
+== Ramsey #4/10 try2
+OK try2 gen 69.0s raw 11.5s -> 11.2s
+== Ramsey #5/10 try1
+SHORT try1 raw 4.9s -> 4.7s
+== Ramsey #5/10 try2
+SHORT try2 raw 5.4s -> 5.2s
+== Ramsey #5/10 try3
+OK try3 gen 77.0s raw 13.4s -> 13.1s
+== Ramsey #6/10 try1
+SHORT try1 raw 6.5s -> 6.4s
+== Ramsey #6/10 try2
+SHORT try2 raw 5.8s -> 5.7s
+== Ramsey #6/10 try3
+OK try3 gen 75.4s raw 12.9s -> 12.8s
+== Ramsey #7/10 try1
+SHORT try1 raw 5.2s -> 5.0s
+== Ramsey #7/10 try2
+SHORT try2 raw 5.9s -> 5.7s
+== Ramsey #7/10 try3
+SHORT try3 raw 9.9s -> 9.7s
+GIVE UP Ramsey #7/10
+== Ramsey #8/10 try1
+SHORT try1 raw 6.2s -> 6.0s
+== Ramsey #8/10 try2
+SHORT try2 raw 5.9s -> 5.8s
+== Ramsey #8/10 try3
+SHORT try3 raw 9.1s -> 9.0s
+GIVE UP Ramsey #8/10
+== Ramsey #9/10 try1
+SHORT try1 raw 6.1s -> 6.0s
+== Ramsey #9/10 try2
+SHORT try2 raw 6.1s -> 5.9s
+== Ramsey #9/10 try3
+OK try3 gen 84.0s raw 13.7s -> 13.5s
+== Ramsey #10/10 try1
+SHORT try1 raw 6.0s -> 5.8s
+== Ramsey #10/10 try2
+SHORT try2 raw 6.2s -> 6.1s
+== Ramsey #10/10 try3
+OK try3 gen 85.1s raw 14.1s -> 13.9s
+DONE total: 16
+loading model from C:\Users\Domo\.cache\huggingface\hub\models--Qwen--Qwen3-TTS-12Hz-1.7B-VoiceDesign\snapshots\5ecdb67327fd37bb2e042aab12ff7391903235d3
+model loaded
+skip C:\Program Files (x86)\Steam\steamapps\common\The Survival of Sarah Rose\voice_candidates\Naydeen\qwen_01.mp3 (exists)
+skip C:\Program Files (x86)\Steam\steamapps\common\The Survival of Sarah Rose\voice_candidates\Naydeen\qwen_02.mp3 (exists)
+skip C:\Program Files (x86)\Steam\steamapps\common\The Survival of Sarah Rose\voice_candidates\Naydeen\qwen_03.mp3 (exists)
+skip C:\Program Files (x86)\Steam\steamapps\common\The Survival of Sarah Rose\voice_candidates\Naydeen\qwen_04.mp3 (exists)
+== Naydeen #5/6 try1
+SHORT try1 raw 4.3s -> 4.1s
+== Naydeen #5/6 try2
+SHORT try2 raw 4.1s -> 3.9s
+== Naydeen #5/6 try3
+loading model from C:\Users\Domo\.cache\huggingface\hub\models--Qwen--Qwen3-TTS-12Hz-1.7B-VoiceDesign\snapshots\5ecdb67327fd37bb2e042aab12ff7391903235d3
+loading model from C:\Users\Domo\.cache\huggingface\hub\models--Qwen--Qwen3-TTS-12Hz-1.7B-VoiceDesign\snapshots\5ecdb67327fd37bb2e042aab12ff7391903235d3
+model loaded
+== Alaric #1/6 try1
+model loaded
+== Metis #1/6 try1
+SHORT try1 raw 9.4s -> 9.3s
+== Metis #1/6 try2
+SHORT try1 raw 10.2s -> 10.0s
+== Alaric #1/6 try2
+SHORT try2 raw 8.7s -> 8.5s
+== Metis #1/6 try3
+SHORT try2 raw 9.0s -> 8.8s
+== Alaric #1/6 try3
+OK try3 gen 137.7s raw 18.1s -> 18.0s
+== Alaric #2/6 try1
+OK try3 gen 176.8s raw 22.9s -> 22.8s
+== Metis #2/6 try1
+SHORT try1 raw 9.5s -> 9.3s
+== Alaric #2/6 try2
+SHORT try1 raw 8.9s -> 8.7s
+== Metis #2/6 try2
+SHORT try2 raw 9.2s -> 9.0s
+== Alaric #2/6 try3
+SHORT try2 raw 10.1s -> 9.9s
+== Metis #2/6 try3
+OK try3 gen 139.1s raw 18.4s -> 18.2s
+== Alaric #3/6 try1
+OK try3 gen 158.4s raw 20.9s -> 20.8s
+== Metis #3/6 try1
+SHORT try1 raw 8.4s -> 8.2s
+== Alaric #3/6 try2
+SHORT try1 raw 9.0s -> 8.7s
+== Metis #3/6 try2
+SHORT try2 raw 8.9s -> 8.7s
+== Alaric #3/6 try3
+SHORT try2 raw 9.8s -> 9.6s
+== Metis #3/6 try3
+OK try3 gen 167.9s raw 22.3s -> 22.1s
+== Alaric #4/6 try1
+OK try3 gen 145.6s raw 19.4s -> 19.3s
+== Metis #4/6 try1
+SHORT try1 raw 8.1s -> 7.9s
+== Alaric #4/6 try2
+SHORT try2 raw 7.1s -> 6.9s
+== Alaric #4/6 try3
+OK try1 gen 87.7s raw 11.7s -> 11.5s
+== Metis #5/6 try1
+OK try1 gen 76.8s raw 10.5s -> 10.3s
+== Metis #6/6 try1
+OK try3 gen 128.7s raw 17.1s -> 16.9s
+== Alaric #5/6 try1
+SHORT try1 raw 8.9s -> 8.7s
+== Metis #6/6 try2
+OK try1 gen 82.8s raw 11.0s -> 10.9s
+== Alaric #6/6 try1
+OK try2 gen 86.4s raw 11.5s -> 11.3s
+== Samayra #1/6 try1
+SHORT try1 raw 9.1s -> 8.9s
+== Alaric #6/6 try2
+OK try1 gen 97.4s raw 12.9s -> 12.7s
+== Samayra #2/6 try1
+OK try2 gen 79.1s raw 10.5s -> 10.3s
+== Atilla #1/6 try1
+SHORT try1 raw 9.2s -> 9.0s
+== Samayra #2/6 try2
+SHORT try1 raw 7.3s -> 7.2s
+== Atilla #1/6 try2
+SHORT try2 raw 8.5s -> 8.3s
+== Samayra #2/6 try3
+SHORT try2 raw 7.3s -> 7.1s
+== Atilla #1/6 try3
+OK try3 gen 140.1s raw 18.7s -> 18.5s
+== Atilla #2/6 try1
+OK try3 gen 164.6s raw 21.9s -> 21.7s
+== Samayra #3/6 try1
+SHORT try1 raw 10.1s -> 9.9s
+== Atilla #2/6 try2
+SHORT try1 raw 7.7s -> 7.5s
+== Samayra #3/6 try2
+SHORT try2 raw 9.9s -> 9.7s
+== Atilla #2/6 try3
+SHORT try2 raw 9.8s -> 9.7s
+== Samayra #3/6 try3
+OK try3 gen 152.0s raw 20.1s -> 19.9s
+== Samayra #4/6 try1
+OK try3 gen 199.1s raw 25.8s -> 24.8s
+== Atilla #3/6 try1
+SHORT try1 raw 9.3s -> 9.1s
+== Samayra #4/6 try2
+OK try1 gen 81.6s raw 10.5s -> 10.3s
+== Atilla #4/6 try1
+OK try2 gen 84.4s raw 11.1s -> 10.9s
+== Samayra #5/6 try1
+OK try1 gen 83.3s raw 11.0s -> 10.8s
+== Atilla #5/6 try1
+SHORT try1 raw 10.1s -> 10.0s
+== Samayra #5/6 try2
+OK try1 gen 81.7s raw 10.7s -> 10.5s
+== Atilla #6/6 try1
+OK try2 gen 86.9s raw 11.2s -> 11.0s
+== Samayra #6/6 try1
+SHORT try1 raw 9.8s -> 9.7s
+== Atilla #6/6 try2
+SHORT try2 raw 8.9s -> 8.7s
+== Atilla #6/6 try3
+OK try1 gen 116.6s raw 14.7s -> 14.6s
+== Sigmund #1/6 try1
+SHORT try1 raw 9.2s -> 9.0s
+== Sigmund #1/6 try2
+SHORT try2 raw 9.1s -> 8.9s
+== Sigmund #1/6 try3
+OK try3 gen 169.5s raw 22.0s -> 21.8s
+== Carolyn #1/6 try1
+SHORT try1 raw 9.5s -> 9.3s
+== Carolyn #1/6 try2
+OK try3 gen 138.7s raw 17.9s -> 17.7s
+== Sigmund #2/6 try1
+SHORT try2 raw 8.5s -> 8.4s
+== Carolyn #1/6 try3
+OK try1 gen 78.4s raw 10.4s -> 10.2s
+== Sigmund #3/6 try1
+SHORT try1 raw 8.6s -> 8.5s
+== Sigmund #3/6 try2
+OK try3 gen 143.2s raw 18.9s -> 18.7s
+== Carolyn #2/6 try1
+SHORT try2 raw 8.9s -> 8.7s
+== Sigmund #3/6 try3
+SHORT try1 raw 9.8s -> 9.6s
+== Carolyn #2/6 try2
+OK try2 gen 80.0s raw 10.7s -> 10.5s
+== Carolyn #3/6 try1
+OK try3 gen 119.7s raw 15.8s -> 15.7s
+== Sigmund #4/6 try1
+SHORT try1 raw 7.6s -> 7.4s
+== Sigmund #4/6 try2
+SHORT try1 raw 9.0s -> 8.9s
+== Carolyn #3/6 try2
+SHORT try2 raw 9.4s -> 9.3s
+== Sigmund #4/6 try3
+OK try2 gen 79.1s raw 10.4s -> 10.2s
+== Carolyn #4/6 try1
+SHORT try1 raw 8.2s -> 8.1s
+== Carolyn #4/6 try2
+SHORT try2 raw 8.9s -> 8.7s
+== Carolyn #4/6 try3
+OK try3 gen 160.9s raw 21.2s -> 21.0s
+== Sigmund #5/6 try1
+OK try1 gen 83.9s raw 11.1s -> 10.9s
+== Sigmund #6/6 try1
+OK try3 gen 156.2s raw 20.2s -> 20.1s
+== Carolyn #5/6 try1
+SHORT try1 raw 7.7s -> 7.5s
+== Sigmund #6/6 try2
+SHORT try1 raw 9.0s -> 8.8s
+== Carolyn #5/6 try2
+SHORT try2 raw 8.6s -> 8.5s
+== Sigmund #6/6 try3
+SHORT try2 raw 9.3s -> 9.1s
+== Carolyn #5/6 try3
+OK try3 gen 131.9s raw 17.3s -> 17.1s
+== Vaelen #1/6 try1
+SHORT try1 raw 8.5s -> 8.3s
+== Vaelen #1/6 try2
+SHORT try2 raw 8.6s -> 8.5s
+== Vaelen #1/6 try3
+OK try3 gen 206.7s raw 26.8s -> 26.5s
+== Carolyn #6/6 try1
+SHORT try1 raw 9.0s -> 8.9s
+== Carolyn #6/6 try2
+OK try3 gen 146.0s raw 19.0s -> 18.9s
+== Vaelen #2/6 try1
+OK try2 gen 79.3s raw 10.3s -> 10.1s
+== Duke Antonio #1/6 try1
+SHORT try1 raw 9.6s -> 9.4s
+== Vaelen #2/6 try2
+SHORT try1 raw 8.2s -> 8.1s
+== Duke Antonio #1/6 try2
+SHORT try2 raw 9.7s -> 9.6s
+== Vaelen #2/6 try3
+SHORT try2 raw 9.4s -> 9.2s
+== Duke Antonio #1/6 try3
+OK try3 gen 132.2s raw 17.4s -> 17.2s
+== Vaelen #3/6 try1
+OK try3 gen 139.9s raw 18.3s -> 18.1s
+== Duke Antonio #2/6 try1
+SHORT try1 raw 6.6s -> 6.4s
+== Vaelen #3/6 try2
+SHORT try1 raw 7.8s -> 7.6s
+== Duke Antonio #2/6 try2
+SHORT try2 raw 8.0s -> 7.8s
+== Vaelen #3/6 try3
+OK try2 gen 100.6s raw 13.3s -> 12.8s
+== Duke Antonio #3/6 try1
+OK try3 gen 122.9s raw 16.2s -> 16.0s
+== Vaelen #4/6 try1
+SHORT try1 raw 9.0s -> 8.9s
+== Duke Antonio #3/6 try2
+SHORT try1 raw 7.3s -> 7.2s
+== Vaelen #4/6 try2
+SHORT try2 raw 7.8s -> 7.7s
+== Duke Antonio #3/6 try3
+SHORT try2 raw 7.8s -> 7.6s
+== Vaelen #4/6 try3
+OK try3 gen 148.8s raw 19.7s -> 19.5s
+== Duke Antonio #4/6 try1
+OK try3 gen 147.0s raw 19.4s -> 19.2s
+== Vaelen #5/6 try1
+OK try1 gen 78.4s raw 10.3s -> 10.1s
+== Duke Antonio #5/6 try1
+SHORT try1 raw 8.9s -> 8.7s
+== Vaelen #5/6 try2
+SHORT try1 raw 8.9s -> 8.7s
+== Duke Antonio #5/6 try2
+SHORT try2 raw 10.1s -> 10.0s
+== Vaelen #5/6 try3
+OK try2 gen 86.1s raw 11.3s -> 11.0s
+== Duke Antonio #6/6 try1
+SHORT try1 raw 7.8s -> 7.6s
+== Duke Antonio #6/6 try2
+SHORT try2 raw 7.9s -> 7.7s
+== Duke Antonio #6/6 try3
+OK try3 gen 179.3s raw 24.0s -> 23.9s
+== Vaelen #6/6 try1
+SHORT try1 raw 9.1s -> 8.9s
+== Vaelen #6/6 try2
+OK try3 gen 118.6s raw 15.6s -> 15.4s
+== Marshal Edmond #1/6 try1
+SHORT try2 raw 10.1s -> 9.9s
+== Vaelen #6/6 try3
+SHORT try1 raw 8.6s -> 8.4s
+== Marshal Edmond #1/6 try2
+SHORT try2 raw 8.5s -> 8.3s
+== Marshal Edmond #1/6 try3
+OK try3 gen 148.5s raw 19.8s -> 19.7s
+stats -> C:\Program Files (x86)\Steam\steamapps\common\The Survival of Sarah Rose\voice_candidates\voice_candidates.yaml
+DONE total: 24
+OK try3 gen 131.0s raw 19.2s -> 19.0s
+== Marshal Edmond #2/6 try1
+SHORT try1 raw 8.7s -> 8.5s
+== Marshal Edmond #2/6 try2
+SHORT try2 raw 8.1s -> 8.0s
+== Marshal Edmond #2/6 try3
+OK try3 gen 86.9s raw 15.3s -> 15.2s
+== Marshal Edmond #3/6 try1
+SHORT try1 raw 8.4s -> 8.2s
+== Marshal Edmond #3/6 try2
+SHORT try2 raw 8.9s -> 8.6s
+== Marshal Edmond #3/6 try3
+OK try3 gen 93.9s raw 16.7s -> 16.5s
+== Marshal Edmond #4/6 try1
+SHORT try1 raw 8.6s -> 8.5s
+== Marshal Edmond #4/6 try2
+SHORT try2 raw 9.8s -> 9.7s
+== Marshal Edmond #4/6 try3
+OK try3 gen 86.4s raw 15.3s -> 14.7s
+== Marshal Edmond #5/6 try1
+SHORT try1 raw 8.3s -> 8.1s
+== Marshal Edmond #5/6 try2
+OK try2 gen 62.6s raw 11.1s -> 10.9s
+== Marshal Edmond #6/6 try1
+SHORT try1 raw 7.3s -> 7.0s
+== Marshal Edmond #6/6 try2
+SHORT try2 raw 10.1s -> 10.0s
+== Marshal Edmond #6/6 try3
+OK try3 gen 120.2s raw 21.4s -> 20.7s
+stats -> C:\Program Files (x86)\Steam\steamapps\common\The Survival of Sarah Rose\voice_candidates\voice_candidates.yaml
+DONE total: 30
