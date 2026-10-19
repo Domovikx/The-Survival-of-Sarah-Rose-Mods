@@ -295,11 +295,17 @@ init python:
 
 init python:
 
+    import os
+    # Папку мода вычисляет voice_config.rpy (init -999 — раньше этого блока);
+    # __file__ в python-блоках врёт (store-неймспейс, см. voice_config.rpy).
+    # Фолбэк — на случай частичной установки без voice_config.rpy.
+    _TSSR_MOD_DIR = globals().get("_MOD_ROOT") or os.path.join(
+        config.basedir, "mods", "tssr-ai-voice-pack")
+
     def tssr_menu_marker(where="label"):
-        # Диагностика: какой хук сработал -> mod/last_menu_hook.txt
-        import os
+        # Диагностика: какой хук сработал -> <папка мода>/last_menu_hook.txt
         try:
-            fn = os.path.join(config.basedir, "mod", "last_menu_hook.txt")
+            fn = os.path.join(_TSSR_MOD_DIR, "last_menu_hook.txt")
             f = open(fn, "w")
             f.write("hook: %s, button=%s\n" % (where, tssr_current_short()))
             f.close()

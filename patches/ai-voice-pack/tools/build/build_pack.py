@@ -3,13 +3,17 @@
 """build_pack.py — сборка дистрибутивных zip'ов AI Voice Pack (патч TSSR).
 
 Схема zip'ов (решение 2026-10-18, одна Nexus-страница = хаб патчей):
-  main      — ядро: mod/, game/voice_config.rpy, game/tl/<lang>/,
-              catalog/ (рантайм-JSON), environment.txt, INSTALL.txt
-  voice-<l> — озвучка языка: ai_voice/<l>/ (отдельный zip на язык)
+  main      — ядро: mods/tssr-ai-voice-pack/ (scripts, catalog, tl/),
+              environment.txt, INSTALL.txt
+  voice-<l> — озвучка языка: mods/tssr-ai-voice-pack/ai_voice/<l>/
 
 Раскладка ВНУТРИ zip = РАСКЛАДКА УСТАНОВКИ: распаковка в корень папки игры
-(там, где TheSurvivalofSarahRose.exe). Аудио кладём без сжатия (opus и так
-сжат; ZIP_STORED = заметно быстрее, размер тот же).
+(там, где TheSurvivalofSarahRose.exe). ВСЁ живёт в атомарной папке
+mods/tssr-ai-voice-pack/ — установка мода = распаковка, удаление = удалить
+эту папку (+ environment.txt, если других модов нет). Другие моды кладутся
+в mods/<своя-папка>/ — движок подхватывает их автоматически (RENPY_SEARCHPATH
+= "mods", обход рекурсивный). Аудио кладём без сжатия (opus и так сжат;
+ZIP_STORED = заметно быстрее, размер тот же).
 
 Запуск (из anywhere):  python patches/ai-voice-pack/tools/build/build_pack.py
 Артефакты: <repo>/dist/*.zip  (dist/ в .gitignore — зипы не коммитим).
@@ -30,8 +34,12 @@ VOICE_LANGS = {
     "en": PATCH / "audio" / "vo_en",
 }
 
+# Атомарная папка мода при установке (относительно корня игры)
+MOD_DIR = "mods/tssr-ai-voice-pack"
+
 # Служебное mod/, что НЕ попадает в дистрибутив (диагностика/доки репы)
-MOD_EXCLUDE = {"README.md", "update_check.txt", "last_menu_hook.txt"}
+MOD_EXCLUDE = {"README.md", "update_check.txt", "last_menu_hook.txt",
+               "voice_debug.log"}
 
 # Рантайм-каталог: voice_config.rpy грузит ТОЛЬКО эти два JSON (label -> arc,
 # who -> variant); остальные 29M catalog/ — вспомогательные, в zip не идут.
@@ -39,10 +47,10 @@ CATALOG_RUNTIME = ("label_arc.json", "voice_list.json")
 
 ENVIRONMENT_TXT = """\
 # TSSR mod: внешний search path (Ren'Py читает этот файл в корне игры при старте).
-# Путь АБСОЛЮТНЫЙ. Папка mod/ обязана существовать в указанном месте.
-# Если игра стоит не в стандартном пути Steam — поправь путь текстовым редактором.
-# If the game is installed elsewhere — fix the path below.
-RENPY_SEARCHPATH = r"C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Survival of Sarah Rose\\mod"
+# Путь ОТНОСИТЕЛЬНЫЙ корню игры — работает при любой локации установки.
+# В папку mods/ можно класть и другие моды (папка на мод) — движок подхватит.
+# Multiple mods: add more paths separated by ::  (example: "mods::mods_other")
+RENPY_SEARCHPATH = "mods"
 """
 
 INSTALL_TXT = """\
@@ -57,17 +65,22 @@ THE SURVIVAL OF SARAH ROSE — AI Voice Pack (RU+EN) / AI-озвучка и пе
 УСТАНОВКА / INSTALL (папка игры = папка с TheSurvivalofSarahRose.exe):
   1. Распакуй main.zip в корень папки игры.
      Unpack main.zip into the game root folder.
-  2. Распакуй нужные voice-zip'ы туда же (появится папка ai_voice/).
-     Unpack the voice zip(s) you need into the same folder (creates ai_voice/).
-  3. Если игра стоит не в стандартном Steam-пути — открой environment.txt
-     текстовым редактором и поправь путь к папке mod.
-     If the game is NOT in the default Steam path — edit environment.txt
-     and fix the path to the mod folder.
-  4. Запусти игру. Настройки: кнопка языка в меню / «Sarah Rose — AI Voice Pack».
+  2. Распакуй нужные voice-zip'ы туда же.
+     Unpack the voice zip(s) you need into the same folder.
+  3. Запусти игру. Настройки: кнопка языка в меню / «Sarah Rose — AI Voice Pack».
      Launch the game. Settings: language button in the menu / settings page.
 
+Всё лежит в одной папке mods/tssr-ai-voice-pack/ (плюс служебный
+environment.txt в корне игры). Другие моды можно класть в mods/ рядом.
+Everything lives in mods/tssr-ai-voice-pack/ (plus the service file
+environment.txt in the game root). Other mods can go into mods/ next to it.
+
+УДАЛЕНИЕ / UNINSTALL:
+  Удали папку mods/tssr-ai-voice-pack и файл environment.txt.
+  Delete the mods/tssr-ai-voice-pack folder and the environment.txt file.
+
 Совместимость / Requires: официальная игра v0.79 (The Survival of Sarah Rose).
-Проверено / Verified: 2026-10-18.
+Проверено / Verified: 2026-10-19.
 """
 
 
@@ -88,7 +101,7 @@ def _tree_files(root, exclude=frozenset()):
 
 
 def build_main(out_dir):
-    """Ядро патча: раскладка установки game/ + mod/ + catalog/ + корень."""
+    """Ядро патча: атомарная папка мода mods/tssr-ai-voice-pack/ + корень."""
     langs = sorted(VOICE_LANGS)
     name = "TSSR-AI-Voice-Pack-main.zip"
     target = out_dir / name
@@ -98,19 +111,20 @@ def build_main(out_dir):
         for arcname, content in (("INSTALL.txt", INSTALL_TXT),
                                  ("environment.txt", ENVIRONMENT_TXT)):
             zf.writestr(arcname, content)
-        # mod/ — аддитивный слой (без служебного)
+        # Скрипты/шрифты/картинки мода (без служебного)
         for p in _tree_files(PATCH / "mod", MOD_EXCLUDE):
-            _add(zf, p, "mod/" + p.relative_to(PATCH / "mod").as_posix())
-        # Третья точка врезки: в официальный game/
-        _add(zf, PATCH / "voice_config.rpy", "game/voice_config.rpy")
+            _add(zf, p, MOD_DIR + "/" + p.relative_to(PATCH / "mod").as_posix())
+        # runtime-конфиг озвучки (в папке мода, НЕ в game/)
+        _add(zf, PATCH / "voice_config.rpy", MOD_DIR + "/voice_config.rpy")
         # Переводы: все языки сразу (в main)
         for lang in langs:
             src = PATCH / "tl" / lang
             for p in _tree_files(src):
-                _add(zf, p, "game/tl/" + lang + "/" + p.relative_to(src).as_posix())
+                _add(zf, p, MOD_DIR + "/tl/" + lang + "/" + p.relative_to(src).as_posix())
         # Рантайм-каталог (label->arc, who->variant)
         for fn in CATALOG_RUNTIME:
-            _add(zf, PATCH / "tools" / "generate" / "catalog" / fn, "catalog/" + fn)
+            _add(zf, PATCH / "tools" / "generate" / "catalog" / fn,
+                 MOD_DIR + "/catalog/" + fn)
     with zipfile.ZipFile(target) as zf:
         infos = zf.infolist()
         nfiles, nbytes = len(infos), sum(i.file_size for i in infos)
@@ -118,13 +132,13 @@ def build_main(out_dir):
 
 
 def build_voice(lang, out_dir):
-    """Озвучка одного языка: audio/vo_<lang>/** -> ai_voice/<lang>/**."""
+    """Озвучка одного языка: audio/vo_<lang>/** -> mods/.../ai_voice/<lang>/**."""
     src = VOICE_LANGS[lang]
     name = "TSSR-AI-Voice-Pack-voice-%s.zip" % lang
     target = out_dir / name
     with zipfile.ZipFile(target, "w", zipfile.ZIP_STORED) as zf:
         for p in _tree_files(src):
-            _add(zf, p, "ai_voice/%s/%s" % (lang, p.relative_to(src).as_posix()))
+            _add(zf, p, MOD_DIR + "/ai_voice/%s/%s" % (lang, p.relative_to(src).as_posix()))
     with zipfile.ZipFile(target) as zf:
         infos = zf.infolist()
         nfiles, nbytes = len(infos), sum(i.file_size for i in infos)
