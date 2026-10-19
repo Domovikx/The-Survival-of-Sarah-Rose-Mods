@@ -93,10 +93,16 @@ def _add(zf, src, arcname):
 
 
 def _tree_files(root, exclude=frozenset()):
-    """Отсортированный список файлов дерева (для воспроизводимости сборки)."""
+    """Отсортированный список файлов дерева (для воспроизводимости сборки).
+
+    .rpyc не шиппим (решение 2026-10-19): двойной источник правды
+    (rpy + rpyc) = тихая рассинхронизация; движок скомпилирует .rpy
+    при первом запуске. В git .rpyc тоже не коммитятся.
+    """
     return sorted(
         p for p in root.rglob("*")
         if p.is_file() and p.name not in exclude and "__pycache__" not in p.parts
+        and p.suffix != ".rpyc"
     )
 
 

@@ -38,7 +38,7 @@ voice_candidates/{Name}/
  Alaric.wav (корень каста)               ← финал (voice_manage select)
         │  каст Alaric.yaml: who_codes — кого озвучиваем (рубильник)
         ▼
- voice_batch --char Alaric → ai_voice/ru/{arc}/{uid}__Alaric.opus
+ voice_batch --char Alaric → audio/vo_ru/{arc}/{uid}__Alaric.opus
 ```
 
 ## Роли папок
@@ -56,7 +56,7 @@ voice_candidates/{Name}/
 `texts` (≥1 для генерации). Отчёт-поля — свободные (`extra='allow'`):
 скрипты дописывают свои (`status`, `last_run`, ...) без правок контракта.
 
-Валидация: pydantic v2 (`tools/voicekit/contract.py`), JSON Schema экспортирована
+Валидация: pydantic v2 (`tools/generate/scripts/voicekit/contract.py`), JSON Schema экспортирована
 в `voice_candidates/cast_schema.json` (автокомплит yaml в VS Code через
 `.vscode/settings.json` → `yaml.schemas`).
 
@@ -76,7 +76,7 @@ voice_candidates/{Name}/
 Безопасность: create-if-missing, ничего не удаляет и не перетирает,
 `--apply` = реальные изменения (по умолчанию только план).
 
-## Инструменты (ядро tools/voicekit/)
+## Инструменты (ядро tools/generate/scripts/voicekit/)
 
 | Модуль        | Роль                                                             |
 | ------------- | ---------------------------------------------------------------- |

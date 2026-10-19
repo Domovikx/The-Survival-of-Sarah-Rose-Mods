@@ -153,3 +153,12 @@ def test_mod_root_canonical_fallback_is_mod_dir():
     for rel in ("voice_config.rpy", "mod/zzz_ui.rpy", "mod/zzz_update_check.rpy"):
         assert suffix in _read(rel), rel
     assert build_pack.MOD_DIR == "mods/tssr-ai-voice-pack"
+
+
+def test_main_zip_ships_no_rpyc(tmp_path):
+    """Скомпилированный байткод не шиппим: движок скомпилирует .rpy при
+    первом запуске; пара rpy+rpyc в зипе = тихая рассинхронизация
+    (решение 2026-10-19; из git .rpyc тоже вычищены)."""
+    with _build_main(tmp_path) as zf:
+        names = zf.namelist()
+    assert not [n for n in names if n.endswith(".rpyc")], names

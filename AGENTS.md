@@ -2,16 +2,22 @@
 
 ## Где что лежит (ЭТА репозиторий)
 
-Это репозиторий ПАТЧЕЙ; описанные ниже пути (`ai_voice/`, `game/voice_config.rpy`,
-`catalog/` и т.д.) — это РАНТАЙМ/раскладка УСТАНОВКИ (корень папки игры), НЕ дерево репы.
-Соответствие «репа → установка»:
+Это репозиторий ПАТЧЕЙ; описанные ниже пути — это РАНТАЙМ/раскладка УСТАНОВКИ
+(корень папки игры), НЕ дерево репы. Мод устанавливается атомарной папкой
+`mods/tssr-ai-voice-pack/` (решение 2026-10-19): установка = распаковка zip,
+удаление = удалить эту папку (+ `environment.txt`, если других модов нет).
+В `game/` мод НИЧЕГО не пишет. Соответствие «репа → установка»:
 
-- `patches/ai-voice-pack/mod/` → `mod/` (установка)
-- `patches/ai-voice-pack/tl/<lang>/` → `game/tl/<lang>/` (установка)
-- `patches/ai-voice-pack/audio/vo_<lang>/` → `ai_voice/<lang>/` (установка)
-- `patches/ai-voice-pack/voice_config.rpy` → `game/voice_config.rpy` (установка)
-- `patches/ai-voice-pack/tools/generate/catalog/` → `catalog/` (установка: только
+- `patches/ai-voice-pack/mod/` → `mods/tssr-ai-voice-pack/` (установка)
+- `patches/ai-voice-pack/tl/<lang>/` → `mods/tssr-ai-voice-pack/tl/<lang>/` (установка)
+- `patches/ai-voice-pack/audio/vo_<lang>/` → `mods/tssr-ai-voice-pack/ai_voice/<lang>/` (установка)
+- `patches/ai-voice-pack/voice_config.rpy` → `mods/tssr-ai-voice-pack/voice_config.rpy` (установка)
+- `patches/ai-voice-pack/tools/generate/catalog/` → `mods/tssr-ai-voice-pack/catalog/` (установка: только
   label_arc.json + voice_list.json; остальное — рантайм-пайплайна)
+- `environment.txt` (корень игры, служебный) → `RENPY_SEARCHPATH = "mods"` —
+  относительный путь, работает при любой локации установки; другие моды
+  кладутся в `mods/<своя-папка>/` и подхватываются автоматически
+  (обход searchpath рекурсивный; несколько путей — через `::`)
 - `patches/ai-voice-pack/tools/{extract,generate,build,deploy}/` — пайплайн (extract →
   generate → build → deploy)
 - `site/` — лендинг (GitHub Pages, vite), `tasks/` — журналы задач, `docs/` — доки,
@@ -37,17 +43,19 @@
 ### Рантайм-раскладка (наш мод-контент, не пересекается с файлами игры)
 
 ```text
-ai_voice/                       # КОРЕНЬ ПРОЕКТА, рядом с game/ (не внутри!)
-  ru/{Arc}/{uid}__{variant}.opus # русская озвучка, постфикс = имя рефа (СТАНДАРТ)
-  en/{Arc}/{uid}__{variant}.opus # английская озвучка, постфикс = имя рефа (СТАНДАРТ)
-                                #   wav в ai_voice НЕТ (удалены 2026-10-14,
-                                #   финальная миграция; wav живут только в
-                                #   voice_candidates — рефы)
-game/
+mods/tssr-ai-voice-pack/          # АТОМАРНАЯ папка мода (корень игры)
+  ai_voice/
+    ru/{Arc}/{uid}__{variant}.opus # русская озвучка, постфикс = имя рефа (СТАНДАРТ)
+    en/{Arc}/{uid}__{variant}.opus # английская озвучка, постфикс = имя рефа (СТАНДАРТ)
+                                  #   wav в ai_voice НЕТ (удалены 2026-10-14,
+                                  #   финальная миграция; wav живут только в
+                                  #   voice_candidates — рефы)
   catalog/
     label_arc.json              # label -> Arc (рантайм-мапа, грузится конфигом)
     voice_list.json             # голоса: имя -> variant (генерится из кастов)
   voice_config.rpy              # config.auto_voice = static_auto_voice
+  tl/<lang>/                    # переводы (работают из searchpath: язык берётся
+                                #   из блока translate, а не из пути файла)
 ```
 
 **Поиск в игре:** `voice_config.rpy` читает `catalog/voice_list.json`
@@ -61,8 +69,32 @@ wav не пишется; `--keep-wav` = старая цепочка), легас
 (финальная миграция). `convert_all_opus.py` — deprecated, конвертировать
 нечего.
 
-`ai_voice/` лежит ВНЕ game/, поэтому voice_config.rpy добавляет корень
-проекта в `config.searchpath` — без этого Ren'Py ищет файлы только в game/.
+`ai_voice/` и `catalog/` лежат внутри папки мода, поэтому voice_config.rpy
+(init -999 — раньше любых других init-блоков) добавляет свою папку в
+`config.searchpath`: загрузчик находит и озвучку, и каталог по относительным
+путям `ai_voice/...`, `catalog/...`, ничего не зная про `mods/`.
+
+**`__file__` в python-блоках НЕ использовать** (2026-10-19, найдено линтом
+приёмочной установки): блоки исполняются в словаре `store`, чей `__file__`
+указывает на движковой `renpy/minstore.py`, а не на наш .rpy — `dirname()`
+давал `<корень>/renpy/`, диагностика писалась в папку движка, а в searchpath
+уходил неверный корень (каталог и голоса не находились бы в игре, молча).
+Старая раскладка работала случайно: `dirname(__file__)/..` из `renpy/` =
+корень игры = правильный путь. Корень папки мода вычисляет только
+`voice_config.rpy` (канонический `mods/tssr-ai-voice-pack` + скан `mods/`
+на свои маркеры — переименованная папка работает); `zzz_ui.rpy` и
+`zzz_update_check.rpy` читают готовое `_MOD_ROOT` из store (с фолбэком).
+Страж: `tests/test_build_layout.py::test_rpy_sources_never_use_dunder_file`.
+
+**Границы приёмочной установки** (правило владельца, 2026-10-19): в папку
+игры не пишется НИЧЕГО вне `mods/` (плюс служебные `INSTALL.txt` и
+`environment.txt` в корне — контракт движка для searchpath). Любые
+артефакты тестов и съёмок — только в репу (`tmp/shots/`, в .gitignore).
+Съёмка UI: драйвер `patches/ai-voice-pack/tools/generate/scripts/shots_capture.ps1 -GameDir <игра>`
+везёт харнесс `zz_capture.rpy` во временную `<игра>/mods/_tssr-test/`,
+пишет скриншоты в `<репа>/tmp/shots/` и убирает харнесс в `finally`.
+Изображения на странице: `shots_for_site.py` конвертирует в
+`site/public/shots/*.jpg` (ffmpeg, 1920x1080).
 
 `Arc` в рантайме берётся из label-части translation ID
 (`OpeningScene_92a05bc0` → `OpeningScene`) через `catalog/label_arc.json`.
@@ -70,8 +102,13 @@ wav не пишется; `--keep-wav` = старая цепочка), легас
 
 ### Dev-сторона
 
+**База путей ниже** — корень патча `patches/ai-voice-pack/` (исключение:
+`config/` — он в корне репы). Плоское `tools/` из game-репы неактуально:
+скрипты живут в `tools/generate/scripts/`, каталоги пайплайна —
+`tools/generate/{catalog,voice_candidates,output}`.
+
 ```text
-catalog/
+tools/generate/catalog/
   voices.jsonl                 # 68 254 записей: uid, old, new, who, arc, scene, category
   label_arc.json               # label -> Arc (рантайм-мапа для voice_config.rpy)
   missing_voices.md            # ЗАГЛУШКИ: кто без голоса (генерится voice_sync.py report)
@@ -80,11 +117,11 @@ catalog/
                                #   генерится из кастов, читается voice_config.rpy
                                #   voices.yaml НЕ существует: озвучен = есть реф
                                #   {Имя}.wav; who-коды — в каст-yaml (who_codes)
-config/
+config/   (КОРЕНЬ РЕПЫ, не патча)
   voice_presets.yaml           # ЕДИНАЯ карта конфигов: audio/refs/design/batch/beastify
-                               #   (читается через tools/voicekit/config.py; в коде только
+                               #   (читается через tools/generate/scripts/voicekit/config.py; в коде только
                                #   фолбэк-дефолты)
-voice_candidates/
+tools/generate/voice_candidates/
   {Имя}/
     {Имя}.yaml                 # КОНТРАКТ (+ отчёт-поля скриптов, extra allowed;
                                #   instruct_en — типаж для генерации, instruct_ru — его
@@ -96,7 +133,7 @@ voice_candidates/
                                #   остальные -> {Имя}_2.wav, {Имя}_3.wav...
     {Имя}.wav                 # АКТИВНЫЙ реф в корне каста (озвучен = есть реф);
                                #   варианты A/B рядом: {Имя}_{v}.wav
-tools/
+tools/generate/scripts/
   voicekit/                    # ЯДРО: paths (раскладка), catalog, contract (pydantic),
                                #   fs (безопасные операции), tts_env (пути моделей)
   voice_sync.py                # АКТУАЛИЗАТОР: status/update/migrate/report
@@ -109,7 +146,7 @@ tools/
   beastify.py                  # нелюдские голоса: пресеты orc/demon/monster
                                #   (pitch+formant вниз, тёмный EQ, acrusher, гроул-субтон,
                                #   модуляция/реверб) + loudnorm -16 LUFS/TP -1.5
-  voice_batch.py               # батч-генерация: каталог -> ai_voice/{lang}/{arc}/{uid}__{variant}.opus
+  voice_batch.py               # батч-генерация: каталог -> audio/vo_{lang}/{arc}/{uid}__{variant}.opus
                                #   (СРАЗУ opus: тензор -> pipe f32le -> ffmpeg loudnorm+libopus
                                #   за один проход, wav НЕ пишется; --keep-wav = старая цепочка
                                #   wav->levelnorm->opus; при сбое pipe — wav-фолбэк;
@@ -130,7 +167,7 @@ tools/
   voice_status.py              # СТАТУС И ПРОГНОЗ генерации: готово (стем opus/wav)
                                #   по языкам/аркам, %, размер, воркеры, скорость,
                                #   прогноз (--fast без замера). ВСЕГДА для «статус?»
-  voice_queue.sh               # ОЧЕРЕДЬ генерации: bash tools/voice_queue.sh {ru|en}
+  voice_queue.sh               # ОЧЕРЕДЬ генерации: bash tools/generate/scripts/voice_queue.sh {ru|en}
                                #   (все арки, resumable, НИЗКИЙ приоритет
                                #   BelowNormal + OMP_NUM_THREADS=6 — не мешает
                                #   интерактиву; лог output/voice/gen_all_{lang}.log)
@@ -141,7 +178,7 @@ tools/
                                #   (процессы ищет по cmdline voice_batch.py/voice_queue.sh;
                                #   пауза = NtSuspendProcess, метка — output/voice/ctl_paused_{lang}.json)
                                #   Двойной клик: voice-start/stop/pause/resume/status/watch.cmd
-  convert_all_opus.py          # УСТАРЕЛ (с 2026-10-14: wav в ai_voice удалены,
+  convert_all_opus.py          # УСТАРЕЛ (с 2026-10-14: wav в audio удалены,
                                #   конвертировать нечего; код оставлен для
                                #   рефов/истории) — ПОЛНАЯ КОНВЕРТАЦИЯ wav -> opus
                                #   24k (резумабельная, маркеры pause/stop,
@@ -155,23 +192,23 @@ tools/
 
 ### Ребут ПК: порядок запуска (двойной клик, без админа)
 
-1. `tools/start-ollama-vulkan.cmd` — Vulkan-сервер LLM (если нужен)
-2. `tools/voice-start.cmd` — обе очереди озвучки (resumable, низкий приоритет)
+1. `tools/generate/scripts/start-ollama-vulkan.cmd` — Vulkan-сервер LLM (если нужен)
+2. `tools/generate/scripts/voice-start.cmd` — обе очереди озвучки (resumable, низкий приоритет)
 
-Контроль: `tools/voice-status.cmd` (сводка), `tools/voice-watch.cmd` (живой
-мониторинг), пауза — `tools/voice-pause.cmd` (снять — `voice-resume.cmd`),
-остановка — `tools/voice-stop.cmd`. Агентам: статус смотреть пультом
-(`python tools/voice_ctl.py status`), не ручным подсчётом файлов.
+Контроль: `tools/generate/scripts/voice-status.cmd` (сводка), `tools/generate/scripts/voice-watch.cmd` (живой
+мониторинг), пауза — `tools/generate/scripts/voice-pause.cmd` (снять — `voice-resume.cmd`),
+остановка — `tools/generate/scripts/voice-stop.cmd`. Агентам: статус смотреть пультом
+(`python tools/generate/scripts/voice_ctl.py status`), не ручным подсчётом файлов.
 
 ## Инкапсуляция тулов (для агентов — ОБЯЗАТЕЛЬНО)
 
 НЕ импортировать и НЕ вызывать код извне нашего репозитория
 (W40K-тулзы `cosyvoice3_demo.py` и пр. в `tts_env.W40K_TOOLS`, чужие
 скрипты, site-packages). Внешний код — только чтение референсов/моделей.
-Если нужна функция из внешнего тула — КОПИРУЙ её в `tools/voicekit/`
+Если нужна функция из внешнего тула — КОПИРУЙ её в `tools/generate/scripts/voicekit/`
 (адаптируя под нашу раскладку) и используй СВОЮ. Пример: `make_tuned_model_dir`
 и `link_tree` раньше брались из W40K `cosyvoice3_demo.py` — теперь это
-наш `tools/voicekit/model_dir.py` (атомарная запись yaml + автохилка,
+наш `tools/generate/scripts/voicekit/model_dir.py` (атомарная запись yaml + автохилка,
 2026-09-16, причина: неатомарный `open('w')` во внешнем коде обнулил
 `cosyvoice3.yaml` при kill и навсегда ломал загрузку модели). Следовать
 этому правилу всегда: наш код = единственный источник правды, внешний —
@@ -185,7 +222,7 @@ tools/
    `highpass=f=60, afftdn=nr=15, deesser=i=0.5, highshelf=f=8000:g=-6`
 2. Громкость всех рефов выровнена EBU R128 loudnorm: -16 LUFS, TP -1.5
 3. Фейды 30мс по краям — защита от кликов
-   Всё — в tools/clean_refs.py, применяется автоматически add_candidate.py
+   Всё — в tools/generate/scripts/clean_refs.py, применяется автоматически add_candidate.py
    (одним прогоном: mp3 -> ПЕРВЫЕ 10с -> чистка -> loudnorm -16/TP -1.5 ->
    корень каста: {Имя}.wav). Единый уровень громкости для ВСЕХ рефов.
 
@@ -196,10 +233,10 @@ tools/
 ## Актуализация (voice_sync)
 
 ```bash
-python tools/voice_sync.py status    # сводка слоёв + расхождения (console)
-python tools/voice_sync.py update --apply   # структура+заглушки новым, сводка
-python tools/voice_sync.py report   # missing_voices.md + voice_sync_report.md
-python tools/voice_sync.py migrate  # переезд refs/ -> папки (одноразовый, сделан)
+python tools/generate/scripts/voice_sync.py status    # сводка слоёв + расхождения (console)
+python tools/generate/scripts/voice_sync.py update --apply   # структура+заглушки новым, сводка
+python tools/generate/scripts/voice_sync.py report   # missing_voices.md + voice_sync_report.md
+python tools/generate/scripts/voice_sync.py migrate  # переезд refs/ -> папки (одноразовый, сделан)
 ```
 
 Безопасность: ничего не удаляет и не перетирает; `--apply` = реальные изменения,
@@ -208,8 +245,8 @@ python tools/voice_sync.py migrate  # переезд refs/ -> папки (одн
 ## Пересборка каталога
 
 ```bash
-python tools/voice_catalog.py    # ТОЛЬКО при апдейте игры (тексты поменялись)
-python tools/voice_sync.py report  # обновить отчёты (заглушки + расхождения)
+python tools/generate/scripts/voice_catalog.py    # ТОЛЬКО при апдейте игры (тексты поменялись)
+python tools/generate/scripts/voice_sync.py report  # обновить отчёты (заглушки + расхождения)
 ```
 
 ## Добавление нового голоса (инкрементально, ничего не пересобирается)
@@ -217,17 +254,17 @@ python tools/voice_sync.py report  # обновить отчёты (заглуш
 ```bash
 # 1. Положить отобранный клип: voice_candidates/{Имя}/gen_selected/{Имя}.mp3
 # 2. Собрать рабочий реф (существующие скипаются):
-C:\tools\cosyvoice3\.venv\Scripts\python.exe tools/add_candidate.py --only "{Имя}"
+C:\tools\cosyvoice3\.venv\Scripts\python.exe tools/generate/scripts/add_candidate.py --only "{Имя}"
 #    -> корень каста {Имя}.wav; голос ПОДКЛЮЧАЕТСЯ сам (озвучен = есть реф)
 # 3. (who-коды в каст-yaml: who_codes — заполняются из каталога, руками
 #    обычно не трогаются)
 # 4. Зафиксировать финальный реф (копия {Имя}.wav в корне — он и есть активный):
-python tools/voice_manage.py select {Имя} ""    # вариант без номера = базовый
+python tools/generate/scripts/voice_manage.py select {Имя} ""    # вариант без номера = базовый
 #    (или просто переименуй {Имя}_{v}.wav -> {Имя}.wav)
 # 5. Обновить отчёты:
-python tools/voice_sync.py report
+python tools/generate/scripts/voice_sync.py report
 # 6. Сгенерировать реплики только этого персонажа (только отсутствующие файлы):
-C:\tools\cosyvoice3\.venv\Scripts\python.exe tools/voice_batch.py \
+C:\tools\cosyvoice3\.venv\Scripts\python.exe tools/generate/scripts/voice_batch.py \
   --char "{Имя}" --limit 10
 ```
 
@@ -238,9 +275,9 @@ C:\tools\cosyvoice3\.venv\Scripts\python.exe tools/voice_batch.py \
 
 ```bash
 PY="C:\pinokio\api\Qwen3-TTS-Pinokio.git\app\venv\Scripts\python.exe"
-"$PY" tools/voice_design.py --list                # каст
-"$PY" tools/voice_design.py --char Carolyn --n 6  # 6 кандидатов -> generated/01..06.mp3
-python tools/voice_sync.py report                 # сводка -> voice_candidates.jsonl
+"$PY" tools/generate/scripts/voice_design.py --list                # каст
+"$PY" tools/generate/scripts/voice_design.py --char Carolyn --n 6  # 6 кандидатов -> generated/01..06.mp3
+python tools/generate/scripts/voice_sync.py report                 # сводка -> voice_candidates.jsonl
 ```
 
 Правила: каст в `voice_candidates/{Имя}/{Имя}.yaml` (instruct_en — ФИЗИОГНОМИКА + СОЦИАЛЬНАЯ РОЛЬ для генерации:
@@ -277,8 +314,8 @@ texts — рус. фразы с ЯВНЫМ признаком пола; файл
 4. Генерация ПО КАЖДОМУ варианту (файлы лежат рядом, постфикс = реф):
    voice_batch.py --char Sarah --ref voice_candidates/Sarah/Sarah_1.wav --limit 5
    voice_batch.py --char Sarah --ref voice_candidates/Sarah/Sarah_3.wav --limit 5
-   → ai_voice/ru/{arc}/{uid}__Sarah_1.opus и {uid}__Sarah_3.opus
-5. Выбор: слушаешь пары в ai_voice/ru/{arc}/ (одинаковые uid рядом)
+   → audio/vo_ru/{arc}/{uid}__Sarah_1.opus и {uid}__Sarah_3.opus
+5. Выбор: слушаешь пары в audio/vo_ru/{arc}/ (одинаковые uid рядом)
 6. Фиксация: voice_manage.py select {Name} {variant}
    → копирует {Name}_{variant}.wav → {Name}.wav (в корне каста)
    → обновляет catalog/voice_list.json
@@ -300,25 +337,25 @@ texts — рус. фразы с ЯВНЫМ признаком пола; файл
 
 ```bash
 # Добавление кандидата → реф
-C:\tools\cosyvoice3\.venv\Scripts\python.exe tools/add_candidate.py --only {Name}
+C:\tools\cosyvoice3\.venv\Scripts\python.exe tools/generate/scripts/add_candidate.py --only {Name}
 
 # A/B-сравнение: генерация каждым вариантом
-C:\tools\cosyvoice3\.venv\Scripts\python.exe tools/voice_batch.py \
+C:\tools\cosyvoice3\.venv\Scripts\python.exe tools/generate/scripts/voice_batch.py \
   --char Sarah --ref voice_candidates/Sarah/Sarah_1.wav --limit 5
-C:\tools\cosyvoice3\.venv\Scripts\python.exe tools/voice_batch.py \
+C:\tools\cosyvoice3\.venv\Scripts\python.exe tools/generate/scripts/voice_batch.py \
   --char Sarah --ref voice_candidates/Sarah/Sarah_3.wav --limit 5
 
 # Управление голосами
-python tools/voice_manage.py list      # все голоса, активный реф, варианты
-python tools/voice_manage.py status    # кто озвучен
-python tools/voice_manage.py select Sarah 3  # выбрать вариант → Sarah.wav (корень)
+python tools/generate/scripts/voice_manage.py list      # все голоса, активный реф, варианты
+python tools/generate/scripts/voice_manage.py status    # кто озвучен
+python tools/generate/scripts/voice_manage.py select Sarah 3  # выбрать вариант → Sarah.wav (корень)
 
 # Генерация (только отсутствующие файлы)
-C:\tools\cosyvoice3\.venv\Scripts\python.exe tools/voice_batch.py \
+C:\tools\cosyvoice3\.venv\Scripts\python.exe tools/generate/scripts/voice_batch.py \
   --char Sarah --limit 10
 
 # Перегенерация (все файлы, --force)
-C:\tools\cosyvoice3\.venv\Scripts\python.exe tools/voice_batch.py \
+C:\tools\cosyvoice3\.venv\Scripts\python.exe tools/generate/scripts/voice_batch.py \
   --char Sarah --limit 5 --force
 ```
 
@@ -353,7 +390,7 @@ voice_candidates/{Name}/
    `--flow-temp 0.8 --cfg-rate 0.7 --top-p 0.8 --top-k 25 --tau-r 0.1`
    (flow-temp 1.2/cfg 0.9 давали звуковые артефакты — заменено 2026-09-03).
 6. Пофразовые эмоции: `catalog/emotions.json` (uid -> emotion_en),
-   разметка `tools/emotion_tag.py` (эвристика или --llm-url phi4-mini);
+   разметка `tools/generate/scripts/emotion_tag.py` (эвристика или --llm-url phi4-mini);
    приоритет: `--emotion` (CLI) > emotions.json[uid] > без эмоции.
    `--no-emotion` отключает пофразовую (суффикс_plain);
    `--emotion-ru` — русский перевод для манифеста/ревью.
@@ -435,7 +472,7 @@ OLLAMA_VULKAN=1 nohup ollama serve > output/voice/ollama_vk.log 2>&1 &
 # проверка: ollama ps → PROCESSOR 100% GPU; лог: "inference compute ... RX 6600 XT"
 ```
 
-ПРОСТОЙ СПОСОБ НЕ ЗАБЫТЬ: `tools/start-ollama-vulkan.cmd` — двойной клик
+ПРОСТОЙ СПОСОБ НЕ ЗАБЫТЬ: `tools/generate/scripts/start-ollama-vulkan.cmd` — двойной клик
 после каждого ребута ПК (без админа), сам запускает Vulkan-сервер
 и показывает `ollama ps`. Автозагрузка (если хочется совсем без рук):
 `Win+R → shell:startup` → ярлык на этот .cmd.
@@ -467,7 +504,7 @@ LM Studio (headless `lms server start --port 1234`) НЕ рекомендует�
 и мусорные провайдеры с битым baseURL — удали их. Правка конфига требует
 ПЕРЕЗАПУСКА opencode (конфиг читается один раз при старте).
 
-Ярлык на рабочий стол «Ollama Vulkan Start» → `tools/start-ollama-vulkan.cmd`
+Ярлык на рабочий стол «Ollama Vulkan Start» → `tools/generate/scripts/start-ollama-vulkan.cmd`
 (создан 2026-09-04; если пропал — пересоздать через PowerShell:
 `WScript.Shell.CreateShortcut($env:USERPROFILE\Desktop\...)`).
 

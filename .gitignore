@@ -17,3 +17,12 @@ __pycache__/
 voice_debug.log
 log.txt
 traceback.txt
+game
+# Артефакты тестов/съёмок игры — только в репу, не коммитятся
+tmp/
+
+# Логи и рантайм-диагностика мода/пайплайна (остаются на диске, в git не идут)
+*.log
+*.log.live
+update_check.txt
+last_menu_hook.txt
