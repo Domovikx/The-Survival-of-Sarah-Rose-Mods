@@ -2,7 +2,7 @@
 """Быстрое управление голосами: list, status, select.
 
 A/B-сравнение: voice_batch.py --ref voice_candidates/{Name}/{Name}_v.wav
-генерит {uid}__{Name}_v.opus в ai_voice/ — слушаешь варианты рядом,
+генерит {uid}__{Name}_v.opus в audio/vo_ru/ — слушаешь варианты рядом,
 победителя фиксируешь через `select` ({Name}_v.wav -> {Name}.wav).
 """
 

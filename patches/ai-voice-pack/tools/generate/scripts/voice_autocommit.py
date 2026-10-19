@@ -1,24 +1,25 @@
 #!/usr/bin/env python3
-"""Автокоммит озвучки TSSR: коммитит новые файлы ai_voice/ пачками ~1000, без пуша.
+"""Автокоммит озвучки TSSR: коммитит новые файлы audio/ пачками ~1000, без пуша.
 
 Зачем: wav копятся тысячами, один большой коммит/пуш висит и таймаутится.
-Скрипт крутится в фоне, раз в --interval смотрит untracked-файлы в ai_voice/
+Скрипт крутится в фоне, раз в --interval смотрит untracked-файлы в audio/
 и если их >= --batch — коммитит первые --batch штук ("add voices").
 
 Безопасность:
-  - трогает ТОЛЬКО untracked (??) внутри ai_voice/, чужие изменения не коммитит;
+  - трогает ТОЛЬКО untracked (??) внутри audio/, чужие изменения не коммитит;
   - свежие файлы моложе --min-age секунд пропускает (файл может ещё
     дописываться/нормализоваться loudnorm — коммитим только устоявшиеся);
   - ничего не пушит, ничего не удаляет.
 
 Использование (системный python, только stdlib)::
 
-    python tools/voice_autocommit.py                 # вечный цикл (раз в 5 мин)
-    python tools/voice_autocommit.py --once          # один проход и выход
-    python tools/voice_autocommit.py --batch 500 --interval 600 --once
+    python patches/ai-voice-pack/tools/generate/scripts/voice_autocommit.py  # вечный цикл (раз в 5 мин)
+    python patches/ai-voice-pack/tools/generate/scripts/voice_autocommit.py --once  # один проход и выход
+    python patches/ai-voice-pack/tools/generate/scripts/voice_autocommit.py --batch 500 --interval 600 --once
 
-Двойной клик (без админа): tools/voice-autocommit.cmd (вечный цикл в окне,
-закрыл окно — остановил). Остановка генерации его не трогает.
+Двойной клик (без админа): tools/generate/scripts/voice-autocommit.cmd
+(вечный цикл в окне, закрыл окно — остановил). Остановка генерации его
+не трогает.
 """
 
 import argparse
@@ -28,7 +29,14 @@ import subprocess
 import sys
 import time
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+from voicekit import paths  # единственный источник путей (см. voicekit/paths.py)
+
+# git status --porcelain печатает пути от корня репы — и status, и add/commit
+# крутим оттуда же: путь от подкаталога к audio/ иначе не сходится
+# (смещение путей после переезда scripts в mods-repo, проверено 2026-10-19).
+REPO_ROOT = paths.REPO_ROOT
+VOICE_PATHSPEC = os.path.relpath(
+    paths.AUDIO_DIR, REPO_ROOT).replace(os.sep, '/') + '/'
 
 _OCT_RE = re.compile(r'[0-7]{1,3}')
 
@@ -36,7 +44,7 @@ _OCT_RE = re.compile(r'[0-7]{1,3}')
 def run_git(args, input_text=None):
     """git + args -> stdout (str). Бросает RuntimeError при неуспехе."""
     p = subprocess.run(
-        ['git'] + args, cwd=ROOT, capture_output=True, timeout=300,
+        ['git'] + args, cwd=REPO_ROOT, capture_output=True, timeout=300,
         input=input_text.encode('utf-8') if input_text is not None else None)
     if p.returncode != 0:
         err = p.stderr.decode('utf-8', errors='replace').strip()
@@ -92,7 +100,7 @@ def parse_porcelain(out):
 
 
 def untracked_voice_files():
-    """Отсортированный список untracked-путей внутри ai_voice/.
+    """Отсортированный список untracked-путей внутри audio/.
 
     --untracked-files=all: каждый файл отдельной строкой (иначе
     целиком новые папки схлопываются в одну запись 'dir/' и сотни
@@ -102,7 +110,7 @@ def untracked_voice_files():
     с пробелами — 'Captain Belmont' — приходили в кавычках и не
     находились на диске при проверке settled())."""
     out = run_git(['-c', 'core.quotePath=false', 'status', '--porcelain',
-                   '--untracked-files=all', '--', 'ai_voice/'])
+                   '--untracked-files=all', '--', VOICE_PATHSPEC])
     return parse_porcelain(out)
 
 
@@ -112,7 +120,7 @@ def settled(files, min_age):
     ok = []
     for f in files:
         try:
-            if now - os.path.getmtime(os.path.join(ROOT, f)) >= min_age:
+            if now - os.path.getmtime(os.path.join(REPO_ROOT, f)) >= min_age:
                 ok.append(f)
         except OSError:
             pass  # файл исчез между status и проверкой — пропускаем

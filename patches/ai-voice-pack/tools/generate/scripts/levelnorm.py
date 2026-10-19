@@ -6,7 +6,7 @@
 EBU R128, -16 LUFS, TP -1.5 (loudnorm, dynamic — на коротких фразах
 сходится вплотную и сам держит TP).
 
-С 2026-10-14 в ai_voice только opus (wav удалены) — этот CLI работает по
+С 2026-10-14 в audio только opus (wav удалены) — этот CLI работает по
 *.wav в рефах/легаси. В генерации озвучки отдельного шага levelnorm НЕТ:
 те же LOUD_ARGS применяются внутри одного ffmpeg-прохода, который пишет
 opus (voice_batch.tensor_to_opus), а normalize_file() зовётся только в

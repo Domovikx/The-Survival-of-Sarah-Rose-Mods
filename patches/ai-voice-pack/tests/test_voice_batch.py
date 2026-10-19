@@ -35,7 +35,7 @@ def mock_config(tmp_path, monkeypatch):
         ('CONFIG_DIR', tmp_path / 'config'),
         ('VOICES_JSONL', tmp_path / 'catalog' / 'voices.jsonl'),
         ('VOICE_LIST_JSON', tmp_path / 'catalog' / 'voice_list.json'),
-        ('AI_VOICE_DIR', tmp_path / 'ai_voice'),
+        ('AUDIO_DIR', tmp_path / 'audio'),
     ):
         monkeypatch.setattr(paths, attr, str(val))
 
@@ -149,7 +149,7 @@ def test_write_manifest(mock_config):
         variant='TestVoice', lang='ru',
         ref=os.path.join(paths.ROOT,
                          'voice_candidates/TestVoice/TestVoice.wav'),
-        out=os.path.join(paths.ROOT, 'ai_voice/ru/TestArc',
+        out=os.path.join(paths.ai_voice_dir('ru'), 'TestArc',
                          'test_uid_001__TestVoice.wav'),
         text_new='Привет мир', text_old='Hello world', emotion=None,
         emotion_ru=None)

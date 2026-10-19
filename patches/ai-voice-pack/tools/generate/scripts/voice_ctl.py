@@ -17,7 +17,7 @@ voice-soft-stop.cmd, voice-pause.cmd, voice-resume.cmd, voice-status.cmd,
 voice-watch.cmd.
 
 Как это работает:
-  - очереди = tools/voice_queue.sh {ru|en} (bash, resumable, низкий приоритет);
+  - очереди = scripts/voice_queue.sh {ru|en} (bash, resumable, низкий приоритет);
   - процессы ищутся по cmdline: 'voice_queue.sh' (обертка) и 'voice_batch.py'
     (воркер) + '--lang {lang}';
   - пауза = NtSuspendProcess по воркерам, состояние — output/voice/ctl_paused_{lang}.json;
@@ -39,6 +39,8 @@ import shutil
 import subprocess
 import sys
 import time
+
+from voicekit import paths  # единственный источник путей (см. voicekit/paths.py)
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LANGS = ('ru', 'en')
@@ -249,7 +251,7 @@ def count_done(lang, arc=None):
     opus (легаси-wav удалены 2026-10-14), ветка .wav оставлена на случай
     возврата — чтобы цифры не удвоились.
     """
-    base = os.path.join(ROOT, 'ai_voice', lang)
+    base = paths.ai_voice_dir(lang)
     if arc:
         base = os.path.join(base, arc)
     if not os.path.isdir(base):
@@ -366,7 +368,7 @@ def cmd_start(args):
             continue
         try:
             p = subprocess.Popen(
-                [bash, 'tools/voice_queue.sh', lang],
+                [bash, os.path.join(paths.SCRIPTS_DIR, 'voice_queue.sh'), lang],
                 cwd=ROOT, stdin=subprocess.DEVNULL,
                 stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
                 creationflags=0x08000000 | 0x00000200)  # DETACHED|NEW_GROUP

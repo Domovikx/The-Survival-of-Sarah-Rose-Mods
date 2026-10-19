@@ -16,12 +16,25 @@ ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)
 PKG_ROOT = os.path.dirname(os.path.dirname(ROOT))       # patches/ai-voice-pack
 REPO_ROOT = os.path.dirname(os.path.dirname(PKG_ROOT))  # корень репы
 
-TOOLS_DIR = os.path.join(ROOT, 'tools')
+# Дом скриптов пайплайна (+ voicekit). Исторически это был game-repo tools/ —
+# после переезда в mods-repo лежат здесь; удалённое TOOLS_DIR (generate/tools)
+# указывало в никуда с 2026-10 и больше не существует.
+SCRIPTS_DIR = os.path.join(ROOT, 'scripts')
 VOICE_CANDIDATES = os.path.join(ROOT, 'voice_candidates')
 CATALOG_DIR = os.path.join(ROOT, 'catalog')
 CONFIG_DIR = os.path.join(REPO_ROOT, 'config')
 OUTPUT_DIR = os.path.join(ROOT, 'output')
-AI_VOICE_DIR = os.path.join(ROOT, 'ai_voice')
+# Озвучка (массив репы): audio/vo_{lang} — в дистрибутиве это ai_voice/<lang>
+AUDIO_DIR = os.path.join(PKG_ROOT, 'audio')
+
+
+def ai_voice_dir(lang):
+    """Каталог озвучки языка в репо: audio/vo_{ru|en}.
+
+    Читает AUDIO_DIR в момент вызова — тесты мокают paths.AUDIO_DIR.
+    В zip эта папка уезжает как mods/.../ai_voice/<lang>/ (см. build_pack).
+    """
+    return os.path.join(AUDIO_DIR, 'vo_' + lang)
 
 VOICES_JSONL = os.path.join(CATALOG_DIR, 'voices.jsonl')
 VOICE_LIST_JSON = os.path.join(CATALOG_DIR, 'voice_list.json')

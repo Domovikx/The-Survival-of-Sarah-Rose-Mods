@@ -35,7 +35,7 @@ def full_project(tmp_path, monkeypatch):
         ('CATALOG_DIR', tmp_path / 'catalog'),
         ('CONFIG_DIR', tmp_path / 'config'),
         ('VOICES_JSONL', tmp_path / 'catalog' / 'voices.jsonl'),
-        ('AI_VOICE_DIR', tmp_path / 'ai_voice'),
+        ('AUDIO_DIR', tmp_path / 'audio'),
     ):
         monkeypatch.setattr(paths, attr, str(val))
 

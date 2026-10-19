@@ -38,7 +38,7 @@ def count_done(lang):
     (легаси-wav удалены 2026-10-14), но ветка .wav сохранена на случай
     возврата/подмешивания — тогда двойного счёта не будет.
     """
-    base = os.path.join(paths.AI_VOICE_DIR, lang)
+    base = paths.ai_voice_dir(lang)
     made = defaultdict(int)
     if os.path.isdir(base):
         for arc in os.listdir(base):
@@ -102,7 +102,7 @@ def char_made():
     """
     out = Counter()
     for lang in LANGS:
-        base = os.path.join(paths.AI_VOICE_DIR, lang)
+        base = paths.ai_voice_dir(lang)
         if not os.path.isdir(base):
             continue
         for arc in os.listdir(base):
@@ -152,7 +152,7 @@ def python_workers():
 
 def arc_size(lang, arc):
     """Дископотребление арки: opus (а .wav — на случай, если вернутся)."""
-    p = os.path.join(paths.AI_VOICE_DIR, lang, arc)
+    p = os.path.join(paths.ai_voice_dir(lang), arc)
     if not os.path.isdir(p):
         return 0
     return sum(os.path.getsize(os.path.join(p, f))
@@ -189,7 +189,7 @@ def cmd_arc(arc, fast):
             lang.upper(), c, plan_total, 100.0 * c / plan_total,
             '✓' if c >= plan_total else ''))
         if c:
-            base = os.path.join(paths.AI_VOICE_DIR, lang, arc)
+            base = os.path.join(paths.ai_voice_dir(lang), arc)
             stems = set()
             for f in os.listdir(base):
                 mm = re.match(r'[0-9a-f]{32}__(.+)\.(?:wav|opus)$', f)
@@ -257,7 +257,7 @@ def cmd_detail():
     print('  процессы voice_batch: {}'.format(python_workers()))
     for lang in LANGS:
         print('  {}: арка {}'.format(lang.upper(), act.get(lang, '?')))
-    orphans = glob.glob(os.path.join(paths.AI_VOICE_DIR, '**', '*.ln.tmp.wav'),
+    orphans = glob.glob(os.path.join(paths.AUDIO_DIR, 'vo_*', '**', '*.ln.tmp.wav'),
                         recursive=True)
     print('  tmp-сирот (loudnorm): {}'.format(len(orphans)))
     return 0
@@ -326,7 +326,7 @@ def main():
     orphans = parts = 0
     sizes = {'ru': 0, 'en': 0}
     for lang in LANGS:
-        base = os.path.join(paths.AI_VOICE_DIR, lang)
+        base = paths.ai_voice_dir(lang)
         for _root, _dirs, files in os.walk(base):
             for f in files:
                 if '.ln.tmp.' in f:

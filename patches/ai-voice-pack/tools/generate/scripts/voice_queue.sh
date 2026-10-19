@@ -2,37 +2,39 @@
 # ============================================================
 # Очередь генерации озвучки TSSR (все арки, один язык).
 #
-# Запуск:
-#   bash tools/voice_queue.sh ru     # вся русская озвучка
-#   bash tools/voice_queue.sh en     # вся английская озвучка
+# Запуск (скрипт сам находит соседей — путь можно давать откуда угодно):
+#   bash patches/ai-voice-pack/tools/generate/scripts/voice_queue.sh ru  # вся русская озвучка
+#   bash patches/ai-voice-pack/tools/generate/scripts/voice_queue.sh en  # вся английская озвучка
 #
 # Свойства:
 #   - resumable: пропускает уже готовые файлы (можно перезапускать/убивать)
 #   - НИЗКИЙ ПРИОРИТЕТ: setpriority 16384 (BelowNormal) для всех python —
 #     CPU отдаётся интерактивным приложениям, генерация ест простой
 #   - OMP_NUM_THREADS=6 — torch не захватывает все ядра
-#   - лог: output/voice/gen_all_{lang}.log (метки START/DONE по аркам)
+#   - лог: tools/generate/output/voice/gen_all_{lang}.log (метки START/DONE по аркам)
 #
 # Рестарт после ребута ПК:
-#   powershell Start-Process bash -ArgumentList 'tools/voice_queue.sh ru' ...
+#   powershell Start-Process bash -ArgumentList '<путь к voice_queue.sh> ru' ...
 #   (см. AGENTS.md «Озвучка» и скил tssr-voice-status)
 # ============================================================
 set -u
 LANG_ARG="${1:-}"
 if [[ "$LANG_ARG" != "ru" && "$LANG_ARG" != "en" ]]; then
-  echo "Использование: bash tools/voice_queue.sh {ru|en}"
+  echo "Использование: bash voice_queue.sh {ru|en}"
   exit 1
 fi
 
 export PYTHONIOENCODING=utf-8
 export OMP_NUM_THREADS=6
 PY="C:/tools/cosyvoice3/.venv/Scripts/python.exe"
-LOG="output/voice/gen_all_${LANG_ARG}.log"
+DIR="$(cd "$(dirname "$0")" && pwd)"   # каталог скрипта (scripts/)
+GEN_DIR="$(dirname "$DIR")"            # tools/generate: тут output/voice
+LOG="$GEN_DIR/output/voice/gen_all_${LANG_ARG}.log"
 ARCS="Prologue StoryBeginnings Other WarriorPath MagePath BlackMonolith UnionKingdom HollowWorld SailorPath AlfredArc HassarPath SailorArc LifeInRahayal VargaMarionPath Training PrisonArc HyralArc DemonArc WarArc"
 
 for arc in $ARCS; do
   echo "=== START $LANG_ARG $arc $(date +%H:%M) ===" >> "$LOG"
-  "$PY" tools/voice_batch.py --arc "$arc" --lang "$LANG_ARG" >> "$LOG" 2>&1 &
+  "$PY" "$DIR/voice_batch.py" --arc "$arc" --lang "$LANG_ARG" >> "$LOG" 2>&1 &
   BATCH_PID=$!
   sleep 1
   # BelowNormal для venv-лаунчера и реального python (их два на воркер)

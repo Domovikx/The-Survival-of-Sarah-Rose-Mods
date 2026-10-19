@@ -18,8 +18,8 @@ UID5 = '4' * 32
 
 
 def make_corpus(root):
-    """ai_voice/{lang}/{arc}/ со смешанным корпусом."""
-    arc = os.path.join(root, 'ru', 'Prologue')
+    """audio/vo_{lang}/{arc}/ со смешанным корпусом (root = AUDIO_DIR)."""
+    arc = os.path.join(root, 'vo_ru', 'Prologue')
     os.makedirs(arc)
     # пара wav+opus (легаси после конвертации) -> одна реплика
     open(os.path.join(arc, UID1 + '__Sarah.wav'), 'wb').close()
@@ -36,7 +36,7 @@ def make_corpus(root):
 
 def test_voice_status_count_done_mixed(tmp_path, monkeypatch):
     make_corpus(str(tmp_path))
-    monkeypatch.setattr(voice_status.paths, 'AI_VOICE_DIR', str(tmp_path))
+    monkeypatch.setattr(voice_status.paths, 'AUDIO_DIR', str(tmp_path))
     made, total = voice_status.count_done('ru')
     assert made['Prologue'] == 3
     assert total == 3
@@ -46,16 +46,17 @@ def test_voice_status_count_done_mixed(tmp_path, monkeypatch):
 
 def test_voice_status_char_made_stem_dedup(tmp_path, monkeypatch):
     make_corpus(str(tmp_path))
-    monkeypatch.setattr(voice_status.paths, 'AI_VOICE_DIR', str(tmp_path))
+    monkeypatch.setattr(voice_status.paths, 'AUDIO_DIR', str(tmp_path))
     out = voice_status.char_made()
     assert out['Sarah'] == 2  # пара + opus-only
     assert out['Narrator'] == 1  # wav-only, сирота не считается
 
 
 def test_voice_ctl_count_done_mixed(tmp_path, monkeypatch):
-    # voice_ctl считает от ROOT/ai_voice (voice_status — от AI_VOICE_DIR)
+    # статус и пульт считают от одного paths.AUDIO_DIR (audio/vo_{lang})
     make_corpus(os.path.join(str(tmp_path), 'ai_voice'))
-    monkeypatch.setattr(voice_ctl, 'ROOT', str(tmp_path))
+    monkeypatch.setattr(voice_ctl.paths, 'AUDIO_DIR',
+                        os.path.join(str(tmp_path), 'ai_voice'))
     assert voice_ctl.count_done('ru') == 3
     assert voice_ctl.count_done('ru', arc='Prologue') == 3
     assert voice_ctl.count_done('en') == -1  # каталога нет
@@ -63,6 +64,7 @@ def test_voice_ctl_count_done_mixed(tmp_path, monkeypatch):
 
 
 def test_voice_ctl_count_done_empty(tmp_path, monkeypatch):
-    monkeypatch.setattr(voice_ctl, 'ROOT', str(tmp_path))
-    os.makedirs(os.path.join(str(tmp_path), 'ai_voice', 'ru'))
+    monkeypatch.setattr(voice_ctl.paths, 'AUDIO_DIR',
+                        os.path.join(str(tmp_path), 'ai_voice'))
+    os.makedirs(os.path.join(str(tmp_path), 'ai_voice', 'vo_ru'))
     assert voice_ctl.count_done('ru') == 0

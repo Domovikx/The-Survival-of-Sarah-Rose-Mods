@@ -46,7 +46,7 @@ def test_settled_min_age(tmp_path, monkeypatch):
     new = tmp_path / 'new.wav'
     old.write_bytes(b'x')
     new.write_bytes(b'y')
-    monkeypatch.setattr(va, 'ROOT', str(tmp_path))
+    monkeypatch.setattr(va, 'REPO_ROOT', str(tmp_path))
     now = os.path.getmtime(str(new))
     os.utime(str(old), (now - 600, now - 600))
     got = settled(['old.wav', 'new.wav', 'missing.wav'], 180)

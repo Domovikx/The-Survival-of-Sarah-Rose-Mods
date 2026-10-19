@@ -121,7 +121,7 @@ def start_design():
         ' '.join([os.path.basename(PY), 'voice_design.py --n {}'.format(N)]),
         log_path))
     f = open(log_path, 'w', encoding='utf-8')
-    subprocess.Popen([PY, os.path.join(paths.TOOLS_DIR, 'voice_design.py'),
+    subprocess.Popen([PY, os.path.join(paths.SCRIPTS_DIR, 'voice_design.py'),
                       '--n', str(N)],
                      cwd=paths.ROOT, stdout=f, stderr=subprocess.STDOUT)
 

@@ -6,7 +6,7 @@
   - касты: озвучен = есть реф {Голос}.wav (иначе пропуск)
 
 ВЫХОД:
-  ai_voice/{lang}/{arc}/{uid}__{variant}.opus 24k mono   (resumable: существующие скипаются)
+  audio/vo_{lang}/{arc}/{uid}__{variant}.opus 24k mono   (resumable: существующие скипаются)
   + манифест рядом {uid}__{variant}.wav.txt (база .stem — путь исторический)
   wav на диск больше НЕ пишется (2026-10-14): тензор речи -> pipe f32le в ffmpeg,
   loudnorm -16 LUFS/TP -1.5 + libopus 24k ЗА ОДИН проход (см. tensor_to_opus).
@@ -46,7 +46,7 @@ REPO_DIR = tts_env.cosy_repo_dir()
 sys.path.insert(0, REPO_DIR)
 sys.path.insert(0, os.path.join(REPO_DIR, 'third_party', 'Matcha-TTS'))
 sys.path.insert(0, tts_env.W40K_TOOLS)
-sys.path.insert(0, paths.TOOLS_DIR)
+sys.path.insert(0, paths.SCRIPTS_DIR)
 
 if any(a == '--device' and sys.argv[i + 1:i + 2] == ['dml']
        for i, a in enumerate(sys.argv[:-1])):
@@ -143,7 +143,7 @@ def select_phrases(entries, voices, who_to_voice, args):
             return []
         if args.emotion:
             variant += '_{}'.format(args.emotion_tag)
-        out = os.path.join(paths.AI_VOICE_DIR, args.lang,
+        out = os.path.join(paths.ai_voice_dir(args.lang),
                            arc, uid + '__' + variant + '.wav')
         return [dict(
             uid=uid, arc=arc, voice=args.char or 'Demo', ref=ref, out=out,
@@ -185,7 +185,7 @@ def select_phrases(entries, voices, who_to_voice, args):
             variant += '_plain'
         emo = (None if args.no_emotion
                else args.emotion or load_emotions().get(e['uid']))
-        out = os.path.join(paths.AI_VOICE_DIR, args.lang,
+        out = os.path.join(paths.ai_voice_dir(args.lang),
                            e['arc'], e['uid'] + '__' + variant + '.wav')
         phrases.append(dict(
             uid=e['uid'], arc=e['arc'], voice=voice, ref=ref, out=out,

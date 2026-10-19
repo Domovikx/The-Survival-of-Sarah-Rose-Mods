@@ -19,8 +19,8 @@
 Стоп: создать файл output/voice/thermal.stop (guard снимет свою
 паузу и выйдет). Лог: output/voice/thermal_guard.log.
 
-Запуск: python tools/thermal_guard.py [--dry-run]
-Двойной клик: tools/thermal-guard.cmd
+Запуск: python scripts/thermal_guard.py [--dry-run]
+Двойной клик: scripts/thermal-guard.cmd
 Автостарт: задача TSSR-ThermalGuard (AtLogOn, pythonw без окна).
 """
 
@@ -34,7 +34,7 @@ import sys
 import time
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-TOOLS = os.path.dirname(os.path.abspath(__file__))
+SCRIPTS = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(ROOT, 'output', 'voice')
 LOG_FILE = os.path.join(OUT, 'thermal_guard.log')
 STOP_FILE = os.path.join(OUT, 'thermal.stop')
@@ -247,7 +247,7 @@ def decide(st, now, gpu, cfg):
 def ctl(langs, cmd):
     """python voice_ctl.py {pause|resume} {langs}. rc процесса."""
     proc = subprocess.run(
-        [sys.executable, os.path.join(TOOLS, 'voice_ctl.py'), cmd, langs],
+        [sys.executable, os.path.join(SCRIPTS, 'voice_ctl.py'), cmd, langs],
         cwd=ROOT, capture_output=True, text=True, timeout=120,
         encoding='utf-8', errors='replace')
     return proc.returncode

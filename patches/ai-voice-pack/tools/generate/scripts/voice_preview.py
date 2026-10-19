@@ -27,7 +27,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from voicekit import catalog, paths  # noqa: E402
 
-BATCH = os.path.join(paths.TOOLS_DIR, 'voice_batch.py')
+BATCH = os.path.join(paths.SCRIPTS_DIR, 'voice_batch.py')
 OUT_MD = os.path.join(paths.OUTPUT_DIR, 'voice', 'preview_review.md')
 
 N_LINES = 3
@@ -35,7 +35,7 @@ N_LINES = 3
 
 def _ai_voice_exists(arc, uid, variant):
     """Фраза сгенерирована? Новый формат — .opus, легаси — .wav (нет dup)."""
-    stem = os.path.join(paths.AI_VOICE_DIR, 'ru', arc,
+    stem = os.path.join(paths.ai_voice_dir('ru'), arc,
                         '{}__{}'.format(uid, variant))
     return os.path.isfile(stem + '.opus') or os.path.isfile(stem + '.wav')
 
@@ -157,7 +157,7 @@ def main():
     with open(OUT_MD, 'w', encoding='utf-8') as f:
         f.write('# Превью-ревью озвучки ({})\n\n'.format(
             time.strftime('%Y-%m-%d %H:%M')))
-        f.write('Слушай пары в `ai_voice/ru/{arc}/`. Формат файла: '
+        f.write('Слушай пары в `audio/vo_ru/{arc}/`. Формат файла: '
                 '`{uid}__{variant}.opus` (новые) / `.wav` (легаси).\n\n')
         f.write('| Персонаж | Вариант | Арка | uid | Текст (ru) |\n')
         f.write('|---|---|---|---|---|\n')
