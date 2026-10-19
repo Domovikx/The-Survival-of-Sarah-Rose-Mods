@@ -2,7 +2,8 @@
 # -*- coding: utf-8 -*-
 """Скриншоты игры -> лендинг: tmp/shots/*.png -> site/public/shots/*.jpg.
 
-Отбор кадров (сняты game/zz_capture.rpy, запуск — tools/shots_capture.ps1;
+Отбор кадров (харнесс zz_capture.rpy из scripts/, деплой драйвером в
+<игра>/mods/_tssr-test, запуск — scripts/shots_capture.ps1;
 game-режим: 24 кадра каждые 2.5с, лучшие с ОТКРЫТЫМ текстовым окном — ревью
 владельца 2026-10-16: «кадры без текста скучноватые»). Порядок в галерее
 задаёт Screenshots.tsx, здесь — только соответствие stem -> кадр:
@@ -18,13 +19,28 @@ game-режим: 24 кадра каждые 2.5с, лучшие с ОТКРЫТ�
 Обработка: ресайз 1920x1080 (16:9, сайт кладёт width:100%), JPEG q=3
 (~совпадает с прежними 2080x1170 по качеству, меньше по весу).
 
-Запуск из корня игры:  python tools/shots_for_site.py
+Запуск из корня репы:
+    python patches/ai-voice-pack/tools/generate/scripts/shots_for_site.py
 """
 import os
 import subprocess
 import sys
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+def _find_repo_root():
+    """Корень репы: поднимаемся от scripts/ до site/public/ (маяк) + patches/."""
+    p = os.path.dirname(os.path.abspath(__file__))
+    while True:
+        if (os.path.isdir(os.path.join(p, "site", "public")) and
+                os.path.isdir(os.path.join(p, "patches"))):
+            return p
+        parent = os.path.dirname(p)
+        if parent == p:
+            sys.exit("не найден корень репы (site/public) от %s" %
+                     os.path.abspath(__file__))
+        p = parent
+
+
+ROOT = _find_repo_root()
 SRC = os.path.join(ROOT, "tmp", "shots")
 DST = os.path.join(ROOT, "site", "public", "shots")
 
@@ -51,7 +67,7 @@ PLAN = {
 
 def main():
     if not os.path.isdir(SRC):
-        sys.exit("нет каталога %s (сначала съёмка: tools/shots_capture.ps1)" % SRC)
+        sys.exit("нет каталога %s (сначала съёмка: scripts/shots_capture.ps1)" % SRC)
     if not os.path.isdir(DST):
         os.makedirs(DST)
 
