@@ -1,0 +1,11 @@
+{
+  // .rpy в этой репе — Ren'Py-переводы (patches/**/tl/ru), а не Python.
+  // Без явной ассоциации автоопределение языка VS Code открывает их как
+  // Python, и Pylance сыплет ложными ошибками ("translate is not defined",
+  // "Statements must be separated by newlines or semicolons").
+  // Явная ассоциация с plaintext отключает auto-detection для .rpy.
+  "files.associations": {
+    "*.rpy": "plaintext",
+    "*.rpym": "plaintext"
+  }
+}
