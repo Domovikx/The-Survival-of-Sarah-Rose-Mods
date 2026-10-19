@@ -8,11 +8,12 @@
 удаление = удалить эту папку (+ `environment.txt`, если других модов нет).
 В `game/` мод НИЧЕГО не пишет. Соответствие «репа → установка»:
 
-- `patches/ai-voice-pack/mod/` → `mods/tssr-ai-voice-pack/` (установка)
-- `patches/ai-voice-pack/tl/<lang>/` → `mods/tssr-ai-voice-pack/tl/<lang>/` (установка)
+- `patches/ai-voice-pack/` (корень патча) → `mods/tssr-ai-voice-pack/` —
+  ЗЕРКАЛО установки (2026-10-19): `zzz_ui.rpy`, `zzz_update_check.rpy`,
+  `voice_config.rpy`, `fonts/`, `images/`, `tl/`, `catalog/` копируются как
+  есть (arcname = относительный путь, тесты не дают вернуться «карте путей»)
 - `patches/ai-voice-pack/audio/vo_<lang>/` → `mods/tssr-ai-voice-pack/ai_voice/<lang>/` (установка)
-- `patches/ai-voice-pack/voice_config.rpy` → `mods/tssr-ai-voice-pack/voice_config.rpy` (установка)
-- `patches/ai-voice-pack/tools/generate/catalog/` → `mods/tssr-ai-voice-pack/catalog/` (установка: только
+- `catalog/` (корень патча) → `mods/tssr-ai-voice-pack/catalog/` (в дистрибутив: только
   label_arc.json + voice_list.json; остальное — рантайм-пайплайна)
 - `environment.txt` (корень игры, служебный) → `RENPY_SEARCHPATH = "mods"` —
   относительный путь, работает при любой локации установки; другие моды
@@ -105,10 +106,10 @@ wav не пишется; `--keep-wav` = старая цепочка), легас
 **База путей ниже** — корень патча `patches/ai-voice-pack/` (исключение:
 `config/` — он в корне репы). Плоское `tools/` из game-репы неактуально:
 скрипты живут в `tools/generate/scripts/`, каталоги пайплайна —
-`tools/generate/{catalog,voice_candidates,output}`.
+`catalog/` (корень патча, зеркало установки) и `tools/generate/{voice_candidates,output}`.
 
 ```text
-tools/generate/catalog/
+catalog/   (КОРЕНЬ ПАТЧА)
   voices.jsonl                 # 68 254 записей: uid, old, new, who, arc, scene, category
   label_arc.json               # label -> Arc (рантайм-мапа для voice_config.rpy)
   missing_voices.md            # ЗАГЛУШКИ: кто без голоса (генерится voice_sync.py report)

@@ -21,7 +21,7 @@ REPO_ROOT = os.path.dirname(os.path.dirname(PKG_ROOT))  # корень репы
 # указывало в никуда с 2026-10 и больше не существует.
 SCRIPTS_DIR = os.path.join(ROOT, 'scripts')
 VOICE_CANDIDATES = os.path.join(ROOT, 'voice_candidates')
-CATALOG_DIR = os.path.join(ROOT, 'catalog')
+CATALOG_DIR = os.path.join(PKG_ROOT, 'catalog')  # зеркало установки 2026-10-19
 CONFIG_DIR = os.path.join(REPO_ROOT, 'config')
 OUTPUT_DIR = os.path.join(ROOT, 'output')
 # Озвучка (массив репы): audio/vo_{lang} — в дистрибутиве это ai_voice/<lang>

@@ -6,16 +6,16 @@
 
 ## Что уезжает в дистрибутив
 
-Установочная папка `mods/tssr-ai-voice-pack/` собирается build'ом из ПЯТИ
-мест этого каталога:
+Установочная папка `mods/tssr-ai-voice-pack/` собирается build'ом как КОПИЯ
+ДЕРЕВА этого каталога — зеркало установки (2026-10-19: корень патча = корень
+папки мода, arcname = относительный путь; тесты не дают вернуться «карте
+путей» — новый файл в репе попадает в дистрибутив сам):
 
-- `voice_config.rpy` → такой же `voice_config.rpy` в папке мода;
-- `mod/` → корень папки мода: `zzz_ui.rpy`, `zzz_update_check.rpy`,
-  `fonts/`, `images/` (диагностика прогонов сюда не идёт — MOD_EXCLUDE);
-- `tl/` → `tl/` (переводы; `.rpyc` не шиппится — см. ниже);
-- `tools/generate/catalog/` → `catalog/` (runtime-мапы `voice_list.json`,
-  `label_arc.json` — лежат в dev-каталоге, но входят в дистрибутив);
-- `audio/vo_<lang>/` → `ai_voice/<lang>/` (массив озвучки).
+- `zzz_ui.rpy`, `zzz_update_check.rpy`, `voice_config.rpy`, `fonts/`, `images/`,
+  `tl/` → такие же пути в папке мода (`.rpyc` не шиппится — см. ниже);
+- `catalog/` → `catalog/` (в дистрибутив уезжают ТОЛЬКО runtime-мапы
+  `voice_list.json`, `label_arc.json` — allowlist в build_pack);
+- `audio/vo_<lang>/` → `ai_voice/<lang>/` (массив озвучки, отдельный voice-zip).
 
 Сборка: `python patches/ai-voice-pack/tools/build/build_pack.py` →
 `dist/*.zip` (main + voice-ru + voice-en). Раскладка zip = раскладка

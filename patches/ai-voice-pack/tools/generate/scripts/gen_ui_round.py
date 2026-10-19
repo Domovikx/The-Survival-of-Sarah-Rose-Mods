@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
-"""Генерация 9-slice «пилюль» для мод-интерфейса -> mod/images/ui/round*.png.
+"""Генерация 9-slice «пилюль» для мод-интерфейса -> images/ui/round*.png.
 
 В Ren'Py 7.4 нет нативного border-radius: скругление кнопок делается
 Frame-нарезкой скруглённых картинок (белая заливка + прозрачные углы),
 цвет задаётся в стилях через TintMatrix. Stdlib-only (zlib/struct/math),
 сглаживание — суперсэмплинг x4. Запуск:
 
-    python tools/gen_ui_round.py
+    python tools/generate/scripts/gen_ui_round.py
 
 Alphas: round=255 (заливка/акцент), round_soft=0x1f (12% — призрачные
 кнопки), round_ghost=0x33 (20% — hover), round_dim=0x66 (40% — бейдж).
@@ -14,7 +14,11 @@ Alphas: round=255 (заливка/акцент), round_soft=0x1f (12% — при
 import math
 import os
 import struct
+import sys
 import zlib
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from voicekit import paths  # noqa: E402  (единый источник путей)
 
 SIZE = 72     # итоговый размер png
 RADIUS = 14   # радиус скругления (срез Frame=16: < высоты самых мелких кнопок)
@@ -70,7 +74,7 @@ def make_png(path, alpha):
 
 
 def main():
-    out_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "mod", "images", "ui")
+    out_dir = os.path.join(paths.PKG_ROOT, "images", "ui")
     out_dir = os.path.normpath(out_dir)
     if not os.path.isdir(out_dir):
         os.makedirs(out_dir)

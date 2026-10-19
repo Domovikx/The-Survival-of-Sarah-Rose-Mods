@@ -1,5 +1,6 @@
 ################################################################################
-## TSSR mod — аддитивный слой (внешняя папка mod/ рядом с game/).
+## TSSR mod — аддитивный слой (в установке — mods/tssr-ai-voice-pack/;
+## в репе — корень патча, зеркало установки).
 ## Подключение: environment.txt (корень установки) -> RENPY_SEARCHPATH.
 ## НИ ОДИН файл игры не изменяется.
 ##
@@ -35,7 +36,7 @@
 ################################################################################
 ## 1. Gui-патч (порт gui.HEAD.rpy; ШРИФТ заменён на Literata — кастинг
 ##    2026-10-15, победитель tmp/font_casting/index.html, файл лежит в
-##    mod/fonts/ и резолвится тем же "fonts/..."-путём через RENPY_SEARCHPATH)
+##    fonts/ и резолвится тем же "fonts/..."-путём через RENPY_SEARCHPATH)
 ################################################################################
 
 ## The font used for in-game text.
@@ -167,7 +168,7 @@ init python:
 
     # (код языка, отображаемое имя); None = английский (оригинал игры).
     # Добавление языка: строка сюда + translate <код> strings: (или
-    # mod/tl/<код>/*.rpy) + при необходимости ai_voice/<код>/ с озвучкой.
+    # tl/<код>/*.rpy) + при необходимости ai_voice/<код>/ с озвучкой.
     # Официальные файлы игры не трогаются.
     TSSR_LANGUAGES = [
         (None, "English"),
@@ -564,7 +565,7 @@ style tssr_mod_row is gui_text:
 
 ## Material-стиль (правка владельца 2026-10-16: «строгие прямоугольники» ->
 ## скруглённые пилюли): в Ren'Py 7.4 нет нативного border-radius — скругление
-## через 9-slice рамку картинок mod/images/ui/round*.png (генерятся
+## через 9-slice рамку картинок images/ui/round*.png (генерятся
 ## tools/gen_ui_round.py; путь резолвится через RENPY_SEARCHPATH как fonts/),
 ## цвет — TintMatrix (динамический gui.accent_color).
 define tssr_ui_pill = Frame("images/ui/round.png", 16, 16, 16, 16)
@@ -610,7 +611,7 @@ style tssr_badge is button:
     hover_background tssr_ui_hover_sky
     padding (12, 4, 12, 4)
 
-## Настоящий Bold: instance из Literata-VF (wght=700), лежит в mod/fonts/
+## Настоящий Bold: instance из Literata-VF (wght=700), лежит в fonts/
 ## (синтетический bold у Ren'Py выходит жирновато-мыльным).
 style tssr_badge_text is gui_text:
     font "fonts/Literata-Bold.ttf"
@@ -665,7 +666,7 @@ style tssr_link_text is gui_text:
 
 ################################################################################
 ## 5. Перевод строк нашего меню (новый язык = свой translate-блок здесь или
-##    в mod/tl/<код>/ — без правки официальных файлов)
+##    в tl/<код>/ — без правки официальных файлов)
 ################################################################################
 
 translate ru strings:

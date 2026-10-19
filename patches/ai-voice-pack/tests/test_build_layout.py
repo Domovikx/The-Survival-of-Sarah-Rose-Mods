@@ -70,12 +70,18 @@ def test_main_zip_key_files_in_mod_dir(tmp_path):
 
 
 def test_main_zip_repo_diagnostics_not_shipped(tmp_path):
-    """Служебные файлы репы (README, update_check.txt...) в дистрибутив не идут."""
+    """Dev-only файлы репы (README/MOD.md, tools/, tests/, audio/) в
+    дистрибутив не идут; каталог шиппится только allowlist'ом (2 JSON)."""
     with _build_main(tmp_path) as zf:
         names = zf.namelist()
     p = build_pack.MOD_DIR + "/"
+    rels = [n[len(p):] for n in names if n.startswith(p)]
+    tops = {r.split("/")[0] for r in rels}
     for fn in build_pack.MOD_EXCLUDE:
-        assert p + fn not in names
+        if fn != "catalog":  # каталог шиппится, но только runtime-пара
+            assert fn not in tops, fn
+    catalog = sorted(r for r in rels if r.startswith("catalog/"))
+    assert catalog == ["catalog/label_arc.json", "catalog/voice_list.json"]
 
 
 def test_environment_txt_is_relative():
@@ -129,7 +135,7 @@ def test_voice_config_registers_own_mod_dir():
 
 def test_no_basedir_mod_writes():
     """Диагностические файлы пишутся в папку мода, а не в basedir/mod."""
-    for rel in ("mod/zzz_ui.rpy", "mod/zzz_update_check.rpy"):
+    for rel in ("zzz_ui.rpy", "zzz_update_check.rpy"):
         src = _read(rel)
         assert 'config.basedir, "mod"' not in src, rel
         assert "_TSSR_MOD_DIR" in src, rel
@@ -140,7 +146,7 @@ def test_rpy_sources_never_use_dunder_file():
     store), а НЕ наш .rpy: в установке оттуда падал dirname() и мод «уезжал»
     в папку движка. Ни один rpy-исходник не имеет права читать путь от __file__
     (комментарии-предупреждения разрешены)."""
-    for rel in ("voice_config.rpy", "mod/zzz_ui.rpy", "mod/zzz_update_check.rpy"):
+    for rel in ("voice_config.rpy", "zzz_ui.rpy", "zzz_update_check.rpy"):
         for line in _read(rel).splitlines():
             code = line.split("#", 1)[0]
             assert "__file__" not in code, "%s: %s" % (rel, line.strip())
@@ -150,7 +156,7 @@ def test_mod_root_canonical_fallback_is_mod_dir():
     """Канонический фолбэк-путь в каждом rpy == MOD_DIR из build_pack —
     единая точка правды для имени папки установки."""
     suffix = '"mods", "tssr-ai-voice-pack"'
-    for rel in ("voice_config.rpy", "mod/zzz_ui.rpy", "mod/zzz_update_check.rpy"):
+    for rel in ("voice_config.rpy", "zzz_ui.rpy", "zzz_update_check.rpy"):
         assert suffix in _read(rel), rel
     assert build_pack.MOD_DIR == "mods/tssr-ai-voice-pack"
 
@@ -162,3 +168,30 @@ def test_main_zip_ships_no_rpyc(tmp_path):
     with _build_main(tmp_path) as zf:
         names = zf.namelist()
     assert not [n for n in names if n.endswith(".rpyc")], names
+
+
+def test_main_zip_is_mirror_of_patch_tree(tmp_path):
+    """Зеркало установки: состав зипа == дерево патча — «карта путей»
+    физически невозможна: файл едет по своему относительному пути, новый
+    файл попадает в дистрибутив сам (решение 2026-10-19)."""
+    with _build_main(tmp_path) as zf:
+        names = zf.namelist()
+    p = build_pack.MOD_DIR + "/"
+    shipped = {n[len(p):] for n in names if n.startswith(p)}
+    tree = {
+        os.path.relpath(str(f), str(build_pack.PATCH)).replace("\\", "/")
+        for f in build_pack._tree_files(build_pack.PATCH, build_pack.MOD_EXCLUDE)
+    }
+    runtime = {"catalog/label_arc.json", "catalog/voice_list.json"}
+    assert shipped == tree | runtime
+
+
+def test_patch_root_is_install_mirror():
+    """В репе больше нет mod/ и tools/generate/catalog: корень патча сам
+    является папкой мода, каталог живёт в корне."""
+    assert not os.path.exists(os.path.join(ROOT, "mod"))
+    assert not os.path.exists(os.path.join(ROOT, "tools", "generate", "catalog"))
+    for rel in ("catalog/label_arc.json", "catalog/voice_list.json",
+                "zzz_ui.rpy", "zzz_update_check.rpy",
+                "fonts/Literata-Regular.ttf", "images/ui/round.png"):
+        assert os.path.isfile(os.path.join(ROOT, rel)), rel

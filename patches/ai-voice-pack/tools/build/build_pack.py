@@ -37,9 +37,13 @@ VOICE_LANGS = {
 # Атомарная папка мода при установке (относительно корня игры)
 MOD_DIR = "mods/tssr-ai-voice-pack"
 
-# Служебное mod/, что НЕ попадает в дистрибутив (диагностика/доки репы)
-MOD_EXCLUDE = {"README.md", "update_check.txt", "last_menu_hook.txt",
-               "voice_debug.log"}
+# Dev-only в КОРНЕ патча — НЕ в дистрибутив (корень патча = зеркало
+# установки 2026-10-19, поэтому исключения — имена ВЕРХНЕГО уровня):
+# dev-дерево, аудио (уезжает отдельным voice-zip), каталог целиком (в зип
+# идут только два runtime-JSON, см. CATALOG_RUNTIME) + defensive-имена
+# диагностик, которые мод пишет в свою папку в установке.
+MOD_EXCLUDE = {"audio", "tools", "tests", "catalog", "README.md", "MOD.md",
+               "update_check.txt", "last_menu_hook.txt", "voice_debug.log"}
 
 # Рантайм-каталог: voice_config.rpy грузит ТОЛЬКО эти два JSON (label -> arc,
 # who -> variant); остальные 29M catalog/ — вспомогательные, в zip не идут.
@@ -95,20 +99,32 @@ def _add(zf, src, arcname):
 def _tree_files(root, exclude=frozenset()):
     """Отсортированный список файлов дерева (для воспроизводимости сборки).
 
+    exclude — имена ВЕРХНЕГО УРОВНЯ (dev-only), которые не шиппим; такие
+    каталоги не обходятся вовсе (audio/ — 134k файлов).
     .rpyc не шиппим (решение 2026-10-19): двойной источник правды
     (rpy + rpyc) = тихая рассинхронизация; движок скомпилирует .rpy
     при первом запуске. В git .rpyc тоже не коммитятся.
     """
-    return sorted(
-        p for p in root.rglob("*")
-        if p.is_file() and p.name not in exclude and "__pycache__" not in p.parts
-        and p.suffix != ".rpyc"
-    )
+    files = []
+    for entry in sorted(root.iterdir()):
+        if entry.name in exclude:
+            continue
+        if entry.is_file():
+            files.append(entry)
+        else:
+            files.extend(p for p in entry.rglob("*")
+                         if p.is_file() and "__pycache__" not in p.parts
+                         and p.suffix != ".rpyc")
+    return sorted(files)
 
 
 def build_main(out_dir):
-    """Ядро патча: атомарная папка мода mods/tssr-ai-voice-pack/ + корень."""
-    langs = sorted(VOICE_LANGS)
+    """Ядро патча: атомарная папка мода mods/tssr-ai-voice-pack/ + корень.
+
+    Сборка = КОПИЯ ДЕРЕВА патча (зеркало установки 2026-10-19): arcname =
+    относительный путь файла — «карта путей» отсутствует, новый файл в репе
+    попадает в дистрибутив сам.
+    """
     name = "TSSR-AI-Voice-Pack-main.zip"
     target = out_dir / name
     nfiles, nbytes = 0, 0
@@ -117,20 +133,12 @@ def build_main(out_dir):
         for arcname, content in (("INSTALL.txt", INSTALL_TXT),
                                  ("environment.txt", ENVIRONMENT_TXT)):
             zf.writestr(arcname, content)
-        # Скрипты/шрифты/картинки мода (без служебного)
-        for p in _tree_files(PATCH / "mod", MOD_EXCLUDE):
-            _add(zf, p, MOD_DIR + "/" + p.relative_to(PATCH / "mod").as_posix())
-        # runtime-конфиг озвучки (в папке мода, НЕ в game/)
-        _add(zf, PATCH / "voice_config.rpy", MOD_DIR + "/voice_config.rpy")
-        # Переводы: все языки сразу (в main)
-        for lang in langs:
-            src = PATCH / "tl" / lang
-            for p in _tree_files(src):
-                _add(zf, p, MOD_DIR + "/tl/" + lang + "/" + p.relative_to(src).as_posix())
-        # Рантайм-каталог (label->arc, who->variant)
+        # Зеркало установки: всё дерево патча кроме dev-only (MOD_EXCLUDE)
+        for p in _tree_files(PATCH, MOD_EXCLUDE):
+            _add(zf, p, MOD_DIR + "/" + p.relative_to(PATCH).as_posix())
+        # Рантайм-каталог: в зип идут ТОЛЬКО два JSON из allowlist
         for fn in CATALOG_RUNTIME:
-            _add(zf, PATCH / "tools" / "generate" / "catalog" / fn,
-                 MOD_DIR + "/catalog/" + fn)
+            _add(zf, PATCH / "catalog" / fn, MOD_DIR + "/catalog/" + fn)
     with zipfile.ZipFile(target) as zf:
         infos = zf.infolist()
         nfiles, nbytes = len(infos), sum(i.file_size for i in infos)

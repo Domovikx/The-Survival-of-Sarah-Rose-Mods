@@ -1,6 +1,8 @@
-# mod/ — аддитивный мод-слой TSSR (вне game/, переживает Steam-апдейты)
+# Мод-слой TSSR (в установке — mods/tssr-ai-voice-pack/, переживает Steam-апдейты)
 
-Подключение: файл `environment.txt` в КОРНЕ установки (рядом с exe) содержит
+В репе исходники этого слоя лежат в КОРНЕ патча (зеркало установки
+2026-10-19: `zzz_*.rpy`, `fonts/`, `images/` — по своим путям). Подключение:
+файл `environment.txt` в КОРНЕ установки (рядом с exe) содержит
 `RENPY_SEARCHPATH` с абсолютным путём к этой папке. Ren'Py грузит `.rpy` отсюда
 ПОСЛЕ официальных файлов игры (механизм и живые проверки:
 `tasks/2026-10-14-update-proof-mod-connection.md`).
@@ -8,7 +10,7 @@
 ## Состав
 
 - `zzz_ui.rpy` — gui-патч (**шрифт Literata** — победитель кастинга 2026-10-15,
-  файл `mod/fonts/Literata-Regular.ttf` + размеры шрифтов из persistent) +
+  файл `fonts/Literata-Regular.ttf` + размеры шрифтов из persistent) +
   **кнопка-бейдж с текущим языком (RUS/ENG)** на главном меню И в процессе
   всей игры (в игре — **«тихий режим»**: idle почти невидим — ghost-пилюля
   12% + подпись 35%, hover вспыхивает сплошным акцентом; хитбокс полный.
@@ -40,7 +42,7 @@
   - **Стиль кнопок — Material-подобные пилюли** (правка владельца «строгие
     прямоугольники -> красивее»): 9-slice рамка скруглённых картинок
     `images/ui/round*.png` + TintMatrix-окраска (в Ren'Py 7.4 нет нативного
-    border-radius). Ассеты генерятся `tools/gen_ui_round.py` (stdlib-only).
+    border-radius). Ассеты генерятся `tools/generate/scripts/gen_ui_round.py` (stdlib-only).
   - Два hook-экрана: `tssr_menu_hook` (главное меню, показ штатным label'ом
     `before_main_menu` — движок в меню overlay-экраны прячет, поэтому этому
     показ не нужен от списка) и `tssr_game_hook` (в `config.overlay_screens` —
@@ -48,7 +50,7 @@
     Общий контент — screen `tssr_button`.
 - `zzz_update_check.rpy` — детект апдейта игры: sha256 официальных файлов vs
   манифест → `update_check.txt` (STATUS: OK / АПДЕЙТ).
-- `README.md` — этот файл.
+- `MOD.md` — этот файл.
 
 Диагностические файлы (можно удалять, создаются заново): `update_check.txt`,
 `last_menu_hook.txt` (какой хук сработал + текущая кнопка, напр.
@@ -56,9 +58,10 @@
 
 ## Правила
 
-1. **Папка `mod/` обязательна**, пока существует `environment.txt` в корне:
-   если папку удалить/переименовать — игра НЕ стартует (краш на старте,
-   renpy/main.py:398). Удалять — только вместе с `environment.txt`.
+1. **Папка мода обязательна** (`mods/tssr-ai-voice-pack/` в установке), пока
+   существует `environment.txt` в корне: если папку удалить/переименовать —
+   игра НЕ стартует (краш на старте, renpy/main.py:398). Удалять — только
+   вместе с `environment.txt`.
 2. Файлы игры (`game/*.rpy`) мод НЕ изменяет. Официальные экраны 0.79 не
    переопределяются.
 3. `import renpy` в `init python` ЗАПРЕЩЁН (перебивает store-алиас renpy.exports).
@@ -66,7 +69,7 @@
 
 ## После апдейта игры
 
-1. Запустить игру, открыть `mod/update_check.txt`:
+1. Запустить игру, открыть `mods/tssr-ai-voice-pack/update_check.txt`:
    - `STATUS: OK` — ничего не делать;
    - `STATUS: АПДЕЙТ` — отревьюить, что изменилось (новые официальные значения
      vs наш слой), поправить мод при необходимости.
@@ -79,7 +82,7 @@
    в `TSSR_LANG_SHORT` (например `"de": "GER"` — кнопка будет показывать
    текущий язык: RUS/ENG/GER...).
 2. Перевод строк мода: `translate <код> strings:` в `zzz_ui.rpy` (или
-   `mod/tl/<код>/*.rpy`) + официальные переводы игры в `game/tl/<код>/` (для
+   `tl/<код>/*.rpy`) + официальные переводы игры в `game/tl/<код>/` (для
    этой игры их делает отдельный процесс — ресинк tl/ru, отдельная задача).
 3. Озвучка: `ai_voice/<код>/...` (см. корневой AGENTS.md).
 
@@ -92,7 +95,8 @@ Voice Volume в официальных настройках.
 
 ## Скриншоты игры для лендинга (ENG и RUS отдельно)
 
-`game/zz_capture.rpy` (рабочая копия в game/, env-гейт `TSSR_SHOTS=1`) снимает
+`tools/generate/scripts/zz_capture.rpy` (харнесс съёмки в репе; деплой —
+во временную `mods/_tssr-test` в установке, env-гейт `TSSR_SHOTS=1`) снимает
 кадры движковым `renpy.screenshot()` — запись изнутри процесса, работает даже
 когда окно невидимо другой Windows-сессии. Два режима: `menu` (главное меню +
 страница настроек) и `game` (диалоги пролога с авто-протоком AFM —
@@ -101,11 +105,11 @@ Voice Volume в официальных настройках.
 `should_save_persistent=False` (язык/AFM живут только в памяти процесса;
 `update(True)` в конце run() иначе записал бы их в persistent).
 
-    powershell -ExecutionPolicy Bypass -File tools\shots_capture.ps1   # съёмка -> tmp/shots/*.png
-    python tools/shots_for_site.py                                     # отбор+ресайз -> site/public/shots/*.jpg
-    python tools/read_persistent.py                                    # диагностик: язык/AFM в persistent
+    powershell -ExecutionPolicy Bypass -File tools\generate\scripts\shots_capture.ps1   # съёмка -> tmp/shots/*.png
+    python tools/generate/scripts/shots_for_site.py                    # отбор+ресайз -> site/public/shots/*.jpg
+    python tools/generate/scripts/read_persistent.py                   # диагностик: язык/AFM в persistent
 
-Кадры для сайта отбираются в `tools/shots_for_site.py` (1920x1080, JPEG q=3),
+Кадры для сайта отбираются в `tools/generate/scripts/shots_for_site.py` (1920x1080, JPEG q=3),
 имя `{name}_{russian|english}.jpg` — виджет `site/src/widgets/screenshots`
 берёт набор по языку лендинга.
 
@@ -117,11 +121,11 @@ Voice Volume в официальных настройках.
 - UI управления размерами ПЕРЕНЕСЁН: числовые поля на странице настроек
   (секция 2.1 `zzz_ui.rpy`, стейджинг + Apply/Reset — см. «Состав»).
 - Кастинг шрифтов: **победил Literata** (№10, выбор 2026-10-15) — поставлена
-  в `mod/fonts/Literata-Regular.ttf` (статический инстанс переменного шрифта
+  в `fonts/Literata-Regular.ttf` (статический инстанс переменного шрифта
   из google/fonts, оси на дефолтах wght=400/opsz=12, лицензия SIL OFL —
   свободная редистрибуция). Все три define gui.*_font указывают
-  `fonts/Literata-Regular.ttf` — путь резолвится из mod/ через
+  `fonts/Literata-Regular.ttf` — путь резолвится из папки мода через
   RENPY_SEARCHPATH (проверено запуском), game/ не трогаем. Жирный —
-  **настоящий инстанс VF** `wght=700` → `mod/fonts/Literata-Bold.ttf`
+  **настоящий инстанс VF** `wght=700` → `fonts/Literata-Bold.ttf`
   (2026-10-17, для бейджа; не синтетический bold движка). История кастинга:
   `tmp/font_casting/index.html` (23 кандидата — не удалять до конца итераций).
