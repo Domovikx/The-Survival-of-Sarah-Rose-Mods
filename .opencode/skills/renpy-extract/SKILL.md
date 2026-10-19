@@ -141,6 +141,11 @@ node extract_texts.mts verify
 - Translated / Untranslated
 - Progress percentage
 
+## Тесты
+
+- `extract_texts.test.mts` — юнит-тесты парсера/генератора.
+- `update_pipeline.test.mts` — E2E-тест полного цикла «апдейт игры» на фикстурах: появилась/изменилась/удалилась строка → `RenPyExtractor.scan` → `generateRpy` (переводы сохраняются, удалённые выпадают) → счётчики непереведённых → CLI `dedup_translations.mts --project` (поиск `<project>/game/tl/ru`) → `verifyIntegrity` до 100%. Запуск: `node --test` в каталоге скилла.
+
 ## Источники
 
 - Ren'Py Translation Documentation: https://www.renpy.org/doc/html/translation.html
