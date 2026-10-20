@@ -25,4 +25,4 @@ tmp/
 *.log
 *.log.live
 update_check.txt
-last_menu_hook.txt
+last_menu_hook.txt.pytest_cache/

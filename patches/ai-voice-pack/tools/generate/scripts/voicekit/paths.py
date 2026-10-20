@@ -26,6 +26,12 @@ CONFIG_DIR = os.path.join(REPO_ROOT, 'config')
 OUTPUT_DIR = os.path.join(ROOT, 'output')
 # Озвучка (массив репы): audio/vo_{lang} — в дистрибутиве это ai_voice/<lang>
 AUDIO_DIR = os.path.join(PKG_ROOT, 'audio')
+# Установка игры (READ-ONLY источник оригинальных скриптов, например script.rpy
+# для voice_catalog). Переопределяется env TSSR_GAME; путь по умолчанию —
+# стандартная локация Steam (паттерн tts_env: env-переопределяемый дефолт).
+GAME_INSTALL = os.environ.get(
+    'TSSR_GAME',
+    r'C:\Program Files (x86)\Steam\steamapps\common\The Survival of Sarah Rose')
 
 
 def ai_voice_dir(lang):

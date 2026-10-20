@@ -63,7 +63,7 @@ voice_candidates/{Имя}/  # источники: *.mp3 (НЕ qwen_*.mp3)
 
 | Тул                           | Назначение                                                                                                                                                                                         |
 | ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `voice_catalog.py`            | tl/ru + script.rpy → catalog/voices.jsonl + label_arc.json (только при апдейте игры)                                                                                                               |
+| `voice_catalog.py`            | тл мода (patches/ai-voice-pack/tl/ru) + script.rpy установки → catalog/voices.jsonl + label_arc.json (только при апдейте игры; `--diff` — манифесты added/changed/dropped в tmp/voice_delta/)      |
 | `voice_status.py`             | отчёт готово/нет голоса → catalog/missing_voices.md (заглушки)                                                                                                                                     |
 | `add_candidate.py`            | MP3-кандидат → реф: нарезка 10с + чистка + loudnorm, одним прогоном (инкрементально; qwen_*.mp3 игнорируются)                                                                                      |
 | `clean_refs.py`               | чистка рефа: highpass+afftdn+deesser+highshelf → loudnorm → фейды                                                                                                                                  |

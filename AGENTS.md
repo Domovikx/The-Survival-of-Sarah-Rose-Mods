@@ -110,7 +110,7 @@ wav не пишется; `--keep-wav` = старая цепочка), легас
 
 ```text
 catalog/   (КОРЕНЬ ПАТЧА)
-  voices.jsonl                 # 68 254 записей: uid, old, new, who, arc, scene, category
+  voices.jsonl                 # 68 322 записи: uid, old, new, who, arc, scene, category
   label_arc.json               # label -> Arc (рантайм-мапа для voice_config.rpy)
   missing_voices.md            # ЗАГЛУШКИ: кто без голоса (генерится voice_sync.py report)
   voice_sync_report.md         # расхождения слоёв: NEW/BROKEN/ORPHAN
@@ -139,7 +139,7 @@ tools/generate/scripts/
                                #   fs (безопасные операции), tts_env (пути моделей)
   voice_sync.py                # АКТУАЛИЗАТОР: status/update/migrate/report
                                #   (создаёт структуру новым, чинит пути, отчёты)
-  voice_catalog.py             # tl/ru + script.rpy -> voices.jsonl + label_arc.json
+  voice_catalog.py             # тл мода + script.rpy установки -> voices.jsonl + label_arc.json
   voice_design.py              # VoiceDesign-генерация кандидатов -> generated/
   add_candidate.py             # gen_selected/*.mp3 -> корень каста: {Имя}[_{v}].wav
                                #   (нарезка + чистка одномерным прогоном)
@@ -227,7 +227,7 @@ tools/generate/scripts/
    (одним прогоном: mp3 -> ПЕРВЫЕ 10с -> чистка -> loudnorm -16/TP -1.5 ->
    корень каста: {Имя}.wav). Единый уровень громкости для ВСЕХ рефов.
 
-Категории (voices.jsonl): dialogue 22 326, narration 44 941, menu 491, ui 496.
+Категории (voices.jsonl): dialogue 22 328, narration 45 024, menu 491, ui 479.
 Озвучиваются только dialogue + narration, и только касты с активным рефом
 {Имя}.wav (остальные — пропуск, видны в missing_voices.md).
 
@@ -246,7 +246,12 @@ python tools/generate/scripts/voice_sync.py migrate  # переезд refs/ -> �
 ## Пересборка каталога
 
 ```bash
-python tools/generate/scripts/voice_catalog.py    # ТОЛЬКО при апдейте игры (тексты поменялись)
+# ТОЛЬКО при апдейте игры (тексты поменялись). Источники: тл мода (patches/
+# ai-voice-pack/tl/ru) + script.rpy установки (TSSR_GAME или Steam-дефолт).
+# --diff: uid-манифесты added/changed/dropped в tmp/voice_delta/ — added
+# генерировать (voice_batch ru+en), changed переозвучить (ru --force --uid),
+# dropped (если были озвучены) — кандидаты на чистку audio/vo_*.
+python tools/generate/scripts/voice_catalog.py --diff catalog/voices.jsonl
 python tools/generate/scripts/voice_sync.py report  # обновить отчёты (заглушки + расхождения)
 ```
 

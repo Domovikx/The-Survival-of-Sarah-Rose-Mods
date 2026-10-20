@@ -12,3 +12,4 @@ patches/ai-voice-pack/tools/generate/voice_candidates/
 patches/ai-voice-pack/tools/generate/output/
 site/public/
 manifest.json
+**/.pytest_cache/

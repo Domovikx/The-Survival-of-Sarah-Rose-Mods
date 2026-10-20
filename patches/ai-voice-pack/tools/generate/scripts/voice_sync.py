@@ -317,19 +317,19 @@ def write_sync_report():
                     orphan.append((c, f))
 
     lines = []
-    lines.append('# Отчёт voice_sync ({})\n'.format(
+    lines.append('# Отчёт voice_sync ({})\n\n'.format(
         __import__('datetime').datetime.now().strftime('%Y-%m-%d %H:%M')))
-    lines.append('Источник: `python tools/voice_sync.py report`\n')
-    lines.append('## NEW — персонажи игры без каста ({}):\n'.format(len(new)))
+    lines.append('Источник: `python tools/voice_sync.py report`\n\n')
+    lines.append('## NEW — персонажи игры без каста ({})\n\n'.format(len(new)))
     lines.append('| # | Персонаж |\n|---|---|\n')
     for n, c in enumerate(new, 1):
         lines.append('| {} | {} |\n'.format(n, c))
-    lines.append('\n## BROKEN — каст есть, но нет активного рефа ({}):\n'.format(
+    lines.append('\n## BROKEN — каст есть, но нет активного рефа ({})\n\n'.format(
         len(broken)))
     lines.append('| Персонаж | Ожидаемый файл |\n|---|---|\n')
     for name in broken:
         lines.append('| {} | `{}` |\n'.format(name, paths.ref_voices(name)))
-    lines.append('\n## ORPHAN — рабочие рефы без каста ({}):\n'.format(
+    lines.append('\n## ORPHAN — рабочие рефы без каста ({})\n\n'.format(
         len(orphan)))
     lines.append('| Персонаж | Файл |\n|---|---|\n')
     for c, f in orphan:

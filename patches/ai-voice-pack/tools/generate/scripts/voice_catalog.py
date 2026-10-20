@@ -1,17 +1,23 @@
 #!/usr/bin/env python
 """TSSR Voice Catalog builder.
 
-Строит каталог озвучки из tl/ru переводов и script.rpy:
+Строит каталог озвучки из переводов тл мода и script.rpy установки:
 
   - uid = md5(old) — полный 32-hex (язык-независимый ключ)
   - catalog/voices.jsonl  — uid, old, new, who, arc, scene, category
                             (JSONL: строка 1 = метаданные, далее по записи)
   - catalog/label_arc.json — label -> arc (рантайм-мапа для auto_voice)
 
+Источники (2026-10-20): tl — модовый patches/ai-voice-pack/tl/ru (репо),
+script.rpy — read-only установка игры (TSSR_GAME или Steam-дефолт из
+voicekit.paths). Раньше оба брались из game_dir, но установка своего tl не
+имеет (тл живёт в моде) — дефолты были мертвы после переезда в mods-repo.
+
 Категории: dialogue / narration / menu / ui (ui и menu не озвучиваются).
 
 Запуск:
-  python tools/voice_catalog.py [game_dir] [--out DIR]
+  python tools/generate/scripts/voice_catalog.py [game_dir] [--tl DIR]
+      [--out DIR] [--diff OLD_JSONL]
 """
 
 import argparse
@@ -22,10 +28,13 @@ import os
 import re
 import sys
 
-GAME_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-TL_RU = os.path.join(GAME_DIR, 'game', 'tl', 'ru')
-SCRIPT = os.path.join(GAME_DIR, 'game', 'script.rpy')
-CATALOG_DIR = os.path.join(GAME_DIR, 'catalog')
+from voicekit import paths
+
+# Тл переводов мода (репо) и каталог-приёмник — раскладка voicekit.paths.
+TL_RU = os.path.join(paths.PKG_ROOT, 'tl', 'ru')
+CATALOG_DIR = paths.CATALOG_DIR
+# script.rpy — только read-only установка (env TSSR_GAME / Steam-дефолт).
+SCRIPT = os.path.join(paths.GAME_INSTALL, 'game', 'script.rpy')
 
 SKIP_FILES = ('renpy_common', 'screens', 'misc_strings')
 
@@ -154,18 +163,68 @@ def parse_script():
     return old_who, old_labels, menu_texts, labels, char_names
 
 
-def build(game_dir=None, out_dir=None):
+def write_delta_manifests(old_jsonl, entries):
+    """added/changed/dropped uid-манифесты: прежний каталог vs свежая сборка.
+
+    added   — uid только в свежем каталоге (новые строки: генерировать ru+en);
+    changed — uid в обоих, но ru-текст new отличается (переозвучить ru --force;
+              en-текст old по определению не менялся — uid = md5(old));
+    dropped — uid только в прежнем (сироты-кандидаты на чистку audio/vo_*).
+
+    Пишет tmp/voice_delta/{added,changed,dropped}.txt (по uid на строку,
+    gitignored tmp/ репы) и печатает сводку.
+    """
+    old_by_uid = {}
+    with open(old_jsonl, encoding='utf-8') as f:
+        for line in f:
+            line = line.strip()
+            if not line:
+                continue
+            rec = json.loads(line)
+            if 'uid' in rec:
+                old_by_uid[rec['uid']] = rec
+    new_by_uid = {e['uid']: e for e in entries}
+    added = sorted(set(new_by_uid) - set(old_by_uid))
+    dropped = sorted(set(old_by_uid) - set(new_by_uid))
+    changed = sorted(u for u in set(new_by_uid) & set(old_by_uid)
+                     if old_by_uid[u].get('new') != new_by_uid[u].get('new'))
+    out_dir = os.path.join(paths.REPO_ROOT, 'tmp', 'voice_delta')
+    os.makedirs(out_dir, exist_ok=True)
+    for name, uids in (('added', added), ('changed', changed),
+                       ('dropped', dropped)):
+        with open(os.path.join(out_dir, name + '.txt'), 'w',
+                  encoding='utf-8', newline='\n') as f:
+            for u in uids:
+                f.write(u + '\n')
+    print('=== diff vs {} ==='.format(old_jsonl))
+    print('  added   (генерировать ru+en): {}'.format(len(added)))
+    print('  changed (переозвучить ru --force): {}'.format(len(changed)))
+    print('  dropped (сироты-кандидаты на чистку): {}'.format(len(dropped)))
+    print('  манифесты: {}'.format(out_dir))
+    return added, changed, dropped
+
+
+def build(game_dir=None, out_dir=None, tl_dir=None, diff_with=None):
     """Сборка каталога.
 
-    game_dir — папка установки игры (по умолчанию — рядом со скриптом);
-    out_dir — куда писать catalog/ (по умолчанию — реальный каталог).
+    game_dir — установка игры: берётся оттуда script.rpy (по умолчанию
+               TSSR_GAME/Steam-дефолт из voicekit.paths);
+    tl_dir   — tl-каталог переводов (по умолчанию — тл мода patches/ai-voice-pack/tl/ru);
+    out_dir  — куда писать catalog/ (по умолчанию — каталог репы);
+    diff_with — прежний voices.jsonl: записать added/changed/dropped
+                uid-манифесты в tmp/voice_delta/ (генерация/переозвучка/чистка).
     """
     global TL_RU, SCRIPT, CATALOG_DIR
+    if tl_dir:
+        TL_RU = tl_dir
     if game_dir:
-        TL_RU = os.path.join(game_dir, 'game', 'tl', 'ru')
         SCRIPT = os.path.join(game_dir, 'game', 'script.rpy')
     if out_dir:
         CATALOG_DIR = out_dir
+    if not os.path.isdir(TL_RU):
+        sys.exit('tl-каталог не найден: {} (передай --tl)'.format(TL_RU))
+    if not os.path.isfile(SCRIPT):
+        sys.exit('script.rpy не найден: {} (передай game_dir или TSSR_GAME)'.format(SCRIPT))
     print('parsing tl/ru ...')
     tl_entries = parse_tl()
     print('  tl entries: {}'.format(len(tl_entries)))
@@ -244,6 +303,10 @@ def build(game_dir=None, out_dir=None):
 
     os.makedirs(CATALOG_DIR, exist_ok=True)
 
+    # diff читает прежний каталог ДО перезаписи (частый случай — тот же путь).
+    if diff_with:
+        write_delta_manifests(diff_with, entries)
+
     voices_path = os.path.join(CATALOG_DIR, 'voices.jsonl')
     meta = dict(
         version=1,
@@ -285,8 +348,15 @@ def build(game_dir=None, out_dir=None):
 if __name__ == '__main__':
     ap = argparse.ArgumentParser(description='Сборка каталога озвучки TSSR')
     ap.add_argument('game_dir', nargs='?', default=None,
-                    help='папка игры (по умолчанию — рядом со скриптом)')
+                    help='установка игры (берётся script.rpy; по умолчанию '
+                         'TSSR_GAME или Steam-дефолт)')
+    ap.add_argument('--tl', default=None,
+                    help='tl-каталог переводов (по умолчанию — тл мода '
+                         'patches/ai-voice-pack/tl/ru)')
     ap.add_argument('--out', default=None,
                     help='куда писать catalog/ (по умолчанию — реальный)')
+    ap.add_argument('--diff', default=None, metavar='OLD_JSONL',
+                    help='прежний voices.jsonl: записать added/changed/dropped '
+                         'uid-манифесты в tmp/voice_delta/')
     a = ap.parse_args()
-    build(game_dir=a.game_dir, out_dir=a.out)
+    build(game_dir=a.game_dir, out_dir=a.out, tl_dir=a.tl, diff_with=a.diff)
