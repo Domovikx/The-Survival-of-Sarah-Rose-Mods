@@ -32,7 +32,8 @@
     приоритет, старт только через пульт);
   - `voice_status/sync/manage/preview/...` — статус, каталог, отчёты;
   - `shots_capture.ps1` + `zz_capture.rpy` — съёмка UI для лендинга;
-- `tools/generate/voice_candidates/` — касты рефов (yaml + wav + сырьё);
+- `registry/` — ЕДИНАЯ БД мода (реестр спикеров who_map.jsonl, uid-исключения
+  overrides.jsonl, голоса кастов casts/; карта — registry/README.md);
 - `tools/generate/output/` — логи и стейты пайплайна (не коммитятся);
 - `tests/` — pytest: `python -m pytest patches/ai-voice-pack/tests/ -q`.
 

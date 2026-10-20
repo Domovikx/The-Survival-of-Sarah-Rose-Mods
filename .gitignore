@@ -25,4 +25,7 @@ tmp/
 *.log
 *.log.live
 update_check.txt
-last_menu_hook.txt.pytest_cache/
+last_menu_hook.txt
+.pytest_cache/
+# state генератора (пересоздаётся warm-guard)
+thermal_guard.json

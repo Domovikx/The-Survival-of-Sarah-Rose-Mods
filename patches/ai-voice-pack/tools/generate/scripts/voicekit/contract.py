@@ -1,4 +1,4 @@
-"""Контракт каста voice_candidates/{Name}/{Name}.yaml.
+"""Контракт каста registry/casts/{Name}/{Name}.yaml.
 
 Контрактные поля валидируются строго; отчёт-поля (status, last_run, ...)
 проходят свободно (extra='allow') — «свои поля для своих дел».

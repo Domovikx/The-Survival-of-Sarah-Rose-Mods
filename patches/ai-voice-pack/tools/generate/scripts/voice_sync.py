@@ -3,13 +3,13 @@
 
 Слои (источники правды):
   catalog/voices.jsonl         кто есть в игре (собирается voice_catalog.py)
-  voice_candidates/{Name}/     кто в работе (контракт + подпапки)
+  registry/casts/{Name}/        кто в работе (контракт + подпапки)
   каст-yaml (who_codes)      кого озвучиваем (озвучен = есть реф {Name}.wav)
 
 КОМАНДЫ:
   status                       сводка слоёв и расхождений (console)
   update  [--apply]            создать структуру+заглушки новым персонажам,
-                               пересобрать сводку voice_candidates.jsonl
+                               пересобрать журнал output/voice_candidates.jsonl
   migrate [--apply]            одноразовый переезд: refs/*.wav -> папки
                                персонажей, mp3 -> generated/gen_selected,
                                обновление структуры кастов

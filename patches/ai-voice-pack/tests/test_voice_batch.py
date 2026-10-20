@@ -103,7 +103,7 @@ def test_select_phrases_with_ref(mock_config):
     assert len(phrases) == 1
     assert phrases[0]['uid'] == 'test_uid_001'
     assert phrases[0]['voice'] == 'TestVoice'
-    assert phrases[0]['ref'].endswith('voice_candidates/TestVoice/TestVoice.wav')
+    assert phrases[0]['ref'].endswith('registry/casts/TestVoice/TestVoice.wav')
 
 
 def test_select_phrases_skips_unlisted(mock_config):
@@ -147,8 +147,8 @@ def test_write_manifest(mock_config):
     p = dict(
         uid='test_uid_001', arc='TestArc', voice='TestVoice',
         variant='TestVoice', lang='ru',
-        ref=os.path.join(paths.ROOT,
-                         'voice_candidates/TestVoice/TestVoice.wav'),
+        ref=os.path.join(paths.PKG_ROOT,
+                         'registry', 'casts', 'TestVoice', 'TestVoice.wav'),
         out=os.path.join(paths.ai_voice_dir('ru'), 'TestArc',
                          'test_uid_001__TestVoice.wav'),
         text_new='Привет мир', text_old='Hello world', emotion=None,
@@ -160,7 +160,7 @@ def test_write_manifest(mock_config):
     assert os.path.exists(manifest)
     content = open(manifest, encoding='utf-8').read()
     assert 'uid: test_uid_001' in content
-    assert 'ref: voice_candidates/TestVoice/TestVoice.wav' in content
+    assert 'registry/casts/TestVoice/TestVoice.wav' in content
     assert 'emotion: -' in content
     assert 'text_ru: Привет мир' in content
     assert 'text_en: Hello world' in content

@@ -5,12 +5,12 @@
 ЧТО ДЕЛАЕТ:
   Для каждого выбранного персонажа генерирует N реплик-кандидатов
   (Qwen3-TTS-12Hz-1.7B-VoiceDesign, инструкция = instruct_en из YAML-каста)
-  и кладёт их в voice_candidates/{Имя}/generated/{NN}.mp3.
-  После прогона пишет статистику в voice_candidates/voice_candidates.jsonl
+  и кладёт их в registry/casts/{Имя}/generated/{NN}.mp3.
+  После прогона пишет статистику в output/voice_candidates.jsonl
   (секция generation: дата, ok/skip/give_up/fail по каждому персонажу).
 
 ИСТОЧНИК КАСТА (YAML):
-  voice_candidates/{Имя}/{Имя}.yaml — контракт персонажа:
+  registry/casts/{Имя}/{Имя}.yaml — контракт персонажа:
     name, gender, age, who, instruct_en (англ. описание для модели), texts.
   Файл = контракт: добавил yaml -> персонаж появился в --list и генерации.
 
@@ -60,7 +60,7 @@ FFPROBE = "ffprobe"
 
 
 def load_cast():
-    """Каст из voice_candidates/*/*.yaml. {Имя: cfg} (только с texts)."""
+    """Каст из registry/casts/*/*.yaml. {Имя: cfg} (только с texts)."""
     cast = {}
     for name in catalog.cast_names():
         cfg = catalog.load_cast(name)
@@ -250,7 +250,7 @@ def main():
 
     cast = load_cast()
     if not cast:
-        print("Каст пуст: нет voice_candidates/*/*.yaml с texts")
+        print("Каст пуст: нет registry/casts/*/*.yaml с texts")
         return 1
 
     if args.list:

@@ -12,7 +12,7 @@
 После цепочки — loudnorm two-pass (-16 LUFS / TP -1.5).
 
 ИСПОЛЬЗОВАНИЕ:
-  python tools/beastify.py --file voice_candidates/Atilla/Atilla_05.wav
+  python tools/beastify.py --file registry/casts/Atilla/Atilla_05.wav
   -> рядом Atilla_05_orc.wav, _demon.wav, _monster.wav
   python tools/beastify.py --file X.wav --only demon
 """

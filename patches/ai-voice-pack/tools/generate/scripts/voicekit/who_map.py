@@ -2,7 +2,7 @@
 """who_map: реестр «кто есть кто» — единый источник истины спикеров игры.
 
 Игра (установка) даёт идентичность (define + строковые спикеры), касты
-(voice_candidates) — голоса, а реестр связывает одно с другим и переживает
+(registry/casts) — голоса, а реестр связывает одно с другим и переживает
 апдейты игры (rename/опечатки/новые ипостаси).
 
 Одна строка who_map.jsonl = один персонаж; хранится ТОЛЬКО дельта от дефолта
@@ -34,8 +34,8 @@ import os
 
 from voicekit import paths
 
-WHO_MAP_PATH = os.path.join(paths.ROOT, 'registry', 'who_map.jsonl')
-OVERRIDES_PATH = os.path.join(paths.ROOT, 'registry', 'overrides.jsonl')
+WHO_MAP_PATH = os.path.join(paths.REGISTRY_DIR, 'who_map.jsonl')
+OVERRIDES_PATH = os.path.join(paths.REGISTRY_DIR, 'overrides.jsonl')
 
 
 def load(path=None):

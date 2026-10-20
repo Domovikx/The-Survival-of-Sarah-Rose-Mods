@@ -1,6 +1,11 @@
 """Раскладка проекта — ЕДИНСТВЕННОЕ место, где живут пути.
 
-Структура voice_candidates/{Name}/:
+БД мода (ЕДИНОЕ место истины) — PKG_ROOT/registry/ (см. registry/README.md):
+  who_map.jsonl   реестр спикеров
+  overrides.jsonl uid-исключения парсера
+  casts/          голоса кастов
+
+Структура registry/casts/{Name}/:
   generated/     сырьё от voice_design (01.mp3, 02.mp3, ...)
   gen_selected/  отобранные вручную ({Name}.mp3, {Name}_1.mp3)
   {Name}.wav     АКТИВНЫЙ реф в корне каста (его ищет система: load_voices);
@@ -15,12 +20,14 @@ ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)
 # Корень репы: пресеты живут в config/ на уровне репы (см. AGENTS.md).
 PKG_ROOT = os.path.dirname(os.path.dirname(ROOT))       # patches/ai-voice-pack
 REPO_ROOT = os.path.dirname(os.path.dirname(PKG_ROOT))  # корень репы
+# ЕДИНЫЙ дом БД мода: реестр спикеров + голоса кастов.
+REGISTRY_DIR = os.path.join(PKG_ROOT, 'registry')
 
 # Дом скриптов пайплайна (+ voicekit). Исторически это был game-repo tools/ —
 # после переезда в mods-repo лежат здесь; удалённое TOOLS_DIR (generate/tools)
 # указывало в никуда с 2026-10 и больше не существует.
 SCRIPTS_DIR = os.path.join(ROOT, 'scripts')
-VOICE_CANDIDATES = os.path.join(ROOT, 'voice_candidates')
+VOICE_CANDIDATES = os.path.join(REGISTRY_DIR, 'casts')
 CATALOG_DIR = os.path.join(PKG_ROOT, 'catalog')  # зеркало установки 2026-10-19
 CONFIG_DIR = os.path.join(REPO_ROOT, 'config')
 OUTPUT_DIR = os.path.join(ROOT, 'output')
@@ -45,7 +52,8 @@ def ai_voice_dir(lang):
 VOICES_JSONL = os.path.join(CATALOG_DIR, 'voices.jsonl')
 VOICE_LIST_JSON = os.path.join(CATALOG_DIR, 'voice_list.json')
 LABEL_ARC_JSON = os.path.join(CATALOG_DIR, 'label_arc.json')
-CAST_SUMMARY_JSONL = os.path.join(VOICE_CANDIDATES, 'voice_candidates.jsonl')
+# Журнал прогонов генерации кастов — ДЕРИВАТ (пересоздаётся voice_design).
+CAST_SUMMARY_JSONL = os.path.join(OUTPUT_DIR, 'voice_candidates.jsonl')
 MISSING_VOICES_MD = os.path.join(CATALOG_DIR, 'missing_voices.md')
 SYNC_REPORT_MD = os.path.join(CATALOG_DIR, 'voice_sync_report.md')
 
@@ -71,7 +79,7 @@ def ref_active(name):
 
 
 def ref_voices(name):
-    return 'voice_candidates/{}/{}.wav'.format(name, name)
+    return 'registry/casts/{}/{}.wav'.format(name, name)
 
 
 def ref_variant(name, variant):
@@ -80,7 +88,18 @@ def ref_variant(name, variant):
 
 
 def resolve_ref(ref):
-    return ref if os.path.isabs(ref) else os.path.join(ROOT, ref)
+    """Реф-путь -> абсолютный.
+
+    Относительный 'registry/casts/...' считается от PKG_ROOT; легаси-префикс
+    'voice_candidates/...' (до переезда БД 2026-10-20) перенаправляется туда же.
+    """
+    if ref.startswith('voice_candidates/'):
+        ref = 'registry/casts/' + ref[len('voice_candidates/'):]
+    if os.path.isabs(ref):
+        return ref
+    if ref.startswith('registry/'):
+        return os.path.join(PKG_ROOT, ref)
+    return os.path.join(ROOT, ref)
 
 
 def batch_log():

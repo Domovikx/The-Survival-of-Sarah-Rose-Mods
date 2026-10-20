@@ -1,6 +1,6 @@
 ---
 name: tssr-voice-design
-description: Генерация голосов-кандидатов для TSSR по текстовому описанию (Qwen3-TTS VoiceDesign) — промт-дизайн тембра, генерация реплик-рефов ≥10с с автодобором длины, постобработка. Используй, когда нужно создать/дополнить голос персонажа, добавить новых кандидатов в voice_candidates/ или найти голос по типажу.
+description: Генерация голосов-кандидатов для TSSR по текстовому описанию (Qwen3-TTS VoiceDesign) — промт-дизайн тембра, генерация реплик-рефов ≥10с с автодобором длины, постобработка. Используй, когда нужно создать/дополнить голос персонажа, добавить новых кандидатов в registry/casts/ или найти голос по типажу.
 ---
 
 # Skill: tssr-voice-design — Генерация голосов по промту
@@ -14,22 +14,22 @@ description: Генерация голосов-кандидатов для TSSR 
 ```text
 tools/
   voice_design.py          # тул генерации (резюмабельный), читает YAML-каст
-voice_candidates/{Имя}/    # сюда падают кандидаты (+ {Имя}.yaml — каст)
+registry/casts/{Имя}/      # сюда падают кандидаты (+ {Имя}.yaml — каст)
   {Имя}.yaml               # ОПИСАНИЕ голоса: контракт для voice_design.py
                                #   (instruct_en — ФИЗИОГНОМИКА тела, напр. "Male, 55-70 years
                                #   old, tall and broad-shouldered..."; instruct_ru — перевод)
   generated/NN.mp3         # кандидаты: 01.mp3, 02.mp3, ... (сырьё)
   gen_selected/            # отобранные вручную (add_candidate делает рефы)
-voice_candidates/
-  voice_candidates.jsonl   # СВОДНАЯ СТАТИСТИКА каста (summary/cast/generation)
-voice_candidates/cast.md   # обзорный документ «кто озвучивает» (справка)
+tools/generate/output/
+  voice_candidates.jsonl   # СВОДНАЯ СТАТИСТИКА каста (журнал, дерииват)
+registry/casts/cast.md     # обзорный документ «кто озвучивает» (справка)
 ```
 
-**Каст живёт в YAML** (`voice_candidates/{Имя}/{Имя}.yaml`), а не в python.
+**Каст живёт в YAML** (`registry/casts/{Имя}/{Имя}.yaml`), а не в python.
 Добавил/поправил yaml → персонаж сразу появился в `--list` и генерации.
 Старый `voice_design_cast.py` удалён при миграции (2026-09-02).
 
-**Статистика** — `voice_candidates/voice_candidates.jsonl`:
+**Статистика** — `tools/generate/output/voice_candidates.jsonl`:
 
 - `summary`: всего / с голосом / с кандидатами / без ничего
 - `cast`: по каждому персонажу статус (voice_ready/candidates/need_generation)
@@ -70,9 +70,9 @@ OMP_NUM_THREADS=8 "$PY" tools/voice_design.py \
 
 Внимание: `--char` принимает ОДНО имя — повторяй флаг для нескольких
 персонажей. Итоги прогона (ok/skip/give_up/fail по каждому) — в
-`voice_candidates/voice_candidates.jsonl` → `generation`.
+`tools/generate/output/voice_candidates.jsonl` → `generation`.
 
-## Формат каста (voice_candidates/{Имя}/{Имя}.yaml)
+## Формат каста (registry/casts/{Имя}/{Имя}.yaml)
 
 Файл = контракт для `voice_design.py`. Схема:
 
@@ -273,7 +273,7 @@ voice_design.py имеет 3 попытки:
 ## Как добавить новый голос
 
 1. Если персонаж в `catalog/missing_voices.md` — проверь пол/возраст по игре.
-2. Создай `voice_candidates/{Имя}/{Имя}.yaml` с описанием и instruct_en
+2. Создай `registry/casts/{Имя}/{Имя}.yaml` с описанием и instruct_en
    (по чек-листу из раздела «Бест-практисы для instruct_en»).
 3. Пользователь проверяет `.yaml`.
 4. Сгенерируй: `"$PY" tools/voice_design.py --char "{Имя}" --n 6`.
@@ -284,7 +284,7 @@ voice_design.py имеет 3 попытки:
 
 ## Папки-заглушки
 
-`voice_candidates/{Имя}/{Имя}.yaml` — описание типажа: кто, пол, возраст,
+`registry/casts/{Имя}/{Имя}.yaml` — описание типажа: кто, пол, возраст,
 характер, реплики, instruct_en (по чек-листу из «Бест-практисы»).
 Папка без .mp3 не участвует в add_candidate.py. После генерации
 кандидатов .yaml можно оставить как справку.

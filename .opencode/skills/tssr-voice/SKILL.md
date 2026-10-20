@@ -22,7 +22,7 @@ ai_voice/                          # КОРЕНЬ ПРОЕКТА (рядом с 
   en/{Arc}/{uid}__{variant}.opus    # английская озвучка (текст = old)
                                     #   wav в ai_voice НЕТ (удалены 2026-10-14,
                                     #   финальная миграция) — только opus;
-                                    #   wav остаются в voice_candidates (рефы)
+                                    #   wav остаются в registry/casts (рефы)
 game/
   catalog/label_arc.json     # label -> Arc (грузится voice_config.rpy)
   voice_config.rpy           # config.auto_voice = static_auto_voice (callable)
@@ -46,7 +46,7 @@ Arc в рантайме = label-часть translation ID (`OpeningScene_92a05bc
 refs/
   {Голос}.wav            # АКТИВНЫЙ реф (озвучен = этот файл существует)
   {Голос}_{variant}.wav  # варианты для A/B (Sarah_1, Sarah_3, Sigmund_2, ...)
-voice_candidates/{Имя}/  # источники: *.mp3 (НЕ qwen_*.mp3)
+registry/casts/{Имя}/  # источники: *.mp3 (НЕ qwen_*.mp3)
 ```
 
 ПРАВИЛА ЛЕЧЕНИЯ РЕФОВ (2026-09-01, зафиксированы):
@@ -141,7 +141,7 @@ Unicode-ударение **U+0301** (combining acute) после ударной 
 ## Добавление нового голоса
 
 ```bash
-# 1. Положить кандидата: voice_candidates/{Имя}/*.mp3
+# 1. Положить кандидата: registry/casts/{Имя}/*.mp3
 #    ВАЖНО: qwen_*.mp3 игнорируются (это VoiceDesign — не рефы)
 # 2. Собрать реф (нарезка+чистка+loudnorm, существующие скипаются):
 C:\tools\cosyvoice3\.venv\Scripts\python.exe tools/add_candidate.py

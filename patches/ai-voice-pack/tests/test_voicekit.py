@@ -16,13 +16,13 @@ def test_paths_layout():
     assert paths.CONFIG_DIR == os.path.join(
         os.path.dirname(os.path.dirname(ROOT)), 'config')
     assert os.path.normpath(paths.char_dir('Alaric')).endswith(
-        os.path.normpath('voice_candidates/Alaric'))
+        os.path.normpath('registry/casts/Alaric'))
     assert os.path.normpath(paths.ref_active('Alaric')).endswith(
-        os.path.normpath('voice_candidates/Alaric/Alaric.wav'))
+        os.path.normpath('registry/casts/Alaric/Alaric.wav'))
     assert paths.ref_voices('Alaric') == \
-        'voice_candidates/Alaric/Alaric.wav'
+        'registry/casts/Alaric/Alaric.wav'
     assert os.path.normpath(paths.ref_variant('Alaric', '3')).endswith(
-        os.path.normpath('voice_candidates/Alaric/Alaric_3.wav'))
+        os.path.normpath('registry/casts/Alaric/Alaric_3.wav'))
     with pytest.raises(ValueError):
         paths.char_subdir('Alaric', 'nope')
 
