@@ -1,4 +1,4 @@
-# Отчёт voice_sync (2026-09-04 18:10)
+# Отчёт voice_sync (2026-10-20 09:25)
 
 Источник: `python tools/voice_sync.py report`
 
