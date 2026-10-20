@@ -8,8 +8,9 @@ tmp/
 site/
 package-lock.json
 patches/ai-voice-pack/audio/
-patches/ai-voice-pack/tools/generate/voice_candidates/
+patches/ai-voice-pack/registry/casts/
 patches/ai-voice-pack/tools/generate/output/
 site/public/
 manifest.json
 **/.pytest_cache/
+patches/ai-voice-pack/catalog/voice_list.json

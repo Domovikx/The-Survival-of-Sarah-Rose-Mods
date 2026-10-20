@@ -13,6 +13,7 @@
     "clearcache": "node .opencode/skills/renpy-clear-cache/clear_cache.mts",
     "tlstat": "node .opencode/skills/list-translation-files/list_translation_files.mts",
     "tlaudit": "node .opencode/skills/renpy-audit/review_translations.mts",
+    "potgen": "node .opencode/skills/renpy-po/potgen.mts",
     "build:pack": "python patches/ai-voice-pack/tools/build/build_pack.py",
     "lint:md": "markdownlint-cli2",
     "lint:md:fix": "markdownlint-cli2 --fix",
