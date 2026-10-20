@@ -451,9 +451,6 @@ translate ru strings:
     old "So singular a person. And he belonged to her and her alone, just as she did to him."
     new "Такой уникальный человек. И он принадлежал ей и только ей, как и она ему."
 
-    old "I love you."
-    new "Я люблю тебя."
-
     old "She spoke the words through heavy breaths."
     new "Она произнесла эти слова, тяжело дыша."
 

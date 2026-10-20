@@ -16,8 +16,8 @@ translate ru strings:
     old "Mythran soldiers, her own fellow mercenaries, everyone who had participated in the battle was here."
     new "Митранские солдаты, её товарищи-наёмники — все, кто участвовал в битве, были здесь."
 
-    old "With any threat of resistance now crushed, the soldier's on all sides had put down their swords and picked up their wine bottles."
-    new "Теперь, когда любая угроза сопротивления была подавлена, солдаты со всех сторон опустили мечи и взялись за бутылки с вином."
+    old "With any threat of resistance now crushed, the soldier's on all sides had puEt down their swords and picked up their wine bottles."
+    new "Теперь, когда любая угроза сопротивления была подавлена, солдаты со всех сторон отложили мечи и взялись за бутылки вина."
 
     old "Most everyone she saw was either drunk or blacked out."
     new "Почти все, кого она видела, были либо пьяны, либо без сознания."
@@ -1083,9 +1083,6 @@ translate ru strings:
 
     old "I think you're still little."
     new "Думаю, ты всё ещё маленькая."
-
-    old "I'm not!"
-    new "Я не маленькая!"
 
     old "Alright, it's settled. We all take the bed, everyone gets a good night sleep. Agreed?"
     new "Ладно, решено. Все ложимся на кровать, все хорошо высыпаемся. Согласны?"
@@ -2964,9 +2961,6 @@ translate ru strings:
 
     old "Or perhaps, Sarah realized more deeply, nothing that she herself would allow to grow."
     new "Или, возможно, Сара осознала глубже, ничего, чему она сама позволила бы развиться."
-
-    old "Maybe."
-    new "Может быть."
 
     old "But if tonight is all we have, can't that be enough?"
     new "Но если у нас есть только эта ночь, разве этого не может быть достаточно?"

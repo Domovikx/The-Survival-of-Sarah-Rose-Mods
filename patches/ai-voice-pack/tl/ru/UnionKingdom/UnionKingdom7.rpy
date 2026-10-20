@@ -592,9 +592,6 @@ translate ru strings:
     old "Ah, so you do have claws."
     new "Ах, так у вас всё-таки есть когти."
 
-    old "Sarah looked at him."
-    new "Сара посмотрела на него."
-
     old "I am not unaware of the matters that you hint at."
     new "Я не невежественна в вопросах, на которые вы намекаете."
 

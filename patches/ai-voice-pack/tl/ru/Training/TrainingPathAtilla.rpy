@@ -124,9 +124,6 @@ translate ru strings:
     old "There might be another way that I could pay you..."
     new "Может быть, есть другой способ заплатить тебе..."
 
-    old "Atilla looked at her."
-    new "Атилла посмотрел на неё."
-
     old "He was really going to make her say it, Sarah realized. She trembled as she forced the words out."
     new "Он действительно заставит её сказать это, поняла Сара. Она дрожала, выдавливая слова."
 

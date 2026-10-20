@@ -502,9 +502,6 @@ translate ru strings:
     old "Each time he entered her, slapped her, pulled her hair, each act only furthered her love for the man."
     new "Каждый раз, когда он входил в неё, шлёпал, дёргал за волосы, каждое действие лишь укрепляло её любовь к этому мужчине."
 
-    old "Another slap across her face."
-    new "Очередная пощёчина."
-
     old "And Sarah looked at him with blind wonder in her eyes."
     new "И Сара смотрела на него со слепым восхищением в глазах."
 

@@ -73,9 +73,6 @@ translate ru strings:
     old "As the princess, heir to a throne she'd now lost, she would undoubtedly know how to read and write."
     new "Будучи принцессой, наследницей трона, который она теперь потеряла, она, несомненно, умела читать и писать."
 
-    old "Samayra..."
-    new "Самайра..."
-
     old "Ooh, I was just thinking out loud. Samayra could work as my secretary."
     new "Оу, я просто размышляла вслух. Самайра могла бы работать моим секретарём."
 

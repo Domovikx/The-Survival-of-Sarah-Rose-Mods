@@ -697,8 +697,8 @@ translate ru strings:
     old "A constant, lowly grunting, seemed to emerge from the creature as it breathed heavily."
     new "Постоянное низкое хрюканье, казалось, исходило от твари, тяжело дышащей."
 
-    old "Until now, Sarah had barely had time to look at the creature."
-    new "До сих пор у Сары почти не было времени рассмотреть тварь."
+    old "Until now, Sarah barely had time to look at the creature."
+    new "До сих пор Сара едва успевала рассмотреть тварь."
 
     old "But now, in the brief moment of quiet, she saw something familiar in him."
     new "Но сейчас, в короткий миг тишины, она увидела в нём что-то знакомое."
@@ -730,8 +730,8 @@ translate ru strings:
     old "Yet...perhaps he had been the goblin that struck her with the dart."
     new "Но... возможно, это он был тем гоблином, что поразил её дротиком."
 
-    old "Perhaps, Sarah reason, that was why he took her. Some kind of ancient rite. Spoils of war."
-    new "Возможно, рассуждала Сара, поэтому он и взял её. Некий древний ритуал. Военный трофей."
+    old "Perhaps, Sarah reasoned, that was why he took her. Some kind of ancient rite. Spoils of war."
+    new "Возможно, рассудила Сара, вот почему он её забрал. Какой-то древний обряд. Трофеи войны."
 
     old "He had defeated her, and so he held the right to her..."
     new "Он победил её, и потому имел на неё право..."
@@ -802,8 +802,8 @@ translate ru strings:
     old "Sarah held onto the bars of her cell."
     new "Сара держалась за прутья камеры."
 
-    old "What options did she hav, she thought."
-    new "Какие у неё были варианты, думала она."
+    old "What options did she have, she thought."
+    new "Какие у неё были варианты, подумала она."
 
     old "Too tired and weakened to run. Lost in a camp in the middle of nowhere."
     new "Слишком уставшая и ослабленная, чтобы бежать. Затерянная в лагере посреди глуши."
@@ -847,8 +847,8 @@ translate ru strings:
     old "She wanted to turn away, hide, cover herself."
     new "Она хотела отвернуться, спрятаться, прикрыться."
 
-    old "But she could do none of them."
-    new "Но не могла сделать ничего из этого."
+    old "But she could do none of these things."
+    new "Но ничего из этого она сделать не могла."
 
     old "Instead, she only felt the goblin plowing into her, harder and faster."
     new "Вместо этого она лишь чувствовала, как гоблин вбивается в неё, сильнее и быстрее."

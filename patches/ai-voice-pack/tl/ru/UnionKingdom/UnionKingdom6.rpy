@@ -751,9 +751,6 @@ translate ru strings:
     old "Sarah could feel a heat growing in her chest, and spreading out further along her body."
     new "Сара чувствовала, как тепло растёт в её груди и распространяется дальше по телу."
 
-    old "More."
-    new "Больше."
-
     old "She wanted more of it, even if she knew she could not have it. Not like this. Not here."
     new "Она хотела большего, даже если знала, что не может этого получить. Не так. Не здесь."
 

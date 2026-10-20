@@ -763,6 +763,9 @@ translate ru strings:
     old "She need to show strength, press him while he was cornered."
     new "Ей нужно было показать силу, давить на него, пока он загнан в угол."
 
+    old "It is more than an hour before anyone dares to try to move her."
+    new "Проходит больше часа, прежде чем кто-то решается попытаться отвести её."
+
     old "For now, this is where this path ends."
     new "На этом этот путь заканчивается."
 

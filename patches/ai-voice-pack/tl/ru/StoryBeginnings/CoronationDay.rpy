@@ -232,9 +232,6 @@ translate ru strings:
     old "Sarah looked at him with surprise."
     new "Сара с удивлением посмотрела на него."
 
-    old "What do you mean?"
-    new "Что вы имеете в виду?"
-
     old "Marion looked at her."
     new "Марион взглянул на неё."
 

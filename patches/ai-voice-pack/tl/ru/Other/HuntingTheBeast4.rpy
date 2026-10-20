@@ -103,9 +103,6 @@ translate ru strings:
     old "You're strong enough, I'd say."
     new "Ты достаточно силён, я бы сказала."
 
-    old "He looked at her intently."
-    new "Он пристально посмотрел на неё."
-
     old "It's not my strength, I mean I can't stand it."
     new "Дело не в силе. Я не выношу этого."
 

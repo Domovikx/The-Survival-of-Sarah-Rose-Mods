@@ -682,9 +682,6 @@ translate ru strings:
     old "No, she isn't. She's a person, and we don't permit slavery in this mercenary company."
     new "Нет. Она человек, и мы не допускаем рабства в нашем отряде."
 
-    old "The soldier laughed."
-    new "Солдат рассмеялся."
-
     old "Have you walked around the camp? There's plenty of girls out there like this one."
     new "Вы ходили по лагерю? Там полно таких девушек."
 

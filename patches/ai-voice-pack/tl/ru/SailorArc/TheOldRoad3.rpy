@@ -931,9 +931,6 @@ translate ru strings:
     old "She wanted to rage at him for his insults, be instead, she did as she had done many times since she left Rosanna."
     new "Она хотела возмутиться его оскорблениям, но вместо этого сделала то, что делала много раз с тех пор, как покинула Розанну."
 
-    old "Sarah swallowed her pride."
-    new "Сара проглотила свою гордость."
-
     old "She swallowed more of her pride."
     new "Она проглотила ещё больше гордости."
 

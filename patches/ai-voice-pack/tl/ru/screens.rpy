@@ -18,12 +18,6 @@ translate ru strings:
     old ">"
     new ">"
 
-    old "▸"
-    new "▸"
-
-    old "Русский"
-    new "Русский"
-
     old "About"
     new "Об игре"
 
@@ -38,9 +32,6 @@ translate ru strings:
 
     old "After Choices"
     new "После выбора"
-
-    old "Apply font sizes and restart"
-    new "Применить размеры шрифтов и перезапустить"
 
     old "Arrow Keys"
     new "Клавиши со стрелками"
@@ -57,20 +48,11 @@ translate ru strings:
     old "Calibrate"
     new "Калибровка"
 
-    old "Character name"
-    new "Имя персонажа"
-
-    old "Character Names"
-    new "Имена персонажей"
-
     old "Ctrl"
     new "Ctrl"
 
     old "D-Pad, Sticks"
     new "Крестовина, Стики"
-
-    old "Dialogue"
-    new "Диалог"
 
     old "Disable"
     new "Отключить"
@@ -84,32 +66,17 @@ translate ru strings:
     old "End Replay"
     new "Завершить повтор"
 
-    old "English"
-    new "Английский"
-
     old "Enter"
     new "Enter"
 
     old "Escape"
     new "Escape"
 
-    old "Font Sizes"
-    new "Размеры шрифтов"
-
     old "Fullscreen"
     new "Полный экран"
 
-    old "Game Title"
-    new "Название игры"
-
     old "Gamepad"
     new "Геймпад"
-
-    old "Header"
-    new "Заголовок"
-
-    old "Headers"
-    new "Заголовки"
 
     old "Help"
     new "Помощь"
@@ -126,17 +93,8 @@ translate ru strings:
     old "Image% d of% d is blocked."
     new "Изображение %d из %d заблокировано."
 
-    old "Interface"
-    new "Интерфейс"
-
-    old "Interface text"
-    new "Текст интерфейса"
-
     old "Keyboard"
     new "Клавиатура"
-
-    old "Language"
-    new "Язык"
 
     old "Left"
     new "Влево"
@@ -183,17 +141,14 @@ translate ru strings:
     old "No"
     new "Нет"
 
-    old "Notification"
-    new "Уведомление"
-
-    old "Notifications"
-    new "Уведомления"
-
     old "Page Down"
     new "Page Down"
 
     old "Page Up"
     new "Page Up"
+
+    old "Preferences"
+    new "Настройки"
 
     old "Prefs"
     new "Настройки"
@@ -206,9 +161,6 @@ translate ru strings:
 
     old "Quit"
     new "Выход"
-
-    old "Reset font sizes and restart"
-    new "Сбросить размеры шрифтов и перезапустить"
 
     old "Return"
     new "Вернуться"
@@ -234,14 +186,14 @@ translate ru strings:
     old "Rolls forward to later dialogue."
     new "Перемотка вперёд к следующему диалогу."
 
-    old "Sample dialogue text for font size preview."
-    new "Пример текста для предпросмотра размера шрифта."
-
     old "Save"
     new "Сохранить"
 
-    old "Settings"
-    new "Настройки"
+    old "Scene Replay"
+    new "Повтор сцены"
+
+    old "Select a Category"
+    new "Выберите категорию"
 
     old "Skip"
     new "Пропустить"
@@ -278,9 +230,6 @@ translate ru strings:
 
     old "The dialogue history is empty."
     new "История диалогов пуста."
-
-    old "Title"
-    new "Название"
 
     old "Toggles assistive {a=https://www.renpy.org/l/voicing}self-voicing{/a}."
     new "Включает/выключает самоозвучивание {a=https://www.renpy.org/l/voicing}self-voicing{/a}."

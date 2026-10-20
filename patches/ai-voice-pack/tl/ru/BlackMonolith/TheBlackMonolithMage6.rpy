@@ -304,9 +304,6 @@ translate ru strings:
     old "So how do we know what they're gonna turn into?"
     new "Так как мы узнаем, во что они превратятся?"
 
-    old "Metis smiled."
-    new "Метис улыбнулся."
-
     old "Well I suppose that's half the fun, isn't it? Magical botany is nothing if not surprising."
     new "Что ж, полагаю, в этом половина веселья, не так ли? Магическая ботаника — это сплошные сюрпризы."
 

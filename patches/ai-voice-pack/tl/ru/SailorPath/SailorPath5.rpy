@@ -913,9 +913,6 @@ translate ru strings:
     old "Answer me, blondie."
     new "Отвечай, блондинка."
 
-    old "She whispered the words."
-    new "Она прошептала слова."
-
     old "Yes, captain Belmont. I would love that."
     new "Да, капитан Белмонт. Я бы этого хотела."
 

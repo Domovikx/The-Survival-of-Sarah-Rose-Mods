@@ -373,9 +373,6 @@ translate ru strings:
     old "Just remember, it's dangerous stuff. Not a joke. If I teach you this, you can't ever practice it without my supervision."
     new "Просто помни, это опасная штука. Не шутка. Если я научу тебя этому, ты не сможешь практиковать это без моего наблюдения."
 
-    old "Metis sighed."
-    new "Метис вздохнул."
-
     old "I guess I'll go ahead and gather up some study materials then. We can schedule a first lesson later this week."
     new "Тогда, думаю, я пойду и соберу учебные материалы. Мы сможем назначить первый урок на конец этой недели."
 
@@ -402,9 +399,6 @@ translate ru strings:
 
     old "Instead, she knew it to be Samayra."
     new "Но она знала, что это Самайра."
-
-    old "Good morning."
-    new "Доброе утро."
 
     old "The girl smiled as she walked into the kitchen."
     new "Девочка улыбнулась, входя на кухню."

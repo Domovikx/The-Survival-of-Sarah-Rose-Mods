@@ -400,9 +400,6 @@ translate ru strings:
     old "Who is the tailor, you or me?"
     new "Кто здесь портной — ты или я?"
 
-    old "I-"
-    new "Я-"
-
     old "No, listen to me girl. If you give me trouble, I can give trouble back."
     new "Нет, послушай меня, девушка. Если ты создашь мне проблемы, я отвечу тем же."
 
@@ -2766,9 +2763,6 @@ translate ru strings:
 
     old "You're a mess."
     new "Ты вся перепачкалась."
-
-    old "Sarah only nodded."
-    new "Сара только кивнула."
 
     old "Go ahead. Clean yourself up and I'll get to work on that dress."
     new "Давай. Приведи себя в порядок, а я займусь платьем."

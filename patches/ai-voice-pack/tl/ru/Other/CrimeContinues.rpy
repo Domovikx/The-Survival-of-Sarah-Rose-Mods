@@ -2323,8 +2323,8 @@ translate ru strings:
     old "She saw it harden quickly."
     new "Она видела, как он быстро твердеет."
 
-    old "He reached for her and plled off the last of her clothes."
-    new "Он потянулся к ней и стянул последние остатки её одежды."
+    old "He reached for her and pulled off the last of her clothes."
+    new "Он потянулся к ней и стянул с неё оставшуюся одежду."
 
     old "She felt his powerful hand, wrapping around her wrist."
     new "Она почувствовала его сильную руку, обхватившую её запястье."

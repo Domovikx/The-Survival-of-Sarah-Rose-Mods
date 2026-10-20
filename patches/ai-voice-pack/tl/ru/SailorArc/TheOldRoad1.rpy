@@ -43,9 +43,6 @@ translate ru strings:
     old "Tell me why you would need to go there?"
     new "Скажи мне, зачем тебе туда?"
 
-    old "Sarah struggled to find the right words."
-    new "Сара с трудом подбирала слова."
-
     old "I...I can't tell you. I just know that I'm supposed to go there."
     new "Я... Я не могу сказать. Я просто знаю, что должна туда попасть."
 

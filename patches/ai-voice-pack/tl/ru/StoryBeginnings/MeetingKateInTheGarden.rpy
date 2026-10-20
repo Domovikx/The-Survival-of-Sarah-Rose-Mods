@@ -49,9 +49,6 @@ translate ru strings:
     old "I was starting to worry you didn't remember me!"
     new "Я уже начала волноваться, что ты меня не узнала!"
 
-    old "Kate laughs."
-    new "Кейт смеётся."
-
     old "Wow, I just...I can't believe this. It's really you."
     new "Ого, я просто... не могу поверить. Это правда ты."
 
@@ -87,9 +84,6 @@ translate ru strings:
 
     old "You're one to talk...just look at you. I remember when you were as flat-chested as a boy."
     new "Кто бы говорил... ты на себя посмотри. Помню, когда ты была плоской, как доска."
-
-    old "Sarah felt herself turn red."
-    new "Сара почувствовала, как краснеет."
 
     old "Still as crude as always, I see."
     new "Всё такая же грубая, как всегда."

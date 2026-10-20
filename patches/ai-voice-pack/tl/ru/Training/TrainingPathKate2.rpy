@@ -121,8 +121,8 @@ translate ru strings:
     old "Sarah was glad Kate was able to at least stand a little bit. Carrying her friend entirely on her own strength still seemed impossible."
     new "Сара была рада, что Кейт хотя бы немного стояла. Нести подругу самостоятельно всё ещё казалось невозможным."
 
-    old "Waddeling together, Sarah made it about halfway across the square, where she managed to let Kate fall onto one of the city benches."
-    new "Ковыляя вместе, Сара добралась до середины площади, где усадила Кейт на скамью."
+    old "Waddling together, Sarah made it about halfway across the square, where she managed to let Kate fall onto one of the city benches."
+    new "Шаркая с Кейт под бок, Сара добралась примерно до середины площади, где ей удалось уронить подругу на одну из городских скамеек."
 
     old "Kate landed, sprawled out, legs sticking out and her arms stretched across the back end of the bench. Her head was crooked back, staring up to the blue sky."
     new "Кейт приземлилась, развалившись, ноги торчали, руки раскинуты по спинке скамьи. Голова запрокинута, смотрит в небо."

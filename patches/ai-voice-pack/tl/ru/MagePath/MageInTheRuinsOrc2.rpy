@@ -559,8 +559,8 @@ translate ru strings:
     old "Sarah opened her mouth wide."
     new "Сара широко открыла рот."
 
-    old "This one was fuller than any of the previous wants."
-    new "Эта кружка была полнее всех предыдущих."
+    old "This one was fuller than any of the previous cups."
+    new "Эта была полнее любой из предыдущих."
 
     old "As the goblin poured it down her throat, Sarah eagerly drank every drop she could manage."
     new "Когда гоблин влил её содержимое ей в горло, Сара с жадностью выпила каждую каплю, какую смогла."
@@ -753,4 +753,445 @@ translate ru strings:
 
     old "Collapsed into darkness."
     new "Рухнула во тьму."
+
+    old "Sarah woke to the sound of the cage door creaking open."
+    new "Сара проснулась от звука скрипящей дверцы клетки."
+
+    old "As her eyes slowly opened, she saw it was still dark out."
+    new "Когда её глаза медленно открылись, она увидела, что снаружи всё ещё темно."
+
+    old "Only the small remaining embers of the campfire giving off a soft glow."
+    new "Лишь немногочисленные угли костра испускали мягкий свет."
+
+    old "Half awake, she recognized the silhouette of her master."
+    new "Вполусне она узнала силуэт своего хозяина."
+
+    old "No, she quickly tried to correct her own thoughts...not her master..."
+    new "Нет, она поспешила поправить собственные мысли...не хозяина..."
+
+    old "She tried to find a different word for him."
+    new "Она попыталась подобрать для него другое слово."
+
+    old "But her mind was blurred."
+    new "Но её разум был затуманен."
+
+    old "Where once her thoughts moved quick and sharp, now they moved like legs through mud."
+    new "Там, где раньше мысли были быстрыми и острыми, теперь они двигались, как ноги в грязи."
+
+    old "Before she could even think of the word, he was in front of her."
+    new "Она ещё не успела подумать о слове, как он уже оказался перед ней."
+
+    old "He roughly grabbed her chin and held it up to face him."
+    new "Он грубо схватил её за подбородок и поднял его, заставив смотреть на себя."
+
+    old "Sarah did not fight him."
+    new "Сара не сопротивлялась ему."
+
+    old "It was pointless, and he would be more harsh if she resisted."
+    new "Это было бесполезно, и он стал бы жёстче, если бы она сопротивлялась."
+
+    old "And what would be the point? Dignity was long lost to her now."
+    new "И какой в этом был смысл? Достоинство она давно потеряла."
+
+    old "She had tasted him so much...had him inside of her...moaned for him..."
+    new "Она так часто пробовала его...он был внутри неё...она стонала для него..."
+
+    old "Even if she would escape and lie about what had happened here...she would never forget."
+    new "Даже если бы она сбежала и соврала о том, что здесь произошло...она бы никогда не забыла."
+
+    old "Instead, he pulled her head forward and pressed his tongue into her mouth again."
+    new "Вместо этого он потянул её голову вперёд и снова ввёл язык ей в рот."
+
+    old "This time, more willingly than before, she parted her own lips and met his tongue with his."
+    new "В этот раз, охотнее, чем прежде, она сама разомкнула губы и встретила его язык своим."
+
+    old "Her face, her whole body, burned with a deep shame."
+    new "Её лицо и всё тело горели глубоким стыдом."
+
+    old "Somehow, this felt almost worse than the sex."
+    new "Как-то это казалось почти хуже, чем секс."
+
+    old "And worse still, Sarah felt herself get wet."
+    new "И ещё хуже — Сара почувствовала, как промокла между ног."
+
+    old "Me no...no...love...no you..."
+    new "Я не...нет...люблю...не тебя..."
+
+    old "Sarah tried to speak in between their feverish kissing."
+    new "Сара попыталась заговорить между их лихорадочными поцелуями."
+
+    old "But if her thoughts moved slow, her words were even worse."
+    new "Но если мысли ползли медленно, слова выходили ещё хуже."
+
+    old "Somehow, even he act of speaking seemed a struggle."
+    new "Как-то даже сама речь стала настоящим испытанием."
+
+    old "The goblin tongue, deep in her mouth, did not make it any easier."
+    new "Язык гоблина, глубоко в её рту, не делал это легче."
+
+    old "Just as she tried to pull herself away, she saw him produce a cup with the purple liquid."
+    new "Как только она попыталась отстраниться, она увидела, как он достал кружку с фиолетовой жидкостью."
+
+    old "The smell of it hit her first."
+    new "Первым её ударил запах."
+
+    old "The most sweet thing she had ever smelled, like rotting fruit or ripe wine."
+    new "Самое сладкое, что она когда-либо нюхала, — словно гниющие фрукты или спелое вино."
+
+    old "She almost leapt for it, but knew better than to disobey her harsh master."
+    new "Она почти бросилась к ней, но знала, что лучше не ослушаться сурового хозяина."
+
+    old "Instead, she threw herself at him more."
+    new "Вместо этого она ещё усерднее бросилась к нему."
+
+    old "Wrapping her arms around him, kissing him feverishly, pressing her own tongue against his."
+    new "Обнимая его руками, лихорадочно целуя и прижимая свой язык к его собственному."
+
+    old "Past his sharp teeth, into his mouth."
+    new "Мимо острых зубов — прямо в его рот."
+
+    old "The way she would have kissed a lover, a husband."
+    new "Так, как она целовала бы возлюбленного, мужа."
+
+    old "Anything. Anything for a taste of the sweet liquid. The only source of relief in this vile place."
+    new "Всё что угодно. Всё что угодно, лишь бы отведать сладкой жидкости — единственного утешения в этом мерзком месте."
+
+    old "He was kind...kind for offering it to her, she distantly thought through her fogged mind."
+    new "Он добр...добр, что предлагает ей это, — смутно думала она сквозь затуманенный разум."
+
+    old "She could feel his leathery skin on her finger tips, but she pressed on."
+    new "Она чувствовала его грубую кожу на кончиках пальцев, но не останавливалась."
+
+    old "After kissing him for a long time, the goblin finally relented, leaning back."
+    new "Поцеловав его долго, гоблин наконец уступил и откинулся назад."
+
+    old "He held up the cup, close to her lips."
+    new "Он поднял кружку вплотную к её губам."
+
+    old "Eagerly, Sarah opened her mouth and trembled in anticipation."
+    new "С жадностью Сара открыла рот и дрожала в предвкушении."
+
+    old "Then, just before he poured it into her throat, he paused."
+    new "Затем, прямо перед тем как влить это ей в горло, он замер."
+
+    old "He grunted a few noises, sounds she could not parse, even if she still had all of her mind."
+    new "Он издал несколько ворчливых звуков, которые она не смогла бы разобрать, даже будь её разум полностью ясен."
+
+    old "Desperate to understand him, she moved her own head, confused."
+    new "Отчаянно пытаясь понять его, она замотала головой, сбитая с толку."
+
+    old "The goblin gestured to the corner of the cage."
+    new "Гоблин указал на угол клетки."
+
+    old "Only now did Sarah for the first time see another goblin."
+    new "Лишь теперь Сара впервые увидела другого гоблина."
+
+    old "The creature was stirring, already naked and its member rising."
+    new "Тварь шевелилась, уже голая, и её член поднимался."
+
+    old "Her master did not seem angry at the intrusion."
+    new "Её хозяин, казалось, не рассердился на вторжение."
+
+    old "As he continued to gesture, the other goblin approached."
+    new "Пока он продолжал жестикулировать, второй гоблин приблизился."
+
+    old "As the second goblin placed its hand on Sarah's cheek, she flinched."
+    new "Когда второй гоблин положил руку на щёку Сары, она дёрнулась."
+
+    old "Only for her master to roughly grab her face again, forcing it back."
+    new "Но её хозяин снова грубо схватил её за лицо, заставив повернуть его обратно."
+
+    old "Slowly, Sarah understood."
+    new "Медленно Сара поняла."
+
+    old "Her eyes remained fixed on the purple liquid, still denied to her."
+    new "Её глаза были прикованы к фиолетовой жидкости, которую ей всё ещё не давали."
+
+    old "And she nodded at her master."
+    new "И она кивнула своему хозяину."
+
+    old "He released his grip on her and she slowly sank back to her knees."
+    new "Он отпустил её, и она медленно опустилась на колени."
+
+    old "Again, she parted her mouth, and this time the creature pressed the cup up to her lips."
+    new "Снова она разомкнула рот, и на этот раз тварь прижала кружку к её губам."
+
+    old "Tilting it slowly, the liquid began to seep into her eager mouth."
+    new "Медленно наклоняя кружку, он пустил жидкость сочиться в её жадный рот."
+
+    old "All at once, the rush of sweetness hit her tongue, drowning out any other sensation."
+    new "Внезапный поток сладости хлынул на её язык, заглушив любое другое ощущение."
+
+    old "Pain, both of the body and the mind, quickly faded away."
+    new "Боль — и телесная, и душевная — быстро отступила."
+
+    old "Her thoughts slowed to a crawl."
+    new "Мысли замедлились до ползущего шага."
+
+    old "Only a soft, pleasant drone filled her mind."
+    new "Лишь мягкий, приятный гул заполнял её разум."
+
+    old "No thoughts, not even fragmented words, only contentment."
+    new "Ни мыслей, ни даже обрывков слов — только довольство."
+
+    old "He placed the bowl down on the ground in front of her."
+    new "Он поставил миску на землю перед ней."
+
+    old "Sarah knew better than the disobey, and instead, waited on hands and feet, watching her master."
+    new "Сара знала, что ослушиваться не стоит, и вместо этого ждала на четвереньках, наблюдая за хозяином."
+
+    old "He waited for a brief moment, making sure she understood her place."
+    new "Он подождал мгновение, убедившись, что она поняла своё место."
+
+    old "Then, finally, he patted her on the head."
+    new "Затем, наконец, он погладил её по голове."
+
+    old "His signal for her to drink."
+    new "Его сигнал, что можно пить."
+
+    old "On all fours, Sarah bowed low and pressed her lips to the feeding bowl."
+    new "На четвереньках Сара низко склонилась и прижала губы к миске."
+
+    old "Lapping with her tongue, she drank the liquid, bit by bit."
+    new "Слизывая языком, она пила жидкость понемногу."
+
+    old "Just as he had taught her...trained her."
+    new "Точно так, как он её научил...приучил."
+
+    old "Once, she might have burned with shame, or outright refused such humiliation."
+    new "Раньше она бы сгорела от стыда или прямо-таки отказалась от такого унижения."
+
+    old "But the liquid was a relief she could not deny."
+    new "Но жидкость была облегчением, от которого она не могла отказаться."
+
+    old "In its absence, she yearned for it, and the more she drank of it, the deeper it sank its hooks into her body, her soul."
+    new "Без неё она жаждала её, и чем больше пила, тем глубже крючки впивались в её тело и душу."
+
+    old "Distantly, faintly, she knew this."
+    new "Отдалённо, смутно она это знала."
+
+    old "But as she lapped up the liquid, as if she were his dog, she could not summon even a hint of rage or defiance."
+    new "Но пока она слизывала жидкость, словно его собака, она не могла вызвать в себе ни капли гнева или неповиновения."
+
+    old "Instead, she felt happiness, as he petted her head again for her good behavior."
+    new "Вместо этого она чувствовала счастье, когда он снова гладил её по голове за хорошее поведение."
+
+    old "Her master."
+    new "Её хозяин."
+
+    old "If she knew her place, he was kind to her...and Sarah had begun to learn."
+    new "Если она знала своё место, он был добр к ней...и Сара начала учиться."
+
+    old "As she was drinking, lapping away at the last remnant of the liquid, she felt the other goblin get up behind her."
+    new "Пока она пила, слизывая последние остатки жидкости, она почувствовала, как второй гоблин поднялся у неё за спиной."
+
+    old "Defiance long gone, Sarah instead raised up her rear, offering herself up more easily."
+    new "Давно забыв о сопротивлении, Сара вместо этого приподняла зад, предлагая себя ещё охотнее."
+
+    old "She felt the creature's clawed fingers, digging into her waist, groping at her body."
+    new "Она чувствовала, как когтистые пальцы твари впиваются в её талию, ощупывая тело."
+
+    old "Then, all at once, he entered her."
+    new "Затем разом он вошёл в неё."
+
+    old "Aaah..."
+    new "Ааах..."
+
+    old "Sarah gasped, some of the liquid falling as spittle from her mouth, down her chin."
+    new "Сара ахнула, и часть жидкости, как слюна, стекла ей изо рта по подбородку."
+
+    old "Above her, she felt her master's hand, wrapping itself around her hair, pulling her head up."
+    new "Над собой она почувствовала руку хозяина, обхватившую её волосы и тянувшую голову вверх."
+
+    old "He yanked, violently, forcing her mouth open."
+    new "Он рванул с силой, заставив её раскрыть рот."
+
+    old "He did not need to take by force what Sarah now gave willingly, but these beasts enjoyed their dominations."
+    new "Ему не нужно было брать силой то, что Сара теперь давала охотно, — этим зверям нравилось властвовать."
+
+    old "And Sarah opened her mouth, in eager submission."
+    new "И Сара открыла рот, охотно подчиняясь."
+
+    old "Sarah dug her hands into the ground, trying to keep her balance as the other goblin began to thrust, taking her from behind."
+    new "Сара вонзила руки в землю, пытаясь удержать равновесие, пока второй гоблин начал толкаться, беря её сзади."
+
+    old "At that same time, she felt her master's cock slide down her eager throat."
+    new "В тот же момент она почувствовала, как член хозяина скользит вниз по её покорному горлу."
+
+    old "She was surprised at how wet she was, how little resistance there was in mind or body."
+    new "Её удивляло, какая она влажная, и как мало сопротивления было и в мыслях, и в теле."
+
+    old "Only the droning pleasure."
+    new "Лишь монотонное наслаждение."
+
+    old "The bliss of a thoughtless life."
+    new "Блаженство жизни без мыслей."
+
+    old "What had all her thinking brought her anyway? Where but here?"
+    new "К чему привело всё её размышление? Где она оказалась, если не здесь?"
+
+    old "And had her cleverness ever brought her an ounce of happiness?"
+    new "И разве её хитрость когда-нибудь приносила хоть каплю счастья?"
+
+    old "Certainly nothing that felt as good as this."
+    new "Уж точно ничего не было так хорошо, как это."
+
+    old "The liquid, she faintly thought, brought out her true nature. As she should have been."
+    new "Жидкость, смутно думала она, выявляла её истинную природу. Какой ей и надлежало быть."
+
+    old "All the rest of her life, idle struggle against her nature."
+    new "Вся прочая её жизнь — напрасная борьба со своей природой."
+
+    old "She felt her throat seize up around her master's cock as she nearly choked on it."
+    new "Она чувствовала, как горло сжимается вокруг члена хозяина, едва не давясь им."
+
+    old "He was big, and he did not give much consideration for her comfort."
+    new "Он был большим, и мало заботился о её удобстве."
+
+    old "As his pet, her place was to learn to please him, not demand special consideration."
+    new "Его питомице место было учиться радовать его, а не требовать к себе особого отношения."
+
+    old "So Sarah did her best, her body reacting to the training."
+    new "Так что Сара старалась изо всех сил, и тело откликнулось на приручение."
+
+    old "Leaning back her head, parting her mouth further, tilting her throat."
+    new "Запрокидывая голову, шире раскрывая рот и наклоняя горло."
+
+    old "Inch by inch, she opened up her throat more to him, repressing her reflex to gag."
+    new "Дюйм за дюймом она шире раскрывала для него горло, сдерживая рефлекс рвоты."
+
+    old "When she applied all she had learned, she could just fit all of him."
+    new "Когда она применяла всё, чему научилась, ей удавалось вобрать его целиком."
+
+    old "Sarah felt pride as the goblin's balls slapped against her chin."
+    new "Сара чувствовала гордость, когда яйца гоблина шлёпнулись ей по подбородку."
+
+    old "Pride at how well she had learned her place."
+    new "Гордость за то, как хорошо она усвоила своё место."
+
+    old "She looked up, tears welling in her eyes, eager for her master's approval."
+    new "Она подняла взгляд, в глазах блестели слёзы, — она жаждала одобрения хозяина."
+
+    old "But he did not glance at her."
+    new "Но он даже не взглянул на неё."
+
+    old "Instead, he simply bucked his hips and fucked her throat as if she were nothing to him."
+    new "Вместо этого он просто качнул бёдрами и трахал её горло, будто она для него — ничто."
+
+    old "She heard him grunt in his goblin language, something to the other goblin."
+    new "Она услышала, как он зарычал по-гоблински, что-то сказав второму."
+
+    old "By now, she was not certain if she could even recall the regular tongue of men, much less the gibberish of goblins."
+    new "К этому моменту она уже не была уверена, что вспомнит обычный человечий язык, не говоря уже о гоблинском бормотании."
+
+    old "But when she heard them both laugh, she understood wel enough."
+    new "Но когда она услышала, как они оба смеются, она поняла вполне достаточно."
+
+    old "Her master did not love her, not truly, nor would he ever."
+    new "Её хозяин не любил её, не по-настоящему, — и никогда не полюбит."
+
+    old "She was a possession to him, one he enjoyed using, but she would never gain his affection or love."
+    new "Для него она была вещью, которой приятно пользоваться, но его привязанности или любви ей не видать."
+
+    old "Sarah raised her hand, cupping her master's balls as she worked his shaft with her mouth."
+    new "Сара подняла руку, прижав в ладони яйца хозяина, пока ртом обрабатывала его ствол."
+
+    old "She noticed a brief startle, but an approving grunt from her master."
+    new "Она заметила короткое вздрагивание — и одобрительное ворчание хозяина."
+
+    old "Pleasuring him with her mouth and playing with his balls, she did her best to gain what little favor she could from him."
+    new "Удовлетворяя его ртом и играя с его яйцами, она старалась вытянуть из него ту крохотную милость, какую только могла."
+
+    old "She would be as a tool to him, but if that was her fate, Sarah wished she could be his favorite tool of all."
+    new "Она была бы для него орудием, но если такова её судьба, Сара хотела бы стать его любимым орудием."
+
+    old "His most prized object."
+    new "Его самая драгоценная вещица."
+
+    old "Her master was strong. Clever. He would surely win more women some day. A harem, no doubt."
+    new "Её хозяин был силён. Хитёр. Однозначно однажды он завоюет ещё женщин. Гарем, без сомнения."
+
+    old "And he would have them all, and she wished she could see him mount others."
+    new "И он будет иметь их всех, и ей хотелось бы видеть, как он трахает других."
+
+    old "But she...she would distinguish herself as his most eager servant."
+    new "Но она...она станет его самой рьяной служанкой."
+
+    old "And in return, his appreciation and more of the sweet liquid."
+    new "И взамен — его расположение и ещё сладкой жидкости."
+
+    old "Sweet pleasure and the oblivion of thought."
+    new "Сладкое наслаждение и забвение мыслей."
+
+    old "Sarah craned her neck as much as she could physically manage, sliding in the last inches of her master."
+    new "Сара вытянула шею, насколько только позволяло тело, впуская в себя последние дюймы хозяина."
+
+    old "She felt his greedy hand on her head, using it for balance as she fucked her face increasingly faster."
+    new "Она чувствовала его жадную руку на своей голове — он опирался на неё для равновесия, всё быстрее трахая её лицо."
+
+    old "Behind her, the other goblin was picking up pace, ravaging her cunt."
+    new "Позади неё второй гоблин ускорялся, терзая её киску."
+
+    old "Sarah's whole body was alight with blind desire and pleasure."
+    new "Всё тело Сары пылало слепым желанием и наслаждением."
+
+    old "If her master wanted her to bring pleasure to this other goblin, she would do that too."
+    new "Если бы хозяин хотел, чтобы она доставляла наслаждение второму гоблину, она бы и это сделала."
+
+    old "The jungle was dark, filled with the buzzing sounds of creature and insects."
+    new "Джунгли были тёмными, полными гудения тварей и насекомых."
+
+    old "And the sounds of their sex."
+    new "И звуков их секса."
+
+    old "Her choking moans."
+    new "Её поперхивающиеся стоны."
+
+    old "Their sharp, shrill shrieks of pleasure as they took her from both ends."
+    new "Их пронзительные, резкие визги наслаждения, пока они брали её с обеих сторон."
+
+    old "The slicking sounds of their cocks, plunging deep into her drenched cunt, her eager mouth."
+    new "Хлюпающие звуки их членов, погружающихся глубоко в её промокшую киску и охотно открытый рот."
+
+    old "Sarah felt her body rock as the orgasm rolled over her."
+    new "Сара чувствовала, как тело качается, когда оргазм накрывал её."
+
+    old "The liquid made her body sensitive to their every touch, amplifying the sensations of their sex beyond anything a human could offer her."
+    new "Жидкость делала её тело чувствительным к каждому их прикосновению, усиливая ощущения от их секса сверх того, что мог бы дать ей человек."
+
+    old "As once followed the other, soon her whole body and mind was drenched in blinding pleasure."
+    new "И одно следовало за другим, и вскоре всё её тело и разум были залиты слепящим наслаждением."
+
+    old "If this was so unholy, for a human to couple with goblins, then why did it feel so utterly divine?"
+    new "Если так нечестиво — чтобы человек сочетался с гоблинами, — то почему же это ощущается столь божественно?"
+
+    old "Because there were no Gods, Sarah realized."
+    new "Потому что богов не было, поняла Сара."
+
+    old "Only nature, and base desire, rutting like beasts."
+    new "Только природа и низменное желание, совокупляясь, как звери."
+
+    old "The goblins understood this, and in their base nature, there was a wisdom. A simple wisdom."
+    new "Гоблины понимали это, и в их низменной природе была мудрость. Простая мудрость."
+
+    old "One that Sarah was now coming to learn."
+    new "Которой Сара теперь начинала учиться."
+
+    old "She moaned hysterically, though her master's cock drowned out most of her noise."
+    new "Она стонала истерично, но член хозяина заглушал почти весь её шум."
+
+    old "When each of them finished into her, Sarah's pleasure surged even beyond what she could handle."
+    new "Когда каждый из них кончил в неё, наслаждение Сары вышло за пределы того, что она могла выдержать."
+
+    old "The final orgasm set every muscle in her body alight with orgasmic light."
+    new "Последний оргазм зажёг каждую мышцу её тела оргазмическим светом."
+
+    old "The world around her faded into oblivion."
+    new "Мир вокруг неё исчез в забвении."
+
+    old "She collapsed to the ground into a dark sleep."
+    new "Она рухнула на землю в глубокий сон."
+
+    old "Time faded, lost to her, along with what little remained of her mind."
+    new "Время угасло, унеся с собой то немногое, что осталось от её разума."
 

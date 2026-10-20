@@ -1027,9 +1027,6 @@ translate ru strings:
     old "You are little more than a sick pervert!"
     new "Ты не более чем больной извращенец!"
 
-    old "He grinned."
-    new "Он усмехнулся."
-
     old "Have I ever denied being otherwise?"
     new "Разве я когда-нибудь отрицал, что я иной?"
 

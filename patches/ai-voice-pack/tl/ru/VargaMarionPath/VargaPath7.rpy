@@ -157,9 +157,6 @@ translate ru strings:
     old "Varga was quiet for a while as they continued walking. Then he spoke."
     new "Варга молчал какое-то время, пока они продолжали идти. Затем он заговорил."
 
-    old "Sarah...I..."
-    new "Сара... я..."
-
     old "I organized the defense, I put down the rebellion...but I won't lie and say that I didn't understand why they took up arms."
     new "Я организовал оборону, я подавил восстание... но не буду врать, что я не понимал, почему они взялись за оружие."
 

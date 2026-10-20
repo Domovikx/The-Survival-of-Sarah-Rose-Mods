@@ -370,6 +370,18 @@ translate ru strings:
     old "Freed from worry and always wondering, she felt perpetually happy."
     new "Освобождённая от тревог и постоянных раздумий, она чувствовала себя неизменно счастливой."
 
+    old "He stroked her head, and she would feel good. She could no longer speak, but produced grateful sounds."
+    new "Он гладил её по голове, и ей становилось хорошо. Она больше не могла говорить, но издавала благодарные звуки."
+
+    old "He kept her fed, putting her food in a through as though an animal, and she gladly ate."
+    new "Он кормил её, кладя ей еду в кормушку, как животному, и она с удовольствием ела."
+
+    old "It was no longer a debasement for her, for she had hardly a sense of self left."
+    new "Это больше не было для неё унижением, ведь от неё почти не осталось чувства собственного «я»."
+
+    old "To her, him feeding her, was an act of love. Kindness."
+    new "Для неё то, что он кормил её, было проявлением любви. Доброты."
+
     old "Frequently taken by the goblin, and frequently offering herself to him, it was only a matter of time."
     new "Гоблин часто брал её, и она часто отдавалась ему — это было лишь вопросом времени."
 
@@ -379,8 +391,8 @@ translate ru strings:
     old "But such low chances had been offset by the frequent nature of their mating."
     new "Но такие низкие шансы компенсировались частотой их спаривания."
 
-    old "Her belly began to swell, with passing weaks, more and more."
-    new "Её живот начал округляться — с каждой неделей всё больше и больше."
+    old "Her belly began to swell, with passing weeks, more and more."
+    new "Её живот начал увеличиваться, и с каждой неделей становился всё больше и больше."
 
     old "Her belly expanded, her ankles swole up, and she suffered the morning sickness."
     new "Её живот рос, лодыжки опухали, и её мучил токсикоз."

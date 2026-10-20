@@ -439,9 +439,6 @@ translate ru strings:
     old "No, Sarah, as a matter of fact I never have, and I think very few people in this world can say that they have."
     new "Нет, Сара, вообще-то никогда, и я думаю, очень немногие люди в этом мире могут похвастаться таким."
 
-    old "He paused for a moment."
-    new "Он помолчал мгновение."
-
     old "I am happy that my faith in you has proven to be well placed."
     new "Я рад, что моя вера в тебя оказалась оправданной."
 
@@ -564,9 +561,6 @@ translate ru strings:
 
     old "I came here to ask you to join me."
     new "Я пришёл попросить тебя пойти со мной."
-
-    old "Join you?"
-    new "Пойти с тобой?"
 
     old "Yes. I want you to be there with me when the Mythran army hands over their demand for surrender."
     new "Да. Я хочу, чтобы ты была рядом со мной, когда мифранская армия вручит требование о сдаче."

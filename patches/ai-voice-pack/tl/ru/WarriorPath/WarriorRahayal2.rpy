@@ -1000,9 +1000,6 @@ translate ru strings:
     old "She liked having a daughter...even if I was a bit more wild than she might have wanted me to be."
     new "Ей нравилось иметь дочь... даже если я была немного более дикой, чем ей хотелось."
 
-    old "Samayra smiled."
-    new "Самайра улыбнулась."
-
     old "I wish I could have met her."
     new "Хотела бы я с ней познакомиться."
 

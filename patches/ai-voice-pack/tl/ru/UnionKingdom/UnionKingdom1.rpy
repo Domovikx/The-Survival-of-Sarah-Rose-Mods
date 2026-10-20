@@ -778,9 +778,6 @@ translate ru strings:
     old "Regardless, I was happy to see you."
     new "Как бы то ни было, я был счастлив видеть тебя."
 
-    old "Happy?"
-    new "Счастлива?"
-
     old "Elder Tirion nodded."
     new "Старейшина Тирион кивнул."
 
@@ -930,9 +927,6 @@ translate ru strings:
 
     old "There I found again the challenges that I had been seeking. And I felt my life bloom again."
     new "Там я снова нашёл вызовы, которые искал. И я почувствовал, как моя жизнь расцвела снова."
-
-    old "Sarah frowned."
-    new "Сара нахмурилась."
 
     old "Forgive me, Elder, but I cannot be as easily moved to a new station as perhaps yourself."
     new "Простите, старейшина, но я не могу быть так легко перемещена на новое место, как, возможно, вы."
@@ -1269,9 +1263,6 @@ translate ru strings:
 
     old "Looking at Lily's face, Sarah saw the tears begin to flow."
     new "Глядя на лицо Лили, Сара увидела, как слёзы начали течь."
-
-    old "What can I do?"
-    new "Что я могу сделать?"
 
     old "Tell me, by the Gods, tell me and I'll do it."
     new "Скажи мне, Богами, скажи, и я сделаю это."

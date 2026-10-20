@@ -2407,9 +2407,6 @@ translate ru strings:
     old "So from now on, when I tell you to not to publicly disobey me, you're going to listen to me."
     new "Так что с этого момента, когда я говорю тебе не перечить мне на публике, ты будешь меня слушаться."
 
-    old "Do you understand?"
-    new "Ты понимаешь?"
-
     old "Submit to Marion"
     new "Подчиниться Мариону"
 

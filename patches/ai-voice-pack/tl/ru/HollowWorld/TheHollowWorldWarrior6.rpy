@@ -2536,9 +2536,6 @@ translate ru strings:
     old "She saw Gideon crane his neck, looking at the women. A few looked back at him, eager eyes."
     new "Она видела, как Гидеон вытянул шею, глядя на женщин. Некоторые смотрели на него в ответ с нетерпеливыми взглядами."
 
-    old "He shrugged."
-    new "Он пожал плечами."
-
     old "He paused, awkwardly fiddling as he made up his mind."
     new "Он помедлил, неловко перебирая пальцами, принимая решение."
 

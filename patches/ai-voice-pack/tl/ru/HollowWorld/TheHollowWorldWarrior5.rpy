@@ -268,8 +268,8 @@ translate ru strings:
     old "Who are you!"
     new "Кто ты!"
 
-    old "The man made no motion suggesting he planned to move."
-    new "Мужчина не сделал ни движения, указывающего на то, что он собирается встать."
+    old "The man made no motion."
+    new "Человек не шелохнулся."
 
     old "No need to waste your time learning my name, child. I am of no importance, and I am not long for this world."
     new "Не трать время на то, чтобы узнать моё имя, дитя. Я ничтожен и не задержусь в этом мире."
@@ -499,9 +499,6 @@ translate ru strings:
     old "They tell me you have a friend that might have need of it..."
     new "Мне говорят, у тебя есть подруга, которая может в этом нуждаться..."
 
-    old "Sarah's eyes went wide."
-    new "Глаза Сары расширились."
-
     old "How could you know that?"
     new "Откуда ты мог знать?"
 
@@ -546,9 +543,6 @@ translate ru strings:
 
     old "Never had she imagined that simply feeling so much like herself, could be such a gift."
     new "Она никогда не думала, что просто чувствовать себя собой может быть таким даром."
-
-    old "I have to go."
-    new "Мне нужно идти."
 
     old "Sarah turned and walked out of the cave."
     new "Сара развернулась и вышла из пещеры."

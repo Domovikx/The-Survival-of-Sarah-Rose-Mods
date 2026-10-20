@@ -136,9 +136,6 @@ translate ru strings:
     old "Well, Xan is currently away."
     new "Что ж, Ксан сейчас в отъезде."
 
-    old "Metis shrugged."
-    new "Метис пожал плечами."
-
     old "I can wait a few more hours. Your friend is greatly entertaining. A princess of Bagrad! What a story."
     new "Я могу подождать ещё несколько часов. Твоя подруга весьма занимательна. Принцесса Баграда! Вот это история."
 
@@ -202,9 +199,6 @@ translate ru strings:
     old "But I had heard through the grapevine that he had taken a new apprentice. The stunning Sarah Rose."
     new "Но по слухам до меня дошло, что он взял новую ученицу. Потрясающую Сару Роуз."
 
-    old "Metis chuckled."
-    new "Метис усмехнулся."
-
     old "He always had a thing for collecting royalty."
     new "У него всегда была слабость коллекционировать королевских особ."
 
@@ -252,9 +246,6 @@ translate ru strings:
 
     old "Turned out to be nothing. As you said, the city was...unimpressive."
     new "Оказалось, ничего. Как ты и сказал, город был... непримечательным."
-
-    old "Metis laughed."
-    new "Метис рассмеялся."
 
     old "You can say that again. It's a miracle there's anything left of that miserable ruin."
     new "Это точно. Чудо, что от этой жалкой развалины хоть что-то осталось."

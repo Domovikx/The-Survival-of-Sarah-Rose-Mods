@@ -181,9 +181,6 @@ translate ru strings:
     old "Rosanna was safe, for now."
     new "Розанна была в безопасности, пока что."
 
-    old "Sarah decided to set out for the library to take care of her council duties, but she had only just made it out of the great hall before she saw a familiar face."
-    new "Сара решила отправиться в библиотеку, чтобы заняться делами совета, но едва выйдя из большого зала, она увидела знакомое лицо."
-
     old "Varga was leaning against a wall, reading a map of some sort. His face was very stern when he was focused, and he was too focused to notice Sarah coming upon him."
     new "Варга стоял, прислонившись к стене, и читал какую-то карту. Его лицо было очень суровым, когда он сосредоточен, и он был слишком поглощён, чтобы заметить приближающуюся Сару."
 
@@ -234,9 +231,6 @@ translate ru strings:
 
     old "Don't let me get in the way, go right ahead. The library is off that way, but I imagine you know your way around the castle."
     new "Не позволяй мне мешать, проходи. Библиотека в той стороне, но, полагаю, ты знаешь замок."
-
-    old "Sarah sighed."
-    new "Сара вздохнула."
 
     old "Ugh, you're no fun."
     new "Ох, с тобой не весело."

@@ -1144,9 +1144,6 @@ translate ru strings:
     old "She couldn't help but feel the press of his hard cock in the palm of her hand."
     new "Она не могла не чувствовать давление его твёрдого члена в своей ладони."
 
-    old "That's your fault."
-    new "Это твоя вина."
-
     old "No, I didn't...I..."
     new "Нет, я не... я..."
 
@@ -2007,9 +2004,6 @@ translate ru strings:
 
     old "You don't wanna cause trouble, right?"
     new "Ты ведь не хочешь создавать проблемы, правда?"
-
-    old "No...I don't..."
-    new "Нет... не хочу..."
 
     old "Her voice was almost a whisper."
     new "Её голос был почти шёпотом."

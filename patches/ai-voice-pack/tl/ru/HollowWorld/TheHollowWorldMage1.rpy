@@ -70,9 +70,6 @@ translate ru strings:
     old "In little more than a second, she was in the study. She had snatched the fate stone off the table and was running back before even Xan fully noticed."
     new "Не прошло и секунды, как она была в кабинете. Она схватила камень судьбы со стола и бежала обратно, прежде чем Ксан даже полностью осознал происходящее."
 
-    old "Sarah!!!"
-    new "Сара!!!"
-
     old "Get back here!"
     new "Вернись сюда!"
 

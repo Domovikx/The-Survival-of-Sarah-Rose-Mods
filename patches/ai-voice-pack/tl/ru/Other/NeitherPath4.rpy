@@ -112,9 +112,6 @@ translate ru strings:
     old "They will not be as ready as they perhaps could have been, but they'll be as ready as we can make them, before our window closes."
     new "Они будут не так готовы, как могли бы быть, но будут настолько готовы, насколько мы сможем их сделать, прежде чем наше окно закроется."
 
-    old "Yes..."
-    new "Да..."
-
     old "Her voice drifted away."
     new "Её голос затих."
 
@@ -577,12 +574,6 @@ translate ru strings:
     old "Painful and frightening, for so easily she could make a mistake and lose their support, and with it, everything."
     new "Болезненно и страшно, потому что так легко она могла совершить ошибку и потерять их поддержку, а с ней и всё."
 
-    old "Are you alright?"
-    new "Ты в порядке?"
-
-    old "Excuse me?"
-    new "Прости?"
-
     old "It's just, you haven't said a word since we left the throne room dear."
     new "Просто ты не сказала ни слова с тех пор, как мы покинули тронный зал, дорогая."
 
@@ -660,9 +651,6 @@ translate ru strings:
 
     old "Her impressive desk, littered with documents, stood as a testament to her productivity."
     new "Её внушительный стол, заваленный документами, служил свидетельством её продуктивности."
-
-    old "Wow..."
-    new "Ого..."
 
     old "Lady Carolyn laughed."
     new "Леди Кэролайн рассмеялась."
@@ -1077,9 +1065,6 @@ translate ru strings:
 
     old "Do you think she debased herself the way you're doing?"
     new "Думаешь, она унижала себя так, как ты?"
-
-    old "Sarah gritted her teeth."
-    new "Сара стиснула зубы."
 
     old "You're weak, Sarah."
     new "Ты слабая, Сара."

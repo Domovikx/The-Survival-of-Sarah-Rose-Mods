@@ -709,12 +709,6 @@ translate ru strings:
     old "In unison, the soldiers stomped their feet and began to storm down the hallway, their rupturous screams filling the hall, striking fear into any possible enemy."
     new "В едином порыве солдаты затопали ногами и бросились по коридору, их ликующие крики наполнили зал, вселяя страх в любого возможного врага."
 
-    old "Sarah leaned against the wall, trying to regain her senses."
-    new "Сара прислонилась к стене, пытаясь прийти в себя."
-
-    old "She saw Kate come up to her."
-    new "Она увидела, как Кейт подходит к ней."
-
     old "Sarah checked her body for injuries but found none."
     new "Сара осмотрела себя на предмет ран, но не нашла ни одной."
 

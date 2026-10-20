@@ -676,9 +676,6 @@ translate ru strings:
     old "Most of it I learned in about two weeks."
     new "Я выучил большую часть примерно за две недели."
 
-    old "Sarah felt her eyes go wide."
-    new "Сара почувствовала, как у неё расширились глаза."
-
     old "Two weeeks? To learn an entire new language?"
     new "Две недели? Выучить целый новый язык?"
 

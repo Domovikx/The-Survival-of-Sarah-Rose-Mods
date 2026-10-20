@@ -253,9 +253,6 @@ translate ru strings:
     old "She could see him smiling as she was eating."
     new "Она видела, как он улыбается, пока она ела."
 
-    old "Nothing."
-    new "Ничего."
-
     old "I'm just happy to see you happy."
     new "Я просто рад видеть тебя счастливой."
 

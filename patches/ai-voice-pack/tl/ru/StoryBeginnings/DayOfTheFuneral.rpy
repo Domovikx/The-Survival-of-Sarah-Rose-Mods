@@ -19,9 +19,6 @@ translate ru strings:
     old "Sarah looks out over the crowd of people that have fitted themselves into the great hall."
     new "Сара смотрит на толпу людей, заполнивших большой зал."
 
-    old "Sarah..."
-    new "Сара..."
-
     old "Thomas embraces his sister."
     new "Томас обнимает сестру."
 

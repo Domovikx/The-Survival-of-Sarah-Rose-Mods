@@ -1789,9 +1789,6 @@ translate ru strings:
     old "But...how would I be able to do so?"
     new "Но... как я смогу это сделать?"
 
-    old "Easy."
-    new "Легко."
-
     old "He will soon come to my Estate for business. I will create a situation for you to meet with him."
     new "Скоро он прибудет в моё поместье по делам. Я создам ситуацию для вашей встречи."
 
