@@ -203,6 +203,9 @@ translate ru strings:
 
     old "Dual line"
     new "Двойная строка"
+
+    old "Hidden voice line"
+    new "Скрытая голосовая строка"
 '''
 
 SCRIPT_AUTHORS_FIXTURE = '''define s = Character("Sarah")
@@ -213,6 +216,7 @@ label scene_one:
     "Master" "Do you understand?"
     "Orc" "Walk!"
     "Hecate" "Behave."
+    "Mysterious" "Hidden voice line"
     s "Same words"
     k "Same words"
     "Mixed line"
@@ -244,10 +248,17 @@ def _make_authors_tree(tmp_path):
     return tl, game, out
 
 
-def test_build_authors_fixture(tmp_path):
+def test_build_authors_fixture(tmp_path, monkeypatch):
     """Гард баги: строковые спикеры получают who-id, коллизии — по записи на спикера,
-    replay-файлы парсятся, display-имя сливается с define при совпадении."""
+    replay-файлы парсятся, display-имя сливается с define при совпадении,
+    uid-override переназначает спикера маски."""
     tl, game, out = _make_authors_tree(tmp_path)
+    # точечное исключение: реплика маски Mysterious принадлежит hec
+    ov = tmp_path / 'overrides.jsonl'
+    ov.write_text(
+        json.dumps({'uid': _uid('Hidden voice line'), 'who': 'hec',
+                    'note': 'фикстура-override'}) + '\n', encoding='utf-8')
+    monkeypatch.setattr(who_map, 'OVERRIDES_PATH', str(ov))
     voice_catalog.build(game_dir=game, out_dir=out, tl_dir=tl)
 
     meta, entries = _load_entries(out)
@@ -273,10 +284,12 @@ def test_build_authors_fixture(tmp_path):
     assert whos('The pain it brings you now...') == {('master', 'dialogue')}
     # меню + эхо-реплика персонажа: обе записи сосуществуют
     assert whos('Dual line') == {(None, 'menu'), ('s', 'dialogue')}
+    # uid-override (registry/overrides.jsonl): маска отдана реальному персонажу
+    assert whos('Hidden voice line') == {('hec', 'dialogue')}
 
     assert meta['characters']['master'] == 'Master'
     assert meta['characters']['orc'] == 'Orc'
-    assert meta['totals']['total'] == 13
+    assert meta['totals']['total'] == 14
     assert all(e['who_name'] for e in entries if e['category'] == 'dialogue')
 
 
@@ -332,6 +345,15 @@ def test_real_game_every_speaker_text_has_dialogue_authors(tmp_path):
     # строковые спикеры получили who-id в characters
     assert meta['characters'].get('captain') == 'Captain'
 
+    # разметка тега Voice (registry/overrides.jsonl): реплики маски — своим
+    # персонажам (23 исключения из tmp/voice_tag_attribution.md)
+    assert {'mar'} <= {e['who'] for e in by['Oy!']}
+    assert {'hec'} <= {e['who'] for e in by['Go to the ships!']}
+    assert 'dam' in {e['who'] for e in by['What?']}
+    voice_n = sum(1 for e in entries if e['who'] == 'voice')
+    assert voice_n == 86, 'голосов существа: ждал 86 (109 - 23), got {}'.format(
+        voice_n)
+
     # rename-trap: каждый who каталога обязан существовать в реестре who_map
     # (новое имя спикера из апдейта игры без записи в реестре = падение сюда)
     reg_whos = set(who_map.resolve())
@@ -369,6 +391,11 @@ def test_who_map_registry_invariants():
     entities = collections.Counter(r['entity'] for r in resolved.values()
                                    if r.get('entity'))
     assert all(n >= 2 for n in entities.values()), 'entity-группа < 2 ключей'
+
+    # overrides: uid-формат и кто-коды существуют в реестре
+    for o in who_map.overrides():
+        assert re.fullmatch(r'[0-9a-f]{32}', o['uid']), o
+        assert o['who'] in resolved, 'override ведёт в никуда: {}'.format(o)
 
     # опечатки игры резолвятся в канон через deprecated-сшивки
     exact, _cf = who_map.name_index()

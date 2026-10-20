@@ -53,7 +53,7 @@ MENU_RE = re.compile(r'^\s*"([^"]*)"\s*(?:if\b.*)?:\s*$')
 DEFINE_RE = re.compile(r'^define\s+(\w+)\s*=\s*Character\(\s*"([^"]+)"')
 
 # Легаси-алиасы: исторические who-id пяти ранних строковых спикеров — те же
-# who_codes лежат в каст-yaml (voice_candidates/*/*.yaml), менять их нельзя.
+# who_codes лежат в каст-yaml (registry/casts/*/*.yaml), менять их нельзя.
 LEGACY_WHO = {
     'Orc': 'orc',
     'Gorak': 'gor',
@@ -155,6 +155,9 @@ def parse_game():
                 if m:
                     defines[m.group(1)] = m.group(2)
     reg_exact, reg_cf = who_map.name_index(defines=defines)
+    # Точечные uid-исключения (registry/overrides.jsonl): размеченные реплики
+    # со спикером-маской Voice, принадлежащие реальным персонажам.
+    uid_overrides = who_map.override_by_uid()
     for path in sorted(glob.glob(os.path.join(game_dir, '*.rpy'))):
         label = None
         with open(path, encoding='utf-8', errors='replace') as f:
@@ -185,6 +188,8 @@ def parse_game():
                        or LEGACY_WHO.get(speaker)
                        or define_by_display.get(speaker)
                        or slug_who(speaker))
+                who = uid_overrides.get(
+                    hashlib.md5(text.encode('utf-8')).hexdigest(), who)
                 char_names.setdefault(who, speaker)
                 text_speakers[text].add(who)
                 text_labels[text].add(label)
@@ -192,6 +197,8 @@ def parse_game():
             m = SAY_RE.match(line)
             if m:
                 who, text = m.group(1), unescape(m.group(2))
+                who = uid_overrides.get(
+                    hashlib.md5(text.encode('utf-8')).hexdigest(), who)
                 text_speakers[text].add(who)
                 text_labels[text].add(label)
                 continue
