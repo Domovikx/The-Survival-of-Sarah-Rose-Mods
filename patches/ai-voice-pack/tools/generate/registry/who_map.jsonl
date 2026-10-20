@@ -1,0 +1,152 @@
+{"character": "Sarah", "define": ["s"]}
+{"character": "King Orwell Rose", "define": ["ko"]}
+{"character": "Thomas", "define": ["t"]}
+{"character": "Hassar", "define": ["h"]}
+{"character": "Marion", "define": ["m"]}
+{"character": "Varga", "define": ["v"]}
+{"character": "Kate", "define": ["k"]}
+{"character": "Barion", "define": ["b"]}
+{"character": "Kravel", "define": ["kr"]}
+{"character": "Carolyn", "define": ["c"]}
+{"character": "Captain Belmont", "define": ["cb"]}
+{"character": "Caleb", "define": ["ca"]}
+{"character": "Ephraim", "define": ["ep"]}
+{"character": "Atilla", "define": ["a"]}
+{"character": "Vaelen", "define": ["vae"]}
+{"character": "Jaeid", "define": ["j"]}
+{"character": "Xanthippe", "define": ["x"]}
+{"character": "Razaphel", "define": ["r"]}
+{"character": "Alaric", "define": ["al"]}
+{"character": "Shah Mahda", "define": ["shah"]}
+{"character": "Samayra", "define": ["sa"]}
+{"character": "Lily", "define": ["l"]}
+{"character": "Mary", "define": ["mary"]}
+{"character": "Bran", "define": ["bran"]}
+{"character": "Took", "define": ["to"]}
+{"character": "Synara", "define": ["sy"]}
+{"character": "Nickolas", "define": ["nick"]}
+{"character": "Sigmund", "define": ["sig"]}
+{"character": "Krip", "define": ["krip"]}
+{"character": "Sakar", "define": ["sak"]}
+{"character": "Matthew", "define": ["matt"]}
+{"character": "Eula", "define": ["eula"]}
+{"character": "Gideon", "define": ["g"]}
+{"character": "Sophia", "define": ["sop"]}
+{"character": "Naydeen", "define": ["nay"]}
+{"character": "Enya", "define": ["eny"]}
+{"character": "Ayaka", "define": ["aya"]}
+{"character": "Dio", "define": ["dio"]}
+{"character": "Cassius", "define": ["cas"]}
+{"character": "Metis", "define": ["met"]}
+{"character": "Jasmine", "define": ["jas"]}
+{"character": "Orwen", "define": ["orw"]}
+{"character": "Miriam", "define": ["mir"]}
+{"character": "Tirion", "define": ["tir"]}
+{"character": "Maeiv", "define": ["mae"]}
+{"character": "Marshal Edmond", "define": ["edm"]}
+{"character": "Duke Antonio", "define": ["ant"]}
+{"character": "Garret", "define": ["gar"]}
+{"character": "Daemon", "entity": "void-god", "note": "Demon-арка: реплики того же существа под именем Daemon; голос каста Daemon.", "define": ["dae"]}
+{"character": "Dalia", "define": ["dalia"]}
+{"character": "Kamal", "define": ["kam"]}
+{"character": "Ramsey", "define": ["rams"]}
+{"character": "Jacob", "define": ["jac"]}
+{"character": "Elsa", "define": ["elsa"]}
+{"character": "Alfred", "define": ["alf"]}
+{"character": "Kim", "define": ["kim"]}
+{"character": "Nathan", "define": ["nat"]}
+{"character": "Gilead", "define": ["gil"]}
+{"character": "Albert", "define": ["alb"]}
+{"character": "Gabriel", "define": ["gab"]}
+{"character": "Hecate", "define": ["hec"]}
+{"character": "Damian", "define": ["dam"]}
+{"character": "Marius", "define": ["mar"]}
+{"character": "Arthur", "define": ["art"]}
+{"character": "Hugh", "define": ["hu"]}
+{"character": "Guard Captain", "define": []}
+{"character": "Guards", "define": []}
+{"character": "Man", "define": []}
+{"character": "Voice", "entity": "void-god", "note": "Тег-маска «голос из ниоткуда»: ~80 строк = существо (entity void-god), остальные — чужие персонажи (см. registry/overrides.jsonl).", "define": []}
+{"character": "Master", "entity": "void-god", "note": "Повелитель/«A God» арок Black Monolith/Demon; самоприсвоенный титул (script.rpy:83482). Тот же entity, что Voice и Daemon — на утверждении владельцем.", "define": []}
+{"character": "Soldier", "define": []}
+{"character": "Sarah and Thomas in unison", "note": "Дуэт: Сара+Томас одновременно — нужен дуэтный кейс.", "define": []}
+{"character": "Servant", "define": []}
+{"character": "Nobleman", "define": []}
+{"character": "Noblewoman", "define": []}
+{"character": "Ambassador", "define": []}
+{"character": "High Priest", "define": []}
+{"character": "Noble wife", "define": []}
+{"character": "Emissary", "define": []}
+{"character": "Guard", "define": []}
+{"character": "Peasant girl", "define": []}
+{"character": "Both", "note": "«Both» — одновременная речь двух персонажей, нужен дуэтный кейс.", "define": []}
+{"character": "Basilisk", "who": "bsk", "define": []}
+{"character": "Merchant", "define": []}
+{"character": "Announcer", "define": []}
+{"character": "Royal Messenger", "define": []}
+{"character": "Captain of the guard", "define": []}
+{"character": "Squire", "define": []}
+{"character": "Young woman", "define": []}
+{"character": "Officer", "define": []}
+{"character": "Camp Guard", "define": []}
+{"character": "Camp Soldier", "define": []}
+{"character": "City Official", "define": []}
+{"character": "The Official", "define": []}
+{"character": "Innkeeper", "define": []}
+{"character": "Official", "define": []}
+{"character": "Slave", "define": []}
+{"character": "Woman", "define": []}
+{"character": "Tailor", "define": []}
+{"character": "Girl", "define": []}
+{"character": "Advisor", "define": []}
+{"character": "Priest", "define": []}
+{"character": "Old Captain", "define": []}
+{"character": "Orc", "who": "orc", "define": []}
+{"character": "Gorak", "who": "gor", "define": []}
+{"character": "Raza", "who": "raza", "define": []}
+{"character": "Examinator", "define": []}
+{"character": "Siege crew", "define": []}
+{"character": "Mythran Prince", "define": []}
+{"character": "Male Soldier", "define": []}
+{"character": "Male soldier", "define": []}
+{"character": "Female Soldier", "define": []}
+{"character": "Female soldier", "define": []}
+{"character": "Slave Woman", "define": []}
+{"character": "Ragged Man", "define": []}
+{"character": "Mythran Officer", "define": []}
+{"character": "Mythran Soldier", "define": []}
+{"character": "Blacksmith", "define": []}
+{"character": "Mayor", "define": []}
+{"character": "Woodland Spirit", "who": "wsp", "define": []}
+{"character": "Scout", "define": []}
+{"character": "Soldiers", "define": []}
+{"character": "Emmissary", "define": [], "status": "deprecated", "merged_into": "Emissary", "note": "Опечатка игры (33 реплики), сшита в Emissary; удалить после миграции реестра."}
+{"character": "Tribesman", "define": []}
+{"character": "Old Tribesman", "define": []}
+{"character": "Engineer", "define": []}
+{"character": "Spearmen", "define": []}
+{"character": "Engineers", "define": []}
+{"character": "Second man", "define": []}
+{"character": "People", "define": []}
+{"character": "Brigand", "define": []}
+{"character": "Court Official", "define": []}
+{"character": "Judge", "define": []}
+{"character": "Court Offical", "define": [], "status": "deprecated", "merged_into": "Court Official", "note": "Опечатка игры (1 реплика), сшита в Court Official; удалить после миграции реестра."}
+{"character": "Other man", "define": []}
+{"character": "Robber", "define": []}
+{"character": "Captain", "define": []}
+{"character": "Young man", "define": []}
+{"character": "Old man", "define": []}
+{"character": "Servants", "define": []}
+{"character": "Curator", "define": []}
+{"character": "Scholar", "define": []}
+{"character": "Romanov Twin", "define": []}
+{"character": "Barkeeper", "define": []}
+{"character": "King-On-The-Outside", "define": []}
+{"character": "Barkeep", "define": []}
+{"character": "Sailor", "define": []}
+{"character": "Courier", "define": []}
+{"character": "Barman", "define": []}
+{"character": "Founder", "define": []}
+{"character": "Oryon", "define": []}
+{"character": "Voidling", "define": []}
