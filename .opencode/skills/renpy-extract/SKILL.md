@@ -17,7 +17,7 @@ metadata:
 
 ## Структура данных
 
-### Оригинальная игра
+### Оригинальная игра (read-only источник строк, `--game`)
 
 ```text
 game/
@@ -29,14 +29,15 @@ game/
 ├── language.rpy        # Язык
 ├── language_switcher.rpy
 ├── new_gallery.rpy     # Галерея
-├── art.rpy             # Арт
-└── tl/ru/              # Сгенерированные переводы
+└── art.rpy             # Арт
 ```
 
-### Структура переводов (генерируется)
+### Структура переводов (генерируется, `--tl`)
+
+В этом репозитории переводы живут в патче, НЕ в установке:
 
 ```text
-game/tl/ru/
+patches/ai-voice-pack/tl/ru/
 ├── Prologue/
 │   ├── OpeningScene.rpy
 │   ├── OpeningSceneEvening.rpy
@@ -54,15 +55,24 @@ game/tl/ru/
 ### Использование
 
 ```bash
-node extract_texts.mts extract      # Извлечение текстов
-node extract_texts.mts verify       # Проверка целостности
-node extract_texts.mts stats        # Статистика переводов
+node extract_texts.mts <command> [lang] [options]
+node extract_texts.mts extract       ru      # Извлечение текстов
+node extract_texts.mts verify        ru      # Проверка целостности
+node extract_texts.mts stats         ru      # Статистика переводов
 ```
+
+Опции всех команд:
+
+- `--game <dir>` — каталог оригинальной игры для скана (read-only; по умолчанию `<project>/game`)
+- `--tl <dir>` — целевой каталог переводов (по умолчанию `<project>/game/tl/<lang>`)
+- `--lang <code>` — язык вместо позиционного аргумента
+
+Язык — параметр всего пайплайна (default `ru`): заголовки блоков пишутся как `translate <lang> strings:`, чтение переводов и verify фильтруются по тому же языку. Для N языков каждый язык живёт в своём `tl/<lang>/` и обрабатывается теми же командами с другим `lang`.
 
 ### Выходной формат
 
 ```text
-game/tl/ru/{ArcName}/{SceneName}.rpy
+<tl-dir>/{ArcName}/{SceneName}.rpy   # например patches/ai-voice-pack/tl/ru/Prologue/OpeningScene.rpy
 ```
 
 Пример файла:
@@ -122,11 +132,18 @@ translate ru strings:
 
 ## Workflow
 
+Полный цикл — см. также `list-translation-files` (находит непереведённое)
+и команду `/translate-arc` → `orchestrator` (сам перевод):
+
 ```text
-1. node extract_texts.mts extract      → Извлечение всех текстов в game/tl/ru/
-2. Переводчики редактируют new "..." в файлах арк
-3. node extract_texts.mts verify       → Проверка прогресса
-4. Запуск dedup при необходимости      → node dedup_translations.mts
+1. node extract_texts.mts extract   → Перегенерация tl/<lang> из игры
+   (существующие переводы сохраняются по old; новые/изменённые строки
+   падают с плейсхолдером new == old — это и есть «надо перевести»)
+2. npm run tlstat                   → Список файлов с непереведёнными (old == new)
+3. /translate-arc <файлы>           → orchestrator: по одному агенту на файл,
+   каждый правит new построчно (skill-translate-rpy) и ревьюит (skill-review-rpy)
+4. node extract_texts.mts verify    → Проверка прогресса
+5. node dedup_translations.mts      → Дедуп при необходимости
 ```
 
 ## Проверка консистентности

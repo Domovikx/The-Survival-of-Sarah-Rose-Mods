@@ -1227,3 +1227,52 @@ describe("TestEngineBuiltins", () => {
     }
   });
 });
+
+describe("TestLangParam", () => {
+  it("generateRpy writes translate <lang> strings", () => {
+    const tmp = makeTempDir();
+    try {
+      const gameDir = sampleScript(tmp.path);
+      const outDir = join(tmp.path, "tl", "de");
+      const ex = new RenPyExtractor(gameDir);
+      const data = ex.scan();
+      generateRpy(data, outDir, "de");
+      const content = readFileSync(join(outDir, "Other", "start.rpy"), "utf-8");
+      assert.ok(content.includes("translate de strings:"));
+      assert.ok(!content.includes("translate ru strings:"));
+    } finally {
+      tmp.cleanup();
+    }
+  });
+
+  it("setExistingTranslations reads only matching lang", () => {
+    const tmp = makeTempDir();
+    try {
+      const tlDir = join(tmp.path, "tl", "ru");
+      mkdirSync(tlDir, { recursive: true });
+      writeFileSync(
+        join(tlDir, "x.rpy"),
+        [
+          "translate de strings:",
+          '    old "Hello"',
+          '    new "Hallo"',
+          "",
+          "translate ru strings:",
+          '    old "World"',
+          '    new "Мир"',
+          "",
+        ].join("\n"),
+        "utf-8",
+      );
+      const ru = new RenPyExtractor("nonexistent");
+      ru.setExistingTranslations(tlDir, "ru");
+      assert.equal(ru._existing("World"), "Мир");
+      assert.equal(ru._existing("Hello"), "");
+      const de = new RenPyExtractor("nonexistent");
+      de.setExistingTranslations(tlDir, "de");
+      assert.equal(de._existing("Hello"), "Hallo");
+    } finally {
+      tmp.cleanup();
+    }
+  });
+});

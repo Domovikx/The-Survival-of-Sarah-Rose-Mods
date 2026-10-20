@@ -19,10 +19,12 @@
  * - Никаких внешних зависимостей — только встроенные модули
  *
  * Использование:
- *   node extract_texts.mts extract            Scan game/ -> .rpy в tl/ru/
- *   node extract_texts.mts extract-builtins   Scan Ren'Py engine built-in strings
- *   node extract_texts.mts verify             Check game/ vs tl/ru/
- *   node extract_texts.mts stats              Show translation statistics
+ *   node extract_texts.mts <command> [lang] [options]
+ *   extract            Scan game/ -> .rpy в tl/<lang>/
+ *   extract-builtins   Scan Ren'Py engine built-in strings
+ *   verify             Check game/ vs tl/<lang>/
+ *   stats              Show translation statistics
+ *   options: --game <dir> --tl <dir> --lang <code>
  *
  * @see {@link https://nodejs.org/docs/latest-v18.x/api/fs.html|Node.js fs docs}
  */
@@ -243,9 +245,11 @@ export class RenPyExtractor {
   }
 
   /**
-   * Читает существующие .rpy файлы в tl/ru/ и извлекает переводы.
+   * Читает существующие .rpy файлы в tl/<lang>/ и извлекает переводы.
+   * Строки с new == old не сохраняются (считаются непереведёнными) —
+   * это осознанно: verify честно показывает их остатком.
    */
-  setExistingTranslations(tlDir: string): void {
+  setExistingTranslations(tlDir: string, lang = "ru"): void {
     const existing: Record<string, string> = {};
     if (!existsSync(tlDir)) return;
 
@@ -267,7 +271,7 @@ export class RenPyExtractor {
             let currentOrig: string | null = null;
             for (const line of content.split("\n")) {
               const s = line.trim();
-              if (s.startsWith("translate ru strings:")) {
+              if (s.startsWith(`translate ${lang} strings:`)) {
                 inTranslate = true;
                 currentOrig = null;
                 continue;
@@ -333,15 +337,27 @@ export class RenPyExtractor {
 
     const lines = content.split("\n");
     let inMenu = false;
+    // Вне label (init python, screen-без-label) и внутри image/ATL-блоков
+    // находятся идентификаторы/пути/атрибуты, а не переводимые строки —
+    // SAY/NARR-матчеры их не трогают (фикс мусора парсера, 2026-10-19).
+    let sawLabel = false;
+    let imageIndent = -1;
 
     for (let i = 0; i < lines.length; i++) {
       const stripped = lines[i].trim();
       if (!stripped) continue;
 
+      const indent = (lines[i].match(/^[ \t]*/) ?? [""])[0].replace(/\t/g, "    ").length;
+      if (imageIndent >= 0 && indent <= imageIndent) imageIndent = -1;
+      if (/^image\s+\S.*:\s*$/.test(stripped)) {
+        imageIndent = indent;
+      }
+
       // Label
       let m = /^label\s+([a-zA-Z_][a-zA-Z0-9_]*)\s*:/.exec(stripped);
       if (m) {
         currentLabel = m[1];
+        sawLabel = true;
         inMenu = false;
         continue;
       }
@@ -357,9 +373,9 @@ export class RenPyExtractor {
         inMenu = false;
       }
 
-      // ── 1. Диалог: character "text" ──
+      // ── 1. Диалог: character "text" ── (только внутри label)
       m = /^([a-zA-Z_][a-zA-Z0-9_]*)\s+"(.+)"\s*$/.exec(stripped);
-      if (m) {
+      if (m && sawLabel && imageIndent < 0) {
         const char = m[1];
         const text = _unescape(m[2]);
         if (text && !text.startsWith("#")) {
@@ -368,9 +384,9 @@ export class RenPyExtractor {
         continue;
       }
 
-      // ── 2. Диалог в кавычках: "Character" "text" ──
+      // ── 2. Диалог в кавычках: "Character" "text" ── (только внутри label)
       m = /^"([^"]+)"\s+"(.+)"\s*$/.exec(stripped);
-      if (m) {
+      if (m && sawLabel && imageIndent < 0) {
         const char = _unescape(m[1]);
         const text = _unescape(m[2]);
         if (text && !text.startsWith("#")) {
@@ -394,9 +410,9 @@ export class RenPyExtractor {
         continue;
       }
 
-      // ── 3. Нарратив: "text" ──
+      // ── 3. Нарратив: "text" ── (только внутри label и вне image-блоков)
       m = /^"(.+)"\s*$/.exec(stripped);
-      if (m && !stripped.startsWith("menu")) {
+      if (m && sawLabel && imageIndent < 0 && !stripped.startsWith("menu")) {
         const text = _unescape(m[1]);
         this._addToArc(this._getArc(currentLabel), currentLabel, sourceFile, i + 1, text, "narration", null);
         continue;
@@ -729,7 +745,7 @@ function entryName(path: string): string {
 /**
  * Генерация .rpy файлов переводов из данных.
  */
-export function generateRpy(data: ExtractResult, outputDir: string): string[] {
+export function generateRpy(data: ExtractResult, outputDir: string, lang = "ru"): string[] {
   const generated: string[] = [];
 
   // Arc files
@@ -745,7 +761,7 @@ export function generateRpy(data: ExtractResult, outputDir: string): string[] {
       let content = "# -*- encoding: utf-8 -*-\n";
       content += `# Arc: ${arcName} | Scene: ${sceneName}\n`;
       content += `# Source: ${sf}\n\n`;
-      content += "translate ru strings:\n\n";
+      content += `translate ${lang} strings:\n\n`;
       for (const [, bd] of Object.entries(blocks)) {
         const o = _esc(bd.original || "");
         const tRaw = bd.translated || "";
@@ -777,7 +793,7 @@ export function generateRpy(data: ExtractResult, outputDir: string): string[] {
 
     let content = "# -*- encoding: utf-8 -*-\n";
     content += "# UI Strings - Buttons, Menus, etc.\n\n";
-    content += "translate ru strings:\n\n";
+    content += `translate ${lang} strings:\n\n`;
     for (const bd of allBlocks) {
       const o = _esc(bd.original || "");
       const tRaw = bd.translated || "";
@@ -810,7 +826,7 @@ export function generateRpy(data: ExtractResult, outputDir: string): string[] {
 
     let content = "# -*- encoding: utf-8 -*-\n";
     content += "# Character names + Define strings\n\n";
-    content += "translate ru strings:\n\n";
+    content += `translate ${lang} strings:\n\n`;
     for (const bd of extraBlocks) {
       const o = _esc(bd.original || "");
       const tRaw = bd.translated || "";
@@ -846,6 +862,7 @@ export function generateEngineRpy(
   engineBlocks: BlockEntry[],
   tlDir: string,
   existingTranslations?: Record<string, string>,
+  lang = "ru",
 ): string[] {
   if (!engineBlocks || engineBlocks.length === 0) return [];
 
@@ -884,7 +901,7 @@ export function generateEngineRpy(
       let currentOrig: string | null = null;
       for (const line of content.split("\n")) {
         const s = line.trim();
-        if (s.startsWith("translate ru strings:")) {
+        if (s.startsWith(`translate ${lang} strings:`)) {
           inTranslate = true;
           currentOrig = null;
           continue;
@@ -919,7 +936,7 @@ export function generateEngineRpy(
   let content = "# -*- encoding: utf-8 -*-\n";
   content += "# Ren'Py Engine Built-in Strings\n";
   content += "# Extracted from renpy/common/00*.rpy\n\n";
-  content += "translate ru strings:\n\n";
+  content += `translate ${lang} strings:\n\n`;
   for (const bd of engineBlocks) {
     const o = _esc(bd.original || "");
     const origText = bd.original.trim();
@@ -1007,7 +1024,7 @@ export function _cleanEngineDuplicatesFromScreens(tlDir: string): void {
 /**
  * Подсчёт переведённых строк в renpy_common.rpy.
  */
-export function countEngineTranslations(tlDir: string): [number, number] {
+export function countEngineTranslations(tlDir: string, lang = "ru"): [number, number] {
   const f = join(tlDir, "renpy_common.rpy");
   if (!existsSync(f)) return [0, 0];
 
@@ -1021,7 +1038,7 @@ export function countEngineTranslations(tlDir: string): [number, number] {
 
     for (const line of content.split("\n")) {
       const s = line.trim();
-      if (s.startsWith("translate ru strings:")) {
+      if (s.startsWith(`translate ${lang} strings:`)) {
         inTranslate = true;
         continue;
       }
@@ -1054,11 +1071,16 @@ export function countEngineTranslations(tlDir: string): [number, number] {
 }
 
 /**
- * Проверка целостности: game/ vs tl/ru/.
+ * Проверка целостности: game/ vs tl/<lang>/.
  */
-export function verifyIntegrity(originalDir: string, tlDir: string, renpyCommonDir?: string): [number, number] {
+export function verifyIntegrity(
+  originalDir: string,
+  tlDir: string,
+  renpyCommonDir?: string,
+  lang = "ru",
+): [number, number] {
   const extractor = new RenPyExtractor(originalDir);
-  extractor.setExistingTranslations(tlDir);
+  extractor.setExistingTranslations(tlDir, lang);
   const data = extractor.scan();
 
   let total = 0;
@@ -1094,7 +1116,7 @@ export function verifyIntegrity(originalDir: string, tlDir: string, renpyCommonD
     }
   }
 
-  const [engineTotal, engineDone] = countEngineTranslations(tlDir);
+  const [engineTotal, engineDone] = countEngineTranslations(tlDir, lang);
   if (engineTotal > 0) {
     total += engineTotal;
     done += engineDone;
@@ -1129,22 +1151,52 @@ function main(): void {
     console.log("Commands:");
     console.log("  extract           Scan game/ -> .rpy in tl/ru/");
     console.log("  extract-builtins  Scan Ren'Py engine built-in strings");
-    console.log("  verify            Check game/ vs tl/ru/");
+    console.log("  verify            Check game/ vs tl/<lang>/");
     console.log("  stats             Show translation statistics");
+    console.log("");
+    console.log("Usage: extract_texts.mts <command> [lang] [options]");
+    console.log("  lang                 Translation language (default: ru, or --lang)");
+    console.log("  --game <dir>         Game/ directory to scan (default: <project>/game)");
+    console.log("  --tl <dir>           Target tl directory (default: <project>/game/tl/<lang>)");
     return;
   }
 
+  // Parse: <cmd> [lang] [--flag value ...]
+  const flagNames = new Set(["game", "tl", "lang"]);
+  const flags: Record<string, string> = {};
+  const positional: string[] = [];
+  for (let i = 1; i < args.length; i++) {
+    const a = args[i];
+    if (a.startsWith("--")) {
+      const name = a.slice(2);
+      if (!flagNames.has(name)) {
+        console.log("Unknown flag:", a);
+        return;
+      }
+      const val = args[i + 1];
+      if (val === undefined || val.startsWith("--")) {
+        console.log("Flag --" + name + " requires a value");
+        return;
+      }
+      flags[name] = val;
+      i++;
+    } else {
+      positional.push(a);
+    }
+  }
+
   const cmd = args[0];
+  const lang = flags.lang ?? positional[0] ?? "ru";
   const scriptDir = join(fileURLToPath(new URL(".", import.meta.url)));
   const projectRoot = join(scriptDir, "..", "..", "..");
-  const gameDir = join(projectRoot, "game");
-  const tlDir = join(projectRoot, "game", "tl", "ru");
+  const gameDir = flags.game ?? join(projectRoot, "game");
+  const tlDir = flags.tl ?? join(projectRoot, "game", "tl", lang);
 
   if (cmd === "extract") {
     const extractor = new RenPyExtractor(gameDir);
-    extractor.setExistingTranslations(tlDir);
+    extractor.setExistingTranslations(tlDir, lang);
     const data = extractor.scan();
-    generateRpy(data, tlDir);
+    generateRpy(data, tlDir, lang);
     console.log("Done!");
   } else if (cmd === "extract-builtins") {
     const renpyCommon = _findRenpyCommonDir(projectRoot);
@@ -1154,9 +1206,9 @@ function main(): void {
       return;
     }
     const extractor = new RenPyExtractor(gameDir);
-    extractor.setExistingTranslations(tlDir);
+    extractor.setExistingTranslations(tlDir, lang);
     const blocks = extractor.scanEngineBuiltins(renpyCommon);
-    const generated = generateEngineRpy(blocks, tlDir, extractor._existingTranslations);
+    const generated = generateEngineRpy(blocks, tlDir, extractor._existingTranslations, lang);
     if (generated.length > 0) {
       console.log(`Generated ${generated[0]} (${blocks.length} strings)`);
     } else {
@@ -1166,10 +1218,10 @@ function main(): void {
     console.log("Done!");
   } else if (cmd === "verify" || cmd === "stats") {
     if (!existsSync(tlDir)) {
-      console.log("ERROR: tl/ru directory not found!");
+      console.log("ERROR: tl directory not found: " + tlDir);
       return;
     }
-    verifyIntegrity(gameDir, tlDir);
+    verifyIntegrity(gameDir, tlDir, undefined, lang);
   } else {
     console.log("Unknown command:", cmd);
   }
