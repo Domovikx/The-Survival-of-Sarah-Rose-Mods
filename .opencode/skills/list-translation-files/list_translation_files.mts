@@ -118,7 +118,7 @@ export function collectFiles(tlDir: string, projectRoot: string): ArcsMap {
  */
 export function formatStatus(arcs: ArcsMap, showAll = false): string {
   const lines: string[] = [];
-  lines.push("=== Translation status: game/tl/ru/ ===");
+  lines.push("=== Translation status: patches/ai-voice-pack/tl/ru/ ===");
   lines.push("");
 
   const sortedArcs = Object.keys(arcs).sort();
@@ -181,10 +181,20 @@ export function formatCopyReady(arcs: ArcsMap, mode: string): string {
   const lines: string[] = [];
   const sortedArcs = Object.keys(arcs).sort();
 
+  // Путь каталога арки вычисляется из первого файла (не хардкод префикса):
+  // работает и для game/tl/ru/, и для patches/ai-voice-pack/tl/ru/.
+  const arcDir = (arcName: string): string | null => {
+    const first = arcs[arcName]?.[0];
+    if (!first) return null;
+    const i = first.path.lastIndexOf("/");
+    return i > 0 ? first.path.slice(0, i) : first.path;
+  };
+
   if (mode === "arcs") {
     for (const arcName of sortedArcs) {
       if (arcName === "__root__") continue;
-      lines.push(`game/tl/ru/${arcName}`);
+      const dir = arcDir(arcName);
+      if (dir) lines.push(dir);
     }
   } else if (mode === "files-untranslated") {
     for (const arcName of sortedArcs) {
@@ -213,7 +223,8 @@ export function formatCopyReady(arcs: ArcsMap, mode: string): string {
       const total = arcs[arcName].reduce((s, f) => s + f.stats.total, 0);
       const translated = arcs[arcName].reduce((s, f) => s + f.stats.translated, 0);
       if (total > 0 && translated < total) {
-        lines.push(`game/tl/ru/${arcName}`);
+        const dir = arcDir(arcName);
+        if (dir) lines.push(dir);
       }
     }
   }
@@ -239,7 +250,7 @@ function main(): void {
 
   const scriptDir = join(fileURLToPath(new URL(".", import.meta.url)));
   const projectRoot = join(scriptDir, "..", "..", "..");
-  const tlDir = join(projectRoot, "game", "tl", "ru");
+  const tlDir = join(projectRoot, "patches", "ai-voice-pack", "tl", "ru");
 
   const arcs = collectFiles(tlDir, projectRoot);
 

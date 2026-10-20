@@ -1,6 +1,6 @@
 ---
 name: renpy-dedup
-description: Поиск и удаление дублирующихся old строк в Ren'Py translation файлах. Ren'Py не допускает одинаковые old строки в разных файлах одного перевода — это вызывает исключение. Скрипт сканирует все .rpy файлы в game/tl/<lang>/, оставляет первый экземпляр, удаляет дубликаты.
+description: Поиск и удаление дублирующихся old строк в Ren'Py translation файлах. Ren'Py не допускает одинаковые old строки в разных файлах одного перевода — это вызывает исключение. Скрипт сканирует все .rpy файлы в tl/<lang>/ (по умолчанию <project>/game/tl/<lang>, в этом репо — через --tl patches/ai-voice-pack/tl/ru), оставляет первый экземпляр, удаляет дубликаты.
 license: MIT
 compatibility: opencode
 metadata:
@@ -26,7 +26,7 @@ Exception: A translation for "Raza" already exists at game/tl/ru/HyralArc/HyralG
 
 Скрипт `dedup_translations.mts`:
 
-1. Сканирует все `.rpy` файлы в `game/tl/<lang>/`
+1. Сканирует все `.rpy` файлы в целевом tl-каталоге (по умолчанию `<project>/game/tl/<lang>/`; в этом репо — `--tl patches/ai-voice-pack/tl/ru`)
 2. Парсит блоки `translate <lang> strings:`
 3. Находит одинаковые `old` строки в разных файлах
 4. Оставляет первый экземпляр (по алфавиту пути файла)
@@ -46,6 +46,9 @@ node dedup_translations.mts --lang de
 
 # Указать корень проекта вручную
 node dedup_translations.mts --project /path/to/game
+
+# Указать tl-каталог напрямую (этот репо: переводы не в game/tl/)
+node dedup_translations.mts --tl patches/ai-voice-pack/tl/ru
 
 # Подробный вывод
 node dedup_translations.mts --verbose

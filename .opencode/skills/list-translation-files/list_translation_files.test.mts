@@ -116,7 +116,7 @@ describe("formatStatus", () => {
   it("reports empty arcs map gracefully", () => {
     const out = formatStatus({});
     assert.ok(out.includes("Translation status"));
-    assert.ok(out.includes("game/tl/ru"));
+    assert.ok(out.includes("patches/ai-voice-pack/tl/ru"));
   });
 
   it("shows DONE for fully translated arc", () => {

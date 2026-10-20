@@ -16,6 +16,7 @@
  *   node dedup_translations.mts --dry-run                # предпросмотр
  *   node dedup_translations.mts --verbose                # подробный вывод
  *   node dedup_translations.mts --project /path          # указать проект
+ *   node dedup_translations.mts --tl /path/to/tl/ru       # прямой путь к tl
  *
  * @see {@link https://nodejs.org/docs/latest-v18.x/api/fs.html|Node.js fs docs}
  */
@@ -453,6 +454,7 @@ function main(): void {
   let dryRun = false;
   let verbose = false;
   let projectPath: string | null = null;
+  let tlPath: string | null = null;
 
   for (let i = 0; i < args.length; i++) {
     const arg = args[i];
@@ -464,6 +466,8 @@ function main(): void {
       verbose = true;
     } else if (arg === "--project" || arg === "-p") {
       projectPath = args[++i];
+    } else if (arg === "--tl") {
+      tlPath = args[++i];
     }
   }
 
@@ -480,7 +484,9 @@ function main(): void {
     }
   }
 
-  const tlDir = join(projectDir, "game", "tl", lang);
+  // --tl имеет приоритет: в этом репо переводы в patches/ai-voice-pack/tl/,
+  // а не в game/tl/.
+  const tlDir = tlPath ?? join(projectDir, "game", "tl", lang);
 
   const result = deduplicate(tlDir, { lang, dryRun, verbose });
 }
