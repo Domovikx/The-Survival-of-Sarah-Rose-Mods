@@ -28,7 +28,10 @@ import os
 import re
 import sys
 
+from collections import defaultdict
+
 from voicekit import paths
+from voicekit import who_map
 
 # Тл переводов мода (репо) и каталог-приёмник — раскладка voicekit.paths.
 TL_RU = os.path.join(paths.PKG_ROOT, 'tl', 'ru')
@@ -44,20 +47,24 @@ HEADER_RE = re.compile(r'^# Arc:\s*(\S+)\s*\|\s*Scene:\s*(\S+)')
 LABEL_RE = re.compile(r'^label\s+([A-Za-z0-9_.]+)')
 SAY_RE = re.compile(r'^\s*(\w+)\s+"((?:[^"\\]|\\.)*)"')
 # Строковые спикеры: "Orc" "Walk!" — безымянные существа без define-переменной.
-# Им присваиваем стабильные who-id, чтобы они не уходили в Narrator.
 SAY_STRING_RE = re.compile(r'^\s*"([^"]+)"\s+"((?:[^"\\]|\\.)*)"')
 NARR_RE = re.compile(r'^\s*"((?:[^"\\]|\\.)*)"\s*(?:nointeract|with\b.*)?\s*$')
 MENU_RE = re.compile(r'^\s*"([^"]*)"\s*(?:if\b.*)?:\s*$')
 DEFINE_RE = re.compile(r'^define\s+(\w+)\s*=\s*Character\(\s*"([^"]+)"')
 
-# Каких строковых спикеров признаём персонажами (кто -> who-id).
-STRING_SPEAKERS = {
+# Легаси-алиасы: исторические who-id пяти ранних строковых спикеров — те же
+# who_codes лежат в каст-yaml (voice_candidates/*/*.yaml), менять их нельзя.
+LEGACY_WHO = {
     'Orc': 'orc',
     'Gorak': 'gor',
     'Raza': 'raza',
     'Basilisk': 'bsk',
     'Woodland Spirit': 'wsp',
 }
+
+
+# Автосlug — общий с реестром who_map (фолбэк для спикеров вне реестра).
+slug_who = who_map.slug_who
 
 
 def unescape(s):
@@ -116,51 +123,84 @@ def parse_tl():
     return entries
 
 
-def parse_script():
-    """Parse script.rpy -> who map, menu set, labels, char names."""
-    old_who = {}
-    old_labels = {}
+def parse_game():
+    """Parse ALL game/*.rpy -> speaker maps.
+
+    Бага 2026-10-20 (фиксируется здесь): раньше читался только script.rpy
+    (replay_gallery.rpy был не виден), строковые спикеры вне хардкод-списка
+    проваливались в NARR_RE с искажённым ключом (кто затёрт), а
+    old_who.setdefault оставлял первого победившего спикера (коллизии текстов).
+
+    Возвращает:
+      text_speakers — {text: set(who_id | None)}: все спикеры текста
+                      (None — есть нарраторское вхождение);
+      text_labels   — {text: set(label)};
+      menu_texts    — set(текстов-выборов меню);
+      labels        — все label'ы всех файлов;
+      char_names    — {who_id: отображаемое имя} (define + строковые).
+    """
+    game_dir = os.path.dirname(SCRIPT)
+    text_speakers = defaultdict(set)
+    text_labels = defaultdict(set)
     menu_texts = set()
     labels = []
     char_names = {}
-    label = None
-    with open(SCRIPT, encoding='utf-8', errors='replace') as f:
-        lines = f.readlines()
-    for line in lines:
-        m = LABEL_RE.match(line)
-        if m:
-            label = m.group(1)
-            labels.append(label)
-            continue
-        m = DEFINE_RE.match(line)
-        if m:
-            char_names[m.group(1)] = m.group(2)
-            continue
-        m = MENU_RE.match(line)
-        if m and label is not None:
-            menu_texts.add(unescape(m.group(1)))
-            continue
-        m = SAY_STRING_RE.match(line)
-        if m:
-            speaker, text = m.group(1), unescape(m.group(2))
-            sid = STRING_SPEAKERS.get(speaker)
-            if sid:
-                char_names.setdefault(sid, speaker)
-                old_who.setdefault(text, (sid, label))
-                old_labels.setdefault(text, set()).add(label)
+    define_by_display = {}
+    # Реестр who_map — источник истины имён (LEGACY_WHO/define — фолбэки).
+    defines = {}
+    for path in sorted(glob.glob(os.path.join(game_dir, '*.rpy'))):
+        with open(path, encoding='utf-8', errors='replace') as f:
+            for line in f:
+                m = DEFINE_RE.match(line)
+                if m:
+                    defines[m.group(1)] = m.group(2)
+    reg_exact, reg_cf = who_map.name_index(defines=defines)
+    for path in sorted(glob.glob(os.path.join(game_dir, '*.rpy'))):
+        label = None
+        with open(path, encoding='utf-8', errors='replace') as f:
+            lines = f.readlines()
+        for line in lines:
+            m = LABEL_RE.match(line)
+            if m:
+                label = m.group(1)
+                labels.append(label)
                 continue
-        m = SAY_RE.match(line)
-        if m:
-            who, text = m.group(1), unescape(m.group(2))
-            old_who.setdefault(text, (who, label))
-            old_labels.setdefault(text, set()).add(label)
-            continue
-        m = NARR_RE.match(line)
-        if m:
-            text = unescape(m.group(1))
-            old_who.setdefault(text, (None, label))
-            old_labels.setdefault(text, set()).add(label)
-    return old_who, old_labels, menu_texts, labels, char_names
+            m = DEFINE_RE.match(line)
+            if m:
+                char_names[m.group(1)] = m.group(2)
+                define_by_display[m.group(2)] = m.group(1)
+                continue
+            m = MENU_RE.match(line)
+            if m and label is not None:
+                menu_texts.add(unescape(m.group(1)))
+                continue
+            m = SAY_STRING_RE.match(line)
+            if m:
+                # ВСЕ строковые спикеры, а не белый список 5 имён:
+                # легаси-алиас -> define с тем же именем -> автосlug.
+                speaker = m.group(1)
+                text = unescape(m.group(2))
+                who = (reg_exact.get(speaker)
+                       or reg_cf.get(speaker.casefold())
+                       or LEGACY_WHO.get(speaker)
+                       or define_by_display.get(speaker)
+                       or slug_who(speaker))
+                char_names.setdefault(who, speaker)
+                text_speakers[text].add(who)
+                text_labels[text].add(label)
+                continue
+            m = SAY_RE.match(line)
+            if m:
+                who, text = m.group(1), unescape(m.group(2))
+                text_speakers[text].add(who)
+                text_labels[text].add(label)
+                continue
+            m = NARR_RE.match(line)
+            if m:
+                text = unescape(m.group(1))
+                text_speakers[text].add(None)
+                text_labels[text].add(label)
+    return text_speakers, text_labels, menu_texts, labels, char_names
 
 
 def write_delta_manifests(old_jsonl, entries):
@@ -174,7 +214,10 @@ def write_delta_manifests(old_jsonl, entries):
     Пишет tmp/voice_delta/{added,changed,dropped}.txt (по uid на строку,
     gitignored tmp/ репы) и печатает сводку.
     """
-    old_by_uid = {}
+    # Сравнение по (uid, who): один uid может обслуживать несколько спикеров
+    # (манифесты остаются на уровне uid — voice_batch --uid переозвучивает
+    # все варианты слова сразу).
+    old_pairs = {}
     with open(old_jsonl, encoding='utf-8') as f:
         for line in f:
             line = line.strip()
@@ -182,12 +225,13 @@ def write_delta_manifests(old_jsonl, entries):
                 continue
             rec = json.loads(line)
             if 'uid' in rec:
-                old_by_uid[rec['uid']] = rec
-    new_by_uid = {e['uid']: e for e in entries}
-    added = sorted(set(new_by_uid) - set(old_by_uid))
-    dropped = sorted(set(old_by_uid) - set(new_by_uid))
-    changed = sorted(u for u in set(new_by_uid) & set(old_by_uid)
-                     if old_by_uid[u].get('new') != new_by_uid[u].get('new'))
+                old_pairs[(rec['uid'], rec.get('who'))] = rec
+    new_pairs = {(e['uid'], e['who']): e for e in entries}
+    added = sorted({u for u, _w in set(new_pairs) - set(old_pairs)})
+    dropped = sorted({u for u, _w in set(old_pairs) - set(new_pairs)})
+    changed = sorted({u for (u, _w) in set(new_pairs) & set(old_pairs)
+                      if old_pairs[(u, _w)].get('new')
+                      != new_pairs[(u, _w)].get('new')})
     out_dir = os.path.join(paths.REPO_ROOT, 'tmp', 'voice_delta')
     os.makedirs(out_dir, exist_ok=True)
     for name, uids in (('added', added), ('changed', changed),
@@ -228,39 +272,52 @@ def build(game_dir=None, out_dir=None, tl_dir=None, diff_with=None):
     print('parsing tl/ru ...')
     tl_entries = parse_tl()
     print('  tl entries: {}'.format(len(tl_entries)))
-    print('parsing script.rpy ...')
-    old_who, old_labels, menu_texts, labels, char_names = parse_script()
-    print('  say texts in script: {}'.format(len(old_who)))
+    print('parsing game scripts ...')
+    text_speakers, old_labels, menu_texts, labels, char_names = parse_game()
+    print('  say texts in game: {}'.format(len(text_speakers)))
     print('  labels: {}'.format(len(labels)))
     print('  menu texts: {}'.format(len(menu_texts)))
     print('  characters: {}'.format(len(char_names)))
 
+    # Одна запись на (uid, who): один и тот же текст могут говорить несколько
+    # персонажей («привет»-кейс) — каждому своё аудио uid__{variant}.
+    # Меню и UI всегда одна запись без спикера; смешанные нарратор+персонаж
+    # тексты получают и narration-запись, и записи говорящих.
     seen = set()
     conflicts = []
     entries = []
     for e in tl_entries:
         old = e['old']
-        if old in seen:
-            continue
-        seen.add(old)
-        uid = hashlib.md5(old.encode('utf-8')).hexdigest()
         rel = e['rel']
+        speakers = set(text_speakers.get(old, set()))
+        narr = (None in speakers) or not speakers
+        who_set = sorted(speakers - {None})
         if rel.startswith(SKIP_FILES):
-            category = 'ui'
-        elif old in menu_texts:
-            category = 'menu'
+            pairs = [(None, 'ui')]
         else:
-            category = 'dialogue' if (old_who.get(old) and old_who[old][0]) else 'narration'
-        who_pair = old_who.get(old)
-        who = who_pair[0] if who_pair else None
+            # Пункт меню, который персонаж тут же проговаривает (частый паттерн
+            # автора: "Tell me.": → s "Tell me.") — и меню, и реплики с автором.
+            pairs = []
+            if old in menu_texts:
+                pairs.append((None, 'menu'))
+            if who_set:
+                pairs.extend((w, 'dialogue') for w in who_set)
+            if narr and (who_set or not pairs):
+                pairs.append((None, 'narration'))
+        uid = hashlib.md5(old.encode('utf-8')).hexdigest()
         if old in old_labels and len(old_labels[old]) > 1:
             conflicts.append(dict(uid=uid, old=old, labels=sorted(old_labels[old])))
-        entries.append(dict(
-            uid=uid, old=old, new=e['new'],
-            who=who, who_name=char_names.get(who) if who else None,
-            arc=e['arc'], scene=e['scene'],
-            category=category,
-        ))
+        for who, category in pairs:
+            key = (uid, who)
+            if key in seen:
+                continue
+            seen.add(key)
+            entries.append(dict(
+                uid=uid, old=old, new=e['new'],
+                who=who, who_name=char_names.get(who) if who else None,
+                arc=e['arc'], scene=e['scene'],
+                category=category,
+            ))
 
     # label -> arc: scene->arc из заголовков + labels из script
     scene_arc = {}
@@ -343,6 +400,18 @@ def build(game_dir=None, out_dir=None, tl_dir=None, diff_with=None):
     print('=== tl scenes not matching labels: {} ==='.format(len(unmatched_scenes)))
     for s in unmatched_scenes[:10]:
         print('  {}'.format(s))
+
+    # Покрытие голосами: какие who-id (реплики) пока не привязаны ни к одному
+    # касту в voice_candidates — их нельзя отдавать в генерацию.
+    from voicekit.catalog import who_to_voice
+    wm = who_to_voice()
+    who_ids = {e['who'] for e in entries if e['who']}
+    unvoiced = sorted(w for w in who_ids if w not in wm)
+    print('=== who-id без привязки к касту: {} ==='.format(len(unvoiced)))
+    for w in unvoiced:
+        print('  {:28s} {} (реплик: {})'.format(
+            w, char_names.get(w, '?'),
+            sum(1 for e in entries if e['who'] == w)))
 
 
 if __name__ == '__main__':
