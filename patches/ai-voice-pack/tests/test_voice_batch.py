@@ -32,7 +32,7 @@ def mock_config(tmp_path, monkeypatch):
         ('ROOT', tmp_path),
         ('VOICE_CANDIDATES', tmp_path / 'voice_candidates'),
         ('CATALOG_DIR', tmp_path / 'catalog'),
-        ('CONFIG_DIR', tmp_path / 'config'),
+        ('PRESETS_MTS', tmp_path / 'config' / 'voice_presets.mts'),
         ('VOICES_JSONL', tmp_path / 'catalog' / 'voices.jsonl'),
         ('VOICE_LIST_JSON', tmp_path / 'catalog' / 'voice_list.json'),
         ('AUDIO_DIR', tmp_path / 'audio'),

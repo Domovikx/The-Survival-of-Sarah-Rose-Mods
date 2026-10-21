@@ -1,17 +1,22 @@
-"""Загрузка config/voice_presets.yaml — единой карты конфигов озвучки.
+"""Доступ к voice_presets.mts — единой карте конфигов озвучки.
+
+Источник истины — TS-модуль scripts/voice_presets.mts (yaml-файл
+config/voice_presets.yaml в корне репы удалён при миграции 2026-10-21 —
+конфиг переехал к скриптам и переписан на TS). python читает JSON-дамп:
+`node voice_presets.mts` печатает весь конфиг; ответ кэшируется на процесс.
+Если файла нет или node недоступен — {} и потребители используют свои
+фолбэк-дефолты.
 
 Использование:
   cfg = config.load()            # весь словарь (кэшируется)
   cfg = config.section('batch')  # секция (dict, или {})
   cfg = config.preset('beastify', 'orc')  # пресет (dict, или {})
   val = config.get('design', 'temperature', 0.9)  # значение с дефолтом
-
-Если файла нет — секции пустые, скрипты используют свои фолбэк-дефолты.
 """
 
+import json
 import os
-
-import yaml
+import subprocess
 
 from . import paths
 
@@ -22,12 +27,12 @@ def load():
     """Весь конфиг (кэшируется после первого чтения)."""
     global _CACHE
     if _CACHE is None:
-        p = os.path.join(paths.CONFIG_DIR, 'voice_presets.yaml')
         data = {}
+        p = paths.PRESETS_MTS
         if os.path.exists(p):
             try:
-                with open(p, encoding='utf-8') as f:
-                    loaded = yaml.safe_load(f)
+                out = subprocess.check_output(['node', p], encoding='utf-8')
+                loaded = json.loads(out)
                 if isinstance(loaded, dict):
                     data = loaded
             except Exception:

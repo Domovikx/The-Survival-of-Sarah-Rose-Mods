@@ -13,8 +13,8 @@ from voicekit import catalog, contract, fs, paths  # noqa: E402
 
 def test_paths_layout():
     assert paths.ROOT == os.path.join(ROOT, 'tools', 'generate')
-    assert paths.CONFIG_DIR == os.path.join(
-        os.path.dirname(os.path.dirname(ROOT)), 'config')
+    assert paths.PRESETS_MTS == os.path.join(
+        paths.SCRIPTS_DIR, 'voice_presets.mts')
     assert os.path.normpath(paths.char_dir('Alaric')).endswith(
         os.path.normpath('casts/Alaric'))
     assert os.path.normpath(paths.ref_active('Alaric')).endswith(

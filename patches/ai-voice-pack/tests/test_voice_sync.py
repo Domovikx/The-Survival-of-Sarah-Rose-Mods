@@ -50,11 +50,9 @@ def patch_all_paths(monkeypatch, tmp_path):
         ('ROOT', tmp_path),
         ('VOICE_CANDIDATES', tmp_path / 'voice_candidates'),
         ('CATALOG_DIR', tmp_path / 'catalog'),
-        ('CONFIG_DIR', tmp_path / 'config'),
+        ('PRESETS_MTS', tmp_path / 'config' / 'voice_presets.mts'),
         ('VOICES_JSONL', tmp_path / 'catalog' / 'voices.jsonl'),
         ('VOICE_LIST_JSON', tmp_path / 'catalog' / 'voice_list.json'),
-        ('CAST_SUMMARY_JSONL', tmp_path / 'voice_candidates'
-         / 'voice_candidates.jsonl'),
         ('MISSING_VOICES_MD', tmp_path / 'catalog' / 'missing_voices.md'),
         ('SYNC_REPORT_MD', tmp_path / 'catalog' / 'voice_sync_report.md'),
     ):
@@ -129,7 +127,6 @@ def test_update_creates_structure(tmp_path, monkeypatch):
     patch_all_paths(monkeypatch, tmp_path)
     vc = paths.VOICE_CANDIDATES
     os.makedirs(vc, exist_ok=True)
-    os.makedirs(paths.CONFIG_DIR, exist_ok=True)
     os.makedirs(paths.CATALOG_DIR, exist_ok=True)
     import json
     with open(paths.VOICES_JSONL, 'w', encoding='utf-8') as f:

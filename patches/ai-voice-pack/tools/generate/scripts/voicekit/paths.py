@@ -32,7 +32,11 @@ REPO_ROOT = os.path.dirname(os.path.dirname(PKG_ROOT))  # корень репы
 SCRIPTS_DIR = os.path.join(ROOT, 'scripts')
 VOICE_CANDIDATES = os.path.join(PKG_ROOT, 'casts', 'voices')
 CATALOG_DIR = os.path.join(PKG_ROOT, 'catalog')  # зеркало установки 2026-10-19
-CONFIG_DIR = os.path.join(REPO_ROOT, 'config')
+# Карта конфигов озвучки — TS-модуль рядом со скриптами (бывший
+# config/voice_presets.yaml в корне репы; yaml удалён 2026-10-21, конфиг
+# переписан на TS). python читает JSON-дамп: node voice_presets.mts
+# (см. voicekit.config).
+PRESETS_MTS = os.path.join(SCRIPTS_DIR, 'voice_presets.mts')
 OUTPUT_DIR = os.path.join(ROOT, 'output')
 # Озвучка (массив репы): audio/vo_{lang} — в дистрибутиве это ai_voice/<lang>
 AUDIO_DIR = os.path.join(PKG_ROOT, 'audio')
@@ -55,8 +59,6 @@ def ai_voice_dir(lang):
 VOICES_JSONL = os.path.join(CATALOG_DIR, 'voices.jsonl')
 VOICE_LIST_JSON = os.path.join(CATALOG_DIR, 'voice_list.json')
 LABEL_ARC_JSON = os.path.join(CATALOG_DIR, 'label_arc.json')
-# Журнал прогонов генерации кастов — ДЕРИВАТ (пересоздаётся voice_design).
-CAST_SUMMARY_JSONL = os.path.join(OUTPUT_DIR, 'voice_candidates.jsonl')
 MISSING_VOICES_MD = os.path.join(CATALOG_DIR, 'missing_voices.md')
 SYNC_REPORT_MD = os.path.join(CATALOG_DIR, 'voice_sync_report.md')
 

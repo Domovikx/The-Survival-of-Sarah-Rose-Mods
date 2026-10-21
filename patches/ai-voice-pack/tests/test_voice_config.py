@@ -37,7 +37,8 @@ def test_get_with_default():
 
 def test_missing_file_fallback(tmp_path, monkeypatch):
     monkeypatch.setattr(config, '_CACHE', None)
-    monkeypatch.setattr('voicekit.paths.CONFIG_DIR', str(tmp_path / 'nope'))
+    monkeypatch.setattr('voicekit.paths.PRESETS_MTS',
+                        str(tmp_path / 'nope' / 'voice_presets.mts'))
     assert config.load() == {}
     assert config.section('batch') == {}
     assert config.preset('beastify', 'orc') == {}

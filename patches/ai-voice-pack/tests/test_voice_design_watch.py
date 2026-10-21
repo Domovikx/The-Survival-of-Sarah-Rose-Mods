@@ -18,13 +18,12 @@ def tmp_layout(tmp_path, monkeypatch):
         ('ROOT', tmp_path),
         ('VOICE_CANDIDATES', tmp_path / 'voice_candidates'),
         ('CATALOG_DIR', tmp_path / 'catalog'),
-        ('CONFIG_DIR', tmp_path / 'config'),
+        ('PRESETS_MTS', tmp_path / 'config' / 'voice_presets.mts'),
         ('VOICES_JSONL', tmp_path / 'catalog' / 'voices.jsonl'),
         ('OUTPUT_DIR', tmp_path / 'output'),
     ):
         monkeypatch.setattr(paths, attr, str(val))
     os.makedirs(paths.CATALOG_DIR, exist_ok=True)
-    os.makedirs(paths.CONFIG_DIR, exist_ok=True)
     import json
     with open(paths.VOICES_JSONL, 'w', encoding='utf-8') as f:
         json.dump({'entries': [], 'characters': {}}, f)

@@ -22,7 +22,7 @@ def tmp_project(tmp_path, monkeypatch):
         ('ROOT', tmp_path),
         ('VOICE_CANDIDATES', tmp_path / 'voice_candidates'),
         ('CATALOG_DIR', tmp_path / 'catalog'),
-        ('CONFIG_DIR', tmp_path / 'config'),
+        ('PRESETS_MTS', tmp_path / 'config' / 'voice_presets.mts'),
         ('VOICES_JSONL', tmp_path / 'catalog' / 'voices.jsonl'),
     ):
         monkeypatch.setattr(paths, attr, str(val))
