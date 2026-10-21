@@ -354,7 +354,7 @@ export function deduplicate(tlDir: string, options: DeduplicateOptions = {}): De
 
     let fileModified = false;
 
-    for (const [lineNo, oldText] of uniqueToRemove) {
+    for (const [lineNo] of uniqueToRemove) {
       if (OLD_RE.test(lines[lineNo])) {
         const deleteLines = new Set([lineNo]);
 
@@ -488,7 +488,7 @@ function main(): void {
   // а не в game/tl/.
   const tlDir = tlPath ?? join(projectDir, "game", "tl", lang);
 
-  const result = deduplicate(tlDir, { lang, dryRun, verbose });
+  deduplicate(tlDir, { lang, dryRun, verbose });
 }
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {

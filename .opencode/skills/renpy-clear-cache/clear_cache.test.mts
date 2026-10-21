@@ -12,21 +12,13 @@
  *   node --test .opencode/skills/renpy-clear-cache/clear_cache.test.mts
  */
 
-import { describe, it, before, after } from "node:test";
+import { describe, it } from "node:test";
 import assert from "node:assert/strict";
-import { mkdtempSync, writeFileSync, readdirSync, existsSync, rmSync, mkdirSync } from "node:fs";
+import { mkdtempSync, writeFileSync, existsSync, rmSync, mkdirSync } from "node:fs";
 import { join } from "node:path";
 import { tmpdir } from "node:os";
 
-import {
-  clearCache,
-  findCacheFiles,
-  findCacheDirs,
-  CACHE_EXTENSIONS,
-  CACHE_DIRS,
-  sizeStr,
-  VERSION,
-} from "./clear_cache.mts";
+import { clearCache, findCacheFiles, findCacheDirs, sizeStr, VERSION } from "./clear_cache.mts";
 
 /** Временная директория: путь и функция очистки. */
 interface TempDir {
@@ -95,10 +87,10 @@ describe("findCacheFiles", () => {
     try {
       const game = createGameDir(tmp.path);
       const files = findCacheFiles(game);
-      const names = files.map((f: string) => f.split(/[\\/]/).pop());
-      assert.ok(names.includes("script.rpyc"));
-      assert.ok(names.includes("screens.rpyc"));
-      assert.ok(names.includes("module.rpyc"));
+      const names = new Set(files.map((f: string) => f.split(/[\\/]/).pop()));
+      assert.ok(names.has("script.rpyc"));
+      assert.ok(names.has("screens.rpyc"));
+      assert.ok(names.has("module.rpyc"));
     } finally {
       tmp.cleanup();
     }
@@ -121,9 +113,9 @@ describe("findCacheFiles", () => {
     try {
       const game = createGameDir(tmp.path);
       const files = findCacheFiles(game);
-      const names = files.map((f: string) => f.split(/[\\/]/).pop());
-      assert.ok(names.includes("script.cpython-314.pyc"));
-      assert.ok(names.includes("module.cpython-314.pyc"));
+      const names = new Set(files.map((f: string) => f.split(/[\\/]/).pop()));
+      assert.ok(names.has("script.cpython-314.pyc"));
+      assert.ok(names.has("module.cpython-314.pyc"));
     } finally {
       tmp.cleanup();
     }
@@ -134,9 +126,9 @@ describe("findCacheFiles", () => {
     try {
       const game = createGameDir(tmp.path);
       const files = findCacheFiles(game);
-      const names = files.map((f: string) => f.split(/[\\/]/).pop());
-      assert.ok(!names.includes("script.rpy"));
-      assert.ok(!names.includes("screens.rpy"));
+      const names = new Set(files.map((f: string) => f.split(/[\\/]/).pop()));
+      assert.ok(!names.has("script.rpy"));
+      assert.ok(!names.has("screens.rpy"));
     } finally {
       tmp.cleanup();
     }
@@ -321,7 +313,7 @@ describe("integration", () => {
 
       assert.ok(findCacheFiles(game).length > 0);
 
-      const result = clearCache(game, { dryRun: false });
+      clearCache(game, { dryRun: false });
 
       const remaining = findCacheFiles(game);
       assert.equal(remaining.length, 0, `Остались файлы кэша: ${remaining}`);

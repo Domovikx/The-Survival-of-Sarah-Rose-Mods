@@ -26,8 +26,6 @@ import {
   _hash,
   _esc,
   _unescape,
-  VERSION,
-  ARC_PATTERNS,
 } from "./extract_texts.mts";
 import type { BlockEntry } from "./extract_texts.mts";
 

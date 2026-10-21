@@ -322,12 +322,12 @@ describe("deduplicate", () => {
 
       const file2Text = readFileSync(join(tlRu, "file2.rpy"), "utf-8");
       const entries = parseTranslateBlocks(file2Text);
-      const oldTexts = entries.map((e) => e[1]);
+      const oldTexts = new Set(entries.map((e) => e[1]));
 
-      assert.ok(!oldTexts.includes("Raza"), "Raza должна быть удалена из file2.rpy");
-      assert.ok(!oldTexts.includes("Hello world"), "Hello world должна быть удалена из file2.rpy");
-      assert.ok(oldTexts.includes("Goodbye"));
-      assert.ok(oldTexts.includes("Something else"));
+      assert.ok(!oldTexts.has("Raza"), "Raza должна быть удалена из file2.rpy");
+      assert.ok(!oldTexts.has("Hello world"), "Hello world должна быть удалена из file2.rpy");
+      assert.ok(oldTexts.has("Goodbye"));
+      assert.ok(oldTexts.has("Something else"));
     } finally {
       tmp.cleanup();
     }
@@ -341,11 +341,11 @@ describe("deduplicate", () => {
 
       const file1Text = readFileSync(join(tlRu, "file1.rpy"), "utf-8");
       const entries = parseTranslateBlocks(file1Text);
-      const oldTexts = entries.map((e) => e[1]);
+      const oldTexts = new Set(entries.map((e) => e[1]));
 
-      assert.ok(oldTexts.includes("Raza"));
-      assert.ok(oldTexts.includes("Hello world"));
-      assert.ok(oldTexts.includes("How are you?"));
+      assert.ok(oldTexts.has("Raza"));
+      assert.ok(oldTexts.has("Hello world"));
+      assert.ok(oldTexts.has("How are you?"));
     } finally {
       tmp.cleanup();
     }
