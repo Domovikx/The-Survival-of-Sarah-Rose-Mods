@@ -15,6 +15,7 @@
     "tlaudit": "node .opencode/skills/renpy-audit/review_translations.mts",
     "potgen": "node .opencode/skills/renpy-po/potgen.mts",
     "po:update": "node .opencode/skills/renpy-po/po_update.mts",
+    "po:prefill": "node .opencode/skills/renpy-po/prefill.mts",
     "speakers:audit": "node patches/ai-voice-pack/tools/generate/scripts/speaker_map.mts sync",
     "speakers:audit:emit": "node patches/ai-voice-pack/tools/generate/scripts/speaker_map.mts sync --emit",
     "speakers:check": "node patches/ai-voice-pack/tools/generate/scripts/speaker_map.mts check",
