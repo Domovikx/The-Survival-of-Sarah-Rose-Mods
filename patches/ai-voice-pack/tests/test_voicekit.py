@@ -16,13 +16,17 @@ def test_paths_layout():
     assert paths.CONFIG_DIR == os.path.join(
         os.path.dirname(os.path.dirname(ROOT)), 'config')
     assert os.path.normpath(paths.char_dir('Alaric')).endswith(
-        os.path.normpath('registry/casts/Alaric'))
+        os.path.normpath('casts/Alaric'))
     assert os.path.normpath(paths.ref_active('Alaric')).endswith(
-        os.path.normpath('registry/casts/Alaric/Alaric.wav'))
+        os.path.normpath('casts/Alaric/Alaric.wav'))
     assert paths.ref_voices('Alaric') == \
-        'registry/casts/Alaric/Alaric.wav'
+        'casts/Alaric/Alaric.wav'
     assert os.path.normpath(paths.ref_variant('Alaric', '3')).endswith(
-        os.path.normpath('registry/casts/Alaric/Alaric_3.wav'))
+        os.path.normpath('casts/Alaric/Alaric_3.wav'))
+    # легаси-префикс registry/casts/ (старый дом БД) редиректится в casts/
+    assert os.path.normpath(paths.resolve_ref(
+        'registry/casts/Alaric/Alaric.wav')) == os.path.normpath(
+        os.path.join(paths.PKG_ROOT, 'casts', 'Alaric', 'Alaric.wav'))
     with pytest.raises(ValueError):
         paths.char_subdir('Alaric', 'nope')
 
@@ -34,8 +38,10 @@ def test_char_subdirs_all_valid():
 
 
 def test_contract_valid():
+    text = dict(text='Я пошёл туда.', emotion_en='Simply, in passing',
+                emotion_ru='Мимоходом, между делом')
     data = dict(name='Alaric', gender='M', age='25-30', who='жулик',
-                instruct_en='Male baritone', texts=['Я пошёл туда.'])
+                instruct_en='Male baritone', texts=[text])
     m, err = contract.validate_file.__wrapped__ if False else (None, None)
     import yaml
     import tempfile
@@ -60,16 +66,22 @@ def test_contract_valid():
 def test_contract_invalid():
     import yaml
     import tempfile
-    with tempfile.NamedTemporaryFile('w', suffix='.yaml', delete=False,
-                                     encoding='utf-8') as f:
-        f.write('name: 123\n')  # name должен быть строкой
-        p = f.name
-    try:
-        _, err = contract.validate_file(p)
-        if contract.PYDANTIC:
-            assert err is not None
-    finally:
-        os.unlink(p)
+    cases = [
+        'name: 123\n',                                    # name должен быть строкой
+        'name: X\ntexts:\n- старый формат-строка\n',      # CastText только dict
+        'name: X\ntexts:\n- text: фраза\n',               # emotion_en/ru обязательны
+    ]
+    for i, content in enumerate(cases):
+        with tempfile.NamedTemporaryFile('w', suffix='.yaml', delete=False,
+                                         encoding='utf-8') as f:
+            f.write(content)
+            p = f.name
+        try:
+            _, err = contract.validate_file(p)
+            if contract.PYDANTIC:
+                assert err is not None, 'case {}: ждали ошибку'.format(i)
+        finally:
+            os.unlink(p)
 
 
 def test_fs_ops_dry_run_creates_nothing(tmp_path):

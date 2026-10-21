@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Быстрое управление голосами: list, status, select.
 
-A/B-сравнение: voice_batch.py --ref registry/casts/{Name}/{Name}_v.wav
+A/B-сравнение: voice_batch.py --ref casts/{Name}/{Name}_v.wav
 генерит {uid}__{Name}_v.opus в audio/vo_ru/ — слушаешь варианты рядом,
 победителя фиксируешь через `select` ({Name}_v.wav -> {Name}.wav).
 """

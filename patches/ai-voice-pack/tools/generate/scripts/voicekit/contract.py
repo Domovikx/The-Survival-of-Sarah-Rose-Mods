@@ -1,4 +1,4 @@
-"""Контракт каста registry/casts/{Name}/{Name}.yaml.
+"""Контракт каста casts/{Name}/{Name}.yaml.
 
 Контрактные поля валидируются строго; отчёт-поля (status, last_run, ...)
 проходят свободно (extra='allow') — «свои поля для своих дел».
@@ -13,6 +13,17 @@ from . import paths
 try:
     from pydantic import BaseModel, ConfigDict, Field
 
+    class CastText(BaseModel):
+        """Фраза: текст + обязательные эмоции диктора (новый формат 2026-10-21).
+
+        Строки-старый-формат запрещены: молча генерировались без эмоции.
+        """
+        model_config = ConfigDict(extra='forbid')
+
+        text: str
+        emotion_en: str
+        emotion_ru: str
+
     class CastContract(BaseModel):
         model_config = ConfigDict(extra='allow')
 
@@ -23,7 +34,7 @@ try:
         who_codes: list = Field(default_factory=list)
         instruct_en: str = ''
         instruct_ru: str = ''
-        texts: list = Field(default_factory=list)
+        texts: list[CastText] = Field(default_factory=list)
 
     PYDANTIC = True
 except ImportError:

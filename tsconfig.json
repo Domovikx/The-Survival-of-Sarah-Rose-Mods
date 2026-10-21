@@ -10,5 +10,10 @@
     "lib": ["es2023", "dom"],
     "types": ["node"]
   },
-  "include": [".opencode/skills/**/*.mts", "patches/ai-voice-pack/tools/generate/scripts/site_review.mts"]
+  "include": [
+    ".opencode/skills/**/*.mts",
+    "patches/ai-voice-pack/tools/generate/scripts/**/*.mts",
+    "patches/ai-voice-pack/casts/**/*.mts",
+    "patches/ai-voice-pack/po/**/*.mts"
+  ]
 }

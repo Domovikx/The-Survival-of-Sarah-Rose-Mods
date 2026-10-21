@@ -1,11 +1,16 @@
 """Раскладка проекта — ЕДИНСТВЕННОЕ место, где живут пути.
 
-БД мода (ЕДИНОЕ место истины) — PKG_ROOT/registry/ (см. registry/README.md):
-  who_map.jsonl   реестр спикеров
-  overrides.jsonl uid-исключения парсера
-  casts/          голоса кастов
+БД мода (ЕДИНОЕ место истины голосов) — PKG_ROOT/casts/:
+  casts.mts   типизированная мапа «спикер POT → голос» + line_overrides
+                 (VOICES/SPEAKERS/LINE_OVERRIDES; ревью — speaker_map.mts)
+  voices/        войсы: папки {Name}/ (контракт {Name}.yaml + рефы) +
+                 voices.mts (генерит cast_mts.mts: список + тип Voice)
 
-Структура registry/casts/{Name}/:
+Спикеры игры — po/template.pot (msgctxt "speaker:*"); старый реестр
+who_map.jsonl/overrides.jsonl удалён при чистке 2026-10-21 (переехал в
+casts.mts).
+
+Структура casts/voices/{Name}/:
   generated/     сырьё от voice_design (01.mp3, 02.mp3, ...)
   gen_selected/  отобранные вручную ({Name}.mp3, {Name}_1.mp3)
   {Name}.wav     АКТИВНЫЙ реф в корне каста (его ищет система: load_voices);
@@ -20,14 +25,12 @@ ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)
 # Корень репы: пресеты живут в config/ на уровне репы (см. AGENTS.md).
 PKG_ROOT = os.path.dirname(os.path.dirname(ROOT))       # patches/ai-voice-pack
 REPO_ROOT = os.path.dirname(os.path.dirname(PKG_ROOT))  # корень репы
-# ЕДИНЫЙ дом БД мода: реестр спикеров + голоса кастов.
-REGISTRY_DIR = os.path.join(PKG_ROOT, 'registry')
 
 # Дом скриптов пайплайна (+ voicekit). Исторически это был game-repo tools/ —
 # после переезда в mods-repo лежат здесь; удалённое TOOLS_DIR (generate/tools)
 # указывало в никуда с 2026-10 и больше не существует.
 SCRIPTS_DIR = os.path.join(ROOT, 'scripts')
-VOICE_CANDIDATES = os.path.join(REGISTRY_DIR, 'casts')
+VOICE_CANDIDATES = os.path.join(PKG_ROOT, 'casts', 'voices')
 CATALOG_DIR = os.path.join(PKG_ROOT, 'catalog')  # зеркало установки 2026-10-19
 CONFIG_DIR = os.path.join(REPO_ROOT, 'config')
 OUTPUT_DIR = os.path.join(ROOT, 'output')
@@ -79,7 +82,7 @@ def ref_active(name):
 
 
 def ref_voices(name):
-    return 'registry/casts/{}/{}.wav'.format(name, name)
+    return 'casts/voices/{}/{}.wav'.format(name, name)
 
 
 def ref_variant(name, variant):
@@ -90,14 +93,20 @@ def ref_variant(name, variant):
 def resolve_ref(ref):
     """Реф-путь -> абсолютный.
 
-    Относительный 'registry/casts/...' считается от PKG_ROOT; легаси-префикс
-    'voice_candidates/...' (до переезда БД 2026-10-20) перенаправляется туда же.
+    Относительный 'casts/...' считается от PKG_ROOT; легаси-префиксы
+    'registry/casts/...', 'voice_candidates/...' (старые дома БД) и
+    'casts/{Name}/...' (до переезда в voices/ 2026-10-21) редиректятся
+    в casts/voices/ — старые манифесты остаются читаемыми.
     """
     if ref.startswith('voice_candidates/'):
-        ref = 'registry/casts/' + ref[len('voice_candidates/'):]
+        ref = 'casts/voices/' + ref[len('voice_candidates/'):]
+    if ref.startswith('registry/casts/'):
+        ref = 'casts/voices/' + ref[len('registry/casts/'):]
+    if ref.startswith('casts/') and not ref.startswith('casts/voices/'):
+        ref = 'casts/voices/' + ref[len('casts/'):]
     if os.path.isabs(ref):
         return ref
-    if ref.startswith('registry/'):
+    if ref.startswith('casts/'):
         return os.path.join(PKG_ROOT, ref)
     return os.path.join(ROOT, ref)
 

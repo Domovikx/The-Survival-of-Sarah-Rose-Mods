@@ -5,13 +5,15 @@
 ЧТО ДЕЛАЕТ:
   Для каждого выбранного персонажа генерирует N реплик-кандидатов
   (Qwen3-TTS-12Hz-1.7B-VoiceDesign, инструкция = instruct_en из YAML-каста)
-  и кладёт их в registry/casts/{Имя}/generated/{NN}.mp3.
+  и кладёт их в casts/{Имя}/generated/{NN}.mp3.
   После прогона пишет статистику в output/voice_candidates.jsonl
   (секция generation: дата, ok/skip/give_up/fail по каждому персонажу).
 
 ИСТОЧНИК КАСТА (YAML):
-  registry/casts/{Имя}/{Имя}.yaml — контракт персонажа:
-    name, gender, age, who, instruct_en (англ. описание для модели), texts.
+  casts/{Имя}/{Имя}.yaml — контракт персонажа:
+    name, gender, age, who, instruct_en (англ. описание для модели),
+    texts — записи {text, emotion_en, emotion_ru} (пофразовая эмоция
+    диктора; строки-старый-формат запрещены контрактом и load_cast).
   Файл = контракт: добавил yaml -> персонаж появился в --list и генерации.
 
 ПРАВИЛА (важно):
@@ -60,13 +62,19 @@ FFPROBE = "ffprobe"
 
 
 def load_cast():
-    """Каст из registry/casts/*/*.yaml. {Имя: cfg} (только с texts)."""
+    """Каст из casts/*/*.yaml. {Имя: cfg} (только с texts-записями-dict)."""
     cast = {}
     for name in catalog.cast_names():
         cfg = catalog.load_cast(name)
         if not isinstance(cfg, dict) or not cfg.get('texts'):
             print("WARN: пропускаю {} (нет texts)".format(
                 paths.char_yaml(name)))
+            continue
+        bad = [i for i, t in enumerate(cfg['texts']) if not isinstance(t, dict)]
+        if bad:
+            print("FAIL: {} — texts[{}] строка (старый формат); нужен dict "
+                  "{{text, emotion_en, emotion_ru}}, каст пропущен".format(
+                      paths.char_yaml(name), bad[0] + 1))
             continue
         cfg.setdefault('instruct_en', '')
         short = [t for t in cfg['texts']
@@ -170,11 +178,17 @@ def sample_params(cfg, i):
 
 
 def text_item(item):
-    """Фраза из texts: str (старый формат) или dict {text, emotion_en, emotion_ru}."""
-    if isinstance(item, dict):
-        return item.get("text", ""), item.get("emotion_en", ""), \
-            item.get("emotion_ru", "")
-    return item, "", ""
+    """Фраза из texts: ТОЛЬКО dict {text, emotion_en, emotion_ru}.
+
+    Строки-старый-формат запрещены (вне load_cast не должны доходить):
+    молча генерировались без эмоции.
+    """
+    if not isinstance(item, dict):
+        raise ValueError(
+            "старый формат texts (строка), нужен dict "
+            "{{text, emotion_en, emotion_ru}}: {!r}".format(item)[:160])
+    return item.get("text", ""), item.get("emotion_en", ""), \
+        item.get("emotion_ru", "")
 
 
 def gen_one(model, dst, char, cfg, i, n):
@@ -250,7 +264,7 @@ def main():
 
     cast = load_cast()
     if not cast:
-        print("Каст пуст: нет registry/casts/*/*.yaml с texts")
+        print("Каст пуст: нет casts/*/*.yaml с texts")
         return 1
 
     if args.list:

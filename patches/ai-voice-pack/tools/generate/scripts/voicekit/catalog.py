@@ -66,7 +66,7 @@ def save_cast_summary(doc):
 
 
 def load_voices():
-    """{имя_голоса: {'who': [коды]}} из КАСТОВ (registry/casts/{Name}.yaml).
+    """{имя_голоса: {'who': [коды]}} из КАСТОВ (casts/{Name}.yaml).
 
     Озвучен = у каста есть активный реф {Name}.wav (правило, без voices.yaml).
     """
@@ -126,7 +126,7 @@ def gen_voice_list_json():
 
 
 def load_cast(name):
-    """registry/casts/{Name}/{Name}.yaml -> dict (или None)."""
+    """casts/{Name}/{Name}.yaml -> dict (или None)."""
     p = paths.char_yaml(name)
     if not os.path.exists(p):
         return None

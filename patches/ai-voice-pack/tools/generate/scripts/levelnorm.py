@@ -14,11 +14,11 @@ opus (voice_batch.tensor_to_opus), а normalize_file() зовётся тольк
 
 Использование:
   # существующие wav-файлы (все файлы папки, in-place):
-  python tools/levelnorm.py --dir registry/casts
+  python tools/levelnorm.py --dir casts
   # один файл:
-  python tools/levelnorm.py --file registry/casts/Alfred/Alfred.wav
+  python tools/levelnorm.py --file casts/Alfred/Alfred.wav
   # отчёт без правки:
-  python tools/levelnorm.py --dir registry/casts --dry-run
+  python tools/levelnorm.py --dir casts --dry-run
 """
 
 import argparse
