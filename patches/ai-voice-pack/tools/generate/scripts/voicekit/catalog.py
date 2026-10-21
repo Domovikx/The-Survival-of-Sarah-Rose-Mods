@@ -22,49 +22,6 @@ def load_catalog():
     return header
 
 
-def load_cast_summary():
-    """voice_candidates.jsonl -> dict (секции и порядок сохраняются).
-
-    Каждая строка: {'section', 'key'?, 'value'}. Со 'key' — один участник
-    секции (построчный дифф статистики каста); без 'key' — мета-строка
-    (updated) или секция целиком (summary). Парная к save_cast_summary.
-    """
-    if not os.path.exists(paths.CAST_SUMMARY_JSONL):
-        return {}
-    doc = {}
-    with open(paths.CAST_SUMMARY_JSONL, encoding='utf-8') as f:
-        for line in f:
-            if not line.strip():
-                continue
-            rec = json.loads(line)
-            if 'key' in rec:
-                doc.setdefault(rec['section'], {})[rec['key']] = rec['value']
-            else:
-                doc[rec['section']] = rec['value']
-    return doc
-
-
-def save_cast_summary(doc):
-    """dict -> voice_candidates.jsonl (обратно-совместимо с load_cast_summary).
-
-    Секция «словарь из словарей» (generation/cast) пишется по строке на
-    участника — git-дифф меняет ровно одну строку на персонажа.
-    """
-    os.makedirs(paths.VOICE_CANDIDATES, exist_ok=True)
-    with open(paths.CAST_SUMMARY_JSONL, 'w', encoding='utf-8',
-              newline='\n') as f:
-        for section, val in doc.items():
-            if isinstance(val, dict) and val and all(
-                    isinstance(v, dict) for v in val.values()):
-                for key, member in val.items():
-                    f.write(json.dumps(
-                        {'section': section, 'key': key, 'value': member},
-                        ensure_ascii=False) + '\n')
-            else:
-                f.write(json.dumps({'section': section, 'value': val},
-                                   ensure_ascii=False) + '\n')
-
-
 def load_voices():
     """{имя_голоса: {'who': [коды]}} из КАСТОВ (casts/{Name}.yaml).
 

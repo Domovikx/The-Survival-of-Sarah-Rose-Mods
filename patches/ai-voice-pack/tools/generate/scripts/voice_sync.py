@@ -169,43 +169,10 @@ def cmd_update(args):
     if new and not args.apply:
         print('dry-run: без --apply структура НЕ создаётся.')
 
-    summary = build_summary()
     ops.ensure_dir(paths.CATALOG_DIR)
-    if args.apply:
-        catalog.save_cast_summary(summary)
-        print('-> {}'.format(paths.CAST_SUMMARY_JSONL))
-    else:
-        print('сводка готова к записи ({} персонажей)'.format(len(summary['cast'])))
     if args.apply:
         print('-> {}'.format(catalog.gen_voice_list_json()))
     return 0
-
-
-def build_summary():
-    data = catalog.load_catalog()
-    lines, arcs = catalog.characters_by_category()
-    voices = load_voices_safe()
-    cast = {}
-    for name in catalog.cast_names():
-        c = catalog.load_cast(name) or {}
-        ref_file = os.path.exists(paths.ref_active(name))
-        cast[name] = dict(
-            gender=c.get('gender'),
-            age=c.get('age'),
-            status='voice_ready' if ref_file else 'in_progress',
-            ref=os.path.basename(paths.ref_active(name)) if ref_file else None,
-            generated=count_files(name, 'generated'),
-            gen_selected=count_files(name, 'gen_selected'),
-            variants=max(0, count_ref_files(name) - (1 if ref_file else 0)),
-            in_voices=name in voices,
-        )
-    ready = sum(1 for v in cast.values() if v['status'] == 'voice_ready')
-    return dict(
-        updated=datetime.datetime.now().strftime('%Y-%m-%d %H:%M'),
-        summary=dict(total=len(cast), voice_ready=ready,
-                     in_progress=len(cast) - ready),
-        cast=cast)
-
 
 
 def cmd_migrate(args):

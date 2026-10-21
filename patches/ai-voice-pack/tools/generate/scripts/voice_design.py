@@ -4,17 +4,17 @@
 
 ЧТО ДЕЛАЕТ:
   Для каждого выбранного персонажа генерирует N реплик-кандидатов
-  (Qwen3-TTS-12Hz-1.7B-VoiceDesign, инструкция = instruct_en из YAML-каста)
-  и кладёт их в casts/{Имя}/generated/{NN}.mp3.
+  (Qwen3-TTS-12Hz-1.7B-VoiceDesign, инструкция = instruct_en из контракта)
+  и кладёт их в casts/voices/{Имя}/generated/{NN}.mp3.
   После прогона пишет статистику в output/voice_candidates.jsonl
   (секция generation: дата, ok/skip/give_up/fail по каждому персонажу).
 
-ИСТОЧНИК КАСТА (YAML):
-  casts/{Имя}/{Имя}.yaml — контракт персонажа:
+ИСТОЧНИК КАСТА (.mts-контракт, читается через node cast_contract.mts --all):
+  casts/voices/{Имя}/{Имя}.mts — контракт персонажа (casts/cast.types.mts):
     name, gender, age, who, instruct_en (англ. описание для модели),
     texts — записи {text, emotion_en, emotion_ru} (пофразовая эмоция
     диктора; строки-старый-формат запрещены контрактом и load_cast).
-  Файл = контракт: добавил yaml -> персонаж появился в --list и генерации.
+  Файл = контракт: добавил {Имя}.mts -> персонаж появился в --list и генерации.
 
 ПРАВИЛА (важно):
   1. Реф для CosyVoice3 должен быть >= 10с. Если клип вышел короче, тул
@@ -27,14 +27,15 @@
 
 ЗАПУСК (нужен python с пакетом qwen_tts — venv pinokio-приложения Qwen3-TTS):
   C:\\pinokio\\api\\Qwen3-TTS-Pinokio.git\\app\\venv\\Scripts\\python.exe ^
-      tools/voice_design.py --list
-  ... tools/voice_design.py --char Carolyn --n 6
-  ... tools/voice_design.py --n 3            # все голоса из каста, по 3 шт
+      tools/generate/scripts/voice_design.py --list
+  ... tools/generate/scripts/voice_design.py --char Carolyn --n 6
+  ... tools/generate/scripts/voice_design.py --n 3            # все голоса из каста, по 3 шт
 
 CPU: ~1-2 мин на клип (1.7B, torch+cpu). Запускай на ночь или частями.
 """
 
 import argparse
+import json
 import os
 import subprocess
 import sys
@@ -43,10 +44,9 @@ import traceback
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from voicekit import catalog, paths, tts_env  # noqa: E402
+from voicekit import paths, tts_env  # noqa: E402
 
 LOG_PATH = os.path.join(paths.OUTPUT_DIR, 'voice', 'design.log')
-STATS_PATH = paths.CAST_SUMMARY_JSONL
 
 from voicekit import config as _cfg
 
@@ -62,19 +62,24 @@ FFPROBE = "ffprobe"
 
 
 def load_cast():
-    """Каст из casts/*/*.yaml. {Имя: cfg} (только с texts-записями-dict)."""
+    """Касты из .mts-контрактов casts/voices/{Имя}/{Имя}.mts (через node-дамп).
+
+    Источник истины контрактов — TS-модули; yaml-контракты удалены при
+    миграции 2026-10-21. cast_contract.mts печатает {Имя: контракт} JSON.
+    """
+    cli = os.path.join(paths.SCRIPTS_DIR, 'cast_contract.mts')
+    out = subprocess.check_output(['node', cli, '--all'], encoding='utf-8')
+    data = json.loads(out)
     cast = {}
-    for name in catalog.cast_names():
-        cfg = catalog.load_cast(name)
+    for name, cfg in data.items():
         if not isinstance(cfg, dict) or not cfg.get('texts'):
-            print("WARN: пропускаю {} (нет texts)".format(
-                paths.char_yaml(name)))
+            print("WARN: пропускаю {} (нет texts)".format(name + '.mts'))
             continue
         bad = [i for i, t in enumerate(cfg['texts']) if not isinstance(t, dict)]
         if bad:
             print("FAIL: {} — texts[{}] строка (старый формат); нужен dict "
                   "{{text, emotion_en, emotion_ru}}, каст пропущен".format(
-                      paths.char_yaml(name), bad[0] + 1))
+                      name + '.mts', bad[0] + 1))
             continue
         cfg.setdefault('instruct_en', '')
         short = [t for t in cfg['texts']
@@ -106,31 +111,6 @@ def log(msg):
     with open(LOG_PATH, "a", encoding="utf-8") as f:
         f.write(msg + "\n")
     print(msg)
-
-
-def load_stats():
-    """Сводка каста (voice_candidates.jsonl) -> dict ({} если нет)."""
-    try:
-        return catalog.load_cast_summary()
-    except Exception:
-        return {}
-
-
-def write_stats(stats, n):
-    """Обновить voice_candidates.jsonl: дата прогона + результат по персонажам."""
-    import datetime
-    now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
-    doc = load_stats()
-    if not doc or "generation" not in doc:
-        doc = {"generation": {}}
-    doc.setdefault("updated", now)
-    doc["updated"] = now
-    for char, per in stats.items():
-        per = dict(per)
-        per["last_run"] = now
-        doc["generation"][char] = per
-    catalog.save_cast_summary(doc)
-    log("stats -> {}".format(STATS_PATH))
 
 
 def postprocess(wav_path, mp3_path):
@@ -264,7 +244,7 @@ def main():
 
     cast = load_cast()
     if not cast:
-        print("Каст пуст: нет casts/*/*.yaml с texts")
+        print("Каст пуст: нет casts/voices/*/*.mts с texts")
         return 1
 
     if args.list:
@@ -296,21 +276,16 @@ def main():
     log("model loaded")
 
     total = 0
-    stats = {}
     for char, cfg in todo.items():
         dst_dir = paths.char_subdir(char, 'generated')
         os.makedirs(dst_dir, exist_ok=True)
-        per_char = {"n": args.n, "ok": 0, "skip": 0, "give_up": 0, "fail": 0}
         for i in range(args.n):
             dst = os.path.join(dst_dir, "{:02d}.mp3".format(i + 1))
             if args.force and os.path.exists(dst):
                 os.remove(dst)
             res = gen_one(model, dst, char, cfg, i, args.n)
-            per_char[res] += 1
             if res == "ok":
                 total += 1
-        stats[char] = per_char
-    write_stats(stats, args.n)
     log("DONE total: {}".format(total))
 
 
