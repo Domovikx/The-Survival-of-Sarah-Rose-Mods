@@ -232,6 +232,7 @@ export const Screenshots = () => {
 
   const close = useCallback(() => {
     setOpenIndex(null)
+    setShown(false)
     const idx = lastIdx.current
     // APG: при закрытии фокус возвращается на вызвавший элемент.
     requestAnimationFrame(() => thumbRefs.current[idx]?.focus())
@@ -254,7 +255,6 @@ export const Screenshots = () => {
   // фокус внутрь диалога, fade-in, препресс соседних кадров.
   useEffect(() => {
     if (openIndex === null) {
-      setShown(false)
       return
     }
 
