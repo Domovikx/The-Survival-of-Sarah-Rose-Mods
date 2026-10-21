@@ -19,6 +19,8 @@
     "speakers:audit:emit": "node patches/ai-voice-pack/tools/generate/scripts/speaker_map.mts sync --emit",
     "speakers:check": "node patches/ai-voice-pack/tools/generate/scripts/speaker_map.mts check",
     "test:speakers": "node --test patches/ai-voice-pack/tools/generate/scripts/speaker_map.test.mts",
+    "refs:add": "node patches/ai-voice-pack/tools/generate/scripts/add_candidate.mts",
+    "test:refs": "node --test patches/ai-voice-pack/tools/generate/scripts/clean_refs.test.mts patches/ai-voice-pack/tools/generate/scripts/add_candidate.test.mts",
     "typecheck": "tsc --noEmit",
     "casts:mts": "node patches/ai-voice-pack/tools/generate/scripts/cast_mts.mts",
     "test:casts": "node --test patches/ai-voice-pack/tools/generate/scripts/cast_mts.test.mts",
