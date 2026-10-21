@@ -1,5 +1,5 @@
 /**
- * Общий тип контракта каста для casts/{Имя}/{Имя}.yaml.
+ * Общий тип контракта каста для casts/voices/{Имя}/{Имя}.mts.
  *
  * Зеркало python-контракта `tools/generate/scripts/voicekit/contract.py`
  * (pydantic CastContract): строгие свои поля, только они — никаких extra.

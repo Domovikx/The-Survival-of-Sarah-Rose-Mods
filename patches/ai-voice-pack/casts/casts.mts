@@ -192,13 +192,13 @@ export const SPEAKERS: Record<PotSpeaker, Voice | null> = {
   "Court Offical": "Generic Male Mature", // опечатка "Court Official"
   "Emissary": "Generic Male Mature",
   "Emmissary": "Generic Male Mature", // опечатка "Emissary"
-  "Founder": "Generic Male Mature",
+  "Founder": "Oryon", // маска Орыона: «my name is Oryon» — тот же персонаж
   "Curator": "Generic Male Mature",
   "Camp Soldier": "Generic Male Young",
 
   // === без голоса: на решении владельца ===
-  "Oryon": null, // 100 реплик — named-персонаж без каста, голос на выбор владельца
-  "King-On-The-Outside": null, // 42 реплики — ипостась? нужен каст или пул
+  "Oryon": "Oryon", // новый каст 2026-10-21 (122 реплики + 22 маски Founder); реф в работе, до рефа молчит
+  "King-On-The-Outside": "King-On-The-Outside", // новый beast-каст 2026-10-21 (42 реплики); реф через beastify
   "Romanov Twin": "Generic Male Mature", // 7 реплик: «Two men entered» — два мужчины-коллектора, не родственники (TheBlackMonolithMage5)
   "Voidling": "Daemon", // 4 обрывка умирающего существа Пустоты (BattleOfRahayal) — beastify-фолбэк
   "Both": "Miriam", // 2 реплики: Miriam+Orwen просят прощения хором (UnionKingdom1) — из дуэта взят один ребёнок
