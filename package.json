@@ -14,7 +14,17 @@
     "tlstat": "node .opencode/skills/list-translation-files/list_translation_files.mts",
     "tlaudit": "node .opencode/skills/renpy-audit/review_translations.mts",
     "potgen": "node .opencode/skills/renpy-po/potgen.mts",
+    "po:update": "node .opencode/skills/renpy-po/po_update.mts",
+    "speakers:audit": "node patches/ai-voice-pack/tools/generate/scripts/speaker_map.mts sync",
+    "speakers:audit:emit": "node patches/ai-voice-pack/tools/generate/scripts/speaker_map.mts sync --emit",
+    "speakers:check": "node patches/ai-voice-pack/tools/generate/scripts/speaker_map.mts check",
+    "test:speakers": "node --test patches/ai-voice-pack/tools/generate/scripts/speaker_map.test.mts",
+    "typecheck": "tsc --noEmit",
+    "casts:mts": "node patches/ai-voice-pack/tools/generate/scripts/cast_mts.mts",
+    "test:casts": "node --test patches/ai-voice-pack/tools/generate/scripts/cast_mts.test.mts",
     "build:pack": "python patches/ai-voice-pack/tools/build/build_pack.py",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
     "lint:md": "markdownlint-cli2",
     "lint:md:fix": "markdownlint-cli2 --fix",
     "spell": "cspell lint \"**/*.md\" --no-progress",
@@ -23,6 +33,7 @@
   },
   "lint-staged": {
     "*.{js,mjs,cjs,ts,tsx,mts,cts}": [
+      "oxlint --fix",
       "prettier --write"
     ],
     "*.{json,css,html,md,yml,yaml}": [
@@ -37,7 +48,9 @@
     "husky": "^9.1.7",
     "lint-staged": "^17.6.0",
     "markdownlint-cli2": "^0.23.3",
+    "oxlint": "^1.89.0",
     "prettier": "^3.9.10",
-    "typescript": "^7.0.2"
+    "typescript": "^7.0.2",
+    "yaml": "^2.9.1"
   }
 }

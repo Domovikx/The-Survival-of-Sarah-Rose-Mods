@@ -7,6 +7,8 @@
     "DavidAnson.vscode-markdownlint",
     "streetsidesoftware.code-spell-checker",
     "streetsidesoftware.code-spell-checker-russian",
-    "timheuer.vscode-zip-viewer"
+    "timheuer.vscode-zip-viewer",
+    // Подсветка po/pot-файлов PO-пайплайна (po/template.pot, po/*.po)
+    "mrorz.language-gettext"
   ]
 }

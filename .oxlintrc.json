@@ -1,0 +1,31 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["typescript", "react", "unicorn", "import", "node", "promise", "oxc"],
+  "categories": {
+    "correctness": "error",
+    "suspicious": "warn",
+    "perf": "warn"
+  },
+  "env": {
+    "builtin": true,
+    "node": true
+  },
+  "ignorePatterns": ["dist", "site/dist", "site/test-results", "site/playwright-report", "tmp"],
+  "overrides": [
+    {
+      "files": ["site/**"],
+      "env": {
+        "browser": true
+      }
+    }
+  ],
+  "rules": {
+    // React 19 + automatic JSX runtime (@vitejs/plugin-react) — импорт React не нужен
+    "react/react-in-jsx-scope": "off",
+    // Стиль проекта: _-хелперы в модульной области (extract_texts, dedup и др.)
+    "eslint/no-underscore-dangle": "off",
+    // Циклические зависимости — ошибка: ломают порядок инициализации модулей
+    // и превращают рефакторинг в лотерею. Плагин import включён в plugins.
+    "import/no-cycle": "error"
+  }
+}

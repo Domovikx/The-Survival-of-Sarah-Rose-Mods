@@ -14,6 +14,8 @@ jobs:
         with:
           node-version: 24
       - run: npm ci
+      - name: oxlint
+        run: npm run lint
       - name: markdownlint
         run: npm run lint:md
       - name: prettier check

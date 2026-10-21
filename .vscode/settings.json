@@ -1,11 +1,17 @@
 {
-  // .rpy в этой репе — Ren'Py-переводы (patches/**/tl/ru), а не Python.
-  // Без явной ассоциации автоопределение языка VS Code открывает их как
-  // Python, и Pylance сыплет ложными ошибками ("translate is not defined",
-  // "Statements must be separated by newlines or semicolons").
-  // Явная ассоциация с plaintext отключает auto-detection для .rpy.
+  "window.title": "${dirty}${rootNameShort}",
+  "editor.wordWrap": "on",
+  // Формат при сохранении — prettier по конфигу репы (.prettierrc.json);
+  // то же делает lint-staged на коммите, тут — чтобы сразу видеть стиль.
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "files.associations": {
     "*.rpy": "plaintext",
-    "*.rpym": "plaintext"
+    "*.rpym": "plaintext",
+    // Явная привязка к gettext (расширение mrorz.language-gettext) —
+    // отключает автоопределение, которое на больших pot-файлах может
+    // выбирать plaintext.
+    "*.pot": "po",
+    "*.po": "po"
   }
 }
