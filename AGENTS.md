@@ -237,11 +237,28 @@ tools/generate/scripts/
 python tools/generate/scripts/voice_sync.py status    # сводка слоёв + расхождения (console)
 python tools/generate/scripts/voice_sync.py update --apply   # структура+заглушки новым, сводка
 python tools/generate/scripts/voice_sync.py report   # missing_voices.md + voice_sync_report.md
-python tools/generate/scripts/voice_sync.py migrate  # переезд refs/ -> папки (одноразовый, сделан)
 ```
 
 Безопасность: ничего не удаляет и не перетирает; `--apply` = реальные изменения,
 по умолчанию — только план.
+
+## Мапа «спикер → голос» (актуализация после апдейта игры)
+
+`casts/casts.mts` — типизированный модуль (2026-10-21, заменил реестры
+who_map.jsonl/overrides.jsonl):
+
+- `CAST_NAMES` — юнион имён кастов (сверяется с папками casts/ в обе стороны);
+- `SPEAKERS` — КАЖДЫЙ спикер `po/template.pot` → каст | null (null = осознанно
+  без голоса);
+- `LINE_OVERRIDES` — uid → спикер (реплики под маской чужого спикера; 23
+  записи перенесены из старого overrides.jsonl).
+
+```bash
+npm run speakers:audit        # рапорт: шаринг голосов, null-спикеры, протухшие ключи
+npm run speakers:audit:emit   # + блок новых спикеров для вставки (после апдейта)
+npm run speakers:check        # тихий CI-гейт
+npm run test:speakers         # 20 тестов (включая живые гарды POT/кастов)
+```
 
 ## Пересборка каталога
 
