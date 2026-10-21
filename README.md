@@ -235,7 +235,7 @@ Prologue, StoryBeginnings, WarriorPath, MagePath, UnionKingdom, HollowWorld, Bla
 
 ## Для разработчиков / For developers
 
-- Структура репы: `patches/ai-voice-pack/{mod, tl, audio, tools}` (патч), `site/` (лендинг, vite + GitHub Pages), `tasks/` (журналы задач), `docs/`, `config/voice_presets.yaml`.
+- Структура репы: `patches/ai-voice-pack/{mod, tl, audio, tools}` (патч), `site/` (лендинг, vite + GitHub Pages), `tasks/` (журналы задач), `docs/`.
 - Конвейер патча: `extract → generate → build → deploy` (см. `AGENTS.md` — архитектура озвучки, uid = md5(old)).
 - Сборка дистрибутива: `npm run build:pack` → `dist/*.zip` (раскладка zip = раскладка установки).
 - Линты: `npm run lint:md` (markdownlint), `npm run format` (prettier), `npm run spell` (cSpell). Pre-commit — lint-staged (husky).

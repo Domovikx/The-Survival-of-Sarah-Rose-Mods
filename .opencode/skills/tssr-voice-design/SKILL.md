@@ -20,8 +20,6 @@ casts/{Имя}/      # сюда падают кандидаты (+ {Имя}.yaml
                                #   old, tall and broad-shouldered..."; instruct_ru — перевод)
   generated/NN.mp3         # кандидаты: 01.mp3, 02.mp3, ... (сырьё)
   gen_selected/            # отобранные вручную (add_candidate делает рефы)
-tools/generate/output/
-  voice_candidates.jsonl   # СВОДНАЯ СТАТИСТИКА каста (журнал, дерииват)
 casts/cast.md     # обзорный документ «кто озвучивает» (справка)
 ```
 
@@ -29,12 +27,10 @@ casts/cast.md     # обзорный документ «кто озвучива�
 Добавил/поправил yaml → персонаж сразу появился в `--list` и генерации.
 Старый `voice_design_cast.py` удалён при миграции (2026-09-02).
 
-**Статистика** — `tools/generate/output/voice_candidates.jsonl`:
-
-- `summary`: всего / с голосом / с кандидатами / без ничего
-- `cast`: по каждому персонажу статус (voice_ready/candidates/need_generation)
-- `generation`: результаты прогонов (дата, ok/skip/give_up/fail) — дописывает
-  сам `voice_design.py`; сводка пересобирается: `python tools/voice_sync.py report`
+**Статистика** — журнал `tools/generate/output/voice_candidates.jsonl`
+УДАЛЁН 2026-10-21 (был дериватом, ничего не решал). Итоги прогона печатает
+сам скрипт и пишет в `output/voice/design.log`; когда каст генерился —
+смотрите mtime `generated/*.mp3`.
 
 ## Запуск
 
@@ -69,8 +65,9 @@ OMP_NUM_THREADS=8 "$PY" tools/voice_design.py \
 ```
 
 Внимание: `--char` принимает ОДНО имя — повторяй флаг для нескольких
-персонажей. Итоги прогона (ok/skip/give_up/fail по каждому) — в
-`tools/generate/output/voice_candidates.jsonl` → `generation`.
+персонажей. Итоги прогона (ok/skip/give_up/fail по каждому) печатает сам
+скрипт и пишет в `output/voice/design.log` (журнал voice_candidates.jsonl
+удалён 2026-10-21).
 
 ## Формат каста (casts/{Имя}/{Имя}.yaml)
 
@@ -266,7 +263,7 @@ voice_design.py имеет 3 попытки:
    («Бест-практисы для instruct_en»): минимум 4 измерения (пол, возраст,
    тембр, эмоция), физика голоса, а не личность.
 3. **texts** — 100+ символов каждая; один текст = один кандидат.
-4. **≥10с** — рефы CosyVoice3 режутся до 10с (`add_candidate.py` берёт
+4. **≥10с** — рефы CosyVoice3 режутся до 10с (`add_candidate.mts` берёт
    min(10, dur)), поэтому тул сам добирает длину.
 5. Постобработка: срез ведущей тишины (silenceremove), mp3 24 kHz mono 96k.
 
@@ -279,12 +276,12 @@ voice_design.py имеет 3 попытки:
 4. Сгенерируй: `"$PY" tools/voice_design.py --char "{Имя}" --n 6`.
 5. Отдай пользователю слушать; он сам отберёт и переименует победителя в
    `{Имя}.mp3`.
-6. Готовый голос — дальше обычный пайплайн: `add_candidate.py` → реф {Имя}.wav
+6. Готовый голос — дальше обычный пайплайн: `add_candidate.mts` → реф {Имя}.wav
    → `voice_status.py` → `voice_batch.py`.
 
 ## Папки-заглушки
 
 `casts/{Имя}/{Имя}.yaml` — описание типажа: кто, пол, возраст,
 характер, реплики, instruct_en (по чек-листу из «Бест-практисы»).
-Папка без .mp3 не участвует в add_candidate.py. После генерации
+Папка без .mp3 не участвует в add_candidate.mts. После генерации
 кандидатов .yaml можно оставить как справку.

@@ -9,8 +9,8 @@
   меняется каждым апдейтом игры, не содержит ни uid, ни спикеров, ни тона.
 - **`patches/ai-voice-pack/po/`** — истина текста. `template.pot` пишет ТОЛЬКО
   potgen; `po/<lang>.po` — переводы (ru=msgstr, en=msgid). Языки-брони: ru, es.
-- **`patches/ai-voice-pack/casts/`** — истина голосов: касты (`{Name}.yaml` + рефы)
-  и типизированная мапа «спикер POT → голос» `casts.mts` (CAST_NAMES / SPEAKERS /
+- **`patches/ai-voice-pack/casts/`** — истина голосов: касты (`{Name}.mts`-контракт
+  с рефами) и типизированная мапа «спикер POT → голос» `casts.mts` (CAST_NAMES / SPEAKERS /
   LINE_OVERRIDES; ревью — тул speakers:audit).
 - **`patches/ai-voice-pack/catalog/`** — производные джойны (не править руками).
 - **`patches/ai-voice-pack/audio/`** — результат (uid__Who.opus), не БД.
@@ -46,8 +46,9 @@
 ### Шаг 3 — голоса: спикеры POT → мапа голосов
 
 - Спикеров берём ИЗ POT (`msgctxt "speaker:*"` — канонические имена).
-- Касты — `casts/` (библиотека голосов: 75 папок = 71 именной + 4 Generic-пула;
-  контракт — `{Name}.yaml` + ref wav; новый формат yaml — с `arcs` и богатым `who`).
+- Касты — `casts/` (библиотека голосов: 77 папок = 73 именной + 4 Generic-пула;
+  контракт — `{Name}.mts` (cast.types.mts) + ref wav; VOICES-значение `null` =
+  папка есть, реф ещё не вылечен).
 - Мапа — `casts/casts.mts` (типизированный модуль): `CAST_NAMES` (юнион
   голосов, сверяется с папками в обе стороны), `SPEAKERS` (каждый спикер POT →
   каст | null), `LINE_OVERRIDES` (uid → спикер; перенесены из удалённого
@@ -64,7 +65,7 @@
 ### Шаг 4 — каталог: производные джойны
 
 > Переезд на .mts — см. «Направление: плавный переход Python → .mts» ниже.
-> Сейчас этот шаг на python (pytest 120 зелёный).
+> Сейчас этот шаг на python (pytest 112 зелёный).
 
 - `python tools/generate/scripts/voice_catalog.py` → `catalog/voices.jsonl`
   (записи uid+who, дифф-манифесты в tmp/voice_delta).
@@ -75,7 +76,7 @@
 ### Шаг 5 — озвучка: PO → аудио
 
 - Голосовой пайплайн читает ТЕКСТЫ из PO (ru=msgstr, en=msgid), голоса — из
-  registry; файл аудио = `uid__Who.opus`, каталоги `audio/vo_ru`, `audio/vo_en`.
+  casts/ (мапа casts.mts + рефы кастов); файл аудио = `uid__Who.opus`, каталоги `audio/vo_ru`, `audio/vo_en`.
 - Озвучка всегда ru + en. **Переозвучка — только по явному гейту владельца**
   («пока всё не починим и не смапим»).
 
@@ -95,8 +96,10 @@
 - `node --test .opencode/skills/renpy-po/*.test.mts` — 36 тестов (unit + e2e,
   включая байт-в-байт гард POT и симуляцию обновления игры)
 - `npm run test:speakers` — 20 тестов (мапа спикеров + живые гарды POT/кастов)
+- `npm run test:refs` — 11 тестов рефов (add_candidate + clean_refs, ffmpeg-кейсы
+  скипаются без ffmpeg)
 - `PYTHONIOENCODING=utf-8 /c/Python314/python -m pytest patches/ai-voice-pack/tests`
-  — 120 тест
+  — 112 тест (легаси-pytest оставшегося python)
 - `npm run spell` / `npm run lint:md` / `npm run format:check`
 
 ## Правила репозитория
@@ -139,7 +142,9 @@
   ни у TS-инструментов). Файл без потребителя = легаси = удалить.
 - **Уже на .mts**: potgen (+ генерация po/template.speakers.mts), po_update,
   po_core, tlstat, speaker_map (мапа «спикер → голос»: casts/casts.mts),
-  cast.types.mts/пофайловые casts/{Имя}.mts, все тесты renpy-po и speaker_map.
+  cast.types.mts/пофайловые casts/{Имя}.mts, рефы (add_candidate и clean_refs
+  с тестами), карта конфигов voice_presets.mts (config.mts, мост
+  cast_contract.mts для voice_design), все тесты renpy-po и speaker_map.
 - **Пока python (в очереди)**: сборка voice_list → тона/джойны каталога →
   voice_catalog (тяжёлый парсер — последним, станет читать POT, а не rpy);
   остальное по мере касания — каждое касание = повод портировать, а не
@@ -154,6 +159,9 @@
   документация — `.opencode/skills/renpy-po/SKILL.md`.
 - Голоса: `casts/` (касты `{Name}/` + мапа `casts/casts.mts`), ревью мапы —
   `patches/ai-voice-pack/tools/generate/scripts/speaker_map.mts` (+ .test.mts).
+- Рефы и конфиги: `tools/generate/scripts/{add_candidate,clean_refs}.mts`
+  (генерация рефов из gen_selected; тесты — `npm run test:refs`), карта
+  конфигов — `tools/generate/scripts/voice_presets.mts` (json-дамп для python).
 - Дерииваты: `catalog/*.json(l)` — только из скриптов `tools/generate/scripts/`.
 - Образец-эталон пайплайна: Third Crisis Neon Translator (po_update.py,
   prefill_po.py) в каталоге Steam.

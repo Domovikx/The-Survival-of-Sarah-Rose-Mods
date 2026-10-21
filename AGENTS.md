@@ -22,7 +22,8 @@
 - `patches/ai-voice-pack/tools/{extract,generate,build,deploy}/` — пайплайн (extract →
   generate → build → deploy)
 - `site/` — лендинг (GitHub Pages, vite), `tasks/` — журналы задач, `docs/` — доки,
-  `config/voice_presets.yaml` — пресеты кастов
+  `patches/ai-voice-pack/tools/generate/scripts/voice_presets.mts` — единая карта
+  конфигов озвучки (бывший `config/voice_presets.yaml`; yaml удалён 2026-10-21)
 - Сборка дистрибутива: `npm run build:pack` → `dist/*.zip` (раскладка zip = раскладка
   установки; zip'ы в git не коммитятся)
 - Рабочая установка игры для пайплайна: Steam-папка (см. «Ребут ПК» ниже); путь зашит
@@ -118,10 +119,6 @@ catalog/   (КОРЕНЬ ПАТЧА)
                                #   генерится из кастов, читается voice_config.rpy
                                #   voices.yaml НЕ существует: озвучен = есть реф
                                #   {Имя}.wav; who-коды — в каст-yaml (who_codes)
-config/   (КОРЕНЬ РЕПЫ, не патча)
-  voice_presets.yaml           # ЕДИНАЯ карта конфигов: audio/refs/design/batch/beastify
-                               #   (читается через tools/generate/scripts/voicekit/config.py; в коде только
-                               #   фолбэк-дефолты)
 tools/generate/voice_candidates/
   {Имя}/
     {Имя}.yaml                 # КОНТРАКТ (+ отчёт-поля скриптов, extra allowed;
@@ -141,9 +138,17 @@ tools/generate/scripts/
                                #   (создаёт структуру новым, чинит пути, отчёты)
   voice_catalog.py             # тл мода + script.rpy установки -> voices.jsonl + label_arc.json
   voice_design.py              # VoiceDesign-генерация кандидатов -> generated/
-  add_candidate.py             # gen_selected/*.mp3 -> корень каста: {Имя}[_{v}].wav
-                               #   (нарезка + чистка одномерным прогоном)
-  clean_refs.py                # лечение рефов: highpass+денойз+deesser+EQ+LOUDNORM+фейды
+  voice_presets.mts            # ЕДИНАЯ карта конфигов: audio/refs/design/batch/beastify
+                               #   (был config/voice_presets.yaml; python читает json-дамп
+                               #   `node voice_presets.mts`)
+  config.mts                   # типизированный доступ к карте конфигов (load/section/get)
+  cast_contract.mts            # дамп контрактов кастов casts/voices/{Имя}/{Имя}.mts
+                               #   в JSON (мост для voice_design.py)
+  add_candidate.mts            # gen_selected/*.mp3 -> корень каста: {Имя}[_{v}].wav
+                               #   (нарезка + чистка одномерным прогоном + подключение
+                               #   голоса: VOICES в casts/voices.mts null -> путь рефа)
+  clean_refs.mts               # лечение рефов: highpass+денойз+deesser+EQ+LOUDNORM+фейды
+                               #   (add_candidate.test.mts / clean_refs.test.mts — node --test)
   beastify.py                  # нелюдские голоса: пресеты orc/demon/monster
                                #   (pitch+formant вниз, тёмный EQ, acrusher, гроул-субтон,
                                #   модуляция/реверб) + loudnorm -16 LUFS/TP -1.5
@@ -223,7 +228,7 @@ tools/generate/scripts/
    `highpass=f=60, afftdn=nr=15, deesser=i=0.5, highshelf=f=8000:g=-6`
 2. Громкость всех рефов выровнена EBU R128 loudnorm: -16 LUFS, TP -1.5
 3. Фейды 30мс по краям — защита от кликов
-   Всё — в tools/generate/scripts/clean_refs.py, применяется автоматически add_candidate.py
+   Всё — в tools/generate/scripts/clean_refs.mts, применяется автоматически add_candidate.mts
    (одним прогоном: mp3 -> ПЕРВЫЕ 10с -> чистка -> loudnorm -16/TP -1.5 ->
    корень каста: {Имя}.wav). Единый уровень громкости для ВСЕХ рефов.
 
@@ -276,8 +281,8 @@ python tools/generate/scripts/voice_sync.py report  # обновить отчё�
 
 ```bash
 # 1. Положить отобранный клип: voice_candidates/{Имя}/gen_selected/{Имя}.mp3
-# 2. Собрать рабочий реф (существующие скипаются):
-C:\tools\cosyvoice3\.venv\Scripts\python.exe tools/generate/scripts/add_candidate.py --only "{Имя}"
+# 2. Собрать рабочий реф (существующие скипаются; voice не требует python):
+node tools/generate/scripts/add_candidate.mts --only "{Имя}"   # или: npm run refs:add -- --only "{Имя}"
 #    -> корень каста {Имя}.wav; голос ПОДКЛЮЧАЕТСЯ сам (озвучен = есть реф)
 # 3. (who-коды в каст-yaml: who_codes — заполняются из каталога, руками
 #    обычно не трогаются)
@@ -300,7 +305,7 @@ C:\tools\cosyvoice3\.venv\Scripts\python.exe tools/generate/scripts/voice_batch.
 PY="C:\pinokio\api\Qwen3-TTS-Pinokio.git\app\venv\Scripts\python.exe"
 "$PY" tools/generate/scripts/voice_design.py --list                # каст
 "$PY" tools/generate/scripts/voice_design.py --char Carolyn --n 6  # 6 кандидатов -> generated/01..06.mp3
-python tools/generate/scripts/voice_sync.py report                 # сводка -> voice_candidates.jsonl
+python tools/generate/scripts/voice_sync.py report                 # обновить отчёты (missing_voices.md + voice_sync_report.md)
 ```
 
 Правила: каст в `voice_candidates/{Имя}/{Имя}.yaml` (instruct_en — ФИЗИОГНОМИКА + СОЦИАЛЬНАЯ РОЛЬ для генерации:
@@ -311,9 +316,9 @@ texts — рус. фразы с ЯВНЫМ признаком пола; файл
 **texts: каждая фраза 150–250 символов (≈10–20с речи)** — короче даёт клип
 <10с (не годится в реф), длиннее — риск дрейфа голоса внутри клипа
 (voice_design.py печатает WARN для коротких); клип должен быть ≥10с — тул сам добирает длину (slow-инструкция →
-+вторая фраза); резюмабелен (существующие файлы пропускает). Итоги прогона и
-сводка каста — в `voice_candidates/voice_candidates.jsonl`
-(summary/cast/generation; --char принимает ОДНО имя — повторяй флаг; параллельно
++вторая фраза); резюмабелен (существующие файлы пропускает). Итог прогона —
+в stdout и `output/voice/design.log`
+(--char принимает ОДНО имя — повторяй флаг; параллельно
 можно гнать 2 процесса по OMP_NUM_THREADS=8, ~8 ГБ RAM на процесс).
 Подробнее: .opencode/skills/tssr-voice-design/SKILL.md.
 Заглушки без texts (созданы voice_sync update) видны в --list с WARN — заполни
@@ -333,7 +338,7 @@ texts — рус. фразы с ЯВНЫМ признаком пола; файл
 1. Кандидаты: voice_design.py → voice_candidates/{Name}/generated/*.mp3
 2. Отбор: слушаешь generated/, копируешь лучшие вручную в gen_selected/
    ({Name}.mp3 — один топ-файл; A/B — {Name}_1.mp3, {Name}_2.mp3)
-3. Рабочие рефы: add_candidate.py → корень каста: {Name}[_{variant}].wav
+3. Рабочие рефы: add_candidate.mts → корень каста: {Name}[_{variant}].wav
 4. Генерация ПО КАЖДОМУ варианту (файлы лежат рядом, постфикс = реф):
    voice_batch.py --char Sarah --ref voice_candidates/Sarah/Sarah_1.wav --limit 5
    voice_batch.py --char Sarah --ref voice_candidates/Sarah/Sarah_3.wav --limit 5
@@ -360,7 +365,7 @@ texts — рус. фразы с ЯВНЫМ признаком пола; файл
 
 ```bash
 # Добавление кандидата → реф
-C:\tools\cosyvoice3\.venv\Scripts\python.exe tools/generate/scripts/add_candidate.py --only {Name}
+node tools/generate/scripts/add_candidate.mts --only {Name}
 
 # A/B-сравнение: генерация каждым вариантом
 C:\tools\cosyvoice3\.venv\Scripts\python.exe tools/generate/scripts/voice_batch.py \
@@ -425,7 +430,7 @@ voice_candidates/{Name}/
    В текст добавляй эмоциональную пунктуацию («Ещё! Ещё! Да-а-а!»).
 
 ВЫВОД (2026-09-03): конфиг + эмоция решают всё — официальные параметры
-модели (batch в voice_presets.yaml) + пофразовая эмоция из emotions.json
+модели (batch в voice_presets.mts) + пофразовая эмоция из emotions.json
 дают чистую генерацию без артефактов. Эмоция автоматически берётся из
 catalog/emotions.json при генерации каждой фразы.
 
@@ -467,7 +472,10 @@ Unicode-ударение **U+0301** после ударной гласной Р�
 ### Тесты
 
 ```bash
-python -m pytest tests/ -v  # 37 тестов: voicekit, voice_sync, manage, batch, pipeline
+# Рефы (TS-порт; ffmpeg-кейсы скипаются без ffmpeg):
+node --test tools/generate/scripts/add_candidate.test.mts tools/generate/scripts/clean_refs.test.mts
+# Легаси-pytest оставшегося python (voicekit/voice_sync/manage/batch):
+python -m pytest tests/ -v
 ```
 
 ## Локальные LLM (проверено 2026-09-04)

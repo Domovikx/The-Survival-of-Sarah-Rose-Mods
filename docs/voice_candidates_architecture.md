@@ -69,7 +69,7 @@ voice_candidates/{Name}/
 | Команда             | Что делает                                                                 |
 | ------------------- | -------------------------------------------------------------------------- |
 | `status`            | сводка слоёв + расхождения (console)                                       |
-| `update [--apply]`  | структура + yaml-заглушки новым персонажам, сводка voice_candidates.jsonl  |
+| `update [--apply]`  | структура + yaml-заглушки новым персонажам                                 |
 | `migrate [--apply]` | переезд refs/ → папки (одноразовый, выполнен 2026-09-02)                   |
 | `report`            | missing_voices.md + voice_sync_report.md (NEW/READY/BROKEN/FOREIGN/ORPHAN) |
 

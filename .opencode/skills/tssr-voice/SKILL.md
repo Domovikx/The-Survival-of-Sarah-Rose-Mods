@@ -56,8 +56,8 @@ casts//{Имя}/  # источники: *.mp3 (НЕ qwen_*.mp3)
 2. Громкость всех рефов выровнена: EBU R128 loudnorm, **-16 LUFS, TP -1.5**
    (иначе голоса «гуляли» и генерация наследовала уровень)
 3. Фейды 30мс по краям — защита от кликов
-   Всё — в `tools/clean_refs.py` (loudnorm двухпроходный), вызывается автоматически
-   из `add_candidate.py` одним прогоном: `mp3 → нарезка 10с → чистка → refs/{Голос}.wav`.
+   Всё — в `tools/clean_refs.mts` (loudnorm двухпроходный), вызывается автоматически
+   из `add_candidate.mts` одним прогоном: `mp3 → нарезка 10с → чистка → refs/{Голос}.wav`.
 
 ## Тулы
 
@@ -65,10 +65,10 @@ casts//{Имя}/  # источники: *.mp3 (НЕ qwen_*.mp3)
 | ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `voice_catalog.py`            | тл мода (patches/ai-voice-pack/tl/ru) + script.rpy установки → catalog/voices.jsonl + label_arc.json (только при апдейте игры; `--diff` — манифесты added/changed/dropped в tmp/voice_delta/)      |
 | `voice_status.py`             | отчёт готово/нет голоса → catalog/missing_voices.md (заглушки)                                                                                                                                     |
-| `add_candidate.py`            | MP3-кандидат → реф: нарезка 10с + чистка + loudnorm, одним прогоном (инкрементально; qwen_*.mp3 игнорируются)                                                                                      |
-| `clean_refs.py`               | чистка рефа: highpass+afftdn+deesser+highshelf → loudnorm → фейды                                                                                                                                  |
+| `add_candidate.mts`           | MP3-кандидат → реф: нарезка 10с + чистка + loudnorm, одним прогоном (инкрементально; подключает голос в casts/voices.mts)                                                                          |
+| `clean_refs.mts`              | чистка рефа: highpass+afftdn+deesser+highshelf → loudnorm → фейды                                                                                                                                  |
 | `voice_batch.py`              | батч-генерация в ai_voice/{lang}/{arc}/{uid}__{variant}.opus (СРАЗУ opus, wav не пишется; `--keep-wav` = старая цепочка, `--ref` перезаписывает реф из yaml)                                       |
-| `catalog.gen_voice_list_json` | касты (who_codes) → catalog/voice_list.json (рантайм-мапа; зовётся select'ом/add_candidate/report)                                                                                                 |
+| `catalog.gen_voice_list_json` | касты (who_codes) → catalog/voice_list.json (рантайм-мапа; зовётся select'ом/report)                                                                                                               |
 | `levelnorm.py`                | выравнивание уровня реплик -16 LUFS / TP -1.5 (loudnorm dynamic; в генерации — внутри того же ffmpeg-прохода, что пишет opus; CLI `--dir` для wav — только рефы/легаси, в ai_voice wav больше нет) |
 | `voice_preview.py`            | 3 самых длинных фразы × каждый вариант → ревью-таблица output/voice/preview_review.md                                                                                                              |
 | `trim_tail_burst.py`          | паттерн-трим хвостов (импортится батчем)                                                                                                                                                           |
@@ -144,7 +144,7 @@ Unicode-ударение **U+0301** (combining acute) после ударной 
 # 1. Положить кандидата: casts//{Имя}/*.mp3
 #    ВАЖНО: qwen_*.mp3 игнорируются (это VoiceDesign — не рефы)
 # 2. Собрать реф (нарезка+чистка+loudnorm, существующие скипаются):
-C:\tools\cosyvoice3\.venv\Scripts\python.exe tools/add_candidate.py
+node tools/generate/scripts/add_candidate.mts
 # 3. Голос подключается сам: озвучен = есть реф {Имя}.wav в корне каста
 #    (who-коды — who_codes в каст-yaml, заполняются из каталога)
 # 4. Обновить отчёт заглушек:
