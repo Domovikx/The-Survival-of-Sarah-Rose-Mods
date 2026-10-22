@@ -18,7 +18,7 @@ voice-watch.cmd.
 
 Как это работает:
   - очереди = scripts/voice_queue.sh {ru|en} (bash, resumable, низкий приоритет);
-  - процессы ищутся по cmdline: 'voice_queue.sh' (обертка) и 'voice_batch.py'
+  - процессы ищутся по cmdline: 'voice_queue.sh' (обертка) и 'voice_batch.mts'
     (воркер) + '--lang {lang}';
   - пауза = NtSuspendProcess по воркерам, состояние — output/voice/ctl_paused_{lang}.json;
   - soft-stop = снять паузу (если была) + дождаться '  saved ' текущего файла
@@ -45,7 +45,7 @@ from voicekit import paths  # единственный источник путе
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LANGS = ('ru', 'en')
 QUEUE_MARK = 'voice_queue.sh'
-WORKER_MARK = 'voice_batch.py'
+WORKER_MARK = 'voice_batch.mts'
 LOG_TMPL = os.path.join(ROOT, 'output', 'voice', 'gen_all_{}.log')
 PAUSE_TMPL = os.path.join(ROOT, 'output', 'voice', 'ctl_paused_{}.json')
 STALE_LOG_SEC = 180  # лог старше — считаем очередь зависшей
@@ -109,7 +109,7 @@ def format_age(sec):
 
 
 def count_saved(text):
-    """Число готовых файлов в логе: строки '  saved ...' (пишет voice_batch.py).
+    """Число готовых файлов в логе: строки '  saved ...' (пишет voice_batch.mts).
 
     Чистая функция (покрыта тестами). Пустой текст -> 0.
     """
@@ -159,7 +159,7 @@ def find_queues(lang):
 
 
 def find_workers(lang):
-    """PID воркеров voice_batch.py --lang {lang}."""
+    """PID воркеров voice_batch.mts --lang {lang}."""
     tag = '--lang %s' % lang
     return [pid for pid, name, cmd in list_processes()
             if name.lower() == 'python.exe'
