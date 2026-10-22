@@ -39,3 +39,4 @@
 | `2026-10-15-github-releases-and-metadata.md`    | READY  | GitHub-релиз + homepage репо вместо master.zip (стабильная ссылка для SEO)                                  |
 | `2026-10-15-external-promotion.md`              | READY  | Продвижение: посты на Reddit/DTF/Steam-дискуссии/TG со ссылкой на репо                                      |
 | `2026-10-15-seo-optimization.md`                | WIP    | SEO лендинга: robots/sitemap/rating/JSON-LD/IndexNow ГОТОВО, ждёт GSC-верификацию (владелец) + контент-план |
+| `2026-10-21-voice-pipeline-ts-migration.md`     | READY  | Реализация: оркестрация пайплайна озвучки на TS (.mts), python = только инференс-шим                        |
