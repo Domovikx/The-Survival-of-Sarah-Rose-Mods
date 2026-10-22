@@ -74,11 +74,13 @@ npm run verify -- --game "<установка>/game" --tl patches/ai-voice-pack/
 **Пересборка каталога** под новый tl и новый script.rpy:
 
 ```bash
-cd patches/ai-voice-pack
-python tools/generate/scripts/voice_catalog.py --diff catalog/voices.jsonl
+npm run potgen        # po/template.pot перезаписан (roundtrip тона + label-map)
+npm run po:update     # ru.po досинхронизирован (перенос/ретаргет/новые пустые)
+# дельта added/changed/dropped = git diff po/template.pot
 ```
 
-Манифесты `tmp/voice_delta/{added,changed,dropped}.txt`:
+Манифесты читаются из диффа шаблона (tmp/voice_delta/{added,changed,dropped}.txt
+больше не пишутся — source of truth POT):
 
 - added — новые uid: генерировать ru + en;
 - changed — ru-текст изменился при том же old: переозвучить ru (--force);
@@ -88,37 +90,36 @@ python tools/generate/scripts/voice_catalog.py --diff catalog/voices.jsonl
 **Слои кастов:**
 
 ```bash
-python tools/generate/scripts/voice_sync.py status
-python tools/generate/scripts/voice_sync.py report
+node tools/generate/scripts/voice_sync.mts status
 ```
 
 NEW > 0 (новые персонажи) → ⚠ процесс добавления голоса по скиллу
-tssr-voice: `voice_sync update --apply` (заглушки) → владелец заполняет
+tssr-voice: `voice_sync.mts update --apply` (заглушки) → владелец заполняет
 контракты (texts/instruct) → voice_design кандидаты → выбор владельца →
-add_candidate + voice_manage select → report. Без активного рефа персонаж
-НЕ озвучивается (пропускается батчем, виден в missing_voices.md).
+add_candidate + voice_manage select. Без активного рефа персонаж
+НЕ озвучивается (пропускается батчем, виден как [--] в voice_status/voice_manage).
 
 **Генерация** (существующие файлы скипаются, resumable, можно рвать):
 
 ```bash
-C:\tools\cosyvoice3\.venv\Scripts\python.exe tools/generate/scripts/voice_batch.py --lang ru
-C:\tools\cosyvoice3\.venv\Scripts\python.exe tools/generate/scripts/voice_batch.py --lang en
+node tools/generate/scripts/voice_batch.mts --lang ru
+node tools/generate/scripts/voice_batch.mts --lang en
 ```
 
 Переозвучка изменённого (changed > 0):
 
 ```bash
-C:\tools\cosyvoice3\.venv\Scripts\python.exe tools/generate/scripts/voice_batch.py \
+node tools/generate/scripts/voice_batch.mts \
   --lang ru --force --uid $(cat ../../tmp/voice_delta/changed.txt)
 ```
 
-**Итог:** `python tools/generate/scripts/voice_status.py --fast` → RU и EN
+**Итог:** `node tools/generate/scripts/voice_status.mts --fast` → RU и EN
 100%. Внимание на арки без ✓ и на счётчики done > total (остатки старых
 файлов).
 
 **Эмоции:** новые uid без разметки озвучиваются без эмоциональных
-инструкций — это ок; глобальная разметка catalog/emotions.json —
-отдельная задача (emotion_tag.py).
+инструкций — это ок; глобальная разметка — `emotion_tag.mts`
+(черновик tmp/emotions_tagged.json, в шаблон — `npm run potgen -- --emotions`).
 
 ## Ступень 4 — Дистрибутив
 

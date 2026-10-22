@@ -5,7 +5,7 @@
  * установки тесты скипаются. Гард актуальности: закоммиченный
  * po/template.pot обязан совпадать по объёму со свежим сканом — после
  * апдейта игры тест падает со словами «запусти npm run potgen».
- * Запуск: node --test .opencode/skills/renpy-po/potgen.e2e.test.mts
+ * Запуск: node --test .opencode/skills/renpy-po/potgen_e2e.test.mts
  */
 
 import assert from "node:assert/strict";
@@ -15,20 +15,27 @@ import { fileURLToPath } from "node:url";
 import { test } from "node:test";
 
 import { parsePo, renderPo } from "./po_core.mts";
-import { renderPot, renderSpeakersMts, scanGame, speakerCtx, speakersMtsPath } from "./potgen.mts";
+import {
+  loadEmotionsFromPot,
+  parseLabelMap,
+  renderPot,
+  renderSpeakersMts,
+  scanGame,
+  speakerCtx,
+  speakersMtsPath,
+} from "./potgen.mts";
 import { mergePoUpdate } from "./po_update.mts";
 
 const REPO_ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "..", "..");
 const GAME = process.env.TSSR_GAME ?? "C:/Program Files (x86)/Steam/steamapps/common/The Survival of Sarah Rose/game";
 const POT_PATH = join(REPO_ROOT, "patches", "ai-voice-pack", "po", "template.pot");
 const SPEAKERS_MTS_PATH = speakersMtsPath(POT_PATH);
-const EMOTIONS_PATH = join(REPO_ROOT, "patches", "ai-voice-pack", "catalog", "emotions.json");
 const HAVE_GAME = existsSync(join(GAME, "script.rpy"));
 
-/** Каталог эмоций (uid → тон) для генерации метаданных, если файл есть. */
+/** Тон для генерации метаданных — roundtrip самого шаблона (emotions.json удалён). */
 function loadEmotions(): Record<string, string> | undefined {
-  if (!existsSync(EMOTIONS_PATH)) return undefined;
-  return JSON.parse(readFileSync(EMOTIONS_PATH, "utf-8")) as Record<string, string>;
+  if (!existsSync(POT_PATH)) return undefined;
+  return loadEmotionsFromPot(readFileSync(POT_PATH, "utf-8"));
 }
 
 /** Дата из заголовка POT: "POT-Creation-Date: YYYY-MM-DD HH:MM+0000\n". */
@@ -102,6 +109,33 @@ test(
           `Свежая: ...${ctx(fresh)}... vs закоммиченная: ...${ctx(committed)}... ` +
           `— запусти npm run potgen и закоммить`,
       );
+    }
+  },
+);
+
+test(
+  "e2e: label-map инвентарь — полный (сцены-дублёры не потеряны), фиксы артефактов на месте",
+  { skip: (!HAVE_GAME || !existsSync(POT_PATH)) && "нет игры или шаблона" },
+  () => {
+    const map = parseLabelMap(readFileSync(POT_PATH, "utf-8"));
+    const n = Object.keys(map).length;
+    assert.ok(
+      n >= 240,
+      `label-map: ${n} лейблов (ожидается ~264: scene-комментариев только 241 — дедуп схлопывает сцены)`,
+    );
+    // Семьи по префиксам/точным именам.
+    const open = Object.keys(map).filter((l) => l.startsWith("OpeningScene"));
+    assert.ok(open.length > 0, "лейблы OpeningScene* есть");
+    for (const l of open) assert.equal(map[l], "Prologue", l);
+    // Документированные фиксы артефактов прежнего label_arc.json (3 шт.):
+    assert.equal(map["VargaPath5"], "VargaMarionPath", "был Prologue — артефакт текст-резолва");
+    assert.equal(map["TrainingPathKate3"], "Training", "был Other — семья TrainingPath*");
+    assert.equal(map["prostitutealaric1"], "Other", "лейбл не досчитан прежним тл-сканом — добавлен");
+    // Регистр-чувствительность: Demonarc4/5 вне семьи DemonArc*.
+    assert.equal(map["Demonarc4"], "Other");
+    // Сцены-дублёры (все строки которых схлопнуты дедупом) обязаны быть в инвентаре.
+    for (const l of ["MercenaryQueen1", "Sakar1", "MythranInvasion1"]) {
+      assert.ok(map[l], `${l} — сцена без уникальных строк должна быть в label-map`);
     }
   },
 );

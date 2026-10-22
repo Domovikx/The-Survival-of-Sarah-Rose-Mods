@@ -13,19 +13,20 @@ description: Генерация голосов-кандидатов для TSSR 
 
 ```text
 tools/
-  voice_design.py          # тул генерации (резюмабельный), читает YAML-каст
-casts/{Имя}/      # сюда падают кандидаты (+ {Имя}.yaml — каст)
-  {Имя}.yaml               # ОПИСАНИЕ голоса: контракт для voice_design.py
-                               #   (instruct_en — ФИЗИОГНОМИКА тела, напр. "Male, 55-70 years
-                               #   old, tall and broad-shouldered..."; instruct_ru — перевод)
+  voice_design.py          # тул генерации (резюмабельный), читает .mts-контракты
+casts/voices/{Имя}/        # сюда падают кандидаты (+ {Имя}.mts — каст)
+  {Имя}.mts                # ОПИСАНИЕ голоса: контракт для voice_design.py
+                              #   (instruct_en — ФИЗИОГНОМИКА тела, напр. "Male, 55-70 years
+                              #   old, tall and broad-shouldered..."; instruct_ru — перевод)
   generated/NN.mp3         # кандидаты: 01.mp3, 02.mp3, ... (сырьё)
   gen_selected/            # отобранные вручную (add_candidate делает рефы)
 casts/cast.md     # обзорный документ «кто озвучивает» (справка)
 ```
 
-**Каст живёт в YAML** (`casts/{Имя}/{Имя}.yaml`), а не в python.
-Добавил/поправил yaml → персонаж сразу появился в `--list` и генерации.
-Старый `voice_design_cast.py` удалён при миграции (2026-09-02).
+**Каст живёт в .mts-контракте** (`casts/voices/{Имя}/{Имя}.mts`), а не в
+python (yaml → mts, миграция 2026-10-21). Добавил/поправил контракт →
+персонаж сразу появился в `--list` и генерации. Старый
+`voice_design_cast.py` удалён при миграции (2026-09-02).
 
 **Статистика** — журнал `tools/generate/output/voice_candidates.jsonl`
 УДАЛЁН 2026-10-21 (был дериватом, ничего не решал). Итоги прогона печатает
@@ -44,7 +45,7 @@ PY="C:\pinokio\api\Qwen3-TTS-Pinokio.git\app\venv\Scripts\python.exe"
 "$PY" tools/voice_design.py --char Carolyn --n 6      # один персонаж, 6 шт
 "$PY" tools/voice_design.py --n 3                     # весь каст по 3 шт
 "$PY" tools/voice_design.py --char Narrator --n 5 --force  # перегенерить
-python tools/voice_sync.py report                  # обновить сводку + отчёты
+node tools/generate/scripts/voice_sync.mts status     # слои/расхождения кастов (отчёты *.md выпищены)
 ```
 
 Модель VoiceDesign (~4.3 ГБ) должна лежать в HF-кэше
@@ -69,28 +70,32 @@ OMP_NUM_THREADS=8 "$PY" tools/voice_design.py \
 скрипт и пишет в `output/voice/design.log` (журнал voice_candidates.jsonl
 удалён 2026-10-21).
 
-## Формат каста (casts/{Имя}/{Имя}.yaml)
+## Формат каста (casts/voices/{Имя}/{Имя}.mts)
 
-Файл = контракт для `voice_design.py`. Схема:
+Файл = контракт для `voice_design.py` (python читает его через node-мост
+`cast_contract.mts --all` — JSON-дамп .mts-контрактов). Схема:
 
-```yaml
-name: Alaric # = имя папки (обязательно)
-gender: M # M/F — метаданные для человека/агента
-age: "25-30" # или "ageless"; строкой (иначе 25-30 станет датой)
-who: >- # роль в игре, контекст для агента
-  low life из свободного города, обаятельный жулик,
-  спутник/любовник Сары в MagePath
-instruct_en: >- # АНГЛ. описание голоса для Qwen3-TTS VoiceDesign
-  Male, 25-30 years old, medium-low velvet baritone, charming rogue,
-  cynical and sarcastic, smooth delivery with slight smirk in voice
-texts: # рус. фразы 100+ символов, с гендерным маркером
-  - Я пошёл через весь город, только чтобы добраться до тебя...
-  - ...
+```ts
+export const Alaric: CastContract = {
+  // имя экспорта = имя папки без пробелов
+  name: "Alaric", // = имя папки (обязательно)
+  gender: "M", // M/F — метаданные для человека/агента
+  age: "25-30", // или "ageless"; строкой
+  who: "low life из свободного города, обаятельный жулик, " + "спутник/любовник Сары в MagePath", // роль в игре, контекст для агента
+  instruct_en:
+    "Male, 25-30 years old, medium-low velvet baritone, " +
+    "charming rogue, cynical and sarcastic, smooth delivery with slight smirk in voice",
+  instruct_ru: "русский перевод instruct_en — для быстрого ревью",
+  texts: [
+    // рус. фразы 100+ символов, с гендерным маркером
+    "Я пошёл через весь город, только чтобы добраться до тебя...",
+    "...",
+  ],
+};
 ```
 
 `instruct_en` писать по разделу «Бест-практисы для instruct_en» (минимум
-4 измерения, физика голоса). `voice_design.py` берёт `instruct_en` как есть
-(legacy `base`/`vars` больше не используются, можно удалять из yaml).
+4 измерения, физика голоса). `voice_design.py` берёт `instruct_en` как есть.
 
 ## Бест-практисы для instruct_en (Qwen3-TTS VoiceDesign)
 
@@ -269,19 +274,19 @@ voice_design.py имеет 3 попытки:
 
 ## Как добавить новый голос
 
-1. Если персонаж в `catalog/missing_voices.md` — проверь пол/возраст по игре.
-2. Создай `casts/{Имя}/{Имя}.yaml` с описанием и instruct_en
+1. Если персонаж без активного рефа (`[--]` в `voice_manage.mts status`) — проверь пол/возраст по игре.
+2. Создай `casts/voices/{Имя}/{Имя}.mts` с описанием и instruct_en
    (по чек-листу из раздела «Бест-практисы для instruct_en»).
-3. Пользователь проверяет `.yaml`.
+3. Пользователь проверяет контракт `.mts`.
 4. Сгенерируй: `"$PY" tools/voice_design.py --char "{Имя}" --n 6`.
 5. Отдай пользователю слушать; он сам отберёт и переименует победителя в
    `{Имя}.mp3`.
 6. Готовый голос — дальше обычный пайплайн: `add_candidate.mts` → реф {Имя}.wav
-   → `voice_status.py` → `voice_batch.py`.
+   → `voice_status.mts` → `voice_batch.mts`.
 
 ## Папки-заглушки
 
-`casts/{Имя}/{Имя}.yaml` — описание типажа: кто, пол, возраст,
+`casts/voices/{Имя}/{Имя}.mts` — описание типажа: кто, пол, возраст,
 характер, реплики, instruct_en (по чек-листу из «Бест-практисы»).
 Папка без .mp3 не участвует в add_candidate.mts. После генерации
-кандидатов .yaml можно оставить как справку.
+кандидатов контракт остаётся справкой.

@@ -10,11 +10,13 @@
 
 - `patches/ai-voice-pack/` (корень патча) → `mods/tssr-ai-voice-pack/` —
   ЗЕРКАЛО установки (2026-10-19): `zzz_ui.rpy`, `zzz_update_check.rpy`,
-  `voice_config.rpy`, `fonts/`, `images/`, `tl/`, `catalog/` копируются как
+  `voice_config.rpy`, `fonts/`, `images/`, `tl/` копируются как
   есть (arcname = относительный путь, тесты не дают вернуться «карте путей»)
 - `patches/ai-voice-pack/audio/vo_<lang>/` → `mods/tssr-ai-voice-pack/ai_voice/<lang>/` (установка)
-- `catalog/` (корень патча) → `mods/tssr-ai-voice-pack/catalog/` (в дистрибутив: только
-  label_arc.json + voice_list.json; остальное — рантайм-пайплайна)
+- `catalog/` (в установке: `mods/tssr-ai-voice-pack/catalog/`) — АРТЕФАКТ СБОРКИ
+  (2026-10-22: в репе каталог/ не живёт): `label_arc.json` + `voice_list.json`
+  генерит `tools/generate/scripts/catalog_gen.mts` из POT-инвентаря и
+  casts/voices.mts, в zip кладёт build_pack.py
 - `environment.txt` (корень игры, служебный) → `RENPY_SEARCHPATH = "mods"` —
   относительный путь, работает при любой локации установки; другие моды
   кладутся в `mods/<своя-папка>/` и подхватываются автоматически
@@ -51,10 +53,13 @@ mods/tssr-ai-voice-pack/          # АТОМАРНАЯ папка мода (ко
     en/{Arc}/{uid}__{variant}.opus # английская озвучка, постфикс = имя рефа (СТАНДАРТ)
                                   #   wav в ai_voice НЕТ (удалены 2026-10-14,
                                   #   финальная миграция; wav живут только в
-                                  #   voice_candidates — рефы)
+                                  #   casts/voices — рефы)
   catalog/
-    label_arc.json              # label -> Arc (рантайм-мапа, грузится конфигом)
-    voice_list.json             # голоса: имя -> variant (генерится из кастов)
+    label_arc.json              # label -> Arc (артефакт СБОРКИ: генерит
+                                #   catalog_gen.mts из POT label-map, в zip
+                                #   кладёт build_pack.py; в репе не живёт)
+    voice_list.json             # голоса: имя -> variant (артефакт СБОРКИ из
+                                #   casts/voices.mts — озвучен = есть реф)
   voice_config.rpy              # config.auto_voice = static_auto_voice
   tl/<lang>/                    # переводы (работают из searchpath: язык берётся
                                 #   из блока translate, а не из пути файла)
@@ -66,8 +71,8 @@ mods/tssr-ai-voice-pack/          # АТОМАРНАЯ папка мода (ко
 затем фолбэк glob `{uid}*.opus`, `{uid}*.wav` (первый совпавший по алфавиту).
 **Формат: opus приоритетен, wav — фолбэк в КОДЕ рантайма** (2026-10-13,
 проверено в игре 7.4.11), однако wav-файлов в `ai_voice/` больше НЕТ —
-2026-10-14 генерация сразу в opus (voice_batch.py, pipe loudnorm+libopus,
-wav не пишется; `--keep-wav` = старая цепочка), легаси-wav удалены с диска
+2026-10-14 генерация сразу в opus (сейчас — voice_batch.mts: pipe
+loudnorm+libopus за один проход, wav не пишется), легаси-wav удалены с диска
 (финальная миграция). `convert_all_opus.py` — deprecated, конвертировать
 нечего.
 
@@ -107,74 +112,76 @@ wav не пишется; `--keep-wav` = старая цепочка), легас
 **База путей ниже** — корень патча `patches/ai-voice-pack/` (исключение:
 `config/` — он в корне репы). Плоское `tools/` из game-репы неактуально:
 скрипты живут в `tools/generate/scripts/`, каталоги пайплайна —
-`catalog/` (корень патча, зеркало установки) и `tools/generate/{voice_candidates,output}`.
+`catalog/` (корень патча, зеркало установки), `casts/voices/` (рефы и
+кандидаты) и `tools/generate/output`.
 
 ```text
-catalog/   (КОРЕНЬ ПАТЧА; источник фраз — po/template.pot + po/ru.po,
-            ниже — рантайм-мапы дистрибутива и источник тона)
-  label_arc.json               # label -> Arc (рантайм-мапа для voice_config.rpy)
-  voice_list.json              # РАНТАЙМ-мапа (имя -> variant, who -> имя);
-                               #   генерится из кастов, читается voice_config.rpy
-                               #   voices.yaml НЕ существует: озвучен = есть реф
-                               #   {Имя}.wav; who-коды — в каст-yaml (who_codes)
-  emotions.json                # источник тона: md5(msgid) -> тон; читают potgen
-                               #   (--emotions) и voice_batch; НЕ легаси, не удалять
-                               #   (голосовые отчёты missing_voices.md /
-                               #   voice_sync_report.md выпищены 2026-10-22)
-tools/generate/voice_candidates/
+catalog/   (УДАЛЁН из репы 2026-10-22: каталог-легаси выпищен. Источник фраз —
+            po/template.pot + po/ru.po; рантайм-мапы дистрибутива — АРТЕФАКТЫ
+            СБОРКИ, генерит tools/generate/scripts/catalog_gen.mts, в zip кладёт
+            build_pack.py; тон — метаданные `#. emotion:` шаблона)
+  label_arc.json               # label -> Arc ИЗ POT label-map (инвентарь
+                               #   сюжетных лейблов, 247 шт.; правила — potgen.mts)
+  voice_list.json              # имена озвученных -> variant ИЗ casts/voices.mts
+                               #   (VOICES: озвучен = активный реф {Имя}.wav;
+                               #   narrator = реф Narrator; who-коды — в
+                               #   casts/casts.mts who_codes)
+casts/voices/
   {Имя}/
-    {Имя}.yaml                 # КОНТРАКТ (+ отчёт-поля скриптов, extra allowed;
-                               #   instruct_en — типаж для генерации, instruct_ru — его
-                               #   русский перевод для быстрого ревью)
-    generated/                 # СЫРЬЁ: voice_design.py пишет сюда 01.mp3..NN.mp3
-    gen_selected/              # ОТБОР: вручную лучшие клипы, ОДИН файл
-                               #   (любое имя mp3) -> станет {Имя}.wav;
-                               #   несколько файлов: 1-й -> {Имя}.wav,
-                               #   остальные -> {Имя}_2.wav, {Имя}_3.wav...
+    {Имя}.mts                 # КОНТРАКТ (типизированный CastContract, отчёт-поля
+                              #   скриптов; instruct_en — типаж для генерации,
+                              #   instruct_ru — его русский перевод для ревью)
+    generated/                # СЫРЬЁ: voice_design.py пишет сюда 01.mp3..NN.mp3
+    gen_selected/             # ОТБОР: вручную лучшие клипы, ОДИН файл
+                              #   (любое имя mp3) -> станет {Имя}.wav;
+                              #   несколько файлов: 1-й -> {Имя}.wav,
+                              #   остальные -> {Имя}_2.wav, {Имя}_3.wav...
     {Имя}.wav                 # АКТИВНЫЙ реф в корне каста (озвучен = есть реф);
-                               #   варианты A/B рядом: {Имя}_{v}.wav
+                              #   варианты A/B рядом: {Имя}_{v}.wav
 tools/generate/scripts/
-  voicekit/                    # ЯДРО: paths (раскладка), catalog, contract (pydantic),
-                               #   fs (безопасные операции), tts_env (пути моделей)
-  voice_sync.py                # АКТУАЛИЗАТОР: status/update/migrate/report
-                               #   (создаёт структуру новым, чинит пути, отчёты)
-  voice_catalog.py             # ЛЕГАСИ: тл мода + script.rpy -> voices.jsonl +
-                               #   label_arc.json (jsonl выпищен 2026-10-22,
-                               #   источник фраз — POT; см. po/)
-  voice_design.py              # VoiceDesign-генерация кандидатов -> generated/
+  voicekit/                    # ЯДРО (python — для оставшихся шимов): paths,
+                               #   contract, fs, tts_env, model_dir
+                               #   (загрузчик catalog.py удалён 2026-10-22:
+                               #   источник фраз — po/template.pot)
+  voice_design.py              # ИНФЕРЕНС VoiceDesign (python): кандидаты -> generated/
+                               #   (мост контрактов — cast_contract.mts JSON)
   voice_presets.mts            # ЕДИНАЯ карта конфигов: audio/refs/design/batch/beastify
                                #   (был config/voice_presets.yaml; python читает json-дамп
                                #   `node voice_presets.mts`)
   config.mts                   # типизированный доступ к карте конфигов (load/section/get)
-  cast_contract.mts            # дамп контрактов кастов casts/voices/{Имя}/{Имя}.mts
-                               #   в JSON (мост для voice_design.py)
+  cast_contract.mts            # дамп контрактов casts/voices/{Имя}/{Имя}.mts -> JSON
+                               #   (мост для инференса voice_design.py)
   add_candidate.mts            # gen_selected/*.mp3 -> корень каста: {Имя}[_{v}].wav
                                #   (нарезка + чистка одномерным прогоном + подключение
                                #   голоса: VOICES в casts/voices.mts null -> путь рефа)
   clean_refs.mts               # лечение рефов: highpass+денойз+deesser+EQ+LOUDNORM+фейды
                                #   (add_candidate.test.mts / clean_refs.test.mts — node --test)
+  voice_manage.mts             # УПРАВЛЕНИЕ ГОЛОСАМИ: list / status / select
+                               #   (A/B: {Имя}_{v}.wav -> {Имя}.wav; voice_list.json —
+                               #   артефакт сборки из casts/voices.mts, реген не нужен)
+  voice_sync.mts               # АКТУАЛИЗАТОР: status (слои/расхождения кастов),
+                               #   update --apply (папка+gen_selected/+generated/
+                               #   контракт-заглушка новым кастам из SPEAKERS)
+  emotion_tag.mts              # разметка эмоций: tmp/emotions_tagged.json (черновик
+                               #   тона; в шаблон — npm run potgen -- --emotions <файл>
+                               #   overlay'ем; эвристика RULES или --llm-url
+                               #   OpenAI-compatible LLM — LM Studio/ollama)
+  voice_batch.mts              # БАТЧ-ОРКЕСТРАТОР: каталог POT -> audio/vo_{lang}/{arc}/
+                               #   {uid}__{variant}.opus (эмоция из `#. emotion:` POT;
+                               #   --ref/--uid/--force/--emotion/--device cuda; wav НЕ
+                               #   пишется: тензор -> pipe f32le -> ffmpeg loudnorm+libopus;
+                               #   ИНФЕРЕНС шеллит в python cosyworker.py)
+  cosyworker.py                # ИНФЕРЕНС CosyVoice (python-шим venv C:/tools/cosyvoice3):
+                               #   модель один раз на процесс; аудио-цепочка проверена
+                               #   2026-10-14/21 (байт-в-байт с прежним python-батчем)
   beastify.py                  # нелюдские голоса: пресеты orc/demon/monster
                                #   (pitch+formant вниз, тёмный EQ, acrusher, гроул-субтон,
                                #   модуляция/реверб) + loudnorm -16 LUFS/TP -1.5
-  voice_batch.py               # батч-генерация: каталог -> audio/vo_{lang}/{arc}/{uid}__{variant}.opus
-                               #   (СРАЗУ opus: тензор -> pipe f32le -> ffmpeg loudnorm+libopus
-                               #   за один проход, wav НЕ пишется; --keep-wav = старая цепочка
-                               #   wav->levelnorm->opus; при сбое pipe — wav-фолбэк;
-                               #   реф = voice_candidates/{Имя}/{Имя}.wav по
-                               #   правилу; --ref перезаписывает;
-                               #    --emotion — стилевая инструкция в промпт, суффикс _em;
-                               #    write_manifest() определён, но НЕ вызывается —
-                               #    манифесты {wav}.txt фактически не пишутся)
-  trim_tail_burst.py           # паттерн-трим хвостовых артефактов (импортится батчем)
-  voice_manage.py              # list/status/select (select: {Имя}_{v}.wav -> {Имя}.wav +
-                               #   voice_list.json)
+  trim_tail_burst.py           # паттерн-трим хвостовых артефактов
   levelnorm.py                 # выравнивание: -16 LUFS / TP -1.5 (CLI по *.wav —
                                #   только рефы/легаси; в генерации его LOUD_ARGS
-                               #   применяются внутри опус-прохода voice_batch)
-  voice_preview.py             # 3 самых длинных фразы × каждый реф -> ревью-таблица
-  emotion_tag.py               # разметка эмоций: catalog/emotions.json
-                               #   (эвристика по тексту или --llm-url локальная LLM)
-  voice_status.py              # СТАТУС И ПРОГНОЗ генерации: готово (стем opus/wav)
+                               #   применяются внутри опус-прохода voice_batch.mts)
+  voice_status.mts             # СТАТУС И ПРОГНОЗ генерации: готово (стем opus/wav)
                                #   по языкам/аркам, %, размер, воркеры, скорость,
                                #   прогноз (--fast без замера). ВСЕГДА для «статус?»
   voice_queue.sh               # ОЧЕРЕДЬ генерации: bash tools/generate/scripts/voice_queue.sh {ru|en}
@@ -185,7 +192,7 @@ tools/generate/scripts/
                                #   голый запуск запрещён (теряется приоритет/детач)
   voice_ctl.py                 # ПУЛЬТ очередями (Windows, только stdlib, системный python):
                                #   status/start/stop/pause/resume/watch/logs [ru|en|all]
-                               #   (процессы ищет по cmdline voice_batch.py/voice_queue.sh;
+                               #   (процессы ищет по cmdline voice_batch.mts/voice_queue.sh;
                                #   пауза = NtSuspendProcess, метка — output/voice/ctl_paused_{lang}.json)
                                #   Двойной клик: voice-start/stop/pause/resume/status/watch.cmd
 ```
@@ -217,7 +224,7 @@ tools/generate/scripts/
 этому правилу всегда: наш код = единственный источник правды, внешний —
 не трогаем (править чужие файлы запрещено).
 
-ВАЖНО: рабочие рефы ВСЕГДА из корня каста `voice_candidates/{Имя}/{Имя}.wav`
+ВАЖНО: рабочие рефы ВСЕГДА из корня каста `casts/voices/{Имя}/{Имя}.wav`
 (вылеченные).
 Правила лечения (решение 2026-09-01, актуализировано):
 
@@ -237,14 +244,15 @@ menu 525, ui 238. Озвучиваются только dialogue + narration, и
 ## Актуализация (voice_sync)
 
 ```bash
-python tools/generate/scripts/voice_sync.py status    # сводка слоёв + расхождения (console)
-python tools/generate/scripts/voice_sync.py update --apply   # структура+заглушки новым, сводка
-python tools/generate/scripts/voice_sync.py report   # ЛЕГАСИ: пишет .md-отчёты в catalog/
-                                                    #   (в git не идут; заменит TS-порт)
+node tools/generate/scripts/voice_sync.mts status    # слои/расхождения кастов (консоль)
+node tools/generate/scripts/voice_sync.mts update --apply   # папка+контракт-заглушка
+                                                            #   новым кастам из SPEAKERS
 ```
 
-Безопасность: ничего не удаляет и не перетирает; `--apply` = реальные изменения,
-по умолчанию — только план.
+Безопасность: ничего не удаляет и не перетирает; без `--apply` — только план.
+Рефы НЕ создаются автоматически — только структура. (python voice_sync.py
+удалён 2026-10-22: migrate — одноразовый переезд уже сделан, report — *.md
+выпищены, jsonl — источник фраз теперь POT.)
 
 ## Мапа «спикер → голос» (актуализация после апдейта игры)
 
@@ -273,26 +281,27 @@ npm run po:update     # ru.po досинхронизирован (точный �
 # Дельта added/changed/dropped видна как git diff template.pot: added —
 # генерировать (voice_batch ru+en), changed переозвучить (--force --uid),
 # dropped (если были озвучены) — кандидаты на чистку audio/vo_*.
-python tools/generate/scripts/voice_sync.py status  # заглушки без рефов/контрактов (консоль)
+node tools/generate/scripts/voice_batch.mts --lang ru --dry-run  # план фраз (консоль)
+#   (заглушки кастов без рефов — npm run speakers:audit; voice_sync status
+#    сломан до TS-порта)
 ```
 
 ## Добавление нового голоса (инкрементально, ничего не пересобирается)
 
 ```bash
-# 1. Положить отобранный клип: voice_candidates/{Имя}/gen_selected/{Имя}.mp3
+# 1. Положить отобранный клип: casts/voices/{Имя}/gen_selected/{Имя}.mp3
 # 2. Собрать рабочий реф (существующие скипаются; voice не требует python):
 node tools/generate/scripts/add_candidate.mts --only "{Имя}"   # или: npm run refs:add -- --only "{Имя}"
 #    -> корень каста {Имя}.wav; голос ПОДКЛЮЧАЕТСЯ сам (озвучен = есть реф)
 # 3. (who-коды в каст-yaml: who_codes — заполняются из каталога, руками
 #    обычно не трогаются)
 # 4. Зафиксировать финальный реф (копия {Имя}.wav в корне — он и есть активный):
-python tools/generate/scripts/voice_manage.py select {Имя} ""    # вариант без номера = базовый
+node tools/generate/scripts/voice_manage.mts select {Имя} ""    # вариант без номера = базовый
 #    (или просто переименуй {Имя}_{v}.wav -> {Имя}.wav)
-# 5. Обновить отчёты:
-python tools/generate/scripts/voice_sync.py report
-# 6. Сгенерировать реплики только этого персонажа (только отсутствующие файлы):
-C:\tools\cosyvoice3\.venv\Scripts\python.exe tools/generate/scripts/voice_batch.py \
-  --char "{Имя}" --limit 10
+#    voice_list.json — артефакт СБОРКИ (catalog_gen.mts из casts/voices.mts),
+#    регенерация не нужна; отчёты *.md выпищены (легаси 2026-10-22).
+# 5. Сгенерировать реплики только этого персонажа (только отсутствующие файлы):
+node tools/generate/scripts/voice_batch.mts --char "{Имя}" --limit 10
 ```
 
 ## Генерация кандидатов по промту (VoiceDesign)
@@ -304,10 +313,10 @@ C:\tools\cosyvoice3\.venv\Scripts\python.exe tools/generate/scripts/voice_batch.
 PY="C:\pinokio\api\Qwen3-TTS-Pinokio.git\app\venv\Scripts\python.exe"
 "$PY" tools/generate/scripts/voice_design.py --list                # каст
 "$PY" tools/generate/scripts/voice_design.py --char Carolyn --n 6  # 6 кандидатов -> generated/01..06.mp3
-python tools/generate/scripts/voice_sync.py status                # сводка: кто без голоса (консоль)
+node tools/generate/scripts/voice_sync.mts status             # сводка: слои/расхождения кастов
 ```
 
-Правила: каст в `voice_candidates/{Имя}/{Имя}.yaml` (instruct_en — ФИЗИОГНОМИКА + СОЦИАЛЬНАЯ РОЛЬ для генерации:
+Правила: каст = контракт `casts/voices/{Имя}/{Имя}.mts` (instruct_en — ФИЗИОГНОМИКА + СОЦИАЛЬНАЯ РОЛЬ для генерации:
 пол, возраст с «лет», кто это (вор/генерал/король/трактирщик...),
 телосложение/лицо/осанка/поступь — БЕЗ описания голоса (типаж
 вырисовывается из тела), instruct_ru — русский перевод для ревью,
@@ -334,20 +343,20 @@ texts — рус. фразы с ЯВНЫМ признаком пола; файл
 ### Цикл: сравнение → выбор → генерация
 
 ```text
-1. Кандидаты: voice_design.py → voice_candidates/{Name}/generated/*.mp3
+1. Кандидаты: voice_design.py → casts/voices/{Name}/generated/*.mp3
 2. Отбор: слушаешь generated/, копируешь лучшие вручную в gen_selected/
    ({Name}.mp3 — один топ-файл; A/B — {Name}_1.mp3, {Name}_2.mp3)
 3. Рабочие рефы: add_candidate.mts → корень каста: {Name}[_{variant}].wav
 4. Генерация ПО КАЖДОМУ варианту (файлы лежат рядом, постфикс = реф):
-   voice_batch.py --char Sarah --ref voice_candidates/Sarah/Sarah_1.wav --limit 5
-   voice_batch.py --char Sarah --ref voice_candidates/Sarah/Sarah_3.wav --limit 5
+   node voice_batch.mts --char Sarah --ref casts/voices/Sarah/Sarah_1.wav --limit 5
+   node voice_batch.mts --char Sarah --ref casts/voices/Sarah/Sarah_3.wav --limit 5
    → audio/vo_ru/{arc}/{uid}__Sarah_1.opus и {uid}__Sarah_3.opus
 5. Выбор: слушаешь пары в audio/vo_ru/{arc}/ (одинаковые uid рядом)
-6. Фиксация: voice_manage.py select {Name} {variant}
+6. Фиксация: voice_manage.mts select {Name} {variant}
    → копирует {Name}_{variant}.wav → {Name}.wav (в корне каста)
-   → обновляет catalog/voice_list.json
-   → перегенерирует catalog/voice_list.json
-7. Генерация: voice_batch.py --char {Name} — использует активный реф
+   → voice_list.json — артефакт сборки (catalog_gen.mts из casts/voices.mts),
+     реген не нужен
+7. Генерация: voice_batch.mts --char {Name} — использует активный реф
    (проигравшие варианты сохраняются рядом — {Name}_{v}.wav, для истории)
 ```
 
@@ -355,8 +364,8 @@ texts — рус. фразы с ЯВНЫМ признаком пола; файл
 
 Кто говорит, игра знает (`_last_say_who.name`). Приоритет резолва:
 `{uid}__{имя}.wav` → любой `{uid}*.wav`. Поэтому сделал
-`voice_manage.py select {Имя} {вариант}` (копирует {Имя}_{v}.wav → {Имя}.wav
-и перегенерит voice_list.json) → в игре зазвучал новый вариант, старые
+`voice_manage.mts select {Имя} {вариант}` (копирует {Имя}_{v}.wav → {Имя}.wav;
+voice_list.json — артефакт сборки, реген не нужен) → в игре зазвучал новый вариант, старые
 файлы удалять НЕ обязательно
 (они просто перестают выигрывать приоритет).
 
@@ -367,40 +376,38 @@ texts — рус. фразы с ЯВНЫМ признаком пола; файл
 node tools/generate/scripts/add_candidate.mts --only {Name}
 
 # A/B-сравнение: генерация каждым вариантом
-C:\tools\cosyvoice3\.venv\Scripts\python.exe tools/generate/scripts/voice_batch.py \
-  --char Sarah --ref voice_candidates/Sarah/Sarah_1.wav --limit 5
-C:\tools\cosyvoice3\.venv\Scripts\python.exe tools/generate/scripts/voice_batch.py \
-  --char Sarah --ref voice_candidates/Sarah/Sarah_3.wav --limit 5
+node tools/generate/scripts/voice_batch.mts \
+  --char Sarah --ref casts/voices/Sarah/Sarah_1.wav --limit 5
+node tools/generate/scripts/voice_batch.mts \
+  --char Sarah --ref casts/voices/Sarah/Sarah_3.wav --limit 5
 
 # Управление голосами
-python tools/generate/scripts/voice_manage.py list      # все голоса, активный реф, варианты
-python tools/generate/scripts/voice_manage.py status    # кто озвучен
-python tools/generate/scripts/voice_manage.py select Sarah 3  # выбрать вариант → Sarah.wav (корень)
+node tools/generate/scripts/voice_manage.mts list      # все голоса, активный реф, варианты
+node tools/generate/scripts/voice_manage.mts status    # кто озвучен
+node tools/generate/scripts/voice_manage.mts select Sarah 3  # выбрать вариант → Sarah.wav (корень)
 
 # Генерация (только отсутствующие файлы)
-C:\tools\cosyvoice3\.venv\Scripts\python.exe tools/generate/scripts/voice_batch.py \
-  --char Sarah --limit 10
+node tools/generate/scripts/voice_batch.mts --char Sarah --limit 10
 
 # Перегенерация (все файлы, --force)
-C:\tools\cosyvoice3\.venv\Scripts\python.exe tools/generate/scripts/voice_batch.py \
-  --char Sarah --limit 5 --force
+node tools/generate/scripts/voice_batch.mts --char Sarah --limit 5 --force
 ```
 
 ### Структура рефов
 
 ```text
-voice_candidates/{Name}/
+casts/voices/{Name}/
   {Name}_{variant}.wav               # A/B-варианты (сохраняются для истории)
   {Name}.wav                        # АКТИВНЫЙ реф (озвучен = этот файл существует)
 ```
 
-Альтернативный реф без правки yaml: `voice_batch.py --ref`
-`voice_candidates/{Name}/{Name}_{variant}.wav`
+Альтернативный реф без правки casts/voices.mts: `voice_batch.mts --ref`
+`casts/voices/{Name}/{Name}_{variant}.wav`
 (постфикс файла генерации = имя рефа: `{uid}__{variant}.wav`).
 
 ### Эмоции в генерации (рецепт, проверено 2026-09-02)
 
-`voice_batch.py --emotion "..." --emotion-tag <тег>` — instruct2-режим
+`voice_batch.mts --emotion "..." --emotion-tag <тег>` — instruct2-режим
 (эмоция + клонированный голос). ПРАВИЛА:
 
 1. **Писать ТОЛЬКО на английском** — русские и китайские инструкции дают
@@ -416,9 +423,12 @@ voice_candidates/{Name}/
 5. Конфиг генерации — ОФИЦИАЛЬНЫЕ параметры модели (FunAudioLLM):
    `--flow-temp 0.8 --cfg-rate 0.7 --top-p 0.8 --top-k 25 --tau-r 0.1`
    (flow-temp 1.2/cfg 0.9 давали звуковые артефакты — заменено 2026-09-03).
-6. Пофразовые эмоции: `catalog/emotions.json` (uid -> emotion_en),
-   разметка `tools/generate/scripts/emotion_tag.py` (эвристика или --llm-url phi4-mini);
-   приоритет: `--emotion` (CLI) > emotions.json[uid] > без эмоции.
+6. Пофразовые эмоции: `#. emotion:` в `po/template.pot` (uid → тон;
+   roundtrip в potgen main() — тон переживает регенерацию, пока текст не
+   менялся). Разметка: `tools/generate/scripts/emotion_tag.mts` пишет черновик
+   в `tmp/emotions_tagged.json`, в шаблон — `npm run potgen -- --emotions <файл>`
+   (overlay поверх roundtrip: старый тон сохраняется, новый добирается).
+   Приоритет: `--emotion` (CLI) > POT[uid] > без эмоции.
    `--no-emotion` отключает пофразовую (суффикс_plain);
    `--emotion-ru` — русский перевод для манифеста/ревью.
 7. Манифест {wav}.txt фиксирует ref/emotion/конфиг — всегда рядом с wav.
@@ -429,28 +439,29 @@ voice_candidates/{Name}/
    В текст добавляй эмоциональную пунктуацию («Ещё! Ещё! Да-а-а!»).
 
 ВЫВОД (2026-09-03): конфиг + эмоция решают всё — официальные параметры
-модели (batch в voice_presets.mts) + пофразовая эмоция из emotions.json
+модели (batch в voice_presets.mts) + пофразовая эмоция из POT (`#. emotion:`)
 дают чистую генерацию без артефактов. Эмоция автоматически берётся из
-catalog/emotions.json при генерации каждой фразы.
+шаблона при генерации каждой фразы.
 
 ВАЖНО (2026-09-04): эмоция есть у КАЖДОЙ фразы — состояния «без эмоции»
 НЕ бывает. Даже наррация-наблюдение («Он хлопнул себя по бёдрам») несёт
 отношение диктора: «Curiously observing», «Warily, watching closely»,
-«Amused» и т.п. Промпт разметки (LLM_PROMPT в emotion_tag.py) требует
+«Amused» и т.п. Промпт разметки (LLM_PROMPT в emotion_tag.mts) требует
 всегда возвращать инструкцию диктора; `none` запрещён; пустой ответ →
-DEFAULT_EMO. emotions.json покрывает 100% фраз (67 254).
+DEFAULT_EMO. Тон покрывает 100% фраз (68 181 запись POT).
 
-ВАЖНО (2026-10-21, инцидент): `catalog/emotions.json` — НЕ легаси, удалять
-запрещено: коммит a16e21ef9 вынес каталог как «легаси» → POT остался
-без `#. emotion:` и 68 181 запись потеряла тон — восстановлено из истории.
-Эмоции живут на записях `po/template.pot` с привязкой по uid (md5 текста):
-обновление игры — тон переживает, пока текст не менялся; фраза изменилась →
+ВАЖНО (2026-10-21/22, история): тон ЖИВЁТ НА ЗАПИСЯХ `po/template.pot`
+(метаданные `#. emotion:`, привязка по uid = md5 текста) — регенерация
+`npm run potgen` roundtrip'ит тон автоматически. `catalog/emotions.json`
+(второй холд тона, создан инцидентом a16e21ef9) УДАЛЁН 2026-10-22 по
+приказу владельца («каталог-легаси выпиливаем полностью»); откат инцидента
+тем самым завершён — единственный источник тона = шаблон. Фраза изменилась →
 новый uid → тон сброшен, навешивать заново ВРУЧНУЮ по семантике фразы и её
 эмоциональному контексту. Эмоция ВСЕГДА на английском. Полная памятка:
 `.opencode/skills/renpy-po/SKILL.md`, раздел «Метаданные озвучки».
 
 ```bash
-... voice_batch.py --char Sarah --emotion "In a burst of passion, crying out with joy and ecstasy" --emotion-tag passion --limit 10
+node tools/generate/scripts/voice_batch.mts --char Sarah --emotion "In a burst of passion, crying out with joy and ecstasy" --emotion-tag passion --limit 10
 ```
 
 ## Вариативность vs стабильность (проверено 2026-09-03)
@@ -480,10 +491,10 @@ Unicode-ударение **U+0301** после ударной гласной Р�
 ### Тесты
 
 ```bash
-# Рефы (TS-порт; ffmpeg-кейсы скипаются без ffmpeg):
-node --test tools/generate/scripts/add_candidate.test.mts tools/generate/scripts/clean_refs.test.mts
-# Легаси-pytest оставшегося python (voicekit/voice_sync/manage/batch):
-python -m pytest tests/ -v
+# Вся TS-матрица (из корня репы; скиллы + пайплайн):
+node --test $(find .opencode/skills patches/ai-voice-pack/tools -name "*.test.mts" -not -path "*/node_modules/*")
+# Гард сборки — pytest только для остатка python (voicekit/voice_ctl/build):
+cd patches/ai-voice-pack && python -m pytest tests/ -v
 ```
 
 ## Локальные LLM (проверено 2026-10-22)
@@ -516,9 +527,10 @@ CLI `~/.lmstudio/bin/lms.exe`, сервер на **127.0.0.1:1234**
   deepseek-r1-qwen3-8b, nomic-embedding); новая — `lms get <имя>` + строка
   в `models` провайдера `~/.config/opencode/opencode.json`;
 - `qwen3.5:27b` (17–20 ГБ) в 16 ГБ VRAM не влезает целиком — не ставить;
-- **`emotion_tag.py --llm-url` зовёт ollama-API (`/api/generate`) — с LM
-  Studio не работает**; повторная LLM-разметка эмоций будет на TS-порте
-  (`/v1/chat/completions`).
+- **`emotion_tag.mts --llm-url` зовёт OpenAI-compatible `/v1/chat/completions`
+  (порт 2026-10-22, заменил ollama `/api/generate`) — работает и с LM Studio
+  (`http://127.0.0.1:1234`), и с ollama (`http://127.0.0.1:11434`); модель —
+  `--llm-model` (по умолчанию phi4-mini; для LM Studio — `qwen/qwen3.5-9b`).
 
 ### Подключение к opencode
 
@@ -546,7 +558,7 @@ Shift+Tab) → LM Studio Local → qwen/qwen3.5-9b.
 ### GPU для CosyVoice (DirectML) — НЕ ВЫШЛО (2026-09-04, история AMD)
 
 АКТУАЛЬНО (2026-10): CosyVoice гоняется на CUDA RTX 5070 Ti —
-`voice_batch.py --device cuda` (fp16, guard + загрузка на старте), rtf ~3
+`voice_batch.mts --device cuda` (fp16, guard + загрузка на старте), rtf ~3
 (было ~8 на CPU; замеры — задача GPU-миграции озвучки). Опыт DirectML ниже —
 исторический; патчи в коде остаются безвредными (env-гейт `TSSR_DML=1`).
 
@@ -567,13 +579,13 @@ Shift+Tab) → LM Studio Local → qwen/qwen3.5-9b.
   удалены).
 
 В коде CosyVoice остались БЕЗВРЕДНЫЕ патчи с env-гейтом `TSSR_DML=1`
-(активны ТОЛЬКО при `--device dml` в voice_batch.py):
+(активны ТОЛЬКО при `--device dml` — флаг уходит в cosyworker.py):
 
 - model.py/frontend.py: device=dml + map_location='cpu' при TSSR_DML;
 - llm.py: one-hot вместо weight[idx]; concat без пустых тензоров;
 - inference_mode-декораторы → identity при TSSR_DML (11 шт);
 - cosyvoice.py: fp16 разрешён при TSSR_DML.
-  CPU-режим (по умолчанию) — не затронут. `voice_batch.py --device dml`
+  CPU-режим (по умолчанию) — не затронут. `voice_batch.mts --device dml`
   существует, но НЕ РАБОТАЕТ до конца (OOM) — не использовать.
 
 ## План работ
@@ -587,7 +599,7 @@ Shift+Tab) → LM Studio Local → qwen/qwen3.5-9b.
 ## Открытые вопросы
 
 - ~~EN-рефы голосов~~ → **СНЯТО 2026-10-18**: EN-озвучка 100% готова (те же
-  рефы voice_candidates)
+  рефы casts/voices)
 - ~~Формат аудио: WAV vs OGG~~ → **РЕШЕНО 2026-10-13: Opus 24k mono** (вердикт ресёрча,
   проверено в игре; см. tasks/2026-10-12-audio-compression-research.md и
   tasks/2026-10-13-opus-migration.md)

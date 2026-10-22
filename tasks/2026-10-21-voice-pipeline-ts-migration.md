@@ -1,6 +1,7 @@
 # [2026-10-21] Перевод пайплайна озвучки на TS: python остаётся только инференс-шимом
 
-Статус: DOING (2026-10-22: инференс-шим + клиент + оркестратор ГОТОВЫ и протестированы, см. «Прогресс» внизу)
+Статус: DOING (2026-10-22: инференс-шим + клиент + оркестратор ГОТОВЫ и протестированы;
+2026-10-22: оркестраторы выпилены из python и добиты TS-портом, см. «Прогресс» внизу)
 
 ## Задача от пользователя
 
@@ -106,3 +107,60 @@ python-тулов.
   rtf 3.16 (6.6с речи / ~21с; CPU-й был ~8) — шим должен держать модель загруженной
   один раз на весь батч, это главный источник выигрыша.
 - AGENTS.md («Новый код — только .mts») — эта задача закрепляет его для озвучки.
+
+## Прогресс
+
+### 2026-10-21/22 — шим и первые порты
+
+- `cosyworker.py` — инференс-шим CosyVoice (модель один раз на процесс,
+  CUDA fp16, тензор → pipe f32le → ffmpeg loudnorm+libopus); аудио-цепочка
+  байт-в-байт сверена с прежним python-батчем.
+- `voice_batch.mts` — батч-оркестратор поверх шима (catalog → opus,
+  `--ref/--uid/--force/--emotion/--device`), `voice_status.mts` — статус/прогноз.
+- Пульт `voice_ctl.py` оставлен python (NtSuspendProcess/ctypes — пауза),
+  `voice_queue.sh` — bash; это осознанный остаток вне сегодняшнего объёма.
+
+### 2026-10-22 — тройной TS-порт оркестраторов + выпил python (по выбору владельца)
+
+Портированы (16/16 новых тестов зелёные):
+
+- **`voice_manage.mts`** — list/status/select (фиксация A/B-варианта
+  `{Имя}_{v}.wav → {Имя}.wav`; voice_list.json — артефакт сборки, реген не нужен);
+- **`voice_sync.mts`** — status (слои/расхождения: wired-no-ref / ref-not-wired /
+  orphan) + update --apply (папка + gen_selected/ + generated/ + контракт-заглушка
+  `{Имя}.mts` новым кастам из SPEAKERS, SKIP = Generic _); `migrate`/`report`
+  удалены как легаси (переезд уже сделан,_.md-отчёты выпищены, источник фраз — POT);
+- **`emotion_tag.mts`** — эвристика RULES перенесена дословно; LLM через
+  OpenAI-compatible `/v1/chat/completions` (работает и с LM Studio, и с ollama —
+  ушла привязка на ollama `/api/generate`); черновик `tmp/emotions_tagged.json`,
+  в шаблон — overlay `npm run potgen -- --emotions`.
+
+Удалены (легаси; замены есть): `voice_batch.py`, `voice_catalog.py`,
+`voice_manage.py`, `voice_sync.py`, `voice_status.py`, `voice_preview.py`,
+`emotion_tag.py`, `voice_design_watch.py` (сломан: читал yaml/jsonl-раскладку),
+`voicekit/catalog.py` + 8 python-тестов (`test_voice_{batch,catalog,manage,
+sync,design_watch,count_done}`, `test_cast_texts`, `test_voicekit`).
+
+Попутные фиксы: `voice_ctl.py` WORKER_MARK `voice_batch.py` → `.mts`
+(давний баг «0 воркеров» — очередь гоняет node), `voicekit/__init__.py`
+без реэкспорта catalog.
+
+**Регресс:** node --test **264/264** (248 + 16 новых), pytest **70 passed /
+0 failed** (все 6 pre-existing падений ушли вместе с легаси), py_compile
+остатка OK, `npm run build:pack` успех. Документация (AGENTS.md, скиллы
+tssr-voice/-status/-design/-update-pipeline, renpy-po) обновлена под .mts.
+
+**Остаток python (по контракту задачи — инференс/шимы/Win-специфика):**
+cosyworker, voice_design, voice_ctl (пауза), beastify, levelnorm,
+trim_tail_burst, gen_ui_round, shots_for_site, thermal_guard,
+voice_autocommit, voice_push_chunked, read_persistent, build_pack,
+voicekit/{paths,contract,fs,tts_env,config,cv3,model_dir}.
+
+### Осталось (не в объёме 2026-10-22)
+
+- [ ] Порт `voice_ctl.mts` + очередей (компактные пути-приёмки ниже:
+      `npm run voice:generate`, `voice:status`, пауза без python).
+- [ ] Сверка чисел `voice_status.mts` vs python на одном дереве (python
+      voice_status.py уже удалён — сверка невозможна как была задумана;
+      кросс-проверка заменена на 16 тестов портов + смоук на реальном дереве).
+- [ ] Пункт приёмки про `voice_queue.sh` заменён — НЕТ: очереди остались bash.

@@ -18,22 +18,25 @@ description: Статус и прогноз генерации озвучки TS
 ## Команда
 
 ```bash
-python tools/voice_status.py                    # полный отчёт + замер (~70 с)
-python tools/voice_status.py --fast             # быстро (~6 с после оптимизации 2026-10-14), без замера
-python tools/voice_status.py --arc Other        # точечно: по конкретной арке
+node tools/generate/scripts/voice_status.mts       # полный отчёт + замер (~70 с)
+node tools/generate/scripts/voice_status.mts --fast  # быстро (~6 с), без замера
+node tools/generate/scripts/voice_status.mts --arc Other        # точечно: по конкретной арке
                                                 #   (RU/EN, по голосам, размер)
-python tools/voice_status.py --char Sarah       # точечно: по персонажу
+node tools/generate/scripts/voice_status.mts --char Sarah       # точечно: по персонажу
                                                 #   (план фраз, сделано, по аркам)
-python tools/voice_status.py --detail           # подробный: арки×проценты×размер,
+node tools/generate/scripts/voice_status.mts --detail           # подробный: арки×проценты×размер,
                                                 #   топ голосов, вокеры, сироты
 ```
+
+(Тул портирован на TS 2026-10-22; python voice_status.py удалён как легаси —
+семантика команд и флагов та же.)
 
 ## Что выводит тул
 
 - План: 134 534 фразы (67 267 озвучиваемых × RU+EN)
 - RU/EN: сколько готово (стемы `.opus`/`.wav` — сейчас в корпусе только opus; пара wav+opus = один), %, размер (оба формата)
 - Арки: сделано/всего, завершённые помечены ✓
-- Вокеры: число voice_batch-процессов (python/2), активная арка (из логов gen_all_{ru,en}.log)
+- Вокеры: число voice_batch-процессов (node, до 2 очередей), активная арка (из логов gen_all_{ru,en}.log)
 - Здоровье: tmp-сироты loudnorm (_.ln.tmp.wav — мусор от kill; с 2026-10-14 в ai_voice только opus, легаси-wav удалены, поэтому таких сирот не бывает) и недописанные_.part (обрыв конверта, атомарная запись — финалы целы)
 - Скорость (замер прироста 60 с) → фраз/час, остаток, прогноз в часах/днях
 
