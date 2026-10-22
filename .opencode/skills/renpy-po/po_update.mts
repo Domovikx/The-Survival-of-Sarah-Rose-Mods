@@ -8,8 +8,9 @@
  *      закоммиченного файла бдит e2e-гард байт-в-байт;
  *   2. npm run po:update — переводы переносятся в новый POT по правилам
  *      NeonTranslator/po_update.py (порт):
- *      - exact (msgid, msgctxt) — перевод перенесён, комментарии
- *        (#. uid/emotion) освежены из POT;
+ *      - exact (msgid, msgctxt) — перевод перенесён, тон (#. emotion)
+ *        освежён из POT; arc/scene/uid в .po не дублируются — только POT
+ *        (связь по ключу msgctxt+msgid, см. keepEmotionComments);
  *      - ключ исчез, но тот же EN-текст жив под другим контекстом
  *        (переклассификация спикера, narration -> speaker:Narrator) —
  *        перевод спасён ретаргетом с пометкой, чужой перевод не перетирается;
@@ -27,7 +28,7 @@ import { readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
-import { parsePo, renderPo } from "./po_core.mts";
+import { keepEmotionComments, parsePo, renderPo } from "./po_core.mts";
 import type { PoEntry } from "./po_core.mts";
 
 const SKILL_DIR = dirname(fileURLToPath(import.meta.url));
@@ -125,6 +126,12 @@ export function mergePoUpdate(poText: string, potText: string): UpdateResult {
     }
     merged.push(keep);
     stats.legacyKept += 1;
+  }
+
+  // Контракт языкового .po (2026-10-22): из POT течёт только тон;
+  // arc/scene/uid остаются в POT и читаются по ключу (msgctxt, msgid).
+  for (const e of merged) {
+    e.comments = keepEmotionComments(e.comments);
   }
 
   merged.sort(

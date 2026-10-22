@@ -9,6 +9,7 @@
  */
 
 import assert from "node:assert/strict";
+import { createHash } from "node:crypto";
 import { mkdirSync, rmSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -67,9 +68,9 @@ function writeGame(script: string): void {
   writeFileSync(join(DIR, "script.rpy"), script, "utf-8");
 }
 
-function potOf(script: string): string {
+function potOf(script: string, emotions?: Record<string, string>): string {
   writeGame(script);
-  return renderPot(scanGame(DIR), POT_DATE);
+  return renderPot(scanGame(DIR, emotions ? { emotions } : {}), POT_DATE);
 }
 
 const TRANSLATIONS: Record<string, string> = {
@@ -133,20 +134,21 @@ test("исчезнувший непереведённый ключ выкиды�
   assert.ok(!merged.some((e) => e.msgid === "Doomed line."));
 });
 
-test("merge детерминирован, round-trip без потерь, uid-комментарии свежие", () => {
+test("merge детерминирован, round-trip, в .po течёт только тон", () => {
+  const helloUid = createHash("md5").update("Hello there!", "utf8").digest("hex");
   const po1 = poFromPot(potOf(SCRIPT_V1));
-  const pot2 = potOf(SCRIPT_V2);
+  const pot2 = potOf(SCRIPT_V2, { [helloUid]: "Warmly, amused" });
   const a = mergePoUpdate(po1, pot2);
   const b = mergePoUpdate(po1, pot2);
   assert.equal(renderPo(a.entries, a.headerLines), renderPo(b.entries, b.headerLines));
 
   const reparsed = parsePo(renderPo(a.entries, a.headerLines)).filter((e) => e.msgid);
   assert.equal(reparsed.length, a.entries.length);
+  for (const e of reparsed) {
+    assert.ok(!e.comments.some((c) => /^(arc|scene|uid):/.test(c)), `arc/scene/uid не дублируются в .po: ${e.msgid}`);
+  }
   const hello = reparsed.find((e) => e.msgid === "Hello there!");
-  assert.ok(
-    hello?.comments.some((c) => /^uid: [0-9a-f]{32}$/.test(c)),
-    "uid-комментарий обновлён из POT v2",
-  );
+  assert.deepEqual(hello?.comments, ["emotion: Warmly, amused"], "тон из POT пережил merge");
 });
 
 test("повторный запуск по освежённому po — идемпотентен (fixpoint)", () => {
