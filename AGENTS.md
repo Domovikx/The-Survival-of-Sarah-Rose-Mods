@@ -184,21 +184,14 @@ tools/generate/scripts/
                                #   (процессы ищет по cmdline voice_batch.py/voice_queue.sh;
                                #   пауза = NtSuspendProcess, метка — output/voice/ctl_paused_{lang}.json)
                                #   Двойной клик: voice-start/stop/pause/resume/status/watch.cmd
-  convert_all_opus.py          # УСТАРЕЛ (с 2026-10-14: wav в audio удалены,
-                               #   конвертировать нечего; код оставлен для
-                               #   рефов/истории) — ПОЛНАЯ КОНВЕРТАЦИЯ wav -> opus
-                               #   24k (резумабельная, маркеры pause/stop,
-                               #   атомарная .part-запись)
-  convert_opus_ctl.py          # УСТАРЕЛ (см. convert_all_opus) — ПУЛЬТ конвертером:
-                               #   start/pause/resume/stop/status
-                               #   Двойной клик: convert-opus-start/pause/resume/stop/status.cmd
-                               #   Ночная цепочка: convert-opus-night.cmd (TSSR-ConvertOpus 23:00:
-                               #   докрутка -> voice_ctl start all; на пустом wav выходит 0)
 ```
 
 ### Ребут ПК: порядок запуска (двойной клик, без админа)
 
-1. `tools/generate/scripts/start-ollama-vulkan.cmd` — Vulkan-сервер LLM (если нужен)
+1. LLM — действий НЕ требует: LM Studio стартует автозагрузкой
+   (Startup → `start-lmstudio.cmd`: сервер + qwen3.5-9b на GPU);
+   контроль: `lms server status`. Освободить VRAM под озвучку —
+   `tools/generate/scripts/stop-lmstudio.cmd`
 2. `tools/generate/scripts/voice-start.cmd` — обе очереди озвучки (resumable, низкий приоритет)
 
 Контроль: `tools/generate/scripts/voice-status.cmd` (сводка), `tools/generate/scripts/voice-watch.cmd` (живой
@@ -487,68 +480,69 @@ node --test tools/generate/scripts/add_candidate.test.mts tools/generate/scripts
 python -m pytest tests/ -v
 ```
 
-## Локальные LLM (проверено 2026-09-04)
+## Локальные LLM (проверено 2026-10-22)
 
-Железо: Ryzen 7 7800X3D, 32 ГБ RAM, AMD RX 6600 XT 8 ГБ (Vulkan), Windows 11.
+Железо: Ryzen 7 7800X3D, 32 ГБ RAM, **NVIDIA RTX 5070 Ti 16 ГБ (CUDA)**,
+Windows 11.
 
-### Драйвер AMD — ОБЯЗАТЕЛЬНО свежий
+### Запуск и остановка (скрипты в tools/generate/scripts/)
 
-Vulkan-инференс упирается в драйвер: со старым Adrenalin (2024) ollama пишет
-«AMD driver is too old» и скорость падает до 2.6 tok/s (медленнее CPU!).
-Обновлено до **Adrenalin 26.8.1** (авг 2026) → **39 tok/s, 100% GPU**.
-Минимальный установщик (818 МБ), права админа нужны (UAC).
-Ссылки: https://www.amd.com/en/support/downloads/drivers.html/graphics/radeon-rx/radeon-rx-6000-series/amd-radeon-rx-6600-xt.html
-(прямая: drivers.amd.com/drivers/installer/26.10/whql/amd-software-adrenalin-edition-26.8.1-minimalsetup-260818_web.exe)
+**LM Studio** (winget `ElementLabs.LMStudio`, v0.4.26) в headless-режиме:
+CLI `~/.lmstudio/bin/lms.exe`, сервер на **127.0.0.1:1234**
+(OpenAI-compatible `/v1`). ВСЕГДА используй `127.0.0.1:1234`, не localhost.
 
-### Запуск Vulkan-сервера (НЕ системный CPU-сервер!)
+- `start-lmstudio.cmd` — `lms server start` + `lms load qwen/qwen3.5-9b
+--gpu max` (загрузка модели ~5–9 с, 6.1 ГБ VRAM). После ребута сам:
+  ярлык «LM Studio Server» в автозагрузке (shell:startup) гоняет этот
+  скрипт свёрнутым.
+- `stop-lmstudio.cmd` — выгружает модели (VRAM 7.5 → 1.0 ГБ) и гасит
+  сервер: запускать, когда ПК нужен под озвучку (CUDA CosyVoice требует
+  VRAM) или другую тяжёлую GPU-задачу.
+- контроль: `lms server status`, `lms ls`; `curl 127.0.0.1:1234/v1/models`.
 
-ВНИМАНИЕ: Ollama app в трее держит СВОЙ сервер на 0.0.0.0:11434 (CPU).
-Если запрос идёт через `localhost`, IPv6-резолв (`::1`) может попасть на
-CPU-сервер (5.5 tok/s вместо 39!). ВСЕГДА используй `127.0.0.1:11434`.
+| Модель (LM Studio) | Размер | Скорость (CUDA 5070 Ti)  | Назначение                              |
+| ------------------ | ------ | ------------------------ | --------------------------------------- |
+| `qwen/qwen3.5-9b`  | 6.1 ГБ | **~100+ ток/с, GPU max** | ОСНОВНАЯ: чат, ресёрчи, разметка эмоций |
 
-```bash
-export OLLAMA_VULKAN=1
-OLLAMA_VULKAN=1 nohup ollama serve > output/voice/ollama_vk.log 2>&1 &
-# проверка: ollama ps → PROCESSOR 100% GPU; лог: "inference compute ... RX 6600 XT"
-```
-
-ПРОСТОЙ СПОСОБ НЕ ЗАБЫТЬ: `tools/generate/scripts/start-ollama-vulkan.cmd` — двойной клик
-после каждого ребута ПК (без админа), сам запускает Vulkan-сервер
-и показывает `ollama ps`. Автозагрузка (если хочется совсем без рук):
-`Win+R → shell:startup` → ярлык на этот .cmd.
-
-### Модели (ollama, уже скачаны) и скорости
-
-| Модель               | Q4     | Скорость (Vulkan 26.8.1) | Назначение                          |
-| -------------------- | ------ | ------------------------ | ----------------------------------- |
-| `qwen3.5:9b`         | 5.5 ГБ | **39 tok/s, 100% GPU**   | ОСНОВНАЯ: чат, разметка эмоций, всё |
-| `qwen3.6:27b-q4_K_M` | 17 ГБ  | 3.5 tok/s (67% CPU)      | только ночные/оффлайн задачи        |
-| `qwen2.5:14b`        | 9 ГБ   | ~10 tok/s                | запасная                            |
-| `qwen2.5-coder:7b`   | 4.7 ГБ | ~35 tok/s                | код                                 |
-
-Qwen 3.5 9B: Apache 2.0, 262K контекст, мультимодальная, 119 языков (русский
-отличный), thinking-режим (для скорости в API: `"think": false`).
-LM Studio (headless `lms server start --port 1234`) НЕ рекомендуется —
-тормозит (~2 tok/s) и зависает; оставлен GUI для ручных тестов.
+- 256K контекст, vision (Text+Image), thinking-режим (для скорости в API:
+  `"think": false` — иначе thinking сжирает токены на простых запросах);
+- модели лежат в `~/.lmstudio/models/` (есть также mimo-v2.6-distill-9b,
+  deepseek-r1-qwen3-8b, nomic-embedding); новая — `lms get <имя>` + строка
+  в `models` провайдера `~/.config/opencode/opencode.json`;
+- `qwen3.5:27b` (17–20 ГБ) в 16 ГБ VRAM не влезает целиком — не ставить;
+- **`emotion_tag.py --llm-url` зовёт ollama-API (`/api/generate`) — с LM
+  Studio не работает**; повторная LLM-разметка эмоций будет на TS-порте
+  (`/v1/chat/completions`).
 
 ### Подключение к opencode
 
-`~/.config/opencode/opencode.json` — провайдер `ollama-local`
-(openai-compatible, baseURL **http://127.0.0.1:11434/v1** — именно 127.0.0.1,
-не localhost!). Модели: qwen3.5-9b, qwen3.6-27b, qwen2.5-coder-7b, qwen2.5-14b.
-Выбор в TUI: `/models` (или Shift+Tab) → Ollama Local → qwen3.5-9b.
+`~/.config/opencode/opencode.json` — провайдер `lmstudio-local`
+(openai-compatible, baseURL **http://127.0.0.1:1234/v1** — именно 127.0.0.1,
+не localhost!). Модель: qwen/qwen3.5-9b. Выбор в TUI: `/models` (или
+Shift+Tab) → LM Studio Local → qwen/qwen3.5-9b.
 
 ВАЖНО (грабли 2026-09-04): если провайдера НЕТ в списке моделей — проверь
 `~/.config/opencode/opencode.jsonc` (грузится поверх opencode.json и
-ПЕРЕКРЫВАЕТ его): там может быть `disabled_providers: ["ollama-local", ...]`
+ПЕРЕКРЫВАЕТ его): там может быть `disabled_providers: ["lmstudio-local", ...]`
 и мусорные провайдеры с битым baseURL — удали их. Правка конфига требует
 ПЕРЕЗАПУСКА opencode (конфиг читается один раз при старте).
 
-Ярлык на рабочий стол «Ollama Vulkan Start» → `tools/generate/scripts/start-ollama-vulkan.cmd`
-(создан 2026-09-04; если пропал — пересоздать через PowerShell:
-`WScript.Shell.CreateShortcut($env:USERPROFILE\Desktop\...)`).
+### История смены стека (2026-09..2026-10)
 
-### GPU для CosyVoice (DirectML) — НЕ ВЫШЛО (2026-09-04)
+1. AMD RX 6600 XT + ollama/Vulkan: 39 tok/s, после каждого ребута — двойной
+   клик `start-ollama-vulkan.cmd`; старый Adrenalin → 2.6 tok/s.
+2. 2026-10-22: машина на RTX 5070 Ti/CUDA; ollama v0.40.8 установлена и В
+   ТОТ ЖЕ ДЕНЬ удалена (владелец выбрал LM Studio): пакет, автозагрузка,
+   `~/.ollama`, env `OLLAMA_KEEP_ALIVE` — вычищены; скрипт
+   `start-ollama-vulkan.cmd` удалён. Правило «127.0.0.1 вместо localhost» —
+   из той же истории, оставлено.
+
+### GPU для CosyVoice (DirectML) — НЕ ВЫШЛО (2026-09-04, история AMD)
+
+АКТУАЛЬНО (2026-10): CosyVoice гоняется на CUDA RTX 5070 Ti —
+`voice_batch.py --device cuda` (fp16, guard + загрузка на старте), rtf ~3
+(было ~8 на CPU; замеры — задача GPU-миграции озвучки). Опыт DirectML ниже —
+исторический; патчи в коде остаются безвредными (env-гейт `TSSR_DML=1`).
 
 Пробовали ускорить генерацию аудио на RX 6600 XT через torch-directml:
 `pip install torch-directml` (0.2.5.dev240914, старый PyPI-релиз) + torch 2.4.1.
