@@ -23,3 +23,6 @@
 *.ts text
 *.mts text
 *.mjs text
+
+# e2e-гард potgen сравнивает байт-в-байт с генерацией (LF) — держим LF на диске
+*.pot eol=lf
