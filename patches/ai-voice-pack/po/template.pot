@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: TSSR-Mods 1.0\n"
-"POT-Creation-Date: 2026-10-22 06:05+0000\n"
+"POT-Creation-Date: 2026-10-22 08:43+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
