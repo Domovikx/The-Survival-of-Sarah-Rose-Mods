@@ -52,7 +52,7 @@ describe("каталог и резолв спикеров (SPEAKERS из casts.m
     assert.equal(narration, 43_236, `narration: ${narration}`);
   });
 
-  it("у каждой фразы есть текст своего языка и эмоция из emotions.json", () => {
+  it("у каждой фразы есть текст своего языка и эмоция из POT-метаданных", () => {
     const phrases = selectPhrases(entries, baseArgs);
     const withEmo = phrases.filter((p) => p.emotion);
     assert.ok(withEmo.length / phrases.length > 0.99, "эмоции покрывают >99% фраз");

@@ -19,7 +19,11 @@ ZIP_STORED = заметно быстрее, размер тот же).
 Артефакты: <repo>/dist/*.zip  (dist/ в .gitignore — зипы не коммитим).
 """
 
+import json
+import shutil
+import subprocess
 import sys
+import tempfile
 import zipfile
 from pathlib import Path
 
@@ -46,8 +50,10 @@ MOD_EXCLUDE = {"audio", "tools", "tests", "catalog", "README.md", "MOD.md",
                "update_check.txt", "last_menu_hook.txt", "voice_debug.log"}
 
 # Рантайм-каталог: voice_config.rpy грузит ТОЛЬКО эти два JSON (label -> arc,
-# who -> variant); остальные 29M catalog/ — вспомогательные, в zip не идут.
+# who -> variant); в zip идут как АРТЕФАКТЫ СБОРКИ — в репе каталог/ не живёт
+# (легаси выпищен 2026-10-22), генерит catalog_gen.mts из POT + casts.
 CATALOG_RUNTIME = ("label_arc.json", "voice_list.json")
+CATALOG_GEN = PATCH / "tools" / "generate" / "scripts" / "catalog_gen.mts"
 
 ENVIRONMENT_TXT = """\
 # TSSR mod: внешний search path (Ren'Py читает этот файл в корне игры при старте).
@@ -118,6 +124,50 @@ def _tree_files(root, exclude=frozenset()):
     return sorted(files)
 
 
+_catalog_cache = None
+
+
+def _catalog_payload():
+    """Сборочные рантайм-мапы: node catalog_gen.mts -> {имя файла: bytes}.
+
+    Единственный источник правды — po/template.pot (инвентарь label → arc)
+    и casts/voices.mts (войсы); в репе каталог/ не живёт. Любая проблема
+    генератора = ПОНИЯТНАЯ ошибка сборки: в дистрибутив не попадает пустой
+    или неполный каталог (edge-контракт приёмки).
+    """
+    global _catalog_cache
+    if _catalog_cache is None:
+        staging = tempfile.mkdtemp(prefix="tssr_catalog_")
+        try:
+            r = subprocess.run(
+                ["node", str(CATALOG_GEN), "--out-dir", staging],
+                capture_output=True, text=True, encoding="utf-8", errors="replace",
+            )
+            if r.returncode != 0:
+                sys.exit(
+                    "СБОРКА ОСТАНОВЛЕНА: генератор рантайм-каталога упал "
+                    "(%s):\n%s%s" % (CATALOG_GEN, r.stdout or "", r.stderr or "")
+                )
+            payload = {}
+            for fn in CATALOG_RUNTIME:
+                p = Path(staging) / fn
+                if not p.is_file() or p.stat().st_size == 0:
+                    sys.exit("СБОРКА ОСТАНОВЛЕНА: %s не сгенерирован (%s)"
+                             % (fn, CATALOG_GEN))
+                data = p.read_bytes()
+                try:
+                    doc = json.loads(data.decode("utf-8"))
+                except Exception as e:
+                    sys.exit("СБОРКА ОСТАНОВЛЕНА: %s — битый JSON: %s" % (fn, e))
+                if not isinstance(doc, dict) or not doc:
+                    sys.exit("СБОРКА ОСТАНОВЛЕНА: %s пустой объект" % fn)
+                payload[fn] = data
+            _catalog_cache = payload
+        finally:
+            shutil.rmtree(staging, ignore_errors=True)
+    return _catalog_cache
+
+
 def build_main(out_dir):
     """Ядро патча: атомарная папка мода mods/tssr-ai-voice-pack/ + корень.
 
@@ -136,9 +186,11 @@ def build_main(out_dir):
         # Зеркало установки: всё дерево патча кроме dev-only (MOD_EXCLUDE)
         for p in _tree_files(PATCH, MOD_EXCLUDE):
             _add(zf, p, MOD_DIR + "/" + p.relative_to(PATCH).as_posix())
-        # Рантайм-каталог: в зип идут ТОЛЬКО два JSON из allowlist
+        # Рантайм-каталог — артефакт сборки (каталог/ в репе нет): генератор
+        # валит сборку сам, если POT/войсы не дают полные мапы.
         for fn in CATALOG_RUNTIME:
-            _add(zf, PATCH / "catalog" / fn, MOD_DIR + "/catalog/" + fn)
+            zf.writestr(MOD_DIR + "/catalog/" + fn, _catalog_payload()[fn],
+                        compress_type=zipfile.ZIP_DEFLATED)
     with zipfile.ZipFile(target) as zf:
         infos = zf.infolist()
         nfiles, nbytes = len(infos), sum(i.file_size for i in infos)

@@ -55,8 +55,18 @@
  *                           паритет со старым полем scene каталога.
  *   #. uid: <md5(msgid)>  — наш id фразы = ключ каталога и суффикс аудио
  *                           (uid__Who.opus), мостик POT → аудио/эмоции;
- *   #. emotion: <тон>      — из catalog/emotions.json (ключ md5), только для
- *                           speaker:* и narration (меню/ui не озвучиваются).
+ *   #. emotion: <тон>      — тон фразы (ключ md5), только для speaker:* и
+ *                           narration (меню/ui не озвучиваются). Источник:
+ *                           roundtrip САМОГО шаблона (тон переживает регенерацию,
+ *                           пока текст не изменился) + overlay --emotions FILE
+ *                           (инкрементальная разметка). catalog/emotions.json
+ *                           удалён 2026-10-22 (каталог-легаси выпищен).
+ *
+ * Инвентарь лейблов (для рантайм-мапы label → arc, см. catalog_gen.mts):
+ *   #. label-map: <label>=<arc>  — КАЖДЫЙ сюжетный label игры (включая те,
+ *                           чьи строки схлопнуты дедупом в другие сцены —
+ *                           scene-комментарии дают только 241 из ~264).
+ *                           Блок после шапки POT, сортировка по label.
  *
  * Запуск:
  *   node .opencode/skills/renpy-po/potgen.mts [--game DIR] [--out FILE]
@@ -68,11 +78,11 @@
  */
 
 import { createHash } from "node:crypto";
-import { mkdirSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
-import { normalizeText, poEscape } from "./po_core.mts";
+import { normalizeText, parsePo, poEscape } from "./po_core.mts";
 
 const SKILL_DIR = dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = join(SKILL_DIR, "..", "..", "..");
@@ -88,8 +98,6 @@ export const SPEAKERS_MTS_NAME = "template.speakers.mts";
 export function speakersMtsPath(potOut: string): string {
   return join(dirname(potOut), SPEAKERS_MTS_NAME);
 }
-/** Каталог эмоций (uid → тон): ключ = md5(EN-текста) = наш uid фразы. */
-const DEFAULT_EMOTIONS = join(REPO_ROOT, "patches", "ai-voice-pack", "catalog", "emotions.json");
 
 export const CTX_MENU = "menu";
 export const CTX_SPEAKER_NAME = "speaker-name";
@@ -173,7 +181,7 @@ export interface PotEntry {
   msgctxt: string;
   n: number; // сколько раз встретилась в игре
   uid: string; // md5(msgid) — id фразы для каталога и суффикс аудиофайла
-  emotion?: string; // тон из emotions.json (только speaker/narration)
+  emotion?: string; // тон из POT/overlay (только speaker/narration)
   arc?: string; // арка текущего label (правила arcOfLabel) — роутинг аудио POT-мапы
   scene?: string; // label записи (сцена) — тоньше арки, таргетинг --scene
 }
@@ -288,6 +296,8 @@ export interface PotStats {
 
 export interface PotCatalog {
   entries: Map<string, PotEntry>; // ключ: `${msgctxt}\0${msgid}`
+  /** КАЖДЫЙ сюжетный label игры -> arc (инвентарь для рантайм-мапы label_arc). */
+  labels: Map<string, string>;
   stats: PotStats;
 }
 
@@ -401,6 +411,13 @@ export function parseRpyFile(filePath: string, catalog: PotCatalog, defineDispla
       sawLabel = true;
       inMenu = false;
       currentLabel = m[1];
+      // Инвентарь лейблов: пишем КАЖДЫЙ сюжетный label (не только те, чьи
+      // строки пережили дедуп) — рантайм-мапе нужен полный список.
+      if (!noArc) {
+        const lab = normLabel(m[1]);
+        const arc = arcOfLabel(lab);
+        if (arc) catalog.labels.set(lab, arc);
+      }
       continue;
     }
 
@@ -488,13 +505,14 @@ export function parseRpyFile(filePath: string, catalog: PotCatalog, defineDispla
 
 /** Опции сканирования (метаданные озвучки для комментариев POT). */
 export interface ScanOptions {
-  emotions?: Record<string, string>; // md5(msgid) -> тон (catalog/emotions.json)
+  emotions?: Record<string, string>; // md5(msgid) -> тон (--emotions <файл>, черновик emotion_tag.mts)
 }
 
 /** Строит каталог POT по всем .rpy в gameDir. */
 export function scanGame(gameDir: string, opts: ScanOptions = {}): PotCatalog {
   const catalog: PotCatalog = {
     entries: new Map(),
+    labels: new Map(),
     stats: {
       files: 0,
       scanned: 0,
@@ -528,7 +546,7 @@ export function scanGame(gameDir: string, opts: ScanOptions = {}): PotCatalog {
   catalog.stats.normTwins = [...byNorm.values()].filter((s) => s.size > 1).length;
 
   // Эмоции: только озвучиваемые (инвариант speaker:* = озвучиваемо, теперь
-  // включая Narrator; меню/ui/имена — не речь, их ключей в emotions.json нет).
+  // включая Narrator; меню/ui/имена — не речь, их ключей в разметке тона нет).
   if (opts.emotions) {
     for (const e of catalog.entries.values()) {
       const em = opts.emotions[e.uid];
@@ -559,6 +577,12 @@ export function renderPot(catalog: PotCatalog, now: Date = new Date()): string {
       (a.msgid < b.msgid ? -1 : a.msgid > b.msgid ? 1 : 0) ||
       (a.msgctxt < b.msgctxt ? -1 : a.msgctxt > b.msgctxt ? 1 : 0),
   );
+  // Инвентарь лейблов (label → arc): полный список — scene-комментарии
+  // неполны (дедуп схлопывает сцены без уникальных строк), рантайм-мапе
+  // (label_arc.json) нужен каждый сюжетный label. Блок сразу после шапки.
+  for (const lab of [...(catalog.labels ?? new Map<string, string>()).keys()].sort()) {
+    out.push(`#. label-map: ${lab}=${catalog.labels.get(lab)}`);
+  }
   for (const e of sorted) {
     if (e.arc) out.push(`#. arc: ${e.arc}`);
     if (e.scene) out.push(`#. scene: ${e.scene}`);
@@ -570,6 +594,40 @@ export function renderPot(catalog: PotCatalog, now: Date = new Date()): string {
     out.push("");
   }
   return out.join("\n").replace(/\n+$/, "") + "\n";
+}
+
+/**
+ * Разбирает блок инвентаря лейблов `#. label-map: <label>=<arc>` (самый
+ * первый блок после шапки POT) — источник рантайм-мапы label_arc.json
+ * (см. renderPot). Битая строка без `=` — ошибка, не молчаливый пропуск.
+ */
+export function parseLabelMap(potText: string): Record<string, string> {
+  const out: Record<string, string> = {};
+  const re = /^#\. label-map: (.+)$/gm;
+  let m: RegExpExecArray | null;
+  while ((m = re.exec(potText)) !== null) {
+    const line = m[1];
+    const eq = line.indexOf("=");
+    if (eq <= 0 || eq === line.length - 1) {
+      throw new Error(`битая строка label-map: "${line}" (ожидается label=arc)`);
+    }
+    out[line.slice(0, eq)] = line.slice(eq + 1);
+  }
+  return out;
+}
+
+/**
+ * Тон шаблона: uid(md5(msgid)) -> emotion из комментариев `#. emotion:`
+ * (roundtrip: тон переживает регенерацию POT, пока текст не менялся).
+ */
+export function loadEmotionsFromPot(potText: string): Record<string, string> {
+  const out: Record<string, string> = {};
+  for (const e of parsePo(potText)) {
+    if (!e.msgid) continue; // шапка
+    const c = e.comments.find((x) => x.startsWith("emotion:"));
+    if (c) out[uidOf(e.msgid)] = c.slice("emotion:".length).trim();
+  }
+  return out;
 }
 
 /** Спикеры POT (msgctxt "speaker:*") без префикса, без дублей, отсортированы. */
@@ -653,19 +711,36 @@ function main(): void {
   }
 
   const emFlag = argv.indexOf("--emotions");
-  const emPath = emFlag >= 0 ? argv[emFlag + 1] : DEFAULT_EMOTIONS;
-  let emotions: Record<string, string> | undefined;
+  let emotions: Record<string, string> = {};
+  let emoSource = "отключён (--no-emotions)";
   if (!argv.includes("--no-emotions")) {
-    if (!emPath) {
-      console.error("ERROR: --emotions требует значение (см. --help)");
-      process.exit(1);
+    // Источник тона — сам шаблон (roundtrip): тон переживает регенерацию,
+    // пока текст не менялся (catalog/emotions.json удалён 2026-10-22).
+    if (existsSync(outFile)) {
+      emotions = loadEmotionsFromPot(readFileSync(outFile, "utf-8"));
+      emoSource = `roundtrip ${outFile}`;
+    } else {
+      emoSource = "нет (шаблона ещё не было — первичная генерация)";
+      console.warn(`WARN: ${outFile} не найден — первичная генерация без #. emotion:`);
     }
-    try {
-      emotions = JSON.parse(readFileSync(emPath, "utf-8")) as Record<string, string>;
-    } catch (e) {
-      console.warn(
-        `WARN: не прочитан файл эмоций ${emPath} (${e instanceof Error ? e.message : String(e)}) — пишу без #. emotion:`,
-      );
+    if (emFlag >= 0) {
+      const emPath = argv[emFlag + 1];
+      if (!emPath) {
+        console.error("ERROR: --emotions требует значение (см. --help)");
+        process.exit(1);
+      }
+      // Явный файл — overlay поверх roundtrip (инкрементальная разметка:
+      // старый тон сохраняется, новый/исправленный добирается из файла).
+      try {
+        const overlay = JSON.parse(readFileSync(emPath, "utf-8")) as Record<string, string>;
+        emotions = { ...emotions, ...overlay };
+        emoSource += ` + overlay ${emPath}`;
+      } catch (e) {
+        console.error(
+          `ERROR: не прочитан файл эмоций ${emPath} (${e instanceof Error ? e.message : String(e)}) — без тона не пишу`,
+        );
+        process.exit(1);
+      }
     }
   }
 
@@ -686,11 +761,12 @@ function main(): void {
   console.log(`  normalizeText-семей >1 варианта (кандидаты prefill): ${s.normTwins}`);
   const withEmotion = [...catalog.entries.values()].filter((e) => e.emotion).length;
   console.log(
-    `  с метаданными emotion: ${withEmotion} (ключей в файле: ${emotions ? Object.keys(emotions).length : 0})`,
+    `  с метаданными emotion: ${withEmotion} (источник: ${emoSource}; ключей: ${Object.keys(emotions).length})`,
   );
   const withArc = [...catalog.entries.values()].filter((e) => e.arc).length;
   const noArcCount = catalog.entries.size - withArc;
   const arcs = new Set([...catalog.entries.values()].map((e) => e.arc).filter((a): a is string => !!a));
+  console.log(`  инвентарь лейблов (label-map): ${catalog.labels.size}`);
   console.log(`  с метаданными arc: ${withArc} (${arcs.size} арок), без арки: ${noArcCount} (вне label/не-сюжет)`);
 }
 

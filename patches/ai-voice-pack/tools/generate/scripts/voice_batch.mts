@@ -40,8 +40,6 @@ const SCRIPTS_DIR = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(SCRIPTS_DIR, "..");
 /** patches/ai-voice-pack */
 export const PKG_ROOT = join(ROOT, "..", "..");
-const CATALOG_DIR = join(PKG_ROOT, "catalog");
-const EMOTIONS_JSON = join(CATALOG_DIR, "emotions.json");
 /** Источник каталога фраз — POT (единая мапа озвучки) + ru.po (переводы). */
 const POT_FILE = join(PKG_ROOT, "po", "template.pot");
 const RU_PO_FILE = join(PKG_ROOT, "po", "ru.po");
@@ -65,11 +63,13 @@ export interface CatalogEntry {
   arc: string;
   scene?: string | null;
   category: string;
+  /** Тон диктора: `#. emotion:` шаблона (emotions.json удалён — тон живёт в POT). */
+  emotion?: string | null;
 }
 
 /**
  * Каталог фраз из po/template.pot (+ переводы из po/ru.po по ключу
- * msgctxt+msgid). uid = md5(msgid) — та же формула, что у potgen/emotions.
+ * msgctxt+msgid). uid = md5(msgid) — та же формула, что у potgen.
  * Категория: speaker:Narrator -> narration, speaker:* -> dialogue,
  * menu/ui/speaker-name -> не-речь (в selectPhrases отфильтровываются).
  */
@@ -106,21 +106,10 @@ export function loadCatalog(): CatalogEntry[] {
       arc: comment(e.comments, "arc:") ?? "_unknown",
       scene: comment(e.comments, "scene:"),
       category,
+      emotion: comment(e.comments, "emotion:"),
     });
   }
   return out;
-}
-
-let emoCache: Record<string, string> | null = null;
-function loadEmotions(): Record<string, string> {
-  if (emoCache === null) {
-    try {
-      emoCache = JSON.parse(readFileSync(EMOTIONS_JSON, "utf8")) as Record<string, string>;
-    } catch {
-      emoCache = {};
-    }
-  }
-  return emoCache;
 }
 
 // ------------------------------------------------------------ рефы/спикеры -
@@ -198,7 +187,6 @@ function basenameNoExt(p: string): string {
 
 /** Фильтр каталога до фраз к генерации (порция select_phrases python). */
 export function selectPhrases(entries: CatalogEntry[], args: Args): Phrase[] {
-  const emotions = loadEmotions();
   const phrases: Phrase[] = [];
 
   if (args.text) {
@@ -256,7 +244,7 @@ export function selectPhrases(entries: CatalogEntry[], args: Args): Phrase[] {
     if (!ref) continue; // не озвучен (нет активного рефа) — как в python
     if (args.emotion) variant += `_${args.emotionTag}`;
     else if (args.noEmotion) variant += "_plain";
-    const emo = args.noEmotion ? null : args.emotion || emotions[e.uid] || null;
+    const emo = args.noEmotion ? null : args.emotion || e.emotion || null;
     const text = args.lang === "ru" ? e.new : e.old;
     if (!text) continue; // непереведённая реплика — синтезировать нечего
     const out = join(aiVoiceDir(args.lang), e.arc, `${e.uid}__${variant}.wav`);

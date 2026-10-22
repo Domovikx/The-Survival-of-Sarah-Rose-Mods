@@ -6,6 +6,7 @@
 только так uninstall = «удалить одну папку», а чужие моды не конфликтуют.
 """
 
+import json
 import os
 import sys
 import zipfile
@@ -82,6 +83,39 @@ def test_main_zip_repo_diagnostics_not_shipped(tmp_path):
             assert fn not in tops, fn
     catalog = sorted(r for r in rels if r.startswith("catalog/"))
     assert catalog == ["catalog/label_arc.json", "catalog/voice_list.json"]
+
+
+def test_zip_catalog_is_build_artifact_with_valid_content(tmp_path):
+    """Сборочный каталог в зипе: label_arc из POT-инвентаря (документированные
+    фиксы артефактов на месте), voice_list из casts (names+narrator).
+    В репе catalog/ не живёт — легаси выпищен 2026-10-22."""
+    assert not os.path.exists(os.path.join(ROOT, "catalog")), \
+        "catalog/ должен отсутствовать в репе (артефакты сборки)"
+    with _build_main(tmp_path) as zf:
+        arc = json.loads(zf.read(build_pack.MOD_DIR + "/catalog/label_arc.json"))
+        vl = json.loads(zf.read(build_pack.MOD_DIR + "/catalog/voice_list.json"))
+    assert len(arc) >= 100, len(arc)
+    # Документированные фиксы артефактов прежнего label_arc.json (3 шт.).
+    assert arc["VargaPath5"] == "VargaMarionPath"
+    assert arc["TrainingPathKate3"] == "Training"
+    assert arc["prostitutealaric1"] == "Other"
+    assert vl["narrator"] == "Narrator"
+    assert vl["names"]["Narrator"] == "Narrator"
+
+
+def test_build_stops_with_clear_error_when_catalog_gen_fails(tmp_path, monkeypatch):
+    """Edge: генератор каталога упал — сборка валится с понятной ошибкой,
+    а не пишет пустой/неполный каталог в дистрибутив."""
+    class _Fail:
+        returncode = 1
+        stdout = "boom out"
+        stderr = "boom err"
+
+    monkeypatch.setattr(build_pack.subprocess, "run", lambda *a, **k: _Fail())
+    monkeypatch.setattr(build_pack, "_catalog_cache", None)
+    with pytest.raises(SystemExit) as ei:
+        build_pack.build_main(tmp_path)
+    assert "СБОРКА ОСТАНОВЛЕНА" in str(ei.value)
 
 
 def test_environment_txt_is_relative():
@@ -187,11 +221,13 @@ def test_main_zip_is_mirror_of_patch_tree(tmp_path):
 
 
 def test_patch_root_is_install_mirror():
-    """В репе больше нет mod/ и tools/generate/catalog: корень патча сам
-    является папкой мода, каталог живёт в корне."""
+    """В репе больше нет mod/, tools/generate/catalog и каталога-легаси
+    catalog/: корень патча сам является папкой мода, рантайм-мапы —
+    артефакты сборки (catalog_gen.mts: POT + casts)."""
     assert not os.path.exists(os.path.join(ROOT, "mod"))
     assert not os.path.exists(os.path.join(ROOT, "tools", "generate", "catalog"))
-    for rel in ("catalog/label_arc.json", "catalog/voice_list.json",
-                "zzz_ui.rpy", "zzz_update_check.rpy",
+    assert not os.path.exists(os.path.join(ROOT, "catalog")), \
+        "каталог-легаси в репе запрещён (см. tasks/2026-10-22-catalog-legacy-removal)"
+    for rel in ("zzz_ui.rpy", "zzz_update_check.rpy",
                 "fonts/Literata-Regular.ttf", "images/ui/round.png"):
         assert os.path.isfile(os.path.join(ROOT, rel)), rel
