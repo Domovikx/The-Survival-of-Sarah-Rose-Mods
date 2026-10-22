@@ -26,7 +26,6 @@ fi
 
 export PYTHONIOENCODING=utf-8
 export OMP_NUM_THREADS=6
-PY="C:/tools/cosyvoice3/.venv/Scripts/python.exe"
 DIR="$(cd "$(dirname "$0")" && pwd)"   # каталог скрипта (scripts/)
 GEN_DIR="$(dirname "$DIR")"            # tools/generate: тут output/voice
 LOG="$GEN_DIR/output/voice/gen_all_${LANG_ARG}.log"
@@ -34,10 +33,11 @@ ARCS="Prologue StoryBeginnings Other WarriorPath MagePath BlackMonolith UnionKin
 
 for arc in $ARCS; do
   echo "=== START $LANG_ARG $arc $(date +%H:%M) ===" >> "$LOG"
-  "$PY" "$DIR/voice_batch.py" --arc "$arc" --lang "$LANG_ARG" >> "$LOG" 2>&1 &
+  node "$DIR/voice_batch.mts" --arc "$arc" --lang "$LANG_ARG" >> "$LOG" 2>&1 &
   BATCH_PID=$!
   sleep 1
-  # BelowNormal для venv-лаунчера и реального python (их два на воркер)
+  # BelowNormal для python-шинов (инференс идёт в python; node — лёгкий
+  # оркестратор, его приоритет не трогаем, чтобы не задеть чужие node)
   for p in $(wmic process where "name='python.exe'" get ProcessId 2>/dev/null | grep -oE "[0-9]+"); do
     wmic process where "processid=$p" call setpriority 16384 > /dev/null 2>&1
   done
