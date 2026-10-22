@@ -110,15 +110,17 @@ wav не пишется; `--keep-wav` = старая цепочка), легас
 `catalog/` (корень патча, зеркало установки) и `tools/generate/{voice_candidates,output}`.
 
 ```text
-catalog/   (КОРЕНЬ ПАТЧА)
-  voices.jsonl                 # 68 322 записи: uid, old, new, who, arc, scene, category
+catalog/   (КОРЕНЬ ПАТЧА; источник фраз — po/template.pot + po/ru.po,
+            ниже — рантайм-мапы дистрибутива и источник тона)
   label_arc.json               # label -> Arc (рантайм-мапа для voice_config.rpy)
-  missing_voices.md            # ЗАГЛУШКИ: кто без голоса (генерится voice_sync.py report)
-  voice_sync_report.md         # расхождения слоёв: NEW/BROKEN/ORPHAN
   voice_list.json              # РАНТАЙМ-мапа (имя -> variant, who -> имя);
                                #   генерится из кастов, читается voice_config.rpy
                                #   voices.yaml НЕ существует: озвучен = есть реф
                                #   {Имя}.wav; who-коды — в каст-yaml (who_codes)
+  emotions.json                # источник тона: md5(msgid) -> тон; читают potgen
+                               #   (--emotions) и voice_batch; НЕ легаси, не удалять
+                               #   (голосовые отчёты missing_voices.md /
+                               #   voice_sync_report.md выпищены 2026-10-22)
 tools/generate/voice_candidates/
   {Имя}/
     {Имя}.yaml                 # КОНТРАКТ (+ отчёт-поля скриптов, extra allowed;
@@ -136,7 +138,9 @@ tools/generate/scripts/
                                #   fs (безопасные операции), tts_env (пути моделей)
   voice_sync.py                # АКТУАЛИЗАТОР: status/update/migrate/report
                                #   (создаёт структуру новым, чинит пути, отчёты)
-  voice_catalog.py             # тл мода + script.rpy установки -> voices.jsonl + label_arc.json
+  voice_catalog.py             # ЛЕГАСИ: тл мода + script.rpy -> voices.jsonl +
+                               #   label_arc.json (jsonl выпищен 2026-10-22,
+                               #   источник фраз — POT; см. po/)
   voice_design.py              # VoiceDesign-генерация кандидатов -> generated/
   voice_presets.mts            # ЕДИНАЯ карта конфигов: audio/refs/design/batch/beastify
                                #   (был config/voice_presets.yaml; python читает json-дамп
@@ -225,16 +229,18 @@ tools/generate/scripts/
    (одним прогоном: mp3 -> ПЕРВЫЕ 10с -> чистка -> loudnorm -16/TP -1.5 ->
    корень каста: {Имя}.wav). Единый уровень громкости для ВСЕХ рефов.
 
-Категории (voices.jsonl): dialogue 22 328, narration 45 024, menu 491, ui 479.
-Озвучиваются только dialogue + narration, и только касты с активным рефом
-{Имя}.wav (остальные — пропуск, видны в missing_voices.md).
+Категории (POT-каталог, msgctxt): dialogue 25 121, narration 43 236 (голосуется),
+menu 525, ui 238. Озвучиваются только dialogue + narration, и только касты с
+активным рефом {Имя}.wav (остальные — пропуск); непереведённые ru-строки
+(пустой msgstr) тоже пропускаются.
 
 ## Актуализация (voice_sync)
 
 ```bash
 python tools/generate/scripts/voice_sync.py status    # сводка слоёв + расхождения (console)
 python tools/generate/scripts/voice_sync.py update --apply   # структура+заглушки новым, сводка
-python tools/generate/scripts/voice_sync.py report   # missing_voices.md + voice_sync_report.md
+python tools/generate/scripts/voice_sync.py report   # ЛЕГАСИ: пишет .md-отчёты в catalog/
+                                                    #   (в git не идут; заменит TS-порт)
 ```
 
 Безопасность: ничего не удаляет и не перетирает; `--apply` = реальные изменения,
@@ -261,13 +267,13 @@ npm run test:speakers         # 20 тестов (включая живые га�
 ## Пересборка каталога
 
 ```bash
-# ТОЛЬКО при апдейте игры (тексты поменялись). Источники: тл мода (patches/
-# ai-voice-pack/tl/ru) + script.rpy установки (TSSR_GAME или Steam-дефолт).
-# --diff: uid-манифесты added/changed/dropped в tmp/voice_delta/ — added
-# генерировать (voice_batch ru+en), changed переозвучить (ru --force --uid),
+# ТОЛЬКО при апдейте игры (тексты поменялись). Источник фраз — POT:
+npm run potgen        # template.pot перезаписан (e2e-гард байт-в-байт)
+npm run po:update     # ru.po досинхронизирован (точный перенос / ретаргет / новые пустые)
+# Дельта added/changed/dropped видна как git diff template.pot: added —
+# генерировать (voice_batch ru+en), changed переозвучить (--force --uid),
 # dropped (если были озвучены) — кандидаты на чистку audio/vo_*.
-python tools/generate/scripts/voice_catalog.py --diff catalog/voices.jsonl
-python tools/generate/scripts/voice_sync.py report  # обновить отчёты (заглушки + расхождения)
+python tools/generate/scripts/voice_sync.py status  # заглушки без рефов/контрактов (консоль)
 ```
 
 ## Добавление нового голоса (инкрементально, ничего не пересобирается)
@@ -298,7 +304,7 @@ C:\tools\cosyvoice3\.venv\Scripts\python.exe tools/generate/scripts/voice_batch.
 PY="C:\pinokio\api\Qwen3-TTS-Pinokio.git\app\venv\Scripts\python.exe"
 "$PY" tools/generate/scripts/voice_design.py --list                # каст
 "$PY" tools/generate/scripts/voice_design.py --char Carolyn --n 6  # 6 кандидатов -> generated/01..06.mp3
-python tools/generate/scripts/voice_sync.py report                 # обновить отчёты (missing_voices.md + voice_sync_report.md)
+python tools/generate/scripts/voice_sync.py status                # сводка: кто без голоса (консоль)
 ```
 
 Правила: каст в `voice_candidates/{Имя}/{Имя}.yaml` (instruct_en — ФИЗИОГНОМИКА + СОЦИАЛЬНАЯ РОЛЬ для генерации:

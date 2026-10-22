@@ -47,12 +47,12 @@
  *                           неизвестные лейблы → Other; лейблы галереи
  *                           (art.rpy, replay_gallery.rpy) и splashscreen —
  *                           без арки (не сюжет). Первый label-владелец
- *                           записи побеждает (как arc в voices.jsonl).
+ *                           записи побеждает.
  *   #. scene: <Сцена>      — label записи: тоньше арки (сцена = label
  *                           игры) — таргетинг --scene при точечной
  *                           перегенерации. Только сюжетные файлы, только
  *                           внутри label; якорь первый-побеждает —
- *                           семантика паритетна scene в voices.jsonl.
+ *                           паритет со старым полем scene каталога.
  *   #. uid: <md5(msgid)>  — наш id фразы = ключ каталога и суффикс аудио
  *                           (uid__Who.opus), мостик POT → аудио/эмоции;
  *   #. emotion: <тон>      — из catalog/emotions.json (ключ md5), только для
@@ -370,7 +370,7 @@ export function parseRpyFile(filePath: string, catalog: PotCatalog, defineDispla
     if (slot) {
       slot.n += 1;
       catalog.stats.mergedDupes += 1;
-      // Дедуп: первый label-владелец побеждает (как arc в voices.jsonl);
+      // Дедуп: первый label-владелец побеждает (паритет с прежним каталогом);
       // пустой якорь добирается, если более поздняя встреча внутри label.
       if (!slot.arc && arc !== undefined) slot.arc = arc;
       if (!slot.scene && lab !== undefined) slot.scene = lab;

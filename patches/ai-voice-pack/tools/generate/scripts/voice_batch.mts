@@ -30,6 +30,7 @@ import { fileURLToPath, pathToFileURL } from "node:url";
 import { parseArgs } from "node:util";
 
 import { SPEAKERS, VOICES } from "../../../casts/casts.mts";
+import { parsePo } from "../../../../../.opencode/skills/renpy-po/po_core.mts";
 import { BATCH } from "./voice_presets.mts";
 import { VoiceWorker } from "./voicekit/worker.mts";
 
@@ -40,8 +41,10 @@ const ROOT = join(SCRIPTS_DIR, "..");
 /** patches/ai-voice-pack */
 export const PKG_ROOT = join(ROOT, "..", "..");
 const CATALOG_DIR = join(PKG_ROOT, "catalog");
-const VOICES_JSONL = join(CATALOG_DIR, "voices.jsonl");
 const EMOTIONS_JSON = join(CATALOG_DIR, "emotions.json");
+/** Источник каталога фраз — POT (единая мапа озвучки) + ru.po (переводы). */
+const POT_FILE = join(PKG_ROOT, "po", "template.pot");
+const RU_PO_FILE = join(PKG_ROOT, "po", "ru.po");
 const CASTS_DIR = join(PKG_ROOT, "casts", "voices");
 const AUDIO_DIR = join(PKG_ROOT, "audio");
 const OUTPUT_DIR = join(ROOT, "output");
@@ -64,11 +67,46 @@ export interface CatalogEntry {
   category: string;
 }
 
+/**
+ * Каталог фраз из po/template.pot (+ переводы из po/ru.po по ключу
+ * msgctxt+msgid). uid = md5(msgid) — та же формула, что у potgen/emotions.
+ * Категория: speaker:Narrator -> narration, speaker:* -> dialogue,
+ * menu/ui/speaker-name -> не-речь (в selectPhrases отфильтровываются).
+ */
 export function loadCatalog(): CatalogEntry[] {
-  const lines = readFileSync(VOICES_JSONL, "utf8").split("\n");
+  const ruByKey = new Map<string, string>();
+  for (const e of parsePo(readFileSync(RU_PO_FILE, "utf8"))) {
+    if (e.msgid) ruByKey.set(`${e.msgctxt}\u0000${e.msgid}`, e.msgstr);
+  }
+  const comment = (comments: string[], prefix: string): string | null => {
+    const c = comments.find((x) => x.startsWith(prefix));
+    return c ? c.slice(prefix.length).trim() : null;
+  };
+
   const out: CatalogEntry[] = [];
-  for (let i = 1; i < lines.length; i++) {
-    if (lines[i].trim()) out.push(JSON.parse(lines[i]) as CatalogEntry);
+  for (const e of parsePo(readFileSync(POT_FILE, "utf8"))) {
+    if (!e.msgid) continue; // заголовок
+    let category: string;
+    let whoName: string | null = null;
+    if (e.msgctxt.startsWith("speaker:")) {
+      const name = e.msgctxt.slice("speaker:".length);
+      if (name === "Narrator") category = "narration";
+      else {
+        category = "dialogue";
+        whoName = name;
+      }
+    } else if (e.msgctxt === "menu") category = "menu";
+    else category = "ui"; // ui + speaker-name (имена) — не речь
+    out.push({
+      uid: createHash("md5").update(e.msgid, "utf8").digest("hex"),
+      old: e.msgid,
+      new: ruByKey.get(`${e.msgctxt}\u0000${e.msgid}`) ?? "",
+      who: null,
+      who_name: whoName,
+      arc: comment(e.comments, "arc:") ?? "_unknown",
+      scene: comment(e.comments, "scene:"),
+      category,
+    });
   }
   return out;
 }
@@ -114,6 +152,7 @@ export function resolveRef(ref: string): string {
 export interface Phrase {
   uid: string;
   arc: string;
+  category: string;
   voice: string;
   ref: string;
   out: string;
@@ -182,6 +221,7 @@ export function selectPhrases(entries: CatalogEntry[], args: Args): Phrase[] {
     phrases.push({
       uid,
       arc,
+      category: "demo",
       voice: args.char || "Demo",
       ref,
       out,
@@ -217,16 +257,19 @@ export function selectPhrases(entries: CatalogEntry[], args: Args): Phrase[] {
     if (args.emotion) variant += `_${args.emotionTag}`;
     else if (args.noEmotion) variant += "_plain";
     const emo = args.noEmotion ? null : args.emotion || emotions[e.uid] || null;
+    const text = args.lang === "ru" ? e.new : e.old;
+    if (!text) continue; // непереведённая реплика — синтезировать нечего
     const out = join(aiVoiceDir(args.lang), e.arc, `${e.uid}__${variant}.wav`);
     phrases.push({
       uid: e.uid,
       arc: e.arc,
+      category: e.category,
       voice,
       ref,
       out,
       variant,
       lang: args.lang,
-      text: args.lang === "ru" ? e.new : e.old,
+      text,
       textOld: e.old,
       textNew: e.new,
       emotion: emo,

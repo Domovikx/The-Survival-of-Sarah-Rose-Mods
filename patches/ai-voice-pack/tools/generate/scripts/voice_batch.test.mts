@@ -2,7 +2,7 @@
  * voice_batch.test.mts — тесты TS-оркестратора батч-генерации.
  *
  * Без модели и без python: только selectPhrases/parseCli/resolveRef на
- * РЕАЛЬНЫХ данных репы (каталог voices.jsonl + casts.mts + рефы на диске).
+ * РЕАЛЬНЫХ данных репы (POT+ru.po + casts.mts + рефы на диске).
  * Запуск: node --test patches/ai-voice-pack/tools/generate/scripts/voice_batch.test.mts
  */
 import assert from "node:assert/strict";
@@ -42,14 +42,14 @@ describe("каталог и резолв спикеров (SPEAKERS из casts.m
     assert.equal(voiceForSpeaker(narr!), "Narrator");
   });
 
-  it("сумма выборки ru = dialogue(озвученных) + narration(озвученных)", () => {
-    // 67 352 = 22 328 dialogue + 45 024 narration при текущих рефах (2026-10-22)
+  it("сумма выборки ru = dialogue + narration (категории POT-каталога)", () => {
+    // 68 357 = 25 121 dialogue + 43 236 narration при текущих рефах (2026-10-22, POT)
     const phrases = selectPhrases(entries, baseArgs);
-    const dialogue = phrases.filter((p) => p.uid && entries.find((e) => e.uid === p.uid && e.category === "dialogue"));
-    const narration = phrases.length - dialogue.length;
-    assert.equal(phrases.length, 67_352, `всего ru: ${phrases.length}`);
-    assert.equal(dialogue.length, 22_328, `dialogue: ${dialogue.length}`);
-    assert.equal(narration, 45_024, `narration: ${narration}`);
+    const dialogue = phrases.filter((p) => p.category === "dialogue").length;
+    const narration = phrases.filter((p) => p.category === "narration").length;
+    assert.equal(phrases.length, 68_357, `всего ru: ${phrases.length}`);
+    assert.equal(dialogue, 25_121, `dialogue: ${dialogue}`);
+    assert.equal(narration, 43_236, `narration: ${narration}`);
   });
 
   it("у каждой фразы есть текст своего языка и эмоция из emotions.json", () => {
