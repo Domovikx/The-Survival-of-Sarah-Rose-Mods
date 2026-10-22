@@ -1,5 +1,5 @@
 /**
- * Тесты potgen.mts — парсер Ren'Py, контексты, гарды, рендер POT.
+ * Тесты potgen.mts — парсер Ren'Py, контексты, гарды, правила арок, рендер POT.
  * Запуск: node --test .opencode/skills/renpy-po/potgen.test.mts
  */
 
@@ -11,7 +11,7 @@ import { fileURLToPath } from "node:url";
 import { test } from "node:test";
 
 import { parsePo } from "./po_core.mts";
-import { renderPot, scanGame } from "./potgen.mts";
+import { arcOfLabel, renderPot, scanGame } from "./potgen.mts";
 
 const REPO_ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "..", "..");
 
@@ -45,6 +45,11 @@ label after_image:
     text "Keyword leak probe."
     imagebutton idle "gui/probe.png" action Start()
     return "Farewell text"
+
+label OpeningScene:
+    s "Shared cross-arc line."
+label UnionKingdom1:
+    s "Shared cross-arc line."
 `;
 
 const SCREENS_RPY = `screen main():
@@ -79,6 +84,9 @@ function makeFixtureGame(): string {
   writeFileSync(join(dir, "aaa_first.rpy"), AAA_RPY, "utf-8");
   writeFileSync(join(dir, "script.rpy"), SCRIPT_RPY, "utf-8");
   writeFileSync(join(dir, "screens.rpy"), SCREENS_RPY, "utf-8");
+  // Галерейные файлы: их лейблы сканируются, но арки не несут (NO_ARC_FILES).
+  writeFileSync(join(dir, "art.rpy"), 'label gallery:\n    s "Gallery arc line."\n', "utf-8");
+  writeFileSync(join(dir, "replay_gallery.rpy"), 'label replay_mage_intro:\n    "Replay arc line."\n', "utf-8");
   mkdirSync(join(dir, "tl"));
   writeFileSync(join(dir, "tl", "junk.rpy"), '"Must not be scanned"\n', "utf-8");
   mkdirSync(join(dir, ".hidden"));
@@ -207,7 +215,7 @@ test("collectRpyFiles обходит tl/ и скрытые каталоги", ()
   const files = readdirSync(makeFixtureGame());
   assert.ok(files.includes("script.rpy"));
   const catalog = scanGame(makeFixtureGame());
-  assert.equal(catalog.stats.files, 3, "только aaa_first.rpy, script.rpy и screens.rpy");
+  assert.equal(catalog.stats.files, 5, "только *.rpy в корне (tl/ и скрытые — мимо)");
 });
 
 test("нарратор с суффиксами nointeract / with dissolve парсится", () => {
@@ -280,8 +288,72 @@ test("emotion комментируется только для speaker:* (мен
   assert.ok(!pot.includes("ui must not get emotion"));
 });
 
-test("без opts эмоции не проставляются (POT без #. emotion:)", () => {
+test("без opts эмоции не проставляются; arc — всегда (правила встроены)", () => {
   const pot = renderPot(scanGame(makeFixtureGame()), new Date(0));
   assert.ok(!pot.includes("#. emotion:"));
   assert.ok(pot.includes("#. uid:"), "uid пишется всегда");
+  assert.ok(pot.includes("#. arc:"), "арка ставится без opts — правила в самом potgen");
+});
+
+test("arcOfLabel: правила из имён лейблов (префикс, точное имя, фолбэк)", () => {
+  // Префиксные семьи.
+  assert.equal(arcOfLabel("OpeningSceneFirstMorning"), "Prologue");
+  assert.equal(arcOfLabel("UnionKingdom9intermezzo1"), "UnionKingdom");
+  assert.equal(arcOfLabel("TheBlackMonolithMage5"), "BlackMonolith");
+  // Точные лейблы без общего префикса.
+  assert.equal(arcOfLabel("CoronationDay"), "StoryBeginnings");
+  assert.equal(arcOfLabel("WarCouncil"), "WarArc");
+  // Регистр-чувствителен (case-sensitive): DemonArc1-3 — арка;
+  // Demonarc4/5 — вне семьи → Other (паритет прежнего label_arc.json).
+  assert.equal(arcOfLabel("DemonArc2"), "DemonArc");
+  assert.equal(arcOfLabel("Demonarc4"), "Other");
+  // Семейные имена, в чужом контексте, — не чужая арка (не-семейные).
+  assert.equal(arcOfLabel("MarionOrVargaPath"), "Other");
+  assert.equal(arcOfLabel("NeitherPath4"), "Other");
+  // Фолбэк: любые неизвестные сюжетные лейблы (новизна игры) → Other.
+  assert.equal(arcOfLabel("BrandNewLabelFromUpdate"), "Other");
+  // Не-сюжет: splashscreen без арки (галерейные — на уровне файла, ниже).
+  assert.equal(arcOfLabel("splashscreen"), undefined);
+  // Документированные фиксы артефактов текст-резолва прежнего label_arc.json.
+  assert.equal(arcOfLabel("VargaPath5"), "VargaMarionPath", "был Prologue — артефакт резолва");
+  assert.equal(arcOfLabel("TrainingPathKate3"), "Training", "был Other — семья TrainingPath*");
+});
+
+test("arc/scene записей: внутри label по правилам, снаружи — без якорей; галереи исключены", () => {
+  const catalog = scanGame(makeFixtureGame());
+  const e = (key: string): { arc?: string; scene?: string } | undefined => catalog.entries.get(key);
+  // Фикстурные сюжетные лейблы правилам неизвестны → фолбэк Other.
+  assert.equal(e("speaker:Sarah\u0000Hello there!")?.arc, "Other");
+  assert.equal(e("speaker:Narrator\u0000The wind howls.")?.arc, "Other");
+  assert.equal(e("menu\u0000Take the sword")?.arc, "Other", "меню внутри label несёт арку");
+  // Сцена — сам label (тоньше арки).
+  assert.equal(e("speaker:Sarah\u0000Hello there!")?.scene, "scene_one");
+  assert.equal(e("menu\u0000Take the sword")?.scene, "scene_one");
+  // Дедуп (первый label-владелец побеждает): фраза в OpeningScene (Prologue)
+  // и UnionKingdom1 (UnionKingdom) — якоря первой встречи, не второй.
+  assert.equal(e("speaker:Sarah\u0000Shared cross-arc line.")?.arc, "Prologue");
+  assert.equal(e("speaker:Sarah\u0000Shared cross-arc line.")?.scene, "OpeningScene");
+  // Снаружи label: define-имена и ui-строки — без арки и сцены.
+  assert.equal(e("speaker-name\u0000Sarah")?.arc, undefined);
+  assert.equal(e("speaker-name\u0000Sarah")?.scene, undefined);
+  assert.equal(e("ui\u0000Continue")?.arc, undefined);
+  assert.equal(e("ui\u0000Continue")?.scene, undefined);
+  // Галерейные файлы (art.rpy, replay_gallery.rpy): лейблы сканируются,
+  // но их строки — без якорей.
+  assert.equal(e("speaker:Sarah\u0000Gallery arc line.")?.arc, undefined);
+  assert.equal(e("speaker:Sarah\u0000Gallery arc line.")?.scene, undefined);
+  assert.equal(e("speaker:Narrator\u0000Replay arc line.")?.arc, undefined);
+  assert.equal(e("speaker:Narrator\u0000Replay arc line.")?.scene, undefined);
+
+  // Рендер: #. arc:/#. scene: доходят до POT-текста, у не-сюжетных — нет.
+  const pot = renderPot(catalog, new Date(0));
+  assert.ok(pot.includes("#. arc: Prologue"));
+  assert.ok(pot.includes("#. scene: OpeningScene"));
+  const parsed = parsePo(pot).filter((x) => x.msgid);
+  const byId = new Map(parsed.map((x) => [`${x.msgctxt}\u0000${x.msgid}`, x.comments]));
+  const shared = byId.get("speaker:Sarah\u0000Shared cross-arc line.") ?? [];
+  assert.ok(shared.some((c) => c === "arc: Prologue"));
+  assert.ok(shared.some((c) => c === "scene: OpeningScene"));
+  const uiComments = byId.get("ui\u0000Continue") ?? [];
+  assert.ok(!uiComments.some((c) => c.startsWith("arc: ") || c.startsWith("scene: ")), "ui-запись без якорей");
 });

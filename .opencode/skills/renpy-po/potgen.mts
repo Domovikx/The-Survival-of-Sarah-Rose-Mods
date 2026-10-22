@@ -35,7 +35,24 @@
  * script.rpy) иначе утекают в спикеров-идентификаторов («s» вместо «Sarah»).
  *
  * Метаданные озвучки — комментарии `#.` (живут только в POT: ru.po их не
- * наследует, writer дропает — машинные данные, переводчику не мешают):
+ * наследует, writer дропает — машинные данные, переводчику не мешают).
+ * Порядок строк — по вложенности: арка ⊃ сцена ⊃ строка, затем uid и тон
+ * (arc → scene → uid → emotion):
+ *   #. arc: <Арка>         — арка текущего label записи: выводится при
+ *                           скане ИЗ САМОЙ ИГРЫ (имена лейблов, таблица
+ *                           правил ARC_BY_LABEL/ARC_BY_PREFIX — никаких
+ *                           внешних json). Роутинг аудио, когда POT работает
+ *                           как мапа озвучки (папка
+ *                           ai_voice/{lang}/{Arc}/{uid}__{variant}.opus);
+ *                           неизвестные лейблы → Other; лейблы галереи
+ *                           (art.rpy, replay_gallery.rpy) и splashscreen —
+ *                           без арки (не сюжет). Первый label-владелец
+ *                           записи побеждает (как arc в voices.jsonl).
+ *   #. scene: <Сцена>      — label записи: тоньше арки (сцена = label
+ *                           игры) — таргетинг --scene при точечной
+ *                           перегенерации. Только сюжетные файлы, только
+ *                           внутри label; якорь первый-побеждает —
+ *                           семантика паритетна scene в voices.jsonl.
  *   #. uid: <md5(msgid)>  — наш id фразы = ключ каталога и суффикс аудио
  *                           (uid__Who.opus), мостик POT → аудио/эмоции;
  *   #. emotion: <тон>      — из catalog/emotions.json (ключ md5), только для
@@ -45,8 +62,8 @@
  *   node .opencode/skills/renpy-po/potgen.mts [--game DIR] [--out FILE]
  *         [--speakers FILE] [--emotions FILE] [--no-emotions]
  * Выход (ШАГ 1 пишет оба файла):
- *   patches/ai-voice-pack/po/template.pot          — EN-шаблон переводов;
- *   patches/ai-voice-pack/po/template.speakers.mts — типизированный список
+ *   patches/ai-voice-pack/po/template.pot           — EN-шаблон переводов;
+ *   patches/ai-voice-pack/po/template.speakers.mts  — типизированный список
  *     спикеров POT (POT_SPEAKERS / PotSpeaker) для маппинга «спикер → голос».
  */
 
@@ -157,11 +174,107 @@ export interface PotEntry {
   n: number; // сколько раз встретилась в игре
   uid: string; // md5(msgid) — id фразы для каталога и суффикс аудиофайла
   emotion?: string; // тон из emotions.json (только speaker/narration)
+  arc?: string; // арка текущего label (правила arcOfLabel) — роутинг аудио POT-мапы
+  scene?: string; // label записи (сцена) — тоньше арки, таргетинг --scene
 }
 
 /** uid каталога и аудио = md5(текста): та же формула, что у catalog/emotions. */
 export function uidOf(text: string): string {
   return createHash("md5").update(text, "utf8").digest("hex");
+}
+
+/** Нормаль label'а — паритет voice_catalog.norm_label (точки → подчёркивания). */
+export function normLabel(label: string): string {
+  return label.replace(/\./g, "_");
+}
+
+// ── Правила «лейбл → арка»: арка выводится ИЗ САМОЙ ИГРЫ (имена лейблов),
+// никаких внешних json. Паритет с прежним label_arc.json проверен: 261/264
+// лейбл в точности совпадает; три отклонения — фиксы артефактов его
+// текст-резолва: VargaPath5 (был Prologue, структурно — VargaMarionPath),
+// TrainingPathKate3 (был Other, семья TrainingPath*), prostitutealaric1
+// (лейбл был не досчитан, тл-заголовок сцены — Arc: Other).
+
+/** Файлы, чьи лейблы не несут сюжет (галерея/реплеи) — арка не ставится. */
+const NO_ARC_FILES = /(?:^|[\\/])(?:art|replay_gallery)\.rpy$/;
+/** Лейбл вне сюжета внутри сюжетного файла. */
+const NO_ARC_LABELS = new Set(["splashscreen"]);
+
+/** Точные лейблы без общей префиксной семьи. */
+const ARC_BY_LABEL: ReadonlyMap<string, string> = new Map([
+  // Семья имен Пролога/погребений — точные имена без общего префикса.
+  ...[
+    "ChooseThePath",
+    "CoronationDay",
+    "DayOfTheFuneral",
+    "MeetingKateInTheGarden",
+    "MeetingOnTheBattlements",
+    "SarahAndThomasSpeak",
+    "SarahsBedroomAfterFuneral",
+    "SecondPartOfFuneral",
+    "TheInsidePathBegins",
+    "TheMorningAfterKate",
+  ].map((l): readonly [string, string] => [l, "StoryBeginnings"]),
+  ...["ChoosingAMentor", "GeneralPathBegins"].map((l): readonly [string, string] => [l, "Training"]),
+  ...[
+    "UnionDecisionLoop",
+    "ASarahInTheParkWithGeorge1",
+    "MercenaryQueen1",
+    "MythranInvasion1",
+    "Sakar1",
+    "SarahExploresLethramHarbor1",
+  ].map((l): readonly [string, string] => [l, "UnionKingdom"]),
+  ...["FallOfLethram2"].map((l): readonly [string, string] => [l, "MagePath"]),
+  ...["SarahAndNick1", "TailorRoute1"].map((l): readonly [string, string] => [l, "LifeInRahayal"]),
+  ...["SarahLeavesLethram1"].map((l): readonly [string, string] => [l, "SailorArc"]),
+  ...["GallowCreek1", "MariusMarriage", "UnmarriedGallowCreek"].map((l): readonly [string, string] => [l, "AlfredArc"]),
+  ...["HyralTown"].map((l): readonly [string, string] => [l, "HyralArc"]),
+  ...["TheBattleForTheCapital", "WarCouncil"].map((l): readonly [string, string] => [l, "WarArc"]),
+]);
+
+/** Префиксы лейблов → арка (case-sensitive: DemonArc1-3 ≠ Demonarc4/5 → Other). */
+const ARC_BY_PREFIX: ReadonlyArray<readonly [string, string]> = [
+  ["OpeningScene", "Prologue"],
+  ["TrainingPath", "Training"],
+  ["UnionKingdom", "UnionKingdom"],
+  ["UnionLoop", "UnionKingdom"],
+  ["MagePath", "MagePath"],
+  ["MageInTheRuins", "MagePath"],
+  ["WarriorPath", "WarriorPath"],
+  ["WarriorQueen", "WarriorPath"],
+  ["WarriorRahayal", "WarriorPath"],
+  ["HassarPath", "HassarPath"],
+  ["JaeidPath", "HassarPath"],
+  ["VargaPath", "VargaMarionPath"],
+  ["MarionPath", "VargaMarionPath"],
+  ["LifeInRahayal", "LifeInRahayal"],
+  ["ServantOfGilead", "LifeInRahayal"],
+  ["SailorPath", "SailorPath"],
+  ["TheOldRoad", "SailorArc"],
+  ["CampSlavePath", "AlfredArc"],
+  ["PrisonPath", "PrisonArc"],
+  ["UnderworldPath", "PrisonArc"],
+  ["OutsideAndAlone", "PrisonArc"],
+  ["TheHollowWorld", "HollowWorld"],
+  ["HyralGoblin", "HyralArc"],
+  ["HyralOrc", "HyralArc"],
+  ["DemonArc", "DemonArc"],
+  ["TheBlackMonolith", "BlackMonolith"],
+];
+
+/**
+ * Арка лейбла: точное имя → префикс → fallback Other (вне сюжета вроде
+ * gallery/replay исключены на уровне файла до вызова — см. NO_ARC_FILES).
+ * undefined — лейбл не несёт арки (splashscreen).
+ */
+export function arcOfLabel(label: string): string | undefined {
+  if (NO_ARC_LABELS.has(label)) return undefined;
+  const exact = ARC_BY_LABEL.get(label);
+  if (exact !== undefined) return exact;
+  for (const [prefix, arc] of ARC_BY_PREFIX) {
+    if (label.startsWith(prefix)) return arc;
+  }
+  return "Other";
 }
 
 export interface PotStats {
@@ -240,16 +353,29 @@ export function parseRpyFile(filePath: string, catalog: PotCatalog, defineDispla
   } catch {
     return;
   }
+  // Лейблы галерейных файлов не несут сюжет — их строки без арки.
+  const noArc = NO_ARC_FILES.test(filePath);
+
+  // Текущий label: арка каждой записи — отсюда (сбрасывается на нулевом
+  // отступе: тело label всегда отступлено).
+  let currentLabel: string | null = null;
 
   const add = (msgid: string, msgctxt: string): void => {
     if (!msgid) return;
+    // Арка и сцена — от текущего label (сюжетные файлы; галереи — без них).
+    const lab = currentLabel !== null && !noArc ? normLabel(currentLabel) : undefined;
+    const arc = lab !== undefined ? arcOfLabel(lab) : undefined;
     const key = entryKey(msgctxt, msgid);
     const slot = catalog.entries.get(key);
     if (slot) {
       slot.n += 1;
       catalog.stats.mergedDupes += 1;
+      // Дедуп: первый label-владелец побеждает (как arc в voices.jsonl);
+      // пустой якорь добирается, если более поздняя встреча внутри label.
+      if (!slot.arc && arc !== undefined) slot.arc = arc;
+      if (!slot.scene && lab !== undefined) slot.scene = lab;
     } else {
-      catalog.entries.set(key, { msgid, msgctxt, n: 1, uid: uidOf(msgid) });
+      catalog.entries.set(key, { msgid, msgctxt, n: 1, uid: uidOf(msgid), arc, scene: lab });
     }
   };
 
@@ -267,10 +393,14 @@ export function parseRpyFile(filePath: string, catalog: PotCatalog, defineDispla
     if (imageIndent >= 0 && indent <= imageIndent) imageIndent = -1;
 
     // Label — граница «мы внутри сюжета». Только нулевой отступ (см. RE_LABEL).
+    // ВАЖНО (реальная игра, script.rpy): тела label у автора БЕЗ отступа
+    // (`label X:` → реплики на нулевом отступе) — якорь держится до СЛЕДУЮЩЕГО
+    // label, не сбрасывается по отступу (паритет гарда sawLabel).
     let m = RE_LABEL.exec(raw);
     if (m) {
       sawLabel = true;
       inMenu = false;
+      currentLabel = m[1];
       continue;
     }
 
@@ -430,6 +560,8 @@ export function renderPot(catalog: PotCatalog, now: Date = new Date()): string {
       (a.msgctxt < b.msgctxt ? -1 : a.msgctxt > b.msgctxt ? 1 : 0),
   );
   for (const e of sorted) {
+    if (e.arc) out.push(`#. arc: ${e.arc}`);
+    if (e.scene) out.push(`#. scene: ${e.scene}`);
     out.push(`#. uid: ${e.uid}`);
     if (e.emotion) out.push(`#. emotion: ${e.emotion}`);
     out.push(`msgctxt "${poEscape(e.msgctxt)}"`);
@@ -556,6 +688,10 @@ function main(): void {
   console.log(
     `  с метаданными emotion: ${withEmotion} (ключей в файле: ${emotions ? Object.keys(emotions).length : 0})`,
   );
+  const withArc = [...catalog.entries.values()].filter((e) => e.arc).length;
+  const noArcCount = catalog.entries.size - withArc;
+  const arcs = new Set([...catalog.entries.values()].map((e) => e.arc).filter((a): a is string => !!a));
+  console.log(`  с метаданными arc: ${withArc} (${arcs.size} арок), без арки: ${noArcCount} (вне label/не-сюжет)`);
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
