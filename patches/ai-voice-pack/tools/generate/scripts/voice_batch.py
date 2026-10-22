@@ -381,8 +381,8 @@ def main():
                     help='RAS штраф повторов (default 0.15)')
     ap.add_argument('--cfg-rate', type=float, default=CFG_RATE,
                     help='LLM classifier-free guidance (default 0.9)')
-    ap.add_argument('--device', default='cpu', choices=['cpu', 'dml'],
-                    help='устройство: cpu (default) или dml (DirectML/AMD)')
+    ap.add_argument('--device', default='cpu', choices=['cpu', 'cuda', 'dml'],
+                    help='устройство: cpu (default), cuda (NVIDIA GPU) или dml (DirectML/AMD, не работает)')
     ap.add_argument('--flow-temp', type=float, default=FLOW_TEMP,
                     help='температура flow-декодера (default 1.2)')
     args = ap.parse_args()
@@ -418,9 +418,17 @@ def main():
         os.environ['TSSR_DML'] = '1'
         torch.inference_mode = lambda *a, **k: (lambda f: f)
         log('device: DML (DirectML)')
+    elif args.device == 'cuda':
+        if not torch.cuda.is_available():
+            log('ERROR: --device cuda запрошен, но torch.cuda.is_available()=False '
+                '(torch без CUDA-сборки? нужен torch с cu128+, см. AGENTS.md)')
+            sys.exit(1)
+        log('device: CUDA ({}, {:.0f} ГБ)'.format(
+            torch.cuda.get_device_name(0),
+            torch.cuda.get_device_properties(0).total_memory / 2**30))
     t0 = time.time()
     cosyvoice = AutoModel(model_dir=model_dir,
-                          fp16=(args.device == 'dml'))
+                          fp16=(args.device in ('dml', 'cuda')))
     patch_flow_temperature(args.flow_temp)
     patch_silent_token_trim()
     log('model loaded in {:.1f}s (flow-temp {}, cfg {}, RAS {}, silent-trim ON)'.format(
