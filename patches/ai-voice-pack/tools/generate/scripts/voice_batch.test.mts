@@ -7,10 +7,22 @@
  */
 import assert from "node:assert/strict";
 import { createHash } from "node:crypto";
-import { join } from "node:path";
+import { readFileSync } from "node:fs";
+import { dirname, join } from "node:path";
 import { describe, it } from "node:test";
+import { fileURLToPath } from "node:url";
 
-import { loadCatalog, parseCli, refActive, resolveRef, selectPhrases, voiceForSpeaker } from "./voice_batch.mts";
+import {
+  loadCatalog,
+  parseCli,
+  runawayDuration,
+  refActive,
+  resolveRef,
+  selectPhrases,
+  voiceForSpeaker,
+} from "./voice_batch.mts";
+
+const SCRIPTS_DIR = dirname(fileURLToPath(import.meta.url));
 
 const entries = loadCatalog();
 const baseArgs = parseCli([]);
@@ -166,5 +178,83 @@ describe("parseCli", () => {
     const a = parseCli(["--limit", "5", "--seed", "7"]);
     assert.equal(a.limit, 5);
     assert.equal(a.seed, 7);
+  });
+});
+
+describe("детектор runaway-длительности (мусорные вбросы, бага 2026-10-23)", () => {
+  const byUid = (uid: string): string => entries.find((e) => e.uid === uid)!.new;
+  it("кейсы реального прогона 2026-10-23: Kate 119.88s и Marion 42s — бегущие", () => {
+    assert.equal(runawayDuration(byUid("d51f45b910ed0371faacd4b30ecab384"), 119.88), true, "Kate");
+    assert.equal(runawayDuration(byUid("c135569dc4d2c77eef343ec2a50acc6f"), 42), true, "Marion");
+  });
+  it("нормальные файлы того же прогона не триггерят", () => {
+    assert.equal(runawayDuration(byUid("965008809955fb24bad05d00315049d9"), 5.0), false, "Carolyn");
+    assert.equal(runawayDuration(byUid("9aad46fc3b7ce586f8c07e89392511b9"), 1.96), false, "Nathan");
+  });
+  it("ложные срабатывания: короткий крик и самая длинная наррация по темпу", () => {
+    assert.equal(runawayDuration("АААААА!!", 15), false, "крик 15с (< 30с — не флагаем)");
+    assert.equal(runawayDuration("Да.", 4), false, "короткая реплика");
+    const long = entries
+      .filter((e) => e.category === "narration")
+      .reduce((a, b) => (a.new.length > b.new.length ? a : b)).new;
+    assert.ok(long.length > 200, `самая длинная наррация подозрительно мала: ${long.length}`);
+    assert.equal(runawayDuration(long, 40), false, "длинная, но по темпу");
+    assert.equal(runawayDuration(long, (long.length / 11) * 4 + 50), true, "длинная И бегущая");
+  });
+});
+
+describe("контракт кодировки UTF-8 (мохибака-бага 2026-10-23)", () => {
+  const src = (rel: string): string => readFileSync(join(SCRIPTS_DIR, rel), "utf8");
+  it("cosyworker.py: sys.stdin.reconfigure в UTF-8 — иначе JSON читается в cp1251", () => {
+    assert.match(src("cosyworker.py"), /sys\.stdin\.reconfigure\(encoding=['"]utf-8/);
+  });
+  it("voicekit/worker.mts: ретрай первой строки на TextEncodeInput (гонка фронтенда)", () => {
+    const worker = src(join("voicekit", "worker.mts"));
+    assert.match(worker, /TextEncodeInput/);
+    assert.match(worker, /повтор через/);
+  });
+  it("voicekit/worker.mts: spawn шима с PYTHONIOENCODING=utf-8 (страховка)", () => {
+    assert.match(src(join("voicekit", "worker.mts")), /PYTHONIOENCODING:\s*"utf-8"/);
+  });
+  it("voice_queue.sh: export PYTHONIOENCODING=utf-8 не убран", () => {
+    assert.match(src("voice_queue.sh"), /export PYTHONIOENCODING=utf-8/);
+  });
+});
+
+describe("формат корпуса OpusHead 24000 (расхождение 2026-10-23)", () => {
+  const audio = readFileSync(join(SCRIPTS_DIR, "voicekit", "audio.mts"), "utf8");
+  it("tensorToOpus: явный выходной -ar — loudnorm ресемплит до 192k, libopus без -ar сам берёт 48000", () => {
+    // Regex терпел и prettier-формат «по элементу на строку» (2026-10-23).
+    assert.match(
+      audio,
+      /"-c:a",\s*"libopus",\s*"-b:a",\s*"24k",\s*"-ac",\s*"1",\s*"-ar",\s*String\(sr\),\s*"-f",\s*"opus"/,
+    );
+  });
+  it("healWavToOpus: без -af — wav уже 24k, фильтр снова увёл бы формат в 48000", () => {
+    const line = readFileSync(join(SCRIPTS_DIR, "voice_batch.mts"), "utf8")
+      .split("\n")
+      .find((l) => l.includes("libopus"));
+    assert.ok(line, "строка libopus в voice_batch.mts");
+    assert.ok(!line.includes("-af"), `heal-конверт должен быть без -af: ${line}`);
+  });
+});
+
+describe("миграция python → TS (кодирование переехало)", () => {
+  const src = (rel: string): string => readFileSync(join(SCRIPTS_DIR, rel), "utf8");
+  it("cosyworker.py: чистый инференс-шим v2 — pcm_b64, без аудио-цепочки", () => {
+    const py = src("cosyworker.py");
+    assert.match(py, /pcm_b64/);
+    assert.ok(!py.includes("import subprocess"), "шим не должен кодировать — ffmpeg на TS (voicekit/audio.mts)");
+    assert.ok(
+      !py.includes("tensor_to_opus") && !py.includes("wav_to_opus") && !py.includes("save_wav_chain"),
+      "аудио-цепочка переехала в voicekit/audio.mts",
+    );
+    assert.ok(!py.includes("trim_tail_burst"), "trim переехал в voicekit/trim.mts");
+    assert.ok(!py.includes("torchaudio"), "wav-цепочка переехала в voicekit/audio.mts");
+  });
+  it("voicekit/audio.mts: LOUD_ARGS и труба f32le на месте", () => {
+    const audio = src(join("voicekit", "audio.mts"));
+    assert.match(audio, /loudnorm=I=/);
+    assert.match(audio, /"-f",\s*"f32le"/);
   });
 });

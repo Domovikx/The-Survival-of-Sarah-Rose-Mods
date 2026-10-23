@@ -25,6 +25,7 @@
     "typecheck": "tsc --noEmit",
     "casts:mts": "node patches/ai-voice-pack/tools/generate/scripts/cast_mts.mts",
     "test:casts": "node --test patches/ai-voice-pack/tools/generate/scripts/cast_mts.test.mts",
+    "test:voice:e2e": "set \"TSSR_VOICE_E2E=1\" && node --test patches/ai-voice-pack/tools/generate/scripts/voice_batch_e2e.test.mts",
     "build:pack": "python patches/ai-voice-pack/tools/build/build_pack.py",
     "lint": "oxlint",
     "lint:fix": "oxlint --fix",

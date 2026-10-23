@@ -5,7 +5,8 @@
  *   ЭТОТ ФАЙЛ (TS) — каталог, фильтры, эмоции, пропуски/лечения, логи, ETA,
  *     выбор рефов, ffmpeg-лечения;
  *   cosyworker.py (python) — ТОЛЬКО инференс: модель один раз на процесс,
- *     тензор -> opus (JSON-lines через voicekit/worker.mts).
+ *     протокол v2 отдаёт сырой PCM (base64); trim + opus — voicekit/
+ *     {trim,audio}.mts через voicekit/worker.mts (JSON-lines).
  *
  * Отличия от python-версии (осознанные):
  *   - резолв спикера: типизированный casts.mts (SPEAKERS -> VOICES -> реф)
@@ -290,6 +291,15 @@ export function healWavToOpus(wavPath: string): boolean {
   return false;
 }
 
+/**
+ * «Бегущая» длительность: речь ≈11 символов/с; флаг если длина файла больше
+ * 4× ожидаемого И больше 30с (короткие крики и длинные наррации не триггерят).
+ * Ловит мусорные вбросы: мохибака-текст (бага 2026-10-23) и runaway модели.
+ */
+export function runawayDuration(text: string, durSec: number): boolean {
+  return durSec > Math.max(30, (text.length / 11) * 4);
+}
+
 // --------------------------------------------------------------- лог -----
 
 function log(msg: string): void {
@@ -376,6 +386,7 @@ export async function main(argv: string[] = process.argv.slice(2)): Promise<numb
   let skipped = 0;
   let healed = 0;
   let failed = 0;
+  let suspect = 0;
   const total = phrases.length;
   const tStart = Date.now();
 
@@ -407,6 +418,10 @@ export async function main(argv: string[] = process.argv.slice(2)): Promise<numb
       });
       if (r.ok) {
         done++;
+        if (typeof r.dur === "number" && runawayDuration(p.text, r.dur)) {
+          suspect++;
+          log(`  !! RUNAWAY: ${r.dur}s на ${p.text.length} символов — подозрительно длинно, проверь файл`);
+        }
         const elapsed = (Date.now() - tStart) / 1000;
         const eta = (elapsed / Math.max(done, 1)) * (total - idx - 1);
         log(`  saved ${r.saved} (${r.dur}s), eta ~${Math.round(eta / 60)} мин`);
@@ -419,7 +434,7 @@ export async function main(argv: string[] = process.argv.slice(2)): Promise<numb
     await w.quit().catch(() => w.kill());
   }
 
-  log(`done=${done} skipped=${skipped} healed=${healed} failed=${failed} total=${total}`);
+  log(`done=${done} skipped=${skipped} healed=${healed} failed=${failed} suspect=${suspect} total=${total}`);
   return failed > 0 && done === 0 ? 1 : 0;
 }
 

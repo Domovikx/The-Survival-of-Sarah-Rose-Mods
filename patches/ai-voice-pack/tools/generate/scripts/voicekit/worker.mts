@@ -1,20 +1,31 @@
 /**
  * worker.mts — клиент инференс-шима cosyworker.py (JSON-lines через stdin/stdout).
  *
- * Протокол v1 (решён 2026-09-22 ресёрчем, см. tasks/2026-10-21-voice-pipeline-ts-migration.md):
- *   -> {"id": N, "cmd": "gen", "text", "ref", "emotion", "seed", "out"}
- *   <- {"id": N, "ok": true, "dur", "saved"} | {"id": N, "ok": false, "error"}
+ * Протокол v2 (миграция python → TS, 2026-10-23, см. AGENTS.md):
+ *   -> {"id": N, "cmd": "gen", "text", "ref", "emotion", "seed"}
+ *   <- {"id": N, "ok": true, "pcm_b64", "sr", "raw_dur"}
+ *      | {"id": N, "ok": false, "error"}
  *   -> {"id": N, "cmd": "ping"}
  *   <- {"id": N, "ok": true, "device", "model_loaded"}
  *   -> {"cmd": "quit"}   <- шим завершается с кодом 0
  *
+ * pcm_b64 — сырой PCM (float32 LE mono, sr = sample_rate модели). Всё после
+ * инференса живёт ЗДЕСЬ: ретрай TextEncodeInput → trim (voicekit/trim.mts)
+ * → ffmpeg-цепочка корпусного формата (voicekit/audio.mts) → GenResult
+ * {ok, dur, saved} — внешняя форма не менялась, voice_batch.mts не тронут.
+ *
  * stdin/stdout, а не HTTP-порт: процесс живёт ровно столько, сколько живёт
  * оркестратор (модель грузится ОДИН раз на батч — главный источник выигрыша,
  * model load ~12.7s на RTX 5070 Ti). stdout зарезервирован под протокол,
- * все логи шима идут в stderr и уходят в onLog.
+ * все логи шима и СВОИ логи кодирования идут в onLog.
  */
 import { spawn, type ChildProcessWithoutNullStreams } from "node:child_process";
+import { mkdirSync } from "node:fs";
+import { dirname } from "node:path";
 import { createInterface } from "node:readline";
+
+import { opusPathFor, saveWavChain, tensorToOpus } from "./audio.mts";
+import { trimTailBurst } from "./trim.mts";
 
 /** Задание на генерацию одной фразы. */
 export interface GenRequest {
@@ -22,7 +33,10 @@ export interface GenRequest {
   ref: string;
   emotion?: string | null;
   seed?: number;
+  /** Куда писать (wav-имя; opus — рядом с тем же именем). Файл пишет worker. */
   out: string;
+  /** Паритет старой шим-ветки: пропустить pipe и написать wav+levelnorm+opus. */
+  keep_wav?: boolean;
 }
 
 export interface GenResult {
@@ -48,7 +62,7 @@ export interface WorkerOptions {
   args?: string[];
   /** Таймаут одного запроса, мс (default 5 мин — генерация на CPU дольше). */
   requestTimeoutMs?: number;
-  /** Строки stderr шима (логи генерации). */
+  /** Логи: stderr шима + свои строки кодирования (trim/saved/WARN). */
   onLog?: (line: string) => void;
 }
 
@@ -82,6 +96,10 @@ export class VoiceWorker {
     this.proc = spawn(opts.python, [opts.script, ...(opts.args ?? [])], {
       stdio: ["pipe", "pipe", "pipe"],
       windowsHide: true,
+      // Контракт UTF-8 с обеих сторон: без него stdin шима читал JSON в cp1251
+      // (мохибака в тексте фраз, бага 2026-10-23). Двойная защита наряду с
+      // sys.stdin.reconfigure в cosyworker.py.
+      env: { ...process.env, PYTHONIOENCODING: "utf-8" },
     });
     const proto = createInterface({ input: this.proc.stdout });
     proto.on("line", (line) => this.onProtocolLine(line));
@@ -156,17 +174,85 @@ export class VoiceWorker {
     return r as unknown as PingResult;
   }
 
-  /** Сгенерировать одну фразу (реф → opus/wav на disk по пути out). */
+  /**
+   * Сгенерировать одну фразу: шим → PCM → trim → opus (или wav-фолбэк)
+   * по пути req.out. Fail-soft как python cmd_gen: ошибка кодирования →
+   * ok:false, исключение не летит наружу.
+   */
   async generate(req: GenRequest): Promise<GenResult> {
-    const r = await this.send({
+    const t0 = Date.now();
+    let r = await this.sendGen(req);
+    if (!r.ok && typeof r.error === "string" && r.error.includes("TextEncodeInput")) {
+      // Холодный фронтенд wetext: ПЕРВАЯ строка после загрузки модели бьётся
+      // о TextEncodeInput (гонка анонимной докачки влажного фронтенда), вторая
+      // после — проходит (бага 2026-10-23). Один повтор через 3с — докачка
+      // успевает. Раньше повтор жил в cosyworker.py; в миграции python → TS
+      // переехал сюда (гард — voice_batch.test.mts, живой тест — WARMUP в
+      // fake_worker.mts).
+      this.opts.onLog?.("  WARN: фронтенд ещё прогревается (TextEncodeInput) — повтор через 3с");
+      await new Promise((res) => setTimeout(res, 3000));
+      r = await this.sendGen(req);
+    }
+    if (!r.ok) {
+      return { ok: false, error: typeof r.error === "string" ? r.error : "неизвестная ошибка шима" };
+    }
+    try {
+      return this.encode(r, req, Date.now() - t0);
+    } catch (e) {
+      const msg = e instanceof Error ? `${e.constructor.name}: ${e.message}` : String(e);
+      this.opts.onLog?.(`  !! FAIL: ${msg}`);
+      return { ok: false, error: msg };
+    }
+  }
+
+  private sendGen(req: GenRequest): Promise<Record<string, unknown>> {
+    return this.send({
       cmd: "gen",
       text: req.text,
       ref: req.ref,
       emotion: req.emotion ?? null,
       seed: req.seed ?? 42,
-      out: req.out,
     });
-    return r as unknown as GenResult;
+  }
+
+  /** PCM из шима → trim → корпусное кодирование → GenResult. */
+  private encode(r: Record<string, unknown>, req: GenRequest, genMs: number): GenResult {
+    const sr = Number(r.sr);
+    const pcmB64 = typeof r.pcm_b64 === "string" ? r.pcm_b64 : "";
+    if (!pcmB64 || !Number.isFinite(sr) || sr <= 0) {
+      return { ok: false, error: "шим вернул пустой pcm/sr" };
+    }
+    const bytes = Buffer.from(pcmB64, "base64");
+    if (bytes.length === 0 || bytes.length % 4 !== 0) {
+      return { ok: false, error: `шим вернул некратный pcm (${bytes.length} байт)` };
+    }
+    // slice — копия: буфер пула Buffer может не быть выровнен по 4
+    const raw = new Float32Array(bytes.buffer.slice(bytes.byteOffset, bytes.byteOffset + bytes.byteLength));
+    const { samples, cuts } = trimTailBurst(raw, sr);
+    mkdirSync(dirname(req.out), { recursive: true });
+    const dur = Math.round((samples.length / sr) * 100) / 100;
+
+    let saved: string;
+    if (req.keep_wav) {
+      if (!saveWavChain(samples, sr, req.out)) {
+        this.opts.onLog?.("  WARN: opus-конверт не удался, wav остаётся фолбэком");
+      }
+      saved = req.out;
+    } else if (tensorToOpus(samples, sr, req.out)) {
+      saved = opusPathFor(req.out);
+    } else {
+      this.opts.onLog?.("  WARN: pipe-конверт не удался — пишу wav-фолбэк");
+      if (!saveWavChain(samples, sr, req.out)) {
+        this.opts.onLog?.("  WARN: opus-конверт не удался, wav остаётся фолбэком");
+      }
+      saved = req.out;
+    }
+    if (cuts.length) {
+      const parts = cuts.map((c) => `burst ${Math.round(c.durMs)}ms after ${Math.round(c.gapMs)}ms gap`);
+      this.opts.onLog?.(`  trim: ${parts.join(", ")}`);
+    }
+    this.opts.onLog?.(`  saved ${saved} (${dur.toFixed(1)}s, gen ${(genMs / 1000).toFixed(1)}s)`);
+    return { ok: true, dur, saved };
   }
 
   /** Грейсфул-остановка: {"cmd":"quit"} → ждём exit. Уже мёртвому — no-op. */
