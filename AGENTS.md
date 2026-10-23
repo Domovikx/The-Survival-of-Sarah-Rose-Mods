@@ -34,6 +34,10 @@
 ## Правила для AI-агента
 
 - **НИКОГДА не коммитить без явного разрешения пользователя.**
+- **При любой проблеме, тупике или неожиданном поведении — СНАЧАЛА делать
+  веб-поиск (websearch), а не гадать и не сдаваться:** часто решение уже
+  найдено кем-то другим (баги ffmpeg/форматов, поведение библиотек, версии
+  тулов). Гипотезу из веб-поиска — проверять локально, потом править код.
 
 ## Архитектура озвучки
 
@@ -139,10 +143,15 @@ casts/voices/
     {Имя}.wav                 # АКТИВНЫЙ реф в корне каста (озвучен = есть реф);
                               #   варианты A/B рядом: {Имя}_{v}.wav
 tools/generate/scripts/
-  voicekit/                    # ЯДРО (python — для оставшихся шимов): paths,
-                               #   contract, fs, tts_env, model_dir
-                               #   (загрузчик catalog.py удалён 2026-10-22:
-                               #   источник фраз — po/template.pot)
+  voicekit/                    # ЯДРО: python-шимы (paths, contract, fs, tts_env,
+                               #   model_dir) + TS-контур генерации:
+                               #   worker.mts     # клиент шима: протокол v2 (PCM),
+                               #                 #   ретрай TextEncodeInput, trim, кодирование
+                               #   trim.mts       # паттерн-трим (порт trim_tail_burst.py)
+                               #   audio.mts      # f32le pipe -> loudnorm -> libopus -ar sr
+                               #                 #   -> .part -> rename; wav-фолбэк (saveWavChain)
+                               #   fake_worker.mts # фейковый шим для тестов worker'а
+                               #   (*.test.mts    # node --test)
   voice_design.py              # ИНФЕРЕНС VoiceDesign (python): кандидаты -> generated/
                                #   (мост контрактов — cast_contract.mts JSON)
   voice_presets.mts            # ЕДИНАЯ карта конфигов: audio/refs/design/batch/beastify
@@ -169,18 +178,22 @@ tools/generate/scripts/
   voice_batch.mts              # БАТЧ-ОРКЕСТРАТОР: каталог POT -> audio/vo_{lang}/{arc}/
                                #   {uid}__{variant}.opus (эмоция из `#. emotion:` POT;
                                #   --ref/--uid/--force/--emotion/--device cuda; wav НЕ
-                               #   пишется: тензор -> pipe f32le -> ffmpeg loudnorm+libopus;
+                               #   пишется: PCM из шима -> trim -> pipe f32le -> ffmpeg
+                               #   loudnorm+libopus (TS, voicekit/audio.mts);
                                #   ИНФЕРЕНС шеллит в python cosyworker.py)
-  cosyworker.py                # ИНФЕРЕНС CosyVoice (python-шим venv C:/tools/cosyvoice3):
-                               #   модель один раз на процесс; аудио-цепочка проверена
-                               #   2026-10-14/21 (байт-в-байт с прежним python-батчем)
+  cosyworker.py                # ИНФЕРЕНС CosyVoice — ЕДИНСТВЕННЫЙ python генерации
+                               #   (венв C:/tools/cosyvoice3): модель один раз на
+                               #   процесс; протокол v2 — отдаёт СЫРОЙ PCM
+                               #   (pcm_b64 + sr), НЕ пишет файлов (trim/opus/wav
+                               #   на TS); torch в node невозможен
   beastify.py                  # нелюдские голоса: пресеты orc/demon/monster
                                #   (pitch+formant вниз, тёмный EQ, acrusher, гроул-субтон,
                                #   модуляция/реверб) + loudnorm -16 LUFS/TP -1.5
-  trim_tail_burst.py           # паттерн-трим хвостовых артефактов
+  trim_tail_burst.py           # паттерн-трим хвостовых артефактов (CLI по wav;
+                               #   в генерации алгоритм живёт в voicekit/trim.mts)
   levelnorm.py                 # выравнивание: -16 LUFS / TP -1.5 (CLI по *.wav —
-                               #   только рефы/легаси; в генерации его LOUD_ARGS
-                               #   применяются внутри опус-прохода voice_batch.mts)
+                               #   только рефы/легаси; в генерации те же LOUD_ARGS
+                               #   применяет voicekit/audio.mts)
   voice_status.mts             # СТАТУС И ПРОГНОЗ генерации: готово (стем opus/wav)
                                #   по языкам/аркам, %, размер, воркеры, скорость,
                                #   прогноз (--fast без замера). ВСЕГДА для «статус?»
@@ -209,6 +222,48 @@ tools/generate/scripts/
 мониторинг), пауза — `tools/generate/scripts/voice-pause.cmd` (снять — `voice-resume.cmd`),
 остановка — `tools/generate/scripts/voice-stop.cmd`. Агентам: статус смотреть пультом
 (`python tools/generate/scripts/voice_ctl.py status`), не ручным подсчётом файлов.
+
+## Миграция python → TypeScript (приказ владельца 2026-10-23)
+
+**Мы мигрируем с питона на ТС: это экспериментальный проект, который в
+идеале должен максимально использовать именно ТС без питона.** python
+живёт только там, где физически не обойтись (torch/CV3-инференс); всё,
+что выражается на TS, пишется на `.mts`.
+
+Приказ владельца (дословно): «`cosyworker.py` перепиши на ТС. напиши в
+`AGENTS.md` что мы мигрируем с питона на ТС, это экспереминтальный проект
+который в идеале должен максимально использовать именно ТС без питона.»
+
+### Граница (шаг «cosyworker → TS», 2026-10-23)
+
+| Слой                                                                   | Язык   | Файлы                                                                                                |
+| ---------------------------------------------------------------------- | ------ | ---------------------------------------------------------------------------------------------------- |
+| Оркестрация батча: каталог, фильтры, эмоции, логи, ETA                 | TS     | `voice_batch.mts`                                                                                    |
+| Клиент шима: протокол v2, ретрай TextEncodeInput, trim, ffmpeg-цепочка | TS     | `voicekit/worker.mts`, `voicekit/trim.mts`, `voicekit/audio.mts`                                     |
+| Инференс (модель CV3, torch)                                           | python | `cosyworker.py` — ЕДИНСТВЕННЫЙ python контура генерации                                              |
+| Рефы/голоса/статус/разметка                                            | TS     | `add_candidate`, `voice_manage`, `voice_status`, `emotion_tag` и пр.                                 |
+| CLI-легаси (на вымирание)                                              | python | `voice_ctl.py`, `beastify.py`, `levelnorm.py`, `trim_tail_burst.py`, `voice_design.py`, `voicekit/*` |
+
+Протокол v2 (2026-10-23): шим отдаёт СЫРОЙ PCM (`pcm_b64` = float32 LE mono,
+плюс поле `sr`), файлов не пишет. Дальше всё на TS: ретрай холодного фронтенда
+(TextEncodeInput, «повтор через 3с») — `worker.mts`; паттерн-трим
+«пауза+всплеск» — `voicekit/trim.mts` (порт `trim_tail_burst.py`);
+кодирование — `voicekit/audio.mts` (pipe f32le → loudnorm -16 LUFS/TP -1.5 →
+libopus 24k с ОБЯЗАТЕЛЬНЫМ выходным `-ar sr` → `.part` → rename; wav-фолбэк
+`saveWavChain` там же).
+
+Правила миграции:
+
+- **Новый код — только `.mts`.** python-файлы не растут: правки = багфиксы
+  по необходимости; новые фичи — на TS.
+- Оставшиеся python-утилиты — легаси: при равной цене делать на TS;
+  перенос алгоритма = порт + тест-паритет (пример: `trim.test.mts`).
+- Внешний код не импортируется (см. «Инкапсуляция тулов»).
+- Гарды: `voice_batch.test.mts` (блок «миграция python → TS», UTF-8,
+  OpusHead-текстовый) и `voicekit/audio.test.mts` (behavioral: OpusHead
+  original-rate == 24000 через ПАРСЕР заголовка — **ffprobe
+  `stream.sample_rate` для opus ВСЕГДА 48000 и контракт НЕ проверяет**,
+  проверено на корпусе 2026-10-23).
 
 ## Инкапсуляция тулов (для агентов — ОБЯЗАТЕЛЬНО)
 
