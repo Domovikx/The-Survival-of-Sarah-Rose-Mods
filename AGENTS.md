@@ -38,6 +38,13 @@
   веб-поиск (websearch), а не гадать и не сдаваться:** часто решение уже
   найдено кем-то другим (баги ffmpeg/форматов, поведение библиотек, версии
   тулов). Гипотезу из веб-поиска — проверять локально, потом править код.
+- **Сохранил .mts/.ts файл — СРАЗУ проверяй его, не копя до коммита:**
+  `npx oxlint --fix <файл>` + `npx prettier --write <файл>` (питон —
+  `python -m py_compile <файл>`); сомневаешься в типах — `npm run typecheck`.
+  oxlint зови по директории или голым `npm run lint` — glob-путь `**/*.mts`
+  он молча не находит (0 файлов, без ошибки).
+  typecheck сейчас падает только на чужом WIP `scan_alaric.mts` (файл
+  владельца) — это не наша ошибка, файл не трогать.
 
 ## Архитектура озвучки
 
@@ -197,6 +204,13 @@ tools/generate/scripts/
   voice_status.mts             # СТАТУС И ПРОГНОЗ генерации: готово (стем opus/wav)
                                #   по языкам/аркам, %, размер, воркеры, скорость,
                                #   прогноз (--fast без замера). ВСЕГДА для «статус?»
+  voice_role_audit.mts         # РОЛЕВОЙ АУДИТ корпуса (скилл tssr-voice-audit):
+                               #   роли PO ↔ касты ↔ файлы, классы OK/WRONG_ROLE/
+                               #   VOICELESS/NON_SPEECH/STALE/ARC/WEIRD; --delete
+                               #   (мёртвые классы), --fix-arc (перенос ARC в
+                               #   POT-арку), --verify (сверка с сырьём game/:
+                               #   POT-дрейф + STALE жив/мёртв), --dry (план без
+                               #   правок ФС); отчёт tmp/role_audit.json
   voice_queue.sh               # ОЧЕРЕДЬ генерации: bash tools/generate/scripts/voice_queue.sh {ru|en}
                                #   (все арки, resumable, НИЗКИЙ приоритет
                                #   BelowNormal + OMP_NUM_THREADS=6 — не мешает
