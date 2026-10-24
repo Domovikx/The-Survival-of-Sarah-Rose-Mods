@@ -153,4 +153,4 @@ grep'ом по package.json/.cmd/.mts/скиллам/докам):
 - `tasks/2026-10-21-voice-pipeline-ts-migration.md` — родительская задача миграции (DOING),
   её «Осталось» — voice_ctl/очереди; эта задача закрывает остальное.
 - AGENTS.md, раздел «Миграция python → TypeScript» — приказ и границы.
-- `tasks/2026-10-22-catalog-legacy-removal.md` — прецедент выпила легаси-слоёв.
+- `tasks/archive/2026-10-22-catalog-legacy-removal.md` — прецедент выпила легаси-слоёв.

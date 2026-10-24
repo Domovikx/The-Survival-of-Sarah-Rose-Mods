@@ -28,7 +28,7 @@
 - Репозиторий проекта лежит ВНУТРИ установки игры: `C:\Program Files (x86)\Steam\steamapps\common\
 The Survival of Sarah Rose\` — здесь же `game/` официальной игры, `ai_voice/` (~1.6 ГБ),
   `mod/` + `environment.txt` (механизм подключения мода вне game/, ресёрч
-  `tasks/2026-10-14-update-proof-mod-connection.md` — DONE).
+  `tasks/archive/2026-10-14-update-proof-mod-connection.md` — DONE).
 - `game/tl/ru/` (перевод) и патчи `game/gui.rpy`, `game/options.rpy`, `game/screens.rpy` —
   прямо смешаны с официальными файлами; после апдейта Steam часть файлов слетает.
 - Мод-слой в работе (`tasks/2026-10-14-mod-overlay-migration.md`, статус DOING — второй агент):
@@ -96,10 +96,10 @@ The Survival of Sarah Rose\` — здесь же `game/` официальной 
 
 ## Связи
 
-- `tasks/2026-10-14-update-proof-mod-connection.md` (DONE) — механизм `environment.txt`,
+- `tasks/archive/2026-10-14-update-proof-mod-connection.md` (DONE) — механизм `environment.txt`,
   база для «мод живёт вне game/».
 - `tasks/2026-10-14-mod-overlay-migration.md` (DOING, второй агент) — что именно переедет
   в мод-пакет на уровне Ren'Py.
 - `README.md` — инструкция установки, которую придётся переписать после миграции.
-- Задачи SEO: `2026-10-15-github-pages-landing.md`, `2026-10-15-github-releases-and-metadata.md` —
+- Задачи SEO: `archive/2026-10-15-github-pages-landing.md`, `2026-10-15-github-releases-and-metadata.md` —
   дистрибутив релиза зависит от итоговой раскладки (1 zip «мод+голоса» vs два пакета).

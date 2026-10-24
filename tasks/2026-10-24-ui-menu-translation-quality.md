@@ -162,6 +162,6 @@ C:\Program Files (x86)\Steam\steamapps\common\The Survival of Sarah Rose\game\sc
 ## Связи
 
 - `tasks/2026-10-23-translate-es-full.md` — идущий прогон перевода es.po.
-- `tasks/2026-10-23-dry-emotion-only-in-pot.md` — тон только в POT, обратный резолвер
+- `tasks/archive/2026-10-23-dry-emotion-only-in-pot.md` — тон только в POT, обратный резолвер
   `pot_resolve.mts` (по нему и определяется category для ветвления).
 - Скилл `skill-translate-es-po` — правила качества перевода (понадобится UI-оговорка).

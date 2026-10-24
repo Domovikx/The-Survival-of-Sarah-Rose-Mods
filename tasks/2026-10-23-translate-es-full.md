@@ -38,7 +38,7 @@
 - Бенчмарк кандидатов моделей В ПРОЦЕССЕ: качаются `lmstudio-community/GLM-4-9B-0414-GGUF`
   (Q4_K_M ~5.2 GB) и `unsloth/Qwen3.5-27B-GGUF` (Q3_K_M 13.5 GB); официального
   Qwen3.5-14B dense не существует (проверено HF API 2026-10-23).
-- Блокер перед запуском: задача `2026-10-23-dry-emotion-only-in-pot.md` — po:translate читает
+- Блокер перед запуском: задача `archive/2026-10-23-dry-emotion-only-in-pot.md` — po:translate читает
   тон из po-комментариев, а DRY их уберёт; сделать ДО старта, иначе конфликт записи файлов.
 - Языковые правила/лексикон — `.opencode/skills/renpy-po/po_langs.mts` (профиль es со
   всеми 18+-запретами), памятка качества — `.opencode/skills/skill-translate-es-po/SKILL.md`
@@ -50,7 +50,7 @@
    судья-кросс: переводил кандидат → судит qwen3.5-9b отдельным заходом, т.к. в VRAM
    не влезают вместе): выбор модели по «балл судьи × секунд на запись»;
    если близко — берём qwen3.5-9b (уже проверен). Результат вписать в журнал задачи.
-2. Закрыть блокер DRY (`2026-10-23-dry-emotion-only-in-pot.md`) до старта перевода.
+2. Закрыть блокер DRY (`archive/2026-10-23-dry-emotion-only-in-pot.md`) до старта перевода.
 3. Запуск: `npm run po:translate -- --lang es` в фоне (построчно, судья вкл),
    логи `tmp/po_translate_es.log/.jsonl`; прогон резюмируемый — старт после каждого
    сбоя/ребута без потерь.
@@ -161,7 +161,7 @@ GLM проиграл по баллу. Победитель: судья+пере�
 
 ## Связи
 
-- Блокер-предпосылка: `2026-10-23-dry-emotion-only-in-pot.md` (сделать до запуска).
+- Блокер-предпосылка: `archive/2026-10-23-dry-emotion-only-in-pot.md` (сделать до запуска).
 - Инструмент: `npm run po:translate` + профиль `po_langs.mts` (es).
 - Правила качества: `.opencode/skills/skill-translate-es-po/SKILL.md` (+ glossary.es.md),
   ревью: `.opencode/skills/skill-review-es-po`.

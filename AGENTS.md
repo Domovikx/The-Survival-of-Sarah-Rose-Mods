@@ -678,7 +678,7 @@ Shift+Tab) → LM Studio Local → qwen/qwen3.5-9b.
 - ~~EN-рефы голосов~~ → **СНЯТО 2026-10-18**: EN-озвучка 100% готова (те же
   рефы casts/voices)
 - ~~Формат аудио: WAV vs OGG~~ → **РЕШЕНО 2026-10-13: Opus 24k mono** (вердикт ресёрча,
-  проверено в игре; см. tasks/2026-10-12-audio-compression-research.md и
-  tasks/2026-10-13-opus-migration.md)
+  проверено в игре; см. tasks/archive/2026-10-12-audio-compression-research.md и
+  tasks/archive/2026-10-13-opus-migration.md)
 - ~~Fallback при отсутствии файла~~ → **РЕШЕНО: молчание** (без крашей;
   задокументировано в README FAQ и строке voice.missing)

@@ -19,7 +19,7 @@
 ## Цель
 
 Мод-слой (`mod/` + `environment.txt`, механизм доказан ресёрчем
-`tasks/2026-10-14-update-proof-mod-connection.md`), который НЕ переопределяет официальные
+`tasks/archive/2026-10-14-update-proof-mod-connection.md`), который НЕ переопределяет официальные
 экраны 0.79, а даёт:
 
 1. **Кнопку на главном меню** (минимальный хук — как в NeonTranslator) → открывает
@@ -232,7 +232,7 @@ cmap). Gui-патч переводит все три `gui.*_font` на `fonts/Li
 
 ## Связи
 
-- `tasks/2026-10-14-update-proof-mod-connection.md` — вердикт механизма (environment.txt).
+- `tasks/archive/2026-10-14-update-proof-mod-connection.md` — вердикт механизма (environment.txt).
 - `tmp/mod-migration/analysis.md` — форензика патчей (что официал, что наше).
 - `game/voice_config.rpy`, `game/language_switcher.rpy` — существующие аддитивные механизмы.
 - `AGENTS.md` — правила (коммиты, инкапсуляция).

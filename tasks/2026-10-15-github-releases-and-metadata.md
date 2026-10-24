@@ -23,7 +23,7 @@ URL, счётчик загрузок, changelog, отдельную индекс
 - README (`README.md:40`, `README.md:140`) ссылается на master.zip — при каждом пуше ZIP меняется.
 - Озвучка не доделана (94.2%, прогноз ~5.5 дня по `voice_status.py` 2026-10-15) — первый релиз
   логично делать либо « translation-complete» (перевод 100% уже есть), либо после 100% озвучки.
-- Homepage у репо пуст; задача `2026-10-15-github-pages-landing.md` после выполнения даст URL
+- Homepage у репо пуст; задача `archive/2026-10-15-github-pages-landing.md` после выполнения даст URL
   для homepage.
 
 ## Что сделать (ресёрч, по протоколу `tasks/AGENT.md`)
@@ -68,5 +68,5 @@ URL, счётчик загрузок, changelog, отдельную индекс
 
 ## Связи
 
-- `2026-10-15-github-pages-landing.md` — лендинг ссылается на релиз, homepage репо берёт URL лендинга.
+- `archive/2026-10-15-github-pages-landing.md` — лендинг ссылается на релиз, homepage репо берёт URL лендинга.
 - `2026-10-15-external-promotion.md` — посты на площадках ссылаются на релиз.
