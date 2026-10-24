@@ -44,3 +44,4 @@
 | `2026-10-22-catalog-legacy-removal.md`          | DONE   | Выпил каталог-легаси: роутинг озвучки из POT, runtime-json на сборке, отчёты в tmp                          |
 | `2026-10-23-dry-emotion-only-in-pot.md`         | DONE   | DRY: тон только в POT + резолвер po → pot (−22.8 MB), e2e-смоук, 70/70 тестов                               |
 | `2026-10-23-tl-ru-deprecation.md`               | DOING  | Депрекейт tl/ru: фаза 1 (маркеры) ГОТОВА, фаза 2 (выпилка) под гейтом владельца                             |
+| `2026-10-23-translate-es-full.md`               | DOING  | Перевод es.po: ночная оркестрация запущена (бенчмарк → выбор модели → po:translate фоном)                   |
