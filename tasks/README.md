@@ -29,19 +29,21 @@
 
 ## Таблица задач
 
-| Файл                                            | Статус | Задача                                                                                                      |
-| ----------------------------------------------- | ------ | ----------------------------------------------------------------------------------------------------------- |
-| `2026-10-12-audio-compression-research.md`      | DONE   | Ресёрч: как сжать WAV-озвучку (21 GB) без потери качества, де-факто 2026                                    |
-| `2026-10-14-update-proof-mod-connection.md`     | DONE   | Ресёрч: подключать наши патчи без правки файлов игры (пережить Steam-апдейт)                                |
-| `2026-10-14-mod-overlay-migration.md`           | DOING  | Реализация: мод-слой с кнопкой на гл. меню → своё меню (языки/озвучка) + gui-патч                           |
-| `2026-10-14-direct-opus-generation-research.md` | DONE   | Ресёрч+реализация: генерация сразу Opus 24k без промежуточного wav                                          |
-| `2026-10-14-final-wav-deletion-migration.md`    | DONE   | Финальная миграция: удалить wav из ai_voice, убрать строку из .gitignore                                    |
-| `2026-10-15-github-pages-landing.md`            | DONE   | Лендинг на GitHub Pages (ветка gh-pages) для продвижения проекта                                            |
-| `2026-10-15-github-releases-and-metadata.md`    | READY  | GitHub-релиз + homepage репо вместо master.zip (стабильная ссылка для SEO)                                  |
-| `2026-10-15-external-promotion.md`              | READY  | Продвижение: посты на Reddit/DTF/Steam-дискуссии/TG со ссылкой на репо                                      |
-| `2026-10-15-seo-optimization.md`                | WIP    | SEO лендинга: robots/sitemap/rating/JSON-LD/IndexNow ГОТОВО, ждёт GSC-верификацию (владелец) + контент-план |
-| `2026-10-21-voice-pipeline-ts-migration.md`     | READY  | Реализация: оркестрация пайплайна озвучки на TS (.mts), python = только инференс-шим                        |
-| `2026-10-22-catalog-legacy-removal.md`          | DONE   | Выпил каталог-легаси: роутинг озвучки из POT, runtime-json на сборке, отчёты в tmp                          |
-| `2026-10-23-dry-emotion-only-in-pot.md`         | DONE   | DRY: тон только в POT + резолвер po → pot (−22.8 MB), e2e-смоук, 70/70 тестов                               |
-| `2026-10-23-tl-ru-deprecation.md`               | DOING  | Депрекейт tl/ru: фаза 1 (маркеры) ГОТОВА, фаза 2 (выпилка) под гейтом владельца                             |
-| `2026-10-23-translate-es-full.md`               | DOING  | Перевод es.po: ночная оркестрация запущена (бенчмарк → выбор модели → po:translate фоном)                   |
+| Файл                                            | Статус | Задача                                                                                                       |
+| ----------------------------------------------- | ------ | ------------------------------------------------------------------------------------------------------------ |
+| `2026-10-12-audio-compression-research.md`      | DONE   | Ресёрч: как сжать WAV-озвучку (21 GB) без потери качества, де-факто 2026                                     |
+| `2026-10-14-update-proof-mod-connection.md`     | DONE   | Ресёрч: подключать наши патчи без правки файлов игры (пережить Steam-апдейт)                                 |
+| `2026-10-14-mod-overlay-migration.md`           | DOING  | Реализация: мод-слой с кнопкой на гл. меню → своё меню (языки/озвучка) + gui-патч                            |
+| `2026-10-14-direct-opus-generation-research.md` | DONE   | Ресёрч+реализация: генерация сразу Opus 24k без промежуточного wav                                           |
+| `2026-10-14-final-wav-deletion-migration.md`    | DONE   | Финальная миграция: удалить wav из ai_voice, убрать строку из .gitignore                                     |
+| `2026-10-15-github-pages-landing.md`            | DONE   | Лендинг на GitHub Pages (ветка gh-pages) для продвижения проекта                                             |
+| `2026-10-15-github-releases-and-metadata.md`    | READY  | GitHub-релиз + homepage репо вместо master.zip (стабильная ссылка для SEO)                                   |
+| `2026-10-15-external-promotion.md`              | READY  | Продвижение: посты на Reddit/DTF/Steam-дискуссии/TG со ссылкой на репо                                       |
+| `2026-10-15-seo-optimization.md`                | WIP    | SEO лендинга: robots/sitemap/rating/JSON-LD/IndexNow ГОТОВО, ждёт GSC-верификацию (владелец) + контент-план  |
+| `2026-10-21-voice-pipeline-ts-migration.md`     | READY  | Реализация: оркестрация пайплайна озвучки на TS (.mts), python = только инференс-шим                         |
+| `2026-10-22-catalog-legacy-removal.md`          | DONE   | Выпил каталог-легаси: роутинг озвучки из POT, runtime-json на сборке, отчёты в tmp                           |
+| `2026-10-23-dry-emotion-only-in-pot.md`         | DONE   | DRY: тон только в POT + резолвер po → pot (−22.8 MB), e2e-смоук, 70/70 тестов                                |
+| `2026-10-23-tl-ru-deprecation.md`               | DOING  | Депрекейт tl/ru: фаза 1 (маркеры) ГОТОВА, фаза 2 (выпилка) под гейтом владельца                              |
+| `2026-10-23-translate-es-full.md`               | DOING  | Перевод es.po: ночная оркестрация запущена (бенчмарк → выбор модели → po:translate фоном)                    |
+| `2026-10-24-ui-menu-translation-quality.md`     | READY  | Ресёрч+фикс: ветка перевода UI/menu-записей (без спикера/эмоции, авточеки не режут короткие); приор. СРЕДНИЙ |
+| `2026-10-24-python-ts-inventory.md`             | READY  | Ресёрч: инвентаризация python — список миграции на TS vs выпиливание протухшего                              |
