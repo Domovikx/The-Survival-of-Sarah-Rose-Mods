@@ -8,9 +8,9 @@
  *      закоммиченного файла бдит e2e-гард байт-в-байт;
  *   2. npm run po:update — переводы переносятся в новый POT по правилам
  *      NeonTranslator/po_update.py (порт):
- *      - exact (msgid, msgctxt) — перевод перенесён, тон (#. emotion)
- *        освежён из POT; arc/scene/uid в .po не дублируются — только POT
- *        (связь по ключу msgctxt+msgid, см. keepEmotionComments);
+ *      - exact (msgid, msgctxt) — перевод перенесён; комментарии НЕ течут
+ *        (DRY 2026-10-23: тон/arc/scene/uid живут только в POT, обратный
+ *        пайплайн — pot_resolve.mts по ключу msgctxt+msgid);
  *      - ключ исчез, но тот же EN-текст жив под другим контекстом
  *        (переклассификация спикера, narration -> speaker:Narrator) —
  *        перевод спасён ретаргетом с пометкой, чужой перевод не перетирается;
@@ -28,7 +28,7 @@ import { readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
-import { keepEmotionComments, parsePo, renderPo } from "./po_core.mts";
+import { parsePo, renderPo } from "./po_core.mts";
 import type { PoEntry } from "./po_core.mts";
 
 const SKILL_DIR = dirname(fileURLToPath(import.meta.url));
@@ -54,13 +54,17 @@ const entryKey = (e: { msgctxt: string; msgid: string }): string => `${e.msgctxt
 
 /** Шапка PO-файла: блок до первой пустой строки (комментарии + msgid ""). */
 export function poHeaderLines(poText: string): string[] {
-  return poText.split("\n\n")[0].split("\n");
+  // CRLF-безопасность: разделитель блоков "\n\n" не находится в CRLF-файле
+  // (там "\r\n\r\n") — без нормализации split возвращал ВЕСЬ файл, и renderPo
+  // склеивал старую копию с новой (инцидент с ru.po 2026-10-23).
+  const text = poText.replace(/\r\n/g, "\n");
+  return text.split("\n\n")[0].split("\n");
 }
 
 /**
  * Переносит переводы из poText в новый POT (potText). Ядро — порт
  * NeonTranslator po_update.merge_pot: спасение через текст под другим
- * контекстом, legacy-keep, свежие #. uid/emotion из POT.
+ * контекстом, legacy-keep; комментарии POT в .po не копируются (DRY).
  */
 export function mergePoUpdate(poText: string, potText: string): UpdateResult {
   const poEntries = parsePo(poText).filter((e) => e.msgid);
@@ -90,8 +94,8 @@ export function mergePoUpdate(poText: string, potText: string): UpdateResult {
     stats.retargeted += 1;
   }
 
-  // Основной поток: каждая запись нового POT; #. uid/emotion берутся из POT
-  // (освежены), перевод и переводческие пометы — из PO.
+  // Основной поток: каждая запись нового POT; метаданные (arc/scene/uid/
+  // emotion) в .po НЕ копируются (DRY), перевод и переводческие пометы — из PO.
   const merged: PoEntry[] = [];
   for (const pe of potEntries) {
     const k = entryKey(pe);
@@ -128,10 +132,11 @@ export function mergePoUpdate(poText: string, potText: string): UpdateResult {
     stats.legacyKept += 1;
   }
 
-  // Контракт языкового .po (2026-10-22): из POT течёт только тон;
-  // arc/scene/uid остаются в POT и читаются по ключу (msgctxt, msgid).
+  // Контракт языкового .po (DRY 2026-10-23): из POT в .po НЕ течёт НИЧЕГО —
+  // ни тона, ни arc/scene/uid: машинные метаданные живут только в POT и
+  // читаются обратным пайплайном pot_resolve.mts по ключу (msgctxt, msgid).
   for (const e of merged) {
-    e.comments = keepEmotionComments(e.comments);
+    e.comments = [];
   }
 
   merged.sort(

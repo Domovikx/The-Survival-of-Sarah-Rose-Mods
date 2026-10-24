@@ -500,6 +500,11 @@ casts/voices/{Name}/
    Приоритет: `--emotion` (CLI) > POT[uid] > без эмоции.
    `--no-emotion` отключает пофразовую (суффикс_plain);
    `--emotion-ru` — русский перевод для манифеста/ревью.
+   **DRY (2026-10-23): тон живёт ТОЛЬКО в `po/template.pot`** — из
+   `po/*.po` он убран (экономия 22.8 MB на 10 языков); обратный пайплайн
+   «po-запись → pot[arc, scene, uid, emotion]» — `renpy-po/pot_resolve.mts`
+   (по ключу msgctxt+msgid; po_translate читает тон через него, po:update
+   комментарии в .po не пишет).
 7. Манифест {wav}.txt фиксирует ref/emotion/конфиг — всегда рядом с wav.
 8. Эмоция = состояние ДИКТОРА (кто произносит), не содержание текста:
    диалог участника — «In a burst of passion, crying out with joy and ecstasy»;

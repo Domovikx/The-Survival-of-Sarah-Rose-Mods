@@ -148,7 +148,7 @@ test("merge детерминирован, round-trip, в .po течёт толь
     assert.ok(!e.comments.some((c) => /^(arc|scene|uid):/.test(c)), `arc/scene/uid не дублируются в .po: ${e.msgid}`);
   }
   const hello = reparsed.find((e) => e.msgid === "Hello there!");
-  assert.deepEqual(hello?.comments, ["emotion: Warmly, amused"], "тон из POT пережил merge");
+  assert.deepEqual(hello?.comments, [], "DRY: в .po не течёт даже тон (тон читается из POT через pot_resolve)");
 });
 
 test("повторный запуск по освежённому po — идемпотентен (fixpoint)", () => {

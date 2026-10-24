@@ -149,17 +149,6 @@ export function renderPo(entries: PoEntry[], headerLines: string[]): string {
 }
 
 /**
- * Комментарии, дозволенные в языковом .po: только тон (`emotion:`).
- * arc/scene/uid в .po НЕ дублируются — они живут в template.pot, а связь
- * идёт ключом (msgctxt, msgid): через ключ запись .po резолвится в POT
- * и оттуда берётся арка/сцена/uid. Решение владельца 2026-10-22
- * (прецедент: NeonTranslator TCCN, ru.po без служебных комментариев).
- */
-export function keepEmotionComments(comments: string[]): string[] {
-  return comments.filter((c) => c.startsWith("emotion:"));
-}
-
-/**
  * Агрессивная нормальная форма для матча твинов (prefill-автозаполнение).
  *
  * «004 Yeees yeees Ill be thereee 1» и «Yeees yeees, I'll be thereee!»

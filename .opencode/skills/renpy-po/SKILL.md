@@ -102,11 +102,15 @@ msgstr "На корабли!"
 
 ## Метаданные озвучки (комментарии `#.`)
 
-Полный набор (`arc/scene/uid/emotion`) живёт ТОЛЬКО в template.pot. ru.po/es.po
-из POT наследуют **только тон** (`#. emotion:` — подсказка переводчику и точка
-ручной доразметки); arc/scene/uid в .po не дублируются — связь с POT идёт
-ключом (msgctxt, msgid), фильтр — `keepEmotionComments` в po_core.mts
-(решение владельца 2026-10-22, прецедент NeonTranslator TCCN). Каждый вид
+Полный набор (`arc/scene/uid/emotion`) живёт ТОЛЬКО в template.pot, и в
+языковые `po/*.po` не течёт **НИЧЕГО** (DRY 2026-10-23: раньше в .po течёк
+только тон — убрано, экономия ~2.3 MB на язык / 22.8 MB на все 10). Кто
+нуждается в тоне/арке — берёт обратным пайплайном
+`pot_resolve.mts` (`loadPotIndex().resolve(msgctxt, msgid)` →
+`{uid, arc, scene, emotion, category, speaker}`, `null` при дрейфе), связь с
+POT идёт ключом (msgctxt, msgid). po:update (po_update.mts) комментарии в .po
+не пишет; po_translate читает тон через резолвер. Потребители резолвера:
+`po_translate.mts` (промпт+судья), будущие тулы ревью/озвучки. Каждый вид
 комментария:
 
 - `#. arc: <Арка>` — арка текущего label записи: выводится potgen ИЗ ИМЁН
