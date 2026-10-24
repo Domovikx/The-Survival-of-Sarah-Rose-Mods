@@ -58,8 +58,9 @@
   `cu130`; в 2.13/2.14 есть breaking changes (удалены cholesky/qr, named tensors, clamp-subgrad,
   trust_repo) — под CosyVoice не проверялись; quality-фиксов для нас нет, ожидаемый
   скорость-выигрыш в eager 0–5%.
-- **TRT/Triton-рантайм** — в roadmap апстрима с 08/2025 (README); ожидаемый выигрыш GPU-части
-  +30…80% [оценка, замерить].
+- **TRT/Triton-рантайм** — в roadmap апстрима с 08/2025 (README); **официальный заявленный
+  выигрыш: ×4 на LLM-часть** (README, секция TensorRT-LLM; каталог `runtime/triton_trtllm`
+  есть локально; альтернатива — `vllm_example.py`) [замерить у нас].
 - transformers: в венв Qwen3-TTS уже 4.57.3; HF-активность апстрима (сентябрь 2026) — только
   ASR (`Fun-ASR-Nano-2512-hf` + transformers 5.17 migration notes) — для TTS модели новых
   версий НЕТ.
@@ -72,6 +73,25 @@
 
 **Связанный факт:** корпус RU+EN почти готов (95.66%) — уже сгенерированные фразы можно
 брать как референс «что было» для слушательского/метрического сравнения с «что стало».
+
+**Ресёрч «запуск CosyVoice из TS» (2026-10-24, веб-поиск 403 → первоисточники GitHub API/npm
+registry/sherpa docs + локальный README апстрима):**
+
+- Нативного Node-инференса CosyVoice **не придумал никто**: все 44 GitHub-проекта
+  «cosyvoice+js/ts» заворачивают python (AIGCPanel 5.7k★ — Electron+python-рантаймы,
+  npm `cortico-world-cosyvoice-tts` — обёртка с prepare-runtime, n8n-node — облачный
+  DashScope). Наш spawn+протокол v2 = де-факто практика.
+- **Официальный FastAPI-сервер** — локально: `CosyVoice/runtime/python/fastapi/{server.py,
+client.py}` (в апстриме с 07/2024). Кандидат C2: одна модель на ОБЕ очереди (сейчас
+  ru+en = два cosyworker = дважды модель в VRAM) + нет 40с перезагрузки на каждый старт.
+- **ONNX-путь закрыт**: sherpa-onnx (Node-addon/WASM есть) не поддерживает CosyVoice —
+  в списке TTS только Kitten/Pocket/Supertonic/ZipVoice/Matcha/Kokoro/VITS/Piper/MMS;
+  в модели ONNX есть только токенизатор/flow/campplus, LLM и вокодер — только torch.
+- WASM/Candle-прецедент (`@spensercai/tts-wasm`, свежий) — для **Qwen3-TTS**, не CV3:
+  возможен для VoiceDesign-кандидатов, не для корпуса.
+- **TRT-LLM: официальный ×4 на LLM-часть** (README апстрима, `runtime/triton_trtllm`,
+  docker compose; локально каталог есть) — сильнее прежней оценки «+30…80%». Есть ещё
+  `vllm_example.py` в корне апстрима — как альтернатива docker-пути.
 
 ## Что сделать (ресёрч, по протоколу `tasks/AGENT.md`)
 
@@ -97,6 +117,12 @@
 4. **Применение:** вердикт в журнал задачи (числа ±%); само обновление основного венва /
    правки `voice_presets`/`cosyworker` — ТОЛЬКО после согласования с владельцем и отдельным
    коммитом; при смене звука (B/C/D-батч) — обязательный A/B на слух перед массовой генерацией.
+5. **Критерий оценки кандидатов, специфичный проекту (владелец, 2026-10-24):** проект —
+   презентационный для студентов (максимум `.ts`/`.mts`, см. AGENTS «Миграция python →
+   TypeScript»). Каждый кандидат оценивается и по «TS-ценности»: C1/C2 (FastAPI-клиент
+   пишем на TS — сервер остаётся python-контрактом), ONNX-путь через `onnxruntime-node`
+   (полный инференс из Node) — амбициозный showcase-этап, оценивать отдельно с учётом
+   стоимости; WASM-прецедент для Qwen3-TTS (VoiceDesign) — тоже showcase-кандидат.
 
 ## Приёмка
 
