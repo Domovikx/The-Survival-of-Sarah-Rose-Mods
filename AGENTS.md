@@ -11,7 +11,10 @@
 - `patches/ai-voice-pack/` (корень патча) → `mods/tssr-ai-voice-pack/` —
   ЗЕРКАЛО установки (2026-10-19): `zzz_ui.rpy`, `zzz_update_check.rpy`,
   `voice_config.rpy`, `fonts/`, `images/`, `tl/` копируются как
-  есть (arcname = относительный путь, тесты не дают вернуться «карте путей»)
+  есть (arcname = относительный путь, тесты не дают вернуться «карте путей»).
+  **2026-10-23: `tl/ru` DEPRECATED** (легаси-корпус, правки не принимаются;
+  источник истины русского — `po/ru.po`; выпилка — фаза 2 задачи
+  `tasks/2026-10-23-tl-ru-deprecation.md` под гейтом владельца)
 - `patches/ai-voice-pack/audio/vo_<lang>/` → `mods/tssr-ai-voice-pack/ai_voice/<lang>/` (установка)
 - `catalog/` (в установке: `mods/tssr-ai-voice-pack/catalog/`) — АРТЕФАКТ СБОРКИ
   (2026-10-22: в репе каталог/ не живёт): `label_arc.json` + `voice_list.json`

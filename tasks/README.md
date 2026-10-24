@@ -43,3 +43,4 @@
 | `2026-10-21-voice-pipeline-ts-migration.md`     | READY  | Реализация: оркестрация пайплайна озвучки на TS (.mts), python = только инференс-шим                        |
 | `2026-10-22-catalog-legacy-removal.md`          | DONE   | Выпил каталог-легаси: роутинг озвучки из POT, runtime-json на сборке, отчёты в tmp                          |
 | `2026-10-23-dry-emotion-only-in-pot.md`         | DONE   | DRY: тон только в POT + резолвер po → pot (−22.8 MB), e2e-смоук, 70/70 тестов                               |
+| `2026-10-23-tl-ru-deprecation.md`               | DOING  | Депрекейт tl/ru: фаза 1 (маркеры) ГОТОВА, фаза 2 (выпилка) под гейтом владельца                             |
