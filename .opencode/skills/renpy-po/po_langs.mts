@@ -24,9 +24,8 @@ export interface LangProfile {
   fewshot: Array<[string, string]>;
   /** Дополнительные пункты для судьи (пер-языковая специфика). */
   judgeNotes: string;
-  /** Макс. отклонение длины перевода от оригинала (CJK шире). */
-  lenMin: number;
-  lenMax: number;
+  // КРИТ-ФИКС 2026-10-24: lenMin/lenMax (проверка длины перевода) ВЫПИЛЕНЫ —
+  // ratio-лимит ломал CJK (1 иероглиф = слово) и короткие UI-кнопки.
 }
 
 /** Базовые правила, общие для всех языков. */
@@ -36,7 +35,7 @@ const COMMON = `HARD RULES:
 - NEVER wrap the line in quotation marks: the game renders speech on screen and the English source has no quotes. Use quotes ONLY where the English itself quotes something inside the text (mirror it).
 - Keep %s/{name}/{i}...{/i} placeholders and Ren'Py text tags verbatim.
 - Names and titles are never translated ("King Orwell" -> localized title + Orwell, the name itself untouched).
-- Length within the allowed range of the English line (subtitles). Keep "..." as "...", keep repetitions and exclamations.
+- Keep "..." as "...", keep repetitions and exclamations. NO length requirement: translation may be shorter or longer than the English line — never trim or pad to match length.
 - Idioms are localized, not translated word-by-word.
 - The emotion tag gives the speaker's delivery (Whispering, afraid = whispered; In a burst of passion = a cry). Tone fidelity outranks literalness.
 - The translation must lose no concreteness: adverbs, possessives, locations, qualifiers all stay.
@@ -48,8 +47,6 @@ export const LANGS: Record<string, LangProfile> = {
   es: {
     code: "es",
     name: "Español (España + LatAm)",
-    lenMin: 0.5,
-    lenMax: 1.6,
     rules: `${COMMON}
 - Address form: "tú" everywhere between lovers/friends/family/servants; "usted" ONLY for subjects addressing monarchs/high lords/priests (Su Majestad, su señoría). NEVER "vos"/voseo, NEVER "vosotros" — plural "you" is always "ustedes".
 - Vocabulary neutral for both Spain and LatAm (prefer "computadora"). FORBIDDEN: "coger" (obscene in LatAm), "concha" (LatAm insult), "usteded" (typo).
@@ -100,8 +97,6 @@ ${EROTIC_NOTE}
   de: {
     code: "de",
     name: "Deutsch",
-    lenMin: 0.5,
-    lenMax: 1.6,
     rules: `${COMMON}
 - Address form: "du" between lovers/friends/family/servants; "Ihr/Sie" (formal) ONLY for subjects addressing monarchs/high lords/priests; nobles may be addressed "Euer Gnaden/Ihre Majestät". NEVER mix du and Ihr within one relationship unless the story marks an intimacy shift.
 - Gender agreement: adjectives and participles must match gender/number/case of their nouns. Sarah is FEMALE (verlegen instead of verlegen... check: "she was tired but happy" -> "sie war müde, aber glücklich"; past participle "ge-X-t" has no gender but attributive adjectives decline: "die erschöpfte Frau").
@@ -122,8 +117,6 @@ ${EROTIC_NOTE}
   fr: {
     code: "fr",
     name: "Français",
-    lenMin: 0.5,
-    lenMax: 1.6,
     rules: `${COMMON}
 - Address form: "tu" between lovers/friends/family/servants; "votre/vous" ONLY for subjects addressing monarchs/high lords/priests (Votre Majesté). NEVER mix within one relationship.
 - Gender agreement: past participles used as adjectives agree in gender/number. Sarah is FEMALE ("elle était fatiguée mais heureuse", "une femme ivre").
@@ -143,8 +136,6 @@ ${EROTIC_NOTE}
   it: {
     code: "it",
     name: "Italiano",
-    lenMin: 0.5,
-    lenMax: 1.6,
     rules: `${COMMON}
 - Address form: "tu" between lovers/friends/family/servants; "Lei" ONLY for subjects addressing monarchs/high lords/priests (Vostra Maestà).
 - Gender agreement: adjectives/participles agree with the subject. Sarah is FEMALE ("era stanca ma felice", "una donna ubriaca").
@@ -165,8 +156,6 @@ ${EROTIC_NOTE}
   pl: {
     code: "pl",
     name: "Polski",
-    lenMin: 0.5,
-    lenMax: 1.6,
     rules: `${COMMON}
 - Address form: "ty" between lovers/friends/family/servants; "Pan/Pani" ONLY for subjects addressing monarchs/high lords/priests (Wasza Królewska Mość).
 - Cases: nouns/adjectives must decline correctly for their grammatical case — check every adjective-noun pair. Sarah is FEMALE ("była zmęczona, ale szczęśliwa", "pijana kobieta").
@@ -189,8 +178,6 @@ ${EROTIC_NOTE}
   pt: {
     code: "pt",
     name: "Português (BR + PT)",
-    lenMin: 0.5,
-    lenMax: 1.6,
     rules: `${COMMON}
 - Address form: "você" as neutral informal (understood in both BR and PT); "o senhor/a senhora" ONLY for subjects addressing monarchs/high lords/priests (Vossa Majestade). NEVER "tu" forms with -es conjugation (BR-neutral file).
 - Vocabulary neutral for BR and PT (prefer words understood in both; avoid strong regionalisms: "cara" OK, "mano" BR-only — avoid).
@@ -212,8 +199,6 @@ ${EROTIC_NOTE}
   ru: {
     code: "ru",
     name: "Русский",
-    lenMin: 0.5,
-    lenMax: 1.6,
     rules: `${COMMON}
 - Address form: "ты" between lovers/friends/family/servants; "Вы/Ваш" ONLY for subjects addressing monarchs/high lords/priests (Ваше Величество).
 - Gender agreement: adjectives/participles agree with the subject. Sarah is FEMALE ("она устала, но была счастлива", "опьяневшая женщина").
@@ -234,10 +219,8 @@ ${EROTIC_NOTE}
   ja: {
     code: "ja",
     name: "日本語",
-    lenMin: 0.3,
-    lenMax: 2.5,
     rules: `${COMMON}
-- Length: Japanese packs more information per character — 0.3x–2.5x of English char count is normal; do not force matching length, but do not pad unnaturally either.
+- Japanese packs much more information per character than English — a significantly shorter translation is the natural outcome. Do NOT force matching length; do not pad unnaturally either.
 - Address form: default neutral/plain form for narration and equals; polite (敬語: です/ます, ～られる) ONLY where the relationship demands it (subjects to monarchs/lords: 陛下/閣下 + polite form). Lovers/friends use casual form. Honorific suffix -様 for names of high rank when the English shows deference.
 - No grammatical gender agreement — but keep Sarah's references feminine-consistent (彼女, and feminine first-person 私/あたし if a female speaker uses one in English context).
 ${EROTIC_NOTE}
@@ -255,10 +238,8 @@ ${EROTIC_NOTE}
   ko: {
     code: "ko",
     name: "한국어",
-    lenMin: 0.3,
-    lenMax: 2.5,
     rules: `${COMMON}
-- Length: Korean packs more per character — 0.3x–2.5x of English char count is normal.
+- Korean packs much more information per character than English — a significantly shorter translation is the natural outcome. Do NOT force matching length.
 - Address form: 반말 (casual) between lovers/friends/family/servants; 존댓말 (높임말: ~십시오/~하십시오, high honorifics) ONLY for subjects addressing monarchs/high lords/priests (폐하, 전하). Relationship shifts must follow the English.
 - No grammatical gender agreement — keep Sarah's references consistent (그녀 for third person).
 ${EROTIC_NOTE}
@@ -276,10 +257,8 @@ ${EROTIC_NOTE}
   zh: {
     code: "zh",
     name: "中文",
-    lenMin: 0.3,
-    lenMax: 2.0,
     rules: `${COMMON}
-- Length: Chinese is denser — 0.3x–2.0x of English char count is normal.
+- Chinese is much denser than English — a significantly shorter translation is the natural outcome. Do NOT force matching length.
 - Address form: plain/neutral for narration and equals; honorific/deferential phrasing (陛下, 阁下, 您) ONLY for subjects addressing monarchs/high lords/priests. Lovers/friends casual.
 - No grammatical gender agreement — but keep pronoun consistency: 她 for Sarah, 他 for male third persons.
 ${EROTIC_NOTE}

@@ -215,8 +215,10 @@ export function checkTranslation(entry: PoEntry, es: string, lang: string): stri
       /* невалидный regex профиля */
     }
   }
-  const ratio = mid.length ? es.length / mid.length : 1;
-  if (ratio < p.lenMin || ratio > p.lenMax) issues.push(`длина ×${ratio.toFixed(2)} вне ${p.lenMin}–${p.lenMax}`);
+  // КРИТ-ФИКС 2026-10-24: проверка длины (ratio) ВЫПИЛЕНА полностью — для
+  // CJK (zh/ja/ko) 1 иероглиф = слово, а для коротких UI-кнопок
+  // («Save»->«Guardar» ×1.75) ratio-лимит давал ложные rejected.
+  // Длина НЕ является критерием качества ни для одного языка.
   // Плейсхолдеры: printf %s/%d и Ren'Py-теги {i}...{/i} должны сохраниться
   const ph = (s: string) => (s.match(/%[sd]|\{\/?[a-zA-Z][^}]*\}/g) ?? []).sort().join("|");
   if (ph(mid) && ph(mid) !== ph(es)) issues.push(`потеряны плейсхолдеры/теги: ${ph(mid)}`);
@@ -230,7 +232,7 @@ export function checkTranslation(entry: PoEntry, es: string, lang: string): stri
 
 const JUDGE_SYSTEM = `You are a strict localization QA reviewer for an adult visual novel (EN -> target language, one file may serve several regions). Judge the candidate translation against the English source, speaker, and emotion tag.
 
-Score 0-10 and list issues. Check: completeness (nothing dropped/added), fidelity to the emotion tag, grammar/gender agreement of the target language, register (frank erotic prose — NO clinical terms in scenes; the target-language lexicon in the task rules is MANDATORY), address-form consistency, naturalness (no Anglicisms/translationese), length (subtitles).
+Score 0-10 and list issues. Check: completeness (nothing dropped/added), fidelity to the emotion tag, grammar/gender agreement of the target language, register (frank erotic prose — NO clinical terms in scenes; the target-language lexicon in the task rules is MANDATORY), address-form consistency, naturalness (no Anglicisms/translationese). NEVER penalize translation length (CJK and UI labels legitimately differ in character count).
 
 CRITICAL: never recommend clinical substitutes (e.g. for Spanish "pene/vagina/penetrar" are FORBIDDEN, not preferred). The explicit lexicon is the correct register.
 

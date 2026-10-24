@@ -42,7 +42,8 @@ test("профили самодостаточны: правила, запрет�
     assert.ok(p.rules.length > 500, `${code}: rules слишком короткие`);
     assert.ok(p.forbidden.length >= 3, `${code}: мало запретов`);
     assert.ok(p.judgeNotes.length > 50, `${code}: judgeNotes пустые`);
-    assert.ok(p.lenMin > 0 && p.lenMax > p.lenMin, `${code}: битый диапазон длины`);
+    // КРИТ-ФИКС 2026-10-24: полей lenMin/lenMax больше нет — длина не проверяется
+    assert.ok(!("lenMin" in p) && !("lenMax" in p), `${code}: lenMin/lenMax должны быть выпилены`);
     assert.equal(p.code, code);
   }
 });
@@ -73,11 +74,12 @@ test("extractJson: чистый JSON, JSON в обрамлении, мусор",
   assert.equal(extractJson('{"broken":'), null);
 });
 
-test("checkTranslation ловит: пустой, копию msgid, длину, кавычки, плейсхолдеры", () => {
+test("checkTranslation ловит: пустой, копию msgid, кавычки, плейсхолдеры; длина НЕ проверяется", () => {
   const e = mkEntry();
   assert.ok(checkTranslation(e, "", "es").includes("пустой перевод"));
   assert.ok(checkTranslation(e, e.msgid, "es").some((i) => i.includes("msgstr == msgid")));
-  assert.ok(checkTranslation(e, "Corto.", "es").some((i) => i.includes("длина"))); // ×0.28 < 0.5
+  // КРИТ-ФИКС 2026-10-24: короткий перевод (×0.28) НЕ отклоняется по длине
+  assert.ok(!checkTranslation(e, "Corto.", "es").some((i) => i.includes("длина")));
   assert.ok(checkTranslation(e, "«She was tired but happy.»", "es").some((i) => i.includes("кавычки")));
   const ph = mkEntry({ msgid: "Give %s to {i}her{/i}." });
   assert.ok(checkTranslation(ph, "Da %s a ella.", "es").some((i) => i.includes("плейсхолдер")));
@@ -100,10 +102,12 @@ test("checkTranslation: es-запреты (клиника, латино-мины
   assert.equal(checkTranslation(scene, "Él se metió muy dentro de ella.", "es").length, 0);
 });
 
-test("checkTranslation: длина в диапазоне проходит", () => {
+test("checkTranslation: длина вообще не проверяется (крит-фикс 2026-10-24)", () => {
   const e = mkEntry();
-  const ok = "Ella estaba cansada, pero feliz."; // 32 vs 24 = ×1.33 ✓
-  assert.equal(checkTranslation(e, ok, "es").length, 0);
+  // Слишком короткий для старого ratio-лимита (×0.16) — теперь проходит
+  assert.equal(checkTranslation(e, "Ok.", "es").length, 0);
+  // Явно длиннее оригинала — тоже проходит
+  assert.equal(checkTranslation(e, "Ella estaba muy cansada pero profundamente feliz.", "es").length, 0);
 });
 
 test("запреты всех языков: regex компилируются и ловят целевые слова", () => {
