@@ -1,4 +1,19 @@
 {
+  // Репа двуязычная (русские переводы/касты + английский код). VS Code по
+  // умолчанию подсвечивает каждую кириллическу lookalike-букву (с/а/е/о/х...)
+  // как "could be confused with the ASCII character" — в файлах вроде
+  // casts/voices/*/*.mts или tl/ru/*.rpy это сотни ложных варнингов на
+  // легитимном русском тексте (одна строка who — десятки «с»).
+  //
+  // allowedLocales: ru — гасит подсветку русского; НО если варнинг всё равно
+  // виден (профиль/версия VS Code), выключаем ambiguousCharacters целиком:
+  // настоящие confusables (латиница внутри русского слова, невидимые символы)
+  // ловит сканер `node .opencode/skills/unicode-guard/scan_confusables.mts <file>`
+  // — он точнее редакторской эвристики.
+  "editor.unicodeHighlight.allowedLocales": {
+    "ru": true
+  },
+  "editor.unicodeHighlight.ambiguousCharacters": false,
   "window.title": "${dirty}${rootNameShort}",
   "editor.wordWrap": "on",
   // Формат при сохранении — prettier по конфигу репы (.prettierrc.json);
