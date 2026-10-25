@@ -40,7 +40,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "<"
-msgstr ""
+msgstr "<\n\n>"
 
 msgctxt "ui"
 msgid ">"
@@ -5264,7 +5264,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "About"
-msgstr ""
+msgstr "Sobre"
 
 msgctxt "speaker:Gilead"
 msgid "About a month later, I was summoned to the Eternal Court, and I was gifted the greatest blessing of all."
@@ -5576,7 +5576,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Absolutely not!"
-msgstr ""
+msgstr "Jamás!"
 
 msgctxt "speaker:Marion"
 msgid "Absolutely."
@@ -5596,51 +5596,51 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Accept Belmont's offer."
-msgstr ""
+msgstr "Aceitar a oferta de Belmont."
 
 msgctxt "menu"
 msgid "Accept Cassius' invitation"
-msgstr ""
+msgstr "Aceitar o convite de Cássio"
 
 msgctxt "menu"
 msgid "Accept Ephraim and Caleb's proposal."
-msgstr ""
+msgstr "Aceitar a proposta de Ephraim e Caleb."
 
 msgctxt "menu"
 msgid "Accept Gilead's offer"
-msgstr ""
+msgstr "Aceitar a oferta de Gilead"
 
 msgctxt "menu"
 msgid "Accept Marion's proposal."
-msgstr ""
+msgstr "Aceitar a proposta de Marion."
 
 msgctxt "menu"
 msgid "Accept her invitation"
-msgstr ""
+msgstr "Aceitar o convite dela"
 
 msgctxt "menu"
 msgid "Accept his proposal"
-msgstr ""
+msgstr "Aceitar sua proposta"
 
 msgctxt "menu"
 msgid "Accept job as tailor's apprentice"
-msgstr ""
+msgstr "Aceitar o trabalho como aprendiz de alfaiate"
 
 msgctxt "menu"
 msgid "Accept the bowl of food and sit on the old soldier's lap."
-msgstr ""
+msgstr "Aceite a tigela de comida e sente-se no colo do soldado velho."
 
 msgctxt "menu"
 msgid "Accept the bowl of food."
-msgstr ""
+msgstr "Aceitar a tigela de comida"
 
 msgctxt "menu"
 msgid "Accept the marriage"
-msgstr ""
+msgstr "Aceitar o casamento"
 
 msgctxt "menu"
 msgid "Accept, dine with the Captain"
-msgstr ""
+msgstr "Aceitar, jantar com o Capitão"
 
 msgctxt "speaker:Sarah"
 msgid "Accept."
@@ -5656,7 +5656,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Accesses the game menu."
-msgstr ""
+msgstr "Acessa o menu do jogo."
 
 msgctxt "speaker:Kravel"
 msgid "Accompanying the letter was...I struggle to speak of it, but I must..."
@@ -5808,15 +5808,15 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Advances dialogue and activates the interface."
-msgstr ""
+msgstr "Avança o diálogo e ativa a interface."
 
 msgctxt "ui"
 msgid "Advances dialogue without selecting choices."
-msgstr ""
+msgstr "Avança o diálogo sem selecionar opções."
 
 msgctxt "speaker-name"
 msgid "Advisor"
-msgstr ""
+msgstr "Avisador"
 
 msgctxt "speaker:Hassar"
 msgid "Advisors, generals, all nod along and say as I do, hoping to win my favors."
@@ -5836,7 +5836,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "After Choices"
-msgstr ""
+msgstr "Após as escolhas"
 
 msgctxt "speaker:Narrator"
 msgid "After Marius' funeral had come to an end, Sarah stood upon the porch of her estate."
@@ -6956,35 +6956,35 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Agree"
-msgstr ""
+msgstr "Concordar"
 
 msgctxt "menu"
 msgid "Agree with Belmont"
-msgstr ""
+msgstr "Concordar com Belmont"
 
 msgctxt "menu"
 msgid "Agree with Kate"
-msgstr ""
+msgstr "Concordar com Kate"
 
 msgctxt "menu"
 msgid "Agree, Nick is less of a man than the captain"
-msgstr ""
+msgstr "Concordar, Nick é menos homem que o capitão"
 
 msgctxt "menu"
 msgid "Agree, don't finish inside."
-msgstr ""
+msgstr "Concordar, não termine dentro."
 
 msgctxt "menu"
 msgid "Agree, let Naydeen teach you"
-msgstr ""
+msgstr "Concordar, deixe Naydeen te ensinar"
 
 msgctxt "menu"
 msgid "Agree, let the matter rest"
-msgstr ""
+msgstr "Concordar, deixar a questão em paz"
 
 msgctxt "menu"
 msgid "Agree, pledge your industry to Maeiv"
-msgstr ""
+msgstr "Concordar, dedique sua indústria a Maeiv"
 
 msgctxt "speaker:Kate"
 msgid "Agreed!"
@@ -7232,7 +7232,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Alaric"
-msgstr ""
+msgstr "Aláric"
 
 msgctxt "speaker:Narrator"
 msgid "Alaric almost spat out the words."
@@ -7900,7 +7900,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Alfred"
-msgstr ""
+msgstr "Alfredo"
 
 msgctxt "speaker:Narrator"
 msgid "Alfred finished his own plate and walked over."
@@ -10416,7 +10416,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Ambassador"
-msgstr ""
+msgstr "Embaixador"
 
 msgctxt "speaker:Gilead"
 msgid "Ambitious?"
@@ -18776,7 +18776,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Announcer"
-msgstr ""
+msgstr "Anunciante"
 
 msgctxt "speaker:Narrator"
 msgid "Annoyed, Sarah threw her arms to the side and spun around for the man, but only found him shaking his head."
@@ -19684,7 +19684,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Apologize"
-msgstr ""
+msgstr "Peça desculpas"
 
 msgctxt "speaker:Jaeid"
 msgid "Apologize at once! She is not some brothel whore!"
@@ -19716,11 +19716,11 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Approach Marion."
-msgstr ""
+msgstr "Aproxime-se de Marion."
 
 msgctxt "menu"
 msgid "Approach Varga."
-msgstr ""
+msgstr "Aproximar-se de Varga."
 
 msgctxt "speaker:Ragged Man"
 msgid "Approved less when we acted upon our desires."
@@ -20460,7 +20460,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Arrow Keys"
-msgstr ""
+msgstr "Setas"
 
 msgctxt "speaker:Narrator"
 msgid "Arrows, shot from windows and rooftops."
@@ -20468,7 +20468,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Arthur"
-msgstr ""
+msgstr "Arturo"
 
 msgctxt "speaker:Narrator"
 msgid "As Atilla carried Sarah across the tent, she let out a dissapointed squeel, unhappy at being pulled off his leg."
@@ -24544,47 +24544,47 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Ask Atilla, the orc."
-msgstr ""
+msgstr "Pergunta a Atilla, o orco."
 
 msgctxt "menu"
 msgid "Ask Carolyn about Vaelen"
-msgstr ""
+msgstr "Perguntar a Carolyn sobre Vaelen"
 
 msgctxt "menu"
 msgid "Ask Carolyn for advice"
-msgstr ""
+msgstr "Perguntar a Carolyn sobre conselhos"
 
 msgctxt "menu"
 msgid "Ask Cassius to fight"
-msgstr ""
+msgstr "Peça a Cássio que lute"
 
 msgctxt "menu"
 msgid "Ask Ephraim and Caleb."
-msgstr ""
+msgstr "Pergunte a Efraim e Calebe."
 
 msgctxt "menu"
 msgid "Ask Hassar about the stone"
-msgstr ""
+msgstr "Perguntar a Hassar sobre a pedra"
 
 msgctxt "menu"
 msgid "Ask Kate"
-msgstr ""
+msgstr "Perguntar a Kate"
 
 msgctxt "menu"
 msgid "Ask Kate to come to your room tonight"
-msgstr ""
+msgstr "Peça a Kate que venha ao seu quarto hoje à noite"
 
 msgctxt "menu"
 msgid "Ask Kate to fight"
-msgstr ""
+msgstr "Peça a Kate para lutar"
 
 msgctxt "menu"
 msgid "Ask Samayra to fight"
-msgstr ""
+msgstr "Peça para Samayra lutar"
 
 msgctxt "menu"
 msgid "Ask Sigmund to protect you"
-msgstr ""
+msgstr "Peça a Sigismundo que o proteja"
 
 msgctxt "speaker:Sigmund"
 msgid "Ask around for help, they're always happy to give a hand to anyone in need."
@@ -24596,7 +24596,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Ask her to sneak away with you"
-msgstr ""
+msgstr "Peça para ela se esconder com você"
 
 msgctxt "speaker:Sarah"
 msgid "Ask me and I'm yours forever."
@@ -24612,7 +24612,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Ask the tailor for help"
-msgstr ""
+msgstr "Peça ajuda ao alfaiate"
 
 msgctxt "speaker:Hassar"
 msgid "Ask whatever thing you want and you will have it."
@@ -24632,7 +24632,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Assert yourself"
-msgstr ""
+msgstr "Se afirme"
 
 msgctxt "speaker:Narrator"
 msgid "At a moment's notice, the other council members could withdraw their support and bring down a Duke."
@@ -25716,7 +25716,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Attack the goblins"
-msgstr ""
+msgstr "Atacar os goblins"
 
 msgctxt "speaker:King Orwell Rose"
 msgid "Attack two Lower Lords? For the crime of breaking a marriage pact?"
@@ -25740,7 +25740,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Attend the Union Council"
-msgstr ""
+msgstr "Assista ao Conselho da União"
 
 msgctxt "ui"
 msgid "Auto"
@@ -25748,11 +25748,11 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Auto-Forward Time"
-msgstr ""
+msgstr "Avançar o tempo automaticamente"
 
 msgctxt "ui"
 msgid "Automatic saves"
-msgstr ""
+msgstr "Autosave"
 
 msgctxt "speaker:Narrator"
 msgid "Average sized, it neither solicited dread nor ridicule."
@@ -25920,7 +25920,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Back"
-msgstr ""
+msgstr "Voltar"
 
 msgctxt "speaker:Narrator"
 msgid "Back and forth, back and forth, as if trying to understand how this man ended up with her, or the other way around."
@@ -26236,7 +26236,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Barkeep"
-msgstr ""
+msgstr "Bartender"
 
 msgctxt "speaker:Captain Belmont"
 msgid "Barkeep! Two Storm Ale and keep em comin!"
@@ -26244,7 +26244,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Barkeeper"
-msgstr ""
+msgstr "Bartender"
 
 msgctxt "speaker-name"
 msgid "Barman"
@@ -26256,7 +26256,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Basilisk"
-msgstr ""
+msgstr "Basílico"
 
 msgctxt "speaker:Narrator"
 msgid "Bathed in the light of the moon, their sails were like sheets of silver."
@@ -26304,7 +26304,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Be friendly"
-msgstr ""
+msgstr "Seja amigável"
 
 msgctxt "speaker:Captain Belmont"
 msgid "Be gentle with those crates. That's how I make my money."
@@ -26328,7 +26328,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Be polite, have a drink"
-msgstr ""
+msgstr "Seja educado, tome uma bebida"
 
 msgctxt "speaker:Maeiv"
 msgid "Be quiet you fat slob!"
@@ -29616,15 +29616,15 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Betray Nick"
-msgstr ""
+msgstr "Trair a Nick"
 
 msgctxt "menu"
 msgid "Betray Xan"
-msgstr ""
+msgstr "Traicionar a Xan"
 
 msgctxt "menu"
 msgid "Betray the order"
-msgstr ""
+msgstr "Trair a ordem"
 
 msgctxt "speaker:Narrator"
 msgid "Betraying Xan, on the word of this creature..."
@@ -30004,7 +30004,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Blacksmith"
-msgstr ""
+msgstr "Ferreiro"
 
 msgctxt "speaker:Narrator"
 msgid "Bleeding, bonding, melting."
@@ -30284,7 +30284,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Both"
-msgstr ""
+msgstr "Ambos"
 
 msgctxt "speaker:Narrator"
 msgid "Both Ephraim and Caleb looked somewhat surprised."
@@ -30412,7 +30412,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Boy"
-msgstr ""
+msgstr "Menino"
 
 msgctxt "speaker:Alfred"
 msgid "Boy! Bring in the water while you're at it. We'll need it for the cooking."
@@ -30452,11 +30452,11 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Break free"
-msgstr ""
+msgstr "Livre-se"
 
 msgctxt "menu"
 msgid "Break the hug"
-msgstr ""
+msgstr "Quebra o abraço"
 
 msgctxt "speaker:Narrator"
 msgid "Break the walls, then advance and seize on the breach."
@@ -30496,7 +30496,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Bribe Antonio"
-msgstr ""
+msgstr "Subornar a Antonio"
 
 msgctxt "speaker:Marshal Edmond"
 msgid "Bribing, absurd!"
@@ -30508,7 +30508,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Brigand"
-msgstr ""
+msgstr "Bandido"
 
 msgctxt "speaker:Narrator"
 msgid "Bright lights shone out through the windows and she could hear the sounds of groups of people talking."
@@ -38700,7 +38700,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Calibrate"
-msgstr ""
+msgstr "Calibrar"
 
 msgctxt "speaker:Thomas"
 msgid "Call in all possible district troops and militia reserves, and gather everyone to the capital."
@@ -38708,7 +38708,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Call it a night"
-msgstr ""
+msgstr "Vá dormir"
 
 msgctxt "speaker:Sarah"
 msgid "Call it a woman's intuition."
@@ -38744,7 +38744,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Call upon Razaphel"
-msgstr ""
+msgstr "Invoca a Razafael"
 
 msgctxt "speaker:Sarah"
 msgid "Call you a cynic, maybe, but then call me a romantic."
@@ -38828,11 +38828,11 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Camp Guard"
-msgstr ""
+msgstr "Guarda do Acampamento"
 
 msgctxt "speaker-name"
 msgid "Camp Soldier"
-msgstr ""
+msgstr "Soldado do Acampamento"
 
 msgctxt "speaker:Narrator"
 msgid "Camped outside on the hills, Sarah saw an army larger than any she had ever seen in her life."
@@ -38984,7 +38984,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Can you show me?"
-msgstr ""
+msgstr "Pode me mostrar?"
 
 msgctxt "speaker:Sarah"
 msgid "Can you swear to me that he won't?"
@@ -39116,11 +39116,11 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Captain"
-msgstr ""
+msgstr "Capitão"
 
 msgctxt "speaker-name"
 msgid "Captain Belmont"
-msgstr ""
+msgstr "Capitão Belmont"
 
 msgctxt "speaker:Narrator"
 msgid "Captain Belmont continued to pester her from aboard his ship."
@@ -39288,7 +39288,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Captain of the guard"
-msgstr ""
+msgstr "Capitã da guarda"
 
 msgctxt "speaker:Sarah"
 msgid "Captain!"
@@ -39600,7 +39600,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Cassius"
-msgstr ""
+msgstr "Cássio"
 
 msgctxt "speaker:Narrator"
 msgid "Cassius began to laddle up the stew and divide it into bowls, passing them around."
@@ -40304,7 +40304,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "City Official"
-msgstr ""
+msgstr "Oficial da Cidade"
 
 msgctxt "speaker:Narrator"
 msgid "Clad in the armor of a knight from head to toe, a scrap of yellow cloth clinging to his steel."
@@ -40316,7 +40316,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Claim the role for yourself"
-msgstr ""
+msgstr "Assuma o papel para você"
 
 msgctxt "speaker:Razaphel"
 msgid "Claim your homeland. Your birthright. Bring as many armies as you can."
@@ -41356,7 +41356,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Condemn Oliver to death"
-msgstr ""
+msgstr "Condenar Óliver à morte"
 
 msgctxt "speaker:Alfred"
 msgid "Conditions? Like what?"
@@ -41436,7 +41436,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Consume Dreamstalk"
-msgstr ""
+msgstr "Consumir a Cana dos Sonhos"
 
 msgctxt "speaker:Sarah"
 msgid "Contempt?!"
@@ -41456,7 +41456,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Continue to Gallow's Creek"
-msgstr ""
+msgstr "Continuar para o Riacho de Gallow"
 
 msgctxt "speaker:Sarah"
 msgid "Continue?"
@@ -41512,7 +41512,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Convince Alaric"
-msgstr ""
+msgstr "Persuadir a Alaric"
 
 msgctxt "speaker:Carolyn"
 msgid "Convince Gilead that you are what he wants you to be. Gain the support of his armies."
@@ -41520,7 +41520,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Convince him to support you"
-msgstr ""
+msgstr "Persuade-o a apoiá-la"
 
 msgctxt "speaker:Sarah"
 msgid "Convincing?"
@@ -41764,15 +41764,15 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Courier"
-msgstr ""
+msgstr "Correio"
 
 msgctxt "speaker-name"
 msgid "Court Offical"
-msgstr ""
+msgstr "Oficial da Corte"
 
 msgctxt "speaker-name"
 msgid "Court Official"
-msgstr ""
+msgstr "Oficial do Tribunal"
 
 msgctxt "speaker:Narrator"
 msgid "Covered in sweat and hoarse from the screams, they sank into a deep sleep."
@@ -41912,7 +41912,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Crown Kamal"
-msgstr ""
+msgstr "Coroa Kamal"
 
 msgctxt "speaker:Narrator"
 msgid "Crude hammers, daggers, fists."
@@ -42004,7 +42004,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Curator"
-msgstr ""
+msgstr "Curador"
 
 msgctxt "speaker:Narrator"
 msgid "Curiosity overcame her."
@@ -42064,7 +42064,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "D-Pad, Sticks"
-msgstr ""
+msgstr "D-Pad, Analógicos"
 
 msgctxt "speaker:Thomas"
 msgid "DAD!"
@@ -42372,7 +42372,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Damian"
-msgstr ""
+msgstr "Damiano"
 
 msgctxt "speaker:Narrator"
 msgid "Damian bowed."
@@ -42628,7 +42628,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Deceive him. Tell him the stone appears black."
-msgstr ""
+msgstr "Enganá-lo. Diga-lhe que a pedra aparece preta."
 
 msgctxt "speaker:Alaric"
 msgid "Decent?"
@@ -42652,7 +42652,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Declare the truth"
-msgstr ""
+msgstr "Declare a verdade"
 
 msgctxt "speaker:Narrator"
 msgid "Deep enough for a man to dissapear into entirely."
@@ -42776,7 +42776,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Defy the Master"
-msgstr ""
+msgstr "Desafiar ao Mestre"
 
 msgctxt "speaker:Narrator"
 msgid "Defying him again seemed like a poor option."
@@ -42784,7 +42784,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Delay the siege, send scouts"
-msgstr ""
+msgstr "Atrasar o cerco e enviar reconhecimento"
 
 msgctxt "speaker:Narrator"
 msgid "Delicate in craftsmanship and material, it fetched her a good amount, though far less than it was worth."
@@ -43856,15 +43856,15 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Disable"
-msgstr ""
+msgstr "Desativar"
 
 msgctxt "menu"
 msgid "Disagree with Kate"
-msgstr ""
+msgstr "Discordar com Kate"
 
 msgctxt "menu"
 msgid "Disagree, fight back against Belmont"
-msgstr ""
+msgstr "Discordar e lutar contra Belmont"
 
 msgctxt "speaker:Narrator"
 msgid "Disaster."
@@ -43908,7 +43908,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Display"
-msgstr ""
+msgstr "Mostrar"
 
 msgctxt "speaker:Narrator"
 msgid "Disrobed, his warrior's body came into full view."
@@ -43960,7 +43960,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Distract him with your body"
-msgstr ""
+msgstr "Distráia-o com o seu corpo"
 
 msgctxt "speaker:Narrator"
 msgid "Distracted, until one day they realized that their potential rival had grown into a real one."
@@ -44056,7 +44056,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Do as he asks, kill him"
-msgstr ""
+msgstr "Faça o que ele pede, mate-o"
 
 msgctxt "speaker:Narrator"
 msgid "Do as she says, Sarah reminded herself."
@@ -44080,7 +44080,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Do not bribe Antonio"
-msgstr ""
+msgstr "Não subornes a Antonio"
 
 msgctxt "speaker:Daemon"
 msgid "Do not concern yourself with her for now."
@@ -44128,7 +44128,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Do not let him bait you, convince him"
-msgstr ""
+msgstr "Não o deixe isca-lo; convença-o"
 
 msgctxt "speaker:Narrator"
 msgid "Do not let him know you."
@@ -44172,7 +44172,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Do nothing"
-msgstr ""
+msgstr "Não fazer nada"
 
 msgctxt "speaker:Narrator"
 msgid "Do nothing but obey."
@@ -44180,7 +44180,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Do nothing."
-msgstr ""
+msgstr "Não fazer nada."
 
 msgctxt "speaker:Xanthippe"
 msgid "Do teachers and students need to be friends?"
@@ -44212,7 +44212,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Do what he wants"
-msgstr ""
+msgstr "Faze o que quiser"
 
 msgctxt "speaker:Sarah"
 msgid "Do what you will...but I'll never submit to you from my own free will!"
@@ -45068,7 +45068,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Don't bother arguing with him"
-msgstr ""
+msgstr "Não se preocupe em brigar com ele"
 
 msgctxt "speaker:Brigand"
 msgid "Don't bother covering up. I've seen all of it and before long I'll be up inside of you."
@@ -45128,7 +45128,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Don't confide in Sigmund"
-msgstr ""
+msgstr "Não confie em Sigmund"
 
 msgctxt "speaker:Narrator"
 msgid "Don't cry out. Don't let anyone hear you, she commanded herself. Don't let him hear."
@@ -45316,7 +45316,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Don't hold back"
-msgstr ""
+msgstr "Não se segure"
 
 msgctxt "speaker:Alaric"
 msgid "Don't joke about a man's dick like that."
@@ -45328,7 +45328,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Don't kiss Nick"
-msgstr ""
+msgstr "Não beije o Nick"
 
 msgctxt "speaker:Sarah"
 msgid "Don't know?"
@@ -45456,7 +45456,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Don't say anything to Kate"
-msgstr ""
+msgstr "Não diga nada à Kate"
 
 msgctxt "speaker:Sigmund"
 msgid "Don't say nothing, child. You want to thank me? Just take good care of yourself, that's all I want for you."
@@ -45532,7 +45532,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Don't stop Kate."
-msgstr ""
+msgstr "Não pare a Kate."
 
 msgctxt "speaker:Gideon"
 msgid "Don't stop..."
@@ -45580,11 +45580,11 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Don't tell him"
-msgstr ""
+msgstr "Não diga a ele"
 
 msgctxt "menu"
 msgid "Don't tell him what you were saying"
-msgstr ""
+msgstr "Não diga a ele o que estava dizendo"
 
 msgctxt "speaker:Kate"
 msgid "Don't tell me girls don't play around here in Bagrad?"
@@ -46564,7 +46564,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Duke Antonio"
-msgstr ""
+msgstr "Duque Antonio"
 
 msgctxt "speaker:Narrator"
 msgid "Duke Antonio chuckled."
@@ -48464,11 +48464,11 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Emissary"
-msgstr ""
+msgstr "Emissário"
 
 msgctxt "speaker-name"
 msgid "Emmissary"
-msgstr ""
+msgstr "Emissário"
 
 msgctxt "speaker:Hecate"
 msgid "Empires rise, empires fall, entire civilizations vanish."
@@ -48504,7 +48504,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "End Replay"
-msgstr ""
+msgstr "Terminar Reprodução"
 
 msgctxt "speaker:Narrator"
 msgid "End of the world, Sarah thought to herself. Maybe it was."
@@ -48552,15 +48552,15 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Enforce your own justice"
-msgstr ""
+msgstr "Imponha sua própria justiça"
 
 msgctxt "speaker-name"
 msgid "Engineer"
-msgstr ""
+msgstr "Engenheiro"
 
 msgctxt "speaker-name"
 msgid "Engineers"
-msgstr ""
+msgstr "Engenheiros"
 
 msgctxt "speaker:Sarah"
 msgid "Engineers, hold the siege weapons!"
@@ -48776,15 +48776,15 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Enter"
-msgstr ""
+msgstr "Entrar"
 
 msgctxt "menu"
 msgid "Enter Calshure with him"
-msgstr ""
+msgstr "Entrar em Calshure com ele"
 
 msgctxt "menu"
 msgid "Enter Rahayal"
-msgstr ""
+msgstr "Entrar em Rahayal"
 
 msgctxt "speaker:Razaphel"
 msgid "Enter the circle..."
@@ -48892,7 +48892,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Ephraim"
-msgstr ""
+msgstr "Efraim"
 
 msgctxt "speaker:Narrator"
 msgid "Ephraim added."
@@ -49100,11 +49100,11 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Escape"
-msgstr ""
+msgstr "Fugir"
 
 msgctxt "ui"
 msgid "Escape"
-msgstr ""
+msgstr "Fugir"
 
 msgctxt "speaker:Narrator"
 msgid "Escape to where?"
@@ -49112,7 +49112,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Escape with the goblin"
-msgstr ""
+msgstr "Fuga com o goblino"
 
 msgctxt "speaker:Narrator"
 msgid "Escape...bide your time...play along...for now..."
@@ -51404,7 +51404,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Examinator"
-msgstr ""
+msgstr "Examinador"
 
 msgctxt "speaker:Cassius"
 msgid "Excellent!"
@@ -51760,11 +51760,11 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Explore the city"
-msgstr ""
+msgstr "Explore a cidade"
 
 msgctxt "menu"
 msgid "Explore the docks"
-msgstr ""
+msgstr "Explora os docais"
 
 msgctxt "speaker:Narrator"
 msgid "Explore what aroused, what was welcomed, what rejected."
@@ -52340,11 +52340,11 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Female Soldier"
-msgstr ""
+msgstr "Soldado Femenino"
 
 msgctxt "speaker-name"
 msgid "Female soldier"
-msgstr ""
+msgstr "Soldada"
 
 msgctxt "speaker:Captain Belmont"
 msgid "Fetch that blondie, and tie up his disloyal dog."
@@ -52404,7 +52404,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Fight your way out"
-msgstr ""
+msgstr "Lute para escapar"
 
 msgctxt "speaker:Narrator"
 msgid "Fighting him off was no option. Not only was he stronger than her by far, but striking him would not end well for her."
@@ -53072,11 +53072,11 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Find in favor of House Greytower"
-msgstr ""
+msgstr "Apoiar a Casa Greytower"
 
 msgctxt "menu"
 msgid "Find in favor of the Merchant"
-msgstr ""
+msgstr "Buscar apoio para o Mercador"
 
 msgctxt "speaker:Sarah"
 msgid "Find what exactly?"
@@ -53328,7 +53328,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Fine, play your little games."
-msgstr ""
+msgstr "Muito bem, jogue seus pequenos jogos."
 
 msgctxt "speaker:Sarah"
 msgid "Fine, play your little games."
@@ -53792,7 +53792,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Fix the dress yourself"
-msgstr ""
+msgstr "Conserte o vestido sozinha"
 
 msgctxt "speaker:Narrator"
 msgid "Fixing the dress herself would only make it worse."
@@ -53844,7 +53844,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Flirt with him"
-msgstr ""
+msgstr "Flertar com ele"
 
 msgctxt "speaker:Narrator"
 msgid "Floating a small distance above the ground, she drew in a deep breath."
@@ -53972,7 +53972,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Follow the captain"
-msgstr ""
+msgstr "Siga o capitão"
 
 msgctxt "speaker:Voice"
 msgid "Follow the old road to Rahayal."
@@ -53980,7 +53980,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Follow the voice"
-msgstr ""
+msgstr "Siga a voz"
 
 msgctxt "speaker:Narrator"
 msgid "Follow your heart."
@@ -56460,7 +56460,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Forget his vote"
-msgstr ""
+msgstr "Esquece o voto dele"
 
 msgctxt "speaker:Sarah"
 msgid "Forget it!"
@@ -56472,7 +56472,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Forget it, heed Metis' warning"
-msgstr ""
+msgstr "Esquece isso, atende ao aviso de Metis"
 
 msgctxt "speaker:Caleb"
 msgid "Forget it, it's nothing."
@@ -56572,7 +56572,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Forgive Kate"
-msgstr ""
+msgstr "Perdoa Kate"
 
 msgctxt "speaker:Varga"
 msgid "Forgive me Princess, but you're a horrible drunk."
@@ -56660,7 +56660,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Forsake Rosanna, remain a mercenary"
-msgstr ""
+msgstr "Abandone Rosanna, permaneça mercenário"
 
 msgctxt "speaker:Narrator"
 msgid "Fortunately, it was not too far."
@@ -56688,7 +56688,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Founder"
-msgstr ""
+msgstr "Fundador"
 
 msgctxt "speaker:Narrator"
 msgid "Four children in total."
@@ -56748,7 +56748,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Freedom"
-msgstr ""
+msgstr "Liberdade"
 
 msgctxt "speaker:Narrator"
 msgid "Freedom, even if it was a brutalized version of it."
@@ -57760,7 +57760,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Fullscreen"
-msgstr ""
+msgstr "Tela Completa"
 
 msgctxt "speaker:Narrator"
 msgid "Fully dressed in her armor, she stepped out of her tent into the blazing sun."
@@ -57980,7 +57980,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Gamepad"
-msgstr ""
+msgstr "Mando"
 
 msgctxt "speaker-name"
 msgid "Garret"
@@ -58388,7 +58388,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Get Sigmund drunk"
-msgstr ""
+msgstr "Deixe o Sigmund bêbado"
 
 msgctxt "speaker:Sarah"
 msgid "Get a fire started, now!"
@@ -58424,7 +58424,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Get back to work"
-msgstr ""
+msgstr "Volte ao trabalho"
 
 msgctxt "speaker:Metis"
 msgid "Get back!"
@@ -58580,7 +58580,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Get some more rest"
-msgstr ""
+msgstr "Descanse um pouco mais"
 
 msgctxt "speaker:Lily"
 msgid "Get some rest, Sarah, you've earned it."
@@ -58616,7 +58616,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Get up by yourself"
-msgstr ""
+msgstr "Levante-se por conta própria"
 
 msgctxt "speaker:Eula"
 msgid "Get up, we don't wanna be late for breakfast."
@@ -59120,11 +59120,11 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Girl"
-msgstr ""
+msgstr "Garota"
 
 msgctxt "speaker-name"
 msgid "Girl"
-msgstr ""
+msgstr "Menina"
 
 msgctxt "speaker:Guard Captain"
 msgid "Girl, the game is up."
@@ -59152,11 +59152,11 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Give Belmont a loan"
-msgstr ""
+msgstr "Dar um empréstimo ao Belmont"
 
 msgctxt "menu"
 msgid "Give Vaelen the real stone."
-msgstr ""
+msgstr "Dê a pedra verdadeira a Vaelen."
 
 msgctxt "speaker:Guard"
 msgid "Give any more lip and I'll give you a real bruisin."
@@ -59164,7 +59164,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Give captain Belmonst a piece of your mind"
-msgstr ""
+msgstr "Dê à capitã Belmonst o que pensa"
 
 msgctxt "speaker:Sarah"
 msgid "Give her my condolences."
@@ -59172,7 +59172,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Give her nothing"
-msgstr ""
+msgstr "No le des nada"
 
 msgctxt "speaker:Sarah"
 msgid "Give him a minute. Let him be alone. He needs to rest."
@@ -59184,15 +59184,15 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Give him what he wants."
-msgstr ""
+msgstr "Dê-lhe o que ele quer."
 
 msgctxt "menu"
 msgid "Give into Raza's demand"
-msgstr ""
+msgstr "Ceda à exigência de Raza"
 
 msgctxt "menu"
 msgid "Give into the spirit"
-msgstr ""
+msgstr "Ceder ao espírito"
 
 msgctxt "speaker:Kate"
 msgid "Give me a place to stay, up in a small room above the tavern."
@@ -59244,11 +59244,11 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Give yourself over to Razaphel"
-msgstr ""
+msgstr "Entregue-se a Razaphel"
 
 msgctxt "menu"
 msgid "Give yourself over to the soldiers"
-msgstr ""
+msgstr "Entrega-te aos soldados"
 
 msgctxt "speaker:Narrator"
 msgid "Given her current condition, she had little time to speculate on peculiar voices."
@@ -59476,15 +59476,15 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Go back home"
-msgstr ""
+msgstr "Voltar para casa"
 
 msgctxt "menu"
 msgid "Go back to bed."
-msgstr ""
+msgstr "Volte para a cama."
 
 msgctxt "menu"
 msgid "Go back to camp"
-msgstr ""
+msgstr "Voltar ao acampamento"
 
 msgctxt "speaker:Sigmund"
 msgid "Go back to the city, you'll be a lot safer there."
@@ -59496,7 +59496,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Go back to your room"
-msgstr ""
+msgstr "Volte para seu quarto"
 
 msgctxt "speaker:Xanthippe"
 msgid "Go back, Razaphel, go back into your flask or I swear I'll give you a thrasing that you will remember for a thousand years."
@@ -59512,7 +59512,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Go for a big coronation."
-msgstr ""
+msgstr "Vá para uma grande coroação."
 
 msgctxt "speaker:Duke Antonio"
 msgid "Go grab your clothes and run back home to your room to save your dignity."
@@ -59520,19 +59520,19 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Go home"
-msgstr ""
+msgstr "Vá para casa"
 
 msgctxt "menu"
 msgid "Go home alone"
-msgstr ""
+msgstr "Ir a casa só"
 
 msgctxt "menu"
 msgid "Go into the greenhouse"
-msgstr ""
+msgstr "Entre na estufa"
 
 msgctxt "menu"
 msgid "Go look"
-msgstr ""
+msgstr "Vá ver"
 
 msgctxt "speaker:Sigmund"
 msgid "Go make yourself busy!"
@@ -59588,11 +59588,11 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Go out and try to forget"
-msgstr ""
+msgstr "Sai e tenta esquecer"
 
 msgctxt "menu"
 msgid "Go out dancing with Samayra"
-msgstr ""
+msgstr "Sair para dançar com Samayra"
 
 msgctxt "speaker:Alfred"
 msgid "Go out into those fields, work, and clear your head."
@@ -59608,23 +59608,23 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Go pray in the chapel later"
-msgstr ""
+msgstr "Vá orar na capela mais tarde"
 
 msgctxt "menu"
 msgid "Go somewhere more privately with Gideon"
-msgstr ""
+msgstr "Vá para um lugar mais privado com Gideon"
 
 msgctxt "menu"
 msgid "Go talk to Ephraim and Caleb"
-msgstr ""
+msgstr "Falar com Efraim e Calebe"
 
 msgctxt "menu"
 msgid "Go talk to Kate"
-msgstr ""
+msgstr "Falar com Kate"
 
 msgctxt "menu"
 msgid "Go talk to Samayra"
-msgstr ""
+msgstr "Fala com Samayra"
 
 msgctxt "speaker:Razaphel"
 msgid "Go there and we shall speak, free of riddles and obscurities."
@@ -59636,11 +59636,11 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Go to Rahayal"
-msgstr ""
+msgstr "Ir a Rahayal"
 
 msgctxt "menu"
 msgid "Go to sleep"
-msgstr ""
+msgstr "Dormir"
 
 msgctxt "speaker:Voice"
 msgid "Go to the ships!"
@@ -59648,19 +59648,19 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Go visit Alaric"
-msgstr ""
+msgstr "Visita a Alaric"
 
 msgctxt "menu"
 msgid "Go with Belmont to his ship"
-msgstr ""
+msgstr "Vá com Belmont até o navio dele"
 
 msgctxt "menu"
 msgid "Go with Kate to her tent"
-msgstr ""
+msgstr "Vá com Kate para sua tenda"
 
 msgctxt "menu"
 msgid "Go with the men"
-msgstr ""
+msgstr "Vá com os homens"
 
 msgctxt "speaker:Daemon"
 msgid "Go, bring your things up."
@@ -61604,7 +61604,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Grow up, little brother."
-msgstr ""
+msgstr "Cresce, irmãozinho."
 
 msgctxt "speaker:Vaelen"
 msgid "Growing afraid, I turned too fast and my body became lodged, fixed, between the walls of the cavern."
@@ -61696,11 +61696,11 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Guard"
-msgstr ""
+msgstr "Guardião"
 
 msgctxt "speaker-name"
 msgid "Guard Captain"
-msgstr ""
+msgstr "Capitão da Guarda"
 
 msgctxt "speaker:Gorak"
 msgid "Guard!"
@@ -61724,7 +61724,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Guards"
-msgstr ""
+msgstr "Guardas"
 
 msgctxt "speaker:Thomas"
 msgid "Guards! Bring me this creature's head!"
@@ -62244,7 +62244,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Hand over some of Sarah's jewelry."
-msgstr ""
+msgstr "Entregue parte das joias de Sarah."
 
 msgctxt "speaker:Alaric"
 msgid "Handed the poor guy straight over the guards, basically walked him up to the gallow."
@@ -62324,7 +62324,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Hang them. Send a message."
-msgstr ""
+msgstr "Pende-os. Envie uma mensagem."
 
 msgctxt "speaker:Narrator"
 msgid "Happiness."
@@ -62632,7 +62632,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Have a drink with Cassius"
-msgstr ""
+msgstr "Tomar uma bebida com Cássio"
 
 msgctxt "speaker:Gabriel"
 msgid "Have a more private party."
@@ -62644,7 +62644,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Have drinks with Captain Belmont"
-msgstr ""
+msgstr "Tenha uma bebida com o Capitão Belmont"
 
 msgctxt "speaker:Sakar"
 msgid "Have it your way."
@@ -62652,11 +62652,11 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Have sex with Eula"
-msgstr ""
+msgstr "Faça amor com Eula"
 
 msgctxt "menu"
 msgid "Have sex with Sophia"
-msgstr ""
+msgstr "Ter sexo com Sophia"
 
 msgctxt "speaker:Sarah"
 msgid "Have they been safe so far?"
@@ -63536,7 +63536,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "He could be a serious threat."
-msgstr ""
+msgstr "Ele pode ser uma ameaça séria."
 
 msgctxt "speaker:Sarah"
 msgid "He could be a serious threat. We should send scouts or spies to investigate."
@@ -70520,7 +70520,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Hecate"
-msgstr ""
+msgstr "Hécate"
 
 msgctxt "speaker:Narrator"
 msgid "Hecate and Sarah alone, as Gabriel watched on from a distance."
@@ -70884,15 +70884,15 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Help"
-msgstr ""
+msgstr "Ajuda"
 
 msgctxt "menu"
 msgid "Help Alaric"
-msgstr ""
+msgstr "Ajude Alaric"
 
 msgctxt "menu"
 msgid "Help Nick"
-msgstr ""
+msgstr "Ajuda o Nick"
 
 msgctxt "speaker:Alfred"
 msgid "Help me out with this, would you?"
@@ -75176,11 +75176,11 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Hide"
-msgstr ""
+msgstr "Esconder"
 
 msgctxt "ui"
 msgid "Hide UI"
-msgstr ""
+msgstr "Esconder"
 
 msgctxt "speaker:Alaric"
 msgid "Hide out a few days, weeks...let it cool down, and you're good as new."
@@ -75188,7 +75188,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Hides the user interface."
-msgstr ""
+msgstr "Ocultar a interface do usuário."
 
 msgctxt "speaker:Narrator"
 msgid "Hiding and sneaking around was pointless and soon abandoned. By the end, Sarah and Sakar vanished into the bushes with few doubts as to their intentions."
@@ -75220,7 +75220,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "High Priest"
-msgstr ""
+msgstr "Alto Sacerdote"
 
 msgctxt "speaker:Sarah"
 msgid "High Queen of the Union."
@@ -77376,7 +77376,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "History"
-msgstr ""
+msgstr "História"
 
 msgctxt "speaker:Narrator"
 msgid "History was filled with great Warlords who left only legacy and ruin."
@@ -77412,11 +77412,11 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Hold back"
-msgstr ""
+msgstr "Segure-se"
 
 msgctxt "menu"
 msgid "Hold back the spirit"
-msgstr ""
+msgstr "Segure o espírito"
 
 msgctxt "speaker:Mayor"
 msgid "Hold her arms and legs down. We don't want her to move."
@@ -77424,7 +77424,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Hold him off."
-msgstr ""
+msgstr "Mantém-no afastado."
 
 msgctxt "speaker:Narrator"
 msgid "Hold it in, she commanded herself."
@@ -77444,7 +77444,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Hold on to Lily"
-msgstr ""
+msgstr "Segura em Lily"
 
 msgctxt "speaker:Narrator"
 msgid "Hold on, a small part of her said. Hold on or you'll lose your mind to this thing."
@@ -77456,7 +77456,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Hold on, try to to speak"
-msgstr ""
+msgstr "Segure-se, tente falar"
 
 msgctxt "speaker:Captain Belmont"
 msgid "Hold on."
@@ -79368,7 +79368,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Hug together for warmth"
-msgstr ""
+msgstr "Abrace-se para se aquecer"
 
 msgctxt "speaker:Narrator"
 msgid "Hugging her tightly, Sarah could feel Samayra's small breasts press up against her own."
@@ -79376,7 +79376,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Hugh"
-msgstr ""
+msgstr "Hugo"
 
 msgctxt "speaker:Narrator"
 msgid "Hugh closed the door behind him and began to take his clothes off."
@@ -83248,7 +83248,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "I have asked all that I need to know"
-msgstr ""
+msgstr "Perguntei tudo o que precisava saber"
 
 msgctxt "speaker:Jaeid"
 msgid "I have been instructed to bring you to him."
@@ -83584,7 +83584,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "I have to leave"
-msgstr ""
+msgstr "Tenho que ir."
 
 msgctxt "speaker:Kate"
 msgid "I have to meet up with Ephraim, he wanted to meet up with me for a drink."
@@ -84236,7 +84236,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "I killed a young man"
-msgstr ""
+msgstr "Matei um jovem."
 
 msgctxt "speaker:Sarah"
 msgid "I killed a young man."
@@ -85000,7 +85000,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "I liked it"
-msgstr ""
+msgstr "Gostei."
 
 msgctxt "speaker:Sarah"
 msgid "I live in Lethram now, but I was born in Rosanna."
@@ -85052,7 +85052,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "I love you too, Kate!"
-msgstr ""
+msgstr "Eu também te amo, Kate!"
 
 msgctxt "speaker:Atilla"
 msgid "I love you too, Sarah."
@@ -85872,7 +85872,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "I once had sex with an orc"
-msgstr ""
+msgstr "Uma vez tive sexo com um orco."
 
 msgctxt "speaker:Sarah"
 msgid "I once had sex with an orc."
@@ -85888,7 +85888,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "I only did it for the information"
-msgstr ""
+msgstr "Eu só fiz isso pela informação."
 
 msgctxt "speaker:Sarah"
 msgid "I only did it for the information."
@@ -87144,7 +87144,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "I think I'm good"
-msgstr ""
+msgstr "Acho que estou bom."
 
 msgctxt "speaker:Thomas"
 msgid "I think I'm still getting used to it."
@@ -87320,7 +87320,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "I think that's enough for me for tonight."
-msgstr ""
+msgstr "Acho que é o suficiente para mim por hoje."
 
 msgctxt "speaker:Sarah"
 msgid "I think that's enough fun for tonight."
@@ -88392,7 +88392,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "I want to know why you did it."
-msgstr ""
+msgstr "Quero saber por que você fez isso."
 
 msgctxt "speaker:Captain Belmont"
 msgid "I want to make love to you, blondie."
@@ -88604,7 +88604,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "I was born in Rosanna"
-msgstr ""
+msgstr "Nasci em Rosanna."
 
 msgctxt "speaker:Sarah"
 msgid "I was born in Rosanna."
@@ -89000,7 +89000,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "I was thinking I might stay"
-msgstr ""
+msgstr "Eu estava pensando em ficar por aqui."
 
 msgctxt "speaker:Sarah"
 msgid "I was thinking we could use the money to maybe move up a bit."
@@ -89300,7 +89300,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "I will join the Brothers of Providence and reclaim Rosanna."
-msgstr ""
+msgstr "Juntar-me-ei aos Irmãos da Providência e resgarei Rosanna."
 
 msgctxt "speaker:Sarah"
 msgid "I will join the Brothers of Providence and reclaim Rosanna."
@@ -89812,7 +89812,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "I won't tell Marius anything"
-msgstr ""
+msgstr "Não vou contar nada ao Marius"
 
 msgctxt "speaker:Sarah"
 msgid "I won't walk away."
@@ -89992,7 +89992,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "I would love to learn"
-msgstr ""
+msgstr "Gostaria de aprender"
 
 msgctxt "speaker:Sarah"
 msgid "I would never let anyone or anything hurt you."
@@ -90312,7 +90312,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "I'll find my way in the city"
-msgstr ""
+msgstr "Encontrarei meu caminho na cidade"
 
 msgctxt "speaker:Alaric"
 msgid "I'll fuck you so hard you'll be dragging yourself home."
@@ -90588,7 +90588,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "I'll take your proposal into consideration."
-msgstr ""
+msgstr "Considerarei sua proposta."
 
 msgctxt "speaker:Sarah"
 msgid "I'll take your proposal into consideration."
@@ -90756,7 +90756,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "I'm a princess of noble birth."
-msgstr ""
+msgstr "Sou uma princesa de nobre nascimento."
 
 msgctxt "speaker:Sarah"
 msgid "I'm a princess of noble birth."
@@ -91440,7 +91440,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "I'm not tired yet"
-msgstr ""
+msgstr "Ainda não estou cansada."
 
 msgctxt "speaker:Sarah"
 msgid "I'm not tired yet."
@@ -95524,7 +95524,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Ignore him"
-msgstr ""
+msgstr "Ignore-o"
 
 msgctxt "speaker:Narrator"
 msgid "Ignore him, she thought."
@@ -95532,11 +95532,11 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Ignore his request, prepare the siege"
-msgstr ""
+msgstr "Ignore seu pedido e prepare o cerco"
 
 msgctxt "menu"
 msgid "Ignore it, go back to sleep"
-msgstr ""
+msgstr "Ignore isso e volte a dormir"
 
 msgctxt "speaker:Narrator"
 msgid "Ignore it, she thought."
@@ -95544,7 +95544,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Ignore it, try to get some sleep."
-msgstr ""
+msgstr "Ignore isso e tente pegar um pouco de sono."
 
 msgctxt "speaker:Varga"
 msgid "Ignore it."
@@ -95552,7 +95552,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Ignore the voice"
-msgstr ""
+msgstr "Ignore a voz"
 
 msgctxt "speaker:Captain Belmont"
 msgid "Ignore those scurvy rats."
@@ -95560,11 +95560,11 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Ignore, just finish."
-msgstr ""
+msgstr "Ignore, termine só."
 
 msgctxt "menu"
 msgid "Ignore, turn around and leave."
-msgstr ""
+msgstr "Ignorar, vire as costas e saia."
 
 msgctxt "speaker:Narrator"
 msgid "Ignoring the retort, Sigmund waved his hand towards the other man."
@@ -95584,7 +95584,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Image% d of% d is blocked."
-msgstr ""
+msgstr "Imagem %d de %d bloqueada."
 
 msgctxt "speaker:Narrator"
 msgid "Images of the carnage played out in her mind."
@@ -98000,7 +98000,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Innkeeper"
-msgstr ""
+msgstr "Tabernero"
 
 msgctxt "speaker:Tribesman"
 msgid "Insane?"
@@ -98108,7 +98108,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Insist, ask Lady Carolyn about Thomas"
-msgstr ""
+msgstr "Insista e pergunte à Lady Carolyn sobre Thomas"
 
 msgctxt "speaker:Narrator"
 msgid "Inspecting it, over and over again, as though the repeated gesture of it would keep her from thinking about her meeting."
@@ -99120,7 +99120,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Intervene and save the woman"
-msgstr ""
+msgstr "Intervenha e salve a mulher"
 
 msgctxt "speaker:Narrator"
 msgid "Interwoven and standing out against the white design of the dress, were the multitude of bright desert flowers that were unfamiliar to Sarah."
@@ -99160,7 +99160,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Investigate the sound"
-msgstr ""
+msgstr "Investigar o som"
 
 msgctxt "speaker:Razaphel"
 msgid "Invisible to them, you can move again their designs."
@@ -99176,11 +99176,11 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Invite Alaric in"
-msgstr ""
+msgstr "Convidar Alaric"
 
 msgctxt "menu"
 msgid "Invite Lily in"
-msgstr ""
+msgstr "Convidar Lily"
 
 msgctxt "speaker:Thomas"
 msgid "Invite those that absolutely need to be invited, but let us be responsible with the money that we have."
@@ -99188,7 +99188,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Invoke Jaeid's name"
-msgstr ""
+msgstr "Invocar o nome de Jaeid"
 
 msgctxt "speaker:Narrator"
 msgid "Ironically, Sarah concluded, she was more safe as a slave than if she had been here unaccompanied."
@@ -102116,7 +102116,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "It was a small mistake, let it go"
-msgstr ""
+msgstr "Foi um pequeno erro, deixa passar"
 
 msgctxt "speaker:Narrator"
 msgid "It was a soft culling, as soft as such a thing could be."
@@ -105540,7 +105540,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "It's not your fight, don't do anything"
-msgstr ""
+msgstr "Não é a sua luta, não faça nada."
 
 msgctxt "speaker:Samayra"
 msgid "It's not!?!"
@@ -105784,7 +105784,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "It's pointless, keep your pride"
-msgstr ""
+msgstr "É inútil, mantenha sua dignidade"
 
 msgctxt "speaker:Narrator"
 msgid "It's pointless."
@@ -106684,7 +106684,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Jasmine"
-msgstr ""
+msgstr "Jasmim"
 
 msgctxt "speaker:Narrator"
 msgid "Jasmine chuckled."
@@ -106828,15 +106828,15 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Join Carolyn in the bath"
-msgstr ""
+msgstr "Junte-se a Carolyn no banho"
 
 msgctxt "menu"
 msgid "Join Sakar on his walk"
-msgstr ""
+msgstr "Junte-se a Sakar para caminhar"
 
 msgctxt "menu"
 msgid "Join and dance."
-msgstr ""
+msgstr "Junte-se e dance."
 
 msgctxt "menu"
 msgid "Join forces with the mage Order"
@@ -106844,7 +106844,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Join his plot and kill the mages"
-msgstr ""
+msgstr "Junte-se ao seu plano e mate os magos."
 
 msgctxt "speaker:Sarah"
 msgid "Join my new army, and help me retake my homeland."
@@ -106856,7 +106856,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Join them"
-msgstr ""
+msgstr "Junte-se a eles"
 
 msgctxt "speaker:Sarah"
 msgid "Join you?"
@@ -106872,7 +106872,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Judge"
-msgstr ""
+msgstr "Juiz"
 
 msgctxt "speaker:Narrator"
 msgid "Judging by the blood and bodies, it seemed like they had not given up easily, even in the end."
@@ -108264,7 +108264,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Kate gives herself up."
-msgstr ""
+msgstr "Kate se entrega."
 
 msgctxt "speaker:Narrator"
 msgid "Kate glared at her."
@@ -109808,7 +109808,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Keep Drinking"
-msgstr ""
+msgstr "Continue bebendo"
 
 msgctxt "speaker:Captain Belmont"
 msgid "Keep a nice house. Bear my children. Raise them. Take care of me whenever I'm in port."
@@ -109836,11 +109836,11 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Keep defending against the orcs"
-msgstr ""
+msgstr "Defender-se dos orcos"
 
 msgctxt "menu"
 msgid "Keep drinking"
-msgstr ""
+msgstr "Continuar bebendo"
 
 msgctxt "speaker:Sarah"
 msgid "Keep firing until a breach opens up!"
@@ -109848,7 +109848,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Keep going"
-msgstr ""
+msgstr "Continue"
 
 msgctxt "speaker:Sakar"
 msgid "Keep going!"
@@ -109864,7 +109864,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Keep guard"
-msgstr ""
+msgstr "Fique de guarda"
 
 msgctxt "speaker:Narrator"
 msgid "Keep her safe."
@@ -109888,7 +109888,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Keep looking"
-msgstr ""
+msgstr "Continuar procurando"
 
 msgctxt "speaker:Samayra"
 msgid "Keep me forever."
@@ -109896,7 +109896,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Keep on your armor"
-msgstr ""
+msgstr "Mantenha sua armadura"
 
 msgctxt "speaker:Ephraim"
 msgid "Keep pushing, the path to western wing should be close."
@@ -109932,7 +109932,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Keep things modest."
-msgstr ""
+msgstr "Mantenha as coisas modestas."
 
 msgctxt "speaker:Captain"
 msgid "Keep those ropes straight!"
@@ -110036,7 +110036,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Keyboard"
-msgstr ""
+msgstr "Teclado"
 
 msgctxt "speaker:Emissary"
 msgid "Khan Hassar bears a great burden, placed upon him by the stars in heaven. He is to bring unity to this world, and bind all peoples together into a single tribe."
@@ -110076,11 +110076,11 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Kill Belmont"
-msgstr ""
+msgstr "Matar Belmont"
 
 msgctxt "menu"
 msgid "Kill Kate"
-msgstr ""
+msgstr "Matar a Kate"
 
 msgctxt "speaker:Narrator"
 msgid "Kill her. They might actually kill her."
@@ -110088,7 +110088,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Kill the soldiers"
-msgstr ""
+msgstr "Matar os soldados"
 
 msgctxt "speaker:Sarah"
 msgid "Kill...kill me..."
@@ -110256,7 +110256,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "King Orwell Rose"
-msgstr ""
+msgstr "Rei Orwell Rose"
 
 msgctxt "speaker:Narrator"
 msgid "King Orwell and Sarah are walking through an empty hallway towards the library. Their steps softly echo."
@@ -110332,7 +110332,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "King-On-The-Outside"
-msgstr ""
+msgstr "Rei Fora da Porta"
 
 msgctxt "speaker:Razaphel"
 msgid "Kingdoms rising and falling, all by careful design."
@@ -110344,15 +110344,15 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Kiss Lily"
-msgstr ""
+msgstr "Beija Lília"
 
 msgctxt "menu"
 msgid "Kiss Nick"
-msgstr ""
+msgstr "Beija Nick"
 
 msgctxt "menu"
 msgid "Kiss Samayra"
-msgstr ""
+msgstr "Beija Samayra"
 
 msgctxt "speaker:Narrator"
 msgid "Kissing along the inside of her thighs, he slowly made his way up, kissing her with each step."
@@ -111836,7 +111836,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Leave Lethram"
-msgstr ""
+msgstr "Sair de Lethram"
 
 msgctxt "speaker:Kate"
 msgid "Leave all this bullshit to the rest of you. But what can I say, I'm a glutton for punishment."
@@ -111844,15 +111844,15 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Leave her behind."
-msgstr ""
+msgstr "Deixá-la para trás."
 
 msgctxt "menu"
 msgid "Leave it be"
-msgstr ""
+msgstr "Deixa isso como está"
 
 msgctxt "menu"
 msgid "Leave me alone"
-msgstr ""
+msgstr "Deixa-me em paz."
 
 msgctxt "speaker:Sarah"
 msgid "Leave me alone."
@@ -111864,7 +111864,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Leave quickly"
-msgstr ""
+msgstr "Sai depressa"
 
 msgctxt "speaker:Dalia"
 msgid "Leave that world and you're nothing more than any other common person."
@@ -111880,11 +111880,11 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Leave the ship"
-msgstr ""
+msgstr "Abandonar a nave"
 
 msgctxt "menu"
 msgid "Leave the tent"
-msgstr ""
+msgstr "Sair da tenda"
 
 msgctxt "speaker:Sarah"
 msgid "Leave this place!"
@@ -111912,7 +111912,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Leave, keep working"
-msgstr ""
+msgstr "Sair, continue trabalhando"
 
 msgctxt "speaker:Razaphel"
 msgid "Leave."
@@ -111964,15 +111964,15 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Left"
-msgstr ""
+msgstr "Esquerda"
 
 msgctxt "ui"
 msgid "Left Click"
-msgstr ""
+msgstr "Clic Esquerdo"
 
 msgctxt "ui"
 msgid "Left Trigger\\nLeft Shoulder"
-msgstr ""
+msgstr "Gatilho Esquerdo\\nOmbro Esquerdo"
 
 msgctxt "speaker:Narrator"
 msgid "Left behind to die to the frost, their bodies preserved until the spring."
@@ -112068,11 +112068,11 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Let Kate Stay"
-msgstr ""
+msgstr "Deixe a Kate ficar"
 
 msgctxt "menu"
 msgid "Let Varga in"
-msgstr ""
+msgstr "Deixa o Varga entrar"
 
 msgctxt "speaker:Daemon"
 msgid "Let a pack of wild demon Hounds have their way with you?"
@@ -112116,7 +112116,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Let her go with a warning."
-msgstr ""
+msgstr "Deixa-a ir com um aviso."
 
 msgctxt "speaker:Vaelen"
 msgid "Let her wander the earth as lost as the day I first found her. Stripped of all title or recognition. Nobody."
@@ -112136,15 +112136,15 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Let it be."
-msgstr ""
+msgstr "Deixa ser."
 
 msgctxt "menu"
 msgid "Let it go"
-msgstr ""
+msgstr "Deixa ir"
 
 msgctxt "menu"
 msgid "Let it go, it's nothing"
-msgstr ""
+msgstr "Deixa ir, não é nada"
 
 msgctxt "speaker:Cassius"
 msgid "Let it only be known that whatever honor I claim here today, I give in tribute to Sarah Rose."
@@ -112152,7 +112152,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Let it rest"
-msgstr ""
+msgstr "Deixa descansar"
 
 msgctxt "speaker:Sarah"
 msgid "Let it rest for now. The first priority is that we remain undetected."
@@ -112264,11 +112264,11 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Let the matter rest"
-msgstr ""
+msgstr "Deixe isso de lado por enquanto"
 
 msgctxt "menu"
 msgid "Let the matter rest for now"
-msgstr ""
+msgstr "Deixe a questão descansar por enquanto"
 
 msgctxt "speaker:Narrator"
 msgid "Let them all be safe...but her most of all."
@@ -112284,7 +112284,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Let them go."
-msgstr ""
+msgstr "Deixe-os ir."
 
 msgctxt "speaker:Sarah"
 msgid "Let them go. They're running away from the palace, no use wasting time trying to hunt them down."
@@ -112304,7 +112304,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Let them have their way"
-msgstr ""
+msgstr "Deixe-os fazer o que quiserem"
 
 msgctxt "speaker:Lily"
 msgid "Let them whisper. See if they dare to say it to my face."
@@ -112452,7 +112452,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Let's head back"
-msgstr ""
+msgstr "Vamos voltar"
 
 msgctxt "speaker:Sarah"
 msgid "Let's head inside then."
@@ -112468,7 +112468,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Let's keep drinking. I have some wine in my room."
-msgstr ""
+msgstr "Vamos continuar bebendo. Tenho um pouco de vinho no meu quarto."
 
 msgctxt "speaker:Sarah"
 msgid "Let's keep going."
@@ -112488,7 +112488,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Let's not get carried away by mere rumors."
-msgstr ""
+msgstr "Não nos deixemos levar por meros rumores."
 
 msgctxt "speaker:Metis"
 msgid "Let's start, did you practice what we went over previously?"
@@ -112600,15 +112600,15 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Lie to Marius about his father"
-msgstr ""
+msgstr "Mente a Marius sobre seu pai"
 
 msgctxt "menu"
 msgid "Lie to her"
-msgstr ""
+msgstr "Mente para ela"
 
 msgctxt "menu"
 msgid "Lie, say you don't have money"
-msgstr ""
+msgstr "Mente, diz que não tem dinheiro"
 
 msgctxt "speaker:Narrator"
 msgid "Lie."
@@ -113632,7 +113632,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Live your own life"
-msgstr ""
+msgstr "Viva sua própria vida"
 
 msgctxt "speaker:Tribesman"
 msgid "Lived."
@@ -113664,7 +113664,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Load"
-msgstr ""
+msgstr "Carregar"
 
 msgctxt "speaker:Sarah"
 msgid "Load the cargo, work the ship, whatever you need. I'll earn my trip the right way."
@@ -113784,7 +113784,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Look at the bed next to you"
-msgstr ""
+msgstr "Olhe para a cama ao seu lado"
 
 msgctxt "speaker:Thomas"
 msgid "Look at the realm."
@@ -113832,7 +113832,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Look away"
-msgstr ""
+msgstr "Olhe para o lado"
 
 msgctxt "speaker:Captain Belmont"
 msgid "Look blondie, I don't mind fuckin you, but business is business. I can't go around giving free rides to every pretty girl willing to toss her panties off."
@@ -114996,7 +114996,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Lower your gaze"
-msgstr ""
+msgstr "Baixe o olhar"
 
 msgctxt "speaker:Narrator"
 msgid "Lowering herself, arching her back, opening herself to them."
@@ -115096,7 +115096,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\\n\\n[renpy.license!t]"
-msgstr ""
+msgstr "Feito com {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\\n\\n[renpy.license!t]"
 
 msgctxt "speaker:Narrator"
 msgid "Madly, the two lovers collapsed into a world of their own."
@@ -115520,7 +115520,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Maintain seperate armies"
-msgstr ""
+msgstr "Mantenha exércitos separados"
 
 msgctxt "speaker:Narrator"
 msgid "Maintaining that independence was a difficult balancing act."
@@ -115536,7 +115536,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Make a fire"
-msgstr ""
+msgstr "Fazer um fogo"
 
 msgctxt "speaker:Narrator"
 msgid "Make a fire. Anything. Anything just to feel warm for a moment."
@@ -115544,15 +115544,15 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Make a move on her"
-msgstr ""
+msgstr "Faça uma jogada com ela"
 
 msgctxt "menu"
 msgid "Make a stew"
-msgstr ""
+msgstr "Faça um guisado"
 
 msgctxt "menu"
 msgid "Make an example out of her."
-msgstr ""
+msgstr "Faça um exemplo dela."
 
 msgctxt "speaker:Maeiv"
 msgid "Make easy tonight and we shall set the hard work out for tomorrow."
@@ -115564,7 +115564,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Make him pay for what did all those years ago"
-msgstr ""
+msgstr "Faz ele pagar por tudo o que fez há tantos anos"
 
 msgctxt "speaker:Narrator"
 msgid "Make him understand that when he debased and humiliated her, he was dearest to her?"
@@ -115596,7 +115596,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Make the eggs and bacon."
-msgstr ""
+msgstr "Faz os ovos e o bacon."
 
 msgctxt "speaker:Sarah"
 msgid "Make up your mind and speak or be done about it."
@@ -115648,15 +115648,15 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Male Soldier"
-msgstr ""
+msgstr "Soldado masculino"
 
 msgctxt "speaker-name"
 msgid "Male soldier"
-msgstr ""
+msgstr "Soldado masculino"
 
 msgctxt "speaker-name"
 msgid "Man"
-msgstr ""
+msgstr "Homem"
 
 msgctxt "speaker:Narrator"
 msgid "Managing everything from the tax laws to the foreign trade agreements, it was a position as important as any other on the council."
@@ -115792,7 +115792,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "March through the Hinterlands"
-msgstr ""
+msgstr "Caminhar pelos Hinterlands"
 
 msgctxt "speaker:Narrator"
 msgid "Marching along the main road, they progressed much faster than Sarah had even dared to hope."
@@ -116668,7 +116668,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Marshal Edmond"
-msgstr ""
+msgstr "Marechal Edmond"
 
 msgctxt "speaker:Narrator"
 msgid "Marshal Edmond groaned. With any other man, such a noise meant a no. For him, it meant a pained yes."
@@ -116820,7 +116820,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Master"
-msgstr ""
+msgstr "Mestre"
 
 msgctxt "speaker:Young man"
 msgid "Master Gilead told me to warn you, don't drop it."
@@ -116908,7 +116908,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Masturbate"
-msgstr ""
+msgstr "Masturbar-se"
 
 msgctxt "speaker:Narrator"
 msgid "Matching her, Sarah began to grind her thigh, up and down."
@@ -117436,7 +117436,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Maybe we could make a life here"
-msgstr ""
+msgstr "Talvez pudéssemos construir uma vida aqui."
 
 msgctxt "speaker:Sarah"
 msgid "Maybe we could try to make a life out here."
@@ -117792,7 +117792,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Mayor"
-msgstr ""
+msgstr "Alcalde"
 
 msgctxt "speaker:Cassius"
 msgid "Me and Dio will pledge ourselves to your cause, freely, on one condition."
@@ -118064,63 +118064,63 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Meet Kate head-on"
-msgstr ""
+msgstr "Enfrenta a Kate"
 
 msgctxt "menu"
 msgid "Meet up with Sakar"
-msgstr ""
+msgstr "Encontre com Sakar"
 
 msgctxt "menu"
 msgid "Meet with Alaric"
-msgstr ""
+msgstr "Encontrar a Alaric"
 
 msgctxt "menu"
 msgid "Meet with Antonio"
-msgstr ""
+msgstr "Encontrar a Antonio"
 
 msgctxt "menu"
 msgid "Meet with Cassius"
-msgstr ""
+msgstr "Encontrar com Cássio"
 
 msgctxt "menu"
 msgid "Meet with Duke Antonio"
-msgstr ""
+msgstr "Encontrar ao Duque Antonio"
 
 msgctxt "menu"
 msgid "Meet with Edmond"
-msgstr ""
+msgstr "Encontrar a Edmond"
 
 msgctxt "menu"
 msgid "Meet with Garret"
-msgstr ""
+msgstr "Encontrar a Garret"
 
 msgctxt "menu"
 msgid "Meet with Kate"
-msgstr ""
+msgstr "Encontrar a Kate"
 
 msgctxt "menu"
 msgid "Meet with Lord Edmond"
-msgstr ""
+msgstr "Reunir-se com o Lord Edmond"
 
 msgctxt "menu"
 msgid "Meet with Maeiv"
-msgstr ""
+msgstr "Encontrar a Maeiv"
 
 msgctxt "menu"
 msgid "Meet with Queen Maeiv"
-msgstr ""
+msgstr "Encontrar com a Rainha Maeiv"
 
 msgctxt "menu"
 msgid "Meet with Razaphel"
-msgstr ""
+msgstr "Encontrar a Razaphel"
 
 msgctxt "menu"
 msgid "Meet with Samayra"
-msgstr ""
+msgstr "Encontrar a Samayra"
 
 msgctxt "menu"
 msgid "Meet with the Captain"
-msgstr ""
+msgstr "Encontrar-se com o Capitão"
 
 msgctxt "menu"
 msgid "Meet with the Tribesman"
@@ -118312,7 +118312,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Mention the dark fountain"
-msgstr ""
+msgstr "Menciona a fonte escura"
 
 msgctxt "speaker:Narrator"
 msgid "Mentioning the word caused a sadness to come over Samayra's face."
@@ -118328,7 +118328,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Merchant"
-msgstr ""
+msgstr "Mercador"
 
 msgctxt "speaker:Narrator"
 msgid "Merchants meeting with officials, cargo men bringing up the carts, sailors loading and unloading cargo."
@@ -118672,7 +118672,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Middle Click"
-msgstr ""
+msgstr "Clic Medio"
 
 msgctxt "speaker:Sarah"
 msgid "Might I ask for a bowl of that stew?"
@@ -119884,7 +119884,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Motion for Jaeid to go into the water."
-msgstr ""
+msgstr "Pedido para que Jaeid entre na água."
 
 msgctxt "speaker:Narrator"
 msgid "Motion. Keep moving. Make the body move before the mind has time to convince itself otherwise."
@@ -119908,15 +119908,15 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Mouse"
-msgstr ""
+msgstr "Rato"
 
 msgctxt "ui"
 msgid "Mouse Wheel Down"
-msgstr ""
+msgstr "Roda do Mouse para Baixo"
 
 msgctxt "ui"
 msgid "Mouse Wheel Up\\nClick Rollback Side"
-msgstr ""
+msgstr "Roda do Mouse para Cima\\nClique para Reverter Lateral"
 
 msgctxt "speaker:Orc"
 msgid "Mouth! Mouth!"
@@ -120100,7 +120100,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Music Volume"
-msgstr ""
+msgstr "Volume de Música"
 
 msgctxt "speaker:Razaphel"
 msgid "Must we now perform the sad faces and the spilling of tears, so that we might imagine our conscience clean?"
@@ -120108,7 +120108,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Mute All"
-msgstr ""
+msgstr "Silenciar tudo"
 
 msgctxt "speaker:Garret"
 msgid "Muted."
@@ -121036,15 +121036,15 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Mythran Officer"
-msgstr ""
+msgstr "Oficial Mythra"
 
 msgctxt "speaker-name"
 msgid "Mythran Prince"
-msgstr ""
+msgstr "Príncipe Mythran"
 
 msgctxt "speaker-name"
 msgid "Mythran Soldier"
-msgstr ""
+msgstr "Soldado Mythran"
 
 msgctxt "speaker:Narrator"
 msgid "Mythran by the looks of it. But she spotted a few other banners among them too."
@@ -121332,7 +121332,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Navigate the interface."
-msgstr ""
+msgstr "Navegar pela interface."
 
 msgctxt "speaker:Narrator"
 msgid "Navigating it all seemed impossible, if not for the help."
@@ -121672,7 +121672,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Negotiate down"
-msgstr ""
+msgstr "Negociar redução"
 
 msgctxt "speaker:Sarah"
 msgid "Neighbouring?"
@@ -122608,7 +122608,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "No"
-msgstr ""
+msgstr "Não"
 
 msgctxt "speaker:Kate"
 msgid "No I didn't drink if that's what you're asking."
@@ -123564,7 +123564,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "No, I can't leave Thomas. This is crazy."
-msgstr ""
+msgstr "Não, não posso deixar o Thomas. Isso é loucura."
 
 msgctxt "speaker:Sarah"
 msgid "No, I cannot assume my leadership by bribing you."
@@ -124528,7 +124528,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "No, this is plenty"
-msgstr ""
+msgstr "Não, isso é suficiente"
 
 msgctxt "speaker:Tirion"
 msgid "No, this is true."
@@ -125152,7 +125152,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Noble wife"
-msgstr ""
+msgstr "Nobre esposa"
 
 msgctxt "speaker:Narrator"
 msgid "Noble, commoner. Outsider. Born into the Tribes."
@@ -125160,7 +125160,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Nobleman"
-msgstr ""
+msgstr "Nobres"
 
 msgctxt "speaker:Narrator"
 msgid "Nobles still made up a large share of those in attendance, but each passing year the crowd grew more diverse. Sucessful merchants, famous scholars, notable guests from across the world."
@@ -125184,7 +125184,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Noblewoman"
-msgstr ""
+msgstr "Nobre"
 
 msgctxt "speaker:Sarah"
 msgid "Nobodies. People that I might have known years ago."
@@ -125360,7 +125360,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "None may threaten Rosanna; make an example of him!"
-msgstr ""
+msgstr "Nenhum pode ameaçar Rosanna; faça dele um exemplo!"
 
 msgctxt "speaker:Narrator"
 msgid "None motioned to leave."
@@ -126608,7 +126608,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Not tonight"
-msgstr ""
+msgstr "Não hoje"
 
 msgctxt "speaker:Sarah"
 msgid "Not tonight, but I swear, if you don't tell me soon, I'll..."
@@ -128116,11 +128116,11 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Obey Sakar"
-msgstr ""
+msgstr "Obedecer a Sakar"
 
 msgctxt "menu"
 msgid "Obey him"
-msgstr ""
+msgstr "Obedeça a ele"
 
 msgctxt "speaker:Narrator"
 msgid "Obey the captain. Life could be so easy, she thought. Away from all the complexities of her former life."
@@ -128232,7 +128232,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Of course"
-msgstr ""
+msgstr "Claro"
 
 msgctxt "speaker:Captain Belmont"
 msgid "Of course I do it for the money, but I don't act all fancy about it, like I'm above that sort of thing."
@@ -129024,35 +129024,35 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Offer her a position"
-msgstr ""
+msgstr "Ofereça-lhe um cargo"
 
 msgctxt "menu"
 msgid "Offer her power over the nobility"
-msgstr ""
+msgstr "Oferecer a ela poder sobre a nobreza"
 
 msgctxt "menu"
 msgid "Offer her wealth"
-msgstr ""
+msgstr "Ofereça-lhe riqueza"
 
 msgctxt "menu"
 msgid "Offer him mercy"
-msgstr ""
+msgstr "Ofereça-lhe misericórdia"
 
 msgctxt "menu"
 msgid "Offer him mercy."
-msgstr ""
+msgstr "Ofereça-lhe misericórdia."
 
 msgctxt "menu"
 msgid "Offer more gold"
-msgstr ""
+msgstr "Ofereça mais ouro"
 
 msgctxt "menu"
 msgid "Offer to help hunt the Beast"
-msgstr ""
+msgstr "Oferecer ajuda na caçada ao Monstro"
 
 msgctxt "menu"
 msgid "Offer to make Edmond High-General"
-msgstr ""
+msgstr "Oferecer-se para fazer de Edmond Alto-Geral"
 
 msgctxt "speaker:Narrator"
 msgid "Offering it would gain her Maeiv's support in the vote to keep their armies apart."
@@ -129064,7 +129064,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Officer"
-msgstr ""
+msgstr "Oficial"
 
 msgctxt "speaker:Sarah"
 msgid "Officer, I swear that-"
@@ -129072,7 +129072,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Official"
-msgstr ""
+msgstr "Oficial"
 
 msgctxt "speaker:Metis"
 msgid "Official Order regulation says trans-dimensional creatures should be exterminated after study."
@@ -129484,7 +129484,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Okay, just this once."
-msgstr ""
+msgstr "Certo, só desta vez."
 
 msgctxt "speaker:Sarah"
 msgid "Okay, keep hanging on, we need to get to safety."
@@ -129564,11 +129564,11 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Old Captain"
-msgstr ""
+msgstr "Velho Capitão"
 
 msgctxt "speaker-name"
 msgid "Old Tribesman"
-msgstr ""
+msgstr "Velho Tribu"
 
 msgctxt "speaker:Ramsey"
 msgid "Old family secret, I'm afraid."
@@ -129580,7 +129580,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Old man"
-msgstr ""
+msgstr "Velho."
 
 msgctxt "speaker:Captain Belmont"
 msgid "Old pal of mine, works for the Marionese family."
@@ -130764,7 +130764,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "One drink can't hurt"
-msgstr ""
+msgstr "Um copo só não fará mal."
 
 msgctxt "speaker:Narrator"
 msgid "One explained how they had worked a kitchen before. Another spoke of some previous experience in cleaning."
@@ -131688,7 +131688,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Only let him touch you"
-msgstr ""
+msgstr "Deixa-o apenas te tocar"
 
 msgctxt "speaker:Narrator"
 msgid "Only looking directly at the vault's door could she see the cryptic texts."
@@ -133716,7 +133716,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Orc"
-msgstr ""
+msgstr "Orco"
 
 msgctxt "speaker:Raza"
 msgid "Orc and smart goblin that know how to hide."
@@ -133824,7 +133824,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Other man"
-msgstr ""
+msgstr "Outro homem"
 
 msgctxt "speaker:Marshal Edmond"
 msgid "Other matters that might be of greater importance than even this question."
@@ -134604,15 +134604,15 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Page Down"
-msgstr ""
+msgstr "Próxima Página"
 
 msgctxt "ui"
 msgid "Page Up"
-msgstr ""
+msgstr "Página Cima"
 
 msgctxt "ui"
 msgid "Page {}"
-msgstr ""
+msgstr "Página {}"
 
 msgctxt "speaker:Narrator"
 msgid "Pain was everywhere, pleasure along with it, dominating her every being."
@@ -134920,7 +134920,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Peasant girl"
-msgstr ""
+msgstr "Menina camponesa"
 
 msgctxt "speaker:Sarah"
 msgid "Peasants, starved, will turn on their lords no matter their vows."
@@ -134964,7 +134964,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "People"
-msgstr ""
+msgstr "Povo"
 
 msgctxt "speaker:Alaric"
 msgid "People all smiles cause it don't cost them shit, but when it comes down to it, people are out for themselves."
@@ -136212,11 +136212,11 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Place the crown on your own head"
-msgstr ""
+msgstr "Coloque a coroa na sua própria cabeça"
 
 msgctxt "menu"
 msgid "Place your hands upon the monolith"
-msgstr ""
+msgstr "Coloca as tuas mãos sobre o monólito"
 
 msgctxt "speaker:Alaric"
 msgid "Places like these are great. Lots of folk wandering around, too busy looking at the wares to pay any mind to their wallets."
@@ -136292,7 +136292,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Play along with Kate, tease Samayra"
-msgstr ""
+msgstr "Jogue junto com Kate e brinque com Samayra"
 
 msgctxt "speaker:Narrator"
 msgid "Play modest for him, she wondered. What was the point? What part of her had he not seen by now?"
@@ -136476,7 +136476,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Please, I'll do anything"
-msgstr ""
+msgstr "Por favor, farei qualquer coisa."
 
 msgctxt "speaker:Captain"
 msgid "Please, I'm happy to have a mage on the ship. God forbid we get attacked by more of those creatures."
@@ -137112,7 +137112,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Power"
-msgstr ""
+msgstr "Poder"
 
 msgctxt "speaker:Marshal Edmond"
 msgid "Power for its own sake. Disgusting."
@@ -137180,7 +137180,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Preferences"
-msgstr ""
+msgstr "Preferências"
 
 msgctxt "ui"
 msgid "Prefs"
@@ -137372,7 +137372,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Pressure him."
-msgstr ""
+msgstr "Pressiona-o."
 
 msgctxt "speaker:Sarah"
 msgid "Prestige?"
@@ -137440,7 +137440,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Priest"
-msgstr ""
+msgstr "Sacerdote"
 
 msgctxt "speaker:Narrator"
 msgid "Primary Alchemical instruction manuals."
@@ -137716,7 +137716,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Propose a council of rulers"
-msgstr ""
+msgstr "Propor um conselho de governantes"
 
 msgctxt "speaker:Sarah"
 msgid "Protect me?"
@@ -137856,7 +137856,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Punish Kate"
-msgstr ""
+msgstr "Castigar a Kate"
 
 msgctxt "speaker:Judge"
 msgid "Punishment for each count is three years, for a total of six years in prison."
@@ -137884,23 +137884,23 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Push Kate away."
-msgstr ""
+msgstr "Empurre Kate para trás."
 
 msgctxt "menu"
 msgid "Push Samayra"
-msgstr ""
+msgstr "Empurre Samayra"
 
 msgctxt "menu"
 msgid "Push her back"
-msgstr ""
+msgstr "Empurrá-la para trás"
 
 msgctxt "menu"
 msgid "Push it further."
-msgstr ""
+msgstr "Empurre mais fundo."
 
 msgctxt "menu"
 msgid "Push yourself"
-msgstr ""
+msgstr "Supere-se"
 
 msgctxt "speaker:Sarah"
 msgid "Pushed your luck once too many."
@@ -137964,7 +137964,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Put her down in the grass"
-msgstr ""
+msgstr "Coloque-a no relvado"
 
 msgctxt "speaker:Mayor"
 msgid "Put her down on the table!"
@@ -138028,11 +138028,11 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Q.Load"
-msgstr ""
+msgstr "Q.Carregar"
 
 msgctxt "ui"
 msgid "Q.Save"
-msgstr ""
+msgstr "Q.Salvar"
 
 msgctxt "speaker:Narrator"
 msgid "Queen Maeiv acknowledged her, but her face was unmoving."
@@ -138156,7 +138156,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Quick saves"
-msgstr ""
+msgstr "Salvar rápido"
 
 msgctxt "speaker:Sarah"
 msgid "Quick student, huh?"
@@ -138324,7 +138324,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Ragged Man"
-msgstr ""
+msgstr "Homem Arrastado"
 
 msgctxt "speaker:Narrator"
 msgid "Raging up from between her legs, the orgasmic feelings poured out into every limb."
@@ -138716,7 +138716,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Razaphel"
-msgstr ""
+msgstr "Razafael"
 
 msgctxt "speaker:Narrator"
 msgid "Razaphel began to flow back into his flask."
@@ -138836,7 +138836,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Reach out and grab Kate's hand."
-msgstr ""
+msgstr "Estende a mão e agarre a mão de Kate."
 
 msgctxt "speaker:Metis"
 msgid "Reach out and speak to it in a way that it might understand, and lure it."
@@ -139244,19 +139244,19 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Reason with him"
-msgstr ""
+msgstr "Razão com ele"
 
 msgctxt "menu"
 msgid "Reason with him."
-msgstr ""
+msgstr "Razão com ele."
 
 msgctxt "menu"
 msgid "Rebuke Razaphel"
-msgstr ""
+msgstr "Admoestar a Razaphel"
 
 msgctxt "menu"
 msgid "Rebuke the spirit"
-msgstr ""
+msgstr "Admoestar o espírito"
 
 msgctxt "speaker:Narrator"
 msgid "Recalling her memories from years ago, she knew what to do."
@@ -139312,15 +139312,15 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Refuse"
-msgstr ""
+msgstr "Recusar"
 
 msgctxt "menu"
 msgid "Refuse Belmont a loan"
-msgstr ""
+msgstr "Recusar o empréstimo para Belmont"
 
 msgctxt "menu"
 msgid "Refuse him"
-msgstr ""
+msgstr "Recusar"
 
 msgctxt "menu"
 msgid "Refuse him; I don't see you like that"
@@ -139328,11 +139328,11 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Refuse his proposal"
-msgstr ""
+msgstr "Recusa sua proposta"
 
 msgctxt "menu"
 msgid "Refuse his request"
-msgstr ""
+msgstr "Recusar o pedido"
 
 msgctxt "speaker:Gilead"
 msgid "Refuse me, and you will find that no other will take your petitions."
@@ -139340,59 +139340,59 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Refuse the job"
-msgstr ""
+msgstr "Recusar o emprego"
 
 msgctxt "menu"
 msgid "Refuse to answer his questions"
-msgstr ""
+msgstr "Recusar responder às suas perguntas"
 
 msgctxt "menu"
 msgid "Refuse to attend the Union Council"
-msgstr ""
+msgstr "Recusar-se a comparecer ao Conselho da União"
 
 msgctxt "menu"
 msgid "Refuse to have sex with Eula"
-msgstr ""
+msgstr "Recusar-se a fazer sexo com Eula"
 
 msgctxt "menu"
 msgid "Refuse to help him"
-msgstr ""
+msgstr "Recusar-se a ajudá-lo"
 
 msgctxt "menu"
 msgid "Refuse to sleep with him"
-msgstr ""
+msgstr "Recusar-se a dormir com ele"
 
 msgctxt "menu"
 msgid "Refuse to spy on Caliban"
-msgstr ""
+msgstr "Recusar-se a espiar Calibã"
 
 msgctxt "menu"
 msgid "Refuse, best to be clear headed"
-msgstr ""
+msgstr "Recusar, melhor manter a mente lúcida"
 
 msgctxt "menu"
 msgid "Refuse, go to the library"
-msgstr ""
+msgstr "Recusar, ir à biblioteca"
 
 msgctxt "menu"
 msgid "Refuse, lose his support"
-msgstr ""
+msgstr "Recusar, perder seu apoio"
 
 msgctxt "menu"
 msgid "Refuse, only give them medical supplies"
-msgstr ""
+msgstr "Recusar, dar apenas suprimentos médicos"
 
 msgctxt "menu"
 msgid "Refuse, scold him"
-msgstr ""
+msgstr "Recusa-se e o repreende"
 
 msgctxt "menu"
 msgid "Refuse, start the siege"
-msgstr ""
+msgstr "Refusar, iniciar o cerco"
 
 msgctxt "menu"
 msgid "Refuse, you don't need her vote"
-msgstr ""
+msgstr "Recusar, você não precisa do seu voto"
 
 msgctxt "speaker:Narrator"
 msgid "Refusing the Khan's request was no option, not even for someone as Jaeid, let alone for a slave like her."
@@ -139556,31 +139556,31 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Reject Gilead's offer, reclaim Rosanna alone"
-msgstr ""
+msgstr "Recusar a oferta de Gileade e recuperar Rosanna sozinha"
 
 msgctxt "menu"
 msgid "Reject Marion's proposal."
-msgstr ""
+msgstr "Rejeitar a proposta de Marion."
 
 msgctxt "menu"
 msgid "Reject Razaphel's offer"
-msgstr ""
+msgstr "Recusar a oferta de Razaphel"
 
 msgctxt "menu"
 msgid "Reject her invitation"
-msgstr ""
+msgstr "Recusar seu convite"
 
 msgctxt "menu"
 msgid "Reject him"
-msgstr ""
+msgstr "Rejeitá-lo"
 
 msgctxt "menu"
 msgid "Reject his invitation"
-msgstr ""
+msgstr "Rejeitar o convite dele"
 
 msgctxt "menu"
 msgid "Reject the spirit"
-msgstr ""
+msgstr "Rejeite o espírito"
 
 msgctxt "speaker:Carolyn"
 msgid "Reject?"
@@ -139616,7 +139616,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Relent, let the matter rest"
-msgstr ""
+msgstr "Relaxe, deixe a questão em paz"
 
 msgctxt "speaker:Narrator"
 msgid "Relief rushed over her."
@@ -139672,7 +139672,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Remember Metis' warning"
-msgstr ""
+msgstr "Lembre-se do aviso de Metis"
 
 msgctxt "speaker:Atilla"
 msgid "Remember it."
@@ -139836,7 +139836,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Resist Marion"
-msgstr ""
+msgstr "Resistir a Marion"
 
 msgctxt "speaker:Narrator"
 msgid "Resist him. Deny him this part of you. Maintain a shred of your dignity."
@@ -139908,11 +139908,11 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Retire for the evening"
-msgstr ""
+msgstr "Descanse esta noite"
 
 msgctxt "ui"
 msgid "Return"
-msgstr ""
+msgstr "Retornar"
 
 msgctxt "speaker:Sarah"
 msgid "Return to your Governor and tell him my own promise."
@@ -140028,19 +140028,19 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Right"
-msgstr ""
+msgstr "Correto"
 
 msgctxt "ui"
 msgid "Right Click"
-msgstr ""
+msgstr "Clique com o botão direito"
 
 msgctxt "ui"
 msgid "Right Shoulder"
-msgstr ""
+msgstr "Ombro Direito"
 
 msgctxt "ui"
 msgid "Right Trigger\\nA/Bottom Button"
-msgstr ""
+msgstr "Gatilho Direito\\nA/Botão Inferior"
 
 msgctxt "speaker:Sarah"
 msgid "Right about what?"
@@ -140248,7 +140248,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Robber"
-msgstr ""
+msgstr "Ladrão"
 
 msgctxt "speaker:Sigmund"
 msgid "Robbing a lone farmer heading to the city. Women herding sheep. Disgusting cowards, the lot of em."
@@ -140264,7 +140264,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Rollback Side"
-msgstr ""
+msgstr "Voltar ao lado anterior"
 
 msgctxt "speaker:Narrator"
 msgid "Rolling onto her back, she felt herself suddenly pinned."
@@ -140272,15 +140272,15 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Rolls back to earlier dialogue."
-msgstr ""
+msgstr "Vai para o diálogo anterior."
 
 msgctxt "ui"
 msgid "Rolls forward to later dialogue."
-msgstr ""
+msgstr "Avança para o diálogo posterior."
 
 msgctxt "speaker-name"
 msgid "Romanov Twin"
-msgstr ""
+msgstr "Gêmea Romanov"
 
 msgctxt "speaker:Narrator"
 msgid "Roofs with so many holes in them, you'd wonder what the point of the roof still was."
@@ -140492,7 +140492,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Royal Messenger"
-msgstr ""
+msgstr "Mensajero Real"
 
 msgctxt "speaker:Narrator"
 msgid "Royalty. Status. Title. All of it, fictions."
@@ -140568,15 +140568,15 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Run"
-msgstr ""
+msgstr "Fugir"
 
 msgctxt "menu"
 msgid "Run away"
-msgstr ""
+msgstr "Foge"
 
 msgctxt "menu"
 msgid "Run away."
-msgstr ""
+msgstr "Fuga."
 
 msgctxt "speaker:Narrator"
 msgid "Run away. Stop this, she thought to herself. But what then, she reasoned?"
@@ -140848,7 +140848,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Sailor"
-msgstr ""
+msgstr "Marinheiro"
 
 msgctxt "speaker:Narrator"
 msgid "Sailors that anxiously tried to save people, carry them on board."
@@ -142868,7 +142868,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Sarah and Thomas in unison"
-msgstr ""
+msgstr "Sarah e Thomas em uníssono"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah and Thomas spent some time chatting, before the door to the council room finally swung open. The other members of the council entered the room."
@@ -143436,7 +143436,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Sarah begins to sing."
-msgstr ""
+msgstr "Sarah começa a cantar."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah begins to sprint back through the throne room."
@@ -143868,7 +143868,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Sarah can't do it, she drops the dagger."
-msgstr ""
+msgstr "Sarah não consegue, solta a adaga."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah can't find the will to hug him back."
@@ -153496,7 +153496,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Sarah gives herself up."
-msgstr ""
+msgstr "Sarah se entrega."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah gives in to the desire."
@@ -155224,7 +155224,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Sarah has her pride, refuse to perform."
-msgstr ""
+msgstr "Sarah tem seu orgulho e se recusa a se entregar."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah hastily begins taking off her underwear to avoid it being cut like her dress."
@@ -156024,7 +156024,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Sarah is disgusted"
-msgstr ""
+msgstr "Sarah está repugnada"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah is happy to notice her foot has returned to normal."
@@ -156060,7 +156060,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Sarah is so close, she doesn't stop Kate"
-msgstr ""
+msgstr "Sarah está tão perto que não para Kate"
 
 msgctxt "speaker:Daemon"
 msgid "Sarah is still new here, and I am sure she had much to learn."
@@ -157204,7 +157204,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Sarah knows that Atilla is right, something breaks between them."
-msgstr ""
+msgstr "Sarah sabe que Atilla tem razão: há uma ruptura entre eles."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah knows that Kate is dear to her, but she also knows that her life, her destiny, is too grand for something so small as love."
@@ -160296,7 +160296,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Sarah loses control."
-msgstr ""
+msgstr "Sarah perde o controle."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah lost any track of time as she worked tirelessly to keep the flow of ships going."
@@ -162944,7 +162944,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Sarah puts a stop to it."
-msgstr ""
+msgstr "Sarah interrompe tudo."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah puts her hands on her father's shoulder."
@@ -162952,7 +162952,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Sarah puts the pillow over her own face."
-msgstr ""
+msgstr "Sarah coloca o travesseiro sobre seu próprio rosto."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah quickened her pace, grasping onto Samayra's body, feeling every twitch of desire."
@@ -168608,7 +168608,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Sarah stays quiet."
-msgstr ""
+msgstr "Sarah fica em silêncio."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah stays with her father, holding his hand."
@@ -175712,7 +175712,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Sarah will fight Vaelen"
-msgstr ""
+msgstr "Sarah se enfrentará a Vaelen"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah willed the spirit the fade, and an in instant, the spirit was gone."
@@ -177608,15 +177608,15 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Save"
-msgstr ""
+msgstr "Salvar"
 
 msgctxt "menu"
 msgid "Save Samayra, intercede"
-msgstr ""
+msgstr "Salvar Samayra, interceder"
 
 msgctxt "menu"
 msgid "Save Samayra."
-msgstr ""
+msgstr "Salvar Samayra."
 
 msgctxt "speaker:Narrator"
 msgid "Save a rare few, she could hardly recall one face from the other, as years passed."
@@ -177716,7 +177716,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Say nothing"
-msgstr ""
+msgstr "Não diga nada"
 
 msgctxt "speaker:Narrator"
 msgid "Say nothing of what had happened between them."
@@ -177740,11 +177740,11 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Say you don't trust the spirit"
-msgstr ""
+msgstr "Diga que não confia no espírito"
 
 msgctxt "menu"
 msgid "Say you trust the spirit"
-msgstr ""
+msgstr "Diga que confia no espírito"
 
 msgctxt "speaker:Narrator"
 msgid "Say. Say anything. Say something."
@@ -177808,7 +177808,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Scene Replay"
-msgstr ""
+msgstr "Replay da Cena"
 
 msgctxt "speaker:Narrator"
 msgid "Scented spices filled her nose with the smell of fruit."
@@ -177816,7 +177816,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Scholar"
-msgstr ""
+msgstr "Acadêmico"
 
 msgctxt "speaker:Sarah"
 msgid "Schools?"
@@ -177824,11 +177824,11 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Scold him"
-msgstr ""
+msgstr "Regañar"
 
 msgctxt "speaker-name"
 msgid "Scout"
-msgstr ""
+msgstr "Explorador"
 
 msgctxt "speaker:Narrator"
 msgid "Scrambling for her clothes, she quickly dressed herself and left."
@@ -177844,7 +177844,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Scream!"
-msgstr ""
+msgstr "Grite!"
 
 msgctxt "speaker:Narrator"
 msgid "Scream, she told herself. Not with her body, but with her mind. Rage until each last fraction of energy that is left in her body is spend."
@@ -177896,7 +177896,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Second man"
-msgstr ""
+msgstr "Segundo homem"
 
 msgctxt "speaker:Captain Belmont"
 msgid "Second, I takes you back to where you came from. Rosanna was it?"
@@ -177928,11 +177928,11 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Seduce Samayra"
-msgstr ""
+msgstr "Seduza Samayra"
 
 msgctxt "menu"
 msgid "Seduce them"
-msgstr ""
+msgstr "Seduze-os"
 
 msgctxt "speaker:Narrator"
 msgid "Seduce you into a moment of laxiety, a single moment where you let your mind slip and forget where you are, and then you'll fall asleep under a scorching sun."
@@ -178348,11 +178348,11 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Send Kate Away"
-msgstr ""
+msgstr "Afastar Kate"
 
 msgctxt "menu"
 msgid "Send a scout party to infiltrate Ridgehaven"
-msgstr ""
+msgstr "Enviar uma patrulha de reconhecimento para infiltrar Ridgehaven"
 
 msgctxt "speaker:Marion"
 msgid "Send a unit of the Royal Army down to the River Province and deliver a message, summoning Oliver Greytower to court."
@@ -178360,7 +178360,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Send him back to the deserts he crawled out of."
-msgstr ""
+msgstr "Devolve-o aos desertos de onde saiu rastejando."
 
 msgctxt "speaker:Sarah"
 msgid "Send him in."
@@ -178372,7 +178372,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Send in the knights"
-msgstr ""
+msgstr "Mande entrar os cavaleiros"
 
 msgctxt "speaker:Sarah"
 msgid "Send out a small unit of scouts to Ridgehaven."
@@ -178380,7 +178380,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Send the spearmen forward"
-msgstr ""
+msgstr "Envie os lançados para frente"
 
 msgctxt "speaker:Sarah"
 msgid "Send two scout units on each end of the city. Ride all the way around and report. Ride in a wide formation."
@@ -178412,7 +178412,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Servant"
-msgstr ""
+msgstr "Serva"
 
 msgctxt "speaker:Sarah"
 msgid "Servant girl?"
@@ -178424,7 +178424,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Servants"
-msgstr ""
+msgstr "Servos"
 
 msgctxt "speaker:Woman"
 msgid "Servants go missin and each week the tryin to sucker new fools workin there."
@@ -178460,7 +178460,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Set the mob loose, let them have their revenge"
-msgstr ""
+msgstr "Solte a matilha, deixe que vinguem"
 
 msgctxt "speaker:Narrator"
 msgid "Setting out again, they ventured back into the unforgiving cold."
@@ -178632,7 +178632,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Share a drink with him"
-msgstr ""
+msgstr "Compartir uma bebida com ele"
 
 msgctxt "speaker:Sarah"
 msgid "Share it?"
@@ -189628,7 +189628,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "She needs to be made an example of"
-msgstr ""
+msgstr "Ela precisa ser punida publicamente"
 
 msgctxt "speaker:Narrator"
 msgid "She needs to find her father."
@@ -198616,11 +198616,11 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Shower later"
-msgstr ""
+msgstr "Banho depois"
 
 msgctxt "menu"
 msgid "Shower with Kate"
-msgstr ""
+msgstr "Banho com Kate"
 
 msgctxt "speaker:Narrator"
 msgid "Shuffling around behind her, she could feel Ephraim coming up behind her."
@@ -198692,7 +198692,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Siege crew"
-msgstr ""
+msgstr "Equipo de asedio"
 
 msgctxt "speaker:Narrator"
 msgid "Sighing deeply from the exhaustion, she remained on all fours."
@@ -199220,7 +199220,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Sit still and observe"
-msgstr ""
+msgstr "Fique imóvel e observe"
 
 msgctxt "speaker:Narrator"
 msgid "Sitting about the room, Sarah could see each of them tired. Exhausted."
@@ -199520,15 +199520,15 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Skip"
-msgstr ""
+msgstr "Pular"
 
 msgctxt "ui"
 msgid "Skipping"
-msgstr ""
+msgstr "Saltando"
 
 msgctxt "ui"
 msgid "Skips dialogue while held down."
-msgstr ""
+msgstr "Pular o diálogo enquanto segurado."
 
 msgctxt "speaker:Narrator"
 msgid "Slack jawed, she could only slightly turn her eyes and saw that the smoke produced in Alaric, the same sensations."
@@ -199540,11 +199540,11 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Slave"
-msgstr ""
+msgstr "Escrava"
 
 msgctxt "speaker-name"
 msgid "Slave Woman"
-msgstr ""
+msgstr "Mulher Escrava"
 
 msgctxt "speaker:Gorak"
 msgid "Slave! Come here!"
@@ -199580,7 +199580,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Sleep alone"
-msgstr ""
+msgstr "Dormir sozinha"
 
 msgctxt "speaker:Narrator"
 msgid "Sleep came easy for Sarah that night."
@@ -199624,35 +199624,35 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Sleep with Alaric"
-msgstr ""
+msgstr "Dormir com Alaric"
 
 msgctxt "menu"
 msgid "Sleep with Belmont"
-msgstr ""
+msgstr "Dormir com Belmont"
 
 msgctxt "menu"
 msgid "Sleep with Dalia"
-msgstr ""
+msgstr "Dormir com Dalia"
 
 msgctxt "menu"
 msgid "Sleep with Garret"
-msgstr ""
+msgstr "Dormir com Garret"
 
 msgctxt "menu"
 msgid "Sleep with Jaeid"
-msgstr ""
+msgstr "Dormir com Jaeid"
 
 msgctxt "menu"
 msgid "Sleep with Lady Carolyn"
-msgstr ""
+msgstr "Dormir com a Senhora Carolyn"
 
 msgctxt "menu"
 msgid "Sleep with Samayra"
-msgstr ""
+msgstr "Dormir com Samayra"
 
 msgctxt "menu"
 msgid "Sleep with the Khan"
-msgstr ""
+msgstr "Dormir com o Xan"
 
 msgctxt "menu"
 msgid "Sleep with the Old Tribesman"
@@ -200740,15 +200740,15 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Snap at him"
-msgstr ""
+msgstr "Aproxime-se dele"
 
 msgctxt "menu"
 msgid "Sneak away"
-msgstr ""
+msgstr "Esquive-se"
 
 msgctxt "menu"
 msgid "Sneak out and visit the spirit."
-msgstr ""
+msgstr "Saia e visite o espírito."
 
 msgctxt "speaker:Thomas"
 msgid "Sneaking away from your duties, are we?"
@@ -203520,7 +203520,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Soldier"
-msgstr ""
+msgstr "Soldado"
 
 msgctxt "speaker:Narrator"
 msgid "Soldier life had made it easier to sleep anywhere, but she still much preferred a proper bed."
@@ -203528,7 +203528,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Soldiers"
-msgstr ""
+msgstr "Soldados"
 
 msgctxt "speaker:Sarah"
 msgid "Soldiers are not friends."
@@ -205324,7 +205324,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Sound Volume"
-msgstr ""
+msgstr "Volume do Som"
 
 msgctxt "speaker:Sarah"
 msgid "Sounds complicated."
@@ -205356,7 +205356,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Space"
-msgstr ""
+msgstr "Espaço"
 
 msgctxt "menu"
 msgid "Spare Kate"
@@ -205392,7 +205392,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Speak honestly, the gemstone shines like bright crimson."
-msgstr ""
+msgstr "Fale a verdade, a pedra brilha como um vermelho vivo."
 
 msgctxt "speaker:Sarah"
 msgid "Speak or be silent, I will not have you act in between."
@@ -205400,11 +205400,11 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Speak privately with Marion"
-msgstr ""
+msgstr "Fale em particular com Marion"
 
 msgctxt "menu"
 msgid "Speak privately with Varga."
-msgstr ""
+msgstr "Falar em particular com Varga."
 
 msgctxt "speaker:Sarah"
 msgid "Speak rumors."
@@ -205520,7 +205520,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Spearmen"
-msgstr ""
+msgstr "Espadachins"
 
 msgctxt "speaker:Narrator"
 msgid "Spearmen raised up their weapons, stabbing them madly towards the Tribesmen."
@@ -205560,15 +205560,15 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Spend the Night with them"
-msgstr ""
+msgstr "Passe a noite com eles"
 
 msgctxt "menu"
 msgid "Spend the day alone"
-msgstr ""
+msgstr "Passe o dia sozinho"
 
 msgctxt "menu"
 msgid "Spend the day with Samayra"
-msgstr ""
+msgstr "Passe o dia com Samayra"
 
 msgctxt "speaker:Marius"
 msgid "Spend the next morning paying for it."
@@ -205796,7 +205796,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Spy on Caliban"
-msgstr ""
+msgstr "Espionar Caliban"
 
 msgctxt "speaker:Narrator"
 msgid "Spymaster Kravel had been left behind at Reinmeer to manage the city in her absence. She hoped he would prove worthy of her trust in him."
@@ -205828,7 +205828,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Squire"
-msgstr ""
+msgstr "Escudero"
 
 msgctxt "speaker:Narrator"
 msgid "Squires, thus, were nearly always the sons of noble houses. Those sons too far in line to inherit much of anything, and so instead, tasked with seeking glory."
@@ -205864,7 +205864,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Stand up to him"
-msgstr ""
+msgstr "Fica de pé contra ele"
 
 msgctxt "speaker:Sarah"
 msgid "Stand up!"
@@ -206132,11 +206132,11 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Start the siege"
-msgstr ""
+msgstr "Iniciar o cerco"
 
 msgctxt "ui"
 msgid "Start, Guide"
-msgstr ""
+msgstr "Iniciar, Guía"
 
 msgctxt "speaker:Sakar"
 msgid "Started out as a young kid all the way up in the northern mountains, the furthest most remote place in this forsaken remote corner of the world."
@@ -206196,35 +206196,35 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Stay"
-msgstr ""
+msgstr "Ficar"
 
 msgctxt "menu"
 msgid "Stay alone"
-msgstr ""
+msgstr "Ficar só"
 
 msgctxt "menu"
 msgid "Stay alone in the cabin"
-msgstr ""
+msgstr "Fique sozinho na cabana"
 
 msgctxt "menu"
 msgid "Stay alone with your thoughts"
-msgstr ""
+msgstr "Fique só com seus pensamentos"
 
 msgctxt "menu"
 msgid "Stay and watch"
-msgstr ""
+msgstr "Fique e observe"
 
 msgctxt "menu"
 msgid "Stay at the camp"
-msgstr ""
+msgstr "Fique no acampamento"
 
 msgctxt "menu"
 msgid "Stay by the campfire, alone"
-msgstr ""
+msgstr "Fique ao lado da fogueira, só"
 
 msgctxt "menu"
 msgid "Stay by yourself"
-msgstr ""
+msgstr "Fique por conta própria"
 
 msgctxt "speaker:Jaeid"
 msgid "Stay close to me, Sarah, and nobody will dare to come near."
@@ -206236,7 +206236,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Stay here"
-msgstr ""
+msgstr "Fique aqui"
 
 msgctxt "speaker:Sarah"
 msgid "Stay here!"
@@ -206252,15 +206252,15 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Stay hidden"
-msgstr ""
+msgstr "Fique escondido"
 
 msgctxt "menu"
 msgid "Stay home"
-msgstr ""
+msgstr "Fique em casa"
 
 msgctxt "menu"
 msgid "Stay in the camp"
-msgstr ""
+msgstr "Ficar no acampamento"
 
 msgctxt "speaker:Marion"
 msgid "Stay like that."
@@ -206280,7 +206280,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Stay silent"
-msgstr ""
+msgstr "Mantenha-se em silêncio"
 
 msgctxt "speaker:Tailor"
 msgid "Stay still, please."
@@ -206296,7 +206296,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Stay with the mercenary company"
-msgstr ""
+msgstr "Fique com a companhia de mercenários"
 
 msgctxt "speaker:Sarah"
 msgid "Stay with us, Ephraim."
@@ -207800,7 +207800,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Stop Alfred"
-msgstr ""
+msgstr "Parar a Alfred"
 
 msgctxt "speaker:Sarah"
 msgid "Stop apologizing."
@@ -207992,15 +207992,15 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Strip completely naked"
-msgstr ""
+msgstr "Desnuda completamente"
 
 msgctxt "menu"
 msgid "Strip down and lay on the bed"
-msgstr ""
+msgstr "Desnuda-te e deita-te na cama"
 
 msgctxt "menu"
 msgid "Strip for him"
-msgstr ""
+msgstr "Desnuda-se para ele"
 
 msgctxt "speaker:Sarah"
 msgid "Strip this woman, tie her to a pole, and flog her in the square."
@@ -208140,15 +208140,15 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Study Botany"
-msgstr ""
+msgstr "Estudar Botânica"
 
 msgctxt "menu"
 msgid "Study Daemonology"
-msgstr ""
+msgstr "Estudar Demonologia"
 
 msgctxt "menu"
 msgid "Study Transmogrification"
-msgstr ""
+msgstr "Estudar Transmutação"
 
 msgctxt "speaker:Narrator"
 msgid "Studying Kim's movements, Sarah quickly noticed all the little tricks she employed to keep up her pace."
@@ -208312,15 +208312,15 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Submit and go to the citadel"
-msgstr ""
+msgstr "Enviar e ir à cidadela"
 
 msgctxt "menu"
 msgid "Submit to Marion"
-msgstr ""
+msgstr "Entregar-se a Marion"
 
 msgctxt "menu"
 msgid "Submit to the Master"
-msgstr ""
+msgstr "Entregar-se ao Mestre"
 
 msgctxt "speaker:Narrator"
 msgid "Submit, he told her. All she needed to do was simply give in to him, and she would live a life far better than most."
@@ -209636,7 +209636,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Suggest sleeping with the spirit together"
-msgstr ""
+msgstr "Sugere que durma com o espírito juntos"
 
 msgctxt "speaker:Atilla"
 msgid "Suicide for you, girl. You don't have a soldier's constitution."
@@ -209648,7 +209648,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Summon Oliver to court"
-msgstr ""
+msgstr "Chama Oliver ao tribunal"
 
 msgctxt "speaker:Sarah"
 msgid "Summon him to court and he can have a fair trial."
@@ -209684,27 +209684,27 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Support Antonio"
-msgstr ""
+msgstr "Apoiar Antônio"
 
 msgctxt "menu"
 msgid "Support Edmond"
-msgstr ""
+msgstr "Apoiar Edmond"
 
 msgctxt "menu"
 msgid "Support Maeiv"
-msgstr ""
+msgstr "Apoiar Maeiv"
 
 msgctxt "menu"
 msgid "Support another"
-msgstr ""
+msgstr "Apoie a outros"
 
 msgctxt "menu"
 msgid "Support the commoners"
-msgstr ""
+msgstr "Apoie o povo"
 
 msgctxt "menu"
 msgid "Support the nobility"
-msgstr ""
+msgstr "Apoiar a nobreza"
 
 msgctxt "speaker:Sarah"
 msgid "Suppose I best find my bed then."
@@ -209876,7 +209876,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Sure, clear my head"
-msgstr ""
+msgstr "Claro, limpar a mente"
 
 msgctxt "speaker:Carolyn"
 msgid "Sure, girl. Next time I will let you work off your debt to me."
@@ -210340,7 +210340,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Surrender to all of them"
-msgstr ""
+msgstr "Entrega-te a todos eles"
 
 msgctxt "speaker:Narrator"
 msgid "Surrender to it...there was an ease in surrendering. A victory, almost, to allow it."
@@ -210348,7 +210348,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Surrender to the captain completely"
-msgstr ""
+msgstr "Entrega-te completamente ao capitão"
 
 msgctxt "speaker:Sarah"
 msgid "Surrender, and I will let you live."
@@ -210536,7 +210536,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Swim with Sophia"
-msgstr ""
+msgstr "Nadar com Sophia"
 
 msgctxt "speaker:Narrator"
 msgid "Swing, swing, stab."
@@ -210568,7 +210568,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Synara"
-msgstr ""
+msgstr "Sinará"
 
 msgctxt "speaker:Sarah"
 msgid "T-t-ank...u..."
@@ -210580,15 +210580,15 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Tab"
-msgstr ""
+msgstr "Aba"
 
 msgctxt "speaker-name"
 msgid "Tailor"
-msgstr ""
+msgstr "Sastre"
 
 msgctxt "menu"
 msgid "Take Samayra back to your tent"
-msgstr ""
+msgstr "Leve Samayra de volta à sua tenda"
 
 msgctxt "speaker:Vaelen"
 msgid "Take a moment and join me in honouring a very special person."
@@ -210608,7 +210608,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Take charge"
-msgstr ""
+msgstr "Assuma o comando"
 
 msgctxt "speaker:Sarah"
 msgid "Take her down and mend her wounds."
@@ -210632,7 +210632,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Take his hand and leave with Sigmund"
-msgstr ""
+msgstr "Pega sua mão e sai com Sigismundo"
 
 msgctxt "speaker:Alaric"
 msgid "Take it all off and I might consider it."
@@ -210672,7 +210672,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Take off armor"
-msgstr ""
+msgstr "Retira a armadura"
 
 msgctxt "speaker:Samayra"
 msgid "Take off that armor and I might forgive you."
@@ -210684,7 +210684,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Take off your clothes."
-msgstr ""
+msgstr "Retire suas roupas."
 
 msgctxt "speaker:Captain Belmont"
 msgid "Take off your dress."
@@ -210704,11 +210704,11 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Take the Khan's hand"
-msgstr ""
+msgstr "Pegue a mão do Khan"
 
 msgctxt "menu"
 msgid "Take the bet."
-msgstr ""
+msgstr "Aposta."
 
 msgctxt "speaker:Razaphel"
 msgid "Take the fate stone and carry it through the house. Hold it up in every corner, and it will shroud the house from the eyes of the gods."
@@ -210720,7 +210720,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Take the real stone for yourself."
-msgstr ""
+msgstr "Pegue a pedra verdadeira para você."
 
 msgctxt "speaker:Razaphel"
 msgid "Take the real stone for yourself. Give the fake stone to the-one-who-calls-himself-Vaelen. He will not be able to discren the false stone from a true one."
@@ -210740,7 +210740,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Take the servant job"
-msgstr ""
+msgstr "Aceite o trabalho de serva"
 
 msgctxt "speaker:Xanthippe"
 msgid "Take this and try it on, maybe it will help it all feel real."
@@ -210796,7 +210796,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Takes a screenshot."
-msgstr ""
+msgstr "Toma uma captura de tela."
 
 msgctxt "speaker:Sarah"
 msgid "Takes skill."
@@ -210912,19 +210912,19 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Talk back"
-msgstr ""
+msgstr "Falar com Lily"
 
 msgctxt "menu"
 msgid "Talk to Lily"
-msgstr ""
+msgstr "Falar com Lily"
 
 msgctxt "menu"
 msgid "Talk to the female soldier"
-msgstr ""
+msgstr "Falar com a soldada"
 
 msgctxt "menu"
 msgid "Talk to the male soldier"
-msgstr ""
+msgstr "Falar com o soldado"
 
 msgctxt "speaker:Sarah"
 msgid "Talk. Don't talk. I'm not going anywhere."
@@ -211060,23 +211060,23 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Tell Garret about Thomas"
-msgstr ""
+msgstr "Conta a Garret sobre Thomas"
 
 msgctxt "menu"
 msgid "Tell Jaeid about what happened at the market"
-msgstr ""
+msgstr "Conte a Jaeid o que aconteceu no mercado"
 
 msgctxt "menu"
 msgid "Tell Kate to stop it, seriously"
-msgstr ""
+msgstr "Diga a Kate que pare isso, sério"
 
 msgctxt "menu"
 msgid "Tell Marius the truth of what happened"
-msgstr ""
+msgstr "Diga a Marius a verdade do que aconteceu"
 
 msgctxt "menu"
 msgid "Tell Samayra about Thomas"
-msgstr ""
+msgstr "Conta a Samayra sobre Thomas"
 
 msgctxt "menu"
 msgid "Tell Varga what you were saying"
@@ -211084,7 +211084,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Tell a lie"
-msgstr ""
+msgstr "Conte uma mentira"
 
 msgctxt "speaker:Metis"
 msgid "Tell her I said goodbye, I regret not being able to do it properly."
@@ -211092,15 +211092,15 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Tell her the truth"
-msgstr ""
+msgstr "Diz a ela a verdade"
 
 msgctxt "menu"
 msgid "Tell her to forget it"
-msgstr ""
+msgstr "Diz-lhe para esquecer isso"
 
 msgctxt "menu"
 msgid "Tell her to sleep it off"
-msgstr ""
+msgstr "Diga-lhe que durma disso"
 
 msgctxt "speaker:Metis"
 msgid "Tell her, Samayra!"
@@ -211120,15 +211120,15 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Tell him the truth"
-msgstr ""
+msgstr "Diz-lhe a verdade"
 
 msgctxt "menu"
 msgid "Tell him to get lost"
-msgstr ""
+msgstr "Diz para ele sumir."
 
 msgctxt "menu"
 msgid "Tell him to take charge"
-msgstr ""
+msgstr "Diga-lhe que tome as rédeas"
 
 msgctxt "speaker:Captain Belmont"
 msgid "Tell me blondie, what are ya?"
@@ -211376,7 +211376,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Tell me."
-msgstr ""
+msgstr "Diz-me."
 
 msgctxt "speaker:Kate"
 msgid "Tell me."
@@ -211408,7 +211408,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Tell the mob to disband"
-msgstr ""
+msgstr "Diga à multidão que se dissolva"
 
 msgctxt "speaker:Sarah"
 msgid "Tell the scouts to remain close to camp."
@@ -211416,7 +211416,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Tell the scouts to stay near camp"
-msgstr ""
+msgstr "Diga aos exploradores que fiquem perto do acampamento."
 
 msgctxt "speaker:Sarah"
 msgid "Tell them to close up the gap, prevent the Tribesman from falling back!"
@@ -211548,7 +211548,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Testify against Alaric"
-msgstr ""
+msgstr "Testificar contra Alaric"
 
 msgctxt "speaker:Narrator"
 msgid "Testify against Alaric and she would be spared..."
@@ -211560,7 +211560,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Text Speed"
-msgstr ""
+msgstr "Velocidade do Texto"
 
 msgctxt "speaker:Alaric"
 msgid "Thank fuck he let us in."
@@ -212888,7 +212888,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "That makes sense"
-msgstr ""
+msgstr "Isso faz sentido"
 
 msgctxt "speaker:Sakar"
 msgid "That makes sense. I really should have figured that out myself."
@@ -213152,7 +213152,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "That sounds horrible."
-msgstr ""
+msgstr "Soa terrível."
 
 msgctxt "speaker:Sarah"
 msgid "That sounds horrible."
@@ -213164,7 +213164,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "That sounds nice."
-msgstr ""
+msgstr "Soa ótimo."
 
 msgctxt "speaker:Sarah"
 msgid "That sounds nice."
@@ -215292,7 +215292,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "The Official"
-msgstr ""
+msgstr "O Oficial"
 
 msgctxt "speaker:Narrator"
 msgid "The Old Tribesman grabbed her by her arm and pulled her up."
@@ -215460,7 +215460,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "The Survival of Sarah Rose"
-msgstr ""
+msgstr "A Sobrevivência de Sarah Rose"
 
 msgctxt "speaker:Narrator"
 msgid "The Survival of Sarah Rose is an epic fantasy game. Production on TSSR is still ongoing."
@@ -216524,7 +216524,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "The capital must not fall; call in the troops."
-msgstr ""
+msgstr "A capital não pode cair; convoque as tropas."
 
 msgctxt "speaker:Narrator"
 msgid "The capital of Delphine, and the rest of the country."
@@ -218144,7 +218144,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "The dialogue history is empty."
-msgstr ""
+msgstr "O histórico de diálogos está vazio."
 
 msgctxt "speaker:Narrator"
 msgid "The difference in physical strength was absolute."
@@ -228484,7 +228484,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "The truth is that you have a sister who can't stand you"
-msgstr ""
+msgstr "A verdade é que você tem uma irmã que não aguenta você."
 
 msgctxt "speaker:Sarah"
 msgid "The truth is that you have a sister who can't stand you."
@@ -228504,7 +228504,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "The truth is you fucked more men than women"
-msgstr ""
+msgstr "A verdade é que teve mais relações com homens do que com mulheres."
 
 msgctxt "speaker:Sarah"
 msgid "The truth is you fucked more men than women"
@@ -228512,7 +228512,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "The truth is you're a wanted man"
-msgstr ""
+msgstr "A verdade é que você é um homem procurado"
 
 msgctxt "speaker:Sarah"
 msgid "The truth is you're a wanted man"
@@ -233808,7 +233808,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "There is no place for me here."
-msgstr ""
+msgstr "Não há lugar para mim aqui."
 
 msgctxt "speaker:Razaphel"
 msgid "There is no point in fighting you. The stones are set in place. Fate is written."
@@ -233840,7 +233840,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "There is no us"
-msgstr ""
+msgstr "Não existe nós."
 
 msgctxt "speaker:Sarah"
 msgid "There is no us, Nick."
@@ -233988,7 +233988,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "There must be another way"
-msgstr ""
+msgstr "Há que haver outra forma"
 
 msgctxt "speaker:Narrator"
 msgid "There must have been more than a thousand souls, she guessed."
@@ -239056,7 +239056,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "This is enough."
-msgstr ""
+msgstr "Isso é suficiente."
 
 msgctxt "speaker:Marius"
 msgid "This is even better than yesterday! You're a natural!"
@@ -239732,7 +239732,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "This proposal is absurd."
-msgstr ""
+msgstr "Esta proposta é absurda."
 
 msgctxt "speaker:Captain Belmont"
 msgid "This pussy is mine. Got that?"
@@ -242076,7 +242076,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Threaten him."
-msgstr ""
+msgstr "Ameaça-o."
 
 msgctxt "speaker:Narrator"
 msgid "Threats of what would be done to her, her army, her people, if they lost."
@@ -242156,7 +242156,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Throw yourself at Belmont's feet"
-msgstr ""
+msgstr "Jogue-se aos pés de Belmont"
 
 msgctxt "speaker:Narrator"
 msgid "Throwing back her head, Sarah felt him lean into her, pressing his mouth onto her body."
@@ -242748,7 +242748,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "To good wine"
-msgstr ""
+msgstr "Para o bom vinho"
 
 msgctxt "speaker:Marius"
 msgid "To grab you and..."
@@ -243236,7 +243236,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "To prosperous cooperation"
-msgstr ""
+msgstr "Para uma cooperação próspera"
 
 msgctxt "speaker:Gabriel"
 msgid "To protect you from yourself. If not for me, you probably would have burned a few cities by now."
@@ -244064,11 +244064,11 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Toggles assistive {a=https://www.renpy.org/l/voicing}self-voicing{/a}."
-msgstr ""
+msgstr "Ativa a auto-voz {a=https://www.renpy.org/l/voicing}auto-voz{/a}."
 
 msgctxt "ui"
 msgid "Toggles dialogue skipping."
-msgstr ""
+msgstr "Ativa a omissão de diálogos."
 
 msgctxt "speaker:Captain Belmont"
 msgid "Told ya I'd make love to you, blondie."
@@ -244396,7 +244396,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Took"
-msgstr ""
+msgstr "Pegou"
 
 msgctxt "speaker:Raza"
 msgid "Took from supply store. Orc so stupid."
@@ -244520,7 +244520,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Trade votes with Edmond, gain his support"
-msgstr ""
+msgstr "Vote em comércio com Edmond e ganhe seu apoio"
 
 msgctxt "speaker:Narrator"
 msgid "Trading rights, Sarah considered his words."
@@ -244572,7 +244572,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Transitions"
-msgstr ""
+msgstr "Transições"
 
 msgctxt "speaker:Narrator"
 msgid "Translucent, blue light, shimmered within its internal black form, giving depth to void."
@@ -244732,7 +244732,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Tribesman"
-msgstr ""
+msgstr "Tribeiro"
 
 msgctxt "speaker:Soldiers"
 msgid "Tribesmen they think."
@@ -245012,7 +245012,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Try to get some sleep."
-msgstr ""
+msgstr "Tente pegar um pouco de sono."
 
 msgctxt "speaker:Sarah"
 msgid "Try to go easy on him Father. I read some of those books on military strategy you gave him. They're very boring."
@@ -245020,15 +245020,15 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Try to outmanoeuvre her"
-msgstr ""
+msgstr "Tente contorná-la"
 
 msgctxt "menu"
 msgid "Try to reason with them"
-msgstr ""
+msgstr "Tente convencer-os"
 
 msgctxt "menu"
 msgid "Try to speak to them"
-msgstr ""
+msgstr "Tenta falar com eles"
 
 msgctxt "speaker:Sarah"
 msgid "Try to stop me, and you'll regret it. Sounds fair?"
@@ -245064,7 +245064,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Turn Varga away"
-msgstr ""
+msgstr "Afastar Varga"
 
 msgctxt "speaker:Captain"
 msgid "Turn around and bend over my desk."
@@ -245072,7 +245072,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Turn around to see the source of the sound."
-msgstr ""
+msgstr "Vire-se para ver a origem do som."
 
 msgctxt "speaker:Duke Antonio"
 msgid "Turn around, I wanna see those tits when I cum."
@@ -245120,7 +245120,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Turn him down"
-msgstr ""
+msgstr "Recusar"
 
 msgctxt "speaker:Sarah"
 msgid "Turned out to be nothing. As you said, the city was...unimpressive."
@@ -245828,7 +245828,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Unify the armies"
-msgstr ""
+msgstr "Unificar os exércitos"
 
 msgctxt "speaker:Narrator"
 msgid "United. Disciplined. Ready."
@@ -245936,7 +245936,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Unseen Text"
-msgstr ""
+msgstr "Texto Invisível"
 
 msgctxt "speaker:Sarah"
 msgid "Unseen?"
@@ -247368,7 +247368,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Version [config.version!t]\\n"
-msgstr ""
+msgstr "Versão [config.version!t]\\n"
 
 msgctxt "speaker:Sarah"
 msgid "Very funny."
@@ -247704,23 +247704,23 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Visit Cassius and Dio"
-msgstr ""
+msgstr "Visita a Cássio e Dío"
 
 msgctxt "menu"
 msgid "Visit Kate"
-msgstr ""
+msgstr "Visitar a Kate"
 
 msgctxt "menu"
 msgid "Visit Samayra"
-msgstr ""
+msgstr "Visitar Samayra"
 
 msgctxt "speaker-name"
 msgid "Voice"
-msgstr ""
+msgstr "Voz"
 
 msgctxt "ui"
 msgid "Voice Volume"
-msgstr ""
+msgstr "Volume da Voz"
 
 msgctxt "speaker:Narrator"
 msgid "Voices."
@@ -247780,7 +247780,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Wait longer"
-msgstr ""
+msgstr "Espere mais um pouco"
 
 msgctxt "speaker:Lily"
 msgid "Wait up, Sarah!"
@@ -247852,7 +247852,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Walk alone"
-msgstr ""
+msgstr "Caminar sozinha"
 
 msgctxt "speaker:Narrator"
 msgid "Walk away. Yell at him. Save your honour."
@@ -249108,7 +249108,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "We can't be more than this."
-msgstr ""
+msgstr "Não podemos ir além disso."
 
 msgctxt "speaker:Captain"
 msgid "We can't cross the sea. We got supplies for two dozen sailors, instead, we now got nearly a thousand passangers."
@@ -249172,7 +249172,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "We cannot afford to waste resources on fictions."
-msgstr ""
+msgstr "Não podemos nos dar ao luxo de desperdiçar recursos com ficções."
 
 msgctxt "speaker:Thomas"
 msgid "We cannot afford to weaken our defenses in the other districts, let the troops remain where they are."
@@ -249192,7 +249192,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "We cannot put ourselves above the rest of the country; let the troops stay in the districts."
-msgstr ""
+msgstr "Não podemos nos colocar acima do resto do país; deixe as tropas ficarem nos distritos."
 
 msgctxt "speaker:Cassius"
 msgid "We cannot receive an appointment with him."
@@ -249344,7 +249344,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "We don't do that in Rosanna."
-msgstr ""
+msgstr "Não fazemos isso em Rosanna."
 
 msgctxt "speaker:Xanthippe"
 msgid "We don't expect the Mythran army to reach the palace, but we can't be sure there won't be smaller vanguard units sneaking behind the main front."
@@ -249948,7 +249948,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "We ready the army; best we be prepared."
-msgstr ""
+msgstr "Preparamos o exército; devemos estar prontos."
 
 msgctxt "speaker:Kate"
 msgid "We received a report today."
@@ -250784,7 +250784,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Wear the dress"
-msgstr ""
+msgstr "Vista o vestido"
 
 msgctxt "speaker:Narrator"
 msgid "Wearing only her underwear, she climbed into bed. The day's events had exhausted her."
@@ -253356,7 +253356,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "What are we waiting for?"
-msgstr ""
+msgstr "Então o que estamos esperando?"
 
 msgctxt "speaker:Captain Belmont"
 msgid "What are ya then?"
@@ -254376,7 +254376,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "What happened to your race?"
-msgstr ""
+msgstr "O que aconteceu com a sua raça?"
 
 msgctxt "speaker:Sarah"
 msgid "What happened, exactly?"
@@ -254592,7 +254592,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "What if you desire no man?"
-msgstr ""
+msgstr "E se você não desejar nenhum homem?"
 
 msgctxt "speaker:Sarah"
 msgid "What if you desire no man?"
@@ -254744,7 +254744,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "What is the hollow world?"
-msgstr ""
+msgstr "O que é esse mundo vazio?"
 
 msgctxt "speaker:Tailor"
 msgid "What is the matter?"
@@ -258752,11 +258752,11 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Where are the Gods now?"
-msgstr ""
+msgstr "Onde estão os deuses?"
 
 msgctxt "menu"
 msgid "Where are the Gods?"
-msgstr ""
+msgstr "Onde estão os Deuses?"
 
 msgctxt "speaker:Sarah"
 msgid "Where are they now, Lord Edmond?"
@@ -260080,7 +260080,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Why did the Gods not prevent this?"
-msgstr ""
+msgstr "Por que os Deuses não impediram isso?"
 
 msgctxt "speaker:Narrator"
 msgid "Why did the heat in her chest and between her legs surge, each time his tongue invaded her mouth."
@@ -260696,7 +260696,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Why your world?"
-msgstr ""
+msgstr "Por que o seu mundo?"
 
 msgctxt "speaker:Carolyn"
 msgid "Why, did you have anyone in mind?"
@@ -261000,7 +261000,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Window"
-msgstr ""
+msgstr "Janela"
 
 msgctxt "speaker:Narrator"
 msgid "Wine poured down throats so quickly, she wondered if anyone even tasted anything at all."
@@ -263368,7 +263368,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Woman"
-msgstr ""
+msgstr "Mulher"
 
 msgctxt "speaker:Sarah"
 msgid "Woman."
@@ -263416,7 +263416,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Woodland Spirit"
-msgstr ""
+msgstr "Espírito da Floresta"
 
 msgctxt "speaker:Samayra"
 msgid "Wooo!"
@@ -264708,7 +264708,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Xanthippe"
-msgstr ""
+msgstr "Xantíppide"
 
 msgctxt "speaker:Curator"
 msgid "Xanthippe was the master of this space, but the connection was recently severed."
@@ -264748,7 +264748,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Y/Top Button"
-msgstr ""
+msgstr "Y/Botão Superior"
 
 msgctxt "speaker:Varga"
 msgid "YOU DARE TO ENTER MY HOME AND MAKE DEMANDS OF ME!?!"
@@ -265932,7 +265932,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Yell at her to leave"
-msgstr ""
+msgstr "Grite para ela ir embora"
 
 msgctxt "speaker:Narrator"
 msgid "Yell for them to run."
@@ -265944,7 +265944,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Yes"
-msgstr ""
+msgstr "Sim"
 
 msgctxt "speaker:Sarah and Thomas in unison"
 msgid "Yes Father."
@@ -266432,7 +266432,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Yes, another!"
-msgstr ""
+msgstr "Sim, outra!"
 
 msgctxt "speaker:Oryon"
 msgid "Yes, as I mentioned, the Gods know the unfolding of future events with perfect accuracy."
@@ -269404,7 +269404,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "You don't want it to pass; press on."
-msgstr ""
+msgstr "Não quer que isso acabe; continue."
 
 msgctxt "speaker:Sarah"
 msgid "You don't want to be rich?"
@@ -273396,7 +273396,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "You will tell Marius everything"
-msgstr ""
+msgstr "Você contará tudo ao Marius"
 
 msgctxt "speaker:Gilead"
 msgid "You will use this opportunity to create a connection with him."
@@ -274132,7 +274132,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "You're drunk. Go back to your room."
-msgstr ""
+msgstr "Você está bêbado. Volte para o seu quarto."
 
 msgctxt "speaker:Sarah"
 msgid "You're drunk. I don't think this is a good idea..."
@@ -274408,7 +274408,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "You're looking for Faded Stars Ink"
-msgstr ""
+msgstr "Você está procurando pela Tinta Estrela Desbotada"
 
 msgctxt "speaker:Sarah"
 msgid "You're looking for Faded Stars Ink"
@@ -274416,7 +274416,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "You're looking for Pale Eclipse Ink"
-msgstr ""
+msgstr "Está procurando por Tinta Eclipse Pálido"
 
 msgctxt "speaker:Sarah"
 msgid "You're looking for Pale Eclipse Ink"
@@ -274424,7 +274424,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "You're looking for White Moonfall Ink"
-msgstr ""
+msgstr "Você está procurando pela Tinta Lua Branca"
 
 msgctxt "speaker:Sarah"
 msgid "You're looking for White Moonfall Ink"
@@ -275732,7 +275732,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Young man"
-msgstr ""
+msgstr "Jovem"
 
 msgctxt "speaker:Narrator"
 msgid "Young men, eager to gain some experience. Old men, eager for her youth."
@@ -275740,7 +275740,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Young woman"
-msgstr ""
+msgstr "Jovem mulher"
 
 msgctxt "speaker:Narrator"
 msgid "Young, inexperienced and a woman, she was not a serious claimant."
@@ -276436,7 +276436,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "empty slot"
-msgstr ""
+msgstr "vazio"
 
 msgctxt "speaker:Narrator"
 msgid "for now, she sat upon the throne, and with that came all the burdens of rulership. She couldn't only listen to her heart."
@@ -276468,11 +276468,11 @@ msgstr ""
 
 msgctxt "ui"
 msgid "{#auto_page}A"
-msgstr ""
+msgstr "A"
 
 msgctxt "ui"
 msgid "{#file_time}%A, %B %d %Y, %H:%M"
-msgstr ""
+msgstr "%A, %B %d %Y, %H:%M"
 
 msgctxt "ui"
 msgid "{#quick_page}Q"

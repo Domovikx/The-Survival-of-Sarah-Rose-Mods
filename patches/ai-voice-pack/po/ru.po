@@ -5613,7 +5613,7 @@ msgstr "Принять предложение Гилэда"
 
 msgctxt "menu"
 msgid "Accept Marion's proposal."
-msgstr ""
+msgstr "Принять предложение Марион."
 
 msgctxt "menu"
 msgid "Accept her invitation"
@@ -29625,7 +29625,7 @@ msgstr "Предать Ксана"
 
 msgctxt "menu"
 msgid "Betray the order"
-msgstr ""
+msgstr "Предать приказ"
 
 msgctxt "speaker:Narrator"
 msgid "Betraying Xan, on the word of this creature..."
@@ -59521,7 +59521,7 @@ msgstr "Иди, хватай одежду и беги в свою комнату
 
 msgctxt "menu"
 msgid "Go home"
-msgstr ""
+msgstr "Вернись домой"
 
 msgctxt "menu"
 msgid "Go home alone"
@@ -59617,7 +59617,7 @@ msgstr "Уединиться с Гидеоном"
 
 msgctxt "menu"
 msgid "Go talk to Ephraim and Caleb"
-msgstr ""
+msgstr "Поговори с Эфраимом и Кaleb"
 
 msgctxt "menu"
 msgid "Go talk to Kate"
@@ -59625,7 +59625,7 @@ msgstr "Поговорить с Кейт"
 
 msgctxt "menu"
 msgid "Go talk to Samayra"
-msgstr ""
+msgstr "Поговори с Самайрой"
 
 msgctxt "speaker:Razaphel"
 msgid "Go there and we shall speak, free of riddles and obscurities."
@@ -59649,7 +59649,7 @@ msgstr "К кораблям!"
 
 msgctxt "menu"
 msgid "Go visit Alaric"
-msgstr ""
+msgstr "Пойти навестить Аларика"
 
 msgctxt "menu"
 msgid "Go with Belmont to his ship"
@@ -118071,15 +118071,15 @@ msgstr "Встретить Кейт в лоб"
 
 msgctxt "menu"
 msgid "Meet up with Sakar"
-msgstr ""
+msgstr "Встреться с Сакар"
 
 msgctxt "menu"
 msgid "Meet with Alaric"
-msgstr ""
+msgstr "Встретиться с Алариком"
 
 msgctxt "menu"
 msgid "Meet with Antonio"
-msgstr ""
+msgstr "Встретиться с Антонио"
 
 msgctxt "menu"
 msgid "Meet with Cassius"
@@ -118087,15 +118087,15 @@ msgstr "Встретиться с Кассиусом"
 
 msgctxt "menu"
 msgid "Meet with Duke Antonio"
-msgstr ""
+msgstr "Встретиться с герцогом Антонио"
 
 msgctxt "menu"
 msgid "Meet with Edmond"
-msgstr ""
+msgstr "Встретиться с Эдмоном"
 
 msgctxt "menu"
 msgid "Meet with Garret"
-msgstr ""
+msgstr "Встретиться с Гарретом"
 
 msgctxt "menu"
 msgid "Meet with Kate"
@@ -118103,23 +118103,23 @@ msgstr "Встретиться с Кейт"
 
 msgctxt "menu"
 msgid "Meet with Lord Edmond"
-msgstr ""
+msgstr "Встретиться с лордом Эдмондом"
 
 msgctxt "menu"
 msgid "Meet with Maeiv"
-msgstr ""
+msgstr "Встретиться с Мейв"
 
 msgctxt "menu"
 msgid "Meet with Queen Maeiv"
-msgstr ""
+msgstr "Встретиться с королевой Мейв"
 
 msgctxt "menu"
 msgid "Meet with Razaphel"
-msgstr ""
+msgstr "Встретиться с Разафелом"
 
 msgctxt "menu"
 msgid "Meet with Samayra"
-msgstr ""
+msgstr "Встретиться с Самайрой"
 
 msgctxt "menu"
 msgid "Meet with the Captain"
@@ -128123,7 +128123,7 @@ msgstr "Подчиниться Сакару"
 
 msgctxt "menu"
 msgid "Obey him"
-msgstr ""
+msgstr "Подчинись ему"
 
 msgctxt "speaker:Narrator"
 msgid "Obey the captain. Life could be so easy, she thought. Away from all the complexities of her former life."
@@ -199635,7 +199635,7 @@ msgstr "Переспать с Белмонтом"
 
 msgctxt "menu"
 msgid "Sleep with Dalia"
-msgstr ""
+msgstr "Спать с Далией"
 
 msgctxt "menu"
 msgid "Sleep with Garret"
@@ -205571,7 +205571,7 @@ msgstr "Провести день в одиночестве"
 
 msgctxt "menu"
 msgid "Spend the day with Samayra"
-msgstr ""
+msgstr "Провести день с Самайрой"
 
 msgctxt "speaker:Marius"
 msgid "Spend the next morning paying for it."
@@ -210919,7 +210919,7 @@ msgstr "Возразить"
 
 msgctxt "menu"
 msgid "Talk to Lily"
-msgstr ""
+msgstr "Поговорить с Лили"
 
 msgctxt "menu"
 msgid "Talk to the female soldier"
@@ -211127,7 +211127,7 @@ msgstr "Сказать ему правду"
 
 msgctxt "menu"
 msgid "Tell him to get lost"
-msgstr ""
+msgstr "Скажи ему, чтобы он свалил"
 
 msgctxt "menu"
 msgid "Tell him to take charge"
@@ -247715,7 +247715,7 @@ msgstr "Навестить Кейт"
 
 msgctxt "menu"
 msgid "Visit Samayra"
-msgstr ""
+msgstr "Посетить Самайру"
 
 msgctxt "speaker-name"
 msgid "Voice"
@@ -254379,7 +254379,7 @@ msgstr "Что с ней случилось?"
 
 msgctxt "menu"
 msgid "What happened to your race?"
-msgstr ""
+msgstr "Что случилось с вашим народом?"
 
 msgctxt "speaker:Sarah"
 msgid "What happened, exactly?"
@@ -254747,7 +254747,7 @@ msgstr "Что это? Что такого важного, что мы позв�
 
 msgctxt "menu"
 msgid "What is the hollow world?"
-msgstr ""
+msgstr "Что такое пустой мир?"
 
 msgctxt "speaker:Tailor"
 msgid "What is the matter?"
@@ -258755,11 +258755,11 @@ msgstr "Там, где движения Ваэлена были выверены
 
 msgctxt "menu"
 msgid "Where are the Gods now?"
-msgstr ""
+msgstr "Где же теперь боги?"
 
 msgctxt "menu"
 msgid "Where are the Gods?"
-msgstr ""
+msgstr "Где же боги?"
 
 msgctxt "speaker:Sarah"
 msgid "Where are they now, Lord Edmond?"
@@ -260699,7 +260699,7 @@ msgstr "Почему ты отказалась от халявы?"
 
 msgctxt "menu"
 msgid "Why your world?"
-msgstr ""
+msgstr "Почему твой мир?"
 
 msgctxt "speaker:Carolyn"
 msgid "Why, did you have anyone in mind?"
