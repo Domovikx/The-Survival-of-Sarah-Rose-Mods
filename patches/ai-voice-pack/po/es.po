@@ -13,6 +13,14 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+# TSSR ES translation — файл забронирован (язык выбран владельцем 2026-10-20).
+# Español sirve para España y LatAm (inteligibilidad completa).
+# Наполнение: перевод через po/template.pot (кандидат №1 после ru;
+# технический гейт — мультиязычность TTS-голосов кастов).
+# msgstr "" = не переведено.
+msgid ""
+msgstr "Project-Id-Version: TSSR-Mods 1.0\nPO-Revision-Date: 2026-10-20 00:00+0000\nLanguage: es\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\n"
+
 msgctxt "speaker:Narrator"
 msgid "\"Ooh no, not this one, try that one\" she would say when Sarah was still small."
 msgstr "\"Oh no, no a esta, prueba con esa\", solía decir cuando Sarah aún era pequeña."
@@ -105407,7 +105415,7 @@ msgstr "No es una pregunta trampa."
 
 msgctxt "speaker:Narrator"
 msgid "It's not a void, she realizes. Amid the blackness, a dark mass writhes, twists and curls."
-msgstr "No es un vacío, se da cuenta. Entre la oscuridad, una masa oscura se retuercе, gira y se enrosca."
+msgstr ""
 
 msgctxt "speaker:Sakar"
 msgid "It's not a weakness to be shocked at the sight of blood. It reminds you that you're human, even if spilling it is sometimes necessary."
@@ -113667,7 +113675,7 @@ msgstr "Vivir con Alaric le había hecho consciente de los ritmos de la ciudad."
 
 msgctxt "ui"
 msgid "Load"
-msgstr "Carga la mercancía, trabaja en el barco, haz lo que necesites. Ganaré mi viaje de la forma correcta."
+msgstr ""
 
 msgctxt "speaker:Sarah"
 msgid "Load the cargo, work the ship, whatever you need. I'll earn my trip the right way."
@@ -200835,7 +200843,7 @@ msgstr "Así que pensé que, si vas a ayudar a la gente, probablemente debería 
 
 msgctxt "speaker:Thomas"
 msgid "So I figured, obviously, my dear sister must be suffering the same fate as me, so why not share the misery?"
-msgstr ""
+msgstr "Entonces pensé, por supuesto, que mi querida hermana debía sufrir el mismo destino que yo, así que ¿por qué no compartir la miseria?"
 
 msgctxt "speaker:Kate"
 msgid "So I go visit William."

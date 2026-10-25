@@ -223,10 +223,65 @@ export function userPrompt(
 // ---------- Авточеки ----------
 
 /** Строки msgstr уже в файле субтитры-стиля: без кавычек, если EN без них. */
+/**
+ * Символьный msgid — только идентичность (шлюз от баги 2026-10-25):
+ * `msgid "<"` модель переводила как галлюцинацию из соседнего контекста
+ * (`<A Brief Investigation on Ethics>`, `《伦理学简史》作者：路凡`), а судья
+ * ставил 9–10. Проверка длины при этом ВЫКЛЮЧЕНА (крит-фикс 2026-10-24).
+ */
+export function isSymbolicMsgid(msgid: string): boolean {
+  return !/[A-Za-zЀ-ӿͰ-Ͽ぀-ヿ가-힯一-鿿]/.test(msgid);
+}
+
+/**
+ * Чужая письменность: в переводе языка X не должно быть букв из алфавитов,
+ * которых у X нет (латинские языки — без кириллицы/CJK/греческого; ru —
+ * без CJK/греческого; ja/ko/zh — без кириллицы/греческого). Ловит
+ * галлюцинации контекста (pl `Thomas`→`Томас`) и опечатки-миксы
+ * (es `retuercе` — кириллическая «е»).
+ */
+export function foreignScriptIssue(lang: string, tr: string): string | null {
+  const cjk = /[぀-ヿ가-힯㐀-鿿豈-﫿]/;
+  const cyr = /[Ѐ-ӿԀ-ԯ]/;
+  const grk = /[Ͱ-Ͽἀ-῿]/;
+  if (lang === "ru") {
+    if (cjk.test(tr)) return `чужая письменность: CJK в русском переводе`;
+    if (grk.test(tr)) return `чужая письменность: греческие буквы в русском переводе`;
+    return null;
+  }
+  if (lang === "ja" || lang === "ko" || lang === "zh") {
+    if (cyr.test(tr)) return `чужая письменность: кириллица в ${lang}-переводе`;
+    if (grk.test(tr)) return `чужая письменность: греческие буквы в ${lang}-переводе`;
+    return null;
+  }
+  if (cjk.test(tr)) return `чужая письменность: CJK в латинском переводе`;
+  if (cyr.test(tr)) return `чужая письменность: кириллица в латинском переводе`;
+  if (grk.test(tr)) return `чужая письменность: греческие буквы в латинском переводе`;
+  return null;
+}
+
+/**
+ * Короткий msgid (≤6 символов, UI-кнопка) → подозрительно длинный перевод:
+ * признак галлюцинации модели по контексту (реальный кейс es `Load` →
+ * «Carga la mercancía, trabaja en el барко…»). Порог 30 — эмпирический:
+ * нормальные короткие кнопки («Guardar partida» и т.п.) укладываются.
+ */
+export function shortToLongIssue(msgid: string, tr: string): string | null {
+  if (msgid.trim().length > 6) return null;
+  if (tr.trim().length <= 30) return null;
+  return `короткий UI-месседж → длинный перевод (галлюцинация?): ${tr.trim().slice(0, 60)}`;
+}
+
 export function checkTranslation(entry: PoEntry, es: string, lang: string): string[] {
   const issues: string[] = [];
   const p = langProfile(lang);
   const mid = entry.msgid;
+  // Шлюз символьных msgid: единственное допустимое значение — идентичность
+  // (иначе «не переведено» — это ОК для `<`, `>`, «…» и прочих символов).
+  if (isSymbolicMsgid(mid)) {
+    if (es.trim() !== mid.trim()) issues.push("символьный msgstr должен совпадать с msgid");
+    return issues;
+  }
   if (!es.trim()) issues.push("пустой перевод");
   if (es.trim() === mid.trim()) issues.push("msgstr == msgid (не переведено)");
   for (const [re, why] of p.forbidden) {
@@ -236,6 +291,11 @@ export function checkTranslation(entry: PoEntry, es: string, lang: string): stri
       /* невалидный regex профиля */
     }
   }
+  // Классовые проверки от баги 2026-10-25 (см. задачу demo-e2e-ui-prologue):
+  const fs = foreignScriptIssue(lang, es);
+  if (fs) issues.push(fs);
+  const sl = shortToLongIssue(mid, es);
+  if (sl) issues.push(sl);
   // КРИТ-ФИКС 2026-10-24: проверка длины (ratio) ВЫПИЛЕНА полностью — для
   // CJK (zh/ja/ko) 1 иероглиф = слово, а для коротких UI-кнопок
   // («Save»->«Guardar» ×1.75) ratio-лимит давал ложные rejected.
@@ -443,9 +503,11 @@ interface Target {
   entry: PoEntry;
 }
 
+/** Все языки пайплайна (имена po/<code>.po); используется ctl и аудит-скриптом. */
+export const ALL_LANGS = ["de", "es", "fr", "it", "ja", "ko", "pl", "pt", "ru", "zh"];
+
 async function main(): Promise<void> {
   const o = parseArgs(process.argv.slice(2));
-  const ALL_LANGS = ["de", "es", "fr", "it", "ja", "ko", "pl", "pt", "ru", "zh"];
   if (o.ctl === "stop") {
     ctlStop(o.lang ? [o.lang] : ALL_LANGS);
     return;
@@ -480,12 +542,34 @@ async function main(): Promise<void> {
     .map((s) => s.trim())
     .filter(Boolean);
   const targets: Target[] = [];
+  let symbolicFilled = 0;
+  let symbolicWrong = 0;
   for (let i = 0; i < entries.length; i++) {
     const e = entries[i];
-    if (e.msgstr.trim()) continue;
+    if (e.msgstr.trim()) {
+      // Шлюз символьных msgid (бага 2026-10-25): уже испорченные записи
+      // (`<` -> `<A Brief Investigation on Ethics>`) чиним на идентичность
+      // сразу в переводе — иначе они висят неправильными навсегда.
+      if (isSymbolicMsgid(e.msgid) && e.msgstr.trim() !== e.msgid.trim()) {
+        e.msgstr = e.msgid;
+        symbolicWrong++;
+      }
+      continue;
+    }
+    if (isSymbolicMsgid(e.msgid)) {
+      // Символьный msgid → идентичность БЕЗ LLM: модель галлюцинирует по
+      // контексту (см. checkTranslation — судья ставил 9–10 на бреде).
+      e.msgstr = e.msgid;
+      symbolicFilled++;
+      continue;
+    }
     if (ctxtList.length && !ctxtList.includes(e.msgctxt)) continue;
     if (o.arc && pot.resolve(e.msgctxt, e.msgid)?.arc !== o.arc) continue;
     targets.push({ idx: i, entry: e });
+  }
+  if (symbolicFilled || symbolicWrong) {
+    writeFileSync(poPath, renderPo(entries, header), "utf-8");
+    console.log(`шлюз символьных msgid: выровнено ${symbolicFilled} пустых + ${symbolicWrong} испорченных (без LLM)`);
   }
   // --start-line трактуется как порядковый индекс ЗАПИСИ (не строки файла):
   // резюм без флагов = с начала, точный докачка — по индексу из лога.

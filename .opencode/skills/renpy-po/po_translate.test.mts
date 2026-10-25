@@ -12,10 +12,13 @@ import {
   ctlStatus,
   ctlStop,
   extractJson,
+  foreignScriptIssue,
   isRunning,
   isSpeechCtx,
+  isSymbolicMsgid,
   judgeSystem,
   parseArgs,
+  shortToLongIssue,
   stopRequested,
   systemPrompt,
   userPrompt,
@@ -294,4 +297,71 @@ test("parseArgs: --ctxt и --arc", () => {
   assert.equal(o.arc, "Prologue");
   assert.equal(parseArgs(["--lang", "de"]).ctxt, "");
   assert.equal(parseArgs(["--lang", "de"]).arc, "");
+});
+
+// ---------- бага символьных msgid + классовые авточеки (2026-10-25) ----------
+
+test("isSymbolicMsgid: символы/многоточие — да; текст с буквами — нет", () => {
+  for (const s of ["<", ">", "...", "…", "«»", "-", "%"]) {
+    assert.equal(isSymbolicMsgid(s), true, `ожидали символьный: ${s}`);
+  }
+  for (const s of ["Load", "Sarah...", "Ctrl + A", "Трахай", "很累", "こんにちは", "Загрузка"]) {
+    assert.equal(isSymbolicMsgid(s), false, `ожидали текстовый: ${s}`);
+  }
+});
+
+test("checkTranslation: символьный msgid — только идентичность (шлюз баги)", () => {
+  const lt = mkEntry({ msgctxt: '"ui"', msgid: "<" });
+  // галлюцинация из контекста — rejected
+  assert.ok(
+    checkTranslation(lt, "<A Brief Investigation on Ethics>", "pl").some((i) => i.includes("символьный")),
+    "галлюцинация должна быть поймана",
+  );
+  assert.ok(checkTranslation(lt, "< ui >", "de").some((i) => i.includes("символьный")));
+  assert.ok(checkTranslation(lt, "《伦理学简史》作者：路凡", "zh").some((i) => i.includes("символьный")));
+  // идентичность — чисто (в т.ч. для `>` «msgstr == msgid» НЕ ругается)
+  assert.deepEqual(checkTranslation(lt, "<", "pl"), []);
+  const gt = mkEntry({ msgctxt: '"ui"', msgid: ">" });
+  assert.deepEqual(checkTranslation(gt, ">", "es"), []);
+  // пустой перевод символьного — тоже ошибка (шлюз обязан заполнить идентичностью)
+  assert.ok(checkTranslation(lt, "", "fr").some((i) => i.includes("символьный")));
+});
+
+test("foreignScriptIssue: чужая письменность ловится, своя — нет", () => {
+  // латинские языки: кириллица/CJK/греческий — мусор
+  assert.ok(foreignScriptIssue("pl", "Томас")?.includes("кириллица"));
+  assert.ok(foreignScriptIssue("es", "se retuercе")?.includes("кириллица")); // кириллическая «е»
+  assert.ok(foreignScriptIssue("de", "《伦理学简史》")?.includes("CJK"));
+  assert.equal(foreignScriptIssue("es", "Se retuerce y gira."), null);
+  assert.equal(foreignScriptIssue("fr", "Él la pecó sin fin — ó, ¡ay!"), null); // акценты — не мусор
+  // ru: кириллица своя, CJK/греческий — чужие
+  assert.equal(foreignScriptIssue("ru", "Она устала, но счастлива."), null);
+  assert.ok(foreignScriptIssue("ru", "她很累")?.includes("CJK"));
+  // CJK-языки: кириллица/греческий — чужие
+  assert.ok(foreignScriptIssue("ja", "Томас")?.includes("кириллица"));
+  assert.equal(foreignScriptIssue("zh", "她很累。"), null);
+  assert.equal(foreignScriptIssue("ko", "그녀는 피곤하다."), null);
+});
+
+test("shortToLongIssue: короткий UI → длинный бред ловится, норма — нет", () => {
+  assert.ok(
+    shortToLongIssue("Load", "Carga la mercancía, trabaja en el barco, haz lo que necesites.") !== null,
+    "бред из контекста должен быть пойман",
+  );
+  assert.equal(shortToLongIssue("Load", "Cargar"), null); // нормальная кнопка
+  assert.equal(shortToLongIssue("Save", "Guardar"), null);
+  assert.equal(shortToLongIssue("A long sentence about the world.", "Слишком длинный перевод...".repeat(4)), null);
+  // встроено в checkTranslation
+  const btn = mkEntry({ msgctxt: '"ui"', msgid: "Load" });
+  assert.ok(
+    checkTranslation(btn, "Carga la mercancía, trabaja en el barco, haz lo que necesites.", "es").some((i) =>
+      i.includes("длинный перевод"),
+    ),
+  );
+});
+
+test("checkTranslation: новые классовые проверки не бьют по норме", () => {
+  const e = mkEntry({ msgid: "She was tired but happy." });
+  assert.equal(checkTranslation(e, "Ella estaba cansada pero feliz.", "es").length, 0);
+  assert.equal(checkTranslation(e, "Elle était fatiguée mais heureuse.", "fr").length, 0);
 });
