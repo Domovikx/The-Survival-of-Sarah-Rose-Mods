@@ -32,6 +32,9 @@
  *   --lang CODE       язык (de,es,fr,it,ja,ko,pl,pt,ru,zh) — обязателен
  *                     (кроме --ctl stop/status без --lang = все языки)
  *   --ctl MODE        stop | status — управление, без перевода
+ *   --ctxt LIST       фильтр msgctxt через запятую: напр. menu,ui,speaker-name
+ *                     (переводятся только эти категории — для UI-прогонов)
+ *   --arc NAME        фильтр по арке POT: напр. Prologue (для пролог-прогонов)
  *   --limit N         перевести не более N записей (по умолчанию без лимита)
  *   --start-line N    начать с записи порядковым индексом N (по умолчанию 0)
  *   --concurrency N   параллельные запросы (по умолчанию 1 — строго построчно)
@@ -69,6 +72,8 @@ export const TMP_DIR = join(REPO_ROOT, "tmp");
 export interface Opts {
   lang: string;
   ctl: string;
+  ctxt: string;
+  arc: string;
   limit: number;
   startLine: number;
   concurrency: number;
@@ -89,6 +94,8 @@ export function parseArgs(argv: string[]): Opts {
   return {
     lang: f("lang", ""),
     ctl: f("ctl", ""),
+    ctxt: f("ctxt", ""),
+    arc: f("arc", ""),
     limit: Number(f("limit", "0")),
     startLine: Number(f("start-line", "0")),
     concurrency: Math.max(1, Number(f("concurrency", "1"))),
@@ -180,6 +187,12 @@ export function systemPrompt(lang: string): string {
   return p.rules + shots;
 }
 
+/** Речь (dialogue/narration) или интерфейс (menu/ui/speaker-name) — категория как в pot_resolve.
+ *  parsePo хранит msgctxt без кавычек; тестовые фикстуры бывают в кавычках — снимаем оба варианта. */
+export function isSpeechCtx(msgctxt: string): boolean {
+  return msgctxt.replace(/^"|"$/g, "").startsWith("speaker:");
+}
+
 /** User prompt: контекст соседних строк + тон из POT (обратный резолв) + спикер + EN-строка. */
 export function userPrompt(
   entry: { msgctxt: string; msgid: string },
@@ -188,11 +201,19 @@ export function userPrompt(
   feedback: string,
   emotion: string | null,
 ): string {
-  const emo = emotion ?? "Curiously observing";
   const parts: string[] = [];
   if (prev.length) parts.push("CONTEXT (previous lines):", ...prev, "");
-  parts.push(`emotion: ${emo}`);
-  parts.push(`speaker: ${entry.msgctxt || '"speaker:Narrator"'}`);
+  if (isSpeechCtx(entry.msgctxt)) {
+    const emo = emotion ?? "Curiously observing";
+    parts.push(`emotion: ${emo}`);
+    parts.push(`speaker: ${entry.msgctxt || '"speaker:Narrator"'}`);
+  } else {
+    // UI/menu/speaker-name (демо-e2e, 2026-10-25): никакой выдуманной эмоции
+    // диктора и бессмысленного «speaker: menu» — строка переводится как интерфейс.
+    parts.push(
+      `category: ${entry.msgctxt} — interface string (menu button / label / name): translate as concise UI copy, no narrator voice, no emotion`,
+    );
+  }
   parts.push(`EN: ${JSON.stringify(entry.msgid).slice(1, -1)}`);
   if (next.length) parts.push("", "CONTEXT (following lines):", ...next);
   if (feedback) parts.push("", feedback);
@@ -238,6 +259,16 @@ CRITICAL: never recommend clinical substitutes (e.g. for Spanish "pene/vagina/pe
 
 Output STRICT JSON only: {"score":<0-10 int>,"issues":["...", ...]}. Each issue SHORT (max 12 words), max 3 issues; [] if perfect. No text outside the JSON.`;
 
+/** UI-вариант судьи (menu/ui/speaker-name): без контент-рейтинга и эрогенных правил. */
+const JUDGE_UI_SYSTEM = `You are a localization QA reviewer for UI/menu/name strings of a game (EN -> target language, one file may serve several regions). Judge ONLY: completeness (nothing dropped/added), natural and consistent UI terminology, register matching a game interface (concise, no narrator voice), placeholders and tags preserved (%s/%d, {i}...{/i}, [config...]). NEVER penalize translation length (CJK and UI labels legitimately differ in character count). Do NOT apply any content-rating, erotic-prose or scene-lexicon rules — these are interface strings, not dialogue.
+
+Output STRICT JSON only: {"score":<0-10 int>,"issues":["...", ...]}. Each issue SHORT (max 12 words), max 3 issues; [] if perfect. No text outside the JSON.`;
+
+/** Системный промпт судьи по категории записи: речь — строгий, интерфейс — UI-вариант. */
+export function judgeSystem(msgctxt: string): string {
+  return isSpeechCtx(msgctxt) ? JUDGE_SYSTEM : JUDGE_UI_SYSTEM;
+}
+
 /** Балл судьи 0..10 и её замечания; -1 если судья не ответил. */
 export async function judge(
   baseUrl: string,
@@ -249,11 +280,15 @@ export async function judge(
 ): Promise<{ score: number; issues: string[] }> {
   const p = langProfile(lang);
   const emo = emotion ?? "-";
-  const user = `${p.judgeNotes}\n\nemotion: ${emo}\nspeaker: ${entry.msgctxt || "-"}\nEN: ${entry.msgid}\nTARGET(${lang}): ${tr}`;
+  const speech = isSpeechCtx(entry.msgctxt);
+  const head = speech
+    ? `${p.judgeNotes}\n\nemotion: ${emo}\nspeaker: ${entry.msgctxt || "-"}`
+    : `${p.judgeNotes}\n\ncategory: ${entry.msgctxt} (interface string — no narrator/emotion rules apply)`;
+  const user = `${head}\nEN: ${entry.msgid}\nTARGET(${lang}): ${tr}`;
   const raw = await chat(
     baseUrl,
     [
-      { role: "system", content: JUDGE_SYSTEM },
+      { role: "system", content: judgeSystem(entry.msgctxt) },
       { role: "user", content: user },
     ],
     { model, temp: 0.1, maxTokens: 900 },
@@ -440,10 +475,16 @@ async function main(): Promise<void> {
   const logPath = join(TMP_DIR, `po_translate_${o.lang}.log`);
   const jsonlPath = join(TMP_DIR, `po_translate_${o.lang}.jsonl`);
 
+  const ctxtList = o.ctxt
+    .split(",")
+    .map((s) => s.trim())
+    .filter(Boolean);
   const targets: Target[] = [];
   for (let i = 0; i < entries.length; i++) {
     const e = entries[i];
     if (e.msgstr.trim()) continue;
+    if (ctxtList.length && !ctxtList.includes(e.msgctxt)) continue;
+    if (o.arc && pot.resolve(e.msgctxt, e.msgid)?.arc !== o.arc) continue;
     targets.push({ idx: i, entry: e });
   }
   // --start-line трактуется как порядковый индекс ЗАПИСИ (не строки файла):
@@ -457,6 +498,12 @@ async function main(): Promise<void> {
     `язык: ${profile.name} | модель: ${o.model} | судья: ${o.judge ? `вкл (порог ${o.threshold})` : "выкл"} | параллелизм: ${o.concurrency}`,
   );
   if (o.dry) {
+    const by = new Map<string, number>();
+    for (const t of queue) {
+      const k = isSpeechCtx(t.entry.msgctxt) ? "speaker:*" : t.entry.msgctxt;
+      by.set(k, (by.get(k) ?? 0) + 1);
+    }
+    console.log(`по категориям: ${[...by].map(([k, v]) => `${k}=${v}`).join(", ") || "-"}`);
     queue
       .slice(0, 10)
       .forEach((t) =>

@@ -13,6 +13,8 @@ import {
   ctlStop,
   extractJson,
   isRunning,
+  isSpeechCtx,
+  judgeSystem,
   parseArgs,
   stopRequested,
   systemPrompt,
@@ -250,4 +252,46 @@ test("ctl-механизм: stopRequested / isRunning / ctlStop — флаги �
     rmSync(stopFile, { force: true });
     rmSync(pidFile, { force: true });
   }
+});
+
+// ---------- UI-ветка и фильтры (задача 2026-10-25-demo-e2e) ----------
+
+test("isSpeechCtx: speaker:* — речь; menu/ui/speaker-name — интерфейс", () => {
+  assert.equal(isSpeechCtx('"speaker:Sarah"'), true);
+  assert.equal(isSpeechCtx('"speaker:Narrator"'), true);
+  assert.equal(isSpeechCtx('"menu"'), false);
+  assert.equal(isSpeechCtx('"ui"'), false);
+  assert.equal(isSpeechCtx('"speaker-name"'), false); // "speaker-name" без двоеточия — не речь
+});
+
+test("UI-ветка userPrompt: без выдуманной эмоции и speaker для menu/ui", () => {
+  const menu = mkEntry({ msgctxt: '"menu"', msgid: "Accept Belmont's offer." });
+  const up = userPrompt(menu, [], [], "", null);
+  assert.ok(!up.includes("Curiously observing"), "эмоция диктора не должна подставляться");
+  assert.ok(!up.includes("speaker:"), "speaker: menu — бессмысленно");
+  assert.match(up, /interface string/i);
+  assert.match(up, /Accept Belmont's offer\./);
+  // речь ведёт себя как раньше
+  const speech = userPrompt(mkEntry(), [], [], "", null);
+  assert.match(speech, /emotion: Curiously observing/);
+  assert.match(speech, /speaker: "speaker:Narrator"/);
+});
+
+test("judgeSystem: UI — без эрогенных правил и с запретом штрафовать длину", () => {
+  const ui = judgeSystem('"menu"');
+  assert.match(ui, /NEVER penalize translation length/);
+  // «erotic-prose» встречается только в запрете; сам эрогенный register-блок — только у речи
+  assert.ok(!ui.includes("frank erotic prose"), "эрогенный register-блок не должен попадать в UI-судью");
+  assert.match(ui, /interface string/i);
+  const speech = judgeSystem('"speaker:Sarah"');
+  assert.match(speech, /frank erotic prose/); // речь остаётся со старыми правилами
+  assert.ok(!speech.includes("interface string"));
+});
+
+test("parseArgs: --ctxt и --arc", () => {
+  const o = parseArgs(["--lang", "de", "--ctxt", "menu,ui", "--arc", "Prologue"]);
+  assert.equal(o.ctxt, "menu,ui");
+  assert.equal(o.arc, "Prologue");
+  assert.equal(parseArgs(["--lang", "de"]).ctxt, "");
+  assert.equal(parseArgs(["--lang", "de"]).arc, "");
 });
