@@ -135868,7 +135868,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Perhaps, Sarah speculated, it was simply his nature. Too kind to hurt anything, and so too soft for war, even the theory of war."
-msgstr ""
+msgstr "サラは、それはおそらくただ彼の本質なのだと推測した。誰かを傷つけるには優しすぎるし、戦争そのものさえも、理論上であってもあまりに軟弱すぎたからだ。"
 
 msgctxt "speaker:Narrator"
 msgid "Perhaps, Sarah thought, if she had hated Xan all this would have been easier."

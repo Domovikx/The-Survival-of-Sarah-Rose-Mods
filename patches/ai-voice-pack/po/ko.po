@@ -50476,7 +50476,7 @@ msgstr ""
 
 msgctxt "speaker:Marion"
 msgid "Every day, the same endless stream of meetings. Everyone wanting something. Just one dull face after the other. It makes you feel like a bookkeeper."
-msgstr ""
+msgstr "매일 똑같은 끝없는 회의들. 모두 무언가를 원하고, 지루한 얼굴들이 줄을 잇습니다. 당신은 회계사처럼 느껴지죠."
 
 msgctxt "speaker:Sarah"
 msgid "Every decision I make seems to sow a thousand new disasters."
@@ -242144,7 +242144,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Throughout the hall, servants ran up and down, placing plates, putting down silverware; some were ironing the sheet covering the oak table."
-msgstr ""
+msgstr "홀 전체에서 종업원들이 오르내리며 접시를 놓고 수저를 내놓았다. 일부는 오크 테이블을 덮은 시트를 다리고 있었다."
 
 msgctxt "speaker:Narrator"
 msgid "Throughout the town, Sarah saw there were still some celebrations, but they seemed to have dimmed a bit."

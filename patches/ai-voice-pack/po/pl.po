@@ -11364,7 +11364,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "And Marion was their scion, first amongst all his peers. He walked around the room with a confidence that could only be the result of years of cultivation."
-msgstr ""
+msgstr "A Marion był ich potomkiem, pierwszym spośród wszystkich swoich rówieśników. Chodził po pokoju z pewnością siebie, która mogła być tylko owocem lat kultury."
 
 msgctxt "speaker:Sarah"
 msgid "And Marion's family is one of the oldest in Rosanna, and he knows just about everyone. He could be a real help to us."
@@ -72064,7 +72064,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Her father had once told her that when their mother died, he had lost so much of himself, that he couldn't risk loving someone like that ever again."
-msgstr ""
+msgstr "Jej ojciec kiedyś powiedział jej, że po śmierci ich matki stracił tak bardzo siebie, że nigdy więcej nie mógł pozwolić sobie na kogoś takiego jak ona."
 
 msgctxt "speaker:Narrator"
 msgid "Her father had tried to comfort her, telling her that this was not unusual for servants, to simply leave for work elsewhere, but Sarah had always kept wondering where her friend went."
@@ -110260,7 +110260,7 @@ msgstr "Król Orwell Rose"
 
 msgctxt "speaker:Narrator"
 msgid "King Orwell and Sarah are walking through an empty hallway towards the library. Their steps softly echo."
-msgstr ""
+msgstr "Król Orwell i Sarah przechodzą pustym korytarzem w stronę biblioteki. Ich kroki cicho echem odbijają się od ścian."
 
 msgctxt "speaker:Narrator"
 msgid "King Orwell grabs his son by the shoulders and holds him at a distance."
@@ -115544,7 +115544,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Make a move on her"
-msgstr ""
+msgstr "Zrób jej ruch"
 
 msgctxt "menu"
 msgid "Make a stew"
@@ -119572,7 +119572,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Most kings would have remarried, but their father never had. When he lost their mother, she took part of his joy with her to the grave."
-msgstr ""
+msgstr "Większość królów ożeniłaby się ponownie, ale ich ojciec tego nie zrobił. Gdy stracił matkę, zabrala ona część jego radości do grobu."
 
 msgctxt "speaker:Xanthippe"
 msgid "Most likely it has magical protections of its own. And even if we could blow it open, the whole world would hear the story of the two thief mages, and who would trust us after that?"
@@ -126572,7 +126572,7 @@ msgstr ""
 
 msgctxt "speaker:Marion"
 msgid "Not to mention, after months of being on the road, you begin to miss the luxuries of the capital. You wouldn't serve up their idea of fine dining to a dog. But, we manage."
-msgstr ""
+msgstr "Nie wspomnę już o tym, że po miesiącach podróży zaczynasz tęsknić za luksusami stolicy. Nie podsługuje się psu ich pojęciem dobrego jedzenia. Ale radzimy sobie."
 
 msgctxt "speaker:Narrator"
 msgid "Not to mention, avoiding any punishment."
@@ -241308,7 +241308,7 @@ msgstr ""
 
 msgctxt "speaker:Sarah"
 msgid "Thomas..."
-msgstr ""
+msgstr "Thomas..."
 
 msgctxt "speaker:Sarah"
 msgid "Thomas...even for me it is not so easy."

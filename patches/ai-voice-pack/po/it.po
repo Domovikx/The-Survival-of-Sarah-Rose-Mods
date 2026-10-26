@@ -157556,7 +157556,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Sarah laughs."
-msgstr ""
+msgstr "Sarah ride."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah lay, fully exposed now. She could see Kate's growing, ravenous appetite in her eyes."
@@ -241308,7 +241308,7 @@ msgstr ""
 
 msgctxt "speaker:Sarah"
 msgid "Thomas..."
-msgstr ""
+msgstr "Thomas..."
 
 msgctxt "speaker:Sarah"
 msgid "Thomas...even for me it is not so easy."

@@ -136980,7 +136980,7 @@ msgstr "Pleeeeeease ne me renvoie pas, d'accord ? Je ne peux vraiment pas dormir
 
 msgctxt "speaker:Thomas"
 msgid "Pleeeeeease."
-msgstr ""
+msgstr "S'il te plaaaaait."
 
 msgctxt "speaker:Kate"
 msgid "Plenty a women getting hurt in this city tonight Sarah. What's one more?"
@@ -177640,7 +177640,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Save for herself, her bed is empty. She hopes Thomas won't be too upset that she had send him away."
-msgstr ""
+msgstr "Hormis elle-même, son lit est vide. Elle espère que Thomas ne sera pas trop bouleversé de l'avoir envoyé partir."
 
 msgctxt "speaker:Narrator"
 msgid "Save for the occasional broken remnant of a statue, the sand dominated everything."
@@ -241308,7 +241308,7 @@ msgstr ""
 
 msgctxt "speaker:Sarah"
 msgid "Thomas..."
-msgstr ""
+msgstr "Thomas..."
 
 msgctxt "speaker:Sarah"
 msgid "Thomas...even for me it is not so easy."

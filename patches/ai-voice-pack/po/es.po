@@ -241311,7 +241311,7 @@ msgstr "Thomas. Le di mi palabra de que estaría a salvo."
 
 msgctxt "speaker:Sarah"
 msgid "Thomas..."
-msgstr ""
+msgstr "Thomas..."
 
 msgctxt "speaker:Sarah"
 msgid "Thomas...even for me it is not so easy."
