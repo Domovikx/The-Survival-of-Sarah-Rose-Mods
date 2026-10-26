@@ -20,6 +20,9 @@
 
 import { execFileSync } from "node:child_process";
 import { readFileSync, writeFileSync } from "node:fs";
+// СТИЛЬ (длина subject, переносы, markdown) живёт отдельно от СТРУКТУРЫ
+// (type(scope)) — см. commit_style.mts о том, почему это не про переводы.
+import { checkCommitMessage } from "./commit_style.mts";
 
 const LLM_URL = "http://127.0.0.1:1234/v1/chat/completions";
 const MODEL = "qwen/qwen3.5-9b";
@@ -117,8 +120,8 @@ function gitDiff(): { stat: string; diff: string } | null {
   }
 }
 
-export async function generate(userPrompt: string): Promise<string | null> {
-  const dbg = process.env.TSSR_COMMIT_DEBUG === "1";
+/** Один запрос к локальной LLM; возвращает извлечённый текст или null. */
+async function askOnce(userPrompt: string, dbg: boolean): Promise<string | null> {
   const ac = new AbortController();
   const timer = setTimeout(() => ac.abort(), TIMEOUT_MS);
   try {
@@ -154,16 +157,52 @@ export async function generate(userPrompt: string): Promise<string | null> {
       if (dbg) console.error("[dbg] пустой content:", JSON.stringify(data).slice(0, 400));
       return null;
     }
-    const msg = extractMessage(content);
-    const ok = isValidMessage(msg) ? msg : null;
-    if (dbg) console.error("[dbg] raw:", JSON.stringify(content).slice(0, 500), "\n[dbg] валидно:", !!ok);
-    return ok;
+    return extractMessage(content);
   } catch (e) {
     if (dbg) console.error("[dbg] исключение:", e instanceof Error ? e.message : String(e));
     return null;
   } finally {
     clearTimeout(timer);
   }
+}
+
+/**
+ * Генерация сообщения. Два прохода:
+ *  1) обычный запрос;
+ *  2) при нарушении СТИЛЯ (см. commit_style.mts) — повтор с конкретной
+ *     инструкцией «почини это».
+ * Если после повтора форма всё ещё кривая, но заголовок структурно валиден —
+ * принимаем (лучше нем совершенное сообщение, чем abort пустого коммита);
+ * если структурно невалиден — null, git откроет штатный шаблон.
+ */
+export async function generate(userPrompt: string): Promise<string | null> {
+  const dbg = process.env.TSSR_COMMIT_DEBUG === "1";
+  let prompt = userPrompt;
+  let structurallyOk: string | null = null;
+
+  for (let attempt = 1; attempt <= 2; attempt++) {
+    // повтор СЛЕДУЕТ за предыдущим ответом (нужны его замечания) — последовательно
+    // eslint-disable-next-line no-await-in-loop
+    const msg = await askOnce(prompt, dbg);
+    if (!msg) return structurallyOk;
+    if (!isValidMessage(msg)) {
+      if (dbg) console.error(`[dbg] попытка ${attempt}: невалидный формат`, JSON.stringify(msg).slice(0, 200));
+      prompt = `${userPrompt}\n\nYour previous answer was not a valid Conventional Commit. Output JSON only.`;
+      continue;
+    }
+    structurallyOk = msg;
+    const problems = checkCommitMessage(msg);
+    if (!problems.length) return msg;
+    if (dbg) console.error(`[dbg] попытка ${attempt}: стиль —`, problems.join("; "));
+    if (attempt === 1) {
+      prompt =
+        `${userPrompt}\n\nSTYLE FIX REQUIRED for your previous answer:\n` +
+        problems.map((p) => `- ${p}`).join("\n") +
+        `\nRewrite the whole message so every rule above is satisfied. Output JSON only.`;
+    }
+  }
+  if (structurallyOk) console.error("[commit-msg] стиль не дотянут после повтора — принимаю как есть");
+  return structurallyOk;
 }
 
 async function main(): Promise<void> {
