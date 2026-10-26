@@ -13,9 +13,6 @@
  *   C  чужая письменность — кириллица в латинских языках, CJK в ru и т.д.
  *      (pl `Thomas`→`Томас`, es `retuercе` — кириллица внутри слова);
  *      fix: msgstr = "" (возврат на перевод)
- *   D  короткий UI-msgid → длинный перевод — галлюцинация по контексту
- *      (es `Load` → фраза про «Carga la mercancía»);
- *      fix: msgstr = "" (возврат на перевод)
  *   B  msgstr == msgid с буквами — ТОЛЬКО отчёт (ru `Ctrl`, `Enter`,
  *      `Page Down` — это и есть перевод; автоматом не трогаем)
  *
@@ -36,7 +33,7 @@ import { fileURLToPath, pathToFileURL } from "node:url";
 import { parsePo, renderPo } from "./po_core.mts";
 import type { PoEntry } from "./po_core.mts";
 import { poHeaderLines } from "./po_update.mts";
-import { ALL_LANGS, foreignScriptIssue, isSymbolicMsgid, shortToLongIssue } from "./po_translate.mts";
+import { ALL_LANGS, foreignScriptIssue, isSymbolicMsgid } from "./po_translate.mts";
 
 const SKILL_DIR = dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = join(SKILL_DIR, "..", "..", "..");
@@ -45,8 +42,10 @@ const PO_DIR = join(REPO_ROOT, "patches", "ai-voice-pack", "po");
 /** Одна найденная аномалия. */
 export interface Anomaly {
   lang: string;
-  /** A | B | C | D */
-  cls: "A" | "B" | "C" | "D";
+  /** A | B | C (классы по буквам; D и E удалены: длина и математические детекторы языка запрещены) */
+  cls: "A" | "B" | "C";
+  /** Индекс записи в нумерации po_list.mts (без заголовка po-файла). */
+  idx: number;
   /** Человекочитаемая причина (из авточека po_translate). */
   why: string;
   msgctxt: string;
@@ -57,11 +56,11 @@ export interface Anomaly {
 }
 
 /** Разбор одной записи языка → аномалии (или ничего). */
-export function auditEntry(lang: string, e: PoEntry): Anomaly[] {
+export function auditEntry(lang: string, e: PoEntry, idx = -1): Anomaly[] {
   if (!e.msgid.trim() || !e.msgstr.trim()) return [];
   const mid = e.msgid;
   const tr = e.msgstr;
-  const base = { lang, msgctxt: e.msgctxt, msgid: mid, msgstr: tr };
+  const base = { lang, idx, msgctxt: e.msgctxt, msgid: mid, msgstr: tr };
   // A: символьный msgid, но перевод не идентичность
   if (isSymbolicMsgid(mid)) {
     if (tr.trim() !== mid.trim()) {
@@ -77,24 +76,34 @@ export function auditEntry(lang: string, e: PoEntry): Anomaly[] {
   // C: чужая письменность
   const fsIssue = foreignScriptIssue(lang, tr);
   if (fsIssue) out.push({ ...base, cls: "C", why: fsIssue, action: "retranslate" });
-  // D: короткий UI → длинный бред
-  const slIssue = shortToLongIssue(mid, tr);
-  if (slIssue) out.push({ ...base, cls: "D", why: slIssue, action: "retranslate" });
+  // КЛАСС D («короткий msgid → длинный перевод») УДАЛЁН по приказу владельца
+  // 2026-10-26: длина не может быть признаком ошибки перевода.
   return out;
 }
 
-/** Аудит одного языка: все аномалии по файлу. */
+/** Аудит одного языка: все аномалии по файлу. Чужой язык (класс E) здесь
+ * НЕ ищется — по приказу владельца 2026-10-26 математические детекторы языка
+ * выпилены; его ловит LLM-судья (judge LANGUAGE GATE) при переводе, а для
+ * уже переведённого — ревьюер/агент (скилл po-audit). */
 export function auditLang(lang: string): Anomaly[] {
   const poPath = join(PO_DIR, `${lang}.po`);
   if (!existsSync(poPath)) return [];
   const text = readFileSync(poPath, "utf-8").replace(/\r\n/g, "\n");
   const out: Anomaly[] = [];
-  for (const e of parsePo(text)) out.push(...auditEntry(lang, e));
+  const entries = parsePo(text).filter((e) => e.msgid);
+  for (let i = 0; i < entries.length; i++) {
+    const e = entries[i];
+    const found = auditEntry(lang, e, i);
+    if (found.length) {
+      out.push(...found);
+      continue;
+    }
+  }
   return out;
 }
 
 /**
- * Применение фикса: A → идентичность, C/D → пустой msgstr (возврат в
+ * Применение фикса: A → идентичность, C → пустой msgstr (возврат в
  * очередь po:translate). B не трогаем. Возвращает число изменённых записей.
  */
 export function applyFix(lang: string, anoms: Anomaly[]): number {
@@ -167,12 +176,12 @@ function main(): void {
     console.log(`аудит ${langs.length} языков: аномалий НЕТ`);
   } else {
     console.log(`=== ПОИСК "В ЧЁМ ЛАЖА" (${langs.length} языков) ===`);
-    for (const cls of ["A", "B", "C", "D"] as const) {
+    for (const cls of ["A", "B", "C"] as const) {
       const n = byCls.get(cls) ?? 0;
       if (n) console.log(`  ${cls}: ${n}`);
     }
     for (const a of all) {
-      console.log(`\n${a.lang} [${a.cls}] ${a.why}  (-> ${a.action})`);
+      console.log(`\n${a.lang} [${a.cls}] idx=${a.idx} ${a.why}  (-> ${a.action})`);
       console.log(`   ctxt: ${a.msgctxt}`);
       console.log(`   EN:   ${a.msgid.slice(0, 120)}`);
       console.log(`   TR:   ${a.msgstr.slice(0, 160)}`);

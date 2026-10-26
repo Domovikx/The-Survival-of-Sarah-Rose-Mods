@@ -67,20 +67,20 @@ test("класс C: чужая письменность — fix=retranslate", ()
   assert.deepEqual(auditEntry("es", mk("She was tired.", "Estaba cansada.")), []);
 });
 
-test("класс D: короткий UI → длинный бред — fix=retranslate", () => {
-  const a = auditEntry("es", mk("Load", "Carga la mercancía, trabaja en el barco, haz lo que necesites.", '"ui"'));
-  assert.equal(a[0]?.cls, "D");
-  assert.equal(a[0]?.action, "retranslate");
-  // нормальная кнопка — не аномалия
+test("класс D (длина) УДАЛЁН по приказу владельца 2026-10-26 — не возвращается", () => {
+  // любая длина проходит: раньше это давало класс D
+  assert.deepEqual(
+    auditEntry("es", mk("Load", "Carga la mercancía, trabaja en el barco, haz lo que necesites.", '"ui"')),
+    [],
+  );
   assert.deepEqual(auditEntry("es", mk("Load", "Cargar", '"ui"')), []);
-  // длинный msgid с длинным переводом — не D
   assert.deepEqual(auditEntry("es", mk("She was tired but happy.", "Estaba cansada pero muy feliz.")), []);
 });
 
-test("одна запись может дать несколько классов (C+D)", () => {
-  const a = auditEntry("es", mk("Load", "Загружай carga la mercancía, trabaja en el barco, muy largo."));
+test("запись может нести класс C (письменность)", () => {
+  const a = auditEntry("es", mk("Load", "Загружай carga la mercancía, trabaja в барко, muy largo."));
   const clss = a.map((x) => x.cls).sort();
-  assert.deepEqual(clss, ["C", "D"]);
+  assert.deepEqual(clss, ["C"]);
 });
 
 test("auditLang: неизвестный/отсутствующий язык — пусто, без краша", () => {

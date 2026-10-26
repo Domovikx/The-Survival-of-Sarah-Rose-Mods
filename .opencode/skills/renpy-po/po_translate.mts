@@ -261,16 +261,14 @@ export function foreignScriptIssue(lang: string, tr: string): string | null {
 }
 
 /**
- * Короткий msgid (≤6 символов, UI-кнопка) → подозрительно длинный перевод:
- * признак галлюцинации модели по контексту (реальный кейс es `Load` →
- * «Carga la mercancía, trabaja en el барко…»). Порог 30 — эмпирический:
- * нормальные короткие кнопки («Guardar partida» и т.п.) укладываются.
+ * ЗАПРЕТ ВЛАДЕЛЬЦА (2026-10-26, категорически): длина НИКОГДА не является
+ * критерием качества перевода. Бывшая проверка «короткий msgid -> длинный
+ * перевод» (класс D, shortToLongIssue) УДАЛЕНА наряду с ratio-проверкой
+ * 24.10: сравнений длины msgstr с длиной msgid в коде НЕ БЫВАЕТ.
+ * Сверка «соответствует ли перевод» -- работа LLM-ревьюера (судья), смотрящего
+ * на СМЫСЛ и СЕМАНТИКУ, а не на арифметику; строка может быть любой длины.
+ * Гард: тест «ЗАПРЕТ длины как критерия» в po_translate.test.mts.
  */
-export function shortToLongIssue(msgid: string, tr: string): string | null {
-  if (msgid.trim().length > 6) return null;
-  if (tr.trim().length <= 30) return null;
-  return `короткий UI-месседж → длинный перевод (галлюцинация?): ${tr.trim().slice(0, 60)}`;
-}
 
 export function checkTranslation(entry: PoEntry, es: string, lang: string): string[] {
   const issues: string[] = [];
@@ -283,7 +281,15 @@ export function checkTranslation(entry: PoEntry, es: string, lang: string): stri
     return issues;
   }
   if (!es.trim()) issues.push("пустой перевод");
-  if (es.trim() === mid.trim()) issues.push("msgstr == msgid (не переведено)");
+  if (es.trim() === mid.trim()) {
+    // Идентичность ЛЕГИТИМНА и не должна отклоняться (иначе запись остаётся
+    // пустой навсегда — класс баги 2026-10-25, тот же корень, что `>` у
+    // символов): имена спикеров (Thomas/Albert), клавиши/кнопки UI (Ctrl,
+    // Tab, Auto, Page Down) — правильный перевод совпадает с оригиналом.
+    const ctxt = entry.msgctxt.replace(/^"|"$/g, "");
+    const legitIdentity = ctxt === "speaker-name" || ((ctxt === "ui" || ctxt === "menu") && mid.trim().length <= 14);
+    if (!legitIdentity) issues.push("msgstr == msgid (не переведено)");
+  }
   for (const [re, why] of p.forbidden) {
     try {
       if (new RegExp(re, "iu").test(es)) issues.push(why);
@@ -294,12 +300,13 @@ export function checkTranslation(entry: PoEntry, es: string, lang: string): stri
   // Классовые проверки от баги 2026-10-25 (см. задачу demo-e2e-ui-prologue):
   const fs = foreignScriptIssue(lang, es);
   if (fs) issues.push(fs);
-  const sl = shortToLongIssue(mid, es);
-  if (sl) issues.push(sl);
   // КРИТ-ФИКС 2026-10-24: проверка длины (ratio) ВЫПИЛЕНА полностью — для
   // CJK (zh/ja/ko) 1 иероглиф = слово, а для коротких UI-кнопок
   // («Save»->«Guardar» ×1.75) ratio-лимит давал ложные rejected.
   // Длина НЕ является критерием качества ни для одного языка.
+  // 2026-10-26 приказ владельца: УДАЛЁН и класс D («короткий msgid → длинный
+  // перевод») — любая математика по длине запрещена; полноту/смысл проверяет
+  // только LLM-судья. Гарантия — тест «ЗАПРЕТ длины как критерия».
   // Плейсхолдеры: printf %s/%d и Ren'Py-теги {i}...{/i} должны сохраниться
   const ph = (s: string) => (s.match(/%[sd]|\{\/?[a-zA-Z][^}]*\}/g) ?? []).sort().join("|");
   if (ph(mid) && ph(mid) !== ph(es)) issues.push(`потеряны плейсхолдеры/теги: ${ph(mid)}`);
@@ -329,6 +336,21 @@ export function judgeSystem(msgctxt: string): string {
   return isSpeechCtx(msgctxt) ? JUDGE_SYSTEM : JUDGE_UI_SYSTEM;
 }
 
+/** User-часть промпта судьи: языковой гейт + профиль + эмоция/категория + EN + TR. */
+export function judgeUser(lang: string, entry: PoEntry, tr: string, emotion: string | null): string {
+  const p = langProfile(lang);
+  const emo = emotion ?? "-";
+  const speech = isSpeechCtx(entry.msgctxt);
+  // ЯЗЫКОВОЙ ГЕЙТ (бага 2026-10-25: it.po засорён испанским, pl — немецким,
+  // судья ставил 9-10, потому что «по смыслу» перевод был верен): судья
+  // обязан первым делом проверить, что candidate вообще на ЦЕЛЕВОМ языке.
+  const langGate = `LANGUAGE GATE (highest priority): the candidate MUST be written in ${p.name} (${lang}). If ANY part of it is in a different language (Spanish/Portuguese/German/English inside an Italian or Polish file, etc.), score 0-2 and put "wrong language: <what was found>" as the first issue.`;
+  const head = speech
+    ? `${langGate}\n\n${p.judgeNotes}\n\nemotion: ${emo}\nspeaker: ${entry.msgctxt || "-"}`
+    : `${langGate}\n\n${p.judgeNotes}\n\ncategory: ${entry.msgctxt} (interface string — no narrator/emotion rules apply)`;
+  return `${head}\nEN: ${entry.msgid}\nTARGET(${lang}): ${tr}`;
+}
+
 /** Балл судьи 0..10 и её замечания; -1 если судья не ответил. */
 export async function judge(
   baseUrl: string,
@@ -338,13 +360,7 @@ export async function judge(
   tr: string,
   emotion: string | null,
 ): Promise<{ score: number; issues: string[] }> {
-  const p = langProfile(lang);
-  const emo = emotion ?? "-";
-  const speech = isSpeechCtx(entry.msgctxt);
-  const head = speech
-    ? `${p.judgeNotes}\n\nemotion: ${emo}\nspeaker: ${entry.msgctxt || "-"}`
-    : `${p.judgeNotes}\n\ncategory: ${entry.msgctxt} (interface string — no narrator/emotion rules apply)`;
-  const user = `${head}\nEN: ${entry.msgid}\nTARGET(${lang}): ${tr}`;
+  const user = judgeUser(lang, entry, tr, emotion);
   const raw = await chat(
     baseUrl,
     [

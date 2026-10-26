@@ -17,8 +17,8 @@ import {
   isSpeechCtx,
   isSymbolicMsgid,
   judgeSystem,
+  judgeUser,
   parseArgs,
-  shortToLongIssue,
   stopRequested,
   systemPrompt,
   userPrompt,
@@ -343,25 +343,81 @@ test("foreignScriptIssue: чужая письменность ловится, с
   assert.equal(foreignScriptIssue("ko", "그녀는 피곤하다."), null);
 });
 
-test("shortToLongIssue: короткий UI → длинный бред ловится, норма — нет", () => {
-  assert.ok(
-    shortToLongIssue("Load", "Carga la mercancía, trabaja en el barco, haz lo que necesites.") !== null,
-    "бред из контекста должен быть пойман",
-  );
-  assert.equal(shortToLongIssue("Load", "Cargar"), null); // нормальная кнопка
-  assert.equal(shortToLongIssue("Save", "Guardar"), null);
-  assert.equal(shortToLongIssue("A long sentence about the world.", "Слишком длинный перевод...".repeat(4)), null);
-  // встроено в checkTranslation
+test("ЗАПРЕТ длины как критерия (приказ владельца 2026-10-26): любой размер проходит", () => {
+  // Раньше это была проверка класса D («короткий msgid → длинный перевод»).
+  // ЗАПРЕЩЕНО: сверка делается только LLM-ревьюером по смыслу/семантике.
   const btn = mkEntry({ msgctxt: '"ui"', msgid: "Load" });
+  const longTr = "Carga la mercancía, trabaja en el barco, haz lo que necesites.".repeat(3);
   assert.ok(
-    checkTranslation(btn, "Carga la mercancía, trabaja en el barco, haz lo que necesites.", "es").some((i) =>
-      i.includes("длинный перевод"),
-    ),
+    !checkTranslation(btn, longTr, "es").some((i) => i.includes("длин")),
+    "длина НЕ должна фигурировать в замечаниях",
   );
+  // и никакого ratio: сверхдлинный перевод короткой кнопки — тоже молча
+  const kbd = mkEntry({ msgctxt: '"ui"', msgid: "Tab" });
+  assert.ok(!checkTranslation(kbd, "Табуляция".repeat(40), "ru").some((i) => i.includes("длин")));
+  // сверхкороткий перевод длинного текста — не ошибка по длине
+  const long = mkEntry({ msgid: "She was tired but happy after everything that happened that day." });
+  assert.equal(
+    checkTranslation(long, "Ok.", "es").some((i) => i.includes("длин")),
+    false,
+  );
+  // а вот смысл/письменность/плейсхолдеры проверяются по-прежнему
+  assert.ok(checkTranslation(btn, "Загрузить", "es").some((i) => i.includes("чужая письменность")));
 });
 
 test("checkTranslation: новые классовые проверки не бьют по норме", () => {
   const e = mkEntry({ msgid: "She was tired but happy." });
   assert.equal(checkTranslation(e, "Ella estaba cansada pero feliz.", "es").length, 0);
   assert.equal(checkTranslation(e, "Elle était fatiguée mais heureuse.", "fr").length, 0);
+});
+
+// ---------- бага 2026-10-25, раунд 2: чужой язык в латинице + легальная идентичность ----------
+
+test("чужой язык внутри латиницы ловится авточеками (it/pl/pt)", () => {
+  // испанский в итальянском (реальные кейсы it.po)
+  const itE = mkEntry({ msgctxt: '"speaker:Narrator"', msgid: "Finally, home again." });
+  assert.ok(
+    checkTranslation(itE, "Finalmente, en casa otra vez.", "it").some((i) => i.includes("испанск")),
+    "испанский в it должен быть пойман",
+  );
+  assert.ok(checkTranslation(itE, "¡Voy!", "it").some((i) => i.includes("испанск")));
+  assert.ok(checkTranslation(itE, "Te he extrañado tanto, padre!", "it").some((i) => i.includes("испанск")));
+  assert.equal(checkTranslation(itE, "Di nuovo a casa.", "it").length, 0, "нормальный итальянский проходит");
+  // немецкий в польском (реальный кейс pl [39298])
+  const plE = mkEntry({ msgctxt: '"speaker:Narrator"', msgid: "Sarah knows that Atilla is right." });
+  assert.ok(
+    checkTranslation(plE, "Sarah weiß, dass Atilla recht hat.", "pl").some((i) => i.includes("немецк")),
+    "немецкий в pl должен быть пойман",
+  );
+  // испанский в португальском (реальные кейсы pt)
+  const ptE = mkEntry({ msgctxt: '"speaker:Narrator"', msgid: "I've missed you so much dad!" });
+  assert.ok(checkTranslation(ptE, "Te extrañé tanto, papá!", "pt").some((i) => i.includes("испанск")));
+  assert.ok(checkTranslation(ptE, "No le des nada.", "pt").some((i) => i.includes("испанск")));
+  // в САМОМ es испанский — норма
+  assert.deepEqual(checkTranslation(itE, "Finalmente, en casa otra vez.", "es"), []);
+});
+
+test("легальная идентичность: имена спикеров и короткие клавиши не отклоняются", () => {
+  const name = mkEntry({ msgctxt: "speaker-name", msgid: "Thomas" });
+  assert.deepEqual(checkTranslation(name, "Thomas", "pl"), [], "имя спикера = идентичность — ОК");
+  const key = mkEntry({ msgctxt: "ui", msgid: "Ctrl" });
+  assert.deepEqual(checkTranslation(key, "Ctrl", "ru"), [], "клавиша = идентичность — ОК");
+  const btn = mkEntry({ msgctxt: '"menu"', msgid: "Auto" });
+  assert.deepEqual(checkTranslation(btn, "Auto", "de"), [], "короткая UI-кнопка — ОК");
+  // длинная UI-строка: идентичность всё ещё бага
+  const long = mkEntry({ msgctxt: '"ui"', msgid: "A very long settings label here" });
+  assert.ok(checkTranslation(long, "A very long settings label here", "it").some((i) => i.includes("msgstr == msgid")));
+  // речь: идентичность по-прежнему rejected
+  const speech = mkEntry();
+  assert.ok(checkTranslation(speech, speech.msgid, "es").some((i) => i.includes("msgstr == msgid")));
+});
+
+test("судья: LANGUAGE GATE первым пунктом (чужой язык = 0-2 балла)", () => {
+  const speech = judgeUser("it", mkEntry({ msgctxt: '"speaker:Narrator"' }), "Finalmente a casa.", "Calmly");
+  assert.match(speech, /LANGUAGE GATE \(highest priority\)/);
+  assert.match(speech, /Italiano \(it\)/);
+  assert.ok(speech.indexOf("LANGUAGE GATE") < speech.indexOf("EN:"), "гейт должен быть ДО источника");
+  const ui = judgeUser("pl", mkEntry({ msgctxt: '"ui"', msgid: "Keyboard" }), "Klawiatura", null);
+  assert.match(ui, /Polski \(pl\)/);
+  assert.ok(!ui.includes("emotion:"), "UI-гейт без эмоции");
 });
