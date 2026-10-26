@@ -210923,7 +210923,7 @@ msgstr "Поговорить с Лили"
 
 msgctxt "menu"
 msgid "Talk to the female soldier"
-msgstr ""
+msgstr "Поговорить с женщиной-солдатом"
 
 msgctxt "menu"
 msgid "Talk to the male soldier"

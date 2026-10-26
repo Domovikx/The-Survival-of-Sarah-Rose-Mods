@@ -53328,7 +53328,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Fine, play your little games."
-msgstr ""
+msgstr "Fine，玩你的小把戏。"
 
 msgctxt "speaker:Sarah"
 msgid "Fine, play your little games."
@@ -62652,7 +62652,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Have sex with Eula"
-msgstr ""
+msgstr "与露拉发生性关系"
 
 msgctxt "menu"
 msgid "Have sex with Sophia"
@@ -85864,7 +85864,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "I once blew an old sailor"
-msgstr ""
+msgstr "我曾和一位老水手做过"
 
 msgctxt "speaker:Sarah"
 msgid "I once blew an old sailor."
@@ -134608,7 +134608,7 @@ msgstr "向下翻页"
 
 msgctxt "ui"
 msgid "Page Up"
-msgstr ""
+msgstr "上一页"
 
 msgctxt "ui"
 msgid "Page {}"
@@ -134964,7 +134964,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "People"
-msgstr ""
+msgstr "人民"
 
 msgctxt "speaker:Alaric"
 msgid "People all smiles cause it don't cost them shit, but when it comes down to it, people are out for themselves."
@@ -139352,7 +139352,7 @@ msgstr "拒绝出席联合议会"
 
 msgctxt "menu"
 msgid "Refuse to have sex with Eula"
-msgstr ""
+msgstr "拒绝与欧洛伦发生性关系"
 
 msgctxt "menu"
 msgid "Refuse to help him"
@@ -156016,7 +156016,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Sarah is aroused"
-msgstr ""
+msgstr "莎拉兴奋了"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah is breathing heavily, so close to exhaustion. She wants to fall to her knees, but she knows they're not safe yet."
@@ -156060,7 +156060,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Sarah is so close, she doesn't stop Kate"
-msgstr ""
+msgstr "莎拉还差一点，她没停下凯特"
 
 msgctxt "speaker:Daemon"
 msgid "Sarah is still new here, and I am sure she had much to learn."
@@ -176652,7 +176652,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Sarah's heart is lost to Atilla, she cannot turn away from him."
-msgstr ""
+msgstr "莎拉的心已属于阿提拉，她无法移开目光。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah's heart pounded in her chest as she watched their eratic movement."
@@ -178576,7 +178576,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Shah Mahda"
-msgstr ""
+msgstr "沙·马哈达王子"
 
 msgctxt "speaker:Mythran Prince"
 msgid "Shah Mahda! Come out of your little rat hiding hole before I send in my men to drag you out like the vermin you are."
@@ -205392,7 +205392,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Speak honestly, the gemstone shines like bright crimson."
-msgstr ""
+msgstr "诚实地说，宝石闪耀着鲜红的亮光。"
 
 msgctxt "speaker:Sarah"
 msgid "Speak or be silent, I will not have you act in between."
@@ -210580,7 +210580,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Tab"
-msgstr ""
+msgstr "标签"
 
 msgctxt "speaker-name"
 msgid "Tailor"
@@ -212608,7 +212608,7 @@ msgstr ""
 
 msgctxt "speaker:King Orwell Rose"
 msgid "That goes for both of you."
-msgstr ""
+msgstr "这话也适用于你们俩。"
 
 msgctxt "speaker:Kate"
 msgid "That good huh?"
@@ -229148,7 +229148,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "The walls have stood just fine for centuries; they'll stand for centuries more."
-msgstr ""
+msgstr "墙壁屹立数个世纪，未来亦将如此。"
 
 msgctxt "speaker:Narrator"
 msgid "The walls of the room were lined with dried meats and other non-perishing foods."

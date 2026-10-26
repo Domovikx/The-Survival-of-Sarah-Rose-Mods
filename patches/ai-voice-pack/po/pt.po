@@ -53252,7 +53252,7 @@ msgstr ""
 
 msgctxt "speaker:King Orwell Rose"
 msgid "Fine, fine. Thomas, find a servant to carry this luggage to my room. And don't let me catch you doing it yourself again."
-msgstr ""
+msgstr "Certo, certo. Thomas, ache um servo para levar essa mala até meu quarto. E não me pegue fazendo isso sozinho novamente."
 
 msgctxt "speaker:Gideon"
 msgid "Fine, forget I ever said anything."
@@ -85864,7 +85864,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "I once blew an old sailor"
-msgstr ""
+msgstr "Já fodi um velho marinheiro"
 
 msgctxt "speaker:Sarah"
 msgid "I once blew an old sailor."
@@ -92372,7 +92372,7 @@ msgstr ""
 
 msgctxt "speaker:Thomas"
 msgid "I've missed you so much dad!"
-msgstr ""
+msgstr "Sinto-te tanto, pai!"
 
 msgctxt "speaker:Marius"
 msgid "I've never been as happy as I've been since I met you."
@@ -109928,7 +109928,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Keep them as our hostages."
-msgstr ""
+msgstr "Mantenham-nos como reféns."
 
 msgctxt "menu"
 msgid "Keep things modest."
@@ -117792,7 +117792,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Mayor"
-msgstr ""
+msgstr "Prefeito"
 
 msgctxt "speaker:Cassius"
 msgid "Me and Dio will pledge ourselves to your cause, freely, on one condition."
@@ -119572,7 +119572,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Most kings would have remarried, but their father never had. When he lost their mother, she took part of his joy with her to the grave."
-msgstr ""
+msgstr "A maioria dos reis teria se casado novamente, mas o seu pai nunca o fez. Quando perdeu a mãe dele, ela levou consigo uma parte da sua alegria até a sepultura."
 
 msgctxt "speaker:Xanthippe"
 msgid "Most likely it has magical protections of its own. And even if we could blow it open, the whole world would hear the story of the two thief mages, and who would trust us after that?"
@@ -137184,7 +137184,7 @@ msgstr "Preferências"
 
 msgctxt "ui"
 msgid "Prefs"
-msgstr ""
+msgstr "Prefs"
 
 msgctxt "speaker:Narrator"
 msgid "Pregnant, to this man. A man who was her senior by at least forty years. The looks that people would give her..."
@@ -139324,7 +139324,7 @@ msgstr "Recusar"
 
 msgctxt "menu"
 msgid "Refuse him; I don't see you like that"
-msgstr ""
+msgstr "Recusá-lo; não te vejo assim"
 
 msgctxt "menu"
 msgid "Refuse his proposal"
@@ -139552,7 +139552,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Reinforce the walls; we can't let them collapse."
-msgstr ""
+msgstr "Reforçar as muralhas; não podemos deixar que elas desabem."
 
 msgctxt "menu"
 msgid "Reject Gilead's offer, reclaim Rosanna alone"
@@ -140492,7 +140492,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Royal Messenger"
-msgstr ""
+msgstr "Mensageiro Real"
 
 msgctxt "speaker:Narrator"
 msgid "Royalty. Status. Title. All of it, fictions."
@@ -156016,7 +156016,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Sarah is aroused"
-msgstr ""
+msgstr "Sarah está excitada"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah is breathing heavily, so close to exhaustion. She wants to fall to her knees, but she knows they're not safe yet."
@@ -162384,7 +162384,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Sarah plunges the dagger into her heart."
-msgstr ""
+msgstr "Sarah crava a adaga em seu coração."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah pocketed the real stone, keeping the fake one in her hand."
@@ -176652,7 +176652,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Sarah's heart is lost to Atilla, she cannot turn away from him."
-msgstr ""
+msgstr "O coração de Sarah pertence a Atilla, ela não pode se afastar dele."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah's heart pounded in her chest as she watched their eratic movement."
@@ -178632,7 +178632,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Share a drink with him"
-msgstr ""
+msgstr "Tomar uma bebida com ele"
 
 msgctxt "speaker:Sarah"
 msgid "Share it?"
@@ -198604,7 +198604,7 @@ msgstr ""
 
 msgctxt "speaker:Thomas"
 msgid "Show off."
-msgstr ""
+msgstr "Exponha-se."
 
 msgctxt "speaker:Sarah"
 msgid "Show that dick! Show that dick!"
@@ -205828,7 +205828,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Squire"
-msgstr ""
+msgstr "Escudeiro"
 
 msgctxt "speaker:Narrator"
 msgid "Squires, thus, were nearly always the sons of noble houses. Those sons too far in line to inherit much of anything, and so instead, tasked with seeking glory."
@@ -211544,7 +211544,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Test"
-msgstr ""
+msgstr "Testar"
 
 msgctxt "menu"
 msgid "Testify against Alaric"
@@ -220816,7 +220816,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "The hunger is too much, dance for the food."
-msgstr ""
+msgstr "A fome é demais, dançe pela comida."
 
 msgctxt "speaker:Narrator"
 msgid "The husband of her dreams had somehow stepped into the real world."
@@ -229148,7 +229148,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "The walls have stood just fine for centuries; they'll stand for centuries more."
-msgstr ""
+msgstr "As paredes resistiram bem por séculos; resistirão por mais séculos."
 
 msgctxt "speaker:Narrator"
 msgid "The walls of the room were lined with dried meats and other non-perishing foods."
@@ -273728,7 +273728,7 @@ msgstr ""
 
 msgctxt "speaker:Sarah"
 msgid "You'll only be king when enough people like him agree that you are. A king sits atop a mountain. Only when the base holds, does the peak."
-msgstr ""
+msgstr "Vocês só serão reis quando o povo concordar que vocês são. Um rei assenta-se no topo da montanha. Só então a base se sustenta, e assim o pico."
 
 msgctxt "speaker:Xanthippe"
 msgid "You'll only hurt yourself by going there."

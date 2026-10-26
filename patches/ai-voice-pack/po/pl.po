@@ -118312,7 +118312,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Mention the dark fountain"
-msgstr ""
+msgstr "Wzmianka o ciemnej fontannie"
 
 msgctxt "speaker:Narrator"
 msgid "Mentioning the word caused a sadness to come over Samayra's face."
@@ -121672,7 +121672,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Negotiate down"
-msgstr ""
+msgstr "Negocjuj obniżkę"
 
 msgctxt "speaker:Sarah"
 msgid "Neighbouring?"
@@ -139552,7 +139552,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Reinforce the walls; we can't let them collapse."
-msgstr ""
+msgstr "Umocnij mury; nie możemy pozwolić, by runęły."
 
 msgctxt "menu"
 msgid "Reject Gilead's offer, reclaim Rosanna alone"
@@ -143868,7 +143868,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Sarah can't do it, she drops the dagger."
-msgstr ""
+msgstr "Sarah nie może tego zrobić, upuszcza noż."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah can't find the will to hug him back."
@@ -155224,7 +155224,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Sarah has her pride, refuse to perform."
-msgstr ""
+msgstr "Sarah ma dumę i odmawia wystąpienia."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah hastily begins taking off her underwear to avoid it being cut like her dress."
@@ -156060,7 +156060,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Sarah is so close, she doesn't stop Kate"
-msgstr ""
+msgstr "Sarah jest tak blisko, że nie daje Kacie spokoju"
 
 msgctxt "speaker:Daemon"
 msgid "Sarah is still new here, and I am sure she had much to learn."
@@ -157204,7 +157204,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Sarah knows that Atilla is right, something breaks between them."
-msgstr ""
+msgstr "Sarah wie, że Atilla ma rację – między nimi coś pękło."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah knows that Kate is dear to her, but she also knows that her life, her destiny, is too grand for something so small as love."
@@ -162384,7 +162384,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Sarah plunges the dagger into her heart."
-msgstr ""
+msgstr "Sarah wbija nóż w serce."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah pocketed the real stone, keeping the fake one in her hand."
@@ -162952,7 +162952,7 @@ msgstr "Sarah położyła dłonie na ramieniu ojca."
 
 msgctxt "menu"
 msgid "Sarah puts the pillow over her own face."
-msgstr ""
+msgstr "Sarah zakrywa poduszką własną twarz."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah quickened her pace, grasping onto Samayra's body, feeling every twitch of desire."
@@ -176652,7 +176652,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Sarah's heart is lost to Atilla, she cannot turn away from him."
-msgstr ""
+msgstr "Serce Sarah należy do Atilli, nie może się od niego odwrócić."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah's heart pounded in her chest as she watched their eratic movement."
@@ -177816,7 +177816,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Scholar"
-msgstr ""
+msgstr "Uczony"
 
 msgctxt "speaker:Sarah"
 msgid "Schools?"
@@ -177824,7 +177824,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Scold him"
-msgstr ""
+msgstr "Wyzywaj go"
 
 msgctxt "speaker-name"
 msgid "Scout"
@@ -178360,7 +178360,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Send him back to the deserts he crawled out of."
-msgstr ""
+msgstr "Wyślij go z powrotem do pustyni, z której wyczołgał się."
 
 msgctxt "speaker:Sarah"
 msgid "Send him in."
@@ -189628,7 +189628,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "She needs to be made an example of"
-msgstr ""
+msgstr "Trzeba ją uczynić przykładem."
 
 msgctxt "speaker:Narrator"
 msgid "She needs to find her father."
@@ -199540,7 +199540,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Slave"
-msgstr ""
+msgstr "Niewolnik"
 
 msgctxt "speaker-name"
 msgid "Slave Woman"
@@ -211124,7 +211124,7 @@ msgstr "Powiedz mu prawdę"
 
 msgctxt "menu"
 msgid "Tell him to get lost"
-msgstr ""
+msgstr "Powiedz mu, by się wybrał"
 
 msgctxt "menu"
 msgid "Tell him to take charge"
@@ -228504,7 +228504,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "The truth is you fucked more men than women"
-msgstr ""
+msgstr "Prawda jest taka, że jebałeś więcej mężczyzn niż kobiet"
 
 msgctxt "speaker:Sarah"
 msgid "The truth is you fucked more men than women"
@@ -229148,7 +229148,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "The walls have stood just fine for centuries; they'll stand for centuries more."
-msgstr ""
+msgstr "Ściany trzymały się dobrze przez wieki; będą trzymać się jeszcze przez wiele wieków."
 
 msgctxt "speaker:Narrator"
 msgid "The walls of the room were lined with dried meats and other non-perishing foods."
@@ -233872,7 +233872,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "There is nothing to explain, leave me alone."
-msgstr ""
+msgstr "Nic nie trzeba tłumaczyć, zostaw mnie w spokoju."
 
 msgctxt "speaker:Naydeen"
 msgid "There is nothing you want that you can't get, all you need to do is ask for it and they'll deliver it as soon as they can."
@@ -242156,7 +242156,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Throw yourself at Belmont's feet"
-msgstr ""
+msgstr "Zrzucij się u stóp Belmonta"
 
 msgctxt "speaker:Narrator"
 msgid "Throwing back her head, Sarah felt him lean into her, pressing his mouth onto her body."
@@ -243236,7 +243236,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "To prosperous cooperation"
-msgstr ""
+msgstr "Do prosperującej współpracy"
 
 msgctxt "speaker:Gabriel"
 msgid "To protect you from yourself. If not for me, you probably would have burned a few cities by now."
@@ -244064,7 +244064,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Toggles assistive {a=https://www.renpy.org/l/voicing}self-voicing{/a}."
-msgstr ""
+msgstr "Włącza/wyłącza asystujące {a=https://www.renpy.org/l/voicing}samowypowiedzenie{/a}."
 
 msgctxt "ui"
 msgid "Toggles dialogue skipping."
@@ -244520,7 +244520,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Trade votes with Edmond, gain his support"
-msgstr ""
+msgstr "Głosowanie handlowe z Edmondem – zdobądź jego poparcie"
 
 msgctxt "speaker:Narrator"
 msgid "Trading rights, Sarah considered his words."
@@ -249108,7 +249108,7 @@ msgstr "Nie wszyscy możemy być tacy idealni jak ty."
 
 msgctxt "menu"
 msgid "We can't be more than this."
-msgstr ""
+msgstr "Nie możemy się na tym zatrzymać."
 
 msgctxt "speaker:Captain"
 msgid "We can't cross the sea. We got supplies for two dozen sailors, instead, we now got nearly a thousand passangers."
@@ -249192,7 +249192,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "We cannot put ourselves above the rest of the country; let the troops stay in the districts."
-msgstr ""
+msgstr "Nie możemy stawiać się ponad resztę kraju; niech wojsko zostanie w powiatach."
 
 msgctxt "speaker:Cassius"
 msgid "We cannot receive an appointment with him."
@@ -249948,7 +249948,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "We ready the army; best we be prepared."
-msgstr ""
+msgstr "Przygotowujemy wojsko; najlepiej być gotowymi."
 
 msgctxt "speaker:Kate"
 msgid "We received a report today."
@@ -254592,7 +254592,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "What if you desire no man?"
-msgstr ""
+msgstr "A co jeśli nie pragniesz żadnego mężczyzny?"
 
 msgctxt "speaker:Sarah"
 msgid "What if you desire no man?"
@@ -264748,7 +264748,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Y/Top Button"
-msgstr ""
+msgstr "Y/Górny przycisk"
 
 msgctxt "speaker:Varga"
 msgid "YOU DARE TO ENTER MY HOME AND MAKE DEMANDS OF ME!?!"
@@ -269404,7 +269404,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "You don't want it to pass; press on."
-msgstr ""
+msgstr "Nie chcesz, by to minęło? Daj się ponieść."
 
 msgctxt "speaker:Sarah"
 msgid "You don't want to be rich?"
@@ -274132,7 +274132,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "You're drunk. Go back to your room."
-msgstr ""
+msgstr "Jesteś pijana. Wróć do swojego pokoju."
 
 msgctxt "speaker:Sarah"
 msgid "You're drunk. I don't think this is a good idea..."

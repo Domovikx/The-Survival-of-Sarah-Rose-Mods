@@ -6972,7 +6972,7 @@ msgstr "同意する、キャプテンの方が男らしい"
 
 msgctxt "menu"
 msgid "Agree, don't finish inside."
-msgstr ""
+msgstr "同意する、中に出さない"
 
 msgctxt "menu"
 msgid "Agree, let Naydeen teach you"
@@ -53328,7 +53328,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Fine, play your little games."
-msgstr ""
+msgstr "さあ、小細工を披露してみろ"
 
 msgctxt "speaker:Sarah"
 msgid "Fine, play your little games."
@@ -85864,7 +85864,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "I once blew an old sailor"
-msgstr ""
+msgstr "かつて、老いた水兵とセックスした"
 
 msgctxt "speaker:Sarah"
 msgid "I once blew an old sailor."
@@ -85872,7 +85872,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "I once had sex with an orc"
-msgstr ""
+msgstr "かつてオグロとセックスしたことがある"
 
 msgctxt "speaker:Sarah"
 msgid "I once had sex with an orc."
@@ -99620,7 +99620,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "It all feels peaceful. She likes to bully him sometimes, but truthfully, she loves her brother."
-msgstr ""
+msgstr "すべて平和だ。たまに彼をからかうが、心の中では兄を愛している。"
 
 msgctxt "speaker:Narrator"
 msgid "It all felt too coincidental to be an accident."
@@ -105784,7 +105784,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "It's pointless, keep your pride"
-msgstr ""
+msgstr "意味ない、誇り捨てろ"
 
 msgctxt "speaker:Narrator"
 msgid "It's pointless."
@@ -112468,7 +112468,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Let's keep drinking. I have some wine in my room."
-msgstr ""
+msgstr "部屋にワインがあるから、もう少し飲みましょう。"
 
 msgctxt "speaker:Sarah"
 msgid "Let's keep going."
@@ -118312,7 +118312,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Mention the dark fountain"
-msgstr ""
+msgstr "暗い噴水について話す"
 
 msgctxt "speaker:Narrator"
 msgid "Mentioning the word caused a sadness to come over Samayra's face."
@@ -143868,7 +143868,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Sarah can't do it, she drops the dagger."
-msgstr ""
+msgstr "サラはそれを成し遂げられず、ナイフを落とす"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah can't find the will to hug him back."
@@ -192716,7 +192716,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "She sees her brother, looking at her, confused, as if he can't understand the words."
-msgstr ""
+msgstr "兄貴が、困惑した顔で彼女を見つめている。まるで彼女の言葉が理解できないかのようだ。"
 
 msgctxt "speaker:Narrator"
 msgid "She sees herself bury some of them in battle."
@@ -193712,7 +193712,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "She stays with him until nightfall. Until the servants are forced to carry her away."
-msgstr ""
+msgstr "彼は彼女に付き添い、夜が暮れるまで共にいた。仕官たちが彼女を連れて去るまでだ。"
 
 msgctxt "speaker:Narrator"
 msgid "She steeled her face, revealing nothing to him."
@@ -198692,7 +198692,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Siege crew"
-msgstr ""
+msgstr "攻城隊員"
 
 msgctxt "speaker:Narrator"
 msgid "Sighing deeply from the exhaustion, she remained on all fours."
@@ -199644,7 +199644,7 @@ msgstr "Jaeid と寝る"
 
 msgctxt "menu"
 msgid "Sleep with Lady Carolyn"
-msgstr ""
+msgstr "キャロリン卿夫人と寝る"
 
 msgctxt "menu"
 msgid "Sleep with Samayra"
@@ -199652,7 +199652,7 @@ msgstr "Samayra と寝る"
 
 msgctxt "menu"
 msgid "Sleep with the Khan"
-msgstr ""
+msgstr "カーンと寝る"
 
 msgctxt "menu"
 msgid "Sleep with the Old Tribesman"
@@ -220816,7 +220816,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "The hunger is too much, dance for the food."
-msgstr ""
+msgstr "空腹が限界だ。踊って食事をせよ。"
 
 msgctxt "speaker:Narrator"
 msgid "The husband of her dreams had somehow stepped into the real world."
@@ -228504,7 +228504,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "The truth is you fucked more men than women"
-msgstr ""
+msgstr "真実は、あなたが男性よりも多くの女性とセックスしたということだ"
 
 msgctxt "speaker:Sarah"
 msgid "The truth is you fucked more men than women"
@@ -276472,7 +276472,7 @@ msgstr "A"
 
 msgctxt "ui"
 msgid "{#file_time}%A, %B %d %Y, %H:%M"
-msgstr ""
+msgstr "{#file_time}%A、%B%d年%H時%M分"
 
 msgctxt "ui"
 msgid "{#quick_page}Q"

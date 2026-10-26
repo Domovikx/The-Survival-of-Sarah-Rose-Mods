@@ -26328,7 +26328,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Be polite, have a drink"
-msgstr ""
+msgstr "예의 바르게 행동하고 술 한 잔 하세요"
 
 msgctxt "speaker:Maeiv"
 msgid "Be quiet you fat slob!"
@@ -53328,7 +53328,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Fine, play your little games."
-msgstr ""
+msgstr "좋아, 네 작은 게임들 해보게."
 
 msgctxt "speaker:Sarah"
 msgid "Fine, play your little games."
@@ -53844,7 +53844,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Flirt with him"
-msgstr ""
+msgstr "그에게 구애하라"
 
 msgctxt "speaker:Narrator"
 msgid "Floating a small distance above the ground, she drew in a deep breath."
@@ -85864,7 +85864,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "I once blew an old sailor"
-msgstr ""
+msgstr "어느 날 노수저를 불어본 적이 있습니다"
 
 msgctxt "speaker:Sarah"
 msgid "I once blew an old sailor."
@@ -87320,7 +87320,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "I think that's enough for me for tonight."
-msgstr ""
+msgstr "오늘 밤이라서 이 정도면 충분해요."
 
 msgctxt "speaker:Sarah"
 msgid "I think that's enough fun for tonight."
@@ -89000,7 +89000,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "I was thinking I might stay"
-msgstr ""
+msgstr "머물고 싶었습니다"
 
 msgctxt "speaker:Sarah"
 msgid "I was thinking we could use the money to maybe move up a bit."
@@ -91032,7 +91032,7 @@ msgstr ""
 
 msgctxt "speaker:King Orwell Rose"
 msgid "I'm going to have to talk with your brother."
-msgstr ""
+msgstr "저는 당신의 형님과 이야기를 해야겠습니다."
 
 msgctxt "speaker:Sakar"
 msgid "I'm going to head out for a small walk."
@@ -105420,7 +105420,7 @@ msgstr ""
 
 msgctxt "speaker:Sarah"
 msgid "It's not as bad as you make it out to be. Also, you should try maybe doing what dad asks for a change."
-msgstr ""
+msgstr "아니, 그렇게 나쁘지는 않아. 그리고 아빠의 요구를 들어보는 것도 한 번 해보지."
 
 msgctxt "speaker:Sigmund"
 msgid "It's not cash, but you trade that off, it's easily worth more than what you asked for."
@@ -110264,7 +110264,7 @@ msgstr "킹 오웰과 사라가 도서관으로 가는 빈 복도를 걷고 있�
 
 msgctxt "speaker:Narrator"
 msgid "King Orwell grabs his son by the shoulders and holds him at a distance."
-msgstr ""
+msgstr "킹 오를이 아들의 양쪽 어깨를 잡고 멀리 밀어냈다."
 
 msgctxt "speaker:Narrator"
 msgid "King Orwell has returned from his travels through the provinces of Rosanna."
@@ -113664,7 +113664,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Load"
-msgstr ""
+msgstr "로드"
 
 msgctxt "speaker:Sarah"
 msgid "Load the cargo, work the ship, whatever you need. I'll earn my trip the right way."
@@ -129568,7 +129568,7 @@ msgstr "구선장"
 
 msgctxt "speaker-name"
 msgid "Old Tribesman"
-msgstr ""
+msgstr "고대 부족인"
 
 msgctxt "speaker:Ramsey"
 msgid "Old family secret, I'm afraid."
@@ -139244,7 +139244,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Reason with him"
-msgstr ""
+msgstr "그와 논쟁하세요"
 
 msgctxt "menu"
 msgid "Reason with him."
@@ -139552,7 +139552,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Reinforce the walls; we can't let them collapse."
-msgstr ""
+msgstr "벽을 보강하라. 무너뜨려서는 안 된다."
 
 msgctxt "menu"
 msgid "Reject Gilead's offer, reclaim Rosanna alone"
@@ -140276,7 +140276,7 @@ msgstr "이전 대화로 되돌립니다."
 
 msgctxt "ui"
 msgid "Rolls forward to later dialogue."
-msgstr ""
+msgstr "앞으로 진행합니다."
 
 msgctxt "speaker-name"
 msgid "Romanov Twin"
@@ -156060,7 +156060,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Sarah is so close, she doesn't stop Kate"
-msgstr ""
+msgstr "카테를 멈추지 않을 정도로 사라는 가까워졌다."
 
 msgctxt "speaker:Daemon"
 msgid "Sarah is still new here, and I am sure she had much to learn."
@@ -177612,7 +177612,7 @@ msgstr "저장"
 
 msgctxt "menu"
 msgid "Save Samayra, intercede"
-msgstr ""
+msgstr "사마이라 구하고 중재하라"
 
 msgctxt "menu"
 msgid "Save Samayra."
@@ -178424,7 +178424,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Servants"
-msgstr ""
+msgstr "종부"
 
 msgctxt "speaker:Woman"
 msgid "Servants go missin and each week the tryin to sucker new fools workin there."
@@ -199644,7 +199644,7 @@ msgstr "자이이드와 잠들기"
 
 msgctxt "menu"
 msgid "Sleep with Lady Carolyn"
-msgstr ""
+msgstr "캐롤린 여사와 잠들기"
 
 msgctxt "menu"
 msgid "Sleep with Samayra"
@@ -199656,7 +199656,7 @@ msgstr "칸과 잠들기"
 
 msgctxt "menu"
 msgid "Sleep with the Old Tribesman"
-msgstr ""
+msgstr "고대 부족인 자와 잠자"
 
 msgctxt "speaker:Narrator"
 msgid "Sleep."
@@ -220816,7 +220816,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "The hunger is too much, dance for the food."
-msgstr ""
+msgstr "배고픔이 너무 심하니, 음식을 위해 춤을 추라."
 
 msgctxt "speaker:Narrator"
 msgid "The husband of her dreams had somehow stepped into the real world."
@@ -228484,7 +228484,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "The truth is that you have a sister who can't stand you"
-msgstr ""
+msgstr "당신을 견디지 못하는 여동생이 있다는 게 진실입니다"
 
 msgctxt "speaker:Sarah"
 msgid "The truth is that you have a sister who can't stand you."
@@ -228504,7 +228504,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "The truth is you fucked more men than women"
-msgstr ""
+msgstr "진실은 당신이 여자보다 더 많은 남자를 성관계를 했다는 것입니다"
 
 msgctxt "speaker:Sarah"
 msgid "The truth is you fucked more men than women"
@@ -233872,7 +233872,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "There is nothing to explain, leave me alone."
-msgstr ""
+msgstr "설명할 필요도 없으니, 내버려 두세요."
 
 msgctxt "speaker:Naydeen"
 msgid "There is nothing you want that you can't get, all you need to do is ask for it and they'll deliver it as soon as they can."
@@ -240772,7 +240772,7 @@ msgstr "토마스"
 
 msgctxt "speaker:Narrator"
 msgid "Thomas Rose, Sarah's younger brother, and heir to the throne, embraces his father."
-msgstr ""
+msgstr "토머스 로즈는 사라의 남동생이자 왕위 계승자로서 아버지를 안아주었다."
 
 msgctxt "speaker:Narrator"
 msgid "Thomas asserted himself again."
