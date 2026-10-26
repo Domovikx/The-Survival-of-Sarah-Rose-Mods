@@ -316,7 +316,14 @@ export function checkTranslation(entry: PoEntry, es: string, lang: string): stri
     // символов): имена спикеров (Thomas/Albert), клавиши/кнопки UI (Ctrl,
     // Tab, Auto, Page Down) — правильный перевод совпадает с оригиналом.
     const ctxt = entry.msgctxt.replace(/^"|"$/g, "");
-    const legitIdentity = ctxt === "speaker-name" || ((ctxt === "ui" || ctxt === "menu") && mid.trim().length <= 14);
+    // Имя/междометие одной части («Thomas...»): авточек НЕ решает за судью.
+    // Раньше такая строка отбраковывалась навсегда как «не переведено» —
+    // в 6 языках, судья вообще не вызывалась (инцидент 2026-10-26).
+    // Одно слово с заглавной + доп. пунктуация = переведать нечего, а вердикт
+    // всё равно даёт LLM-судья (сверка смысла — его работа, не арифметики).
+    const singleTokenName = /^[\p{Lu}][\p{L}'’]*(?:[.!?…]+)?$/u.test(mid.trim());
+    const legitIdentity =
+      ctxt === "speaker-name" || singleTokenName || ((ctxt === "ui" || ctxt === "menu") && mid.trim().length <= 14);
     if (!legitIdentity) issues.push("msgstr == msgid (не переведено)");
   }
   for (const [re, why] of p.forbidden) {
@@ -391,7 +398,10 @@ export function judgeUser(lang: string, entry: PoEntry, tr: string, emotion: str
     `You may report "wrong language" ONLY if the CANDIDATE itself contains another language AND you quote that exact fragment from it; ` +
     `without a verbatim quote from the candidate, do not report a language issue (a false gate zeroes a good score). ` +
     `When the CANDIDATE is genuinely foreign, score 0-2 and put "wrong language: <quoted fragment>" first. ` +
-    `Proper nouns, speaker names and Ren'Py tags inside the candidate are NOT foreign language.`;
+    `Proper nouns, speaker names and Ren'Py tags inside the candidate are NOT foreign language. ` +
+    `HOMOGRAPHS are NOT a leak: a word can be spelled the same in both languages while meaning different things ` +
+    `(it "ride" = "laughs", it "piano", de "das", fr "son", pl "ich") — judge such a word by the CONTEXT of the ` +
+    `candidate, and only report a language issue when the fragment is unambiguously foreign.`;
   const context = speech
     ? `${p.judgeNotes}\n\nemotion: ${emo}\nspeaker: ${entry.msgctxt || "-"}`
     : `${p.judgeNotes}\n\ncategory: ${entry.msgctxt} (interface string — no narrator/emotion rules apply)`;

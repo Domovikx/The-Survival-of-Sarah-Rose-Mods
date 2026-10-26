@@ -431,6 +431,38 @@ test("судья: LANGUAGE GATE первым пунктом (чужой язык
   assert.ok(!ui.includes("emotion:"), "UI-гейт без эмоции");
 });
 
+test("реплика-имя «Thomas...» не отбраковывается как «не переведено» (инцидент 2026-10-26)", () => {
+  // Было: 6 языков вечно зависали на реплике-имени — авточек сравнивал
+  // msgstr с msgid и не знал, что переводить нечего, судья не вызывалась.
+  const name = mkEntry({ msgctxt: '"speaker:Sarah"', msgid: "Thomas..." });
+  assert.ok(
+    !checkTranslation(name, "Thomas...", "de").some((i) => i.includes("не переведено")),
+    "имя с многоточием должно проходить авточек и уходить судье",
+  );
+  // а английское предложение из нескольких слов по-прежнему подозрительно
+  const sent = mkEntry({ msgctxt: '"speaker:Sarah"', msgid: "She goes home." });
+  assert.ok(
+    checkTranslation(sent, "She goes home.", "de").some((i) => i.includes("не переведено")),
+    "полное предложение копипастом — не принимаем",
+  );
+});
+
+test("pl: польское «ich» не считается немецким (коллизия стоп-листа 2026-10-26)", () => {
+  // `ich` = род. мн. «их» (ich matki, ich kroki) — законное польское слово.
+  // Старый стоп-лист вешал 5 валидных переводов автома́тикой (judge=-1).
+  const e = mkEntry({ msgctxt: '"speaker:Narrator"', msgid: "Their steps echoed softly in the hall." });
+  assert.deepEqual(
+    checkTranslation(e, "Ich kroki cicho echem odbijały się od ścian pałacu.", "pl"),
+    [],
+    "польское «Ich» не должно ругаться",
+  );
+  // а настоящий немецкий ловится (в списке остались nicht/das/wir/...)
+  assert.ok(
+    checkTranslation(e, "Das ist nicht gut, wir gehen jetzt sofort.", "pl").some((i) => i.includes("немецкий")),
+    "немецкий обязан ловиться",
+  );
+});
+
 test("плейсхолдеры: {#...} теги Ren'Py ловятся (бага E2E 2026-10-26)", () => {
   // Раньше regex требовал букву сразу после "{", поэтому {#file_time}
   // не считался плейсхолдером и ПРИНИМАЛСЯ перевод, выкинувший его.
