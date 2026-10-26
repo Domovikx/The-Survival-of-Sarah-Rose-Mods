@@ -1,21 +1,26 @@
 /**
- * commit_style.mts — валидатор СТИЛЯ git-сообщений. Чистые функции, без I/O.
+ * commit_style.mts — валидатор ФОРМЫ git-сообщения (Conventional Commits).
  *
- * ⚠️ ГРАНИЦА (AGENTS.md, приказ 2026-10-26): запрет проверок длины касается
- * ПЕРЕВОДА — сравнения длины msgstr с длиной msgid. Это здесь НЕ то: речь о
- * формате заголовка git-коммита (Conventional Commits), к качеству перевода
- * отношения не имеющем. Модуль намеренно вынесен ОТДЕЛЬНО от po_*.mts и
- * ни в один po-инструмент не импортируется — граница проверяется тестом
- * `commit_style.test.mts::«po-инструменты не импортируют валидатор стиля»`.
+ * Зачем: генератор (scripts/commit_msg.mts) пишет сообщения локальной LLM,
+ * а она выдаёт разное — от аккуратного «заголовок + тело» до одной
+ * растянутой строки (def3a2a3f). Здесь проверяется ТОЛЬКО форма:
+ * структура `type(scope):`, длина заголовка, пустой рядок перед телом,
+ * переносы, markdown. СМЫСЛ сообщения остаётся за генератором.
  *
- * Зачем: LLM-коммитер иногда выдавал subject одной строкой без тела
- * (см. def3a2a3f) либо растянутый. Проверяем структуру, а не смысл —
- * смысл остаётся за генератором.
+ * ГРАНИЦА с запретом длины (AGENTS.md, приказ владельца 2026-10-26):
+ * тот запрет касается ПЕРЕВОДА (длина msgstr против msgid), а здесь
+ * проверяется артефакт к переводу не относящийся — форма git-записи.
+ * Соблюдение закреплено архитектурно: модуль не импортируется ни одним
+ * po-инструментом, это проверяет тест
+ * `commit_style.test.mts::«po-инструменты НЕ импортируют валидатор стиля коммитов»`.
  *
- * Использование:
- *   node scripts/commit_style.mts --lint <файл>   # проверить сообщение в файле
- *   node scripts/commit_style.mts --lint -        # ...или из stdin
- * Выход 0 — стиль ок, 1 — есть замечания.
+ * API (чистые функции, без I/O):
+ *   checkCommitMessage(msg) -> string[]   замечания; [] = всё по правилам
+ *   isStyleOk(msg)          -> boolean
+ *
+ * CLI (хуки, ручная проверка):
+ *   node scripts/commit_style.mts --lint <файл>    exit 0 — ок, 1 — замечания
+ *   node scripts/commit_style.mts --lint -         то же, но из stdin
  */
 
 import { readFileSync } from "node:fs";
@@ -29,8 +34,8 @@ export const MAX_BODY_LINE = 100;
 const TYPE_SCOPE_RE = /^[a-z]+(\([^)\s]+\))?!?:\s+\S/i;
 
 /**
- * Замечания по стилю коммита. Пустой массив = всё по правилам.
- * Проверяется ТОЛЬКО форма: длина заголовка, структура, переносы.
+ * Замечания по форме сообщения; пустой массив = всё по правилам.
+ * Проверки — см. док-блок модуля (структура, длина заголовка, переносы).
  */
 export function checkCommitMessage(msg: string): string[] {
   const out: string[] = [];
@@ -47,7 +52,7 @@ export function checkCommitMessage(msg: string): string[] {
     out.push(`subject не в формате type(scope): ... — "${s.slice(0, 60)}"`);
   }
   if (s.length > MAX_SUBJECT) {
-    out.push(`subject ${s.length} симв. > ${MAX_SUBJECT} — перенеси суть в тело`);
+    out.push(`subject: ${s.length} символов > ${MAX_SUBJECT} — перенеси суть в тело`);
   }
   if (s.endsWith(".")) out.push("subject не должен заканчиваться точкой");
   if (/[`*_#|<>]/.test(s)) out.push("subject не должен содержать markdown-разметку");
@@ -58,7 +63,7 @@ export function checkCommitMessage(msg: string): string[] {
   if (bodyLines.length) {
     if (body[0]?.trim()) out.push("перед телом обязателен пустой рядок");
     bodyLines.forEach((l, i) => {
-      if (l.length > MAX_BODY_LINE) out.push(`строка тела #${i + 1}: ${l.length} симв. > ${MAX_BODY_LINE}`);
+      if (l.length > MAX_BODY_LINE) out.push(`строка тела #${i + 1}: ${l.length} символов > ${MAX_BODY_LINE}`);
       if (l.trimEnd() !== l) out.push(`строка тела #${i + 1}: лишние пробелы в конце`);
     });
   }

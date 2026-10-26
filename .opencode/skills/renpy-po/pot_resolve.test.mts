@@ -5,6 +5,8 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { createHash } from "node:crypto";
+import { readFileSync, readdirSync } from "node:fs";
+import { join } from "node:path";
 
 import { PotIndex, loadPotIndex, DEFAULT_POT } from "./pot_resolve.mts";
 
@@ -86,4 +88,26 @@ test("боевой template.pot: индекс строится, размер = �
   assert.ok(m, "известная строка резолвится");
   assert.equal(m.arc, "AlfredArc");
   assert.equal(m.emotion, "Thoughtfully puzzled");
+});
+
+test("ГРАНИЦА: тон живёт ТОЛЬКО в template.pot — в po/*.po его нет", () => {
+  // Решение 2026-10-23 (DRY) + подтверждение владельца 2026-10-26: все
+  // держатели тона, кроме шаблона, — ересь. Раньше держалось только на
+  // конвенции (po_update чистит comments), теперь это тест.
+  const poDir = join(import.meta.dirname, "..", "..", "..", "patches", "ai-voice-pack", "po");
+  const offenders: string[] = [];
+  let scanned = 0;
+  for (const f of readdirSync(poDir).toSorted()) {
+    if (!f.endsWith(".po")) continue;
+    scanned++;
+    const hit = readFileSync(join(poDir, f), "utf-8")
+      .split("\n")
+      .find((l) => l.startsWith("#. emotion:"));
+    if (hit) offenders.push(`${f}: ${hit.slice(0, 70)}`);
+  }
+  assert.ok(scanned >= 10, `po-файлов найдено: ${scanned}`);
+  assert.deepEqual(offenders, [], `тон протёк в .po:\n${offenders.join("\n")}`);
+
+  // позитивный контроль: если в шаблоне тона вдруг нет — проверка пустая
+  assert.ok(readFileSync(DEFAULT_POT, "utf-8").includes("#. emotion:"), "в template.pot нет тона!");
 });
