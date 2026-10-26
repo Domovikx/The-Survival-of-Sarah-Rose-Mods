@@ -24,11 +24,11 @@
  * Выход: po/<lang>.po перезаписан на месте (страховка — git, .bak не делаем).
  */
 
-import { readFileSync, writeFileSync } from "node:fs";
+import { readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
-import { parsePo, renderPo } from "./po_core.mts";
+import { parsePo, renderPo, writePoAtomic } from "./po_core.mts";
 import type { PoEntry } from "./po_core.mts";
 
 const SKILL_DIR = dirname(fileURLToPath(import.meta.url));
@@ -167,7 +167,7 @@ function main(): void {
   const poText = readFileSync(poPath, "utf-8");
   const potText = readFileSync(potPath, "utf-8");
   const { entries, headerLines, stats } = mergePoUpdate(poText, potText);
-  writeFileSync(poPath, renderPo(entries, headerLines), "utf-8");
+  writePoAtomic(poPath, renderPo(entries, headerLines));
   const s = stats;
   console.log(`${poPath}: ${entries.length} записей после освежения от ${potPath}`);
   console.log(`  перенесено: ${s.carried} (из них ретаргет: ${s.retargeted})`);

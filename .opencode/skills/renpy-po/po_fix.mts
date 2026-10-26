@@ -19,11 +19,11 @@
  * Безопасность: как и po_translate, НЕ запускается для языка с активным
  * прогоном (иначе работающий процесс перетрёт правку своим flush'ем).
  */
-import { readFileSync, writeFileSync } from "node:fs";
+import { readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
-import { parsePo, renderPo } from "./po_core.mts";
+import { parsePo, renderPo, writePoAtomic } from "./po_core.mts";
 import { poHeaderLines } from "./po_update.mts";
 import { ALL_LANGS, isRunning } from "./po_translate.mts";
 
@@ -82,7 +82,7 @@ export function applyFixes(
     }
   }
   for (const i of byIdx.keys()) if (i >= entries.length) skipped.push(i);
-  if (changed && !dry) writeFileSync(poPath, renderPo(entries, header), "utf-8");
+  if (changed && !dry) writePoAtomic(poPath, renderPo(entries, header));
   return { changed, skipped: [...skipped].sort((a, b) => a - b) };
 }
 

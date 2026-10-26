@@ -26,11 +26,11 @@
  * Выход: stdout (человек) или JSON; --fix перезаписывает po-файлы на месте
  * (round-trip через renderPo проверен байт-в-байт для всех 10 языков).
  */
-import { existsSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
-import { parsePo, renderPo } from "./po_core.mts";
+import { parsePo, renderPo, writePoAtomic } from "./po_core.mts";
 import type { PoEntry } from "./po_core.mts";
 import { poHeaderLines } from "./po_update.mts";
 import { ALL_LANGS, foreignScriptIssue, isSymbolicMsgid } from "./po_translate.mts";
@@ -121,7 +121,7 @@ export function applyFix(lang: string, anoms: Anomaly[]): number {
     else e.msgstr = "";
     n++;
   }
-  if (n) writeFileSync(poPath, renderPo(entries, header), "utf-8");
+  if (n) writePoAtomic(poPath, renderPo(entries, header));
   return n;
 }
 

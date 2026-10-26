@@ -29,3 +29,6 @@ last_menu_hook.txt
 .pytest_cache/
 # state генератора (пересоздаётся warm-guard)
 thermal_guard.json
+
+# атомарная запись po: временный файл до rename
+*.po.part

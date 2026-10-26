@@ -32,7 +32,7 @@ import { existsSync, mkdirSync, readFileSync, readdirSync, statSync, writeFileSy
 import { dirname, join } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
-import { normalizeText, parsePo, poUnescape, renderPo } from "./po_core.mts";
+import { normalizeText, parsePo, poUnescape, renderPo, writePoAtomic } from "./po_core.mts";
 import type { PoEntry } from "./po_core.mts";
 import { poHeaderLines } from "./po_update.mts";
 
@@ -351,7 +351,7 @@ function main(): void {
   );
 
   if (!dryRun) {
-    writeFileSync(poPath, renderPo(entries, poHeaderLines(oldRuText)), "utf-8");
+    writePoAtomic(poPath, renderPo(entries, poHeaderLines(oldRuText)));
   }
 
   const filled = stats.exact + stats.humanKept + stats.autoNormalized;

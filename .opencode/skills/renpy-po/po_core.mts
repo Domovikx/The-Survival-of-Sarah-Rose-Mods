@@ -10,6 +10,8 @@
  * наших каталогов (как и оригинал).
  */
 
+import { renameSync, writeFileSync } from "node:fs";
+
 /** Запись PO-файла. */
 export interface PoEntry {
   msgid: string;
@@ -158,6 +160,19 @@ export function renderPo(entries: PoEntry[], headerLines: string[]): string {
  * Матч по нормали защищён правилом «ровно один вариант перевода» — см.
  * prefill_po (порт NeonTranslator).
  */
+/** Атомарная запись PO: сначала в `.part`, потом rename поверх цели.
+ *
+ * ИНЦИДЕНТ 2026-10-26: перезапуск сервера убил процесс переводчика ПОСРЕДИ
+ * writeFileSync — `de.po` остался обнулённым (7.5 МБ нулей, 0 msgid).
+ * rename на тех же файловой системе атомарен: либо старая версия, либо новая,
+ * но никогда «обрезанная/пустая».
+ */
+export function writePoAtomic(path: string, content: string): void {
+  const tmp = `${path}.part`;
+  writeFileSync(tmp, content, "utf-8");
+  renameSync(tmp, path);
+}
+
 export function normalizeText(s: string): string {
   let t = (s ?? "")
     .toLowerCase()

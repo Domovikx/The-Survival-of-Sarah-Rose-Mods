@@ -55,7 +55,7 @@ import { appendFileSync, existsSync, readFileSync, rmSync, statSync, writeFileSy
 import { dirname, join } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
-import { parsePo, renderPo } from "./po_core.mts";
+import { parsePo, renderPo, writePoAtomic } from "./po_core.mts";
 import type { PoEntry } from "./po_core.mts";
 import { poHeaderLines } from "./po_update.mts";
 import { langProfile } from "./po_langs.mts";
@@ -664,7 +664,7 @@ async function main(): Promise<void> {
     targets.push({ idx: i, entry: e });
   }
   if (symbolicFilled || symbolicWrong) {
-    writeFileSync(poPath, renderPo(entries, header), "utf-8");
+    writePoAtomic(poPath, renderPo(entries, header));
     console.log(`шлюз символьных msgid: выровнено ${symbolicFilled} пустых + ${symbolicWrong} испорченных (без LLM)`);
   }
   // --start-line трактуется как порядковый индекс ЗАПИСИ (не строки файла):
@@ -709,7 +709,7 @@ async function main(): Promise<void> {
 
   const flush = (): void => {
     if (!dirty) return;
-    writeFileSync(poPath, renderPo(entries, header), "utf-8");
+    writePoAtomic(poPath, renderPo(entries, header));
     dirty = 0;
   };
 

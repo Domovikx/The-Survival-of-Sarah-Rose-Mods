@@ -6,7 +6,10 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
 
-import { normalizeText, parsePo, poEscape, poUnescape, renderPo } from "./po_core.mts";
+import { normalizeText, parsePo, poEscape, poUnescape, renderPo, writePoAtomic } from "./po_core.mts";
+import { existsSync, mkdtempSync, readFileSync, rmSync } from "node:fs";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
 
 test("escape/unescape — обратимость для спецсимволов", () => {
   const samples = ['He said "Hi".', "back\\slash", "line\nbreak", "tab\there", "plain"];
@@ -66,4 +69,26 @@ test("normalizeText: растяжение/апострофы/цифры выки
 
 test("normalizeText различает разные слова", () => {
   assert.notEqual(normalizeText("Go left"), normalizeText("Go right"));
+});
+
+test("writePoAtomic: целевой файл всегда целый, .part не остаётся (инцидент 2026-10-26)", () => {
+  // Перезапуск сервера убил переводчик посреди writeFileSync -> de.po стал
+  // 7.5 МБ нулей. Атомарная запись гарантирует «старая версия ИЛИ новая».
+  const dir = mkdtempSync(join(tmpdir(), "po-atomic-"));
+  try {
+    const p = join(dir, "x.po");
+    const v1 = 'msgid "a"\nmsgstr "б"\n';
+    writePoAtomic(p, v1);
+    assert.equal(readFileSync(p, "utf-8"), v1);
+    assert.ok(!existsSync(`${p}.part`), "временный .part обязан быть переименован");
+
+    const v2 = 'msgid "a"\nmsgstr "вторая версия"\n';
+    writePoAtomic(p, v2);
+    assert.equal(readFileSync(p, "utf-8"), v2, "перезапись идёт поверх, без дублей");
+    assert.ok(!existsSync(`${p}.part`));
+    // файл никогда не пустой и не нулевой после успешной записи
+    assert.ok(readFileSync(p).length > 0);
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
 });
