@@ -59617,7 +59617,7 @@ msgstr "Уединиться с Гидеоном"
 
 msgctxt "menu"
 msgid "Go talk to Ephraim and Caleb"
-msgstr "Поговори с Эфраимом и Кaleb"
+msgstr "Поговори с Эфраимом и Калебом"
 
 msgctxt "menu"
 msgid "Go talk to Kate"
@@ -193715,7 +193715,7 @@ msgstr "Она осталась сверху, в его объятиях."
 
 msgctxt "speaker:Narrator"
 msgid "She stays with him until nightfall. Until the servants are forced to carry her away."
-msgstr "Она остаётся с ним до наступления темноты. Пока слуги не вынуждены унести её."
+msgstr "Она остаётся с ним до наступления темноты — пока слуги не будут вынуждены унести её."
 
 msgctxt "speaker:Narrator"
 msgid "She steeled her face, revealing nothing to him."
@@ -260083,7 +260083,7 @@ msgstr "Почему ей так трудно поспевать за ним, ч
 
 msgctxt "menu"
 msgid "Why did the Gods not prevent this?"
-msgstr ""
+msgstr "Почему боги не предотвратили это?"
 
 msgctxt "speaker:Narrator"
 msgid "Why did the heat in her chest and between her legs surge, each time his tongue invaded her mouth."

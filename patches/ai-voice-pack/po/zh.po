@@ -26256,7 +26256,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Basilisk"
-msgstr ""
+msgstr "蛇怪"
 
 msgctxt "speaker:Narrator"
 msgid "Bathed in the light of the moon, their sails were like sheets of silver."
@@ -41968,7 +41968,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Ctrl"
-msgstr ""
+msgstr "Ctrl"
 
 msgctxt "speaker:Sarah"
 msgid "Cultivation?"
@@ -42108,7 +42108,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Daemon"
-msgstr ""
+msgstr "达蒙"
 
 msgctxt "speaker:Metis"
 msgid "Daemonology is one of the oldest Arts. Some even believe it to be the very first Art ever learned by a mage."
@@ -53328,7 +53328,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Fine, play your little games."
-msgstr "Fine，玩你的小把戏。"
+msgstr ""
 
 msgctxt "speaker:Sarah"
 msgid "Fine, play your little games."
@@ -77416,7 +77416,7 @@ msgstr "按住"
 
 msgctxt "menu"
 msgid "Hold back the spirit"
-msgstr ""
+msgstr "压制精神"
 
 msgctxt "speaker:Mayor"
 msgid "Hold her arms and legs down. We don't want her to move."
@@ -89992,7 +89992,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "I would love to learn"
-msgstr ""
+msgstr "我想了解"
 
 msgctxt "speaker:Sarah"
 msgid "I would never let anyone or anything hurt you."
@@ -109928,7 +109928,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Keep them as our hostages."
-msgstr ""
+msgstr "把他们当作人质。"
 
 msgctxt "menu"
 msgid "Keep things modest."
@@ -115096,7 +115096,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\\n\\n[renpy.license!t]"
-msgstr ""
+msgstr "由 {a=https://www.renpy.org/}Ren'Py{/a} 制作 [renpy.version_only]。\\n\\n[renpy.license!t]"
 
 msgctxt "speaker:Narrator"
 msgid "Madly, the two lovers collapsed into a world of their own."
@@ -115552,7 +115552,7 @@ msgstr "做个炖菜"
 
 msgctxt "menu"
 msgid "Make an example out of her."
-msgstr ""
+msgstr "让她成为反面教材。"
 
 msgctxt "speaker:Maeiv"
 msgid "Make easy tonight and we shall set the hard work out for tomorrow."
@@ -122608,7 +122608,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "No"
-msgstr "拒绝"
+msgstr ""
 
 msgctxt "speaker:Kate"
 msgid "No I didn't drink if that's what you're asking."
@@ -134964,7 +134964,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "People"
-msgstr "阿尔里克"
+msgstr ""
 
 msgctxt "speaker:Alaric"
 msgid "People all smiles cause it don't cost them shit, but when it comes down to it, people are out for themselves."
@@ -156060,7 +156060,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Sarah is so close, she doesn't stop Kate"
-msgstr "莎拉快追上来了，她没停下"
+msgstr ""
 
 msgctxt "speaker:Daemon"
 msgid "Sarah is still new here, and I am sure she had much to learn."
@@ -177616,7 +177616,7 @@ msgstr "拯救萨梅拉，介入"
 
 msgctxt "menu"
 msgid "Save Samayra."
-msgstr "存档萨玛雅"
+msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Save a rare few, she could hardly recall one face from the other, as years passed."
@@ -205324,7 +205324,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Sound Volume"
-msgstr "音量"
+msgstr ""
 
 msgctxt "speaker:Sarah"
 msgid "Sounds complicated."
@@ -205356,7 +205356,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Space"
-msgstr "空间"
+msgstr ""
 
 msgctxt "menu"
 msgid "Spare Kate"
@@ -210720,7 +210720,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Take the real stone for yourself."
-msgstr ""
+msgstr "把真石头拿走。"
 
 msgctxt "speaker:Razaphel"
 msgid "Take the real stone for yourself. Give the fake stone to the-one-who-calls-himself-Vaelen. He will not be able to discren the false stone from a true one."
@@ -245012,7 +245012,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Try to get some sleep."
-msgstr ""
+msgstr "试着睡一会儿。"
 
 msgctxt "speaker:Sarah"
 msgid "Try to go easy on him Father. I read some of those books on military strategy you gave him. They're very boring."
@@ -247720,7 +247720,7 @@ msgstr "声音"
 
 msgctxt "ui"
 msgid "Voice Volume"
-msgstr "音量"
+msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Voices."
@@ -276468,7 +276468,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "{#auto_page}A"
-msgstr ""
+msgstr "A"
 
 msgctxt "ui"
 msgid "{#file_time}%A, %B %d %Y, %H:%M"

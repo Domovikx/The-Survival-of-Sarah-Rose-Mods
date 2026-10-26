@@ -12,7 +12,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "\"Ooh no, not this one, try that one\" she would say when Sarah was still small."
-msgstr "「お、やだ、これじゃダメよ。こっちで」"
+msgstr "「おっ、ダメだ、これじゃねえ。こっちや」"
 
 msgctxt "speaker:Narrator"
 msgid "\"Ooh no, not this one. Try that one\", she would say when Sarah was still young."
@@ -5264,7 +5264,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "About"
-msgstr ""
+msgstr "概要"
 
 msgctxt "speaker:Gilead"
 msgid "About a month later, I was summoned to the Eternal Court, and I was gifted the greatest blessing of all."
@@ -5640,7 +5640,7 @@ msgstr "結婚を承諾する"
 
 msgctxt "menu"
 msgid "Accept, dine with the Captain"
-msgstr ""
+msgstr "キャプテンと食事をする"
 
 msgctxt "speaker:Sarah"
 msgid "Accept."
@@ -6980,7 +6980,7 @@ msgstr "同意する、ナイディンに教えてもらう"
 
 msgctxt "menu"
 msgid "Agree, let the matter rest"
-msgstr ""
+msgstr "同意し、この件はこれで終わりとする"
 
 msgctxt "menu"
 msgid "Agree, pledge your industry to Maeiv"
@@ -24596,7 +24596,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Ask her to sneak away with you"
-msgstr ""
+msgstr "彼女に密かに連れ去られるように頼む"
 
 msgctxt "speaker:Sarah"
 msgid "Ask me and I'm yours forever."
@@ -24960,7 +24960,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "At least he's trying, she thinks to herself."
-msgstr ""
+msgstr "少なくとも、彼は努力しようとしている。そう彼女は独り言を呟いた。"
 
 msgctxt "speaker:Sakar"
 msgid "At least here on the old road you just gotta do your job. Other than that, nobody gives a fuck."
@@ -26328,7 +26328,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Be polite, have a drink"
-msgstr ""
+msgstr "振る舞おう、一杯飲もう"
 
 msgctxt "speaker:Maeiv"
 msgid "Be quiet you fat slob!"
@@ -28248,7 +28248,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Behind her, she hears her brother enter the room, and scream."
-msgstr "Brother enters the room and screams."
+msgstr "兄が部屋に入り、叫ぶのを耳にした。"
 
 msgctxt "speaker:Narrator"
 msgid "Behind her, the Old Tribesman defied his old age."
@@ -30452,7 +30452,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Break free"
-msgstr ""
+msgstr "逃れろ"
 
 msgctxt "menu"
 msgid "Break the hug"
@@ -31704,7 +31704,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "But Thomas was difficult. It wasn't that he was stupid, or even that he was lazy. If he was, Sarah thought, that would almost be easier."
-msgstr ""
+msgstr "でもトーマスは扱いにくかった。愚か者でもなく怠け者でもない。もしそうなら、サラは思ったが、それの方がまだ楽だったかもしれない。"
 
 msgctxt "speaker:Narrator"
 msgid "But Vaelen didn't move through it as though it confused him. He moved as though he'd walked the path many times before."
@@ -38708,7 +38708,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Call it a night"
-msgstr ""
+msgstr "寝よう"
 
 msgctxt "speaker:Sarah"
 msgid "Call it a woman's intuition."
@@ -41968,7 +41968,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Ctrl"
-msgstr ""
+msgstr "Ctrl"
 
 msgctxt "speaker:Sarah"
 msgid "Cultivation?"
@@ -43960,7 +43960,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Distract him with your body"
-msgstr ""
+msgstr "彼の体で気を逸らせろ"
 
 msgctxt "speaker:Narrator"
 msgid "Distracted, until one day they realized that their potential rival had grown into a real one."
@@ -44128,7 +44128,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Do not let him bait you, convince him"
-msgstr "彼に罠を食らわせないで、説得して"
+msgstr "彼に罠にはらわれないようにしなさい。説得しなさい"
 
 msgctxt "speaker:Narrator"
 msgid "Do not let him know you."
@@ -48504,7 +48504,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "End Replay"
-msgstr "リプレイを再開"
+msgstr "リプレイを再開始"
 
 msgctxt "speaker:Narrator"
 msgid "End of the world, Sarah thought to herself. Maybe it was."
@@ -50476,7 +50476,7 @@ msgstr ""
 
 msgctxt "speaker:Marion"
 msgid "Every day, the same endless stream of meetings. Everyone wanting something. Just one dull face after the other. It makes you feel like a bookkeeper."
-msgstr ""
+msgstr "毎日、同じ無尽の会議。誰もが何かを望む。ただ顔だけの連続。簿記係みたいだ。"
 
 msgctxt "speaker:Sarah"
 msgid "Every decision I make seems to sow a thousand new disasters."
@@ -52088,7 +52088,7 @@ msgstr ""
 
 msgctxt "speaker:Sarah"
 msgid "Father, I can see that something is worrying you. Please, tell me now. You'll sleep better having shared."
-msgstr ""
+msgstr "父上、何か心配事がおありのようです。どうか今すぐにお話しください。分かち合えば、よりよく眠れるはずです。"
 
 msgctxt "speaker:Sarah"
 msgid "Father..."
@@ -53792,7 +53792,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Fix the dress yourself"
-msgstr ""
+msgstr "自己でドレスを直せ"
 
 msgctxt "speaker:Narrator"
 msgid "Fixing the dress herself would only make it worse."
@@ -53844,7 +53844,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Flirt with him"
-msgstr ""
+msgstr "彼を挑発する"
 
 msgctxt "speaker:Narrator"
 msgid "Floating a small distance above the ground, she drew in a deep breath."
@@ -57760,7 +57760,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Fullscreen"
-msgstr ""
+msgstr "フルスクリーン"
 
 msgctxt "speaker:Narrator"
 msgid "Fully dressed in her armor, she stepped out of her tent into the blazing sun."
@@ -59248,7 +59248,7 @@ msgstr "ラザフェルに身を委ねる"
 
 msgctxt "menu"
 msgid "Give yourself over to the soldiers"
-msgstr "Razaphel へ身を任せる"
+msgstr "Razaphel に身を委ねる"
 
 msgctxt "speaker:Narrator"
 msgid "Given her current condition, she had little time to speculate on peculiar voices."
@@ -61308,7 +61308,7 @@ msgstr ""
 
 msgctxt "speaker:Sarah"
 msgid "Grandfather used to beat him, mercilessly."
-msgstr "おじさんは、かつて彼を無慈悲に殴り倒したものだ"
+msgstr "祖父は彼を残酷に殴っていた。"
 
 msgctxt "speaker:Narrator"
 msgid "Grateful for the distraction. Grateful to have something she could put her mind to."
@@ -70888,11 +70888,11 @@ msgstr "ヘルプ"
 
 msgctxt "menu"
 msgid "Help Alaric"
-msgstr "アラリックに手伝ってください"
+msgstr "アラリックを助けて"
 
 msgctxt "menu"
 msgid "Help Nick"
-msgstr ""
+msgstr "ニックを助けて"
 
 msgctxt "speaker:Alfred"
 msgid "Help me out with this, would you?"
@@ -71416,11 +71416,11 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Her brother hugs her, and she hugs him back."
-msgstr "兄が彼女を抱きしめ、彼女は返すように抱きしめる。"
+msgstr "兄が彼女を抱き寄せ、彼女はそれを返して抱きしめた。"
 
 msgctxt "speaker:Narrator"
 msgid "Her brother is still asleep, next to her."
-msgstr "兄はまだ眠っている。"
+msgstr "兄はまだ寝ている。"
 
 msgctxt "speaker:Narrator"
 msgid "Her brother seemed flustered."
@@ -72064,7 +72064,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Her father had once told her that when their mother died, he had lost so much of himself, that he couldn't risk loving someone like that ever again."
-msgstr ""
+msgstr "父はかつて、母が亡くなった時、自分がどれほど失ったかを語り、二度とそんな人を愛するリスクは取れないと言いました。"
 
 msgctxt "speaker:Narrator"
 msgid "Her father had tried to comfort her, telling her that this was not unusual for servants, to simply leave for work elsewhere, but Sarah had always kept wondering where her friend went."
@@ -72072,7 +72072,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Her father is lying in his bed, his skin white as paper, eyes wide open."
-msgstr ""
+msgstr "父はベッドに横たわり、肌は紙のように白く、目だけが大きく開いている。"
 
 msgctxt "speaker:Narrator"
 msgid "Her father sits towards the center, she and her brother by his side. Strong. Regal. Just as he had been in life."
@@ -76104,7 +76104,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "His hand feels cold to the touch, and stiff. These are her father's hands, but not as she remembers them. His hands don't hold hers back."
-msgstr ""
+msgstr "彼の手のひらは冷たく、硬く感じられた。それは彼女の父親の手だが、記憶とは異なる手だ。その手は彼女を留めようとはしなかった。"
 
 msgctxt "speaker:Narrator"
 msgid "His hand gripped and passed over it again and again, the way a monk would pass prayer beads."
@@ -76340,7 +76340,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "His interests could stay fixed for months, only to completely shift in less than a day."
-msgstr ""
+msgstr "彼の関心は数ヶ月間固定されていたのに、一日も経たないうちに完全に移り変わってしまう。"
 
 msgctxt "speaker:Narrator"
 msgid "His iron gaze remained fixed on Thomas and Sarah."
@@ -77424,7 +77424,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Hold him off."
-msgstr ""
+msgstr "抑えろ。"
 
 msgctxt "speaker:Narrator"
 msgid "Hold it in, she commanded herself."
@@ -77444,7 +77444,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Hold on to Lily"
-msgstr ""
+msgstr "リリーを逃がすな"
 
 msgctxt "speaker:Narrator"
 msgid "Hold on, a small part of her said. Hold on or you'll lose your mind to this thing."
@@ -82516,7 +82516,7 @@ msgstr ""
 
 msgctxt "speaker:King Orwell Rose"
 msgid "I expected the usual: complaints about road repairs, demands for more money from the city holders, maybe someone trying to ask for your hand in marriage."
-msgstr ""
+msgstr "いつものことだ。道路工事への不満、都市支配者からの金銭要求、あるいは誰かがあなたの結婚相手として提案してくるかもしれないなど"
 
 msgctxt "speaker:Sarah"
 msgid "I fail to see the difference."
@@ -84236,7 +84236,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "I killed a young man"
-msgstr ""
+msgstr "若い男を殺した"
 
 msgctxt "speaker:Sarah"
 msgid "I killed a young man."
@@ -84724,7 +84724,7 @@ msgstr ""
 
 msgctxt "speaker:Thomas"
 msgid "I know, I know. I tried, but I was staring at the ceiling and I just couldn't get to sleep."
-msgstr ""
+msgstr "うん、うん。やってみたけど、天井を見てて寝られなかったんだ"
 
 msgctxt "speaker:Kate"
 msgid "I know, I was just making a joke. It's not actually about drinking."
@@ -85556,7 +85556,7 @@ msgstr ""
 
 msgctxt "speaker:King Orwell Rose"
 msgid "I missed you too son, but remember: composure. It's not befitting for a future king to be running around like a wild child."
-msgstr ""
+msgstr "私も、あなたを恋しく思っていました。しかし、覚悟してください。未来の王様として、子供のように走り回るのはふさわしくありません。"
 
 msgctxt "speaker:Alaric"
 msgid "I missed you."
@@ -92324,7 +92324,7 @@ msgstr ""
 
 msgctxt "speaker:King Orwell Rose"
 msgid "I've kept you long enough, Sarah. I'll walk the rest of the way to the library myself."
-msgstr ""
+msgstr "もう十分お時間を取らせてしまいました、サラ。残りの道は私が図書館まで歩いていきますから。"
 
 msgctxt "speaker:Gideon"
 msgid "I've known tough times, don't mean I'm indebted to any asshole that gives me a hand."
@@ -99620,7 +99620,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "It all feels peaceful. She likes to bully him sometimes, but truthfully, she loves her brother."
-msgstr "すべてが平和だ。たまに彼をいじめるけど、正直言うと兄ちゃんを愛してる。"
+msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "It all felt too coincidental to be an accident."
@@ -102464,7 +102464,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "It was different for her, because she could still vaguely remember her mother. Thomas had been too small before she passed."
-msgstr ""
+msgstr "彼女にとっては違う。母の姿がまだぼんやりと記憶に残っていたからだ。トマスは亡くなる前に小さすぎた。"
 
 msgctxt "speaker:Narrator"
 msgid "It was different in style from where she had grown up, and yet, she could recognize it. The wealth, the opulence."
@@ -105784,7 +105784,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "It's pointless, keep your pride"
-msgstr "無駄だ。その誇りを捨てよ"
+msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "It's pointless."
@@ -106836,7 +106836,7 @@ msgstr "サカールと散歩する"
 
 msgctxt "menu"
 msgid "Join and dance."
-msgstr ""
+msgstr "踊りましょう"
 
 msgctxt "menu"
 msgid "Join forces with the mage Order"
@@ -107664,7 +107664,7 @@ msgstr ""
 
 msgctxt "speaker:Sarah"
 msgid "Just show some effort, even if you hate it. Pretending is half of what it takes to be a king."
-msgstr ""
+msgstr "嫌いなことでも、少しは努力してみなさい。王様になるには、演技が半分必要なんです"
 
 msgctxt "speaker:Thomas"
 msgid "Just sitting in the thing...it unnerved me."
@@ -108264,7 +108264,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Kate gives herself up."
-msgstr ""
+msgstr "ケイトは自首しました。"
 
 msgctxt "speaker:Narrator"
 msgid "Kate glared at her."
@@ -110036,7 +110036,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Keyboard"
-msgstr ""
+msgstr "キーボード"
 
 msgctxt "speaker:Emissary"
 msgid "Khan Hassar bears a great burden, placed upon him by the stars in heaven. He is to bring unity to this world, and bind all peoples together into a single tribe."
@@ -111836,7 +111836,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Leave Lethram"
-msgstr ""
+msgstr "去る"
 
 msgctxt "speaker:Kate"
 msgid "Leave all this bullshit to the rest of you. But what can I say, I'm a glutton for punishment."
@@ -111912,7 +111912,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Leave, keep working"
-msgstr "Leave, continue working"
+msgstr "留守、作業を続けてください"
 
 msgctxt "speaker:Razaphel"
 msgid "Leave."
@@ -112264,7 +112264,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Let the matter rest"
-msgstr ""
+msgstr "今はこのままにしておく"
 
 msgctxt "menu"
 msgid "Let the matter rest for now"
@@ -115552,7 +115552,7 @@ msgstr "シチューを作ろう"
 
 msgctxt "menu"
 msgid "Make an example out of her."
-msgstr ""
+msgstr "彼女を戒めにする"
 
 msgctxt "speaker:Maeiv"
 msgid "Make easy tonight and we shall set the hard work out for tomorrow."
@@ -118312,7 +118312,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Mention the dark fountain"
-msgstr "暗い噴水へ"
+msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Mentioning the word caused a sadness to come over Samayra's face."
@@ -118672,7 +118672,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Middle Click"
-msgstr ""
+msgstr "中クリック"
 
 msgctxt "speaker:Sarah"
 msgid "Might I ask for a bowl of that stew?"
@@ -119912,11 +119912,11 @@ msgstr "マウス"
 
 msgctxt "ui"
 msgid "Mouse Wheel Down"
-msgstr ""
+msgstr "スクロールダウン"
 
 msgctxt "ui"
 msgid "Mouse Wheel Up\\nClick Rollback Side"
-msgstr ""
+msgstr "マウスホイール上へスクロール\\nクリックでロールバック"
 
 msgctxt "speaker:Orc"
 msgid "Mouth! Mouth!"
@@ -120100,7 +120100,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Music Volume"
-msgstr ""
+msgstr "音楽の音量"
 
 msgctxt "speaker:Razaphel"
 msgid "Must we now perform the sad faces and the spilling of tears, so that we might imagine our conscience clean?"
@@ -124052,7 +124052,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "No, her brother Thomas was one of those unique people whose interests continually drifted from one topic to another."
-msgstr ""
+msgstr "いいえ、弟のトーマスは、興味の対象が絶えず話題から話題へと移るような、そんな独特な人でした。"
 
 msgctxt "speaker:Kim"
 msgid "No, honestly, I just do the work and get on with my day."
@@ -130232,7 +130232,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Once he had spend an entire week learning everything there was to learn about how glass was made."
-msgstr ""
+msgstr "彼はガラスの作り方をすべて学ぶのに一週間を費やした。"
 
 msgctxt "speaker:Mary"
 msgid "Once he makes up his mind, it's not easy to get him to change."
@@ -131688,7 +131688,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Only let him touch you"
-msgstr ""
+msgstr "彼に触れるのを許すだけ"
 
 msgctxt "speaker:Narrator"
 msgid "Only looking directly at the vault's door could she see the cryptic texts."
@@ -132672,7 +132672,7 @@ msgstr ""
 
 msgctxt "speaker:King Orwell Rose"
 msgid "Ooh, Sarah, my back! Please daugher, I'm not as young as I was, and you've grown much too big to just be jumping on me."
-msgstr ""
+msgstr "うわ、サラ、背中！お嬢さん、もう若い頃じゃないんだから、そんなに大きく成長したのに、私の上に乗って遊ぶなんて。"
 
 msgctxt "speaker:Marshal Edmond"
 msgid "Ooh, Sarah."
@@ -134608,7 +134608,7 @@ msgstr "ページダウン"
 
 msgctxt "ui"
 msgid "Page Up"
-msgstr ""
+msgstr "Page Up"
 
 msgctxt "ui"
 msgid "Page {}"
@@ -136216,7 +136216,7 @@ msgstr "王冠を自分の頭に載せろ"
 
 msgctxt "menu"
 msgid "Place your hands upon the monolith"
-msgstr ""
+msgstr "その巨大な柱に手を置け"
 
 msgctxt "speaker:Alaric"
 msgid "Places like these are great. Lots of folk wandering around, too busy looking at the wares to pay any mind to their wallets."
@@ -136976,7 +136976,7 @@ msgstr ""
 
 msgctxt "speaker:Thomas"
 msgid "Pleeeeease don't send me back, ok? I really can't fall asleep."
-msgstr ""
+msgstr "うん、戻さないでよ……ねえ、本当に眠れないから。"
 
 msgctxt "speaker:Thomas"
 msgid "Pleeeeeease."
@@ -137184,7 +137184,7 @@ msgstr "設定"
 
 msgctxt "ui"
 msgid "Prefs"
-msgstr ""
+msgstr "設定"
 
 msgctxt "speaker:Narrator"
 msgid "Pregnant, to this man. A man who was her senior by at least forty years. The looks that people would give her..."
@@ -137236,7 +137236,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Press the issue"
-msgstr "議題を選択してください"
+msgstr "問題を押す"
 
 msgctxt "speaker:Daemon"
 msgid "Press your hands against the walls."
@@ -139244,7 +139244,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Reason with him"
-msgstr ""
+msgstr "彼と話す"
 
 msgctxt "menu"
 msgid "Reason with him."
@@ -139324,7 +139324,7 @@ msgstr "断る"
 
 msgctxt "menu"
 msgid "Refuse him; I don't see you like that"
-msgstr ""
+msgstr "彼を拒否する；あなたをそんな風に見ているわけではない"
 
 msgctxt "menu"
 msgid "Refuse his proposal"
@@ -139616,7 +139616,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Relent, let the matter rest"
-msgstr ""
+msgstr "許して、この件はこれで終わりだ"
 
 msgctxt "speaker:Narrator"
 msgid "Relief rushed over her."
@@ -156204,7 +156204,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Sarah keeps hugging her brother."
-msgstr "サラは兄を強く抱きしめる"
+msgstr "サラは兄を優しく抱きしめ続ける。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah keeps shaking her head."
@@ -157204,7 +157204,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Sarah knows that Atilla is right, something breaks between them."
-msgstr ""
+msgstr "サラはアッティラが正しいことを知っている。二人の間に何か大きな亀裂が入っているのだ"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah knows that Kate is dear to her, but she also knows that her life, her destiny, is too grand for something so small as love."
@@ -177640,7 +177640,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Save for herself, her bed is empty. She hopes Thomas won't be too upset that she had send him away."
-msgstr ""
+msgstr "自分以外を除けば、彼女のベッドは空だ。トーマスが自分を追い返したことにあまり悲しまないことを願っている。"
 
 msgctxt "speaker:Narrator"
 msgid "Save for the occasional broken remnant of a statue, the sand dominated everything."
@@ -178360,7 +178360,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Send him back to the deserts he crawled out of."
-msgstr ""
+msgstr "砂漠から這い出てきた彼を、そこへ送り返せ。"
 
 msgctxt "speaker:Sarah"
 msgid "Send him in."
@@ -178380,7 +178380,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Send the spearmen forward"
-msgstr ""
+msgstr "先鋒を出せ"
 
 msgctxt "speaker:Sarah"
 msgid "Send two scout units on each end of the city. Ride all the way around and report. Ride in a wide formation."
@@ -184788,7 +184788,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "She gently nudges him, knowing the banquet will start soon."
-msgstr ""
+msgstr "彼女はすぐに宴会が始まることを知り、そっと彼を促す。"
 
 msgctxt "speaker:Narrator"
 msgid "She genuinely was."
@@ -192716,7 +192716,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "She sees her brother, looking at her, confused, as if he can't understand the words."
-msgstr "兄は、私に目をやり、言葉の意味が分からないように困惑している。"
+msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "She sees herself bury some of them in battle."
@@ -192768,7 +192768,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "She sees the nobles react: some in anger, some turned white."
-msgstr "貴族たちが反応する：怒りを露わにする者も、白目をむく者もいる。"
+msgstr "貴族たちが反応する。怒り狂う者も、白く凍りつく者もいる。"
 
 msgctxt "speaker:Narrator"
 msgid "She sees the world continue to spin around her, her dress fluttering wildly in the wind as she descends."
@@ -193712,7 +193712,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "She stays with him until nightfall. Until the servants are forced to carry her away."
-msgstr "彼と夜が明けるまで一緒にいる。家来たちが彼女を運ぶまで。"
+msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "She steeled her face, revealing nothing to him."
@@ -199628,7 +199628,7 @@ msgstr "アラリックと寝る"
 
 msgctxt "menu"
 msgid "Sleep with Belmont"
-msgstr "Alaric と寝る"
+msgstr "Belmont と寝る"
 
 msgctxt "menu"
 msgid "Sleep with Dalia"
@@ -210632,7 +210632,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Take his hand and leave with Sigmund"
-msgstr ""
+msgstr "シグムンドの手をとり、彼と去る"
 
 msgctxt "speaker:Alaric"
 msgid "Take it all off and I might consider it."
@@ -211124,7 +211124,7 @@ msgstr "真実を告げる"
 
 msgctxt "menu"
 msgid "Tell him to get lost"
-msgstr ""
+msgstr "追放してやる"
 
 msgctxt "menu"
 msgid "Tell him to take charge"
@@ -211544,7 +211544,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Test"
-msgstr ""
+msgstr "テスト"
 
 msgctxt "menu"
 msgid "Testify against Alaric"
@@ -212608,7 +212608,7 @@ msgstr ""
 
 msgctxt "speaker:King Orwell Rose"
 msgid "That goes for both of you."
-msgstr "二人分です。"
+msgstr "二人分だ。"
 
 msgctxt "speaker:Kate"
 msgid "That good huh?"
@@ -216524,7 +216524,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "The capital must not fall; call in the troops."
-msgstr ""
+msgstr "首都は陥落させない。兵を呼べ。"
 
 msgctxt "speaker:Narrator"
 msgid "The capital of Delphine, and the rest of the country."
@@ -228512,7 +228512,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "The truth is you're a wanted man"
-msgstr ""
+msgstr "正直に言うと、あなたは狙われている男だ"
 
 msgctxt "speaker:Sarah"
 msgid "The truth is you're a wanted man"
@@ -229148,7 +229148,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "The walls have stood just fine for centuries; they'll stand for centuries more."
-msgstr ""
+msgstr "何百年も支え続けてきた壁は、さらに何百年も耐えるだろう"
 
 msgctxt "speaker:Narrator"
 msgid "The walls of the room were lined with dried meats and other non-perishing foods."
@@ -237392,7 +237392,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "They stay, locked in an embrace. It doesn't take long for Thomas to fall asleep."
-msgstr "塞がれた車内、二人は抱き合っていた。すぐにトーマスが眠りにつく。"
+msgstr "塞がれたまま、抱きしめ合っている。トーマスはすぐに眠りにつく。"
 
 msgctxt "speaker:Narrator"
 msgid "They stepped out of the carriage."
@@ -242144,7 +242144,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Throughout the hall, servants ran up and down, placing plates, putting down silverware; some were ironing the sheet covering the oak table."
-msgstr ""
+msgstr "ホール全体で、執事たちが上り下り、皿を置き、銀食器を下ろし、オークのテーブルを覆うシーツをアイロンしていました。"
 
 msgctxt "speaker:Narrator"
 msgid "Throughout the town, Sarah saw there were still some celebrations, but they seemed to have dimmed a bit."
@@ -249968,7 +249968,7 @@ msgstr ""
 
 msgctxt "speaker:Sarah"
 msgid "We see how hard you work for us, for everyone, Father. Just remember to also think about yourself sometimes."
-msgstr "父様、私たちが頼りにしているのはよく分かります。皆のために、そして自分自身も少しは考えてください。"
+msgstr "私たちがあなたにどれだけ感謝しているか、よく見ていますよ。父上。たまには自分自身も考えてあげてください"
 
 msgctxt "speaker:King-On-The-Outside"
 msgid "We seek no peace. No treaty. No compromise."
@@ -257388,7 +257388,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "When her father had given Thomas the books, she knew Thomas would get distracted, as he usually did."
-msgstr ""
+msgstr "父がトーマスに本を渡したとき、彼女はいつものようにトーマスが気が散ることを知っていた。"
 
 msgctxt "speaker:Narrator"
 msgid "When her mother had still been alive, she had once been so overcome with excitement, that her mother had almost send her back to her room."
@@ -269404,7 +269404,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "You don't want it to pass; press on."
-msgstr ""
+msgstr "通るのを嫌だ？押せ。"
 
 msgctxt "speaker:Sarah"
 msgid "You don't want to be rich?"
@@ -276476,7 +276476,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "{#quick_page}Q"
-msgstr ""
+msgstr "{#quick_page}Q"
 
 msgctxt "speaker:Narrator"
 msgid "{i}Composure{/i}. She reminded herself in the voice of her father."

@@ -10,11 +10,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-# TSSR PL translation — скелет из po/template.pot (Polski).
-# msgstr "" = не переведено; заполняется построчно переводчиком.
-msgid ""
-msgstr "Project-Id-Version: TSSR-Mods 1.0\nPO-Revision-Date: 2026-10-23 00:00+0000\nLanguage: pl\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-
 msgctxt "speaker:Narrator"
 msgid "\"Ooh no, not this one, try that one\" she would say when Sarah was still small."
 msgstr "\"Och, nie tę! Spróbuj tej drugiej\", mówiła, gdy Sarah była jeszcze mała."
@@ -2225,7 +2220,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "A man waved at Marion from across the room, and Marion waved back."
-msgstr "Mężczyzna machnął do Mariona z drugiego końca sali, a Marion odwzajemniła gest."
+msgstr "Mężczyzna machnął do Mariona z drugiego końca sali, a Marion odpowiedziała mu gestem."
 
 msgctxt "speaker:Narrator"
 msgid "A man who could not believe that fortune and fate had played him for a fool."
@@ -4673,7 +4668,7 @@ msgstr ""
 
 msgctxt "speaker:Sarah"
 msgid "AAAH!"
-msgstr "¡AAAH!"
+msgstr ""
 
 msgctxt "speaker:Sarah"
 msgid "AAAH! What...what did you do!?!"
@@ -5617,7 +5612,7 @@ msgstr "Akceptuj ofertę Gileada"
 
 msgctxt "menu"
 msgid "Accept Marion's proposal."
-msgstr ""
+msgstr "Akceptuj jej propozycję."
 
 msgctxt "menu"
 msgid "Accept her invitation"
@@ -5633,7 +5628,7 @@ msgstr "Zaakceptuj pracę jako uczeń krawca"
 
 msgctxt "menu"
 msgid "Accept the bowl of food and sit on the old soldier's lap."
-msgstr ""
+msgstr "Pobierz miskę jedzenia i usiądź na kolanach starego żołnierza."
 
 msgctxt "menu"
 msgid "Accept the bowl of food."
@@ -6981,7 +6976,7 @@ msgstr "Zgodzić się, nie kończyć w środku."
 
 msgctxt "menu"
 msgid "Agree, let Naydeen teach you"
-msgstr ""
+msgstr "Zgadzam się, pozwól Naydeen nauczyć cię"
 
 msgctxt "menu"
 msgid "Agree, let the matter rest"
@@ -7237,7 +7232,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Alaric"
-msgstr ""
+msgstr "Alaric"
 
 msgctxt "speaker:Narrator"
 msgid "Alaric almost spat out the words."
@@ -7865,7 +7860,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Albert"
-msgstr ""
+msgstr "Albert"
 
 msgctxt "speaker:Narrator"
 msgid "Albert began to explain the intricate nature of the machine."
@@ -7905,7 +7900,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Alfred"
-msgstr ""
+msgstr "Alfred"
 
 msgctxt "speaker:Narrator"
 msgid "Alfred finished his own plate and walked over."
@@ -9589,7 +9584,7 @@ msgstr ""
 
 msgctxt "speaker:Sarah"
 msgid "All this military stuff, it doesn't come as naturally to him as it did to you."
-msgstr ""
+msgstr "Ta cała wojskowa robota nie przychodzi mu tak naturalnie, jak Tobie."
 
 msgctxt "speaker:Narrator"
 msgid "All this now came to her as a second nature."
@@ -20473,7 +20468,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Arthur"
-msgstr ""
+msgstr "Arthur"
 
 msgctxt "speaker:Narrator"
 msgid "As Atilla carried Sarah across the tent, she let out a dissapointed squeel, unhappy at being pulled off his leg."
@@ -24481,7 +24476,7 @@ msgstr ""
 
 msgctxt "speaker:Marion"
 msgid "As well as was to be expected. I'm just glad to be back here in the capital. Travelling with your father to the Eastern districts has been exhausting."
-msgstr ""
+msgstr "Jak się spodziewano. Jestem tylko wdzięczna, że wróciłam do stolicy. Podróż z twoim ojcem do wschodnich dzielnic była wyczerpująca."
 
 msgctxt "speaker:Narrator"
 msgid "As well they should be."
@@ -24601,7 +24596,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Ask her to sneak away with you"
-msgstr ""
+msgstr "Poproś ją, by się z tobą ukradkiem wycofała"
 
 msgctxt "speaker:Sarah"
 msgid "Ask me and I'm yours forever."
@@ -25277,7 +25272,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Atilla"
-msgstr ""
+msgstr "Atilla"
 
 msgctxt "speaker:Narrator"
 msgid "Atilla barked at her."
@@ -25749,7 +25744,7 @@ msgstr "Uczestnicz w Radzie Unii"
 
 msgctxt "ui"
 msgid "Auto"
-msgstr ""
+msgstr "Auto"
 
 msgctxt "ui"
 msgid "Auto-Forward Time"
@@ -25881,7 +25876,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Ayaka"
-msgstr ""
+msgstr "Ayaka"
 
 msgctxt "speaker:Naydeen"
 msgid "Ayaka is a nice girl."
@@ -26209,7 +26204,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Barion"
-msgstr ""
+msgstr "Barion"
 
 msgctxt "speaker:Kravel"
 msgid "Barion has been loyal to your family and Rosanna for all this life, but he has always seen the value of the noble families and their guiding hand."
@@ -26253,7 +26248,7 @@ msgstr "Barman"
 
 msgctxt "speaker-name"
 msgid "Barman"
-msgstr ""
+msgstr "Barman"
 
 msgctxt "speaker:Barkeeper"
 msgid "Basic dances, nothin fancy. We swap up solo dances and partner dances, keep to the rules, and everyone is gonna have a good time."
@@ -26261,7 +26256,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Basilisk"
-msgstr ""
+msgstr "Bazylik"
 
 msgctxt "speaker:Narrator"
 msgid "Bathed in the light of the moon, their sails were like sheets of silver."
@@ -26309,7 +26304,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Be friendly"
-msgstr ""
+msgstr "Bądź uprzejmy"
 
 msgctxt "speaker:Captain Belmont"
 msgid "Be gentle with those crates. That's how I make my money."
@@ -28253,7 +28248,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Behind her, she hears her brother enter the room, and scream."
-msgstr ""
+msgstr "Za nią usłyszała wchodzenie do pokoju brata i jego krzyk."
 
 msgctxt "speaker:Narrator"
 msgid "Behind her, the Old Tribesman defied his old age."
@@ -30433,7 +30428,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Bran"
-msgstr ""
+msgstr "Bran"
 
 msgctxt "speaker:Sarah"
 msgid "Brave of them to stay at their post."
@@ -39429,7 +39424,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Carolyn"
-msgstr ""
+msgstr "Carolyn"
 
 msgctxt "speaker:Cassius"
 msgid "Carolyn favors you."
@@ -40309,7 +40304,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "City Official"
-msgstr ""
+msgstr "Urzędnik miejski"
 
 msgctxt "speaker:Narrator"
 msgid "Clad in the armor of a knight from head to toe, a scrap of yellow cloth clinging to his steel."
@@ -40321,7 +40316,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Claim the role for yourself"
-msgstr ""
+msgstr "Przypisz sobie tę rolę"
 
 msgctxt "speaker:Razaphel"
 msgid "Claim your homeland. Your birthright. Bring as many armies as you can."
@@ -41525,7 +41520,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Convince him to support you"
-msgstr ""
+msgstr "Przekonaj go, by poparł cię"
 
 msgctxt "speaker:Sarah"
 msgid "Convincing?"
@@ -41773,7 +41768,7 @@ msgstr "Kurier"
 
 msgctxt "speaker-name"
 msgid "Court Offical"
-msgstr ""
+msgstr "Urzędnik Dworu"
 
 msgctxt "speaker-name"
 msgid "Court Official"
@@ -41917,7 +41912,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Crown Kamal"
-msgstr "Korona Kamali"
+msgstr "Korona Kamala"
 
 msgctxt "speaker:Narrator"
 msgid "Crude hammers, daggers, fists."
@@ -41973,7 +41968,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Ctrl"
-msgstr ""
+msgstr "Ctrl"
 
 msgctxt "speaker:Sarah"
 msgid "Cultivation?"
@@ -42113,7 +42108,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Daemon"
-msgstr ""
+msgstr "Daemon"
 
 msgctxt "speaker:Metis"
 msgid "Daemonology is one of the oldest Arts. Some even believe it to be the very first Art ever learned by a mage."
@@ -42145,7 +42140,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Dalia"
-msgstr ""
+msgstr "Dalia"
 
 msgctxt "speaker:Daemon"
 msgid "Dalia can instruct you on the castle."
@@ -42377,7 +42372,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Damian"
-msgstr ""
+msgstr "Damian"
 
 msgctxt "speaker:Narrator"
 msgid "Damian bowed."
@@ -43789,7 +43784,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Dio"
-msgstr ""
+msgstr "Dio"
 
 msgctxt "speaker:Narrator"
 msgid "Dio faced Kate."
@@ -43965,7 +43960,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Distract him with your body"
-msgstr ""
+msgstr "Zatrzymaj go ciałem"
 
 msgctxt "speaker:Narrator"
 msgid "Distracted, until one day they realized that their potential rival had grown into a real one."
@@ -44061,7 +44056,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Do as he asks, kill him"
-msgstr ""
+msgstr "Zrób to, co ci mówi, i zabij go"
 
 msgctxt "speaker:Narrator"
 msgid "Do as she says, Sarah reminded herself."
@@ -44085,7 +44080,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Do not bribe Antonio"
-msgstr ""
+msgstr "Nie przekupuj Antonia"
 
 msgctxt "speaker:Daemon"
 msgid "Do not concern yourself with her for now."
@@ -44133,7 +44128,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Do not let him bait you, convince him"
-msgstr ""
+msgstr "Nie pozwól mu na prowokację, przekonaj go"
 
 msgctxt "speaker:Narrator"
 msgid "Do not let him know you."
@@ -45461,7 +45456,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Don't say anything to Kate"
-msgstr ""
+msgstr "Nie mów nic Kate"
 
 msgctxt "speaker:Sigmund"
 msgid "Don't say nothing, child. You want to thank me? Just take good care of yourself, that's all I want for you."
@@ -48385,7 +48380,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Elsa"
-msgstr ""
+msgstr "Elsa"
 
 msgctxt "speaker:Narrator"
 msgid "Elsa got up and motioned for Sarah to follow. She quickly did."
@@ -48473,7 +48468,7 @@ msgstr "Emissarius"
 
 msgctxt "speaker-name"
 msgid "Emmissary"
-msgstr "Emissary"
+msgstr "Posłannik"
 
 msgctxt "speaker:Hecate"
 msgid "Empires rise, empires fall, entire civilizations vanish."
@@ -48885,7 +48880,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Enya"
-msgstr ""
+msgstr "Enya"
 
 msgctxt "speaker:Caleb"
 msgid "Eph doesn't have the stamina I guess."
@@ -49193,7 +49188,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Eula"
-msgstr ""
+msgstr "Eula"
 
 msgctxt "speaker:Narrator"
 msgid "Eula by contrast seemed to walk with an air of confidence, clearly more experienced at prison life."
@@ -50481,7 +50476,7 @@ msgstr ""
 
 msgctxt "speaker:Marion"
 msgid "Every day, the same endless stream of meetings. Everyone wanting something. Just one dull face after the other. It makes you feel like a bookkeeper."
-msgstr "Każdy dzień to ten sam, nieskończony nurt spotkań. Każdy chce czegoś innego. Jedna nudna twarz po drugiej. Wygląda na to, że jesteś księgową."
+msgstr "Każdego dnia ta sama, niekończąca się struga spotkań. Każdy chce czegoś. Jedna nudna twarz po drugiej. Wygląda to jak księgowość."
 
 msgctxt "speaker:Sarah"
 msgid "Every decision I make seems to sow a thousand new disasters."
@@ -51581,7 +51576,7 @@ msgstr ""
 
 msgctxt "speaker:Marion"
 msgid "Excuse me, Prince, Princess. Duty calls."
-msgstr ""
+msgstr "Przepraszam, księże, księżniczko. Obowiązek woła."
 
 msgctxt "speaker:Varga"
 msgid "Excuse me, but can I offer you my cloak?"
@@ -52093,7 +52088,7 @@ msgstr ""
 
 msgctxt "speaker:Sarah"
 msgid "Father, I can see that something is worrying you. Please, tell me now. You'll sleep better having shared."
-msgstr ""
+msgstr "Tato, widzę, że coś martwi Cię. Proszę, powiedz mi teraz. Lepiej zasypisz, gdy się podzielimy."
 
 msgctxt "speaker:Sarah"
 msgid "Father..."
@@ -52345,7 +52340,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Female Soldier"
-msgstr ""
+msgstr "Żołnierzka"
 
 msgctxt "speaker-name"
 msgid "Female soldier"
@@ -52737,7 +52732,7 @@ msgstr ""
 
 msgctxt "speaker:King Orwell Rose"
 msgid "Finally, home again."
-msgstr "Finalmente, en casa otra vez."
+msgstr "Wreszcie, w domu."
 
 msgctxt "speaker:Narrator"
 msgid "Finally, in one smooth motion, he pulled of his pants."
@@ -57869,7 +57864,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Gabriel"
-msgstr ""
+msgstr "Gabriel"
 
 msgctxt "speaker:Narrator"
 msgid "Gabriel got up behind her, grabbing one of Hecate's arms and grabbing her waist."
@@ -57985,7 +57980,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Gamepad"
-msgstr ""
+msgstr "Kontroler"
 
 msgctxt "speaker-name"
 msgid "Garret"
@@ -58693,7 +58688,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Gideon"
-msgstr ""
+msgstr "Gideon"
 
 msgctxt "speaker:Narrator"
 msgid "Gideon began to chuckle."
@@ -58913,7 +58908,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Gilead"
-msgstr ""
+msgstr "Gilead"
 
 msgctxt "speaker:Narrator"
 msgid "Gilead and his Legions meant certain victory."
@@ -59613,7 +59608,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Go pray in the chapel later"
-msgstr ""
+msgstr "Później pomodlę się w kaplicy"
 
 msgctxt "menu"
 msgid "Go somewhere more privately with Gideon"
@@ -60621,7 +60616,7 @@ msgstr ""
 
 msgctxt "speaker:Sarah"
 msgid "Good to see you, Marion. I hope your travels went well."
-msgstr "Mi alegra verte otra vez, Marion. Espero que tus viajes hayan ido bien."
+msgstr "Miło cię widzieć, Marion. Mam nadzieję, że podróż minęła pomyślnie."
 
 msgctxt "speaker:Narrator"
 msgid "Good was perhaps not the right word, as it was the shady ramshackle appearance of the place that drew her to it."
@@ -61125,7 +61120,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Gorak"
-msgstr ""
+msgstr "Gorak"
 
 msgctxt "speaker:Narrator"
 msgid "Gorak leaned close and suddenly spoke to her in a harsh whisper."
@@ -61857,7 +61852,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Had Thomas been obsessed with war, he could have been a general unlike any other, but out of his many interests, war never seemed to be one of them."
-msgstr ""
+msgstr "Jeśli Thomas był obsesjonowany wojną, mógłby zostać generałem niezrównanym, ale spośród wielu jego zainteresowań wojna nigdy nie wydawała się być jednym z nich."
 
 msgctxt "speaker:Hecate"
 msgid "Had a rather dull boring with one of our founders, I imagine."
@@ -62501,7 +62496,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Hassar"
-msgstr ""
+msgstr "Hassar"
 
 msgctxt "speaker:Jaeid"
 msgid "Hassar and his horde will ride out to every corner of the world, and one day every soul on this world will be valued for their merits, rather than the luck of their birth."
@@ -70525,7 +70520,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Hecate"
-msgstr ""
+msgstr "Hecate"
 
 msgctxt "speaker:Narrator"
 msgid "Hecate and Sarah alone, as Gabriel watched on from a distance."
@@ -71421,7 +71416,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Her brother hugs her, and she hugs him back."
-msgstr ""
+msgstr "Brat przytula ją, a ona go odwzajemnia."
 
 msgctxt "speaker:Narrator"
 msgid "Her brother is still asleep, next to her."
@@ -72069,7 +72064,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Her father had once told her that when their mother died, he had lost so much of himself, that he couldn't risk loving someone like that ever again."
-msgstr "Su padre le había dicho una vez que cuando su madre murió, perdió gran parte de sí mismo y nunca más se arriesgó a amar a alguien así."
+msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Her father had tried to comfort her, telling her that this was not unusual for servants, to simply leave for work elsewhere, but Sarah had always kept wondering where her friend went."
@@ -76345,7 +76340,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "His interests could stay fixed for months, only to completely shift in less than a day."
-msgstr "Sus pasyjacje mogły trwać bez zmian przez miesiące, by w mniej niż jeden dzień całkowicie się zmienić."
+msgstr "Jego pasje mogły trwać miesiącami, by w mniej niż jeden dzień całkowicie się zmienić."
 
 msgctxt "speaker:Narrator"
 msgid "His iron gaze remained fixed on Thomas and Sarah."
@@ -77449,7 +77444,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Hold on to Lily"
-msgstr ""
+msgstr "Trzymaj się Lily"
 
 msgctxt "speaker:Narrator"
 msgid "Hold on, a small part of her said. Hold on or you'll lose your mind to this thing."
@@ -79381,7 +79376,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Hugh"
-msgstr ""
+msgstr "Hugh"
 
 msgctxt "speaker:Narrator"
 msgid "Hugh closed the door behind him and began to take his clothes off."
@@ -82521,7 +82516,7 @@ msgstr ""
 
 msgctxt "speaker:King Orwell Rose"
 msgid "I expected the usual: complaints about road repairs, demands for more money from the city holders, maybe someone trying to ask for your hand in marriage."
-msgstr ""
+msgstr "Oczekiwałem na to samo: skargi na naprawy dróg, żądania więcej pieniędzy od właścicieli miast, może ktoś próbujący o twoją rękę poprosić."
 
 msgctxt "speaker:Sarah"
 msgid "I fail to see the difference."
@@ -84241,7 +84236,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "I killed a young man"
-msgstr ""
+msgstr "Zabiłem chłopaka"
 
 msgctxt "speaker:Sarah"
 msgid "I killed a young man."
@@ -85633,7 +85628,7 @@ msgstr ""
 
 msgctxt "speaker:King Orwell Rose"
 msgid "I need to be alone with my thoughts for a bit."
-msgstr "Muszę zostać sama na chwilę, żeby się zastanowić."
+msgstr "Muszę na chwilę zostać sama ze swoimi myślami."
 
 msgctxt "speaker:Sarah"
 msgid "I need to better understand my circumstances. My position."
@@ -95549,7 +95544,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Ignore it, try to get some sleep."
-msgstr ""
+msgstr "Zignoruj to, spróbuj się wyspać."
 
 msgctxt "speaker:Varga"
 msgid "Ignore it."
@@ -98113,7 +98108,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Insist, ask Lady Carolyn about Thomas"
-msgstr ""
+msgstr "Wymagaj, zapytaj Lady Carolyn o Thomasa"
 
 msgctxt "speaker:Narrator"
 msgid "Inspecting it, over and over again, as though the repeated gesture of it would keep her from thinking about her meeting."
@@ -99505,7 +99500,7 @@ msgstr ""
 
 msgctxt "speaker:Thomas"
 msgid "Is this all you do all day? so boring."
-msgstr ""
+msgstr "To wszystko, co robisz przez cały dzień? Tak nudno."
 
 msgctxt "speaker:Sarah"
 msgid "Is this going to explode if it accidentally opens up?"
@@ -99625,7 +99620,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "It all feels peaceful. She likes to bully him sometimes, but truthfully, she loves her brother."
-msgstr "Todo parece pacífico. A veces le gusta intimidarlo, pero la verdad es que ama a su hermano."
+msgstr "Wszystko wydaje się spokojne. Czasami lubi go denerwować, ale szczerze kocha swojego brata."
 
 msgctxt "speaker:Narrator"
 msgid "It all felt too coincidental to be an accident."
@@ -99893,7 +99888,7 @@ msgstr ""
 
 msgctxt "speaker:King Orwell Rose"
 msgid "It didn't matter who I talked to: rich, poor, soldier, farmer. They all kept talking about this Hassar."
-msgstr "Nie miało znaczenia, z kim rozmawiałam: z bogatym czy biednym, z żołnierzem czy rolnikiem. Wszyscy ciągle mówili o tym Hassarze."
+msgstr "Nie miało znaczenia, z kim rozmawiałem: z bogatym czy biednym, z żołnierzem czy chłopskim. Wszyscy wciąż mówili o tym Hassarze."
 
 msgctxt "speaker:Narrator"
 msgid "It didn't matter, Sarah thought to herself. She needed the training, and there was nobody better than Kate."
@@ -105425,7 +105420,7 @@ msgstr ""
 
 msgctxt "speaker:Sarah"
 msgid "It's not as bad as you make it out to be. Also, you should try maybe doing what dad asks for a change."
-msgstr ""
+msgstr "Nie jest tak źle, jak się wydaje. Może też spróbuj posłuchać taty, żeby coś zmienić."
 
 msgctxt "speaker:Sigmund"
 msgid "It's not cash, but you trade that off, it's easily worth more than what you asked for."
@@ -106313,7 +106308,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Jaeid"
-msgstr ""
+msgstr "Jaeid"
 
 msgctxt "speaker:Narrator"
 msgid "Jaeid almost laughed."
@@ -107905,7 +107900,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Kamal"
-msgstr ""
+msgstr "Kamal"
 
 msgctxt "speaker:Narrator"
 msgid "Kamal rose to his feet and threw up his fists."
@@ -107921,7 +107916,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Kate"
-msgstr ""
+msgstr "Kate"
 
 msgctxt "speaker:Narrator"
 msgid "Kate again took Sarah's hands, and together the two ran onto the streets of the capital."
@@ -110085,7 +110080,7 @@ msgstr "Zabij Belmont"
 
 msgctxt "menu"
 msgid "Kill Kate"
-msgstr ""
+msgstr "Zabij Kate"
 
 msgctxt "speaker:Narrator"
 msgid "Kill her. They might actually kill her."
@@ -110113,7 +110108,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Kim"
-msgstr ""
+msgstr "Kim"
 
 msgctxt "speaker:Narrator"
 msgid "Kim breathed in deeply."
@@ -110265,7 +110260,7 @@ msgstr "Król Orwell Rose"
 
 msgctxt "speaker:Narrator"
 msgid "King Orwell and Sarah are walking through an empty hallway towards the library. Their steps softly echo."
-msgstr "El Rey Orwell y Sarah caminan por un pasillo vacío hacia la biblioteca. Sus pasos resuenan suavemente."
+msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "King Orwell grabs his son by the shoulders and holds him at a distance."
@@ -110305,7 +110300,7 @@ msgstr "Król Orwell mrugnął do swojej córki."
 
 msgctxt "speaker:Narrator"
 msgid "King Orwell's voice grows louder."
-msgstr "Głos Kravla rośnie w sile."
+msgstr ""
 
 msgctxt "speaker:Kravel"
 msgid "King Thomas is most likely their hostage."
@@ -110525,7 +110520,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Kravel"
-msgstr ""
+msgstr "Kravel"
 
 msgctxt "speaker:Narrator"
 msgid "Kravel began to tap his fingers on the table, as if trying to summon a memory."
@@ -110621,7 +110616,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Krip"
-msgstr ""
+msgstr "Krip"
 
 msgctxt "speaker:Narrator"
 msgid "Krip grunted approvingly."
@@ -111841,7 +111836,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Leave Lethram"
-msgstr ""
+msgstr "Zostaw Lethram"
 
 msgctxt "speaker:Kate"
 msgid "Leave all this bullshit to the rest of you. But what can I say, I'm a glutton for punishment."
@@ -111917,7 +111912,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Leave, keep working"
-msgstr ""
+msgstr "Zostaw, kontynuuj pracę"
 
 msgctxt "speaker:Razaphel"
 msgid "Leave."
@@ -111973,11 +111968,11 @@ msgstr "W lewo"
 
 msgctxt "ui"
 msgid "Left Click"
-msgstr "Clic Iz"
+msgstr "Klik lewy"
 
 msgctxt "ui"
 msgid "Left Trigger\\nLeft Shoulder"
-msgstr ""
+msgstr "Lewa spustowa\\nLewe ramię"
 
 msgctxt "speaker:Narrator"
 msgid "Left behind to die to the frost, their bodies preserved until the spring."
@@ -113697,7 +113692,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Lodged in his chest, a dagger, buried so deep she can only see the handle."
-msgstr ""
+msgstr "W jego piersi utknięty nóż, zagrzebany tak głęboko, że widzi tylko rękojeść."
 
 msgctxt "speaker:Narrator"
 msgid "Loneliness."
@@ -115109,7 +115104,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Maeiv"
-msgstr ""
+msgstr "Maeiv"
 
 msgctxt "speaker:Narrator"
 msgid "Maeiv began slowly, then committed."
@@ -115569,7 +115564,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Make him pay for what did all those years ago"
-msgstr ""
+msgstr "Zmusz go do zapłaty za to, co zrobił w tamtych latach"
 
 msgctxt "speaker:Narrator"
 msgid "Make him understand that when he debased and humiliated her, he was dearest to her?"
@@ -115789,7 +115784,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "March on Calshure"
-msgstr "Marcha a Calshure"
+msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "March on the city of Calshure, straight ahead to the capital, or go around it through the Hinterlands."
@@ -115797,7 +115792,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "March through the Hinterlands"
-msgstr ""
+msgstr "Przez tereny Hinterlandów"
 
 msgctxt "speaker:Narrator"
 msgid "Marching along the main road, they progressed much faster than Sarah had even dared to hope."
@@ -115829,7 +115824,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Marion"
-msgstr ""
+msgstr "Marion"
 
 msgctxt "speaker:Narrator"
 msgid "Marion almost seems surprised as he stares down at his chest, the blood seeping through his clothes."
@@ -116301,7 +116296,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Marius"
-msgstr ""
+msgstr "Marius"
 
 msgctxt "speaker:Narrator"
 msgid "Marius began to pace about, as if looking for an answer that could somehow bring her to change her mind."
@@ -116689,7 +116684,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Mary"
-msgstr ""
+msgstr "Mary"
 
 msgctxt "speaker:Narrator"
 msgid "Mary collapsed, resting into the pillows that covered the ground."
@@ -117441,7 +117436,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Maybe we could make a life here"
-msgstr ""
+msgstr "Może powinniśmy tu zbudować życie"
 
 msgctxt "speaker:Sarah"
 msgid "Maybe we could try to make a life out here."
@@ -118317,7 +118312,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Mention the dark fountain"
-msgstr "Zwiedzaj ciemną fontannę"
+msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Mentioning the word caused a sadness to come over Samayra's face."
@@ -118325,7 +118320,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Menu"
-msgstr ""
+msgstr "Menu"
 
 msgctxt "speaker:Sarah"
 msgid "Mercenary life learns you to pack light, among other things."
@@ -118365,7 +118360,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Metis"
-msgstr ""
+msgstr "Metis"
 
 msgctxt "speaker:Narrator"
 msgid "Metis advanced, pouring out more pale fire onto the flower."
@@ -118741,7 +118736,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Miriam"
-msgstr ""
+msgstr "Miriam"
 
 msgctxt "speaker:Narrator"
 msgid "Miriam shook her head."
@@ -119917,11 +119912,11 @@ msgstr "Mysz"
 
 msgctxt "ui"
 msgid "Mouse Wheel Down"
-msgstr ""
+msgstr "Przewijanie w dół"
 
 msgctxt "ui"
 msgid "Mouse Wheel Up\\nClick Rollback Side"
-msgstr ""
+msgstr "Przewiń w górę\\nKliknij cofnij"
 
 msgctxt "speaker:Orc"
 msgid "Mouth! Mouth!"
@@ -121289,7 +121284,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Nathan"
-msgstr ""
+msgstr "Nathan"
 
 msgctxt "speaker:Kim"
 msgid "Nathan is a senior. He's been here longer than most. A few years by now, right?"
@@ -121345,7 +121340,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Naydeen"
-msgstr ""
+msgstr "Naydeen"
 
 msgctxt "speaker:Narrator"
 msgid "Naydeen gave her a soft smile."
@@ -122565,7 +122560,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Nickolas"
-msgstr ""
+msgstr "Nickolas"
 
 msgctxt "speaker:Narrator"
 msgid "Night had begun to set in when Sarah finished up preparing her bunk and wrapping up the last of her chores."
@@ -125165,7 +125160,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Nobleman"
-msgstr "Nobles"
+msgstr "Szlachcic"
 
 msgctxt "speaker:Narrator"
 msgid "Nobles still made up a large share of those in attendance, but each passing year the crowd grew more diverse. Sucessful merchants, famous scholars, notable guests from across the world."
@@ -128365,7 +128360,7 @@ msgstr ""
 
 msgctxt "speaker:King Orwell Rose"
 msgid "Of course they are. I didn't give them to him for his enjoyment."
-msgstr ""
+msgstr "Oczywiście, że tak. Nie dawałem im tego dla jego rozrywki."
 
 msgctxt "speaker:Sarah"
 msgid "Of course training swords. I don't wanna put you into the medic tent."
@@ -129441,7 +129436,7 @@ msgstr ""
 
 msgctxt "speaker:Sarah"
 msgid "Ok, you can stay, but only for a bit. We're going to have the banquet tomorrow for Dad's return. If you don't get any rest, you're going to fall asleep in your soup like last time."
-msgstr ""
+msgstr "Ok, możesz zostać, ale tylko na chwilę. Jutro mamy bankiet z okazji powrotu taty. Jeśli nie odpoczniesz, zasnąś w zupie jak ostatnio."
 
 msgctxt "speaker:Sarah"
 msgid "Ok...if you think that's for the best."
@@ -130189,7 +130184,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Once Thomas was interested in a thing, it seemed to completely envelop his every waking moment, and he rarely stopped until he understood the object of his obsession."
-msgstr "Una vez que Tomás se interesaba por algo, parecía envolverlo completamente en cada momento de su vigilia, y raramente dejaba de hacerlo hasta comprender el objeto de su obsesión."
+msgstr "Gdy Thomas interesował się czymś, wydawało się, że całkowicie pochłaniało to każdą jego czujną chwilę i rzadko przestawał, dopóki nie zrozumiał przedmiotu swojej fascynacji."
 
 msgctxt "speaker:Narrator"
 msgid "Once a favorite destination for the wealthy and elites to go on vacation, the city had been of little strategic interest to the empire."
@@ -131693,7 +131688,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Only let him touch you"
-msgstr ""
+msgstr "Tylko pozwól mu dotknąć cię"
 
 msgctxt "speaker:Narrator"
 msgid "Only looking directly at the vault's door could she see the cryptic texts."
@@ -133785,7 +133780,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Orwen"
-msgstr ""
+msgstr "Orwen"
 
 msgctxt "speaker:Narrator"
 msgid "Orwen nodded."
@@ -133813,7 +133808,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Oryon"
-msgstr ""
+msgstr "Oryon"
 
 msgctxt "speaker:Narrator"
 msgid "Oryon nodded."
@@ -134613,7 +134608,7 @@ msgstr "Strona w dół"
 
 msgctxt "ui"
 msgid "Page Up"
-msgstr ""
+msgstr "Page Up"
 
 msgctxt "ui"
 msgid "Page {}"
@@ -135873,7 +135868,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Perhaps, Sarah speculated, it was simply his nature. Too kind to hurt anything, and so too soft for war, even the theory of war."
-msgstr "Może, pomyślała Sarah, po prostu tak miała na to naturę – zbyt łaskawa, by kogoś ranić, i dlatego zbyt miękka nawet dla wojny, a tym bardziej dla jej teorii."
+msgstr "Może – pomyślała Sarah – po prostu tak miał naturę. Był zbyt dobry, by krzywdzić cokolwiek, i dlatego zbyt miękki na wojnę, nawet na samą teorię wojny."
 
 msgctxt "speaker:Narrator"
 msgid "Perhaps, Sarah thought, if she had hated Xan all this would have been easier."
@@ -136297,7 +136292,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Play along with Kate, tease Samayra"
-msgstr ""
+msgstr "Graj z Kate, podrywaj Samayrę"
 
 msgctxt "speaker:Narrator"
 msgid "Play modest for him, she wondered. What was the point? What part of her had he not seen by now?"
@@ -137241,7 +137236,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Press the issue"
-msgstr ""
+msgstr "Naciśnij to"
 
 msgctxt "speaker:Daemon"
 msgid "Press your hands against the walls."
@@ -138453,7 +138448,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Ramsey"
-msgstr ""
+msgstr "Ramsey"
 
 msgctxt "speaker:Narrator"
 msgid "Ramsey clasped his hands together."
@@ -138705,7 +138700,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Raza"
-msgstr ""
+msgstr "Raza"
 
 msgctxt "speaker:Raza"
 msgid "Raza help Sarah. Sarah help Raza."
@@ -139257,7 +139252,7 @@ msgstr "Porozmawiaj z nim"
 
 msgctxt "menu"
 msgid "Rebuke Razaphel"
-msgstr ""
+msgstr "Ostrzec Razafela"
 
 msgctxt "menu"
 msgid "Rebuke the spirit"
@@ -139365,7 +139360,7 @@ msgstr "Odmów pomocy mu"
 
 msgctxt "menu"
 msgid "Refuse to sleep with him"
-msgstr ""
+msgstr "Odmów mu spania"
 
 msgctxt "menu"
 msgid "Refuse to spy on Caliban"
@@ -139373,7 +139368,7 @@ msgstr "Odmów szpiegowania Calibana"
 
 msgctxt "menu"
 msgid "Refuse, best to be clear headed"
-msgstr ""
+msgstr "Odmów, lepiej być trzeźwym"
 
 msgctxt "menu"
 msgid "Refuse, go to the library"
@@ -139389,7 +139384,7 @@ msgstr "Odmów, podaj tylko leki"
 
 msgctxt "menu"
 msgid "Refuse, scold him"
-msgstr "Odmów, wygnaj go"
+msgstr "Odmów, wyganaj go"
 
 msgctxt "menu"
 msgid "Refuse, start the siege"
@@ -140869,7 +140864,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Sakar"
-msgstr ""
+msgstr "Sakar"
 
 msgctxt "speaker:Sigmund"
 msgid "Sakar and Krip can ride on back."
@@ -141169,7 +141164,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Samayra"
-msgstr ""
+msgstr "Samayra"
 
 msgctxt "speaker:Narrator"
 msgid "Samayra allowed herself to fall back."
@@ -142477,7 +142472,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Sarah"
-msgstr ""
+msgstr "Sarah"
 
 msgctxt "speaker:Voice"
 msgid "Sarah Rose!"
@@ -154785,7 +154780,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Sarah had often wondered why. For most boys his age, war seemed to be the only thing they cared for. Soldiers, battle, glory."
-msgstr ""
+msgstr "Sarah często zastanawiała się nad tym. Dla większości chłopców w jej wieku wojna wydawała się jedyną rzeczą, o którą dbali. Żołnierze, bitwy, sława."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah had only just gotten started when she heard a voice."
@@ -156029,7 +156024,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Sarah is disgusted"
-msgstr ""
+msgstr "Sarah odczuwa obrzydzenie"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah is happy to notice her foot has returned to normal."
@@ -156209,7 +156204,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Sarah keeps hugging her brother."
-msgstr ""
+msgstr "Sarah wciąż przytula swojego brata."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah keeps shaking her head."
@@ -156661,7 +156656,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Sarah knew him and wasn't surprised to see him, Marion Achillea, from the Achillea family."
-msgstr "Sarah go znała i nie zdziwiła się, widząc Marię Achilleę z rodziny Achillea."
+msgstr "Sarah znała go i nie zaskoczyło ją to, że zobaczyła Mariona Achilleę z rodu Achillei."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah knew how it felt."
@@ -157209,7 +157204,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Sarah knows that Atilla is right, something breaks between them."
-msgstr "Sarah wie, dass Atilla recht hat – zwischen ihnen bricht etwas."
+msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Sarah knows that Kate is dear to her, but she also knows that her life, her destiny, is too grand for something so small as love."
@@ -161553,7 +161548,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Sarah nods."
-msgstr "Sarah asiente."
+msgstr "Sarah kiwa głową."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah noticed Kate turning more quiet, more inward."
@@ -162445,7 +162440,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Sarah politely smiled as she listened to Marion complain. From Marion, even a little could be too much."
-msgstr ""
+msgstr "Sarah uśmiechnęła się uprzejmie, słuchając narzekań Marion. U Marion nawet odrobina bywała za dużo."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah pounded her fist into the orc's muscle, knowing that it didn't do anything to him."
@@ -164369,7 +164364,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Sarah rolls her eyes."
-msgstr "Sara mrugnie powoli, z delikatną nutą czułości w oczach."
+msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Sarah rose back to her feet."
@@ -166041,7 +166036,7 @@ msgstr "Sarah potrząsa głową i odpycha wspomnienie. Powaga. Tak jak zawsze m�
 
 msgctxt "speaker:Narrator"
 msgid "Sarah shakes her head and pushes away the memory. Composure. Just as father always said."
-msgstr ""
+msgstr "Sarah potrząsnęła głową i odpycha wspomnienie. Spokój. Tak jak zawsze mówił Ojciec."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah shakes her head."
@@ -166669,7 +166664,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Sarah sighs."
-msgstr ""
+msgstr "Sarah suspira."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah silently listened to his lectures. Atilla could be lecture for hours, but she loved listening to him. It showed her he cared."
@@ -167825,7 +167820,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Sarah smiles at her brother."
-msgstr ""
+msgstr "Sarah uśmiecha się do swojego brata."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah smirked at Samayra, who seemed none too entertained by her cryptic answers."
@@ -168581,7 +168576,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Sarah stares at the ornate ceiling. Her brother soundly asleep next to her."
-msgstr ""
+msgstr "Sarah patrzy na ozdobny sufit. Jej brat śpi głęboko obok niej."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah stares at the woman, trying to figure out how she knows her."
@@ -168617,7 +168612,7 @@ msgstr "Sarah milczała."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah stays with her father, holding his hand."
-msgstr ""
+msgstr "Sarah trzyma się przy ojcu, chwytając go za rękę."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah steeled her heart and threw the torn up dress into the boiler."
@@ -169117,7 +169112,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Sarah storms into the bedchamber of her father. Servants try to stop her, but she brushes past them."
-msgstr ""
+msgstr "Sarah wbiega do sypialni ojca. Kobiety służące próbują ją powstrzymać, ale ona odpycha je i przechodzi obok."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah straddled Varga and opened her mouth, welcoming his tongue."
@@ -171305,7 +171300,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Sarah tries to call out to her father, but her voice is weak and soft."
-msgstr ""
+msgstr "Sarah próbuje zawołać ojca, ale jej głos jest słaby i cichy."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah tries to clear her mind, sitting amidst the ashes."
@@ -172301,7 +172296,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Sarah wakes to the first beams of light breaking through her curtains."
-msgstr ""
+msgstr "Sarah obudziła się, gdy pierwsze promienie światła zaczęły przebijać przez jej zasłony."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah walked across the hardened earth until she was close to him."
@@ -175585,7 +175580,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Sarah waves to her brother."
-msgstr ""
+msgstr "Sarah macha do swojego brata, z lekkim uśmiechem w głosie."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah weaved her energy into a spike, all that she could bend and forge into it she did, and raised it up."
@@ -177833,7 +177828,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Scout"
-msgstr ""
+msgstr "Szpieg"
 
 msgctxt "speaker:Narrator"
 msgid "Scrambling for her clothes, she quickly dressed herself and left."
@@ -177933,11 +177928,11 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Seduce Samayra"
-msgstr ""
+msgstr "Uczaruj Samayrę"
 
 msgctxt "menu"
 msgid "Seduce them"
-msgstr "Zagrzewaj ich"
+msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Seduce you into a moment of laxiety, a single moment where you let your mind slip and forget where you are, and then you'll fall asleep under a scorching sun."
@@ -177973,7 +177968,7 @@ msgstr ""
 
 msgctxt "speaker:Thomas"
 msgid "See you at the banquet."
-msgstr ""
+msgstr "Do zobaczenia na balu."
 
 msgctxt "speaker:Sarah"
 msgid "See!"
@@ -178385,7 +178380,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Send the spearmen forward"
-msgstr ""
+msgstr "Wyślij szpadzistów naprzód"
 
 msgctxt "speaker:Sarah"
 msgid "Send two scout units on each end of the city. Ride all the way around and report. Ride in a wide formation."
@@ -178409,7 +178404,7 @@ msgstr ""
 
 msgctxt "speaker:Sarah"
 msgid "Seriously, Thomas, you need to go to your room and get dressed before Dad comes and drags you to the banquet."
-msgstr ""
+msgstr "Poważnie, Thomasie, musisz iść do swojego pokoju i się ubrać, zanim tata przyjdzie i zaciągnie cię na bal."
 
 msgctxt "speaker:Sarah"
 msgid "Seriously, can't you tell me?"
@@ -178465,7 +178460,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Set the mob loose, let them have their revenge"
-msgstr ""
+msgstr "Puść tłum na wolność, niech odrobią sobie sprawiedliwość"
 
 msgctxt "speaker:Narrator"
 msgid "Setting out again, they ventured back into the unforgiving cold."
@@ -178477,7 +178472,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Settled in the center was a large oak table, long enough to house dozens of people on each side."
-msgstr ""
+msgstr "W centrum stał duży dębowy stół, wystarczająco długi, by przy nim mogło usiąść po kilka osób z każdej strony."
 
 msgctxt "speaker:Narrator"
 msgid "Seven more days they spend like this."
@@ -182517,7 +182512,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "She enjoyed seeing the castle like this: alive, vibrant."
-msgstr ""
+msgstr "Ciekawie obserwowała zamek w tym stanie: żywy, pulsujący."
 
 msgctxt "speaker:Narrator"
 msgid "She entangled her hands into Samayra's black hair, twirling and gripping at it, just to feel her closer."
@@ -184793,7 +184788,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "She gently nudges him, knowing the banquet will start soon."
-msgstr ""
+msgstr "Delikatnie popycha go, wiedząc, że bankiet za chwilę się rozpocznie."
 
 msgctxt "speaker:Narrator"
 msgid "She genuinely was."
@@ -184873,7 +184868,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "She gets up and puts her arms around him."
-msgstr ""
+msgstr "Wstała i objęła go ramionami."
 
 msgctxt "speaker:Narrator"
 msgid "She giggled."
@@ -185733,7 +185728,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "She had hoped to read the books on his behalf and give Thomas a summary so he could at least learn something."
-msgstr ""
+msgstr "Chciała przeczytać książki za niego i podać Thomasowi streszczenie, żeby przynajmniej coś się nauczył."
 
 msgctxt "speaker:Narrator"
 msgid "She had hoped to sound strong, confident. Instead, her voice came out soft."
@@ -187641,7 +187636,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "She is brought to a pause by the sight."
-msgstr ""
+msgstr "Zdumiała widokiem."
 
 msgctxt "speaker:Narrator"
 msgid "She is caught by surprise as she sees the cum from his cock spew out, landing half across her stomach and half across her breasts."
@@ -188581,7 +188576,7 @@ msgstr ""
 
 msgctxt "speaker:Thomas"
 msgid "She likes to think she is."
-msgstr ""
+msgstr "Myślała, że tak właśnie jest."
 
 msgctxt "speaker:Narrator"
 msgid "She linked her arm through his."
@@ -188593,7 +188588,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "She listens as the servants drag him away, kicking and screaming until he is too far to hear."
-msgstr ""
+msgstr "Słyszy, jak służba go pociąga, krzycząc i kopiąc, dopóki nie usłyszy już jego głosu."
 
 msgctxt "speaker:Narrator"
 msgid "She lived because he willed it so, and she would die if he willed it otherwise."
@@ -189637,7 +189632,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "She needs to find her father."
-msgstr ""
+msgstr "Muszy odnaleźć swojego ojca."
 
 msgctxt "speaker:Narrator"
 msgid "She neither runs, nor speaks up. She only keeps her eyes on the man as he comes closer to her."
@@ -192713,7 +192708,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "She sees Marion, usually so composed, with a hint of fear in his eyes."
-msgstr ""
+msgstr "Widzi Marion, zwykle tak skomponowanego, z nutką strachu w oczach."
 
 msgctxt "speaker:Narrator"
 msgid "She sees her body begin to shake, a soft sobbing sound like repressed tears, rising up from deep within her."
@@ -192721,7 +192716,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "She sees her brother, looking at her, confused, as if he can't understand the words."
-msgstr ""
+msgstr "Widzi swojego brata patrzącego na nią z niedowierzaniem, jakby nie mógł zrozumieć jej słów."
 
 msgctxt "speaker:Narrator"
 msgid "She sees herself bury some of them in battle."
@@ -192773,7 +192768,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "She sees the nobles react: some in anger, some turned white."
-msgstr ""
+msgstr "Widzi reakcję szlachty: niektórzy z gniewem, inni bledną."
 
 msgctxt "speaker:Narrator"
 msgid "She sees the world continue to spin around her, her dress fluttering wildly in the wind as she descends."
@@ -193717,7 +193712,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "She stays with him until nightfall. Until the servants are forced to carry her away."
-msgstr ""
+msgstr "Zostaje z nim aż do zmierzchu, aż słudzy zabiorą ją na siłę."
 
 msgctxt "speaker:Narrator"
 msgid "She steeled her face, revealing nothing to him."
@@ -197153,7 +197148,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "She watches herself in the mirror as she tries out a series of different dresses."
-msgstr ""
+msgstr "Obserwuje siebie w lustrze, gdy próbuje na sobie szereg różnych sukienek."
 
 msgctxt "speaker:Narrator"
 msgid "She watches him leave into the dark."
@@ -197461,7 +197456,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "She wondered if it was worse to feel this sadness, or to have no memory at all. Each seemed a different kind of cruelty."
-msgstr ""
+msgstr "Zastanawiała się, czy gorzej było czuć tę smutność, czy też nie pamiętać wcale niczego. Każde z nich wydawało się innym rodzajem okrucieństwa."
 
 msgctxt "speaker:Narrator"
 msgid "She wondered if she ever would see them again."
@@ -198477,7 +198472,7 @@ msgstr ""
 
 msgctxt "speaker:Sarah"
 msgid "Should we be worried?"
-msgstr ""
+msgstr "Czy powinniśmy się martwić?"
 
 msgctxt "speaker:Cassius"
 msgid "Should we chance to meet again."
@@ -198609,7 +198604,7 @@ msgstr ""
 
 msgctxt "speaker:Thomas"
 msgid "Show off."
-msgstr ""
+msgstr "Pokaż się!"
 
 msgctxt "speaker:Sarah"
 msgid "Show that dick! Show that dick!"
@@ -198705,7 +198700,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Sigmund"
-msgstr ""
+msgstr "Sigmund"
 
 msgctxt "speaker:Narrator"
 msgid "Sigmund and Krip stood there, already waiting."
@@ -199549,7 +199544,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Slave Woman"
-msgstr ""
+msgstr "Kobieta niewolnica"
 
 msgctxt "speaker:Gorak"
 msgid "Slave! Come here!"
@@ -199585,7 +199580,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Sleep alone"
-msgstr ""
+msgstr "Śpij sama"
 
 msgctxt "speaker:Narrator"
 msgid "Sleep came easy for Sarah that night."
@@ -199661,7 +199656,7 @@ msgstr "Śpij z Chanem"
 
 msgctxt "menu"
 msgid "Sleep with the Old Tribesman"
-msgstr ""
+msgstr "Śpij z Starszym Plemioniarzem"
 
 msgctxt "speaker:Narrator"
 msgid "Sleep."
@@ -200837,7 +200832,7 @@ msgstr ""
 
 msgctxt "speaker:Thomas"
 msgid "So I figured, obviously, my dear sister must be suffering the same fate as me, so why not share the misery?"
-msgstr ""
+msgstr "Pomyślałem więc, że skoro moja ukochana siostra musi doświadczać tego samego losu co ja, to czemu nie podzielić się tym cierpieniem?"
 
 msgctxt "speaker:Kate"
 msgid "So I go visit William."
@@ -201745,7 +201740,7 @@ msgstr ""
 
 msgctxt "speaker:Sarah"
 msgid "So mean!"
-msgstr ""
+msgstr "Taka jesteś!"
 
 msgctxt "speaker:Sarah"
 msgid "So mean..."
@@ -204857,7 +204852,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Sophia"
-msgstr ""
+msgstr "Sophia"
 
 msgctxt "speaker:Narrator"
 msgid "Sophia continued to casually swim."
@@ -205337,7 +205332,7 @@ msgstr ""
 
 msgctxt "speaker:Sarah"
 msgid "Sounds like a smart person."
-msgstr ""
+msgstr "Brzmi jak ktoś inteligentny."
 
 msgctxt "speaker:Kate"
 msgid "Sounds like you're getting closer to forgiving me."
@@ -205365,7 +205360,7 @@ msgstr "Przestrzeń"
 
 msgctxt "menu"
 msgid "Spare Kate"
-msgstr ""
+msgstr "Oszczędź Kate"
 
 msgctxt "speaker:Guard Captain"
 msgid "Spare me the excuses, rat."
@@ -205405,7 +205400,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Speak privately with Marion"
-msgstr ""
+msgstr "Porozmawiaj z Marion w sekrecie"
 
 msgctxt "menu"
 msgid "Speak privately with Varga."
@@ -205457,7 +205452,7 @@ msgstr ""
 
 msgctxt "speaker:King Orwell Rose"
 msgid "Speaking of growing up, have you seen..."
-msgstr ""
+msgstr "Mówiąc o dorastaniu, czy widziałaś..."
 
 msgctxt "speaker:Jaeid"
 msgid "Speaking of her, where is Jasmine?"
@@ -205801,7 +205796,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Spy on Caliban"
-msgstr ""
+msgstr "Obserwuj Caliban"
 
 msgctxt "speaker:Narrator"
 msgid "Spymaster Kravel had been left behind at Reinmeer to manage the city in her absence. She hoped he would prove worthy of her trust in him."
@@ -205833,7 +205828,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Squire"
-msgstr "Escudero"
+msgstr "Szymon"
 
 msgctxt "speaker:Narrator"
 msgid "Squires, thus, were nearly always the sons of noble houses. Those sons too far in line to inherit much of anything, and so instead, tasked with seeking glory."
@@ -205949,7 +205944,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Standing in the corner of her room is her brother, Thomas."
-msgstr ""
+msgstr "W rogu jej pokoju stoi jej brat, Thomas."
 
 msgctxt "speaker:Narrator"
 msgid "Standing in the corner, she raised her face and looked on."
@@ -207221,7 +207216,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Still, he should have known they were too old for that."
-msgstr ""
+msgstr "Wszak powinien był wiedzieć, że są za starymi na to."
 
 msgctxt "speaker:Narrator"
 msgid "Still, he smiled, and she saw it was genuine. He was having a good day."
@@ -207997,7 +207992,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Strip completely naked"
-msgstr ""
+msgstr "Zdejmij się całkowicie"
 
 msgctxt "menu"
 msgid "Strip down and lay on the bed"
@@ -208005,7 +208000,7 @@ msgstr "Zdejmij się i połóż na łóżku"
 
 msgctxt "menu"
 msgid "Strip for him"
-msgstr "Odziej go"
+msgstr "Ogołoń dla niego"
 
 msgctxt "speaker:Sarah"
 msgid "Strip this woman, tie her to a pole, and flog her in the square."
@@ -208013,7 +208008,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Strip your clothes"
-msgstr ""
+msgstr "Zdejmij ubranie"
 
 msgctxt "speaker:Atilla"
 msgid "Strip!"
@@ -209453,7 +209448,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Suddenly, the door to the great hall is slammed open."
-msgstr ""
+msgstr "Nagle, z hukiem uchyliły się drzwi do wielkiej sali."
 
 msgctxt "speaker:Narrator"
 msgid "Suddenly, the door to the throne room was thrown open and a surge of soldiers streamed in."
@@ -209881,7 +209876,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Sure, clear my head"
-msgstr ""
+msgstr "Dobrze, odprężmy się."
 
 msgctxt "speaker:Carolyn"
 msgid "Sure, girl. Next time I will let you work off your debt to me."
@@ -210017,7 +210012,7 @@ msgstr ""
 
 msgctxt "speaker:Sarah"
 msgid "Sure, slipped into it, whatever."
-msgstr ""
+msgstr "Jasne, weszła do niego, kurwa."
 
 msgctxt "speaker:Narrator"
 msgid "Sure, some of the Serfs worked more complicated jobs, like blacksmiths, but most of them were simple farmers."
@@ -210573,7 +210568,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Synara"
-msgstr ""
+msgstr "Synara"
 
 msgctxt "speaker:Sarah"
 msgid "T-t-ank...u..."
@@ -210613,7 +210608,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Take charge"
-msgstr ""
+msgstr "Bierz odpowiedzialność"
 
 msgctxt "speaker:Sarah"
 msgid "Take her down and mend her wounds."
@@ -210637,7 +210632,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Take his hand and leave with Sigmund"
-msgstr ""
+msgstr "Weź jego rękę i odejdź ze Sigmundem"
 
 msgctxt "speaker:Alaric"
 msgid "Take it all off and I might consider it."
@@ -210709,7 +210704,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Take the Khan's hand"
-msgstr ""
+msgstr "Bierz rękę Khana"
 
 msgctxt "menu"
 msgid "Take the bet."
@@ -210917,7 +210912,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Talk back"
-msgstr ""
+msgstr "Odpowiedz"
 
 msgctxt "menu"
 msgid "Talk to Lily"
@@ -210925,11 +210920,11 @@ msgstr "Porozmawiaj z Lilą"
 
 msgctxt "menu"
 msgid "Talk to the female soldier"
-msgstr ""
+msgstr "Porozmawiaj z żołnierzką"
 
 msgctxt "menu"
 msgid "Talk to the male soldier"
-msgstr ""
+msgstr "Porozmawiaj z żołnierzem"
 
 msgctxt "speaker:Sarah"
 msgid "Talk. Don't talk. I'm not going anywhere."
@@ -212529,7 +212524,7 @@ msgstr ""
 
 msgctxt "speaker:Sarah"
 msgid "That doesn't mean I'm not right."
-msgstr ""
+msgstr "To nie oznacza, że mam rację."
 
 msgctxt "speaker:Sarah"
 msgid "That doesn't mean we have to just get married out of nowhere."
@@ -212613,7 +212608,7 @@ msgstr ""
 
 msgctxt "speaker:King Orwell Rose"
 msgid "That goes for both of you."
-msgstr ""
+msgstr "To samo dotyczy was obojga."
 
 msgctxt "speaker:Kate"
 msgid "That good huh?"
@@ -213937,7 +213932,7 @@ msgstr ""
 
 msgctxt "speaker:Sarah"
 msgid "That's not true. He told me how difficult it was, growing up under his father. How nothing he ever did was good enough."
-msgstr ""
+msgstr "To nie prawda. Powiedział mi, jak trudne było dorastać pod presją ojca. Jak niczego, co robił, nigdy nie uznawał za wystarczające."
 
 msgctxt "speaker:Thomas"
 msgid "That's not what I meant!"
@@ -214485,7 +214480,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "The Achillea family was one of the oldest and most prestigious families of Rosanna. They had fought with Sarah's ancestors in establishing the Rose dynasty. For their efforts, they were well rewarded."
-msgstr ""
+msgstr "Rod Achillea należał do najstarszych i najbardziej prestiżowych rodów w Rosannie. Walczyli u boku przodków Sarah przy zakładaniu dynastii Róż, a za swoje wysiłki otrzymali odpowiednią nagrodę."
 
 msgctxt "speaker:Xanthippe"
 msgid "The Bagrad army will cluster near the central gate. If the Mythran army wants to enter the city, they will have to pass through it."
@@ -216529,7 +216524,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "The capital must not fall; call in the troops."
-msgstr ""
+msgstr "Stolica nie może upaść; wezwij wojsko."
 
 msgctxt "speaker:Narrator"
 msgid "The capital of Delphine, and the rest of the country."
@@ -221161,7 +221156,7 @@ msgstr ""
 
 msgctxt "speaker:Servant"
 msgid "The king! The king is dead!"
-msgstr ""
+msgstr "Pan Król! Pan Król jest martwy!"
 
 msgctxt "speaker:Marion"
 msgid "The king, he fought as if posessed by the heroes of old."
@@ -226333,7 +226328,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "The sheets are drenched in dark blood. So dark it has nearly turned black."
-msgstr ""
+msgstr "Pościel jest przesiąknięta ciemną krwią, tak ciemną, że prawie stała się czarna."
 
 msgctxt "speaker:Narrator"
 msgid "The sheets pulled aside, each was exposed to the cold air of the night."
@@ -228013,7 +228008,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "The tears could come later."
-msgstr ""
+msgstr "Łzy można było odłożyć na później."
 
 msgctxt "speaker:Narrator"
 msgid "The tears she had spilled for her own tragedy were gone."
@@ -228337,7 +228332,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "The title reads: A historical account of cavalry flanking manoeuvres in the 8th and 9th century."
-msgstr ""
+msgstr "Napis na okładce głosi: Historyczny opis manewrów flankujących kawalerii z VIII i IX wieku."
 
 msgctxt "speaker:Narrator"
 msgid "The tome appeared thick and heavy. The leather binding expensive."
@@ -232365,7 +232360,7 @@ msgstr ""
 
 msgctxt "speaker:King Orwell Rose"
 msgid "Then what did he study?"
-msgstr ""
+msgstr "To co on studiował?"
 
 msgctxt "speaker:Sarah"
 msgid "Then what was all that just now?"
@@ -236425,7 +236420,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "They had crowded around a young man with a thin frame and long, flowing blonde hair, reaching to his shoulders."
-msgstr ""
+msgstr "Zgromadzili się wokół młodego mężczyzny o szczupłej budowie i długich, falujących blond włosach sięgających ramion."
 
 msgctxt "speaker:Narrator"
 msgid "They had cut so deep into her army."
@@ -237397,7 +237392,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "They stay, locked in an embrace. It doesn't take long for Thomas to fall asleep."
-msgstr ""
+msgstr "Zostają, spleceni w objęciach. Thomas szybko zasypia."
 
 msgctxt "speaker:Narrator"
 msgid "They stepped out of the carriage."
@@ -240773,11 +240768,11 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Thomas"
-msgstr ""
+msgstr "Thomas"
 
 msgctxt "speaker:Narrator"
 msgid "Thomas Rose, Sarah's younger brother, and heir to the throne, embraces his father."
-msgstr ""
+msgstr "Thomas Rose, młodszy brat Sarah i następca tronu, przytula swojego ojca."
 
 msgctxt "speaker:Narrator"
 msgid "Thomas asserted himself again."
@@ -240805,7 +240800,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Thomas casually drops the tome back on the desk."
-msgstr ""
+msgstr "Thomas bez troski kładzie tomik z powrotem na biurku."
 
 msgctxt "speaker:Narrator"
 msgid "Thomas chortled."
@@ -240837,7 +240832,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Thomas drags himself from the bed."
-msgstr ""
+msgstr "Thomas pociąga się z łóżka."
 
 msgctxt "speaker:Narrator"
 msgid "Thomas embraces his sister."
@@ -240869,7 +240864,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Thomas grunts, acknowledging he's awake but hoping to be spared the day's official events."
-msgstr ""
+msgstr "Thomas mrucze, uznając, że się obudził, ale liczy na to, że uniknie oficjalnych wydarzeń dnia."
 
 msgctxt "speaker:Narrator"
 msgid "Thomas had set out earlier in the day with Marion and an entourage to go stag hunting in the royal forest."
@@ -240949,7 +240944,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Thomas looks at the bed."
-msgstr ""
+msgstr "Thomas patrzy na łóżko."
 
 msgctxt "speaker:Narrator"
 msgid "Thomas motioned for the guards to move forward. They seized the man, who offered up no struggle, even as they forced him to his knees."
@@ -241029,7 +241024,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Thomas rolls his eyes."
-msgstr ""
+msgstr "Thomas kręci oczami."
 
 msgctxt "speaker:Narrator"
 msgid "Thomas rose up from his seat, and an attendant stomped hard on the floor three times, bringing the room to a silence."
@@ -241149,7 +241144,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Thomas strolled into the great hall, stopping next to his sister."
-msgstr ""
+msgstr "Thomas weszł do wielkiej sali i stanął obok swojej siostry."
 
 msgctxt "speaker:Narrator"
 msgid "Thomas suddenly sat up."
@@ -241157,7 +241152,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Thomas sudenly looks up, a shocked expression on his face."
-msgstr ""
+msgstr "Thomas nagle podnosi wzrok, na twarzy wyraz szoku."
 
 msgctxt "speaker:Narrator"
 msgid "Thomas threw up one hand."
@@ -241177,7 +241172,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Thomas turns around before leaving."
-msgstr ""
+msgstr "Thomas się odwraca przed wyjściem."
 
 msgctxt "speaker:Narrator"
 msgid "Thomas turns away from her, staring off into the distance, trying to look at nothing at all."
@@ -241201,7 +241196,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Thomas walks over to Sarah's desk and picks up the book."
-msgstr ""
+msgstr "Thomas podchodzi do biurka Sarah i bierze książkę w dłoń."
 
 msgctxt "speaker:Narrator"
 msgid "Thomas was looking down now, seemingly nervous."
@@ -241225,7 +241220,7 @@ msgstr ""
 
 msgctxt "speaker:Sarah"
 msgid "Thomas wasn't wrong. These books are very dry."
-msgstr ""
+msgstr "Thomas nie mylił się. Te książki są bardzo nudne."
 
 msgctxt "speaker:Narrator"
 msgid "Thomas waved his hand."
@@ -241241,7 +241236,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Thomas winks at his sister."
-msgstr ""
+msgstr "Thomas mruga do swojej siostry."
 
 msgctxt "speaker:Sarah"
 msgid "Thomas! My brother! Your king! They've abandoned any sense of honour or decency, for what!?"
@@ -242149,7 +242144,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Throughout the hall, servants ran up and down, placing plates, putting down silverware; some were ironing the sheet covering the oak table."
-msgstr ""
+msgstr "W całym holu służba biegła tam i z powrotem, stawiając talerze, układając przyborów; niektórzy prasowali pościel na dębowym stole."
 
 msgctxt "speaker:Narrator"
 msgid "Throughout the town, Sarah saw there were still some celebrations, but they seemed to have dimmed a bit."
@@ -242161,7 +242156,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Throw yourself at Belmont's feet"
-msgstr "Złóż się u nóg Belmonta"
+msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Throwing back her head, Sarah felt him lean into her, pressing his mouth onto her body."
@@ -242425,7 +242420,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Tirion"
-msgstr ""
+msgstr "Tirion"
 
 msgctxt "speaker:Narrator"
 msgid "Tirion laughed."
@@ -244849,7 +244844,7 @@ msgstr ""
 
 msgctxt "speaker:Sarah"
 msgid "True."
-msgstr ""
+msgstr "Prawda."
 
 msgctxt "speaker:Razaphel"
 msgid "True. But I am sure you have some you could call on?"
@@ -245017,15 +245012,15 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Try to get some sleep."
-msgstr ""
+msgstr "Spróbuj się wyspać."
 
 msgctxt "speaker:Sarah"
 msgid "Try to go easy on him Father. I read some of those books on military strategy you gave him. They're very boring."
-msgstr ""
+msgstr "Spróbuj się z nim nie kłócić, ojcze. Przeczytałam niektóre z tych książek o strategii wojskowej, które mi dałeś. Są bardzo nudne."
 
 msgctxt "menu"
 msgid "Try to outmanoeuvre her"
-msgstr ""
+msgstr "Spróbuj ją wymanewrować"
 
 msgctxt "menu"
 msgid "Try to reason with them"
@@ -245513,7 +245508,7 @@ msgstr ""
 
 msgctxt "speaker:Thomas"
 msgid "Ugh, I can't stand the guy."
-msgstr ""
+msgstr "Ach, nie mogę tego człowieka znosić."
 
 msgctxt "speaker:Thomas"
 msgid "Ugh, I really am worse off than I thought."
@@ -246325,7 +246320,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Vaelen"
-msgstr ""
+msgstr "Vaelen"
 
 msgctxt "speaker:Narrator"
 msgid "Vaelen and Cassius drew into a fighting stance, raising up their weapons."
@@ -246801,7 +246796,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Varga"
-msgstr ""
+msgstr "Varga"
 
 msgctxt "speaker:Narrator"
 msgid "Varga agreed."
@@ -247385,7 +247380,7 @@ msgstr ""
 
 msgctxt "speaker:Sarah"
 msgid "Very funny..."
-msgstr ""
+msgstr "Bardzo śmieszne..."
 
 msgctxt "speaker:Atilla"
 msgid "Very good."
@@ -247837,7 +247832,7 @@ msgstr ""
 
 msgctxt "speaker:Sarah"
 msgid "Wake up Father, please."
-msgstr ""
+msgstr "Obudź się, ojcze, proszę."
 
 msgctxt "speaker:Sarah"
 msgid "Wake up!"
@@ -249109,7 +249104,7 @@ msgstr ""
 
 msgctxt "speaker:Thomas"
 msgid "We can't all be perfect like you."
-msgstr ""
+msgstr "Nie wszyscy możemy być tacy idealni jak ty."
 
 msgctxt "menu"
 msgid "We can't be more than this."
@@ -249973,7 +249968,7 @@ msgstr ""
 
 msgctxt "speaker:Sarah"
 msgid "We see how hard you work for us, for everyone, Father. Just remember to also think about yourself sometimes."
-msgstr ""
+msgstr "Widzimy, jak ciężko pracujesz dla nas, dla wszystkich, Ojciec. Pamiętaj tylko, by czasem myśleć również o sobie."
 
 msgctxt "speaker:King-On-The-Outside"
 msgid "We seek no peace. No treaty. No compromise."
@@ -252949,7 +252944,7 @@ msgstr ""
 
 msgctxt "speaker:Sarah"
 msgid "Were we attacked?"
-msgstr ""
+msgstr "Czy nas zaatakowano?"
 
 msgctxt "speaker:Samayra"
 msgid "Were you any good?"
@@ -253381,7 +253376,7 @@ msgstr ""
 
 msgctxt "speaker:Sarah"
 msgid "What are you doing creeping around my room? You should be in bed by now."
-msgstr ""
+msgstr "Co ty tu robisz, wdzierając się do mojego pokoju? Powinnaś już spać."
 
 msgctxt "speaker:Kate"
 msgid "What are you doing here, anyway?"
@@ -254185,7 +254180,7 @@ msgstr ""
 
 msgctxt "speaker:King Orwell Rose"
 msgid "What does that that mean, exactly?"
-msgstr ""
+msgstr "Co to dokładnie oznacza?"
 
 msgctxt "speaker:Daemon"
 msgid "What does the cow think of abstract mathematics?"
@@ -256721,7 +256716,7 @@ msgstr ""
 
 msgctxt "speaker:Thomas"
 msgid "Whatever."
-msgstr ""
+msgstr "Coś ty, kurwa."
 
 msgctxt "speaker:Marius"
 msgid "Whatever. Do what you like so long as it doesn't involve me."
@@ -256941,7 +256936,7 @@ msgstr ""
 
 msgctxt "speaker:Thomas"
 msgid "When I'm king, shouldn't he want to be my friend?"
-msgstr ""
+msgstr "Gdy będę królem, czy nie powinien on pragnąć być moim przyjacielem?"
 
 msgctxt "speaker:Narrator"
 msgid "When Jaeid had told her, only the most important people would attend, Sarah had never dared to imagine this many people."
@@ -257393,7 +257388,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "When her father had given Thomas the books, she knew Thomas would get distracted, as he usually did."
-msgstr ""
+msgstr "Kiedy ojciec dał Tomaszowi książki, wiedziała, że ten się rozproszy, jak zwykle."
 
 msgctxt "speaker:Narrator"
 msgid "When her mother had still been alive, she had once been so overcome with excitement, that her mother had almost send her back to her room."
@@ -265453,7 +265448,7 @@ msgstr ""
 
 msgctxt "speaker:Sarah"
 msgid "Yeah, when we were six. We're not kids anymore, it's not appropriate."
-msgstr ""
+msgstr "Tylko kiedy mieliśmy sześć lat. Nie jesteśmy już dziećmi, więc to nieodpowiednie."
 
 msgctxt "speaker:Alaric"
 msgid "Yeah, why not?"
@@ -265685,7 +265680,7 @@ msgstr ""
 
 msgctxt "speaker:Thomas"
 msgid "Yeah...I guess I could try to be better."
-msgstr ""
+msgstr "Jasne... pewnie mogłbym spróbować być lepszy."
 
 msgctxt "speaker:Kate"
 msgid "Yeah...I guess that makes sense."
@@ -265953,7 +265948,7 @@ msgstr "Tak"
 
 msgctxt "speaker:Sarah and Thomas in unison"
 msgid "Yes Father."
-msgstr ""
+msgstr "Tak, Ojcze."
 
 msgctxt "speaker:Sarah"
 msgid "Yes I'll stop acting like a stupid girl..."
@@ -266117,7 +266112,7 @@ msgstr ""
 
 msgctxt "speaker:Thomas"
 msgid "Yes, Father."
-msgstr ""
+msgstr "Tak, Ojciec."
 
 msgctxt "speaker:Sarah"
 msgid "Yes, Hecate told me, your stupid Will, or whatever story you tell yourself to justify what you do."
@@ -270445,7 +270440,7 @@ msgstr ""
 
 msgctxt "speaker:King Orwell Rose"
 msgid "You know that every year I visit a different part of the kingdom, and this year, I went to see the eastern provinces."
-msgstr ""
+msgstr "Wiesz, że co roku odwiedzam inną część królestwa, a w tym roku byłem w prowincjach wschodnich."
 
 msgctxt "speaker:Kim"
 msgid "You know that last girl that was in the bunk next to me?"
@@ -272129,7 +272124,7 @@ msgstr ""
 
 msgctxt "speaker:Sarah"
 msgid "You should remember to keep him as a friend."
-msgstr ""
+msgstr "Powinna pamiętać, żeby go traktować jak przyjaciela."
 
 msgctxt "speaker:Captain Belmont"
 msgid "You should see these nipples, hard as rock."
@@ -272189,7 +272184,7 @@ msgstr ""
 
 msgctxt "speaker:Thomas"
 msgid "You sound like Father."
-msgstr ""
+msgstr "Brzmi jak ojciec."
 
 msgctxt "speaker:Metis"
 msgid "You sound surprised."
@@ -273109,7 +273104,7 @@ msgstr ""
 
 msgctxt "speaker:Sarah"
 msgid "You were gone for almost five months! If you thought I wasn't going to hug you, you don't know me at all."
-msgstr ""
+msgstr "Byłaś nieobecna przez prawie pięć miesięcy! Gdybyś myślała, że się na ciebie nie rzucę, to mnie w ogóle nie znasz."
 
 msgctxt "speaker:Sarah"
 msgid "You were great. I was afraid that you might have been intimidated by the setting and would say nothing, but I was glad that you spoke your mind about the army."
@@ -273733,7 +273728,7 @@ msgstr ""
 
 msgctxt "speaker:Sarah"
 msgid "You'll only be king when enough people like him agree that you are. A king sits atop a mountain. Only when the base holds, does the peak."
-msgstr ""
+msgstr "Ty będziesz tylko królem, gdy wystarczająco wielu ludzi zgodzi się, że jesteś. Król siedzi na szczycie góry. Szczyt istnieje dopiero wtedy, gdy podstawa go utrzymuje."
 
 msgctxt "speaker:Xanthippe"
 msgid "You'll only hurt yourself by going there."
@@ -275317,7 +275312,7 @@ msgstr ""
 
 msgctxt "speaker:King Orwell Rose"
 msgid "You've grown older but I don't think you've grown up yet."
-msgstr ""
+msgstr "Wydoroślałeś, ale nie dojrzałeś."
 
 msgctxt "speaker:Alaric"
 msgid "You've had it before, huh? Always knew you were a fancy girl."
@@ -275861,7 +275856,7 @@ msgstr ""
 
 msgctxt "speaker:King Orwell Rose"
 msgid "Your brother will be king one day, and when that day comes he needs to be ready."
-msgstr ""
+msgstr "Twój brat zostanie królem pewnego dnia, a gdy ten dzień nadejdzie, musi być gotowy."
 
 msgctxt "speaker:Vaelen"
 msgid "Your brother, King Thomas, rallied his forces to meet them on the battlefield..."
@@ -276481,7 +276476,7 @@ msgstr "%A, %B %d %Y, %H:%M"
 
 msgctxt "ui"
 msgid "{#quick_page}Q"
-msgstr ""
+msgstr "{#quick_page}Q"
 
 msgctxt "speaker:Narrator"
 msgid "{i}Composure{/i}. She reminded herself in the voice of her father."
