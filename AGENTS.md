@@ -398,16 +398,19 @@ node tools/generate/scripts/voice_batch.mts --lang ru --dry-run  # план фр
 
 Источник фраз — `po/template.pot` (ключ uid = md5 текста), переводы —
 `po/<lang>.po`, 10 языков. Сам пайплайн НЕ пересказывается здесь: правила
-качества, шлюзы и пороги — в скиллах `.opencode/skills/renpy-po/SKILL.md`
+качества, шлюзы и пороги — в `.opencode/skills/renpy-po/SKILL.md`
 (перевод) и `.opencode/skills/po-audit/SKILL.md` (поиск проблем в готовом).
 
 ```bash
 npm run po:translate -- --lang es   # построчный перевод: LM Studio + LLM-судья
 npm run po:translate:status         # стоп / пустых / скорость по всем языкам
-npm run po:translate:stop           # чистая остановка (чекпоинт)
+npm run po:translate:stop           # чистая остановка с сохранением прогресса
 npm run po:audit                    # «в чём лажа» в уже переведённом
 npm run po:check                    # целостность po (обнуление/усечение/остатки .part)
 npm run po:commit                   # валидация -> git add -> коммит (текст пишет локальная LLM)
+npm run po:commit -- --wait         # то же, но СНАЧАЛА ждёт полной остановки
+                                    #   всех очередей перевода (опрос 20с,
+                                    #   3 «стопа» подряд, лимит 240м)
 ```
 
 Две памятки, каждая из-за реального инцидента:
@@ -637,6 +640,25 @@ CLI `~/.lmstudio/bin/lms.exe`, сервер на **127.0.0.1:1234**
   сервер: запускать, когда ПК нужен под озвучку (CUDA CosyVoice требует
   VRAM) или другую тяжёлую GPU-задачу.
 - контроль: `lms server status`, `lms ls`; `curl 127.0.0.1:1234/v1/models`.
+- **Выгрузка после простоя** — `scripts/lmstudio_idle.mts` (+ `.cmd`):
+  модель загружена и не используется ≥10 мин → выгружает (VRAM ~8.5 → 1 ГБ).
+  Сигнал простоя — последний `Received request:` в сервер-логе LM Studio
+  (`~/.lmstudio/server-logs/`), а **вторым независимым сигналом** служит
+  статус `lms ps`: при `generating`/`processingprompt` не выгружает никогда.
+  Двойная защита не случайна: 2026-10-26 сортировка файлов лога шла по ИМЕНИ
+  (ротация немонотонна: `.4` оказался старше `.3`) и демон снял модель
+  посреди работающей очереди. Обе причины закрыты и покрыты тестами.
+
+  ```bash
+  node scripts/lmstudio_idle.mts                    # один прогон (для задачи)
+  node scripts/lmstudio_idle.mts --dry --minutes 0  # проверка решения без выгрузки
+  node scripts/lmstudio_idle.mts --watch            # цикл раз в 60с
+  node scripts/lmstudio_idle.mts --stop-server      # + погасить сервер целиком
+  # регистрация плановой задачи (делает владелец — это изменение ОС):
+  schtasks /Create /TN "LM Studio idle" /SC MINUTE /MO 10 /TR "<репа>\scripts\lmstudio_idle.cmd"
+  ```
+
+  Журнал — `tmp/lmstudio_idle.log`.
 
 | Модель (LM Studio) | Размер | Скорость (CUDA 5070 Ti)  | Назначение                              |
 | ------------------ | ------ | ------------------------ | --------------------------------------- |
@@ -667,8 +689,8 @@ Shift+Tab) → LM Studio Local → qwen/qwen3.5-9b.
 `~/.config/opencode/opencode.jsonc` (грузится поверх opencode.json и
 ПЕРЕКРЫВАЕТ его): там может быть `disabled_providers: ["lmstudio-local", ...]`
 и мусорные провайдеры с битым baseURL — удали их. Правка конфига применяется
-БЕЗ перезапуска (OpenCode слушает файлы и перезагружает провайдеров/скиллы;
-`cli.json` — так же). Если что-то «не подхватилось» — `/reload` (принудительная
+БЕЗ перезапуска (OpenCode слушает файлы и перезагружает провайдеры и
+подключённые модули; `cli.json` — так же). Если что-то «не подхватилось» — `/reload` (принудительная
 перезагрузка), перезапуск не нужен.
 
 ### История смены стека (2026-09..2026-10)
