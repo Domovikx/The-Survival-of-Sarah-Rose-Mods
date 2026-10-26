@@ -9584,7 +9584,7 @@ msgstr ""
 
 msgctxt "speaker:Sarah"
 msgid "All this military stuff, it doesn't come as naturally to him as it did to you."
-msgstr ""
+msgstr "All dieser Militärkram fällt ihm nicht so natürlich wie dir."
 
 msgctxt "speaker:Narrator"
 msgid "All this now came to her as a second nature."
@@ -28248,7 +28248,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Behind her, she hears her brother enter the room, and scream."
-msgstr ""
+msgstr "Hinter ihr hört sie ihren Bruder in den Raum eintreten und schreien."
 
 msgctxt "speaker:Narrator"
 msgid "Behind her, the Old Tribesman defied his old age."
@@ -44056,7 +44056,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Do as he asks, kill him"
-msgstr ""
+msgstr "Gehorche ihm und töte ihn"
 
 msgctxt "speaker:Narrator"
 msgid "Do as she says, Sarah reminded herself."
@@ -76104,7 +76104,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "His hand feels cold to the touch, and stiff. These are her father's hands, but not as she remembers them. His hands don't hold hers back."
-msgstr ""
+msgstr "Seine Hand fühlt sich kalt und starr an. Das sind die Hände ihres Vaters, doch nicht so, wie sie sie sich erinnert. Seine Hände halten ihre nicht zurück."
 
 msgctxt "speaker:Narrator"
 msgid "His hand gripped and passed over it again and again, the way a monk would pass prayer beads."
@@ -76340,7 +76340,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "His interests could stay fixed for months, only to completely shift in less than a day."
-msgstr ""
+msgstr "Sein Interesse konnte monatelang auf dasselbe Thema fixiert bleiben, nur um dann in weniger als einem Tag vollständig zu wechseln."
 
 msgctxt "speaker:Narrator"
 msgid "His iron gaze remained fixed on Thomas and Sarah."
@@ -126572,7 +126572,7 @@ msgstr ""
 
 msgctxt "speaker:Marion"
 msgid "Not to mention, after months of being on the road, you begin to miss the luxuries of the capital. You wouldn't serve up their idea of fine dining to a dog. But, we manage."
-msgstr ""
+msgstr "Nicht zu vergessen, dass nach monatelangen Reisen auf der Straße man die Genüsse der Hauptstadt vermisst. Man würde deren Vorstellung von feinem Essen einem Hund nicht servieren. Doch wir kommen zurecht."
 
 msgctxt "speaker:Narrator"
 msgid "Not to mention, avoiding any punishment."
@@ -129032,7 +129032,7 @@ msgstr "Biete ihr Macht über die Adligen an"
 
 msgctxt "menu"
 msgid "Offer her wealth"
-msgstr ""
+msgstr "Biete ihr Vermögen an"
 
 msgctxt "menu"
 msgid "Offer him mercy"

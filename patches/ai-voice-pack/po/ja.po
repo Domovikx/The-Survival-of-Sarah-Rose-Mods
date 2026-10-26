@@ -119572,7 +119572,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Most kings would have remarried, but their father never had. When he lost their mother, she took part of his joy with her to the grave."
-msgstr ""
+msgstr "多くの王なら再婚するだろうが、父はそうしなかった。母を失った時、その喜びも彼女と共に墓穴へ埋めてしまったのだ。"
 
 msgctxt "speaker:Xanthippe"
 msgid "Most likely it has magical protections of its own. And even if we could blow it open, the whole world would hear the story of the two thief mages, and who would trust us after that?"
@@ -205452,7 +205452,7 @@ msgstr ""
 
 msgctxt "speaker:King Orwell Rose"
 msgid "Speaking of growing up, have you seen..."
-msgstr ""
+msgstr "成長のことだ。君、それ見たことあるか？"
 
 msgctxt "speaker:Jaeid"
 msgid "Speaking of her, where is Jasmine?"

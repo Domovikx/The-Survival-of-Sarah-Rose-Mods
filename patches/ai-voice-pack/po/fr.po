@@ -188588,7 +188588,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "She listens as the servants drag him away, kicking and screaming until he is too far to hear."
-msgstr ""
+msgstr "Elle écoute alors les serviteurs l'emmener, frappant et hurlant jusqu'à ce qu'il soit trop loin pour l'entendre."
 
 msgctxt "speaker:Narrator"
 msgid "She lived because he willed it so, and she would die if he willed it otherwise."

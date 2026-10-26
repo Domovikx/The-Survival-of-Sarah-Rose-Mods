@@ -4668,7 +4668,7 @@ msgstr ""
 
 msgctxt "speaker:Sarah"
 msgid "AAAH!"
-msgstr ""
+msgstr "Ahhh!"
 
 msgctxt "speaker:Sarah"
 msgid "AAAH! What...what did you do!?!"
@@ -52404,7 +52404,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Fight your way out"
-msgstr ""
+msgstr "Przebij się na zewnątrz"
 
 msgctxt "speaker:Narrator"
 msgid "Fighting him off was no option. Not only was he stronger than her by far, but striking him would not end well for her."
@@ -76104,7 +76104,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "His hand feels cold to the touch, and stiff. These are her father's hands, but not as she remembers them. His hands don't hold hers back."
-msgstr ""
+msgstr "Dłoń jest chłodna w dotyku i sztywna. To dłonie ojca, lecz nie takie, jak je pamiętała. Nie przytrzymują jej rąk."
 
 msgctxt "speaker:Narrator"
 msgid "His hand gripped and passed over it again and again, the way a monk would pass prayer beads."
@@ -85864,7 +85864,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "I once blew an old sailor"
-msgstr ""
+msgstr "Kiedyś uprawiałem seks z starym żeglarzem"
 
 msgctxt "speaker:Sarah"
 msgid "I once blew an old sailor."
@@ -112488,7 +112488,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Let's not get carried away by mere rumors."
-msgstr ""
+msgstr "Niech nas nie zwodzą puste plotki."
 
 msgctxt "speaker:Metis"
 msgid "Let's start, did you practice what we went over previously?"
@@ -115784,7 +115784,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "March on Calshure"
-msgstr ""
+msgstr "Szturm na Calshure"
 
 msgctxt "speaker:Narrator"
 msgid "March on the city of Calshure, straight ahead to the capital, or go around it through the Hinterlands."
@@ -177932,7 +177932,7 @@ msgstr "Uczaruj Samayrę"
 
 msgctxt "menu"
 msgid "Seduce them"
-msgstr ""
+msgstr "Uczaruj je"
 
 msgctxt "speaker:Narrator"
 msgid "Seduce you into a moment of laxiety, a single moment where you let your mind slip and forget where you are, and then you'll fall asleep under a scorching sun."
@@ -178576,7 +178576,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Shah Mahda"
-msgstr ""
+msgstr "Szah Mahda"
 
 msgctxt "speaker:Mythran Prince"
 msgid "Shah Mahda! Come out of your little rat hiding hole before I send in my men to drag you out like the vermin you are."
@@ -217388,7 +217388,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "The court nobles were amongst the first. Always priding themselves on their own importance, each representing an important family."
-msgstr ""
+msgstr "Szlachta dworu była wśród pierwszych. Zawsze dumni ze swojego znaczenia, każdy reprezentujący ważną rodzinę."
 
 msgctxt "speaker:Judge"
 msgid "The court of Lethram finds this evidene compelling. Does the defendant wish to offer up any counter evidence?"

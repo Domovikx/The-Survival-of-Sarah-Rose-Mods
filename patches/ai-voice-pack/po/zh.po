@@ -240772,7 +240772,7 @@ msgstr "托马斯"
 
 msgctxt "speaker:Narrator"
 msgid "Thomas Rose, Sarah's younger brother, and heir to the throne, embraces his father."
-msgstr ""
+msgstr "托马斯·罗斯，莎拉的弟弟，王位继承人，正拥抱着他的父亲。"
 
 msgctxt "speaker:Narrator"
 msgid "Thomas asserted himself again."

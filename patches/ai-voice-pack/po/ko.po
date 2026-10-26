@@ -115880,7 +115880,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Marion crossed the room to meet them."
-msgstr ""
+msgstr "마리온은 방을 건너서 그들을 맞으러 갔다."
 
 msgctxt "speaker:Narrator"
 msgid "Marion doesn't speak, he only turns and runs."
@@ -129436,7 +129436,7 @@ msgstr ""
 
 msgctxt "speaker:Sarah"
 msgid "Ok, you can stay, but only for a bit. We're going to have the banquet tomorrow for Dad's return. If you don't get any rest, you're going to fall asleep in your soup like last time."
-msgstr ""
+msgstr "좋습니다, 잠시만 머물 수 있습니다. 내일 아버님이 돌아오시는 연회가 있거든요. 조금도 쉬지 않으면 이번처럼 국물에 잠이 들 거예요."
 
 msgctxt "speaker:Sarah"
 msgid "Ok...if you think that's for the best."
@@ -132672,7 +132672,7 @@ msgstr ""
 
 msgctxt "speaker:King Orwell Rose"
 msgid "Ooh, Sarah, my back! Please daugher, I'm not as young as I was, and you've grown much too big to just be jumping on me."
-msgstr ""
+msgstr "오우, 사라! 내 등에다! 딸아, 내가 예전처럼 젊지는 않아. 너도 너무 커서 그냥 뛰어오를 수 있는 게 아니야."
 
 msgctxt "speaker:Marshal Edmond"
 msgid "Ooh, Sarah."
@@ -134608,7 +134608,7 @@ msgstr "다음 페이지"
 
 msgctxt "ui"
 msgid "Page Up"
-msgstr ""
+msgstr "페이지 위로"
 
 msgctxt "ui"
 msgid "Page {}"
@@ -178412,7 +178412,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Servant"
-msgstr ""
+msgstr "종"
 
 msgctxt "speaker:Sarah"
 msgid "Servant girl?"

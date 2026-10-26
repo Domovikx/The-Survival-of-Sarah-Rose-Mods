@@ -136980,7 +136980,7 @@ msgstr "Pleeeeease, non mandarmi indietro, va bene? Non riesco proprio ad addorm
 
 msgctxt "speaker:Thomas"
 msgid "Pleeeeeease."
-msgstr ""
+msgstr "Per favore."
 
 msgctxt "speaker:Kate"
 msgid "Plenty a women getting hurt in this city tonight Sarah. What's one more?"
