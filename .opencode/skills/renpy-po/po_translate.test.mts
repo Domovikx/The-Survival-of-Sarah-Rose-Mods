@@ -18,6 +18,13 @@ import {
   isSymbolicMsgid,
   judgeSystem,
   judgeUser,
+  medianOf,
+  parseVerdict,
+  VERIFY_ONE_SYSTEM,
+  actionableJudgeIssues,
+  fixExample,
+  isNameLike,
+  meaningfulIssues,
   parseArgs,
   salvageIssues,
   extractTranslation,
@@ -563,4 +570,216 @@ test("systemPrompt: OUTPUT LANGUAGE есть у ВСЕХ 10 языков (ант
     assert.match(p, /"tr"/, `${code}: нет нейтрального ключа`);
     assert.ok(p.length > 1500, `${code}: промпт подозрительно короткий (${p.length})`);
   }
+});
+
+test("судья получает ТУ ЖЕ языковую специфику, что и модель (фикс 2026-10-26)", () => {
+  // JUDGE_SYSTEM требует «lexicon in the task rules is MANDATORY», но судье
+  // раньше уходило только одно предложение judgeNotes — она досочивала по
+  // памяти и противоречила себе («semen -> cum» против «esperma -> semen»).
+  const speech = judgeUser("es", mkEntry({ msgctxt: '"speaker:Narrator"' }), "Vino dentro de ella.", null);
+  assert.match(speech, /Lexicon/, "судья должна видеть таблицу лексикона");
+  assert.match(speech, /FORBIDDEN in scenes/, "судья должна видеть запрет клиники в сценах");
+  assert.match(speech, /coño/, "судья должна видеть конкретные варианты лексикона");
+  // COMMON (правило вывода {"tr"...}) судье НЕ отдаём — конфликтовало бы
+  // с её собственным {"score": ...}
+  assert.ok(!speech.includes('"tr":"<translation>"'), "правила вывода модели судье не нужны");
+
+  // а UI-судья сценарных правил НЕ получает — это было и раньше, но фиксируем
+  const ui = judgeUser("es", mkEntry({ msgctxt: '"ui"', msgid: "Save" }), "Guardar", null);
+  assert.ok(!ui.includes("FORBIDDEN in scenes"), "UI-судье не подмешиваем правила сцен");
+});
+
+test("meaningfulIssues: мусорный фидбэк отбрасывается, настоящий остаётся", () => {
+  // Мусор из судьи (инцидент 2026-10-26): обрывки занимали слот slice(0,3)
+  // и вытесняли реальные замечания.
+  const junk = ["luz", ",", "Semilla", "Я", "Monte", "montaña de placer"];
+  assert.deepEqual(meaningfulIssues(junk), [], "обрывки не должны уходить модели");
+
+  const real = [
+    "Gender agreement: 'Culta' matches Sarah",
+    "Fidelity: 'follábamos' contradicts source 'had never taken her'",
+    "use 'carpa' instead of neutral 'tienda'",
+  ];
+  assert.deepEqual(meaningfulIssues(real), real, "осмысленный фидбэк сохраняется");
+
+  // мусор отбрасывается, порядок настоящих сохраняется
+  const mixed = ["luz", "Gender agreement: 'Culta' matches Sarah", ",", "use 'carpa' instead of 'tienda'"];
+  assert.deepEqual(meaningfulIssues(mixed), [
+    "Gender agreement: 'Culta' matches Sarah",
+    "use 'carpa' instead of 'tienda'",
+  ]);
+});
+
+test("авточек отдаёт ИСПОЛНИМЫЙ фидбэк: слово-нарушитель + что сделать (фикс 2026-10-26)", () => {
+  // Сообщения вида «форма España» / «клинический penetrar» — метки для
+  // отчёта; внутри английского промпта модель не понимала, что править,
+  // и тратила 8 попыток впустую. Теперь к метке прикладывается сам
+  // нарушитель и указание его убрать.
+  const scene = mkEntry({ msgctxt: '"speaker:Narrator"' });
+  const v = checkTranslation(scene, "liberar a cada uno de vosotros", "es");
+  const form = v.find((i) => i.includes("форма España"));
+  assert.ok(form, "форма обращения должна пойматься");
+  assert.match(form!, /vosotros/, "нужно назвать слово-нарушитель");
+  assert.match(form!, /MANDATORY EDIT: replace EVERY occurrence of "vosotros" with "ustedes"/, "нужна явная замена");
+  assert.ok(!form!.includes("RULE:"), "при известной замене RULE-подсказку не даём (она повторяет запрет)");
+
+  const c = checkTranslation(scene, "al sentir su penetración repentina.", "es");
+  const clin = c.find((i) => i.includes("клинический"));
+  assert.ok(clin, "клиника должна пойматься");
+  assert.match(clin!, /penetración/, "нужно назвать слово-нарушитель");
+
+  // копия msgid — тоже с инструкцией, а не голой меткой
+  const copy = checkTranslation(
+    mkEntry({ msgctxt: '"speaker:Narrator"', msgid: "Kneeling down behind her, he entered her again." }),
+    "Kneeling down behind her, he entered her again.",
+    "es",
+  );
+  assert.ok(
+    copy.some((i) => i.includes("verbatim copy of the source") && i.includes("translate the sentence")),
+    "копия msgid должна получить исполнимое указание",
+  );
+
+  // а междометный копия («No, no, no.») — легитимна: отличается только
+  // знаками, вердикт даёт судья, а не арифметика (инцидент 2026-10-26)
+  assert.deepEqual(
+    checkTranslation(mkEntry({ msgctxt: '"speaker:Narrator"', msgid: "No, no, no." }), "No, no, no.", "es"),
+    [],
+    "междометия-копия не должна отбраковываться",
+  );
+});
+
+test("isNameLike: имена и перечисления проходят, английские предложения — нет", () => {
+  // «Edmond. Antonio.» — перечисление имён: переводить нечего, но раньше
+  // авточек вешал «не переведено» и строка висела (инцидент 2026-10-26).
+  for (const ok of ["Thomas...", "Alaric.", "Ah...", "Edmond. Antonio.", "Sarah! Thomas!"]) {
+    assert.ok(isNameLike(ok), `должно пройти: ${ok}`);
+  }
+  for (const no of ["Dutifully, Sarah did.", "No, no, no.", "Kneeling down behind her, he entered her again."]) {
+    assert.ok(!isNameLike(no), `должно быть отклонено: ${no}`);
+  }
+});
+
+test("fixExample: пример замены строится по КОНТЕКСТУ строки (фикс 2026-10-26)", () => {
+  // Живой A/B (9 прогонов): абстрактный «replace vosotros with ustedes»
+  // модель игнорировала (0/9), тот же текст со СВОИМ контекстом строки
+  // чинил 9/9 — ей нужен готовый образец правки.
+  const src = "Como es tradición, coronaré entre vosotros a uno más Exaltado.";
+  const ex = fixExample(src, "vosotros", "ustedes");
+  assert.match(ex, /entre vosotros a/, "пример должен брать слова слева/справа");
+  assert.match(ex, /->/, "нужна стрелка замены");
+  assert.ok(!ex.includes("a uno") || ex.includes("a uno"), "контекст сохраняется");
+  const dst = ex.match(/-> "(.+)"/)![1];
+  assert.ok(!dst.includes("vosotros"), "в замене не должно остаться запрещённого слова");
+  assert.ok(dst.includes("ustedes"), "в замене должна быть правильная форма");
+  assert.equal(dst, "entre ustedes a", "пример = тот же контекст с заменой слова");
+
+  // нарушитель в начале строки — левого слова нет, пример всё равно собирается
+  assert.match(fixExample("Vosotros sois los elegidos", "Vosotros", "Ustedes"), /Vosotros sois/);
+  // слово не найдено — примера нет (не выдумываем контекст)
+  assert.equal(fixExample("sin esa forma", "vosotros", "ustedes"), "");
+});
+
+test("судья: запрет требовать FORBIDDEN-слово и взаимоисключающие синонимы (фикс 2026-10-26)", () => {
+  const sys = judgeSystem('"speaker:Narrator"');
+  // инцидент: судья требовала «penetración», которую правила запрещают,
+  // и по очереди запрещала «leche»/«semen»/«semilla» — все из таблицы
+  assert.match(sys, /NEVER ask for a term the rules mark FORBIDDEN/, "нет запрета требовать запрещённое");
+  assert.match(sys, /Lexicon line lists ALL acceptable equivalents/, "нет правила про синонимы");
+  assert.match(sys, /never call a listed synonym wrong/, "нет запрета ругать разрешённый синоним");
+  // инцидент остатка es: судья выдумывала запреты («clítoris запрещён»,
+  // «entrada клинический») и носила вкусовщину («leche -> semilla»)
+  assert.match(sys, /NO TASTE-MAKING/, "нет запрета на вкусовщину");
+  assert.match(sys, /A word NOT listed as forbidden is ALLOWED/, "нет запрета выдумывать запреты");
+  assert.match(sys, /score 9-10 and output \[\]/, "нет инструкции ставить 9-10 без дефектов");
+  assert.match(sys, /quote the exact wrong fragment and state the exact fix/, "нет требования исполнимости замечания");
+});
+
+test("actionableJudgeIssues: замечание с FORBIDDEN-термином отбрасывается (фикс 2026-10-26)", () => {
+  // Инцидент: судья писала «usar "penetración"» / «usar "infiltró"» —
+  // термины из FORBIDDEN-списка. Модель выполняла запрет авточека, судья
+  // veto'ила исправление -> неразрешимая петля на 8 попыток.
+  const demandsForbidden = [
+    '"entrada en ella" es eufemismo clínico; usar "penetración" según lexicon.',
+    'The clinical term "penetrado" must be replaced by the explicit lexicon.',
+  ];
+  assert.deepEqual(actionableJudgeIssues(demandsForbidden, "es"), [], "предложения нарушить правила отбрасываются");
+
+  const real = [
+    "Gender agreement: 'sufrió' must agree with the feminine subject",
+    "Fidelity: 'su marido' adds information not present in the source",
+  ];
+  assert.deepEqual(actionableJudgeIssues(real, "es"), real, "настоящие дефекты проходят");
+
+  // мусор по-прежнему отбрасывается, порядок сохраняется
+  const mixed = ["dissapeared", real[0], ",", real[1]];
+  assert.deepEqual(actionableJudgeIssues(mixed, "es"), real);
+
+  // для языка без запретов фильтр не выкидывает ничего легитимного
+  assert.equal(actionableJudgeIssues(real, "de").length, 2);
+});
+
+test("судья: FORBIDDEN SCOPE и BODY PARTS — антиобобщение и антибуквализм (фикс 2026-10-26)", () => {
+  const sys = judgeSystem('"speaker:Narrator"');
+  // H3 диагностики: пример «pene/vagina FORBIDDEN» судья обобщала на ВСЮ
+  // анатомию и требовала «clit» вместо «clítoris», называя его запрещённым
+  assert.ok(!sys.includes("pene/vagina"), "пример-перечень убран — он провоцировал обобщение");
+  assert.match(sys, /COMPLETENESS IS CHECKED FIRST, clause by clause/, "нет пословного чека полноты");
+  assert.match(sys, /Coverage is about MEANING, not word overlap/, "нет правила «смысл, не слова»");
+  assert.match(sys, /NEVER report a "drop" for a single word/, "нет запрета ловить одиночные слова");
+  assert.match(
+    sys,
+    /score at most 6 and put "dropped: <the exact source fragment>"/,
+    "нет порога при потере содержания",
+  );
+  assert.match(sys, /FORBIDDEN SCOPE/, "нет правила области запрета");
+  assert.match(sys, /NEVER generalize from an example/, "нет запрета обобщать");
+  assert.match(sys, /clitoris, clit, thigh\/muslo/, "телесные слова не должны числиться запрещёнными");
+  // H3+: судья буквализировала «between her legs -> entre sus piernas» и
+  // требовала заменить «thigh» (source) на «entre sus piernas»
+  assert.match(sys, /BODY PARTS: translate what the SOURCE says/, "нет правила про части тела");
+  assert.match(sys, /applies ONLY when the English says "between her legs"/, "нет запрета буквализировать маппинг");
+});
+
+test("medianOf: медиана гасит шум судьи (H1: 8,6,6 -> 6; 9,8,9 -> 9)", () => {
+  assert.equal(medianOf([8, 6, 6]), 6);
+  assert.equal(medianOf([9, 8, 9]), 9, "одиночный провал 8 не роняет стабильные 9");
+  assert.equal(medianOf([6, 9, 8]), 8);
+  assert.equal(medianOf([10, 9, 9]), 9);
+});
+
+test("судья: COMPLETENESS MAP нумерует предложения многосложного SOURCE (фикс 2026-10-26)", () => {
+  // Инцидент: судья 3/3 прогона не замечала потерю целого предложения
+  // («Holding onto the wall...» отсутствовало в кандидате), а ставила 8-9
+  // за мелочь — судила стиль, не комплектность. Нумерация вынуждает
+  // пройтись по каждой части источника.
+  const long = mkEntry({
+    msgctxt: '"speaker:Narrator"',
+    msgid:
+      "Sarah still felt every part of her being controlled. Holding onto the wall was the only thing she could manage.",
+  });
+  const u = judgeUser("es", long, "Sarah seguía sintiendo que la controlaban.", null);
+  assert.match(u, /COMPLETENESS MAP/, "нет карты комплектности");
+  assert.match(u, /1\. Sarah still felt every part/, "нет нумерации предложений");
+  assert.match(u, /2\. Holding onto the wall/, "второе предложение не выделено отдельно");
+  assert.match(u, /dropped: <that exact part>/, "нет инструкции про потерю");
+
+  // односложный SOURCE — карту не даём (KISS: не раздуваем промпт)
+  const short = mkEntry({ msgctxt: '"speaker:Narrator"', msgid: "No, no." });
+  assert.ok(!judgeUser("es", short, "No, no.", null).includes("COMPLETENESS MAP"));
+});
+
+test("верификатор замечаний: parseVerdict + промпт с двойной проверкой (фикс 2026-10-26)", () => {
+  // живой замер: 5/5 ложных придирок отбито («su -> la», «él -> ella»,
+  // «matutinas — anglicism», «use penetración», «mojada -> empapada»)
+  assert.equal(parseVerdict('{"verdict":"ACCEPT","why":"ok"}'), true);
+  assert.equal(parseVerdict('{"verdict":"REJECT","why":"wrong claim"}'), false);
+  assert.equal(parseVerdict('{"verdict": "REJECT"}'), false, "пробел после двоеточия — тоже REJECT");
+  assert.equal(parseVerdict("битый ответ без вердикта"), false, "битый JSON = не подтверждено");
+
+  assert.match(VERIFY_ONE_SYSTEM, /spelling, grammar, word function/, "нет шага проверки факта");
+  assert.match(VERIFY_ONE_SYSTEM, /the rules mark FORBIDDEN/, "нет проверки FORBIDDEN");
+  assert.match(VERIFY_ONE_SYSTEM, /Judge EVERY claim/, "нет проверки каждого утверждения по отдельности");
+  assert.match(VERIFY_ONE_SYSTEM, /unrelated to, contradicts/, "нет шага проверки фиделити");
+  assert.match(VERIFY_ONE_SYSTEM, /claims content was DROPPED/, "нет шага проверки полноты через SOURCE");
+  assert.match(VERIFY_ONE_SYSTEM, /Only if all checks pass, ACCEPT/, "нет требования тройной проверки");
 });

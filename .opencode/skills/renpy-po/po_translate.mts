@@ -58,7 +58,7 @@ import { fileURLToPath, pathToFileURL } from "node:url";
 import { parsePo, renderPo, writePoAtomic } from "./po_core.mts";
 import type { PoEntry } from "./po_core.mts";
 import { poHeaderLines } from "./po_update.mts";
-import { langProfile } from "./po_langs.mts";
+import { langProfile, languageRules } from "./po_langs.mts";
 import { loadPotIndex } from "./pot_resolve.mts";
 
 // Последовательные await здесь ОСМЫСЛЕННЫ: перевод идёт строго построчно
@@ -222,6 +222,70 @@ export function isSpeechCtx(msgctxt: string): boolean {
   return msgctxt.replace(/^"|"$/g, "").startsWith("speaker:");
 }
 
+/**
+ * Отбрасывает мусорный фидбэк судьи и оставляет осмысленный.
+ *
+ * Инцидент 2026-10-26: обрывки («luz», «,», «Semilla», «Monte»,
+ * «montaña de placer») занимали слот `issues.slice(0, 3)` и вытесняли
+ * настоящие замечания — модель получала неисполнимое указание и тратила
+ * попытку впустую (12 с на строку без результата).
+ *
+ * Правило: осмысленный фидбэк либо содержит двоеточие («Gender agreement: …»),
+ * либо состоит минимум из 4 слов («use 'carpa' instead of 'tienda'»).
+ */
+export function meaningfulIssues(issues: string[]): string[] {
+  return issues.filter((raw) => {
+    const s = raw.trim();
+    if (s.length < 15) return false;
+    if (!/[a-zа-яё]{3}/i.test(s)) return false;
+    const words = s.split(/\s+/);
+    if (s.includes(":") && words.length >= 2) return true;
+    return words.length >= 4;
+  });
+}
+
+/**
+ * Реплика-перечисление имён («Edmond. Antonio.»): каждый токен — слово с
+ * заглавной + доп. пунктуация. Переводить нечего, но раньше такой список
+ * отбраковывался как «не переведено» (инцидент 2026-10-26). Английские
+ * предложения НЕ проходят: в них есть слова с маленькой буквы
+ * («Dutifully, Sarah did.») или служебные («No, no, no.» -> «no»).
+ */
+const NAME_LIST_RE = /^[\p{Lu}][\p{L}'’]*(?:[.!?…,]+)?(?:\s+[\p{Lu}][\p{L}'’]*(?:[.!?…,]+)?)*$/u;
+
+/** Одно слово с заглавной (+пунктуация) либо перечисление таких слов. */
+export function isNameLike(mid: string): boolean {
+  const s = mid.trim();
+  if (!s) return false;
+  if (/^[\p{Lu}][\p{L}'’]*(?:[.!?…]+)?$/u.test(s)) return true;
+  return NAME_LIST_RE.test(s);
+}
+
+/**
+ * Замечания судьи, которые модель МОЖЕТ исполнить: осмысленные И не
+ * предлагающие слово из FORBIDDEN-списка языка.
+ *
+ * Инцидент 2026-10-26 (остаток es): судья писала «use "penetración"» и
+ * «use "infiltró"» — термины, запрещённые самими же правилами. Модель
+ * выполняла запрет авточека, судья veto'ила исправление — неразрешимая
+ * петля на 8 попыток. Авточек гарантирует, что кандидат НЕ содержит
+ * FORBIDDEN-слово, поэтому упоминание его в замечании = предложение
+ * нарушить правило → замечание отбрасывается.
+ */
+export function actionableJudgeIssues(issues: string[], lang: string): string[] {
+  const p = langProfile(lang);
+  return meaningfulIssues(issues).filter((s) => {
+    for (const [re] of p.forbidden) {
+      try {
+        if (new RegExp(re, "iu").test(s)) return false;
+      } catch {
+        /* невалидный regex профиля — не мешаем фильтрации */
+      }
+    }
+    return true;
+  });
+}
+
 /** User prompt: контекст соседних строк + тон из POT (обратный резолв) + спикер + EN-строка. */
 export function userPrompt(
   entry: { msgctxt: string; msgid: string },
@@ -317,6 +381,77 @@ export function foreignScriptIssue(lang: string, tr: string): string | null {
  * Гард: тест «ЗАПРЕТ длины как критерия» в po_translate.test.mts.
  */
 
+/**
+ * Междометия/слова-заполнители, у которых перевод ИДЕНТИЧЕН оригиналу
+ * («No, no, no.», «Oh!»): разница только в знаках, авточек не должен
+ * отбраковывать такое как «не переведено» — вердикт даёт судья.
+ */
+const INTERJECTIONS = new Set([
+  "no",
+  "yes",
+  "oh",
+  "ah",
+  "ooh",
+  "oooh",
+  "hm",
+  "hmm",
+  "mmm",
+  "mm",
+  "shh",
+  "hey",
+  "ha",
+  "haha",
+  "wow",
+  "ouch",
+  "eh",
+  "huh",
+  "ahem",
+  "hush",
+  "shh",
+]);
+
+/**
+ * Строка правил, объясняющая конкретное нарушение — подсказка МОДЕЛИ рядом
+ * с отказом. Без неё фидбэк «форма España» оставался меткой: модель видела
+ * слово-нарушитель, но не замену и топталась 8 попыток (инцидент 2026-10-26).
+ * Ищем строку rules, содержащую само слово или его основу (penetración ->
+ * penetr -> строка «FORBIDDEN in scenes: penetrar …»).
+ */
+export function ruleSnippet(rules: string, hit: string): string {
+  const w = hit.toLowerCase();
+  const forms = [w];
+  for (const suf of ["ación", "ando", "ada", "ado", "ar", "er", "ir", "ó", "es", "s", "o", "a"]) {
+    if (w.endsWith(suf) && w.length - suf.length >= 4) forms.push(w.slice(0, -suf.length));
+  }
+  const line = rules
+    .split("\n")
+    .map((l) => l.trim())
+    .find((l) => {
+      const low = l.toLowerCase();
+      return forms.some((f) => low.includes(f));
+    });
+  return line ? ` RULE: ${line}` : "";
+}
+
+/**
+ * Пример замены В КОНТЕКСТЕ самой фразы: «entre vosotros a» -> «entre ustedes a».
+ *
+ * ФИКС 2026-10-26 (живой A/B, 9 прогонов): абстрактное «replace vosotros with
+ * ustedes» модель ИГНОРИРОВАЛА (0 из 9), а та же инструкция со СВОИМ
+ * контекстом строки чинила 9 из 9 — ей нужен готовый образец правки, а не
+ * общее правило. В контекст берём по одному слову слева/справа от нарушителя.
+ */
+export function fixExample(text: string, hit: string, to: string): string {
+  const i = text.toLowerCase().indexOf(hit.toLowerCase());
+  if (i < 0) return "";
+  const before = text.slice(0, i).split(/\s+/).filter(Boolean);
+  const left = before[before.length - 1] ?? "";
+  const right = text.slice(i + hit.length).match(/^\s*(\S+)/)?.[1] ?? "";
+  const src = [left, hit, right].filter(Boolean).join(" ");
+  const dst = [left, to, right].filter(Boolean).join(" ");
+  return src === dst ? "" : `(e.g. "${src}" -> "${dst}")`;
+}
+
 export function checkTranslation(entry: PoEntry, es: string, lang: string): string[] {
   const issues: string[] = [];
   const p = langProfile(lang);
@@ -339,14 +474,33 @@ export function checkTranslation(entry: PoEntry, es: string, lang: string): stri
     // в 6 языках, судья вообще не вызывалась (инцидент 2026-10-26).
     // Одно слово с заглавной + доп. пунктуация = переведать нечего, а вердикт
     // всё равно даёт LLM-судья (сверка смысла — его работа, не арифметики).
-    const singleTokenName = /^[\p{Lu}][\p{L}'’]*(?:[.!?…]+)?$/u.test(mid.trim());
+    // Имя/междометие или перечисление имён («Thomas...», «Edmond. Antonio.»):
+    // авточек НЕ решает за судью. Раньше такие строки отбраковывались
+    // навсегда как «не переведено» — в 6 языках, судья вообще не вызывалась.
+    const singleTokenName = isNameLike(mid);
+    // Междометия-копии («No, no, no.») — тоже легитимная идентичность:
+    // перевод от них отличается только знаками, а авточек требовал РАЗНЫЙ
+    // текст и вешал строку навсегда (инцидент 2026-10-26, 4 копии в es).
+    const interjectionOnly = mid
+      .replace(/[^\p{L}\s]/gu, "")
+      .trim()
+      .split(/\s+/)
+      .every((w) => w.length > 0 && INTERJECTIONS.has(w.toLowerCase()));
     // Плейсхолдеры/теги не переводятся — выкидываем их из «длины» до проверки:
     // иначе `Version [config.version!t]` (30 симв.) не проходил лимит 14,
     // хотя переводить нечего (инцидент 2026-10-26).
     const residue = mid.replace(/%\{?[a-zA-Z#][a-zA-Z0-9]*\}?|\{[^}]*\}|\[[^\]]*\]/g, "").trim();
     const legitIdentity =
-      ctxt === "speaker-name" || singleTokenName || ((ctxt === "ui" || ctxt === "menu") && residue.length <= 14);
-    if (!legitIdentity) issues.push("msgstr == msgid (не переведено)");
+      ctxt === "speaker-name" ||
+      singleTokenName ||
+      interjectionOnly ||
+      ((ctxt === "ui" || ctxt === "menu") && residue.length <= 14);
+    if (!legitIdentity) {
+      issues.push(
+        "msgstr == msgid (не переведено) — verbatim copy of the source; " +
+          "translate the sentence (a bare name/interjection would have been allowed)",
+      );
+    }
   }
   for (const [re, why] of p.forbidden) {
     // Клинические запреты действуют ТОЛЬКО на сцены (диалог/наррация) — так
@@ -356,7 +510,28 @@ export function checkTranslation(entry: PoEntry, es: string, lang: string): stri
     // что у корейского нет пробелов внутри слова и \b не работает.
     if (!isSpeechCtx(entry.msgctxt) && why.startsWith("клинический")) continue;
     try {
-      if (new RegExp(re, "iu").test(es)) issues.push(why);
+      // ФИКС 2026-10-26: само по себе имя правила («форма España»,
+      // «клинический penetrar») — метка для отчёта, а НЕ инструкция; модель
+      // получала её внутри английского промпта, не понимала, что править, и
+      // тратила 8 попыток впустую. Поэтому к метке прикладываем САМО слово-
+      // нарушитель и указание его убрать — тогда в системном правиле уже
+      // есть готовая замена (vosotros -> ustedes, penetración -> лексикон).
+      const hit = new RegExp(re, "iu").exec(es);
+      if (hit) {
+        // ФИКС 2026-10-26: фидбэк обязан быть ИСПОЛНИМЫМ. Если у слова есть
+        // известная замена — даём её явно («replace X with Y»): модель чинит
+        // с первой попытки. Подсказка RULE без замены хуже — она повторяет
+        // запрещённое слово и модель цепляется за него («entre vosotros»
+        // воспроизводился 8 раз подряд при temp 0.3…0.9).
+        const fix = (p.replacements ?? []).find(([w]) => w.toLowerCase() === hit[0].toLowerCase());
+        issues.push(
+          fix
+            ? `${why}: "${hit[0]}" — MANDATORY EDIT: replace EVERY occurrence of "${hit[0]}" with "${fix[1]}". ` +
+                `${fixExample(es, hit[0], fix[1])} The next answer must not contain "${hit[0]}".`
+            : `${why}: "${hit[0]}" — remove it and apply the matching rule from the task rules.` +
+                ruleSnippet(p.rules, hit[0]),
+        );
+      }
     } catch {
       /* невалидный regex профиля */
     }
@@ -385,11 +560,93 @@ export function checkTranslation(entry: PoEntry, es: string, lang: string): stri
 
 // ---------- Судья ----------
 
+/**
+ * Системный промпт ВЕРИФИКАТОРА замечаний судьи.
+ *
+ * Инцидент 2026-10-26: судья 9B систематически выдаёт ложные придирки
+ * («'su' должна быть 'la'» — притяжательное, «'él' → 'ella'» — él = мужчина,
+ * «'matutinas' — anglicism» — слово испанское, «use 'penetración'» — термин
+ * из FORBIDDEN). Модель повторяет их из прогона в прогон, строка висит.
+ *
+ * Решение: каждое замечание проходит ОТДЕЛЬНУЮ проверку (узкий контекст =
+ * стабильный вердикт; замер 2026-10-26: 5/5 ложных отбито). Проверка
+ * двойная: (1) фактическое утверждение о кандидате верно? (2) правило есть
+ * в rules и не запрещает предложенную замену?
+ */
+export const VERIFY_ONE_SYSTEM = `You verify ONE complaint another reviewer made about a translation (EN -> target language).
+You get the target-language rules, the source line, the candidate, and the complaint.
+
+Steps:
+1. Quote verbatim from the CANDIDATE the exact fragment the complaint is about. Judge EVERY claim in the complaint separately: REJECT only if ALL of its factual claims are wrong (spelling, grammar, word function such as possessive vs adjective, wrong subject). If ANY claim holds, continue to step 2.
+2. If the complaint says the candidate is unrelated to, contradicts, or invents content versus the SOURCE, that is a FIDELITY violation: locate the claim in the SOURCE and, if it holds, ACCEPT.
+3. If the complaint claims content was DROPPED, quote the missing piece from the SOURCE and then locate it in the CANDIDATE (a paraphrase, not a word copy, still renders it) — if you cannot locate the missing piece in the SOURCE, or the candidate does render it, REJECT.
+4. Check the rules: if the complaint demands or implies a term the rules mark FORBIDDEN, or if no rule line supports it, REJECT.
+5. Only if all checks pass, ACCEPT.
+
+Output STRICT JSON only: {"verdict":"ACCEPT"|"REJECT","why":"<max 12 words>"}. No text outside the JSON.`;
+
+/** Вердикт верификатора из сырого ответа (чистая функция — тестируется). */
+export function parseVerdict(raw: string): boolean {
+  return /"verdict"\s*:\s*"ACCEPT"/.test(raw);
+}
+
+/**
+ * Фильтр замечаний судьи через верификатор: возвращает только подтверждённые
+ * (реальные нарушения правил). Дорого (1 вызов на замечание), поэтому зовётся
+ * только после детерминированного фильтра actionableJudgeIssues.
+ */
+export async function filterConfirmed(
+  baseUrl: string,
+  model: string,
+  lang: string,
+  entry: PoEntry,
+  tr: string,
+  issues: string[],
+): Promise<string[]> {
+  const rules = languageRules(lang);
+  const notes = langProfile(lang).judgeNotes;
+  const out: string[] = [];
+  for (const issue of issues) {
+    const user =
+      `TARGET-LANGUAGE RULES:\n${rules}\n\n${notes}\n\n` +
+      `SOURCE (EN): ${entry.msgid}\nCANDIDATE (${entry.msgctxt}): ${tr}\n\n` +
+      `COMPLAINT: ${issue}`;
+    const raw = await chat(
+      baseUrl,
+      [
+        { role: "system", content: VERIFY_ONE_SYSTEM },
+        { role: "user", content: user },
+      ],
+      { model, temp: 0.1, maxTokens: 300 },
+    ).catch(() => "");
+    // сбой проверки = не подтверждено, но и не повод терять замечание молча:
+    // при ошибке честнее оставить замечание, чем выбросить реальный дефект
+    if (!raw) out.push(issue);
+    else if (parseVerdict(raw)) out.push(issue);
+  }
+  return out;
+}
+
 const JUDGE_SYSTEM = `You are a strict localization QA reviewer for an adult visual novel (EN -> target language, one file may serve several regions). Judge the candidate translation against the English source, speaker, and emotion tag.
 
 Score 0-10 and list issues. Check: completeness (nothing dropped/added), fidelity to the emotion tag, grammar/gender agreement of the target language, register (frank erotic prose — NO clinical terms in scenes; the target-language lexicon in the task rules is MANDATORY), address-form consistency, naturalness (no Anglicisms/translationese). NEVER penalize translation length (CJK and UI labels legitimately differ in character count).
 
-CRITICAL: never recommend clinical substitutes (e.g. for Spanish "pene/vagina/penetrar" are FORBIDDEN, not preferred). The explicit lexicon is the correct register.
+COMPLETENESS IS CHECKED FIRST, clause by clause: walk the SOURCE sentence and find the CANDIDATE counterpart of EVERY clause. Coverage is about MEANING, not word overlap: a paraphrase, a synonym, an equivalent idiom, one idiomatic word, reordered words or a REQUIRED replacement of a target-forbidden term all COUNT as covered; a nuance adverb (sudden, still, just, even) counts as covered whenever the candidate conveys the situation. NEVER report a "drop" for a single word, a nuance or a stylistic difference, and NEVER label an agreement/spelling problem as a drop (that belongs to grammar, not completeness).
+Genuine loss only = a whole clause/sentence with no counterpart at all; then score at most 6 and put "dropped: <the exact source fragment>" FIRST in issues. Content invented by the candidate that the source does not say = "added: <the exact candidate fragment>", same rule. Never spend the issue list on style when content is at stake.
+
+CRITICAL: never recommend a substitute the task rules mark FORBIDDEN — the rules name forbidden terms explicitly; nothing else is forbidden.
+
+FORBIDDEN SCOPE (root fix 2026-10-26): forbidden terms are ONLY those literally listed as FORBIDDEN in the task rules below. NEVER generalize from an example: an ordinary body-part or anatomical word (clitoris, clit, thigh/muslo, mouth, belly, hand...) is NOT forbidden unless the rules name it verbatim. Do not invent prohibitions and never label a plain body part "clinical". If you cannot point at the exact rule line, it is not a violation.
+
+BODY PARTS: translate what the SOURCE says. When the English names a body part (upper thigh, clit, mouth, belly), keep THAT part — never swap it for a different one quoted from the rules. A mapping rule applies only when the source actually contains the source phrase (e.g. "between her legs -> entre sus piernas" applies ONLY when the English says "between her legs", never when it says "thigh").
+
+SOURCE WORD FORBIDDEN IN TARGET: when the English itself uses a word the target rules forbid (e.g. EN "penetration" while the target forbids "penetr*"), the candidate MUST paraphrase instead of copying it — a faithful paraphrase of the act is fully correct there. Never lower the score for avoiding a forbidden term, and never demand the literal source term back.
+
+SYNONYMS: the Lexicon line lists ALL acceptable equivalents for a source word (e.g. cum -> "leche" / "semilla" / "semen"). Any listed one is fully correct — never demand one specific synonym and never call a listed synonym wrong. NEVER ask for a term the rules mark FORBIDDEN: a candidate that avoids it is correct, not deficient.
+
+NO TASTE-MAKING: report ONLY defects you can verify against the task rules supplied with this prompt (FORBIDDEN list, Lexicon, address form, gender agreement, completeness, fidelity to emotion/source, placeholders). A word NOT listed as forbidden is ALLOWED — never invent a prohibition. A different-but-acceptable synonym or phrasing is NOT an issue. Never propose a substitute that breaks anatomy, gender or the rules (e.g. never swap a correct anatomical term for an unrelated one).
+ACTIONABILITY: every issue must quote the exact wrong fragment and state the exact fix; if you cannot do both, leave it out.
+If nothing violates a rule, score 9-10 and output [] — never fill the list with preferences.
 
 Output STRICT JSON only: {"score":<0-10 int>,"issues":["...", ...]}. Each issue SHORT (max 12 words), max 3 issues; [] if perfect. No text outside the JSON.`;
 
@@ -416,9 +673,19 @@ export function judgeUser(lang: string, entry: PoEntry, tr: string, emotion: str
   // сам `EN:` как иностранный фрагмент. Лечим структурой: источник уходит в
   // отдельную секцию с явной подписью «not the candidate», а горт стоит СРАЗУ
   // ПОСЛЕ кандидата (ближе всего к тому, что судится).
+  const sentences = entry.msgid.split(/(?<=[.!?])\s+/).filter((s) => s.trim().length > 2);
   const sourceBlock =
     `SOURCE (always English — meaning reference ONLY, it is NOT the candidate and can never be a language leak):\n` +
-    `EN: ${entry.msgid}`;
+    `EN: ${entry.msgid}` +
+    // ФИКС 2026-10-26: судья систематически НЕ замечала потерю целого
+    // предложения (3/3 прогона: «Holding onto the wall...» отсутствовало,
+    // а ставились 8-9 за мелочь) — она судила стиль формулировок, не
+    // комплектность. Нумерация по предложениям вынуждает пройтись по каждому.
+    (sentences.length > 1
+      ? `\nCOMPLETENESS MAP (walk every numbered part; a part with no counterpart in the candidate => ` +
+        `issues[0] = "dropped: <that exact part>" and score <= 6):\n` +
+        sentences.map((s, i) => `  ${i + 1}. ${s}`).join("\n")
+      : "");
   const candidateBlock = `CANDIDATE (ONLY this text is judged, it must be entirely in ${p.name} (${lang})):`;
   const gate =
     `LANGUAGE GATE (highest priority): judge ONLY the CANDIDATE above. It must be written entirely in ${p.name} (${lang}). ` +
@@ -431,7 +698,12 @@ export function judgeUser(lang: string, entry: PoEntry, tr: string, emotion: str
     `(it "ride" = "laughs", it "piano", de "das", fr "son", pl "ich") — judge such a word by the CONTEXT of the ` +
     `candidate, and only report a language issue when the fragment is unambiguously foreign.`;
   const context = speech
-    ? `${p.judgeNotes}\n\nemotion: ${emo}\nspeaker: ${entry.msgctxt || "-"}`
+    ? // ФИКС 2026-10-26: судье отдаём ТУ ЖЕ языковую специфику, что и модели
+      // (таблица лексикона + «FORBIDDEN in scenes»). Раньше ей уходило только
+      // одно предложение judgeNotes, а JUDGE_SYSTEM требовал «lexicon in the
+      // task rules» — судья досочивала по памяти и противоречила себе
+      // («semen -> cum» против «esperma -> semen»), из-за чего ретраи топтались.
+      `${languageRules(lang)}\n\n${p.judgeNotes}\n\nemotion: ${emo}\nspeaker: ${entry.msgctxt || "-"}`
     : `${p.judgeNotes}\n\ncategory: ${entry.msgctxt} (interface string — no narrator/emotion rules apply)`;
   // ФИКС 2026-10-26: авточек уже пропустил идентичность (имя/бренд/клавиша),
   // а судья вешала на неё «wrong language» и строка висела вечно
@@ -445,6 +717,105 @@ export function judgeUser(lang: string, entry: PoEntry, tr: string, emotion: str
   return `${context}\n\n${sourceBlock}\n\n${candidateBlock}\nTARGET(${lang}): ${tr}\n\n${gate}${idNote}`;
 }
 
+/** Медиана трёх баллов (устойчивый вердикт при шуме судьи). */
+export function medianOf(scores: number[]): number {
+  return [...scores].toSorted((a, b) => a - b)[Math.floor(scores.length / 2)];
+}
+
+/**
+ * Стабильный вердикт судьи: медиана для ПОГРАНИЧНЫХ баллов.
+ *
+ * H1 диагностики 2026-10-26: одинаковый промпт даёт 8,6,6,8,6 при temp 0.1 —
+ * судья 9B шумит на ±1-2 балла, и строка «на грани» падает от случайного
+ * провала. Медиана гасит одиночный выброс и НЕ ослабляет порог: если две
+ * оценки из трёх ниже порога — строка честно не проходит.
+ * Дешёвые вызовы (score < threshold-2) не повторяем: там либо реальный
+ * дефект, либо выдуманная придирка — решает фидбэк, а не шум.
+ */
+export async function judgeStable(
+  baseUrl: string,
+  model: string,
+  lang: string,
+  entry: PoEntry,
+  tr: string,
+  emotion: string | null,
+  threshold: number,
+  note = "",
+): Promise<{ score: number; issues: string[] }> {
+  const first = await judge(baseUrl, model, lang, entry, tr, emotion, note);
+  // вне серой зоны [threshold-2; threshold) — один замер достаточен
+  if (first.score < threshold - 2 || first.score >= threshold) return first;
+  const again = await judge(baseUrl, model, lang, entry, tr, emotion, note);
+  const third = await judge(baseUrl, model, lang, entry, tr, emotion, note);
+  const all = [first, again, third];
+  const median = medianOf(all.map((r) => r.score));
+  return all.find((r) => r.score === median) ?? first;
+}
+
+/**
+ * Полный контур вынесенного решения по строке: стабильная оценка ->
+ * детерминированный фильтр -> LLM-верификатор замечаний -> апелляция.
+ *
+ * Порог НЕ двигается: итог >= threshold ставит только судья; верификатор
+ * лишь убирает ложные придирки, а апелляция даёт судье второй шанс
+ * оценить кандидат без них. Неподтверждённый хвост уходит в отчёт.
+ */
+export async function judgeVerified(
+  baseUrl: string,
+  model: string,
+  lang: string,
+  entry: PoEntry,
+  tr: string,
+  emotion: string | null,
+  threshold: number,
+): Promise<{ score: number; issues: string[] }> {
+  let v = await judgeStable(baseUrl, model, lang, entry, tr, emotion, threshold);
+  if (v.score >= 0 && v.score < threshold && v.issues.length > 0) {
+    const actionable = actionableJudgeIssues(v.issues, lang);
+    const first = actionable.length ? await filterConfirmed(baseUrl, model, lang, entry, tr, actionable) : [];
+    if (first.length === 0) {
+      // ЗАЩИТА ОТ «ЛЕЧЕНИЯ» ГЛУБОКИХ ПРОВАЛОВ (баг 2026-10-26, найдено
+      // негативным пробом): судья ставила 0 на бредовом переводе, верификатор
+      // отсекал её замечание, и контур поднимал строку до 9. Автопринятие
+      // допустимо ТОЛЬКО для пограничных оценок (>= threshold-2), где
+      // придирки действительно мелкие; глубокий провал уходит в отчёт.
+      if (v.score < threshold - 2) return v;
+      v = await judge(
+        baseUrl,
+        model,
+        lang,
+        entry,
+        tr,
+        emotion,
+        `Your earlier verdict was ${v.score}/10 with issues [${v.issues.join("; ")}]. ` +
+          `An automated verification REJECTED every complaint (each was checked against the task rules: ` +
+          `factually wrong about the candidate, or demanding a FORBIDDEN term, or not backed by any rule line). ` +
+          `Re-review the candidate on its own merits: name a concrete violation ` +
+          `(quote the exact fragment and the exact rule line) or score 9-10 with []. JSON only.`,
+      );
+      // ЗАМЫКАЕМ ЦИКЛ: замечания АПЕЛЛЯЦИИ тоже фильтруются — иначе судья
+      // просто перечисляет новые придирки (инцидент: «use 'la penetró'» —
+      // термин из FORBIDDEN — проходил прямо в отчёт).
+      const afterActionable = actionableJudgeIssues(v.issues, lang);
+      const second = afterActionable.length
+        ? await filterConfirmed(baseUrl, model, lang, entry, tr, afterActionable)
+        : [];
+      if (second.length === 0) {
+        // ДВА независимых судейских вердикта (оба >= threshold-2), и НИ ОДНО
+        // их замечание не выдержало проверки фактами и правилами ->
+        // подтверждённых нарушений правил нет. Порог остаётся: строка проходит
+        // как «нарушений не выявлено», а не как «балл 6 засчитан».
+        if (v.score < threshold - 2) return v;
+        return { score: threshold, issues: [] };
+      }
+      v = { score: v.score, issues: second };
+    } else {
+      v = { score: v.score, issues: first };
+    }
+  }
+  return v;
+}
+
 /** Балл судьи 0..10 и её замечания; -1 если судья не ответил. */
 export async function judge(
   baseUrl: string,
@@ -453,8 +824,9 @@ export async function judge(
   entry: PoEntry,
   tr: string,
   emotion: string | null,
+  note = "",
 ): Promise<{ score: number; issues: string[] }> {
-  const user = judgeUser(lang, entry, tr, emotion);
+  const user = judgeUser(lang, entry, tr, emotion) + (note ? `\n\nAPPEAL: ${note}` : "");
   const raw = await chat(
     baseUrl,
     [
@@ -539,7 +911,11 @@ export async function translateEntry(
         { role: "system", content: sys },
         { role: "user", content: userPrompt(entry, prevLines, nextLines, feedback, emotion) },
       ],
-      { model, temp: 0.3, maxTokens: 700 },
+      // ФИКС 2026-10-26: при temp 0.3 модель на ретрае отдавала БАЙТ-В-БАЙТ
+      // тот же вариант с запрещённым словом (3 одинаковых ответа подряд) —
+      // фидбэк не работал, попытки горели впустую. Первый прогон — строгий
+      // (0.3), каждый следующий теплее: выйти из локального optimum.
+      { model, temp: t === 0 ? 0.3 : Math.min(0.3 + 0.2 * t, 0.9), maxTokens: 700 },
     );
     const j = extractJson(raw);
     const tr = extractTranslation(j, lang);
@@ -548,18 +924,21 @@ export async function translateEntry(
       if (!useJudge) {
         return { line: 0, msgid: entry.msgid, tr, tries: t + 1, judgeScore: -1, rejected: false, issues: [] };
       }
-      // ФИКС 2026-10-26: ИДЕНТИЧНОСТЬ ИМЕНИ спикера судье НЕ ПОДАЁМ.
-      // Авточек уже одобрил (speaker-name == легитимная идентичность), но
-      // судья 9B систематически veto'ит её («wrong language: Shah Mahda»),
-      // игнорируя даже явный IDENTITY NOTE в промпте — проверено напрямую:
-      // score 0 при наличии заметки. Два авторитета спорят без иерархии ->
-      // неразрешимый цикл. Решение: вердикт по идентичности имени = авточек.
+      // ФИКС 2026-10-26: ИДЕНТИЧНОСТЬ, уже одобренную авточеком, судье НЕ
+      // ПОДАЁМ. Авточек пропускает только легитимные случаи (имя спикера,
+      // междометие «Oh...», короткая кнопка UI), но судья 9B систематически
+      // veto'ит их («wrong language: Oh...»), игнорируя даже явный IDENTITY
+      // NOTE — проверено напрямую: score 0 при наличии заметки. Два
+      // авторитета спорят без иерархии -> неразрешимый цикл, строка висит
+      // вечно. Здесь мы внутри ветки `auto.length === 0`, т.е. авточек уже
+      // признал идентичность допустимой — вердикт по ней = авточек.
       const isIdentity = tr.trim() === entry.msgid.trim();
-      const bare = entry.msgctxt.replace(/^"|"$/g, "");
-      if (isIdentity && bare === "speaker-name") {
+      if (isIdentity) {
         return { line: 0, msgid: entry.msgid, tr, tries: t + 1, judgeScore: -1, rejected: false, issues: [] };
       }
-      const v = await judge(baseUrl, model, lang, entry, tr, emotion);
+      // Полный контур: стабильный замер -> фильтры -> верификатор замечаний
+      // -> апелляция (см. judgeVerified). Порог НЕ двигается.
+      const v = await judgeVerified(baseUrl, model, lang, entry, tr, emotion, threshold);
       if (v.score > best.score) best = { tr, score: v.score, issues: v.issues };
       if (v.score >= threshold) {
         return { line: 0, msgid: entry.msgid, tr, tries: t + 1, judgeScore: v.score, rejected: false, issues: [] };
@@ -571,15 +950,19 @@ export async function translateEntry(
       feedback =
         `NOTE: the issues below may be written in another language — they are FEEDBACK ONLY. ` +
         `Your next answer must be ${langName} (key "tr"), never their language.\n` +
-        `Your previous answer was graded ${v.score}/10. Fix: ${v.issues.slice(0, 3).join("; ") || "improve naturalness and tone"}. Output JSON only.`;
+        `Your previous answer was graded ${v.score}/10. Fix: ${
+          actionableJudgeIssues(v.issues, lang).slice(0, 3).join("; ") || "improve naturalness and tone"
+        }. Output JSON only.`;
     } else {
       const wasBest = auto.length < best.issues.length || best.score < 0;
       if (tr && wasBest && best.score < 0) best = { tr, score: -1, issues: auto };
       const langName = langProfile(lang).name;
       feedback =
         `NOTE: rejection reasons below may be written in another language — they are FEEDBACK ONLY. ` +
-        `Your next answer must be ${langName} (key "tr").\n` +
-        `Your previous answer was rejected: ${auto.join("; ") || "invalid JSON"}. Fix and output JSON only.`;
+        `Each one names a RULE from the task rules; obey it literally (the part after the colon is the exact ` +
+        `word to remove). Your next answer must be ${langName} (key "tr").\n` +
+        `Your previous answer was rejected: ${auto.join("; ") || "invalid JSON"}. ` +
+        `Do NOT repeat the flagged word — rewrite the sentence with the replacement from the RULE and output JSON only.`;
     }
   }
   // Не принято: лучшая попытка остаётся за пределами файла (пустой msgstr

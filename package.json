@@ -39,7 +39,8 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "po:check": "node scripts/po_check.mts",
-    "po:commit": "node scripts/po_commit.mts"
+    "po:commit": "node scripts/po_commit.mts",
+    "po:judge": "node .opencode/skills/renpy-po/po_judge_check.mts"
   },
   "lint-staged": {
     "*.{js,mjs,cjs,ts,tsx,mts,cts}": [

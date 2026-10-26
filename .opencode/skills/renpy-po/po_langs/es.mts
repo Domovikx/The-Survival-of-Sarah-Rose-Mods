@@ -30,6 +30,13 @@ ${EROTIC_NOTE}
     ],
     ["\\bunas? (senos|manos|piernas|nalgas|ojos|orejas)\\b", "число/род: несогласованная форма"],
   ],
+  // Явные замены для фидбэка (см. LangProfile.replacements): без них модель
+  // цеплялась за «entre vosotros» и повторяла его 8 попыток подряд.
+  replacements: [
+    ["vosotros", "ustedes"],
+    ["usteded", "usted"],
+    ["entre sus muslos", "entre sus piernas"],
+  ],
   fewshot: [
     [
       "A complicated flurry of emotions rocked her body as she began to slowly finger herself.",
