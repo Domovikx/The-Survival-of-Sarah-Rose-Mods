@@ -51576,7 +51576,7 @@ msgstr ""
 
 msgctxt "speaker:Marion"
 msgid "Excuse me, Prince, Princess. Duty calls."
-msgstr ""
+msgstr "殿下，公主。职责召唤我。"
 
 msgctxt "speaker:Varga"
 msgid "Excuse me, but can I offer you my cloak?"
@@ -122608,7 +122608,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "No"
-msgstr ""
+msgstr "不"
 
 msgctxt "speaker:Kate"
 msgid "No I didn't drink if that's what you're asking."
@@ -139244,7 +139244,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Reason with him"
-msgstr ""
+msgstr "与他共理"
 
 msgctxt "menu"
 msgid "Reason with him."
@@ -177616,7 +177616,7 @@ msgstr "拯救萨梅拉，介入"
 
 msgctxt "menu"
 msgid "Save Samayra."
-msgstr ""
+msgstr "拯救萨玛拉"
 
 msgctxt "speaker:Narrator"
 msgid "Save a rare few, she could hardly recall one face from the other, as years passed."
@@ -205324,7 +205324,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Sound Volume"
-msgstr ""
+msgstr "音量"
 
 msgctxt "speaker:Sarah"
 msgid "Sounds complicated."
@@ -205356,7 +205356,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Space"
-msgstr ""
+msgstr "空间"
 
 msgctxt "menu"
 msgid "Spare Kate"
@@ -211544,7 +211544,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Test"
-msgstr ""
+msgstr "测试"
 
 msgctxt "menu"
 msgid "Testify against Alaric"
@@ -247720,7 +247720,7 @@ msgstr "声音"
 
 msgctxt "ui"
 msgid "Voice Volume"
-msgstr ""
+msgstr "音量"
 
 msgctxt "speaker:Narrator"
 msgid "Voices."
@@ -254592,7 +254592,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "What if you desire no man?"
-msgstr ""
+msgstr "若你无意于任何男子？"
 
 msgctxt "speaker:Sarah"
 msgid "What if you desire no man?"

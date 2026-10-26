@@ -3404,7 +3404,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "A servant runs into the room, half stumbling, drenched in sweat."
-msgstr "노예가 방으로 들어와서 미친 듯이 땀을 흘리며 걸음을 헛디뎠다."
+msgstr "노예가 방 안으로 넘어오듯 들어왔다. 땀에 젖어 있었다."
 
 msgctxt "speaker:Narrator"
 msgid "A servant, a young woman, entered the room. Her eyes fixed to the floor."
@@ -5264,7 +5264,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "About"
-msgstr ""
+msgstr "정보"
 
 msgctxt "speaker:Gilead"
 msgid "About a month later, I was summoned to the Eternal Court, and I was gifted the greatest blessing of all."
@@ -5576,7 +5576,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Absolutely not!"
-msgstr ""
+msgstr "절대로 안 돼!"
 
 msgctxt "speaker:Marion"
 msgid "Absolutely."
@@ -5640,7 +5640,7 @@ msgstr "결혼을 수락하다"
 
 msgctxt "menu"
 msgid "Accept, dine with the Captain"
-msgstr ""
+msgstr "수락하기, 대장님과 식사"
 
 msgctxt "speaker:Sarah"
 msgid "Accept."
@@ -6972,7 +6972,7 @@ msgstr "동의, 벨몬트보다 니크는 남자가 못 돼"
 
 msgctxt "menu"
 msgid "Agree, don't finish inside."
-msgstr ""
+msgstr "동의, 안으로 끝내지 마"
 
 msgctxt "menu"
 msgid "Agree, let Naydeen teach you"
@@ -11364,7 +11364,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "And Marion was their scion, first amongst all his peers. He walked around the room with a confidence that could only be the result of years of cultivation."
-msgstr ""
+msgstr "마리온은 그들의 후손으로, 모든 동료들 중 가장 앞섰다. 그는 수년의 연마가 빚어낸 자신감으로 방을 거닐었다."
 
 msgctxt "speaker:Sarah"
 msgid "And Marion's family is one of the oldest in Rosanna, and he knows just about everyone. He could be a real help to us."
@@ -19372,7 +19372,7 @@ msgstr ""
 
 msgctxt "speaker:King Orwell Rose"
 msgid "Anyone can be a king in the easy times. It's the bad times that a king needs to be ready for. And your brother isn't ready."
-msgstr "쉬운 시기에 누구나 왕이 될 수 있다. 하지만 나쁜 시기에야말로 왕이 준비되어 있어야 할 때다. 그리고 네 형은 아직 준비가 안 돼."
+msgstr "어떤 사람이라도 왕이 될 수 있습니다. 평온할 때요. 하지만 어려운 시기를 대비하지 못한 당신의 형제는 그렇지 않습니다."
 
 msgctxt "speaker:Sarah"
 msgid "Anyone care for a drink?"
@@ -24596,7 +24596,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Ask her to sneak away with you"
-msgstr ""
+msgstr "그녀와 함께 도망가도록 청하다"
 
 msgctxt "speaker:Sarah"
 msgid "Ask me and I'm yours forever."
@@ -26248,7 +26248,7 @@ msgstr "바텐더"
 
 msgctxt "speaker-name"
 msgid "Barman"
-msgstr "바리스타"
+msgstr "바르맨"
 
 msgctxt "speaker:Barkeeper"
 msgid "Basic dances, nothin fancy. We swap up solo dances and partner dances, keep to the rules, and everyone is gonna have a good time."
@@ -28248,7 +28248,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Behind her, she hears her brother enter the room, and scream."
-msgstr ""
+msgstr "그녀 뒤에서 형이 방으로 들어와 비명을 지르는 소리가 들렸다."
 
 msgctxt "speaker:Narrator"
 msgid "Behind her, the Old Tribesman defied his old age."
@@ -31704,7 +31704,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "But Thomas was difficult. It wasn't that he was stupid, or even that he was lazy. If he was, Sarah thought, that would almost be easier."
-msgstr ""
+msgstr "하지만 토마스는 고집스러웠다. 그가 멍청하거나 게으르다는 뜻은 아니었다. 만약 그랬다면, 사라는 생각했다, 그나마 더 쉬웠을 것이다."
 
 msgctxt "speaker:Narrator"
 msgid "But Vaelen didn't move through it as though it confused him. He moved as though he'd walked the path many times before."
@@ -39120,7 +39120,7 @@ msgstr "캐프틴"
 
 msgctxt "speaker-name"
 msgid "Captain Belmont"
-msgstr "벨몬트 대령"
+msgstr "벨몬트 상사"
 
 msgctxt "speaker:Narrator"
 msgid "Captain Belmont continued to pester her from aboard his ship."
@@ -41968,7 +41968,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Ctrl"
-msgstr ""
+msgstr "Ctrl"
 
 msgctxt "speaker:Sarah"
 msgid "Cultivation?"
@@ -44128,7 +44128,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Do not let him bait you, convince him"
-msgstr "그를 속이지 마라, 설득하라"
+msgstr "그를 속이지 마라. 그를 설득하라."
 
 msgctxt "speaker:Narrator"
 msgid "Do not let him know you."
@@ -45068,7 +45068,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Don't bother arguing with him"
-msgstr ""
+msgstr "그와 다투는 건 소용없어"
 
 msgctxt "speaker:Brigand"
 msgid "Don't bother covering up. I've seen all of it and before long I'll be up inside of you."
@@ -45316,7 +45316,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Don't hold back"
-msgstr ""
+msgstr "멈추지 마세요"
 
 msgctxt "speaker:Alaric"
 msgid "Don't joke about a man's dick like that."
@@ -52088,7 +52088,7 @@ msgstr ""
 
 msgctxt "speaker:Sarah"
 msgid "Father, I can see that something is worrying you. Please, tell me now. You'll sleep better having shared."
-msgstr "아버지, 제가 걱정하시는 것을 보니 알겠습니다. 지금 말씀해 주십시오. 나누어 이야기하면 더 잘 잠들 수 있을 테니까요."
+msgstr "아버지, 걱정하시는 게 보입니다. 지금 말씀해 주십시오. 나누어 말하면 더 잘 잠들 것입니다."
 
 msgctxt "speaker:Sarah"
 msgid "Father..."
@@ -52344,7 +52344,7 @@ msgstr "여병"
 
 msgctxt "speaker-name"
 msgid "Female soldier"
-msgstr ""
+msgstr "여성병사"
 
 msgctxt "speaker:Captain Belmont"
 msgid "Fetch that blondie, and tie up his disloyal dog."
@@ -53252,7 +53252,7 @@ msgstr ""
 
 msgctxt "speaker:King Orwell Rose"
 msgid "Fine, fine. Thomas, find a servant to carry this luggage to my room. And don't let me catch you doing it yourself again."
-msgstr "좋아, 좋아. 토머스야, 이 짐을 내 방까지 실어다 줘. 그리고 내가 다시 잡게 해서는 안 돼."
+msgstr "좋다, 좋다. 토머스야, 이 짐을 내 방까지 실어오게 하라. 그리고 내가 다시 네가 직접 들고 다니는 걸 보게 되면 안 된다."
 
 msgctxt "speaker:Gideon"
 msgid "Fine, forget I ever said anything."
@@ -59156,7 +59156,7 @@ msgstr "벨몬트에게 대출해 주기"
 
 msgctxt "menu"
 msgid "Give Vaelen the real stone."
-msgstr "벨몬트 상병에게 진짜 돌을 주세요."
+msgstr "벨몬트 대장에게 진짜 돌을 주세요."
 
 msgctxt "speaker:Guard"
 msgid "Give any more lip and I'll give you a real bruisin."
@@ -70888,7 +70888,7 @@ msgstr "도움"
 
 msgctxt "menu"
 msgid "Help Alaric"
-msgstr "알라릭에게 도움말 요청"
+msgstr "알라릭에게 도움을 요청하세요"
 
 msgctxt "menu"
 msgid "Help Nick"
@@ -71416,11 +71416,11 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Her brother hugs her, and she hugs him back."
-msgstr "형이 그녀를 안고, 그녀는 형을 껴안았다."
+msgstr "형이 그녀를 안아주자, 그녀는 형을 꼭 껴안았다."
 
 msgctxt "speaker:Narrator"
 msgid "Her brother is still asleep, next to her."
-msgstr "형은 여전히 옆에서 잠이 깊다."
+msgstr "형은 여전히 옆에서 자고 있습니다."
 
 msgctxt "speaker:Narrator"
 msgid "Her brother seemed flustered."
@@ -72072,7 +72072,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Her father is lying in his bed, his skin white as paper, eyes wide open."
-msgstr ""
+msgstr "아버님은 침대에 누워 계십니다. 피부는 종이처럼 하얗고, 눈은 크게 떠 있습니다."
 
 msgctxt "speaker:Narrator"
 msgid "Her father sits towards the center, she and her brother by his side. Strong. Regal. Just as he had been in life."
@@ -77412,7 +77412,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Hold back"
-msgstr ""
+msgstr "잠깐만"
 
 msgctxt "menu"
 msgid "Hold back the spirit"
@@ -81504,7 +81504,7 @@ msgstr ""
 
 msgctxt "speaker:Thomas"
 msgid "I didn't know that."
-msgstr "그도 몰랐군요."
+msgstr "알지 못했군요."
 
 msgctxt "speaker:Sarah"
 msgid "I didn't know the two of you had nicknames for each other."
@@ -82516,7 +82516,7 @@ msgstr ""
 
 msgctxt "speaker:King Orwell Rose"
 msgid "I expected the usual: complaints about road repairs, demands for more money from the city holders, maybe someone trying to ask for your hand in marriage."
-msgstr ""
+msgstr "보통의 일들을 예상했습니다: 도로 수리 불평, 도시 주인들에게 더 많은 돈을 요구하는 소리, 어쩌면 당신의 손을 청혼하려는 사람도 있었을 테니까요."
 
 msgctxt "speaker:Sarah"
 msgid "I fail to see the difference."
@@ -83840,7 +83840,7 @@ msgstr ""
 
 msgctxt "speaker:King Orwell Rose"
 msgid "I hope your brother has been keeping to his studies while I was away."
-msgstr ""
+msgstr "아버님이 떠나신 동안 오를이 형은 공부를 잘 하고 있었나 보네요."
 
 msgctxt "speaker:Sarah"
 msgid "I hoped you'd come."
@@ -92372,7 +92372,7 @@ msgstr ""
 
 msgctxt "speaker:Thomas"
 msgid "I've missed you so much dad!"
-msgstr ""
+msgstr "아버지, 정말 많이 그리웠어요!"
 
 msgctxt "speaker:Marius"
 msgid "I've never been as happy as I've been since I met you."
@@ -98108,7 +98108,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Insist, ask Lady Carolyn about Thomas"
-msgstr ""
+msgstr "카롤린 여자에게 토머스에 관해 간곡히 요청하라"
 
 msgctxt "speaker:Narrator"
 msgid "Inspecting it, over and over again, as though the repeated gesture of it would keep her from thinking about her meeting."
@@ -99160,7 +99160,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Investigate the sound"
-msgstr "음소 조사하기"
+msgstr "소리 추적하기"
 
 msgctxt "speaker:Razaphel"
 msgid "Invisible to them, you can move again their designs."
@@ -106836,7 +106836,7 @@ msgstr "사카르와 산책하기"
 
 msgctxt "menu"
 msgid "Join and dance."
-msgstr ""
+msgstr "카롤린과 함께 춤을 추세요."
 
 msgctxt "menu"
 msgid "Join forces with the mage Order"
@@ -109836,7 +109836,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Keep defending against the orcs"
-msgstr "오rc 를 막아내세요"
+msgstr "오크로부터 방어하기"
 
 msgctxt "menu"
 msgid "Keep drinking"
@@ -110296,7 +110296,7 @@ msgstr "오를 왕은 잠시 자신의 대답을 생각했다."
 
 msgctxt "speaker:Narrator"
 msgid "King Orwell winks at his daughter."
-msgstr ""
+msgstr "킹 오를이는 딸에게 눈짓하며 웃는다."
 
 msgctxt "speaker:Narrator"
 msgid "King Orwell's voice grows louder."
@@ -112072,7 +112072,7 @@ msgstr "케이트 머물게 하기"
 
 msgctxt "menu"
 msgid "Let Varga in"
-msgstr ""
+msgstr "바르가를 들여라"
 
 msgctxt "speaker:Daemon"
 msgid "Let a pack of wild demon Hounds have their way with you?"
@@ -112264,7 +112264,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Let the matter rest"
-msgstr ""
+msgstr "그냥 두고 가자"
 
 msgctxt "menu"
 msgid "Let the matter rest for now"
@@ -113664,7 +113664,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Load"
-msgstr "적재하기"
+msgstr ""
 
 msgctxt "speaker:Sarah"
 msgid "Load the cargo, work the ship, whatever you need. I'll earn my trip the right way."
@@ -116908,7 +116908,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Masturbate"
-msgstr ""
+msgstr "자위"
 
 msgctxt "speaker:Narrator"
 msgid "Matching her, Sarah began to grind her thigh, up and down."
@@ -118084,7 +118084,7 @@ msgstr "카시우스와 만나기"
 
 msgctxt "menu"
 msgid "Meet with Duke Antonio"
-msgstr ""
+msgstr "두크 안토니오와 만남"
 
 msgctxt "menu"
 msgid "Meet with Edmond"
@@ -118672,7 +118672,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Middle Click"
-msgstr ""
+msgstr "중간 클릭"
 
 msgctxt "speaker:Sarah"
 msgid "Might I ask for a bowl of that stew?"
@@ -119916,7 +119916,7 @@ msgstr "마우스 휠 아래로"
 
 msgctxt "ui"
 msgid "Mouse Wheel Up\\nClick Rollback Side"
-msgstr ""
+msgstr "마우스 휠 위로\\n클릭하여 되돌리기"
 
 msgctxt "speaker:Orc"
 msgid "Mouth! Mouth!"
@@ -129028,7 +129028,7 @@ msgstr "그녀에게 권력을 제안하다"
 
 msgctxt "menu"
 msgid "Offer her power over the nobility"
-msgstr "귀족들에게 권력을 부여하다"
+msgstr "귀족들에게 권력을 주십시오"
 
 msgctxt "menu"
 msgid "Offer her wealth"
@@ -135868,7 +135868,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Perhaps, Sarah speculated, it was simply his nature. Too kind to hurt anything, and so too soft for war, even the theory of war."
-msgstr ""
+msgstr "아마도 사라가 추측하듯, 그것은 단순히 그의 성향일 뿐이었다. 어떤 것을 해칠 만큼 너무 친절하고, 전쟁이라든가 전쟁의 이론조차 감당할 만큼 너무 연약했던 것이다."
 
 msgctxt "speaker:Narrator"
 msgid "Perhaps, Sarah thought, if she had hated Xan all this would have been easier."
@@ -136216,7 +136216,7 @@ msgstr "왕관을 당신의 머리에 씌우세요"
 
 msgctxt "menu"
 msgid "Place your hands upon the monolith"
-msgstr "모노리듬에 손을 얹으세요"
+msgstr "모노리트를 손으로 감싸세요"
 
 msgctxt "speaker:Alaric"
 msgid "Places like these are great. Lots of folk wandering around, too busy looking at the wares to pay any mind to their wallets."
@@ -137184,7 +137184,7 @@ msgstr "선호"
 
 msgctxt "ui"
 msgid "Prefs"
-msgstr ""
+msgstr "설정"
 
 msgctxt "speaker:Narrator"
 msgid "Pregnant, to this man. A man who was her senior by at least forty years. The looks that people would give her..."
@@ -137236,7 +137236,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Press the issue"
-msgstr "문제를 해결하세요"
+msgstr "문제 제기"
 
 msgctxt "speaker:Daemon"
 msgid "Press your hands against the walls."
@@ -138836,7 +138836,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Reach out and grab Kate's hand."
-msgstr "케이特的 손을 잡아라."
+msgstr "케이트의 손을 잡아라."
 
 msgctxt "speaker:Metis"
 msgid "Reach out and speak to it in a way that it might understand, and lure it."
@@ -139324,7 +139324,7 @@ msgstr "폐하를 거절하십시오"
 
 msgctxt "menu"
 msgid "Refuse him; I don't see you like that"
-msgstr ""
+msgstr "거절해. 네가 그런 사람이라고는 생각하지 않아"
 
 msgctxt "menu"
 msgid "Refuse his proposal"
@@ -139380,7 +139380,7 @@ msgstr "거절하면 그의 지지를 잃습니다"
 
 msgctxt "menu"
 msgid "Refuse, only give them medical supplies"
-msgstr ""
+msgstr "의료품만 주기로 거절"
 
 msgctxt "menu"
 msgid "Refuse, scold him"
@@ -139392,7 +139392,7 @@ msgstr "거절, 포위 공격을 시작하라"
 
 msgctxt "menu"
 msgid "Refuse, you don't need her vote"
-msgstr ""
+msgstr "거절하시오. 그녀의 표는 필요 없습니다."
 
 msgctxt "speaker:Narrator"
 msgid "Refusing the Khan's request was no option, not even for someone as Jaeid, let alone for a slave like her."
@@ -148556,7 +148556,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Sarah embraces her father, hugging him more tightly than she herself had even expected, holding him."
-msgstr ""
+msgstr "사라가 아버지를 껴안았다. 예상했던 것보다 훨씬 더 단단히 그를 안고 있었다."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah entered her own stance, raising the dulled training blade in front of her."
@@ -156204,7 +156204,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Sarah keeps hugging her brother."
-msgstr "사라가 형을 껴안고 있다."
+msgstr "사라가 형을 꼭 안고 있다."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah keeps shaking her head."
@@ -156556,7 +156556,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Sarah kneels by the edge of the bed and reaches out to hold her father's hand."
-msgstr ""
+msgstr "사라가 침대 가장자리로 무릎을 꿇고 아버지의 손을 잡으려 뻗었다."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah knelt down beside him, putting one arm around him."
@@ -158268,7 +158268,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Sarah lets out a high-pitched scream and spins around."
-msgstr ""
+msgstr "사라가 비명을 지르고 뒤를 돌아섰다."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah lets out a loud moan."
@@ -160252,7 +160252,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Sarah looks at her brother, his eyes fixed to the floor."
-msgstr "사라가 그녀의 형을 바라보았다. 그의 시선은 바닥에 고정되어 있었다."
+msgstr "사라가 그녀의 형을 바라보았다. 그의 눈은 바닥에 고정되어 있었다."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah looks at her old friend. All grown up, but it was like she never left."
@@ -160296,7 +160296,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Sarah loses control."
-msgstr ""
+msgstr "사라가 통제력을 잃었다."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah lost any track of time as she worked tirelessly to keep the flow of ships going."
@@ -162440,7 +162440,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Sarah politely smiled as she listened to Marion complain. From Marion, even a little could be too much."
-msgstr "마리온의 불평을 들어주며 마리는 예의 바르게 미소 지었다. 마리에게 있어 마리온의 작은 말 한마디조차 너무 많은 것이었으니까."
+msgstr "마리온의 불평을 경청하며 사라는 예의를 다해 미소 지었습니다. 마리온에게 있어 작은 것조차 너무 많은 것이었죠."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah pounded her fist into the orc's muscle, knowing that it didn't do anything to him."
@@ -168576,7 +168576,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Sarah stares at the ornate ceiling. Her brother soundly asleep next to her."
-msgstr ""
+msgstr "사라가 화려한 천장을 응시한다. 그녀 옆에 그녀의 형은 깊게 잠이 들었다."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah stares at the woman, trying to figure out how she knows her."
@@ -175580,7 +175580,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Sarah waves to her brother."
-msgstr "사라가 형을 향해 손을 흔든다."
+msgstr "사라가 형을 향해 손을 흔들었다."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah weaved her energy into a spike, all that she could bend and forge into it she did, and raised it up."
@@ -178360,7 +178360,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Send him back to the deserts he crawled out of."
-msgstr ""
+msgstr "사막에서 기어 나온 그에게 돌려보내라."
 
 msgctxt "speaker:Sarah"
 msgid "Send him in."
@@ -178404,7 +178404,7 @@ msgstr ""
 
 msgctxt "speaker:Sarah"
 msgid "Seriously, Thomas, you need to go to your room and get dressed before Dad comes and drags you to the banquet."
-msgstr ""
+msgstr "진지하게 말해, 토머스야. 아빠가 연회를 위해 너를 끌려가기 전에 방으로 가서 옷을 입어야 해."
 
 msgctxt "speaker:Sarah"
 msgid "Seriously, can't you tell me?"
@@ -178412,7 +178412,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Servant"
-msgstr "종이"
+msgstr ""
 
 msgctxt "speaker:Sarah"
 msgid "Servant girl?"
@@ -178424,7 +178424,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Servants"
-msgstr "종부"
+msgstr ""
 
 msgctxt "speaker:Woman"
 msgid "Servants go missin and each week the tryin to sucker new fools workin there."
@@ -178632,7 +178632,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Share a drink with him"
-msgstr ""
+msgstr "그와 술 한 잔 마시다"
 
 msgctxt "speaker:Sarah"
 msgid "Share it?"
@@ -185728,7 +185728,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "She had hoped to read the books on his behalf and give Thomas a summary so he could at least learn something."
-msgstr "그녀는 그가 읽을 책을 대신 읽어주고 요한에게 요약해 주어 최소한 무언가를 배울 수 있게 해 줄 수 있기를 바랐습니다."
+msgstr "그의 대신에 책을 읽고 요약을 해 주어서, 그가 적어도 무언가를 배울 수 있었으면 좋았을 텐데."
 
 msgctxt "speaker:Narrator"
 msgid "She had hoped to sound strong, confident. Instead, her voice came out soft."
@@ -192716,7 +192716,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "She sees her brother, looking at her, confused, as if he can't understand the words."
-msgstr "그녀는 자신을 바라보는 형을 보았습니다. 혼란스러워하며, 마치 그 말을 이해하지 못하는 듯했습니다."
+msgstr "그녀는 자신을 바라보며 혼란스러워하는 형을 본다."
 
 msgctxt "speaker:Narrator"
 msgid "She sees herself bury some of them in battle."
@@ -192768,7 +192768,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "She sees the nobles react: some in anger, some turned white."
-msgstr "贵族们做出了反应：有的愤怒，有的吓得脸色苍白。"
+msgstr "그녀는 귀족들의 반응을 목격합니다. 어떤 이는 분노하고, 어떤 이는 창백해집니다."
 
 msgctxt "speaker:Narrator"
 msgid "She sees the world continue to spin around her, her dress fluttering wildly in the wind as she descends."
@@ -193712,7 +193712,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "She stays with him until nightfall. Until the servants are forced to carry her away."
-msgstr ""
+msgstr "그녀는 밤이 되자 그를 떠나지 않았다. 종들이 그녀를 강제로 데려가게 될 때까지."
 
 msgctxt "speaker:Narrator"
 msgid "She steeled her face, revealing nothing to him."
@@ -198604,7 +198604,7 @@ msgstr ""
 
 msgctxt "speaker:Thomas"
 msgid "Show off."
-msgstr "자세히 보여줘!"
+msgstr "자랑 좀 해봐."
 
 msgctxt "speaker:Sarah"
 msgid "Show that dick! Show that dick!"
@@ -199528,7 +199528,7 @@ msgstr "건너뛰기"
 
 msgctxt "ui"
 msgid "Skips dialogue while held down."
-msgstr "按住可跳过对话。"
+msgstr "按住时跳过对话。"
 
 msgctxt "speaker:Narrator"
 msgid "Slack jawed, she could only slightly turn her eyes and saw that the smoke produced in Alaric, the same sensations."
@@ -201020,7 +201020,7 @@ msgstr ""
 
 msgctxt "speaker:Thomas"
 msgid "So busy."
-msgstr "너도 바빠?"
+msgstr "이렇게 바빠."
 
 msgctxt "speaker:Marius"
 msgid "So by the time I looked up and thought about a family of my own, most of the women in town had already settled."
@@ -205452,7 +205452,7 @@ msgstr ""
 
 msgctxt "speaker:King Orwell Rose"
 msgid "Speaking of growing up, have you seen..."
-msgstr ""
+msgstr "자라나는 것에 대해 이야기하자면, 너는 ... 본 적이 있니?"
 
 msgctxt "speaker:Jaeid"
 msgid "Speaking of her, where is Jasmine?"
@@ -205944,7 +205944,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Standing in the corner of her room is her brother, Thomas."
-msgstr "방 구석에 서 있는 그녀의 형, 토머스다."
+msgstr "방 구석에 그녀의 형인 토머스 서 있다."
 
 msgctxt "speaker:Narrator"
 msgid "Standing in the corner, she raised her face and looked on."
@@ -206200,7 +206200,7 @@ msgstr "머물기"
 
 msgctxt "menu"
 msgid "Stay alone"
-msgstr ""
+msgstr "혼자 남기세요"
 
 msgctxt "menu"
 msgid "Stay alone in the cabin"
@@ -206260,7 +206260,7 @@ msgstr "집에 있으세요"
 
 msgctxt "menu"
 msgid "Stay in the camp"
-msgstr "영진에 머물다"
+msgstr "캠프에 머무르기"
 
 msgctxt "speaker:Marion"
 msgid "Stay like that."
@@ -208312,7 +208312,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Submit and go to the citadel"
-msgstr ""
+msgstr "성전으로 제출하기"
 
 msgctxt "menu"
 msgid "Submit to Marion"
@@ -210584,7 +210584,7 @@ msgstr "탭"
 
 msgctxt "speaker-name"
 msgid "Tailor"
-msgstr ""
+msgstr "수선사"
 
 msgctxt "menu"
 msgid "Take Samayra back to your tent"
@@ -211060,11 +211060,11 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Tell Garret about Thomas"
-msgstr "토머스에게 말하기"
+msgstr "Garret에게 Thomas에 대해 말하기"
 
 msgctxt "menu"
 msgid "Tell Jaeid about what happened at the market"
-msgstr ""
+msgstr "Jaeid 에게 시장 일 보고하기"
 
 msgctxt "menu"
 msgid "Tell Kate to stop it, seriously"
@@ -211076,7 +211076,7 @@ msgstr "마리우스에게 진실을 말하라"
 
 msgctxt "menu"
 msgid "Tell Samayra about Thomas"
-msgstr "Thomas 에게 말하기"
+msgstr "토머스에게 말하기"
 
 msgctxt "menu"
 msgid "Tell Varga what you were saying"
@@ -213932,7 +213932,7 @@ msgstr ""
 
 msgctxt "speaker:Sarah"
 msgid "That's not true. He told me how difficult it was, growing up under his father. How nothing he ever did was good enough."
-msgstr ""
+msgstr "그건 사실이 아니야. 그가 아버지의 밑에서 자라면서 얼마나 힘들었는지, 그가 한 일이 하나도 훌륭하지 않았다고 말했어."
 
 msgctxt "speaker:Thomas"
 msgid "That's not what I meant!"
@@ -217388,7 +217388,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "The court nobles were amongst the first. Always priding themselves on their own importance, each representing an important family."
-msgstr ""
+msgstr "법원 귀족들이 먼저 도착했습니다. 자신의 위대함을 항상 자랑하며, 각자 중요한 가문을 대표하고 있었습니다."
 
 msgctxt "speaker:Judge"
 msgid "The court of Lethram finds this evidene compelling. Does the defendant wish to offer up any counter evidence?"
@@ -240800,7 +240800,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Thomas casually drops the tome back on the desk."
-msgstr "톰스가 책상을 가볍게 놓아두었다."
+msgstr "토머스 는 책상을 가볍게 툭 치며 책을 내려놓았다."
 
 msgctxt "speaker:Narrator"
 msgid "Thomas chortled."
@@ -240864,7 +240864,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Thomas grunts, acknowledging he's awake but hoping to be spared the day's official events."
-msgstr ""
+msgstr "토머스 씨, 깨어 계시군요. 오늘 공식 행사만은 넘겨주실 수 있기를 바란답니다."
 
 msgctxt "speaker:Narrator"
 msgid "Thomas had set out earlier in the day with Marion and an entourage to go stag hunting in the royal forest."
@@ -241140,7 +241140,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Thomas storms off, angrily muttering to himself."
-msgstr ""
+msgstr "토머스 화난 채로 자기 자신에게 뭐라고 중얼거리며 사라졌습니다."
 
 msgctxt "speaker:Narrator"
 msgid "Thomas strolled into the great hall, stopping next to his sister."
@@ -241220,7 +241220,7 @@ msgstr ""
 
 msgctxt "speaker:Sarah"
 msgid "Thomas wasn't wrong. These books are very dry."
-msgstr "토머스 다행이다. 이 책들은 정말 건조하군."
+msgstr "토머스도 틀리지 않았다. 이 책들은 정말 지루하군."
 
 msgctxt "speaker:Narrator"
 msgid "Thomas waved his hand."
@@ -241236,7 +241236,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Thomas winks at his sister."
-msgstr ""
+msgstr "토머스 형이 여동생에게 눈웃음을 지었다."
 
 msgctxt "speaker:Sarah"
 msgid "Thomas! My brother! Your king! They've abandoned any sense of honour or decency, for what!?"
@@ -245012,11 +245012,11 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Try to get some sleep."
-msgstr ""
+msgstr "잠을 좀 자세요"
 
 msgctxt "speaker:Sarah"
 msgid "Try to go easy on him Father. I read some of those books on military strategy you gave him. They're very boring."
-msgstr ""
+msgstr "아버님, 그분께 조금 더 관대하게 대해주세요. 전 아버님께서 주신 군사 전략 책들 중 일부 읽었거든요. 정말 지루하네요."
 
 msgctxt "menu"
 msgid "Try to outmanoeuvre her"
@@ -245024,7 +245024,7 @@ msgstr "그녀를 속여 보자"
 
 msgctxt "menu"
 msgid "Try to reason with them"
-msgstr ""
+msgstr "그들과 논리적으로 설득해 보자"
 
 msgctxt "menu"
 msgid "Try to speak to them"
@@ -249192,7 +249192,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "We cannot put ourselves above the rest of the country; let the troops stay in the districts."
-msgstr ""
+msgstr "국가 전체를 위해 스스로를 우위에 둘 수 없습니다. 병사들을 지역대에 머물게 하십시오."
 
 msgctxt "speaker:Cassius"
 msgid "We cannot receive an appointment with him."
@@ -249968,7 +249968,7 @@ msgstr ""
 
 msgctxt "speaker:Sarah"
 msgid "We see how hard you work for us, for everyone, Father. Just remember to also think about yourself sometimes."
-msgstr "우리가 아버지를 위해, 그리고 모든 사람을 위해 얼마나 열심히 일하는지 잘 알고 있어요. 가끔은 아버지 자신을 생각해도 될 거예요."
+msgstr "아버님, 저희와 모든 이를 위해 얼마나 열심히 일하는지 우리는 잘 알고 있습니다. 때때로 자신도 고려해 주시기를 바랍니다."
 
 msgctxt "speaker:King-On-The-Outside"
 msgid "We seek no peace. No treaty. No compromise."
@@ -264912,7 +264912,7 @@ msgstr ""
 
 msgctxt "speaker:Thomas"
 msgid "Yeah, I know, but sometimes it just gets a bit much. Read this, train that, study such. Like, no matter how much I try, I just can't be like him, Sarah."
-msgstr ""
+msgstr "네 알지만 가끔은 정말 견딜만하지 않아. 이거 읽어봐, 그거 훈련해봐, 저런 거 공부해봐. 아무리 노력해도 내가 그가 될 순 없잖아, 사라."
 
 msgctxt "speaker:Samayra"
 msgid "Yeah, I know."
@@ -270440,7 +270440,7 @@ msgstr ""
 
 msgctxt "speaker:King Orwell Rose"
 msgid "You know that every year I visit a different part of the kingdom, and this year, I went to see the eastern provinces."
-msgstr ""
+msgstr "알고 있죠, 매년 왕국의 다른 지역을 방문하고 올해는 동부 지방을 다녀왔어요."
 
 msgctxt "speaker:Kim"
 msgid "You know that last girl that was in the bunk next to me?"
@@ -275856,7 +275856,7 @@ msgstr ""
 
 msgctxt "speaker:King Orwell Rose"
 msgid "Your brother will be king one day, and when that day comes he needs to be ready."
-msgstr ""
+msgstr "형님은 언젠가 왕이 되실 테니, 그날을 대비하셔야 합니다."
 
 msgctxt "speaker:Vaelen"
 msgid "Your brother, King Thomas, rallied his forces to meet them on the battlefield..."
@@ -276476,7 +276476,7 @@ msgstr "%A 년 %B 월 %d 일 %H 시 %M 분"
 
 msgctxt "ui"
 msgid "{#quick_page}Q"
-msgstr ""
+msgstr "{#quick_page}Q"
 
 msgctxt "speaker:Narrator"
 msgid "{i}Composure{/i}. She reminded herself in the voice of her father."

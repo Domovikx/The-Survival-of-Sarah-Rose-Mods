@@ -210927,7 +210927,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Talk to the male soldier"
-msgstr ""
+msgstr "Поговори с солдатом"
 
 msgctxt "speaker:Sarah"
 msgid "Talk. Don't talk. I'm not going anywhere."
