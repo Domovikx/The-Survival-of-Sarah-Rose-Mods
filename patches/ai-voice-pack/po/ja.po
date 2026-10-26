@@ -115096,7 +115096,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\\n\\n[renpy.license!t]"
-msgstr ""
+msgstr "{a=https://www.renpy.org/}Ren'Py{/a} で作成 [renpy.version_only].\\n\\n[renpy.license!t]"
 
 msgctxt "speaker:Narrator"
 msgid "Madly, the two lovers collapsed into a world of their own."
@@ -244064,7 +244064,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Toggles assistive {a=https://www.renpy.org/l/voicing}self-voicing{/a}."
-msgstr ""
+msgstr "補助的な{a=https://www.renpy.org/l/voicing}音声{/a}を切り替えます。"
 
 msgctxt "ui"
 msgid "Toggles dialogue skipping."

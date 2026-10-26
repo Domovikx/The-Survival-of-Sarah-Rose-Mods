@@ -44148,7 +44148,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Do not punish Oliver"
-msgstr ""
+msgstr "Não puna Oliver"
 
 msgctxt "speaker:Razaphel"
 msgid "Do not stop, do not pause, do not speak. Seize the stone and immediately run back here."

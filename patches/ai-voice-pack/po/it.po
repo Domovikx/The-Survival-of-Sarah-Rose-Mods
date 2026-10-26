@@ -79376,7 +79376,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Hugh"
-msgstr ""
+msgstr "Hugh"
 
 msgctxt "speaker:Narrator"
 msgid "Hugh closed the door behind him and began to take his clothes off."
@@ -119908,7 +119908,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Mouse"
-msgstr ""
+msgstr "Mouse"
 
 msgctxt "ui"
 msgid "Mouse Wheel Down"
@@ -178576,7 +178576,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Shah Mahda"
-msgstr ""
+msgstr "Shah Mahda"
 
 msgctxt "speaker:Mythran Prince"
 msgid "Shah Mahda! Come out of your little rat hiding hole before I send in my men to drag you out like the vermin you are."
@@ -198692,7 +198692,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Siege crew"
-msgstr ""
+msgstr "Siege crew"
 
 msgctxt "speaker:Narrator"
 msgid "Sighing deeply from the exhaustion, she remained on all fours."
@@ -211544,7 +211544,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Test"
-msgstr ""
+msgstr "Test"
 
 msgctxt "menu"
 msgid "Testify against Alaric"
@@ -247728,7 +247728,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Voidling"
-msgstr ""
+msgstr "Voidling"
 
 msgctxt "speaker:Narrator"
 msgid "Voidlings of differing shapes and sizes, rampaging throught the city."

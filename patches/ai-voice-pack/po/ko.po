@@ -109928,7 +109928,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Keep them as our hostages."
-msgstr ""
+msgstr "인질로 두라."
 
 msgctxt "menu"
 msgid "Keep things modest."
@@ -244064,7 +244064,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Toggles assistive {a=https://www.renpy.org/l/voicing}self-voicing{/a}."
-msgstr ""
+msgstr "자음 기능 {a=https://www.renpy.org/l/voicing}스스로 발음{/a} 전환"
 
 msgctxt "ui"
 msgid "Toggles dialogue skipping."

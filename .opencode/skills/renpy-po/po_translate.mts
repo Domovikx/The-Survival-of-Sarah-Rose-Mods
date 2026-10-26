@@ -239,9 +239,27 @@ export function userPrompt(
   } else {
     // UI/menu/speaker-name (демо-e2e, 2026-10-25): никакой выдуманной эмоции
     // диктора и бессмысленного «speaker: menu» — строка переводится как интерфейс.
-    parts.push(
-      `category: ${entry.msgctxt} — interface string (menu button / label / name): translate as concise UI copy, no narrator voice, no emotion`,
-    );
+    const bare = entry.msgctxt.replace(/^"|"$/g, "");
+    if (bare === "speaker-name") {
+      // ФИКС 2026-10-26: имя персонажа НЕ переводим. Раньше промпт велел
+      // «translate as concise UI copy» — и модель выдавала бред вроде
+      // Hugh -> «abbracciare insieme per scaldarsi», судья справедливо
+      // отклоняла, строка висела навсегда (5 штук).
+      parts.push(
+        `category: speaker-name — this is a CHARACTER NAME. Do NOT translate it, ` +
+          `do NOT paraphrase or transliterate: output the name exactly as it is given, nothing else. No emotion.`,
+      );
+    } else {
+      // ФИКС 2026-10-26: короткие UI-надписи модель любила оставлять
+      // по-английски (Mouse/Transitions -> отказ судьи -> вечный цикл).
+      // Говорим прямо: надпись переводится, кроме случая, когда слово
+      // совпадает с целевым (Test в немецком и т.п.).
+      parts.push(
+        `category: ${entry.msgctxt} — interface string (menu button / label): translate it into the target ` +
+          `language as concise UI copy (short labels are translated too — do NOT keep the English unless the ` +
+          `word is written the same in the target language), no narrator voice, no emotion`,
+      );
+    }
   }
   parts.push(`EN: ${JSON.stringify(entry.msgid).slice(1, -1)}`);
   if (next.length) parts.push("", "CONTEXT (following lines):", ...next);
@@ -322,11 +340,21 @@ export function checkTranslation(entry: PoEntry, es: string, lang: string): stri
     // Одно слово с заглавной + доп. пунктуация = переведать нечего, а вердикт
     // всё равно даёт LLM-судья (сверка смысла — его работа, не арифметики).
     const singleTokenName = /^[\p{Lu}][\p{L}'’]*(?:[.!?…]+)?$/u.test(mid.trim());
+    // Плейсхолдеры/теги не переводятся — выкидываем их из «длины» до проверки:
+    // иначе `Version [config.version!t]` (30 симв.) не проходил лимит 14,
+    // хотя переводить нечего (инцидент 2026-10-26).
+    const residue = mid.replace(/%\{?[a-zA-Z#][a-zA-Z0-9]*\}?|\{[^}]*\}|\[[^\]]*\]/g, "").trim();
     const legitIdentity =
-      ctxt === "speaker-name" || singleTokenName || ((ctxt === "ui" || ctxt === "menu") && mid.trim().length <= 14);
+      ctxt === "speaker-name" || singleTokenName || ((ctxt === "ui" || ctxt === "menu") && residue.length <= 14);
     if (!legitIdentity) issues.push("msgstr == msgid (не переведено)");
   }
   for (const [re, why] of p.forbidden) {
+    // Клинические запреты действуют ТОЛЬКО на сцены (диалог/наррация) — так
+    // и написано в COMMON: «FORBIDDEN in scenes». На menu/ui это ловушки на
+    // законные слова: инцидент 2026-10-26, ko «인질» (= hostage, меню
+    // «Keep them as our hostages») матчился как «клинический 질», потому
+    // что у корейского нет пробелов внутри слова и \b не работает.
+    if (!isSpeechCtx(entry.msgctxt) && why.startsWith("клинический")) continue;
     try {
       if (new RegExp(re, "iu").test(es)) issues.push(why);
     } catch {
@@ -405,7 +433,16 @@ export function judgeUser(lang: string, entry: PoEntry, tr: string, emotion: str
   const context = speech
     ? `${p.judgeNotes}\n\nemotion: ${emo}\nspeaker: ${entry.msgctxt || "-"}`
     : `${p.judgeNotes}\n\ncategory: ${entry.msgctxt} (interface string — no narrator/emotion rules apply)`;
-  return `${context}\n\n${sourceBlock}\n\n${candidateBlock}\nTARGET(${lang}): ${tr}\n\n${gate}`;
+  // ФИКС 2026-10-26: авточек уже пропустил идентичность (имя/бренд/клавиша),
+  // а судья вешала на неё «wrong language» и строка висела вечно
+  // (Test, Mouse, Shah Mahda). Один разрешает, второй vetoes — цикл неразрешим.
+  const identity = tr.trim() === entry.msgid.trim();
+  const idNote = identity
+    ? `\n\nIDENTITY NOTE: the CANDIDATE is identical to the SOURCE. This identity was ALREADY vetted by the pipeline ` +
+      `(character name, brand, UI key, or a word written the same in ${p.name}) — it is NOT a language leak. ` +
+      `Do NOT report "wrong language" for it; judge only completeness and terminology.`
+    : "";
+  return `${context}\n\n${sourceBlock}\n\n${candidateBlock}\nTARGET(${lang}): ${tr}\n\n${gate}${idNote}`;
 }
 
 /** Балл судьи 0..10 и её замечания; -1 если судья не ответил. */
@@ -487,12 +524,20 @@ export async function translateEntry(
   const sys = systemPrompt(lang);
   let feedback = "";
   let best = { tr: "", score: -1, issues: [] as string[] };
+  // ФИКС 2026-10-26: для ИМЕНИ спикера контекст соседних строк УБИРАЕМ.
+  // Иначе модель, увидев рядом реплику «Prince Shah Mahda! Sortez de votre
+  // tanière…», переводила ЕЁ, а не сам msgid — и получалось длинное
+  // французское предложение вместо имени (fr/it, 2 шт).
+  const bareCtxt = entry.msgctxt.replace(/^"|"$/g, "");
+  const ctxOff = bareCtxt === "speaker-name";
+  const prevLines = ctxOff ? [] : prev;
+  const nextLines = ctxOff ? [] : next;
   for (let t = 0; t < maxTries; t++) {
     const raw = await chat(
       baseUrl,
       [
         { role: "system", content: sys },
-        { role: "user", content: userPrompt(entry, prev, next, feedback, emotion) },
+        { role: "user", content: userPrompt(entry, prevLines, nextLines, feedback, emotion) },
       ],
       { model, temp: 0.3, maxTokens: 700 },
     );
@@ -501,6 +546,17 @@ export async function translateEntry(
     const auto = checkTranslation(entry, tr, lang);
     if (tr && auto.length === 0) {
       if (!useJudge) {
+        return { line: 0, msgid: entry.msgid, tr, tries: t + 1, judgeScore: -1, rejected: false, issues: [] };
+      }
+      // ФИКС 2026-10-26: ИДЕНТИЧНОСТЬ ИМЕНИ спикера судье НЕ ПОДАЁМ.
+      // Авточек уже одобрил (speaker-name == легитимная идентичность), но
+      // судья 9B систематически veto'ит её («wrong language: Shah Mahda»),
+      // игнорируя даже явный IDENTITY NOTE в промпте — проверено напрямую:
+      // score 0 при наличии заметки. Два авторитета спорят без иерархии ->
+      // неразрешимый цикл. Решение: вердикт по идентичности имени = авточек.
+      const isIdentity = tr.trim() === entry.msgid.trim();
+      const bare = entry.msgctxt.replace(/^"|"$/g, "");
+      if (isIdentity && bare === "speaker-name") {
         return { line: 0, msgid: entry.msgid, tr, tries: t + 1, judgeScore: -1, rejected: false, issues: [] };
       }
       const v = await judge(baseUrl, model, lang, entry, tr, emotion);

@@ -463,6 +463,43 @@ test("pl: польское «ich» не считается немецким (к�
   );
 });
 
+test("userPrompt: имя персонажа НЕ подаётся как «переведи как UI» (фикс 2026-10-26)", () => {
+  // Раньше speaker-name получал «translate as concise UI copy» — модель
+  // переводила имена в бред (Hugh -> «abbracciare insieme per scaldarsi»),
+  // судья отклоняла, строка висела (5 штук).
+  const name = mkEntry({ msgctxt: '"speaker-name"', msgid: "Hugh" });
+  const up = userPrompt(name, [], [], "", null);
+  assert.match(up, /CHARACTER NAME/);
+  assert.match(up, /Do NOT translate it/);
+  assert.ok(!up.includes("translate as concise UI copy"), "для имени не должно быть команды переводить");
+
+  // а menu/ui по-прежнему переводятся как интерфейс (и короткие — тоже)
+  const ui = mkEntry({ msgctxt: '"ui"', msgid: "Transitions" });
+  const upUi = userPrompt(ui, [], [], "", null);
+  assert.match(upUi, /concise UI copy/);
+  assert.match(upUi, /do NOT keep the English/, "короткие надписи обязаны переводиться");
+});
+
+test("клинические запреты не действуют на menu/ui (инцидент ko «인질» 2026-10-26)", () => {
+  // Паттерн ko «질(?!...)» не имеет границ: внутри слова «인질» (= hostage)
+  // он матчился как «клинический», и меню «Keep them as our hostages» вечно
+  // отбраковывалось. COMMON говорит «FORBIDDEN in scenes» — значит клинике
+  // место только в диалоге/наррации.
+  const menu = mkEntry({ msgctxt: '"menu"', msgid: "Keep them as our hostages." });
+  assert.deepEqual(
+    checkTranslation(menu, "그들을 우리 인질로 남겨 둔다.", "ko"),
+    [],
+    "меню не должно ловиться на клинике",
+  );
+
+  // а в сцене клинический запрет обязан работать
+  const scene = mkEntry({ msgctxt: '"speaker:Narrator"', msgid: "He pressed into her." });
+  assert.ok(
+    checkTranslation(scene, "그가 그녀의 질 안으로 밀어 넣었다.", "ko").some((i) => i.includes("клинический")),
+    "в сцене клинический паттерн обязан срабатывать",
+  );
+});
+
 test("плейсхолдеры: {#...} теги Ren'Py ловятся (бага E2E 2026-10-26)", () => {
   // Раньше regex требовал букву сразу после "{", поэтому {#file_time}
   // не считался плейсхолдером и ПРИНИМАЛСЯ перевод, выкинувший его.

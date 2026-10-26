@@ -211544,7 +211544,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Test"
-msgstr ""
+msgstr "Test"
 
 msgctxt "menu"
 msgid "Testify against Alaric"
@@ -215292,7 +215292,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "The Official"
-msgstr ""
+msgstr "The Official"
 
 msgctxt "speaker:Narrator"
 msgid "The Old Tribesman grabbed her by her arm and pulled her up."
@@ -220816,7 +220816,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "The hunger is too much, dance for the food."
-msgstr ""
+msgstr "Głód jest zbyt wielki, tańcz dla jedzenia."
 
 msgctxt "speaker:Narrator"
 msgid "The husband of her dreams had somehow stepped into the real world."
@@ -274408,7 +274408,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "You're looking for Faded Stars Ink"
-msgstr ""
+msgstr "Szukasz Faded Stars Ink"
 
 msgctxt "speaker:Sarah"
 msgid "You're looking for Faded Stars Ink"

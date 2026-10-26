@@ -178576,7 +178576,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Shah Mahda"
-msgstr ""
+msgstr "Shah Mahda"
 
 msgctxt "speaker:Mythran Prince"
 msgid "Shah Mahda! Come out of your little rat hiding hole before I send in my men to drag you out like the vermin you are."
@@ -244572,7 +244572,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Transitions"
-msgstr ""
+msgstr "Transitions"
 
 msgctxt "speaker:Narrator"
 msgid "Translucent, blue light, shimmered within its internal black form, giving depth to void."
@@ -247368,7 +247368,7 @@ msgstr ""
 
 msgctxt "ui"
 msgid "Version [config.version!t]\\n"
-msgstr ""
+msgstr "Version [config.version!t]"
 
 msgctxt "speaker:Sarah"
 msgid "Very funny."
