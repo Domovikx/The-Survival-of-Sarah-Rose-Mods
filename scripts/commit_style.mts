@@ -55,7 +55,10 @@ export function checkCommitMessage(msg: string): string[] {
     out.push(`subject: ${s.length} символов > ${MAX_SUBJECT} — перенеси суть в тело`);
   }
   if (s.endsWith(".")) out.push("subject не должен заканчиваться точкой");
-  if (/[`*_#|<>]/.test(s)) out.push("subject не должен содержать markdown-разметку");
+  // markdown в subject: обратные кавычки, |, <>, *жирный*, _курсив_ (парные
+  // подчёркивания). Одинокий `_` (имена файлов: commit_msg.mts) и `#123`
+  // (ссылки на issues) — НЕ markdown и не должны ругаться.
+  if (/[`|<>]|\*\S|_\S+_/.test(s)) out.push("subject не должен содержать markdown-разметку");
   if (/^\s+\S/.test(lines[0])) out.push("subject не должен начинаться с пробела");
 
   // тело — только если оно есть

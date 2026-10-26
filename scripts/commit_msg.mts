@@ -54,18 +54,31 @@ const SYSTEM = [
   "Ты — опытный разработчик, пишущий сообщения git-коммитов для репозитория",
   "модов к игре (переводы po, голосовой пайплайн на TypeScript/Python, лендинг).",
   "Пишешь КОРОТКО и по делу, по-русски, стилистика Conventional Commits.",
+  "Отвечай ОБЫЧНЫМ ТЕКСТОМ сообщения: первая строка «type(scope): суть»,",
+  "затем пустая строка и пункты. НЕ JSON, НЕ markdown, НЕ пояснения.",
+  "ЖЁСТКИЕ ЛИМИТЫ: первая строка ≤72 символов (считай!), строки тела ≤100.",
 ].join(" ");
 
 const RULES = [
   "Правила:",
   "1. Первая строка (subject): `type(scope): суть изменения` — type из списка",
   `   [${TYPES.join(", ")}], scope — подсистема (po, tools, docs, site, voice, pack...).`,
-  "2. Subject на русском, ≤72 символов, без точки в конце, от первого лица",
-  "   не ведётся — констатируется факт («добавлено», «выпилено», «исправлено»).",
+  "2. Subject на русском, БЕЗ точки в конце, от первого лица не ведётся —",
+  "   констатируется факт («добавлено», «выпилено», «исправлено»).",
+  "   ЖЁСТКО ≤72 символа: сначала сокращай формулировку («добавлен X» вместо",
+  "   «добавлено правило описания того, как X»), переносить суть в тело —",
+  "   крайний случай. Считай символы сам, примерно 72 ≈ 10 строк типа",
+  "   «fix(tools): добавлена проверка формата сообщений».",
   "3. Если изменений много и разнородных — пустая строка и body списком",
-  "   из 2-5 пунктов по сути (что и почему), по-русски.",
+  "   из 2-5 пунктов; каждая строка тела ≤100 символов, по-русски.",
   "4. Никакого Markdown, никаких ```, никаких пояснений кроме самого сообщения.",
   "5. Не выдумывай: опирайся ТОЛЬКО на присланный diff.",
+  "6. Описывай, что ИЗМЕНИЛОСЬ, а не о чём документ или код. В diff правки",
+  "   документа видны одновременно старый и новый текст — не резюмируй тему",
+  "   файла, а называй конкретную правку («устаревшее утверждение исправлено»,",
+  "   «удалено дублирование», «добавлен тест»). То, что существовало ДО этого",
+  "   коммита (старые правила, прошлые миграции, легаси), не выдавай за",
+  "   результат этого коммита.",
 ].join("\n");
 
 /** Обрезка diff перед отправкой: большие po-файлы не должны жрать контекст. */
@@ -179,26 +192,40 @@ export async function generate(userPrompt: string): Promise<string | null> {
   const dbg = process.env.TSSR_COMMIT_DEBUG === "1";
   let prompt = userPrompt;
   let structurallyOk: string | null = null;
+  /** Попыток: 1 — обычный запрос, 2..N — со стилевым фидбэком (реtries дёшевы, ~1.5с). */
+  const MAX_ATTEMPTS = 3;
 
-  for (let attempt = 1; attempt <= 2; attempt++) {
+  for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
     // повтор СЛЕДУЕТ за предыдущим ответом (нужны его замечания) — последовательно
     // eslint-disable-next-line no-await-in-loop
     const msg = await askOnce(prompt, dbg);
     if (!msg) return structurallyOk;
     if (!isValidMessage(msg)) {
       if (dbg) console.error(`[dbg] попытка ${attempt}: невалидный формат`, JSON.stringify(msg).slice(0, 200));
-      prompt = `${userPrompt}\n\nYour previous answer was not a valid Conventional Commit. Output JSON only.`;
+      // ВАЖНО: НЕ просим JSON — модель начинает отдавать {"type":...,"body":[...]}
+      // и extractMessage ломается. Нужен обычный текст сообщения.
+      prompt =
+        `${userPrompt}\n\nYour previous answer was not a Conventional Commit. ` +
+        `Answer with the commit message as PLAIN TEXT ONLY: first line ` +
+        `"type(scope): subject", then an empty line, then bullet points. ` +
+        `No JSON, no backticks, no quotes around the message, no explanations.`;
       continue;
     }
     structurallyOk = msg;
     const problems = checkCommitMessage(msg);
     if (!problems.length) return msg;
     if (dbg) console.error(`[dbg] попытка ${attempt}: стиль —`, problems.join("; "));
-    if (attempt === 1) {
+    if (attempt < MAX_ATTEMPTS) {
+      const len = msg.split("\n")[0].trim().length;
       prompt =
         `${userPrompt}\n\nSTYLE FIX REQUIRED for your previous answer:\n` +
         problems.map((p) => `- ${p}`).join("\n") +
-        `\nRewrite the whole message so every rule above is satisfied. Output JSON only.`;
+        `\nYour subject was ${len} characters. REWRITE IT SHORTER — target ≤72, ` +
+        `cut qualifiers and verbosity ("добавлено правило описания того, как X" -> "добавлено правило X"), ` +
+        `do NOT keep the old wording and do NOT append to it. ` +
+        `Body bullets: keep each line ≤100 characters, wrap them. ` +
+        `Answer with PLAIN TEXT ONLY: first line "type(scope): subject", empty line, bullets. ` +
+        `No JSON, no backticks, no Markdown, no explanations.`;
     }
   }
   if (structurallyOk) console.error("[commit-msg] стиль не дотянут после повтора — принимаю как есть");
