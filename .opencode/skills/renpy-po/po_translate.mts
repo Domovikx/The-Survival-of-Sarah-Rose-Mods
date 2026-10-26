@@ -159,6 +159,23 @@ export async function chat(
 }
 
 /** Первая {...}-последовательность в ответе (модель любит обрамления). */
+/**
+ * Достаём перевод из JSON-ответа модели. Ключ «tr» нейтрален и не зависит от
+ * языка (фикс 2026-10-26: раньше ключ был «es» ДЛЯ ВСЕХ языков — 9B-модель
+ * читала «es» как «по-испански» и выдавала испанский/английский; A/B: 2/14 → 0/14).
+ * Старые/альтернативные ключи принимаем с запасом, чтобы не потерять ответ:
+ * код языка, легаси «es», и — крайний случай — единственная строка в объекте.
+ */
+export function extractTranslation(j: Record<string, unknown> | null, lang: string): string {
+  if (!j) return "";
+  for (const key of ["tr", lang, "es"]) {
+    const v = j[key];
+    if (typeof v === "string" && v.trim()) return v.trim();
+  }
+  const strings = Object.values(j).filter((v): v is string => typeof v === "string" && v.trim().length > 0);
+  return strings.length === 1 ? strings[0].trim() : "";
+}
+
 export function extractJson(text: string): Record<string, unknown> | null {
   const start = text.indexOf("{");
   if (start < 0) return null;
@@ -184,11 +201,19 @@ export function extractJson(text: string): Record<string, unknown> | null {
 /** System prompt: правила языка + few-shot стиля. */
 export function systemPrompt(lang: string): string {
   const p = langProfile(lang);
+  // ЯЗЫКОВОЙ БЛОК ПЕРВЫМ (фикс 2026-10-26): главная причина отказов во всех
+  // языках — модель выдаёт чужой язык (испанский/английский). A/B-тест на 14
+  // отказанных de-строках: явный блок + нейтральный ключ "tr" → 0 сломанных
+  // (было 2). Явно называем язык ДВАЖДЫ: в блоке и в правиле JSON.
+  const langBlock =
+    `OUTPUT LANGUAGE: ${p.name} (${lang}). EVERY word you write in "tr" must be in ${p.name}. ` +
+    `Spanish, English and any other language are a FAILURE of this task.\n` +
+    `- The JSON key is "tr" (neutral: it does NOT mean Spanish). Value must be in ${p.name}.\n`;
   const shots = p.fewshot.length
-    ? `\n\nSTYLE EXAMPLES (EN -> target, same register):\n` +
-      p.fewshot.map(([en, tr], i) => `${i + 1}. EN: ${en}\n   TARGET: ${tr}`).join("\n")
+    ? `\n\nSTYLE EXAMPLES (EN -> ${p.name}, same register):\n` +
+      p.fewshot.map(([en, tr], i) => `${i + 1}. EN: ${en}\n   ${lang.toUpperCase()}: ${tr}`).join("\n")
     : "";
-  return p.rules + shots;
+  return langBlock + p.rules + shots;
 }
 
 /** Речь (dialogue/narration) или интерфейс (menu/ui/speaker-name) — категория как в pot_resolve.
@@ -312,7 +337,10 @@ export function checkTranslation(entry: PoEntry, es: string, lang: string): stri
   // перевод») — любая математика по длине запрещена; полноту/смысл проверяет
   // только LLM-судья. Гарантия — тест «ЗАПРЕТ длины как критерия».
   // Плейсхолдеры: printf %s/%d и Ren'Py-теги {i}...{/i} должны сохраниться
-  const ph = (s: string) => (s.match(/%[sd]|\{\/?[a-zA-Z][^}]*\}/g) ?? []).sort().join("|");
+  // Плейсхолдеры: printf %s/%d, Ren'Py-теги {i}...{/i} и {#...} (атрибуты в
+  //именах, напр. {#file_time}) — regex обязан покрывать ОБА вида, иначе
+  // E2E (2026-10-26) ловил принятый ja-перевод, выкинувший {#file_time}.
+  const ph = (s: string) => (s.match(/%[sd]|\{#[^}]*\}|\{\/?[a-zA-Z][^}]*\}/g) ?? []).sort().join("|");
   if (ph(mid) && ph(mid) !== ph(es)) issues.push(`потеряны плейсхолдеры/теги: ${ph(mid)}`);
   // Кавычки: EN без внешних кавычек → перевод без них (стиль pilot/ru.po)
   const midQuoted = /^["«]/.test(mid.trim());
@@ -348,11 +376,26 @@ export function judgeUser(lang: string, entry: PoEntry, tr: string, emotion: str
   // ЯЗЫКОВОЙ ГЕЙТ (бага 2026-10-25: it.po засорён испанским, pl — немецким,
   // судья ставил 9-10, потому что «по смыслу» перевод был верен): судья
   // обязан первым делом проверить, что candidate вообще на ЦЕЛЕВОМ языке.
-  const langGate = `LANGUAGE GATE (highest priority): the candidate MUST be written in ${p.name} (${lang}). If ANY part of it is in a different language (Spanish/Portuguese/German/English inside an Italian or Polish file, etc.), score 0-2 and put "wrong language: <what was found>" as the first issue.`;
-  const head = speech
-    ? `${langGate}\n\n${p.judgeNotes}\n\nemotion: ${emo}\nspeaker: ${entry.msgctxt || "-"}`
-    : `${langGate}\n\n${p.judgeNotes}\n\ncategory: ${entry.msgctxt} (interface string — no narrator/emotion rules apply)`;
-  return `${head}\nEN: ${entry.msgid}\nTARGET(${lang}): ${tr}`;
+  //
+  // ФИКС 2026-10-26 (E2E): судья считала строку ИСТОЧНИКА «утечкой» — цитировала
+  // сам `EN:` как иностранный фрагмент. Лечим структурой: источник уходит в
+  // отдельную секцию с явной подписью «not the candidate», а горт стоит СРАЗУ
+  // ПОСЛЕ кандидата (ближе всего к тому, что судится).
+  const sourceBlock =
+    `SOURCE (always English — meaning reference ONLY, it is NOT the candidate and can never be a language leak):\n` +
+    `EN: ${entry.msgid}`;
+  const candidateBlock = `CANDIDATE (ONLY this text is judged, it must be entirely in ${p.name} (${lang})):`;
+  const gate =
+    `LANGUAGE GATE (highest priority): judge ONLY the CANDIDATE above. It must be written entirely in ${p.name} (${lang}). ` +
+    `The SOURCE section is English by design — never quote it as foreign language. ` +
+    `You may report "wrong language" ONLY if the CANDIDATE itself contains another language AND you quote that exact fragment from it; ` +
+    `without a verbatim quote from the candidate, do not report a language issue (a false gate zeroes a good score). ` +
+    `When the CANDIDATE is genuinely foreign, score 0-2 and put "wrong language: <quoted fragment>" first. ` +
+    `Proper nouns, speaker names and Ren'Py tags inside the candidate are NOT foreign language.`;
+  const context = speech
+    ? `${p.judgeNotes}\n\nemotion: ${emo}\nspeaker: ${entry.msgctxt || "-"}`
+    : `${p.judgeNotes}\n\ncategory: ${entry.msgctxt} (interface string — no narrator/emotion rules apply)`;
+  return `${context}\n\n${sourceBlock}\n\n${candidateBlock}\nTARGET(${lang}): ${tr}\n\n${gate}`;
 }
 
 /** Балл судьи 0..10 и её замечания; -1 если судья не ответил. */
@@ -376,12 +419,34 @@ export async function judge(
   if (raw.startsWith("__ERROR__")) return { score: -1, issues: [raw.slice(0, 120)] };
   const j = extractJson(raw);
   if (j && typeof j.score === "number") {
-    return { score: j.score, issues: Array.isArray(j.issues) ? (j.issues as string[]) : [] };
+    return { score: j.score, issues: Array.isArray(j.issues) ? (j.issues as string[]) : salvageIssues(raw) };
   }
-  const m = /"score"\s*:\s*(\d+)/.exec(raw);
+  const m = /"score"\s*:\s*"?(\d+(?:\.\d+)?)"?/.exec(raw);
   return m
-    ? { score: Number(m[1]), issues: ["судья вернул битый JSON — issues потеряны"] }
+    ? { score: Number(m[1]), issues: salvageIssues(raw) }
     : { score: -1, issues: [`судья не вернул JSON: ${raw.slice(0, 80)}`] };
+}
+
+/**
+ * Достаём issues из сырых (битых) ответов судьи. Раньше при обрыве JSON
+ * диагностика терялась полностью — 830 отказов с пустой причиной
+ * («битый JSON — issues потеряны»). Кавычки внутри строк не экранированы —
+ * берём то, что похоже на строки, и разэкраниваем что вышло.
+ */
+export function salvageIssues(raw: string): string[] {
+  const m = /"issues"\s*:\s*\[([\s\S]*?)\]/.exec(raw);
+  if (!m) return [];
+  const out: string[] = [];
+  for (const s of m[1].matchAll(/"((?:[^"\\]|\\.)*)"/g)) {
+    let v = s[1];
+    try {
+      v = JSON.parse(`"${s[1]}"`) as string;
+    } catch {
+      /* не разэкранировалось — оставляем как есть */
+    }
+    if (v.trim()) out.push(v.trim());
+  }
+  return out;
 }
 
 // ---------- Перевод одной записи ----------
@@ -422,7 +487,7 @@ export async function translateEntry(
       { model, temp: 0.3, maxTokens: 700 },
     );
     const j = extractJson(raw);
-    const tr = j && typeof j.es === "string" ? (j.es as string).trim() : "";
+    const tr = extractTranslation(j, lang);
     const auto = checkTranslation(entry, tr, lang);
     if (tr && auto.length === 0) {
       if (!useJudge) {
@@ -433,11 +498,22 @@ export async function translateEntry(
       if (v.score >= threshold) {
         return { line: 0, msgid: entry.msgid, tr, tries: t + 1, judgeScore: v.score, rejected: false, issues: [] };
       }
-      feedback = `Your previous answer was graded ${v.score}/10. Fix: ${v.issues.slice(0, 3).join("; ") || "improve naturalness and tone"}. Output JSON only.`;
+      // ФИКС 2026-10-26: замечания судьи приходят на ЕЁ языке (fr/it/es/pt
+      // пишут по-своему) — модель подхватывала этот язык и утекала в перевод.
+      // Фидбэк = только инпут, дальше модель обязана вернуться на целевой.
+      const langName = langProfile(lang).name;
+      feedback =
+        `NOTE: the issues below may be written in another language — they are FEEDBACK ONLY. ` +
+        `Your next answer must be ${langName} (key "tr"), never their language.\n` +
+        `Your previous answer was graded ${v.score}/10. Fix: ${v.issues.slice(0, 3).join("; ") || "improve naturalness and tone"}. Output JSON only.`;
     } else {
       const wasBest = auto.length < best.issues.length || best.score < 0;
       if (tr && wasBest && best.score < 0) best = { tr, score: -1, issues: auto };
-      feedback = `Your previous answer was rejected: ${auto.join("; ") || "invalid JSON"}. Fix and output JSON only.`;
+      const langName = langProfile(lang).name;
+      feedback =
+        `NOTE: rejection reasons below may be written in another language — they are FEEDBACK ONLY. ` +
+        `Your next answer must be ${langName} (key "tr").\n` +
+        `Your previous answer was rejected: ${auto.join("; ") || "invalid JSON"}. Fix and output JSON only.`;
     }
   }
   // Не принято: лучшая попытка остаётся за пределами файла (пустой msgstr

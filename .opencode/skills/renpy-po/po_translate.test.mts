@@ -19,6 +19,8 @@ import {
   judgeSystem,
   judgeUser,
   parseArgs,
+  salvageIssues,
+  extractTranslation,
   stopRequested,
   systemPrompt,
   userPrompt,
@@ -416,8 +418,80 @@ test("судья: LANGUAGE GATE первым пунктом (чужой язык
   const speech = judgeUser("it", mkEntry({ msgctxt: '"speaker:Narrator"' }), "Finalmente a casa.", "Calmly");
   assert.match(speech, /LANGUAGE GATE \(highest priority\)/);
   assert.match(speech, /Italiano \(it\)/);
-  assert.ok(speech.indexOf("LANGUAGE GATE") < speech.indexOf("EN:"), "гейт должен быть ДО источника");
+  // Новая структура (фикс ложной утечки 2026-10-26): источник — отдельная
+  // секция, кандидат — за ней, горт — СРАЗУ ПОСЛЕ кандидата.
+  const src = speech.indexOf("SOURCE (always English");
+  const cand = speech.indexOf("CANDIDATE (ONLY this text");
+  const gate = speech.indexOf("LANGUAGE GATE");
+  assert.ok(src > 0 && cand > src, "секция источника должна идти ДО кандидата");
+  assert.ok(gate > cand, "гейт должен стоять ПОСЛЕ кандидата (ближе к судимому)");
+  assert.match(speech, /it is NOT the candidate and can never be a language leak/);
   const ui = judgeUser("pl", mkEntry({ msgctxt: '"ui"', msgid: "Keyboard" }), "Klawiatura", null);
   assert.match(ui, /Polski \(pl\)/);
   assert.ok(!ui.includes("emotion:"), "UI-гейт без эмоции");
+});
+
+test("плейсхолдеры: {#...} теги Ren'Py ловятся (бага E2E 2026-10-26)", () => {
+  // Раньше regex требовал букву сразу после "{", поэтому {#file_time}
+  // не считался плейсхолдером и ПРИНИМАЛСЯ перевод, выкинувший его.
+  const e = mkEntry({ msgctxt: '"ui"', msgid: "{#file_time}%A, %B %d %Y, %H:%M" });
+  assert.ok(checkTranslation(e, "%A, %B %d %Y, %H:%M", "ja").some((i) => i.includes("плейсхолдер")));
+  assert.ok(
+    !checkTranslation(e, "{#file_time}%A, %B %d %Y, %H:%M", "ja").some((i) => i.includes("плейсхолдер")),
+    "целый {#...} не должен считаться потерянным",
+  );
+  // классика: %s и {i}...{/i} работают как раньше
+  const p2 = mkEntry({ msgid: "Give %s to {i}her{/i}" });
+  assert.ok(checkTranslation(p2, "Дай %s ей", "ru").some((i) => i.includes("плейсхолдер")));
+});
+
+test("extractTranslation: нейтральный ключ tr (фикс утечки испанскоГО)", () => {
+  assert.equal(extractTranslation({ tr: "Hallo Welt" }, "de"), "Hallo Welt");
+  // запасные пути: код языка, легаси "es"
+  assert.equal(extractTranslation({ de: "Guten Tag" }, "de"), "Guten Tag");
+  assert.equal(extractTranslation({ es: "Hola" }, "fr"), "Hola");
+  // приоритет tr выше остальных
+  assert.equal(extractTranslation({ es: "Hola", tr: "Hallo" }, "de"), "Hallo");
+  // единственная строка в объекте — принимаем как отчаянный фолбэк
+  assert.equal(extractTranslation({ any: "Bonjour" }, "fr"), "Bonjour");
+  // две строки и ноль строк — не гадаем
+  assert.equal(extractTranslation({ a: "x", b: "y" }, "fr"), "");
+  assert.equal(extractTranslation(null, "fr"), "");
+  assert.equal(extractTranslation({ tr: "   " }, "fr"), "");
+});
+
+test("salvageIssues: диагностика вытаскивается из битого JSON судьи", () => {
+  // раньше при обрыве JSON причина терялась («битый JSON — issues потеряны»),
+  // таких отказов накопилось 830
+  const broken = '{"score": 7, "issues": ["wrong language: Spanish found", "adjective ending bad"], "note": "о';
+  assert.deepEqual(salvageIssues(broken), ["wrong language: Spanish found", "adjective ending bad"]);
+  // issues с одним элементом и без него
+  assert.deepEqual(salvageIssues('{"score": 3, "issues": ["grammar"]}'), ["grammar"]);
+  assert.deepEqual(salvageIssues('{"score": 10}'), []);
+  // разэкранирование кавычек внутри строки
+  assert.deepEqual(salvageIssues('{"issues": ["he said \\"hi\\" badly"]}'), ['he said "hi" badly']);
+});
+
+test("systemPrompt: языковой блок первым + ключ tr + few-shot", () => {
+  const de = systemPrompt("de");
+  // OUTPUT LANGUAGE должен идти ДО любых прочих правил
+  assert.ok(de.startsWith("OUTPUT LANGUAGE: Deutsch (de)"), "языковой блок — первая строка");
+  assert.ok(de.indexOf("OUTPUT LANGUAGE") < de.indexOf("HARD RULES"));
+  assert.match(de, /"tr":"<translation>"/);
+  assert.ok(!/"es":"<translation>"/.test(de), "старого ключа es в правилах быть не должно");
+  // few-shot подписан целевым языком, а не абстрактным TARGET
+  assert.match(de, /STYLE EXAMPLES \(EN -> Deutsch/);
+  assert.match(de, /\n   DE: /);
+  // для CJK — своя подпись
+  assert.match(systemPrompt("ja"), /STYLE EXAMPLES \(EN -> 日本語/);
+  assert.match(systemPrompt("ja"), /\n   JA: /);
+});
+
+test("systemPrompt: OUTPUT LANGUAGE есть у ВСЕХ 10 языков (анти-утечка)", () => {
+  for (const code of Object.keys(LANGS)) {
+    const p = systemPrompt(code);
+    assert.ok(p.startsWith("OUTPUT LANGUAGE:"), `${code}: блока языка нет`);
+    assert.match(p, /"tr"/, `${code}: нет нейтрального ключа`);
+    assert.ok(p.length > 1500, `${code}: промпт подозрительно короткий (${p.length})`);
+  }
 });
