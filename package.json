@@ -26,7 +26,7 @@
     "test:speakers": "node --test patches/ai-voice-pack/tools/generate/scripts/speaker_map.test.mts",
     "refs:add": "node patches/ai-voice-pack/tools/generate/scripts/add_candidate.mts",
     "test:refs": "node --test patches/ai-voice-pack/tools/generate/scripts/clean_refs.test.mts patches/ai-voice-pack/tools/generate/scripts/add_candidate.test.mts",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "tsc --noEmit && tsc --noEmit -p site/tsconfig.json && node scripts/check_ts_coverage.mts",
     "casts:mts": "node patches/ai-voice-pack/tools/generate/scripts/cast_mts.mts",
     "test:casts": "node --test patches/ai-voice-pack/tools/generate/scripts/cast_mts.test.mts",
     "test:voice:e2e": "set \"TSSR_VOICE_E2E=1\" && node --test patches/ai-voice-pack/tools/generate/scripts/voice_batch_e2e.test.mts",
