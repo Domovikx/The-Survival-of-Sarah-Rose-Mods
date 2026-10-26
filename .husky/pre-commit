@@ -1,2 +1,4 @@
 npx lint-staged
 npm run typecheck
+# локальная защита po от порчи (обнулённый/усечённый файл, остатки .part)
+node scripts/po_check.mts --staged
