@@ -17,6 +17,8 @@
  *                            127.0.0.1:1234, и с ollama 11434); каждая фраза
  *                            получает тон (DEFAULT_EMO для нейтральных)
  *   --tagged                 LLM: пере-размечать только уже помеченные
+ *   --resume                 LLM: продолжить после обрыва — уже размеченные
+ *                            uid в черновике пропускаются, не перетираются
  *   --dry-run                только статистика, без записи
  */
 
@@ -57,16 +59,37 @@ export const RULES: Array<[RegExp, string]> = [
 
 export const DEFAULT_EMO = "Evenly, with a measured neutral tone";
 
+/**
+ * Инструкция LLM-разметки (ФИКС КАЧЕСТВА 2026-10-26).
+ *
+ * Раньше LLM получала ТОЛЬКО текст фразы — без спикера, арки и соседей.
+ * Следствие (замер аудита): 26% корпуса = «Curiously observing», 76%
+ * словаря — одноразовые формулировки. Контекст подаёт buildPrompt().
+ */
 export const LLM_PROMPT =
-  "You are a voice director. For this Russian voice line, describe the " +
-  "DIRECTOR's emotional state while reading it (how the narrator or " +
-  "speaker delivers it): an emotion/attitude instruction in English, " +
-  '2-6 words, like "In a low menacing whisper", "Curiously observing", ' +
-  '"With bored indifference", "Warmly, with affection". ' +
-  "EVERY line has a delivery state - even neutral observations have the " +
-  "narrator's attitude (attentively, warily, amused, flat, admiring...). " +
-  "NEVER reply 'none'. Reply with ONLY the short English instruction. " +
-  "Line: ";
+  "You are a voice director for an adult visual novel. For the ONE line below, " +
+  "give the DELIVERY instruction: the emotional state of the speaker (or narrator) " +
+  "while saying it.\n\n" +
+  "RULES:\n" +
+  "- English only, 2-6 words, one phrase, starts with a capital; no quotes, no period.\n" +
+  "- The SPEAKER'S state of delivery, NOT a summary of what the line says.\n" +
+  '- NEVER reply "none": every line has a delivery — even neutral lines carry an ' +
+  "attitude (measured, flat, weary, bemused...).\n" +
+  "- Fit the moment: use the speaker, arc, scene and neighbouring lines as context.\n" +
+  "- Be specific and varied: do not reuse one instruction for unrelated lines; " +
+  "pick the nuance that belongs to THIS moment.\n" +
+  "- Output ONLY the instruction.\n\n";
+
+/** Промпт разметки ОДНОЙ фразы с контекстом (спикер/арка/соседи). */
+export function buildPrompt(e: CatalogEntry, prev?: string | null, next?: string | null): string {
+  const who = e.who_name ?? "Narrator";
+  const ctx: string[] = [`Speaker: ${who} | arc: ${e.arc}${e.scene ? ` | scene: ${e.scene}` : ""}`];
+  if (prev) ctx.push(`Previous line: ${prev.slice(0, 200)}`);
+  ctx.push(`Line (EN): ${e.old}`);
+  if (e.new) ctx.push(`Line (RU): ${e.new}`);
+  if (next) ctx.push(`Next line: ${next.slice(0, 200)}`);
+  return LLM_PROMPT + ctx.join("\n");
+}
 
 /** Эмоция по тексту (первая подходящая) или null. */
 export function tagPhrase(ru: string | null | undefined, en: string | null | undefined): string | null {
@@ -84,17 +107,32 @@ export interface LlmOpts {
   fetchImpl?: typeof fetch;
 }
 
-/** Тон фразы через локальную LLM (OpenAI-compatible /v1/chat/completions). */
-export async function llmAsk(baseUrl: string, model: string, line: string, opts: LlmOpts = {}): Promise<string | null> {
+/**
+ * Тон фразы через локальную LLM (OpenAI-compatible /v1/chat/completions).
+ *
+ * Принимает ГОТОВЫЙ промпт (см. buildPrompt) — инструкция не склеивается
+ * здесь, чтобы не дублироваться.
+ *
+ * ФИКС 2026-10-26: `reasoning_effort: "none"` обязателен — qwen3.5 думает
+ * внутри бюджета `max_tokens`, и при 25 токенах content выходил ПУСТЫМ
+ * (finish=length), разметка возвращала null на каждой строке.
+ */
+export async function llmAsk(
+  baseUrl: string,
+  model: string,
+  prompt: string,
+  opts: LlmOpts = {},
+): Promise<string | null> {
   const tries = opts.tries ?? 3;
   const delayMs = opts.delayMs;
   const doFetch = opts.fetchImpl ?? fetch;
   const body = JSON.stringify({
     model,
-    messages: [{ role: "user", content: LLM_PROMPT + line }],
+    messages: [{ role: "user", content: prompt }],
     temperature: 0.3,
-    max_tokens: 25,
+    max_tokens: 60,
     stream: false,
+    reasoning_effort: "none",
   });
   for (let attempt = 0; attempt < tries; attempt++) {
     try {
@@ -107,10 +145,13 @@ export async function llmAsk(baseUrl: string, model: string, line: string, opts:
       const d = (await r.json()) as { choices?: Array<{ message?: { content?: string } }> };
       const resp = (d.choices?.[0]?.message?.content ?? "")
         .trim()
-        .replace(/^\.+|\.+$/g, "")
+        .replace(/^["'«»]+|["'«».]+$/g, "")
         .trim();
-      if (resp && resp.toLowerCase() !== "none") return resp;
-      return null;
+      // пустой content = съеденный thinking/лимит — это НЕ ответ, ретраим
+      if (!resp) throw new Error("пустой ответ LLM");
+      if (resp.toLowerCase() === "none") return null;
+      // форма: с заглавной (правило качества тона — 2-6 слов, Capitalized)
+      return resp.charAt(0).toUpperCase() + resp.slice(1);
     } catch {
       if (attempt < tries - 1) {
         await new Promise((s) => setTimeout(s, delayMs ?? 5000 * (attempt + 1)));
@@ -158,6 +199,8 @@ export interface MainOpts {
   llmModel?: string;
   taggedOnly?: boolean;
   dryRun?: boolean;
+  /** Продолжить: уже размеченные uid в черновике ПРОПУСКАЮТСЯ (не перетираются). */
+  resume?: boolean;
 }
 
 export async function run(opts: MainOpts): Promise<number> {
@@ -174,8 +217,15 @@ export async function run(opts: MainOpts): Promise<number> {
     for (let i = 1; i <= voiced.length; i++) {
       const e = voiced[i - 1];
       if (opts.taggedOnly && !(e.uid in out)) continue;
+      // --resume (инцидент 2026-10-26: перезапуск сервера оборвал полный
+      // прогон на 3000/68357): уже размеченные uid в черновике НЕ
+      // перетираются — прогон продолжается с места обрыва.
+      if (opts.resume && e.uid in out) continue;
       delete out[e.uid]; // LLM заменяет старое значение
-      const emo = (await llmAsk(opts.llmUrl, model, e.new || "")) ?? DEFAULT_EMO;
+      // Контекст (фикс качества 2026-10-26): раньше у LLM был только текст
+      // фразы — без спикера/арки/соседей она шаблонила (26% «Curiously observing»).
+      const prompt = buildPrompt(e, voiced[i - 2]?.old, voiced[i]?.old);
+      const emo = (await llmAsk(opts.llmUrl, model, prompt)) ?? DEFAULT_EMO;
       out[e.uid] = emo;
       tagged++;
       if (i % 200 === 0) {
@@ -211,6 +261,7 @@ function parseCli(argv: string[]): MainOpts {
     llmModel: flag("--llm-model"),
     taggedOnly: argv.includes("--tagged"),
     dryRun: argv.includes("--dry-run"),
+    resume: argv.includes("--resume"),
   };
 }
 
