@@ -40,6 +40,8 @@
  *   --concurrency N   параллельные запросы (по умолчанию 1 — строго построчно)
  *   --flush-every N   записывать файл каждые N переводов (по умолчанию 20)
  *   --threshold N     минимальный балл судьи для приёмки (по умолчанию 9)
+ *   --tries N         попыток на строку (по умолчанию 3; больше — для добора
+ *                     «упрямых», которых судья гоняет по кругу)
  *   --no-judge        без LLM-судьи (только авточеки) — быстрее, но хуже
  *   --dry             только план (сколько записей, без перевода)
  *   --base-url URL    LM Studio (по умолчанию http://127.0.0.1:1234)
@@ -79,6 +81,7 @@ export interface Opts {
   concurrency: number;
   flushEvery: number;
   threshold: number;
+  tries: number;
   judge: boolean;
   dry: boolean;
   baseUrl: string;
@@ -101,6 +104,7 @@ export function parseArgs(argv: string[]): Opts {
     concurrency: Math.max(1, Number(f("concurrency", "1"))),
     flushEvery: Math.max(1, Number(f("flush-every", "20"))),
     threshold: Number(f("threshold", "9")),
+    tries: Math.max(1, Number(f("tries", "3"))),
     judge: !argv.includes("--no-judge"),
     dry: argv.includes("--dry"),
     baseUrl: f("base-url", "http://127.0.0.1:1234"),
@@ -392,7 +396,7 @@ export interface EntryResult {
   issues: string[];
 }
 
-/** Один целевой перевод: до 3 попыток, фидбэк = авточеки/замечания судьи. */
+/** Один целевой перевод: до `maxTries` попыток, фидбэк = авточеки/замечания судьи. */
 export async function translateEntry(
   baseUrl: string,
   model: string,
@@ -403,11 +407,11 @@ export async function translateEntry(
   useJudge: boolean,
   threshold: number,
   emotion: string | null,
+  maxTries = 3,
 ): Promise<EntryResult> {
   const sys = systemPrompt(lang);
   let feedback = "";
   let best = { tr: "", score: -1, issues: [] as string[] };
-  const maxTries = 3;
   for (let t = 0; t < maxTries; t++) {
     const raw = await chat(
       baseUrl,
@@ -595,7 +599,7 @@ async function main(): Promise<void> {
   const totalEmpty = targets.length;
   console.log(`${poPath}: непереведённых ${totalEmpty}, к переводу в этом прогоне ${queue.length}`);
   console.log(
-    `язык: ${profile.name} | модель: ${o.model} | судья: ${o.judge ? `вкл (порог ${o.threshold})` : "выкл"} | параллелизм: ${o.concurrency}`,
+    `язык: ${profile.name} | модель: ${o.model} | судья: ${o.judge ? `вкл (порог ${o.threshold})` : "выкл"} | попыток: ${o.tries} | параллелизм: ${o.concurrency}`,
   );
   if (o.dry) {
     const by = new Map<string, number>();
@@ -656,6 +660,7 @@ async function main(): Promise<void> {
           o.judge,
           o.threshold,
           pot.emotion(entry.msgctxt, entry.msgid),
+          o.tries,
         );
         if (r.tr) {
           entry.msgstr = r.tr;
@@ -673,8 +678,14 @@ async function main(): Promise<void> {
           rejected++;
           appendFileSync(
             jsonlPath,
-            JSON.stringify({ lang: o.lang, msgid: r.msgid, rejected: true, issues: r.issues, judge: r.judgeScore }) +
-              "\n",
+            JSON.stringify({
+              lang: o.lang,
+              msgid: r.msgid,
+              rejected: true,
+              issues: r.issues,
+              judge: r.judgeScore,
+              tries: r.tries,
+            }) + "\n",
           );
         }
         const done = translated + rejected;
