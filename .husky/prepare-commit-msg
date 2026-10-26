@@ -1,0 +1,13 @@
+# Генерация сообщения коммита локальной LLM (LM Studio, qwen3.5-9b).
+# "$1" = COMMIT_EDITMSG, "$2" = source (пусто только при обычном git commit).
+# Скрипт сам выходит при -m/-F/merge/squash и при любом сбое LLM — git
+# откроет штатный шаблон. Отключение: TSSR_COMMIT_LLM=0.
+#
+# ВАЖНО (найдено 2026-10-26 при живом прогоне): husky делает
+# `export PATH="node_modules/.bin:$PATH"`, а devDependency `node@26` ставит
+# туда шим, который exec'ит 34-байтную пустышку `node_modules/node/bin/node`
+# ("This file intentionally left blank") — `node` в хуке падает с code 127
+# и коммит НЕ создаётся. Вычищаем этот каталог из PATH только для нашего
+# вызова: настоящий node (/c/Program Files/nodejs/node) остаётся в PATH.
+CLEAN_PATH=$(printf '%s' "$PATH" | tr ':' '\n' | grep -v 'node_modules[\\/]\.bin' | paste -sd: -)
+PATH="$CLEAN_PATH" node scripts/commit_msg.mts "$1" "$2"
