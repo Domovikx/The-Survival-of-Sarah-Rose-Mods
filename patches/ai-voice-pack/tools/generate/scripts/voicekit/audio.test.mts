@@ -19,6 +19,7 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { after, before, describe, it } from "node:test";
 
+import { measureLoudness } from "../voxcpm_bench.mts";
 import { LOUD_ARGS, normalizeWav, opusPathFor, saveWavChain, tensorToOpus, wavToOpus, writeWav16 } from "./audio.mts";
 
 const SR = 24000;
@@ -55,7 +56,7 @@ function opusHeadRate(path: string): number {
   return b.readUInt32LE(i + 12);
 }
 
-function probe(path: string): { codec: string; rate: number; channels: number } {
+function probe(path: string): { codec: string; rate: number; channels: number; dur: number } {
   const r = spawnSync(
     "ffprobe",
     [
@@ -64,7 +65,7 @@ function probe(path: string): { codec: string; rate: number; channels: number } 
       "-select_streams",
       "a:0",
       "-show_entries",
-      "stream=codec_name,sample_rate,channels",
+      "stream=codec_name,sample_rate,channels:format=duration",
       "-of",
       "json",
       path,
@@ -72,8 +73,12 @@ function probe(path: string): { codec: string; rate: number; channels: number } 
     { encoding: "utf8" },
   );
   assert.equal(r.status, 0, `ffprobe упал: ${r.stderr}`);
-  const s = JSON.parse(r.stdout).streams[0] as { codec_name: string; sample_rate: string; channels: number };
-  return { codec: s.codec_name, rate: opusHeadRate(path), channels: s.channels };
+  const j = JSON.parse(r.stdout) as {
+    streams: Array<{ codec_name: string; sample_rate: string; channels: number }>;
+    format: { duration: string };
+  };
+  const s = j.streams[0];
+  return { codec: s.codec_name, rate: opusHeadRate(path), channels: s.channels, dur: Number(j.format.duration) };
 }
 
 describe("контракт уровня и путей (без ffmpeg)", () => {
@@ -119,6 +124,22 @@ describe("ffmpeg-кодирование", () => {
     assert.equal(p.channels, 1);
   });
 
+  it("tensorToOpus: ВХОД 48000 (VoxCPM2) -> всё равно OpusHead 24000", { skip: !CAN_ENCODE }, () => {
+    const sr = 48000;
+    const a = new Float32Array(sr * 1.5);
+    for (let i = 0; i < a.length; i++) a[i] = 0.25 * Math.sin((2 * Math.PI * 1000 * i) / sr);
+    const out = join(tmp, "pipe48", "uid__Voice.wav");
+    assert.equal(tensorToOpus(a, sr, out), true, "pipe-конверт 48k должен пройти");
+    const opus = join(tmp, "pipe48", "uid__Voice.opus");
+    assert.ok(existsSync(opus), "opus создан");
+    const p = probe(opus);
+    // бага 2026-10-27: выходной -ar брался из ВХОДНОГО sr -> в VoxCPM2-прологе
+    // 109 файлов легли с OpusHead 48000 (редактор владельца их не открывает)
+    assert.equal(p.rate, 24000, `вход 48000, но корпус обязан остаться 24000 (OpusHead=${p.rate})`);
+    assert.equal(p.channels, 1);
+    assert.ok(Math.abs(p.dur - 1.5) < 0.3, `длительность потерялась при ресемпе 48k->24k: ${p.dur}s`);
+  });
+
   it("wavToOpus + writeWav16: wav -> opus 24000 рядом", { skip: !CAN_ENCODE }, () => {
     const wav = join(tmp, "wav", "x.wav");
     writeWav16(wav, sine(SR), SR);
@@ -135,7 +156,29 @@ describe("ffmpeg-кодирование", () => {
     assert.equal(normalizeWav(wav), true);
     assert.ok(existsSync(wav));
     assert.ok(!existsSync(wav + ".ln.tmp.wav"));
+    assert.ok(!existsSync(wav + ".gain.tmp.wav"));
   });
+
+  it(
+    "normalizeWav: двухпроходный — I попадает в -16 ±0.7 и для громкого, и для тихого (тунель громкости)",
+    { skip: !HAS_FFMPEG },
+    () => {
+      const loud = join(tmp, "norm", "acc_loud.wav");
+      writeWav16(loud, sine(SR * 4, 0.6), SR);
+      assert.equal(normalizeWav(loud), true);
+      const l1 = measureLoudness(loud);
+      if (!l1 || l1.i === null || l1.tp === null) assert.fail("громкий: замер не прошёл");
+      assert.ok(Math.abs(l1.i + 16) <= 0.7, `громкий: I=${l1.i} (ждём -16 ±0.7)`);
+      assert.ok(l1.tp <= -1.4, `громкий: TP=${l1.tp} (лимит -1.5)`);
+
+      const quiet = join(tmp, "norm", "acc_quiet.wav");
+      writeWav16(quiet, sine(SR * 4, 0.02), SR);
+      assert.equal(normalizeWav(quiet), true);
+      const l2 = measureLoudness(quiet);
+      if (!l2 || l2.i === null) assert.fail("тихий: замер не прошёл");
+      assert.ok(Math.abs(l2.i + 16) <= 0.7, `тихий: I=${l2.i} (ждём -16 ±0.7)`);
+    },
+  );
 
   it("saveWavChain: wav + opus рядом (фолбэк-цепочка)", { skip: !CAN_ENCODE }, () => {
     const wav = join(tmp, "chain", "c.wav");

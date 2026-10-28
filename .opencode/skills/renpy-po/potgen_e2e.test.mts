@@ -32,10 +32,16 @@ const POT_PATH = join(REPO_ROOT, "patches", "ai-voice-pack", "po", "template.pot
 const SPEAKERS_MTS_PATH = speakersMtsPath(POT_PATH);
 const HAVE_GAME = existsSync(join(GAME, "script.rpy"));
 
-/** Тон для генерации метаданных — roundtrip самого шаблона (emotions.json удалён). */
-function loadEmotions(): Record<string, string> | undefined {
-  if (!existsSync(POT_PATH)) return undefined;
-  return loadEmotionsFromPot(readFileSync(POT_PATH, "utf-8"));
+/**
+ * Тон для генерации метаданных — roundtrip самого шаблона (emotions.json
+ * удалён). Оба слоя: действующий `#. emotion:` и миграционный
+ * `#. emotion_new:` (2026-10-26) — иначе регенерация потеряла бы новый
+ * тон и байт-в-байт сравнение упало бы после overlay.
+ */
+function toneOpts(): { emotions?: Record<string, string>; emotionsNew?: Record<string, string> } {
+  if (!existsSync(POT_PATH)) return {};
+  const text = readFileSync(POT_PATH, "utf-8");
+  return { emotions: loadEmotionsFromPot(text), emotionsNew: loadEmotionsFromPot(text, "emotion_new:") };
 }
 
 /** Дата из заголовка POT: "POT-Creation-Date: YYYY-MM-DD HH:MM+0000\n". */
@@ -97,7 +103,7 @@ test(
   { skip: (!HAVE_GAME || !existsSync(POT_PATH)) && "нет игры или шаблона" },
   () => {
     const committed = readFileSync(POT_PATH, "utf-8");
-    const fresh = renderPot(scanGame(GAME, { emotions: loadEmotions() }), potCreationDate(committed));
+    const fresh = renderPot(scanGame(GAME, toneOpts()), potCreationDate(committed));
     if (fresh !== committed) {
       let i = 0;
       const n = Math.min(fresh.length, committed.length);
@@ -176,12 +182,12 @@ test(
     for (const f of readdirSync(GAME)) {
       if (f.endsWith(".rpy")) copyFileSync(join(GAME, f), join(copyDir, f));
     }
-    const emotions = loadEmotions();
+    const tones = toneOpts();
     const stripDate = (t: string): string => t.replace(/"POT-Creation-Date:[^"]*"/, "");
 
     // 2. Детерминизм: копия даёт POT, байт-в-байт равный закоммиченному.
     assert.equal(
-      stripDate(renderPot(scanGame(copyDir, { emotions }), new Date(0))),
+      stripDate(renderPot(scanGame(copyDir, tones), new Date(0))),
       stripDate(readFileSync(POT_PATH, "utf-8")),
     );
 
@@ -205,7 +211,7 @@ test(
     writeFileSync(sp, src, "utf-8");
 
     // 4. Регенерация POT из «обновлённой» игры.
-    const pot2 = renderPot(scanGame(copyDir, { emotions }), new Date(0));
+    const pot2 = renderPot(scanGame(copyDir, tones), new Date(0));
     assert.ok(!pot2.includes('msgid "Go to the ships!"'), "удалённая реплика выпала из POT");
     assert.ok(pot2.includes(`msgid "${narr.msgid} (v2)"`), "переименованная реплика в POT v2");
     assert.ok(pot2.includes('msgid "A brand new narration line."'), "новая реплика в POT v2");

@@ -69,6 +69,23 @@ describe("VoiceWorker (протокол шима)", () => {
     }
   });
 
+  it("wav_only: пишется только wav (corpus opus не создаётся/не трогается)", { skip: !HAS_FFMPEG }, async () => {
+    const w = makeWorker();
+    const out = join(tmp, "wavonly", "uid__Voice.wav");
+    const opus = out.replace(/\.wav$/, ".opus");
+    try {
+      const r = await w.generate({ text: "привет мир", ref: "ref.wav", out, wav_only: true });
+      assert.equal(r.ok, true, JSON.stringify(r));
+      assert.equal(r.saved, out, "saved — сам wav, без конверта");
+      assert.ok(existsSync(out), "wav должен быть создан");
+      assert.ok(statSync(out).size > 1000, "реальный wav, не заглушка");
+      assert.ok(!existsSync(opus), "opus при wav_only НЕ создаётся (корпус не трогаем)");
+      assert.ok(!existsSync(out + ".ln.tmp.wav"), "tmp loudnorm должен быть переименован");
+    } finally {
+      await w.quit();
+    }
+  });
+
   it("ретрай TextEncodeInput: первый запрос отваливается → повтор через 3с → ok", async () => {
     const logs: string[] = [];
     const w = makeWorker({ onLog: (l) => logs.push(l) });
@@ -130,6 +147,40 @@ describe("VoiceWorker (протокол шима)", () => {
       await assert.rejects(() => w.ping(), /завершён/);
     } finally {
       w.kill();
+    }
+  });
+
+  it("generateRaw: сырой PCM без trim/кодирования, файл не создаётся", async () => {
+    const w = makeWorker();
+    try {
+      const r = await w.generateRaw({ text: "сырой выход", ref: "ref.wav", out: join(tmp, "raw", "x.wav") });
+      assert.equal(r.ok, true, JSON.stringify(r));
+      assert.equal(r.sr, 24000);
+      // fake отдаёт 1.5с синуса: generateRaw НЕ тримит и НЕ пишет файлы
+      assert.equal(r.samples?.length, 36000);
+      assert.ok(typeof r.genMs === "number" && r.genMs >= 0);
+      assert.ok(!existsSync(join(tmp, "raw", "x.wav")), "generateRaw не пишет файлы");
+    } finally {
+      await w.quit();
+    }
+  });
+
+  it("genOpts: переопределения доходят до шима в поле opts", async () => {
+    const w = makeWorker();
+    try {
+      const good = await w.generateRaw({
+        text: "OPTS-фраза",
+        ref: "ref.wav",
+        out: join(tmp, "opts", "x.wav"),
+        genOpts: { cfg_value: 1.5, inference_timesteps: 30 },
+      });
+      assert.equal(good.ok, true, `opts должны дойти: ${good.error ?? ""}`);
+      // без genOpts фейк жалуется — значит, поле реально уезжает в запрос
+      const bad = await w.generateRaw({ text: "OPTS-фраза", ref: "ref.wav", out: join(tmp, "opts", "y.wav") });
+      assert.equal(bad.ok, false);
+      assert.match(bad.error ?? "", /opts не дошли до шима/);
+    } finally {
+      await w.quit();
     }
   });
 

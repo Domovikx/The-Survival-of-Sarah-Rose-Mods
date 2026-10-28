@@ -19,6 +19,8 @@
  *   --tagged                 LLM: пере-размечать только уже помеченные
  *   --resume                 LLM: продолжить после обрыва — уже размеченные
  *                            uid в черновике пропускаются, не перетираются
+ *   --only-invalid           LLM: пере-разметить ТОЛЬКО uid с нарушением
+ *                            правил тона (добривка до «нарушений 0»)
  *   --dry-run                только статистика, без записи
  */
 
@@ -58,6 +60,41 @@ export const RULES: Array<[RegExp, string]> = [
 ];
 
 export const DEFAULT_EMO = "Evenly, with a measured neutral tone";
+
+/** Имена классов нарушений правил тона (общие для разметки и аудита). */
+export const VIOLATION_NAMES = [
+  "кириллица в тоне",
+  "CJK в тоне",
+  "пустой тон",
+  '"none"',
+  "больше 6 слов",
+  "1 слово (нет инструкции)",
+  "не с заглавной буквы",
+  "в кавычках",
+] as const;
+
+/**
+ * Нарушения правил качества тона для одного значения (правила — скилл
+ * `.opencode/skills/emotion-tag/SKILL.md`).
+ *
+ * Живёт здесь (а не в emotion_audit), потому что используется и разметчиком
+ * (`--only-invalid`: точечный добор нарушителей) — направление импорта
+ * emotion_audit -> emotion_tag, цикла нет.
+ */
+export function violationsOf(emo: string | null): string[] {
+  const e = (emo ?? "").trim();
+  const words = e ? e.split(/\s+/) : [];
+  const out: string[] = [];
+  if (!e) out.push("пустой тон");
+  if (/[Ѐ-ӿ]/.test(e)) out.push("кириллица в тоне");
+  if (/[぀-ヿ가-힯一-鿿]/.test(e)) out.push("CJK в тоне");
+  if (/^none$/i.test(e)) out.push('"none"');
+  if (words.length > 6) out.push("больше 6 слов");
+  if (words.length === 1) out.push("1 слово (нет инструкции)");
+  if (e && !/^[A-Z]/.test(e)) out.push("не с заглавной буквы");
+  if (/^["«']/.test(e)) out.push("в кавычках");
+  return out;
+}
 
 /**
  * Инструкция LLM-разметки (ФИКС КАЧЕСТВА 2026-10-26).
@@ -201,6 +238,12 @@ export interface MainOpts {
   dryRun?: boolean;
   /** Продолжить: уже размеченные uid в черновике ПРОПУСКАЮТСЯ (не перетираются). */
   resume?: boolean;
+  /**
+   * Точечный добор: пере-размечать ТОЛЬКО uid с нарушением правил тона
+   * (violationsOf непуст) — точка входа «нарушений должно быть 0» из
+   * скилла emotion-tag (шаг 3), без полной переразметки корпуса.
+   */
+  onlyInvalid?: boolean;
 }
 
 export async function run(opts: MainOpts): Promise<number> {
@@ -221,6 +264,9 @@ export async function run(opts: MainOpts): Promise<number> {
       // прогон на 3000/68357): уже размеченные uid в черновике НЕ
       // перетираются — прогон продолжается с места обрыва.
       if (opts.resume && e.uid in out) continue;
+      // --only-invalid: валидный тон НЕ трогаем — пере-размечаются только
+      // нарушители правил (добривка 428 до «нарушений 0», шаг 3 скилла).
+      if (opts.onlyInvalid && violationsOf(out[e.uid] ?? null).length === 0) continue;
       delete out[e.uid]; // LLM заменяет старое значение
       // Контекст (фикс качества 2026-10-26): раньше у LLM был только текст
       // фразы — без спикера/арки/соседей она шаблонила (26% «Curiously observing»).
@@ -262,6 +308,7 @@ function parseCli(argv: string[]): MainOpts {
     taggedOnly: argv.includes("--tagged"),
     dryRun: argv.includes("--dry-run"),
     resume: argv.includes("--resume"),
+    onlyInvalid: argv.includes("--only-invalid"),
   };
 }
 

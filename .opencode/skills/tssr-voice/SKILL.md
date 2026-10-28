@@ -100,25 +100,17 @@ node tools/generate/scripts/voice_batch.mts \
 ... voice_batch.mts --char Sarah --emotion "In a burst of passion, crying out with joy and ecstasy" --emotion-tag passion --limit 10
 ```
 
-ПРАВИЛА (подробно в AGENTS.md → «Эмоции в генерации»):
+ПРАВИЛА инструкции диктора (DRY 2026-10-26 — здесь только ссылки, текст
+живёт в одном месте):
 
-1. Эмоция ТОЛЬКО на английском — русские/китайские инструкции дают акцент
-2. Формат — ОПИСАНИЕ СОСТОЯНИЯ, не приказ: «In a burst of passion, crying out
-   with joy and ecstasy» ✓; «говори злобно» / «Speak angrily» ✗
-3. Эмоция = СОСТОЯНИЕ ДИКТОРА (кто произносит), не содержание текста:
-   - диалог участника: «In a burst of passion, crying out with joy and ecstasy»
-   - наррация-наблюдение эротики: «Erotically and sensually»
-   - оргазм/кульминация: «Crying out with joy, gasping through the spasms of orgasm»
-4. Эмоция работает, когда ТЕКСТ ФРАЗЫ ей соответствует (агрессивный текст +
-   злость; нейтральный текст + эмоция = вяло). В текст добавляй эмоциональную
-   пунктуацию: «Тра́хай меня сильнее! Ещё! Ещё! Да-а-а!»
-5. Пресеты: `--emotion angry|sad|happy|fast|slow|loud|soft|whisper`
-6. Параметры семплирования — дефолты (`--top-p 0.5 --top-k 10 --tau-r 0.15
---cfg-rate 0.7 --flow-temp 0.8`) — официальные параметры модели
-7. Пофразовые эмоции: `#. emotion:` в `po/template.pot` (черновик пишет
-   `emotion_tag.mts` → tmp/emotions_tagged.json, в шаблон — overlay'ем
-   `npm run potgen -- --emotions <файл>`), приоритет: `--emotion` > POT[uid] > без эмоции;
-   `--no-emotion` (суффикс_plain), `--emotion-ru` (ревью)
+- **инструктаж генерации** (английский, описание состояния ≠ приказ,
+  состояние диктора ≠ содержание, соответствие тексту, пресеты, параметры
+  семплирования, ударения) — `AGENTS.md` → «Эмоции в генерации»;
+- **пофразовый тон `#. emotion:`** (правила качества, жизненный цикл,
+  разметка `emotion_tag.mts`, аудит `npm run emotion:audit`, полная
+  переразметка) — скилл `.opencode/skills/emotion-tag/`;
+- приоритет тона: `--emotion` (CLI) > POT[uid] > без; `--no-emotion`
+  (суффикс_plain), `--emotion-ru` (ревью).
 
 ## Ударения (проверено 2026-09-03)
 

@@ -307,6 +307,8 @@ export async function main(argv: string[] = process.argv.slice(2)): Promise<numb
     force: true,
     dryRun: false,
     noEmotion: false,
+    keepWav: false,
+    wavOnly: false,
     emotionTag: "",
     device: o.device,
     python: o.python,

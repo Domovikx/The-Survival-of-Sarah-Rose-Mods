@@ -118,8 +118,9 @@ node tools/generate/scripts/voice_batch.mts \
 файлов).
 
 **Эмоции:** новые uid без разметки озвучиваются без эмоциональных
-инструкций — это ок; глобальная разметка — `emotion_tag.mts`
-(черновик tmp/emotions_tagged.json, в шаблон — `npm run potgen -- --emotions`).
+инструкций — это ок; глобальная разметка/переразметка тона — по скиллу
+`.opencode/skills/emotion-tag/` (DRY: `emotion_tag.mts` → черновик →
+`npm run potgen -- --emotions`, аудит `npm run emotion:audit`).
 
 ## Ступень 4 — Дистрибутив
 

@@ -104,29 +104,33 @@ Cloud docs feb-2026, HF Space) и практических гайдах.
 
 ### Официальные 5 принципов (Alibaba Cloud)
 
-1. **Конкретность** — "deep / crisp / fast-paced", а не "nice / pleasant"
-2. **Несколько измерений одновременно** — пол + возраст + тембр + эмоция + темп
+1. **Конкретность** — "deep / crisp / resonant", а не "nice / pleasant"
+2. **Несколько измерений одновременно** — пол + возраст + тембр + эмоция
 3. **Объективность** — описывай ФИЗИКУ голоса (как звучит), не личность
    (кто персонаж). Слабо: "A wise philosopher who quotes Aristotle" →
-   сильно: "A calm, measured male voice with a deep, resonant tone and slow,
-   contemplative pacing"
+   сильно: "A calm, measured male voice with a deep, resonant tone and
+   warm, breathy quality"
 4. **Оригинальность** — имитация знаменитостей явно блокируется моделью
 5. **Лаконичность** — каждое слово по делу; 1-3 предложения, 15-80 слов
    (максимум 2048 символов)
 
-### 7 измерений описания
+### 6 измерений описания
 
 | Измерение                  | Что работает                                                        |
 | -------------------------- | ------------------------------------------------------------------- |
 | Gender                     | male, female, neutral                                               |
 | Age                        | конкретика: "25-30 years old", "teenager", "elderly 55+"            |
 | Pitch / register           | high, mid-range, low, deep bass, "tenor range"                      |
-| Pace / cadence             | fast, medium, slow, "speaks slowly and deliberately"                |
 | Emotion                    | cheerful, calm, gentle, serious, lively, composed, weary, sarcastic |
 | Characteristics (текстура) | magnetic, crisp, hoarse, mellow, sweet, raspy, velvet, husky        |
 | Use case / scenario        | news broadcast, audiobook, documentary narration, court speech      |
 
-Порядок в промте: Identity → Pitch → Texture → Emotion → Pacing →
+**Темп/скорость НЕ описываем никогда** (правило владельца 2026-10-27):
+темп — художественный замысел модели, навязывание темпа (fast/slow/pace/
+unhurried и т.п.) его ломает. Pace/cadence — официальное измерение Qwen3-TTS,
+но в НАШИ промты оно не попадает.
+
+Порядок в промте: Identity → Pitch → Texture → Emotion →
 Detail (манеры, образность).
 
 ### Слабые vs сильные примеры
@@ -134,11 +138,11 @@ Detail (манеры, образность).
 ```text
 Слабо:  "An old man's voice"
 Сильно: "An elderly man in his 80s with a reedy, quavering voice that
-         wavers with age, slow and breathless, with a warm scratchy quality"
+         wavers with age, with a warm scratchy quality"
 
 Слабо:  "A wise philosopher who quotes Aristotle"      (личность, не звук)
-Сильно: "A calm, measured male voice with a deep, resonant tone and slow,
-         contemplative pacing"                        (акустика)
+Сильно: "A calm, measured male voice with a deep, resonant tone and
+         warm, breathy quality"                        (акустика)
 
 Слабо:  "мужской голос"                               (общее, русский)
 Сильно: "Male, 30s, professional and friendly tone, clear articulation"
@@ -146,6 +150,10 @@ Detail (манеры, образность).
 
 ### Чего НЕ делать
 
+- **Темп/скорость — НИКОГДА** (правило владельца 2026-10-27): никаких
+  "fast/slow/pace/unhurried/speaking faster/stretching words" и русских
+  эквивалентов — темп задаёт сама модель, навязанный темп ломает
+  художественный замысел. Касается instruct_en, текстов и любых промтов
 - **Конфликтующие атрибуты** — "high-pitched deep bass" (модель выбирает одно,
   результат непредсказуем)
 - **Абстрактные ярлыки** — "nice voice", "beautiful", "мужской голос"
@@ -156,29 +164,28 @@ Detail (манеры, образность).
 - **Списки без связки** — "male, 30, deep, calm" (без глаголов) хуже, чем
   связные предложения
 
-### Официальные примеры (Alibaba Cloud, 3 шт)
+### Официальные примеры (Alibaba Cloud, 3 шт) — темп вырезан (правило владельца)
 
 ```text
-1. "A young, lively female voice, with a fast pace and a noticeable upward
-    inflection, suitable for introducing fashion products."
-2. "A calm, middle-aged male voice, with a slow pace and a deep, magnetic
-    tone, suitable for reading news or narrating documentaries."
+1. "A young, lively female voice, with a noticeable upward inflection,
+    suitable for introducing fashion products."
+2. "A calm, middle-aged male voice, with a deep, magnetic tone, suitable
+    for reading news or narrating documentaries."
 3. "A cute child's voice, around 8 years old, speaking with a slightly
     childish tone, suitable for animation character voice-overs."
 ```
 
-### Официальные примеры (mintlify guides)
+### Официальные примеры (mintlify guides) — темп вырезан (правило владельца)
 
 ```text
 "Male, 25 years old, friendly and professional tone"
 "Female, 70 years old, warm and grandmotherly voice with slight raspiness"
 "Male, 17 years old, tenor range, gaining confidence - deeper breath
  support now, though vowels still tighten when nervous"
-"Middle-aged male voice, worried and anxious tone, slightly breathless
- and speaking faster than normal"
+"Middle-aged male voice, worried and anxious tone, slightly breathless"
 "Female, Southern US accent, warm and hospitable tone"
 "Male, professional news anchor voice, clear articulation, authoritative
- but approachable, medium paced"
+ but approachable"
 ```
 
 ### Готовые образцы под типажи TSSR (проверенные на прогонах)
@@ -186,10 +193,10 @@ Detail (манеры, образность).
 ```text
 # Молодая женщина-авторитет (Сара/Кейт-рег.2)
 Female, 17-19 years old, clear youthful voice, composed and intelligent,
-dry humor, formal court speech with warm undertone, unhurried pace
+dry humor, formal court speech with warm undertone
 
 # Тёплый нарратор (25-35, женский)
-Female, 25-35 years old, warm mezzo-soprano, intimate and unhurried,
+Female, 25-35 years old, warm mezzo-soprano, intimate,
 soft breath support, speaks with quiet confidence as if telling a story
 by the fire
 
@@ -205,7 +212,7 @@ anger
 
 # Молодой жулик (Аларик/Зигмунд)
 Male, 25-30 years old, medium-low velvet baritone, smooth lazy delivery
-with a perpetual smirk, cynical and sarcastic, stretches vowels playfully
+with a perpetual smirk, cynical and sarcastic
 
 # Древний маг (Ксан/Разафель)
 Male, ageless, deep resonant bass with dry menace, measured and
@@ -220,7 +227,7 @@ Male, 30-40 years old, powerful mid-low booming voice, proud and warm,
 deliberate weight in every word, friendly rumble
 
 # Демон (Дэймон)
-Male, deep booming bass with otherworldly resonance, slow and hypnotic,
+Male, deep booming bass with otherworldly resonance,
 speaks as if echoing through a vast marble temple, velvet menace
 
 # Старый король (Орвелл)
@@ -231,7 +238,7 @@ with his children, regal measured speech, warmth beneath authority
 ### Чек-лист перед генерацией
 
 - [ ] instruct на английском, 1-3 предложения (15-80 слов)
-- [ ] Пол + возраст + тембр + эмоция + темп (минимум 4 измерения)
+- [ ] Пол + возраст + тембр + эмоция (минимум 4 измерения), БЕЗ темпа
 - [ ] Акустика, а не личность ("velvet baritone", "slight rasp"),
       эмоция через манеру ("smirk in the voice"), а не биографию
 - [ ] Нет конфликтов ("deep" и "high-pitched" одновременно)
@@ -247,11 +254,13 @@ with his children, regal measured speech, warmth beneath authority
 - **Рекомендация:** 100-120 символов (оптимально для 10с)
 - **Максимум:** 150+ символов (длинная фраза, может быть обрезана)
 
-voice_design.py имеет 3 попытки:
+voice_design.py имеет 3 попытки (темп НЕ задаётся — правило владельца
+2026-10-27; автодобор длины только удлинением текста):
 
 1. Обычный instruct + текст
-2. "Говори медленно" + текст
-3. "Говори медленно" + текст + следующая фраза (конкатенация)
+2. Обычный instruct + текст (другая температура сэмплирования)
+3. Обычный instruct + текст + следующая фраза (конкатенация — длина растёт
+   текстом, а не замедлением речи)
 
 Если после 3 попыток <10с — GIVE UP в логе.
 
@@ -264,7 +273,7 @@ voice_design.py имеет 3 попытки:
 1. **Явный пол в тексте** — каждая фраза первого лица с маркером рода:
    «я пошёл/пошла», «я делал/делала». Иначе TTS путает пол.
 2. **instruct_en** — всегда на английском, 1-3 предложения с акустическими
-   деталями (тембр, эмоция, темп). Писать по БП ниже
+   деталями (тембр, эмоция), БЕЗ темпа/скорости. Писать по БП ниже
    («Бест-практисы для instruct_en»): минимум 4 измерения (пол, возраст,
    тембр, эмоция), физика голоса, а не личность.
 3. **texts** — 100+ символов каждая; один текст = один кандидат.

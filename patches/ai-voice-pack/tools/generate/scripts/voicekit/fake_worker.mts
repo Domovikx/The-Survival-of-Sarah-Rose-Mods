@@ -9,6 +9,8 @@
  *   gen c text содержащим "FAIL" -> ok:false (тест fail-ветки),
  *   gen с text содержащим "WARMUP" -> ПЕРВЫЙ запрос ok:false с
  *     TextEncodeInput в ошибке, второй ok (тест ретрая worker.mts),
+ *   gen с text содержащим "OPTS" -> ok ТОЛЬКО если req.opts донёс
+ *     cfg_value=1.5 и inference_timesteps=30 (тест прокидки genOpts -> opts),
  *   gen с text содержащим "CRASH" -> процесс падает (тест обрыва).
  * stdout = только протокол, stderr = логи.
  */
@@ -61,6 +63,18 @@ rl.on("line", (line) => {
           "\n",
       );
       return;
+    }
+    if (text.includes("OPTS")) {
+      // Тест прокидки genOpts -> opts (стенд voxcpm_bench.mts): просили
+      // переопределения — шим обязан их получить, иначе fail-ветка.
+      const opts = req.opts;
+      if (!opts || opts.cfg_value !== 1.5 || opts.inference_timesteps !== 30) {
+        process.stdout.write(
+          JSON.stringify({ id: req.id, ok: false, error: `opts не дошли до шима: ${JSON.stringify(opts ?? null)}` }) +
+            "\n",
+        );
+        return;
+      }
     }
     process.stdout.write(JSON.stringify({ id: req.id, ok: true, pcm_b64: PCM_B64, sr: SR, raw_dur: DUR_S }) + "\n");
     return;

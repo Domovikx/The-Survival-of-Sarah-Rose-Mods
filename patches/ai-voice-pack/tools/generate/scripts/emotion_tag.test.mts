@@ -9,7 +9,8 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { test } from "node:test";
 
-import { llmAsk, tagPhrase, writeDraft } from "./emotion_tag.mts";
+import { buildPrompt, llmAsk, tagPhrase, writeDraft } from "./emotion_tag.mts";
+import type { CatalogEntry } from "./voice_batch.mts";
 
 // --- эвристика -------------------------------------------------------------
 
@@ -81,4 +82,43 @@ test("writeDraft: ключи сортируются (детерминизм)", (
   writeDraft({ bbb: "B", aaa: "A", mmm: "M" }, p);
   const keys = Object.keys(JSON.parse(readFileSync(p, "utf-8")) as object);
   assert.deepEqual(keys, ["aaa", "bbb", "mmm"]);
+});
+
+// --- промпт разметки с контекстом -------------------------------------------
+
+const mk = (over: Partial<CatalogEntry> = {}): CatalogEntry => ({
+  uid: "u",
+  old: "He smiled at her.",
+  new: "Он улыбнулся на неё.",
+  who: null,
+  who_name: "Sarah",
+  arc: "WarriorPath",
+  scene: "WarriorQueen1",
+  category: "dialogue",
+  emotion: null,
+  ...over,
+});
+
+test("buildPrompt: подаёт контекст спикера/арки/соседей и правила качества", () => {
+  // ФИКС КАЧЕСТВА 2026-10-26: раньше LLM видела ТОЛЬКО текст фразы —
+  // без контекста она шаблонила (26% корпуса «Curiously observing»).
+  const p = buildPrompt(mk(), "Go away from me.", "I will never leave.");
+  assert.match(p, /Speaker: Sarah \| arc: WarriorPath \| scene: WarriorQueen1/);
+  assert.match(p, /Previous line: Go away from me\./);
+  assert.match(p, /Line \(EN\): He smiled at her\./);
+  assert.match(p, /Line \(RU\): Он улыбнулся на неё\./);
+  assert.match(p, /Next line: I will never leave\./);
+  assert.match(p, /2-6 words/, "правило длины");
+  assert.match(p, /NEVER reply "none"/, "запрет none");
+  assert.match(p, /NOT a summary/, "состояние, а не пересказ");
+  assert.match(p, /varied/, "запрет шаблонного повтора");
+});
+
+test("buildPrompt: Narrator по умолчанию, без соседей и без scene — не добавляем", () => {
+  const n = buildPrompt(mk({ who_name: null, scene: null }));
+  assert.match(n, /Speaker: Narrator \| arc: WarriorPath/);
+  assert.ok(!n.includes("scene:"), "пустая сцена не подставляется");
+  const solo = buildPrompt(mk());
+  assert.ok(!solo.includes("Previous line"));
+  assert.ok(!solo.includes("Next line"));
 });

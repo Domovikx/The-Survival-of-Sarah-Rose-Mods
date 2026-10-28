@@ -182,6 +182,14 @@ export interface PotEntry {
   n: number; // сколько раз встретилась в игре
   uid: string; // md5(msgid) — id фразы для каталога и суффикс аудиофайла
   emotion?: string; // тон из POT/overlay (только speaker/narration)
+  /**
+   * НОВЫЙ тон (миграция 2026-10-26): `#. emotion_new:` пишется overlay'ем
+   * `--emotions` и переживает регенерацию (roundtrip). Старый `emotion`
+   * НЕ трогается — у уже сгенерированного звука остаётся его тональность,
+   * миграция плавная: сравниваешь, перегенерируешь строку — и она берёт
+   * новый тон. Действующий тон = emotion_new ?? emotion (см. loadCatalog).
+   */
+  emotionNew?: string;
   arc?: string; // арка текущего label (правила arcOfLabel) — роутинг аудио POT-мапы
   scene?: string; // label записи (сцена) — тоньше арки, таргетинг --scene
 }
@@ -505,7 +513,10 @@ export function parseRpyFile(filePath: string, catalog: PotCatalog, defineDispla
 
 /** Опции сканирования (метаданные озвучки для комментариев POT). */
 export interface ScanOptions {
-  emotions?: Record<string, string>; // md5(msgid) -> тон (--emotions <файл>, черновик emotion_tag.mts)
+  /** md5(msgid) -> ДЕЙСТВУЮЩИЙ тон (roundtrip `#. emotion:`). */
+  emotions?: Record<string, string>;
+  /** md5(msgid) -> НОВЫЙ тон (roundtrip `#. emotion_new:` + overlay `--emotions`). */
+  emotionsNew?: Record<string, string>;
 }
 
 /** Строит каталог POT по всем .rpy в gameDir. */
@@ -547,12 +558,13 @@ export function scanGame(gameDir: string, opts: ScanOptions = {}): PotCatalog {
 
   // Эмоции: только озвучиваемые (инвариант speaker:* = озвучиваемо, теперь
   // включая Narrator; меню/ui/имена — не речь, их ключей в разметке тона нет).
-  if (opts.emotions) {
+  if (opts.emotions || opts.emotionsNew) {
     for (const e of catalog.entries.values()) {
-      const em = opts.emotions[e.uid];
-      if (em && e.msgctxt.startsWith("speaker:")) {
-        e.emotion = em;
-      }
+      if (!e.msgctxt.startsWith("speaker:")) continue;
+      const em = opts.emotions?.[e.uid];
+      if (em) e.emotion = em;
+      const nu = opts.emotionsNew?.[e.uid];
+      if (nu) e.emotionNew = nu; // миграционный слой — старый НЕ перетирается
     }
   }
   return catalog;
@@ -588,6 +600,7 @@ export function renderPot(catalog: PotCatalog, now: Date = new Date()): string {
     if (e.scene) out.push(`#. scene: ${e.scene}`);
     out.push(`#. uid: ${e.uid}`);
     if (e.emotion) out.push(`#. emotion: ${e.emotion}`);
+    if (e.emotionNew) out.push(`#. emotion_new: ${e.emotionNew}`); // миграционный слой 2026-10-26
     out.push(`msgctxt "${poEscape(e.msgctxt)}"`);
     out.push(`msgid "${poEscape(e.msgid)}"`);
     out.push('msgstr ""');
@@ -617,15 +630,18 @@ export function parseLabelMap(potText: string): Record<string, string> {
 }
 
 /**
- * Тон шаблона: uid(md5(msgid)) -> emotion из комментариев `#. emotion:`
+ * Тон шаблона: uid(md5(msgid)) -> тон из комментариев `#. emotion:`
  * (roundtrip: тон переживает регенерацию POT, пока текст не менялся).
+ *
+ * `prefix` выбирает слой: `"emotion:"` — действующий, `"emotion_new:"` —
+ * миграционный (2026-10-26, плавный переход на новый тон).
  */
-export function loadEmotionsFromPot(potText: string): Record<string, string> {
+export function loadEmotionsFromPot(potText: string, prefix = "emotion:"): Record<string, string> {
   const out: Record<string, string> = {};
   for (const e of parsePo(potText)) {
     if (!e.msgid) continue; // шапка
-    const c = e.comments.find((x) => x.startsWith("emotion:"));
-    if (c) out[uidOf(e.msgid)] = c.slice("emotion:".length).trim();
+    const c = e.comments.find((x) => x.startsWith(prefix));
+    if (c) out[uidOf(e.msgid)] = c.slice(prefix.length).trim();
   }
   return out;
 }
@@ -712,13 +728,18 @@ function main(): void {
 
   const emFlag = argv.indexOf("--emotions");
   let emotions: Record<string, string> = {};
+  let emotionsNew: Record<string, string> = {};
   let emoSource = "отключён (--no-emotions)";
   if (!argv.includes("--no-emotions")) {
     // Источник тона — сам шаблон (roundtrip): тон переживает регенерацию,
     // пока текст не менялся (catalog/emotions.json удалён 2026-10-22).
     if (existsSync(outFile)) {
-      emotions = loadEmotionsFromPot(readFileSync(outFile, "utf-8"));
+      const potText = readFileSync(outFile, "utf-8");
+      emotions = loadEmotionsFromPot(potText); // слой `#. emotion:`
+      emotionsNew = loadEmotionsFromPot(potText, "emotion_new:"); // слой `#. emotion_new:`
       emoSource = `roundtrip ${outFile}`;
+      const nNew = Object.keys(emotionsNew).length;
+      if (nNew) emoSource += ` (+emotion_new: ${nNew})`;
     } else {
       emoSource = "нет (шаблона ещё не было — первичная генерация)";
       console.warn(`WARN: ${outFile} не найден — первичная генерация без #. emotion:`);
@@ -729,12 +750,14 @@ function main(): void {
         console.error("ERROR: --emotions требует значение (см. --help)");
         process.exit(1);
       }
-      // Явный файл — overlay поверх roundtrip (инкрементальная разметка:
-      // старый тон сохраняется, новый/исправленный добирается из файла).
+      // Overlay 2026-10-26 (решение владельца — ПЛАВНАЯ МИГРАЦИЯ): файл
+      // пишется в слой `#. emotion_new:`, а действующий `#. emotion:`
+      // НЕ перетирается — у уже сгенерированного звука остаётся его
+      // тональность; сравнение/переход построчный, откат — точечный.
       try {
         const overlay = JSON.parse(readFileSync(emPath, "utf-8")) as Record<string, string>;
-        emotions = { ...emotions, ...overlay };
-        emoSource += ` + overlay ${emPath}`;
+        emotionsNew = { ...emotionsNew, ...overlay };
+        emoSource += ` + overlay ${emPath} -> emotion_new`;
       } catch (e) {
         console.error(
           `ERROR: не прочитан файл эмоций ${emPath} (${e instanceof Error ? e.message : String(e)}) — без тона не пишу`,
@@ -744,7 +767,7 @@ function main(): void {
     }
   }
 
-  const catalog = scanGame(gameDir, { emotions });
+  const catalog = scanGame(gameDir, { emotions, emotionsNew });
   const s = catalog.stats;
   mkdirSync(dirname(outFile), { recursive: true });
   writeFileSync(outFile, renderPot(catalog), "utf-8");
@@ -760,8 +783,10 @@ function main(): void {
   console.log(`  схлопнуто повторов (тот же msgid+msgctxt): ${s.mergedDupes}`);
   console.log(`  normalizeText-семей >1 варианта (кандидаты prefill): ${s.normTwins}`);
   const withEmotion = [...catalog.entries.values()].filter((e) => e.emotion).length;
+  const withNew = [...catalog.entries.values()].filter((e) => e.emotionNew).length;
   console.log(
-    `  с метаданными emotion: ${withEmotion} (источник: ${emoSource}; ключей: ${Object.keys(emotions).length})`,
+    `  с метаданными emotion: ${withEmotion} (источник: ${emoSource}; ключей: ${Object.keys(emotions).length})` +
+      ` | emotion_new: ${withNew} (миграция, ключей: ${Object.keys(emotionsNew).length})`,
   );
   const withArc = [...catalog.entries.values()].filter((e) => e.arc).length;
   const noArcCount = catalog.entries.size - withArc;

@@ -50,8 +50,6 @@ LOG_PATH = os.path.join(paths.OUTPUT_DIR, 'voice', 'design.log')
 
 from voicekit import config as _cfg
 
-TEMPO = _cfg.get('design', 'tempo',
-                 "темп речи спокойный, неторопливый, паузы короткие")
 MIN_TEXT_LEN = int(_cfg.get('design', 'min_text_len', 150))
 MAX_TEXT_LEN = int(_cfg.get('design', 'max_text_len', 250))
 DEFAULT_TEMP = float(_cfg.get('design', 'temperature', 0.9))
@@ -189,14 +187,12 @@ def gen_one(model, dst, char, cfg, i, n):
         log("FAIL {} #{}: нет instruct_en в {}".format(char, i + 1, dst))
         return "fail"
 
+    # Темп НЕ задаём (владелец, 2026-10-27): никаких "slowly/stretching" —
+    # автодобор длины >= 10с только удлинением текста (вторая фраза), не темпом
     attempts = [
-        (base_instruct + "; " + TEMPO,
-         text, temp, top_p),
-        (base_instruct + "; " + TEMPO +
-         "; speak slowly, deliberately, stretching words", text, 0.85, top_p),
-        (base_instruct + "; " + TEMPO +
-         "; speak slowly, deliberately, stretching words",
-         text + " " + extra, 0.85, top_p),
+        (base_instruct, text, temp, top_p),
+        (base_instruct, text, 0.85, top_p),
+        (base_instruct, text + " " + extra, 0.85, top_p),
     ]
     for att, (instruct, t, temp, p) in enumerate(attempts):
         log("== {} #{}/{} try{} temp={:.2f} top_p={:.2f}".format(

@@ -2,7 +2,7 @@
  * worker.mts — клиент инференс-шима cosyworker.py (JSON-lines через stdin/stdout).
  *
  * Протокол v2 (миграция python → TS, 2026-10-23, см. AGENTS.md):
- *   -> {"id": N, "cmd": "gen", "text", "ref", "emotion", "seed"}
+ *   -> {"id": N, "cmd": "gen", "text", "ref", "emotion", "seed", "opts"?}
  *   <- {"id": N, "ok": true, "pcm_b64", "sr", "raw_dur"}
  *      | {"id": N, "ok": false, "error"}
  *   -> {"id": N, "cmd": "ping"}
@@ -24,7 +24,7 @@ import { mkdirSync } from "node:fs";
 import { dirname } from "node:path";
 import { createInterface } from "node:readline";
 
-import { opusPathFor, saveWavChain, tensorToOpus } from "./audio.mts";
+import { normalizeWav, opusPathFor, saveWavChain, tensorToOpus, writeWav16 } from "./audio.mts";
 import { trimTailBurst } from "./trim.mts";
 
 /** Задание на генерацию одной фразы. */
@@ -32,17 +32,55 @@ export interface GenRequest {
   text: string;
   ref: string;
   emotion?: string | null;
+  /**
+   * Hi-Fi Cloning (2026-10-28): точная расшифровка рефа. Передаётся
+   * только когда просили — прод-запрос байт-в-байт не меняется.
+   */
+  prompt_text?: string | null;
   seed?: number;
-  /** Куда писать (wav-имя; opus — рядом с тем же именем). Файл пишет worker. */
+  /**
+   * Куда писать (wav-имя; opus — рядом с тем же именем). Файл пишет worker.
+   * generateRaw() поле НЕ использует (PCM отдаёт вызывающей стороне) — но путь
+   * всё равно указываем, чтобы задание оставалось самодокументируемым.
+   */
   out: string;
   /** Паритет старой шим-ветки: пропустить pipe и написать wav+levelnorm+opus. */
   keep_wav?: boolean;
+  /**
+   * Только wav: PCM → writeWav16 → loudnorm, БЕЗ конверта в opus — корпусной
+   * `{uid}__{voice}.opus` не перезаписывается (сравнительные съёмки Vox/Cosy,
+   * инцидент 2026-10-27: --keep-wav тихо перетёр 10 корпусных opus).
+   */
+  wav_only?: boolean;
+  /**
+   * Переопределения генерации движком (стенд voxcpm_bench.mts): у VoxCPM2 это
+   * cfg_value, inference_timesteps, normalize, retry_badcase, min_len/max_len,
+   * seed (см. GEN_OPTS в voxcpmworker.py). Без поля — дефолты шима,
+   * прод-поведение не меняется. Ключи движко-специфичные: шим их игнорирует,
+   * если не знает.
+   */
+  genOpts?: Record<string, unknown>;
 }
 
 export interface GenResult {
   ok: boolean;
   dur?: number;
   saved?: string;
+  error?: string;
+}
+
+/**
+ * Сырая генерация (generateRaw): PCM из шима БЕЗ trim и кодирования —
+ * для стенда перебора конфигов, которому нужен честный выход модели
+ * (см. voxcpm_bench.mts).
+ */
+export interface RawResult {
+  ok: boolean;
+  samples?: Float32Array;
+  /** Частота PCM модели (VoxCPM2 — 48000). */
+  sr?: number;
+  /** Чистый инференс + транспорт, мс. */
+  genMs?: number;
   error?: string;
 }
 
@@ -73,6 +111,21 @@ interface Pending {
 }
 
 const DEFAULT_TIMEOUT_MS = 5 * 60 * 1000;
+
+/**
+ * Ответ шима → сырой PCM: {samples, sr} либо текст ошибки (fail-soft форма).
+ * Общий декодер для encode() и generateRaw().
+ */
+function decodePcm(r: Record<string, unknown>): { samples: Float32Array; sr: number } | string {
+  const sr = Number(r.sr);
+  const pcmB64 = typeof r.pcm_b64 === "string" ? r.pcm_b64 : "";
+  if (!pcmB64 || !Number.isFinite(sr) || sr <= 0) return "шим вернул пустой pcm/sr";
+  const bytes = Buffer.from(pcmB64, "base64");
+  if (bytes.length === 0 || bytes.length % 4 !== 0) return `шим вернул некратный pcm (${bytes.length} байт)`;
+  // slice — копия: буфер пула Buffer может не быть выровнен по 4
+  const samples = new Float32Array(bytes.buffer.slice(bytes.byteOffset, bytes.byteOffset + bytes.byteLength));
+  return { samples, sr };
+}
 
 /**
  * Живой инференс-процесс: spawn → ping (модель загружена) → generate×N → quit.
@@ -181,18 +234,7 @@ export class VoiceWorker {
    */
   async generate(req: GenRequest): Promise<GenResult> {
     const t0 = Date.now();
-    let r = await this.sendGen(req);
-    if (!r.ok && typeof r.error === "string" && r.error.includes("TextEncodeInput")) {
-      // Холодный фронтенд wetext: ПЕРВАЯ строка после загрузки модели бьётся
-      // о TextEncodeInput (гонка анонимной докачки влажного фронтенда), вторая
-      // после — проходит (бага 2026-10-23). Один повтор через 3с — докачка
-      // успевает. Раньше повтор жил в cosyworker.py; в миграции python → TS
-      // переехал сюда (гард — voice_batch.test.mts, живой тест — WARMUP в
-      // fake_worker.mts).
-      this.opts.onLog?.("  WARN: фронтенд ещё прогревается (TextEncodeInput) — повтор через 3с");
-      await new Promise((res) => setTimeout(res, 3000));
-      r = await this.sendGen(req);
-    }
+    const r = await this.sendGenWithRetry(req);
     if (!r.ok) {
       return { ok: false, error: typeof r.error === "string" ? r.error : "неизвестная ошибка шима" };
     }
@@ -205,6 +247,39 @@ export class VoiceWorker {
     }
   }
 
+  /**
+   * Сырая генерация: шим → PCM, БЕЗ trim и кодирования (см. RawResult).
+   * Нужна стенду перебора конфигов voxcpm_bench.mts: честный выход модели
+   * без нормализации/ресемпла. Файлы не пишутся — владелец результата.
+   */
+  async generateRaw(req: GenRequest): Promise<RawResult> {
+    const t0 = Date.now();
+    const r = await this.sendGenWithRetry(req);
+    if (!r.ok) {
+      return { ok: false, error: typeof r.error === "string" ? r.error : "неизвестная ошибка шима" };
+    }
+    const pcm = decodePcm(r);
+    if (typeof pcm === "string") return { ok: false, error: pcm };
+    return { ok: true, samples: pcm.samples, sr: pcm.sr, genMs: Date.now() - t0 };
+  }
+
+  /** Запрос gen + ретрай холодного фронтенда wetext (см. generate). */
+  private async sendGenWithRetry(req: GenRequest): Promise<Record<string, unknown>> {
+    let r = await this.sendGen(req);
+    if (!r.ok && typeof r.error === "string" && r.error.includes("TextEncodeInput")) {
+      // Холодный фронтенд wetext: ПЕРВАЯ строка после загрузки модели бьётся
+      // о TextEncodeInput (гонка анонимной докачки влажного фронтенда), вторая
+      // после — проходит (бага 2026-10-23). Один повтор через 3с — докачка
+      // успевает. Раньше повтор жил в cosyworker.py; в миграции python → TS
+      // переехал сюда (гард — voice_batch.test.mts, живой тест — WARMUP в
+      // fake_worker.mts).
+      this.opts.onLog?.("  WARN: фронтенд ещё прогревается (TextEncodeInput) — повтор через 3с");
+      await new Promise((res) => setTimeout(res, 3000));
+      r = await this.sendGen(req);
+    }
+    return r;
+  }
+
   private sendGen(req: GenRequest): Promise<Record<string, unknown>> {
     return this.send({
       cmd: "gen",
@@ -212,28 +287,30 @@ export class VoiceWorker {
       ref: req.ref,
       emotion: req.emotion ?? null,
       seed: req.seed ?? 42,
+      // Hi-Fi: только когда просили (см. контракт GenRequest)
+      ...(req.prompt_text ? { prompt_text: req.prompt_text } : {}),
+      // Переопределения генерации (стенд VoxCPM2) — только когда просили,
+      // чтобы прод-запрос остался байт-в-байт прежним.
+      ...(req.genOpts ? { opts: req.genOpts } : {}),
     });
   }
 
   /** PCM из шима → trim → корпусное кодирование → GenResult. */
   private encode(r: Record<string, unknown>, req: GenRequest, genMs: number): GenResult {
-    const sr = Number(r.sr);
-    const pcmB64 = typeof r.pcm_b64 === "string" ? r.pcm_b64 : "";
-    if (!pcmB64 || !Number.isFinite(sr) || sr <= 0) {
-      return { ok: false, error: "шим вернул пустой pcm/sr" };
-    }
-    const bytes = Buffer.from(pcmB64, "base64");
-    if (bytes.length === 0 || bytes.length % 4 !== 0) {
-      return { ok: false, error: `шим вернул некратный pcm (${bytes.length} байт)` };
-    }
-    // slice — копия: буфер пула Buffer может не быть выровнен по 4
-    const raw = new Float32Array(bytes.buffer.slice(bytes.byteOffset, bytes.byteOffset + bytes.byteLength));
+    const pcm = decodePcm(r);
+    if (typeof pcm === "string") return { ok: false, error: pcm };
+    const { samples: raw, sr } = pcm;
     const { samples, cuts } = trimTailBurst(raw, sr);
     mkdirSync(dirname(req.out), { recursive: true });
     const dur = Math.round((samples.length / sr) * 100) / 100;
 
     let saved: string;
-    if (req.keep_wav) {
+    if (req.wav_only) {
+      // Только wav (opus НЕ трогаем): та же цепочка saveWavChain без конверта
+      writeWav16(req.out, samples, sr);
+      normalizeWav(req.out, sr); // сбой не фатален — паритет saveWavChain
+      saved = req.out;
+    } else if (req.keep_wav) {
       if (!saveWavChain(samples, sr, req.out)) {
         this.opts.onLog?.("  WARN: opus-конверт не удался, wav остаётся фолбэком");
       }

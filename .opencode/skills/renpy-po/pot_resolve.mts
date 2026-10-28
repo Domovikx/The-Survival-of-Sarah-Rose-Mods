@@ -76,7 +76,9 @@ export class PotIndex {
         uid: createHash("md5").update(e.msgid, "utf8").digest("hex"),
         arc: meta ?? "_unknown",
         scene: commentOf(e.comments, "scene:"),
-        emotion: commentOf(e.comments, "emotion:"),
+        // МИГРАЦИЯ 2026-10-26: действующий тон = emotion_new ?? emotion
+        // (po-контуру — промпту и судье — нужен тот тон, что реально звучит)
+        emotion: commentOf(e.comments, "emotion_new:") ?? commentOf(e.comments, "emotion:"),
         category,
         speaker,
       });

@@ -40,7 +40,9 @@
     "format:check": "prettier --check .",
     "po:check": "node scripts/po_check.mts",
     "po:commit": "node scripts/po_commit.mts",
-    "po:judge": "node .opencode/skills/renpy-po/po_judge_check.mts"
+    "po:judge": "node .opencode/skills/renpy-po/po_judge_check.mts",
+    "emotion:audit": "node patches/ai-voice-pack/tools/generate/scripts/emotion_audit.mts",
+    "emotion:judge": "node patches/ai-voice-pack/tools/generate/scripts/emotion_judge.mts"
   },
   "lint-staged": {
     "*.{js,mjs,cjs,ts,tsx,mts,cts}": [

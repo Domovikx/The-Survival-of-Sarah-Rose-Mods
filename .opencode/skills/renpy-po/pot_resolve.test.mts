@@ -83,11 +83,17 @@ test("детерминизм: дубль ключа -> первая запись
 test("боевой template.pot: индекс строится, размер = числу записей", () => {
   const idx = loadPotIndex(DEFAULT_POT);
   assert.ok(idx.size > 60000, `слишком мало: ${idx.size}`);
-  // известная запись (проверено 2026-10-23)
+  // известная запись (проверено 2026-10-23; тон обновлён миграцией
+  // emotion_new 2026-10-27 — действующий слой = emotion_new ?? emotion)
   const m = idx.resolve("speaker:Narrator", "Al'Gahaem was a city that was hard for Sarah to wrap her mind around.");
   assert.ok(m, "известная строка резолвится");
   assert.equal(m.arc, "AlfredArc");
-  assert.equal(m.emotion, "Thoughtfully puzzled");
+  assert.equal(m.emotion, "Reflective and slightly weary", "индекс отдаёт НОВЫЙ тон (emotion_new)");
+  // старый слой в POT сохранён (плавная миграция) — просто уже не действующий
+  const raw = readFileSync(DEFAULT_POT, "utf8")
+    .split(/\n\n/)
+    .find((b) => b.includes("Al'Gahaem was a city"));
+  assert.match(raw ?? "", /^#\. emotion: Thoughtfully puzzled$/m, "старый слой цел");
 });
 
 test("ГРАНИЦА: тон живёт ТОЛЬКО в template.pot — в po/*.po его нет", () => {

@@ -38,7 +38,8 @@ export const REFS = {
 /** Генерация кандидатов (voice_design, VoiceDesign). */
 export const DESIGN = {
   candidates: 6, // сколько кандидатов на персонажа (--n по умолчанию)
-  tempo: "темп речи спокойный, неторопливый, паузы короткие",
+  // ВАЖНО (владелец, 2026-10-27): никаких указаний темпа/скорости в промтах —
+  // темп — художественный замысел модели, его нельзя навязывать
   min_text_len: 150, // мин. длина фразы в texts (≈10с речи)
   max_text_len: 250, // макс: длиннее — риск дрейфа голоса
   temperature: 0.9, // ЕДИНАЯ конфигурация семплирования на всех кандидатов
@@ -52,12 +53,11 @@ export const BATCH = {
   sampling: [0.8, 25.0, 0.1], // RAS: top_p, top_k, tau_r (официальные)
   seed: 42,
   instruct_presets: {
-    // --emotion пресеты (англ. описания состояний)
+    // --emotion пресеты (англ. описания состояний);
+    // пресеты fast/slow УДАЛЕНЫ (владелец 2026-10-27): темп не задаём никогда
     angry: "In a fit of rage, with intensity",
     sad: "Sadly, with melancholic tone",
     happy: "Happily, with excitement",
-    fast: "Speaking as fast as possible",
-    slow: "Speaking slowly and deliberately",
     loud: "As loudly as possible",
     soft: "In a very soft voice",
     whisper: "In a soft whisper",

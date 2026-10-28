@@ -13,6 +13,7 @@ import { describe, it } from "node:test";
 import { fileURLToPath } from "node:url";
 
 import {
+  ENGINES,
   loadCatalog,
   parseCli,
   runawayDuration,
@@ -223,12 +224,21 @@ describe("контракт кодировки UTF-8 (мохибака-бага 2
 
 describe("формат корпуса OpusHead 24000 (расхождение 2026-10-23)", () => {
   const audio = readFileSync(join(SCRIPTS_DIR, "voicekit", "audio.mts"), "utf8");
-  it("tensorToOpus: явный выходной -ar — loudnorm ресемплит до 192k, libopus без -ar сам берёт 48000", () => {
+  it("tensorToOpus: ВХОДНОЙ -ar = частоте PCM, ВЫХОДНОЙ = AUDIO.sr (контракт 24000)", () => {
     // Regex терпел и prettier-формат «по элементу на строку» (2026-10-23).
+    // Вход: частота модели (у VoxCPM2 = 48000 — ей обязан верить pipe f32le).
+    assert.match(audio, /"-f",\s*"f32le",\s*"-ar",\s*String\(sr\)/);
+    // Выход: ТОЛЬКО корпусная 24000 — иначе (бага 2026-10-27 на VoxCPM2)
+    // в корпусе появляются 48k-файлы, редактор владельца их не открывает.
     assert.match(
       audio,
-      /"-c:a",\s*"libopus",\s*"-b:a",\s*"24k",\s*"-ac",\s*"1",\s*"-ar",\s*String\(sr\),\s*"-f",\s*"opus"/,
+      /"-c:a",\s*"libopus",\s*"-b:a",\s*"24k",\s*"-ac",\s*"1",\s*"-ar",\s*String\(Math\.trunc\(AUDIO\.sr\)\),\s*"-f",\s*"opus"/,
     );
+  });
+  it("wavToOpus: явный выходной -ar параметром (дефолт AUDIO.sr = контракт 24000)", () => {
+    const w = audio.slice(audio.indexOf("export function wavToOpus"), audio.indexOf("export function normalizeWav"));
+    assert.match(w, /sr: number = Math\.trunc\(AUDIO\.sr\)/, "дефолт частоты = контракт 24000 (не изменился)");
+    assert.match(w, /"-ar",\s*String\(Math\.trunc\(sr\)\)/, "-ar обязан быть явным (фикс 2026-10-23)");
   });
   it("healWavToOpus: без -af — wav уже 24k, фильтр снова увёл бы формат в 48000", () => {
     const line = readFileSync(join(SCRIPTS_DIR, "voice_batch.mts"), "utf8")
@@ -256,5 +266,84 @@ describe("миграция python → TS (кодирование перееха�
     const audio = src(join("voicekit", "audio.mts"));
     assert.match(audio, /loudnorm=I=/);
     assert.match(audio, /"-f",\s*"f32le"/);
+  });
+});
+
+// ------------------------------------------- движок voxcpm2 (миграция) ---
+
+describe("движок voxcpm2 (2026-10-26: вердикт владельца «однозначно лучший»)", () => {
+  it("parseCli: свой venv на движок; неизвестный движок — throw", () => {
+    const v = parseCli(["--engine", "voxcpm2"]);
+    assert.equal(v.engine, "voxcpm2");
+    assert.match(v.python.replace(/\\/g, "/"), /voxcpm2\/\.venv/, "venv VoxCPM2, не cosyvoice3");
+
+    const d = parseCli([]);
+    assert.equal(d.engine, "cosyvoice3");
+    assert.equal(d.python, ENGINES.cosyvoice3.python, "дефолт по-прежнему CosyVoice3");
+
+    assert.throws(() => parseCli(["--engine", "nope"]), /неизвестный движок/);
+  });
+
+  it("ENGINES: у каждого движка свой шим и метка variant", () => {
+    assert.equal(ENGINES.cosyvoice3.tag, "", "контракт рантайма: {uid}__{имя}.opus");
+    assert.equal(ENGINES.voxcpm2.tag, "VoxCPM2");
+    assert.ok(ENGINES.cosyvoice3.shim.endsWith("cosyworker.py"));
+    assert.ok(ENGINES.voxcpm2.shim.endsWith("voxcpmworker.py"));
+    assert.notEqual(ENGINES.cosyvoice3.python, ENGINES.voxcpm2.python, "venv разные");
+  });
+
+  it("selectPhrases: voxcpm2 -> {uid}__VoxCPM2.opus РЯДОМ со старыми (не перезапись)", () => {
+    const ph = selectPhrases(entries, { ...baseArgs, engine: "voxcpm2" }).slice(0, 30);
+    assert.ok(ph.length > 0, "фразы отобрались");
+    for (const p of ph) {
+      assert.equal(p.variant, "VoxCPM2");
+      assert.ok(p.out.endsWith("__VoxCPM2.wav"), `имя файла: ${p.out}`);
+      assert.ok(!/__Sarah/.test(p.out), "контрактный файл спикера не затрагивается");
+    }
+    // а без движка — прежний контракт: {uid}__{variant}.variant = имя
+    // спикера/рефа (включая имена с пробелами вроде "Generic Male Mature")
+    const plain = selectPhrases(entries, baseArgs).slice(0, 5);
+    for (const p of plain) {
+      assert.notEqual(p.variant, "VoxCPM2", "без --engine метки движка нет");
+      assert.ok(p.out.endsWith(`__${p.variant}.wav`), `контрактное имя: ${p.out}`);
+    }
+  });
+
+  it("selectPhrases: --emotion сохраняет свой суффикс после метки движка", () => {
+    const ph = selectPhrases(entries, { ...baseArgs, engine: "voxcpm2", emotion: "Whispering" })[0];
+    assert.equal(ph.variant, "VoxCPM2_em");
+  });
+
+  it("--keep-wav: флаг парсится и доходит до генератора (диагностика wav→opus)", () => {
+    assert.equal(parseCli([]).keepWav, false, "дефолт — без wav");
+    assert.equal(parseCli(["--keep-wav"]).keepWav, true);
+    // гард-источник: generate() обязан получать keep_wav из аргументов
+    const src = readFileSync(join(SCRIPTS_DIR, "voice_batch.mts"), "utf8");
+    assert.match(src, /keep_wav:\s*args\.keepWav/, "ветка keep_wav в вызове w.generate потерялась");
+  });
+
+  it("--wav-only: флаг парсится и доходит до генератора (корпусной opus не трогаем)", () => {
+    assert.equal(parseCli([]).wavOnly, false, "дефолт — как раньше, с opus");
+    assert.equal(parseCli(["--wav-only"]).wavOnly, true);
+    const src = readFileSync(join(SCRIPTS_DIR, "voice_batch.mts"), "utf8");
+    assert.match(src, /wav_only:\s*args\.wavOnly/, "ветка wav_only в вызове w.generate потерялась");
+  });
+
+  it("текст языка: ja берётся из po/ja.po, а не из EN-оригинала", () => {
+    const ja = loadCatalog("ja");
+    const ph = selectPhrases(ja, { ...baseArgs, lang: "ja", arc: "Prologue" }).slice(0, 5);
+    assert.ok(ph.length > 0, "пролог на ja отбирается");
+    for (const p of ph) {
+      const src = ja.find((e) => e.uid === p.uid);
+      assert.ok(src, "строка есть в каталоге ja");
+      assert.equal(p.text, src!.new, "текст = перевод po/ja.po");
+      assert.notEqual(p.text, p.textOld, "не EN-оригинал");
+    }
+  });
+
+  it("en: текст = EN-оригинал (po/en.po вне десятки языков)", () => {
+    const ph = selectPhrases(entries, { ...baseArgs, lang: "en", arc: "Prologue" }).slice(0, 3);
+    assert.ok(ph.length > 0);
+    for (const p of ph) assert.equal(p.text, p.textOld, "en -> старый текст (msgid)");
   });
 });

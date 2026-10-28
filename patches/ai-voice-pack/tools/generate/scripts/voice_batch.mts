@@ -19,9 +19,13 @@
  *
  * Запуск:
  *   node voice_batch.mts [--arc A] [--scene S] [--char C] [--uid u1 u2]
- *       [--limit N] [--force] [--lang ru|en] [--seed N] [--dry-run]
+ *       [--limit N] [--force] [--lang ru|en|<po-код>] [--seed N] [--dry-run]
  *       [--ref path] [--emotion E] [--emotion-tag T] [--emotion-ru R]
  *       [--no-emotion] [--text T] [--device cuda|cpu] [--python PATH]
+ *       [--engine cosyvoice3|voxcpm2]   движок: свой шим/venv + метка variant
+ *       [--keep-wav]                оставить исходный wav рядом с opus
+ *       [--wav-only]                только wav, opus корпуса не перезаписывать
+ *                                   (диагностика конверта wav→opus)
  */
 import { spawnSync } from "node:child_process";
 import { appendFileSync, existsSync, mkdirSync, readFileSync, renameSync, rmSync, statSync } from "node:fs";
@@ -48,8 +52,27 @@ const CASTS_DIR = join(PKG_ROOT, "casts", "voices");
 const AUDIO_DIR = join(PKG_ROOT, "audio");
 const OUTPUT_DIR = join(ROOT, "output");
 const BATCH_LOG = join(OUTPUT_DIR, "voice", "batch.log");
-const SHIM = join(SCRIPTS_DIR, "cosyworker.py");
+/** venv движка по умолчанию (cosyvoice3); свои venv — в ENGINES. */
 export const DEFAULT_PYTHON = "C:/tools/cosyvoice3/.venv/Scripts/python.exe";
+
+/**
+ * Движки инференса: свой шим (python, протокол v2) + venv + МЕТКА variant.
+ *
+ * Метка подставляется вместо имени спикера в имени файла:
+ * `cosyvoice3` -> `{uid}__Sarah.opus` (контракт рантайма, как раньше),
+ * `voxcpm2` -> `{uid}__VoxCPM2.opus` (миграция 2026-10-26, решение
+ * владельца: «VoxCPM2 однозначно лучший» — новый слух лежит РЯДОМ со
+ * старым, рантайм точным путём находит прежний, glob не путается).
+ */
+export const ENGINES = {
+  cosyvoice3: { shim: join(SCRIPTS_DIR, "cosyworker.py"), python: DEFAULT_PYTHON, tag: "" },
+  voxcpm2: {
+    shim: join(SCRIPTS_DIR, "voxcpmworker.py"),
+    python: "C:/tools/voxcpm2/.venv/Scripts/python.exe",
+    tag: "VoxCPM2",
+  },
+} as const;
+export type EngineName = keyof typeof ENGINES;
 
 const aiVoiceDir = (lang: string) => join(AUDIO_DIR, `vo_${lang}`);
 
@@ -66,19 +89,28 @@ export interface CatalogEntry {
   category: string;
   /** Тон диктора: `#. emotion:` шаблона (emotions.json удалён — тон живёт в POT). */
   emotion?: string | null;
+  /**
+   * Миграционный слой `#. emotion_new:` (2026-10-26), если есть — отдельно
+   * от действующего `emotion` для мониторинга перехода. В `emotion` уже
+   * лежит ПРИОРИТЕТНЫЙ тон (emotion_new ?? emotion).
+   */
+  emotionNew?: string | null;
 }
 
 /**
- * Каталог фраз из po/template.pot (+ переводы из po/ru.po по ключу
- * msgctxt+msgid). uid = md5(msgid) — та же формула, что у potgen.
+ * Каталог фраз из po/template.pot (+ переводы из po/<lang>.po по ключу
+ * msgctxt+msgid; lang — параметр функции, по умолчанию ru, en — без po →
+ * new пуст → строка отфильтруется). uid = md5(msgid) — та же формула, что у potgen.
  * Категория: speaker:Narrator -> narration, speaker:* -> dialogue,
  * menu/ui/speaker-name -> не-речь (в selectPhrases отфильтровываются).
  */
-export function loadCatalog(): CatalogEntry[] {
+export function loadCatalog(lang = "ru"): CatalogEntry[] {
+  const poFile = lang === "ru" ? RU_PO_FILE : join(PKG_ROOT, "po", `${lang}.po`);
   const ruByKey = new Map<string, string>();
-  for (const e of parsePo(readFileSync(RU_PO_FILE, "utf8"))) {
-    if (e.msgid) ruByKey.set(`${e.msgctxt}\u0000${e.msgid}`, e.msgstr);
-  }
+  if (existsSync(poFile))
+    for (const e of parsePo(readFileSync(poFile, "utf8"))) {
+      if (e.msgid) ruByKey.set(`${e.msgctxt}\u0000${e.msgid}`, e.msgstr);
+    }
   const comment = (comments: string[], prefix: string): string | null => {
     const c = comments.find((x) => x.startsWith(prefix));
     return c ? c.slice(prefix.length).trim() : null;
@@ -107,7 +139,11 @@ export function loadCatalog(): CatalogEntry[] {
       arc: comment(e.comments, "arc:") ?? "_unknown",
       scene: comment(e.comments, "scene:"),
       category,
-      emotion: comment(e.comments, "emotion:"),
+      // МИГРАЦИЯ 2026-10-26: действующий тон = `emotion_new` ?? `emotion`
+      // (новый тон overlay'ем potgen пишется РЯДОМ со старым — плавный
+      // переход: у уже сгенерированного звука остаётся его тональность).
+      emotion: comment(e.comments, "emotion_new:") ?? comment(e.comments, "emotion:"),
+      emotionNew: comment(e.comments, "emotion_new:"),
     });
   }
   return out;
@@ -173,6 +209,20 @@ export interface Args {
   text?: string;
   device: string;
   python: string;
+  /** Движок инференса (см. ENGINES); по умолчанию cosyvoice3. */
+  engine?: EngineName;
+  /**
+   * Оставить исходный wav рядом с opus (диагностика wav→opus-конверта):
+   * PCM → writeWav16 → loudnorm → opus рядом, wav НЕ удаляется
+   * (voicekit/worker.mts encode, ветка req.keep_wav).
+   */
+  keepWav: boolean;
+  /**
+   * Только wav, без opus (voicekit/worker.mts encode, ветка req.wav_only):
+   * корпусной `{uid}__{variant}.opus` НЕ перезаписывается — режим сравнительных
+   * съёмок Vox/Cosy (у keep_wav opus как раз пишется, инцидент 2026-10-27).
+   */
+  wavOnly: boolean;
 }
 
 /** Голос спикера: SPEAKERS[who_name] (dialogue) / SPEAKERS.Narrator (narration). */
@@ -205,6 +255,7 @@ export function selectPhrases(entries: CatalogEntry[], args: Args): Phrase[] {
       variant = char;
     }
     if (!ref) return [];
+    if (ENGINES[args.engine ?? "cosyvoice3"].tag) variant = ENGINES[args.engine ?? "cosyvoice3"].tag;
     if (args.emotion) variant += `_${args.emotionTag}`;
     const out = join(aiVoiceDir(args.lang), arc, `${uid}__${variant}.wav`);
     phrases.push({
@@ -243,10 +294,13 @@ export function selectPhrases(entries: CatalogEntry[], args: Args): Phrase[] {
       variant = voice;
     }
     if (!ref) continue; // не озвучен (нет активного рефа) — как в python
+    if (ENGINES[args.engine ?? "cosyvoice3"].tag) variant = ENGINES[args.engine ?? "cosyvoice3"].tag;
     if (args.emotion) variant += `_${args.emotionTag}`;
     else if (args.noEmotion) variant += "_plain";
     const emo = args.noEmotion ? null : args.emotion || e.emotion || null;
-    const text = args.lang === "ru" ? e.new : e.old;
+    // Текст языка: перевод po/<lang>.po (каталог читается под этот lang),
+    // en — оригинал (po/en.po нет в десятке языков).
+    const text = args.lang === "en" ? e.old : e.new;
     if (!text) continue; // непереведённая реплика — синтезировать нечего
     const out = join(aiVoiceDir(args.lang), e.arc, `${e.uid}__${variant}.wav`);
     phrases.push({
@@ -333,7 +387,12 @@ const CLI_OPTIONS = {
   "no-emotion": { type: "boolean", default: false },
   "text": { type: "string" },
   "device": { type: "string", default: "cuda" },
-  "python": { type: "string", default: DEFAULT_PYTHON },
+  // без default: значение считается в parseCli по выбранному движку
+  // (иначе default CLI перебивал venv voxcpm2 своим cosyvoice3)
+  "python": { type: "string" },
+  "engine": { type: "string", default: "cosyvoice3" },
+  "keep-wav": { type: "boolean", default: false },
+  "wav-only": { type: "boolean", default: false },
 } as const;
 
 /** Разбор аргументов CLI -> Args (пресеты эмоций раскрываются здесь же). */
@@ -341,6 +400,10 @@ export function parseCli(argv: string[]): Args {
   const { values } = parseArgs({ args: argv, options: CLI_OPTIONS });
   const presets = BATCH.instruct_presets as Record<string, string>;
   const emotion = values.emotion && presets[values.emotion] ? presets[values.emotion] : values.emotion;
+  const engine = (values.engine ?? "cosyvoice3") as EngineName;
+  if (!(engine in ENGINES)) {
+    throw new Error(`неизвестный движок "${engine}". Доступные: ${Object.keys(ENGINES).join(", ")}`);
+  }
   return {
     arc: values.arc,
     scene: values.scene,
@@ -358,7 +421,11 @@ export function parseCli(argv: string[]): Args {
     noEmotion: values["no-emotion"] ?? false,
     text: values.text,
     device: values.device ?? "cuda",
-    python: values.python ?? DEFAULT_PYTHON,
+    engine,
+    keepWav: values["keep-wav"] ?? false,
+    wavOnly: values["wav-only"] ?? false,
+    // python по умолчанию — VENV ВЫБРАННОГО движка (для voxcpm2 свой)
+    python: values.python ?? ENGINES[engine].python,
   };
 }
 
@@ -366,7 +433,8 @@ export function parseCli(argv: string[]): Args {
 
 export async function main(argv: string[] = process.argv.slice(2)): Promise<number> {
   const args = parseCli(argv);
-  const entries = loadCatalog();
+  const engine = ENGINES[args.engine ?? "cosyvoice3"];
+  const entries = loadCatalog(args.lang);
   const phrases = selectPhrases(entries, args);
   log(`фраз к генерации: ${phrases.length} (lang=${args.lang}, force=${args.force})`);
   for (const p of phrases.slice(0, 10)) {
@@ -377,8 +445,10 @@ export async function main(argv: string[] = process.argv.slice(2)): Promise<numb
 
   const w = new VoiceWorker({
     python: args.python,
-    script: SHIM,
-    args: ["--device", args.device],
+    script: engine.shim,
+    // voxcpm2-шим не принимает --device: CUDA выбирается сама; cfg/timesteps —
+    // дефолты самого шима (вердикт со стенда voxcpm_bench.mts, 2026-10-27)
+    args: (args.engine ?? "cosyvoice3") === "cosyvoice3" ? ["--device", args.device] : [],
     onLog: (l) => log(`[shim] ${l}`),
   });
 
@@ -415,6 +485,8 @@ export async function main(argv: string[] = process.argv.slice(2)): Promise<numb
         emotion: p.emotion,
         seed: args.seed,
         out: p.out,
+        keep_wav: args.keepWav || undefined,
+        wav_only: args.wavOnly || undefined,
       });
       if (r.ok) {
         done++;
