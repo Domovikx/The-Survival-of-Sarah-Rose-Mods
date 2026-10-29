@@ -28,5 +28,8 @@
     // выбирать plaintext.
     "*.pot": "po",
     "*.po": "po"
-  }
+  },
+  // PlantUML: рендер через публичный сервер, т.к. локально нет Java+Graphviz
+  "plantuml.render": "PlantUMLServer",
+  "plantuml.server": "https://www.plantuml.com/plantuml"
 }

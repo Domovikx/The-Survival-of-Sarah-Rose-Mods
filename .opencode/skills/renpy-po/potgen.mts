@@ -78,11 +78,20 @@
  */
 
 import { createHash } from "node:crypto";
-import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
 import { normalizeText, parsePo, poEscape } from "./po_core.mts";
+// puml-диаграмма ветвления (тот же скан игры + те же правила арок — оптом с POT).
+// Циклический импорт безопасен: обе стороны используют биндинги только внутри
+// функций, при загрузке модуля ничего не исполняется.
+import {
+  buildModel as buildBranchingModel,
+  countArcLines,
+  renderPuml,
+  DEFAULT_OUT as PUML_DEFAULT,
+} from "../arc-branching/arc_branching.mts";
 
 const SKILL_DIR = dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = join(SKILL_DIR, "..", "..", "..");
@@ -204,94 +213,9 @@ export function normLabel(label: string): string {
   return label.replace(/\./g, "_");
 }
 
-// ── Правила «лейбл → арка»: арка выводится ИЗ САМОЙ ИГРЫ (имена лейблов),
-// никаких внешних json. Паритет с прежним label_arc.json проверен: 261/264
-// лейбл в точности совпадает; три отклонения — фиксы артефактов его
-// текст-резолва: VargaPath5 (был Prologue, структурно — VargaMarionPath),
-// TrainingPathKate3 (был Other, семья TrainingPath*), prostitutealaric1
-// (лейбл был не досчитан, тл-заголовок сцены — Arc: Other).
-
-/** Файлы, чьи лейблы не несут сюжет (галерея/реплеи) — арка не ставится. */
-const NO_ARC_FILES = /(?:^|[\\/])(?:art|replay_gallery)\.rpy$/;
-/** Лейбл вне сюжета внутри сюжетного файла. */
-const NO_ARC_LABELS = new Set(["splashscreen"]);
-
-/** Точные лейблы без общей префиксной семьи. */
-const ARC_BY_LABEL: ReadonlyMap<string, string> = new Map([
-  // Семья имен Пролога/погребений — точные имена без общего префикса.
-  ...[
-    "ChooseThePath",
-    "CoronationDay",
-    "DayOfTheFuneral",
-    "MeetingKateInTheGarden",
-    "MeetingOnTheBattlements",
-    "SarahAndThomasSpeak",
-    "SarahsBedroomAfterFuneral",
-    "SecondPartOfFuneral",
-    "TheInsidePathBegins",
-    "TheMorningAfterKate",
-  ].map((l): readonly [string, string] => [l, "StoryBeginnings"]),
-  ...["ChoosingAMentor", "GeneralPathBegins"].map((l): readonly [string, string] => [l, "Training"]),
-  ...[
-    "UnionDecisionLoop",
-    "ASarahInTheParkWithGeorge1",
-    "MercenaryQueen1",
-    "MythranInvasion1",
-    "Sakar1",
-    "SarahExploresLethramHarbor1",
-  ].map((l): readonly [string, string] => [l, "UnionKingdom"]),
-  ...["FallOfLethram2"].map((l): readonly [string, string] => [l, "MagePath"]),
-  ...["SarahAndNick1", "TailorRoute1"].map((l): readonly [string, string] => [l, "LifeInRahayal"]),
-  ...["SarahLeavesLethram1"].map((l): readonly [string, string] => [l, "SailorArc"]),
-  ...["GallowCreek1", "MariusMarriage", "UnmarriedGallowCreek"].map((l): readonly [string, string] => [l, "AlfredArc"]),
-  ...["HyralTown"].map((l): readonly [string, string] => [l, "HyralArc"]),
-  ...["TheBattleForTheCapital", "WarCouncil"].map((l): readonly [string, string] => [l, "WarArc"]),
-]);
-
-/** Префиксы лейблов → арка (case-sensitive: DemonArc1-3 ≠ Demonarc4/5 → Other). */
-const ARC_BY_PREFIX: ReadonlyArray<readonly [string, string]> = [
-  ["OpeningScene", "Prologue"],
-  ["TrainingPath", "Training"],
-  ["UnionKingdom", "UnionKingdom"],
-  ["UnionLoop", "UnionKingdom"],
-  ["MagePath", "MagePath"],
-  ["MageInTheRuins", "MagePath"],
-  ["WarriorPath", "WarriorPath"],
-  ["WarriorQueen", "WarriorPath"],
-  ["WarriorRahayal", "WarriorPath"],
-  ["HassarPath", "HassarPath"],
-  ["JaeidPath", "HassarPath"],
-  ["VargaPath", "VargaMarionPath"],
-  ["MarionPath", "VargaMarionPath"],
-  ["LifeInRahayal", "LifeInRahayal"],
-  ["ServantOfGilead", "LifeInRahayal"],
-  ["SailorPath", "SailorPath"],
-  ["TheOldRoad", "SailorArc"],
-  ["CampSlavePath", "AlfredArc"],
-  ["PrisonPath", "PrisonArc"],
-  ["UnderworldPath", "PrisonArc"],
-  ["OutsideAndAlone", "PrisonArc"],
-  ["TheHollowWorld", "HollowWorld"],
-  ["HyralGoblin", "HyralArc"],
-  ["HyralOrc", "HyralArc"],
-  ["DemonArc", "DemonArc"],
-  ["TheBlackMonolith", "BlackMonolith"],
-];
-
-/**
- * Арка лейбла: точное имя → префикс → fallback Other (вне сюжета вроде
- * gallery/replay исключены на уровне файла до вызова — см. NO_ARC_FILES).
- * undefined — лейбл не несёт арки (splashscreen).
- */
-export function arcOfLabel(label: string): string | undefined {
-  if (NO_ARC_LABELS.has(label)) return undefined;
-  const exact = ARC_BY_LABEL.get(label);
-  if (exact !== undefined) return exact;
-  for (const [prefix, arc] of ARC_BY_PREFIX) {
-    if (label.startsWith(prefix)) return arc;
-  }
-  return "Other";
-}
+import { NO_ARC_FILES, arcOfLabel, collectRpyFiles } from "./game_source.mts";
+// Реэкспорт: потребители (тесты, catalog_gen) привыкли брать это из potgen.
+export { NO_ARC_FILES, arcOfLabel, collectRpyFiles } from "./game_source.mts";
 
 export interface PotStats {
   files: number;
@@ -311,34 +235,6 @@ export interface PotCatalog {
 
 function entryKey(msgctxt: string, msgid: string): string {
   return `${msgctxt}\u0000${msgid}`;
-}
-
-/** Рекурсивно собирает .rpy файлы (мимо tl/ и скрытых каталогов), по возрастанию. */
-export function collectRpyFiles(gameDir: string): string[] {
-  const files: string[] = [];
-  const walk = (dir: string): void => {
-    let dirents;
-    try {
-      dirents = readdirSync(dir, { withFileTypes: true });
-    } catch {
-      return;
-    }
-    for (const d of dirents) {
-      const full = join(dir, d.name);
-      if (d.isDirectory()) {
-        // tl — переводы, mods — установленные моды (в т.ч. наш: их rpy
-        // не должны попадать в POT — спикеры только из оригинальной игры),
-        // renpy — движок Ren'Py (его common/*.rpy дают фейковых «спикеров»
-        // вроде if/style — это не реплики игры).
-        if (d.name === "tl" || d.name === "mods" || d.name === "renpy" || d.name.startsWith(".")) continue;
-        walk(full);
-      } else if (d.isFile() && d.name.endsWith(".rpy")) {
-        files.push(full);
-      }
-    }
-  };
-  walk(gameDir);
-  return files.sort();
 }
 
 /** Проход 1: только define-имена — карта резолва должна жить до парсинга реплик. */
@@ -708,7 +604,10 @@ export function renderSpeakersMts(catalog: PotCatalog): string {
 function main(): void {
   const argv = process.argv.slice(2);
   if (argv.includes("--help") || argv.includes("-h")) {
-    console.log("Usage: node potgen.mts [--game DIR] [--out FILE] [--speakers FILE] [--emotions FILE] [--no-emotions]");
+    console.log(
+      "Usage: node potgen.mts [--game DIR] [--out FILE] [--speakers FILE] [--emotions FILE] [--no-emotions]" +
+        "\n         [--puml FILE] [--no-puml]   # диаграмма ветвления арок (по умолчанию docs/game-branching.puml)",
+    );
     return;
   }
   const gameFlag = argv.indexOf("--game");
@@ -774,6 +673,25 @@ function main(): void {
   mkdirSync(dirname(speakersFile), { recursive: true });
   writeFileSync(speakersFile, renderSpeakersMts(catalog), "utf-8");
 
+  // Диаграмма ветвления арок — оптом с POT из ТОГО ЖЕ gameDir (один скан
+  // игры, одни правила арок: POT и puml физически не могут разойтись).
+  let pumlNote = "пропущена (--no-puml)";
+  if (!argv.includes("--no-puml")) {
+    const pumlFlag = argv.indexOf("--puml");
+    const pumlFile = pumlFlag >= 0 ? argv[pumlFlag + 1] : PUML_DEFAULT;
+    if (!pumlFile) {
+      console.error("ERROR: --puml требует значение (см. --help)");
+      process.exit(1);
+    }
+    const sources = collectRpyFiles(gameDir).map((path) => ({ path, text: readFileSync(path, "utf-8") }));
+    const model = buildBranchingModel(sources);
+    // счётчик строк — из ТОЛЬКО ЧТО записанного POT (тот же каталог)
+    model.lines = countArcLines(readFileSync(outFile, "utf-8"));
+    mkdirSync(dirname(pumlFile), { recursive: true });
+    writeFileSync(pumlFile, renderPuml(model), "utf-8");
+    pumlNote = pumlFile;
+  }
+
   console.log(`POT: ${catalog.entries.size} уникальных записей из ${s.files} файлов -> ${outFile}`);
   console.log(`Speakers: ${potSpeakerNames(catalog).length} спикеров -> ${speakersFile}`);
   console.log(`  разобрано строк: ${s.scanned}, define Character: ${s.defines}`);
@@ -793,6 +711,7 @@ function main(): void {
   const arcs = new Set([...catalog.entries.values()].map((e) => e.arc).filter((a): a is string => !!a));
   console.log(`  инвентарь лейблов (label-map): ${catalog.labels.size}`);
   console.log(`  с метаданными arc: ${withArc} (${arcs.size} арок), без арки: ${noArcCount} (вне label/не-сюжет)`);
+  console.log(`PUML: диаграмма ветвления -> ${pumlNote}`);
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {

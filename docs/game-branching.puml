@@ -1,0 +1,102 @@
+@startuml
+title TSSR — архитектура ветвления арок (game/*.rpy)
+' единственный источник: jump/call между label в .rpy игры; уровни = BFS-глубина от старта
+top to bottom direction
+skinparam linetype polyline
+skinparam nodesep 24
+skinparam ranksep 70
+skinparam defaultTextAlignment center
+skinparam stateFontSize 12
+skinparam stateFontStyle bold
+skinparam arrowFontSize 10
+skinparam ArrowColor #334155
+skinparam packageBorderColor #94a3b8
+skinparam packageBackgroundColor #f1f5f9
+skinparam packageFontStyle bold
+
+state "СТАРТ" as START #e2e8f0
+
+state "Уровень 0" as LEVEL0 {
+  state "Prologue" as Prologue : 238 строк
+  state "StoryBeginnings" as StoryBeginnings : 1025 строк
+  state "WarArc" as WarArc : 703 строк
+}
+
+state "Уровень 1" as LEVEL1 {
+  state "Other" as Other : 10224 строк
+}
+
+state "Уровень 2" as LEVEL2 {
+  state "VargaMarionPath" as VargaMarionPath : 1745 строк
+  state "UnionKingdom" as UnionKingdom : 5339 строк
+  state "HassarPath" as HassarPath : 2913 строк
+  state "AlfredArc" as AlfredArc : 3045 строк
+  state "Training" as Training : 1552 строк
+  state "SailorPath" as SailorPath : 3889 строк
+  state "WarriorPath" as WarriorPath : 8984 строк
+  state "BlackMonolith" as BlackMonolith : 6215 строк
+  state "PrisonArc" as PrisonArc : 3072 строк
+  state "MagePath" as MagePath : 7034 строк
+}
+
+state "Уровень 3" as LEVEL3 {
+  state "LifeInRahayal" as LifeInRahayal : 2583 строк
+  state "HollowWorld" as HollowWorld : 4507 строк
+  state "SailorArc" as SailorArc : 2747 строк
+  state "DemonArc" as DemonArc : 1226 строк
+}
+
+state "Уровень 4" as LEVEL4 {
+  state "HyralArc" as HyralArc : 1316 строк
+}
+
+START --> Prologue
+START --> StoryBeginnings
+START --> WarArc
+
+Other --> VargaMarionPath : 2
+Other --> UnionKingdom : 2
+Other --> HassarPath : 2
+Other --> AlfredArc : 3
+Other --> Training : 11
+Other --> PrisonArc : 2
+Other --> SailorPath : 1
+Other --> BlackMonolith : 2
+Other --> WarriorPath : 6
+Other --> MagePath : 4
+StoryBeginnings --> Other
+WarArc --> Other
+SailorPath --> LifeInRahayal
+LifeInRahayal --> HyralArc : 2
+BlackMonolith --> DemonArc : 1
+PrisonArc --> SailorArc : 1
+MagePath --> HollowWorld : 1
+
+legend bottom
+  19 арок · 37 переходов · 5 уровней
+  Озвучиваемых строк: 68357 (по арке под её именем; диалог+наррация)
+  Переходов label->label между арками: 96
+  Стрелка = переход вперёд (на следующий уровень), N — сколько jump/call
+  Возвраты/петли (20, не нарисованы):
+    VargaMarionPath -> Other (2)
+    VargaMarionPath -> UnionKingdom (1)
+    UnionKingdom -> Other (1)
+    AlfredArc -> Other (3)
+    Training -> Other (6)
+    LifeInRahayal -> Other (1)
+    WarriorPath -> Other (2)
+    WarriorPath -> UnionKingdom (1)
+    HollowWorld -> Other (1)
+    HollowWorld -> BlackMonolith (2)
+    BlackMonolith -> Other (6)
+    BlackMonolith -> MagePath (2)
+    PrisonArc -> MagePath (1)
+    PrisonArc -> Other (3)
+    PrisonArc -> UnionKingdom (2)
+    SailorArc -> AlfredArc (1)
+    SailorArc -> LifeInRahayal (1)
+    SailorArc -> UnionKingdom (1)
+    MagePath -> Other (6)
+    DemonArc -> Other (1)
+endlegend
+@enduml
