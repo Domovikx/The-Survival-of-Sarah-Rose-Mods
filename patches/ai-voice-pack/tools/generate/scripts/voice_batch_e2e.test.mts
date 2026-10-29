@@ -57,7 +57,7 @@ function probe(file: string): Probe {
 
 async function runDemo(text: string, lang: "ru" | "en"): Promise<string> {
   const uid = createHash("md5").update(text, "utf8").digest("hex");
-  const opus = join(PKG_ROOT, "audio", `vo_${lang}`, "Demo", `${uid}__Sarah.opus`);
+  const opus = join(PKG_ROOT, "audio", lang, "Demo", `${uid}__Sarah.opus`);
   try {
     const code = await main(["--text", text, "--char", "Sarah", "--lang", lang, "--force"]);
     assert.equal(code, 0, `voice_batch вернул ${code} (первая строка после загрузки модели упала?)`);
@@ -114,7 +114,7 @@ test(
   async () => {
     const text = "Привет! Это проверочный прогон VoxCPM2 — слушаем качество нового движка.";
     const uid = createHash("md5").update(text, "utf8").digest("hex");
-    const demoDir = join(PKG_ROOT, "audio", "vo_ru", "Demo");
+    const demoDir = join(PKG_ROOT, "audio", "ru", "Demo");
     const opus = join(demoDir, `${uid}__VoxCPM2.opus`);
     const wav = join(demoDir, `${uid}__VoxCPM2.wav`);
     const contract = join(demoDir, `${uid}__Sarah.opus`);

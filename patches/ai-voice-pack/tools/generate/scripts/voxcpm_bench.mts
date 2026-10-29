@@ -1037,7 +1037,7 @@ export async function main(argv: string[] = process.argv.slice(2)): Promise<numb
       rec.genSec = Math.round(((r.genMs ?? 0) / 1000) * 10) / 10;
       // Только wav, СЫРОЙ (без trim/фильтров): уровень выравнивается позже —
       // `vox_qc.mts --normalize` только на одобренных судьёй (реш. 2026-10-27)
-      mkdirSync(dirname(it.wavPath), { recursive: true }); // vo_<lang> может не существовать
+      mkdirSync(dirname(it.wavPath), { recursive: true }); // <lang> может не существовать
       writeWav16(it.wavPath, r.samples, r.sr);
       rec.loud = measureLoudness(it.wavPath);
       rec.ok = true;

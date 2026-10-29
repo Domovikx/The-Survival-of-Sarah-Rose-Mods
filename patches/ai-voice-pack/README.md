@@ -15,7 +15,7 @@
   `tl/` → такие же пути в папке мода (`.rpyc` не шиппится — см. ниже);
 - `catalog/` → `catalog/` (в дистрибутив уезжают ТОЛЬКО runtime-мапы
   `voice_list.json`, `label_arc.json` — allowlist в build_pack);
-- `audio/vo_<lang>/` → `ai_voice/<lang>/` (массив озвучки, отдельный voice-zip).
+- `audio/<lang>/` → `ai_voice/<lang>/` (массив озвучки, отдельный voice-zip).
 
 Сборка: `python patches/ai-voice-pack/tools/build/build_pack.py` →
 `dist/*.zip` (main + voice-ru + voice-en). Раскладка zip = раскладка

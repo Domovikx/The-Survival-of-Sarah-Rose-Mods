@@ -15,7 +15,7 @@
   **2026-10-23: `tl/ru` DEPRECATED** (легаси-корпус, правки не принимаются;
   источник истины русского — `po/ru.po`; выпилка — фаза 2 задачи
   `tasks/2026-10-23-tl-ru-deprecation.md` под гейтом владельца)
-- `patches/ai-voice-pack/audio/vo_<lang>/` → `mods/tssr-ai-voice-pack/ai_voice/<lang>/` (установка)
+- `patches/ai-voice-pack/audio/<lang>/` → `mods/tssr-ai-voice-pack/ai_voice/<lang>/` (установка)
 - `catalog/` (в установке: `mods/tssr-ai-voice-pack/catalog/`) — АРТЕФАКТ СБОРКИ
   (2026-10-22: в репе каталог/ не живёт): `label_arc.json` + `voice_list.json`
   генерит `tools/generate/scripts/catalog_gen.mts` из POT-инвентаря и
@@ -214,7 +214,7 @@ tools/generate/scripts/
                                #   тона; в шаблон — npm run potgen -- --emotions <файл>
                                #   overlay'ем; эвристика RULES или --llm-url
                                #   OpenAI-compatible LLM — LM Studio/ollama)
-  voice_batch.mts              # БАТЧ-ОРКЕСТРАТОР: каталог POT -> audio/vo_{lang}/{arc}/
+  voice_batch.mts              # БАТЧ-ОРКЕСТРАТОР: каталог POT -> audio/{lang}/{arc}/
                                #   {uid}__{variant}.opus (эмоция из `#. emotion:` POT;
                                #   --ref/--uid/--force/--emotion/--device cuda; wav НЕ
                                #   пишется: PCM из шима -> trim -> pipe f32le -> ffmpeg
@@ -388,7 +388,7 @@ npm run potgen        # template.pot перезаписан (e2e-гард бай
 npm run po:update     # ru.po досинхронизирован (точный перенос / ретаргет / новые пустые)
 # Дельта added/changed/dropped видна как git diff template.pot: added —
 # генерировать (voice_batch ru+en), changed переозвучить (--force --uid),
-# dropped (если были озвучены) — кандидаты на чистку audio/vo_*.
+# dropped (если были озвучены) — кандидаты на чистку audio/<lang>.
 node tools/generate/scripts/voice_batch.mts --lang ru --dry-run  # план фраз (консоль)
 #   (заглушки кастов без рефов — npm run speakers:audit; voice_sync status
 #    сломан до TS-порта)
@@ -482,8 +482,8 @@ texts — рус. фразы с ЯВНЫМ признаком пола; файл
 4. Генерация ПО КАЖДОМУ варианту (файлы лежат рядом, постфикс = реф):
    node voice_batch.mts --char Sarah --ref casts/voices/Sarah/Sarah_1.wav --limit 5
    node voice_batch.mts --char Sarah --ref casts/voices/Sarah/Sarah_3.wav --limit 5
-   → audio/vo_ru/{arc}/{uid}__Sarah_1.opus и {uid}__Sarah_3.opus
-5. Выбор: слушаешь пары в audio/vo_ru/{arc}/ (одинаковые uid рядом)
+   → audio/ru/{arc}/{uid}__Sarah_1.opus и {uid}__Sarah_3.opus
+5. Выбор: слушаешь пары в audio/ru/{arc}/ (одинаковые uid рядом)
 6. Фиксация: voice_manage.mts select {Name} {variant}
    → копирует {Name}_{variant}.wav → {Name}.wav (в корне каста)
 7. Генерация: voice_batch.mts --char {Name} — использует активный реф

@@ -38,7 +38,7 @@ function fakePhrase(uid: string, arc: string, voice: string): Phrase {
     category: "narration",
     voice,
     ref: `C:/casts/${voice}/${voice}.wav`,
-    out: `C:/repo/audio/vo_ru/${arc}/${uid}__VoxCPM2.wav`,
+    out: `C:/repo/audio/ru/${arc}/${uid}__VoxCPM2.wav`,
     variant: "VoxCPM2",
     lang: "ru",
     text: `фраза ${uid}`,

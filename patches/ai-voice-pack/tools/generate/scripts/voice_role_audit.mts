@@ -1,5 +1,5 @@
 /**
- * voice_role_audit.mts — аудит «роль по PO → озвучка в audio/vo_*».
+ * voice_role_audit.mts — аудит «роль по PO → озвучка в audio/<lang>».
  *
  * Баг-клас (инцидент 2026-10): пачка файлов озвучена под роль из тикета,
  * а PO (po/template.pot msgctxt speaker:*) говорит про другую роль —
@@ -218,7 +218,7 @@ const EXAMPLES = 30;
 function report(lang: string, findings: Finding[]): Map<Kind, number> {
   const counts = new Map<Kind, number>(ALL_KINDS.map((k) => [k, 0]));
   for (const f of findings) counts.set(f.kind, (counts.get(f.kind) ?? 0) + 1);
-  console.log(`\n=== vo_${lang}: файлов ${findings.length}`);
+  console.log(`\n=== ${lang}: файлов ${findings.length}`);
   for (const k of ALL_KINDS) {
     const n = counts.get(k) ?? 0;
     if (k === "OK") {
@@ -344,7 +344,7 @@ export function main(argv: string[] = process.argv.slice(2)): number {
 
   // 1) скан и классификация всех языков — ДО любых правок
   const scanned = langs.map((lang) => {
-    const dir = join(AUDIO_DIR, `vo_${lang}`);
+    const dir = join(AUDIO_DIR, lang);
     return { lang, dir, findings: listFiles(dir).map((rel) => classify(lang, rel, exp)) };
   });
 
@@ -405,7 +405,7 @@ export function main(argv: string[] = process.argv.slice(2)): number {
         }
       }
       console.log(
-        `  ${values.dry ? "будет удалено" : "удалено"} из vo_${lang}: ${toDelete.length}` +
+        `  ${values.dry ? "будет удалено" : "удалено"} из ${lang}: ${toDelete.length}` +
           (aliveKept.length ? ` (сохранено — строка жива в игре: ${aliveKept.length})` : ""),
       );
       totalDeleted += toDelete.length;
@@ -419,7 +419,7 @@ export function main(argv: string[] = process.argv.slice(2)): number {
         values.dry === true,
       );
       console.log(
-        `  ${values.dry ? "план переноса ARC" : "перенесено ARC"} vo_${lang}: ${r.moved}` +
+        `  ${values.dry ? "план переноса ARC" : "перенесено ARC"} ${lang}: ${r.moved}` +
           ` (конфликтов: ${r.conflicts}, без действия: ${r.kept})`,
       );
       totalMoved += r.moved;

@@ -34,8 +34,8 @@ DIST = REPO / "dist"
 
 # Языки озвучки: каталог в репо -> каталог при установке
 VOICE_LANGS = {
-    "ru": PATCH / "audio" / "vo_ru",
-    "en": PATCH / "audio" / "vo_en",
+    "ru": PATCH / "audio" / "ru",
+    "en": PATCH / "audio" / "en",
 }
 
 # Атомарная папка мода при установке (относительно корня игры)
@@ -198,7 +198,7 @@ def build_main(out_dir):
 
 
 def build_voice(lang, out_dir):
-    """Озвучка одного языка: audio/vo_<lang>/** -> mods/.../ai_voice/<lang>/**."""
+    """Озвучка одного языка: audio/<lang>/** -> mods/.../ai_voice/<lang>/**."""
     src = VOICE_LANGS[lang]
     name = "TSSR-AI-Voice-Pack-voice-%s.zip" % lang
     target = out_dir / name

@@ -134,10 +134,10 @@ def test_environment_txt_in_zip(tmp_path):
 
 def test_voice_zip_files_in_mod_dir(tmp_path, monkeypatch):
     """Озвучка кладётся в mods/<папка>/ai_voice/<lang>/ (дерево фейковое)."""
-    src = tmp_path / "vo_ru" / "OpeningScene"
+    src = tmp_path / "ru" / "OpeningScene"
     src.mkdir(parents=True)
     (src / "deadbeef__Sarah_3.opus").write_bytes(b"fake")
-    monkeypatch.setattr(build_pack, "VOICE_LANGS", {"ru": tmp_path / "vo_ru"})
+    monkeypatch.setattr(build_pack, "VOICE_LANGS", {"ru": tmp_path / "ru"})
     out = tmp_path / "dist"
     out.mkdir()
     name, target, nfiles, nbytes = build_pack.build_voice("ru", out)

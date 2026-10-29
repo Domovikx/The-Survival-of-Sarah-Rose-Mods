@@ -74,7 +74,7 @@ export const ENGINES = {
 } as const;
 export type EngineName = keyof typeof ENGINES;
 
-const aiVoiceDir = (lang: string) => join(AUDIO_DIR, `vo_${lang}`);
+const aiVoiceDir = (lang: string) => join(AUDIO_DIR, lang);
 
 // ------------------------------------------------------------- каталог ----
 

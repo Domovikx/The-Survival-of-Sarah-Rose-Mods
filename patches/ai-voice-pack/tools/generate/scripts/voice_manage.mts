@@ -5,7 +5,7 @@
  * инференс остаётся в python-шимах cosyworker/voice_design).
  *
  * A/B-цикл: генерируешь вариантом (`voice_batch.mts --ref .../{Имя}_{v}.wav`),
- * слушаешь пары в audio/vo_ru/, победителя фиксируешь:
+ * слушаешь пары в audio/ru/, победителя фиксируешь:
  *   node voice_manage.mts select {Имя} v   ->  {Имя}_v.wav -> {Имя}.wav
  * voice_list.json дистрибутива — АРТЕФАКТ СБОРКИ (catalog_gen.mts из
  * casts/voices.mts): реестр = VOICES, регенерация не нужна; «подключение»

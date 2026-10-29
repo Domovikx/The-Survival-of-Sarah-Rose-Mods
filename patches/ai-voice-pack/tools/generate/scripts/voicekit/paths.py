@@ -38,7 +38,7 @@ CATALOG_DIR = os.path.join(PKG_ROOT, 'catalog')  # зеркало установ
 # (см. voicekit.config).
 PRESETS_MTS = os.path.join(SCRIPTS_DIR, 'voice_presets.mts')
 OUTPUT_DIR = os.path.join(ROOT, 'output')
-# Озвучка (массив репы): audio/vo_{lang} — в дистрибутиве это ai_voice/<lang>
+# Озвучка (массив репы): audio/{lang} — в дистрибутиве это ai_voice/<lang>
 AUDIO_DIR = os.path.join(PKG_ROOT, 'audio')
 # Установка игры (READ-ONLY источник оригинальных скриптов, например script.rpy
 # для voice_catalog). Переопределяется env TSSR_GAME; путь по умолчанию —
@@ -49,12 +49,12 @@ GAME_INSTALL = os.environ.get(
 
 
 def ai_voice_dir(lang):
-    """Каталог озвучки языка в репо: audio/vo_{ru|en}.
+    """Каталог озвучки языка в репо: audio/{ru|en}.
 
     Читает AUDIO_DIR в момент вызова — тесты мокают paths.AUDIO_DIR.
     В zip эта папка уезжает как mods/.../ai_voice/<lang>/ (см. build_pack).
     """
-    return os.path.join(AUDIO_DIR, 'vo_' + lang)
+    return os.path.join(AUDIO_DIR, lang)
 
 VOICES_JSONL = os.path.join(CATALOG_DIR, 'voices.jsonl')
 VOICE_LIST_JSON = os.path.join(CATALOG_DIR, 'voice_list.json')

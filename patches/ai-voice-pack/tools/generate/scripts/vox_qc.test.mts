@@ -57,11 +57,11 @@ function fake(partial: Partial<QcMetrics>): QcMetrics {
 // ------------------------------------------------------------- разбор имён ---
 
 test("parseGeneratedName: только сгенерированные имена, корпус и мусор -> null", () => {
-  const gen = parseGeneratedName(`C:/a/vo_ru/Arc/${UID_A}__Sarah__Vox.wav`);
+  const gen = parseGeneratedName(`C:/a/ru/Arc/${UID_A}__Sarah__Vox.wav`);
   assert.deepEqual(gen, {
     uid: UID_A,
     voice: "Sarah",
-    corpusBase: join("C:/a/vo_ru/Arc", `${UID_A}__Sarah`),
+    corpusBase: join("C:/a/ru/Arc", `${UID_A}__Sarah`),
   });
   // матрица/опции: постфиксов много, голос с пробелами
   const matrix = parseGeneratedName(`Arc/${UID_A}__Generic Male Mature__5_cfg2.5_ts30.wav`);
@@ -265,7 +265,7 @@ test("qcScore: REJECT -> null; дефекты (в т.ч. F0-свинг «ман�
 
 test("parseQcCli: опции, дефолтный --dir из --lang, неизвестная опция = стоп", () => {
   const def = parseQcCli([]);
-  assert.ok(def.dir.endsWith(`vo_ru`), `дефолтный --dir из lang: ${def.dir}`);
+  assert.ok(def.dir.endsWith("ru"), `дефолтный --dir из lang: ${def.dir}`);
   assert.equal(def.all, false);
   assert.equal(def.rank, false, "--rank выключен по умолчанию");
   assert.equal(def.pick, false, "--pick выключен по умолчанию");

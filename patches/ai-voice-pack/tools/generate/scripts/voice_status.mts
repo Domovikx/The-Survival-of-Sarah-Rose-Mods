@@ -26,7 +26,7 @@ import { loadCatalog, PKG_ROOT } from "./voice_batch.mts";
 const LANGS = ["ru", "en"] as const;
 const AUDIO_DIR = join(PKG_ROOT, "audio");
 const OUTPUT_DIR = join(PKG_ROOT, "tools", "generate", "output");
-const aiVoiceDir = (lang: string) => join(AUDIO_DIR, `vo_${lang}`);
+const aiVoiceDir = (lang: string) => join(AUDIO_DIR, lang);
 
 // ------------------------------------------------------------- файлы -----
 

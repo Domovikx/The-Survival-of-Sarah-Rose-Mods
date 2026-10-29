@@ -27,7 +27,7 @@ const PYTHON = "C:/tools/cosyvoice3/.venv/Scripts/python.exe";
 const SHIM = join(SCRIPTS, "cosyworker.py");
 const POT = join(ROOT, "patches", "ai-voice-pack", "po", "template.pot");
 const REF = join(ROOT, "patches", "ai-voice-pack", "casts", "voices", "Carolyn", "Carolyn.wav");
-// Реплика из жалобы: vo_en/BlackMonolith/9650...__Carolyn.opus
+// Реплика из жалобы: en/BlackMonolith/9650...__Carolyn.opus
 const UID = "965008809955fb24bad05d00315049d9";
 const OUT_WAV = join(DEMO_DIR, "carolyn_en.wav"); // opus ляжет рядом: carolyn_en.opus
 

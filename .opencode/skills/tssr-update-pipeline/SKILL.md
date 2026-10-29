@@ -143,7 +143,7 @@ npm run build:pack
 
 Атомарно, русские однострочные, БЕЗ обратных кавычек в сообщениях:
 код/доки тулов → каталог+отчёты (voices.jsonl, label_arc, missing_voices,
-voice_sync_report) → tl → аудио (audio/vo_ru + vo_en новые opus).
+voice_sync_report) → tl → аудио (audio/ru + en новые opus).
 Гейты перед коммитом: node --test (пофайлово), pytest patches/ai-voice-pack/tests,
 npm run spell, npm run lint:md, npm run format:check.
 ПUSH — только по явной просьбе.

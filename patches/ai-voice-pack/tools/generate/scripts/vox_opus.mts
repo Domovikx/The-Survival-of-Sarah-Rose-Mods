@@ -71,13 +71,13 @@ export function parseOpusCli(argv: string[]): OpusCli {
         throw new Error(`неизвестная опция: ${argv[i]} (есть --dir/--lang/--filter/--rate/--dry-run/--help)`);
     }
   }
-  if (!o.dir) o.dir = join(PKG_ROOT, "audio", `vo_${o.lang}`);
+  if (!o.dir) o.dir = join(PKG_ROOT, "audio", o.lang);
   return o;
 }
 
 export const OPUS_USAGE = [
   "vox_opus.mts — конвертер wav -> opus (атомарно, .part -> rename)",
-  "  --dir <папка>   что конвертировать (дефолт: audio/vo_<lang>)",
+  "  --dir <папка>   что конвертировать (дефолт: audio/<lang>)",
   "  --lang <ru>     язык для дефолтного --dir",
   "  --filter <строка> только файлы, содержащие строку",
   "  --rate <N>      частота opus: 8000/12000/16000/24000/48000 (дефолт 48000;",

@@ -30,7 +30,7 @@
  *   OK               — ничего из вышеперечисленного
  *
  * ЗАПУСК (из корня репы):
- *   node patches/ai-voice-pack/tools/generate/scripts/vox_qc.mts                # весь vo_ru
+ *   node patches/ai-voice-pack/tools/generate/scripts/vox_qc.mts                # весь audio/ru
  *   node .../vox_qc.mts --filter Jasmine --all                                  # строки всех вердиктов
  *   node .../vox_qc.mts --lang ru --json tmp/voxcpm_bench/qc.json               # отчёт JSON
  *   node .../vox_qc.mts --rejects tmp/voxcpm_bench/rejects.txt                  # фразы брака
@@ -615,14 +615,14 @@ export function parseQcCli(argv: string[]): QcCli {
         );
     }
   }
-  if (!o.dir) o.dir = join(PKG_ROOT, "audio", `vo_${o.lang}`);
+  if (!o.dir) o.dir = join(PKG_ROOT, "audio", o.lang);
   if (!o.archive) o.archive = join(PKG_ROOT, "..", "..", "tmp", "voxcpm_bench", "rejected");
   return o;
 }
 
 export const QC_USAGE = [
   "vox_qc.mts — судья генерируемых wav (брак -> REJECT до прослушивания)",
-  "  --dir <папка>     что проверять (дефолт: audio/vo_<lang>)",
+  "  --dir <папка>     что проверять (дефолт: audio/<lang>)",
   "  --lang <ru>       язык для дефолтного --dir",
   "  --filter <строка> проверять только файлы, содержащие строку",
   "  --json <файл>     записать полный отчёт JSON",

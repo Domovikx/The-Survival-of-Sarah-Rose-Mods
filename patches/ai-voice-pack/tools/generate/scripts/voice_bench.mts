@@ -3,7 +3,7 @@
  *
  * Задача: tasks/2026-10-24-voice-engine-update-benchmark.md. Меряет СКОРОСТЬ
  * production-пути: шим cosyworker.py (инференс) -> trim -> opus (VoiceWorker).
- * Пишет результаты во временную папку tmp/voice_bench/, корпус audio/vo_* НЕ
+ * Пишет результаты во временную папку tmp/voice_bench/, корпус audio/<lang> НЕ
  * трогает (каждая фраза уходит в свой out-файл бенча).
  *
  * Что меряем по каждой фразе:

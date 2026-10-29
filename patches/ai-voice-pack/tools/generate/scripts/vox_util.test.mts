@@ -38,7 +38,7 @@ function bursty(seed0: number, seconds: number): Float32Array {
 test("parseOpusCli: rate-контракт opus (36k невозможен), дефолты, мусор=стоп", () => {
   const d = parseOpusCli([]);
   assert.equal(d.rate, 48000, "дефолт 48k — Vox-стандарт (2026-10-28)");
-  assert.ok(d.dir.endsWith("vo_ru"));
+  assert.ok(d.dir.endsWith("ru"));
   assert.deepEqual([...OPUS_RATES], [8000, 12000, 16000, 24000, 48000]);
   assert.equal(parseOpusCli(["--rate", "48000", "--dir", "D:/x", "--filter", "a", "--dry-run"]).rate, 48000);
   assert.throws(() => parseOpusCli(["--rate", "36000"]), /36k-режима у кодека НЕТ/);
@@ -51,7 +51,7 @@ test("parseLevelCli: --all и дефолты (только наши wav без �
   const d = parseLevelCli([]);
   assert.equal(d.all, false, "по умолчанию НЕ трогаем чужие wav");
   assert.equal(parseLevelCli(["--all"]).all, true);
-  assert.ok(d.dir.endsWith("vo_ru"));
+  assert.ok(d.dir.endsWith("ru"));
   assert.throws(() => parseLevelCli(["--nope"]), /неизвестная опция/);
   assert.match(LEVEL_USAGE, /-16/);
 });

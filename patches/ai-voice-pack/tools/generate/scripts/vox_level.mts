@@ -61,13 +61,13 @@ export function parseLevelCli(argv: string[]): LevelCli {
         throw new Error(`неизвестная опция: ${argv[i]} (есть --dir/--lang/--filter/--all/--dry-run/--help)`);
     }
   }
-  if (!o.dir) o.dir = join(PKG_ROOT, "audio", `vo_${o.lang}`);
+  if (!o.dir) o.dir = join(PKG_ROOT, "audio", o.lang);
   return o;
 }
 
 export const LEVEL_USAGE = [
   "vox_level.mts — выравнивание уровня wav до -16 LUFS / TP -1.5 (двухпроходно, без искажений)",
-  "  --dir <папка>     что выравнивать (дефолт: audio/vo_<lang>)",
+  "  --dir <папка>     что выравнивать (дефолт: audio/<lang>)",
   "  --lang <ru>       язык для дефолтного --dir",
   "  --filter <строка> только файлы, содержащие строку",
   "  --all              включить ВСЕ wav (без флага — только наши *__Vox* / *_cfg*)",
