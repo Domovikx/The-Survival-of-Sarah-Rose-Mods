@@ -32,3 +32,4 @@ thermal_guard.json
 
 # атомарная запись po: временный файл до rename
 *.po.part
+nul

@@ -37,7 +37,7 @@
  *   - генерация resumable: перезапуск продолжает с места останова.
  */
 import { spawn, spawnSync } from "node:child_process";
-import { existsSync, readFileSync, readdirSync, rmSync, statSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, readdirSync, rmSync, statSync, writeFileSync } from "node:fs";
 import { basename, dirname, join } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
@@ -216,6 +216,8 @@ const NT_PInvoke = [
   '[DllImport("kernel32.dll")] public static extern bool CloseHandle(IntPtr h);',
   '[DllImport("ntdll.dll")] public static extern int NtSuspendProcess(IntPtr h);',
   '[DllImport("ntdll.dll")] public static extern int NtResumeProcess(IntPtr h);',
+  "[StructLayout(LayoutKind.Sequential)] public struct PROCESS_POWER_THROTTLING_STATE { public uint Version; public uint ControlMask; public uint StateMask; }",
+  '[DllImport("kernel32.dll", SetLastError=true)] public static extern bool SetProcessInformation(IntPtr hProcess, int infoClass, ref PROCESS_POWER_THROTTLING_STATE state, int size);',
   "}'",
 ].join(" ");
 
@@ -267,6 +269,81 @@ export function setBelowNormal(pid: number): void {
     );
   } catch {
     /* не фатально */
+  }
+}
+
+function setEcoQos(pid: number): void {
+  if (!isWin()) return;
+  const ps =
+    NT_PInvoke +
+    `; $h=[TssrNt]::OpenProcess(0x1F0FFF,$false,${pid}); if($h -ne [IntPtr]::Zero){ $s=New-Object TssrNt+PROCESS_POWER_THROTTLING_STATE; $s.Version=1; $s.ControlMask=1; $s.StateMask=1; [void][TssrNt]::SetProcessInformation($h,4,[ref]$s,[Runtime.InteropServices.Marshal]::SizeOf($s)); [TssrNt]::CloseHandle($h) }`;
+  try {
+    spawnSync("powershell", ["-NoProfile", "-Command", ps], { windowsHide: true, timeout: 15_000, stdio: "ignore" });
+  } catch {
+    /* не фатально */
+  }
+}
+
+function setAffinity(pid: number, maxCores: number): void {
+  if (!isWin() || maxCores <= 0) return;
+  // Битовая маска для maxCores (по умолчанию оставляем часть ядер под систему)
+  const mask = maxCores >= 64 ? BigInt("0xFFFFFFFFFFFFFFFF") : (BigInt(1) << BigInt(maxCores)) - BigInt(1);
+  const ps = `
+$code = @'
+using System;
+using System.Runtime.InteropServices;
+public class TssrAff {
+  [DllImport("kernel32.dll", SetLastError=true)]
+  public static extern IntPtr OpenProcess(uint access, bool inherit, int pid);
+  [DllImport("kernel32.dll", SetLastError=true)]
+  public static extern bool SetProcessAffinityMask(IntPtr hProcess, IntPtr dwProcessAffinityMask);
+  [DllImport("kernel32.dll")]
+  public static extern bool CloseHandle(IntPtr hObject);
+}
+'@
+Add-Type -TypeDefinition $code
+$h=[TssrAff]::OpenProcess(0x0200,$false,${pid})
+if($h -ne [IntPtr]::Zero){
+  $m=[IntPtr]${mask}
+  [void][TssrAff]::SetProcessAffinityMask($h,$m)
+  [TssrAff]::CloseHandle($h)
+}
+`;
+  try {
+    spawnSync("powershell", ["-NoProfile", "-Command", ps], { windowsHide: true, timeout: 15_000, stdio: "ignore" });
+  } catch {
+    /* не фатально */
+  }
+}
+
+/** Понизить приоритет ВСЕЙ vox-ветки (queue + bench + worker) + EcoQoS + ограничение ядер. */
+export function lowerVoxPriority(cfg?: VoxAutoCfg): void {
+  if (!isWin()) return;
+  const c = cfg ?? getVoxAutoCfg();
+  for (const p of listProcesses()) {
+    const cmd = p.cmd.toLowerCase();
+    if (
+      cmd.includes(VOX_QUEUE_MARK) ||
+      cmd.includes(VOX_WORKER_MARK) ||
+      cmd.includes("voxcpmworker.py") ||
+      (cmd.includes("voxcpm") && cmd.includes("bench"))
+    ) {
+      try {
+        spawnSync(
+          "powershell",
+          [
+            "-NoProfile",
+            "-Command",
+            `$p = Get-Process -Id ${p.pid} -ErrorAction SilentlyContinue; if ($p) { try { $p.PriorityClass = 'BelowNormal' } catch {} }`,
+          ],
+          { windowsHide: true, timeout: 10_000, stdio: "ignore" },
+        );
+      } catch {
+        /* не фатально */
+      }
+      setEcoQos(p.pid);
+      setAffinity(p.pid, c.maxCores);
+    }
   }
 }
 
@@ -510,6 +587,8 @@ const CTL_HELP = `Пульт очередей озвучки TSSR
   soft-stop [lang] [--timeout N] доделать текущий файл и встать
   watch [--interval N]           живой мониторинг (Ctrl+C — выход)
   logs [--lang lang] [-n N] [--vox]  хвост лога
+  lower|vox-lower                понизить приоритет всей VOX-ветки до BelowNormal + EcoQoS + affinity
+  vox-auto start|stop|status      автотроттлинг: пауза при нагрузке, возобновление при простое
   vox-start|vox-stop|vox-pause|vox-resume [lang]  Vox-очередь (11 языков)`;
 
 function cmdStatus(a: CtlArgs): number {
@@ -564,6 +643,7 @@ async function cmdStart(a: CtlArgs): Promise<number> {
     }
     setBelowNormal(pid);
     await sleep(5000);
+    if (a.kind === "vox") lowerVoxPriority(getVoxAutoCfg());
     if (findQueues(lang, a.kind).length || findWorkers(lang, a.kind).length) {
       console.log(
         `${lang.toUpperCase()}: запущено (pid ${pid}), лог output/voice/${basename(fmt(logTmpl(a.kind), lang))}`,
@@ -675,6 +755,10 @@ async function cmdResume(a: CtlArgs): Promise<number> {
     }
     console.log(`${lang.toUpperCase()}: снято с паузы (${resumed})`);
   }
+  if (a.kind === "vox") {
+    await sleep(2000);
+    lowerVoxPriority(getVoxAutoCfg());
+  }
   return rc;
 }
 
@@ -762,6 +846,306 @@ async function cmdWatch(a: CtlArgs): Promise<number> {
   return 0;
 }
 
+function cmdLowerPriority(): number {
+  if (!isWin()) {
+    console.log("lower-priority: только Windows");
+    return 1;
+  }
+  const c = getVoxAutoCfg();
+  lowerVoxPriority(c);
+  console.log(`VOX-процессы понижены до BelowNormal + EcoQoS + affinity ${c.maxCores} ядер (queue/bench/worker)`);
+  return 0;
+}
+
+const VOX_AUTO_CFG = join(ROOT, "output", "voice", "vox_auto.json");
+const VOX_AUTO_PID = join(ROOT, "output", "voice", "vox_auto.pid");
+
+interface VoxAutoCfg {
+  cpuHigh: number;
+  cpuLow: number;
+  gpuHigh: number;
+  gpuLow: number;
+  intervalSec: number;
+  idleSec: number;
+  langs: string[];
+  maxCores: number;
+}
+
+function getVoxAutoCfg(): VoxAutoCfg {
+  try {
+    const c = JSON.parse(readFileSync(VOX_AUTO_CFG, "utf-8")) as Partial<VoxAutoCfg>;
+    return {
+      cpuHigh: c.cpuHigh ?? 25,
+      cpuLow: c.cpuLow ?? 12,
+      gpuHigh: c.gpuHigh ?? 50,
+      gpuLow: c.gpuLow ?? 25,
+      intervalSec: c.intervalSec ?? 10,
+      idleSec: c.idleSec ?? 40,
+      langs: Array.isArray(c.langs) && c.langs.length ? c.langs : ["ru", "en", "es"],
+      maxCores: typeof c.maxCores === "number" && c.maxCores > 0 ? Math.min(c.maxCores, 64) : 6,
+    };
+  } catch {
+    return {
+      cpuHigh: 25,
+      cpuLow: 12,
+      gpuHigh: 50,
+      gpuLow: 25,
+      intervalSec: 10,
+      idleSec: 40,
+      langs: ["ru", "en", "es"],
+      maxCores: 6,
+    };
+  }
+}
+
+function saveVoxAutoCfg(c: VoxAutoCfg): void {
+  try {
+    mkdirSync(dirname(VOX_AUTO_CFG), { recursive: true });
+    writeFileSync(VOX_AUTO_CFG, JSON.stringify(c, null, 2), "utf-8");
+  } catch {
+    /* не фатально */
+  }
+}
+
+function getCpuLoad(): number | null {
+  if (!isWin()) return null;
+  const ps =
+    "[Console]::OutputEncoding=[Text.Encoding]::UTF8; " +
+    "$m=Get-CimInstance Win32_PerfFormattedData_PerfOS_Processor -Filter \\\"Name='_Total'\\\"; " +
+    "if($m){$m.PercentProcessorTime}else{Get-Counter '\\\\Processor(_Total)\\\\% Processor Time' -SampleInterval 1 -MaxSamples 1 | % {$_.CounterSamples[0].CookedValue}}";
+  try {
+    const r = spawnSync("powershell", ["-NoProfile", "-Command", ps], {
+      encoding: "utf-8",
+      timeout: 15_000,
+      windowsHide: true,
+      stdio: ["ignore", "pipe", "ignore"],
+    });
+    if (r.status !== 0 || !r.stdout) return null;
+    const v = Number(r.stdout.trim().split(/\s+/).pop());
+    return Number.isFinite(v) ? Math.max(0, Math.min(100, v)) : null;
+  } catch {
+    return null;
+  }
+}
+
+function getGpuLoad(): { util: number | null; used: number | null; free: number | null } {
+  try {
+    const r = spawnSync(
+      "nvidia-smi",
+      ["--query-gpu=utilization.gpu,memory.used,memory.free", "--format=csv,noheader,nounits"],
+      { encoding: "utf-8", timeout: 10_000, windowsHide: true, stdio: ["ignore", "pipe", "ignore"] },
+    );
+    if (r.status !== 0 || !r.stdout) return { util: null, used: null, free: null };
+    const line = r.stdout.trim().split(/\n/)[0];
+    const [u, used, free] = line.split(",").map((x) => Number(x.trim()));
+    return {
+      util: Number.isFinite(u) ? Math.max(0, Math.min(100, u)) : null,
+      used: Number.isFinite(used) ? used : null,
+      free: Number.isFinite(free) ? free : null,
+    };
+  } catch {
+    return { util: null, used: null, free: null };
+  }
+}
+
+function getLastInputSeconds(): number | null {
+  if (!isWin()) return null;
+  const ps =
+    'Add-Type -TypeDefinition \'using System;using System.Runtime.InteropServices;public struct LASTINPUTINFO{public uint cbSize;public uint dwTime;} public class TssrInput{[DllImport("user32.dll")]public static extern bool GetLastInputInfo(ref LASTINPUTINFO plii);[DllImport("kernel32.dll")]public static extern uint GetTickCount();}\'' +
+    "; $li=New-Object LASTINPUTINFO; $li.cbSize=[Runtime.InteropServices.Marshal]::SizeOf($li); if([TssrInput]::GetLastInputInfo([ref]$li)){([TssrInput]::GetTickCount()-$li.dwTime)/1000}else{9999}";
+  try {
+    const r = spawnSync("powershell", ["-NoProfile", "-Command", ps], {
+      encoding: "utf-8",
+      timeout: 10_000,
+      windowsHide: true,
+      stdio: ["ignore", "pipe", "ignore"],
+    });
+    if (r.status !== 0 || !r.stdout) return null;
+    const v = Number(r.stdout.trim().split(/\s+/).pop());
+    return Number.isFinite(v) && v >= 0 ? v : null;
+  } catch {
+    return null;
+  }
+}
+
+function readVoxAutoPid(): number | null {
+  try {
+    const p = Number(readFileSync(VOX_AUTO_PID, "utf-8").trim());
+    if (!Number.isFinite(p) || p <= 0) return null;
+    // проверка живой
+    const r = spawnSync("tasklist", ["/FI", `PID eq ${p}`], { encoding: "utf-8", timeout: 5_000, windowsHide: true });
+    if (r.status !== 0) return null;
+    if (!r.stdout.includes(String(p))) return null;
+    return p;
+  } catch {
+    return null;
+  }
+}
+
+function killVoxAuto(): boolean {
+  const pid = readVoxAutoPid();
+  if (!pid) {
+    try {
+      rmSync(VOX_AUTO_PID, { force: true });
+    } catch {}
+    return false;
+  }
+  const ok = taskkill(pid, true);
+  try {
+    rmSync(VOX_AUTO_PID, { force: true });
+  } catch {}
+  return ok;
+}
+
+function pauseAllVoxLangs(langs: string[]): void {
+  for (const lang of langs) {
+    try {
+      if (pauseState(lang, "vox")) continue;
+      const pids = findWorkers(lang, "vox");
+      if (!pids.length) continue;
+      const frozen: number[] = [];
+      for (const pid of pids) {
+        try {
+          suspendProcess(pid);
+          frozen.push(pid);
+        } catch {}
+      }
+      if (frozen.length) {
+        writeFileSync(
+          fmt(pauseTmpl("vox"), lang),
+          JSON.stringify({ pids: frozen, at: new Date().toLocaleString("sv-SE").slice(0, 19).replace("T", " ") }),
+          "utf-8",
+        );
+      }
+    } catch {}
+  }
+}
+
+function resumeAllVoxLangs(langs: string[]): void {
+  for (const lang of langs) {
+    try {
+      const st = pauseState(lang, "vox");
+      if (!st) continue;
+      const alive = new Set(findWorkers(lang, "vox"));
+      for (const pid of st.pids ?? []) {
+        if (!alive.has(pid)) continue;
+        try {
+          resumeProcess(pid);
+        } catch {}
+      }
+      try {
+        rmSync(fmt(pauseTmpl("vox"), lang), { force: true });
+      } catch {}
+    } catch {}
+  }
+}
+
+async function voxAutoLoop(): Promise<void> {
+  const cfg = getVoxAutoCfg();
+  mkdirSync(dirname(VOX_AUTO_PID), { recursive: true });
+  writeFileSync(VOX_AUTO_PID, String(process.pid), "utf-8");
+  let idleSince = Date.now();
+  let busySince = 0;
+  // применяем приоритет сразу
+  lowerVoxPriority(cfg);
+  console.log(
+    `[vox-auto] запущен, пороги cpu>${cfg.cpuHigh}/<${cfg.cpuLow} gpu>${cfg.gpuHigh}/<${cfg.gpuLow}, idle>${cfg.idleSec}с, langs=${cfg.langs.join(",")}, cores=${cfg.maxCores}`,
+  );
+  while (true) {
+    await sleep(cfg.intervalSec * 1000);
+    // если пульт запущен заново — выходим
+    if (readVoxAutoPid() !== process.pid) break;
+    const cpu = getCpuLoad();
+    const gpu = getGpuLoad();
+    const inputSec = getLastInputSeconds();
+    const inputActive = inputSec !== null && inputSec < 15; // движение мыши/клавиатура за 15с
+    const cpuBusy = cpu !== null && cpu >= cfg.cpuHigh;
+    const gpuBusy = gpu.util !== null && gpu.util >= cfg.gpuHigh;
+    const busy = inputActive || cpuBusy || gpuBusy;
+    if (busy) {
+      idleSince = Date.now();
+      if (busySince === 0) busySince = Date.now();
+      // если занят дольше ~10с и не на паузе — ставим на паузу (реактивнее при вводе)
+      const anyRunning = cfg.langs.some((lang) => findWorkers(lang, "vox").length && !pauseState(lang, "vox"));
+      if (anyRunning && Date.now() - busySince > 10_000) {
+        console.log(
+          `[vox-auto] пауза (input=${inputSec?.toFixed(1) ?? "?"}с cpu=${cpu ?? "?"}% gpu=${gpu.util ?? "?"}%)`,
+        );
+        pauseAllVoxLangs(cfg.langs);
+        lowerVoxPriority(cfg);
+        busySince = Date.now();
+      }
+    } else {
+      busySince = 0;
+      const idleSec = (Date.now() - idleSince) / 1000;
+      if (idleSec >= cfg.idleSec) {
+        // снимаем с паузы если на паузе
+        if (cfg.langs.some((lang) => pauseState(lang, "vox"))) {
+          console.log(
+            `[vox-auto] возобновление (простой ${Math.round(idleSec)}с, input=${inputSec?.toFixed(0) ?? "?"}с, cpu=${cpu ?? "?"}% gpu=${gpu.util ?? "?"}%)`,
+          );
+          resumeAllVoxLangs(cfg.langs);
+          await sleep(2000);
+          lowerVoxPriority(cfg);
+          idleSince = Date.now();
+          continue;
+        }
+        // если остановлены совсем — можно запустить? не делаем автоматически, только пауза/возобновление
+      }
+    }
+    lowerVoxPriority(cfg);
+  }
+  try {
+    rmSync(VOX_AUTO_PID, { force: true });
+  } catch {}
+}
+
+function cmdVoxAuto(args: string[]): number {
+  if (!isWin()) {
+    console.log("vox-auto: только Windows");
+    return 1;
+  }
+  const sub = args[0] || "status";
+  if (sub === "start") {
+    const cur = readVoxAutoPid();
+    if (cur) {
+      console.log(`vox-auto: уже работает (pid ${cur})`);
+      return 0;
+    }
+    const cfg = getVoxAutoCfg();
+    saveVoxAutoCfg(cfg);
+    const p = spawn(process.execPath, [join(SCRIPTS_DIR, "voice_ctl.mts"), "__vox_auto_loop"], {
+      cwd: ROOT,
+      stdio: "ignore",
+      detached: true,
+      windowsHide: true,
+    });
+    if (p.pid) p.unref();
+    console.log(`vox-auto: запущен (pid ${p.pid}) для ${cfg.langs.join(",")}`);
+    console.log(
+      `конфиг: output/voice/vox_auto.json (cpuHigh=${cfg.cpuHigh} cpuLow=${cfg.cpuLow} gpuHigh=${cfg.gpuHigh} gpuLow=${cfg.gpuLow} idleSec=${cfg.idleSec})`,
+    );
+    return 0;
+  }
+  if (sub === "stop") {
+    if (killVoxAuto()) console.log("vox-auto: остановлен");
+    else console.log("vox-auto: не запущен");
+    return 0;
+  }
+  if (sub === "status" || sub === "info") {
+    const pid = readVoxAutoPid();
+    const cfg = getVoxAutoCfg();
+    console.log(`vox-auto: ${pid ? "RUNNING pid " + pid : "STOPPED"}`);
+    console.log(
+      `конфиг: cpu>${cfg.cpuHigh}/<${cfg.cpuLow} gpu>${cfg.gpuHigh}/<${cfg.gpuLow} idle>${cfg.idleSec}с langs=${cfg.langs.join(",")}`,
+    );
+    console.log(`метрики: cpu=${getCpuLoad() ?? "?"}% gpu=${getGpuLoad().util ?? "?"}%`);
+    return 0;
+  }
+  console.log("usage: vox-auto start|stop|status");
+  return 1;
+}
+
 function cmdLogs(a: CtlArgs): number {
   const langs = normLangs(a.lang, a.kind);
   for (const lang of langs) {
@@ -808,6 +1192,15 @@ export async function main(argv: string[]): Promise<number> {
         return await cmdWatch(a);
       case "logs":
         return cmdLogs(a);
+      case "lower":
+      case "lower-priority":
+      case "vox-lower":
+        return cmdLowerPriority();
+      case "vox-auto":
+        return cmdVoxAuto(argv.slice(1));
+      case "__vox_auto_loop":
+        await voxAutoLoop();
+        return 0;
       case "vox-start":
         return await cmdStart(a);
       case "vox-stop":
