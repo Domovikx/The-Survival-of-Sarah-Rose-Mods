@@ -1,0 +1,12 @@
+{
+  "cpuHigh": 20,
+  "cpuLow": 10,
+  "gpuHigh": 40,
+  "gpuLow": 20,
+  "intervalSec": 8,
+  "idleSec": 30,
+  "langs": [
+    "ru"
+  ],
+  "maxCores": 4
+}

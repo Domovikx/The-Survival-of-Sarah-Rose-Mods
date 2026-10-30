@@ -30,6 +30,9 @@ last_menu_hook.txt
 # state генератора (пересоздаётся warm-guard)
 thermal_guard.json
 
+# пульт: pid-файл автотроттлинга vox-auto (пересоздаётся при старте)
+vox_auto.pid
+
 # атомарная запись po: временный файл до rename
 *.po.part
 nul
