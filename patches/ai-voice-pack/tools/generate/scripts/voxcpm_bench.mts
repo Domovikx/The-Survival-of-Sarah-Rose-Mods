@@ -112,10 +112,12 @@
  *       `vox_qc.mts --filter <uid> --rank` / `--pick`, победитель -> каноническое
  *       победитель -> каноническое имя {uid}__{voice}__Vox_cfg{cfg}_ts{ts}.wav)
  *
- * ПАЙПЛАЙН (владелец 2026-10-28): генерация СЫРЫМ wav -> пост-конвейер
- * (выравнивание -16/TP-1.5 -> opus 48 kHz/24 kbps -> удаление wav) -> в папке
- * ТОЛЬКО opus. Vox-стандарт: OpusHead 48000 + битрейт 24k (владелец 2026-10-28).
- * Отключение пост-конвейера: --raw (сырой wav остаётся — для отладки/экспериментов).
+ * ПАЙПЛАЙН (владелец 2026-10-28, инлайн с 2026-10-30): генерация СЫРЫМ wav ->
+ * СРАЗУ после записи каждой фразы конвейер (выравнивание -16/TP-1.5 ->
+ * opus 48 kHz/24 kbps -> удаление wav) -> в папке ТОЛЬКО opus, пачка wav
+ * не накапливается (~10x места), обрыв оставляет максимум один недоконвер-
+ * тированный wav (а не сотни). Vox-стандарт: OpusHead 48000 + битрейт 24k.
+ * Отключение конвейера: --raw (сырой wav остаётся — для отладки/экспериментов).
  * ИТОГ: консольная таблица + tmp/voxcpm_bench/last.jsonl (пофразовино) +
  * gen_times.jsonl (накопительный журнал скоростей: cfg/ts/genSec по каждой генерации).
  */
@@ -472,7 +474,7 @@ interface BenchCli {
   dryRun: boolean;
   /**
    * Resume (планировщик очереди, задача 2026-10-30): пропуск фраз, чей
-   * целевой файл УЖЕ есть (opus после пост-конвейера; wav при --raw) —
+   * целевой файл УЖЕ есть (opus после инлайн-конвейера; wav при --raw) —
    * обрыв/остановка/ребут не теряют прогресс, повторный запуск продолжает
    * с места. Без флага — обычное поведение стенда (полная регенерация).
    */
@@ -483,7 +485,7 @@ interface BenchCli {
   emotion: string;
   /** Метка в имени файла (A/B: проба не затирает основной файл). */
   nameTag: string;
-  /** Без пост-конвейера: оставить СЫРОЙ wav (не выравнивать, не конвертировать). */
+  /** Без конвейера: оставить СЫРОЙ wav (не выравнивать, не конвертировать). */
   raw: boolean;
   /** Совсем без эмоции: голый текст, префикс (emotion) не подставляется. */
   noEmotion: boolean;
@@ -873,8 +875,8 @@ function planOnce(o: BenchCli, phrases: Phrase[]): PlanItem[] {
  */
 /**
  * --resume (очередь vox_queue.mts, задача 2026-10-30): какие фразы ПРОПУСТИТЬ,
- * т.к. их целевой файл уже есть. Цель = opus после пост-конвейера (итог
- * прогона), либо сырой wav при --raw. Чистая функция: `exists` внедряется
+ * т.к. их целевой файл уже есть. Цель = opus после инлайн-конвейера (файл
+ * создаётся сразу), либо сырой wav при --raw. Чистая функция: `exists` внедряется
  * снаружи — тесты ходят без ФС.
  */
 export function filterDone<T extends { wavPath: string }>(
@@ -1021,6 +1023,10 @@ export async function main(argv: string[] = process.argv.slice(2)): Promise<numb
     onLog: (l) => console.log(`  [shim] ${l}`),
   });
   const records: RunRecord[] = [];
+  // Vox-стандарт (владелец 2026-10-28): OpusHead 48000 Hz, битрейт 24 kbps
+  const VOX_HZ = 48_000;
+  // Ошибки инлайн-конвейера (level/opus) — отчёт в конце прогона
+  const convErrs: string[] = [];
   try {
     const tLoad = Date.now();
     const ping = await w.ping();
@@ -1076,8 +1082,7 @@ export async function main(argv: string[] = process.argv.slice(2)): Promise<numb
       const durSec = r.samples.length / r.sr;
       rec.durSec = Math.round(durSec * 100) / 100;
       rec.genSec = Math.round(((r.genMs ?? 0) / 1000) * 10) / 10;
-      // Только wav, СЫРОЙ (без trim/фильтров): уровень выравнивается позже —
-      // `vox_qc.mts --normalize` только на одобренных судьёй (реш. 2026-10-27)
+      // СЫРОЙ wav (без trim/фильтров): уровень выравнивается КОНВЕЙЕРОМ ниже
       mkdirSync(dirname(it.wavPath), { recursive: true }); // <lang> может не существовать
       writeWav16(it.wavPath, r.samples, r.sr);
       rec.loud = measureLoudness(it.wavPath);
@@ -1087,6 +1092,19 @@ export async function main(argv: string[] = process.argv.slice(2)): Promise<numb
         `  ${String(it.n).padStart(2)}. ${it.name}: ${rec.durSec.toFixed(2)}с, gen ${rec.genSec}с, ` +
           `I ${fmt(rec.loud?.i)} LUFS, TP ${fmt(rec.loud?.tp)} dBTP, LRA ${fmt(rec.loud?.lra)} LU`,
       );
+      // КОНВЕЙЕР СРАЗУ после записи (владелец 2026-10-30): wav -> выравнивание
+      // (-16/TP-1.5) -> opus 48k/24k -> удаление wav. Не копим пачку wav
+      // (~10x места на диске), обрыв оставляет максимум один недоконвертированный
+      // wav вместо сотен; --raw — сырой wav остаётся (отладка/эксперименты).
+      if (!o.raw) {
+        if (!normalizeWav(it.wavPath, VOX_HZ)) {
+          convErrs.push(`level:${it.name}`);
+        } else if (!wavToOpus(it.wavPath, VOX_HZ)) {
+          convErrs.push(`opus:${it.name}`);
+        } else {
+          rmSync(it.wavPath, { force: true });
+        }
+      }
     }
   } finally {
     await w.quit().catch(() => w.kill());
@@ -1112,37 +1130,10 @@ export async function main(argv: string[] = process.argv.slice(2)): Promise<numb
       .join("\n") + "\n",
   );
 
-  // ПОСТ-КОНВЕЙЕР (владелец 2026-10-28): wav -> выравнивание (-16/TP-1.5) ->
-  // opus 48 kHz/24 kbps (Vox-стандарт) -> удаление wav. Итог прогона = ТОЛЬКО opus
-  // («все wav должны быть opus по нашему плану или уже удалены»); сырой wav
-  // живёт только внутри прогона. Порядок: records[i] <-> plan[i] (push в том
-  // же порядке, см. main-цикл).
-  {
-    const postItems = o.raw ? [] : plan.filter((_, i) => records[i]?.ok); // --raw: оставить сырой wav
-    if (postItems.length > 0) {
-      console.log(`
-пост-конвейер (wav -> уровень -> opus -> удаление wav): ${postItems.length} файл(ов)`);
-      let done = 0;
-      const errs: string[] = [];
-      // Vox-стандарт (владелец 2026-10-28): OpusHead 48000 Hz, битрейт 24 kbps
-      const VOX_HZ = 48_000;
-      for (const it of postItems) {
-        // стенд всегда VoxCPM2 -> нативная частота PCM 48k
-        if (!normalizeWav(it.wavPath, VOX_HZ)) {
-          errs.push(`level:${it.name}`);
-          continue;
-        }
-        if (!wavToOpus(it.wavPath, VOX_HZ)) {
-          errs.push(`opus:${it.name}`);
-          continue;
-        }
-        rmSync(it.wavPath, { force: true });
-        done++;
-      }
-      console.log(
-        `пост-конвейер: готово ${done}/${postItems.length}${errs.length ? `, ошибок ${errs.length}: ${errs.slice(0, 5).join(", ")}` : ""}`,
-      );
-    }
+  // Инлайн-конвейер живёт в главном цикле (см. выше): wav -> уровень -> opus ->
+  // удаление wav — сразу после каждой фразы; пачка wav не накапливается.
+  if (convErrs.length > 0) {
+    console.log(`\nконвейер: ошибок ${convErrs.length}: ${convErrs.slice(0, 5).join(", ")}`);
   }
 
   const ok = records.filter((r) => r.ok);
