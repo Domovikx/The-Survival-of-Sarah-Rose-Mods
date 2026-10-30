@@ -141,7 +141,7 @@ export function activeArcs(): Map<string, string> {
   return out;
 }
 
-/** Число живых инференс-шимов (python cosyworker) — приблизительно. */
+/** Число живых инференс-шимов (python cosyworker | voxcpmworker) — приблизительно. */
 export function shimWorkers(): number {
   try {
     const r = spawnSync(
@@ -149,7 +149,7 @@ export function shimWorkers(): number {
       [
         "-NoProfile",
         "-Command",
-        "(Get-CimInstance Win32_Process -Filter \"Name='python.exe'\" | Where-Object { $_.CommandLine -match 'cosyworker' }).Count",
+        "(Get-CimInstance Win32_Process -Filter \"Name='python.exe'\" | Where-Object { $_.CommandLine -match 'cosyworker|voxcpmworker' }).Count",
       ],
       { stdio: ["ignore", "pipe", "pipe"], timeout: 20_000, windowsHide: true },
     );
@@ -288,7 +288,7 @@ function cmdDetail(): number {
   console.log();
   const act = activeArcs();
   console.log("=== ВОКЕРЫ ===");
-  console.log(`  процессы cosyworker: ${shimWorkers()}`);
+  console.log(`  процессы шимов (cosy|vox): ${shimWorkers()}`);
   for (const lang of LANGS) console.log(`  ${lang.toUpperCase()}: арка ${act.get(lang) ?? "?"}`);
   console.log(`  tmp-сирот (loudnorm): ${healthScan().orphans}`);
   return 0;
@@ -387,7 +387,7 @@ export async function main(argv: string[] = process.argv.slice(2)): Promise<numb
   const act = activeArcs();
   console.log("\n=== ВОКЕРЫ ===");
   const workers = shimWorkers();
-  console.log(`  процессы cosyworker: ${workers >= 0 ? workers : "? (нет tasklist)"}`);
+  console.log(`  процессы шимов (cosy|vox): ${workers >= 0 ? workers : "? (нет tasklist)"}`);
   for (const lang of LANGS) {
     const arc = act.get(lang) ?? "?";
     console.log(`  ${lang.toUpperCase()}: арка ${arc} (всего в арке ${p.get(arc) ?? 0})`);

@@ -27,7 +27,7 @@
 - `tools/generate/scripts/` — весь пайплайн:
   - `voicekit/` — ядро: `paths.py` (ЕДИНСТВЕННОЕ место с путями),
     `catalog.py`, `contract.py`, `config.py`, `fs.py`;
-  - `voice_ctl.py` + `voice-*.cmd` — пульт очередями (статус/старт/пауза);
+  - `voice_ctl.mts` + `voice-*.cmd` + `vox-*.cmd` — пульт очередями (статус/старт/пауза/остановка/soft-stop, cosy+vox); двойной клик.
   - `voice_batch.py`, `voice_queue.sh` — генерация (resumable, низкий
     приоритет, старт только через пульт);
   - `voice_status/sync/manage/preview/...` — статус, каталог, отчёты;

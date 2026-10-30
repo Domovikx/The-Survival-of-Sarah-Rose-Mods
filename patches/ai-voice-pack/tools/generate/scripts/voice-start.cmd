@@ -8,6 +8,6 @@ rem  Logs: output\voice\gen_all_{ru,en}.log
 rem  Control: voice-status / voice-stop / voice-pause / voice-resume
 rem  Usage: voice-start.cmd [ru|en|all]
 rem ============================================================
-python "%~dp0voice_ctl.py" start %*
+node "%~dp0voice_ctl.mts" start %*
 echo.
 pause

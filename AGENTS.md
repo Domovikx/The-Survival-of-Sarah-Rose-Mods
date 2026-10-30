@@ -249,11 +249,17 @@ tools/generate/scripts/
                                #   интерактиву; лог output/voice/gen_all_{lang}.log)
                                #   СТАРТ ТОЛЬКО ЧЕРЕЗ ПУЛЬТ (voice_ctl/voice-start.cmd),
                                #   голый запуск запрещён (теряется приоритет/детач)
-  voice_ctl.py                 # ПУЛЬТ очередями (Windows, только stdlib, системный python):
-                               #   status/start/stop/pause/resume/watch/logs [ru|en|all]
-                               #   (процессы ищет по cmdline voice_batch.mts/voice_queue.sh;
-                               #   пауза = NtSuspendProcess, метка — output/voice/ctl_paused_{lang}.json)
-                               #   Двойной клик: voice-start/stop/pause/resume/status/watch.cmd
+  vox_queue.mts                # VOX-ОЧЕРЕДЬ (VoxCPM, 11 языков): node vox_queue.mts {lang|all}
+                               #   (обход арок Prologue/StoryBeginnings/WarArc, resumable
+                               #   --resume, низкий приоритет; лог output/voice/vox_gen_{lang}.log)
+                               #   СТАРТ ТОЛЬКО ЧЕРЕЗ ПУЛЬТ (voice_ctl/vox-start.cmd)
+  voice_ctl.mts                # ПУЛЬТ очередями (Windows, node, только stdlib; порт
+                               #   voice_ctl.py 2026-10-30): status/start/stop/soft-stop/
+                               #   pause/resume/watch/logs [ru|en|all] + vox-* (11 языков)
+                               #   (процессы ищет по cmdline voice_batch.mts/voice_queue.sh и
+                               #   voxcpm_bench.mts/vox_queue.mts; пауза = NtSuspendProcess,
+                               #   метка — output/voice/ctl_paused[_vox]_{lang}.json)
+                               #   Двойной клик: voice-*.cmd и vox-*.cmd
 ```
 
 ### Ребут ПК: порядок запуска (двойной клик, без админа)
@@ -263,11 +269,13 @@ tools/generate/scripts/
    контроль: `lms server status`. Освободить VRAM под озвучку —
    `tools/generate/scripts/stop-lmstudio.cmd`
 2. `tools/generate/scripts/voice-start.cmd` — обе очереди озвучки (resumable, низкий приоритет)
+3. `tools/generate/scripts/vox-start.cmd` — Vox-очередь 11 языков (VoxCPM,
+   resumable, низкий приоритет; при необходимости — на GPU свободной от LM Studio)
 
 Контроль: `tools/generate/scripts/voice-status.cmd` (сводка), `tools/generate/scripts/voice-watch.cmd` (живой
 мониторинг), пауза — `tools/generate/scripts/voice-pause.cmd` (снять — `voice-resume.cmd`),
-остановка — `tools/generate/scripts/voice-stop.cmd`. Агентам: статус смотреть пультом
-(`python tools/generate/scripts/voice_ctl.py status`), не ручным подсчётом файлов.
+остановка — `tools/generate/scripts/voice-stop.cmd` (vox — `vox-*.cmd`). Агентам: статус смотреть пультом
+(`node tools/generate/scripts/voice_ctl.mts status`), не ручным подсчётом файлов.
 
 ## Миграция python → TypeScript (приказ владельца 2026-10-23)
 
@@ -289,13 +297,13 @@ tools/generate/scripts/
 
 ### Граница (шаг «cosyworker → TS», 2026-10-23)
 
-| Слой                                                                   | Язык   | Файлы                                                                                                |
-| ---------------------------------------------------------------------- | ------ | ---------------------------------------------------------------------------------------------------- |
-| Оркестрация батча: каталог, фильтры, эмоции, логи, ETA                 | TS     | `voice_batch.mts`                                                                                    |
-| Клиент шима: протокол v2, ретрай TextEncodeInput, trim, ffmpeg-цепочка | TS     | `voicekit/worker.mts`, `voicekit/trim.mts`, `voicekit/audio.mts`                                     |
-| Инференс (модель CV3, torch)                                           | python | `cosyworker.py` — ЕДИНСТВЕННЫЙ python контура генерации                                              |
-| Рефы/голоса/статус/разметка                                            | TS     | `add_candidate`, `voice_manage`, `voice_status`, `emotion_tag` и пр.                                 |
-| CLI-легаси (на вымирание)                                              | python | `voice_ctl.py`, `beastify.py`, `levelnorm.py`, `trim_tail_burst.py`, `voice_design.py`, `voicekit/*` |
+| Слой                                                                   | Язык   | Файлы                                                                                |
+| ---------------------------------------------------------------------- | ------ | ------------------------------------------------------------------------------------ |
+| Оркестрация батча: каталог, фильтры, эмоции, логи, ETA                 | TS     | `voice_batch.mts`                                                                    |
+| Клиент шима: протокол v2, ретрай TextEncodeInput, trim, ffmpeg-цепочка | TS     | `voicekit/worker.mts`, `voicekit/trim.mts`, `voicekit/audio.mts`                     |
+| Инференс (модель CV3, torch)                                           | python | `cosyworker.py` — ЕДИНСТВЕННЫЙ python контура генерации                              |
+| Рефы/голоса/статус/разметка                                            | TS     | `add_candidate`, `voice_manage`, `voice_status`, `emotion_tag` и пр.                 |
+| CLI-легаси (на вымирание)                                              | python | `beastify.py`, `levelnorm.py`, `trim_tail_burst.py`, `voice_design.py`, `voicekit/*` |
 
 Протокол v2 (2026-10-23): шим отдаёт СЫРОЙ PCM (`pcm_b64` = float32 LE mono,
 плюс поле `sr`), файлов не пишет. Дальше всё на TS: ретрай холодного фронтенда
@@ -614,7 +622,7 @@ Unicode-ударение **U+0301** после ударной гласной Р�
 ```bash
 # Вся TS-матрица (из корня репы; скиллы + пайплайн + scripts/):
 node --test $(find .opencode/skills patches/ai-voice-pack/tools scripts -name "*.test.mts" -not -path "*/node_modules/*")
-# Гард сборки — pytest только для остатка python (voicekit/voice_ctl/build):
+# Гард сборки — pytest только для остатка python (voicekit/beastify/levelnorm/trim_tail_burst/voice_design/build):
 cd patches/ai-voice-pack && python -m pytest tests/ -v
 ```
 

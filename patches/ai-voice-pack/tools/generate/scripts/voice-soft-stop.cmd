@@ -5,6 +5,6 @@ rem  Finishes current file, then stops. Frees CPU+RAM, nothing lost.
 rem  Safe: done wavs stay valid, restart continues (resumable).
 rem  Usage: voice-soft-stop.cmd [ru|en|all] [--timeout 300]
 rem ============================================================
-python "%~dp0voice_ctl.py" soft-stop %*
+node "%~dp0voice_ctl.mts" soft-stop %*
 echo.
 pause

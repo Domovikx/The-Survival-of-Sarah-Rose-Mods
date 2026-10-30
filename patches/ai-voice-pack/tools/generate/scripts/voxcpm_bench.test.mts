@@ -17,6 +17,7 @@ import {
   filterByUids,
   filterByArc,
   filterByVoices,
+  filterDone,
   knobsText,
   matrixName,
   measureLoudness,
@@ -566,6 +567,67 @@ test("measureLoudness: живой замер wav (нужен ffmpeg)", { skip: !
     assert.ok(l.i !== null && l.i < 0, `интегральный уровень должен быть отрицательным, получили ${l.i}`);
     assert.ok(l.tp !== null && l.tp < 0, `true peak должен быть отрицательным, получили ${l.tp}`);
     assert.ok(l.lra !== null, "LRA должен быть измерим");
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+// ---------- resume (планировщик очереди, задача 2026-10-30) ----------
+
+test("parseBenchCli: --resume по умолчанию выключен, флаг включает", () => {
+  assert.equal(parseBenchCli(["--picks", "3"]).resume, false);
+  assert.equal(parseBenchCli(["--picks", "3", "--resume"]).resume, true);
+});
+
+test("filterDone: opus-цель — пропуск готовых, перенумерация остатка — на совести плана", () => {
+  const items = [
+    { wavPath: "C:/repo/audio/ru/Arc/aaa__Vox.wav" },
+    { wavPath: "C:/repo/audio/ru/Arc/bbb__Vox.wav" },
+    { wavPath: "C:/repo/audio/ru/Arc/ccc__Vox.wav" },
+  ];
+  const done = new Set(["C:/repo/audio/ru/Arc/bbb__Vox.opus"]);
+  const { kept, skipped } = filterDone(items, false, (p) => done.has(p));
+  assert.equal(skipped, 1);
+  assert.deepEqual(
+    kept.map((it) => it.wavPath),
+    ["C:/repo/audio/ru/Arc/aaa__Vox.wav", "C:/repo/audio/ru/Arc/ccc__Vox.wav"],
+  );
+  // ничего не готово -> всё в работе
+  assert.equal(filterDone(items, false, () => false).skipped, 0);
+});
+
+test("filterDone: --raw сравнивает с wav (сырой прогон без пост-конвейера)", () => {
+  const items = [{ wavPath: "C:/repo/audio/ru/Arc/aaa__Vox.wav" }, { wavPath: "C:/repo/audio/ru/Arc/bbb__Vox.wav" }];
+  const done = new Set(["C:/repo/audio/ru/Arc/aaa__Vox.wav"]);
+  const { kept, skipped } = filterDone(items, true, (p) => done.has(p));
+  assert.equal(skipped, 1);
+  assert.deepEqual(
+    kept.map((it) => it.wavPath),
+    ["C:/repo/audio/ru/Arc/bbb__Vox.wav"],
+  );
+});
+
+test("filterDone: все готовы -> пустой остаток (раннер напечатает 'генерировать нечего')", () => {
+  const items = [{ wavPath: "x/a.wav" }, { wavPath: "x/b.wav" }];
+  const { kept, skipped } = filterDone(items, false, () => true);
+  assert.equal(kept.length, 0);
+  assert.equal(skipped, 2);
+});
+
+test("filterDone: ФС-фолбэк — реальный opus на диске пропускается (живой диск)", () => {
+  const dir = mkdtempSync(join(tmpdir(), "voxcpm-resume-"));
+  try {
+    const wavDone = join(dir, "aaa__Vox.wav");
+    const opusDone = join(dir, "aaa__Vox.opus");
+    const wavTodo = join(dir, "bbb__Vox.wav");
+    writeFileSync(opusDone, "fake"); // opus готов — фраза пропускается
+    writeFileSync(wavTodo, "fake"); // есть только wav — opus нет, в работе
+    const { kept, skipped } = filterDone([{ wavPath: wavDone }, { wavPath: wavTodo }], false);
+    assert.equal(skipped, 1);
+    assert.deepEqual(
+      kept.map((it) => it.wavPath),
+      [wavTodo],
+    );
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }

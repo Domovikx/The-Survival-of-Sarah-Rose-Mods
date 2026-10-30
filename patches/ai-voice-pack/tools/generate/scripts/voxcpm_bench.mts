@@ -92,6 +92,10 @@
  *   ... --cfgs 2,2.25,2.5 --ts 30                                                     # подбор cfg на одной фразе
  *   ... --picks 10                                                                    # 10 разных фраз
  *   ... --picks 10 --seed 7                                                           # другие 10 фраз
+ *   ... --arc StoryBeginnings --picks 9999 --resume --seed 49 --cfg 2.6 --ts 30      # очередь (resume)
+ *      (--resume: фразы с готовым opus ПРОПУСКАЮТСЯ — обрыв/остановка/ребут не теряют
+ *       прогресс, повторный запуск продолжает с места; массовый обход арок/языков —
+ *       vox_queue.mts, он и гоняет это с конфигом пролога)
  *   ... --knobs                                                                       # справочник кнобков
  *   ... --picks 10 --opt normalize=true --opt retry_badcase=false                     # оперативный конфиг
  *   ... --each-voice --per-voice 3                                                    # 72 голоса x 3 фразы
@@ -122,7 +126,7 @@ import { pathToFileURL } from "node:url";
 
 import { ENGINES, loadCatalog, type Args, type Phrase, PKG_ROOT, selectPhrases } from "./voice_batch.mts";
 import { selectSample } from "./voice_bench.mts";
-import { normalizeWav, wavToOpus, writeWav16 } from "./voicekit/audio.mts";
+import { normalizeWav, opusPathFor, wavToOpus, writeWav16 } from "./voicekit/audio.mts";
 import { VoiceWorker } from "./voicekit/worker.mts";
 
 /** Репа-корень: PKG_ROOT = patches/ai-voice-pack -> ../../. */
@@ -466,6 +470,13 @@ interface BenchCli {
   /** Только напечатать справочник кнобков и выйти (`--knobs`). */
   knobs: boolean;
   dryRun: boolean;
+  /**
+   * Resume (планировщик очереди, задача 2026-10-30): пропуск фраз, чей
+   * целевой файл УЖЕ есть (opus после пост-конвейера; wav при --raw) —
+   * обрыв/остановка/ребут не теряют прогресс, повторный запуск продолжает
+   * с места. Без флага — обычное поведение стенда (полная регенерация).
+   */
+  resume: boolean;
   /** Не удалять прошлые версии фразы (A/B-сравнение конфигов/эмоций). */
   keepPrev: boolean;
   /** Переопределение эмоции: стиль-префикс `(emotion)text` вместо POT-тона. */
@@ -508,6 +519,7 @@ export function parseBenchCli(argv: string[]): BenchCli {
     opts: {},
     knobs: false,
     dryRun: false,
+    resume: false,
     keepPrev: false,
     emotion: "",
     nameTag: "",
@@ -625,6 +637,9 @@ export function parseBenchCli(argv: string[]): BenchCli {
         break;
       case "--dry-run":
         o.dryRun = true;
+        break;
+      case "--resume":
+        o.resume = true;
         break;
       default:
         throw new Error(`неизвестная опция: ${a}`);
@@ -856,6 +871,21 @@ function planOnce(o: BenchCli, phrases: Phrase[]): PlanItem[] {
  * дальше `vox_qc.mts --rank/--pick` отбирает лучшего, победитель копируется
  * в каноническое `{uid}__{voice}__Vox.wav`.
  */
+/**
+ * --resume (очередь vox_queue.mts, задача 2026-10-30): какие фразы ПРОПУСТИТЬ,
+ * т.к. их целевой файл уже есть. Цель = opus после пост-конвейера (итог
+ * прогона), либо сырой wav при --raw. Чистая функция: `exists` внедряется
+ * снаружи — тесты ходят без ФС.
+ */
+export function filterDone<T extends { wavPath: string }>(
+  items: T[],
+  raw: boolean,
+  exists: (path: string) => boolean = existsSync,
+): { kept: T[]; skipped: number } {
+  const kept = items.filter((it) => !exists(raw ? it.wavPath : opusPathFor(it.wavPath)));
+  return { kept, skipped: items.length - kept.length };
+}
+
 export function buildPlan(o: BenchCli, phrases: Phrase[]): PlanItem[] {
   const base = planOnce(o, phrases);
   if (o.seeds.length === 0) return base;
@@ -922,10 +952,21 @@ export async function main(argv: string[] = process.argv.slice(2)): Promise<numb
     console.error(`--uid ${o.uid} в выборочном режиме: найдено ${phrases.length} фраз (нужна ровно 1)`);
     return 1;
   }
-  const plan = buildPlan(o, phrases);
+  let plan = buildPlan(o, phrases);
   if (plan.length === 0) {
     console.error(`план пуст: --only=${o.only ?? "-"} / --picks=${o.picks} (кандидатов ${phrases.length})`);
     return 1;
+  }
+  if (o.resume) {
+    // Обрыв/остановка/ребут: готовые opus не трогаем — продолжаем с места.
+    const { kept, skipped } = filterDone(plan, o.raw);
+    plan = kept;
+    console.log(`resume: пропущено готовых ${skipped}, в работе ${plan.length}`);
+    if (plan.length === 0) {
+      console.log(`resume: всё уже сгенерировано (${skipped}) — генерировать нечего`);
+      return 0;
+    }
+    plan.forEach((it, i) => (it.n = i + 1)); // сквозная нумерация остатка
   }
 
   const mode =
