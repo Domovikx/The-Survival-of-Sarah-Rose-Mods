@@ -20,23 +20,23 @@ msgstr "오우, 아니 이거 말고 저거 해봐”라고 사라가 아직 어
 
 msgctxt "speaker:Narrator"
 msgid "'A preliminary Analysis on Snow Crystal as an Alchemical Catalyst.'"
-msgstr ""
+msgstr "'설정 결정체로서의 알케미 촉매에 대한 예비 분석.'"
 
 msgctxt "speaker:Curator"
 msgid "'The Desert Blooms'. We have Thirty-eight copies within the current inventory."
-msgstr ""
+msgstr "'사막이 피어난다'입니다. 현재 재고에는 38 부가 있습니다."
 
 msgctxt "speaker:Narrator"
 msgid "'The Hollow World'."
-msgstr ""
+msgstr "'빈터'."
 
 msgctxt "speaker:Sarah"
 msgid "...So Sir Roderic, now bearing the sword..."
-msgstr ""
+msgstr "…이제 검을 든 로더릭爵士님,"
 
 msgctxt "speaker:Samayra"
 msgid "...at least I'll have seen the world."
-msgstr ""
+msgstr "...적어도 세상은 보게 되었군."
 
 msgctxt "ui"
 msgid "<"
@@ -48,191 +48,191 @@ msgstr ">"
 
 msgctxt "speaker:Curator"
 msgid "A Brief Investigation on Ethics was first written by the philosopher Lu-Fan, hailing from the current region known to you as the Far East."
-msgstr ""
+msgstr "윤리학에 대한 간략한 조사는 현재 여러분이 동방이라고 부르는 지역에서 온 철학자 루판에 의해 처음 쓰였습니다."
 
 msgctxt "speaker:Voice"
 msgid "A God."
-msgstr ""
+msgstr "신이시군요."
 
 msgctxt "speaker:Sarah"
 msgid "A Mythran army? Why?"
-msgstr ""
+msgstr "미트란 군대라니? 왜?"
 
 msgctxt "speaker:Xanthippe"
 msgid "A Mythran host is no joke, but the Bagrad army should be able to keep them off for a while. We're mostly here just to protect the palace from anyone that sneaks past the main battle."
-msgstr ""
+msgstr "미트란의 호위군은 장난이 아닙니다만, 바그라드 군은 잠시 동안 그들을 막아낼 수 있을 것입니다. 우리는 주로 주요 전투를 통과한 누구든 궁전을 보호하기 위해 여기에 있습니다."
 
 msgctxt "speaker:Emmissary"
 msgid "A Queen with no crown. A Queen with no throne. A Queen with no land."
-msgstr ""
+msgstr "왕관이 없는 여왕. 왕좌가 없는 여왕. 땅이 없는 여왕."
 
 msgctxt "speaker:Sarah"
 msgid "A Rosannan man would never..."
-msgstr ""
+msgstr "로산 남자는 절대 그럴 리가 없지..."
 
 msgctxt "speaker:Narrator"
 msgid "A Tribesmen, caught from his horse, was far less of a threat."
-msgstr ""
+msgstr "마부에서 끌려온 부족민은 훨씬 덜 위협적이다."
 
 msgctxt "speaker:Kravel"
 msgid "A Union Council hasn't been called in over a century..."
-msgstr ""
+msgstr "백 년 넘게 연방 의회는 소집되지 않았습니다..."
 
 msgctxt "speaker:Narrator"
 msgid "A Union King."
-msgstr ""
+msgstr "연방의 왕."
 
 msgctxt "speaker:Narrator"
 msgid "A bad idea."
-msgstr ""
+msgstr "나쁜 생각이다."
 
 msgctxt "speaker:Narrator"
 msgid "A bar of soap."
-msgstr ""
+msgstr "비누 한 개."
 
 msgctxt "speaker:Narrator"
 msgid "A bar of soap. Some towels. Toiletries."
-msgstr ""
+msgstr "비누 한 개, 수건 몇 장, 화장품."
 
 msgctxt "speaker:Sarah"
 msgid "A bath? In this place?"
-msgstr ""
+msgstr "욕조? 이 곳에서?"
 
 msgctxt "speaker:Narrator"
 msgid "A bathhouse."
-msgstr ""
+msgstr "욕실이다."
 
 msgctxt "speaker:Narrator"
 msgid "A bead of sweat fell from Naydeen's face, landing on Sarah's stomach."
-msgstr ""
+msgstr "나디엔의 땀방울이 얼굴에서 떨어져 사라하의 배에 착했다."
 
 msgctxt "speaker:Narrator"
 msgid "A beautiful woman like that, dominated by a man like that."
-msgstr ""
+msgstr "그토록 아름다운 여자를, 그토록 거대한 남자가 지배한다."
 
 msgctxt "speaker:Narrator"
 msgid "A bed, some storage, nothing of note."
-msgstr ""
+msgstr "침대와 몇 가지 저장 공간이 전부다. 특별할 것은 없다."
 
 msgctxt "speaker:Metis"
 msgid "A bit more, this time."
-msgstr ""
+msgstr "이번엔 조금 더 해."
 
 msgctxt "speaker:Captain Belmont"
 msgid "A bit of slack, but nothing practice won't fix. Very good."
-msgstr ""
+msgstr "조금 느슨하지만, 연습으로 고칠 수 있는 정도지. 훌륭하다."
 
 msgctxt "speaker:Sarah"
 msgid "A bit of the good of both."
-msgstr ""
+msgstr "양쪽의 좋은 부분도 일부."
 
 msgctxt "speaker:Sarah"
 msgid "A bit, here and there."
-msgstr ""
+msgstr "여기저리 조금씩."
 
 msgctxt "speaker:Narrator"
 msgid "A black liquid spewed out, covering part of her face and armor, and the beast roared again."
-msgstr ""
+msgstr "검은 액체가 분출되어 그녀의 얼굴과 갑옷 일부에 덮이고, 괴수는 다시 울부짖었다."
 
 msgctxt "speaker:Narrator"
 msgid "A black scar, a void, an absence."
-msgstr ""
+msgstr "검은 흉터, 공허, 부재."
 
 msgctxt "speaker:Narrator"
 msgid "A black, oily tongue, emerged from its mouth, sliding around the body of the Mythran prince, and dragging it into its bowels."
-msgstr ""
+msgstr "검은 기름기 어린 혀가 입에서 튀어나와 미스란 공주의 몸을 감싸며 속으로 빨아들였다."
 
 msgctxt "speaker:Sarah"
 msgid "A blessing?"
-msgstr ""
+msgstr "축복이라니?"
 
 msgctxt "speaker:Narrator"
 msgid "A blinding light."
-msgstr ""
+msgstr "눈부신 빛."
 
 msgctxt "speaker:Narrator"
 msgid "A blissful silence is replaced by a cold one."
-msgstr ""
+msgstr "즐거움의 침묵은 차가운 침묵으로 대체된다."
 
 msgctxt "speaker:Narrator"
 msgid "A blissful silence. A gentle sun. A soft breeze."
-msgstr ""
+msgstr "Blissful silence. Gentle sun. Soft breeze."
 
 msgctxt "speaker:Narrator"
 msgid "A blistering assault of pleasure that drowned out all other senses, striking her blind."
-msgstr ""
+msgstr "쾌락의 타오르는 공격이 모든 감각을 덮어버려 시력을 앗아갔다."
 
 msgctxt "speaker:Narrator"
 msgid "A blistering hearth in the other end of the room."
-msgstr ""
+msgstr "방의 다른 쪽 끝엔 타오르는 불길과 화로가 있었다."
 
 msgctxt "speaker:Narrator"
 msgid "A blistering hearth, braziers filled with flames, warmth oozing out from every direction."
-msgstr ""
+msgstr "불타는 화로, 불꽃으로 가득 찬 화덕들, 모든 방향에서 스며나오는 온기"
 
 msgctxt "speaker:Alaric"
 msgid "A block of buildings in the cannery section burned down a few years back."
-msgstr ""
+msgstr "몇 년 전 캔너리 구역의 건물이 불탔다."
 
 msgctxt "speaker:Narrator"
 msgid "A blood-curdling scream rings out across the silenced mass of slaves."
-msgstr ""
+msgstr "침묵한 노예 군중 위로 피를 울리는 비명"
 
 msgctxt "speaker:Narrator"
 msgid "A bloodied hand emerged from the surface of the pool, though she could see the body it was attached to."
-msgstr ""
+msgstr "피가 묻은 손이 연못 표면에서 솟아올랐지만, 그녀가 그 손이 붙어 있는 몸을 볼 수 있었다."
 
 msgctxt "speaker:Sigmund"
 msgid "A bloodlust seemed to take over, and by the end of it, nothing of the old regimes or histories remained."
-msgstr ""
+msgstr "피의 갈증이 그녀를 덮쳤고, 그 끝에 남은 것은 고대 제국이나 역사의 흔적도 없었습니다."
 
 msgctxt "speaker:Narrator"
 msgid "A blue sky, save for a few clouds, crowned the start of a new day in Lethram."
-msgstr ""
+msgstr "레트람의 새로운 하루가 시작되자, 몇몇 구름을 제외하고는 푸른 하늘이 그 자리에 떠올랐다."
 
 msgctxt "speaker:Narrator"
 msgid "A blur she hoped would not end."
-msgstr ""
+msgstr "끝이 되지 않기를 바라는 흐릿함"
 
 msgctxt "speaker:Narrator"
 msgid "A blurring of bodies and sex."
-msgstr ""
+msgstr "몸과 성이 뒤섞이는 흐릿한 그림자"
 
 msgctxt "speaker:Narrator"
 msgid "A bolt of pleasure shot through her body as she felt him press the tip up against her pussy."
-msgstr ""
+msgstr "그녀는 그가 자지 끝을 자신의 보지에 대고 누르는 것을 느끼자 쾌락의 전율이 온몸을 뚫고 지나갔다."
 
 msgctxt "speaker:Maeiv"
 msgid "A bore, much like your father."
-msgstr ""
+msgstr "진부하군. 아버지와도 마찬가지야."
 
 msgctxt "speaker:Narrator"
 msgid "A bowl that had been sat upon the edge of the Shah's throne was send clattering across the stone floor."
-msgstr ""
+msgstr "샤의 왕좌 가장자리에 놓여 있던 그릇이 바닥에 툭 하고 떨어졌다."
 
 msgctxt "speaker:Varga"
 msgid "A boy, a girl. Either would be a blessing."
-msgstr ""
+msgstr "소년이나 소녀나 다 축복이다."
 
 msgctxt "speaker:Narrator"
 msgid "A boy, as she had hoped it would be."
-msgstr ""
+msgstr "그가 그녀가 바랐던 아이입니다."
 
 msgctxt "speaker:Narrator"
 msgid "A boy, they cried out."
-msgstr ""
+msgstr "소년이라 외쳤다."
 
 msgctxt "speaker:Sarah"
 msgid "A boy."
-msgstr ""
+msgstr "소년이야."
 
 msgctxt "speaker:Narrator"
 msgid "A breeze runs through the alley, and past Sarah's naked body. She shivers"
-msgstr ""
+msgstr "골목길로 불어오는 바람이 사라의 벌거벗은 몸을 스치며 지나갔다. 그녀는 떨렸다."
 
 msgctxt "speaker:Narrator"
 msgid "A bride in Rosanna was clad in white only, like a ghost, but here they crowned their brides in bright floral, for all the world to see."
-msgstr ""
+msgstr "로사나의 신부는 하얀 옷만 입고 유령처럼 보였지만, 여기서는 모든 사람이 볼 수 있도록 화려한 꽃으로 신부를 장식했다."
 
 msgctxt "speaker:Narrator"
 msgid "A bridge of some kind."
@@ -240,151 +240,151 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "A brief few seconds more, before they'd catch her."
-msgstr ""
+msgstr "잠시 더 기다린 뒤 그녀를 잡을 것이다."
 
 msgctxt "speaker:Narrator"
 msgid "A brief flash of magical flame brushed along her hand."
-msgstr ""
+msgstr "순간적으로 마법의 불꽃이 그녀의 손을 스쳤다."
 
 msgctxt "speaker:Narrator"
 msgid "A brief moment later, he came back out."
-msgstr ""
+msgstr "잠시 후 그가 다시 밖으로 나왔다."
 
 msgctxt "speaker:Narrator"
 msgid "A brief moment of pause, as if they were understanding something."
-msgstr ""
+msgstr "잠시 멈춤, 마치 무언가를 이해하는 듯"
 
 msgctxt "speaker:Narrator"
 msgid "A brief moment of shame."
-msgstr ""
+msgstr "짧은 부끄러움의 순간."
 
 msgctxt "speaker:Narrator"
 msgid "A brief pause."
-msgstr ""
+msgstr "잠시 멈춤."
 
 msgctxt "speaker:Narrator"
 msgid "A brief respite. A chance to restock."
-msgstr ""
+msgstr "짧은 휴식. 보급을 위한 기회다."
 
 msgctxt "speaker:Varga"
 msgid "A brief window where our troops will be ready to attack Marion's position, but where we might still end the uprising in time to spare the outer provinces from a wasted harvest."
-msgstr ""
+msgstr "우리 병력이 마리온의 요새를 공격할 수 있는 짧은 시간 동안, 외곽 지역이 불필요한 수확 손실을 입는 것을 막기 위해 봉기를 제때에 진압할 수도 있습니다."
 
 msgctxt "speaker:Narrator"
 msgid "A bright flower, vibrant in colour, but not all that otherwordly."
-msgstr ""
+msgstr "밝고 생생한 꽃이지만, 그다지 초자연적이지는 않다."
 
 msgctxt "speaker:Garret"
 msgid "A brother...I'm sorry, I didn't know..."
-msgstr ""
+msgstr "형제님... 죄송합니다, 알지 못했습니다."
 
 msgctxt "speaker:Narrator"
 msgid "A brutal peace, where as often, the weakest and poorest were made to pay the price."
-msgstr ""
+msgstr "피약한 자와 가난한 자가 대가를 치르는 잔혹한 평화"
 
 msgctxt "speaker:Oryon"
 msgid "A brutal war between them and the Void that would see countless of them dead."
-msgstr ""
+msgstr "그들과 공허 사이의 잔혹한 전쟁, 수많은 이들이 죽음을 맞게 될 전쟁."
 
 msgctxt "speaker:Narrator"
 msgid "A bubble of sensations of touch, smell, sight, each overpowering her senses."
-msgstr ""
+msgstr "촉각, 후각, 시각의 감각들이 그녀를 압도하는 기포"
 
 msgctxt "speaker:Narrator"
 msgid "A bull that could protect her in a world of lions."
-msgstr ""
+msgstr "사자 세상에서 그녀를 보호해 줄 수 있는 소"
 
 msgctxt "speaker:Narrator"
 msgid "A burden of which she was reminded only in its absence, when she remembered what it felt like to live easily."
-msgstr ""
+msgstr "그녀가 쉽게 살아가는滋味를 기억할 때, 그 부재로만 상기되는 짐이었다."
 
 msgctxt "speaker:Narrator"
 msgid "A burning pain along the side of her cheek."
-msgstr ""
+msgstr "얼굴 옆구리를 타고 번지는 타는 듯한 통증"
 
 msgctxt "speaker:Narrator"
 msgid "A burst of blue flame poured forth from her hand and surged out in the center of the room."
-msgstr ""
+msgstr "푸른 불꽃이 그녀의 손에서 쏟아져 나와 방 중앙으로 번졌다."
 
 msgctxt "speaker:Narrator"
 msgid "A busy, chaotic, almost maddening scene."
-msgstr ""
+msgstr "바쁘고 혼란스러운, 거의 미친 듯이 어지러운 광경이다."
 
 msgctxt "speaker:Sarah"
 msgid "A cart? What...what are you talking about?"
-msgstr ""
+msgstr "수레? 뭐...뭐라고 하는 거야?"
 
 msgctxt "speaker:Judge"
 msgid "A case of improper soliciation? Prostitution?"
-msgstr ""
+msgstr "불법적인 구걸? 매춘?"
 
 msgctxt "speaker:Carolyn"
 msgid "A castle is only as strong as the morale that rules it."
-msgstr ""
+msgstr "성곽의 강함은 그 성곽을 다스리는 사기만큼이나 중요합니다."
 
 msgctxt "speaker:Narrator"
 msgid "A cave, Sarah realized, as they neared it."
-msgstr ""
+msgstr "그들은 동굴에 다가가자 사라는 깨달았다."
 
 msgctxt "speaker:Narrator"
 msgid "A cell door appeared."
-msgstr ""
+msgstr "감금실 문이 나타났다."
 
 msgctxt "speaker:Narrator"
 msgid "A challenge she was committed to."
-msgstr ""
+msgstr "그녀가 결심한 도전이었다."
 
 msgctxt "speaker:Narrator"
 msgid "A chance. That's all she had ever wanted."
-msgstr ""
+msgstr "그 기회. 그녀가 항상 원했던 것뿐이었다."
 
 msgctxt "speaker:Narrator"
 msgid "A chaos was spreading through the room, Sarah had lost all control. Herself, her brother and now even her husband...she stood to lose everything."
-msgstr ""
+msgstr "방 안은 혼란으로 가득 차고 있었다. 사라는 모든 통제를 잃어버렸다. 자신, 그리고 형까지, 이제는 남편까지... 그녀는 모든 것을 잃을 처지가 되었다."
 
 msgctxt "speaker:Narrator"
 msgid "A chaos was spreading through the room, Sarah had lost all control. Herself, her brother...she stood to lose everything."
-msgstr ""
+msgstr "방 안으로 혼란이 퍼져가고 있었다. 사라는 모든 통제력을 잃어버렸다. 자신, 그리고 형... 이제 남편까지. 그녀는 모든 것을 잃을 처지가 되었다."
 
 msgctxt "speaker:Narrator"
 msgid "A chaotic surge of butterflies in her stomach."
-msgstr ""
+msgstr "복부에서 혼란스러운 나비들이 날아다니는 듯했다."
 
 msgctxt "speaker:Narrator"
 msgid "A charged silence came over the hall."
-msgstr ""
+msgstr "홀에는 긴장된 침묵이 흘렀다."
 
 msgctxt "speaker:Narrator"
 msgid "A charged silence lingered."
-msgstr ""
+msgstr "장중한 침묵이 흘렀다."
 
 msgctxt "speaker:Captain Belmont"
 msgid "A cheap ship whore who will suck my dick the moment I order her to?"
-msgstr ""
+msgstr "순간 내 명령만 하면 자지를 빨아먹을 듯한 값싼 선녀가냐?"
 
 msgctxt "speaker:Narrator"
 msgid "A child that would guarantee peace and stability."
-msgstr ""
+msgstr "평화와 안정을 보장할 아이"
 
 msgctxt "speaker:Narrator"
 msgid "A child would mean the end of that."
-msgstr ""
+msgstr "그 아이는 그 모든 것을 끝장낼 것이다."
 
 msgctxt "speaker:Narrator"
 msgid "A child, born from her family and his. The final seal that would forever link their houses."
-msgstr ""
+msgstr "그녀의 가족과 그의 사이에서 태어난 아이. 두 가문을 영원히 결속시킬 마지막 인장이다."
 
 msgctxt "speaker:Narrator"
 msgid "A child, she thought, would be something she could give him that would weigh up to all he gave her."
-msgstr ""
+msgstr "그녀는 그 아이를 통해, 그가 자신을 위해 준 모든 것만큼이나 무거운 것을 줄 수 있을 거라고 생각했다."
 
 msgctxt "speaker:Narrator"
 msgid "A child."
-msgstr ""
+msgstr "아이."
 
 msgctxt "speaker:Narrator"
 msgid "A childish hope, that she had long ago allowed to die, returned."
-msgstr ""
+msgstr "아주 오래전에 죽여버렸을 어린 시절의 희망이 다시 살아났습니다."
 
 msgctxt "speaker:Narrator"
 msgid "A citizen could succeed on his own merit, but unlike a slave, he could also fall into poverty."
@@ -392,151 +392,151 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "A city like Lethram was always filled with various noises, but Sarah had learned by now that people rarely came to this particular alley."
-msgstr ""
+msgstr "레트람 같은 도시는 늘 다양한 소음으로 가득했지만, 사라는 이제 사람들이 이 골목에 드나드는 일이 거의 없음을 깨달았다."
 
 msgctxt "speaker:Narrator"
 msgid "A city like this, there was none like it in all the world."
-msgstr ""
+msgstr "이 도시와 같은 곳은 세상에 하나뿐이었습니다."
 
 msgctxt "speaker:Narrator"
 msgid "A city unlike any other in the world."
-msgstr ""
+msgstr "세상에 유례가 없는 도시입니다."
 
 msgctxt "speaker:Marion"
 msgid "A claim that Oliver could use as a pretext to take offense."
-msgstr ""
+msgstr "올리버가 불쾌함을 표출하는 빌미로 삼을 수 있는 주장입니다."
 
 msgctxt "speaker:Duke Antonio"
 msgid "A clear and logical position."
-msgstr ""
+msgstr "명확하고 논리적인 입장이다."
 
 msgctxt "speaker:Atilla"
 msgid "A clever move, girl, but you need to think."
-msgstr ""
+msgstr "재치 있는 수작이지만, 좀 더 생각해보라."
 
 msgctxt "speaker:Sarah"
 msgid "A cock hungry slut...pretending to be a deck hand."
-msgstr ""
+msgstr "자지 탐닉하는 년... 선원 척을 연기하다."
 
 msgctxt "speaker:Narrator"
 msgid "A cold gust of air breezed past them, rising up from deep within the bowels of the Imperial Palace."
-msgstr ""
+msgstr "제국 궁전의 깊은 내장에서 불어온 차가운 바람이 그들을 스쳤다."
 
 msgctxt "speaker:Narrator"
 msgid "A cold wind ran through the tent, the thick hide cover slapping against itself as the wind battered against it."
-msgstr ""
+msgstr "추운 바람이 천막을 관통하며 두꺼운 가죽 덮개가 바람에 맞서 살랑거렸다."
 
 msgctxt "speaker:Narrator"
 msgid "A cold wind rushed up to meet her as they neared closer to land; the shores quickly growing."
-msgstr ""
+msgstr "육지가 가까워지며 차가운 바람이 그녀에게 불어닥쳤다; 해안은 빠르게 다가오고 있었다."
 
 msgctxt "speaker:Narrator"
 msgid "A collar, as meant for an animal."
-msgstr ""
+msgstr "동물에게 쓰는 목걸이"
 
 msgctxt "speaker:Sigmund"
 msgid "A collection of smaller kingdoms that managed to keep the other powers out by working together whenever it served them."
-msgstr ""
+msgstr "다른 세력들을 필요에 따라 협력하여 막아낸 여러 작은 왕국들의 연맹입니다."
 
 msgctxt "speaker:Narrator"
 msgid "A comfortable change of pace from the dangerous streets."
-msgstr ""
+msgstr "위험한 거리에서 벗어나는 편안한 변화"
 
 msgctxt "speaker:Narrator"
 msgid "A command he would soon be in his full right to give to her, she realized."
-msgstr ""
+msgstr "그녀는 곧 그녀에게 주어야 할 명령을 깨달았습니다."
 
 msgctxt "speaker:Narrator"
 msgid "A command she already obeyed as if it was his right."
-msgstr ""
+msgstr "이미 그의 권리로 여겨 순종하던 명령이었다."
 
 msgctxt "speaker:Narrator"
 msgid "A command was given atop the walls for the archers to fire, and together they did."
-msgstr ""
+msgstr "성벽 위에서 궁수들에게 발사하라는 명령이 내려졌고, 그들은 곧바로 그 명령을 수행했다."
 
 msgctxt "speaker:Duke Antonio"
 msgid "A common whore. I could go out into the city tonight and fuck a dozen like her."
-msgstr ""
+msgstr "하찮은 년이군. 오늘 밤 도시로 나가서 그녀 같은 여자를 십 명이나 성관계를 할 수 있어."
 
 msgctxt "speaker:Narrator"
 msgid "A complex maze of gears and machinery."
-msgstr ""
+msgstr "기어와 기계를 얽힌 복잡한 미로"
 
 msgctxt "speaker:Narrator"
 msgid "A complicated flurry of emotions rocked her body as she began to slowly finger herself."
-msgstr ""
+msgstr "복잡한 감정의 소용돌이가 그녀의 몸을 흔들며, 그녀는 천천히 스스로 손가락을 넣기 시작했다."
 
 msgctxt "speaker:Narrator"
 msgid "A complicated mixture of emotions rushed through her."
-msgstr ""
+msgstr "복잡한 감정의 흐름이 그녀를 휩쓸었다."
 
 msgctxt "speaker:King-On-The-Outside"
 msgid "A condemned man knows his own judgement. Knowing does not exempt him from suffering it."
-msgstr ""
+msgstr "정죄받은 자는 자신의 판결을 안다. 알았다고 해서 그 고통이 면제되는 것은 아니다."
 
 msgctxt "speaker:Narrator"
 msgid "A conspiracy against the Gods of her world themselves."
-msgstr ""
+msgstr "그녀의 세계 신들 자체에 대한 음모였다."
 
 msgctxt "speaker:Narrator"
 msgid "A constant pleasure invaded every part of her body, dominated her mind."
-msgstr ""
+msgstr "그녀의 온몸에 끊임없는 쾌락이 침범하여 정신을 지배했다."
 
 msgctxt "speaker:Narrator"
 msgid "A constant, lowly grunting, seemed to emerge from the creature as it breathed heavily."
-msgstr ""
+msgstr "중대하게, 무겁게 숨을 쉬는 듯이 괴물에서 낮은 으르렁거림이 끊임없이 흘러나왔다."
 
 msgctxt "speaker:Curator"
 msgid "A copy of such a book does not exist within the current inventory."
-msgstr ""
+msgstr "현재 재고에는 그러한 책의 사본이 존재하지 않습니다."
 
 msgctxt "speaker:Narrator"
 msgid "A council of leaders would form the leadership of the Union."
-msgstr ""
+msgstr "연합의 지도부는 지도자들의 자문회의가 구성할 것이다."
 
 msgctxt "speaker:Captain Belmont"
 msgid "A couple, to be sure."
-msgstr ""
+msgstr "물론 커플이니까."
 
 msgctxt "speaker:Narrator"
 msgid "A crack rang out across the tent."
-msgstr ""
+msgstr "텐트 한쪽에서 갈라지는 소리가 울렸다."
 
 msgctxt "speaker:Narrator"
 msgid "A creature hiding could ask for no more perfect place."
-msgstr ""
+msgstr "숨어 있는 존재에게 더 이상 완벽한 장소는 없을 것이다."
 
 msgctxt "speaker:Narrator"
 msgid "A creeping feeling came over her, as though something from inside the forest was looking back at her."
-msgstr ""
+msgstr "어느새 그녀의 몸이 차갑게 식어갔다. 마치 숲속 어딘가가 그녀를 응시하고 있는 듯했다."
 
 msgctxt "speaker:Narrator"
 msgid "A crossbow bolt pierced through his back."
-msgstr ""
+msgstr "활촉이 그의 등을 관통했다."
 
 msgctxt "speaker:Narrator"
 msgid "A crowd began to form."
-msgstr ""
+msgstr "사람들이 모여들기 시작했다."
 
 msgctxt "speaker:Narrator"
 msgid "A crowd of men and women already stood gathered outside, busily engaged with one another."
-msgstr ""
+msgstr "남녀가 이미 모여서 서로 바쁘게 지내고 있었다."
 
 msgctxt "speaker:Kate"
 msgid "A crowd of people gathered to watch them, and I couldn't keep away. I was drawn in like everyone else."
-msgstr ""
+msgstr "사람들로 가득 찬 군중이 그들을 지켜보며 모였지만, 나는 다른 사람들과 마찬가지로 그들 사이로 끌려 들어갈 수밖에 없었다."
 
 msgctxt "speaker:Narrator"
 msgid "A crowd of people."
-msgstr ""
+msgstr "사람들 군중"
 
 msgctxt "speaker:Narrator"
 msgid "A crown her family still wore, to this day."
-msgstr ""
+msgstr "아직도 그 가족이 쓰고 있는 왕관."
 
 msgctxt "speaker:Old Tribesman"
 msgid "A cunt like this..."
-msgstr ""
+msgstr "이런 보지..."
 
 msgctxt "speaker:Alaric"
 msgid "A cunt."
@@ -544,95 +544,95 @@ msgstr ""
 
 msgctxt "speaker:Kate"
 msgid "A cup like this, wouldn't be hard to sell that off at the local market."
-msgstr ""
+msgstr "이 잔으로 거래하면, 마을 시장에서 쉽게 팔 수 있을 거야."
 
 msgctxt "speaker:Garret"
 msgid "A curse that would heal my wounds, save my life and make me a creature of the forest. A Beast."
-msgstr ""
+msgstr "상처를 고치고 생명을 구하며 나를 숲의 괴물로 만들 저주. 짐승이 되는 것."
 
 msgctxt "speaker:Sarah"
 msgid "A curse?"
-msgstr ""
+msgstr "저주?"
 
 msgctxt "speaker:Narrator"
 msgid "A dagger glinted in the light, inches from her brother's throat."
-msgstr ""
+msgstr "빛 속에서 칼날이 반짝이며 그녀의 형의 목구멍 바로 앞에 놓여 있었다."
 
 msgctxt "speaker:Narrator"
 msgid "A dagger."
-msgstr ""
+msgstr "칼날."
 
 msgctxt "speaker:Narrator"
 msgid "A dagger. A handle as black as obsidian, a blade glowing in deep crimson red."
-msgstr ""
+msgstr "검은 흑요석처럼 어두운 손잡이, 깊은 붉은색을 띠는 날."
 
 msgctxt "speaker:Sigmund"
 msgid "A dark fountain?"
-msgstr ""
+msgstr "어두운 분수인가?"
 
 msgctxt "speaker:Narrator"
 msgid "A darkness stood out."
-msgstr ""
+msgstr "어둠이 돋보였다."
 
 msgctxt "speaker:Narrator"
 msgid "A darkness that was more like a void, filled with starlight"
-msgstr ""
+msgstr "어둠이라기보다 공허에 가까우며 별빛으로 가득 찬 어둠"
 
 msgctxt "speaker:Narrator"
 msgid "A daughter loves her father, despite the quality of the man."
-msgstr ""
+msgstr "아버지의 인품이 어떻든 딸은 아버지를 사랑한다."
 
 msgctxt "speaker:Atilla"
 msgid "A day, more than a year ago, in Lethram. But I kept myself hidden."
-msgstr ""
+msgstr "레트라암에서 한 달도 아닌 한 년이 지났습니다. 하지만 저는 숨어 있었습니다."
 
 msgctxt "speaker:Narrator"
 msgid "A dead end, Sarah thought. She knew every inch of the castle."
-msgstr ""
+msgstr "길목, 사라는 생각했다. 성의 모든 구석구석을 잘 알고 있었지만."
 
 msgctxt "speaker:Narrator"
 msgid "A deafening and thunderous crashing sound roared out aross the room."
-msgstr ""
+msgstr "방 안을 지진처럼 덮친 굉음이 터져 나왔다."
 
 msgctxt "speaker:Narrator"
 msgid "A deafening cracking sound rang out across the room."
-msgstr ""
+msgstr "방 안을 울리는 굉음이 터졌다."
 
 msgctxt "speaker:Narrator"
 msgid "A deafening scream erupted from the creature as it crashed into the stone floor, its limb smashing against the ground with a loud thud."
-msgstr ""
+msgstr "괴물이 돌 바닥에 충돌하며 비명 지르는 소리가 터져 나왔고, 다리가 땅을 때리는 묵직한 소리가 들렸다."
 
 msgctxt "speaker:Narrator"
 msgid "A deafening silence had descended on the people that had survived, and no doubt lost countless others."
-msgstr ""
+msgstr "생존자들은 압도적인 침묵에 휩싸였고, 수많은 생명이 희생되었을 것이다."
 
 msgctxt "speaker:Sarah"
 msgid "A deal?"
-msgstr ""
+msgstr "거래요?"
 
 msgctxt "speaker:Narrator"
 msgid "A deathly silence descended on the crowd."
-msgstr ""
+msgstr "죽음 같은 침묵이 군중을 덮쳤다."
 
 msgctxt "speaker:Metis"
 msgid "A decent attempt, but this one...I'll give it half a chance of surviving."
-msgstr ""
+msgstr "괜찮은 시도였지만, 이 녀석은... 생존할 확률이 반밖에 안 될 것 같아."
 
 msgctxt "speaker:Narrator"
 msgid "A decent sum. She wouldn't live off it forever, but it would keep her housed for a good while. Enough to make a plan."
-msgstr ""
+msgstr "괜찮은 액수다. 그녀는 그걸로 영원히 살지는 못하지만, 꽤 오랫동안 집을 마련할 수 있을 것이다. 계획을 세울 만한 시간이다."
 
 msgctxt "speaker:Narrator"
 msgid "A deep groan of pain roared out from his throat as he collapsed to the ground."
-msgstr ""
+msgstr "그의 목에서 깊은 고통의 울림이 터져 나오며 바닥으로 쓰러졌다."
 
 msgctxt "speaker:Narrator"
 msgid "A deep growl, followed by his already sizeable cock expanding further."
-msgstr ""
+msgstr "깊은 으르렁거림이 이어져 이미 거대한 자지가 더 팽창했다."
 
 msgctxt "speaker:Narrator"
 msgid "A deep grunt errupted from Alaric, his grip on her hip and head tightening, adding to the pain."
-msgstr ""
+msgstr "알라릭이 깊게 웅얼거렸다. 그녀의 허벅지를 꽉 쥐고 머리를 조여들며 고통을 더했다."
 
 msgctxt "speaker:Narrator"
 msgid "A deep grunt proceeded what she did not yet know would follow."
@@ -644,443 +644,443 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "A deep panic had overtaken the people of Lethram."
-msgstr ""
+msgstr "레트람의 사람들은 깊은 공포에 휩싸였습니다."
 
 msgctxt "speaker:Narrator"
 msgid "A deep part of her wanted to lunge for her sword and make them all pay."
-msgstr ""
+msgstr "그녀의 깊은 한 부분은 검을 뽑아 모든 이를 갚게 하려 달려가고 싶었다."
 
 msgctxt "speaker:Narrator"
 msgid "A deep sleep took hold of her."
-msgstr ""
+msgstr "깊은 잠이 그녀를 덮쳤다."
 
 msgctxt "speaker:Narrator"
 msgid "A degree of seperation between herself and the real world, now again full of uncertainty."
-msgstr ""
+msgstr "자신과 현실 세계 사이에 생긴 그 간극은 이제 다시 불확실성에 가득 차 있었다."
 
 msgctxt "speaker:Razaphel"
 msgid "A design in which every path bends towards the same desination."
-msgstr ""
+msgstr "모든 길은 같은 목적지로 굽어가는 설계다."
 
 msgctxt "speaker:Narrator"
 msgid "A detailed map of the city of Rahayal, containing not just all the districts, but even down to recording most streets and alleys."
-msgstr ""
+msgstr "라하얄 시의 상세 지도로, 모든 지구뿐만 아니라 대부분의 거리와 골목까지 기록되어 있다."
 
 msgctxt "speaker:Narrator"
 msgid "A difference between knowing a thing and seeing it. And experiencing this debauchery was almost too much for her."
-msgstr ""
+msgstr "알고 있는 것과 보는 것 사이에는 차이가 있다. 그리고 이 방탕을 경험하는 것은 그녀에게 거의 너무 많은 일이었다."
 
 msgctxt "speaker:Razaphel"
 msgid "A different world, in a place beyond the dimensions of your own, where life lived forever."
-msgstr ""
+msgstr "차원의 너머에 있는 당신의 세계와 다른 곳, 영원히 살아가는 세상"
 
 msgctxt "speaker:Xanthippe"
 msgid "A disaster."
-msgstr ""
+msgstr "재앙이군."
 
 msgctxt "speaker:Sarah"
 msgid "A discount, really? Why?"
-msgstr ""
+msgstr "할인이라니, 정말? 왜 그래?"
 
 msgctxt "speaker:Narrator"
 msgid "A distant echo of a woman who dreamed of so much more."
-msgstr ""
+msgstr "그토록 많은 것을 꿈꾸던 여인의 먼 메아리"
 
 msgctxt "speaker:Narrator"
 msgid "A divine omen, one that made victory so obvious that it made them eager for the bloodshed."
-msgstr ""
+msgstr "승리를 너무 명백하게 만들어 그들의 피 흘림에 대한 갈망을 불러일으킨 신의 징조다."
 
 msgctxt "speaker:Narrator"
 msgid "A divine sign of their right to rule."
-msgstr ""
+msgstr "통치할 권리가 있음을 보여주는 신의 징조"
 
 msgctxt "speaker:Cassius"
 msgid "A doctor in Rahayal, he has studied the jungles and their diseases more than any man alive."
-msgstr ""
+msgstr "라하얄의 의사로, 살아있는 어떤 사람보다도 더 많이 정글과 그 질병을 연구했습니다."
 
 msgctxt "speaker:Narrator"
 msgid "A dominating silence hung over the room. Ashes slowly drifted across the floor."
-msgstr ""
+msgstr "방 전체를 무겁고 불길한 침묵이 덮어쌌다. 재가 천천히 바닥을 스쳤다."
 
 msgctxt "speaker:Narrator"
 msgid "A door had been thrown open and a cadre of servants swarmed behind the man who now walked ahead of the pack."
-msgstr ""
+msgstr "문이 활짝 열리고, 그 뒤로 종려들이 앞장서 걷는 남자를 쫓아 몰려들었다."
 
 msgctxt "speaker:Narrator"
 msgid "A door with a mind of its own. Sarah thought she couldn't be more unnerved by the thing."
-msgstr ""
+msgstr "마음대로 움직이는 문이었다. 사라는 그 존재를 보고 더 이상 놀라울 것이라 생각하지 않았다."
 
 msgctxt "speaker:Sarah"
 msgid "A dozen attacks?"
-msgstr ""
+msgstr "열두 번의 공격?"
 
 msgctxt "speaker:Narrator"
 msgid "A dread they had not yet tasted."
-msgstr ""
+msgstr "아직 맛보지 못한 공포."
 
 msgctxt "speaker:Narrator"
 msgid "A dreadful quietness came over the hall."
-msgstr ""
+msgstr "홀에는 끔찍한 침묵이 내려앉았다."
 
 msgctxt "speaker:Narrator"
 msgid "A dreadful silence came over the room as a everyone turned their heads to see the source of the disturbance."
-msgstr ""
+msgstr "모두가 소란의 원인을 보려고 고개를 돌리자 방 전체에 끔찍한 침묵이 찾아왔다."
 
 msgctxt "speaker:Narrator"
 msgid "A dream of her mother...father...and Thomas."
-msgstr ""
+msgstr "어머니와 아버지 그리고 토머스와의 꿈"
 
 msgctxt "speaker:Narrator"
 msgid "A dream she had murdered, returned so vividly that she could now feel it on her skin."
-msgstr ""
+msgstr "그녀가 죽인 꿈이 피부에 닿는 듯 생생하게 돌아온 것이다."
 
 msgctxt "speaker:Narrator"
 msgid "A dream she had once."
-msgstr ""
+msgstr "한때 꾸었던 꿈이었다."
 
 msgctxt "speaker:Narrator"
 msgid "A dress was sprawled out across it. Just by looking at it, one could see how expensive it was."
-msgstr ""
+msgstr "그 위에 드레스가 널려 있었다. 단순히 그것을 보는 것만으로도 얼마나 값비싼지 알 수 있었다."
 
 msgctxt "speaker:Narrator"
 msgid "A drink couldn't hurt."
-msgstr ""
+msgstr "술 한 잔이 나쁘지 않을 거야."
 
 msgctxt "speaker:Narrator"
 msgid "A dryer temperate."
-msgstr ""
+msgstr "마음의 온도가 조금 더 차분해졌습니다."
 
 msgctxt "speaker:Narrator"
 msgid "A dullness had been lifted, and Sarah prayed it would remain forever banished."
-msgstr ""
+msgstr "둔했던 기분이 사라졌고 사라진 채로 남아주기를 빌었다."
 
 msgctxt "speaker:Narrator"
 msgid "A faint distant voice in her head tried to speak reason."
-msgstr ""
+msgstr "머릿속에서 희미한 목소리가 이성적으로 말하려는 듯했다."
 
 msgctxt "speaker:Marshal Edmond"
 msgid "A fair assumption, I would say."
-msgstr ""
+msgstr "그건 타당한 추론이라고 할 수 있겠네."
 
 msgctxt "speaker:Ramsey"
 msgid "A fair price and we treat all our customers like family, not like those big places that just want your money."
-msgstr ""
+msgstr "공정한 가격이며, 우리는 고객을 가족처럼 대합니다. 돈만 원하는 그런 큰 곳과는 다릅니다."
 
 msgctxt "speaker:Narrator"
 msgid "A familiar purple, though she struggled to place it."
-msgstr ""
+msgstr "익숙한 보라색이었지만, 그녀가 그 색을 정확히 지목하기는 어려웠다."
 
 msgctxt "speaker:Narrator"
 msgid "A familiar voice responded."
-msgstr ""
+msgstr "익숙한 목소리가 대답했다."
 
 msgctxt "speaker:Narrator"
 msgid "A family working at an inn looked up as they passed, sparing them a glance."
-msgstr ""
+msgstr "inn을 운영하는 가족이 지나가는 우리를 올려다보며 한눈길만 주었다."
 
 msgctxt "speaker:Sarah"
 msgid "A family."
-msgstr ""
+msgstr "가족이네."
 
 msgctxt "speaker:Sarah"
 msgid "A famine? That's horrible...we can't allow that to happen."
-msgstr ""
+msgstr "굶주림이라니 끔찍하군… 그 일이 일어나게는 안 되겠지."
 
 msgctxt "speaker:Narrator"
 msgid "A fantasy."
-msgstr ""
+msgstr "환상일 뿐이다."
 
 msgctxt "speaker:Narrator"
 msgid "A fate stone, the spirit had called it."
-msgstr ""
+msgstr "정령이 운명석이라 불렀다."
 
 msgctxt "speaker:Narrator"
 msgid "A father, that raised no hand to save his daughter."
-msgstr ""
+msgstr "딸을 구할 손을 들지 않은 아버지"
 
 msgctxt "speaker:Narrator"
 msgid "A fear had descended over the city, one that had snuffed out any semblance of celebration."
-msgstr ""
+msgstr "공포가 도시를 덮쳤고, 축제의 기색은 완전히 사라졌다."
 
 msgctxt "speaker:Narrator"
 msgid "A feeling ran through her. She feared it close to pride, pride at a job well done."
-msgstr ""
+msgstr "그녀의 몸 한가닥이 스쳤다. 그것은 자부심과도 다름없는 두려움이었다. 훌륭하게 마친 일에서의 자부심."
 
 msgctxt "speaker:Narrator"
 msgid "A female soldier next to him snatched the dice from the floor and nearly instantly cast them again."
-msgstr ""
+msgstr "그의 옆에 있던 여성 병사가 주사위를 바닥에서 집어 올린 뒤, 거의 즉시 다시 던졌다."
 
 msgctxt "speaker:Narrator"
 msgid "A ferocious screaming and roaring exploded as he was crowned the victor."
-msgstr ""
+msgstr "승리의 자리에 오르는 순간, 그는 격렬한 함성과 호루라기 소리로 폭발했다."
 
 msgctxt "speaker:Alaric"
 msgid "A few I guess. I never really did count."
-msgstr ""
+msgstr "몇 개나 됐겠지. 내가 세어본 적은 없으니까."
 
 msgctxt "speaker:Narrator"
 msgid "A few arrows fell on them as they advanced, but the large volley she had expected did not come."
-msgstr ""
+msgstr "그들이 진군하는 동안 몇 개의 화살이 떨어졌지만, 그녀가 예상했던 대규모 포화는 오지 않았다."
 
 msgctxt "speaker:Narrator"
 msgid "A few clouds, moving strangely peaceful as if this brutal betrayal had not taken place."
-msgstr ""
+msgstr "몇 구름이 이상하게도 평온해 보이며, 이 잔인한 배신이 일어난 것처럼 보이지 않았다."
 
 msgctxt "speaker:Narrator"
 msgid "A few coins, that was it."
-msgstr ""
+msgstr "몇 개의 동전뿐이었다."
 
 msgctxt "speaker:Narrator"
 msgid "A few days back, the royal messenger had been send back, carrying with him the message of her acceptance."
-msgstr ""
+msgstr "수일 전, 왕의 사신은 그녀의 승낙을 담은 편지를 가지고 돌아왔다."
 
 msgctxt "speaker:Narrator"
 msgid "A few days had passed and their journey had progressed smoothly."
-msgstr ""
+msgstr "몇 일이 지났고 여정은 평온하게 진행되었다."
 
 msgctxt "speaker:Narrator"
 msgid "A few days had passed since they had managed to get past the river crossing."
-msgstr ""
+msgstr "강을 건넜던 지 몇 일이 흘렀다."
 
 msgctxt "speaker:Sarah"
 msgid "A few days off course wouldn't be the worst thing."
-msgstr ""
+msgstr "길에서 몇 날을 벗어나는 것도 나쁘지 않을 테니까."
 
 msgctxt "speaker:Marion"
 msgid "A few did not attend."
-msgstr ""
+msgstr "몇 명은 참석하지 않았습니다."
 
 msgctxt "speaker:Narrator"
 msgid "A few dozen lives, to save millions?"
-msgstr ""
+msgstr "수백 명의 목숨을 구하기 위해 몇몇의 생명을 희생해야 하는가?"
 
 msgctxt "speaker:Narrator"
 msgid "A few faces lingered atop the towers of the castle, but Sarah couldn't even be certain they were soldiers. Perhaps simply scared civillians."
-msgstr ""
+msgstr "성곽 꼭대기에 몇몇 얼굴만 남아 있었지만, 사라는 그들이 병사인지조차 확신할 수 없었다. 어쩌면 단순히 겁먹은 평범한 시민들일지도 모른다."
 
 msgctxt "speaker:Sarah"
 msgid "A few farmers here and there."
-msgstr ""
+msgstr "여기저리 몇몇 농부들."
 
 msgctxt "speaker:Narrator"
 msgid "A few fires, here and there."
-msgstr ""
+msgstr "여기저기 몇 개의 불빛이 보였다."
 
 msgctxt "speaker:Narrator"
 msgid "A few gestured and looked in their direction, but for the most part, nobody noticed them."
-msgstr ""
+msgstr "몇몇은 손짓하며 그들의 방향을 보았지만, 대체로 아무도 그들을 눈여겨보지 않았다."
 
 msgctxt "speaker:Narrator"
 msgid "A few greeted her, many more were already too deep into their drinks."
-msgstr ""
+msgstr "몇 명은 그녀를 인사했지만, 대부분 이미 술에 취해 있었다."
 
 msgctxt "speaker:Narrator"
 msgid "A few guards might come by, a day late, to inspect reports of a cry. And none would care for Alaric's sudden dissapearance."
-msgstr ""
+msgstr "수색을 위해 늦은 밤에 보고를 올 수 있는 몇몇 경호병이 지나갈지도 모른다. 하지만 아무도 알라릭의 갑작스러운 실종에 관심을 갖지 않을 것이다."
 
 msgctxt "speaker:Narrator"
 msgid "A few hours had passed and night had fallen over the city of Calshure."
-msgstr ""
+msgstr "몇 시간이 흘러 칼슈어 도시 위로 밤이 찾아왔다."
 
 msgctxt "speaker:Narrator"
 msgid "A few hours later, the cry of new life could be heard."
-msgstr ""
+msgstr "몇 시간이 지나자 새로운 생명의 울음소리가 들렸다."
 
 msgctxt "speaker:Carolyn"
 msgid "A few lashes will sort her out, and it will tell a different story to all the others that will think of stealing."
-msgstr ""
+msgstr "몇 대의 채찍이면 그녀를 바로잡을 수 있고, 훔치려 할 다른 이들에게는 전혀 다른 이야기를 들려줄 것이다."
 
 msgctxt "speaker:Narrator"
 msgid "A few lights coming from lit lanterns could be seen, shining through the darkness."
-msgstr ""
+msgstr "어둠을 뚫고 켜진 등불의 빛이 희미하게 보였다."
 
 msgctxt "speaker:Narrator"
 msgid "A few marks on the map, notes left by Xan, probably to himself."
-msgstr ""
+msgstr "지도에 몇 개의 표시와 아마도 스스로를 위한 메모가 남겨진 잔의 흔적들"
 
 msgctxt "speaker:Narrator"
 msgid "A few men and women dressed in the robes of scholars were walking around the digsite, but they seemed equally uninterested in her."
-msgstr ""
+msgstr "학자의 로브를 입은 몇몇 남자와 여자가 발굴 현장에 산책하고 있었지만, 그들은 그녀에게도 동등하게 무관심해 보였다."
 
 msgctxt "speaker:Narrator"
 msgid "A few miles outside of the city walls, a Mythran army led by the uncle of the slain prince was camped. Soon they would begin their assault."
-msgstr ""
+msgstr "도시 성벽 밖 몇 마일 떨어진 곳에, 죽은 왕자의 삼촌이 이끄는 미트란 군대가 진을 치고 있었다. 곧 공격을 시작할 것이다."
 
 msgctxt "speaker:Narrator"
 msgid "A few minutes later, Sarah would hear the cracking of the whip and the girl's screams, coming from the square just outside the castle."
-msgstr ""
+msgstr "몇 분 후, 사라는 성 밖 광장에서 채찍의 갈림소리와 소녀의 비명을 들었다."
 
 msgctxt "speaker:Narrator"
 msgid "A few minutes later, the other man finished in her hand, his seed adding to the rest."
-msgstr ""
+msgstr "몇 분 후, 다른 남자가 그녀의 손에서 마무리하고 정액을 더했다."
 
 msgctxt "speaker:Narrator"
 msgid "A few moments later, Samayra was fast asleep."
-msgstr ""
+msgstr "잠시 후 사마이라가 깊게 잠들었습니다."
 
 msgctxt "speaker:Sarah"
 msgid "A few months ago I awoke from a dream, and for a brief moment, I swore that he was alive."
-msgstr ""
+msgstr "몇 달 전 꿈에서 깨어났을 때 잠시 동안 그가 살아있다는 것을 맹세할 만큼 믿었습니다."
 
 msgctxt "speaker:Gideon"
 msgid "A few more days after that, we expect most of your remaining troops to have landed and begun preparing."
-msgstr ""
+msgstr "그로부터 며칠 뒤에는 남은 병력의 대부분이 상륙하여 준비를 마쳤을 것으로 예상됩니다."
 
 msgctxt "speaker:Narrator"
 msgid "A few of the soldiers uttered a cruel laugh."
-msgstr ""
+msgstr "몇 명의 병사들이 잔인한 웃음을 터뜨렸다."
 
 msgctxt "speaker:Narrator"
 msgid "A few orcs muddled about, engaged in trivial work."
-msgstr ""
+msgstr "몇 명의 오르크가 사소한 일을 하느라 어리둥절해하고 있었다."
 
 msgctxt "speaker:Narrator"
 msgid "A few patrons were seated by their own tables, occupied in their own conversations"
-msgstr ""
+msgstr "몇몇 손님은 자신의 테이블에 앉아各自的 대화에 몰두하고 있었다"
 
 msgctxt "speaker:Narrator"
 msgid "A few people gave her a worried or confused look, but nobody was calling for the guards."
-msgstr ""
+msgstr "몇몇 사람이 그녀를 걱정스럽거나 혼란스러운 눈빛으로 바라보았지만, 경비대를 부르는 사람은 없었다."
 
 msgctxt "speaker:Narrator"
 msgid "A few people in the street seemed to notice them go by, but most went about their day."
-msgstr ""
+msgstr "거리에서 몇몇은 그들이 지나가는 걸 알아차렸지만, 대부분은 일상으로 돌아갔다."
 
 msgctxt "speaker:Narrator"
 msgid "A few plumes of smoke rose up, suggesting at least some still lived there."
-msgstr ""
+msgstr "몇 줄기의 연기가 올라가 그곳에 사는 이들이 아직 남아있음을 암시했다."
 
 msgctxt "speaker:Narrator"
 msgid "A few pulls was all it took for him to finish."
-msgstr ""
+msgstr "몇 번의 숨만으로도 그는 끝냈다."
 
 msgctxt "speaker:Narrator"
 msgid "A few rows over, some of her soldiers lit up, screaming their final words, their armors quickly melting against their bodies, trapping them inside them."
-msgstr ""
+msgstr "몇 줄 건너 몇몇 병사들이 불꽃을 내며 마지막 외침을 올렸다. 갑옷이 몸에 붙어 녹아내려 그들을 가두어버렸다."
 
 msgctxt "speaker:Sarah"
 msgid "A few scratches. Nothing I can't survive."
-msgstr ""
+msgstr "몇 번 긁힌 건 내게는 아무것도 아니야."
 
 msgctxt "speaker:Narrator"
 msgid "A few second later, Xan appeared in the room, slamming the door open so violently it bashed into the wall."
-msgstr ""
+msgstr "몇 초 뒤, 잔이 방으로 들어와 문짝을 벽에 부딪히도록 세게 밀어 넣었다."
 
 msgctxt "speaker:Narrator"
 msgid "A few steps more and she was back on the middle of the market place."
-msgstr ""
+msgstr "한 걸음 더 나아가면 그녀는 다시 시장 중앙에 서 있었습니다."
 
 msgctxt "speaker:Narrator"
 msgid "A few steps out from around the corner, and then they turned."
-msgstr ""
+msgstr "회전구석 밖으로 몇 걸음 더 나갔다가 돌아섰다."
 
 msgctxt "speaker:Dalia"
 msgid "A few that I've seen. Some seem to be his friends. Others...old rivals, maybe? I don't know exactly."
-msgstr ""
+msgstr "몇 명은 봤어요. 일부는 그의 친구 같고, 나머지는... 옛 라이벌일 수도 있겠네요. 정확히 알진 못해요."
 
 msgctxt "speaker:Narrator"
 msgid "A few voices rose in nervous whispers."
-msgstr ""
+msgstr "몇몇 목소리가 긴장된 속삭임으로 들려왔다."
 
 msgctxt "speaker:Narrator"
 msgid "A few weeks had passed and almost every day, Sarah and Kate had spent practicing together."
-msgstr ""
+msgstr "몇 주가 지났고 거의 매일 사라와 케이트는 함께 연습을 했다."
 
 msgctxt "speaker:Narrator"
 msgid "A few wobbled about, clearly drunk."
-msgstr ""
+msgstr "몇몇은 확실히 취해 보들보들 떨고 있었다."
 
 msgctxt "speaker:Narrator"
 msgid "A few yards, in a cage very similar to hers, she saw two shadow figures, moving."
-msgstr ""
+msgstr "그녀는 몇 야드 떨어진 곳에 그녀의 케이지와 매우 유사한 케이지 안에 두 개의 그림자를 보았다. 그들은 움직이고 있었다."
 
 msgctxt "speaker:Narrator"
 msgid "A few years ago, the former elder that had watched over Castle Reinmeer retired. Elder Tirion had been his replacement."
-msgstr ""
+msgstr "수년 전, 레인미어 성을 지켰던 전임 고위 관리가 은퇴했습니다. 티리온 장로가 그 자리를 이어받았습니다."
 
 msgctxt "speaker:Atilla"
 msgid "A few, but I heal quick."
-msgstr ""
+msgstr "몇 명이지만, 내 회복 속도는 빠르니까."
 
 msgctxt "speaker:Kate"
 msgid "A few, the dumbest of the lot, but still. This shit always starts from the bottom and rises up."
-msgstr ""
+msgstr "조금이나마, 그들 중 가장 멍청한 놈이지만 그래도. 이런 건 언제나 밑에서 시작되어 위로 올라오잖아."
 
 msgctxt "speaker:Varga"
 msgid "A few."
-msgstr ""
+msgstr "몇 명."
 
 msgctxt "speaker:Narrator"
 msgid "A field of grass stretched across the small plain, tall trees threw out shade across the bank, and in the center a pool of water."
-msgstr ""
+msgstr "작은 평야를 가로지른 잔디밭과 은행을 덮은 높은 나무의 그늘, 그리고 중앙에 있는 물웅덩이."
 
 msgctxt "speaker:Narrator"
 msgid "A figure sat hunched on the edge, face buried in their hands."
-msgstr ""
+msgstr "한 인물이 무릎을 굽혀 물가 가장자리에 앉아 얼굴을 손에 묻힌 채로 있었다."
 
 msgctxt "speaker:Narrator"
 msgid "A final attempt at a surprise attack."
-msgstr ""
+msgstr "마지막으로 기습을 시도해 보자."
 
 msgctxt "speaker:Sarah"
 msgid "A fine argument, but I suspect your motives are not so pure."
-msgstr ""
+msgstr "훌륭한 논리지만, 당신의 동기가 그렇게 순수하지는 않다고 의심합니다."
 
 msgctxt "speaker:Kravel"
 msgid "A finger, bearing a ring."
-msgstr ""
+msgstr "반지를 낀 손가락."
 
 msgctxt "speaker:Narrator"
 msgid "A fire in a hearth, crackling."
-msgstr ""
+msgstr "난로 위 불꽃이 뚝뚝 타오른다."
 
 msgctxt "speaker:Metis"
 msgid "A fire spell can burn down a city. Some mages can rip apart mountains."
-msgstr ""
+msgstr "화염 마법은 도시를 태울 수 있고, 일부 마법사는 산을 갈아엎을 수도 있습니다."
 
 msgctxt "speaker:Narrator"
 msgid "A fire turned to inferno, the searing pleasure ran through her every nerve and sinew, wrenching out violent pleasure."
-msgstr ""
+msgstr "화염은 지옥불로 변해 그녀의 모든 신경과 근육을 타고 달아오르는 쾌감을 강제로 끌어내었다."
 
 msgctxt "speaker:Narrator"
 msgid "A fire was burning in a hearth on the opposite end of the room."
-msgstr ""
+msgstr "방의 반대편 벽난로에는 불이 타오르고 있었다."
 
 msgctxt "speaker:Sarah"
 msgid "A fire will stand out in the dark."
-msgstr ""
+msgstr "어둠 속에서 불꽃이 빛날 것입니다."
 
 msgctxt "speaker:Narrator"
 msgid "A firm push to her back, and Sarah tumbled forward, catching herself only just in time."
-msgstr ""
+msgstr "자신의 등을 단단히 밀어붙였을 때 사라는 앞으로 굴러떨어졌지만, 겨우 몸을 지탱했다."
 
 msgctxt "speaker:Narrator"
 msgid "A firm spank on her ass served as his version of approval to her answer."
-msgstr ""
+msgstr "어린 엉덩이에 단단히 한 대를 날렸다."
 
 msgctxt "speaker:Narrator"
 msgid "A firm spank to her ass rang out, and Sarah could feel the right cheek begin to burn."
-msgstr ""
+msgstr "아주 단단한 한 방이 그녀의 엉덩이에 울렸고, 사라는 오른쪽 볼이 타오르기 시작함을 느꼈다."
 
 msgctxt "speaker:Narrator"
 msgid "A flame had been awakened in her ever since that nothing could stomp out."
-msgstr ""
+msgstr "그녀는 그 순간부터 꺼낼 수 없는 불꽃을 품게 되었다."
 
 msgctxt "speaker:Narrator"
 msgid "A flash of regret ran through her."
-msgstr ""
+msgstr "한 순간의 후회가 스쳤다."
 
 msgctxt "speaker:Narrator"
 msgid "A flash passed before her eyes, striking her blind for a moment."
-msgstr ""
+msgstr "눈앞에 번개가 치며 잠시 시야가 가려졌다."
 
 msgctxt "speaker:Narrator"
 msgid "A flash, something glimmered in the dark."
-msgstr ""
+msgstr "어둠 속에서 반짝이는 무언가가 번쩍였다."
 
 msgctxt "speaker:Narrator"
 msgid "A flawless face, an easy smile and a casual confidence made it hard not to notice him."
-msgstr ""
+msgstr "완벽한 얼굴과 여유로운 미소, 그리고 평범한 자신감은 그를 놓칠 수 없게 만들었다."
 
 msgctxt "speaker:Narrator"
 msgid "A flow of tears became a sob, and before long, Sarah could feel her chest rising and falling as she began to wail."
@@ -1088,227 +1088,227 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "A flush of heat build in her chest."
-msgstr ""
+msgstr "가슴에 열기가 밀려왔다."
 
 msgctxt "speaker:Narrator"
 msgid "A fool of a girl that had fled when her brother needed her."
-msgstr ""
+msgstr "형이 필요할 때 도망친 바보 같은 소녀가군."
 
 msgctxt "speaker:Narrator"
 msgid "A force pulled on her that ran deeper than any cold logic that Xan had tried to instil in her."
-msgstr ""
+msgstr "그녀를 더 깊게 묶어두는 어떤 힘이 작용했다. 잔이 심어놓은 차가운 논리보다도 훨씬 강력했다."
 
 msgctxt "speaker:Sarah"
 msgid "A founder?"
-msgstr ""
+msgstr "창립자?"
 
 msgctxt "speaker:Narrator"
 msgid "A frenzied back and forth."
-msgstr ""
+msgstr "혼란스러운 왕복 운동"
 
 msgctxt "speaker:Narrator"
 msgid "A frenzy begins to form."
-msgstr ""
+msgstr "광기 어린 쾌락이 그녀를 사로잡았다."
 
 msgctxt "speaker:Narrator"
 msgid "A frenzy of maddening pleasure, the likes only he could draw out from her."
-msgstr ""
+msgstr "그녀에게서 오직 그가 끌어낼 수 있는 광란의 쾌락"
 
 msgctxt "speaker:Narrator"
 msgid "A frenzy took hold of her as she continued her march, up and up the hill, faster and faster."
-msgstr ""
+msgstr "그녀는 계속 언덕을 올라가며 광기에 사로잡혔다."
 
 msgctxt "speaker:Sarah"
 msgid "A friend?"
-msgstr ""
+msgstr "친구라고?"
 
 msgctxt "speaker:Narrator"
 msgid "A full moon draped the world in pale light, making the dunes appear as silver."
-msgstr ""
+msgstr "완전한 달빛이 세계를 연한 빛으로 뒤덮어 모래언덕을 은빛처럼 만들었습니다."
 
 msgctxt "speaker:Alfred"
 msgid "A fun fling, I could forgive being disobedient."
-msgstr ""
+msgstr "재미있는 연애일 테니 불순종은 용서해 줄 수 있어."
 
 msgctxt "speaker:Narrator"
 msgid "A fury was building in the thing, she could hear its screams mix with an animalistic fury, something close to a hiss."
-msgstr ""
+msgstr "그 존재의 분노는 커지고 있었다. 그녀는 그 비명들이 야수적인 격노와 섞이는 것을 들을 수 있었고, 그것은 거의 숨소리와도 같았다."
 
 msgctxt "speaker:Xanthippe"
 msgid "A future where every soul, be it a king or a peasant, will be valued and safeguarded."
-msgstr ""
+msgstr "모든 영혼이 왕이나 농부라 할지라도 소중히 여겨지고 보호받는 미래"
 
 msgctxt "speaker:Narrator"
 msgid "A gate, a few watch towers, all made from what seemed like scavenged material."
-msgstr ""
+msgstr "폐허가 된 자재로 만든 성문과 몇 개의 감시탑이 서 있었다."
 
 msgctxt "speaker:Narrator"
 msgid "A general easiness of being. Their conversations flowed naturally. He made her forget the rest of the hall."
-msgstr ""
+msgstr "자연스러운 편안함. 대화는 자연스럽게 흘러갔고, 그는 그녀를 홀로 남겨둔 채 대회의 나머지 부분을 잊게 했다."
 
 msgctxt "speaker:Narrator"
 msgid "A gentle touch, or a threat of more violence, she could hardly tell anymore."
-msgstr ""
+msgstr "어느 것이 부드러운 손길인지, 또 어느 것이 폭력의 위협인지 더는 구별하지 못했습니다."
 
 msgctxt "speaker:Narrator"
 msgid "A genuine smile crept over Samayra's face."
-msgstr ""
+msgstr "진정한 미소가 사마이라의 얼굴에 스며들었다."
 
 msgctxt "speaker:Old Tribesman"
 msgid "A gift is fitting, but-"
-msgstr ""
+msgstr "선물이 적절하긴 한데..."
 
 msgctxt "speaker:Narrator"
 msgid "A gift like that would be more than she could hope to earn in a lifetime of service."
-msgstr ""
+msgstr "그런 선물은 평생 봉사해도 얻기 힘들 만큼 값진 것이었다."
 
 msgctxt "speaker:Atilla"
 msgid "A gift must show to the partner, that they have wagered their life. To show how serious they are in their ask."
-msgstr ""
+msgstr "선물은 파트너가 생명을 걸었음을 보여야 한다. 그들이 얼마나 진지한지 증명하기 위함이다."
 
 msgctxt "speaker:Kamal"
 msgid "A gift such as this, I could not dare to have expected."
-msgstr ""
+msgstr "이런 선물은 내가 감히 기대할 수 없었습니다."
 
 msgctxt "speaker:Ragged Man"
 msgid "A gift, from my friends. Or perhaps payment for my services now rendered."
-msgstr ""
+msgstr "친구들로부터의 선물. 혹은 이제 갚은 내 서비스에 대한 대가일지도 모른다."
 
 msgctxt "speaker:Sarah"
 msgid "A gift?"
-msgstr ""
+msgstr "선물이라고?"
 
 msgctxt "speaker:Thomas"
 msgid "A gift?"
-msgstr ""
+msgstr "선물이라니?"
 
 msgctxt "speaker:Narrator"
 msgid "A girl had grown up here."
-msgstr ""
+msgstr "여기서 자란 소녀가 있었어."
 
 msgctxt "speaker:Thomas"
 msgid "A girl like that needs someone who can make her happy. Not to be married off to a depressive like me."
-msgstr ""
+msgstr "그런 여자는 나를처럼 우울한 남자에게 팔려가야 하는 게 아니라, 행복하게 만들어 줄 사람이 필요해."
 
 msgctxt "speaker:Eula"
 msgid "A girl like you ain't gettin through here without givin it up at least a few times."
-msgstr ""
+msgstr "너 같은 여자는 여기서 살아남으려면 몇 번은 몸을 내놓아야 해."
 
 msgctxt "speaker:Sakar"
 msgid "A girl like you wouldn't last a day on the old road by yourself."
-msgstr ""
+msgstr "그런 너는 옛길에서 혼자 하루도 버티지 못해."
 
 msgctxt "speaker:Narrator"
 msgid "A girl of no means and no title, in a city where so many had lives no different from her own."
-msgstr ""
+msgstr "빈약한 배경과 무명의 소녀, 수많은 사람들이 그녀와 별반 다른 삶을 살아가는 도시에서."
 
 msgctxt "speaker:Alaric"
 msgid "A girl your age shouldn't be this pent up. Maybe I need to pay you a visit more often?"
-msgstr ""
+msgstr "너 나이에 이 정도 억눌림을 견디다니? 어쩌면 더 자주 찾아와야 하나?"
 
 msgctxt "speaker:Sarah"
 msgid "A girl."
-msgstr ""
+msgstr "소녀."
 
 msgctxt "speaker:Tribesman"
 msgid "A glory many of us Tribesman would have wished to seize. You must have made a pretty fortune off what you took there."
-msgstr ""
+msgstr "우리 부족의 많은 이들이 원했던 영광입니다. 거기서 가져온 것으로 꽤 큰 부를 얻었겠군요."
 
 msgctxt "speaker:Narrator"
 msgid "A glow on the surface of her skin."
-msgstr ""
+msgstr "피부 표면에서 빛이 발산된다."
 
 msgctxt "speaker:Narrator"
 msgid "A goblin wife...was that what had become of her?"
-msgstr ""
+msgstr "고블린 아내...그녀가 그렇게 되었단 말인가?"
 
 msgctxt "speaker:Metis"
 msgid "A good choice."
-msgstr ""
+msgstr "좋은 선택입니다."
 
 msgctxt "speaker:Tailor"
 msgid "A good craftsmen must first study the object of his work."
-msgstr ""
+msgstr "훌륭한 장인은 먼저 자신의 작업 대상에 대해 연구해야 합니다."
 
 msgctxt "speaker:Kate"
 msgid "A good few days, actually. I thought I was showing real restraint by keeping it to myself for that long."
-msgstr ""
+msgstr "사실 꽤 좋은 몇 날을 보내고 있었어. 그토록 오랫동안 혼자 감당하며 참음을 보인 줄 알았지."
 
 msgctxt "speaker:Sarah"
 msgid "A good king needs good advisors, and do you know anyone smarter than me?"
-msgstr ""
+msgstr "좋은 왕은 훌륭한 조언자가 필요하고, 나보다 더 똑똑한 사람을 알고 있니?"
 
 msgctxt "speaker:Narrator"
 msgid "A good man that loved a good day's work."
-msgstr ""
+msgstr "하루의 노동을 사랑한 착한 남자."
 
 msgctxt "speaker:Narrator"
 msgid "A good meal, wasted on her."
-msgstr ""
+msgstr "좋은 음식, 그녀에게 낭비된 것."
 
 msgctxt "speaker:Marion"
 msgid "A good ruler lets the facts guide him, not hysteria."
-msgstr ""
+msgstr "선한 통치자는 공포가 아닌 사실을 따릅니다."
 
 msgctxt "speaker:Carolyn"
 msgid "A good thing you don't enjoy this sort of thing, I mean."
-msgstr ""
+msgstr "좋아하는 그런 일이라면 다행이다, 말했잖아."
 
 msgctxt "speaker:Sarah"
 msgid "A governor?"
-msgstr ""
+msgstr "총독이라니?"
 
 msgctxt "speaker:Narrator"
 msgid "A gradual yet ongoing collapse."
-msgstr ""
+msgstr "점진적이면서도 지속되는 붕괴"
 
 msgctxt "speaker:Razaphel"
 msgid "A great and final war draws closer."
-msgstr ""
+msgstr "거대한 최후의 전쟁이 다가오고 있습니다."
 
 msgctxt "speaker:Narrator"
 msgid "A great blizzard seemed to form, rushing up behind the fleeing scout unit."
-msgstr ""
+msgstr "거대한 폭설이 도망치는 정찰부대 뒤로 몰려오는 듯했다."
 
 msgctxt "speaker:Narrator"
 msgid "A great brute of an orc sat outside the entrance to a tent, sliding a whetstone across a two-handed sword, sharpening it. The sword alone, Sarah thought, was bigger than herself."
-msgstr ""
+msgstr "오rc 한 마리가 거대한 괴물처럼 텐트 입구에 앉아 두 손검을 연마석으로 갈고 있었다. 검만 해도 사라보다 커 보였다."
 
 msgctxt "speaker:Narrator"
 msgid "A great chaotic roar of metal and flesh slamming against one another."
-msgstr ""
+msgstr "금속과 살이 서로 부딪히는 거대한 혼란스러운 울음소리"
 
 msgctxt "speaker:Narrator"
 msgid "A great city was being put to the sword, and she had played a part in it."
-msgstr ""
+msgstr "거대한 도시가 칼날에 찌르고 있었고, 그녀도 그 일의 일부였으니."
 
 msgctxt "speaker:Narrator"
 msgid "A great force pulled her forward."
-msgstr ""
+msgstr "거대한 힘이 그녀를 앞으로 밀어붙였다."
 
 msgctxt "speaker:Narrator"
 msgid "A great loud roaring voice summoned them from their work."
-msgstr ""
+msgstr "거대한 굉음과 함께 울려 퍼지는 목소리가 일상을 멈추게 하여 그들을 소환했다."
 
 msgctxt "speaker:Narrator"
 msgid "A great many of them have violent eyes. She almost imagines she can see their fantasies play out in their eyes."
-msgstr ""
+msgstr "그들 중 많은 이가 잔혹한 눈을 지니고 있다. 그녀는 거의 그들이 눈 속에 품은 환상을 실제로 보게 될 것 같다고 상상한다."
 
 msgctxt "speaker:Narrator"
 msgid "A great metal chain ran around it, shattered and broken, some of the links were sprawled out across the grass."
-msgstr ""
+msgstr "거대한 금속 사슬이 그것을 감싸고 있었는데, 부서져 끊겨 일부 연결 고리는 잔디 위로 흩어져 있었습니다."
 
 msgctxt "speaker:Narrator"
 msgid "A great open space in the midsts of this claustrophobic construct."
-msgstr ""
+msgstr "이 답답한 구조물 중앙에 펼쳐진 거대한 공간."
 
 msgctxt "speaker:Narrator"
 msgid "A great path lead up to the dais, where atop the stairs sat the throne of Normandi."
-msgstr ""
+msgstr "거대한 계단이 올라가는 대좌 위에 노르망디의 왕좌가 놓여 있었다."
 
 msgctxt "speaker:Narrator"
 msgid "A great roar of some kind rang out."
-msgstr ""
+msgstr "어떤 대의 거대한 울림이 울려 퍼졌다."
 
 msgctxt "speaker:Razaphel"
 msgid "A great war raged between your race and mine. Between your Gods and mine."
@@ -1316,39 +1316,39 @@ msgstr ""
 
 msgctxt "speaker:Vaelen"
 msgid "A great war. A bright future."
-msgstr ""
+msgstr "큰 전쟁. 밝은 미래."
 
 msgctxt "speaker:Narrator"
 msgid "A greedy noble, round and fat as a pig, shoved a sausage into his mouth."
-msgstr ""
+msgstr "배고픈 귀족이 돼지처럼 뚱뚱한 몸으로 소시지를 입에 쑤셔 넣었다."
 
 msgctxt "speaker:Narrator"
 msgid "A green wax seal covered the front."
-msgstr ""
+msgstr "녹색 밀랍 인장이 앞을 덮고 있었다."
 
 msgctxt "speaker:Narrator"
 msgid "A grinding sound, like metal scraping metal, rang out through the tunnels. The echo made it feel like the sound was in Sarah's body."
-msgstr ""
+msgstr "터널을 통해 금속이 서로 문지르는 듯한 소리가 울려 퍼졌다. 그 반향은 마치 그 소리가 사라의 몸속에서 나는 듯했다."
 
 msgctxt "speaker:Narrator"
 msgid "A group of Hassar's soldiers was standing in a circle. In the midsts of the circle, several young women were being violated by the invading soldiers."
-msgstr ""
+msgstr "하사르의 병사들이 원형으로 서 있었다. 원 중앙에는 젊은 여성들이 침략병들에게 강간당하고 있었다."
 
 msgctxt "speaker:Narrator"
 msgid "A group of farmers had burned the bridges leading to one of the northern provinces, out of protest over land rights, preventing Rosanna's standing army from moving there without taking a month long detour."
-msgstr ""
+msgstr "농민들이 토지 권리 항의로 북부 한 성에 이르는 다리를 불태워 로산나의 상비군을 우회 이동 없이 그곳으로 가게 막았다."
 
 msgctxt "speaker:Narrator"
 msgid "A group of five or so soldiers walked into the tent, already undressed."
-msgstr ""
+msgstr "이미 옷을 벗은 다섯 명 내외의 병사들이 천막 안으로 들어왔다."
 
 msgctxt "speaker:Narrator"
 msgid "A group of orcs and goblins, armed with simple spears and crude knives, advanced across the plaza."
-msgstr ""
+msgstr "단검과 창을 들고 광장에 진군하는 오그와 고블린 군대가 나타났다."
 
 msgctxt "speaker:Narrator"
 msgid "A group of soldiers blocked the road up ahead of her."
-msgstr ""
+msgstr "앞으로 가는 길목을 그녀를 막아선 병사들이 있었다."
 
 msgctxt "speaker:Narrator"
 msgid "A group of soldiers, too slow to run away, exploded into red mist as the thing's tail slashed through them."
@@ -1356,191 +1356,191 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "A growing confidence in himself."
-msgstr ""
+msgstr "자신감이 차오른다."
 
 msgctxt "speaker:Narrator"
 msgid "A guard freed her from her chain and guided her through the doors, into the judge's court."
-msgstr ""
+msgstr "수호병이 그녀를 사슬에서 풀어 문으로 인도하여 재판관 법정 안으로 들어갔다."
 
 msgctxt "speaker:Narrator"
 msgid "A guard slowly begins to laugh."
-msgstr ""
+msgstr "경호병이 서서히 웃음을 터뜨리기 시작합니다."
 
 msgctxt "speaker:Narrator"
 msgid "A gulp."
-msgstr ""
+msgstr "한 입 들이마심."
 
 msgctxt "speaker:Narrator"
 msgid "A gust of cold night air rushed into the house."
-msgstr ""
+msgstr "차가운 밤바람이 집안으로 몰려 들어왔다."
 
 msgctxt "speaker:Narrator"
 msgid "A gust of cold wind chased after them, but the door was quickly shut behind them."
-msgstr ""
+msgstr "추운 바람이 그들을 쫓아왔지만 문은 이미 빠르게 닫혔다."
 
 msgctxt "speaker:Narrator"
 msgid "A gust of wind blew past her and Sarah wrapped her arms around herself, trying to shield herself from the cold."
-msgstr ""
+msgstr "한 줄기 바람이 그녀 곁을 스치고 지나가자 사라는 팔짱을 끼며 차가운 바람으로부터 몸을 보호하려 했다."
 
 msgctxt "speaker:Narrator"
 msgid "A gust of wind rushed past her, across her naked body, the cold taking root in her."
-msgstr ""
+msgstr "한 줄기 바람이 그녀의 몸을 스쳐 지나갔고, 차가운 기운이 그녀의 몸속으로 침투했다."
 
 msgctxt "speaker:Caleb"
 msgid "A guy can dream, can't he?"
-msgstr ""
+msgstr "남자도 꿈꿀 수 있죠?"
 
 msgctxt "speaker:Narrator"
 msgid "A hail of stone descended on the Rosannan army, splatters of red mist erupted across the entire line."
-msgstr ""
+msgstr "돌비가 로산 군대에 쏟아져 내리며 붉은 안개들이 온 전열을 적셨다."
 
 msgctxt "speaker:Sarah"
 msgid "A handful of guards...and me."
-msgstr ""
+msgstr "수비대 몇 명과 나뿐이네."
 
 msgctxt "speaker:Narrator"
 msgid "A happiness that was so natural and obvious, she wondered how she could have ever felt sad in a world so beautiful."
-msgstr ""
+msgstr "그렇게 자연스럽고 명백한 행복을 보며, 그녀는 아름다운 이 세상에서 왜 슬퍼할 수 있었는지 궁금해졌다."
 
 msgctxt "speaker:Narrator"
 msgid "A happy old man."
-msgstr ""
+msgstr "행복한 노인이었습니다."
 
 msgctxt "speaker:Narrator"
 msgid "A hard life had given him a hard body. The many scars bore testament to this unspoken and yet obvious truth."
-msgstr ""
+msgstr "어린 시절의 고된 삶은 그를 단단한 몸으로 만들었다. 수많은 흉터는 말하지 않았지만 명백한 진실을 증명하고 있었다."
 
 msgctxt "speaker:Cassius"
 msgid "A hard worker."
-msgstr ""
+msgstr "열심히 일하는 사람입니다."
 
 msgctxt "speaker:Narrator"
 msgid "A haunting blue light had drowned out all other light."
-msgstr ""
+msgstr "어둡고 음산한 푸른 빛이 모든 것을 덮어버렸다."
 
 msgctxt "speaker:Varga"
 msgid "A head on assault on the fort would be a disaster."
-msgstr ""
+msgstr "성당에 대한 정면 공격은 재앙이 될 것입니다."
 
 msgctxt "speaker:Narrator"
 msgid "A head taller than the tallest man she had ever seen in her life."
-msgstr ""
+msgstr "그녀가 평생 본过的인들보다 머리 한참 더 컸다."
 
 msgctxt "speaker:Varga"
 msgid "A head-on assault on the fort would be a disaster."
-msgstr ""
+msgstr "성당에 정면으로 돌진하는 건 재앙이야."
 
 msgctxt "speaker:Sarah"
 msgid "A heart attack? Didn't know you had so many enemies in the castle to be fearful of."
-msgstr ""
+msgstr "심장 마비? 성에 그렇게 많은 적들이 있어 두려워할 줄은 몰랐네."
 
 msgctxt "speaker:Narrator"
 msgid "A heat was building her chest as she slowly, partially slid a finger inside herself."
-msgstr ""
+msgstr "가슴이 뜨거워지며 천천히, 부분적으로 손가락을 안으로 밀어 넣었다."
 
 msgctxt "speaker:Narrator"
 msgid "A heavy breath slipped past her lips as a jolt of pleasure moved through her body."
-msgstr ""
+msgstr "그녀의 입술 사이로 숨이 헐떡이며, 쾌락의 전율이 온몸을 스쳤다."
 
 msgctxt "speaker:Narrator"
 msgid "A heavy pause lingered."
-msgstr ""
+msgstr "중요한 침묵이 흘렀다."
 
 msgctxt "speaker:Narrator"
 msgid "A heavy pause."
-msgstr ""
+msgstr "긴 침묵"
 
 msgctxt "speaker:Narrator"
 msgid "A heavy sigh slipped past her lips as the creature grabbed at her breast, still covered by her clothes."
-msgstr ""
+msgstr "옷으로 가려진 그녀의 가슴을 괴물이 잡자 입술 사이로 무거운 한숨이 새어 나왔다."
 
 msgctxt "speaker:Narrator"
 msgid "A heavy silence loomed over the field. Two armies, waiting with bated breath for the next moment."
-msgstr ""
+msgstr "무거운 침묵이 들판을 덮쳤다. 두 군대가 다음 순간을 숨죽이며 기다렸다."
 
 msgctxt "speaker:Hecate"
 msgid "A hierarchy."
-msgstr ""
+msgstr "계급이다."
 
 msgctxt "speaker:Narrator"
 msgid "A high pitched hissing scream emerged as it fell to the earth, writing in pain."
-msgstr ""
+msgstr "땅에 떨어지며 고통을 새겨 넣는 높은 음의 비명"
 
 msgctxt "speaker:Narrator"
 msgid "A high pitched, furious scream, like an animal snared in a trap."
-msgstr ""
+msgstr "낚인 짐승처럼 날카롭고 격렬한 비명"
 
 msgctxt "speaker:Dio"
 msgid "A highland stew, traditional Mythran peasant dish."
-msgstr ""
+msgstr "고산지대 스투, 미스란 농민의 전통 음식이다."
 
 msgctxt "speaker:Narrator"
 msgid "A hiss emerged from the creature."
-msgstr ""
+msgstr "생물체에서 숨소리가 새어 나왔다."
 
 msgctxt "speaker:Narrator"
 msgid "A hiss emerged from the spirit, what passed for laughter."
-msgstr ""
+msgstr "정령에서 숨소리가 났다. 그것이 웃음에 가장 가까운 소리였다."
 
 msgctxt "speaker:Narrator"
 msgid "A hissing sound emerged from the creature, the closest it could produce to a laugh."
-msgstr ""
+msgstr "정령이 내뿜은 숨소리는 웃음에 가장 가까운 것이었다."
 
 msgctxt "speaker:Narrator"
 msgid "A hissing sound emerged from the spirit."
-msgstr ""
+msgstr "정령에서 뱀소리가 흘러나왔다."
 
 msgctxt "speaker:Narrator"
 msgid "A hissing sound emerged from the thing. It took a moment for Sarah to realize it passed for laughter."
-msgstr ""
+msgstr "그 괴물에서 비명 같은 소리가 새어 나왔다. 잠시 후 사라가 그것이 웃음으로 들린다는 것을 깨달았다."
 
 msgctxt "speaker:Narrator"
 msgid "A hole, large enough for maybe two men to move through."
-msgstr ""
+msgstr "두 명 정도가 지나갈 만한 구멍이 있었다."
 
 msgctxt "speaker:Narrator"
 msgid "A home she hadn't thought of in a long time."
-msgstr ""
+msgstr "오랜만에 생각해보지 못했던 집"
 
 msgctxt "speaker:Narrator"
 msgid "A home that only remained in her mind."
-msgstr ""
+msgstr "그녀의 마음에만 남아있던 집"
 
 msgctxt "speaker:Narrator"
 msgid "A home, she thought. That's what it reminded her of."
-msgstr ""
+msgstr "집이라 생각했다. 그녀에게 그런 느낌을 주었다."
 
 msgctxt "speaker:Narrator"
 msgid "A home. A safe place in this world that belonged to her."
-msgstr ""
+msgstr "집. 이 세상에서 그녀에게 속한 안전한 곳."
 
 msgctxt "speaker:Narrator"
 msgid "A home. Food."
-msgstr ""
+msgstr "집. 음식."
 
 msgctxt "speaker:Narrator"
 msgid "A horde of impossible creatures that had never been meant for this world."
-msgstr ""
+msgstr "이 세계에 존재할 수 없었던 불가능한 생물들의 무리"
 
 msgctxt "speaker:Narrator"
 msgid "A horde of the beasts, stumbling madly into the market square."
-msgstr ""
+msgstr "비현실적인 짐승 떼가 광장으로 미친 듯이 몰려든다."
 
 msgctxt "speaker:Narrator"
 msgid "A horn."
-msgstr ""
+msgstr "뿔이."
 
 msgctxt "speaker:Sarah"
 msgid "A house?"
-msgstr ""
+msgstr "집?"
 
 msgctxt "speaker:Narrator"
 msgid "A huge wave of water splashed across Sarah's face, nearly toppling her off her feet."
-msgstr ""
+msgstr "거대한 물결이 사라의 얼굴을 덮어 거의 그녀를 넘어뜨릴 뻔했다."
 
 msgctxt "speaker:Narrator"
 msgid "A huge wide grin spread across Samayra's face as she saw the slave woman returned safely."
-msgstr ""
+msgstr "슬레이브 여자가 무사히 돌아온 것을 보자 사마이라의 얼굴에는 거대한 미소가 피어났다."
 
 msgctxt "speaker:Narrator"
 msgid "A human Queen, married to an Orc, giving him children."
@@ -1548,67 +1548,67 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "A human might use a cart, but they simply carried them on their shoulders."
-msgstr ""
+msgstr "인간은 수레를 쓰지만, 그들은 그저 어깨에 메고 나르곤 했다."
 
 msgctxt "speaker:Narrator"
 msgid "A humble trait for a person. A poor one for a king."
-msgstr ""
+msgstr "인간에게도 겸손한 일이라면 왕에게는 가난한 일이다."
 
 msgctxt "speaker:Narrator"
 msgid "A hundred people, that together, represented the leadership of the refugees of Rosanna that had landed in Rahayal."
-msgstr ""
+msgstr "로사나의 난민들이 라하얄에 상륙한 이후 그들을 이끄는 지도부였을 백여 명의 사람들이었다."
 
 msgctxt "speaker:Kravel"
 msgid "A hunting accident, so his father says..."
-msgstr ""
+msgstr "사냥 중 사고라니, 아버지가 그러시네요..."
 
 msgctxt "speaker:Narrator"
 msgid "A job at this Inn might just be the thing she needed."
-msgstr ""
+msgstr "이 여관에서 일하는 것만으로도 그녀가 필요로 했던 것이 될지도 모른다."
 
 msgctxt "speaker:Elsa"
 msgid "A job! That's awesome!"
-msgstr ""
+msgstr "일자리야! 너무棒了!"
 
 msgctxt "speaker:Sarah"
 msgid "A joke, Marion. He probably thought you were a joke, and I suppose, in that regard, he was right."
-msgstr ""
+msgstr "농담이야, 마리온. 그는 아마도 너를 농담으로 생각했을 거야. 그리고 그 점에서는 그가 옳았다고 해도 과언이 아니지."
 
 msgctxt "speaker:Narrator"
 msgid "A justice of some kind, the others would whisper among themselves."
-msgstr ""
+msgstr "어떤 정의로운 존재라, 다른 이들은 속삭일 것이다."
 
 msgctxt "speaker:Narrator"
 msgid "A key."
-msgstr ""
+msgstr "열쇠입니다."
 
 msgctxt "speaker:Narrator"
 msgid "A kind of death of spirit. People too defeated to fight back, but too desperate for life to give up, caught in some nightmarish liminal space."
-msgstr ""
+msgstr "정신의 죽음 같은 것. 싸울 만큼 패배했지만 생명을 버릴 만큼 절망하지도 못한 사람들이, 어떤 악몽 같은 경계 공간에 갇혀 있는 상태입니다."
 
 msgctxt "speaker:Carolyn"
 msgid "A kind offer, but I have a girl waiting for me at home."
-msgstr ""
+msgstr "제안이지만 집에는 기다리고 있는 여자애가 있어요."
 
 msgctxt "speaker:Narrator"
 msgid "A kindly smile on his face, the most he could do to communicate his appreciation for her."
-msgstr ""
+msgstr "그의 얼굴에는 그녀에 대한 감사를 표현할 수 있는 최대한의 친절함이 가득한 미소가 피어있었다."
 
 msgctxt "speaker:Sarah"
 msgid "A king ruled these lands. Soon a queen."
-msgstr ""
+msgstr "이 땅을 다스리는 왕이 있었으며 곧 여왕이 될 것입니다."
 
 msgctxt "speaker:Narrator"
 msgid "A kingdom of a different kind, she thought as she smiled and thought of her bull."
-msgstr ""
+msgstr "다른 종류의 왕국이라 생각하며 미소를 짓고 자신의 황소에게 생각했다."
 
 msgctxt "speaker:Narrator"
 msgid "A kiss so close to devouring."
-msgstr ""
+msgstr "먹어치울 듯 가까운 키스"
 
 msgctxt "speaker:Sarah"
 msgid "A kiss?"
-msgstr ""
+msgstr "키스?"
 
 msgctxt "speaker:Damian"
 msgid "A knife to my throat, I was all but done, my Lady."
@@ -1616,135 +1616,135 @@ msgstr ""
 
 msgctxt "speaker:Sarah"
 msgid "A knight."
-msgstr ""
+msgstr "기사군."
 
 msgctxt "speaker:Narrator"
 msgid "A knighting ceremony was a holy rite."
-msgstr ""
+msgstr "기사 수여식은 거룩한 의식이었습니다."
 
 msgctxt "speaker:Narrator"
 msgid "A knock at the door broke her concentration."
-msgstr ""
+msgstr "문 밖의 두드림이 그녀의 집중을 깨뜨렸다."
 
 msgctxt "speaker:Narrator"
 msgid "A knock at the door caused her to sit up."
-msgstr ""
+msgstr "문 밖의 두드림에 그녀는 몸을 일으켰다."
 
 msgctxt "speaker:Narrator"
 msgid "A knock at the door gained her attention."
-msgstr ""
+msgstr "문 밖의 두드림이 그녀의 주의를 끌었다."
 
 msgctxt "speaker:Narrator"
 msgid "A knock at the door startled her."
-msgstr ""
+msgstr "문 밖의 두드림에 그녀는 놀랐다."
 
 msgctxt "speaker:Narrator"
 msgid "A knock on the door signalled food, and Sarah would retrieve it."
-msgstr ""
+msgstr "문 두드림은 식량 신호였고, 사라가 가져오리라."
 
 msgctxt "speaker:Narrator"
 msgid "A knock on the door."
-msgstr ""
+msgstr "문 밖에서 두드리는 소리."
 
 msgctxt "speaker:Sarah"
 msgid "A lady favors wine..."
-msgstr ""
+msgstr "여자는 포도주를 좋아하죠..."
 
 msgctxt "speaker:Narrator"
 msgid "A large cabinet stood on the far end of the room, filled with trinkets from many different places."
-msgstr ""
+msgstr "방의 한쪽 끝에는 다양한 곳에서 가져온 장신구로 가득 찬 큰 캐비닛이 서 있었다."
 
 msgctxt "speaker:Sarah"
 msgid "A large coronation will show the people we are still strong."
-msgstr ""
+msgstr "대규모 즉위식은 우리가 여전히 강하다는 것을 사람들에게 보여줄 것이다."
 
 msgctxt "speaker:Narrator"
 msgid "A large crowd had gathered to watch the recruits that were attempting the exam today."
-msgstr ""
+msgstr "오늘 시험을 치려는 지원자들을 보기 위해 많은 사람들이 모였다."
 
 msgctxt "speaker:Narrator"
 msgid "A large hole in the earth, as if someone had plunged a dagger into the flesh of the earth and rended it open."
-msgstr ""
+msgstr "땅속으로 칼날을 꽂아 찢어놓은 듯한 거대한 구멍"
 
 msgctxt "speaker:Narrator"
 msgid "A large man sat just outside, carving into a block of wood with a knife."
-msgstr ""
+msgstr "거대한 남자가 막대기를 칼로 베고 있었다."
 
 msgctxt "speaker:Narrator"
 msgid "A large oak tree, some small garden plots for various vegetables. A dilapidated barn that housed a few animals."
-msgstr ""
+msgstr "거대한 참나무와 여러 채소의 작은 텃밭, 몇 마리의 동물을 키우던 허름한 창고."
 
 msgctxt "speaker:Narrator"
 msgid "A large orc stood near the cage, hitting the bars with a stick."
-msgstr ""
+msgstr "거대한 오르크가 감옥 바퀴 근처에 서서 막대기로 철창을 때리고 있었다."
 
 msgctxt "speaker:Narrator"
 msgid "A large scar runs across the side of his cheek, blemishing what would otherwise be a very handsome face."
-msgstr ""
+msgstr "얼굴 옆을 가로지르는 큰 흉터가 있어, 그 자체로 매우 잘생겼을 얼굴에 흠이 되었다."
 
 msgctxt "speaker:Narrator"
 msgid "A large unit of Tribesman cavalary was rushing up behind the scouting units."
-msgstr ""
+msgstr "트라이브스맨 기병대 한 대대가 정찰부대 뒤로 급히 달려오고 있었다."
 
 msgctxt "speaker:Narrator"
 msgid "A large world, but perhaps, not quite that big."
-msgstr ""
+msgstr "거대한 세상이지만, 어쩌면 그리 크지는 않은가."
 
 msgctxt "speaker:Narrator"
 msgid "A large yoke bound the two animals to the wooden pulls."
-msgstr ""
+msgstr "두 동물을 나무 끌이에 묶는 큰 멍에가 달렸다."
 
 msgctxt "speaker:Narrator"
 msgid "A large, burly man stormed into the room. The town blacksmith, perhaps, Sarah thought by his appearance."
-msgstr ""
+msgstr "거대하고 마른 체구의 남자가 방으로 뛰쳐나왔다. 마을의 대장장이였을 것이다. 외모를 보고 사라는 생각은 들었다."
 
 msgctxt "speaker:Narrator"
 msgid "A last few drops of semen, landing on her tongue."
-msgstr ""
+msgstr "정액의 마지막 몇 방울이 그녀의 혀 위에 떨어졌다."
 
 msgctxt "speaker:Narrator"
 msgid "A last few pumps, and then, a loud primal grunt as he finished."
-msgstr ""
+msgstr "마지막 몇 번의 밀어붙임과 함께, 그는 끝을 내며 거친 원초적인 소리를 냈다."
 
 msgctxt "speaker:Narrator"
 msgid "A last few steady thrust and she could feel him climax, his cock expanding and his cum spewing into her."
-msgstr ""
+msgstr "마지막 몇 번의 단단한 밀림과 함께 그녀가 그가 절정에 달함을 느끼고, 그의 자지가 팽창하며 정액이 그녀의 안으로 분출되는 것을 느꼈다."
 
 msgctxt "speaker:Narrator"
 msgid "A last few violent thrusts, each jolting her body deeper into bliss."
-msgstr ""
+msgstr "마지막으로 격렬한 몇 번의 밀어붙임이 그녀를 더 깊은 쾌락 속으로 흔들었다."
 
 msgctxt "speaker:Narrator"
 msgid "A last high pitched shriek as it spewed out its seed across her cell."
-msgstr ""
+msgstr "씨를 그녀의 감옥 바닥에 뿜어내는 마지막 날카로운 비명"
 
 msgctxt "speaker:Narrator"
 msgid "A last inspection, though it didn't matter. She knew they were ready."
-msgstr ""
+msgstr "마지막 점검이었지만 이미 늦었다. 그녀는 그들이 준비되었음을 알고 있었다."
 
 msgctxt "speaker:Narrator"
 msgid "A last load of cum spewed forth. Sarah felt the warm seed splash across her lower back."
-msgstr ""
+msgstr "마지막 정액이 쏟아져 나오자 사라는 허벅지 뒤로 따뜻한 액체가 튀어 내렸다."
 
 msgctxt "speaker:Narrator"
 msgid "A last moment of hesitation passed over her, and then she pushed it down."
-msgstr ""
+msgstr "잠깐의 망설임이 스쳐 지나갔지만 곧 밀어냈다."
 
 msgctxt "speaker:Narrator"
 msgid "A last moment of peace, she thought to herself."
-msgstr ""
+msgstr "마지막 평화의 순간을 생각했다."
 
 msgctxt "speaker:Narrator"
 msgid "A last thought passed her mind. Not words but an image."
-msgstr ""
+msgstr "마지막 생각이 그녀의 머리를 스쳤다. 말은 아니었다. 이미지였다."
 
 msgctxt "speaker:Narrator"
 msgid "A laugh that sounded like a hiss, eminated from the creature."
-msgstr ""
+msgstr "그 존재에서 뱀의 숨소리 같은 웃음이 터져 나왔다."
 
 msgctxt "speaker:Narrator"
 msgid "A laughter ran through the people watching."
-msgstr ""
+msgstr "관중들의 웃음소리가 울렸다."
 
 msgctxt "speaker:Narrator"
 msgid "A laughter, interbroken with a choking sound from his lungs could be heard throughout the cave."
@@ -1752,219 +1752,219 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "A laundry house."
-msgstr ""
+msgstr "세탁소입니다."
 
 msgctxt "speaker:Carolyn"
 msgid "A leader around whom everyone can gather."
-msgstr ""
+msgstr "모두가 모일 수 있는 지도자"
 
 msgctxt "speaker:Narrator"
 msgid "A leader for the whole of the Union."
-msgstr ""
+msgstr "전 연방 전체의 지도자."
 
 msgctxt "speaker:Narrator"
 msgid "A leash of some kind. She shuddered at the thought."
-msgstr ""
+msgstr "어떤 종의 족쇄. 그 생각에 그녀는 몸을 떨었다."
 
 msgctxt "speaker:Narrator"
 msgid "A legion returning home. A strange army among them."
-msgstr ""
+msgstr "집으로 돌아오는 군단. 그중에는 이국적인 병력이 섞여 있었다."
 
 msgctxt "speaker:Narrator"
 msgid "A lesser army might have surrendered."
-msgstr ""
+msgstr "작은 군대는 항복했을 것이다."
 
 msgctxt "speaker:Alfred"
 msgid "A lesson in obdience. And a lesson in what happens when you fall short of the duties of a wife."
-msgstr ""
+msgstr "복종의 교훈이자 아내의 의무를 저지른 자에게 닥치는 일의 교훈이다."
 
 msgctxt "speaker:Narrator"
 msgid "A lesson she spend the rest of the day studying."
-msgstr ""
+msgstr "그녀가 하루 종일 공부한 교훈"
 
 msgctxt "speaker:Sarah"
 msgid "A lesson?"
-msgstr ""
+msgstr "수업이라니?"
 
 msgctxt "speaker:Narrator"
 msgid "A letter of Xan, from Metis. Explaining what he had come here to tell him in the first place..."
-msgstr ""
+msgstr "잔의 편지였다. 메티스에서 온 것이었다. 처음부터 그를 이곳에 데려온 이유를 설명하고 있었다..."
 
 msgctxt "speaker:Narrator"
 msgid "A letter sat attached to the inside of the box."
-msgstr ""
+msgstr "함께 박힌 편지가 있었다."
 
 msgctxt "speaker:Narrator"
 msgid "A library like this would take an army to maintain. Of course mages would find more efficient ways if magic allowed it."
-msgstr ""
+msgstr "이런 도서관을 유지하려면 군대가 필요할 것이다. 물론 마법이 허용한다면 마법사가 더 효율적인 방법을 찾을 수 있을 테지만."
 
 msgctxt "speaker:Narrator"
 msgid "A lie to get what he wanted, and now he would leave her here to suffer."
-msgstr ""
+msgstr "원하는 것을 얻기 위한 거짓말, 그리고 이제 그녀를 고통 속에 남겨두는 것"
 
 msgctxt "speaker:Narrator"
 msgid "A lie."
-msgstr ""
+msgstr "거짓말이다."
 
 msgctxt "speaker:Narrator"
 msgid "A lie. But Sarah wasn't about to betray the only ally she had left by revealing that."
-msgstr ""
+msgstr "거짓말이지만, 사라는 그 사실을 폭로함으로써 자신이 가진 유일한 동맹을 배신할 수는 없었다."
 
 msgctxt "speaker:Narrator"
 msgid "A life of only luxury and no obligation, seemed to not just relax her body but also her mind. She felt less sharp with each passing day."
-msgstr ""
+msgstr "오직 사치만 존재하고 의무는 없는 삶은 그녀의 몸뿐만 아니라 마음까지도 이완시키는 듯했다. 날이 갈수록 그녀는 날카로워지는 자신을 덜 느끼게 되었다."
 
 msgctxt "speaker:Narrator"
 msgid "A life she could remember having, but one that seemed to have happened to someone else."
-msgstr ""
+msgstr "그녀가 기억하고 있을 수 있는 삶이지만, 마치 다른 누군가의 일처럼 느껴지는 삶이었다."
 
 msgctxt "speaker:Narrator"
 msgid "A life, captured in a paper. With this, the Mythran empire would enforce it, even if Cassius and Dio fled to the ends of the world."
-msgstr ""
+msgstr "종이로 포착된 삶. 이로써 미트란 제국은 카시우스와 디오가 세계의 끝으로 도망쳐도 이를 강제할 것이다."
 
 msgctxt "speaker:Gabriel"
 msgid "A lifetime of protocol and proper decorum, all forgotten after just a few years with her."
-msgstr ""
+msgstr "그녀와 함께한 몇 년 만에 모든 의식과 예의는 잊혀졌다."
 
 msgctxt "speaker:Narrator"
 msgid "A lifetime of working in his father's Inn had hardend his body in an appealing way."
-msgstr ""
+msgstr "아버지의 여관 일생을 보내며 그는 매력적인 방식으로 몸을 단련시켰다."
 
 msgctxt "speaker:Narrator"
 msgid "A lifetime passes."
-msgstr ""
+msgstr "시간이 흐른다."
 
 msgctxt "speaker:Narrator"
 msgid "A light radiated from each of his hands, swirling around his arms, driving back the darkness."
-msgstr ""
+msgstr "그의 손에서 빛이 뿜어져 나와 팔을 감싸며 어둠을 물리쳤다."
 
 msgctxt "speaker:Narrator"
 msgid "A lightness."
-msgstr ""
+msgstr "가벼운 느낌."
 
 msgctxt "speaker:Narrator"
 msgid "A little arrogant, Sarah hated herself for the fact that she liked that about him."
-msgstr ""
+msgstr "조금 자만심이 있었지만, 그 점이 그녀를 끌리게 하는 것을 알고 있어 스스로를 미워했다."
 
 msgctxt "speaker:Sarah"
 msgid "A little bit, maybe."
-msgstr ""
+msgstr "조금이나마, 아마도."
 
 msgctxt "speaker:Sarah"
 msgid "A little bit."
-msgstr ""
+msgstr "조금이나마."
 
 msgctxt "speaker:Narrator"
 msgid "A little distance ahead of her, she saw him moving through the night."
-msgstr ""
+msgstr "그녀 앞 약간 떨어진 거리에서, 그는 밤을 헤매고 있었다."
 
 msgctxt "speaker:Narrator"
 msgid "A little in the distance, she could make out the harbor. Ships, coming and going."
-msgstr ""
+msgstr "조금 떨어진 곳에서는 항구를 볼 수 있었다. 배들이 오가고 있었다."
 
 msgctxt "speaker:Captain Belmont"
 msgid "A little late for sorry's and apologies. Ya stole from the captain, that can't stand."
-msgstr ""
+msgstr "죄송하다고 늦은 시점이네. 선장의 소유를 훔친 건 용납할 수 없으니."
 
 msgctxt "speaker:Narrator"
 msgid "A little later in the day, Sarah managed to find a chance to slip into Razaphel's room."
-msgstr ""
+msgstr "조금 더 늦은 오후, 사라는 라자펠의 방으로 스며들 기회를 잡았다."
 
 msgctxt "speaker:Sophia"
 msgid "A little less confident now that he was being led along with a leash."
-msgstr ""
+msgstr "이제 그가 밧줄로 이끌려 다니는 모습을 보니 조금 더 자신감이 떨어졌다."
 
 msgctxt "speaker:Narrator"
 msgid "A little over a week had gone by."
-msgstr ""
+msgstr "한 주가 조금 지났다."
 
 msgctxt "speaker:Carolyn"
 msgid "A little roughed up here and there, but you still have your mother's beauty."
-msgstr ""
+msgstr "여기저리 조금씩 상처를 입었지만, 여전히 어머니의 그 아름다움을 간직하고 있군."
 
 msgctxt "speaker:Narrator"
 msgid "A little slower. A little faster. One extra step. A spin."
-msgstr ""
+msgstr "조금 더 천천히. 조금 더 빠르게. 한 걸음 더. 회전."
 
 msgctxt "speaker:Narrator"
 msgid "A little under half of the standing army was staffed with bannermen from one of the old houses, and though they were less than half, they made up the strong half."
-msgstr ""
+msgstr "장정병의 거의 절반은 한 옛 집안의 Banner Men 으로 이루어져 있었으나, 숫자가 절반에 미치지 못해도 그들이 차지하는 비중만큼이나 강력했다."
 
 msgctxt "speaker:Narrator"
 msgid "A little ways up the alley, a light was shining."
-msgstr ""
+msgstr "골목 위쪽 어딘가에서 빛이 비추고 있었다."
 
 msgctxt "speaker:Samayra"
 msgid "A little, maybe. But also not. Is that weird?"
-msgstr ""
+msgstr "조금일지도 몰라. 하지만 그렇다고 다 그런 건 아니야. 이상한 거야?"
 
 msgctxt "speaker:Kate"
 msgid "A little."
-msgstr ""
+msgstr "조금."
 
 msgctxt "speaker:Alaric"
 msgid "A little. Heard about it. Never used any. Pretty damn hard to get in Lethram."
-msgstr ""
+msgstr "약간은 들었지. 하지만 실제로는 한 번도 써본 적이 없어. 레스라암에 들어가는 건 꽤나 어렵거든."
 
 msgctxt "speaker:Narrator"
 msgid "A long day behind her, the sleep came easy."
-msgstr ""
+msgstr "긴 하루를 보내고 그녀는 쉽게 잠들었다."
 
 msgctxt "speaker:Narrator"
 msgid "A long pause lingered before Alaric finally spoke."
-msgstr ""
+msgstr "알라릭이 드디어 말을 하기까지 긴 침묵이 흘렀다."
 
 msgctxt "speaker:Narrator"
 msgid "A long silence lingered."
-msgstr ""
+msgstr "긴 침묵이 흘렀다."
 
 msgctxt "speaker:Narrator"
 msgid "A long time ago, longer than anyone at this table had been alive, a local baron had ruled the town and its surrounding lands."
-msgstr ""
+msgstr "오랜 옛날, 이 자리에 앉은 누구도 살아있지 못했던 그 이전부터, 한 지방 백작이 마을과 주변 땅을 다스렸다."
 
 msgctxt "speaker:Atilla"
 msgid "A long time ago, when I was still young, I met a woman, an orc like myself. She was everything to me. Fierce, strong, an equal."
-msgstr ""
+msgstr "오랜 옛날, 나 아직 어릴 때 나는 나와 같은 오그와 한 여인을 만났습니다. 그녀는 내 모든 것이었습니다. 거칠고 강하며 평등한 존재였습니다."
 
 msgctxt "speaker:Vaelen"
 msgid "A long time ago, when I was still young, younger than you even, I lived in a small town out in the Mytrhan Southlands."
-msgstr ""
+msgstr "오랜 옛날, 당신보다 훨씬 어렸을 때 저는 미트란 남부 지방의 작은 마을에서 살았습니다."
 
 msgctxt "speaker:Narrator"
 msgid "A longer pause."
-msgstr ""
+msgstr "잠시 더 멈추었다."
 
 msgctxt "speaker:Narrator"
 msgid "A lot had happened."
-msgstr ""
+msgstr "많은 일들이 있었습니다."
 
 msgctxt "speaker:Kate"
 msgid "A lot happened at home, and I never let you see any of that. I didn't think you would understand."
-msgstr ""
+msgstr "집에서 많은 일들이 있었고, 그 어떤 것도 당신에게 보여 주지 않았습니다. 당신이 이해하지 못할 거라고 생각했습니다."
 
 msgctxt "speaker:Marion"
 msgid "A lot has been asked of the nobility, and a lot we have given, but Thomas...my king...you will be asking them to leave their homes unguarded."
-msgstr ""
+msgstr "귀족에게 요구된 것은 많았고, 우리가 바친 것도 많았지만, 토머스... 내 왕이시여... 이제 그들이 집을 지키지 않고 떠날 것을 요구하게 될 것입니다."
 
 msgctxt "speaker:Sarah"
 msgid "A lot has been happening in my life recently, leaving not many things certain."
-msgstr ""
+msgstr "최근 제 인생에서 많은 일이 일어나며 확실한 것은 많지 않습니다."
 
 msgctxt "speaker:Sarah"
 msgid "A lot has changed, as you might notice."
-msgstr ""
+msgstr "많은 변화가 일어났을 거야."
 
 msgctxt "speaker:Sarah"
 msgid "A lot is going to change for me soon."
-msgstr ""
+msgstr "곧 내게 많은 변화가 찾아올 거야."
 
 msgctxt "speaker:Narrator"
 msgid "A lot of had transpired between them when they had ventured into the forest together."
-msgstr ""
+msgstr "그들이 함께 숲으로 들어섰을 때 많은 일들이 벌어졌습니다."
 
 msgctxt "speaker:Sarah"
 msgid "A lot of people are going to die if we do this. Our people, the ones we're supposed to be responsible for."
-msgstr ""
+msgstr "이 짓을 하면 많은 사람들이 죽을 거야. 우리가 책임져야 할 우리 사람들 말이지."
 
 msgctxt "speaker:Elsa"
 msgid "A lot of people most days, actually."
@@ -1972,15 +1972,15 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "A lot of things that had been unthinkable once, had now become normal. All in order to survive."
-msgstr ""
+msgstr "이미 한번은 상상하기조차 어려웠던 것들이 이제는 일상화되어 버렸다. 생존을 위해."
 
 msgctxt "speaker:Marion"
 msgid "A lot of trade goes through it, and he taxes it."
-msgstr ""
+msgstr "거기서 많은 거래가 오가고 그에 대한 세금도 걷는다."
 
 msgctxt "speaker:Sarah"
 msgid "A lot to take in, huh?"
-msgstr ""
+msgstr "흡수할 게 많군."
 
 msgctxt "speaker:King Orwell Rose"
 msgid "A lot...too much to talk about. You can ask me tomorrow, okay?"
@@ -1988,103 +1988,103 @@ msgstr "그렇지... 너무 많아 말하기엔. 내일 물어봐도 돼, 알았
 
 msgctxt "speaker:Narrator"
 msgid "A loud banging on the door rang out through the room, disrupting the proceedings."
-msgstr ""
+msgstr "방 안으로 큰 소리가 울려 퍼지며 진행을 방해했다."
 
 msgctxt "speaker:Narrator"
 msgid "A loud battle horn rang out across the line."
-msgstr ""
+msgstr "장대 소리가 선을 따라 울려 퍼졌다."
 
 msgctxt "speaker:Narrator"
 msgid "A loud battle horn rang out over the battlefield, and as if suddenly recovering all their training, Hassar's army began to move forward as one."
-msgstr ""
+msgstr "전장 위에는 거대한 전투 호루라기가 울려 퍼졌고, 마치 갑자기 모든 훈련을 되찾은 듯 하사르의 군대가 한 목소리로 앞으로 돌진하기 시작했다."
 
 msgctxt "speaker:Narrator"
 msgid "A loud battle horn rang out over the field, the battle horn of the Rosanna army."
-msgstr ""
+msgstr "장대 소리가 들렸다. 로사나 군대의 호각이었다."
 
 msgctxt "speaker:Narrator"
 msgid "A loud bell rang out and the murmurs in the room were brought to silence."
-msgstr ""
+msgstr "큰 종소리가 울려 회중의 속삭임은 잠잠해졌습니다."
 
 msgctxt "speaker:Narrator"
 msgid "A loud chant rose up as the warriors all battered the table in tribute."
-msgstr ""
+msgstr "장병들이 테이블을 치며 경의를 표하며 큰 함성이 일었다."
 
 msgctxt "speaker:Narrator"
 msgid "A loud cheer rose up from the soldiers as they watched Sarah enter the castle grounds."
-msgstr ""
+msgstr "솔라가 성터로 들어오자 병사들은 크게 환호했다."
 
 msgctxt "speaker:Narrator"
 msgid "A loud clap and a stinging pain on her ass. He spanked her."
-msgstr ""
+msgstr "한 번의 큰 타격과 엉덩이에 느껴지는 찌릿한 통증이 있었다. 그가 그녀를 때렸다."
 
 msgctxt "speaker:Narrator"
 msgid "A loud crack rang out through the hall, it's echo carried deep into the palace hallways."
-msgstr ""
+msgstr "거대한 굉음이 복도를 울리며 그 진동은 궁전의 깊은 회랑까지 전달되었다."
 
 msgctxt "speaker:Narrator"
 msgid "A loud cracking sound drew her attention."
-msgstr ""
+msgstr "큰 갈라지는 소리가 그녀의 주의를 끌었다."
 
 msgctxt "speaker:Narrator"
 msgid "A loud cracking sound rang out."
-msgstr ""
+msgstr "큰 갈라지는 소리가 울렸다."
 
 msgctxt "speaker:Narrator"
 msgid "A loud cracking sound rang out. Sarah felt her ass begin to burn."
-msgstr ""
+msgstr "크는 소리가 터져 나왔다. 사라의 엉덩이가 타기 시작했다."
 
 msgctxt "speaker:Narrator"
 msgid "A loud cracking sound rung out across the room."
-msgstr ""
+msgstr "방 전체에 큰 갈라지는 소리가 울렸다."
 
 msgctxt "speaker:Narrator"
 msgid "A loud crashing sound echoed across the training ground as the examinator, his armor and his massive blade, crashed into the ground."
-msgstr ""
+msgstr "훈련장에서 검사가 갑옷과 거대한 검으로 바닥을 강타하며 큰 충돌음이 울렸다."
 
 msgctxt "speaker:Narrator"
 msgid "A loud groan filled the room."
-msgstr ""
+msgstr "방 안에는 큰 탄식이 울렸다."
 
 msgctxt "speaker:Narrator"
 msgid "A loud grunt rang out across the alley and Sarah felt her head fixed onto Alaric's cock."
-msgstr ""
+msgstr "작은 골목에 큰 신음소리가 울려 퍼졌고, 사라는 자신의 머리를 알라리의 자지 위에 고정된 듯한 느낌을 받았다."
 
 msgctxt "speaker:Narrator"
 msgid "A loud horn blast rang out, signaling danger."
-msgstr ""
+msgstr "경보음이 울려 위험을 알렸다."
 
 msgctxt "speaker:Narrator"
 msgid "A loud pang rang out across the room."
-msgstr ""
+msgstr "방 전체에 큰 통증이 울려 퍼졌다."
 
 msgctxt "speaker:Narrator"
 msgid "A loud pounding noise rang out."
-msgstr ""
+msgstr "큰 소리가 울렸다."
 
 msgctxt "speaker:Narrator"
 msgid "A loud slap rang out across the apartment, and Sarah felt her ass and face burn from the humiliation."
-msgstr ""
+msgstr "아파트 한가운데 큰 소리가 울려 퍼졌고, 사라는 수치심 때문에 엉덩이와 얼굴이 타는 듯한 고통을 느꼈다."
 
 msgctxt "speaker:Narrator"
 msgid "A loud slap rang out across the hall, Sarah let out a surprised moan."
-msgstr ""
+msgstr "거실 한가운데서 큰 소리가 울렸다. 사라는 놀란 듯이 탄식했다."
 
 msgctxt "speaker:Narrator"
 msgid "A loud sound called out to her."
-msgstr ""
+msgstr "그녀를 부르는 큰 소리가 들렸다."
 
 msgctxt "speaker:Narrator"
 msgid "A loud thumping sound rang out as the crossbow released the bolt."
-msgstr ""
+msgstr "활이 화살을 발사하며 큰 타격음이 울렸다."
 
 msgctxt "speaker:Narrator"
 msgid "A loud thundering crack, like a splitting log, roaring out over the open field."
-msgstr ""
+msgstr "넓은 들판 위로 울려 퍼지는, 나무가 갈라지는 듯한 거대한 천둥소음"
 
 msgctxt "speaker:Narrator"
 msgid "A loud voice rang out across the gathering."
-msgstr ""
+msgstr "모인 군중 위로 큰 목소리가 울려 퍼졌다."
 
 msgctxt "speaker:Narrator"
 msgid "A loud, unmistaken, moan."
@@ -2092,47 +2092,47 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "A louder moan slipped from Kate's mouth, and Sarah could almost feel proud at her efforts."
-msgstr ""
+msgstr "카테 입에서 더 큰 탄성이 새어 나왔고, 사라는 그녀의 노력이 거의 자랑스러울 만큼 느껴졌다."
 
 msgctxt "speaker:Cassius"
 msgid "A lovely name."
-msgstr ""
+msgstr "아름다운 이름이야."
 
 msgctxt "speaker:Carolyn"
 msgid "A lovely spot, surrounded by vineyards."
-msgstr ""
+msgstr "포도밭으로 둘러싸인 아름다운 곳입니다."
 
 msgctxt "speaker:Sarah"
 msgid "A lowlife. A criminal that feeds on those too vulnerable to defend themselves."
-msgstr ""
+msgstr "하층민이다. 스스로를 방어할 수 없는 약자들을 먹어치우는 범죄자다."
 
 msgctxt "speaker:Narrator"
 msgid "A lust in his eyes unlike any she had seen before."
-msgstr ""
+msgstr "그의 눈빛에는 그녀가 본 적 없는 욕망이 담겨 있었다."
 
 msgctxt "speaker:Sarah"
 msgid "A madman in a cave, rambling about his divine friends."
-msgstr ""
+msgstr "동굴에 있는 미친놈이 신의 친구들에 대해 떠들고 있다."
 
 msgctxt "speaker:Narrator"
 msgid "A mage that reached to far. Lost to a dead world. Slave-bride to a Daemon."
-msgstr ""
+msgstr "너무 멀리까지 닿은 마법사, 죽은 세계에 잃어버린 자, 데몬의 노예 신부."
 
 msgctxt "speaker:Narrator"
 msgid "A mage was always dangerous."
-msgstr ""
+msgstr "마법사는 항상 위험했다."
 
 msgctxt "speaker:Narrator"
 msgid "A mage."
-msgstr ""
+msgstr "마법사입니다."
 
 msgctxt "speaker:Dalia"
 msgid "A magical mark of some kind. I guess you've already felt it?"
-msgstr ""
+msgstr "어떤 마법적 문장인가? 이미 느껴본 적이 있겠지?"
 
 msgctxt "speaker:Narrator"
 msgid "A male soldier stepped up and threw a pair of dice. Some of them cheered, others groaned, making it clear who'd won this round."
-msgstr ""
+msgstr "남성 병사가 앞으로 나와 주사위를 던졌다. 일부는 환호했고, 다른 이들은 한숨을 쉬며 이번 라운드의 승자를 명확히 했다."
 
 msgctxt "speaker:Narrator"
 msgid "A man barks commands at her."
@@ -2140,83 +2140,83 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "A man blocked her path."
-msgstr ""
+msgstr "한 남자가 그녀의 길목을 막았다."
 
 msgctxt "speaker:Narrator"
 msgid "A man in heat. A woman in heat."
-msgstr ""
+msgstr "발정기인 남자, 발정기인 여자."
 
 msgctxt "speaker:Narrator"
 msgid "A man instructed them all to stand in line."
-msgstr ""
+msgstr "열에 타 있는 남자가 모두 줄을 서라고 지시했다."
 
 msgctxt "speaker:Kate"
 msgid "A man like that goes about life, lying, cheating."
-msgstr ""
+msgstr "그런 남자는 인생을 살아가며 거짓말하고 사기만 치는 거야."
 
 msgctxt "speaker:Narrator"
 msgid "A man more used to being guarded than seen."
-msgstr ""
+msgstr "보이지 않는 것보다 지키는 데 익숙한 남자다."
 
 msgctxt "speaker:Alfred"
 msgid "A man my age can only be so angry when he's just finished fucking a girl like you."
-msgstr ""
+msgstr "내 나이인데 너 같은 여자랑 막 성관계를 끝냈으니 화가 날 수밖에."
 
 msgctxt "speaker:Marshal Edmond"
 msgid "A man of his age with a girl like that."
-msgstr ""
+msgstr "그 나이에 그런 여자와."
 
 msgctxt "speaker:Marshal Edmond"
 msgid "A man or woman should rise or fall on account of their skills. Not their name."
-msgstr ""
+msgstr "사람은 실력으로 승부해야지 이름으로 판단하지 않아야 해."
 
 msgctxt "speaker:Narrator"
 msgid "A man ran out and soon returned with the tools that had been requested."
-msgstr ""
+msgstr "한 남자가 달려나와 곧 요청된 도구를 들고 돌아왔다."
 
 msgctxt "speaker:Narrator"
 msgid "A man sat opposite of her. The man that had removed the hood."
-msgstr ""
+msgstr "그녀의 정반대에 앉아 있는 남자가 있었다.フード를 벗어던진 그 남자였다."
 
 msgctxt "speaker:Maeiv"
 msgid "A man should have a strong name."
-msgstr ""
+msgstr "남자는 강한 이름을 가져야 한다."
 
 msgctxt "speaker:Narrator"
 msgid "A man stumbled, his shoulder bashing into her."
-msgstr ""
+msgstr "남자가 넘어졌고 어깨로 그녀를 밀쳤다."
 
 msgctxt "speaker:Narrator"
 msgid "A man that could provide. Be strong. Faithful. Honest."
-msgstr ""
+msgstr "자식을 부양할 수 있는 남자, 강하고, 신실하며 정직한 남자."
 
 msgctxt "speaker:Narrator"
 msgid "A man that didn't much matter to anyone."
-msgstr ""
+msgstr "누구에게나 크게 중요하지 않은 남자."
 
 msgctxt "speaker:Narrator"
 msgid "A man that had been given a second life and wasted not a minute of it."
-msgstr ""
+msgstr "누구에게도 크게 중요하지 않았던 두 번째 삶을 얻어 그 어느 순간도 허투루 보내지 않은 남자."
 
 msgctxt "speaker:Narrator"
 msgid "A man that had feared life had passed him by, and now equally feared that he had caught life but had no idea what to do with it."
-msgstr ""
+msgstr "삶이 자신을 지나쳐간다는 두려움과, 삶을 잡았지만 어떻게 해야 할지 막막함을 느끼는 그를"
 
 msgctxt "speaker:Narrator"
 msgid "A man that had perhaps feared the day would never come."
-msgstr ""
+msgstr "어쩌면 그날이 결코 오지 않을 것이라 두려워했던 남자."
 
 msgctxt "speaker:Narrator"
 msgid "A man that lived with his head in the clouds."
-msgstr ""
+msgstr "구름 속에 머리를 박고 살던 남자."
 
 msgctxt "speaker:Narrator"
 msgid "A man that treated her like she was worth nothing, reminding her with every thrust that she was only good for this."
-msgstr ""
+msgstr "아무것도 아니라고 여겼던 그녀를 마치 물건처럼 대하며,每一次의 삽입마다 그녀가 오직 이것만을 위해 존재한다고 상기시켰던 남자"
 
 msgctxt "speaker:Narrator"
 msgid "A man walked in through the door to the Great Hall."
-msgstr ""
+msgstr "대회의실로 들어섰다."
 
 msgctxt "speaker:Narrator"
 msgid "A man waved at Marion from across the room, and Marion waved back."
@@ -2224,247 +2224,247 @@ msgstr "남자가 거실 반대편에서 마리온에게 손을 흔들었고, �
 
 msgctxt "speaker:Narrator"
 msgid "A man who could not believe that fortune and fate had played him for a fool."
-msgstr ""
+msgstr "운명과 운명이 자신을 바보로 여긴 남자가 있었습니다."
 
 msgctxt "speaker:Narrator"
 msgid "A man who desired her. Provided for her."
-msgstr ""
+msgstr "그녀를 원하고 그녀를 부양하던 남자"
 
 msgctxt "speaker:Narrator"
 msgid "A man who expected to find a willing woman, but not this eager whore."
-msgstr ""
+msgstr "자발적인 여자를 기대했지만, 이 정도로 열광한 년은 아니었다."
 
 msgctxt "speaker:Narrator"
 msgid "A man who had lost everything, and possessed nothing."
-msgstr ""
+msgstr "모든 것을 잃고 아무것도 가지지 못한 남자"
 
 msgctxt "speaker:Narrator"
 msgid "A man who knew he had killed himself just the same, but took glee from knowing his enemies would die with him."
-msgstr ""
+msgstr "자신이 죽은 것과 똑같이 알고 있었지만, 적들이 자신과 함께 죽는다는 것을 안 기쁨을 느꼈던 남자"
 
 msgctxt "speaker:Narrator"
 msgid "A man who thought that only the decay of old age remained, who now instead found a young and willing woman, again before him."
-msgstr ""
+msgstr "오직 노쇠의 부패만을 남겼을 것이라 생각했던 그 남자가, 이제 다시 자신의 앞에 젊은 기꺼이 몸을 내어준 여인을 발견한 것이다."
 
 msgctxt "speaker:Narrator"
 msgid "A man who wanted to take a woman. A woman who wanted to be taken by a man."
-msgstr ""
+msgstr "남자가 여자를 원했다. 여자가 남자에게 취해지기를 원했다."
 
 msgctxt "speaker:Narrator"
 msgid "A man who wielded no sword was no man at all in their eyes."
-msgstr ""
+msgstr "그들의 눈에 검을 휘두르지 않는 남자는 아무것도 아니었다."
 
 msgctxt "speaker:Narrator"
 msgid "A man who would gladly sacrifice every last one of them to carry himself across a wicked desert."
-msgstr ""
+msgstr "자신만만하게 모든 것을 바쳐 악마의 사막을 건너는 그 남자는"
 
 msgctxt "speaker:Narrator"
 msgid "A man whose name she had heard many times by now, and whose appearance lived up to his reputation. Hassar."
-msgstr ""
+msgstr "이제 수없이 들어본 이름이자 실체까지 명성에 걸맞은 하사르였다."
 
 msgctxt "speaker:Narrator"
 msgid "A man with a round face slowly peaked out, his eyes narrowing."
-msgstr ""
+msgstr "둥근 얼굴의 남자가 천천히 모습을 드러내며 눈썹을 찌푸렸다."
 
 msgctxt "speaker:Sarah"
 msgid "A man with thread and needle? I'll survive."
-msgstr ""
+msgstr "실과 바늘로 만든 남자라니? 살아남을 거야."
 
 msgctxt "speaker:Narrator"
 msgid "A man wraps his arms around the neck of the soldier between Sarah's legs, violently pulling him away."
-msgstr ""
+msgstr "남자가 사라의 다리 사이에서 군인의 목을 감싸며 그를 폭력적으로 끌어내렸다."
 
 msgctxt "speaker:Narrator"
 msgid "A man's voice could be heard roaring through the hall."
-msgstr ""
+msgstr "홀을 관통하는 남자의 우렁찬 목소리가 들렸다."
 
 msgctxt "speaker:Narrator"
 msgid "A man, as one ought to be."
-msgstr ""
+msgstr "남자다. 제법 그럴만도 한."
 
 msgctxt "speaker:Narrator"
 msgid "A man, pale and tall, walked across the hall with a great stride."
-msgstr ""
+msgstr "한 남자가 거대한 걸음으로 복도를 걸어갔다."
 
 msgctxt "speaker:Narrator"
 msgid "A man, that watched as a group of Tribesmen took his wife on the day of their marriage."
-msgstr ""
+msgstr "결혼식 날 부족 사람들이 아내를 데려가 본 남자"
 
 msgctxt "speaker:Narrator"
 msgid "A man."
-msgstr ""
+msgstr "남자."
 
 msgctxt "speaker:Sarah"
 msgid "A man? Yes."
-msgstr ""
+msgstr "남자요? 네."
 
 msgctxt "speaker:Sarah"
 msgid "A mansion? What makes you say that."
-msgstr ""
+msgstr "별장이라니요. 왜 그렇게 말씀하시죠?"
 
 msgctxt "speaker:Sarah"
 msgid "A marking kit?"
-msgstr ""
+msgstr "도장 키트?"
 
 msgctxt "speaker:Sarah"
 msgid "A marriage? Between whom?"
-msgstr ""
+msgstr "결혼? 누구와?"
 
 msgctxt "speaker:Narrator"
 msgid "A marvel of miracle and magic, held together by the will of the Gods."
-msgstr ""
+msgstr "신들의 의지로 이어져 있는 기적과 마법의 경이"
 
 msgctxt "speaker:Narrator"
 msgid "A mask balanced on her face, but her pale skin and form were familiar to Sarah."
-msgstr ""
+msgstr "얼굴 위에 균형을 맞춘 가면을 쓰고 있었지만, 창백한 피부와 몸매는 사라에게 익숙했다."
 
 msgctxt "speaker:Tailor"
 msgid "A mason does not just blindly hack into his marble, nor do I start without properly inspecting the body."
-msgstr ""
+msgstr "석공이 대리석을 맹목적으로 깎듯, 나는 신체를 제대로 살피지 않고는 시작하지 않는다."
 
 msgctxt "speaker:Advisor"
 msgid "A masquerade?"
-msgstr ""
+msgstr "가면 파티?"
 
 msgctxt "speaker:Sarah"
 msgid "A massive conflict that could drag out for decades."
-msgstr ""
+msgstr "수십 년에 걸칠 거대한 분쟁"
 
 msgctxt "speaker:Narrator"
 msgid "A massive hole had been dug straight into the earth."
-msgstr ""
+msgstr "땅속으로 곧게 파진 거대한 구덩이가 있었다."
 
 msgctxt "speaker:Narrator"
 msgid "A massive stone statue, marking and guarding the entrance."
-msgstr ""
+msgstr "거대한 돌상, 입구를 표시하고 지키고 있다."
 
 msgctxt "speaker:Marion"
 msgid "A match like this one doesn't come around very often. True love, what a miracle."
-msgstr ""
+msgstr "이런 기회는 흔하지 않네요. 진정한 사랑이라니, 기적이에요."
 
 msgctxt "speaker:Narrator"
 msgid "A meeting between the two, running late."
-msgstr ""
+msgstr "두 사람 사이의 만남이 늦어졌습니다."
 
 msgctxt "speaker:Sarah"
 msgid "A meeting?"
-msgstr ""
+msgstr "만남이라니?"
 
 msgctxt "speaker:Narrator"
 msgid "A melee had broken out."
-msgstr ""
+msgstr "싸움이 벌어졌다."
 
 msgctxt "speaker:Kate"
 msgid "A mercenary...well, you're lucky to get to forty."
-msgstr ""
+msgstr "雇佣兵... 네가 40 살까지 살아남은 건 행운이네."
 
 msgctxt "speaker:Duke Antonio"
 msgid "A merchant knows when to say yes to a good deal."
-msgstr ""
+msgstr "상인은 좋은 거래를 할 때면 언제든 '네'라고 대답할 줄 안다."
 
 msgctxt "speaker:Kate"
 msgid "A merchant, if you'd believe it. I thought they'd killed the last of 'em by now."
-msgstr ""
+msgstr "상인이라니 믿을 수가 없군요. 이제쯤은 다 죽어 버린 줄 알았어요."
 
 msgctxt "speaker:Narrator"
 msgid "A merchant, in their eyes, was as low as any man could be. Earning his way through life by trickery and deceit."
-msgstr ""
+msgstr "상인이라는 것, 그들의 눈에는 인간 중 가장 낮은 존재였다. 사기나 거짓으로 생계를 유지하는 자라니까."
 
 msgctxt "speaker:Duke Antonio"
 msgid "A mercy?"
-msgstr ""
+msgstr "자비심이라니?"
 
 msgctxt "speaker:Kravel"
 msgid "A message has arrived...from Marion."
-msgstr ""
+msgstr "메시지가 도착했습니다... 마리온으로부터."
 
 msgctxt "speaker:Narrator"
 msgid "A message then, but what it was it remained to be seen."
-msgstr ""
+msgstr "메시지였지만 그 내용은 아직 알 수 없었다."
 
 msgctxt "speaker:Narrator"
 msgid "A message, Sarah would try to rationalize. A warning to her enemies and those who broke their vows of loyalty."
-msgstr ""
+msgstr "메시지라니, 사라는 이를 합리화하려 했다. 적들과 충성을 저버린 자들에게 보내는 경고였다."
 
 msgctxt "speaker:Narrator"
 msgid "A metal door, carefully decorated, cut into the wall."
-msgstr ""
+msgstr "벽에 정교하게 장식된 금속 문이 있었다."
 
 msgctxt "speaker:Dalia"
 msgid "A millenium, maybe more."
-msgstr ""
+msgstr "천 년쯤, 어쩌면 더 길게요."
 
 msgctxt "speaker:Narrator"
 msgid "A miniscule smile crept along Queen Maeiv's face."
-msgstr ""
+msgstr "퀸 메이브의 입가에 미미한 웃음기가 스쳤다."
 
 msgctxt "speaker:Narrator"
 msgid "A minute, then two, then-"
-msgstr ""
+msgstr "한 순간, 그다음 두 순간, 그리고—"
 
 msgctxt "speaker:Narrator"
 msgid "A minute...Sarah wondered. Was that really possible?"
-msgstr ""
+msgstr "한 순간... 사라는 생각했습니다. 그것이 정말 가능할까요?"
 
 msgctxt "speaker:Narrator"
 msgid "A miracle."
-msgstr ""
+msgstr "기적이다."
 
 msgctxt "speaker:Narrator"
 msgid "A mirror stood off to the side, and Sarah had did her best not to look for fear of bad luck, but an accidental glance forced her to turn and look at herself."
-msgstr ""
+msgstr "옆쪽 거울에 비친 자신의 모습을 보지 않으려고 애썼지만, 나쁜 운을 피할 수 없는 우연한 시선으로 인해 뒤를 돌아보게 되었다."
 
 msgctxt "speaker:Carolyn"
 msgid "A mission, far away from the reach of Mythra, of any power."
-msgstr ""
+msgstr "미트라나 어떤 힘의 영향권 밖으로 멀리 떨어진 임무입니다."
 
 msgctxt "speaker:Narrator"
 msgid "A mist of red blood splashed out and a deep crimson trail as left across her back."
-msgstr ""
+msgstr "붉은 피의 안개가 튀어 나와 등 뒤로 깊은 선홍빛 자국을 남겼다."
 
 msgctxt "speaker:Narrator"
 msgid "A mist rose up, wrapping itself around her."
-msgstr ""
+msgstr "붉은 안개가 그녀를 감쌌다."
 
 msgctxt "speaker:Gilead"
 msgid "A mistake does not exempt you from punishment."
-msgstr ""
+msgstr "실수는 처벌을 면제해 주지 않습니다."
 
 msgctxt "speaker:Alfred"
 msgid "A mistake, huh?"
-msgstr ""
+msgstr "오류라니?"
 
 msgctxt "speaker:Sarah"
 msgid "A mistake?"
-msgstr ""
+msgstr "오류라니?"
 
 msgctxt "speaker:Sarah"
 msgid "A mistake? It seemed like what you did was very intentional."
-msgstr ""
+msgstr "오류였을 뿐이야? 네가 한 일이 의도적으로 보였는데."
 
 msgctxt "speaker:Narrator"
 msgid "A mixture of chance, odds, bluffing. Half the game was the cards. The other half reading the player opposite of you."
-msgstr ""
+msgstr "운과 확률, 그리고 bluffing 의 혼합물이었다. 게임의 절반은 카드였고, 나머지 절반은 당신을 대적하는 플레이어를 읽는 것이었다."
 
 msgctxt "speaker:Narrator"
 msgid "A mixture of lust and surprise painted the creature's face."
-msgstr ""
+msgstr "욕망과 놀라움이 섞여 괴물의 얼굴을 붉혔다."
 
 msgctxt "speaker:Narrator"
 msgid "A mixture of scented spice weighed heavily on the air."
-msgstr ""
+msgstr "향기로운 향료의 무게가 공기를 짓누르듯 감돌았다."
 
 msgctxt "speaker:Narrator"
 msgid "A moan erupted from her mouth as if he had truly lost her mind."
-msgstr ""
+msgstr "그녀의 입에서 그가 그녀의 정신을 완전히 잃어버린 듯 한탄이 터져 나왔다."
 
 msgctxt "speaker:Narrator"
 msgid "A moan slipped from her mouth and filled the tent, cutting through the silence."
-msgstr ""
+msgstr "그녀의 입술 사이로 한숨이 새어 나와 장막을 가득 채웠고, 고요함을 찢었다."
 
 msgctxt "speaker:Narrator"
 msgid "A moan slipped out as she felt him enter her."
-msgstr ""
+msgstr "그가 그녀 안으로 들어가는 순간, 그녀는 억눌린 한숨을 내쉬었다."
 
 msgctxt "speaker:Narrator"
 msgid "A moan, mixed with desperate frustration sounded out from Samayra, fearing that Sarah had denied her."
@@ -2472,7 +2472,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "A moan, no pain, she thought distantly as her mind sank into pleasured, thoughtless bliss."
-msgstr ""
+msgstr "아픔 없이 흐르는 한숨. 그녀는 멀리서 생각했다. 마음이 쾌락에 잠겨 무심한 행복으로 가라앉았다."
 
 msgctxt "speaker:Narrator"
 msgid "A moment ago, she feared she had seen the last of him, and now she was back here. Back where she wanted to be, but could not stay."

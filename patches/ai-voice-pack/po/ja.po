@@ -20,23 +20,23 @@ msgstr "「うわっ、ダメだ。こっちのやってみて」そう言って
 
 msgctxt "speaker:Narrator"
 msgid "'A preliminary Analysis on Snow Crystal as an Alchemical Catalyst.'"
-msgstr ""
+msgstr "『雪晶をアルケミカル触媒としての予備分析』"
 
 msgctxt "speaker:Curator"
 msgid "'The Desert Blooms'. We have Thirty-eight copies within the current inventory."
-msgstr ""
+msgstr "『砂漠の咲き誇る花』。現在の在庫には三十八点ございます"
 
 msgctxt "speaker:Narrator"
 msgid "'The Hollow World'."
-msgstr ""
+msgstr "『空の国』"
 
 msgctxt "speaker:Sarah"
 msgid "...So Sir Roderic, now bearing the sword..."
-msgstr ""
+msgstr "……では、ロデリック卿、剣を帯びて"
 
 msgctxt "speaker:Samayra"
 msgid "...at least I'll have seen the world."
-msgstr ""
+msgstr "……せめて、この世をみたことにはなりました。"
 
 msgctxt "ui"
 msgid "<"
@@ -48,15 +48,15 @@ msgstr ">"
 
 msgctxt "speaker:Curator"
 msgid "A Brief Investigation on Ethics was first written by the philosopher Lu-Fan, hailing from the current region known to you as the Far East."
-msgstr ""
+msgstr "倫理学に関する簡易調査は、あなたが言うところの東洋に由来する哲学者ル・ファンによって最初に書かれた。"
 
 msgctxt "speaker:Voice"
 msgid "A God."
-msgstr ""
+msgstr "神様。"
 
 msgctxt "speaker:Sarah"
 msgid "A Mythran army? Why?"
-msgstr ""
+msgstr "ミトランの軍勢か。なぜ？"
 
 msgctxt "speaker:Xanthippe"
 msgid "A Mythran host is no joke, but the Bagrad army should be able to keep them off for a while. We're mostly here just to protect the palace from anyone that sneaks past the main battle."
@@ -64,995 +64,995 @@ msgstr ""
 
 msgctxt "speaker:Emmissary"
 msgid "A Queen with no crown. A Queen with no throne. A Queen with no land."
-msgstr ""
+msgstr "王冠なき女王。玉座なき女王。領土なき女王。"
 
 msgctxt "speaker:Sarah"
 msgid "A Rosannan man would never..."
-msgstr ""
+msgstr "ロサンの男は決して……"
 
 msgctxt "speaker:Narrator"
 msgid "A Tribesmen, caught from his horse, was far less of a threat."
-msgstr ""
+msgstr "馬から引きずり降ろされた部族民は、遥かに脅威ではなかった。"
 
 msgctxt "speaker:Kravel"
 msgid "A Union Council hasn't been called in over a century..."
-msgstr ""
+msgstr "百年以上も前に開かれたことのない連合評議会だ。"
 
 msgctxt "speaker:Narrator"
 msgid "A Union King."
-msgstr ""
+msgstr "ユニオン王。"
 
 msgctxt "speaker:Narrator"
 msgid "A bad idea."
-msgstr ""
+msgstr "悪手だ。"
 
 msgctxt "speaker:Narrator"
 msgid "A bar of soap."
-msgstr ""
+msgstr "石鹸の塊。"
 
 msgctxt "speaker:Narrator"
 msgid "A bar of soap. Some towels. Toiletries."
-msgstr ""
+msgstr "石鹸。タオル。洗漱用品。"
 
 msgctxt "speaker:Sarah"
 msgid "A bath? In this place?"
-msgstr ""
+msgstr "入浴？この場所か？"
 
 msgctxt "speaker:Narrator"
 msgid "A bathhouse."
-msgstr ""
+msgstr "湯浴場。"
 
 msgctxt "speaker:Narrator"
 msgid "A bead of sweat fell from Naydeen's face, landing on Sarah's stomach."
-msgstr ""
+msgstr "ナディーンの額から汗の粒が滴り、サラのお腹に落ちた。"
 
 msgctxt "speaker:Narrator"
 msgid "A beautiful woman like that, dominated by a man like that."
-msgstr ""
+msgstr "そんな美貌の女が、その男に支配されているなんて。"
 
 msgctxt "speaker:Narrator"
 msgid "A bed, some storage, nothing of note."
-msgstr ""
+msgstr "ベッド、収納スペース。特に目立つものはない。"
 
 msgctxt "speaker:Metis"
 msgid "A bit more, this time."
-msgstr ""
+msgstr "もう少し、今度はね。"
 
 msgctxt "speaker:Captain Belmont"
 msgid "A bit of slack, but nothing practice won't fix. Very good."
-msgstr ""
+msgstr "少しの緩みだが、練習で直せるものだ。よくやった。"
 
 msgctxt "speaker:Sarah"
 msgid "A bit of the good of both."
-msgstr ""
+msgstr "両方の利点を少しだけ。"
 
 msgctxt "speaker:Sarah"
 msgid "A bit, here and there."
-msgstr ""
+msgstr "ここにも、あそこにも。"
 
 msgctxt "speaker:Narrator"
 msgid "A black liquid spewed out, covering part of her face and armor, and the beast roared again."
-msgstr ""
+msgstr "黒い液体が噴き出し、彼女の顔と鎧の一部を覆った。獣は再び咆哮した。"
 
 msgctxt "speaker:Narrator"
 msgid "A black scar, a void, an absence."
-msgstr ""
+msgstr "黒い傷、虚無、欠落。"
 
 msgctxt "speaker:Narrator"
 msgid "A black, oily tongue, emerged from its mouth, sliding around the body of the Mythran prince, and dragging it into its bowels."
-msgstr ""
+msgstr "黒く油っぽい舌が口から現れ、神獣の王子の体を滑りながら腸の中に引き込んだ。"
 
 msgctxt "speaker:Sarah"
 msgid "A blessing?"
-msgstr ""
+msgstr "祝福か？"
 
 msgctxt "speaker:Narrator"
 msgid "A blinding light."
-msgstr ""
+msgstr "眩い光。"
 
 msgctxt "speaker:Narrator"
 msgid "A blissful silence is replaced by a cold one."
-msgstr ""
+msgstr "安らかな沈黙は、冷たい静寂に代わった。"
 
 msgctxt "speaker:Narrator"
 msgid "A blissful silence. A gentle sun. A soft breeze."
-msgstr ""
+msgstr "安らかな沈黙。柔らかな日差し。そよぐ風。"
 
 msgctxt "speaker:Narrator"
 msgid "A blistering assault of pleasure that drowned out all other senses, striking her blind."
-msgstr ""
+msgstr "快楽の爆発が、全ての感覚を飲み込み、盲目にした。"
 
 msgctxt "speaker:Narrator"
 msgid "A blistering hearth in the other end of the room."
-msgstr ""
+msgstr "部屋の向こう側にある、熱い炉。"
 
 msgctxt "speaker:Narrator"
 msgid "A blistering hearth, braziers filled with flames, warmth oozing out from every direction."
-msgstr ""
+msgstr "炎をともした暖炉。すべての方向から熱気が溢れる。"
 
 msgctxt "speaker:Alaric"
 msgid "A block of buildings in the cannery section burned down a few years back."
-msgstr ""
+msgstr "数年前、缶詰製造地区の建物が焼失した。"
 
 msgctxt "speaker:Narrator"
 msgid "A blood-curdling scream rings out across the silenced mass of slaves."
-msgstr ""
+msgstr "沈黙した奴隷の群れに、血を凍らせるような叫びが響き渡った。"
 
 msgctxt "speaker:Narrator"
 msgid "A bloodied hand emerged from the surface of the pool, though she could see the body it was attached to."
-msgstr ""
+msgstr "血にまみれた手が水面から現れたが、その手がついていたのは誰の体か見えている。"
 
 msgctxt "speaker:Sigmund"
 msgid "A bloodlust seemed to take over, and by the end of it, nothing of the old regimes or histories remained."
-msgstr ""
+msgstr "狂気じみた殺意が支配し、やがて旧体制や歴史の痕跡はすべて消え去った。"
 
 msgctxt "speaker:Narrator"
 msgid "A blue sky, save for a few clouds, crowned the start of a new day in Lethram."
-msgstr ""
+msgstr "青空、雲は数枚だけ。レトラムの新しい一日が始まった。"
 
 msgctxt "speaker:Narrator"
 msgid "A blur she hoped would not end."
-msgstr ""
+msgstr "終わらないと願う、霞んだ世界。"
 
 msgctxt "speaker:Narrator"
 msgid "A blurring of bodies and sex."
-msgstr ""
+msgstr "肉欲と性行為が溶け合うような恍惚感。"
 
 msgctxt "speaker:Narrator"
 msgid "A bolt of pleasure shot through her body as she felt him press the tip up against her pussy."
-msgstr ""
+msgstr "快楽の電撃が体を駆け巡り、彼がマンコの入り口を押し付けた瞬間に"
 
 msgctxt "speaker:Maeiv"
 msgid "A bore, much like your father."
-msgstr ""
+msgstr "退屈な男だ。お前の父親と同じくさ。"
 
 msgctxt "speaker:Narrator"
 msgid "A bowl that had been sat upon the edge of the Shah's throne was send clattering across the stone floor."
-msgstr ""
+msgstr "シャアの王座の縁に置かれていた碗が、石畳の上で転がり落ちた。"
 
 msgctxt "speaker:Varga"
 msgid "A boy, a girl. Either would be a blessing."
-msgstr ""
+msgstr "男か女か。どちらでも祝福となるだろう。"
 
 msgctxt "speaker:Narrator"
 msgid "A boy, as she had hoped it would be."
-msgstr ""
+msgstr "男の子、それが望んでいた通りだ。"
 
 msgctxt "speaker:Narrator"
 msgid "A boy, they cried out."
-msgstr ""
+msgstr "男の子だと叫んだ。"
 
 msgctxt "speaker:Sarah"
 msgid "A boy."
-msgstr ""
+msgstr "男の子だ。"
 
 msgctxt "speaker:Narrator"
 msgid "A breeze runs through the alley, and past Sarah's naked body. She shivers"
-msgstr ""
+msgstr "風が路地を吹き抜け、サラの裸体を掠めていく。彼女は震えた。"
 
 msgctxt "speaker:Narrator"
 msgid "A bride in Rosanna was clad in white only, like a ghost, but here they crowned their brides in bright floral, for all the world to see."
-msgstr ""
+msgstr "ロサナでは、白い布で包まれたような幽霊のような花嫁がいましたが、ここでは鮮やかな花々を被せ、世界中に見せるために花嫁を飾りました。"
 
 msgctxt "speaker:Narrator"
 msgid "A bridge of some kind."
-msgstr ""
+msgstr "ある種の橋。"
 
 msgctxt "speaker:Narrator"
 msgid "A brief few seconds more, before they'd catch her."
-msgstr ""
+msgstr "もう少しだけ、彼らが彼女を捕まえるまでの数秒。"
 
 msgctxt "speaker:Narrator"
 msgid "A brief flash of magical flame brushed along her hand."
-msgstr ""
+msgstr "魔法の炎が瞬く間に彼女の手のひらを撫でた。"
 
 msgctxt "speaker:Narrator"
 msgid "A brief moment later, he came back out."
-msgstr ""
+msgstr "少し後、彼は再び外に出てきた。"
 
 msgctxt "speaker:Narrator"
 msgid "A brief moment of pause, as if they were understanding something."
-msgstr ""
+msgstr "一瞬の沈黙。何かを理解しようとしているかのように。"
 
 msgctxt "speaker:Narrator"
 msgid "A brief moment of shame."
-msgstr ""
+msgstr "一瞬の恥辱。"
 
 msgctxt "speaker:Narrator"
 msgid "A brief pause."
-msgstr ""
+msgstr "一瞬の沈黙。"
 
 msgctxt "speaker:Narrator"
 msgid "A brief respite. A chance to restock."
-msgstr ""
+msgstr "一息つく時間。補給する機会だ。"
 
 msgctxt "speaker:Varga"
 msgid "A brief window where our troops will be ready to attack Marion's position, but where we might still end the uprising in time to spare the outer provinces from a wasted harvest."
-msgstr ""
+msgstr "我々の兵士がマーリョンの陣地を攻撃する準備ができるわずかな隙間だが、その間に蜂起を鎮め、外側の州に収穫の無駄を避けられるかもしれない。"
 
 msgctxt "speaker:Narrator"
 msgid "A bright flower, vibrant in colour, but not all that otherwordly."
-msgstr ""
+msgstr "鮮やかな色を放つ明るい花だが、それほど異界のものではない。"
 
 msgctxt "speaker:Garret"
 msgid "A brother...I'm sorry, I didn't know..."
-msgstr ""
+msgstr "兄弟だ…ごめん、知らなかった…"
 
 msgctxt "speaker:Narrator"
 msgid "A brutal peace, where as often, the weakest and poorest were made to pay the price."
-msgstr ""
+msgstr "残酷な平和。いつも通り、最も弱く貧しい者たちが代償を払う世界だ。"
 
 msgctxt "speaker:Oryon"
 msgid "A brutal war between them and the Void that would see countless of them dead."
-msgstr ""
+msgstr "彼らと虚空との間の過酷な戦争で、無数の者が命を落とすことになるだろう。"
 
 msgctxt "speaker:Narrator"
 msgid "A bubble of sensations of touch, smell, sight, each overpowering her senses."
-msgstr ""
+msgstr "触覚、嗅覚、視覚の感覚が混ざり合い、彼女の五感に押し寄せる。"
 
 msgctxt "speaker:Narrator"
 msgid "A bull that could protect her in a world of lions."
-msgstr ""
+msgstr "ライオンが跋扈する世界で、彼女を護る雄牛。"
 
 msgctxt "speaker:Narrator"
 msgid "A burden of which she was reminded only in its absence, when she remembered what it felt like to live easily."
-msgstr ""
+msgstr "彼女の存在を、安らかに生きる感覚を思い出す欠落を通じてのみ感じさせられる重み。"
 
 msgctxt "speaker:Narrator"
 msgid "A burning pain along the side of her cheek."
-msgstr ""
+msgstr "頬の側を走る激痛。"
 
 msgctxt "speaker:Narrator"
 msgid "A burst of blue flame poured forth from her hand and surged out in the center of the room."
-msgstr ""
+msgstr "彼女の掌から青い炎の爆発が迸り、部屋中央へと広がった。"
 
 msgctxt "speaker:Narrator"
 msgid "A busy, chaotic, almost maddening scene."
-msgstr ""
+msgstr "忙しすぎて、混乱し、ほとんど狂気じみた光景だ。"
 
 msgctxt "speaker:Sarah"
 msgid "A cart? What...what are you talking about?"
-msgstr ""
+msgstr "馬車？いったい……何を言っているの？"
 
 msgctxt "speaker:Judge"
 msgid "A case of improper soliciation? Prostitution?"
-msgstr ""
+msgstr "不正な勧誘か？売春か？"
 
 msgctxt "speaker:Carolyn"
 msgid "A castle is only as strong as the morale that rules it."
-msgstr ""
+msgstr "城の強さは、それを支配する士気によって決まる。"
 
 msgctxt "speaker:Narrator"
 msgid "A cave, Sarah realized, as they neared it."
-msgstr ""
+msgstr "洞窟に近づくと、サラは気づいた。"
 
 msgctxt "speaker:Narrator"
 msgid "A cell door appeared."
-msgstr ""
+msgstr "牢屋の扉が現れた。"
 
 msgctxt "speaker:Narrator"
 msgid "A challenge she was committed to."
-msgstr ""
+msgstr "彼女が抱きしめた挑戦だ。"
 
 msgctxt "speaker:Narrator"
 msgid "A chance. That's all she had ever wanted."
-msgstr ""
+msgstr "チャンス。それが彼女がずっと願っていたすべてだった。"
 
 msgctxt "speaker:Narrator"
 msgid "A chaos was spreading through the room, Sarah had lost all control. Herself, her brother and now even her husband...she stood to lose everything."
-msgstr ""
+msgstr "部屋中が混沌と渦巻き、サラはすべてを失いかけた。自分自身、弟、そして夫さえも……彼女は全てを失う寸前だった。"
 
 msgctxt "speaker:Narrator"
 msgid "A chaos was spreading through the room, Sarah had lost all control. Herself, her brother...she stood to lose everything."
-msgstr ""
+msgstr "部屋に混沌が広がり、サラはすべてを失っていた。自分自身、そして兄……彼女はすべてを失う寸前だ。"
 
 msgctxt "speaker:Narrator"
 msgid "A chaotic surge of butterflies in her stomach."
-msgstr ""
+msgstr "胃の奥でカオスな蝶々が舞う。"
 
 msgctxt "speaker:Narrator"
 msgid "A charged silence came over the hall."
-msgstr ""
+msgstr "大広間には、張り詰めた沈黙が降りかかった。"
 
 msgctxt "speaker:Narrator"
 msgid "A charged silence lingered."
-msgstr ""
+msgstr "静寂が漂っていた。"
 
 msgctxt "speaker:Captain Belmont"
 msgid "A cheap ship whore who will suck my dick the moment I order her to?"
-msgstr ""
+msgstr "命令すればすぐに私のチンポを舐めさせるような、安っぽい船の売春婦か？"
 
 msgctxt "speaker:Narrator"
 msgid "A child that would guarantee peace and stability."
-msgstr ""
+msgstr "平和と安定を保証する子供だ。"
 
 msgctxt "speaker:Narrator"
 msgid "A child would mean the end of that."
-msgstr ""
+msgstr "子供なら、それが終わる。"
 
 msgctxt "speaker:Narrator"
 msgid "A child, born from her family and his. The final seal that would forever link their houses."
-msgstr ""
+msgstr "彼女と彼の間に生まれた子供。両家の永遠の絆を結ぶ最後の印だ。"
 
 msgctxt "speaker:Narrator"
 msgid "A child, she thought, would be something she could give him that would weigh up to all he gave her."
-msgstr ""
+msgstr "彼女は、彼が自分に与えたすべてに匹敵する重みを持つものとして、子供を彼に与えられると考えた。"
 
 msgctxt "speaker:Narrator"
 msgid "A child."
-msgstr ""
+msgstr "子供。"
 
 msgctxt "speaker:Narrator"
 msgid "A childish hope, that she had long ago allowed to die, returned."
-msgstr ""
+msgstr "幼い頃の希望が、彼女自身も古くから死んでしまったと信じていたのに、再び蘇った。"
 
 msgctxt "speaker:Narrator"
 msgid "A citizen could succeed on his own merit, but unlike a slave, he could also fall into poverty."
-msgstr ""
+msgstr "市民は自身の功績で成功することも、奴隷とは異なり貧困に陥ることもできた。"
 
 msgctxt "speaker:Narrator"
 msgid "A city like Lethram was always filled with various noises, but Sarah had learned by now that people rarely came to this particular alley."
-msgstr ""
+msgstr "レトラムのような街には、常に様々な音が充満していたが、サラはすでにこの特定の路地へ人々がほとんど訪れないことを知っていた。"
 
 msgctxt "speaker:Narrator"
 msgid "A city like this, there was none like it in all the world."
-msgstr ""
+msgstr "この街は、世界に類を見ないものだった。"
 
 msgctxt "speaker:Narrator"
 msgid "A city unlike any other in the world."
-msgstr ""
+msgstr "この世界に類を見ない都市だ。"
 
 msgctxt "speaker:Marion"
 msgid "A claim that Oliver could use as a pretext to take offense."
-msgstr ""
+msgstr "オリバーが文句を言うための口実に使える主張だ。"
 
 msgctxt "speaker:Duke Antonio"
 msgid "A clear and logical position."
-msgstr ""
+msgstr "明確で論理的な立場だ。"
 
 msgctxt "speaker:Atilla"
 msgid "A clever move, girl, but you need to think."
-msgstr ""
+msgstr "賢い手だ、お前。だがもっと考える必要があるね。"
 
 msgctxt "speaker:Sarah"
 msgid "A cock hungry slut...pretending to be a deck hand."
-msgstr ""
+msgstr "チンポが欲しいスケベ女…船員を装っているか。"
 
 msgctxt "speaker:Narrator"
 msgid "A cold gust of air breezed past them, rising up from deep within the bowels of the Imperial Palace."
-msgstr ""
+msgstr "帝国宮殿の奥深くから冷たい風が吹き抜け、二人を過ぎ去っていった。"
 
 msgctxt "speaker:Narrator"
 msgid "A cold wind ran through the tent, the thick hide cover slapping against itself as the wind battered against it."
-msgstr ""
+msgstr "冷たい風がテントを吹き抜け、厚い革の屋根は風に叩かれながら自身に激しくぶつかった。"
 
 msgctxt "speaker:Narrator"
 msgid "A cold wind rushed up to meet her as they neared closer to land; the shores quickly growing."
-msgstr ""
+msgstr "陸地への距離が短くなるにつれ、彼女のもとへ向かって冷たい風が吹き寄せた。岸辺もすぐに近づいてくる。"
 
 msgctxt "speaker:Narrator"
 msgid "A collar, as meant for an animal."
-msgstr ""
+msgstr "動物用の首輪だ。"
 
 msgctxt "speaker:Sigmund"
 msgid "A collection of smaller kingdoms that managed to keep the other powers out by working together whenever it served them."
-msgstr ""
+msgstr "他国を排し、必要に応じて協力することで存続してきた小王国の連合体だ。"
 
 msgctxt "speaker:Narrator"
 msgid "A comfortable change of pace from the dangerous streets."
-msgstr ""
+msgstr "危険な街並みからの、心地よい変化だ。"
 
 msgctxt "speaker:Narrator"
 msgid "A command he would soon be in his full right to give to her, she realized."
-msgstr ""
+msgstr "彼女はすぐに彼から命令を下す権利を得ることになることを悟った。"
 
 msgctxt "speaker:Narrator"
 msgid "A command she already obeyed as if it was his right."
-msgstr ""
+msgstr "すでに彼の権利のように従っていた命令だ。"
 
 msgctxt "speaker:Narrator"
 msgid "A command was given atop the walls for the archers to fire, and together they did."
-msgstr ""
+msgstr "城壁の上から射手に発射を命じ、同時に彼らは従った。"
 
 msgctxt "speaker:Duke Antonio"
 msgid "A common whore. I could go out into the city tonight and fuck a dozen like her."
-msgstr ""
+msgstr "下賎な売春婦だ。今夜、街に出て彼女のような女を一打十二も犯すことだってできるだろう"
 
 msgctxt "speaker:Narrator"
 msgid "A complex maze of gears and machinery."
-msgstr ""
+msgstr "複雑な歯車と機械の迷路だ。"
 
 msgctxt "speaker:Narrator"
 msgid "A complicated flurry of emotions rocked her body as she began to slowly finger herself."
-msgstr ""
+msgstr "複雑な感情の嵐が体を揺さぶり、彼女はゆっくりと指で自分自身を弄り始めた。"
 
 msgctxt "speaker:Narrator"
 msgid "A complicated mixture of emotions rushed through her."
-msgstr ""
+msgstr "複雑な感情の混ざり合いが彼女を襲った。"
 
 msgctxt "speaker:King-On-The-Outside"
 msgid "A condemned man knows his own judgement. Knowing does not exempt him from suffering it."
-msgstr ""
+msgstr "死刑宣告を受けた男は、自分の判決を知っている。知っているだけでは、その苦しみから逃れることはできない。"
 
 msgctxt "speaker:Narrator"
 msgid "A conspiracy against the Gods of her world themselves."
-msgstr ""
+msgstr "神々自身に対する陰謀だ。"
 
 msgctxt "speaker:Narrator"
 msgid "A constant pleasure invaded every part of her body, dominated her mind."
-msgstr ""
+msgstr "快楽は彼女の全身に浸透し、心まで支配した。"
 
 msgctxt "speaker:Narrator"
 msgid "A constant, lowly grunting, seemed to emerge from the creature as it breathed heavily."
-msgstr ""
+msgstr "獣が重く息を吐くたびに、低いうめき声が絶え間なく響いていた。"
 
 msgctxt "speaker:Curator"
 msgid "A copy of such a book does not exist within the current inventory."
-msgstr ""
+msgstr "そのような書の写しは、現在の在庫には存在しません。"
 
 msgctxt "speaker:Narrator"
 msgid "A council of leaders would form the leadership of the Union."
-msgstr ""
+msgstr "指導者たちの評議会が連合の指導部を構成するだろう。"
 
 msgctxt "speaker:Captain Belmont"
 msgid "A couple, to be sure."
-msgstr ""
+msgstr "確かに、カップルだ。"
 
 msgctxt "speaker:Narrator"
 msgid "A crack rang out across the tent."
-msgstr ""
+msgstr "テント全体に割れ音がした。"
 
 msgctxt "speaker:Narrator"
 msgid "A creature hiding could ask for no more perfect place."
-msgstr ""
+msgstr "隠れておる者が、より完璧な場所を求めようとはしない。"
 
 msgctxt "speaker:Narrator"
 msgid "A creeping feeling came over her, as though something from inside the forest was looking back at her."
-msgstr ""
+msgstr "森の中から彼女を注視しているような、ぞっとする感覚が彼女を包んだ。"
 
 msgctxt "speaker:Narrator"
 msgid "A crossbow bolt pierced through his back."
-msgstr ""
+msgstr "クロスボウの矢が彼の背中を貫いた。"
 
 msgctxt "speaker:Narrator"
 msgid "A crowd began to form."
-msgstr ""
+msgstr "人々が集まり始めた。"
 
 msgctxt "speaker:Narrator"
 msgid "A crowd of men and women already stood gathered outside, busily engaged with one another."
-msgstr ""
+msgstr "すでに男女が多数集まり、互いに忙しく交わっていた。"
 
 msgctxt "speaker:Kate"
 msgid "A crowd of people gathered to watch them, and I couldn't keep away. I was drawn in like everyone else."
-msgstr ""
+msgstr "人々が集まって彼らを眺めていた。私も逃れられず、皆と同じように引き込まれてしまった。"
 
 msgctxt "speaker:Narrator"
 msgid "A crowd of people."
-msgstr ""
+msgstr "人だかり。"
 
 msgctxt "speaker:Narrator"
 msgid "A crown her family still wore, to this day."
-msgstr ""
+msgstr "一族が今も戴いている王冠。"
 
 msgctxt "speaker:Old Tribesman"
 msgid "A cunt like this..."
-msgstr ""
+msgstr "こんなおまんこ……"
 
 msgctxt "speaker:Alaric"
 msgid "A cunt."
-msgstr ""
+msgstr "マンコ。"
 
 msgctxt "speaker:Kate"
 msgid "A cup like this, wouldn't be hard to sell that off at the local market."
-msgstr ""
+msgstr "この程度の杯なら、地元の市場で簡単に売れるだろう。"
 
 msgctxt "speaker:Garret"
 msgid "A curse that would heal my wounds, save my life and make me a creature of the forest. A Beast."
-msgstr ""
+msgstr "傷を癒やし、命を救い、森の生物へと変える呪い。獣となるのだ。"
 
 msgctxt "speaker:Sarah"
 msgid "A curse?"
-msgstr ""
+msgstr "呪い？"
 
 msgctxt "speaker:Narrator"
 msgid "A dagger glinted in the light, inches from her brother's throat."
-msgstr ""
+msgstr "光にきらめく短剣が、彼女の兄の喉元で輝いていた。"
 
 msgctxt "speaker:Narrator"
 msgid "A dagger."
-msgstr ""
+msgstr "ナイフ。"
 
 msgctxt "speaker:Narrator"
 msgid "A dagger. A handle as black as obsidian, a blade glowing in deep crimson red."
-msgstr ""
+msgstr "黒曜石のように漆黒の柄、深い紅に輝く刃。"
 
 msgctxt "speaker:Sigmund"
 msgid "A dark fountain?"
-msgstr ""
+msgstr "暗き泉か？"
 
 msgctxt "speaker:Narrator"
 msgid "A darkness stood out."
-msgstr ""
+msgstr "闇が際立っていた。"
 
 msgctxt "speaker:Narrator"
 msgid "A darkness that was more like a void, filled with starlight"
-msgstr ""
+msgstr "虚空のように、星の光に満ちた闇。"
 
 msgctxt "speaker:Narrator"
 msgid "A daughter loves her father, despite the quality of the man."
-msgstr ""
+msgstr "父の質を問わず、娘は父を愛する。"
 
 msgctxt "speaker:Atilla"
 msgid "A day, more than a year ago, in Lethram. But I kept myself hidden."
-msgstr ""
+msgstr "一年前、レトラムで。だが、私は身を隠していた。"
 
 msgctxt "speaker:Narrator"
 msgid "A dead end, Sarah thought. She knew every inch of the castle."
-msgstr ""
+msgstr "行き止まりだとサラは思った。城の至る所を知っていたからだ。"
 
 msgctxt "speaker:Narrator"
 msgid "A deafening and thunderous crashing sound roared out aross the room."
-msgstr ""
+msgstr "部屋中に轟音と雷鳴のような破裂音が響き渡った。"
 
 msgctxt "speaker:Narrator"
 msgid "A deafening cracking sound rang out across the room."
-msgstr ""
+msgstr "部屋中に轟音のような割れ音が響いた。"
 
 msgctxt "speaker:Narrator"
 msgid "A deafening scream erupted from the creature as it crashed into the stone floor, its limb smashing against the ground with a loud thud."
-msgstr ""
+msgstr "怪獣が石の床に激突し、四肢が地面を叩く大きな音と共に、恐ろしい叫び声が響きわたった。"
 
 msgctxt "speaker:Narrator"
 msgid "A deafening silence had descended on the people that had survived, and no doubt lost countless others."
-msgstr ""
+msgstr "生存者たちは死に絶えたかのように沈黙し、間違いなく無数の命を失った。"
 
 msgctxt "speaker:Sarah"
 msgid "A deal?"
-msgstr ""
+msgstr "取引？"
 
 msgctxt "speaker:Narrator"
 msgid "A deathly silence descended on the crowd."
-msgstr ""
+msgstr "死にそうな沈黙が群衆を覆った。"
 
 msgctxt "speaker:Metis"
 msgid "A decent attempt, but this one...I'll give it half a chance of surviving."
-msgstr ""
+msgstr "悪くない試みだが、この奴は……生き残る確率は半分くらいだ。"
 
 msgctxt "speaker:Narrator"
 msgid "A decent sum. She wouldn't live off it forever, but it would keep her housed for a good while. Enough to make a plan."
-msgstr ""
+msgstr "それなりの額だ。彼女はそれを一生暮らせるわけではないが、しばらくは住居費には困らないだろう。計画を立てるのに十分な時間がある。"
 
 msgctxt "speaker:Narrator"
 msgid "A deep groan of pain roared out from his throat as he collapsed to the ground."
-msgstr ""
+msgstr "苦痛に満ちた荒い声で、彼は地面へ崩れ落ちた。"
 
 msgctxt "speaker:Narrator"
 msgid "A deep growl, followed by his already sizeable cock expanding further."
-msgstr ""
+msgstr "深い唸りが漏れ、すでに大きく膨らんでいたチンポがさらに大きくなった。"
 
 msgctxt "speaker:Narrator"
 msgid "A deep grunt errupted from Alaric, his grip on her hip and head tightening, adding to the pain."
-msgstr ""
+msgstr "アラリックから深い唸りが漏れ、彼女の腰と頭を握りしめる力が強まり、痛みが増した。"
 
 msgctxt "speaker:Narrator"
 msgid "A deep grunt proceeded what she did not yet know would follow."
-msgstr ""
+msgstr "深い唸りが、彼女がまだ知る由もない後続の出来事の前触れとなった。"
 
 msgctxt "speaker:Narrator"
 msgid "A deep grunt, then she felt him expanding inside of her."
-msgstr ""
+msgstr "深い唸りが漏れ、彼女は彼が体内で膨らむのを感じた。"
 
 msgctxt "speaker:Narrator"
 msgid "A deep panic had overtaken the people of Lethram."
-msgstr ""
+msgstr "レトラムの人々は深い恐怖に襲われた。"
 
 msgctxt "speaker:Narrator"
 msgid "A deep part of her wanted to lunge for her sword and make them all pay."
-msgstr ""
+msgstr "深層の彼女の一部は、剣を抜いて彼ら全員に報復したくなる衝動に駆られた。"
 
 msgctxt "speaker:Narrator"
 msgid "A deep sleep took hold of her."
-msgstr ""
+msgstr "深い眠りが彼女を包み込んだ。"
 
 msgctxt "speaker:Narrator"
 msgid "A degree of seperation between herself and the real world, now again full of uncertainty."
-msgstr ""
+msgstr "自分自身と現実世界との間に、再び不確実さに満ちた隔たりが生じている。"
 
 msgctxt "speaker:Razaphel"
 msgid "A design in which every path bends towards the same desination."
-msgstr ""
+msgstr "すべての道が同じ目的地へと曲がる設計だ。"
 
 msgctxt "speaker:Narrator"
 msgid "A detailed map of the city of Rahayal, containing not just all the districts, but even down to recording most streets and alleys."
-msgstr ""
+msgstr "ラーハヤルの都市の詳細な地図で、すべての地区だけでなく、多くの通りや路地まで記録されている。"
 
 msgctxt "speaker:Narrator"
 msgid "A difference between knowing a thing and seeing it. And experiencing this debauchery was almost too much for her."
-msgstr ""
+msgstr "知っていることと、目にすることは違う。そしてこの淫乱を体験することは、彼女にとってあまりにも重すぎた。"
 
 msgctxt "speaker:Razaphel"
 msgid "A different world, in a place beyond the dimensions of your own, where life lived forever."
-msgstr ""
+msgstr "異なる世界。あなたの次元を超えた場所において、永遠に生き続ける生命が息づく場所です。"
 
 msgctxt "speaker:Xanthippe"
 msgid "A disaster."
-msgstr ""
+msgstr "惨事だ。"
 
 msgctxt "speaker:Sarah"
 msgid "A discount, really? Why?"
-msgstr ""
+msgstr "安売りって、本気？どうしたの？"
 
 msgctxt "speaker:Narrator"
 msgid "A distant echo of a woman who dreamed of so much more."
-msgstr ""
+msgstr "遥か彼方の、もっと大きな夢を抱いていた女性の残響。"
 
 msgctxt "speaker:Narrator"
 msgid "A divine omen, one that made victory so obvious that it made them eager for the bloodshed."
-msgstr ""
+msgstr "神託。勝利があまりに明白となり、彼らを血浴びたくなるほど欲した。"
 
 msgctxt "speaker:Narrator"
 msgid "A divine sign of their right to rule."
-msgstr ""
+msgstr "支配を正当化する神のしるし。"
 
 msgctxt "speaker:Cassius"
 msgid "A doctor in Rahayal, he has studied the jungles and their diseases more than any man alive."
-msgstr ""
+msgstr "ラハイアルの医者であり、生きている人間の中で最もジャングルとその病を研究している。"
 
 msgctxt "speaker:Narrator"
 msgid "A dominating silence hung over the room. Ashes slowly drifted across the floor."
-msgstr ""
+msgstr "部屋には支配的な沈黙が漂い、灰がゆっくりと床を横切った。"
 
 msgctxt "speaker:Narrator"
 msgid "A door had been thrown open and a cadre of servants swarmed behind the man who now walked ahead of the pack."
-msgstr ""
+msgstr "扉が勢いよく開け放たれ、先導する男の背後から一団の用人たちが蜂の巣のように湧き上がってきた。"
 
 msgctxt "speaker:Narrator"
 msgid "A door with a mind of its own. Sarah thought she couldn't be more unnerved by the thing."
-msgstr ""
+msgstr "自分勝手なドアだ。サラは、それほど恐ろしいものに出会ったことはなかったとさえ思っていた。"
 
 msgctxt "speaker:Sarah"
 msgid "A dozen attacks?"
-msgstr ""
+msgstr "十二の攻撃か"
 
 msgctxt "speaker:Narrator"
 msgid "A dread they had not yet tasted."
-msgstr ""
+msgstr "彼らがまだ味わったことのない恐怖。"
 
 msgctxt "speaker:Narrator"
 msgid "A dreadful quietness came over the hall."
-msgstr ""
+msgstr "大広間に沈黙が訪れた。"
 
 msgctxt "speaker:Narrator"
 msgid "A dreadful silence came over the room as a everyone turned their heads to see the source of the disturbance."
-msgstr ""
+msgstr "全員が騒ぎの元を確認するために首を傾げた時、部屋は恐ろしい沈黙に包まれた。"
 
 msgctxt "speaker:Narrator"
 msgid "A dream of her mother...father...and Thomas."
-msgstr ""
+msgstr "母、父、そしてトーマスの夢。"
 
 msgctxt "speaker:Narrator"
 msgid "A dream she had murdered, returned so vividly that she could now feel it on her skin."
-msgstr ""
+msgstr "かつて彼女が殺した夢が、肌を伝うほどの鮮明さで蘇った。"
 
 msgctxt "speaker:Narrator"
 msgid "A dream she had once."
-msgstr ""
+msgstr "かつての夢"
 
 msgctxt "speaker:Narrator"
 msgid "A dress was sprawled out across it. Just by looking at it, one could see how expensive it was."
-msgstr ""
+msgstr "その上にはドレスが広げられていた。ただ眺めるだけでも、どれほど高価かがわかる。"
 
 msgctxt "speaker:Narrator"
 msgid "A drink couldn't hurt."
-msgstr ""
+msgstr "一杯でも悪くないだろう。"
 
 msgctxt "speaker:Narrator"
 msgid "A dryer temperate."
-msgstr ""
+msgstr "少し落ち着いた。"
 
 msgctxt "speaker:Narrator"
 msgid "A dullness had been lifted, and Sarah prayed it would remain forever banished."
-msgstr ""
+msgstr "暗い雲が晴れ、サラはそれが永遠に去ったままになることを祈った。"
 
 msgctxt "speaker:Narrator"
 msgid "A faint distant voice in her head tried to speak reason."
-msgstr ""
+msgstr "頭の中で、遠くから来る微弱な声が理性を説こうとした。"
 
 msgctxt "speaker:Marshal Edmond"
 msgid "A fair assumption, I would say."
-msgstr ""
+msgstr "なるほど、その通りだ"
 
 msgctxt "speaker:Ramsey"
 msgid "A fair price and we treat all our customers like family, not like those big places that just want your money."
-msgstr ""
+msgstr "適正な価格で、我々はすべての顧客を家族のように扱います。単にお金を欲しがるような大店とは違いますから。"
 
 msgctxt "speaker:Narrator"
 msgid "A familiar purple, though she struggled to place it."
-msgstr ""
+msgstr "慣れ親しんだ紫色だが、彼女はそれを特定するのが困難だった。"
 
 msgctxt "speaker:Narrator"
 msgid "A familiar voice responded."
-msgstr ""
+msgstr "馴染みのある声が返ってきた。"
 
 msgctxt "speaker:Narrator"
 msgid "A family working at an inn looked up as they passed, sparing them a glance."
-msgstr ""
+msgstr "通りかかった宿の一家が、一瞥を惜しまず見上げた。"
 
 msgctxt "speaker:Sarah"
 msgid "A family."
-msgstr ""
+msgstr "一家。"
 
 msgctxt "speaker:Sarah"
 msgid "A famine? That's horrible...we can't allow that to happen."
-msgstr ""
+msgstr "飢え？ひどいことだ…そんなことは起こしてはいけない。"
 
 msgctxt "speaker:Narrator"
 msgid "A fantasy."
-msgstr ""
+msgstr "幻想だ。"
 
 msgctxt "speaker:Narrator"
 msgid "A fate stone, the spirit had called it."
-msgstr ""
+msgstr "運命の石、精霊はそう呼んでいた。"
 
 msgctxt "speaker:Narrator"
 msgid "A father, that raised no hand to save his daughter."
-msgstr ""
+msgstr "父は、娘を救うために手を挙げなかった。"
 
 msgctxt "speaker:Narrator"
 msgid "A fear had descended over the city, one that had snuffed out any semblance of celebration."
-msgstr ""
+msgstr "恐怖が街に降りかかり、祝祭の気配を消し去った。"
 
 msgctxt "speaker:Narrator"
 msgid "A feeling ran through her. She feared it close to pride, pride at a job well done."
-msgstr ""
+msgstr "彼女の胸を走ったのは、誇りに近い感情だった。任務がうまくいったという自負心だ。"
 
 msgctxt "speaker:Narrator"
 msgid "A female soldier next to him snatched the dice from the floor and nearly instantly cast them again."
-msgstr ""
+msgstr "隣にいた女性兵士がサイコロを床から拾い、瞬く間に再び振る"
 
 msgctxt "speaker:Narrator"
 msgid "A ferocious screaming and roaring exploded as he was crowned the victor."
-msgstr ""
+msgstr "勝者として王冠を戴いた瞬間、激しい叫びと咆哮が爆発した。"
 
 msgctxt "speaker:Alaric"
 msgid "A few I guess. I never really did count."
-msgstr ""
+msgstr "まあ、数えようとも思わなかったからな。"
 
 msgctxt "speaker:Narrator"
 msgid "A few arrows fell on them as they advanced, but the large volley she had expected did not come."
-msgstr ""
+msgstr "彼らが前進するにつれ、数本の矢が落ちたが、彼女が期待したような大規模な矢雨は来なかった。"
 
 msgctxt "speaker:Narrator"
 msgid "A few clouds, moving strangely peaceful as if this brutal betrayal had not taken place."
-msgstr ""
+msgstr "数ある雲が、まるでこの残酷な裏切りもなかったかのように、奇妙に静かに動き出している。"
 
 msgctxt "speaker:Narrator"
 msgid "A few coins, that was it."
-msgstr ""
+msgstr "数枚の硬貨。それだけだ。"
 
 msgctxt "speaker:Narrator"
 msgid "A few days back, the royal messenger had been send back, carrying with him the message of her acceptance."
-msgstr ""
+msgstr "数日前、王立の使者が彼女の受諾を伝えるメッセージと共に戻ってきた。"
 
 msgctxt "speaker:Narrator"
 msgid "A few days had passed and their journey had progressed smoothly."
-msgstr ""
+msgstr "数日が過ぎ、旅は順調に進んでいた。"
 
 msgctxt "speaker:Narrator"
 msgid "A few days had passed since they had managed to get past the river crossing."
-msgstr ""
+msgstr "川を渡りきってから数日経過した。"
 
 msgctxt "speaker:Sarah"
 msgid "A few days off course wouldn't be the worst thing."
-msgstr ""
+msgstr "数日遅れても、最悪ではない。"
 
 msgctxt "speaker:Marion"
 msgid "A few did not attend."
-msgstr ""
+msgstr "数人は欠席した。"
 
 msgctxt "speaker:Narrator"
 msgid "A few dozen lives, to save millions?"
-msgstr ""
+msgstr "数十人の命で数百万を救うのか？"
 
 msgctxt "speaker:Narrator"
 msgid "A few faces lingered atop the towers of the castle, but Sarah couldn't even be certain they were soldiers. Perhaps simply scared civillians."
-msgstr ""
+msgstr "城の塔の上には数人の顔が見えたが、サラは彼らが兵士なのかただの恐怖に震える市民なのかも確信できなかった。"
 
 msgctxt "speaker:Sarah"
 msgid "A few farmers here and there."
-msgstr ""
+msgstr "そこら中に点在する数人の農民だ。"
 
 msgctxt "speaker:Narrator"
 msgid "A few fires, here and there."
-msgstr ""
+msgstr "いくつかの火が、あちこちで燃えている。"
 
 msgctxt "speaker:Narrator"
 msgid "A few gestured and looked in their direction, but for the most part, nobody noticed them."
-msgstr ""
+msgstr "数人は手を振り、こちらを見ていたが、大半は彼らに気づかなかった。"
 
 msgctxt "speaker:Narrator"
 msgid "A few greeted her, many more were already too deep into their drinks."
-msgstr ""
+msgstr "数人は彼女を歓迎したが、多くはすでに飲み物に深く沈んでいた。"
 
 msgctxt "speaker:Narrator"
 msgid "A few guards might come by, a day late, to inspect reports of a cry. And none would care for Alaric's sudden dissapearance."
-msgstr ""
+msgstr "数人の兵士が、報告書の点検を兼ねて遅れて訪れるかもしれない。だが、アラリックの突然の行方は誰も気にしないだろう。"
 
 msgctxt "speaker:Narrator"
 msgid "A few hours had passed and night had fallen over the city of Calshure."
-msgstr ""
+msgstr "数時間後、カルシュールの街は夜に包まれた。"
 
 msgctxt "speaker:Narrator"
 msgid "A few hours later, the cry of new life could be heard."
-msgstr ""
+msgstr "数時間後、新しい命の叫び声が聞こえてきた。"
 
 msgctxt "speaker:Carolyn"
 msgid "A few lashes will sort her out, and it will tell a different story to all the others that will think of stealing."
-msgstr ""
+msgstr "数本の鞭打ちで彼女を黙らせ、他の盗もうとする者たちに警告を与えるだろう。"
 
 msgctxt "speaker:Narrator"
 msgid "A few lights coming from lit lanterns could be seen, shining through the darkness."
-msgstr ""
+msgstr "灯に照らされたランタンから数本の光が、闇を切り裂いて見えた。"
 
 msgctxt "speaker:Narrator"
 msgid "A few marks on the map, notes left by Xan, probably to himself."
-msgstr ""
+msgstr "地図上の数か所の印。おそらく、自身へのメモを残したザンのものだろう。"
 
 msgctxt "speaker:Narrator"
 msgid "A few men and women dressed in the robes of scholars were walking around the digsite, but they seemed equally uninterested in her."
-msgstr ""
+msgstr "学者のローブを着た男女が発掘現場を歩き回っていたが、彼女にはまるで関心がなかったようだ。"
 
 msgctxt "speaker:Narrator"
 msgid "A few miles outside of the city walls, a Mythran army led by the uncle of the slain prince was camped. Soon they would begin their assault."
-msgstr ""
+msgstr "城壁から数マイルの地点、亡き王子の叔父を率いるミトラン軍が陣取っていた。間もなく彼らは攻撃を開始するだろう。"
 
 msgctxt "speaker:Narrator"
 msgid "A few minutes later, Sarah would hear the cracking of the whip and the girl's screams, coming from the square just outside the castle."
-msgstr ""
+msgstr "数分後、サラは城のすぐ外の広場から鞭の音と少女の悲鳴を聞いた。"
 
 msgctxt "speaker:Narrator"
 msgid "A few minutes later, the other man finished in her hand, his seed adding to the rest."
-msgstr ""
+msgstr "数分後、男は彼女の手の中で射精し、その精液が他のものに加わった。"
 
 msgctxt "speaker:Narrator"
 msgid "A few moments later, Samayra was fast asleep."
-msgstr ""
+msgstr "数分後、サマヤラは深く眠っていた。"
 
 msgctxt "speaker:Sarah"
 msgid "A few months ago I awoke from a dream, and for a brief moment, I swore that he was alive."
-msgstr ""
+msgstr "数ヶ月前、夢から覚めた時、一瞬だけ彼が生きていると確信した。"
 
 msgctxt "speaker:Gideon"
 msgid "A few more days after that, we expect most of your remaining troops to have landed and begun preparing."
-msgstr ""
+msgstr "その数日後には、残りの兵士の大半が到着し、準備を整えるだろうと予想されている。"
 
 msgctxt "speaker:Narrator"
 msgid "A few of the soldiers uttered a cruel laugh."
-msgstr ""
+msgstr "数人の兵士が冷たい笑いを漏らした。"
 
 msgctxt "speaker:Narrator"
 msgid "A few orcs muddled about, engaged in trivial work."
-msgstr ""
+msgstr "数人のオークが、些細な作業に追われてうろついていた。"
 
 msgctxt "speaker:Narrator"
 msgid "A few patrons were seated by their own tables, occupied in their own conversations"
-msgstr ""
+msgstr "数人の客がそれぞれのテーブルに座り、それぞれの会話をしていた。"
 
 msgctxt "speaker:Narrator"
 msgid "A few people gave her a worried or confused look, but nobody was calling for the guards."
-msgstr ""
+msgstr "数人は彼女を心配したような、あるいは困惑したような目で見せたが、誰かが警備隊を呼ぶことはなかった。"
 
 msgctxt "speaker:Narrator"
 msgid "A few people in the street seemed to notice them go by, but most went about their day."
-msgstr ""
+msgstr "通りを歩く人々の中には、彼らを気付きそうな者もいたが、大半はいつものように忙しさを続けた。"
 
 msgctxt "speaker:Narrator"
 msgid "A few plumes of smoke rose up, suggesting at least some still lived there."
-msgstr ""
+msgstr "数本の煙が立ち上り、そこにはまだ生きている者がいたことを示唆していた。"
 
 msgctxt "speaker:Narrator"
 msgid "A few pulls was all it took for him to finish."
-msgstr ""
+msgstr "数回引くだけで、彼は完了した。"
 
 msgctxt "speaker:Narrator"
 msgid "A few rows over, some of her soldiers lit up, screaming their final words, their armors quickly melting against their bodies, trapping them inside them."
-msgstr ""
+msgstr "数列先、彼女の兵士の一部が炎に包まれ、最期の叫びを上げている。鎧は体から熱を帯びて溶け出し、彼らを内部に閉じ込めていく。"
 
 msgctxt "speaker:Sarah"
 msgid "A few scratches. Nothing I can't survive."
-msgstr ""
+msgstr "数回の傷痕。私には耐え得る程度のものだ。"
 
 msgctxt "speaker:Narrator"
 msgid "A few second later, Xan appeared in the room, slamming the door open so violently it bashed into the wall."
-msgstr ""
+msgstr "数秒後、ザンが部屋に現れ、ドアを勢いよく叩き開け、壁に激突させた。"
 
 msgctxt "speaker:Narrator"
 msgid "A few steps more and she was back on the middle of the market place."
-msgstr ""
+msgstr "数歩進むと、彼女は再び広場の真ん中にいた。"
 
 msgctxt "speaker:Narrator"
 msgid "A few steps out from around the corner, and then they turned."
-msgstr ""
+msgstr "角の少し先で立ち止まり、振り返る。"
 
 msgctxt "speaker:Dalia"
 msgid "A few that I've seen. Some seem to be his friends. Others...old rivals, maybe? I don't know exactly."
-msgstr ""
+msgstr "数人見たことがある。その中には彼の友人もいるようだ。他は…古のライバルかもしれない。正確にはわからないが。"
 
 msgctxt "speaker:Narrator"
 msgid "A few voices rose in nervous whispers."
-msgstr ""
+msgstr "数人の声が、緊張したささやき声で上がった。"
 
 msgctxt "speaker:Narrator"
 msgid "A few weeks had passed and almost every day, Sarah and Kate had spent practicing together."
-msgstr ""
+msgstr "数週間が過ぎ、ほぼ毎日サラとケイトは練習に励んでいた。"
 
 msgctxt "speaker:Narrator"
 msgid "A few wobbled about, clearly drunk."
-msgstr ""
+msgstr "数人はふらつき、明らかに酔っ払っている。"
 
 msgctxt "speaker:Narrator"
 msgid "A few yards, in a cage very similar to hers, she saw two shadow figures, moving."
-msgstr ""
+msgstr "数ヤード先、彼女と似たような檻の中に、二人の影が動いていた。"
 
 msgctxt "speaker:Narrator"
 msgid "A few years ago, the former elder that had watched over Castle Reinmeer retired. Elder Tirion had been his replacement."
-msgstr ""
+msgstr "数年前、レインミール城を護衛していた元長老が引退しました。その後任はティリオン長老です。"
 
 msgctxt "speaker:Atilla"
 msgid "A few, but I heal quick."
-msgstr ""
+msgstr "数人か。だが、俺は治るのに早いな。"
 
 msgctxt "speaker:Kate"
 msgid "A few, the dumbest of the lot, but still. This shit always starts from the bottom and rises up."
-msgstr ""
+msgstr "数人、愚か者だがそれでも。この種のことはいつも下層から始まって上へ向かうものだ。"
 
 msgctxt "speaker:Varga"
 msgid "A few."
-msgstr ""
+msgstr "数人。"
 
 msgctxt "speaker:Narrator"
 msgid "A field of grass stretched across the small plain, tall trees threw out shade across the bank, and in the center a pool of water."
-msgstr ""
+msgstr "小平原に広がる草地、岸辺には高い木々が影を落とし、中央には水たまりがあった。"
 
 msgctxt "speaker:Narrator"
 msgid "A figure sat hunched on the edge, face buried in their hands."
-msgstr ""
+msgstr "一人の人影が、岸辺に座り込んでおり、顔を両手で覆っていた。"
 
 msgctxt "speaker:Narrator"
 msgid "A final attempt at a surprise attack."
-msgstr ""
+msgstr "奇襲の最終試みだ。"
 
 msgctxt "speaker:Sarah"
 msgid "A fine argument, but I suspect your motives are not so pure."
-msgstr ""
+msgstr "いい論理だ。だが、あなたの動機がこれほど純粋かどうかは疑わしい。"
 
 msgctxt "speaker:Kravel"
 msgid "A finger, bearing a ring."
-msgstr ""
+msgstr "指輪を戴いた指。"
 
 msgctxt "speaker:Narrator"
 msgid "A fire in a hearth, crackling."
-msgstr ""
+msgstr "暖炉の火がポカポカと燃えている。"
 
 msgctxt "speaker:Metis"
 msgid "A fire spell can burn down a city. Some mages can rip apart mountains."
-msgstr ""
+msgstr "炎の魔法で都市を焼き尽くすことも、一部の魔法使いなら山脈を引き裂くこともできる。"
 
 msgctxt "speaker:Narrator"
 msgid "A fire turned to inferno, the searing pleasure ran through her every nerve and sinew, wrenching out violent pleasure."
-msgstr ""
+msgstr "炎は地獄の火となり、激しい快楽が彼女の全身を駆け巡り、暴虐的な悦びを引き裂いた。"
 
 msgctxt "speaker:Narrator"
 msgid "A fire was burning in a hearth on the opposite end of the room."
-msgstr ""
+msgstr "部屋の向こう側で、暖炉に火が燃えていた。"
 
 msgctxt "speaker:Sarah"
 msgid "A fire will stand out in the dark."
-msgstr ""
+msgstr "暗闇に火は確かに光る。"
 
 msgctxt "speaker:Narrator"
 msgid "A firm push to her back, and Sarah tumbled forward, catching herself only just in time."
-msgstr ""
+msgstr "背中を強く押されると、サラは勢いよく前に転び、僅かに間に合わせてバランスを取った。"
 
 msgctxt "speaker:Narrator"
 msgid "A firm spank on her ass served as his version of approval to her answer."
@@ -1060,147 +1060,147 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "A firm spank to her ass rang out, and Sarah could feel the right cheek begin to burn."
-msgstr ""
+msgstr "お尻に鋭く響くスパンキングが、サラの右頬から灼熱のような痛みを走らせた。"
 
 msgctxt "speaker:Narrator"
 msgid "A flame had been awakened in her ever since that nothing could stomp out."
-msgstr ""
+msgstr "その日以来、彼女の中に燃える炎が宿り、何もそれを消し去ることはできなかった。"
 
 msgctxt "speaker:Narrator"
 msgid "A flash of regret ran through her."
-msgstr ""
+msgstr "一瞬の後悔が彼女を襲った。"
 
 msgctxt "speaker:Narrator"
 msgid "A flash passed before her eyes, striking her blind for a moment."
-msgstr ""
+msgstr "眼前に一瞬の閃光が走り、一時的に視界を塞いだ。"
 
 msgctxt "speaker:Narrator"
 msgid "A flash, something glimmered in the dark."
-msgstr ""
+msgstr "暗闇に、何かきらめく。"
 
 msgctxt "speaker:Narrator"
 msgid "A flawless face, an easy smile and a casual confidence made it hard not to notice him."
-msgstr ""
+msgstr "完璧な顔、気さくな笑顔、そして自然な自信が、彼を見逃せなくさせていた。"
 
 msgctxt "speaker:Narrator"
 msgid "A flow of tears became a sob, and before long, Sarah could feel her chest rising and falling as she began to wail."
-msgstr ""
+msgstr "涙の流れが泣き声に変わり、やがてサラは胸の起伏を感じながら号哭し始めた。"
 
 msgctxt "speaker:Narrator"
 msgid "A flush of heat build in her chest."
-msgstr ""
+msgstr "胸の奥に熱気が湧き上がってきた。"
 
 msgctxt "speaker:Narrator"
 msgid "A fool of a girl that had fled when her brother needed her."
-msgstr ""
+msgstr "兄弟が彼女を必要としている時に逃げ出した愚かな少女だ。"
 
 msgctxt "speaker:Narrator"
 msgid "A force pulled on her that ran deeper than any cold logic that Xan had tried to instil in her."
-msgstr ""
+msgstr "彼女を動かしたのは、ザンが植え付けた冷徹な論理よりも深い力だった。"
 
 msgctxt "speaker:Sarah"
 msgid "A founder?"
-msgstr ""
+msgstr "創設者？"
 
 msgctxt "speaker:Narrator"
 msgid "A frenzied back and forth."
-msgstr ""
+msgstr "混乱した行き来。"
 
 msgctxt "speaker:Narrator"
 msgid "A frenzy begins to form."
-msgstr ""
+msgstr "狂気的な快楽が渦巻く。"
 
 msgctxt "speaker:Narrator"
 msgid "A frenzy of maddening pleasure, the likes only he could draw out from her."
-msgstr ""
+msgstr "狂おしいほどの快楽の嵐。彼だけが引き出すことのできるような、彼女から。"
 
 msgctxt "speaker:Narrator"
 msgid "A frenzy took hold of her as she continued her march, up and up the hill, faster and faster."
-msgstr ""
+msgstr "彼女は山を登り続けるうちに、狂おしいほどの悦びに支配されていった。"
 
 msgctxt "speaker:Sarah"
 msgid "A friend?"
-msgstr ""
+msgstr "友達？"
 
 msgctxt "speaker:Narrator"
 msgid "A full moon draped the world in pale light, making the dunes appear as silver."
-msgstr ""
+msgstr "満月の光が世界を薄く照らし、砂丘は銀色に見えた。"
 
 msgctxt "speaker:Alfred"
 msgid "A fun fling, I could forgive being disobedient."
-msgstr ""
+msgstr "従順でなくても許せる、楽しい遊び相手だ。"
 
 msgctxt "speaker:Narrator"
 msgid "A fury was building in the thing, she could hear its screams mix with an animalistic fury, something close to a hiss."
-msgstr ""
+msgstr "その怪物の内部には怒りが蓄積しており、彼女は獣のような狂気と混ざり合う叫び声を聞き取れた。それはヒスのような音に近く、"
 
 msgctxt "speaker:Xanthippe"
 msgid "A future where every soul, be it a king or a peasant, will be valued and safeguarded."
-msgstr ""
+msgstr "王や民、すべての魂が尊重され、守られるような未来。"
 
 msgctxt "speaker:Narrator"
 msgid "A gate, a few watch towers, all made from what seemed like scavenged material."
-msgstr ""
+msgstr "門と数基の警備塔。まるで拾い集めたような素材で作られていた。"
 
 msgctxt "speaker:Narrator"
 msgid "A general easiness of being. Their conversations flowed naturally. He made her forget the rest of the hall."
-msgstr ""
+msgstr "安らぎと充足感に満ちた空気が漂っていた。会話は自然に交わされ、彼は彼女をホール内の他のすべてから忘れさせた。"
 
 msgctxt "speaker:Narrator"
 msgid "A gentle touch, or a threat of more violence, she could hardly tell anymore."
-msgstr ""
+msgstr "優しく触れるのか、暴力を繰り返すかの区別がつかなくなっていた。"
 
 msgctxt "speaker:Narrator"
 msgid "A genuine smile crept over Samayra's face."
-msgstr ""
+msgstr "サマヤラの顔に、本物の笑みが浮かび上がった。"
 
 msgctxt "speaker:Old Tribesman"
 msgid "A gift is fitting, but-"
-msgstr ""
+msgstr "贈り物はふさわしいが、しかし─"
 
 msgctxt "speaker:Narrator"
 msgid "A gift like that would be more than she could hope to earn in a lifetime of service."
-msgstr ""
+msgstr "そのような贈り物は、生涯の奉仕で得られるものより遥かに多く、彼女は望むことさえできないほどだった。"
 
 msgctxt "speaker:Atilla"
 msgid "A gift must show to the partner, that they have wagered their life. To show how serious they are in their ask."
-msgstr ""
+msgstr "贈り物は、命を賭けたことを示すものであり、その願いの真摯さを表すものだ。"
 
 msgctxt "speaker:Kamal"
 msgid "A gift such as this, I could not dare to have expected."
-msgstr ""
+msgstr "このような贈り物、期待できるはずがありませんでした"
 
 msgctxt "speaker:Ragged Man"
 msgid "A gift, from my friends. Or perhaps payment for my services now rendered."
-msgstr ""
+msgstr "友人からの贈り物か。あるいは、今支払った対価だ。"
 
 msgctxt "speaker:Sarah"
 msgid "A gift?"
-msgstr ""
+msgstr "贈り物？"
 
 msgctxt "speaker:Thomas"
 msgid "A gift?"
-msgstr ""
+msgstr "贈り物？"
 
 msgctxt "speaker:Narrator"
 msgid "A girl had grown up here."
-msgstr ""
+msgstr "少女がここに住んでいた。"
 
 msgctxt "speaker:Thomas"
 msgid "A girl like that needs someone who can make her happy. Not to be married off to a depressive like me."
-msgstr ""
+msgstr "そんな娘は、私のような鬱病持ちに嫁ぐより、幸せにしてあげられる誰かが必要だ"
 
 msgctxt "speaker:Eula"
 msgid "A girl like you ain't gettin through here without givin it up at least a few times."
-msgstr ""
+msgstr "お前のような女がここを抜けるなら、数回くらいは耐えきれずに犯されることになっちまうわ。"
 
 msgctxt "speaker:Sakar"
 msgid "A girl like you wouldn't last a day on the old road by yourself."
-msgstr ""
+msgstr "一人じゃ、古い道で一日も生きられないような女だ。"
 
 msgctxt "speaker:Narrator"
 msgid "A girl of no means and no title, in a city where so many had lives no different from her own."
-msgstr ""
+msgstr "手段も肩書きもない少女が、彼女と同じような人生を歩む者たちが溢れるこの街で。"
 
 msgctxt "speaker:Alaric"
 msgid "A girl your age shouldn't be this pent up. Maybe I need to pay you a visit more often?"
@@ -1208,323 +1208,323 @@ msgstr ""
 
 msgctxt "speaker:Sarah"
 msgid "A girl."
-msgstr ""
+msgstr "少女。"
 
 msgctxt "speaker:Tribesman"
 msgid "A glory many of us Tribesman would have wished to seize. You must have made a pretty fortune off what you took there."
-msgstr ""
+msgstr "我々の多くが欲しがった栄光だ。そこで得たものから、相当な富を築いたに違いない。"
 
 msgctxt "speaker:Narrator"
 msgid "A glow on the surface of her skin."
-msgstr ""
+msgstr "肌表面に浮かぶ光。"
 
 msgctxt "speaker:Narrator"
 msgid "A goblin wife...was that what had become of her?"
-msgstr ""
+msgstr "ゴブリンの妻……それが彼女に成り果てていたのか？"
 
 msgctxt "speaker:Metis"
 msgid "A good choice."
-msgstr ""
+msgstr "良い選択だ。"
 
 msgctxt "speaker:Tailor"
 msgid "A good craftsmen must first study the object of his work."
-msgstr ""
+msgstr "優れた職人は、まずその仕事の対象を研究しなければならない。"
 
 msgctxt "speaker:Kate"
 msgid "A good few days, actually. I thought I was showing real restraint by keeping it to myself for that long."
-msgstr ""
+msgstr "実際、数日間は持った。それだけ我慢して隠し持っていたのは、自制心を発揮していたと自負していただけだ"
 
 msgctxt "speaker:Sarah"
 msgid "A good king needs good advisors, and do you know anyone smarter than me?"
-msgstr ""
+msgstr "良い王様には良い顧問官が必要だ。そして、私より賢い人を知っているか？"
 
 msgctxt "speaker:Narrator"
 msgid "A good man that loved a good day's work."
-msgstr ""
+msgstr "良い男は、一日の仕事を愛するものだ。"
 
 msgctxt "speaker:Narrator"
 msgid "A good meal, wasted on her."
-msgstr ""
+msgstr "良い食事が、彼女に無駄遣いされた。"
 
 msgctxt "speaker:Marion"
 msgid "A good ruler lets the facts guide him, not hysteria."
-msgstr ""
+msgstr "優れた指導者は、事実を導き手とする。"
 
 msgctxt "speaker:Carolyn"
 msgid "A good thing you don't enjoy this sort of thing, I mean."
-msgstr ""
+msgstr "まあ、あなたがそんなの好きじゃないのはいいことだ。つまりね。"
 
 msgctxt "speaker:Sarah"
 msgid "A governor?"
-msgstr ""
+msgstr "知事？"
 
 msgctxt "speaker:Narrator"
 msgid "A gradual yet ongoing collapse."
-msgstr ""
+msgstr "崩壊は緩やかでありながら、止まることを知らず進んでいる。"
 
 msgctxt "speaker:Razaphel"
 msgid "A great and final war draws closer."
-msgstr ""
+msgstr "大いなる終焉の戦いが迫っている。"
 
 msgctxt "speaker:Narrator"
 msgid "A great blizzard seemed to form, rushing up behind the fleeing scout unit."
-msgstr ""
+msgstr "巨大な雪嵐が、逃げる斥候部隊の背後から急速に迫ってきたように見えた。"
 
 msgctxt "speaker:Narrator"
 msgid "A great brute of an orc sat outside the entrance to a tent, sliding a whetstone across a two-handed sword, sharpening it. The sword alone, Sarah thought, was bigger than herself."
-msgstr ""
+msgstr "巨大なオグロのオークがテントの入口に座り、二刀流の剣を研ぎ石で磨いていた。その剣だけでサラより大きいと思った。"
 
 msgctxt "speaker:Narrator"
 msgid "A great chaotic roar of metal and flesh slamming against one another."
-msgstr ""
+msgstr "金属と肉が激突する大混乱の唸り声。"
 
 msgctxt "speaker:Narrator"
 msgid "A great city was being put to the sword, and she had played a part in it."
-msgstr ""
+msgstr "巨大な都市が剣に屠られ、彼女はそれに手を貸したのだ。"
 
 msgctxt "speaker:Narrator"
 msgid "A great force pulled her forward."
-msgstr ""
+msgstr "巨大な力が彼女を前に引きずり去った。"
 
 msgctxt "speaker:Narrator"
 msgid "A great loud roaring voice summoned them from their work."
-msgstr ""
+msgstr "巨大な轟音で、彼らを作業から呼び戻した。"
 
 msgctxt "speaker:Narrator"
 msgid "A great many of them have violent eyes. She almost imagines she can see their fantasies play out in their eyes."
-msgstr ""
+msgstr "多くの人々が暴力的な目をしている。彼女は、その目から人々の幻想が繰り広げられているかのように錯覚するほどだ。"
 
 msgctxt "speaker:Narrator"
 msgid "A great metal chain ran around it, shattered and broken, some of the links were sprawled out across the grass."
-msgstr ""
+msgstr "巨大な金属の鎖がそれを囲んでいた。鎖は砕け散り、いくつかの輪が芝生の上に横たわっている。"
 
 msgctxt "speaker:Narrator"
 msgid "A great open space in the midsts of this claustrophobic construct."
-msgstr ""
+msgstr "この閉塞的な構造物の真ん中に、広大な空間が広がっている。"
 
 msgctxt "speaker:Narrator"
 msgid "A great path lead up to the dais, where atop the stairs sat the throne of Normandi."
-msgstr ""
+msgstr "巨大な階段の頂上には、ノルマンディの王座が置かれていた。"
 
 msgctxt "speaker:Narrator"
 msgid "A great roar of some kind rang out."
-msgstr ""
+msgstr "巨大な咆哮が響き渡った。"
 
 msgctxt "speaker:Razaphel"
 msgid "A great war raged between your race and mine. Between your Gods and mine."
-msgstr ""
+msgstr "あなたの種族と私の間、そしてあなたの神々と私の間で、大戦争が繰り広げられた。"
 
 msgctxt "speaker:Vaelen"
 msgid "A great war. A bright future."
-msgstr ""
+msgstr "大いなる戦争。輝かしい未来。"
 
 msgctxt "speaker:Narrator"
 msgid "A greedy noble, round and fat as a pig, shoved a sausage into his mouth."
-msgstr ""
+msgstr "太った豚のような貪欲な貴族が、ソーセージを口へ押し込んだ。"
 
 msgctxt "speaker:Narrator"
 msgid "A green wax seal covered the front."
-msgstr ""
+msgstr "緑色のワックスで封印された封蝋が、正面を覆っていた。"
 
 msgctxt "speaker:Narrator"
 msgid "A grinding sound, like metal scraping metal, rang out through the tunnels. The echo made it feel like the sound was in Sarah's body."
-msgstr ""
+msgstr "トンネルを突き抜けて、金属が擦り合うような軋む音が響いた。その反響は、音がサラの体内に鳴っているようにも思えた。"
 
 msgctxt "speaker:Narrator"
 msgid "A group of Hassar's soldiers was standing in a circle. In the midsts of the circle, several young women were being violated by the invading soldiers."
-msgstr ""
+msgstr "ハッサー兵士たちが円陣を組み、その中心では若い女性たちが侵入者によって犯されていた。"
 
 msgctxt "speaker:Narrator"
 msgid "A group of farmers had burned the bridges leading to one of the northern provinces, out of protest over land rights, preventing Rosanna's standing army from moving there without taking a month long detour."
-msgstr ""
+msgstr "土地権を巡る抗議として、北部の諸省の一つへの橋を農民たちが焼き払い、ロザナの常備軍が迂回なしにそこへ進出するには一ヶ月もの時間を要するよう仕向けた。"
 
 msgctxt "speaker:Narrator"
 msgid "A group of five or so soldiers walked into the tent, already undressed."
-msgstr ""
+msgstr "五人ほどの兵士が、すでに裸になりながらテントの中に入った。"
 
 msgctxt "speaker:Narrator"
 msgid "A group of orcs and goblins, armed with simple spears and crude knives, advanced across the plaza."
-msgstr ""
+msgstr "シンプルな槍と荒っぽい包丁を携えたオークとゴブリンの群れが、広場を進んでくる"
 
 msgctxt "speaker:Narrator"
 msgid "A group of soldiers blocked the road up ahead of her."
-msgstr ""
+msgstr "前方に兵士たちが道を引き止めていた。"
 
 msgctxt "speaker:Narrator"
 msgid "A group of soldiers, too slow to run away, exploded into red mist as the thing's tail slashed through them."
-msgstr ""
+msgstr "兵士たちは逃げ遅れ、尾の切り裂く音と共に赤い霧へと散った。"
 
 msgctxt "speaker:Narrator"
 msgid "A growing confidence in himself."
-msgstr ""
+msgstr "自分自身への自信が育つ。"
 
 msgctxt "speaker:Narrator"
 msgid "A guard freed her from her chain and guided her through the doors, into the judge's court."
-msgstr ""
+msgstr "兵士が鎖を解き、彼女を門を通り、裁判所の前に導いた。"
 
 msgctxt "speaker:Narrator"
 msgid "A guard slowly begins to laugh."
-msgstr ""
+msgstr "兵士がゆっくりと笑いをこらえ始めた。"
 
 msgctxt "speaker:Narrator"
 msgid "A gulp."
-msgstr ""
+msgstr "喉を鳴らした。"
 
 msgctxt "speaker:Narrator"
 msgid "A gust of cold night air rushed into the house."
-msgstr ""
+msgstr "家の中に冷たい夜風が吹き込んだ。"
 
 msgctxt "speaker:Narrator"
 msgid "A gust of cold wind chased after them, but the door was quickly shut behind them."
-msgstr ""
+msgstr "冷たい風が彼らを追いかけたが、ドアはすぐに彼らの背後に閉ざされた。"
 
 msgctxt "speaker:Narrator"
 msgid "A gust of wind blew past her and Sarah wrapped her arms around herself, trying to shield herself from the cold."
-msgstr ""
+msgstr "風がサラの体を掠め、彼女は寒さをしのぐために腕を組んだ。"
 
 msgctxt "speaker:Narrator"
 msgid "A gust of wind rushed past her, across her naked body, the cold taking root in her."
-msgstr ""
+msgstr "風が彼女の裸体を掠め去り、寒さがその身に根を張った。"
 
 msgctxt "speaker:Caleb"
 msgid "A guy can dream, can't he?"
-msgstr ""
+msgstr "男だって夢見れるだろ？"
 
 msgctxt "speaker:Narrator"
 msgid "A hail of stone descended on the Rosannan army, splatters of red mist erupted across the entire line."
-msgstr ""
+msgstr "石の雨はローサナ軍に降り注ぎ、赤い霧の飛び散りが整列全体を覆った。"
 
 msgctxt "speaker:Sarah"
 msgid "A handful of guards...and me."
-msgstr ""
+msgstr "護衛の数人……そして私だけ。"
 
 msgctxt "speaker:Narrator"
 msgid "A happiness that was so natural and obvious, she wondered how she could have ever felt sad in a world so beautiful."
-msgstr ""
+msgstr "そんな自然で明白な幸せに、彼女はなぜかこの美しい世界で悲しみを抱えたことが不思議に思えた。"
 
 msgctxt "speaker:Narrator"
 msgid "A happy old man."
-msgstr ""
+msgstr "幸せそうな老人だ。"
 
 msgctxt "speaker:Narrator"
 msgid "A hard life had given him a hard body. The many scars bore testament to this unspoken and yet obvious truth."
-msgstr ""
+msgstr "過酷な人生は、彼に過酷な肉体を与えた。数々の傷痕は、この言わぬが花の真実を物語っていた。"
 
 msgctxt "speaker:Cassius"
 msgid "A hard worker."
-msgstr ""
+msgstr "勤勉な男だ。"
 
 msgctxt "speaker:Narrator"
 msgid "A haunting blue light had drowned out all other light."
-msgstr ""
+msgstr "不気味な青い光が、他のすべての光を飲み込んでいた。"
 
 msgctxt "speaker:Varga"
 msgid "A head on assault on the fort would be a disaster."
-msgstr ""
+msgstr "要塞への正面からの攻撃は、大惨事になるだろう。"
 
 msgctxt "speaker:Narrator"
 msgid "A head taller than the tallest man she had ever seen in her life."
-msgstr ""
+msgstr "人生で見たことのある最も背の高い男よりもさらに高い頭を持つ。"
 
 msgctxt "speaker:Varga"
 msgid "A head-on assault on the fort would be a disaster."
-msgstr ""
+msgstr "要塞への正面からの攻撃は失敗に終わるだろう。"
 
 msgctxt "speaker:Sarah"
 msgid "A heart attack? Didn't know you had so many enemies in the castle to be fearful of."
-msgstr ""
+msgstr "心臓発作？城にそんな数の敵がいるなんて、知らなかったわ。"
 
 msgctxt "speaker:Narrator"
 msgid "A heat was building her chest as she slowly, partially slid a finger inside herself."
-msgstr ""
+msgstr "胸の奥に熱がこみ、指をゆっくりと部分的に体内へ滑らせた。"
 
 msgctxt "speaker:Narrator"
 msgid "A heavy breath slipped past her lips as a jolt of pleasure moved through her body."
-msgstr ""
+msgstr "息を深く吐き、快楽の電撃が全身を駆け巡った。"
 
 msgctxt "speaker:Narrator"
 msgid "A heavy pause lingered."
-msgstr ""
+msgstr "重く長い沈黙が漂った。"
 
 msgctxt "speaker:Narrator"
 msgid "A heavy pause."
-msgstr ""
+msgstr "重く長い沈黙。"
 
 msgctxt "speaker:Narrator"
 msgid "A heavy sigh slipped past her lips as the creature grabbed at her breast, still covered by her clothes."
-msgstr ""
+msgstr "服で覆われた乳房を、生物が掴むと、彼女は深く息を吐いた。"
 
 msgctxt "speaker:Narrator"
 msgid "A heavy silence loomed over the field. Two armies, waiting with bated breath for the next moment."
-msgstr ""
+msgstr "重厚な沈黙が戦場を覆う。両軍は次の瞬間を、屏息で待ち構えていた。"
 
 msgctxt "speaker:Hecate"
 msgid "A hierarchy."
-msgstr ""
+msgstr "階級。"
 
 msgctxt "speaker:Narrator"
 msgid "A high pitched hissing scream emerged as it fell to the earth, writing in pain."
-msgstr ""
+msgstr "大地に落ちるや、痛みに歪んだ尖ったヒス声が上がった。"
 
 msgctxt "speaker:Narrator"
 msgid "A high pitched, furious scream, like an animal snared in a trap."
-msgstr ""
+msgstr "捕らえられた獣のような、高鳴る怒叫が空から降りてきた。"
 
 msgctxt "speaker:Dio"
 msgid "A highland stew, traditional Mythran peasant dish."
-msgstr ""
+msgstr "高地のシチュー、ミトラの農民料理だ。"
 
 msgctxt "speaker:Narrator"
 msgid "A hiss emerged from the creature."
-msgstr ""
+msgstr "生物からはヒス音が漏れた。"
 
 msgctxt "speaker:Narrator"
 msgid "A hiss emerged from the spirit, what passed for laughter."
-msgstr ""
+msgstr "精霊からは、笑いにも似たヒス音が漏れた。"
 
 msgctxt "speaker:Narrator"
 msgid "A hissing sound emerged from the creature, the closest it could produce to a laugh."
-msgstr ""
+msgstr "精霊から、笑いに似たヒスという音が漏れ出した。"
 
 msgctxt "speaker:Narrator"
 msgid "A hissing sound emerged from the spirit."
-msgstr ""
+msgstr "精霊からはヒュッという音が漏れ出した。"
 
 msgctxt "speaker:Narrator"
 msgid "A hissing sound emerged from the thing. It took a moment for Sarah to realize it passed for laughter."
-msgstr ""
+msgstr "そのものからはヒュッという音が漏れ、サラはそれが笑いに通じることに気づくまで少し時間がかかった。"
 
 msgctxt "speaker:Narrator"
 msgid "A hole, large enough for maybe two men to move through."
-msgstr ""
+msgstr "二人が通れるほど大きな穴だ"
 
 msgctxt "speaker:Narrator"
 msgid "A home she hadn't thought of in a long time."
-msgstr ""
+msgstr "久しく想わなかった家。"
 
 msgctxt "speaker:Narrator"
 msgid "A home that only remained in her mind."
-msgstr ""
+msgstr "彼女の中にだけ残っていた家。"
 
 msgctxt "speaker:Narrator"
 msgid "A home, she thought. That's what it reminded her of."
-msgstr ""
+msgstr "家だ。そう思わされた。"
 
 msgctxt "speaker:Narrator"
 msgid "A home. A safe place in this world that belonged to her."
-msgstr ""
+msgstr "家。この世界に属する、彼女だけの安全な場所だ。"
 
 msgctxt "speaker:Narrator"
 msgid "A home. Food."
-msgstr ""
+msgstr "家。食料。"
 
 msgctxt "speaker:Narrator"
 msgid "A horde of impossible creatures that had never been meant for this world."
-msgstr ""
+msgstr "この世界に属すべきではなかった不可能な生物たちの群れが。"
 
 msgctxt "speaker:Narrator"
 msgid "A horde of the beasts, stumbling madly into the market square."
-msgstr ""
+msgstr "群れを成した獣たちが、狂ったように市場広場へ突入してきた。"
 
 msgctxt "speaker:Narrator"
 msgid "A horn."
@@ -1532,251 +1532,251 @@ msgstr ""
 
 msgctxt "speaker:Sarah"
 msgid "A house?"
-msgstr ""
+msgstr "家？"
 
 msgctxt "speaker:Narrator"
 msgid "A huge wave of water splashed across Sarah's face, nearly toppling her off her feet."
-msgstr ""
+msgstr "巨大な水しぶきがサラの顔を襲い、彼女を足から転ばせそうになった。"
 
 msgctxt "speaker:Narrator"
 msgid "A huge wide grin spread across Samayra's face as she saw the slave woman returned safely."
-msgstr ""
+msgstr "サムライラは、奴隷の女性が無事に戻ってきたことを見て、大きな笑みを浮かべた。"
 
 msgctxt "speaker:Narrator"
 msgid "A human Queen, married to an Orc, giving him children."
-msgstr ""
+msgstr "人間女王がオグを妻にし、子供を産んでいる。"
 
 msgctxt "speaker:Narrator"
 msgid "A human might use a cart, but they simply carried them on their shoulders."
-msgstr ""
+msgstr "人間なら馬車を使うが、彼らはただ肩に担いで運ぶだけだ。"
 
 msgctxt "speaker:Narrator"
 msgid "A humble trait for a person. A poor one for a king."
-msgstr ""
+msgstr "人間としての美徳だ。だが、王にとっては貧しいものだ。"
 
 msgctxt "speaker:Narrator"
 msgid "A hundred people, that together, represented the leadership of the refugees of Rosanna that had landed in Rahayal."
-msgstr ""
+msgstr "ロサーナの難民のリーダー格を担う者たち、百人以上がラハヤルに上陸した。"
 
 msgctxt "speaker:Kravel"
 msgid "A hunting accident, so his father says..."
-msgstr ""
+msgstr "狩猟中の事故だ、父がそう言うんだ…"
 
 msgctxt "speaker:Narrator"
 msgid "A job at this Inn might just be the thing she needed."
-msgstr ""
+msgstr "このインンの仕事は、彼女に必要なことかもしれない。"
 
 msgctxt "speaker:Elsa"
 msgid "A job! That's awesome!"
-msgstr ""
+msgstr "仕事！最高だ！"
 
 msgctxt "speaker:Sarah"
 msgid "A joke, Marion. He probably thought you were a joke, and I suppose, in that regard, he was right."
-msgstr ""
+msgstr "冗談だ、マリアン。おそらく彼は君を冗談だと考えていたのだろう。その点で、彼が正しいと私は思う。"
 
 msgctxt "speaker:Narrator"
 msgid "A justice of some kind, the others would whisper among themselves."
-msgstr ""
+msgstr "ある種の正義について、他の人たちはささやき合うだろう。"
 
 msgctxt "speaker:Narrator"
 msgid "A key."
-msgstr ""
+msgstr "鍵。"
 
 msgctxt "speaker:Narrator"
 msgid "A kind of death of spirit. People too defeated to fight back, but too desperate for life to give up, caught in some nightmarish liminal space."
-msgstr ""
+msgstr "魂の死。戦うほどではないが、生きるために諦めきれない人々が、悪夢のような境界に閉じ込められている状態だ。"
 
 msgctxt "speaker:Carolyn"
 msgid "A kind offer, but I have a girl waiting for me at home."
-msgstr ""
+msgstr "申し出は好意的だが、家に待っている娘がいる。"
 
 msgctxt "speaker:Narrator"
 msgid "A kindly smile on his face, the most he could do to communicate his appreciation for her."
-msgstr ""
+msgstr "顔には温かい笑みが浮かび、感謝を伝えることのできる最善の努力だった。"
 
 msgctxt "speaker:Sarah"
 msgid "A king ruled these lands. Soon a queen."
-msgstr ""
+msgstr "王がこれらの土地を治めていた。そしてまもなく、女王も現れるだろう。"
 
 msgctxt "speaker:Narrator"
 msgid "A kingdom of a different kind, she thought as she smiled and thought of her bull."
-msgstr ""
+msgstr "異国の王国だ、と彼女は微笑みながら牛を想った。"
 
 msgctxt "speaker:Narrator"
 msgid "A kiss so close to devouring."
-msgstr ""
+msgstr "喉を切られそうなキスだ。"
 
 msgctxt "speaker:Sarah"
 msgid "A kiss?"
-msgstr ""
+msgstr "キス？"
 
 msgctxt "speaker:Damian"
 msgid "A knife to my throat, I was all but done, my Lady."
-msgstr ""
+msgstr "喉元に刃を突きつけられ、もう終わりかと思ったわ、お方。"
 
 msgctxt "speaker:Sarah"
 msgid "A knight."
-msgstr ""
+msgstr "騎士。"
 
 msgctxt "speaker:Narrator"
 msgid "A knighting ceremony was a holy rite."
-msgstr ""
+msgstr "騎士授与式は神聖な儀式だった。"
 
 msgctxt "speaker:Narrator"
 msgid "A knock at the door broke her concentration."
-msgstr ""
+msgstr "ドアのノックが彼女の集中を切らした。"
 
 msgctxt "speaker:Narrator"
 msgid "A knock at the door caused her to sit up."
-msgstr ""
+msgstr "ドアのノックに気づき、彼女は座り直した。"
 
 msgctxt "speaker:Narrator"
 msgid "A knock at the door gained her attention."
-msgstr ""
+msgstr "ドアのノックが彼女の注意を引いた。"
 
 msgctxt "speaker:Narrator"
 msgid "A knock at the door startled her."
-msgstr ""
+msgstr "ドアのノックに驚いた。"
 
 msgctxt "speaker:Narrator"
 msgid "A knock on the door signalled food, and Sarah would retrieve it."
-msgstr ""
+msgstr "ドアのノックは食事の合図でした。サラがそれを回収します。"
 
 msgctxt "speaker:Narrator"
 msgid "A knock on the door."
-msgstr ""
+msgstr "ドアのノック。"
 
 msgctxt "speaker:Sarah"
 msgid "A lady favors wine..."
-msgstr ""
+msgstr "女はワインを好むものね…"
 
 msgctxt "speaker:Narrator"
 msgid "A large cabinet stood on the far end of the room, filled with trinkets from many different places."
-msgstr ""
+msgstr "部屋の奥には、様々な場所から集められた小物が並んだ大きなキャビネットが立っていた。"
 
 msgctxt "speaker:Sarah"
 msgid "A large coronation will show the people we are still strong."
-msgstr ""
+msgstr "大規模な戴冠式は、我々がいまだに強靭であることを人々に示すだろう。"
 
 msgctxt "speaker:Narrator"
 msgid "A large crowd had gathered to watch the recruits that were attempting the exam today."
-msgstr ""
+msgstr "今日、入試を受ける新兵たちを見物するために大勢の人が集まっていた。"
 
 msgctxt "speaker:Narrator"
 msgid "A large hole in the earth, as if someone had plunged a dagger into the flesh of the earth and rended it open."
-msgstr ""
+msgstr "大地に、まるで誰かが刀を突き刺して裂いたかのような大きな穴が広がっていた。"
 
 msgctxt "speaker:Narrator"
 msgid "A large man sat just outside, carving into a block of wood with a knife."
-msgstr ""
+msgstr "大男が外に座り、包丁で木を削っていた。"
 
 msgctxt "speaker:Narrator"
 msgid "A large oak tree, some small garden plots for various vegetables. A dilapidated barn that housed a few animals."
-msgstr ""
+msgstr "巨大なオークの樹木、野菜を育てる小さな畑の数区画。破れかけた牛小屋には数頭の家畜が飼われていた。"
 
 msgctxt "speaker:Narrator"
 msgid "A large orc stood near the cage, hitting the bars with a stick."
-msgstr ""
+msgstr "巨大なオークが柵のそばに立って、棒で柵を叩いていた。"
 
 msgctxt "speaker:Narrator"
 msgid "A large scar runs across the side of his cheek, blemishing what would otherwise be a very handsome face."
-msgstr ""
+msgstr "頬の側には大きな傷跡が横切り、もとは非常にハンサムだった顔を台無しにしている。"
 
 msgctxt "speaker:Narrator"
 msgid "A large unit of Tribesman cavalary was rushing up behind the scouting units."
-msgstr ""
+msgstr "大規模な部族兵の騎兵隊が偵察部隊の背後から急接近していた。"
 
 msgctxt "speaker:Narrator"
 msgid "A large world, but perhaps, not quite that big."
-msgstr ""
+msgstr "世界は大きいのに、そう大きくはないのかもしれない。"
 
 msgctxt "speaker:Narrator"
 msgid "A large yoke bound the two animals to the wooden pulls."
-msgstr ""
+msgstr "馬の首輪は木製の挽き具に繋がれていた。"
 
 msgctxt "speaker:Narrator"
 msgid "A large, burly man stormed into the room. The town blacksmith, perhaps, Sarah thought by his appearance."
-msgstr ""
+msgstr "巨大な体格の男が部屋に乱入してきた。町の鍛冶屋だ、おそらくサラは彼の容姿から推測した。"
 
 msgctxt "speaker:Narrator"
 msgid "A last few drops of semen, landing on her tongue."
-msgstr ""
+msgstr "最後の数滴の精子が、彼女の舌に落ちる。"
 
 msgctxt "speaker:Narrator"
 msgid "A last few pumps, and then, a loud primal grunt as he finished."
-msgstr ""
+msgstr "あと数回ポンピングし、終わると荒々しい唸りを発した。"
 
 msgctxt "speaker:Narrator"
 msgid "A last few steady thrust and she could feel him climax, his cock expanding and his cum spewing into her."
-msgstr ""
+msgstr "最後の数回の激しい突きで、彼が高潮しているのが感じられ、チンポは膨らみ、精子をマンコから噴き出させた。"
 
 msgctxt "speaker:Narrator"
 msgid "A last few violent thrusts, each jolting her body deeper into bliss."
-msgstr ""
+msgstr "最後の数回、激しい突き。そのたびに彼女の体が歓喜の深淵へと揺さぶられた。"
 
 msgctxt "speaker:Narrator"
 msgid "A last high pitched shriek as it spewed out its seed across her cell."
-msgstr ""
+msgstr "最後に尖った叫び声を上げて、その種を彼女の牢獄に撒き散らした。"
 
 msgctxt "speaker:Narrator"
 msgid "A last inspection, though it didn't matter. She knew they were ready."
-msgstr ""
+msgstr "最後の確認だったが、それは意味をなさない。彼女たちは準備ができていたことを知っていたからだ。"
 
 msgctxt "speaker:Narrator"
 msgid "A last load of cum spewed forth. Sarah felt the warm seed splash across her lower back."
-msgstr ""
+msgstr "最後の精液が噴き出た。サラは、温かい種が腰の後ろに飛び散るのを覚えた。"
 
 msgctxt "speaker:Narrator"
 msgid "A last moment of hesitation passed over her, and then she pushed it down."
-msgstr ""
+msgstr "一瞬の迷いが過ぎ去り、彼女はそれを押し殺した。"
 
 msgctxt "speaker:Narrator"
 msgid "A last moment of peace, she thought to herself."
-msgstr ""
+msgstr "最後の瞬間の平和について、彼女は考えました。"
 
 msgctxt "speaker:Narrator"
 msgid "A last thought passed her mind. Not words but an image."
-msgstr ""
+msgstr "最後の想いが彼女の頭を過ぎる。言葉ではなく、映像だ。"
 
 msgctxt "speaker:Narrator"
 msgid "A laugh that sounded like a hiss, eminated from the creature."
-msgstr ""
+msgstr "生物から、ヒソヒソ音のような笑いが漏れた。"
 
 msgctxt "speaker:Narrator"
 msgid "A laughter ran through the people watching."
-msgstr ""
+msgstr "観衆からは嘲笑が走った。"
 
 msgctxt "speaker:Narrator"
 msgid "A laughter, interbroken with a choking sound from his lungs could be heard throughout the cave."
-msgstr ""
+msgstr "洞穴中に、肺から絞り出されるような喘ぎ声に混じった笑いが響き渡っていた。"
 
 msgctxt "speaker:Narrator"
 msgid "A laundry house."
-msgstr ""
+msgstr "洗濯屋。"
 
 msgctxt "speaker:Carolyn"
 msgid "A leader around whom everyone can gather."
-msgstr ""
+msgstr "誰しもが集うことができる指導者。"
 
 msgctxt "speaker:Narrator"
 msgid "A leader for the whole of the Union."
-msgstr ""
+msgstr "全連邦を率いる指導者。"
 
 msgctxt "speaker:Narrator"
 msgid "A leash of some kind. She shuddered at the thought."
-msgstr ""
+msgstr "ある種の拘束具。その想いに震えた。"
 
 msgctxt "speaker:Narrator"
 msgid "A legion returning home. A strange army among them."
-msgstr ""
+msgstr "帰還する軍団。その中に、奇妙な軍隊が混じっていた。"
 
 msgctxt "speaker:Narrator"
 msgid "A lesser army might have surrendered."
-msgstr ""
+msgstr "劣勢の軍団なら降伏したかもしれない。"
 
 msgctxt "speaker:Alfred"
 msgid "A lesson in obdience. And a lesson in what happens when you fall short of the duties of a wife."
-msgstr ""
+msgstr "服従の教え。そして、妻としての義務を果たせなかった時の結末だ。"
 
 msgctxt "speaker:Narrator"
 msgid "A lesson she spend the rest of the day studying."
@@ -1784,203 +1784,203 @@ msgstr ""
 
 msgctxt "speaker:Sarah"
 msgid "A lesson?"
-msgstr ""
+msgstr "お見せになったのは、レッスンですか？"
 
 msgctxt "speaker:Narrator"
 msgid "A letter of Xan, from Metis. Explaining what he had come here to tell him in the first place..."
-msgstr ""
+msgstr "キサンからの手紙。メティスからのもので、当初伝えようとしたことを説明している..."
 
 msgctxt "speaker:Narrator"
 msgid "A letter sat attached to the inside of the box."
-msgstr ""
+msgstr "箱の内側に封書が添えられていた。"
 
 msgctxt "speaker:Narrator"
 msgid "A library like this would take an army to maintain. Of course mages would find more efficient ways if magic allowed it."
-msgstr ""
+msgstr "このような図書館を維持するには、軍団が必要だ。魔法がそれを可能にするなら、魔導士たちはもっと効率的な方法を見つけるだろう。"
 
 msgctxt "speaker:Narrator"
 msgid "A lie to get what he wanted, and now he would leave her here to suffer."
-msgstr ""
+msgstr "望みを叶えるための嘘。そして今、彼女はここで苦しみ続けることになる。"
 
 msgctxt "speaker:Narrator"
 msgid "A lie."
-msgstr ""
+msgstr "嘘。"
 
 msgctxt "speaker:Narrator"
 msgid "A lie. But Sarah wasn't about to betray the only ally she had left by revealing that."
-msgstr ""
+msgstr "嘘だ。だが、サラは残された唯一の味方を裏切るわけにはいかなかった。"
 
 msgctxt "speaker:Narrator"
 msgid "A life of only luxury and no obligation, seemed to not just relax her body but also her mind. She felt less sharp with each passing day."
-msgstr ""
+msgstr "贅沢だけで義務のない生活は、彼女の体を癒やすだけでなく心も和ませた。日毎に彼女はより鈍感になり、まるで過去のもののように感じ始めた。"
 
 msgctxt "speaker:Narrator"
 msgid "A life she could remember having, but one that seemed to have happened to someone else."
-msgstr ""
+msgstr "かつて彼女が持っていた人生だが、まるで誰か他の人のように見えた。"
 
 msgctxt "speaker:Narrator"
 msgid "A life, captured in a paper. With this, the Mythran empire would enforce it, even if Cassius and Dio fled to the ends of the world."
-msgstr ""
+msgstr "紙に収められた人生。これにより、カシウスとディオが世界の果てへ逃れたとしても、ミトラニア帝国はそれを強制するだろう。"
 
 msgctxt "speaker:Gabriel"
 msgid "A lifetime of protocol and proper decorum, all forgotten after just a few years with her."
-msgstr ""
+msgstr "数ヶ月の彼女との生活で、生涯にわたる儀礼と格式はすべて忘れ去られた。"
 
 msgctxt "speaker:Narrator"
 msgid "A lifetime of working in his father's Inn had hardend his body in an appealing way."
-msgstr ""
+msgstr "父親の宿で生涯にわたり働き、その肉体は魅力的なまでに鍛え上げられていた。"
 
 msgctxt "speaker:Narrator"
 msgid "A lifetime passes."
-msgstr ""
+msgstr "時が過ぎた。"
 
 msgctxt "speaker:Narrator"
 msgid "A light radiated from each of his hands, swirling around his arms, driving back the darkness."
-msgstr ""
+msgstr "彼の両手から光が放たれ、腕を旋回させながら闇を追い払う。"
 
 msgctxt "speaker:Narrator"
 msgid "A lightness."
-msgstr ""
+msgstr "軽さ。"
 
 msgctxt "speaker:Narrator"
 msgid "A little arrogant, Sarah hated herself for the fact that she liked that about him."
-msgstr ""
+msgstr "少し傲慢で、彼はそんなところを気に入っていることに、サラは自虐的に自分を嫌っていた。"
 
 msgctxt "speaker:Sarah"
 msgid "A little bit, maybe."
-msgstr ""
+msgstr "少しだけ、まあ、そうかも。"
 
 msgctxt "speaker:Sarah"
 msgid "A little bit."
-msgstr ""
+msgstr "少しだけ。"
 
 msgctxt "speaker:Narrator"
 msgid "A little distance ahead of her, she saw him moving through the night."
-msgstr ""
+msgstr "少し先の闇を、彼女は彼が歩いている姿を見ることができた。"
 
 msgctxt "speaker:Narrator"
 msgid "A little in the distance, she could make out the harbor. Ships, coming and going."
-msgstr ""
+msgstr "遠くに見える港。船が行き交う。"
 
 msgctxt "speaker:Captain Belmont"
 msgid "A little late for sorry's and apologies. Ya stole from the captain, that can't stand."
-msgstr ""
+msgstr "ごめんなさいの遅すぎだ。船長から盗んだら許さん"
 
 msgctxt "speaker:Narrator"
 msgid "A little later in the day, Sarah managed to find a chance to slip into Razaphel's room."
-msgstr ""
+msgstr "少し日が経ち、サラはついにラザフェルの部屋に潜り込む機会を窺い出した。"
 
 msgctxt "speaker:Sophia"
 msgid "A little less confident now that he was being led along with a leash."
-msgstr ""
+msgstr "少し自信を失っている。彼がリードに繋がれているからだ。"
 
 msgctxt "speaker:Narrator"
 msgid "A little over a week had gone by."
-msgstr ""
+msgstr "もう一週間ほど経った。"
 
 msgctxt "speaker:Carolyn"
 msgid "A little roughed up here and there, but you still have your mother's beauty."
-msgstr ""
+msgstr "ここらへん、ちょっと傷ついてるけど、まだお母さんのような美しさがあるね。"
 
 msgctxt "speaker:Narrator"
 msgid "A little slower. A little faster. One extra step. A spin."
-msgstr ""
+msgstr "少しゆっくり。少し速く。一歩多く。一回り回れ。"
 
 msgctxt "speaker:Narrator"
 msgid "A little under half of the standing army was staffed with bannermen from one of the old houses, and though they were less than half, they made up the strong half."
-msgstr ""
+msgstr "常備軍の半数弱は、旧家の家臣団で構成されていたが、その数は半分以下にも関わらず、実質的な強固な半分の力を成していた。"
 
 msgctxt "speaker:Narrator"
 msgid "A little ways up the alley, a light was shining."
-msgstr ""
+msgstr "奥の路地を少し上った先、明かりが灯っていた。"
 
 msgctxt "speaker:Samayra"
 msgid "A little, maybe. But also not. Is that weird?"
-msgstr ""
+msgstr "少しかも。でも、そうでもない。変？"
 
 msgctxt "speaker:Kate"
 msgid "A little."
-msgstr ""
+msgstr "少しだ。"
 
 msgctxt "speaker:Alaric"
 msgid "A little. Heard about it. Never used any. Pretty damn hard to get in Lethram."
-msgstr ""
+msgstr "少しのことだ。聞いたことがある。一度も使ったことはない。レトラムでは相当難しいだろう"
 
 msgctxt "speaker:Narrator"
 msgid "A long day behind her, the sleep came easy."
-msgstr ""
+msgstr "長い一日を終え、すぐに眠気が訪れた。"
 
 msgctxt "speaker:Narrator"
 msgid "A long pause lingered before Alaric finally spoke."
-msgstr ""
+msgstr "長い沈黙が続き、ようやくアラルイクが口を開いた。"
 
 msgctxt "speaker:Narrator"
 msgid "A long silence lingered."
-msgstr ""
+msgstr "長い沈黙が漂った。"
 
 msgctxt "speaker:Narrator"
 msgid "A long time ago, longer than anyone at this table had been alive, a local baron had ruled the town and its surrounding lands."
-msgstr ""
+msgstr "かつて、このテーブルに座っている誰よりも長く生きた人々が生きていた時代、この町とその周辺を支配していたのは地元の男爵だった。"
 
 msgctxt "speaker:Atilla"
 msgid "A long time ago, when I was still young, I met a woman, an orc like myself. She was everything to me. Fierce, strong, an equal."
-msgstr ""
+msgstr "かつて、まだ若き日の私は、自分と同様のオグマの女性と出会うことができました。彼女はすべてでした。猛々しく、強く、私の対等者でした。"
 
 msgctxt "speaker:Vaelen"
 msgid "A long time ago, when I was still young, younger than you even, I lived in a small town out in the Mytrhan Southlands."
-msgstr ""
+msgstr "かつて、私がまだ幼い頃、あなたよりもずっと若かったころ、マイスランの南地にある小さな町に住んでいました。"
 
 msgctxt "speaker:Narrator"
 msgid "A longer pause."
-msgstr ""
+msgstr "長い間、何もなかった。"
 
 msgctxt "speaker:Narrator"
 msgid "A lot had happened."
-msgstr ""
+msgstr "多くのことが起こった。"
 
 msgctxt "speaker:Kate"
 msgid "A lot happened at home, and I never let you see any of that. I didn't think you would understand."
-msgstr ""
+msgstr "家に多くのことがあり、それをあなたに見せることは一度もなかった。あなたが理解してくれるとは思わなかったからだ。"
 
 msgctxt "speaker:Marion"
 msgid "A lot has been asked of the nobility, and a lot we have given, but Thomas...my king...you will be asking them to leave their homes unguarded."
-msgstr ""
+msgstr "貴族に多大なものを求め、それに応えて多くを捧げましたが、トマス…わが陛下…今後は彼らを無防備のまま家から去らせることを命じるでしょう。"
 
 msgctxt "speaker:Sarah"
 msgid "A lot has been happening in my life recently, leaving not many things certain."
-msgstr ""
+msgstr "最近、私の人生で多くのことが起こり、不確かなことも多くなりました。"
 
 msgctxt "speaker:Sarah"
 msgid "A lot has changed, as you might notice."
-msgstr ""
+msgstr "変わりは、お分かりいただけるでしょう。"
 
 msgctxt "speaker:Sarah"
 msgid "A lot is going to change for me soon."
-msgstr ""
+msgstr "間もなく、私の人生は大きく変わるだろう。"
 
 msgctxt "speaker:Narrator"
 msgid "A lot of had transpired between them when they had ventured into the forest together."
-msgstr ""
+msgstr "二人が森林へ足を踏み入れた後、多くの出来事があった。"
 
 msgctxt "speaker:Sarah"
 msgid "A lot of people are going to die if we do this. Our people, the ones we're supposed to be responsible for."
-msgstr ""
+msgstr "このまま進めば、多くの人が死ぬことになる。我々を守るべき人々だ。"
 
 msgctxt "speaker:Elsa"
 msgid "A lot of people most days, actually."
-msgstr ""
+msgstr "実際には、毎日そうなることが多い。"
 
 msgctxt "speaker:Narrator"
 msgid "A lot of things that had been unthinkable once, had now become normal. All in order to survive."
-msgstr ""
+msgstr "かつては考えられなかったことが、今は日常になっている。すべてを生き残るためだ。"
 
 msgctxt "speaker:Marion"
 msgid "A lot of trade goes through it, and he taxes it."
-msgstr ""
+msgstr "そこを介して多くの取引が行われ、彼はそれに対して課税している。"
 
 msgctxt "speaker:Sarah"
 msgid "A lot to take in, huh?"
-msgstr ""
+msgstr "受け入れるのは大変だ、 huh？"
 
 msgctxt "speaker:King Orwell Rose"
 msgid "A lot...too much to talk about. You can ask me tomorrow, okay?"
@@ -1988,235 +1988,235 @@ msgstr "たくさん……話したいほどだ。明日にでも聞いてくれ
 
 msgctxt "speaker:Narrator"
 msgid "A loud banging on the door rang out through the room, disrupting the proceedings."
-msgstr ""
+msgstr "ドアに激しいノック音が響き、会議を中断した。"
 
 msgctxt "speaker:Narrator"
 msgid "A loud battle horn rang out across the line."
-msgstr ""
+msgstr "戦場の線上に、大きな戦闘の角が鳴り響いた。"
 
 msgctxt "speaker:Narrator"
 msgid "A loud battle horn rang out over the battlefield, and as if suddenly recovering all their training, Hassar's army began to move forward as one."
-msgstr ""
+msgstr "戦場の上空に響き渡る激しい戦闘の角笛。まるで訓練を思い起こしたかのように、ハッサーの軍勢は一斉に前進し始めた。"
 
 msgctxt "speaker:Narrator"
 msgid "A loud battle horn rang out over the field, the battle horn of the Rosanna army."
-msgstr ""
+msgstr "戦場の上空に、ローサナの軍の戦鼓が鳴り響いた。"
 
 msgctxt "speaker:Narrator"
 msgid "A loud bell rang out and the murmurs in the room were brought to silence."
-msgstr ""
+msgstr "大きな鐘の音が響き、部屋のざわめきが静まり返った。"
 
 msgctxt "speaker:Narrator"
 msgid "A loud chant rose up as the warriors all battered the table in tribute."
-msgstr ""
+msgstr "戦士たちがテーブルを叩き、称賛の叫び声が響き渡った。"
 
 msgctxt "speaker:Narrator"
 msgid "A loud cheer rose up from the soldiers as they watched Sarah enter the castle grounds."
-msgstr ""
+msgstr "兵士たちがサラが城の敷地に入ってくるのを眺め、大きな歓声が上がった。"
 
 msgctxt "speaker:Narrator"
 msgid "A loud clap and a stinging pain on her ass. He spanked her."
-msgstr ""
+msgstr "大きな音と共に、お尻に鋭い痛みが走った。彼は彼女を打った。"
 
 msgctxt "speaker:Narrator"
 msgid "A loud crack rang out through the hall, it's echo carried deep into the palace hallways."
-msgstr ""
+msgstr "大きな音の「パチン」という音が廊下を響き、その反響は宮殿の奥深くまで届いた。"
 
 msgctxt "speaker:Narrator"
 msgid "A loud cracking sound drew her attention."
-msgstr ""
+msgstr "大きな音に彼女は気づいた。"
 
 msgctxt "speaker:Narrator"
 msgid "A loud cracking sound rang out."
-msgstr ""
+msgstr "大きな割れ音が響いた。"
 
 msgctxt "speaker:Narrator"
 msgid "A loud cracking sound rang out. Sarah felt her ass begin to burn."
-msgstr ""
+msgstr "大きな破裂音が響いた。サラは尻が燃え始めるのを感じた。"
 
 msgctxt "speaker:Narrator"
 msgid "A loud cracking sound rung out across the room."
-msgstr ""
+msgstr "部屋中に大きな割れる音が響いた。"
 
 msgctxt "speaker:Narrator"
 msgid "A loud crashing sound echoed across the training ground as the examinator, his armor and his massive blade, crashed into the ground."
-msgstr ""
+msgstr "訓練場には、試験官の鎧と巨剣が地面に叩きつけられた大きな音だけが響いた。"
 
 msgctxt "speaker:Narrator"
 msgid "A loud groan filled the room."
-msgstr ""
+msgstr "部屋中に大きなうめき声が響いた。"
 
 msgctxt "speaker:Narrator"
 msgid "A loud grunt rang out across the alley and Sarah felt her head fixed onto Alaric's cock."
-msgstr ""
+msgstr "アルリックのチンポに頭を固定されたように感じたサラが、狭路で大きな唸りを上げた。"
 
 msgctxt "speaker:Narrator"
 msgid "A loud horn blast rang out, signaling danger."
-msgstr ""
+msgstr "大きなホーンの音が鳴り響き、危険を告げた。"
 
 msgctxt "speaker:Narrator"
 msgid "A loud pang rang out across the room."
-msgstr ""
+msgstr "部屋中に大きな音が響いた。"
 
 msgctxt "speaker:Narrator"
 msgid "A loud pounding noise rang out."
-msgstr ""
+msgstr "大きな叩き音が響いた。"
 
 msgctxt "speaker:Narrator"
 msgid "A loud slap rang out across the apartment, and Sarah felt her ass and face burn from the humiliation."
-msgstr ""
+msgstr "アパートに大きな音が響き、サラは恥辱から尻と顔が熱くなっているのを感じた。"
 
 msgctxt "speaker:Narrator"
 msgid "A loud slap rang out across the hall, Sarah let out a surprised moan."
-msgstr ""
+msgstr "廊下に大きな音が響き、サラは驚いたため息を漏らした。"
 
 msgctxt "speaker:Narrator"
 msgid "A loud sound called out to her."
-msgstr ""
+msgstr "大きな音が彼女を呼んだ。"
 
 msgctxt "speaker:Narrator"
 msgid "A loud thumping sound rang out as the crossbow released the bolt."
-msgstr ""
+msgstr "クロスボウが矢を放ち、大きな音響いた。"
 
 msgctxt "speaker:Narrator"
 msgid "A loud thundering crack, like a splitting log, roaring out over the open field."
-msgstr ""
+msgstr "轟音のような爆音が、広大な野原に響き渡った。"
 
 msgctxt "speaker:Narrator"
 msgid "A loud voice rang out across the gathering."
-msgstr ""
+msgstr "集まりの場を響く大きな声がした。"
 
 msgctxt "speaker:Narrator"
 msgid "A loud, unmistaken, moan."
-msgstr ""
+msgstr "大きな、間違いのないようなうめき声。"
 
 msgctxt "speaker:Narrator"
 msgid "A louder moan slipped from Kate's mouth, and Sarah could almost feel proud at her efforts."
-msgstr ""
+msgstr "ケイトの口からさらに大きなうめきが漏れ、サラは彼女の努力に誇りを感じたような気がした。"
 
 msgctxt "speaker:Cassius"
 msgid "A lovely name."
-msgstr ""
+msgstr "愛らしい名前だ。"
 
 msgctxt "speaker:Carolyn"
 msgid "A lovely spot, surrounded by vineyards."
-msgstr ""
+msgstr "葡萄畑に囲まれた、素敵な場所だ。"
 
 msgctxt "speaker:Sarah"
 msgid "A lowlife. A criminal that feeds on those too vulnerable to defend themselves."
-msgstr ""
+msgstr "卑劣者。自分では守れない弱者を食い物にする犯罪者だ。"
 
 msgctxt "speaker:Narrator"
 msgid "A lust in his eyes unlike any she had seen before."
-msgstr ""
+msgstr "彼の瞳には、彼女がこれまで見たことのないような欲望が宿っていた。"
 
 msgctxt "speaker:Sarah"
 msgid "A madman in a cave, rambling about his divine friends."
-msgstr ""
+msgstr "洞窟にいた狂人。神聖な友人たちについて語っている。"
 
 msgctxt "speaker:Narrator"
 msgid "A mage that reached to far. Lost to a dead world. Slave-bride to a Daemon."
-msgstr ""
+msgstr "遠くへ手を伸ばし、死の世界に堕ちた魔術師。デーモンに奴隷として捧げられた花嫁。"
 
 msgctxt "speaker:Narrator"
 msgid "A mage was always dangerous."
-msgstr ""
+msgstr "魔法使いは常に危険だった。"
 
 msgctxt "speaker:Narrator"
 msgid "A mage."
-msgstr ""
+msgstr "魔法使い。"
 
 msgctxt "speaker:Dalia"
 msgid "A magical mark of some kind. I guess you've already felt it?"
-msgstr ""
+msgstr "何かの魔法の印ですね。もう、感じているでしょう？"
 
 msgctxt "speaker:Narrator"
 msgid "A male soldier stepped up and threw a pair of dice. Some of them cheered, others groaned, making it clear who'd won this round."
-msgstr ""
+msgstr "男性兵士が上がり、サイコロを二つ投げた。一部の者は歓声を上げ、他の者はため息をつき、この回で勝者が誰かを示した。"
 
 msgctxt "speaker:Narrator"
 msgid "A man barks commands at her."
-msgstr ""
+msgstr "男が彼女に命令を叫ぶ。"
 
 msgctxt "speaker:Narrator"
 msgid "A man blocked her path."
-msgstr ""
+msgstr "男が彼女の道に立ち塞がった。"
 
 msgctxt "speaker:Narrator"
 msgid "A man in heat. A woman in heat."
-msgstr ""
+msgstr "発情した男。発情した女。"
 
 msgctxt "speaker:Narrator"
 msgid "A man instructed them all to stand in line."
-msgstr ""
+msgstr "男が全員に列をなすように命じた。"
 
 msgctxt "speaker:Kate"
 msgid "A man like that goes about life, lying, cheating."
-msgstr ""
+msgstr "そんな男が人生を過ごしているなんて、嘘つきで裏切り者だ。"
 
 msgctxt "speaker:Narrator"
 msgid "A man more used to being guarded than seen."
-msgstr ""
+msgstr "見られることよりも、守られてきた男だ。"
 
 msgctxt "speaker:Alfred"
 msgid "A man my age can only be so angry when he's just finished fucking a girl like you."
-msgstr ""
+msgstr "男なら、そんな女とセックスした直後でも、これほど怒れるはずがない。"
 
 msgctxt "speaker:Marshal Edmond"
 msgid "A man of his age with a girl like that."
-msgstr ""
+msgstr "その年齢の男が、そんな女を。"
 
 msgctxt "speaker:Marshal Edmond"
 msgid "A man or woman should rise or fall on account of their skills. Not their name."
-msgstr ""
+msgstr "男か女かは、その技量によって成り上がったり落ちたりするものだ。名前で決まるわけではない。"
 
 msgctxt "speaker:Narrator"
 msgid "A man ran out and soon returned with the tools that had been requested."
-msgstr ""
+msgstr "男が走り去り、すぐに頼まれた道具を持って戻ってきた。"
 
 msgctxt "speaker:Narrator"
 msgid "A man sat opposite of her. The man that had removed the hood."
-msgstr ""
+msgstr "対面したのは、フードを脱いだ男だった。"
 
 msgctxt "speaker:Maeiv"
 msgid "A man should have a strong name."
-msgstr ""
+msgstr "男には、強い名が必要だ。"
 
 msgctxt "speaker:Narrator"
 msgid "A man stumbled, his shoulder bashing into her."
-msgstr ""
+msgstr "男がよろめき、肩で彼女にぶつかった。"
 
 msgctxt "speaker:Narrator"
 msgid "A man that could provide. Be strong. Faithful. Honest."
-msgstr ""
+msgstr "養うべき男。強く、忠実で、正直な男。"
 
 msgctxt "speaker:Narrator"
 msgid "A man that didn't much matter to anyone."
-msgstr ""
+msgstr "誰も気にかけない男だ。"
 
 msgctxt "speaker:Narrator"
 msgid "A man that had been given a second life and wasted not a minute of it."
-msgstr ""
+msgstr "誰にも気にならない男が、二度目の人生を与えられ、その一秒も無駄にせず生きた。"
 
 msgctxt "speaker:Narrator"
 msgid "A man that had feared life had passed him by, and now equally feared that he had caught life but had no idea what to do with it."
-msgstr ""
+msgstr "人生を逃したことを恐れていた男が、今度はそれを手に入れたもののどうすればいいか分からず怯えている。"
 
 msgctxt "speaker:Narrator"
 msgid "A man that had perhaps feared the day would never come."
-msgstr ""
+msgstr "もしかしたら、その日が来ることを恐れていた男だ。"
 
 msgctxt "speaker:Narrator"
 msgid "A man that lived with his head in the clouds."
-msgstr ""
+msgstr "雲の上の頭で生きた男。"
 
 msgctxt "speaker:Narrator"
 msgid "A man that treated her like she was worth nothing, reminding her with every thrust that she was only good for this."
-msgstr ""
+msgstr "彼女を何の価値もない存在として扱った男が、毎回の突きで彼女に『ただこれしかできない女だ』と刻みつけた。"
 
 msgctxt "speaker:Narrator"
 msgid "A man walked in through the door to the Great Hall."
-msgstr ""
+msgstr "大広間の扉を通って、男が入ってきた。"
 
 msgctxt "speaker:Narrator"
 msgid "A man waved at Marion from across the room, and Marion waved back."
@@ -2224,583 +2224,583 @@ msgstr "マリオンのいる部屋の向こう側から、男が手を振った
 
 msgctxt "speaker:Narrator"
 msgid "A man who could not believe that fortune and fate had played him for a fool."
-msgstr ""
+msgstr "運と運命が自分を馬鹿にしたことに気づかない男だ。"
 
 msgctxt "speaker:Narrator"
 msgid "A man who desired her. Provided for her."
-msgstr ""
+msgstr "彼女を欲し、世話になった男だ。"
 
 msgctxt "speaker:Narrator"
 msgid "A man who expected to find a willing woman, but not this eager whore."
-msgstr ""
+msgstr "男が求むのは同意する女であり、このほど欲しがるスケベ女ではなかった。"
 
 msgctxt "speaker:Narrator"
 msgid "A man who had lost everything, and possessed nothing."
-msgstr ""
+msgstr "すべてを失い、何も持たぬ男。"
 
 msgctxt "speaker:Narrator"
 msgid "A man who knew he had killed himself just the same, but took glee from knowing his enemies would die with him."
-msgstr ""
+msgstr "自分も同時に死ぬことを知っていたが、敵と共に死ねばいいと喜んだ男。"
 
 msgctxt "speaker:Narrator"
 msgid "A man who thought that only the decay of old age remained, who now instead found a young and willing woman, again before him."
-msgstr ""
+msgstr "老いによる朽ち残ししかないと信じていた男が、今度は若い女を前にした。"
 
 msgctxt "speaker:Narrator"
 msgid "A man who wanted to take a woman. A woman who wanted to be taken by a man."
-msgstr ""
+msgstr "男が女を望み、女が男に望まれた。"
 
 msgctxt "speaker:Narrator"
 msgid "A man who wielded no sword was no man at all in their eyes."
-msgstr ""
+msgstr "剣を携えた男は、彼らにとって何者でもない。"
 
 msgctxt "speaker:Narrator"
 msgid "A man who would gladly sacrifice every last one of them to carry himself across a wicked desert."
-msgstr ""
+msgstr "悪徳の砂漠を背負って自分自身を運ぶために、喜んで彼ら全員を犠牲にする男。"
 
 msgctxt "speaker:Narrator"
 msgid "A man whose name she had heard many times by now, and whose appearance lived up to his reputation. Hassar."
-msgstr ""
+msgstr "何度も名前を聞いた男で、その容姿も評判にふさわしい。ハッサー。"
 
 msgctxt "speaker:Narrator"
 msgid "A man with a round face slowly peaked out, his eyes narrowing."
-msgstr ""
+msgstr "丸い顔の男がゆっくりと顔を覗かせ、目を細めた。"
 
 msgctxt "speaker:Sarah"
 msgid "A man with thread and needle? I'll survive."
-msgstr ""
+msgstr "糸と針でできた男か？大丈夫だ。"
 
 msgctxt "speaker:Narrator"
 msgid "A man wraps his arms around the neck of the soldier between Sarah's legs, violently pulling him away."
-msgstr ""
+msgstr "男がサラの股間にいる兵士の首に腕を回し、激しく引き剥がした。"
 
 msgctxt "speaker:Narrator"
 msgid "A man's voice could be heard roaring through the hall."
-msgstr ""
+msgstr "廊下に、男の叫び声が響き渡った。"
 
 msgctxt "speaker:Narrator"
 msgid "A man, as one ought to be."
-msgstr ""
+msgstr "男であるべき姿だ。"
 
 msgctxt "speaker:Narrator"
 msgid "A man, pale and tall, walked across the hall with a great stride."
-msgstr ""
+msgstr "蒼白く背の高い男が、大きな歩幅で廊下を歩いていた。"
 
 msgctxt "speaker:Narrator"
 msgid "A man, that watched as a group of Tribesmen took his wife on the day of their marriage."
-msgstr ""
+msgstr "結婚の日に、妻を部族の人々が奪っていくのをただ見守る男。"
 
 msgctxt "speaker:Narrator"
 msgid "A man."
-msgstr ""
+msgstr "男か。"
 
 msgctxt "speaker:Sarah"
 msgid "A man? Yes."
-msgstr ""
+msgstr "男？もちろん。"
 
 msgctxt "speaker:Sarah"
 msgid "A mansion? What makes you say that."
-msgstr ""
+msgstr "邸宅？どうやってそれを知ったの"
 
 msgctxt "speaker:Sarah"
 msgid "A marking kit?"
-msgstr ""
+msgstr "印字キット？"
 
 msgctxt "speaker:Sarah"
 msgid "A marriage? Between whom?"
-msgstr ""
+msgstr "結婚？誰とだ？"
 
 msgctxt "speaker:Narrator"
 msgid "A marvel of miracle and magic, held together by the will of the Gods."
-msgstr ""
+msgstr "神々の意志によって支えられ、奇跡と魔法の傑作だ。"
 
 msgctxt "speaker:Narrator"
 msgid "A mask balanced on her face, but her pale skin and form were familiar to Sarah."
-msgstr ""
+msgstr "顔に載せられた仮面だが、その蒼白い肌と体はサラにとって馴染みがあった。"
 
 msgctxt "speaker:Tailor"
 msgid "A mason does not just blindly hack into his marble, nor do I start without properly inspecting the body."
-msgstr ""
+msgstr "石工は大理石に盲目的に手出しをせず、私は身体を正しく点検しないまま始めたりもしない。"
 
 msgctxt "speaker:Advisor"
 msgid "A masquerade?"
-msgstr ""
+msgstr "仮面舞踏会か？"
 
 msgctxt "speaker:Sarah"
 msgid "A massive conflict that could drag out for decades."
-msgstr ""
+msgstr "数十年に及ぶ可能性のある大規模な紛争だ。"
 
 msgctxt "speaker:Narrator"
 msgid "A massive hole had been dug straight into the earth."
-msgstr ""
+msgstr "大地に巨大な穴が掘られていた。"
 
 msgctxt "speaker:Narrator"
 msgid "A massive stone statue, marking and guarding the entrance."
-msgstr ""
+msgstr "巨大な石像が入口を象徴し、守護している。"
 
 msgctxt "speaker:Marion"
 msgid "A match like this one doesn't come around very often. True love, what a miracle."
-msgstr ""
+msgstr "こんな出会いの機会はそうそうあるものではありません。真の愛、なんて奇跡です。"
 
 msgctxt "speaker:Narrator"
 msgid "A meeting between the two, running late."
-msgstr ""
+msgstr "二人の会合は遅れ気味だ。"
 
 msgctxt "speaker:Sarah"
 msgid "A meeting?"
-msgstr ""
+msgstr "合流？"
 
 msgctxt "speaker:Narrator"
 msgid "A melee had broken out."
-msgstr ""
+msgstr "混戦が勃発していた。"
 
 msgctxt "speaker:Kate"
 msgid "A mercenary...well, you're lucky to get to forty."
-msgstr ""
+msgstr "傭兵か…まあ、四十歳まで生き延びられたのは幸運だ。"
 
 msgctxt "speaker:Duke Antonio"
 msgid "A merchant knows when to say yes to a good deal."
-msgstr ""
+msgstr "商人は、良い取引を断れないものだ。"
 
 msgctxt "speaker:Kate"
 msgid "A merchant, if you'd believe it. I thought they'd killed the last of 'em by now."
-msgstr ""
+msgstr "商人なんて、そう言われると信じられないわ。もう滅びたはずだもの"
 
 msgctxt "speaker:Narrator"
 msgid "A merchant, in their eyes, was as low as any man could be. Earning his way through life by trickery and deceit."
-msgstr ""
+msgstr "商人とは、その目には男の底辺に過ぎない。欺瞞と偽りで生計を立てる者だ。"
 
 msgctxt "speaker:Duke Antonio"
 msgid "A mercy?"
-msgstr ""
+msgstr "慈悲か？"
 
 msgctxt "speaker:Kravel"
 msgid "A message has arrived...from Marion."
-msgstr ""
+msgstr "マリオンの手紙が届いた。"
 
 msgctxt "speaker:Narrator"
 msgid "A message then, but what it was it remained to be seen."
-msgstr ""
+msgstr "しかし、その内容はどうなるのか、まだ見ぬことだった。"
 
 msgctxt "speaker:Narrator"
 msgid "A message, Sarah would try to rationalize. A warning to her enemies and those who broke their vows of loyalty."
-msgstr ""
+msgstr "メッセンジャー、サラはそう合理化しようと試みる。敵や忠誠の誓いを破った者たちへの警告だ。"
 
 msgctxt "speaker:Narrator"
 msgid "A metal door, carefully decorated, cut into the wall."
-msgstr ""
+msgstr "壁に切り込まれた、丁寧に装飾された金属製の扉。"
 
 msgctxt "speaker:Dalia"
 msgid "A millenium, maybe more."
-msgstr ""
+msgstr "千年、あるいはそれ以上だ。"
 
 msgctxt "speaker:Narrator"
 msgid "A miniscule smile crept along Queen Maeiv's face."
-msgstr ""
+msgstr "女王メーヴの顔には、微かな笑みが浮かんだ。"
 
 msgctxt "speaker:Narrator"
 msgid "A minute, then two, then-"
-msgstr ""
+msgstr "一分、そして二分、そして─"
 
 msgctxt "speaker:Narrator"
 msgid "A minute...Sarah wondered. Was that really possible?"
-msgstr ""
+msgstr "一瞬……サラは疑問に思った。本当にそんなことが可能なのか？"
 
 msgctxt "speaker:Narrator"
 msgid "A miracle."
-msgstr ""
+msgstr "奇跡だ。"
 
 msgctxt "speaker:Narrator"
 msgid "A mirror stood off to the side, and Sarah had did her best not to look for fear of bad luck, but an accidental glance forced her to turn and look at herself."
-msgstr ""
+msgstr "横に置かれた鏡。サラは不吉を恐れて視線を逸らそうとしていたが、偶然の目移りが彼女を振り返らせた。"
 
 msgctxt "speaker:Carolyn"
 msgid "A mission, far away from the reach of Mythra, of any power."
-msgstr ""
+msgstr "ミストラや、どんな力も届かない遠い場所での任務だ。"
 
 msgctxt "speaker:Narrator"
 msgid "A mist of red blood splashed out and a deep crimson trail as left across her back."
-msgstr ""
+msgstr "赤い血の霧が飛び散り、深い紅い痕が彼女の背中に残された。"
 
 msgctxt "speaker:Narrator"
 msgid "A mist rose up, wrapping itself around her."
-msgstr ""
+msgstr "紅気のような霧が立ち上り、彼女を取り巻いた。"
 
 msgctxt "speaker:Gilead"
 msgid "A mistake does not exempt you from punishment."
-msgstr ""
+msgstr "過ちが、罰を免じる理由にはならない。"
 
 msgctxt "speaker:Alfred"
 msgid "A mistake, huh?"
-msgstr ""
+msgstr "過ちか？"
 
 msgctxt "speaker:Sarah"
 msgid "A mistake?"
-msgstr ""
+msgstr "ミスのことか？"
 
 msgctxt "speaker:Sarah"
 msgid "A mistake? It seemed like what you did was very intentional."
-msgstr ""
+msgstr "「間違い？」お前のやったことは、とても意図的に見えたのに。"
 
 msgctxt "speaker:Narrator"
 msgid "A mixture of chance, odds, bluffing. Half the game was the cards. The other half reading the player opposite of you."
-msgstr ""
+msgstr "偶然と確率、そして虚勢の混ざり合いだ。このゲームの半分はカードであり、残りの半分は対面のプレイヤーを読むことだ"
 
 msgctxt "speaker:Narrator"
 msgid "A mixture of lust and surprise painted the creature's face."
-msgstr ""
+msgstr "欲望と驚きが混ざり合った表情が、その生物の顔に浮かんでいた。"
 
 msgctxt "speaker:Narrator"
 msgid "A mixture of scented spice weighed heavily on the air."
-msgstr ""
+msgstr "香りのするスパイスが空気を重く包み込んでいた。"
 
 msgctxt "speaker:Narrator"
 msgid "A moan erupted from her mouth as if he had truly lost her mind."
-msgstr ""
+msgstr "彼女の口から、彼が本当に彼女を狂わせたかのような悲鳴が漏れ出した。"
 
 msgctxt "speaker:Narrator"
 msgid "A moan slipped from her mouth and filled the tent, cutting through the silence."
-msgstr ""
+msgstr "ため息が彼女の口から漏れ、テントを満たして静寂を切り裂いた。"
 
 msgctxt "speaker:Narrator"
 msgid "A moan slipped out as she felt him enter her."
-msgstr ""
+msgstr "彼が彼女の中に入った感覚と共に、漏れ出すようなうめき声が出た。"
 
 msgctxt "speaker:Narrator"
 msgid "A moan, mixed with desperate frustration sounded out from Samayra, fearing that Sarah had denied her."
-msgstr ""
+msgstr "サマヤラからは、サラが彼女を拒絶したと恐れた絶望的な苛立ちに混じったため息が響いた。"
 
 msgctxt "speaker:Narrator"
 msgid "A moan, no pain, she thought distantly as her mind sank into pleasured, thoughtless bliss."
-msgstr ""
+msgstr "痛みはない。彼女は遠くでそう思った。心が快楽の無思考な恍惚に沈みゆく。"
 
 msgctxt "speaker:Narrator"
 msgid "A moment ago, she feared she had seen the last of him, and now she was back here. Back where she wanted to be, but could not stay."
-msgstr ""
+msgstr "一瞬前、彼女は彼との最後を恐れていたが、今はここにいた。望んでいた場所だが、留まれない。"
 
 msgctxt "speaker:Narrator"
 msgid "A moment before they reach her, she topples backwards, her world begins to spin."
-msgstr ""
+msgstr "彼らが彼女に到達する直前、彼女は後方へ転倒し、世界が回り始めた。"
 
 msgctxt "speaker:Narrator"
 msgid "A moment in the fog of her mind passed, and she saw him throwing off the last of his own clothes."
-msgstr ""
+msgstr "彼女の意識の霧の中で一瞬が過ぎ、彼女は彼が最後の服を脱ぎ捨てているのをみた。"
 
 msgctxt "speaker:Narrator"
 msgid "A moment later, Sigmund climbed back onto the cart."
-msgstr ""
+msgstr "少し後、シグムントは再び馬車に乗り込んだ。"
 
 msgctxt "speaker:Narrator"
 msgid "A moment later, soldiers pulled Kate away. Everyone seemed so busy, especially when they were almost ready to leave."
-msgstr ""
+msgstr "その頃、兵士たちがケイトを引っ張り去った。皆は忙しそうにしていた。特に、出発の準備が整いかけるとなおさらだ。"
 
 msgctxt "speaker:Narrator"
 msgid "A moment later, the servants arrived and began to help her get dressed."
-msgstr ""
+msgstr "やがて、用人たちが現れて、彼女を着飾るのを手伝い始めた。"
 
 msgctxt "speaker:Narrator"
 msgid "A moment longer, and her heart began to race."
-msgstr ""
+msgstr "もう少しだけ、心臓が早鐘を打つ。"
 
 msgctxt "speaker:Narrator"
 msgid "A moment neither wanted to allow to pass."
-msgstr ""
+msgstr "誰も進んでほしくない一瞬が、過ぎ去ろうとしない。"
 
 msgctxt "speaker:Narrator"
 msgid "A moment of clarity began to dawn on Sarah, amidst all the chaos. She had thrown her life away...for this drunkard thief."
-msgstr ""
+msgstr "混乱の只中に、サラに悟りの瞬間が訪れた。彼女は生涯を捨ててしまったのだ……この酔っ払い泥棒のためだ。"
 
 msgctxt "speaker:Narrator"
 msgid "A moment of inattention, and she had almost paid for it dearly."
-msgstr ""
+msgstr "一瞬の不注意で、彼女は代償を払う寸前だった。"
 
 msgctxt "speaker:Narrator"
 msgid "A moment of pause."
-msgstr ""
+msgstr "一瞬の静寂。"
 
 msgctxt "speaker:Narrator"
 msgid "A moment of quiet that felt as if it was drawn out forever."
-msgstr ""
+msgstr "静寂が、まるで永遠に引き伸ばされたかのような一瞬。"
 
 msgctxt "speaker:Narrator"
 msgid "A moment of silence between them, as if there were no words that could be meaningfully spoken."
-msgstr ""
+msgstr "二人の間には、意味のある言葉など一つも語れないような沈黙が流れていた。"
 
 msgctxt "speaker:Narrator"
 msgid "A moment of silence lingered between them."
-msgstr ""
+msgstr "二人の間に沈黙が漂っていた。"
 
 msgctxt "speaker:Narrator"
 msgid "A moment of silence."
-msgstr ""
+msgstr "一瞬の沈黙。"
 
 msgctxt "speaker:Narrator"
 msgid "A moment of warmth...and this was the price they would pay for it."
-msgstr ""
+msgstr "一瞬の温もり……そして、それが彼らが支払う代償だった。"
 
 msgctxt "speaker:Narrator"
 msgid "A moment passed in silence."
-msgstr ""
+msgstr "一瞬、沈黙が続いた。"
 
 msgctxt "speaker:Narrator"
 msgid "A moment passed, then, movement."
-msgstr ""
+msgstr "一瞬の静寂が過ぎ、やがて動きが生まれた。"
 
 msgctxt "speaker:Hugh"
 msgid "A month at the least. And after that, you'd probably still do best to get out of the city for a while."
-msgstr ""
+msgstr "最低でも一ヶ月はかかるだろう。その後も、しばらく街を離れておいたほうが無難だ"
 
 msgctxt "speaker:Narrator"
 msgid "A month had passed since Thomas had been kidnapped by Marion and the old houses had declared their revolt."
-msgstr ""
+msgstr "トーマスがマリオンの誘拐から、古びた家々が反乱を宣言するまで、一月が過ぎた。"
 
 msgctxt "speaker:Narrator"
 msgid "A month. Was he really planning to stay here that long? Then again, if he did, could she really throw him out?"
-msgstr ""
+msgstr "一月。彼は本当にここでこれほど長く滞在するつもりだったのか？しかし、もしそうだとしたら、彼を追い出すことができるだろうか"
 
 msgctxt "speaker:Narrator"
 msgid "A more humble man would have seen the signs of what came next, but Marion was not humble."
-msgstr ""
+msgstr "もっと謙虚な男なら、次に何が起きるかを察していたかもしれないが、マーロンはそうではなかった。"
 
 msgctxt "speaker:Voice"
 msgid "A morsel. A most delicate one to be sure, but nothing more."
-msgstr ""
+msgstr "一口。確かに繊細な一品だが、それ以上ではない。"
 
 msgctxt "speaker:Metis"
 msgid "A most kind host. I promise I won't inconvenience you."
-msgstr ""
+msgstr "最も親切なご主人様です。迷惑をかけることは決してしないことを約束します。"
 
 msgctxt "speaker:Metis"
 msgid "A most kind offer, but I'll sleep here tonight if that is fine with you. The fire...it's awfully calming."
-msgstr ""
+msgstr "非常に親切なご提案ですが、今夜はここで寝かせていただいてもよろしいでしょうか。暖炉の火...とても落ち着きます。"
 
 msgctxt "speaker:Razaphel"
 msgid "A most surprising answer."
-msgstr ""
+msgstr "驚くべき答えだ。"
 
 msgctxt "speaker:Maeiv"
 msgid "A most wise decision, my dear."
-msgstr ""
+msgstr "賢明な決断ですね、愛しい人。"
 
 msgctxt "speaker:Narrator"
 msgid "A mother always knew."
-msgstr ""
+msgstr "母はいつも分かっていた。"
 
 msgctxt "speaker:Razaphel"
 msgid "A murderer and his victim, would equally go to the same place."
-msgstr ""
+msgstr "殺人犯も犠牲者も、同じ場所へ行く。"
 
 msgctxt "speaker:Narrator"
 msgid "A murmur ran through the crowd like lightning."
-msgstr ""
+msgstr "群衆に雷走ったような囁きが走った。"
 
 msgctxt "speaker:Narrator"
 msgid "A muscle long unused but now trained was flexed."
-msgstr ""
+msgstr "長らく使われなかった筋肉が、今こそ力を発揮した。"
 
 msgctxt "speaker:Narrator"
 msgid "A musky stench that added to her revulsion of him."
-msgstr ""
+msgstr "彼への嫌悪感をさらに増幅させる、湿った臭気。"
 
 msgctxt "speaker:Narrator"
 msgid "A muted scream rang out, drowned by his grinding teeth and growling rage."
-msgstr ""
+msgstr "抑え込まれた叫びが、彼の歯ぎしりと咆哮する怒りに飲み込まれて響いた。"
 
 msgctxt "speaker:Narrator"
 msgid "A mutual madness overtook them as they continued deep into the night."
-msgstr ""
+msgstr "互いに狂気に包まれ、夜が更けても彼らは止まらなかった。"
 
 msgctxt "speaker:Narrator"
 msgid "A naked woman in Rosanna would bring the street to a stop, but here, she barely seemed to solicit more than a quick appreciative glance."
-msgstr ""
+msgstr "ロサーナでは裸の女が通りを止めるほどだが、ここではただ一瞬の視線を引く程度にしか見えない。"
 
 msgctxt "speaker:Narrator"
 msgid "A nation where ordinary people did not have to live in fear of its own soldiers and nobles."
-msgstr ""
+msgstr "兵士や貴族に恐れを知らず、庶民が暮らせる国。"
 
 msgctxt "speaker:Xanthippe"
 msgid "A natural aptitude, but such is no replacement for commitment. That's what's changed."
-msgstr ""
+msgstr "自然な才能ではあるが、それだけでは代わりにならない。それが変わったのだ。"
 
 msgctxt "speaker:Narrator"
 msgid "A nature like this could never have existed in her home country, she realized. Simply because the ever growing masses of people would seize on it eventually."
-msgstr ""
+msgstr "そんな性質は、彼女の故郷ではあり得ないことだった。彼女はそう悟った。いずれ人々はそれを手に入れようとするからだ。"
 
 msgctxt "speaker:Narrator"
 msgid "A near army of servants rushed into the room, carrying an almost equally impossible amount of food."
-msgstr ""
+msgstr "近衛兵のような家来たちが、まるで不可能に近い量の食料を運んで部屋に駆け込んできた。"
 
 msgctxt "speaker:Narrator"
 msgid "A near madness came over her, tears flowing past her face, as she found herself begging him a third time."
-msgstr ""
+msgstr "彼女は狂気じみた状態に陥り、涙が顔を伝いながら、彼に三度目の懇願を始めた。"
 
 msgctxt "speaker:Narrator"
 msgid "A neighbouring kingdom might take her in, but so dire was the news from across the ocean, that she didn't even know if any still stood against Hassar's horde."
-msgstr ""
+msgstr "隣国の庇護を受けられるかもしれないが、海を越えて届いた知らせはあまりに深刻で、ハッサーの軍勢に対抗する国がまだ残っているかどうかさえわからなかった。"
 
 msgctxt "speaker:Narrator"
 msgid "A nervous innkeeper came up to her table and served her some beer and food."
-msgstr ""
+msgstr "不安そうな宿の主人が彼女のテーブルまで来て、ビールと料理を運んできた。"
 
 msgctxt "speaker:Narrator"
 msgid "A nervous panic."
-msgstr ""
+msgstr "不安に駆られる。"
 
 msgctxt "speaker:Narrator"
 msgid "A nervousness came over her."
-msgstr ""
+msgstr "彼女に緊張が走った。"
 
 msgctxt "speaker:Narrator"
 msgid "A nervousness seemed to grip him. Then again, her brother had been plagued with nervousness all his life."
-msgstr ""
+msgstr "不安そうな顔が浮かんだ。だが、兄は生涯にわたって神経質だったのだ。"
 
 msgctxt "speaker:Narrator"
 msgid "A new couple approached."
-msgstr ""
+msgstr "新しいカップルが近づいてきた。"
 
 msgctxt "speaker:Narrator"
 msgid "A new door."
-msgstr ""
+msgstr "新しい扉。"
 
 msgctxt "speaker:Narrator"
 msgid "A new feeling began to spring in Sarah."
-msgstr ""
+msgstr "サラの心には、新たな感情が芽生え始めた。"
 
 msgctxt "speaker:Ayaka"
 msgid "A new friend, have we?"
-msgstr ""
+msgstr "新しい友人か"
 
 msgctxt "speaker:Narrator"
 msgid "A new lease on life."
-msgstr ""
+msgstr "人生の新しい章。"
 
 msgctxt "speaker:Narrator"
 msgid "A new life."
-msgstr ""
+msgstr "新たな人生。"
 
 msgctxt "speaker:Narrator"
 msgid "A new report had come in."
-msgstr ""
+msgstr "新しい報告が入ってきた。"
 
 msgctxt "speaker:Narrator"
 msgid "A new understanding had grown between them."
-msgstr ""
+msgstr "二人の間には、新たな理解が芽生えていた。"
 
 msgctxt "speaker:Carolyn"
 msgid "A new warlord has risen, or to be exact, several of them. Each claiming title to the horde, but each as spurious as the other."
-msgstr ""
+msgstr "新しい戦争lordsが台頭した、あるいは正確に言えば、数人だ。それぞれが群れへの権威を主張しているが、互いに同様に虚偽である。"
 
 msgctxt "speaker:Captain Belmont"
 msgid "A nice offer, blondie."
-msgstr ""
+msgstr "いい提案ね、ブロンド。"
 
 msgctxt "speaker:Samayra"
 msgid "A nobody. You risked your life, facing down a demon, just to save me, a girl that meant nothing to you."
-msgstr ""
+msgstr "何者でもない。命を賭けて悪魔と戦い、あなたにとって意味のなかった私を救ったのに。"
 
 msgctxt "speaker:Xanthippe"
 msgid "A nudge here, a tug there."
-msgstr ""
+msgstr "ここを軽く押す、あそこを引っ張る。"
 
 msgctxt "speaker:Narrator"
 msgid "A pain she desired, and a pleasure that harmed her."
-msgstr ""
+msgstr "彼女が望む痛み、そして彼女を傷つける快楽。"
 
 msgctxt "speaker:Narrator"
 msgid "A pain that came as pleasure."
-msgstr ""
+msgstr "快楽が痛みとして訪れた。"
 
 msgctxt "speaker:Narrator"
 msgid "A pain that was no pain, carried Sarah further over the edge of pleasure."
-msgstr ""
+msgstr "痛みではない痛みが、サラを快楽の果てへとさらに押しやった。"
 
 msgctxt "speaker:Narrator"
 msgid "A pained expression moved across his face, for a brief moment, then he banished it."
-msgstr ""
+msgstr "彼の顔に苦悶の表情が浮かび、一瞬だけ続いた後、彼はそれを消し去った。"
 
 msgctxt "speaker:Narrator"
 msgid "A pained regret in her voice. Not tonight, and perhaps not ever."
-msgstr ""
+msgstr "声には苦い後悔が滲んでいた。今夜は、そしておそらく永遠に。"
 
 msgctxt "speaker:Narrator"
 msgid "A pained smile appeared on Cassius' face."
-msgstr ""
+msgstr "カッシウスの顔に苦悶の笑みが浮かんだ。"
 
 msgctxt "speaker:Narrator"
 msgid "A pained smile on his face."
-msgstr ""
+msgstr "彼の顔には苦々しい笑みが浮かんでいた。"
 
 msgctxt "speaker:Narrator"
 msgid "A painful pull on her hair, but the pain felt only like pleasure."
-msgstr ""
+msgstr "髪を引っ張られる痛みは、ただ快感に過ぎなかった。"
 
 msgctxt "speaker:Narrator"
 msgid "A pair of small glasses balanced on the tip of his nose."
-msgstr ""
+msgstr "鼻先に小さな眼鏡が乗っている。"
 
 msgctxt "speaker:Narrator"
 msgid "A pale blue flame emerged from the palm of her hand, spreading around her hand."
-msgstr ""
+msgstr "掌から蒼白の炎が現れ、手周りを包み込んだ。"
 
 msgctxt "speaker:Narrator"
 msgid "A pale blue light errupted from her eyes and mouth, a crackling sound like lightning roared through the throne room."
-msgstr ""
+msgstr "彼女の目と口から蒼白い光が迸り、大広間に落雷のような轟音が響き渡った。"
 
 msgctxt "speaker:Narrator"
 msgid "A panicked expression on his face, he raised his blade to block her attack."
-msgstr ""
+msgstr "驚きと恐怖に満ちた表情で、彼は剣を上げ、彼女の攻撃を遮ろうとした。"
 
 msgctxt "speaker:Narrator"
 msgid "A panicked expression on his face."
-msgstr ""
+msgstr "慌てた表情を浮かべた。"
 
 msgctxt "speaker:Narrator"
 msgid "A panicked scout ran over."
-msgstr ""
+msgstr "パニックに陥った斥候が駆け寄ってきた。"
 
 msgctxt "speaker:Sarah"
 msgid "A paradise."
-msgstr ""
+msgstr "楽園だ。"
 
 msgctxt "speaker:Narrator"
 msgid "A part of her could never forget that, if not for Kate's intervention, she herself would have been captured and likely treated no different than this woman."
-msgstr ""
+msgstr "もしケイトが介入しなかったなら、自分も捕まり、この女と大差ない扱いを受けたかもしれない。その事実を忘れることはできない部分がある。"
 
 msgctxt "speaker:Narrator"
 msgid "A part of her hoped so. A part of her feared."
-msgstr ""
+msgstr "一部はそう願っていた。一部は恐れていた。"
 
 msgctxt "speaker:Narrator"
 msgid "A part of her hurt at the thought."
-msgstr ""
+msgstr "その考えに心を痛めた。"
 
 msgctxt "speaker:Narrator"
 msgid "A part of her wanted to resist it, but Sarah also knew that he was right."
-msgstr ""
+msgstr "彼女の心は抵抗したかったが、サラも彼が正しいことを知っていた。"
 
 msgctxt "speaker:Narrator"
 msgid "A part of her wanted to run back inside, but she also knew she could not live in that house forever."
-msgstr ""
+msgstr "一部は家の中へ逃げ込みたいと願っていたが、彼女はそこでずっと暮らすことはできないことも知っていた。"
 
 msgctxt "speaker:Narrator"
 msgid "A part of her wanted to tell Marius...but the man was his father."
-msgstr ""
+msgstr "彼女の一部はマリュスに話したかったが、その男は父だった。"
 
 msgctxt "speaker:Narrator"
 msgid "A part of her wanted to tell him to get lost."
-msgstr ""
+msgstr "一部は彼に去ってほしいと伝えたいと思った。"
 
 msgctxt "speaker:Narrator"
 msgid "A part of herself became cold and calculating."
-msgstr ""
+msgstr "自分の中の片方が冷たく計算高いものになった。"
 
 msgctxt "speaker:Sarah"
 msgid "A party? Shouldn't they ask the kitchen staff then?"
-msgstr ""
+msgstr "パーティか。では、なぜ厨房の奴らに聞いてやらないのか？"
 
 msgctxt "speaker:Narrator"
 msgid "A passing army drew some attention, but they were a curiosity to the people here."
-msgstr ""
+msgstr "通りかかった軍勢が注目を集めたが、彼らはこの地の人々にとって単なる珍異に過ぎなかった。"
 
 msgctxt "speaker:Narrator"
 msgid "A path that she could follow, but perhaps above all, something tha could make her powerful. She'd never have to be scared again."

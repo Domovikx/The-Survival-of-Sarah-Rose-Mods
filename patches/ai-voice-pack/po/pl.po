@@ -24,19 +24,19 @@ msgstr ""
 
 msgctxt "speaker:Curator"
 msgid "'The Desert Blooms'. We have Thirty-eight copies within the current inventory."
-msgstr ""
+msgstr "'Kwiaty pustyni'. Mamy trzydzieści osiem egzemplarzy w obecnych zapasach."
 
 msgctxt "speaker:Narrator"
 msgid "'The Hollow World'."
-msgstr ""
+msgstr "Pusta Świat"
 
 msgctxt "speaker:Sarah"
 msgid "...So Sir Roderic, now bearing the sword..."
-msgstr ""
+msgstr "...Więc Panie Roderiku, teraz trzymający miecz..."
 
 msgctxt "speaker:Samayra"
 msgid "...at least I'll have seen the world."
-msgstr ""
+msgstr "...przynajmniej zobaczyłam świat."
 
 msgctxt "ui"
 msgid "<"
@@ -48,191 +48,191 @@ msgstr ">"
 
 msgctxt "speaker:Curator"
 msgid "A Brief Investigation on Ethics was first written by the philosopher Lu-Fan, hailing from the current region known to you as the Far East."
-msgstr ""
+msgstr "Pierwsze opracowanie pt. Krótka analiza etyki pochodzi od filozofa Lu-Fana, który wywodzi się z obecnej dla was części świata zwanego Dalekim Wschodem."
 
 msgctxt "speaker:Voice"
 msgid "A God."
-msgstr ""
+msgstr "Bóg."
 
 msgctxt "speaker:Sarah"
 msgid "A Mythran army? Why?"
-msgstr ""
+msgstr "Armia Mythran? Dlaczego?"
 
 msgctxt "speaker:Xanthippe"
 msgid "A Mythran host is no joke, but the Bagrad army should be able to keep them off for a while. We're mostly here just to protect the palace from anyone that sneaks past the main battle."
-msgstr ""
+msgstr "Gość z Mythru to nie żart, ale armia Bagrad powinna być w stanie utrzymać ich na dystans przez jakiś czas. Jesteśmy tu głównie po to, aby chronić pałac przed każdym, kto przełamie główne starcie."
 
 msgctxt "speaker:Emmissary"
 msgid "A Queen with no crown. A Queen with no throne. A Queen with no land."
-msgstr ""
+msgstr "Królowa bez korony. Królowa bez tronu. Królowa bez ziemi."
 
 msgctxt "speaker:Sarah"
 msgid "A Rosannan man would never..."
-msgstr ""
+msgstr "Mężczyzna z Rosanny nigdy by tak nie zrobił..."
 
 msgctxt "speaker:Narrator"
 msgid "A Tribesmen, caught from his horse, was far less of a threat."
-msgstr ""
+msgstr "Plemieniacz schwytany z konia był znacznie mniejszym zagrożeniem."
 
 msgctxt "speaker:Kravel"
 msgid "A Union Council hasn't been called in over a century..."
-msgstr ""
+msgstr "Rada Zjednoczenia nie była wywoływana od ponad stulecia..."
 
 msgctxt "speaker:Narrator"
 msgid "A Union King."
-msgstr ""
+msgstr "Król Zjednoczenia."
 
 msgctxt "speaker:Narrator"
 msgid "A bad idea."
-msgstr ""
+msgstr "Zła decyzja."
 
 msgctxt "speaker:Narrator"
 msgid "A bar of soap."
-msgstr ""
+msgstr "Kawałek mydła."
 
 msgctxt "speaker:Narrator"
 msgid "A bar of soap. Some towels. Toiletries."
-msgstr ""
+msgstr "Kawałek mydła. Niektóre ręczniki. Przydatki toaletowe."
 
 msgctxt "speaker:Sarah"
 msgid "A bath? In this place?"
-msgstr ""
+msgstr "Kąpiel? W tym miejscu?"
 
 msgctxt "speaker:Narrator"
 msgid "A bathhouse."
-msgstr ""
+msgstr "Kąpielownia."
 
 msgctxt "speaker:Narrator"
 msgid "A bead of sweat fell from Naydeen's face, landing on Sarah's stomach."
-msgstr ""
+msgstr "Kropla potu spłynęła z twarzy Naydeen i lądowała na brzuchu Sarah."
 
 msgctxt "speaker:Narrator"
 msgid "A beautiful woman like that, dominated by a man like that."
-msgstr ""
+msgstr "Piękna kobieta taka jak ona, poddana mężczyźnie takiemu jak on."
 
 msgctxt "speaker:Narrator"
 msgid "A bed, some storage, nothing of note."
-msgstr ""
+msgstr "Łóżko, szafa, nic ciekawego."
 
 msgctxt "speaker:Metis"
 msgid "A bit more, this time."
-msgstr ""
+msgstr "Jeszcze trochę, tym razem."
 
 msgctxt "speaker:Captain Belmont"
 msgid "A bit of slack, but nothing practice won't fix. Very good."
-msgstr ""
+msgstr "Mało luzu, ale nic, co nie dałoby się naprawić ćwiczeniami. Bardzo dobrze."
 
 msgctxt "speaker:Sarah"
 msgid "A bit of the good of both."
-msgstr ""
+msgstr "Trochę z obu."
 
 msgctxt "speaker:Sarah"
 msgid "A bit, here and there."
-msgstr ""
+msgstr "Trochę, tu i ówdzie."
 
 msgctxt "speaker:Narrator"
 msgid "A black liquid spewed out, covering part of her face and armor, and the beast roared again."
-msgstr ""
+msgstr "Czarna ciecz wystrzeliła na zewnątrz, zakrywając część jej twarzy i pancerza, a bestia znów załajała."
 
 msgctxt "speaker:Narrator"
 msgid "A black scar, a void, an absence."
-msgstr ""
+msgstr "Czarna blizna, pustka, brak."
 
 msgctxt "speaker:Narrator"
 msgid "A black, oily tongue, emerged from its mouth, sliding around the body of the Mythran prince, and dragging it into its bowels."
-msgstr ""
+msgstr "Czarna, olejista język wyłoniła się z jego pyska, ślizgając się po ciele księcia Mythranów i wciągając je do swoich wnętrzności."
 
 msgctxt "speaker:Sarah"
 msgid "A blessing?"
-msgstr ""
+msgstr "Błogosławieństwo?"
 
 msgctxt "speaker:Narrator"
 msgid "A blinding light."
-msgstr ""
+msgstr "Ślepiąca jasność."
 
 msgctxt "speaker:Narrator"
 msgid "A blissful silence is replaced by a cold one."
-msgstr ""
+msgstr "Bliski spokój ustępuje miejsca zimnemu."
 
 msgctxt "speaker:Narrator"
 msgid "A blissful silence. A gentle sun. A soft breeze."
-msgstr ""
+msgstr "Błogoduszna cisza. Delikatne słońce. Miękkie wiatry."
 
 msgctxt "speaker:Narrator"
 msgid "A blistering assault of pleasure that drowned out all other senses, striking her blind."
-msgstr ""
+msgstr "Piorunująca fala przyjemności, która zalała wszystkie zmysły i pozbawiła ją wzroku."
 
 msgctxt "speaker:Narrator"
 msgid "A blistering hearth in the other end of the room."
-msgstr ""
+msgstr "Żarzący się kominek na drugim końcu pokoju."
 
 msgctxt "speaker:Narrator"
 msgid "A blistering hearth, braziers filled with flames, warmth oozing out from every direction."
-msgstr ""
+msgstr "Gorące ognisko, żarówki wypełnione płomieniami, ciepło wydobywające się z każdej strony."
 
 msgctxt "speaker:Alaric"
 msgid "A block of buildings in the cannery section burned down a few years back."
-msgstr ""
+msgstr "Kilka lat temu spłonęła cała dzielnica fabryczna."
 
 msgctxt "speaker:Narrator"
 msgid "A blood-curdling scream rings out across the silenced mass of slaves."
-msgstr ""
+msgstr "Zmrożony krzyk rozbrzmiewa wśród zamilkniętej masy niewolników."
 
 msgctxt "speaker:Narrator"
 msgid "A bloodied hand emerged from the surface of the pool, though she could see the body it was attached to."
-msgstr ""
+msgstr "Z powierzchni basenu wystąpiła zabrudzona krwią dłoń, choć mogła dostrzec ciało, do którego była przywiązana."
 
 msgctxt "speaker:Sigmund"
 msgid "A bloodlust seemed to take over, and by the end of it, nothing of the old regimes or histories remained."
-msgstr ""
+msgstr "Krewiżerca zdawała się przejąć kontrolę, i gdy to wszystko dobiegło końca, nic z dawnych reżimów ani historii nie pozostało."
 
 msgctxt "speaker:Narrator"
 msgid "A blue sky, save for a few clouds, crowned the start of a new day in Lethram."
-msgstr ""
+msgstr "Niebieskie niebo, z wyjątkiem kilku chmur, koronowało początek nowego dnia w Lethram."
 
 msgctxt "speaker:Narrator"
 msgid "A blur she hoped would not end."
-msgstr ""
+msgstr "Zamglona, w nadziei, że to nie dobiegnie końca."
 
 msgctxt "speaker:Narrator"
 msgid "A blurring of bodies and sex."
-msgstr ""
+msgstr "Zmętnienie ciał i seksu."
 
 msgctxt "speaker:Narrator"
 msgid "A bolt of pleasure shot through her body as she felt him press the tip up against her pussy."
-msgstr ""
+msgstr "Prąd przyjemności przeszył jej ciało, gdy poczuła, jak wciska wierzchołek przeciwko jej cipce."
 
 msgctxt "speaker:Maeiv"
 msgid "A bore, much like your father."
-msgstr ""
+msgstr "Nudydlu, tak jak Twój ojciec."
 
 msgctxt "speaker:Narrator"
 msgid "A bowl that had been sat upon the edge of the Shah's throne was send clattering across the stone floor."
-msgstr ""
+msgstr "Miska, która znajdowała się na krawędzi tronu szacha, rozbiła się o kamienną podłogę."
 
 msgctxt "speaker:Varga"
 msgid "A boy, a girl. Either would be a blessing."
-msgstr ""
+msgstr "Chłopiec, dziewczyna. Każdy z nich będzie błogosławieństwem."
 
 msgctxt "speaker:Narrator"
 msgid "A boy, as she had hoped it would be."
-msgstr ""
+msgstr "Chłopiec, tak jak się spodziewała."
 
 msgctxt "speaker:Narrator"
 msgid "A boy, they cried out."
-msgstr ""
+msgstr "Chłopiec – zawołały."
 
 msgctxt "speaker:Sarah"
 msgid "A boy."
-msgstr ""
+msgstr "Chłopiec."
 
 msgctxt "speaker:Narrator"
 msgid "A breeze runs through the alley, and past Sarah's naked body. She shivers"
-msgstr ""
+msgstr "Przygrywa wiatrem przez zaułek i obok nagiego ciała Sarah. Drży."
 
 msgctxt "speaker:Narrator"
 msgid "A bride in Rosanna was clad in white only, like a ghost, but here they crowned their brides in bright floral, for all the world to see."
-msgstr ""
+msgstr "Młoda żona w Rosannie ubrana była tylko w biel, jak duch, ale tutaj koronowali swoje młode żony jaskrawymi kwiatami, by wszyscy to widzieli."
 
 msgctxt "speaker:Narrator"
 msgid "A bridge of some kind."
@@ -240,83 +240,83 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "A brief few seconds more, before they'd catch her."
-msgstr ""
+msgstr "Jeszcze kilka sekund, zanim ją złapią."
 
 msgctxt "speaker:Narrator"
 msgid "A brief flash of magical flame brushed along her hand."
-msgstr ""
+msgstr "Krótka iskra magicznego płomienia dotknęła jej dłoni."
 
 msgctxt "speaker:Narrator"
 msgid "A brief moment later, he came back out."
-msgstr ""
+msgstr "Krótko później wrócił."
 
 msgctxt "speaker:Narrator"
 msgid "A brief moment of pause, as if they were understanding something."
-msgstr ""
+msgstr "Krótka chwila pauzy, jakby coś rozumiejąc."
 
 msgctxt "speaker:Narrator"
 msgid "A brief moment of shame."
-msgstr ""
+msgstr "Krótka chwila wstydu."
 
 msgctxt "speaker:Narrator"
 msgid "A brief pause."
-msgstr ""
+msgstr "Krótka pauza."
 
 msgctxt "speaker:Narrator"
 msgid "A brief respite. A chance to restock."
-msgstr ""
+msgstr "Krótka przerwa. Szansa na uzupełnienie zapasów."
 
 msgctxt "speaker:Varga"
 msgid "A brief window where our troops will be ready to attack Marion's position, but where we might still end the uprising in time to spare the outer provinces from a wasted harvest."
-msgstr ""
+msgstr "Krótki okienko, w którym nasze wojska będą gotowe do ataku na pozycję Mariona, ale w którym możemy jeszcze zakończyć powstanie na czas, aby oszczędzić zewnętrzne prowincje przed marnotrawnym żniwem."
 
 msgctxt "speaker:Narrator"
 msgid "A bright flower, vibrant in colour, but not all that otherwordly."
-msgstr ""
+msgstr "Jasny kwiat, intensywnie barwiony, ale nie aż tak nadprzyrodzony."
 
 msgctxt "speaker:Garret"
 msgid "A brother...I'm sorry, I didn't know..."
-msgstr ""
+msgstr "Brat... przepraszam, nie wiedziałem..."
 
 msgctxt "speaker:Narrator"
 msgid "A brutal peace, where as often, the weakest and poorest were made to pay the price."
-msgstr ""
+msgstr "Okrutny pokój, w którym tak często płacili cenę najwięksi i najsłabsi."
 
 msgctxt "speaker:Oryon"
 msgid "A brutal war between them and the Void that would see countless of them dead."
-msgstr ""
+msgstr "Brutalna wojna między nimi a Pustką, w której wielu z nich padnie."
 
 msgctxt "speaker:Narrator"
 msgid "A bubble of sensations of touch, smell, sight, each overpowering her senses."
-msgstr ""
+msgstr "Bąbel dotyku, zapachów i wzroku, każdy z nich przytłaczający jej zmysły."
 
 msgctxt "speaker:Narrator"
 msgid "A bull that could protect her in a world of lions."
-msgstr ""
+msgstr "Byk, który mógłby ją chronić w świecie lwów."
 
 msgctxt "speaker:Narrator"
 msgid "A burden of which she was reminded only in its absence, when she remembered what it felt like to live easily."
-msgstr ""
+msgstr "Obciążenie, o którym przypominała sobie tylko w jego nieobecności, gdy wspomniała, jak było żyć lekko."
 
 msgctxt "speaker:Narrator"
 msgid "A burning pain along the side of her cheek."
-msgstr ""
+msgstr "Ogień wstrząsnął jej policzkiem."
 
 msgctxt "speaker:Narrator"
 msgid "A burst of blue flame poured forth from her hand and surged out in the center of the room."
-msgstr ""
+msgstr "Z jej dłoni wystrzelił błękitny płomień, który z prędkością wyleciał na środek pokoju."
 
 msgctxt "speaker:Narrator"
 msgid "A busy, chaotic, almost maddening scene."
-msgstr ""
+msgstr "Zabiegane, chaotyczne, wręcz wariackie widowisko."
 
 msgctxt "speaker:Sarah"
 msgid "A cart? What...what are you talking about?"
-msgstr ""
+msgstr "Wóz? Co...co ty mówisz?"
 
 msgctxt "speaker:Judge"
 msgid "A case of improper soliciation? Prostitution?"
-msgstr ""
+msgstr "Sprawa nieodpowiedniego podchmielania? Prostytucja?"
 
 msgctxt "speaker:Carolyn"
 msgid "A castle is only as strong as the morale that rules it."
@@ -324,143 +324,143 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "A cave, Sarah realized, as they neared it."
-msgstr ""
+msgstr "Jaskinia – zrozumiała Sarah, gdy zbliżyli się do niej."
 
 msgctxt "speaker:Narrator"
 msgid "A cell door appeared."
-msgstr ""
+msgstr "Pojawili się drzwi do celi."
 
 msgctxt "speaker:Narrator"
 msgid "A challenge she was committed to."
-msgstr ""
+msgstr "Wyzwanie, do którego była zobowiązana."
 
 msgctxt "speaker:Narrator"
 msgid "A chance. That's all she had ever wanted."
-msgstr ""
+msgstr "Szansa. To wszystko, o co kiedykolwiek prosiła."
 
 msgctxt "speaker:Narrator"
 msgid "A chaos was spreading through the room, Sarah had lost all control. Herself, her brother and now even her husband...she stood to lose everything."
-msgstr ""
+msgstr "Chaos rozprzestrzeniał się w pokoju, Sarah straciła wszelką kontrolę. Sama siebie, swojego brata, a teraz nawet męża... stała na straży utraty wszystkiego."
 
 msgctxt "speaker:Narrator"
 msgid "A chaos was spreading through the room, Sarah had lost all control. Herself, her brother...she stood to lose everything."
-msgstr ""
+msgstr "Chaos rozprzestrzeniał się w pokoju, Sarah straciła wszelką kontrolę. Sama siebie, swojego brata... stało się jej groźba utrata wszystkiego."
 
 msgctxt "speaker:Narrator"
 msgid "A chaotic surge of butterflies in her stomach."
-msgstr ""
+msgstr "Chaotyczna fala motyli w jej żołądku."
 
 msgctxt "speaker:Narrator"
 msgid "A charged silence came over the hall."
-msgstr ""
+msgstr "Napięta cisza opadła na hol."
 
 msgctxt "speaker:Narrator"
 msgid "A charged silence lingered."
-msgstr ""
+msgstr "Napięta cisza trwała jeszcze chwilę."
 
 msgctxt "speaker:Captain Belmont"
 msgid "A cheap ship whore who will suck my dick the moment I order her to?"
-msgstr ""
+msgstr "Tania suka z okrętu, która na moje polecenie wciągnie mi kutasa do góry?"
 
 msgctxt "speaker:Narrator"
 msgid "A child that would guarantee peace and stability."
-msgstr ""
+msgstr "Dziecko, które zagwarantuje pokój i stabilność."
 
 msgctxt "speaker:Narrator"
 msgid "A child would mean the end of that."
-msgstr ""
+msgstr "Dziecko oznaczałoby koniec tego."
 
 msgctxt "speaker:Narrator"
 msgid "A child, born from her family and his. The final seal that would forever link their houses."
-msgstr ""
+msgstr "Dziecko urodzone z ich rodzin. Ostateczna pieczęć, która na zawsze połączy ich rody."
 
 msgctxt "speaker:Narrator"
 msgid "A child, she thought, would be something she could give him that would weigh up to all he gave her."
-msgstr ""
+msgstr "Dziecko – pomyślała – byłoby czymś, co mogłaby dać mu w zamian za wszystko, co on jej dał."
 
 msgctxt "speaker:Narrator"
 msgid "A child."
-msgstr ""
+msgstr "Dziecko."
 
 msgctxt "speaker:Narrator"
 msgid "A childish hope, that she had long ago allowed to die, returned."
-msgstr ""
+msgstr "Dziecięca nadzieja, którą dawno pozwoliła umrzeć, wróciła."
 
 msgctxt "speaker:Narrator"
 msgid "A citizen could succeed on his own merit, but unlike a slave, he could also fall into poverty."
-msgstr ""
+msgstr "Obywatel mógł się wybić na własną rękę, ale w przeciwieństwie do niewolnika, mógł też upaść w nędzy."
 
 msgctxt "speaker:Narrator"
 msgid "A city like Lethram was always filled with various noises, but Sarah had learned by now that people rarely came to this particular alley."
-msgstr ""
+msgstr "Miasto takie jak Lethram zawsze wypełnione było różnymi dźwiękami, ale Sarah już teraz wiedziała, że ludzie rzadko przychodzili do tej konkretnej uliczki."
 
 msgctxt "speaker:Narrator"
 msgid "A city like this, there was none like it in all the world."
-msgstr ""
+msgstr "Miastu podobnemu do tego nie było drugiego na świecie."
 
 msgctxt "speaker:Narrator"
 msgid "A city unlike any other in the world."
-msgstr ""
+msgstr "Miasto inne niż każde inne na świecie."
 
 msgctxt "speaker:Marion"
 msgid "A claim that Oliver could use as a pretext to take offense."
-msgstr ""
+msgstr "Powiedzenie, które Oliver mógłby wykorzystać jako pretekst do urazy."
 
 msgctxt "speaker:Duke Antonio"
 msgid "A clear and logical position."
-msgstr ""
+msgstr "Jasna i logiczna pozycja."
 
 msgctxt "speaker:Atilla"
 msgid "A clever move, girl, but you need to think."
-msgstr ""
+msgstr "Sprytna pociąga, dziewczyno, ale musisz myśleć."
 
 msgctxt "speaker:Sarah"
 msgid "A cock hungry slut...pretending to be a deck hand."
-msgstr ""
+msgstr "Głodna kutasa suka... udająca marynarza."
 
 msgctxt "speaker:Narrator"
 msgid "A cold gust of air breezed past them, rising up from deep within the bowels of the Imperial Palace."
-msgstr ""
+msgstr "Zimny podmuch wiatru przeszedł obok nich, unosząc się z głębi wnętrzności Pałacu Imperium."
 
 msgctxt "speaker:Narrator"
 msgid "A cold wind ran through the tent, the thick hide cover slapping against itself as the wind battered against it."
-msgstr ""
+msgstr "Chłodny wiatr przeciął namiot, a gruba skórzana pokrywa trzaskała o siebie pod uderzeniami wiatru."
 
 msgctxt "speaker:Narrator"
 msgid "A cold wind rushed up to meet her as they neared closer to land; the shores quickly growing."
-msgstr ""
+msgstr "Zimny wiatr pędził naprzeciw niej, gdy zbliżali się do brzegu; wybrzeże szybko rosło przed oczami."
 
 msgctxt "speaker:Narrator"
 msgid "A collar, as meant for an animal."
-msgstr ""
+msgstr "Kołnierz, taki jak na zwierzę."
 
 msgctxt "speaker:Sigmund"
 msgid "A collection of smaller kingdoms that managed to keep the other powers out by working together whenever it served them."
-msgstr ""
+msgstr "Zbiór mniejszych królestw, które potrafiły utrzymać inne mocarstwa z dala od siebie, współpracując razem, gdy im to odpowiadało."
 
 msgctxt "speaker:Narrator"
 msgid "A comfortable change of pace from the dangerous streets."
-msgstr ""
+msgstr "Zmiana tempa, która przynosi ulgę po niebezpiecznych ulicach."
 
 msgctxt "speaker:Narrator"
 msgid "A command he would soon be in his full right to give to her, she realized."
-msgstr ""
+msgstr "Polecenie, które wkrótce będzie miał pełne prawo wydać jej"
 
 msgctxt "speaker:Narrator"
 msgid "A command she already obeyed as if it was his right."
-msgstr ""
+msgstr "Okazując się posłuszna, jakby to było jego prawo."
 
 msgctxt "speaker:Narrator"
 msgid "A command was given atop the walls for the archers to fire, and together they did."
-msgstr ""
+msgstr "Wydano rozkaz strzelania z łuków na murach, i razem go wykonali."
 
 msgctxt "speaker:Duke Antonio"
 msgid "A common whore. I could go out into the city tonight and fuck a dozen like her."
-msgstr ""
+msgstr "Powszechna suka. Mogę wyjść na ulicę miasta dziś wieczorem i ruchać z dziesięciorgiem takich jak ona."
 
 msgctxt "speaker:Narrator"
 msgid "A complex maze of gears and machinery."
-msgstr ""
+msgstr "Skomplikowana labirynt zębatek i mechanizmów."
 
 msgctxt "speaker:Narrator"
 msgid "A complicated flurry of emotions rocked her body as she began to slowly finger herself."
@@ -468,63 +468,63 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "A complicated mixture of emotions rushed through her."
-msgstr ""
+msgstr "Zawiła mieszanka emocji natychmiast wypełniła ją."
 
 msgctxt "speaker:King-On-The-Outside"
 msgid "A condemned man knows his own judgement. Knowing does not exempt him from suffering it."
-msgstr ""
+msgstr "Skazany mężczyzna zna własny wyrok. Znajomość nie zwalnia go od cierpienia."
 
 msgctxt "speaker:Narrator"
 msgid "A conspiracy against the Gods of her world themselves."
-msgstr ""
+msgstr "Spisek przeciwko Bogom jej własnego świata."
 
 msgctxt "speaker:Narrator"
 msgid "A constant pleasure invaded every part of her body, dominated her mind."
-msgstr ""
+msgstr "Stała przyjemność inwadowała każdą część jej ciała, dominowała umysł."
 
 msgctxt "speaker:Narrator"
 msgid "A constant, lowly grunting, seemed to emerge from the creature as it breathed heavily."
-msgstr ""
+msgstr "Stały, niski gromotanie wydawało się wyłaniać z istoty, gdy ciężko oddychała."
 
 msgctxt "speaker:Curator"
 msgid "A copy of such a book does not exist within the current inventory."
-msgstr ""
+msgstr "Kopia takiej książki nie istnieje w obecnym inwentarzu."
 
 msgctxt "speaker:Narrator"
 msgid "A council of leaders would form the leadership of the Union."
-msgstr ""
+msgstr "Rada przywódców utworzyłaby kierownictwo Związku."
 
 msgctxt "speaker:Captain Belmont"
 msgid "A couple, to be sure."
-msgstr ""
+msgstr "Para, rzecz jasna."
 
 msgctxt "speaker:Narrator"
 msgid "A crack rang out across the tent."
-msgstr ""
+msgstr "Dźwięk pęknięcia rozbrzmiał w namiocie."
 
 msgctxt "speaker:Narrator"
 msgid "A creature hiding could ask for no more perfect place."
-msgstr ""
+msgstr "Stworzenie ukrywające się nie mogło prosić o lepsze miejsce."
 
 msgctxt "speaker:Narrator"
 msgid "A creeping feeling came over her, as though something from inside the forest was looking back at her."
-msgstr ""
+msgstr "Przeczucie przebiegło ją, jakby coś z wnętrza lasu spoglądało na nią."
 
 msgctxt "speaker:Narrator"
 msgid "A crossbow bolt pierced through his back."
-msgstr ""
+msgstr "Strzała z łuku przebiła mu plecy."
 
 msgctxt "speaker:Narrator"
 msgid "A crowd began to form."
-msgstr ""
+msgstr "Zbiórka ludzi zaczęła się formować."
 
 msgctxt "speaker:Narrator"
 msgid "A crowd of men and women already stood gathered outside, busily engaged with one another."
-msgstr ""
+msgstr "Za nimi już gromadziła się tłok ludzi – mężczyzn i kobiet, którzy gorliwie rozmawiali ze sobą."
 
 msgctxt "speaker:Kate"
 msgid "A crowd of people gathered to watch them, and I couldn't keep away. I was drawn in like everyone else."
-msgstr ""
+msgstr "Zbiera się tłum ludzi, by ich obserwować, a ja nie mogę się oprzeć. Jestem pociągana do środka jak każdy inny."
 
 msgctxt "speaker:Narrator"
 msgid "A crowd of people."
@@ -532,527 +532,527 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "A crown her family still wore, to this day."
-msgstr ""
+msgstr "Korona, którą jej rodzina wciąż nosiła, do dziś."
 
 msgctxt "speaker:Old Tribesman"
 msgid "A cunt like this..."
-msgstr ""
+msgstr "Cipka taka jak ta..."
 
 msgctxt "speaker:Alaric"
 msgid "A cunt."
-msgstr ""
+msgstr "Cipka."
 
 msgctxt "speaker:Kate"
 msgid "A cup like this, wouldn't be hard to sell that off at the local market."
-msgstr ""
+msgstr "Kieliszkiem takim jak ten nie byłoby trudno sprzedać coś na lokalnym targu."
 
 msgctxt "speaker:Garret"
 msgid "A curse that would heal my wounds, save my life and make me a creature of the forest. A Beast."
-msgstr ""
+msgstr "Przekleństwo, które uzdrowiłoby moje rany, ocaliłoby mi życie i sprawiłoby ze mnie istotę lasu. Bestię."
 
 msgctxt "speaker:Sarah"
 msgid "A curse?"
-msgstr ""
+msgstr "Czar?"
 
 msgctxt "speaker:Narrator"
 msgid "A dagger glinted in the light, inches from her brother's throat."
-msgstr ""
+msgstr "Klin błysnął w świetle, zaledwie kilka cali od gardła jej brata."
 
 msgctxt "speaker:Narrator"
 msgid "A dagger."
-msgstr ""
+msgstr "Noż."
 
 msgctxt "speaker:Narrator"
 msgid "A dagger. A handle as black as obsidian, a blade glowing in deep crimson red."
-msgstr ""
+msgstr "Noż. Uchwyt tak czarny jak obsydian, ostrze świecące głębokim czerwonym."
 
 msgctxt "speaker:Sigmund"
 msgid "A dark fountain?"
-msgstr ""
+msgstr "Ciemna fontanna?"
 
 msgctxt "speaker:Narrator"
 msgid "A darkness stood out."
-msgstr ""
+msgstr "Ciemność wyróżniała się."
 
 msgctxt "speaker:Narrator"
 msgid "A darkness that was more like a void, filled with starlight"
-msgstr ""
+msgstr "Ciemność, która bardziej przypominała pustkę, wypełnioną światłem gwiazd"
 
 msgctxt "speaker:Narrator"
 msgid "A daughter loves her father, despite the quality of the man."
-msgstr ""
+msgstr "Córka kocha ojca, niezależnie od tego, kim jest ten mężczyzna."
 
 msgctxt "speaker:Atilla"
 msgid "A day, more than a year ago, in Lethram. But I kept myself hidden."
-msgstr ""
+msgstr "Jeden dzień, ponad rok temu, w Lethram. Ale ukrywałem się."
 
 msgctxt "speaker:Narrator"
 msgid "A dead end, Sarah thought. She knew every inch of the castle."
-msgstr ""
+msgstr "Sarah pomyślała, że to martwy koniec. Znała każdy cal zamku."
 
 msgctxt "speaker:Narrator"
 msgid "A deafening and thunderous crashing sound roared out aross the room."
-msgstr ""
+msgstr "Ogłuszający, grzmotny huk rozbrzmiał po całym pokoju."
 
 msgctxt "speaker:Narrator"
 msgid "A deafening cracking sound rang out across the room."
-msgstr ""
+msgstr "Ostrzały pęknięcie rozległo się po całym pokoju."
 
 msgctxt "speaker:Narrator"
 msgid "A deafening scream erupted from the creature as it crashed into the stone floor, its limb smashing against the ground with a loud thud."
-msgstr ""
+msgstr "Zduszony krzyk wyrwał się z bestii, gdy uderzyła w kamienną podłogę, a jej kończyna z łoskotem rozbiła się o ziemię."
 
 msgctxt "speaker:Narrator"
 msgid "A deafening silence had descended on the people that had survived, and no doubt lost countless others."
-msgstr ""
+msgstr "Na przeżyłych ludziach zapanowała przeraźliwa cisza, a niewątpliwie wielu innych zostało straconych."
 
 msgctxt "speaker:Sarah"
 msgid "A deal?"
-msgstr ""
+msgstr "Umowa?"
 
 msgctxt "speaker:Narrator"
 msgid "A deathly silence descended on the crowd."
-msgstr ""
+msgstr "Śmiertelna cisza opadła na tłum."
 
 msgctxt "speaker:Metis"
 msgid "A decent attempt, but this one...I'll give it half a chance of surviving."
-msgstr ""
+msgstr "Sprawny próbą, ale ten... dam mu pół szansy na przeżycie."
 
 msgctxt "speaker:Narrator"
 msgid "A decent sum. She wouldn't live off it forever, but it would keep her housed for a good while. Enough to make a plan."
-msgstr ""
+msgstr "Dobry pieniądz. Nie przetrwałaby na nim wiecznie, ale wystarczyłoby na długi czas. Wystarczająco, by zaplanować."
 
 msgctxt "speaker:Narrator"
 msgid "A deep groan of pain roared out from his throat as he collapsed to the ground."
-msgstr ""
+msgstr "Głęboki, bolesny jęk wyrywał się z jego gardła, gdy upadł na ziemię."
 
 msgctxt "speaker:Narrator"
 msgid "A deep growl, followed by his already sizeable cock expanding further."
-msgstr ""
+msgstr "Głęboki ryk, a następnie jego już spory kutus zaczął się jeszcze bardziej powiększać."
 
 msgctxt "speaker:Narrator"
 msgid "A deep grunt errupted from Alaric, his grip on her hip and head tightening, adding to the pain."
-msgstr ""
+msgstr "Z gardła Alarica wydobył się głęboki jęk, jego chwyt na jej biodrze i głowie stawał się coraz mocniejszy, pogłębiając ból."
 
 msgctxt "speaker:Narrator"
 msgid "A deep grunt proceeded what she did not yet know would follow."
-msgstr ""
+msgstr "Głębki charkot poprzedził to, czego jeszcze nie wiedziała."
 
 msgctxt "speaker:Narrator"
 msgid "A deep grunt, then she felt him expanding inside of her."
-msgstr ""
+msgstr "Głęboki charkot, a potem poczuła, jak się w niej powiększa."
 
 msgctxt "speaker:Narrator"
 msgid "A deep panic had overtaken the people of Lethram."
-msgstr ""
+msgstr "Głębika panika ogarnęła mieszkańców Lethram."
 
 msgctxt "speaker:Narrator"
 msgid "A deep part of her wanted to lunge for her sword and make them all pay."
-msgstr ""
+msgstr "Głęboka część jej duszy pragniała skoczyć po miecz i ukarać ich wszystkich."
 
 msgctxt "speaker:Narrator"
 msgid "A deep sleep took hold of her."
-msgstr ""
+msgstr "Głębki sen objął ją."
 
 msgctxt "speaker:Narrator"
 msgid "A degree of seperation between herself and the real world, now again full of uncertainty."
-msgstr ""
+msgstr "Stopień oddzielenia od niej samej oraz od rzeczywistości, która znowu jest pełna niepewności."
 
 msgctxt "speaker:Razaphel"
 msgid "A design in which every path bends towards the same desination."
-msgstr ""
+msgstr "Projekt, w którym każda ścieżka krzywi się ku temu samemu celowi."
 
 msgctxt "speaker:Narrator"
 msgid "A detailed map of the city of Rahayal, containing not just all the districts, but even down to recording most streets and alleys."
-msgstr ""
+msgstr "Szczegółowa mapa miasta Rahayal zawierająca nie tylko wszystkie dzielnice, ale nawet większość ulic i zaułków."
 
 msgctxt "speaker:Narrator"
 msgid "A difference between knowing a thing and seeing it. And experiencing this debauchery was almost too much for her."
-msgstr ""
+msgstr "Różnica między wiedzą o czymś a jego widzeniem i przeżyciem tego deprawowania była dla niej prawie zbyt duża."
 
 msgctxt "speaker:Razaphel"
 msgid "A different world, in a place beyond the dimensions of your own, where life lived forever."
-msgstr ""
+msgstr "Inna rzeczywistość, w miejscu poza wymiarami Twojego świata, gdzie życie trwa wiecznie."
 
 msgctxt "speaker:Xanthippe"
 msgid "A disaster."
-msgstr ""
+msgstr "Katastrofa."
 
 msgctxt "speaker:Sarah"
 msgid "A discount, really? Why?"
-msgstr ""
+msgstr "Zniżka? Naprawdę? Dlaczego?"
 
 msgctxt "speaker:Narrator"
 msgid "A distant echo of a woman who dreamed of so much more."
-msgstr ""
+msgstr "Daleki echem kobiety, która marzyła o znacznie więcej."
 
 msgctxt "speaker:Narrator"
 msgid "A divine omen, one that made victory so obvious that it made them eager for the bloodshed."
-msgstr ""
+msgstr "Prawdziwy znak boski, który sprawił, że zwycięstwo stało się tak oczywiste, iż oboje gorączkowo pragnęli krwi."
 
 msgctxt "speaker:Narrator"
 msgid "A divine sign of their right to rule."
-msgstr ""
+msgstr "Boże znaki ich prawa do panowania."
 
 msgctxt "speaker:Cassius"
 msgid "A doctor in Rahayal, he has studied the jungles and their diseases more than any man alive."
-msgstr ""
+msgstr "Lekarz w Rahayal, który więcej niż każdy żyjący człowiek badał dżungle i ich choroby."
 
 msgctxt "speaker:Narrator"
 msgid "A dominating silence hung over the room. Ashes slowly drifted across the floor."
-msgstr ""
+msgstr "Cisza, która dominowała nad pokojem, była ciężka i niepokojąca. Popioły powoli unosiły się w powietrzu, opadając na podłogę."
 
 msgctxt "speaker:Narrator"
 msgid "A door had been thrown open and a cadre of servants swarmed behind the man who now walked ahead of the pack."
-msgstr ""
+msgstr "Drzwi otworzyły się z własną wolą, a za mężczyzną, który teraz szedł na czele grupy, wtargnęła horda służby."
 
 msgctxt "speaker:Narrator"
 msgid "A door with a mind of its own. Sarah thought she couldn't be more unnerved by the thing."
-msgstr ""
+msgstr "Drzwi, które miały własny umysł. Sarah pomyślała, że nic jej nie mogło bardziej wystraszyć."
 
 msgctxt "speaker:Sarah"
 msgid "A dozen attacks?"
-msgstr ""
+msgstr "Dziesięć razy?"
 
 msgctxt "speaker:Narrator"
 msgid "A dread they had not yet tasted."
-msgstr ""
+msgstr "Strach, którego jeszcze nie próbowali."
 
 msgctxt "speaker:Narrator"
 msgid "A dreadful quietness came over the hall."
-msgstr ""
+msgstr "Przeraźliwa cisza opadła na salę."
 
 msgctxt "speaker:Narrator"
 msgid "A dreadful silence came over the room as a everyone turned their heads to see the source of the disturbance."
-msgstr ""
+msgstr "Przeraźliwa cisza zapadła w sali, gdy wszyscy odwrócili głowy, by dostrzec źródło zamieszania."
 
 msgctxt "speaker:Narrator"
 msgid "A dream of her mother...father...and Thomas."
-msgstr ""
+msgstr "Marzenie o jej matce...ojcu...i Thomasie."
 
 msgctxt "speaker:Narrator"
 msgid "A dream she had murdered, returned so vividly that she could now feel it on her skin."
-msgstr ""
+msgstr "Marzenie, które zamordowała, powróciło tak żywo, że teraz czuła je na swojej skórze."
 
 msgctxt "speaker:Narrator"
 msgid "A dream she had once."
-msgstr ""
+msgstr "Marzenie, które kiedyś miała."
 
 msgctxt "speaker:Narrator"
 msgid "A dress was sprawled out across it. Just by looking at it, one could see how expensive it was."
-msgstr ""
+msgstr "Na nim rozpostarta była sukienka. Tylko patrząc na nią, można było poznać jej wartość."
 
 msgctxt "speaker:Narrator"
 msgid "A drink couldn't hurt."
-msgstr ""
+msgstr "Koktajl nie zaszkodzi."
 
 msgctxt "speaker:Narrator"
 msgid "A dryer temperate."
-msgstr ""
+msgstr "Spokojniejsza."
 
 msgctxt "speaker:Narrator"
 msgid "A dullness had been lifted, and Sarah prayed it would remain forever banished."
-msgstr ""
+msgstr "Zmętnienie ustąpiło, a Sarah błagała, by zostało na zawsze wygnane."
 
 msgctxt "speaker:Narrator"
 msgid "A faint distant voice in her head tried to speak reason."
-msgstr ""
+msgstr "Cisza w jej głowie spróbowała przemówić rozsądek."
 
 msgctxt "speaker:Marshal Edmond"
 msgid "A fair assumption, I would say."
-msgstr ""
+msgstr "Zgadzam się, to uczciwy zakład, sądzę."
 
 msgctxt "speaker:Ramsey"
 msgid "A fair price and we treat all our customers like family, not like those big places that just want your money."
-msgstr ""
+msgstr "Sprawiedliwa cena i traktujemy wszystkich naszych klientów jak rodzinę, a nie jak te duże miejsca, które chcą tylko z waszego portfela."
 
 msgctxt "speaker:Narrator"
 msgid "A familiar purple, though she struggled to place it."
-msgstr ""
+msgstr "Znajomy fiolet, choć z trudem potrafiła go umiejscowić."
 
 msgctxt "speaker:Narrator"
 msgid "A familiar voice responded."
-msgstr ""
+msgstr "Odpowiedział znajomy głos."
 
 msgctxt "speaker:Narrator"
 msgid "A family working at an inn looked up as they passed, sparing them a glance."
-msgstr ""
+msgstr "Pracująca w gospodzie rodzina podniosła wzrok, gdy przechodziliśmy obok, i rzuciła nam spojrzenie."
 
 msgctxt "speaker:Sarah"
 msgid "A family."
-msgstr ""
+msgstr "Rodzina."
 
 msgctxt "speaker:Sarah"
 msgid "A famine? That's horrible...we can't allow that to happen."
-msgstr ""
+msgstr "Głód? To jest straszne... nie możemy pozwolić, żeby tak się stało."
 
 msgctxt "speaker:Narrator"
 msgid "A fantasy."
-msgstr ""
+msgstr "Fantazja."
 
 msgctxt "speaker:Narrator"
 msgid "A fate stone, the spirit had called it."
-msgstr ""
+msgstr "Kamień losu – tak nazywał go duch."
 
 msgctxt "speaker:Narrator"
 msgid "A father, that raised no hand to save his daughter."
-msgstr ""
+msgstr "Ojciec, który nie podniósł ręki, by uratować córkę."
 
 msgctxt "speaker:Narrator"
 msgid "A fear had descended over the city, one that had snuffed out any semblance of celebration."
-msgstr ""
+msgstr "Strach opadł na miasto, zgaszając wszelką nadzieję na świętowanie."
 
 msgctxt "speaker:Narrator"
 msgid "A feeling ran through her. She feared it close to pride, pride at a job well done."
-msgstr ""
+msgstr "Przebiegło przez nią uczucie, które bała się pomylić z dumą, dumą za dobrze wykonaną robotę."
 
 msgctxt "speaker:Narrator"
 msgid "A female soldier next to him snatched the dice from the floor and nearly instantly cast them again."
-msgstr ""
+msgstr "Żołnierzyca stojąca obok niego chwycła kostki z podłogi i niemal natychmiast rzuciła je ponownie."
 
 msgctxt "speaker:Narrator"
 msgid "A ferocious screaming and roaring exploded as he was crowned the victor."
-msgstr ""
+msgstr "Głośny krzyk i ryk wybuchły, gdy został koronowany na zwycięzcę."
 
 msgctxt "speaker:Alaric"
 msgid "A few I guess. I never really did count."
-msgstr ""
+msgstr "Kilku, pewnie. Nigdy nie liczyłem."
 
 msgctxt "speaker:Narrator"
 msgid "A few arrows fell on them as they advanced, but the large volley she had expected did not come."
-msgstr ""
+msgstr "Kilka strzał spadło na nich podczas ich natarcia, ale oczekiwana przez nią duża salwa nie nadjechała."
 
 msgctxt "speaker:Narrator"
 msgid "A few clouds, moving strangely peaceful as if this brutal betrayal had not taken place."
-msgstr ""
+msgstr "Kilka chmur, poruszających się dziwnie spokojnie, jakby ta brutalna zdrada nie miała miejsca."
 
 msgctxt "speaker:Narrator"
 msgid "A few coins, that was it."
-msgstr ""
+msgstr "Kilka monet, tyle było."
 
 msgctxt "speaker:Narrator"
 msgid "A few days back, the royal messenger had been send back, carrying with him the message of her acceptance."
-msgstr ""
+msgstr "Kilka dni temu, królewski posłaniec został wysłany z powrotem, zabierając ze sobą wiadomość o jej akceptacji."
 
 msgctxt "speaker:Narrator"
 msgid "A few days had passed and their journey had progressed smoothly."
-msgstr ""
+msgstr "Minęło kilka dni, a ich podróż przebiegła bez zakłóceń."
 
 msgctxt "speaker:Narrator"
 msgid "A few days had passed since they had managed to get past the river crossing."
-msgstr ""
+msgstr "Minęło kilka dni od momentu, gdy udało im się przekroczyć przeprawę rzeczna."
 
 msgctxt "speaker:Sarah"
 msgid "A few days off course wouldn't be the worst thing."
-msgstr ""
+msgstr "Kilka dni odstępstwa nie byłoby najgorszym rozwiązaniem."
 
 msgctxt "speaker:Marion"
 msgid "A few did not attend."
-msgstr ""
+msgstr "Niektórzy nie przybyli."
 
 msgctxt "speaker:Narrator"
 msgid "A few dozen lives, to save millions?"
-msgstr ""
+msgstr "Kilkadziesiąt dusi, by uratować miliony?"
 
 msgctxt "speaker:Narrator"
 msgid "A few faces lingered atop the towers of the castle, but Sarah couldn't even be certain they were soldiers. Perhaps simply scared civillians."
-msgstr ""
+msgstr "Na szczytach zamku wciąż widniały twarze, ale Sarah nie była nawet pewna, czy byli to żołnierze. Może po prostu przerażeni cywile."
 
 msgctxt "speaker:Sarah"
 msgid "A few farmers here and there."
-msgstr ""
+msgstr "Kilku tu i ówdzie rolników."
 
 msgctxt "speaker:Narrator"
 msgid "A few fires, here and there."
-msgstr ""
+msgstr "Kilko ognisk, tu i ówdzie."
 
 msgctxt "speaker:Narrator"
 msgid "A few gestured and looked in their direction, but for the most part, nobody noticed them."
-msgstr ""
+msgstr "Kilku gestykulowało i spojrzało w ich stronę, ale w większości nikt ich nie zauważył."
 
 msgctxt "speaker:Narrator"
 msgid "A few greeted her, many more were already too deep into their drinks."
-msgstr ""
+msgstr "Kilku ją powitało, ale większość już była zbyt głęboko w swoich trunkach."
 
 msgctxt "speaker:Narrator"
 msgid "A few guards might come by, a day late, to inspect reports of a cry. And none would care for Alaric's sudden dissapearance."
-msgstr ""
+msgstr "Kilku strażników może przyjść dzień później, by sprawdzić raporty o krzyku. Nikt nie zadba o nagłe zniknięcie Alarika."
 
 msgctxt "speaker:Narrator"
 msgid "A few hours had passed and night had fallen over the city of Calshure."
-msgstr ""
+msgstr "Przeleciały kilka godzin i nad miastem Calshure zapadła noc."
 
 msgctxt "speaker:Narrator"
 msgid "A few hours later, the cry of new life could be heard."
-msgstr ""
+msgstr "Kilka godzin później usłyszały się głosy nowego życia."
 
 msgctxt "speaker:Carolyn"
 msgid "A few lashes will sort her out, and it will tell a different story to all the others that will think of stealing."
-msgstr ""
+msgstr "Kilka uderzeń laską posprząta z niej, a to przestraszy wszystkich innych, którzy by pomyśleli o kradzieży."
 
 msgctxt "speaker:Narrator"
 msgid "A few lights coming from lit lanterns could be seen, shining through the darkness."
-msgstr ""
+msgstr "W ciemności można było dostrzec kilka światła pochodzącego od zapalonych latarni."
 
 msgctxt "speaker:Narrator"
 msgid "A few marks on the map, notes left by Xan, probably to himself."
-msgstr ""
+msgstr "Kilka znaków na mapie, notatki zostawione przez Xana, pewnie dla samego siebie."
 
 msgctxt "speaker:Narrator"
 msgid "A few men and women dressed in the robes of scholars were walking around the digsite, but they seemed equally uninterested in her."
-msgstr ""
+msgstr "Kilku mężczyzn i kobiet w szatach uczonych przechadzało się po miejscu wykopalisk, lecz równie niewiele im na niej zależało."
 
 msgctxt "speaker:Narrator"
 msgid "A few miles outside of the city walls, a Mythran army led by the uncle of the slain prince was camped. Soon they would begin their assault."
-msgstr ""
+msgstr "Kilka mil poza murami miasta obozowała armia Mythranów dowodzona przez stryja zabitego księcia. Wkrótce rozpocznieją szturm."
 
 msgctxt "speaker:Narrator"
 msgid "A few minutes later, Sarah would hear the cracking of the whip and the girl's screams, coming from the square just outside the castle."
-msgstr ""
+msgstr "Kilka minut później Sarah usłyszała chrzęst lancy i krzyki dziewczyny dochodzące z placu tuż za murami zamku."
 
 msgctxt "speaker:Narrator"
 msgid "A few minutes later, the other man finished in her hand, his seed adding to the rest."
-msgstr ""
+msgstr "Kilka minut później, drugi mężczyzna dokończył w jej dłoni, nasienie łącząc się z resztą."
 
 msgctxt "speaker:Narrator"
 msgid "A few moments later, Samayra was fast asleep."
-msgstr ""
+msgstr "Kilka chwil później Samayra spała już głęboko."
 
 msgctxt "speaker:Sarah"
 msgid "A few months ago I awoke from a dream, and for a brief moment, I swore that he was alive."
-msgstr ""
+msgstr "Kilka miesięcy temu obudziłam się z snu i przez krótką chwilę przysięgam, że był żywy."
 
 msgctxt "speaker:Gideon"
 msgid "A few more days after that, we expect most of your remaining troops to have landed and begun preparing."
-msgstr ""
+msgstr "Niektóre dni po tym, spodziewamy się, że większość Waszych pozostałych oddziałów będzie już na lądzie i zacznie przygotowania."
 
 msgctxt "speaker:Narrator"
 msgid "A few of the soldiers uttered a cruel laugh."
-msgstr ""
+msgstr "Kilku żołnierzy wybuchnęło okrutnym śmiechem."
 
 msgctxt "speaker:Narrator"
 msgid "A few orcs muddled about, engaged in trivial work."
-msgstr ""
+msgstr "Kilku orków bezładnie poruszało się po miejscu, zajmując się błahą pracą."
 
 msgctxt "speaker:Narrator"
 msgid "A few patrons were seated by their own tables, occupied in their own conversations"
-msgstr ""
+msgstr "Kilku gości siedziało przy swoich stolikach, zajętych własnymi rozmowami."
 
 msgctxt "speaker:Narrator"
 msgid "A few people gave her a worried or confused look, but nobody was calling for the guards."
-msgstr ""
+msgstr "Kilku ludzi rzuciło jej spojrzenie pełne troski lub zdezorientowania, ale nikt nie wołał strażników."
 
 msgctxt "speaker:Narrator"
 msgid "A few people in the street seemed to notice them go by, but most went about their day."
-msgstr ""
+msgstr "Kilku ludzi na ulicy zdawało się zauważyć ich przechodzenie, ale większość zajęła się swoimi sprawami."
 
 msgctxt "speaker:Narrator"
 msgid "A few plumes of smoke rose up, suggesting at least some still lived there."
-msgstr ""
+msgstr "Kilka słupów dymu unosiło się w górę, sugerując, że przynajmniej niektórzy tam wciąż żyli."
 
 msgctxt "speaker:Narrator"
 msgid "A few pulls was all it took for him to finish."
-msgstr ""
+msgstr "Kilka pociągnięć wystarczyło, by dokończył."
 
 msgctxt "speaker:Narrator"
 msgid "A few rows over, some of her soldiers lit up, screaming their final words, their armors quickly melting against their bodies, trapping them inside them."
-msgstr ""
+msgstr "Kilka rzędów dalej niektórzy z jej żołnierzy zapalili się, krzycząc ostatnie słowa; ich pancerze szybko topiły się na ich ciałach, uwięziwszy ich wewnątrz."
 
 msgctxt "speaker:Sarah"
 msgid "A few scratches. Nothing I can't survive."
-msgstr ""
+msgstr "Kilka rys. Nic, z czym nie potrafię sobie poradzić."
 
 msgctxt "speaker:Narrator"
 msgid "A few second later, Xan appeared in the room, slamming the door open so violently it bashed into the wall."
-msgstr ""
+msgstr "Kilka sekund później Xan pojawił się w pokoju, gwałtownie otwierając drzwi tak mocno, że uderzyły o ścianę."
 
 msgctxt "speaker:Narrator"
 msgid "A few steps more and she was back on the middle of the market place."
-msgstr ""
+msgstr "Kilka kroków dalej i znów była w środku rynku."
 
 msgctxt "speaker:Narrator"
 msgid "A few steps out from around the corner, and then they turned."
-msgstr ""
+msgstr "Kilka kroków dalej, za rogiem, i wtedy się odwrócili."
 
 msgctxt "speaker:Dalia"
 msgid "A few that I've seen. Some seem to be his friends. Others...old rivals, maybe? I don't know exactly."
-msgstr ""
+msgstr "Kilku z nich widziałam. Wyglądają jak jego przyjaciele. Inni... może dawni rywale? Nie jestem pewna."
 
 msgctxt "speaker:Narrator"
 msgid "A few voices rose in nervous whispers."
-msgstr ""
+msgstr "Kilku głosów podniosło się w nerwistym szeptach."
 
 msgctxt "speaker:Narrator"
 msgid "A few weeks had passed and almost every day, Sarah and Kate had spent practicing together."
-msgstr ""
+msgstr "Przebiegło kilka tygodni i prawie codziennie Sarah i Kate ćwiczyły razem."
 
 msgctxt "speaker:Narrator"
 msgid "A few wobbled about, clearly drunk."
-msgstr ""
+msgstr "Kilku chwiejało się, wyraźnie pijanych."
 
 msgctxt "speaker:Narrator"
 msgid "A few yards, in a cage very similar to hers, she saw two shadow figures, moving."
-msgstr ""
+msgstr "Kilka jardów dalej, w klatce bardzo podobnej do jej własnej, zobaczyła dwie postacie cienia, poruszające się."
 
 msgctxt "speaker:Narrator"
 msgid "A few years ago, the former elder that had watched over Castle Reinmeer retired. Elder Tirion had been his replacement."
-msgstr ""
+msgstr "Kilka lat temu, ów starszy, który pilnował Zamek Reinmeer, przeszedł na emeryturę. Jego następcą został Starszy Tirion."
 
 msgctxt "speaker:Atilla"
 msgid "A few, but I heal quick."
-msgstr ""
+msgstr "Kilku, ale szybko się regeneruję."
 
 msgctxt "speaker:Kate"
 msgid "A few, the dumbest of the lot, but still. This shit always starts from the bottom and rises up."
-msgstr ""
+msgstr "Kilka, najgłupsza z nich wszystkich, ale i tak. To zawsze zaczyna się od dołu i wznosi się na górze."
 
 msgctxt "speaker:Varga"
 msgid "A few."
-msgstr ""
+msgstr "Kilku."
 
 msgctxt "speaker:Narrator"
 msgid "A field of grass stretched across the small plain, tall trees threw out shade across the bank, and in the center a pool of water."
-msgstr ""
+msgstr "Łąka z trawą rozciągała się na małej równinie, wysokie drzewa rzucały cień nad brzegiem, a w centrum znajdował się staw."
 
 msgctxt "speaker:Narrator"
 msgid "A figure sat hunched on the edge, face buried in their hands."
-msgstr ""
+msgstr "Figura siedziała zgarbiona na brzegu, twarzą schowaną w dłoniach."
 
 msgctxt "speaker:Narrator"
 msgid "A final attempt at a surprise attack."
-msgstr ""
+msgstr "Ostatnia próba zaskakującego ataku."
 
 msgctxt "speaker:Sarah"
 msgid "A fine argument, but I suspect your motives are not so pure."
-msgstr ""
+msgstr "Dobrze brzmiąca argumentacja, ale podejrzewam, że Twoja motywacja nie jest tak czysta."
 
 msgctxt "speaker:Kravel"
 msgid "A finger, bearing a ring."
-msgstr ""
+msgstr "Palcem z pierścieniem."
 
 msgctxt "speaker:Narrator"
 msgid "A fire in a hearth, crackling."
-msgstr ""
+msgstr "Ogień w kominku, chrzęszczący."
 
 msgctxt "speaker:Metis"
 msgid "A fire spell can burn down a city. Some mages can rip apart mountains."
-msgstr ""
+msgstr "Ognisty zaklęcie może spalić miasto. Niektórzy magowie mogą rozrywać góry."
 
 msgctxt "speaker:Narrator"
 msgid "A fire turned to inferno, the searing pleasure ran through her every nerve and sinew, wrenching out violent pleasure."
-msgstr ""
+msgstr "Ogień zamienił się w piekło, a paląca przyjemność przebiegła przez każdy nerw i ścięgno, wyrywając gwałtowne zaspokojenie."
 
 msgctxt "speaker:Narrator"
 msgid "A fire was burning in a hearth on the opposite end of the room."
-msgstr ""
+msgstr "Ogień palił się w kominku na przeciwległym końcu pokoju."
 
 msgctxt "speaker:Sarah"
 msgid "A fire will stand out in the dark."
-msgstr ""
+msgstr "W ciemnościach zawsze będzie widać ogień."
 
 msgctxt "speaker:Narrator"
 msgid "A firm push to her back, and Sarah tumbled forward, catching herself only just in time."
-msgstr ""
+msgstr "Twardy pchnięcie w jej plecy sprawiło, że Sarah przewróciła się do przodu, łapiąc się za moment."
 
 msgctxt "speaker:Narrator"
 msgid "A firm spank on her ass served as his version of approval to her answer."
@@ -1060,75 +1060,75 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "A firm spank to her ass rang out, and Sarah could feel the right cheek begin to burn."
-msgstr ""
+msgstr "Twardy uderzenie w jej pośladki rozbrzmiało, a Sarah czuła, jak prawy policzek zaczyna palić."
 
 msgctxt "speaker:Narrator"
 msgid "A flame had been awakened in her ever since that nothing could stomp out."
-msgstr ""
+msgstr "Od tamtej pory w niej zbudziła się iskra, której nic nie mogło ugasić."
 
 msgctxt "speaker:Narrator"
 msgid "A flash of regret ran through her."
-msgstr ""
+msgstr "Przebiegł przez nią błysk żalu."
 
 msgctxt "speaker:Narrator"
 msgid "A flash passed before her eyes, striking her blind for a moment."
-msgstr ""
+msgstr "Przebiegła przed jej oczami iskra, na chwilę ją ślepiając."
 
 msgctxt "speaker:Narrator"
 msgid "A flash, something glimmered in the dark."
-msgstr ""
+msgstr "Światło, coś błysnęło w ciemności."
 
 msgctxt "speaker:Narrator"
 msgid "A flawless face, an easy smile and a casual confidence made it hard not to notice him."
-msgstr ""
+msgstr "Bezflawowy oblicz, uśmiech pełen lekkości i swobodna pewność siebie sprawiały, że trudno było go nie zauważyć."
 
 msgctxt "speaker:Narrator"
 msgid "A flow of tears became a sob, and before long, Sarah could feel her chest rising and falling as she began to wail."
-msgstr ""
+msgstr "Strumień łez przerodził się w jęk, i zanim minęło dużo czasu, Sarah czuła, jak jej klatka piersiowa unosi się i opada, gdy zaczęła płakać."
 
 msgctxt "speaker:Narrator"
 msgid "A flush of heat build in her chest."
-msgstr ""
+msgstr "Ciepło rozlało się w jej piersi."
 
 msgctxt "speaker:Narrator"
 msgid "A fool of a girl that had fled when her brother needed her."
-msgstr ""
+msgstr "Głupia dziewczyna, która uciekła, gdy jej brat tego potrzebował."
 
 msgctxt "speaker:Narrator"
 msgid "A force pulled on her that ran deeper than any cold logic that Xan had tried to instil in her."
-msgstr ""
+msgstr "Siła pociągnęła ją, głębsza niż jakikolwiek zimny rozum, który Xan próbował w niej wyrobić."
 
 msgctxt "speaker:Sarah"
 msgid "A founder?"
-msgstr ""
+msgstr "Założycielka?"
 
 msgctxt "speaker:Narrator"
 msgid "A frenzied back and forth."
-msgstr ""
+msgstr "Zabiegany ruch w przód i w tył."
 
 msgctxt "speaker:Narrator"
 msgid "A frenzy begins to form."
-msgstr ""
+msgstr "Zaczyna się szaleństwo."
 
 msgctxt "speaker:Narrator"
 msgid "A frenzy of maddening pleasure, the likes only he could draw out from her."
-msgstr ""
+msgstr "Zabójcza euforia, jaką tylko on potrafił z niej wydobyć."
 
 msgctxt "speaker:Narrator"
 msgid "A frenzy took hold of her as she continued her march, up and up the hill, faster and faster."
-msgstr ""
+msgstr "Zapadła w nią gorączka, gdy kontynuowała marsz ku górze, coraz wyżej i szybciej."
 
 msgctxt "speaker:Sarah"
 msgid "A friend?"
-msgstr ""
+msgstr "Przyjaciółka?"
 
 msgctxt "speaker:Narrator"
 msgid "A full moon draped the world in pale light, making the dunes appear as silver."
-msgstr ""
+msgstr "Pełnia księżyca owija świat w blade światło, czyniąc wydmy srebrnymi."
 
 msgctxt "speaker:Alfred"
 msgid "A fun fling, I could forgive being disobedient."
-msgstr ""
+msgstr "Dowcipny flirt, mogłemby przebaczyć nieposłuszeństwo."
 
 msgctxt "speaker:Narrator"
 msgid "A fury was building in the thing, she could hear its screams mix with an animalistic fury, something close to a hiss."
@@ -1136,59 +1136,59 @@ msgstr ""
 
 msgctxt "speaker:Xanthippe"
 msgid "A future where every soul, be it a king or a peasant, will be valued and safeguarded."
-msgstr ""
+msgstr "Przyszłość, w której każda dusza, czy to król, czy chłopiec, będzie ceniona i chroniona."
 
 msgctxt "speaker:Narrator"
 msgid "A gate, a few watch towers, all made from what seemed like scavenged material."
-msgstr ""
+msgstr "Brama, kilka wież strażniczych, wszystko wykonane z materiałów, które wyglądały na odzyskane."
 
 msgctxt "speaker:Narrator"
 msgid "A general easiness of being. Their conversations flowed naturally. He made her forget the rest of the hall."
-msgstr ""
+msgstr "Ogólny spokój bytu. Ich rozmowy płynęły naturalnie. On sprawił, że zapomniała o reszcie sali."
 
 msgctxt "speaker:Narrator"
 msgid "A gentle touch, or a threat of more violence, she could hardly tell anymore."
-msgstr ""
+msgstr "Delikatne dotyk, czy groźba na nowo przemoc – już nie potrafiła rozróżnić."
 
 msgctxt "speaker:Narrator"
 msgid "A genuine smile crept over Samayra's face."
-msgstr ""
+msgstr "Prawdziwy uśmiech pojawił się na twarzy Samayry."
 
 msgctxt "speaker:Old Tribesman"
 msgid "A gift is fitting, but-"
-msgstr ""
+msgstr "Dar jest odpowiedni, ale..."
 
 msgctxt "speaker:Narrator"
 msgid "A gift like that would be more than she could hope to earn in a lifetime of service."
-msgstr ""
+msgstr "Taki dar przekroczyłby jej oczekiwania na całe życie służby."
 
 msgctxt "speaker:Atilla"
 msgid "A gift must show to the partner, that they have wagered their life. To show how serious they are in their ask."
-msgstr ""
+msgstr "Ofiarowanie musi pokazać partnerowi, że postawili oni na losie swoje życie. Musi pokazać, jak poważnie traktują swoją prośbę."
 
 msgctxt "speaker:Kamal"
 msgid "A gift such as this, I could not dare to have expected."
-msgstr ""
+msgstr "Darek taki jak ten nie śmiałbym nawet oczekiwać."
 
 msgctxt "speaker:Ragged Man"
 msgid "A gift, from my friends. Or perhaps payment for my services now rendered."
-msgstr ""
+msgstr "Darem, od moich przyjaciół. Albo może zapłata za usługi już świadczone."
 
 msgctxt "speaker:Sarah"
 msgid "A gift?"
-msgstr ""
+msgstr "Prezenty?"
 
 msgctxt "speaker:Thomas"
 msgid "A gift?"
-msgstr ""
+msgstr "Prezent?"
 
 msgctxt "speaker:Narrator"
 msgid "A girl had grown up here."
-msgstr ""
+msgstr "Tu dorastała dziewczyna."
 
 msgctxt "speaker:Thomas"
 msgid "A girl like that needs someone who can make her happy. Not to be married off to a depressive like me."
-msgstr ""
+msgstr "Dziewczyna taka jak ona potrzebuje kogoś, kto sprawi jej szczęście. Nie żeby oddać ją w małżeństwo do depresyjnego faceta takiego jak ja."
 
 msgctxt "speaker:Eula"
 msgid "A girl like you ain't gettin through here without givin it up at least a few times."
@@ -1196,363 +1196,363 @@ msgstr ""
 
 msgctxt "speaker:Sakar"
 msgid "A girl like you wouldn't last a day on the old road by yourself."
-msgstr ""
+msgstr "Dziewczyna jak ty nie przetrwałaby ani dnia na starej drodze sama."
 
 msgctxt "speaker:Narrator"
 msgid "A girl of no means and no title, in a city where so many had lives no different from her own."
-msgstr ""
+msgstr "Dziewczyna bez środków do życia i tytułu, w mieście, gdzie tylu ludzi żyło tak samo jak ona."
 
 msgctxt "speaker:Alaric"
 msgid "A girl your age shouldn't be this pent up. Maybe I need to pay you a visit more often?"
-msgstr ""
+msgstr "Dziewczyna Twojego wieku nie powinna być tak napięta. Może powinienem częściej Ci przychodzić na wizytę?"
 
 msgctxt "speaker:Sarah"
 msgid "A girl."
-msgstr ""
+msgstr "Dziewczyna."
 
 msgctxt "speaker:Tribesman"
 msgid "A glory many of us Tribesman would have wished to seize. You must have made a pretty fortune off what you took there."
-msgstr ""
+msgstr "Wielka chwała, o którą wielu z nas, Tłumowców, pragnęłoby sięgnąć. Musisz mieć sporo zarobić na tym, co tam zabraliś."
 
 msgctxt "speaker:Narrator"
 msgid "A glow on the surface of her skin."
-msgstr ""
+msgstr "Świecenie na powierzchni jej skóry."
 
 msgctxt "speaker:Narrator"
 msgid "A goblin wife...was that what had become of her?"
-msgstr ""
+msgstr "Goblinowa żona... tak się skończyło?"
 
 msgctxt "speaker:Metis"
 msgid "A good choice."
-msgstr ""
+msgstr "Dobra decyzja."
 
 msgctxt "speaker:Tailor"
 msgid "A good craftsmen must first study the object of his work."
-msgstr ""
+msgstr "Dobry rzemieślnik musi najpierw poznać przedmiot swojej pracy."
 
 msgctxt "speaker:Kate"
 msgid "A good few days, actually. I thought I was showing real restraint by keeping it to myself for that long."
-msgstr ""
+msgstr "Dobrze się czułam przez kilka dni, w sumie. Myślałam, że powstrzymuję się naprawdę dobrze, trzymając to w sobie aż tak długo."
 
 msgctxt "speaker:Sarah"
 msgid "A good king needs good advisors, and do you know anyone smarter than me?"
-msgstr ""
+msgstr "Dobry król potrzebuje dobrych doradców, a czy znasz kogoś mądrszego ode mnie?"
 
 msgctxt "speaker:Narrator"
 msgid "A good man that loved a good day's work."
-msgstr ""
+msgstr "Dobry człowiek, który kochał dobry dzień pracy."
 
 msgctxt "speaker:Narrator"
 msgid "A good meal, wasted on her."
-msgstr ""
+msgstr "Dobra kolacja, zmarnowana na nią."
 
 msgctxt "speaker:Marion"
 msgid "A good ruler lets the facts guide him, not hysteria."
-msgstr ""
+msgstr "Dobry przywódca kieruje się faktami, a nie histerią."
 
 msgctxt "speaker:Carolyn"
 msgid "A good thing you don't enjoy this sort of thing, I mean."
-msgstr ""
+msgstr "Dobrze, że nie lubisz tego typu rzeczy, mam na myśli."
 
 msgctxt "speaker:Sarah"
 msgid "A governor?"
-msgstr ""
+msgstr "Gubernator?"
 
 msgctxt "speaker:Narrator"
 msgid "A gradual yet ongoing collapse."
-msgstr ""
+msgstr "Powolne i nieustanne zawalenie się."
 
 msgctxt "speaker:Razaphel"
 msgid "A great and final war draws closer."
-msgstr ""
+msgstr "Wielka i ostateczna wojna zbliża się nieuchronnie."
 
 msgctxt "speaker:Narrator"
 msgid "A great blizzard seemed to form, rushing up behind the fleeing scout unit."
-msgstr ""
+msgstr "Wielka burza śnieżna zdawała się formować, goniąc z tyłu uciekający oddział szpiegów."
 
 msgctxt "speaker:Narrator"
 msgid "A great brute of an orc sat outside the entrance to a tent, sliding a whetstone across a two-handed sword, sharpening it. The sword alone, Sarah thought, was bigger than herself."
-msgstr ""
+msgstr "Obok wejścia do namiotu siedział potężny ork, szlifując dwuręczną miecz kamieniem ściernym. Tylko sam miecz, pomyślała Sarah, był większy od niej."
 
 msgctxt "speaker:Narrator"
 msgid "A great chaotic roar of metal and flesh slamming against one another."
-msgstr ""
+msgstr "Ogromny, chaotyczny ryk metalu i ciała uderzających o siebie."
 
 msgctxt "speaker:Narrator"
 msgid "A great city was being put to the sword, and she had played a part in it."
-msgstr ""
+msgstr "Miasto zostało poddane mieczu, a ja w tym uczestniczyłam."
 
 msgctxt "speaker:Narrator"
 msgid "A great force pulled her forward."
-msgstr ""
+msgstr "Ogromna siła pociągnęła ją do przodu."
 
 msgctxt "speaker:Narrator"
 msgid "A great loud roaring voice summoned them from their work."
-msgstr ""
+msgstr "Głośny, krzyczący głos zawołał ich od pracy."
 
 msgctxt "speaker:Narrator"
 msgid "A great many of them have violent eyes. She almost imagines she can see their fantasies play out in their eyes."
-msgstr ""
+msgstr "Wielu z nich ma oki pełne przemocy. Prawie wyobraża sobie, że może zobaczyć ich fantazje rozgrywające się w ich oczach."
 
 msgctxt "speaker:Narrator"
 msgid "A great metal chain ran around it, shattered and broken, some of the links were sprawled out across the grass."
-msgstr ""
+msgstr "Ogromny metalowy łańcuch otaczał go, roztrzaskany i pęknięty; niektóre z ogniw leżały rozsiane po trawie."
 
 msgctxt "speaker:Narrator"
 msgid "A great open space in the midsts of this claustrophobic construct."
-msgstr ""
+msgstr "Ogromna, otwarta przestrzeń w samym środku tego klaustrofobicznego konstruktu."
 
 msgctxt "speaker:Narrator"
 msgid "A great path lead up to the dais, where atop the stairs sat the throne of Normandi."
-msgstr ""
+msgstr "Wielka droga prowadziła do tronu Normandy, który usytuowany był na szczycie schodów."
 
 msgctxt "speaker:Narrator"
 msgid "A great roar of some kind rang out."
-msgstr ""
+msgstr "Ogromny, nieznany grzmot rozbrzmiał."
 
 msgctxt "speaker:Razaphel"
 msgid "A great war raged between your race and mine. Between your Gods and mine."
-msgstr ""
+msgstr "Między waszymi ludami i moimi toczyła się wielka wojna. Między waszymi bogami a moimi."
 
 msgctxt "speaker:Vaelen"
 msgid "A great war. A bright future."
-msgstr ""
+msgstr "Wielka wojna. Jasna przyszłość."
 
 msgctxt "speaker:Narrator"
 msgid "A greedy noble, round and fat as a pig, shoved a sausage into his mouth."
-msgstr ""
+msgstr "Chciwy szlachcic, okrągły i tłuści jak świnia, wsunął kiełbaskę do ust."
 
 msgctxt "speaker:Narrator"
 msgid "A green wax seal covered the front."
-msgstr ""
+msgstr "Zielona pieczęć woskowa zakrywała przód."
 
 msgctxt "speaker:Narrator"
 msgid "A grinding sound, like metal scraping metal, rang out through the tunnels. The echo made it feel like the sound was in Sarah's body."
-msgstr ""
+msgstr "Zgrzytający dźwięk, jakby metal szorował o metal, rozbrzmiał w tunelach. Echa sprawiły, że wydawało się, iż ten dźwięk znajduje się w ciele Sarah."
 
 msgctxt "speaker:Narrator"
 msgid "A group of Hassar's soldiers was standing in a circle. In the midsts of the circle, several young women were being violated by the invading soldiers."
-msgstr ""
+msgstr "Grupa żołnierzy Hassara stała w kole. W środku koła kilku młodych kobiet było gwałconych przez napastników."
 
 msgctxt "speaker:Narrator"
 msgid "A group of farmers had burned the bridges leading to one of the northern provinces, out of protest over land rights, preventing Rosanna's standing army from moving there without taking a month long detour."
-msgstr ""
+msgstr "Grupa rolników spaliła mosty prowadzące do jednej z prowincji na północy w protestacji przeciwko prawom do ziemi, uniemożliwiając Rosannie stojącą armię przemieszczania się tam bez konieczności podjęcia miesięcznej detours."
 
 msgctxt "speaker:Narrator"
 msgid "A group of five or so soldiers walked into the tent, already undressed."
-msgstr ""
+msgstr "Grupa pięciu lub sześciu żołnierzy wkroczyła do namiotu, już rozebrana."
 
 msgctxt "speaker:Narrator"
 msgid "A group of orcs and goblins, armed with simple spears and crude knives, advanced across the plaza."
-msgstr ""
+msgstr "Grupa orków i goblinów uzbrojonych w proste kopie i dzikie noże podeszła przez plac."
 
 msgctxt "speaker:Narrator"
 msgid "A group of soldiers blocked the road up ahead of her."
-msgstr ""
+msgstr "Grupa żołnierzy zablokowała drogę przed nią."
 
 msgctxt "speaker:Narrator"
 msgid "A group of soldiers, too slow to run away, exploded into red mist as the thing's tail slashed through them."
-msgstr ""
+msgstr "Grupa żołnierzy, zbyt wolna na ucieczkę, eksplodowała w czerwony mglisty chmurę, gdy ogon bestii przeciął ich."
 
 msgctxt "speaker:Narrator"
 msgid "A growing confidence in himself."
-msgstr ""
+msgstr "Rozrastająca się pewność siebie."
 
 msgctxt "speaker:Narrator"
 msgid "A guard freed her from her chain and guided her through the doors, into the judge's court."
-msgstr ""
+msgstr "Strażnik uwolnił ją z łańcucha i poprowadził przez drzwi do sądu sędziego."
 
 msgctxt "speaker:Narrator"
 msgid "A guard slowly begins to laugh."
-msgstr ""
+msgstr "Strażnik powoli zaczyna się śmiać."
 
 msgctxt "speaker:Narrator"
 msgid "A gulp."
-msgstr ""
+msgstr "Gryzienienie."
 
 msgctxt "speaker:Narrator"
 msgid "A gust of cold night air rushed into the house."
-msgstr ""
+msgstr "Przebiegł przez dom lodowaty wiatr z nocy."
 
 msgctxt "speaker:Narrator"
 msgid "A gust of cold wind chased after them, but the door was quickly shut behind them."
-msgstr ""
+msgstr "Zimny wiatr pogonił ich, ale drzwi szybko zamknęły się za nimi."
 
 msgctxt "speaker:Narrator"
 msgid "A gust of wind blew past her and Sarah wrapped her arms around herself, trying to shield herself from the cold."
-msgstr ""
+msgstr "Przemywała się wiatrem, a Sarah objęła siebie ramionami, próbując chronić się przed zimnem."
 
 msgctxt "speaker:Narrator"
 msgid "A gust of wind rushed past her, across her naked body, the cold taking root in her."
-msgstr ""
+msgstr "Przebiegł przez nią, po jej nagim ciele, a zimno wbiło się w nią."
 
 msgctxt "speaker:Caleb"
 msgid "A guy can dream, can't he?"
-msgstr ""
+msgstr "Chłopak może się marzyć, prawda?"
 
 msgctxt "speaker:Narrator"
 msgid "A hail of stone descended on the Rosannan army, splatters of red mist erupted across the entire line."
-msgstr ""
+msgstr "Na armię Rosannan spadł grad kamieni, a po całej linii wybuchły plamy czerwonego mgły."
 
 msgctxt "speaker:Sarah"
 msgid "A handful of guards...and me."
-msgstr ""
+msgstr "Garść strażników... i ja."
 
 msgctxt "speaker:Narrator"
 msgid "A happiness that was so natural and obvious, she wondered how she could have ever felt sad in a world so beautiful."
-msgstr ""
+msgstr "Szczęście, które było tak naturalne i oczywiste, że zastanawiała się, jak mogła kiedykolwiek czuć smutek w świecie tak pięknym."
 
 msgctxt "speaker:Narrator"
 msgid "A happy old man."
-msgstr ""
+msgstr "Szczęśliwy stary człowiek."
 
 msgctxt "speaker:Narrator"
 msgid "A hard life had given him a hard body. The many scars bore testament to this unspoken and yet obvious truth."
-msgstr ""
+msgstr "Twardy żywot nadał mu twarde ciało. Liczne blizny świadczyły o tej niewypowiedzianej, a jednak oczywistej prawdzie."
 
 msgctxt "speaker:Cassius"
 msgid "A hard worker."
-msgstr ""
+msgstr "Pracowity."
 
 msgctxt "speaker:Narrator"
 msgid "A haunting blue light had drowned out all other light."
-msgstr ""
+msgstr "Złowieszczy, błękitne światło zatopiło w sobie wszystkie inne źródła oświetlenia."
 
 msgctxt "speaker:Varga"
 msgid "A head on assault on the fort would be a disaster."
-msgstr ""
+msgstr "Bezpośredni atak na twierdzę byłby katastrofą."
 
 msgctxt "speaker:Narrator"
 msgid "A head taller than the tallest man she had ever seen in her life."
-msgstr ""
+msgstr "Głowa wyższa niż najwyższy mężczyzna, jakiego kiedykolwiek widziała w swoim życiu."
 
 msgctxt "speaker:Varga"
 msgid "A head-on assault on the fort would be a disaster."
-msgstr ""
+msgstr "Atak bezpośredni na fort byłby katastrofą."
 
 msgctxt "speaker:Sarah"
 msgid "A heart attack? Didn't know you had so many enemies in the castle to be fearful of."
-msgstr ""
+msgstr "Zawał serca? Nie wiedziałam, że masz tyle wrogów w zamku, żeby się bać."
 
 msgctxt "speaker:Narrator"
 msgid "A heat was building her chest as she slowly, partially slid a finger inside herself."
-msgstr ""
+msgstr "Ciepło budziło się w jej piersi, gdy powoli, częściowo wsuwała palec do środka."
 
 msgctxt "speaker:Narrator"
 msgid "A heavy breath slipped past her lips as a jolt of pleasure moved through her body."
-msgstr ""
+msgstr "Ciężki oddech wymknął się z jej ust, gdy uderzenie przyjemności rozprzestrzeniło się po całym ciele."
 
 msgctxt "speaker:Narrator"
 msgid "A heavy pause lingered."
-msgstr ""
+msgstr "Ciężka pauza zawisła w powietrzu."
 
 msgctxt "speaker:Narrator"
 msgid "A heavy pause."
-msgstr ""
+msgstr "Ciężka pauza."
 
 msgctxt "speaker:Narrator"
 msgid "A heavy sigh slipped past her lips as the creature grabbed at her breast, still covered by her clothes."
-msgstr ""
+msgstr "Ciężki westchnięcie wymknęło się z jej ust, gdy stworzenie chwyciło za jej piersi, wciąż zakryte ubraniem."
 
 msgctxt "speaker:Narrator"
 msgid "A heavy silence loomed over the field. Two armies, waiting with bated breath for the next moment."
-msgstr ""
+msgstr "Ciężka cisza zawisła nad polem. Dwie armie czekały z utrudnionym oddechem na następną chwilę."
 
 msgctxt "speaker:Hecate"
 msgid "A hierarchy."
-msgstr ""
+msgstr "Hierarchia."
 
 msgctxt "speaker:Narrator"
 msgid "A high pitched hissing scream emerged as it fell to the earth, writing in pain."
-msgstr ""
+msgstr "Z głośnym, piskliwym krzykiem upadła na ziemię, piszcząc z bólu."
 
 msgctxt "speaker:Narrator"
 msgid "A high pitched, furious scream, like an animal snared in a trap."
-msgstr ""
+msgstr "Wysoki, furczący krzyk, jakby zwierzę wpuściło się w pułapkę."
 
 msgctxt "speaker:Dio"
 msgid "A highland stew, traditional Mythran peasant dish."
-msgstr ""
+msgstr "Gulasz górski, tradycyjne danie chłopskie z Mythru."
 
 msgctxt "speaker:Narrator"
 msgid "A hiss emerged from the creature."
-msgstr ""
+msgstr "Z bestii wydobył się szmer."
 
 msgctxt "speaker:Narrator"
 msgid "A hiss emerged from the spirit, what passed for laughter."
-msgstr ""
+msgstr "Z ducha wydobył się syczenie, co było najbliżej śmiechu."
 
 msgctxt "speaker:Narrator"
 msgid "A hissing sound emerged from the creature, the closest it could produce to a laugh."
-msgstr ""
+msgstr "Z istoty wydobył się syczący dźwięk, najbliższy temu, co mogła nazwać śmiechem."
 
 msgctxt "speaker:Narrator"
 msgid "A hissing sound emerged from the spirit."
-msgstr ""
+msgstr "Z ducha wydobył się syczący dźwięk, najbliżej tego, co można było nazwać śmiechem."
 
 msgctxt "speaker:Narrator"
 msgid "A hissing sound emerged from the thing. It took a moment for Sarah to realize it passed for laughter."
-msgstr ""
+msgstr "Z góry wydobył się syczący dźwięk. Sarah potrzebowała chwili, by zrozumieć, że brzmi jak śmiech."
 
 msgctxt "speaker:Narrator"
 msgid "A hole, large enough for maybe two men to move through."
-msgstr ""
+msgstr "Dziura wystarczająco duża, by przez nią mogli przejść może dwaj mężczyźni."
 
 msgctxt "speaker:Narrator"
 msgid "A home she hadn't thought of in a long time."
-msgstr ""
+msgstr "Domu, o którym nie myślała od dawna."
 
 msgctxt "speaker:Narrator"
 msgid "A home that only remained in her mind."
-msgstr ""
+msgstr "Dom, który pozostał tylko w jej umyśle."
 
 msgctxt "speaker:Narrator"
 msgid "A home, she thought. That's what it reminded her of."
-msgstr ""
+msgstr "Dom, pomyślała. To tak o tym przypominało jej."
 
 msgctxt "speaker:Narrator"
 msgid "A home. A safe place in this world that belonged to her."
-msgstr ""
+msgstr "Dom. Bezpieczne miejsce w tym świecie, które należało do niej."
 
 msgctxt "speaker:Narrator"
 msgid "A home. Food."
-msgstr ""
+msgstr "Dom. Jedzenie."
 
 msgctxt "speaker:Narrator"
 msgid "A horde of impossible creatures that had never been meant for this world."
-msgstr ""
+msgstr "Horda niemożliwych stworzeń, które nigdy nie miały trafić do tego świata."
 
 msgctxt "speaker:Narrator"
 msgid "A horde of the beasts, stumbling madly into the market square."
-msgstr ""
+msgstr "Horda bestii, chwiejnie wpadająca na targowy plac."
 
 msgctxt "speaker:Narrator"
 msgid "A horn."
-msgstr ""
+msgstr "Róg."
 
 msgctxt "speaker:Sarah"
 msgid "A house?"
-msgstr ""
+msgstr "Dom?"
 
 msgctxt "speaker:Narrator"
 msgid "A huge wave of water splashed across Sarah's face, nearly toppling her off her feet."
-msgstr ""
+msgstr "Ogromna fala wody uderzyła Sarah w twarz, prawie przewracając ją na nogi."
 
 msgctxt "speaker:Narrator"
 msgid "A huge wide grin spread across Samayra's face as she saw the slave woman returned safely."
-msgstr ""
+msgstr "Ogromny, szeroki uśmiech rozciągnął się na twarzy Samayry, gdy zobaczyła, że niewolnicza kobieta wróciła bez szwanku."
 
 msgctxt "speaker:Narrator"
 msgid "A human Queen, married to an Orc, giving him children."
-msgstr ""
+msgstr "Ludzka królowa, żona orka, rodząca mu dzieci."
 
 msgctxt "speaker:Narrator"
 msgid "A human might use a cart, but they simply carried them on their shoulders."
-msgstr ""
+msgstr "Ludzie mogą używać wozów, ale oni po prostu nosili je na swoich barkach."
 
 msgctxt "speaker:Narrator"
 msgid "A humble trait for a person. A poor one for a king."
-msgstr ""
+msgstr "Cnota skromna dla zwykłego człowieka. Nędza dla króla."
 
 msgctxt "speaker:Narrator"
 msgid "A hundred people, that together, represented the leadership of the refugees of Rosanna that had landed in Rahayal."
@@ -1560,411 +1560,411 @@ msgstr ""
 
 msgctxt "speaker:Kravel"
 msgid "A hunting accident, so his father says..."
-msgstr ""
+msgstr "Zgodnie z jego ojcem, był to wypadek łowiecki..."
 
 msgctxt "speaker:Narrator"
 msgid "A job at this Inn might just be the thing she needed."
-msgstr ""
+msgstr "Praca w tym gospodzie mogła być właśnie tym, czego potrzebowała."
 
 msgctxt "speaker:Elsa"
 msgid "A job! That's awesome!"
-msgstr ""
+msgstr "Praca! To wspaniale!"
 
 msgctxt "speaker:Sarah"
 msgid "A joke, Marion. He probably thought you were a joke, and I suppose, in that regard, he was right."
-msgstr ""
+msgstr "Żart, Marion. Pewnie myślał, że jesteś żartem, i w tym względzie miał rację."
 
 msgctxt "speaker:Narrator"
 msgid "A justice of some kind, the others would whisper among themselves."
-msgstr ""
+msgstr "Gdzieś sprawiedliwość, szepnęli by między sobą."
 
 msgctxt "speaker:Narrator"
 msgid "A key."
-msgstr ""
+msgstr "Klucz."
 
 msgctxt "speaker:Narrator"
 msgid "A kind of death of spirit. People too defeated to fight back, but too desperate for life to give up, caught in some nightmarish liminal space."
-msgstr ""
+msgstr "Rodzaj śmierci ducha. Ludzie zbyt pokonani, by walczyć, ale zbyt odespani życiem, by zrezygnować, zahaczeni w jakiejś koszmarnej przestrzeni liminalnej."
 
 msgctxt "speaker:Carolyn"
 msgid "A kind offer, but I have a girl waiting for me at home."
-msgstr ""
+msgstr "To miła oferta, ale mam dziewczynę czekającą na mnie w domu."
 
 msgctxt "speaker:Narrator"
 msgid "A kindly smile on his face, the most he could do to communicate his appreciation for her."
-msgstr ""
+msgstr "Uśmiechnął się łagodnie, to wszystko, na co był w stanie, by wyrazić swoją wdzięczność."
 
 msgctxt "speaker:Sarah"
 msgid "A king ruled these lands. Soon a queen."
-msgstr ""
+msgstr "Król panował nad tymi ziemiami. Wkrótce królowa."
 
 msgctxt "speaker:Narrator"
 msgid "A kingdom of a different kind, she thought as she smiled and thought of her bull."
-msgstr ""
+msgstr "Królestwo odmiennej natury, pomyślała, uśmiechając się i myślec o swoim bydle."
 
 msgctxt "speaker:Narrator"
 msgid "A kiss so close to devouring."
-msgstr ""
+msgstr "Całunek tak blisko zjedzenia."
 
 msgctxt "speaker:Sarah"
 msgid "A kiss?"
-msgstr ""
+msgstr "Całunek?"
 
 msgctxt "speaker:Damian"
 msgid "A knife to my throat, I was all but done, my Lady."
-msgstr ""
+msgstr "Nożem u gardła, byłem na krawędzi, Pani moja."
 
 msgctxt "speaker:Sarah"
 msgid "A knight."
-msgstr ""
+msgstr "Rycerz."
 
 msgctxt "speaker:Narrator"
 msgid "A knighting ceremony was a holy rite."
-msgstr ""
+msgstr "Obdarowanie rycerskim godłem było świętym obrzędem."
 
 msgctxt "speaker:Narrator"
 msgid "A knock at the door broke her concentration."
-msgstr ""
+msgstr "Uderzenie w drzwi zerwało jej skupienie."
 
 msgctxt "speaker:Narrator"
 msgid "A knock at the door caused her to sit up."
-msgstr ""
+msgstr "Dźwięk stukania w drzwi sprawił, że usiadła prosto."
 
 msgctxt "speaker:Narrator"
 msgid "A knock at the door gained her attention."
-msgstr ""
+msgstr "Kokot u drzwi przykuł jej uwagę."
 
 msgctxt "speaker:Narrator"
 msgid "A knock at the door startled her."
-msgstr ""
+msgstr "Dźwięk pukania do drzwi wystraszył ją."
 
 msgctxt "speaker:Narrator"
 msgid "A knock on the door signalled food, and Sarah would retrieve it."
-msgstr ""
+msgstr "Puknięcie do drzwi oznaczało posiłek, a Sarah odebrała go."
 
 msgctxt "speaker:Narrator"
 msgid "A knock on the door."
-msgstr ""
+msgstr "Dźwięk pukania do drzwi."
 
 msgctxt "speaker:Sarah"
 msgid "A lady favors wine..."
-msgstr ""
+msgstr "Dama kocha wino..."
 
 msgctxt "speaker:Narrator"
 msgid "A large cabinet stood on the far end of the room, filled with trinkets from many different places."
-msgstr ""
+msgstr "Duża szafa stała na dalekim końcu pokoju, wypełniona drobiazgami z wielu różnych miejsc."
 
 msgctxt "speaker:Sarah"
 msgid "A large coronation will show the people we are still strong."
-msgstr ""
+msgstr "Wielka koronacja pokaże ludowi, że wciąż jesteśmy silni."
 
 msgctxt "speaker:Narrator"
 msgid "A large crowd had gathered to watch the recruits that were attempting the exam today."
-msgstr ""
+msgstr "Wielka masa ludzi zgromadziła się, by obserwować rekrutów próbujących zdać egzamin dziś."
 
 msgctxt "speaker:Narrator"
 msgid "A large hole in the earth, as if someone had plunged a dagger into the flesh of the earth and rended it open."
-msgstr ""
+msgstr "Duża dziura w ziemi, jakby ktoś wbijał w nią nóż i rozrywał ją na strzępy."
 
 msgctxt "speaker:Narrator"
 msgid "A large man sat just outside, carving into a block of wood with a knife."
-msgstr ""
+msgstr "Duży mężczyzna siedział tuż za ogrodzeniem, tnąc kawałek drewna nożem."
 
 msgctxt "speaker:Narrator"
 msgid "A large oak tree, some small garden plots for various vegetables. A dilapidated barn that housed a few animals."
-msgstr ""
+msgstr "Duży dąb, kilka niewielkich działek z różnymi warzywami. Zrujnowana stodoła, w której znajdowało się kilku zwierząt."
 
 msgctxt "speaker:Narrator"
 msgid "A large orc stood near the cage, hitting the bars with a stick."
-msgstr ""
+msgstr "Obok klaty stał duży ork, uderzający w kratę kijem."
 
 msgctxt "speaker:Narrator"
 msgid "A large scar runs across the side of his cheek, blemishing what would otherwise be a very handsome face."
-msgstr ""
+msgstr "Duży blizna biegnie po jego policzku, psując to, co w przeciwnym razie byłoby bardzo przystojną twarzą."
 
 msgctxt "speaker:Narrator"
 msgid "A large unit of Tribesman cavalary was rushing up behind the scouting units."
-msgstr ""
+msgstr "Dużo jednostek kawalerii plemion ruszyło naprzód za oddziałami rozpoznawczymi."
 
 msgctxt "speaker:Narrator"
 msgid "A large world, but perhaps, not quite that big."
-msgstr ""
+msgstr "Duży świat, ale może nie aż tak wielki."
 
 msgctxt "speaker:Narrator"
 msgid "A large yoke bound the two animals to the wooden pulls."
-msgstr ""
+msgstr "Duże jarmo wiązało dwa zwierzęta do drewnianych zaprzęgów."
 
 msgctxt "speaker:Narrator"
 msgid "A large, burly man stormed into the room. The town blacksmith, perhaps, Sarah thought by his appearance."
-msgstr ""
+msgstr "Do pokoju wbiegł duży, potężny mężczyzna. Kowal z miasta, pomyślała Sarah, sądząc po jego wyglądzie."
 
 msgctxt "speaker:Narrator"
 msgid "A last few drops of semen, landing on her tongue."
-msgstr ""
+msgstr "Ostatnie krople plemnika lądują na jej języku."
 
 msgctxt "speaker:Narrator"
 msgid "A last few pumps, and then, a loud primal grunt as he finished."
-msgstr ""
+msgstr "Ostatnie kilka pomp, a potem głośny, pierwotny ryk, gdy ukończył."
 
 msgctxt "speaker:Narrator"
 msgid "A last few steady thrust and she could feel him climax, his cock expanding and his cum spewing into her."
-msgstr ""
+msgstr "Ostatnie kilka pewnych ruchów i poczuła, jak osiąga kulminację, jego kutus się rozszerzając, a sperma wystrzykiwana do niej."
 
 msgctxt "speaker:Narrator"
 msgid "A last few violent thrusts, each jolting her body deeper into bliss."
-msgstr ""
+msgstr "Ostatnie kilka gwałtownych ruchów, każdy z nich wstrząsał jej ciałem głębiej w błogość."
 
 msgctxt "speaker:Narrator"
 msgid "A last high pitched shriek as it spewed out its seed across her cell."
-msgstr ""
+msgstr "Ostatni, wysoki krzyk, gdy wylało to nasienie po jej celi."
 
 msgctxt "speaker:Narrator"
 msgid "A last inspection, though it didn't matter. She knew they were ready."
-msgstr ""
+msgstr "Ostatnia inspekcja, choć nie miało to znaczenia. Wiedziała, że są gotowi."
 
 msgctxt "speaker:Narrator"
 msgid "A last load of cum spewed forth. Sarah felt the warm seed splash across her lower back."
-msgstr ""
+msgstr "Ostatnia porcja spermy wystrzeliła na zewnątrz. Sarah poczuła ciepłe nasienie splaskujące jej dolną pleców."
 
 msgctxt "speaker:Narrator"
 msgid "A last moment of hesitation passed over her, and then she pushed it down."
-msgstr ""
+msgstr "Przeszedł ją ostatni moment wahania, a potem odepchnęła go."
 
 msgctxt "speaker:Narrator"
 msgid "A last moment of peace, she thought to herself."
-msgstr ""
+msgstr "Ostatni moment spokoju – pomyślała w sobie."
 
 msgctxt "speaker:Narrator"
 msgid "A last thought passed her mind. Not words but an image."
-msgstr ""
+msgstr "Ostatnia myśl przemknęła jej przez umysł. Nie słowa, lecz obraz."
 
 msgctxt "speaker:Narrator"
 msgid "A laugh that sounded like a hiss, eminated from the creature."
-msgstr ""
+msgstr "Śmiech brzmiący jak syczenie wydobył się z bestii."
 
 msgctxt "speaker:Narrator"
 msgid "A laughter ran through the people watching."
-msgstr ""
+msgstr "Śmiech rozbrzmiał wśród ludzi obserwujących."
 
 msgctxt "speaker:Narrator"
 msgid "A laughter, interbroken with a choking sound from his lungs could be heard throughout the cave."
-msgstr ""
+msgstr "Śmiech przerywany duszącym się oddechem z jego płuc rozbrzmiewał w całej jaskini."
 
 msgctxt "speaker:Narrator"
 msgid "A laundry house."
-msgstr ""
+msgstr "Pralnia."
 
 msgctxt "speaker:Carolyn"
 msgid "A leader around whom everyone can gather."
-msgstr ""
+msgstr "Liderem, wokół którego mogą się zebrać wszyscy."
 
 msgctxt "speaker:Narrator"
 msgid "A leader for the whole of the Union."
-msgstr ""
+msgstr "Przewodniczący dla całej Unii."
 
 msgctxt "speaker:Narrator"
 msgid "A leash of some kind. She shuddered at the thought."
-msgstr ""
+msgstr "Jakaś smycz. Zadrżała na samą myśl."
 
 msgctxt "speaker:Narrator"
 msgid "A legion returning home. A strange army among them."
-msgstr ""
+msgstr "Legion wracający do domu. Dziwna armia wśród nich."
 
 msgctxt "speaker:Narrator"
 msgid "A lesser army might have surrendered."
-msgstr ""
+msgstr "Armia mniejsza mogłaby się poddać."
 
 msgctxt "speaker:Alfred"
 msgid "A lesson in obdience. And a lesson in what happens when you fall short of the duties of a wife."
-msgstr ""
+msgstr "Lekcja posłuszeństwa. I lekcja tego, co czeka, gdy nie spełnia się obowiązków żony."
 
 msgctxt "speaker:Narrator"
 msgid "A lesson she spend the rest of the day studying."
-msgstr ""
+msgstr "Lekcję, którą spędziła resztę dnia na studiowaniu."
 
 msgctxt "speaker:Sarah"
 msgid "A lesson?"
-msgstr ""
+msgstr "Lekcja?"
 
 msgctxt "speaker:Narrator"
 msgid "A letter of Xan, from Metis. Explaining what he had come here to tell him in the first place..."
-msgstr ""
+msgstr "List od Xana z Metis. Wyjaśniający, co miał tu do niego powiedzieć w pierwszej kolejności..."
 
 msgctxt "speaker:Narrator"
 msgid "A letter sat attached to the inside of the box."
-msgstr ""
+msgstr "List leżał przyklejony do wewnątrz skrzynki."
 
 msgctxt "speaker:Narrator"
 msgid "A library like this would take an army to maintain. Of course mages would find more efficient ways if magic allowed it."
-msgstr ""
+msgstr "Biblioteka podobna do tej wymagałaby armii, aby ją utrzymać. Oczywiście magowie znalazłby bardziej efektywne sposoby, gdyby magia na to pozwalała."
 
 msgctxt "speaker:Narrator"
 msgid "A lie to get what he wanted, and now he would leave her here to suffer."
-msgstr ""
+msgstr "Kłamstwo, aby uzyskać to, czego pragnął, a teraz zostawi ją tutaj, cierpiącą."
 
 msgctxt "speaker:Narrator"
 msgid "A lie."
-msgstr ""
+msgstr "Kłamstwo."
 
 msgctxt "speaker:Narrator"
 msgid "A lie. But Sarah wasn't about to betray the only ally she had left by revealing that."
-msgstr ""
+msgstr "Kłamstwo. Ale Sarah nie zamierzała zdradzić jedynej sojuszniczki, jakiej jeszcze posiadała, przez ujawnienie tego."
 
 msgctxt "speaker:Narrator"
 msgid "A life of only luxury and no obligation, seemed to not just relax her body but also her mind. She felt less sharp with each passing day."
-msgstr ""
+msgstr "Życie pełne tylko luksusu i bez żadnych zobowiązań zdawało się nie tylko rozluźniać jej ciało, ale także umysł. Z każdym dniem czuła się mniej ostra."
 
 msgctxt "speaker:Narrator"
 msgid "A life she could remember having, but one that seemed to have happened to someone else."
-msgstr ""
+msgstr "Życie, o którym mogła pamiętać, ale które wydawało się należeć do kogoś innego."
 
 msgctxt "speaker:Narrator"
 msgid "A life, captured in a paper. With this, the Mythran empire would enforce it, even if Cassius and Dio fled to the ends of the world."
-msgstr ""
+msgstr "Życie zapisane na papierze. Dzięki temu Imperium Mythran wymusi je, nawet jeśli Cassius i Dio uciekną do kresów świata."
 
 msgctxt "speaker:Gabriel"
 msgid "A lifetime of protocol and proper decorum, all forgotten after just a few years with her."
-msgstr ""
+msgstr "Całe życie pełne protokołu i należytego szacunku, wszystko zapomniane już po kilku latach z nią."
 
 msgctxt "speaker:Narrator"
 msgid "A lifetime of working in his father's Inn had hardend his body in an appealing way."
-msgstr ""
+msgstr "Całe życie pracy w gospodzie ojca ukształtowało jego ciało w kuszący sposób."
 
 msgctxt "speaker:Narrator"
 msgid "A lifetime passes."
-msgstr ""
+msgstr "Mija całe życie."
 
 msgctxt "speaker:Narrator"
 msgid "A light radiated from each of his hands, swirling around his arms, driving back the darkness."
-msgstr ""
+msgstr "Z jego dłoni wydobywał się blask, wirując wokół ramion i wypierając mroki."
 
 msgctxt "speaker:Narrator"
 msgid "A lightness."
-msgstr ""
+msgstr "Lekkość."
 
 msgctxt "speaker:Narrator"
 msgid "A little arrogant, Sarah hated herself for the fact that she liked that about him."
-msgstr ""
+msgstr "Trochę arogancka, Sarah nienawidziła siebie za to, że podobało jej się u niego."
 
 msgctxt "speaker:Sarah"
 msgid "A little bit, maybe."
-msgstr ""
+msgstr "Trochę, może."
 
 msgctxt "speaker:Sarah"
 msgid "A little bit."
-msgstr ""
+msgstr "Trochę."
 
 msgctxt "speaker:Narrator"
 msgid "A little distance ahead of her, she saw him moving through the night."
-msgstr ""
+msgstr "Nieco przed nią widziała go poruszającego się w nocy."
 
 msgctxt "speaker:Narrator"
 msgid "A little in the distance, she could make out the harbor. Ships, coming and going."
-msgstr ""
+msgstr "Trochę w oddali widziała port. Statki, przybywające i odjeżdżające."
 
 msgctxt "speaker:Captain Belmont"
 msgid "A little late for sorry's and apologies. Ya stole from the captain, that can't stand."
-msgstr ""
+msgstr "Zbyt późno na przepraszanie i przeprosiny. Kradzież od kapitana? To się nie popłaca."
 
 msgctxt "speaker:Narrator"
 msgid "A little later in the day, Sarah managed to find a chance to slip into Razaphel's room."
-msgstr ""
+msgstr "Kilka godzin później Sarah zdołała znaleźć sposobu, by się przemknąć do pokoju Razaphela."
 
 msgctxt "speaker:Sophia"
 msgid "A little less confident now that he was being led along with a leash."
-msgstr ""
+msgstr "Jeszcze mniej pewnie siebie teraz, gdy prowadzono ją za smycz."
 
 msgctxt "speaker:Narrator"
 msgid "A little over a week had gone by."
-msgstr ""
+msgstr "Przeszło już ponad tydzień."
 
 msgctxt "speaker:Carolyn"
 msgid "A little roughed up here and there, but you still have your mother's beauty."
-msgstr ""
+msgstr "Trochę zniszczona w niektórych miejscach, ale wciąż masz urodę swojej matki."
 
 msgctxt "speaker:Narrator"
 msgid "A little slower. A little faster. One extra step. A spin."
-msgstr ""
+msgstr "Trochę wolniej. Trochę szybciej. Jeden dodatkowy krok. Obrót."
 
 msgctxt "speaker:Narrator"
 msgid "A little under half of the standing army was staffed with bannermen from one of the old houses, and though they were less than half, they made up the strong half."
-msgstr ""
+msgstr "Niecałe połowa stojącej armii składała się z bannermanów z jednego ze starych domów, i choć stanowili oni mniej niż połowę, tworzyli silną połowę."
 
 msgctxt "speaker:Narrator"
 msgid "A little ways up the alley, a light was shining."
-msgstr ""
+msgstr "Nieco wyżej w zaułku świeciło się światło."
 
 msgctxt "speaker:Samayra"
 msgid "A little, maybe. But also not. Is that weird?"
-msgstr ""
+msgstr "Trochę, może. Ale też nie. Czy to dziwne?"
 
 msgctxt "speaker:Kate"
 msgid "A little."
-msgstr ""
+msgstr "Trochę."
 
 msgctxt "speaker:Alaric"
 msgid "A little. Heard about it. Never used any. Pretty damn hard to get in Lethram."
-msgstr ""
+msgstr "Trochę. Słyszałem o tym. Nikt tam nie używa. W Lethram jest naprawdę ciężko się dostać."
 
 msgctxt "speaker:Narrator"
 msgid "A long day behind her, the sleep came easy."
-msgstr ""
+msgstr "Długi dzień za nią, sen nadszedł łatwo."
 
 msgctxt "speaker:Narrator"
 msgid "A long pause lingered before Alaric finally spoke."
-msgstr ""
+msgstr "Długa pauza przetrwała przed tym, aż Alaric wreszcie przemówił."
 
 msgctxt "speaker:Narrator"
 msgid "A long silence lingered."
-msgstr ""
+msgstr "Długi milczenie sięgło."
 
 msgctxt "speaker:Narrator"
 msgid "A long time ago, longer than anyone at this table had been alive, a local baron had ruled the town and its surrounding lands."
-msgstr ""
+msgstr "Dawno temu, dłużej niż ktokolwiek przy tym stole był żywy, lokalny hrabia rządził miastem i jego otoczeniem."
 
 msgctxt "speaker:Atilla"
 msgid "A long time ago, when I was still young, I met a woman, an orc like myself. She was everything to me. Fierce, strong, an equal."
-msgstr ""
+msgstr "Dawno temu, kiedy jeszcze byłem młody, spotkałem kobietę, orka podobnego do mnie. Była wszystkim dla mnie. Zacięta, silna, równa."
 
 msgctxt "speaker:Vaelen"
 msgid "A long time ago, when I was still young, younger than you even, I lived in a small town out in the Mytrhan Southlands."
-msgstr ""
+msgstr "Dawno temu, gdy byłem jeszcze młodszy niż ty, mieszkałem w małym miasteczku na południowych ziemiach Mytrhan."
 
 msgctxt "speaker:Narrator"
 msgid "A longer pause."
-msgstr ""
+msgstr "Dłuższa pauza."
 
 msgctxt "speaker:Narrator"
 msgid "A lot had happened."
-msgstr ""
+msgstr "Wiele się wydarzyło."
 
 msgctxt "speaker:Kate"
 msgid "A lot happened at home, and I never let you see any of that. I didn't think you would understand."
-msgstr ""
+msgstr "W domu wydarzyło się wiele, i nigdy nie pozwoliłam ci zobaczyć żadnej z tych rzeczy. Nie sądziłam, że zrozumiesz."
 
 msgctxt "speaker:Marion"
 msgid "A lot has been asked of the nobility, and a lot we have given, but Thomas...my king...you will be asking them to leave their homes unguarded."
-msgstr ""
+msgstr "Wielkie rzeczy wymagane od szlachty, wiele też oddaliśmy, ale Thomas... mój królu... poprosisz ich o opuszczenie domów bez straż."
 
 msgctxt "speaker:Sarah"
 msgid "A lot has been happening in my life recently, leaving not many things certain."
-msgstr ""
+msgstr "W ostatnim czasie wiele się dzieje w moim życiu, przez co niewiele jest pewne."
 
 msgctxt "speaker:Sarah"
 msgid "A lot has changed, as you might notice."
-msgstr ""
+msgstr "Wiele się zmieniło, jak pewnie zauważasz."
 
 msgctxt "speaker:Sarah"
 msgid "A lot is going to change for me soon."
-msgstr ""
+msgstr "Wkrótce wiele się zmieni dla mnie."
 
 msgctxt "speaker:Narrator"
 msgid "A lot of had transpired between them when they had ventured into the forest together."
-msgstr ""
+msgstr "Między nimi wiele się wydarzyło, gdy razem wyruszyli w las."
 
 msgctxt "speaker:Sarah"
 msgid "A lot of people are going to die if we do this. Our people, the ones we're supposed to be responsible for."
-msgstr ""
+msgstr "Wielu ludzi umrze, jeśli zrobimy to. Nasz lud, tymi, za których mamy odpowiadać."
 
 msgctxt "speaker:Elsa"
 msgid "A lot of people most days, actually."
@@ -1972,15 +1972,15 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "A lot of things that had been unthinkable once, had now become normal. All in order to survive."
-msgstr ""
+msgstr "Wiele rzeczy, które kiedyś wydawały się niemożliwe, teraz stało się normalne. Wszystko po to, by przetrwać."
 
 msgctxt "speaker:Marion"
 msgid "A lot of trade goes through it, and he taxes it."
-msgstr ""
+msgstr "Przez nie przechodzi sporo handlu, a on od tego pobiera podatki."
 
 msgctxt "speaker:Sarah"
 msgid "A lot to take in, huh?"
-msgstr ""
+msgstr "A dużo do wchłonięcia, hmm?"
 
 msgctxt "speaker:King Orwell Rose"
 msgid "A lot...too much to talk about. You can ask me tomorrow, okay?"

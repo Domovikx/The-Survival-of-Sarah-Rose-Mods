@@ -20,23 +20,23 @@ msgstr "“哎呀，不行，换一个”，莎拉还小的时候，她会这么
 
 msgctxt "speaker:Narrator"
 msgid "'A preliminary Analysis on Snow Crystal as an Alchemical Catalyst.'"
-msgstr ""
+msgstr "《雪晶作为炼金催化剂的初步分析》"
 
 msgctxt "speaker:Curator"
 msgid "'The Desert Blooms'. We have Thirty-eight copies within the current inventory."
-msgstr ""
+msgstr "《沙漠绽放》。我们目前的库存里有三十八份副本。"
 
 msgctxt "speaker:Narrator"
 msgid "'The Hollow World'."
-msgstr ""
+msgstr "“空之世界”"
 
 msgctxt "speaker:Sarah"
 msgid "...So Sir Roderic, now bearing the sword..."
-msgstr ""
+msgstr "……那么，罗德里克爵士，如今您已手握利剑……"
 
 msgctxt "speaker:Samayra"
 msgid "...at least I'll have seen the world."
-msgstr ""
+msgstr "……至少我也见识过这个世界了。"
 
 msgctxt "ui"
 msgid "<"
@@ -48,35 +48,35 @@ msgstr ">"
 
 msgctxt "speaker:Curator"
 msgid "A Brief Investigation on Ethics was first written by the philosopher Lu-Fan, hailing from the current region known to you as the Far East."
-msgstr ""
+msgstr "《伦理简论》一书的作者，是哲学家路凡，他来自你们所称的远东地区。"
 
 msgctxt "speaker:Voice"
 msgid "A God."
-msgstr ""
+msgstr "神。"
 
 msgctxt "speaker:Sarah"
 msgid "A Mythran army? Why?"
-msgstr ""
+msgstr "神话人军队？为何？"
 
 msgctxt "speaker:Xanthippe"
 msgid "A Mythran host is no joke, but the Bagrad army should be able to keep them off for a while. We're mostly here just to protect the palace from anyone that sneaks past the main battle."
-msgstr ""
+msgstr "神话族的援军绝非儿戏，但巴格拉德大军足以暂时阻挡他们。我们此来，主要是为了防备有人从主战场后方潜入皇宫。"
 
 msgctxt "speaker:Emmissary"
 msgid "A Queen with no crown. A Queen with no throne. A Queen with no land."
-msgstr ""
+msgstr "无冠的皇后。无座的皇后。无土的皇后。"
 
 msgctxt "speaker:Sarah"
 msgid "A Rosannan man would never..."
-msgstr ""
+msgstr "罗桑男人绝不会……"
 
 msgctxt "speaker:Narrator"
 msgid "A Tribesmen, caught from his horse, was far less of a threat."
-msgstr ""
+msgstr "一名被从马上拽下的部落民，威胁性要小得多。"
 
 msgctxt "speaker:Kravel"
 msgid "A Union Council hasn't been called in over a century..."
-msgstr ""
+msgstr "一个联合议会已逾百年未曾召开..."
 
 msgctxt "speaker:Narrator"
 msgid "A Union King."
@@ -84,1391 +84,1391 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "A bad idea."
-msgstr ""
+msgstr "坏主意。"
 
 msgctxt "speaker:Narrator"
 msgid "A bar of soap."
-msgstr ""
+msgstr "一块肥皂。"
 
 msgctxt "speaker:Narrator"
 msgid "A bar of soap. Some towels. Toiletries."
-msgstr ""
+msgstr "一块肥皂。几条毛巾。洗漱用品。"
 
 msgctxt "speaker:Sarah"
 msgid "A bath? In this place?"
-msgstr ""
+msgstr "在这儿洗澡？"
 
 msgctxt "speaker:Narrator"
 msgid "A bathhouse."
-msgstr ""
+msgstr "澡堂。"
 
 msgctxt "speaker:Narrator"
 msgid "A bead of sweat fell from Naydeen's face, landing on Sarah's stomach."
-msgstr ""
+msgstr "一滴汗珠从奈迪恩脸上滑落，落在莎拉的小腹上。"
 
 msgctxt "speaker:Narrator"
 msgid "A beautiful woman like that, dominated by a man like that."
-msgstr ""
+msgstr "像她这样美丽的女人，被那样一个男人主宰。"
 
 msgctxt "speaker:Narrator"
 msgid "A bed, some storage, nothing of note."
-msgstr ""
+msgstr "一张床，一些储物柜，没什么特别的。"
 
 msgctxt "speaker:Metis"
 msgid "A bit more, this time."
-msgstr ""
+msgstr "再深一点，这次。"
 
 msgctxt "speaker:Captain Belmont"
 msgid "A bit of slack, but nothing practice won't fix. Very good."
-msgstr ""
+msgstr "放松一点，但没什么练习解决不了的。很好。"
 
 msgctxt "speaker:Sarah"
 msgid "A bit of the good of both."
-msgstr ""
+msgstr "两者兼得。"
 
 msgctxt "speaker:Sarah"
 msgid "A bit, here and there."
-msgstr ""
+msgstr "些许罢了，这里那里。"
 
 msgctxt "speaker:Narrator"
 msgid "A black liquid spewed out, covering part of her face and armor, and the beast roared again."
-msgstr ""
+msgstr "一股黑液喷涌而出，沾湿了她的脸庞与铠甲，野兽再次咆哮。"
 
 msgctxt "speaker:Narrator"
 msgid "A black scar, a void, an absence."
-msgstr ""
+msgstr "一道黑色的伤疤，一片虚无，一种缺失。"
 
 msgctxt "speaker:Narrator"
 msgid "A black, oily tongue, emerged from its mouth, sliding around the body of the Mythran prince, and dragging it into its bowels."
-msgstr ""
+msgstr "一条黑油般的舌头从它口中伸出，滑过神话王子的身躯，将其拖入腹中。"
 
 msgctxt "speaker:Sarah"
 msgid "A blessing?"
-msgstr ""
+msgstr "祝福？"
 
 msgctxt "speaker:Narrator"
 msgid "A blinding light."
-msgstr ""
+msgstr "刺眼的光芒。"
 
 msgctxt "speaker:Narrator"
 msgid "A blissful silence is replaced by a cold one."
-msgstr ""
+msgstr "愉悦的寂静被一片冰冷取代。"
 
 msgctxt "speaker:Narrator"
 msgid "A blissful silence. A gentle sun. A soft breeze."
-msgstr ""
+msgstr "一片宁静的欢愉。温和的阳光。轻柔的微风。"
 
 msgctxt "speaker:Narrator"
 msgid "A blistering assault of pleasure that drowned out all other senses, striking her blind."
-msgstr ""
+msgstr "一股灼热的快感洪流淹没了她所有的感官，令她目眩神迷。"
 
 msgctxt "speaker:Narrator"
 msgid "A blistering hearth in the other end of the room."
-msgstr ""
+msgstr "房间另一端，炽热的壁炉。"
 
 msgctxt "speaker:Narrator"
 msgid "A blistering hearth, braziers filled with flames, warmth oozing out from every direction."
-msgstr ""
+msgstr "炽热的壁炉，炭火盆里烈焰熊熊，暖意从四面八方涌出。"
 
 msgctxt "speaker:Alaric"
 msgid "A block of buildings in the cannery section burned down a few years back."
-msgstr ""
+msgstr "罐头区的建筑群几年前就烧毁了。"
 
 msgctxt "speaker:Narrator"
 msgid "A blood-curdling scream rings out across the silenced mass of slaves."
-msgstr ""
+msgstr "一声令人毛骨悚然的尖叫响彻了死寂的奴隶群。"
 
 msgctxt "speaker:Narrator"
 msgid "A bloodied hand emerged from the surface of the pool, though she could see the body it was attached to."
-msgstr ""
+msgstr "一只沾满鲜血的手从水面浮现，尽管她仍能看见那具相连的躯体。"
 
 msgctxt "speaker:Sigmund"
 msgid "A bloodlust seemed to take over, and by the end of it, nothing of the old regimes or histories remained."
-msgstr ""
+msgstr "嗜血狂潮席卷了一切，待到风停雨歇，旧时代的残影与往昔的史书皆已荡然无存。"
 
 msgctxt "speaker:Narrator"
 msgid "A blue sky, save for a few clouds, crowned the start of a new day in Lethram."
-msgstr ""
+msgstr "除了几朵云，湛蓝的天空笼罩着莱特拉姆新的一天。"
 
 msgctxt "speaker:Narrator"
 msgid "A blur she hoped would not end."
-msgstr ""
+msgstr "她希望不会结束的迷离。"
 
 msgctxt "speaker:Narrator"
 msgid "A blurring of bodies and sex."
-msgstr ""
+msgstr "身体与性爱交融，一片模糊。"
 
 msgctxt "speaker:Narrator"
 msgid "A bolt of pleasure shot through her body as she felt him press the tip up against her pussy."
-msgstr ""
+msgstr "一股快感如电流般窜遍全身，她感到他将顶端抵上了她的逼。"
 
 msgctxt "speaker:Maeiv"
 msgid "A bore, much like your father."
-msgstr ""
+msgstr "无聊透顶，跟你那父亲一样。"
 
 msgctxt "speaker:Narrator"
 msgid "A bowl that had been sat upon the edge of the Shah's throne was send clattering across the stone floor."
-msgstr ""
+msgstr "一只盛着食物的碗从沙皇王座边缘滑落，在石地上叮当作响。"
 
 msgctxt "speaker:Varga"
 msgid "A boy, a girl. Either would be a blessing."
-msgstr ""
+msgstr "男孩也好，女孩也罢，皆是福分。"
 
 msgctxt "speaker:Narrator"
 msgid "A boy, as she had hoped it would be."
-msgstr ""
+msgstr "是个男孩，正如她所期盼的。"
 
 msgctxt "speaker:Narrator"
 msgid "A boy, they cried out."
-msgstr ""
+msgstr "男孩，他们欢呼道。"
 
 msgctxt "speaker:Sarah"
 msgid "A boy."
-msgstr ""
+msgstr "是个男孩。"
 
 msgctxt "speaker:Narrator"
 msgid "A breeze runs through the alley, and past Sarah's naked body. She shivers"
-msgstr ""
+msgstr "风穿过小巷，掠过莎拉赤裸的身体，她打了个寒颤。"
 
 msgctxt "speaker:Narrator"
 msgid "A bride in Rosanna was clad in white only, like a ghost, but here they crowned their brides in bright floral, for all the world to see."
-msgstr ""
+msgstr "罗萨纳的新娘只身披白衣，宛如鬼魅，而此处却以繁花加冕新娘，让世人尽睹。"
 
 msgctxt "speaker:Narrator"
 msgid "A bridge of some kind."
-msgstr ""
+msgstr "一座桥。"
 
 msgctxt "speaker:Narrator"
 msgid "A brief few seconds more, before they'd catch her."
-msgstr ""
+msgstr "再等片刻，他们便会抓住她。"
 
 msgctxt "speaker:Narrator"
 msgid "A brief flash of magical flame brushed along her hand."
-msgstr ""
+msgstr "一丝微弱的魔法火焰在她手背上掠过。"
 
 msgctxt "speaker:Narrator"
 msgid "A brief moment later, he came back out."
-msgstr ""
+msgstr "片刻之后，他又走了出来。"
 
 msgctxt "speaker:Narrator"
 msgid "A brief moment of pause, as if they were understanding something."
-msgstr ""
+msgstr "短暂的停顿，仿佛他们正在领悟什么。"
 
 msgctxt "speaker:Narrator"
 msgid "A brief moment of shame."
-msgstr ""
+msgstr "片刻的羞耻。"
 
 msgctxt "speaker:Narrator"
 msgid "A brief pause."
-msgstr ""
+msgstr "短暂的停顿。"
 
 msgctxt "speaker:Narrator"
 msgid "A brief respite. A chance to restock."
-msgstr ""
+msgstr "短暂的喘息。一次补充补给的机会。"
 
 msgctxt "speaker:Varga"
 msgid "A brief window where our troops will be ready to attack Marion's position, but where we might still end the uprising in time to spare the outer provinces from a wasted harvest."
-msgstr ""
+msgstr "一个短暂的窗口，届时我军将准备就绪，可对玛丽恩的据点发起进攻；但若此时行动，或许仍能在时间耗尽前平定叛乱，保全外省的庄稼免于荒废。"
 
 msgctxt "speaker:Narrator"
 msgid "A bright flower, vibrant in colour, but not all that otherwordly."
-msgstr ""
+msgstr "一朵色彩鲜艳的花朵，却并不显得多么超凡脱俗。"
 
 msgctxt "speaker:Garret"
 msgid "A brother...I'm sorry, I didn't know..."
-msgstr ""
+msgstr "兄弟……对不起，我不知道……"
 
 msgctxt "speaker:Narrator"
 msgid "A brutal peace, where as often, the weakest and poorest were made to pay the price."
-msgstr ""
+msgstr "一场残酷的和平，正如往常，代价总是由最弱者和最贫穷者来支付。"
 
 msgctxt "speaker:Oryon"
 msgid "A brutal war between them and the Void that would see countless of them dead."
-msgstr ""
+msgstr "一场他们与虚空之间的残酷战争，无数人将因此丧生。"
 
 msgctxt "speaker:Narrator"
 msgid "A bubble of sensations of touch, smell, sight, each overpowering her senses."
-msgstr ""
+msgstr "触觉、嗅觉、视觉的感官洪流，将她彻底淹没。"
 
 msgctxt "speaker:Narrator"
 msgid "A bull that could protect her in a world of lions."
-msgstr ""
+msgstr "一头能在狮群横行的世界里守护她的公牛。"
 
 msgctxt "speaker:Narrator"
 msgid "A burden of which she was reminded only in its absence, when she remembered what it felt like to live easily."
-msgstr ""
+msgstr "只有失去时才被提醒的重担，那时她忆起曾经轻松度日的日子。"
 
 msgctxt "speaker:Narrator"
 msgid "A burning pain along the side of her cheek."
-msgstr ""
+msgstr "脸颊侧面传来一阵灼烧般的剧痛。"
 
 msgctxt "speaker:Narrator"
 msgid "A burst of blue flame poured forth from her hand and surged out in the center of the room."
-msgstr ""
+msgstr "她掌心喷出一股蓝色烈焰，在房间中央轰然炸开。"
 
 msgctxt "speaker:Narrator"
 msgid "A busy, chaotic, almost maddening scene."
-msgstr ""
+msgstr "一片繁忙、混乱，甚至令人抓狂的景象。"
 
 msgctxt "speaker:Sarah"
 msgid "A cart? What...what are you talking about?"
-msgstr ""
+msgstr "一辆手推车？你……你在说什么？"
 
 msgctxt "speaker:Judge"
 msgid "A case of improper soliciation? Prostitution?"
-msgstr ""
+msgstr "不当游说？卖淫？"
 
 msgctxt "speaker:Carolyn"
 msgid "A castle is only as strong as the morale that rules it."
-msgstr ""
+msgstr "城堡的坚固程度，取决于统治它的士气。"
 
 msgctxt "speaker:Narrator"
 msgid "A cave, Sarah realized, as they neared it."
-msgstr ""
+msgstr "山洞近在眼前，莎拉意识到这一点。"
 
 msgctxt "speaker:Narrator"
 msgid "A cell door appeared."
-msgstr ""
+msgstr "一扇牢房门出现了。"
 
 msgctxt "speaker:Narrator"
 msgid "A challenge she was committed to."
-msgstr ""
+msgstr "这是她誓要迎接的挑战。"
 
 msgctxt "speaker:Narrator"
 msgid "A chance. That's all she had ever wanted."
-msgstr ""
+msgstr "这就是她一直渴望的机会。"
 
 msgctxt "speaker:Narrator"
 msgid "A chaos was spreading through the room, Sarah had lost all control. Herself, her brother and now even her husband...she stood to lose everything."
-msgstr ""
+msgstr "房间里一片混乱，莎拉彻底失去了控制。她自己、她的哥哥……甚至她的丈夫……她似乎要失去一切。"
 
 msgctxt "speaker:Narrator"
 msgid "A chaos was spreading through the room, Sarah had lost all control. Herself, her brother...she stood to lose everything."
-msgstr ""
+msgstr "混乱在房间里蔓延，莎拉已失去一切控制。她自己、她的兄弟……她即将失去所有。"
 
 msgctxt "speaker:Narrator"
 msgid "A chaotic surge of butterflies in her stomach."
-msgstr ""
+msgstr "胃里一阵混乱的翻腾。"
 
 msgctxt "speaker:Narrator"
 msgid "A charged silence came over the hall."
-msgstr ""
+msgstr "大厅里弥漫着令人窒息的沉默。"
 
 msgctxt "speaker:Narrator"
 msgid "A charged silence lingered."
-msgstr ""
+msgstr "空气中弥漫着令人窒息的沉默。"
 
 msgctxt "speaker:Captain Belmont"
 msgid "A cheap ship whore who will suck my dick the moment I order her to?"
-msgstr ""
+msgstr "一个贱货，只要我下令就会立刻给我口？"
 
 msgctxt "speaker:Narrator"
 msgid "A child that would guarantee peace and stability."
-msgstr ""
+msgstr "一个能确保和平与稳定的孩子。"
 
 msgctxt "speaker:Narrator"
 msgid "A child would mean the end of that."
-msgstr ""
+msgstr "孩子意味着这一切的终结。"
 
 msgctxt "speaker:Narrator"
 msgid "A child, born from her family and his. The final seal that would forever link their houses."
-msgstr ""
+msgstr "一个出自她与他家族的孩子，那将永远联结两家的最终契约。"
 
 msgctxt "speaker:Narrator"
 msgid "A child, she thought, would be something she could give him that would weigh up to all he gave her."
-msgstr ""
+msgstr "她心想，一个孩子是她能给予他的、足以抵偿他所有付出的东西。"
 
 msgctxt "speaker:Narrator"
 msgid "A child."
-msgstr ""
+msgstr "一个孩子。"
 
 msgctxt "speaker:Narrator"
 msgid "A childish hope, that she had long ago allowed to die, returned."
-msgstr ""
+msgstr "一种童稚的希望，那希望她早已任其死去，如今却重新归来。"
 
 msgctxt "speaker:Narrator"
 msgid "A citizen could succeed on his own merit, but unlike a slave, he could also fall into poverty."
-msgstr ""
+msgstr "公民可凭自身才能成功，但不同于奴隶，他也可能陷入贫困。"
 
 msgctxt "speaker:Narrator"
 msgid "A city like Lethram was always filled with various noises, but Sarah had learned by now that people rarely came to this particular alley."
-msgstr ""
+msgstr "像勒特拉姆这样的城市，总是充斥着各种各样的声响，但莎拉如今已明白，人们很少会来到这条小巷。"
 
 msgctxt "speaker:Narrator"
 msgid "A city like this, there was none like it in all the world."
-msgstr ""
+msgstr "这世上，再没有像这样的城市了。"
 
 msgctxt "speaker:Narrator"
 msgid "A city unlike any other in the world."
-msgstr ""
+msgstr "这世上独一无二的城市。"
 
 msgctxt "speaker:Marion"
 msgid "A claim that Oliver could use as a pretext to take offense."
-msgstr ""
+msgstr "奥利弗可以以此为借口生气的说辞。"
 
 msgctxt "speaker:Duke Antonio"
 msgid "A clear and logical position."
-msgstr ""
+msgstr "立场清晰，逻辑严密。"
 
 msgctxt "speaker:Atilla"
 msgid "A clever move, girl, but you need to think."
-msgstr ""
+msgstr "真聪明，丫头，但你得动动脑子。"
 
 msgctxt "speaker:Sarah"
 msgid "A cock hungry slut...pretending to be a deck hand."
-msgstr ""
+msgstr "一个饥渴的贱货……却装成甲板水手。"
 
 msgctxt "speaker:Narrator"
 msgid "A cold gust of air breezed past them, rising up from deep within the bowels of the Imperial Palace."
-msgstr ""
+msgstr "一股寒意从帝国宫殿深处涌出，掠过他们身旁。"
 
 msgctxt "speaker:Narrator"
 msgid "A cold wind ran through the tent, the thick hide cover slapping against itself as the wind battered against it."
-msgstr ""
+msgstr "寒风穿过帐篷，厚重的兽皮顶棚在风中拍打作响。"
 
 msgctxt "speaker:Narrator"
 msgid "A cold wind rushed up to meet her as they neared closer to land; the shores quickly growing."
-msgstr ""
+msgstr "随着他们离陆地越来越近，一股冷风迎面吹来；海岸线迅速显现。"
 
 msgctxt "speaker:Narrator"
 msgid "A collar, as meant for an animal."
-msgstr ""
+msgstr "一副给动物戴的项圈。"
 
 msgctxt "speaker:Sigmund"
 msgid "A collection of smaller kingdoms that managed to keep the other powers out by working together whenever it served them."
-msgstr ""
+msgstr "一群较小的王国，它们通过合作来抵御其他势力，只要这对它们有利。"
 
 msgctxt "speaker:Narrator"
 msgid "A comfortable change of pace from the dangerous streets."
-msgstr ""
+msgstr "从危险的街头换作这舒适的节奏。"
 
 msgctxt "speaker:Narrator"
 msgid "A command he would soon be in his full right to give to her, she realized."
-msgstr ""
+msgstr "她意识到，这很快便是他有权向她发出的命令。"
 
 msgctxt "speaker:Narrator"
 msgid "A command she already obeyed as if it was his right."
-msgstr ""
+msgstr "她早已顺从地执行着这道命令，仿佛那是他理所应当的权利。"
 
 msgctxt "speaker:Narrator"
 msgid "A command was given atop the walls for the archers to fire, and together they did."
-msgstr ""
+msgstr "城墙上发出了命令，弓箭手们开火，他们一同执行。"
 
 msgctxt "speaker:Duke Antonio"
 msgid "A common whore. I could go out into the city tonight and fuck a dozen like her."
-msgstr ""
+msgstr "一个普通的婊子。我今晚就能上街，操上一打像她那样的货色。"
 
 msgctxt "speaker:Narrator"
 msgid "A complex maze of gears and machinery."
-msgstr ""
+msgstr "错综复杂的齿轮与机械迷宫。"
 
 msgctxt "speaker:Narrator"
 msgid "A complicated flurry of emotions rocked her body as she began to slowly finger herself."
-msgstr ""
+msgstr "她的身躯因那复杂而纷乱的情绪而剧烈战栗，缓缓地将手指探入私处。"
 
 msgctxt "speaker:Narrator"
 msgid "A complicated mixture of emotions rushed through her."
-msgstr ""
+msgstr "一股复杂的情绪涌上她的心头。"
 
 msgctxt "speaker:King-On-The-Outside"
 msgid "A condemned man knows his own judgement. Knowing does not exempt him from suffering it."
-msgstr ""
+msgstr "被判处死刑的人深知自己的判决。知晓并不能免除他承受苦难的命运。"
 
 msgctxt "speaker:Narrator"
 msgid "A conspiracy against the Gods of her world themselves."
-msgstr ""
+msgstr "一场针对她世界诸神的阴谋。"
 
 msgctxt "speaker:Narrator"
 msgid "A constant pleasure invaded every part of her body, dominated her mind."
-msgstr ""
+msgstr "一种持续的快感侵入了她的每一寸身体，主宰了她的思想。"
 
 msgctxt "speaker:Narrator"
 msgid "A constant, lowly grunting, seemed to emerge from the creature as it breathed heavily."
-msgstr ""
+msgstr "一种持续的低沉呻吟声，似乎随着那生物沉重的呼吸而发出。"
 
 msgctxt "speaker:Curator"
 msgid "A copy of such a book does not exist within the current inventory."
-msgstr ""
+msgstr "当前库存中并无此类书籍的副本。"
 
 msgctxt "speaker:Narrator"
 msgid "A council of leaders would form the leadership of the Union."
-msgstr ""
+msgstr "联盟的领导层将由领袖组成的议会来确立。"
 
 msgctxt "speaker:Captain Belmont"
 msgid "A couple, to be sure."
-msgstr ""
+msgstr "一对，当然。"
 
 msgctxt "speaker:Narrator"
 msgid "A crack rang out across the tent."
-msgstr ""
+msgstr "一声裂响在帐篷内炸开。"
 
 msgctxt "speaker:Narrator"
 msgid "A creature hiding could ask for no more perfect place."
-msgstr ""
+msgstr "藏匿的造物再也找不到比这里更完美的地方了。"
 
 msgctxt "speaker:Narrator"
 msgid "A creeping feeling came over her, as though something from inside the forest was looking back at her."
-msgstr ""
+msgstr "一种寒意悄然爬上她的脊背，仿佛森林深处有什么东西正透过树影回望着她。"
 
 msgctxt "speaker:Narrator"
 msgid "A crossbow bolt pierced through his back."
-msgstr ""
+msgstr "一支弩箭穿透了他的后背。"
 
 msgctxt "speaker:Narrator"
 msgid "A crowd began to form."
-msgstr ""
+msgstr "人群开始聚集。"
 
 msgctxt "speaker:Narrator"
 msgid "A crowd of men and women already stood gathered outside, busily engaged with one another."
-msgstr ""
+msgstr "人群早已聚集在门外，彼此间忙忙碌碌。"
 
 msgctxt "speaker:Kate"
 msgid "A crowd of people gathered to watch them, and I couldn't keep away. I was drawn in like everyone else."
-msgstr ""
+msgstr "人群聚集围观，我也无法置身事外，不由自主地融入了其中。"
 
 msgctxt "speaker:Narrator"
 msgid "A crowd of people."
-msgstr ""
+msgstr "一群人。"
 
 msgctxt "speaker:Narrator"
 msgid "A crown her family still wore, to this day."
-msgstr ""
+msgstr "她家族至今仍在佩戴的皇冠。"
 
 msgctxt "speaker:Old Tribesman"
 msgid "A cunt like this..."
-msgstr ""
+msgstr "像这样的骚货……"
 
 msgctxt "speaker:Alaric"
 msgid "A cunt."
-msgstr ""
+msgstr "一个穴。"
 
 msgctxt "speaker:Kate"
 msgid "A cup like this, wouldn't be hard to sell that off at the local market."
-msgstr ""
+msgstr "像这样的杯子，在当地市场上卖出去并不难。"
 
 msgctxt "speaker:Garret"
 msgid "A curse that would heal my wounds, save my life and make me a creature of the forest. A Beast."
-msgstr ""
+msgstr "能治愈我的伤口、挽救我性命，将我化作森林之兽的诅咒。一个野兽。"
 
 msgctxt "speaker:Sarah"
 msgid "A curse?"
-msgstr ""
+msgstr "诅咒？"
 
 msgctxt "speaker:Narrator"
 msgid "A dagger glinted in the light, inches from her brother's throat."
-msgstr ""
+msgstr "一把匕首在光线下闪着寒光，距离她的喉咙仅寸许。"
 
 msgctxt "speaker:Narrator"
 msgid "A dagger."
-msgstr ""
+msgstr "匕首。"
 
 msgctxt "speaker:Narrator"
 msgid "A dagger. A handle as black as obsidian, a blade glowing in deep crimson red."
-msgstr ""
+msgstr "一把匕首。柄如黑曜石般漆黑，刃身却泛着深红的血光。"
 
 msgctxt "speaker:Sigmund"
 msgid "A dark fountain?"
-msgstr ""
+msgstr "黑暗喷泉？"
 
 msgctxt "speaker:Narrator"
 msgid "A darkness stood out."
-msgstr ""
+msgstr "一片黑暗赫然显现。"
 
 msgctxt "speaker:Narrator"
 msgid "A darkness that was more like a void, filled with starlight"
-msgstr ""
+msgstr "一种更像虚空般的黑暗，充斥着星光"
 
 msgctxt "speaker:Narrator"
 msgid "A daughter loves her father, despite the quality of the man."
-msgstr ""
+msgstr "女儿爱她的父亲，尽管他是个什么样的人。"
 
 msgctxt "speaker:Atilla"
 msgid "A day, more than a year ago, in Lethram. But I kept myself hidden."
-msgstr ""
+msgstr "一年前，在莱特拉姆。但我一直藏身于暗处。"
 
 msgctxt "speaker:Narrator"
 msgid "A dead end, Sarah thought. She knew every inch of the castle."
-msgstr ""
+msgstr "死胡同，莎拉心想。她对这个城堡的每一寸都了如指掌。"
 
 msgctxt "speaker:Narrator"
 msgid "A deafening and thunderous crashing sound roared out aross the room."
-msgstr ""
+msgstr "一声震耳欲聋的巨响在房间内炸开。"
 
 msgctxt "speaker:Narrator"
 msgid "A deafening cracking sound rang out across the room."
-msgstr ""
+msgstr "一声震耳欲聋的碎裂声响彻大厅。"
 
 msgctxt "speaker:Narrator"
 msgid "A deafening scream erupted from the creature as it crashed into the stone floor, its limb smashing against the ground with a loud thud."
-msgstr ""
+msgstr "怪物撞击石地板时发出震耳欲聋的尖叫，四肢重重砸在地上，发出巨大的闷响。"
 
 msgctxt "speaker:Narrator"
 msgid "A deafening silence had descended on the people that had survived, and no doubt lost countless others."
-msgstr ""
+msgstr "死一般的寂静笼罩了幸存者们，无数生命已在此刻消逝。"
 
 msgctxt "speaker:Sarah"
 msgid "A deal?"
-msgstr ""
+msgstr "交易？"
 
 msgctxt "speaker:Narrator"
 msgid "A deathly silence descended on the crowd."
-msgstr ""
+msgstr "死一般的寂静笼罩了人群。"
 
 msgctxt "speaker:Metis"
 msgid "A decent attempt, but this one...I'll give it half a chance of surviving."
-msgstr ""
+msgstr "还算不错，但这家伙……能活下来的几率大概只有一半。"
 
 msgctxt "speaker:Narrator"
 msgid "A decent sum. She wouldn't live off it forever, but it would keep her housed for a good while. Enough to make a plan."
-msgstr ""
+msgstr "一笔不错的数目。她不会靠这笔钱过一辈子，但足够让她安身立命很长一段时间。足以让她制定计划。"
 
 msgctxt "speaker:Narrator"
 msgid "A deep groan of pain roared out from his throat as he collapsed to the ground."
-msgstr ""
+msgstr "他痛苦地呻吟着，随即重重地倒在地上。"
 
 msgctxt "speaker:Narrator"
 msgid "A deep growl, followed by his already sizeable cock expanding further."
-msgstr ""
+msgstr "一声低沉的咆哮，随后他那本就硕大的鸡巴又胀大了几分。"
 
 msgctxt "speaker:Narrator"
 msgid "A deep grunt errupted from Alaric, his grip on her hip and head tightening, adding to the pain."
-msgstr ""
+msgstr "阿拉里克发出一声低沉的呻吟，双手紧紧扣住她的腰肢与头部，加剧了那份痛楚。"
 
 msgctxt "speaker:Narrator"
 msgid "A deep grunt proceeded what she did not yet know would follow."
-msgstr ""
+msgstr "一声低沉的呻吟在她尚未知晓即将发生之事后响起。"
 
 msgctxt "speaker:Narrator"
 msgid "A deep grunt, then she felt him expanding inside of her."
-msgstr ""
+msgstr "一声低沉的呻吟，随后她感到他正在她体内膨胀。"
 
 msgctxt "speaker:Narrator"
 msgid "A deep panic had overtaken the people of Lethram."
-msgstr ""
+msgstr "深深的恐慌笼罩了莱特拉姆的人民。"
 
 msgctxt "speaker:Narrator"
 msgid "A deep part of her wanted to lunge for her sword and make them all pay."
-msgstr ""
+msgstr "她内心深处的一部分想要扑向剑，让那些人都付出代价。"
 
 msgctxt "speaker:Narrator"
 msgid "A deep sleep took hold of her."
-msgstr ""
+msgstr "深沉的睡意将她笼罩。"
 
 msgctxt "speaker:Narrator"
 msgid "A degree of seperation between herself and the real world, now again full of uncertainty."
-msgstr ""
+msgstr "与真实世界之间，如今又充满了不确定的隔阂。"
 
 msgctxt "speaker:Razaphel"
 msgid "A design in which every path bends towards the same desination."
-msgstr ""
+msgstr "一条所有路径都通向同一终点的蓝图。"
 
 msgctxt "speaker:Narrator"
 msgid "A detailed map of the city of Rahayal, containing not just all the districts, but even down to recording most streets and alleys."
-msgstr ""
+msgstr "拉海亚尔城的详细地图，不仅囊括了所有街区，甚至连大多数街道和巷弄都记录在案。"
 
 msgctxt "speaker:Narrator"
 msgid "A difference between knowing a thing and seeing it. And experiencing this debauchery was almost too much for her."
-msgstr ""
+msgstr "知晓事物与亲眼目睹它之间，存在着天壤之别。亲历这般荒淫，对她而言几乎难以承受。"
 
 msgctxt "speaker:Razaphel"
 msgid "A different world, in a place beyond the dimensions of your own, where life lived forever."
-msgstr ""
+msgstr "一个截然不同的世界，位于你所在维度之外，在那里生命得以永存。"
 
 msgctxt "speaker:Xanthippe"
 msgid "A disaster."
-msgstr ""
+msgstr "一场灾难。"
 
 msgctxt "speaker:Sarah"
 msgid "A discount, really? Why?"
-msgstr ""
+msgstr "只是打折？为何？"
 
 msgctxt "speaker:Narrator"
 msgid "A distant echo of a woman who dreamed of so much more."
-msgstr ""
+msgstr "一个遥远回响，那是曾梦想过更多的一切的女子。"
 
 msgctxt "speaker:Narrator"
 msgid "A divine omen, one that made victory so obvious that it made them eager for the bloodshed."
-msgstr ""
+msgstr "一个神圣的预兆，让胜利显得如此显而易见，以至于让他们渴望杀戮。"
 
 msgctxt "speaker:Narrator"
 msgid "A divine sign of their right to rule."
-msgstr ""
+msgstr "统治权的神圣征兆。"
 
 msgctxt "speaker:Cassius"
 msgid "A doctor in Rahayal, he has studied the jungles and their diseases more than any man alive."
-msgstr ""
+msgstr "拉哈亚尔的医生，他比世上任何人更精通丛林及其疫病。"
 
 msgctxt "speaker:Narrator"
 msgid "A dominating silence hung over the room. Ashes slowly drifted across the floor."
-msgstr ""
+msgstr "房间里弥漫着令人窒息的沉默，灰烬在地板上缓缓飘落。"
 
 msgctxt "speaker:Narrator"
 msgid "A door had been thrown open and a cadre of servants swarmed behind the man who now walked ahead of the pack."
-msgstr ""
+msgstr "一扇门被猛地推开，一群仆从簇拥着那个走在最前面的人涌了进来。"
 
 msgctxt "speaker:Narrator"
 msgid "A door with a mind of its own. Sarah thought she couldn't be more unnerved by the thing."
-msgstr ""
+msgstr "一扇仿佛有了自己意志的门。莎拉觉得，没有什么比这更让她毛骨悚然了。"
 
 msgctxt "speaker:Sarah"
 msgid "A dozen attacks?"
-msgstr ""
+msgstr "十二次袭击？"
 
 msgctxt "speaker:Narrator"
 msgid "A dread they had not yet tasted."
-msgstr ""
+msgstr "一种他们尚未尝过的恐惧。"
 
 msgctxt "speaker:Narrator"
 msgid "A dreadful quietness came over the hall."
-msgstr ""
+msgstr "大厅里笼罩起令人窒息的寂静。"
 
 msgctxt "speaker:Narrator"
 msgid "A dreadful silence came over the room as a everyone turned their heads to see the source of the disturbance."
-msgstr ""
+msgstr "众人纷纷转头，探寻骚乱的源头，大厅里顿时陷入令人胆寒的死寂。"
 
 msgctxt "speaker:Narrator"
 msgid "A dream of her mother...father...and Thomas."
-msgstr ""
+msgstr "母亲……父亲……还有托马斯的梦境。"
 
 msgctxt "speaker:Narrator"
 msgid "A dream she had murdered, returned so vividly that she could now feel it on her skin."
-msgstr ""
+msgstr "一场她曾亲手谋杀的梦，如此鲜活地重现，仿佛此刻正贴在她的肌肤上。"
 
 msgctxt "speaker:Narrator"
 msgid "A dream she had once."
-msgstr ""
+msgstr "一场她曾做过的梦。"
 
 msgctxt "speaker:Narrator"
 msgid "A dress was sprawled out across it. Just by looking at it, one could see how expensive it was."
-msgstr ""
+msgstr "一件礼服随意地铺在上面。光看就知道它价值不菲。"
 
 msgctxt "speaker:Narrator"
 msgid "A drink couldn't hurt."
-msgstr ""
+msgstr "喝点东西也无妨。"
 
 msgctxt "speaker:Narrator"
 msgid "A dryer temperate."
-msgstr ""
+msgstr "干爽了许多。"
 
 msgctxt "speaker:Narrator"
 msgid "A dullness had been lifted, and Sarah prayed it would remain forever banished."
-msgstr ""
+msgstr "昏沉感已然消散，莎拉祈祷这状态能永驻。"
 
 msgctxt "speaker:Narrator"
 msgid "A faint distant voice in her head tried to speak reason."
-msgstr ""
+msgstr "她脑海中传来一声微弱而遥远的声音，试图讲道理。"
 
 msgctxt "speaker:Marshal Edmond"
 msgid "A fair assumption, I would say."
-msgstr ""
+msgstr "这倒是个合理的推断。"
 
 msgctxt "speaker:Ramsey"
 msgid "A fair price and we treat all our customers like family, not like those big places that just want your money."
-msgstr ""
+msgstr "合理的价格，我们对待所有顾客都像家人，而不是那些只想掏空你钱包的大店。"
 
 msgctxt "speaker:Narrator"
 msgid "A familiar purple, though she struggled to place it."
-msgstr ""
+msgstr "一种熟悉的紫色，尽管她难以将其辨认出来。"
 
 msgctxt "speaker:Narrator"
 msgid "A familiar voice responded."
-msgstr ""
+msgstr "一个熟悉的声音回应道。"
 
 msgctxt "speaker:Narrator"
 msgid "A family working at an inn looked up as they passed, sparing them a glance."
-msgstr ""
+msgstr "一家在客栈做工的家人路过时抬头看了一眼。"
 
 msgctxt "speaker:Sarah"
 msgid "A family."
-msgstr ""
+msgstr "一家人。"
 
 msgctxt "speaker:Sarah"
 msgid "A famine? That's horrible...we can't allow that to happen."
-msgstr ""
+msgstr "饥荒？太可怕了……绝不能让这种事发生。"
 
 msgctxt "speaker:Narrator"
 msgid "A fantasy."
-msgstr ""
+msgstr "幻想。"
 
 msgctxt "speaker:Narrator"
 msgid "A fate stone, the spirit had called it."
-msgstr ""
+msgstr "命运之石，灵魂曾如此称呼它。"
 
 msgctxt "speaker:Narrator"
 msgid "A father, that raised no hand to save his daughter."
-msgstr ""
+msgstr "一位父亲，未曾出手拯救他的女儿。"
 
 msgctxt "speaker:Narrator"
 msgid "A fear had descended over the city, one that had snuffed out any semblance of celebration."
-msgstr ""
+msgstr "恐惧笼罩了全城，抹去了所有欢庆的假象。"
 
 msgctxt "speaker:Narrator"
 msgid "A feeling ran through her. She feared it close to pride, pride at a job well done."
-msgstr ""
+msgstr "一股情绪掠过她心头，那近乎自豪的恐惧——为功绩而生的自豪。"
 
 msgctxt "speaker:Narrator"
 msgid "A female soldier next to him snatched the dice from the floor and nearly instantly cast them again."
-msgstr ""
+msgstr "他身旁的士兵一把抓起地上的骰子，几乎瞬间便重新掷出。"
 
 msgctxt "speaker:Narrator"
 msgid "A ferocious screaming and roaring exploded as he was crowned the victor."
-msgstr ""
+msgstr "他加冕为胜者时，爆发出狂野的尖叫与咆哮。"
 
 msgctxt "speaker:Alaric"
 msgid "A few I guess. I never really did count."
-msgstr ""
+msgstr "算几个吧，我从来就没仔细数过。"
 
 msgctxt "speaker:Narrator"
 msgid "A few arrows fell on them as they advanced, but the large volley she had expected did not come."
-msgstr ""
+msgstr "几支箭矢落在他们身上，但她们预想中的那轮齐射并未到来。"
 
 msgctxt "speaker:Narrator"
 msgid "A few clouds, moving strangely peaceful as if this brutal betrayal had not taken place."
-msgstr ""
+msgstr "几朵云，飘动得异常平静，仿佛那场残酷的背叛从未发生。"
 
 msgctxt "speaker:Narrator"
 msgid "A few coins, that was it."
-msgstr ""
+msgstr "几枚金币，仅此而已。"
 
 msgctxt "speaker:Narrator"
 msgid "A few days back, the royal messenger had been send back, carrying with him the message of her acceptance."
-msgstr ""
+msgstr "数日前，皇家信使已被遣返，带回她接受旨意的消息。"
 
 msgctxt "speaker:Narrator"
 msgid "A few days had passed and their journey had progressed smoothly."
-msgstr ""
+msgstr "数日已过，旅程顺遂。"
 
 msgctxt "speaker:Narrator"
 msgid "A few days had passed since they had managed to get past the river crossing."
-msgstr ""
+msgstr "几天过去了，他们总算过了河。"
 
 msgctxt "speaker:Sarah"
 msgid "A few days off course wouldn't be the worst thing."
-msgstr ""
+msgstr "偏出几天航线也不算什么坏事。"
 
 msgctxt "speaker:Marion"
 msgid "A few did not attend."
-msgstr ""
+msgstr "有几人缺席。"
 
 msgctxt "speaker:Narrator"
 msgid "A few dozen lives, to save millions?"
-msgstr ""
+msgstr "救几十条命，换千万人？"
 
 msgctxt "speaker:Narrator"
 msgid "A few faces lingered atop the towers of the castle, but Sarah couldn't even be certain they were soldiers. Perhaps simply scared civillians."
-msgstr ""
+msgstr "几道身影伫立在城堡塔楼之上，但莎拉甚至无法确定他们是否是士兵。或许只是受惊的平民。"
 
 msgctxt "speaker:Sarah"
 msgid "A few farmers here and there."
-msgstr ""
+msgstr "零星几个农民。"
 
 msgctxt "speaker:Narrator"
 msgid "A few fires, here and there."
-msgstr ""
+msgstr "零星几处火光。"
 
 msgctxt "speaker:Narrator"
 msgid "A few gestured and looked in their direction, but for the most part, nobody noticed them."
-msgstr ""
+msgstr "有几个向他们挥手示意，但大多数人并未注意到他们。"
 
 msgctxt "speaker:Narrator"
 msgid "A few greeted her, many more were already too deep into their drinks."
-msgstr ""
+msgstr "几个向她致意，更多的人早已沉醉于杯中。"
 
 msgctxt "speaker:Narrator"
 msgid "A few guards might come by, a day late, to inspect reports of a cry. And none would care for Alaric's sudden dissapearance."
-msgstr ""
+msgstr "几名卫兵或许会迟来一日，前来查验哭喊的奏报。但没人会在意阿拉里克突然失踪的事。"
 
 msgctxt "speaker:Narrator"
 msgid "A few hours had passed and night had fallen over the city of Calshure."
-msgstr ""
+msgstr "数小时后，卡尔舒尔城已陷入夜色。"
 
 msgctxt "speaker:Narrator"
 msgid "A few hours later, the cry of new life could be heard."
-msgstr ""
+msgstr "几个时辰后，新生的啼哭声响起了。"
 
 msgctxt "speaker:Carolyn"
 msgid "A few lashes will sort her out, and it will tell a different story to all the others that will think of stealing."
-msgstr ""
+msgstr "几鞭子就能让她清醒，也能让那些动歪心思的人知道厉害。"
 
 msgctxt "speaker:Narrator"
 msgid "A few lights coming from lit lanterns could be seen, shining through the darkness."
-msgstr ""
+msgstr "黑暗中，几盏灯笼透出的微光隐约可见。"
 
 msgctxt "speaker:Narrator"
 msgid "A few marks on the map, notes left by Xan, probably to himself."
-msgstr ""
+msgstr "地图上留下的几处标记，是 Xan 的笔记，大概都是写给自己看的。"
 
 msgctxt "speaker:Narrator"
 msgid "A few men and women dressed in the robes of scholars were walking around the digsite, but they seemed equally uninterested in her."
-msgstr ""
+msgstr "几名身着学者长袍的男子和女子在挖掘现场走动，但他们似乎对她同样毫无兴趣。"
 
 msgctxt "speaker:Narrator"
 msgid "A few miles outside of the city walls, a Mythran army led by the uncle of the slain prince was camped. Soon they would begin their assault."
-msgstr ""
+msgstr "城外几英里处，一支由已故王叔率领的米特拉军队正在扎营。很快，他们便会发起进攻。"
 
 msgctxt "speaker:Narrator"
 msgid "A few minutes later, Sarah would hear the cracking of the whip and the girl's screams, coming from the square just outside the castle."
-msgstr ""
+msgstr "几分钟后，莎拉便听到了鞭子的脆响和女孩的尖叫，那声音来自城堡外的广场。"
 
 msgctxt "speaker:Narrator"
 msgid "A few minutes later, the other man finished in her hand, his seed adding to the rest."
-msgstr ""
+msgstr "几分钟后，另一个男人在她手中射精，精液与其余的混在一起。"
 
 msgctxt "speaker:Narrator"
 msgid "A few moments later, Samayra was fast asleep."
-msgstr ""
+msgstr "片刻之后，萨梅拉已沉沉睡去。"
 
 msgctxt "speaker:Sarah"
 msgid "A few months ago I awoke from a dream, and for a brief moment, I swore that he was alive."
-msgstr ""
+msgstr "几个月前，我从梦中醒来，刹那间发誓他仍活着。"
 
 msgctxt "speaker:Gideon"
 msgid "A few more days after that, we expect most of your remaining troops to have landed and begun preparing."
-msgstr ""
+msgstr "几天后，我们预计您剩余的部队将抵达并开始准备。"
 
 msgctxt "speaker:Narrator"
 msgid "A few of the soldiers uttered a cruel laugh."
-msgstr ""
+msgstr "几名士兵发出了残忍的笑声。"
 
 msgctxt "speaker:Narrator"
 msgid "A few orcs muddled about, engaged in trivial work."
-msgstr ""
+msgstr "几个兽人漫无目的地游荡，做着琐碎的杂活。"
 
 msgctxt "speaker:Narrator"
 msgid "A few patrons were seated by their own tables, occupied in their own conversations"
-msgstr ""
+msgstr "几位顾客坐在各自的桌旁，沉浸在自己的交谈中"
 
 msgctxt "speaker:Narrator"
 msgid "A few people gave her a worried or confused look, but nobody was calling for the guards."
-msgstr ""
+msgstr "几个人投来担忧或困惑的目光，但没人呼叫卫兵。"
 
 msgctxt "speaker:Narrator"
 msgid "A few people in the street seemed to notice them go by, but most went about their day."
-msgstr ""
+msgstr "街上似乎有几个人注意到了他们经过，但大多数人仍自顾自地忙碌着。"
 
 msgctxt "speaker:Narrator"
 msgid "A few plumes of smoke rose up, suggesting at least some still lived there."
-msgstr ""
+msgstr "几缕青烟袅袅升起，暗示着那里至少还住着一些人。"
 
 msgctxt "speaker:Narrator"
 msgid "A few pulls was all it took for him to finish."
-msgstr ""
+msgstr "几下就让他完成了。"
 
 msgctxt "speaker:Narrator"
 msgid "A few rows over, some of her soldiers lit up, screaming their final words, their armors quickly melting against their bodies, trapping them inside them."
-msgstr ""
+msgstr "几排开去，她的几名士兵燃起火焰，嘶吼着最后的遗言，铠甲在身侧迅速熔化，将他们困在其中。"
 
 msgctxt "speaker:Sarah"
 msgid "A few scratches. Nothing I can't survive."
-msgstr ""
+msgstr "几下划痕。我受得住。"
 
 msgctxt "speaker:Narrator"
 msgid "A few second later, Xan appeared in the room, slamming the door open so violently it bashed into the wall."
-msgstr ""
+msgstr "几秒后，Xan 出现在房间里，猛地撞开门，门板狠狠砸在墙上。"
 
 msgctxt "speaker:Narrator"
 msgid "A few steps more and she was back on the middle of the market place."
-msgstr ""
+msgstr "又走了几步，她回到了集市中央。"
 
 msgctxt "speaker:Narrator"
 msgid "A few steps out from around the corner, and then they turned."
-msgstr ""
+msgstr "转过街角走几步，然后他们转过身。"
 
 msgctxt "speaker:Dalia"
 msgid "A few that I've seen. Some seem to be his friends. Others...old rivals, maybe? I don't know exactly."
-msgstr ""
+msgstr "见过几个。有些像是他的朋友，其他的……或许是旧敌？我也不太清楚。"
 
 msgctxt "speaker:Narrator"
 msgid "A few voices rose in nervous whispers."
-msgstr ""
+msgstr "几声低语中透着紧张。"
 
 msgctxt "speaker:Narrator"
 msgid "A few weeks had passed and almost every day, Sarah and Kate had spent practicing together."
-msgstr ""
+msgstr "几周过去了，几乎每天都有莎拉和凯特一起练习。"
 
 msgctxt "speaker:Narrator"
 msgid "A few wobbled about, clearly drunk."
-msgstr ""
+msgstr "几个踉跄着，显然喝醉了。"
 
 msgctxt "speaker:Narrator"
 msgid "A few yards, in a cage very similar to hers, she saw two shadow figures, moving."
-msgstr ""
+msgstr "几码之外，一个与她相似的笼子里，她看见两个黑影在移动。"
 
 msgctxt "speaker:Narrator"
 msgid "A few years ago, the former elder that had watched over Castle Reinmeer retired. Elder Tirion had been his replacement."
-msgstr ""
+msgstr "几年前，曾守护雷恩米尔城堡的前任长老退休了。提里昂长老接替了他的职位。"
 
 msgctxt "speaker:Atilla"
 msgid "A few, but I heal quick."
-msgstr ""
+msgstr "几个，但我恢复得快。"
 
 msgctxt "speaker:Kate"
 msgid "A few, the dumbest of the lot, but still. This shit always starts from the bottom and rises up."
-msgstr ""
+msgstr "几个，最蠢的那几个，但即便如此。这破事总是从底层开始，然后向上蔓延。"
 
 msgctxt "speaker:Varga"
 msgid "A few."
-msgstr ""
+msgstr "几个。"
 
 msgctxt "speaker:Narrator"
 msgid "A field of grass stretched across the small plain, tall trees threw out shade across the bank, and in the center a pool of water."
-msgstr ""
+msgstr "一片草地铺满了小平原，高大的树木在岸边投下阴影，中央是一汪水潭。"
 
 msgctxt "speaker:Narrator"
 msgid "A figure sat hunched on the edge, face buried in their hands."
-msgstr ""
+msgstr "一个身影蜷缩在岸边，脸埋在双手里。"
 
 msgctxt "speaker:Narrator"
 msgid "A final attempt at a surprise attack."
-msgstr ""
+msgstr "最后的突袭尝试。"
 
 msgctxt "speaker:Sarah"
 msgid "A fine argument, but I suspect your motives are not so pure."
-msgstr ""
+msgstr "说得好，但我怀疑你的动机并不纯粹。"
 
 msgctxt "speaker:Kravel"
 msgid "A finger, bearing a ring."
-msgstr ""
+msgstr "一枚戴着戒指的手指。"
 
 msgctxt "speaker:Narrator"
 msgid "A fire in a hearth, crackling."
-msgstr ""
+msgstr "壁炉里的火焰噼啪作响。"
 
 msgctxt "speaker:Metis"
 msgid "A fire spell can burn down a city. Some mages can rip apart mountains."
-msgstr ""
+msgstr "火系法术足以焚毁一座城池，有些法师甚至能撕裂山脉。"
 
 msgctxt "speaker:Narrator"
 msgid "A fire turned to inferno, the searing pleasure ran through her every nerve and sinew, wrenching out violent pleasure."
-msgstr ""
+msgstr "烈焰化作焚城之火，灼热的快感窜遍她每一根神经与肌腱，撕裂出暴烈的欢愉。"
 
 msgctxt "speaker:Narrator"
 msgid "A fire was burning in a hearth on the opposite end of the room."
-msgstr ""
+msgstr "房间另一端壁炉里的火正燃着。"
 
 msgctxt "speaker:Sarah"
 msgid "A fire will stand out in the dark."
-msgstr ""
+msgstr "黑暗之中，火光会格外醒目。"
 
 msgctxt "speaker:Narrator"
 msgid "A firm push to her back, and Sarah tumbled forward, catching herself only just in time."
-msgstr ""
+msgstr "她后背猛地一推，莎拉向前跌去，千钧一发之际才勉强稳住。"
 
 msgctxt "speaker:Narrator"
 msgid "A firm spank on her ass served as his version of approval to her answer."
-msgstr ""
+msgstr "屁股上重重一巴掌，是他对她回答的‘认可’。"
 
 msgctxt "speaker:Narrator"
 msgid "A firm spank to her ass rang out, and Sarah could feel the right cheek begin to burn."
-msgstr ""
+msgstr "一记结实的臀打声响过，莎拉能感觉到右臀已经开始发烫。"
 
 msgctxt "speaker:Narrator"
 msgid "A flame had been awakened in her ever since that nothing could stomp out."
-msgstr ""
+msgstr "自那一刻起，她心中便燃起一团火焰，无人能将其扑灭。"
 
 msgctxt "speaker:Narrator"
 msgid "A flash of regret ran through her."
-msgstr ""
+msgstr "一丝悔意闪过她的心头。"
 
 msgctxt "speaker:Narrator"
 msgid "A flash passed before her eyes, striking her blind for a moment."
-msgstr ""
+msgstr "眼前闪过一道光，让她瞬间目眩神迷。"
 
 msgctxt "speaker:Narrator"
 msgid "A flash, something glimmered in the dark."
-msgstr ""
+msgstr "黑暗中闪过一丝光亮。"
 
 msgctxt "speaker:Narrator"
 msgid "A flawless face, an easy smile and a casual confidence made it hard not to notice him."
-msgstr ""
+msgstr "无瑕的面容、轻松的笑容与随性的自信，让人无法忽视他。"
 
 msgctxt "speaker:Narrator"
 msgid "A flow of tears became a sob, and before long, Sarah could feel her chest rising and falling as she began to wail."
-msgstr ""
+msgstr "泪水涌出，化作呜咽。很快，莎拉便感到胸口起伏不定，开始放声痛哭。"
 
 msgctxt "speaker:Narrator"
 msgid "A flush of heat build in her chest."
-msgstr ""
+msgstr "胸口涌起一阵燥热。"
 
 msgctxt "speaker:Narrator"
 msgid "A fool of a girl that had fled when her brother needed her."
-msgstr ""
+msgstr "一个在哥哥需要她时却逃之夭夭的蠢丫头。"
 
 msgctxt "speaker:Narrator"
 msgid "A force pulled on her that ran deeper than any cold logic that Xan had tried to instil in her."
-msgstr ""
+msgstr "有一股力量牵引着她，那力量远比夏恩试图灌输给她的冰冷理智更为深沉。"
 
 msgctxt "speaker:Sarah"
 msgid "A founder?"
-msgstr ""
+msgstr "创始人？"
 
 msgctxt "speaker:Narrator"
 msgid "A frenzied back and forth."
-msgstr ""
+msgstr "疯狂地来回折腾。"
 
 msgctxt "speaker:Narrator"
 msgid "A frenzy begins to form."
-msgstr ""
+msgstr "狂乱开始滋生。"
 
 msgctxt "speaker:Narrator"
 msgid "A frenzy of maddening pleasure, the likes only he could draw out from her."
-msgstr ""
+msgstr "一股令人疯狂的狂喜，唯有他能从她身上榨取。"
 
 msgctxt "speaker:Narrator"
 msgid "A frenzy took hold of her as she continued her march, up and up the hill, faster and faster."
-msgstr ""
+msgstr "随着她继续向上攀登，那股狂乱逐渐掌控了她，速度越来越快。"
 
 msgctxt "speaker:Sarah"
 msgid "A friend?"
-msgstr ""
+msgstr "朋友？"
 
 msgctxt "speaker:Narrator"
 msgid "A full moon draped the world in pale light, making the dunes appear as silver."
-msgstr ""
+msgstr "一轮满月将世界笼罩在苍白的微光中，沙丘宛如银装。"
 
 msgctxt "speaker:Alfred"
 msgid "A fun fling, I could forgive being disobedient."
-msgstr ""
+msgstr "调情的小把戏，我大可以原谅你的不听话。"
 
 msgctxt "speaker:Narrator"
 msgid "A fury was building in the thing, she could hear its screams mix with an animalistic fury, something close to a hiss."
-msgstr ""
+msgstr "那股东西的怒火正在积聚，她听见它的嘶吼与兽性的狂怒交织在一起，那声音近乎嘶嘶作响。"
 
 msgctxt "speaker:Xanthippe"
 msgid "A future where every soul, be it a king or a peasant, will be valued and safeguarded."
-msgstr ""
+msgstr "一个未来，无论灵魂属于国王还是平民，都将受到珍视与守护。"
 
 msgctxt "speaker:Narrator"
 msgid "A gate, a few watch towers, all made from what seemed like scavenged material."
-msgstr ""
+msgstr "一道大门，几座瞭望塔，全都由看似捡来的材料建成。"
 
 msgctxt "speaker:Narrator"
 msgid "A general easiness of being. Their conversations flowed naturally. He made her forget the rest of the hall."
-msgstr ""
+msgstr "一种自在从容的氛围。他们的交谈自然流畅，他让她忘却了大厅里的其他一切。"
 
 msgctxt "speaker:Narrator"
 msgid "A gentle touch, or a threat of more violence, she could hardly tell anymore."
-msgstr ""
+msgstr "她已分不清，那究竟是温柔的触碰，还是暴力的威胁。"
 
 msgctxt "speaker:Narrator"
 msgid "A genuine smile crept over Samayra's face."
-msgstr ""
+msgstr "一抹真诚的笑容在萨梅拉脸上浮现。"
 
 msgctxt "speaker:Old Tribesman"
 msgid "A gift is fitting, but-"
-msgstr ""
+msgstr "礼物倒是合适，不过——"
 
 msgctxt "speaker:Narrator"
 msgid "A gift like that would be more than she could hope to earn in a lifetime of service."
-msgstr ""
+msgstr "那样的礼物，是她一生服役也换不来的。"
 
 msgctxt "speaker:Atilla"
 msgid "A gift must show to the partner, that they have wagered their life. To show how serious they are in their ask."
-msgstr ""
+msgstr "礼物必须向对方表明，你已押上性命。以此证明你所求之事，分量之重。"
 
 msgctxt "speaker:Kamal"
 msgid "A gift such as this, I could not dare to have expected."
-msgstr ""
+msgstr "如此厚礼，我实在不敢奢望。"
 
 msgctxt "speaker:Ragged Man"
 msgid "A gift, from my friends. Or perhaps payment for my services now rendered."
-msgstr ""
+msgstr "礼物，来自我的朋友。或者说，是我如今已尽义务后的酬劳。"
 
 msgctxt "speaker:Sarah"
 msgid "A gift?"
-msgstr ""
+msgstr "礼物？"
 
 msgctxt "speaker:Thomas"
 msgid "A gift?"
-msgstr ""
+msgstr "礼物？"
 
 msgctxt "speaker:Narrator"
 msgid "A girl had grown up here."
-msgstr ""
+msgstr "有个女孩在这里长大。"
 
 msgctxt "speaker:Thomas"
 msgid "A girl like that needs someone who can make her happy. Not to be married off to a depressive like me."
-msgstr ""
+msgstr "像那样的女孩，需要有人让她快乐。而不是被我这种抑郁鬼娶走。"
 
 msgctxt "speaker:Eula"
 msgid "A girl like you ain't gettin through here without givin it up at least a few times."
-msgstr ""
+msgstr "像你这样的姑娘，若不想在这儿把身子献出去几次，可过不了这关。"
 
 msgctxt "speaker:Sakar"
 msgid "A girl like you wouldn't last a day on the old road by yourself."
-msgstr ""
+msgstr "像你这样的姑娘，独自走在老路上撑不过一天。"
 
 msgctxt "speaker:Narrator"
 msgid "A girl of no means and no title, in a city where so many had lives no different from her own."
-msgstr ""
+msgstr "一个出身卑微、无名无姓的女子，身处一座与她同命者众多的城市。"
 
 msgctxt "speaker:Alaric"
 msgid "A girl your age shouldn't be this pent up. Maybe I need to pay you a visit more often?"
-msgstr ""
+msgstr "像你这样的女孩，不该如此压抑。或许我该常来拜访你？"
 
 msgctxt "speaker:Sarah"
 msgid "A girl."
-msgstr ""
+msgstr "女孩。"
 
 msgctxt "speaker:Tribesman"
 msgid "A glory many of us Tribesman would have wished to seize. You must have made a pretty fortune off what you took there."
-msgstr ""
+msgstr "许多部落族人梦寐以求的荣耀。你在那些地方一定赚了不少吧。"
 
 msgctxt "speaker:Narrator"
 msgid "A glow on the surface of her skin."
-msgstr ""
+msgstr "她肌肤上泛起一层微光。"
 
 msgctxt "speaker:Narrator"
 msgid "A goblin wife...was that what had become of her?"
-msgstr ""
+msgstr "一个哥布林妻子……她竟沦落至此？"
 
 msgctxt "speaker:Metis"
 msgid "A good choice."
-msgstr ""
+msgstr "好选择。"
 
 msgctxt "speaker:Tailor"
 msgid "A good craftsmen must first study the object of his work."
-msgstr ""
+msgstr "优秀的工匠，必先研习其作品的对象。"
 
 msgctxt "speaker:Kate"
 msgid "A good few days, actually. I thought I was showing real restraint by keeping it to myself for that long."
-msgstr ""
+msgstr "其实也没几天。我本以为能憋这么久，已经算是相当克制了。"
 
 msgctxt "speaker:Sarah"
 msgid "A good king needs good advisors, and do you know anyone smarter than me?"
-msgstr ""
+msgstr "一位好国王需要好的谋士，你知道谁比我更聪明吗？"
 
 msgctxt "speaker:Narrator"
 msgid "A good man that loved a good day's work."
-msgstr ""
+msgstr "一个热爱劳作的好男人。"
 
 msgctxt "speaker:Narrator"
 msgid "A good meal, wasted on her."
-msgstr ""
+msgstr "一顿好饭，却浪费在她身上。"
 
 msgctxt "speaker:Marion"
 msgid "A good ruler lets the facts guide him, not hysteria."
-msgstr ""
+msgstr "一位优秀的统治者会让事实指引自己，而非歇斯底里。"
 
 msgctxt "speaker:Carolyn"
 msgid "A good thing you don't enjoy this sort of thing, I mean."
-msgstr ""
+msgstr "你最好别喜欢这种玩意儿，我是说。"
 
 msgctxt "speaker:Sarah"
 msgid "A governor?"
-msgstr ""
+msgstr "州长？"
 
 msgctxt "speaker:Narrator"
 msgid "A gradual yet ongoing collapse."
-msgstr ""
+msgstr "缓慢而持续的崩塌。"
 
 msgctxt "speaker:Razaphel"
 msgid "A great and final war draws closer."
-msgstr ""
+msgstr "一场伟大而最终的战争迫在眉睫。"
 
 msgctxt "speaker:Narrator"
 msgid "A great blizzard seemed to form, rushing up behind the fleeing scout unit."
-msgstr ""
+msgstr "一场巨大的暴风雪似乎正在形成，从逃窜的侦察兵身后呼啸而来。"
 
 msgctxt "speaker:Narrator"
 msgid "A great brute of an orc sat outside the entrance to a tent, sliding a whetstone across a two-handed sword, sharpening it. The sword alone, Sarah thought, was bigger than herself."
-msgstr ""
+msgstr "一个巨大的兽人坐在帐篷外的入口处，用磨刀石打磨着一把双手巨剑。莎拉心想，仅这把剑就比她本人还要大。"
 
 msgctxt "speaker:Narrator"
 msgid "A great chaotic roar of metal and flesh slamming against one another."
-msgstr ""
+msgstr "金属与血肉猛烈撞击，发出巨大的混沌轰鸣。"
 
 msgctxt "speaker:Narrator"
 msgid "A great city was being put to the sword, and she had played a part in it."
-msgstr ""
+msgstr "一座城市正遭屠戮，而她曾参与其中。"
 
 msgctxt "speaker:Narrator"
 msgid "A great force pulled her forward."
-msgstr ""
+msgstr "一股巨大的力量将她向前拉扯。"
 
 msgctxt "speaker:Narrator"
 msgid "A great loud roaring voice summoned them from their work."
-msgstr ""
+msgstr "一个巨大的轰鸣声召唤着他们离开工作。"
 
 msgctxt "speaker:Narrator"
 msgid "A great many of them have violent eyes. She almost imagines she can see their fantasies play out in their eyes."
-msgstr ""
+msgstr "许多人眼中都透着暴戾。她几乎能看见他们眼中的幻想在肆意上演。"
 
 msgctxt "speaker:Narrator"
 msgid "A great metal chain ran around it, shattered and broken, some of the links were sprawled out across the grass."
-msgstr ""
+msgstr "一条巨大的金属链环绕着它，断裂成碎片，有些链环散落在草地上。"
 
 msgctxt "speaker:Narrator"
 msgid "A great open space in the midsts of this claustrophobic construct."
-msgstr ""
+msgstr "在这令人窒息的构造体中央，是一片开阔的空地。"
 
 msgctxt "speaker:Narrator"
 msgid "A great path lead up to the dais, where atop the stairs sat the throne of Normandi."
-msgstr ""
+msgstr "一条巨大的阶梯通向高台，诺曼底的王座就在那里。"
 
 msgctxt "speaker:Narrator"
 msgid "A great roar of some kind rang out."
-msgstr ""
+msgstr "一声巨大的咆哮响彻云霄。"
 
 msgctxt "speaker:Razaphel"
 msgid "A great war raged between your race and mine. Between your Gods and mine."
-msgstr ""
+msgstr "你们的种族与我的种族之间曾爆发过一场大战，你们的神祇与我的神祇之间亦如此。"
 
 msgctxt "speaker:Vaelen"
 msgid "A great war. A bright future."
-msgstr ""
+msgstr "一场大战。光明的未来。"
 
 msgctxt "speaker:Narrator"
 msgid "A greedy noble, round and fat as a pig, shoved a sausage into his mouth."
-msgstr ""
+msgstr "一个贪婪的贵族，圆滚滚、胖得像头猪，把香肠塞进了嘴里。"
 
 msgctxt "speaker:Narrator"
 msgid "A green wax seal covered the front."
-msgstr ""
+msgstr "绿色的火漆封住了正面。"
 
 msgctxt "speaker:Narrator"
 msgid "A grinding sound, like metal scraping metal, rang out through the tunnels. The echo made it feel like the sound was in Sarah's body."
-msgstr ""
+msgstr "隧道里传来金属摩擦的刺耳声响，回声仿佛直接回荡在莎拉体内。"
 
 msgctxt "speaker:Narrator"
 msgid "A group of Hassar's soldiers was standing in a circle. In the midsts of the circle, several young women were being violated by the invading soldiers."
-msgstr ""
+msgstr "一群哈萨尔士兵围成一圈，圆圈中央，几名年轻女子正遭受入侵士兵的凌辱。"
 
 msgctxt "speaker:Narrator"
 msgid "A group of farmers had burned the bridges leading to one of the northern provinces, out of protest over land rights, preventing Rosanna's standing army from moving there without taking a month long detour."
-msgstr ""
+msgstr "一群农民因土地权益问题抗议，烧毁了通往北方某省的所有桥梁，迫使罗莎娜的常备军若想前往该地，必须绕行整整一个月。"
 
 msgctxt "speaker:Narrator"
 msgid "A group of five or so soldiers walked into the tent, already undressed."
-msgstr ""
+msgstr "五名士兵走进帐篷，早已脱得精光。"
 
 msgctxt "speaker:Narrator"
 msgid "A group of orcs and goblins, armed with simple spears and crude knives, advanced across the plaza."
-msgstr ""
+msgstr "一群手持简陋长矛和粗陋匕首的兽人与哥布林，正缓缓穿过广场。"
 
 msgctxt "speaker:Narrator"
 msgid "A group of soldiers blocked the road up ahead of her."
-msgstr ""
+msgstr "前方有一群士兵挡住了去路。"
 
 msgctxt "speaker:Narrator"
 msgid "A group of soldiers, too slow to run away, exploded into red mist as the thing's tail slashed through them."
-msgstr ""
+msgstr "那怪物尾巴横扫而过，将那些逃不掉的士兵瞬间撕成了血雾。"
 
 msgctxt "speaker:Narrator"
 msgid "A growing confidence in himself."
-msgstr ""
+msgstr "对自己越来越有信心。"
 
 msgctxt "speaker:Narrator"
 msgid "A guard freed her from her chain and guided her through the doors, into the judge's court."
-msgstr ""
+msgstr "一名卫兵解开了她的锁链，引她穿过大门，来到审判庭。"
 
 msgctxt "speaker:Narrator"
 msgid "A guard slowly begins to laugh."
-msgstr ""
+msgstr "一名卫兵渐渐笑了起来。"
 
 msgctxt "speaker:Narrator"
 msgid "A gulp."
-msgstr ""
+msgstr "一咽。"
 
 msgctxt "speaker:Narrator"
 msgid "A gust of cold night air rushed into the house."
-msgstr ""
+msgstr "一股冰冷的夜风呼啸着涌入屋内。"
 
 msgctxt "speaker:Narrator"
 msgid "A gust of cold wind chased after them, but the door was quickly shut behind them."
-msgstr ""
+msgstr "一阵冷风追在他们身后，但门很快就被关上了。"
 
 msgctxt "speaker:Narrator"
 msgid "A gust of wind blew past her and Sarah wrapped her arms around herself, trying to shield herself from the cold."
-msgstr ""
+msgstr "一阵冷风掠过她身边，莎拉双臂环抱自己，试图抵御寒意。"
 
 msgctxt "speaker:Narrator"
 msgid "A gust of wind rushed past her, across her naked body, the cold taking root in her."
-msgstr ""
+msgstr "一阵狂风掠过她，穿过她赤裸的身体，寒意在她体内生根。"
 
 msgctxt "speaker:Caleb"
 msgid "A guy can dream, can't he?"
-msgstr ""
+msgstr "男人也能做白日梦，不是吗？"
 
 msgctxt "speaker:Narrator"
 msgid "A hail of stone descended on the Rosannan army, splatters of red mist erupted across the entire line."
-msgstr ""
+msgstr "石雨倾泻在罗萨纳军阵上，整条战线爆发出大片大片的红色血雾。"
 
 msgctxt "speaker:Sarah"
 msgid "A handful of guards...and me."
-msgstr ""
+msgstr "几个卫兵……还有我。"
 
 msgctxt "speaker:Narrator"
 msgid "A happiness that was so natural and obvious, she wondered how she could have ever felt sad in a world so beautiful."
-msgstr ""
+msgstr "一种如此自然又显而易见的幸福，她不禁好奇，自己怎能曾在那般美好的世界里感到悲伤。"
 
 msgctxt "speaker:Narrator"
 msgid "A happy old man."
-msgstr ""
+msgstr "一位幸福的老人。"
 
 msgctxt "speaker:Narrator"
 msgid "A hard life had given him a hard body. The many scars bore testament to this unspoken and yet obvious truth."
-msgstr ""
+msgstr "艰辛的生活铸就了他强健的体魄，那些累累伤痕便是这不言自明的真相。"
 
 msgctxt "speaker:Cassius"
 msgid "A hard worker."
-msgstr ""
+msgstr "个拼命干活的。"
 
 msgctxt "speaker:Narrator"
 msgid "A haunting blue light had drowned out all other light."
-msgstr ""
+msgstr "幽蓝的鬼火淹没了所有其他的光亮。"
 
 msgctxt "speaker:Varga"
 msgid "A head on assault on the fort would be a disaster."
-msgstr ""
+msgstr "正面强攻堡垒只会是一场灾难。"
 
 msgctxt "speaker:Narrator"
 msgid "A head taller than the tallest man she had ever seen in her life."
-msgstr ""
+msgstr "比她此生所见过的任何男人还要高出一头。"
 
 msgctxt "speaker:Varga"
 msgid "A head-on assault on the fort would be a disaster."
-msgstr ""
+msgstr "正面强攻堡垒只会是一场灾难。"
 
 msgctxt "speaker:Sarah"
 msgid "A heart attack? Didn't know you had so many enemies in the castle to be fearful of."
-msgstr ""
+msgstr "心脏病发作？我还以为你在城堡里敌人多到怕成这样。"
 
 msgctxt "speaker:Narrator"
 msgid "A heat was building her chest as she slowly, partially slid a finger inside herself."
-msgstr ""
+msgstr "一股热流在她胸中翻涌，她缓缓地将一根手指半插进自己的体内。"
 
 msgctxt "speaker:Narrator"
 msgid "A heavy breath slipped past her lips as a jolt of pleasure moved through her body."
-msgstr ""
+msgstr "一声沉重的叹息从她唇间溢出，一阵强烈的快感席卷了她的全身。"
 
 msgctxt "speaker:Narrator"
 msgid "A heavy pause lingered."
-msgstr ""
+msgstr "短暂的停顿持续着。"
 
 msgctxt "speaker:Narrator"
 msgid "A heavy pause."
-msgstr ""
+msgstr "沉重的停顿。"
 
 msgctxt "speaker:Narrator"
 msgid "A heavy sigh slipped past her lips as the creature grabbed at her breast, still covered by her clothes."
-msgstr ""
+msgstr "一声沉重的叹息从她唇间溢出，那生物抓向她仍被衣物覆盖的胸脯。"
 
 msgctxt "speaker:Narrator"
 msgid "A heavy silence loomed over the field. Two armies, waiting with bated breath for the next moment."
-msgstr ""
+msgstr "战场上死一般的寂静笼罩着一切。两军屏息以待，静候下一瞬的到来。"
 
 msgctxt "speaker:Hecate"
 msgid "A hierarchy."
-msgstr ""
+msgstr "等级制度。"
 
 msgctxt "speaker:Narrator"
 msgid "A high pitched hissing scream emerged as it fell to the earth, writing in pain."
-msgstr ""
+msgstr "一声尖锐刺耳的嘶鸣划破长空，伴随着坠地而生的剧痛。"
 
 msgctxt "speaker:Narrator"
 msgid "A high pitched, furious scream, like an animal snared in a trap."
-msgstr ""
+msgstr "一声尖锐而愤怒的嘶吼，如同被困在陷阱中的野兽。"
 
 msgctxt "speaker:Dio"
 msgid "A highland stew, traditional Mythran peasant dish."
@@ -1476,43 +1476,43 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "A hiss emerged from the creature."
-msgstr ""
+msgstr "那生物发出嘶嘶声。"
 
 msgctxt "speaker:Narrator"
 msgid "A hiss emerged from the spirit, what passed for laughter."
-msgstr ""
+msgstr "一声嘶鸣从灵体中发出，那不过是它所能发出的类似笑声的声响。"
 
 msgctxt "speaker:Narrator"
 msgid "A hissing sound emerged from the creature, the closest it could produce to a laugh."
-msgstr ""
+msgstr "怪物的喉咙里发出嘶嘶声，那是它所能发出的最接近笑声的声音。"
 
 msgctxt "speaker:Narrator"
 msgid "A hissing sound emerged from the spirit."
-msgstr ""
+msgstr "从精神体里传出一声嘶嘶的声响。"
 
 msgctxt "speaker:Narrator"
 msgid "A hissing sound emerged from the thing. It took a moment for Sarah to realize it passed for laughter."
-msgstr ""
+msgstr "那怪物发出嘶嘶声，那是它所能发出的最接近笑声的声音。莎拉愣了一会儿才反应过来，这声音竟像是笑声。"
 
 msgctxt "speaker:Narrator"
 msgid "A hole, large enough for maybe two men to move through."
-msgstr ""
+msgstr "一个足以让两名男子穿行的洞。"
 
 msgctxt "speaker:Narrator"
 msgid "A home she hadn't thought of in a long time."
-msgstr ""
+msgstr "许久未曾想起的家。"
 
 msgctxt "speaker:Narrator"
 msgid "A home that only remained in her mind."
-msgstr ""
+msgstr "只存在于她脑海中的家。"
 
 msgctxt "speaker:Narrator"
 msgid "A home, she thought. That's what it reminded her of."
-msgstr ""
+msgstr "一个家，她想。那正是它带给她的感觉。"
 
 msgctxt "speaker:Narrator"
 msgid "A home. A safe place in this world that belonged to her."
-msgstr ""
+msgstr "一个家。一个属于她的、在这世上安全的所在。"
 
 msgctxt "speaker:Narrator"
 msgid "A home. Food."
@@ -1520,467 +1520,467 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "A horde of impossible creatures that had never been meant for this world."
-msgstr ""
+msgstr "一群本不该存在于这个世界的不可思议的怪物。"
 
 msgctxt "speaker:Narrator"
 msgid "A horde of the beasts, stumbling madly into the market square."
-msgstr ""
+msgstr "一群野兽跌跌撞撞地闯入市集广场。"
 
 msgctxt "speaker:Narrator"
 msgid "A horn."
-msgstr ""
+msgstr "一声号角。"
 
 msgctxt "speaker:Sarah"
 msgid "A house?"
-msgstr ""
+msgstr "房子？"
 
 msgctxt "speaker:Narrator"
 msgid "A huge wave of water splashed across Sarah's face, nearly toppling her off her feet."
-msgstr ""
+msgstr "巨大的水浪拍在莎拉脸上，差点把她冲翻。"
 
 msgctxt "speaker:Narrator"
 msgid "A huge wide grin spread across Samayra's face as she saw the slave woman returned safely."
-msgstr ""
+msgstr "看到奴隶女仆平安归来，萨梅拉脸上绽开了巨大的笑容。"
 
 msgctxt "speaker:Narrator"
 msgid "A human Queen, married to an Orc, giving him children."
-msgstr ""
+msgstr "人类女王，嫁给兽人，还为他生下孩子。"
 
 msgctxt "speaker:Narrator"
 msgid "A human might use a cart, but they simply carried them on their shoulders."
-msgstr ""
+msgstr "人类或许会用车，但他们只是用肩膀扛着。"
 
 msgctxt "speaker:Narrator"
 msgid "A humble trait for a person. A poor one for a king."
-msgstr ""
+msgstr "对凡人而言是美德，对君王却是贫瘠。"
 
 msgctxt "speaker:Narrator"
 msgid "A hundred people, that together, represented the leadership of the refugees of Rosanna that had landed in Rahayal."
-msgstr ""
+msgstr "一百人，共同构成了罗萨纳难民抵达拉海亚尔后的领导层。"
 
 msgctxt "speaker:Kravel"
 msgid "A hunting accident, so his father says..."
-msgstr ""
+msgstr "打猎时出了意外，他父亲这么说的……"
 
 msgctxt "speaker:Narrator"
 msgid "A job at this Inn might just be the thing she needed."
-msgstr ""
+msgstr "这家旅馆的工作，或许正是她所需要的。"
 
 msgctxt "speaker:Elsa"
 msgid "A job! That's awesome!"
-msgstr ""
+msgstr "工作！太棒了！"
 
 msgctxt "speaker:Sarah"
 msgid "A joke, Marion. He probably thought you were a joke, and I suppose, in that regard, he was right."
-msgstr ""
+msgstr "玩笑，玛丽昂。他大概觉得你是个笑话，而在这方面，他确实没错。"
 
 msgctxt "speaker:Narrator"
 msgid "A justice of some kind, the others would whisper among themselves."
-msgstr ""
+msgstr "某种正义，旁人会窃窃私语。"
 
 msgctxt "speaker:Narrator"
 msgid "A key."
-msgstr ""
+msgstr "一把钥匙。"
 
 msgctxt "speaker:Narrator"
 msgid "A kind of death of spirit. People too defeated to fight back, but too desperate for life to give up, caught in some nightmarish liminal space."
-msgstr ""
+msgstr "一种精神的死亡。人们被打败得无力反抗，却又因对生命的渴望而不敢放弃，被困在某种噩梦般的临界空间里。"
 
 msgctxt "speaker:Carolyn"
 msgid "A kind offer, but I have a girl waiting for me at home."
-msgstr ""
+msgstr "算是个不错的提议，但我家里还有个姑娘在等我。"
 
 msgctxt "speaker:Narrator"
 msgid "A kindly smile on his face, the most he could do to communicate his appreciation for her."
-msgstr ""
+msgstr "他脸上露出一丝温和的微笑，那是他能表达感激之情的极限。"
 
 msgctxt "speaker:Sarah"
 msgid "A king ruled these lands. Soon a queen."
-msgstr ""
+msgstr "一位国王统治着这片土地，不久之后，将有一位女王。"
 
 msgctxt "speaker:Narrator"
 msgid "A kingdom of a different kind, she thought as she smiled and thought of her bull."
-msgstr ""
+msgstr "她心想，这是一个别样的王国，嘴角扬起笑意，脑海中浮现出那头公牛。"
 
 msgctxt "speaker:Narrator"
 msgid "A kiss so close to devouring."
-msgstr ""
+msgstr "如此炽热，仿佛要将我吞噬的吻。"
 
 msgctxt "speaker:Sarah"
 msgid "A kiss?"
-msgstr ""
+msgstr "吻？"
 
 msgctxt "speaker:Damian"
 msgid "A knife to my throat, I was all but done, my Lady."
-msgstr ""
+msgstr "刀抵咽喉，我几乎就要命丧于此，我的女士。"
 
 msgctxt "speaker:Sarah"
 msgid "A knight."
-msgstr ""
+msgstr "骑士。"
 
 msgctxt "speaker:Narrator"
 msgid "A knighting ceremony was a holy rite."
-msgstr ""
+msgstr "封爵仪式是神圣的。"
 
 msgctxt "speaker:Narrator"
 msgid "A knock at the door broke her concentration."
-msgstr ""
+msgstr "敲门声打断了她的专注。"
 
 msgctxt "speaker:Narrator"
 msgid "A knock at the door caused her to sit up."
-msgstr ""
+msgstr "敲门声让她坐了起来。"
 
 msgctxt "speaker:Narrator"
 msgid "A knock at the door gained her attention."
-msgstr ""
+msgstr "敲门声吸引了她的注意。"
 
 msgctxt "speaker:Narrator"
 msgid "A knock at the door startled her."
-msgstr ""
+msgstr "门外的敲门声惊了她一跳。"
 
 msgctxt "speaker:Narrator"
 msgid "A knock on the door signalled food, and Sarah would retrieve it."
-msgstr ""
+msgstr "敲门声意味着有食物送来，莎拉去取。"
 
 msgctxt "speaker:Narrator"
 msgid "A knock on the door."
-msgstr ""
+msgstr "门外的敲门声。"
 
 msgctxt "speaker:Sarah"
 msgid "A lady favors wine..."
-msgstr ""
+msgstr "酒是女人最钟爱的……"
 
 msgctxt "speaker:Narrator"
 msgid "A large cabinet stood on the far end of the room, filled with trinkets from many different places."
-msgstr ""
+msgstr "房间尽头立着一个巨大的橱柜，里面摆满了来自各地的奇珍小物。"
 
 msgctxt "speaker:Sarah"
 msgid "A large coronation will show the people we are still strong."
-msgstr ""
+msgstr "盛大的加冕典礼将向世人证明，我们依然强大。"
 
 msgctxt "speaker:Narrator"
 msgid "A large crowd had gathered to watch the recruits that were attempting the exam today."
-msgstr ""
+msgstr "一大群人聚集在此，观看今日参加考核的学员。"
 
 msgctxt "speaker:Narrator"
 msgid "A large hole in the earth, as if someone had plunged a dagger into the flesh of the earth and rended it open."
-msgstr ""
+msgstr "大地上一道巨大的裂口，仿佛有人将匕首刺入大地的肌理，将其撕裂。"
 
 msgctxt "speaker:Narrator"
 msgid "A large man sat just outside, carving into a block of wood with a knife."
-msgstr ""
+msgstr "一个大个子坐在外面，用刀子在一块木头上刻着。"
 
 msgctxt "speaker:Narrator"
 msgid "A large oak tree, some small garden plots for various vegetables. A dilapidated barn that housed a few animals."
-msgstr ""
+msgstr "一棵巨大的橡树，几块种着各种蔬菜的小菜地。一座破败的谷仓里圈养着几只动物。"
 
 msgctxt "speaker:Narrator"
 msgid "A large orc stood near the cage, hitting the bars with a stick."
-msgstr ""
+msgstr "一个巨大的兽人站在笼子旁，用棍子敲打栏杆。"
 
 msgctxt "speaker:Narrator"
 msgid "A large scar runs across the side of his cheek, blemishing what would otherwise be a very handsome face."
-msgstr ""
+msgstr "一道巨大的伤疤横贯他脸颊一侧，毁坏了那张原本英俊的脸庞。"
 
 msgctxt "speaker:Narrator"
 msgid "A large unit of Tribesman cavalary was rushing up behind the scouting units."
-msgstr ""
+msgstr "大批部落骑兵正从侦察部队后方疾驰而来。"
 
 msgctxt "speaker:Narrator"
 msgid "A large world, but perhaps, not quite that big."
-msgstr ""
+msgstr "世界很大，但也未必如此之大。"
 
 msgctxt "speaker:Narrator"
 msgid "A large yoke bound the two animals to the wooden pulls."
-msgstr ""
+msgstr "一副巨大的轭将两头牲畜绑在木制挽具上。"
 
 msgctxt "speaker:Narrator"
 msgid "A large, burly man stormed into the room. The town blacksmith, perhaps, Sarah thought by his appearance."
-msgstr ""
+msgstr "一个身材魁梧的大汉闯了进来。镇上的铁匠，莎拉心想，从他的外表来看大概就是他。"
 
 msgctxt "speaker:Narrator"
 msgid "A last few drops of semen, landing on her tongue."
-msgstr ""
+msgstr "最后几滴精液落在她的舌头上。"
 
 msgctxt "speaker:Narrator"
 msgid "A last few pumps, and then, a loud primal grunt as he finished."
-msgstr ""
+msgstr "最后几下猛冲，随后发出一声粗犷的野兽般的吼叫，他结束了。"
 
 msgctxt "speaker:Narrator"
 msgid "A last few steady thrust and she could feel him climax, his cock expanding and his cum spewing into her."
-msgstr ""
+msgstr "最后几次沉稳的冲刺，她感觉到他达到了高潮，他的鸡巴膨胀着，精液喷涌进她的体内。"
 
 msgctxt "speaker:Narrator"
 msgid "A last few violent thrusts, each jolting her body deeper into bliss."
-msgstr ""
+msgstr "最后几次猛烈的冲刺，每一次都将她的身体狠狠推向极乐。"
 
 msgctxt "speaker:Narrator"
 msgid "A last high pitched shriek as it spewed out its seed across her cell."
-msgstr ""
+msgstr "一声尖啸，精液喷溅在她牢房各处。"
 
 msgctxt "speaker:Narrator"
 msgid "A last inspection, though it didn't matter. She knew they were ready."
-msgstr ""
+msgstr "最后一次检查，尽管这已无关紧要。她知道他们已准备就绪。"
 
 msgctxt "speaker:Narrator"
 msgid "A last load of cum spewed forth. Sarah felt the warm seed splash across her lower back."
-msgstr ""
+msgstr "最后一股精液喷涌而出。莎拉感到温热的种子溅落在她的小腹上。"
 
 msgctxt "speaker:Narrator"
 msgid "A last moment of hesitation passed over her, and then she pushed it down."
-msgstr ""
+msgstr "她心头掠过最后一丝犹豫，随即将其压下。"
 
 msgctxt "speaker:Narrator"
 msgid "A last moment of peace, she thought to herself."
-msgstr ""
+msgstr "她心想，这是最后的片刻宁静。"
 
 msgctxt "speaker:Narrator"
 msgid "A last thought passed her mind. Not words but an image."
-msgstr ""
+msgstr "她脑海中闪过最后一个念头。不是言语，而是一幅画面。"
 
 msgctxt "speaker:Narrator"
 msgid "A laugh that sounded like a hiss, eminated from the creature."
-msgstr ""
+msgstr "那笑声如同嘶嘶声，从生物体内传出。"
 
 msgctxt "speaker:Narrator"
 msgid "A laughter ran through the people watching."
-msgstr ""
+msgstr "笑声在围观的人群中回荡。"
 
 msgctxt "speaker:Narrator"
 msgid "A laughter, interbroken with a choking sound from his lungs could be heard throughout the cave."
-msgstr ""
+msgstr "洞穴里回荡着那笑声，夹杂着从他肺里发出的窒息声。"
 
 msgctxt "speaker:Narrator"
 msgid "A laundry house."
-msgstr ""
+msgstr "洗衣房。"
 
 msgctxt "speaker:Carolyn"
 msgid "A leader around whom everyone can gather."
-msgstr ""
+msgstr "一个能凝聚众人的领袖。"
 
 msgctxt "speaker:Narrator"
 msgid "A leader for the whole of the Union."
-msgstr ""
+msgstr "整个联盟的领袖。"
 
 msgctxt "speaker:Narrator"
 msgid "A leash of some kind. She shuddered at the thought."
-msgstr ""
+msgstr "某种枷锁。一想到这个，她不禁战栗。"
 
 msgctxt "speaker:Narrator"
 msgid "A legion returning home. A strange army among them."
-msgstr ""
+msgstr "一支凯旋归来的军团。其中混杂着一支奇异的军队。"
 
 msgctxt "speaker:Narrator"
 msgid "A lesser army might have surrendered."
-msgstr ""
+msgstr "一支弱小的军队本可以投降。"
 
 msgctxt "speaker:Alfred"
 msgid "A lesson in obdience. And a lesson in what happens when you fall short of the duties of a wife."
-msgstr ""
+msgstr "这是关于服从的教训，也是关于身为妻子若未能履行职责将招致何种后果的教训。"
 
 msgctxt "speaker:Narrator"
 msgid "A lesson she spend the rest of the day studying."
-msgstr ""
+msgstr "她花了一整天琢磨这个教训。"
 
 msgctxt "speaker:Sarah"
 msgid "A lesson?"
-msgstr ""
+msgstr "课程？"
 
 msgctxt "speaker:Narrator"
 msgid "A letter of Xan, from Metis. Explaining what he had come here to tell him in the first place..."
-msgstr ""
+msgstr "这是来自米提斯的珊的信，解释了他最初为何到此。"
 
 msgctxt "speaker:Narrator"
 msgid "A letter sat attached to the inside of the box."
-msgstr ""
+msgstr "盒子里面附着一封信。"
 
 msgctxt "speaker:Narrator"
 msgid "A library like this would take an army to maintain. Of course mages would find more efficient ways if magic allowed it."
-msgstr ""
+msgstr "维持这样的图书馆需要一支军队。当然，如果魔法允许的话，法师们会找到更高效的方法。"
 
 msgctxt "speaker:Narrator"
 msgid "A lie to get what he wanted, and now he would leave her here to suffer."
-msgstr ""
+msgstr "为了得到他想要的而撒的谎，如今却要让她独自在此受苦。"
 
 msgctxt "speaker:Narrator"
 msgid "A lie."
-msgstr ""
+msgstr "谎言。"
 
 msgctxt "speaker:Narrator"
 msgid "A lie. But Sarah wasn't about to betray the only ally she had left by revealing that."
-msgstr ""
+msgstr "谎言。但莎拉绝不会通过揭露这一点，去背叛她仅剩的盟友。"
 
 msgctxt "speaker:Narrator"
 msgid "A life of only luxury and no obligation, seemed to not just relax her body but also her mind. She felt less sharp with each passing day."
-msgstr ""
+msgstr "只享福而无责任的生活，不仅让她的身心都放松下来，她觉得随着日子一天天过去，自己变得不再那么敏锐。"
 
 msgctxt "speaker:Narrator"
 msgid "A life she could remember having, but one that seemed to have happened to someone else."
-msgstr ""
+msgstr "一段她曾拥有的生活，却仿佛发生在别人身上。"
 
 msgctxt "speaker:Narrator"
 msgid "A life, captured in a paper. With this, the Mythran empire would enforce it, even if Cassius and Dio fled to the ends of the world."
-msgstr ""
+msgstr "一段被纸页封存的人生。凭借此物，神话帝国将强行将其落实，即便卡修斯与迪奥逃往世界尽头。"
 
 msgctxt "speaker:Gabriel"
 msgid "A lifetime of protocol and proper decorum, all forgotten after just a few years with her."
-msgstr ""
+msgstr "与她的短短几年时光，让他忘却了毕生恪守的礼仪与规矩。"
 
 msgctxt "speaker:Narrator"
 msgid "A lifetime of working in his father's Inn had hardend his body in an appealing way."
-msgstr ""
+msgstr "在父亲旅馆里度过的一生，让他的身体变得格外强健。"
 
 msgctxt "speaker:Narrator"
 msgid "A lifetime passes."
-msgstr ""
+msgstr "岁月流转。"
 
 msgctxt "speaker:Narrator"
 msgid "A light radiated from each of his hands, swirling around his arms, driving back the darkness."
-msgstr ""
+msgstr "光芒从他每只手掌中散发出来，环绕着他的手臂，驱散了黑暗。"
 
 msgctxt "speaker:Narrator"
 msgid "A lightness."
-msgstr ""
+msgstr "一丝轻盈。"
 
 msgctxt "speaker:Narrator"
 msgid "A little arrogant, Sarah hated herself for the fact that she liked that about him."
-msgstr ""
+msgstr "有点自恋，莎拉讨厌自己竟喜欢他这一点。"
 
 msgctxt "speaker:Sarah"
 msgid "A little bit, maybe."
-msgstr ""
+msgstr "许是有一点吧。"
 
 msgctxt "speaker:Sarah"
 msgid "A little bit."
-msgstr ""
+msgstr "一点点。"
 
 msgctxt "speaker:Narrator"
 msgid "A little distance ahead of her, she saw him moving through the night."
-msgstr ""
+msgstr "前方不远处，她看见他在夜色中移动。"
 
 msgctxt "speaker:Narrator"
 msgid "A little in the distance, she could make out the harbor. Ships, coming and going."
-msgstr ""
+msgstr "稍远处，她依稀能望见港口。船只往来穿梭。"
 
 msgctxt "speaker:Captain Belmont"
 msgid "A little late for sorry's and apologies. Ya stole from the captain, that can't stand."
-msgstr ""
+msgstr "道歉和认错现在太晚了。你偷了船长的东西，这是绝对不行的。"
 
 msgctxt "speaker:Narrator"
 msgid "A little later in the day, Sarah managed to find a chance to slip into Razaphel's room."
-msgstr ""
+msgstr "稍后，莎拉终于找到机会溜进了拉扎斐尔的房间。"
 
 msgctxt "speaker:Sophia"
 msgid "A little less confident now that he was being led along with a leash."
-msgstr ""
+msgstr "如今，他像被牵着走的狗一样，自信大减。"
 
 msgctxt "speaker:Narrator"
 msgid "A little over a week had gone by."
-msgstr ""
+msgstr "转眼过去了一周多。"
 
 msgctxt "speaker:Carolyn"
 msgid "A little roughed up here and there, but you still have your mother's beauty."
-msgstr ""
+msgstr "这里和那里受了点轻伤，但你依然拥有母亲的美貌。"
 
 msgctxt "speaker:Narrator"
 msgid "A little slower. A little faster. One extra step. A spin."
-msgstr ""
+msgstr "慢一点。快一点。多走一步。转个圈。"
 
 msgctxt "speaker:Narrator"
 msgid "A little under half of the standing army was staffed with bannermen from one of the old houses, and though they were less than half, they made up the strong half."
-msgstr ""
+msgstr "驻军不到半数来自旧贵族，虽人数不足半，却占了精锐。"
 
 msgctxt "speaker:Narrator"
 msgid "A little ways up the alley, a light was shining."
-msgstr ""
+msgstr "巷子深处，有一盏灯火在闪烁。"
 
 msgctxt "speaker:Samayra"
 msgid "A little, maybe. But also not. Is that weird?"
-msgstr ""
+msgstr "一点点，也许吧。但也不是。这样很奇怪吗？"
 
 msgctxt "speaker:Kate"
 msgid "A little."
-msgstr ""
+msgstr "一点点。"
 
 msgctxt "speaker:Alaric"
 msgid "A little. Heard about it. Never used any. Pretty damn hard to get in Lethram."
-msgstr ""
+msgstr "有点。听说过这事。但从未用过。在莱瑟姆这地方，想进去可真他妈难。"
 
 msgctxt "speaker:Narrator"
 msgid "A long day behind her, the sleep came easy."
-msgstr ""
+msgstr "漫长的白昼过后，她很快便陷入了梦乡。"
 
 msgctxt "speaker:Narrator"
 msgid "A long pause lingered before Alaric finally spoke."
-msgstr ""
+msgstr "阿尔里克沉默良久，终于开口。"
 
 msgctxt "speaker:Narrator"
 msgid "A long silence lingered."
-msgstr ""
+msgstr "漫长的沉默持续着。"
 
 msgctxt "speaker:Narrator"
 msgid "A long time ago, longer than anyone at this table had been alive, a local baron had ruled the town and its surrounding lands."
-msgstr ""
+msgstr "很久以前，比在座的任何人都要久远，一位当地男爵统治着这座城镇及其周边土地。"
 
 msgctxt "speaker:Atilla"
 msgid "A long time ago, when I was still young, I met a woman, an orc like myself. She was everything to me. Fierce, strong, an equal."
-msgstr ""
+msgstr "很久以前，在我尚且年轻的时候，我曾遇见一位女人，她和我一样是兽人。她对我而言就是全部。勇猛、强壮，与我平等。"
 
 msgctxt "speaker:Vaelen"
 msgid "A long time ago, when I was still young, younger than you even, I lived in a small town out in the Mytrhan Southlands."
-msgstr ""
+msgstr "很久以前，那时我还年轻，比你们都要年轻得多，我住在迈特拉南境的一个小镇里。"
 
 msgctxt "speaker:Narrator"
 msgid "A longer pause."
-msgstr ""
+msgstr "稍作停顿。"
 
 msgctxt "speaker:Narrator"
 msgid "A lot had happened."
-msgstr ""
+msgstr "发生的事太多了。"
 
 msgctxt "speaker:Kate"
 msgid "A lot happened at home, and I never let you see any of that. I didn't think you would understand."
-msgstr ""
+msgstr "家里发生了太多事，我从未让你看到过任何一点。我以为你无法理解。"
 
 msgctxt "speaker:Marion"
 msgid "A lot has been asked of the nobility, and a lot we have given, but Thomas...my king...you will be asking them to leave their homes unguarded."
-msgstr ""
+msgstr "贵族们承受了诸多要求，我们也付出了许多，但托马斯……我的陛下……您将要求他们离开家园，不再设防。"
 
 msgctxt "speaker:Sarah"
 msgid "A lot has been happening in my life recently, leaving not many things certain."
-msgstr ""
+msgstr "最近我的生活发生了很多事，让许多事情变得不再确定。"
 
 msgctxt "speaker:Sarah"
 msgid "A lot has changed, as you might notice."
-msgstr ""
+msgstr "你也注意到了，一切都变了。"
 
 msgctxt "speaker:Sarah"
 msgid "A lot is going to change for me soon."
-msgstr ""
+msgstr "很快，我的人生也将发生巨变。"
 
 msgctxt "speaker:Narrator"
 msgid "A lot of had transpired between them when they had ventured into the forest together."
-msgstr ""
+msgstr "两人一同踏入森林后，其间已发生了许多事。"
 
 msgctxt "speaker:Sarah"
 msgid "A lot of people are going to die if we do this. Our people, the ones we're supposed to be responsible for."
-msgstr ""
+msgstr "如果我们这么做，会有很多人死去。我们的人，那些本该由我们负责的人。"
 
 msgctxt "speaker:Elsa"
 msgid "A lot of people most days, actually."
-msgstr ""
+msgstr "实际上，大多数日子都是如此。"
 
 msgctxt "speaker:Narrator"
 msgid "A lot of things that had been unthinkable once, had now become normal. All in order to survive."
-msgstr ""
+msgstr "许多曾经不可思议的事，如今都成了常态。一切为了生存。"
 
 msgctxt "speaker:Marion"
 msgid "A lot of trade goes through it, and he taxes it."
-msgstr ""
+msgstr "大量货物从这里流转，他还为此征税。"
 
 msgctxt "speaker:Sarah"
 msgid "A lot to take in, huh?"
-msgstr ""
+msgstr "真是让人应接不暇，对吧？"
 
 msgctxt "speaker:King Orwell Rose"
 msgid "A lot...too much to talk about. You can ask me tomorrow, okay?"
@@ -1988,235 +1988,235 @@ msgstr "太多了……太多，没法细说。明天再问吧，好吗？"
 
 msgctxt "speaker:Narrator"
 msgid "A loud banging on the door rang out through the room, disrupting the proceedings."
-msgstr ""
+msgstr "一声巨响的敲门声打破了室内的宁静。"
 
 msgctxt "speaker:Narrator"
 msgid "A loud battle horn rang out across the line."
-msgstr ""
+msgstr "战场上响起了嘹亮的冲锋号角。"
 
 msgctxt "speaker:Narrator"
 msgid "A loud battle horn rang out over the battlefield, and as if suddenly recovering all their training, Hassar's army began to move forward as one."
-msgstr ""
+msgstr "战场上响起了震耳欲聋的号角声，仿佛瞬间唤醒了所有的训练，哈萨尔的军队如同一人般向前推进。"
 
 msgctxt "speaker:Narrator"
 msgid "A loud battle horn rang out over the field, the battle horn of the Rosanna army."
-msgstr ""
+msgstr "战场上响起了震耳欲聋的号角声，那是罗莎娜军队的战号。"
 
 msgctxt "speaker:Narrator"
 msgid "A loud bell rang out and the murmurs in the room were brought to silence."
-msgstr ""
+msgstr "一声洪钟响起，室内的低语随之归于寂静。"
 
 msgctxt "speaker:Narrator"
 msgid "A loud chant rose up as the warriors all battered the table in tribute."
-msgstr ""
+msgstr "战士们纷纷拍击桌面以示敬意，响起了震耳欲聋的欢呼声。"
 
 msgctxt "speaker:Narrator"
 msgid "A loud cheer rose up from the soldiers as they watched Sarah enter the castle grounds."
-msgstr ""
+msgstr "士兵们发出震耳欲聋的欢呼声，注视着莎拉走进城堡。"
 
 msgctxt "speaker:Narrator"
 msgid "A loud clap and a stinging pain on her ass. He spanked her."
-msgstr ""
+msgstr "一声巨响伴随着屁股上火辣辣的疼痛，他狠狠地抽了她一下。"
 
 msgctxt "speaker:Narrator"
 msgid "A loud crack rang out through the hall, it's echo carried deep into the palace hallways."
-msgstr ""
+msgstr "一声巨响在厅堂中回荡，余音深深传遍宫殿的长廊。"
 
 msgctxt "speaker:Narrator"
 msgid "A loud cracking sound drew her attention."
-msgstr ""
+msgstr "一声巨响吸引了她的注意。"
 
 msgctxt "speaker:Narrator"
 msgid "A loud cracking sound rang out."
-msgstr ""
+msgstr "一声巨响炸裂开来。"
 
 msgctxt "speaker:Narrator"
 msgid "A loud cracking sound rang out. Sarah felt her ass begin to burn."
-msgstr ""
+msgstr "一声巨响炸裂开来。莎拉感到屁股开始灼烧。"
 
 msgctxt "speaker:Narrator"
 msgid "A loud cracking sound rung out across the room."
-msgstr ""
+msgstr "一声巨响在房间里回荡。"
 
 msgctxt "speaker:Narrator"
 msgid "A loud crashing sound echoed across the training ground as the examinator, his armor and his massive blade, crashed into the ground."
-msgstr ""
+msgstr "一声巨响在训练场回荡，考官连同他的铠甲与巨剑重重砸向地面。"
 
 msgctxt "speaker:Narrator"
 msgid "A loud groan filled the room."
-msgstr ""
+msgstr "一声痛苦的呻吟响彻了房间。"
 
 msgctxt "speaker:Narrator"
 msgid "A loud grunt rang out across the alley and Sarah felt her head fixed onto Alaric's cock."
-msgstr ""
+msgstr "一声粗重的喘息响彻巷弄，莎拉感到头部死死抵在阿拉里克那根勃起的鸡巴上。"
 
 msgctxt "speaker:Narrator"
 msgid "A loud horn blast rang out, signaling danger."
-msgstr ""
+msgstr "一声刺耳的号角声响起，预示着危险。"
 
 msgctxt "speaker:Narrator"
 msgid "A loud pang rang out across the room."
-msgstr ""
+msgstr "一声巨大的痛楚响彻了整个房间。"
 
 msgctxt "speaker:Narrator"
 msgid "A loud pounding noise rang out."
-msgstr ""
+msgstr "一声巨大的敲击声响彻房间。"
 
 msgctxt "speaker:Narrator"
 msgid "A loud slap rang out across the apartment, and Sarah felt her ass and face burn from the humiliation."
-msgstr ""
+msgstr "一声响亮的耳光在公寓里回荡，莎拉感到屁股和脸颊因羞耻而火辣辣地疼。"
 
 msgctxt "speaker:Narrator"
 msgid "A loud slap rang out across the hall, Sarah let out a surprised moan."
-msgstr ""
+msgstr "走廊里传来一声响亮的耳光声，莎拉忍不住发出一声惊愕的呻吟。"
 
 msgctxt "speaker:Narrator"
 msgid "A loud sound called out to her."
-msgstr ""
+msgstr "一声巨响向她传来。"
 
 msgctxt "speaker:Narrator"
 msgid "A loud thumping sound rang out as the crossbow released the bolt."
-msgstr ""
+msgstr "一声巨大的闷响，弩箭射出。"
 
 msgctxt "speaker:Narrator"
 msgid "A loud thundering crack, like a splitting log, roaring out over the open field."
-msgstr ""
+msgstr "一声震耳欲聋的炸裂声，如同劈开的原木般在空旷的原野上轰鸣。"
 
 msgctxt "speaker:Narrator"
 msgid "A loud voice rang out across the gathering."
-msgstr ""
+msgstr "一声洪亮的声音响彻集会。"
 
 msgctxt "speaker:Narrator"
 msgid "A loud, unmistaken, moan."
-msgstr ""
+msgstr "一声响亮而清晰的呻吟。"
 
 msgctxt "speaker:Narrator"
 msgid "A louder moan slipped from Kate's mouth, and Sarah could almost feel proud at her efforts."
-msgstr ""
+msgstr "一声更响的呻吟从凯特口中溢出，莎拉几乎为她的努力感到自豪。"
 
 msgctxt "speaker:Cassius"
 msgid "A lovely name."
-msgstr ""
+msgstr "真是个动听的名字。"
 
 msgctxt "speaker:Carolyn"
 msgid "A lovely spot, surrounded by vineyards."
-msgstr ""
+msgstr "一处被葡萄园环绕的绝佳之地。"
 
 msgctxt "speaker:Sarah"
 msgid "A lowlife. A criminal that feeds on those too vulnerable to defend themselves."
-msgstr ""
+msgstr "卑鄙小人，靠吞噬那些无力自卫者维生的罪犯。"
 
 msgctxt "speaker:Narrator"
 msgid "A lust in his eyes unlike any she had seen before."
-msgstr ""
+msgstr "他眼中流露出的欲望，是她前所未见的。"
 
 msgctxt "speaker:Sarah"
 msgid "A madman in a cave, rambling about his divine friends."
-msgstr ""
+msgstr "山洞里的疯子，胡言乱语着他的‘神友’。"
 
 msgctxt "speaker:Narrator"
 msgid "A mage that reached to far. Lost to a dead world. Slave-bride to a Daemon."
-msgstr ""
+msgstr "一个法力无边却迷失于死寂世界的法师，沦为恶魔的奴隶新娘。"
 
 msgctxt "speaker:Narrator"
 msgid "A mage was always dangerous."
-msgstr ""
+msgstr "法师向来危险。"
 
 msgctxt "speaker:Narrator"
 msgid "A mage."
-msgstr ""
+msgstr "法师。"
 
 msgctxt "speaker:Dalia"
 msgid "A magical mark of some kind. I guess you've already felt it?"
-msgstr ""
+msgstr "某种魔法印记。我想你已经感觉到了？"
 
 msgctxt "speaker:Narrator"
 msgid "A male soldier stepped up and threw a pair of dice. Some of them cheered, others groaned, making it clear who'd won this round."
-msgstr ""
+msgstr "一名男兵上前掷下骰子，有人欢呼，有人呻吟，胜负已分。"
 
 msgctxt "speaker:Narrator"
 msgid "A man barks commands at her."
-msgstr ""
+msgstr "一名男子向她大声咆哮着发号施令。"
 
 msgctxt "speaker:Narrator"
 msgid "A man blocked her path."
-msgstr ""
+msgstr "一名男子挡住了她的去路。"
 
 msgctxt "speaker:Narrator"
 msgid "A man in heat. A woman in heat."
-msgstr ""
+msgstr "发情的男人。发情的女人。"
 
 msgctxt "speaker:Narrator"
 msgid "A man instructed them all to stand in line."
-msgstr ""
+msgstr "一名男子命令他们全部排好队。"
 
 msgctxt "speaker:Kate"
 msgid "A man like that goes about life, lying, cheating."
-msgstr ""
+msgstr "像他那种人，活在谎言与欺骗里。"
 
 msgctxt "speaker:Narrator"
 msgid "A man more used to being guarded than seen."
-msgstr ""
+msgstr "一个更习惯被守护而非被看见的男人。"
 
 msgctxt "speaker:Alfred"
 msgid "A man my age can only be so angry when he's just finished fucking a girl like you."
-msgstr ""
+msgstr "一个像我这样的年纪的男人，刚操完你这样的小妞，能有多大脾气。"
 
 msgctxt "speaker:Marshal Edmond"
 msgid "A man of his age with a girl like that."
-msgstr ""
+msgstr "一个年纪到了这样的男人，和一个那样的姑娘。"
 
 msgctxt "speaker:Marshal Edmond"
 msgid "A man or woman should rise or fall on account of their skills. Not their name."
-msgstr ""
+msgstr "人的成与败，应取决于其技艺，而非其名讳。"
 
 msgctxt "speaker:Narrator"
 msgid "A man ran out and soon returned with the tools that had been requested."
-msgstr ""
+msgstr "一名男子跑出去，很快便带着被要求的工具回来了。"
 
 msgctxt "speaker:Narrator"
 msgid "A man sat opposite of her. The man that had removed the hood."
-msgstr ""
+msgstr "一个男人坐在她对面，摘下了兜帽。"
 
 msgctxt "speaker:Maeiv"
 msgid "A man should have a strong name."
-msgstr ""
+msgstr "男人应当有个响亮的名字。"
 
 msgctxt "speaker:Narrator"
 msgid "A man stumbled, his shoulder bashing into her."
-msgstr ""
+msgstr "一个男人踉跄了一下，肩膀撞到了她。"
 
 msgctxt "speaker:Narrator"
 msgid "A man that could provide. Be strong. Faithful. Honest."
-msgstr ""
+msgstr "一个能给予的男人。要坚强。忠诚。诚实。"
 
 msgctxt "speaker:Narrator"
 msgid "A man that didn't much matter to anyone."
-msgstr ""
+msgstr "一个无人会在意的人。"
 
 msgctxt "speaker:Narrator"
 msgid "A man that had been given a second life and wasted not a minute of it."
-msgstr ""
+msgstr "一个重获新生的人，分秒必争。"
 
 msgctxt "speaker:Narrator"
 msgid "A man that had feared life had passed him by, and now equally feared that he had caught life but had no idea what to do with it."
-msgstr ""
+msgstr "一个曾畏惧生命从他身边溜走，如今又同样恐惧自己抓住了生命却不知该如何把握的男人。"
 
 msgctxt "speaker:Narrator"
 msgid "A man that had perhaps feared the day would never come."
-msgstr ""
+msgstr "一个或许曾畏惧这一天永远不会到来的人。"
 
 msgctxt "speaker:Narrator"
 msgid "A man that lived with his head in the clouds."
-msgstr ""
+msgstr "一个活在云端的男人。"
 
 msgctxt "speaker:Narrator"
 msgid "A man that treated her like she was worth nothing, reminding her with every thrust that she was only good for this."
-msgstr ""
+msgstr "一个视她如草芥的男人，每一次冲刺都在提醒她，自己除了这点用处外一无是处。"
 
 msgctxt "speaker:Narrator"
 msgid "A man walked in through the door to the Great Hall."
-msgstr ""
+msgstr "一个男人穿过大门，走进了大礼堂。"
 
 msgctxt "speaker:Narrator"
 msgid "A man waved at Marion from across the room, and Marion waved back."
@@ -2224,995 +2224,995 @@ msgstr "男人隔着房间向玛丽昂挥手，玛丽昂也回以挥手。"
 
 msgctxt "speaker:Narrator"
 msgid "A man who could not believe that fortune and fate had played him for a fool."
-msgstr ""
+msgstr "一个无法相信命运与运气竟将他耍得团团转的男人。"
 
 msgctxt "speaker:Narrator"
 msgid "A man who desired her. Provided for her."
-msgstr ""
+msgstr "一个渴望她、供养她的男人。"
 
 msgctxt "speaker:Narrator"
 msgid "A man who expected to find a willing woman, but not this eager whore."
-msgstr ""
+msgstr "一个指望能找到顺从女人的男人，却没想到会遇上这副急不可耐的贱货。"
 
 msgctxt "speaker:Narrator"
 msgid "A man who had lost everything, and possessed nothing."
-msgstr ""
+msgstr "一个失去了一切，也一无所有的人。"
 
 msgctxt "speaker:Narrator"
 msgid "A man who knew he had killed himself just the same, but took glee from knowing his enemies would die with him."
-msgstr ""
+msgstr "一个明知自己已自杀，却因知晓仇敌将与他一同死去而欣喜若狂的男人。"
 
 msgctxt "speaker:Narrator"
 msgid "A man who thought that only the decay of old age remained, who now instead found a young and willing woman, again before him."
-msgstr ""
+msgstr "一个以为只剩衰老腐朽的男人，此刻却遇见了一位年轻且甘愿顺从的女子，再次出现在他面前。"
 
 msgctxt "speaker:Narrator"
 msgid "A man who wanted to take a woman. A woman who wanted to be taken by a man."
-msgstr ""
+msgstr "一个想占有女人的男人，和一个渴望被男人占有的女人。"
 
 msgctxt "speaker:Narrator"
 msgid "A man who wielded no sword was no man at all in their eyes."
-msgstr ""
+msgstr "在他们眼中，无剑的男子便不算男人。"
 
 msgctxt "speaker:Narrator"
 msgid "A man who would gladly sacrifice every last one of them to carry himself across a wicked desert."
-msgstr ""
+msgstr "一个愿为穿越恶毒沙漠而献祭所有他们的男人。"
 
 msgctxt "speaker:Narrator"
 msgid "A man whose name she had heard many times by now, and whose appearance lived up to his reputation. Hassar."
-msgstr ""
+msgstr "一个她已听过多次名字的男人，其外貌也配得上他的名声。哈萨尔。"
 
 msgctxt "speaker:Narrator"
 msgid "A man with a round face slowly peaked out, his eyes narrowing."
-msgstr ""
+msgstr "一个圆脸的男人慢慢探出头，双眼眯起。"
 
 msgctxt "speaker:Sarah"
 msgid "A man with thread and needle? I'll survive."
-msgstr ""
+msgstr "用针线？我能活命。"
 
 msgctxt "speaker:Narrator"
 msgid "A man wraps his arms around the neck of the soldier between Sarah's legs, violently pulling him away."
-msgstr ""
+msgstr "一名男子双臂环住莎拉双腿间士兵的脖颈，猛地将他拽开。"
 
 msgctxt "speaker:Narrator"
 msgid "A man's voice could be heard roaring through the hall."
-msgstr ""
+msgstr "大厅里传来一声怒吼。"
 
 msgctxt "speaker:Narrator"
 msgid "A man, as one ought to be."
-msgstr ""
+msgstr "一个男人，正如他本该是那样。"
 
 msgctxt "speaker:Narrator"
 msgid "A man, pale and tall, walked across the hall with a great stride."
-msgstr ""
+msgstr "一个苍白高大的男人，迈着大步穿过大厅。"
 
 msgctxt "speaker:Narrator"
 msgid "A man, that watched as a group of Tribesmen took his wife on the day of their marriage."
-msgstr ""
+msgstr "一个男人，眼睁睁看着一群部落男子在他婚礼当天抢走了他的妻子。"
 
 msgctxt "speaker:Narrator"
 msgid "A man."
-msgstr ""
+msgstr "一个男人。"
 
 msgctxt "speaker:Sarah"
 msgid "A man? Yes."
-msgstr ""
+msgstr "男人？是的。"
 
 msgctxt "speaker:Sarah"
 msgid "A mansion? What makes you say that."
-msgstr ""
+msgstr "一座豪宅？你怎么会这么想。"
 
 msgctxt "speaker:Sarah"
 msgid "A marking kit?"
-msgstr ""
+msgstr "标记套装？"
 
 msgctxt "speaker:Sarah"
 msgid "A marriage? Between whom?"
-msgstr ""
+msgstr "婚姻？在谁之间？"
 
 msgctxt "speaker:Narrator"
 msgid "A marvel of miracle and magic, held together by the will of the Gods."
-msgstr ""
+msgstr "神祇意志维系下的奇迹与魔法杰作。"
 
 msgctxt "speaker:Narrator"
 msgid "A mask balanced on her face, but her pale skin and form were familiar to Sarah."
-msgstr ""
+msgstr "脸上戴着面具，但莎拉认出了那张苍白的脸庞和那具身躯。"
 
 msgctxt "speaker:Tailor"
 msgid "A mason does not just blindly hack into his marble, nor do I start without properly inspecting the body."
-msgstr ""
+msgstr "石匠不会盲目地凿刻大理石，我也绝不会在未仔细查验尸体前便贸然动工。"
 
 msgctxt "speaker:Advisor"
 msgid "A masquerade?"
-msgstr ""
+msgstr "假面舞会？"
 
 msgctxt "speaker:Sarah"
 msgid "A massive conflict that could drag out for decades."
-msgstr ""
+msgstr "一场可能持续数十年的巨大冲突。"
 
 msgctxt "speaker:Narrator"
 msgid "A massive hole had been dug straight into the earth."
-msgstr ""
+msgstr "大地深处被挖出了一个巨大的坑洞。"
 
 msgctxt "speaker:Narrator"
 msgid "A massive stone statue, marking and guarding the entrance."
-msgstr ""
+msgstr "一座巨大的石像，标记并守卫着入口。"
 
 msgctxt "speaker:Marion"
 msgid "A match like this one doesn't come around very often. True love, what a miracle."
-msgstr ""
+msgstr "像这样的缘分可不多见。真爱，真是奇迹。"
 
 msgctxt "speaker:Narrator"
 msgid "A meeting between the two, running late."
-msgstr ""
+msgstr "两人会面，却迟到了。"
 
 msgctxt "speaker:Sarah"
 msgid "A meeting?"
-msgstr ""
+msgstr "会面？"
 
 msgctxt "speaker:Narrator"
 msgid "A melee had broken out."
-msgstr ""
+msgstr "一场混战已经爆发了。"
 
 msgctxt "speaker:Kate"
 msgid "A mercenary...well, you're lucky to get to forty."
-msgstr ""
+msgstr "雇佣兵……呵，你能活到四十岁，也算走运了。"
 
 msgctxt "speaker:Duke Antonio"
 msgid "A merchant knows when to say yes to a good deal."
-msgstr ""
+msgstr "商人知道何时该答应一笔好交易。"
 
 msgctxt "speaker:Kate"
 msgid "A merchant, if you'd believe it. I thought they'd killed the last of 'em by now."
-msgstr ""
+msgstr "商人？你竟会信这种鬼话。我以为他们早就把最后几个都杀光了。"
 
 msgctxt "speaker:Narrator"
 msgid "A merchant, in their eyes, was as low as any man could be. Earning his way through life by trickery and deceit."
-msgstr ""
+msgstr "在他们眼里，商人卑劣至极，靠欺诈与谎言苟活于世。"
 
 msgctxt "speaker:Duke Antonio"
 msgid "A mercy?"
-msgstr ""
+msgstr "慈悲？"
 
 msgctxt "speaker:Kravel"
 msgid "A message has arrived...from Marion."
-msgstr ""
+msgstr "有一封来自玛丽昂的信..."
 
 msgctxt "speaker:Narrator"
 msgid "A message then, but what it was it remained to be seen."
-msgstr ""
+msgstr "那是一则消息，至于内容如何，尚待揭晓。"
 
 msgctxt "speaker:Narrator"
 msgid "A message, Sarah would try to rationalize. A warning to her enemies and those who broke their vows of loyalty."
-msgstr ""
+msgstr "一条消息，莎拉会试图合理化。这是对敌人的警告，也是对那些背弃忠诚誓言者的警告。"
 
 msgctxt "speaker:Narrator"
 msgid "A metal door, carefully decorated, cut into the wall."
-msgstr ""
+msgstr "一扇金属门，精心装饰后嵌入墙中。"
 
 msgctxt "speaker:Dalia"
 msgid "A millenium, maybe more."
-msgstr ""
+msgstr "千年，或许更久。"
 
 msgctxt "speaker:Narrator"
 msgid "A miniscule smile crept along Queen Maeiv's face."
-msgstr ""
+msgstr "女王梅薇的嘴角泛起一丝微不可察的笑意。"
 
 msgctxt "speaker:Narrator"
 msgid "A minute, then two, then-"
-msgstr ""
+msgstr "一分钟后，两分钟后——"
 
 msgctxt "speaker:Narrator"
 msgid "A minute...Sarah wondered. Was that really possible?"
-msgstr ""
+msgstr "一分钟……莎拉心想。这真的可能吗？"
 
 msgctxt "speaker:Narrator"
 msgid "A miracle."
-msgstr ""
+msgstr "奇迹。"
 
 msgctxt "speaker:Narrator"
 msgid "A mirror stood off to the side, and Sarah had did her best not to look for fear of bad luck, but an accidental glance forced her to turn and look at herself."
-msgstr ""
+msgstr "一面镜子立在侧边，莎拉曾竭力不去看它，唯恐招致厄运，但一次不经意的瞥视却迫使她转身凝视自己。"
 
 msgctxt "speaker:Carolyn"
 msgid "A mission, far away from the reach of Mythra, of any power."
-msgstr ""
+msgstr "远离米特拉神祇与任何力量的庇护，这是一项使命。"
 
 msgctxt "speaker:Narrator"
 msgid "A mist of red blood splashed out and a deep crimson trail as left across her back."
-msgstr ""
+msgstr "鲜红的血雾溅射而出，一道深红的血迹在她背上蜿蜒。"
 
 msgctxt "speaker:Narrator"
 msgid "A mist rose up, wrapping itself around her."
-msgstr ""
+msgstr "红雾升腾，将她包裹其中。"
 
 msgctxt "speaker:Gilead"
 msgid "A mistake does not exempt you from punishment."
-msgstr ""
+msgstr "错误并不能让你免受惩罚。"
 
 msgctxt "speaker:Alfred"
 msgid "A mistake, huh?"
-msgstr ""
+msgstr "失误？"
 
 msgctxt "speaker:Sarah"
 msgid "A mistake?"
-msgstr ""
+msgstr "失误？"
 
 msgctxt "speaker:Sarah"
 msgid "A mistake? It seemed like what you did was very intentional."
-msgstr ""
+msgstr "失误？你做的事看起来非常刻意。"
 
 msgctxt "speaker:Narrator"
 msgid "A mixture of chance, odds, bluffing. Half the game was the cards. The other half reading the player opposite of you."
-msgstr ""
+msgstr "运气、概率与虚张声势的混合体。游戏的一半在于牌面，另一半则在于揣摩对手的心思。"
 
 msgctxt "speaker:Narrator"
 msgid "A mixture of lust and surprise painted the creature's face."
-msgstr ""
+msgstr "欲望与惊愕交织，在那怪物的脸上浮现。"
 
 msgctxt "speaker:Narrator"
 msgid "A mixture of scented spice weighed heavily on the air."
-msgstr ""
+msgstr "空气中弥漫着浓重的香料气息。"
 
 msgctxt "speaker:Narrator"
 msgid "A moan erupted from her mouth as if he had truly lost her mind."
-msgstr ""
+msgstr "一声呻吟从她口中迸发，仿佛他真把她逼疯了。"
 
 msgctxt "speaker:Narrator"
 msgid "A moan slipped from her mouth and filled the tent, cutting through the silence."
-msgstr ""
+msgstr "一声呻吟从她口中溢出，填满了帐篷，划破了寂静。"
 
 msgctxt "speaker:Narrator"
 msgid "A moan slipped out as she felt him enter her."
-msgstr ""
+msgstr "一声呻吟从她口中溢出，伴随着他进入她的感觉。"
 
 msgctxt "speaker:Narrator"
 msgid "A moan, mixed with desperate frustration sounded out from Samayra, fearing that Sarah had denied her."
-msgstr ""
+msgstr "萨迈拉发出一声呻吟，夹杂着绝望的挫败感，她担心莎拉会拒绝她。"
 
 msgctxt "speaker:Narrator"
 msgid "A moan, no pain, she thought distantly as her mind sank into pleasured, thoughtless bliss."
-msgstr ""
+msgstr "她心想，没有痛楚，只是沉浸在愉悦的、无思无虑的幸福中。"
 
 msgctxt "speaker:Narrator"
 msgid "A moment ago, she feared she had seen the last of him, and now she was back here. Back where she wanted to be, but could not stay."
-msgstr ""
+msgstr "片刻前，她以为再也见不到他了，如今却重归此处。回到了她渴望停留却无法久留的地方。"
 
 msgctxt "speaker:Narrator"
 msgid "A moment before they reach her, she topples backwards, her world begins to spin."
-msgstr ""
+msgstr "就在他们触碰到她之前，她向后倒去，世界开始旋转。"
 
 msgctxt "speaker:Narrator"
 msgid "A moment in the fog of her mind passed, and she saw him throwing off the last of his own clothes."
-msgstr ""
+msgstr "她神智恍惚间，仿佛度过了一瞬，只见他正褪去身上最后的衣物。"
 
 msgctxt "speaker:Narrator"
 msgid "A moment later, Sigmund climbed back onto the cart."
-msgstr ""
+msgstr "片刻后，西格蒙德爬回了车上。"
 
 msgctxt "speaker:Narrator"
 msgid "A moment later, soldiers pulled Kate away. Everyone seemed so busy, especially when they were almost ready to leave."
-msgstr ""
+msgstr "片刻后，士兵们将凯特带走。大家都显得那么忙碌，尤其是当他们即将出发时。"
 
 msgctxt "speaker:Narrator"
 msgid "A moment later, the servants arrived and began to help her get dressed."
-msgstr ""
+msgstr "片刻后，仆人们前来协助她更衣。"
 
 msgctxt "speaker:Narrator"
 msgid "A moment longer, and her heart began to race."
-msgstr ""
+msgstr "再等片刻，她的心跳便已开始加速。"
 
 msgctxt "speaker:Narrator"
 msgid "A moment neither wanted to allow to pass."
-msgstr ""
+msgstr "片刻，谁也不愿让这时间流逝。"
 
 msgctxt "speaker:Narrator"
 msgid "A moment of clarity began to dawn on Sarah, amidst all the chaos. She had thrown her life away...for this drunkard thief."
-msgstr ""
+msgstr "混乱之中，萨拉终于清醒过来。她竟将一生……拱手送给了这个酒鬼小偷。"
 
 msgctxt "speaker:Narrator"
 msgid "A moment of inattention, and she had almost paid for it dearly."
-msgstr ""
+msgstr "稍一疏忽，她几乎为此付出了惨痛的代价。"
 
 msgctxt "speaker:Narrator"
 msgid "A moment of pause."
-msgstr ""
+msgstr "短暂的停顿。"
 
 msgctxt "speaker:Narrator"
 msgid "A moment of quiet that felt as if it was drawn out forever."
-msgstr ""
+msgstr "一段仿佛被无限拉长的静谧。"
 
 msgctxt "speaker:Narrator"
 msgid "A moment of silence between them, as if there were no words that could be meaningfully spoken."
-msgstr ""
+msgstr "他们之间陷入了一片沉默，仿佛已无言语可说。"
 
 msgctxt "speaker:Narrator"
 msgid "A moment of silence lingered between them."
-msgstr ""
+msgstr "沉默在他们之间蔓延。"
 
 msgctxt "speaker:Narrator"
 msgid "A moment of silence."
-msgstr ""
+msgstr "片刻的沉默。"
 
 msgctxt "speaker:Narrator"
 msgid "A moment of warmth...and this was the price they would pay for it."
-msgstr ""
+msgstr "片刻的暖意……这便是他们为此付出的代价。"
 
 msgctxt "speaker:Narrator"
 msgid "A moment passed in silence."
-msgstr ""
+msgstr "沉默了片刻。"
 
 msgctxt "speaker:Narrator"
 msgid "A moment passed, then, movement."
-msgstr ""
+msgstr "片刻后，动静传来。"
 
 msgctxt "speaker:Hugh"
 msgid "A month at the least. And after that, you'd probably still do best to get out of the city for a while."
-msgstr ""
+msgstr "至少一个月。之后，你最好还是暂时离开这座城市。"
 
 msgctxt "speaker:Narrator"
 msgid "A month had passed since Thomas had been kidnapped by Marion and the old houses had declared their revolt."
-msgstr ""
+msgstr "托马斯被马利恩绑架、老宅群发起反抗，已过去一个月了。"
 
 msgctxt "speaker:Narrator"
 msgid "A month. Was he really planning to stay here that long? Then again, if he did, could she really throw him out?"
-msgstr ""
+msgstr "一个月。他真的打算待这么久吗？话说回来，如果他真这么做了，她又能把他赶出去吗？"
 
 msgctxt "speaker:Narrator"
 msgid "A more humble man would have seen the signs of what came next, but Marion was not humble."
-msgstr ""
+msgstr "更谦逊的人早已察觉接下来的征兆，但玛里昂绝非如此。"
 
 msgctxt "speaker:Voice"
 msgid "A morsel. A most delicate one to be sure, but nothing more."
-msgstr ""
+msgstr "一点小食。确实精致，但也仅此而已。"
 
 msgctxt "speaker:Metis"
 msgid "A most kind host. I promise I won't inconvenience you."
-msgstr ""
+msgstr "如此慷慨的主人。我向您保证，绝不会给您添麻烦。"
 
 msgctxt "speaker:Metis"
 msgid "A most kind offer, but I'll sleep here tonight if that is fine with you. The fire...it's awfully calming."
-msgstr ""
+msgstr "真是个体贴的提议，不过今晚我就在这儿过夜吧。只要您不介意就好。这炉火……真让人安心。"
 
 msgctxt "speaker:Razaphel"
 msgid "A most surprising answer."
-msgstr ""
+msgstr "真是个令人惊讶的回答。"
 
 msgctxt "speaker:Maeiv"
 msgid "A most wise decision, my dear."
-msgstr ""
+msgstr "明智之举，我的爱人。"
 
 msgctxt "speaker:Narrator"
 msgid "A mother always knew."
-msgstr ""
+msgstr "母亲向来知晓。"
 
 msgctxt "speaker:Razaphel"
 msgid "A murderer and his victim, would equally go to the same place."
-msgstr ""
+msgstr "杀人者与受害者，终将归于同一处。"
 
 msgctxt "speaker:Narrator"
 msgid "A murmur ran through the crowd like lightning."
-msgstr ""
+msgstr "人群中响起一阵如闪电般的低语。"
 
 msgctxt "speaker:Narrator"
 msgid "A muscle long unused but now trained was flexed."
-msgstr ""
+msgstr "一条久未使用却已训练有素的肌肉紧绷起来。"
 
 msgctxt "speaker:Narrator"
 msgid "A musky stench that added to her revulsion of him."
-msgstr ""
+msgstr "一股令人作呕的麝香臭味，更添她对他的厌恶。"
 
 msgctxt "speaker:Narrator"
 msgid "A muted scream rang out, drowned by his grinding teeth and growling rage."
-msgstr ""
+msgstr "一声压抑的尖叫响起，却被他咬合的牙齿和咆哮的怒火淹没。"
 
 msgctxt "speaker:Narrator"
 msgid "A mutual madness overtook them as they continued deep into the night."
-msgstr ""
+msgstr "他们一同陷入疯狂，直至深夜。"
 
 msgctxt "speaker:Narrator"
 msgid "A naked woman in Rosanna would bring the street to a stop, but here, she barely seemed to solicit more than a quick appreciative glance."
-msgstr ""
+msgstr "在罗莎娜，一个赤身裸体的女人能让整条街道驻足，但在这里，她似乎连多争取一个匆匆一瞥都做不到。"
 
 msgctxt "speaker:Narrator"
 msgid "A nation where ordinary people did not have to live in fear of its own soldiers and nobles."
-msgstr ""
+msgstr "一个普通人不必畏惧本国士兵与贵族的国度。"
 
 msgctxt "speaker:Xanthippe"
 msgid "A natural aptitude, but such is no replacement for commitment. That's what's changed."
-msgstr ""
+msgstr "天分虽好，却抵不过决心。这才是改变之处。"
 
 msgctxt "speaker:Narrator"
 msgid "A nature like this could never have existed in her home country, she realized. Simply because the ever growing masses of people would seize on it eventually."
-msgstr ""
+msgstr "这样的天性在她故乡绝不可能存在，她意识到这一点。毕竟，日益膨胀的民众迟早会将其据为己有。"
 
 msgctxt "speaker:Narrator"
 msgid "A near army of servants rushed into the room, carrying an almost equally impossible amount of food."
-msgstr ""
+msgstr "一群近卫仆从冲入房间，搬运着几乎同样难以想象的食物。"
 
 msgctxt "speaker:Narrator"
 msgid "A near madness came over her, tears flowing past her face, as she found herself begging him a third time."
-msgstr ""
+msgstr "她几近疯狂，泪水顺着脸颊滑落，这是她第三次向他乞求。"
 
 msgctxt "speaker:Narrator"
 msgid "A neighbouring kingdom might take her in, but so dire was the news from across the ocean, that she didn't even know if any still stood against Hassar's horde."
-msgstr ""
+msgstr "邻国或许能收留她，但大洋彼岸传来的消息太过绝望，她甚至不知是否还有谁能抵挡哈萨尔的军团。"
 
 msgctxt "speaker:Narrator"
 msgid "A nervous innkeeper came up to her table and served her some beer and food."
-msgstr ""
+msgstr "一个神色慌张的客栈老板走到桌边，为她端来了啤酒和食物。"
 
 msgctxt "speaker:Narrator"
 msgid "A nervous panic."
-msgstr ""
+msgstr "一阵恐慌。"
 
 msgctxt "speaker:Narrator"
 msgid "A nervousness came over her."
-msgstr ""
+msgstr "一阵不安袭上她心头。"
 
 msgctxt "speaker:Narrator"
 msgid "A nervousness seemed to grip him. Then again, her brother had been plagued with nervousness all his life."
-msgstr ""
+msgstr "一种紧张感似乎攫住了他。毕竟，她哥哥一生都饱受神经质的困扰。"
 
 msgctxt "speaker:Narrator"
 msgid "A new couple approached."
-msgstr ""
+msgstr "一对新人走近了。"
 
 msgctxt "speaker:Narrator"
 msgid "A new door."
-msgstr ""
+msgstr "一扇新门。"
 
 msgctxt "speaker:Narrator"
 msgid "A new feeling began to spring in Sarah."
-msgstr ""
+msgstr "莎拉心中涌起一股新的感觉。"
 
 msgctxt "speaker:Ayaka"
 msgid "A new friend, have we?"
-msgstr ""
+msgstr "新交的朋友，是这样吗？"
 
 msgctxt "speaker:Narrator"
 msgid "A new lease on life."
-msgstr ""
+msgstr "重获新生。"
 
 msgctxt "speaker:Narrator"
 msgid "A new life."
-msgstr ""
+msgstr "新的生活。"
 
 msgctxt "speaker:Narrator"
 msgid "A new report had come in."
-msgstr ""
+msgstr "一份新的报告传来。"
 
 msgctxt "speaker:Narrator"
 msgid "A new understanding had grown between them."
-msgstr ""
+msgstr "他们之间已生出新的默契。"
 
 msgctxt "speaker:Carolyn"
 msgid "A new warlord has risen, or to be exact, several of them. Each claiming title to the horde, but each as spurious as the other."
-msgstr ""
+msgstr "一位新的军阀崛起了，或者更准确地说，有好几位。每个人都声称拥有兽群的称号，但彼此之间都同样虚伪。"
 
 msgctxt "speaker:Captain Belmont"
 msgid "A nice offer, blondie."
-msgstr ""
+msgstr "不错的提议，金发女郎。"
 
 msgctxt "speaker:Samayra"
 msgid "A nobody. You risked your life, facing down a demon, just to save me, a girl that meant nothing to you."
-msgstr ""
+msgstr "无名之辈。你冒死面对恶魔，只为救我——一个对你毫无意义的女孩。"
 
 msgctxt "speaker:Xanthippe"
 msgid "A nudge here, a tug there."
-msgstr ""
+msgstr "这里推一下，那里拉一把。"
 
 msgctxt "speaker:Narrator"
 msgid "A pain she desired, and a pleasure that harmed her."
-msgstr ""
+msgstr "她渴望的痛苦，与那伤害她的欢愉。"
 
 msgctxt "speaker:Narrator"
 msgid "A pain that came as pleasure."
-msgstr ""
+msgstr "那痛楚来得如同欢愉。"
 
 msgctxt "speaker:Narrator"
 msgid "A pain that was no pain, carried Sarah further over the edge of pleasure."
-msgstr ""
+msgstr "那并非痛苦的痛楚，反而将莎拉推向了极乐之巅。"
 
 msgctxt "speaker:Narrator"
 msgid "A pained expression moved across his face, for a brief moment, then he banished it."
-msgstr ""
+msgstr "痛苦的表情在他脸上掠过，转瞬即逝，随即被他驱散。"
 
 msgctxt "speaker:Narrator"
 msgid "A pained regret in her voice. Not tonight, and perhaps not ever."
-msgstr ""
+msgstr "她声音里带着痛苦的遗憾。今夜不行，或许永远都不行。"
 
 msgctxt "speaker:Narrator"
 msgid "A pained smile appeared on Cassius' face."
-msgstr ""
+msgstr "卡修斯脸上浮现出痛苦的笑容。"
 
 msgctxt "speaker:Narrator"
 msgid "A pained smile on his face."
-msgstr ""
+msgstr "他脸上带着痛苦的笑容。"
 
 msgctxt "speaker:Narrator"
 msgid "A painful pull on her hair, but the pain felt only like pleasure."
-msgstr ""
+msgstr "扯着她的头发，痛楚却只带来快感。"
 
 msgctxt "speaker:Narrator"
 msgid "A pair of small glasses balanced on the tip of his nose."
-msgstr ""
+msgstr "鼻梁上架着一副小巧的眼镜。"
 
 msgctxt "speaker:Narrator"
 msgid "A pale blue flame emerged from the palm of her hand, spreading around her hand."
-msgstr ""
+msgstr "她掌心燃起一抹苍白的蓝光，光芒在她四周蔓延。"
 
 msgctxt "speaker:Narrator"
 msgid "A pale blue light errupted from her eyes and mouth, a crackling sound like lightning roared through the throne room."
-msgstr ""
+msgstr "一道苍白的蓝光从她眼中和口中迸发，伴随着雷鸣般的噼啪声，在王座大厅中轰鸣。"
 
 msgctxt "speaker:Narrator"
 msgid "A panicked expression on his face, he raised his blade to block her attack."
-msgstr ""
+msgstr "他脸上满是惊恐，举起刀刃格挡她的攻击。"
 
 msgctxt "speaker:Narrator"
 msgid "A panicked expression on his face."
-msgstr ""
+msgstr "他脸上满是惊恐。"
 
 msgctxt "speaker:Narrator"
 msgid "A panicked scout ran over."
-msgstr ""
+msgstr "一名惊慌失措的侦察兵跑了过来。"
 
 msgctxt "speaker:Sarah"
 msgid "A paradise."
-msgstr ""
+msgstr "天堂。"
 
 msgctxt "speaker:Narrator"
 msgid "A part of her could never forget that, if not for Kate's intervention, she herself would have been captured and likely treated no different than this woman."
-msgstr ""
+msgstr "她的一部分永远无法忘记，若非凯特的干预，她自己本会被俘，下场恐怕与这女人无异。"
 
 msgctxt "speaker:Narrator"
 msgid "A part of her hoped so. A part of her feared."
-msgstr ""
+msgstr "她的一部分心存希望，另一部分却充满恐惧。"
 
 msgctxt "speaker:Narrator"
 msgid "A part of her hurt at the thought."
-msgstr ""
+msgstr "想到这些，她心中隐隐作痛。"
 
 msgctxt "speaker:Narrator"
 msgid "A part of her wanted to resist it, but Sarah also knew that he was right."
-msgstr ""
+msgstr "她有一部分想要反抗，但莎拉也明白他是正确的。"
 
 msgctxt "speaker:Narrator"
 msgid "A part of her wanted to run back inside, but she also knew she could not live in that house forever."
-msgstr ""
+msgstr "她的一部分想要逃回屋内，但也明白自己无法永远住在那栋房子里。"
 
 msgctxt "speaker:Narrator"
 msgid "A part of her wanted to tell Marius...but the man was his father."
-msgstr ""
+msgstr "她的一部分想告诉马里乌斯……但那个人是他的父亲。"
 
 msgctxt "speaker:Narrator"
 msgid "A part of her wanted to tell him to get lost."
-msgstr ""
+msgstr "她的一部分想要让他滚蛋。"
 
 msgctxt "speaker:Narrator"
 msgid "A part of herself became cold and calculating."
-msgstr ""
+msgstr "她的一部分变得冰冷而算计。"
 
 msgctxt "speaker:Sarah"
 msgid "A party? Shouldn't they ask the kitchen staff then?"
-msgstr ""
+msgstr "派对？他们不该先问问厨房的人吗？"
 
 msgctxt "speaker:Narrator"
 msgid "A passing army drew some attention, but they were a curiosity to the people here."
-msgstr ""
+msgstr "路过的军队吸引了些许目光，但在这里的人们眼中，他们不过是稀罕之物。"
 
 msgctxt "speaker:Narrator"
 msgid "A path that she could follow, but perhaps above all, something tha could make her powerful. She'd never have to be scared again."
-msgstr ""
+msgstr "一条她可以追随的道路，但更重要的是，某种能赋予她力量的东西。从此，她再也不必恐惧。"
 
 msgctxt "speaker:Narrator"
 msgid "A pause lingered between as the soldiers continued to celebrate, ignorant of anything else."
-msgstr ""
+msgstr "士兵们继续欢庆，对周遭的一切浑然不觉，空气中弥漫着片刻的凝滞。"
 
 msgctxt "speaker:Narrator"
 msgid "A pause lingered in the air."
-msgstr ""
+msgstr "空气里弥漫着片刻的沉寂。"
 
 msgctxt "speaker:Narrator"
 msgid "A pause lingered in the room."
-msgstr ""
+msgstr "房间里一片死寂。"
 
 msgctxt "speaker:Narrator"
 msgid "A pause lingered, and the hall was quiet as a grave."
-msgstr ""
+msgstr "空气里弥漫着停顿，大厅静得如同坟墓。"
 
 msgctxt "speaker:Narrator"
 msgid "A pause lingered."
-msgstr ""
+msgstr "短暂的沉默在房间里蔓延。"
 
 msgctxt "speaker:Narrator"
 msgid "A pause lingered. Neither seemed to want to say anything, fearing it would be the last thing they say to one another."
-msgstr ""
+msgstr "短暂的沉默。两人都似乎不愿开口，生怕这是彼此最后的言语。"
 
 msgctxt "speaker:Narrator"
 msgid "A pause lingered. Sarah tapped the table with her fingers."
-msgstr ""
+msgstr "沉默持续着。莎拉用手指轻敲桌面。"
 
 msgctxt "speaker:Narrator"
 msgid "A pause lingered. Then, Jasmine spoke."
-msgstr ""
+msgstr "片刻的沉默。随后，茉莉开口了。"
 
 msgctxt "speaker:Narrator"
 msgid "A pause."
-msgstr ""
+msgstr "沉默。"
 
 msgctxt "speaker:Narrator"
 msgid "A pause. No response."
-msgstr ""
+msgstr "沉默。无人应答。"
 
 msgctxt "speaker:Narrator"
 msgid "A pauze hung between them."
-msgstr ""
+msgstr "两人之间，静默如常。"
 
 msgctxt "speaker:Tribesman"
 msgid "A payment will go a long way in easing their concerns...but I must insist on another."
-msgstr ""
+msgstr "一笔酬金足以缓解他们的忧虑……但我还有另一个要求。"
 
 msgctxt "speaker:Narrator"
 msgid "A peace she hadn't felt since the tragedy of her country. The death of her brother."
-msgstr ""
+msgstr "自国家悲剧与兄长离世以来，她未曾感受到的和平。"
 
 msgctxt "speaker:Narrator"
 msgid "A peaceful mood came over her as she sank deeper into the bed, until eventually, she could no longer resist the pull of sleep."
-msgstr ""
+msgstr "随着她渐渐沉入床榻，一种平和的情绪笼罩了她，直至最终再也无法抗拒睡意的牵引。"
 
 msgctxt "speaker:Narrator"
 msgid "A pensive expression came on Samayra's face for a moment."
-msgstr ""
+msgstr "萨梅拉的脸上浮现出一丝沉思的神情。"
 
 msgctxt "speaker:Narrator"
 msgid "A perfect image of his ravaging her, humiliating her."
-msgstr ""
+msgstr "他凌辱她、羞辱她的完美幻象。"
 
 msgctxt "speaker:Narrator"
 msgid "A perfect moment of rest."
-msgstr ""
+msgstr "片刻的安宁。"
 
 msgctxt "speaker:Garret"
 msgid "A person can punish themselves for the rest of their lives. Can keep doing it until they break under their own beating."
-msgstr ""
+msgstr "人可以自我惩罚，直至余生。可以一直这样下去，直到在自残中崩溃。"
 
 msgctxt "speaker:Dalia"
 msgid "A person's connection to magic is tied to the world itself."
-msgstr ""
+msgstr "人与魔法的连结，系于世界本身。"
 
 msgctxt "speaker:Narrator"
 msgid "A person."
-msgstr ""
+msgstr "一个人。"
 
 msgctxt "speaker:Carolyn"
 msgid "A petty man."
-msgstr ""
+msgstr "卑鄙小人。"
 
 msgctxt "speaker:Sarah"
 msgid "A pig? No."
-msgstr ""
+msgstr "猪？不。"
 
 msgctxt "speaker:Narrator"
 msgid "A pit grew in her stomach, when suddenly, the memories returned to her."
-msgstr ""
+msgstr "她胃里仿佛被挖空了一块，就在这一刻，记忆如潮水般涌回。"
 
 msgctxt "speaker:Narrator"
 msgid "A place of importance. A place that decided how the world moved."
-msgstr ""
+msgstr "一个重要的地方。一个决定世界如何运转的地方。"
 
 msgctxt "speaker:Hassar"
 msgid "A place seperated from the world outside. A place that could remind me of who I am, where I can by myself without fear of showing weakness."
-msgstr ""
+msgstr "一个与外界隔绝的地方。一个能让我想起自己是谁、让我可以独自待着而不必担心暴露弱点的地方。"
 
 msgctxt "speaker:Narrator"
 msgid "A place she had learned about in books. Books that spoke of the entrepeneurial spirit of the people of Lethram."
-msgstr ""
+msgstr "一个她在书中了解过的地方。那里记载着莱特拉姆人民的企业家精神。"
 
 msgctxt "speaker:Narrator"
 msgid "A place to which she would return."
-msgstr ""
+msgstr "她会重返的地方。"
 
 msgctxt "speaker:Carolyn"
 msgid "A place where I could meet the famous Rose Knight and test if she was who I suspected. And you proved to be so much more."
-msgstr ""
+msgstr "一个能让我遇见传奇玫瑰骑士、验证她是否如我所料的地方。而你，更胜一筹。"
 
 msgctxt "speaker:Narrator"
 msgid "A place where people went to dissapear."
-msgstr ""
+msgstr "人们消失的地方。"
 
 msgctxt "speaker:Narrator"
 msgid "A place with decent people. No criminals roaming every street corner. A place where she could gather her thoughts and plan."
-msgstr ""
+msgstr "一个好人聚居的地方。没有罪犯在街角游荡。一个能让她静心思考、谋划未来的地方。"
 
 msgctxt "speaker:Narrator"
 msgid "A plague, several years back, and that had been that."
-msgstr ""
+msgstr "几年前的一场瘟疫，之后便再无音讯。"
 
 msgctxt "speaker:Sarah"
 msgid "A plan?"
-msgstr ""
+msgstr "计划？"
 
 msgctxt "speaker:Hugh"
 msgid "A plant root, if you burn it and inhale the vapors, it will make a day pass like a dream."
-msgstr ""
+msgstr "一种植物根茎，若将其烧灼并吸入其蒸气，便能令一日恍如梦境。"
 
 msgctxt "speaker:Narrator"
 msgid "A plate of partially eaten food was in front of him."
-msgstr ""
+msgstr "他面前放着一盘半吃的食物。"
 
 msgctxt "speaker:Narrator"
 msgid "A plaything for the Tribesmen. That is what she had become."
-msgstr ""
+msgstr "沦为部落人的玩物。她已堕落到这般地步。"
 
 msgctxt "speaker:Narrator"
 msgid "A pleasant pain spread through her body as she arched her back."
-msgstr ""
+msgstr "一股令人愉悦的痛楚传遍她的全身，她挺起了腰背。"
 
 msgctxt "speaker:Sarah"
 msgid "A pleasure to meet all of you."
-msgstr ""
+msgstr "见到各位，真是荣幸。"
 
 msgctxt "speaker:Narrator"
 msgid "A pleasured pain roared through Sarah's body as she felt his dominating hands."
-msgstr ""
+msgstr "快感与痛楚在莎拉体内轰鸣，她感受到他掌控的双手。"
 
 msgctxt "speaker:Narrator"
 msgid "A pointless task, for seemingly no end."
-msgstr ""
+msgstr "无谓的徒劳，仿佛永无止境。"
 
 msgctxt "speaker:Narrator"
 msgid "A poor decision, she realized with the next load landed half across her chin and half in her open mouth."
-msgstr ""
+msgstr "她意识到这是个糟糕的决定，当下一股巨浪将她半张脸和敞开的嘴淹没。"
 
 msgctxt "speaker:Sarah"
 msgid "A possible weakness you could exploit is-"
-msgstr ""
+msgstr "你可以利用的一个弱点是——"
 
 msgctxt "speaker:Narrator"
 msgid "A power unlike any she had ever known before."
-msgstr ""
+msgstr "一种前所未见的力量。"
 
 msgctxt "speaker:Narrator"
 msgid "A powerful grunt rang out through the room as he finished inside of her."
-msgstr ""
+msgstr "一声粗犷而满足的闷哼在房间里响起，他就这样在她体内结束了。"
 
 msgctxt "speaker:Alaric"
 msgid "A practical fortress in the heart of East Lethram."
-msgstr ""
+msgstr "东列特拉姆心脏地带，一座实用的堡垒。"
 
 msgctxt "speaker:Narrator"
 msgid "A practical surrender."
-msgstr ""
+msgstr "无奈的屈服。"
 
 msgctxt "speaker:Narrator"
 msgid "A practiced machine of human misery."
-msgstr ""
+msgstr "人类苦难的精密机器。"
 
 msgctxt "speaker:Varga"
 msgid "A pretender?"
-msgstr ""
+msgstr "冒牌货？"
 
 msgctxt "speaker:Narrator"
 msgid "A pretense of someone playing tougher than they were."
-msgstr ""
+msgstr "装模作样地逞强。"
 
 msgctxt "speaker:Narrator"
 msgid "A pretty girl or a mage would both turn heads. A pretty girl that was a mage, of course she'd draw attention."
-msgstr ""
+msgstr "漂亮的少女或是法师都会引人注目，而身为法师的漂亮少女，自然更会吸引目光。"
 
 msgctxt "speaker:Sarah"
 msgid "A price?"
-msgstr ""
+msgstr "要价？"
 
 msgctxt "speaker:Narrator"
 msgid "A priest, older than her but younger than her soon-to-be-husband, stood near the altar."
-msgstr ""
+msgstr "一位牧师站在祭坛旁，他比她年长，却比她即将迎娶的新郎年轻。"
 
 msgctxt "speaker:Sarah"
 msgid "A prince and princess need their sleep, or they never grow up and stay small forever."
-msgstr ""
+msgstr "王子和公主需要睡眠，否则他们将永远长不大，永远是个小不点。"
 
 msgctxt "speaker:Narrator"
 msgid "A princess turned mercenary. A mercenary turned commander. Died at the hands of Vaelen."
-msgstr ""
+msgstr "公主沦为佣兵，佣兵晋升统帅，最终死于瓦伦之手。"
 
 msgctxt "speaker:Narrator"
 msgid "A princess turned sailor. A sailor turned slave. Wife to an orc."
-msgstr ""
+msgstr "公主沦为水手，水手沦为奴隶，成了兽人的妻子。"
 
 msgctxt "speaker:Narrator"
 msgid "A princess turned slave. A slave turned wife. A wife turned mother."
-msgstr ""
+msgstr "公主沦为奴隶，奴隶沦为妻室，妻室沦为母亲。"
 
 msgctxt "speaker:Narrator"
 msgid "A princess turned slave. Loyal servant to her master. A Mother."
-msgstr ""
+msgstr "沦为奴隶的公主。忠实的仆人。母亲。"
 
 msgctxt "speaker:Narrator"
 msgid "A princess without a country, but a princess still..."
-msgstr ""
+msgstr "一个没有国家的公主，却依然是个公主……"
 
 msgctxt "speaker:Narrator"
 msgid "A princess without a country. A sailor. Adrift on the seas of the world."
-msgstr ""
+msgstr "没有国家的公主。一名水手。漂泊在世界之海上。"
 
 msgctxt "speaker:Narrator"
 msgid "A princess without a country. A sailor. Wife of Nick."
-msgstr ""
+msgstr "没有国家的公主，水手，尼克的女夫。"
 
 msgctxt "speaker:Narrator"
 msgid "A princess without a country. A soldier. Lover to Atilla."
-msgstr ""
+msgstr "一个没有国家的公主。一名士兵。阿提拉的情人。"
 
 msgctxt "speaker:Narrator"
 msgid "A princess without a kingdom was no princess at all."
-msgstr ""
+msgstr "没有王国的公主，根本不算什么公主。"
 
 msgctxt "speaker:Narrator"
 msgid "A princess."
-msgstr ""
+msgstr "公主。"
 
 msgctxt "speaker:Narrator"
 msgid "A princess. A sailor. A goblin's wife."
-msgstr ""
+msgstr "公主。水手。哥布林的女人。"
 
 msgctxt "speaker:Cassius"
 msgid "A prized one, to be sure, but a slave all the same."
-msgstr ""
+msgstr "确实是个宝贝，但终究还是个奴隶。"
 
 msgctxt "speaker:Narrator"
 msgid "A problem had begun to take shape. Though they made a good team, they in fact seemed to make too much of a good team."
-msgstr ""
+msgstr "麻烦的雏形已然显现。他们虽配合默契，却似乎过于默契了。"
 
 msgctxt "speaker:Sarah"
 msgid "A prodigy, huh?."
-msgstr ""
+msgstr "天才？哼。"
 
 msgctxt "speaker:Hecate"
 msgid "A product of the endless scratching claws of our enemy."
-msgstr ""
+msgstr "我们敌人那永不停歇的利爪所孕育出的产物。"
 
 msgctxt "speaker:Narrator"
 msgid "A promise of safety if she retreated."
-msgstr ""
+msgstr "若她退却，便许以安全。"
 
 msgctxt "speaker:Man"
 msgid "A proper and rightious man, that held loyal to you and your family."
-msgstr ""
+msgstr "一位正直且忠诚的君子，始终忠于您与您的家族。"
 
 msgctxt "speaker:Narrator"
 msgid "A proposal like this, equally bold as it was base."
-msgstr ""
+msgstr "如此大胆却又卑鄙的提议。"
 
 msgctxt "speaker:Narrator"
 msgid "A proposal on how to organize the Union Kingdom's armies, should they unify."
-msgstr ""
+msgstr "关于若联合王国统一时如何整编其军队的提议。"
 
 msgctxt "speaker:Narrator"
 msgid "A pulled string here, a pulled string there."
-msgstr ""
+msgstr "这里拉一根弦，那里扯一根线。"
 
 msgctxt "speaker:Narrator"
 msgid "A pulse, like the beating of a heart."
-msgstr ""
+msgstr "一阵悸动，宛如心脏的跳动。"
 
 msgctxt "speaker:Sarah"
 msgid "A punk?"
-msgstr ""
+msgstr "朋克？"
 
 msgctxt "speaker:Narrator"
 msgid "A purple haze filled the shabby apartment."
-msgstr ""
+msgstr "紫色的薄雾弥漫在这间破旧的公寓里。"
 
 msgctxt "speaker:Sarah"
 msgid "A question?"
-msgstr ""
+msgstr "疑问吗？"
 
 msgctxt "speaker:Narrator"
 msgid "A quiet pause lingered for a moment."
-msgstr ""
+msgstr "片刻的寂静悄然延续。"
 
 msgctxt "speaker:Narrator"
 msgid "A rapturous applause exploded, echoing loudly against the walls of the castle."
-msgstr ""
+msgstr "雷鸣般的掌声轰然爆发，在城堡的墙壁间久久回荡。"
 
 msgctxt "speaker:Narrator"
 msgid "A rare few spoke in her native language, welcoming her."
-msgstr ""
+msgstr "只有寥寥数人用她的母语欢迎她。"
 
 msgctxt "speaker:Narrator"
 msgid "A rare few were caught alive, mostly becaused they had been too wounded to fight to their deaths."
-msgstr ""
+msgstr "极少数人侥幸活了下来，多半是因为伤势过重，无力战至死地。"
 
 msgctxt "speaker:Narrator"
 msgid "A rare few, however, sat effortlessly upon the throne and instead appeared larger."
-msgstr ""
+msgstr "然而，极少数人却毫不费力地端坐于王座之上，反而显得更为高大。"
 
 msgctxt "speaker:Gilead"
 msgid "A rare gift for any mortal to see the inside of this place."
-msgstr ""
+msgstr "凡人能得见此地内景，实乃罕见之殊荣。"
 
 msgctxt "speaker:Narrator"
 msgid "A raven-haired servant girl, perhaps only just twenty, did her best to carry a plate stacked with food."
-msgstr ""
+msgstr "一个黑发女仆，或许刚满二十岁，正尽力端着盛满食物的盘子。"
 
 msgctxt "speaker:Narrator"
 msgid "A real army, the kind she had, was more than just men and horses."
-msgstr ""
+msgstr "真正的军队，她所拥有过的那种，远不止是男人和马匹。"
 
 msgctxt "speaker:Narrator"
 msgid "A real bed. An actual bed."
-msgstr ""
+msgstr "一张真正的床。实实在在的床。"
 
 msgctxt "speaker:Xanthippe"
 msgid "A real mage would have been moving."
-msgstr ""
+msgstr "真正的法师本该在移动。"
 
 msgctxt "speaker:Narrator"
 msgid "A real princess didn't go out to the forest at night, alone, with a near stranger, and suck him off for a story."
-msgstr ""
+msgstr "真正的公主不会大半夜独自跑到森林里，跟个半生不熟的家伙干那种事，就为了听个故事。"
 
 msgctxt "speaker:Narrator"
 msgid "A reason to keep on, push forward, to fight."
-msgstr ""
+msgstr "继续前行的理由，战斗的理由。"
 
 msgctxt "speaker:Sarah"
 msgid "A reason?"
-msgstr ""
+msgstr "理由？"
 
 msgctxt "speaker:Narrator"
 msgid "A red mist splattered out as the sheer force of the creature's tail ripped them apart."
-msgstr ""
+msgstr "鲜红的血雾四溅，怪物的尾巴以巨大的力量将她们撕成了碎片。"
 
 msgctxt "speaker:Scout"
 msgid "A regiment of Tribesmen soldiers is in control of they city, and they're out in force."
-msgstr ""
+msgstr "一支部落士兵的军团已掌控了这座城市，他们兵力充足。"
 
 msgctxt "speaker:Narrator"
 msgid "A regiment wasn't too bad in terms of numbers. Still, they had the advantage of holding the city walls."
-msgstr ""
+msgstr "就兵力而言，一个团也不算差。不过，他们占据着城墙，这是他们的优势。"
 
 msgctxt "speaker:Narrator"
 msgid "A relationship of a kind...it terrified her."
-msgstr ""
+msgstr "一种这样的关系……令她恐惧。"
 
 msgctxt "speaker:Narrator"
 msgid "A relaxing pain ran through her arms, the kind that did not stress her, but rather only reminded her of the extends of her body."
-msgstr ""
+msgstr "一股舒缓的痛楚流过她的双臂，那种痛楚并不给她带来压力，反而只是提醒她身体的延展。"
 
 msgctxt "speaker:Narrator"
 msgid "A relic from when Xan had last been here, years ago."
-msgstr ""
+msgstr "这是 Xan 多年前最后一次造访时留下的遗物。"
 
 msgctxt "speaker:Sarah"
 msgid "A reluctant offer is still an offer."
-msgstr ""
+msgstr "勉强的提议依然是提议。"
 
 msgctxt "speaker:Narrator"
 msgid "A reminder from the Khan to her of where the stood. What had become of her. Her people."
-msgstr ""
+msgstr "这是可汗给她留下的提醒，告诉她自己身处何地、已沦落为何等境地，以及她的子民如今又成了什么模样。"
 
 msgctxt "speaker:Narrator"
 msgid "A reminder of just how long this house had sat empty."
-msgstr ""
+msgstr "这座宅邸空无一人已有多久。"
 
 msgctxt "speaker:Narrator"
 msgid "A reminder that would last for a while."
-msgstr ""
+msgstr "这提醒会持续一段时间。"
 
 msgctxt "speaker:Sarah"
 msgid "A reminder to them, and to myself, about where each stands."
-msgstr ""
+msgstr "这是对他们，也是对我自己的提醒，关于各自所处的位置。"
 
 msgctxt "speaker:Narrator"
 msgid "A reply, but not an answer."
-msgstr ""
+msgstr "回应，却非答案。"
 
 msgctxt "speaker:Kate"
 msgid "A report from the authorities."
-msgstr ""
+msgstr "来自当局的报告。"
 
 msgctxt "speaker:Narrator"
 msgid "A repressed sobbing sound slipped out from Kate."
