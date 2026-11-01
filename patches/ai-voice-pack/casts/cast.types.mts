@@ -1,8 +1,8 @@
 /**
  * Общий тип контракта каста для casts/voices/{Имя}/{Имя}.mts.
  *
- * Зеркало python-контракта `tools/generate/scripts/voicekit/contract.py`
- * (pydantic CastContract): строгие свои поля, только они — никаких extra.
+ * Контракт каста: единица истины здесь (python-дубликат voicekit/contract.py
+ * выпилен 2026-11-01 как мёртвый): строгие свои поля, только они — никаких extra.
  *
  * Использование:  import type { CastContract } from "../cast.types.mts";
  * Проверка:       npx tsc --noEmit (корневой tsconfig).

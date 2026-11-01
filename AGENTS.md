@@ -186,7 +186,7 @@ tools/generate/scripts/
                                #   model_dir) + TS-контур генерации:
                                #   worker.mts     # клиент шима: протокол v2 (PCM),
                                #                 #   ретрай TextEncodeInput, trim, кодирование
-                               #   trim.mts       # паттерн-трим (порт trim_tail_burst.py)
+                               #   trim.mts       # паттерн-трим хвостовых артефактов
                                #   audio.mts      # f32le pipe -> loudnorm -> libopus -ar sr
                                #                 #   -> .part -> rename; wav-фолбэк (saveWavChain)
                                #   fake_worker.mts # фейковый шим для тестов worker'а
@@ -228,11 +228,6 @@ tools/generate/scripts/
   beastify.py                  # нелюдские голоса: пресеты orc/demon/monster
                                #   (pitch+formant вниз, тёмный EQ, acrusher, гроул-субтон,
                                #   модуляция/реверб) + loudnorm -16 LUFS/TP -1.5
-  trim_tail_burst.py           # паттерн-трим хвостовых артефактов (CLI по wav;
-                               #   в генерации алгоритм живёт в voicekit/trim.mts)
-  levelnorm.py                 # выравнивание: -16 LUFS / TP -1.5 (CLI по *.wav —
-                               #   только рефы/легаси; в генерации те же LOUD_ARGS
-                               #   применяет voicekit/audio.mts)
   voice_status.mts             # СТАТУС И ПРОГНОЗ генерации: готово (стем opus/wav)
                                #   по языкам/аркам, %, размер, воркеры, скорость,
                                #   прогноз (--fast без замера). ВСЕГДА для «статус?»
@@ -297,19 +292,19 @@ tools/generate/scripts/
 
 ### Граница (шаг «cosyworker → TS», 2026-10-23)
 
-| Слой                                                                   | Язык   | Файлы                                                                                |
-| ---------------------------------------------------------------------- | ------ | ------------------------------------------------------------------------------------ |
-| Оркестрация батча: каталог, фильтры, эмоции, логи, ETA                 | TS     | `voice_batch.mts`                                                                    |
-| Клиент шима: протокол v2, ретрай TextEncodeInput, trim, ffmpeg-цепочка | TS     | `voicekit/worker.mts`, `voicekit/trim.mts`, `voicekit/audio.mts`                     |
-| Инференс (модель CV3, torch)                                           | python | `cosyworker.py` — ЕДИНСТВЕННЫЙ python контура генерации                              |
-| Рефы/голоса/статус/разметка                                            | TS     | `add_candidate`, `voice_manage`, `voice_status`, `emotion_tag` и пр.                 |
-| CLI-легаси (на вымирание)                                              | python | `beastify.py`, `levelnorm.py`, `trim_tail_burst.py`, `voice_design.py`, `voicekit/*` |
+| Слой                                                                   | Язык   | Файлы                                                                |
+| ---------------------------------------------------------------------- | ------ | -------------------------------------------------------------------- |
+| Оркестрация батча: каталог, фильтры, эмоции, логи, ETA                 | TS     | `voice_batch.mts`                                                    |
+| Клиент шима: протокол v2, ретрай TextEncodeInput, trim, ffmpeg-цепочка | TS     | `voicekit/worker.mts`, `voicekit/trim.mts`, `voicekit/audio.mts`     |
+| Инференс (модель CV3, torch)                                           | python | `cosyworker.py` — ЕДИНСТВЕННЫЙ python контура генерации              |
+| Рефы/голоса/статус/разметка                                            | TS     | `add_candidate`, `voice_manage`, `voice_status`, `emotion_tag` и пр. |
+| CLI-легаси (на вымирание)                                              | python | `beastify.py`, `voice_design.py`, `voicekit/*` (шимы инференса)      |
 
 Протокол v2 (2026-10-23): шим отдаёт СЫРОЙ PCM (`pcm_b64` = float32 LE mono,
 плюс поле `sr`), файлов не пишет. Дальше всё на TS: ретрай холодного фронтенда
 (TextEncodeInput, «повтор через 3с») — `worker.mts`; паттерн-трим
-«пауза+всплеск» — `voicekit/trim.mts` (порт `trim_tail_burst.py`);
-кодирование — `voicekit/audio.mts` (pipe f32le → loudnorm -16 LUFS/TP -1.5 →
+«пауза+всплеск» — `voicekit/trim.mts`; кодирование — `voicekit/audio.mts`
+(pipe f32le → loudnorm -16 LUFS/TP -1.5 →
 libopus 24k с ОБЯЗАТЕЛЬНЫМ выходным `-ar sr` → `.part` → rename; wav-фолбэк
 `saveWavChain` там же).
 
@@ -474,9 +469,8 @@ texts — рус. фразы с ЯВНЫМ признаком пола; файл
 
 ## Тримминг хвостов (паттерн)
 
-`trim_tail_burst.py`: тишина ≥80мс → короткий звук ≤500мс, упирающийся в конец
-файла = артефакт → режем. Запуск: `--dry-run` (отчёт), `--in-place` (применение),
-`--dir` (батч).
+`voicekit/trim.mts`: тишина ≥80мс → короткий звук ≤500мс, упирающийся в конец
+файла = артефакт → режем. В батче применяется автоматически (`worker.mts`).
 
 ## A/B-тестирование голосов
 
@@ -622,7 +616,7 @@ Unicode-ударение **U+0301** после ударной гласной Р�
 ```bash
 # Вся TS-матрица (из корня репы; скиллы + пайплайн + scripts/):
 node --test $(find .opencode/skills patches/ai-voice-pack/tools scripts -name "*.test.mts" -not -path "*/node_modules/*")
-# Гард сборки — pytest только для остатка python (voicekit/beastify/levelnorm/trim_tail_burst/voice_design/build):
+# Гард сборки — pytest только для остатка python (voicekit/beastify/voice_design/build):
 cd patches/ai-voice-pack && python -m pytest tests/ -v
 ```
 

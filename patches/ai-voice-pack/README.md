@@ -26,11 +26,11 @@
 - `tools/build/` — сборка дистрибутива (`build_pack.py`);
 - `tools/generate/scripts/` — весь пайплайн:
   - `voicekit/` — ядро: `paths.py` (ЕДИНСТВЕННОЕ место с путями),
-    `catalog.py`, `contract.py`, `config.py`, `fs.py`;
+    `config.py`, `tts_env.py`, `model_dir.py`, `cv3.py`;
   - `voice_ctl.mts` + `voice-*.cmd` + `vox-*.cmd` — пульт очередями (статус/старт/пауза/остановка/soft-stop, cosy+vox); двойной клик.
-  - `voice_batch.py`, `voice_queue.sh` — генерация (resumable, низкий
+  - `voice_batch.mts`, `voice_queue.sh` — генерация (resumable, низкий
     приоритет, старт только через пульт);
-  - `voice_status/sync/manage/preview/...` — статус, каталог, отчёты;
+  - `voice_status/sync/manage/...` — статус, каталог, отчёты;
   - `shots_capture.ps1` + `zz_capture.rpy` — съёмка UI для лендинга;
 - `registry/` — ЕДИНАЯ БД мода (реестр спикеров who_map.jsonl, uid-исключения
   overrides.jsonl, голоса кастов casts/; карта — registry/README.md);

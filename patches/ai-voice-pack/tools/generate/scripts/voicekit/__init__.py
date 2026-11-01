@@ -4,11 +4,11 @@
 Код извне репозитория (W40K tools, чужие скрипты) НЕ вызывается и НЕ
 правится — нужная функция КОПИРУЕТСЯ сюда и используется своя.
 
-Единственный источник правды по раскладке проекта (paths), контракту
-каста (contract), безопасным файловым операциям (fs), окружению TTS
+Единственный источник правды по раскладке проекта (paths), окружению TTS
 (tts_env) и модельным директориям CosyVoice3 с атомарной правкой yaml
-(model_dir). (Загрузчик каталога catalog.py удалён 2026-10-22:
-источник фраз — po/template.pot, TS-пайплайн.)
+(model_dir). (Загрузчик каталога catalog.py удалён 2026-10-22: источник
+фраз — po/template.pot, TS-пайплайн; contract.py/fs.py удалены 2026-11-01
+как мёртвые — их занял TS-контур cast.types/cast_contract/node:fs.)
 """
 
-from . import paths, contract, fs, tts_env, model_dir  # noqa: F401
+from . import paths, tts_env, model_dir  # noqa: F401

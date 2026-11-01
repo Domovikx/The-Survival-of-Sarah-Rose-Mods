@@ -1,6 +1,6 @@
 # [2026-10-24] Ресёрч: инвентаризация python — список миграции на TS vs выпиливание протухшего
 
-Статус: READY
+Статус: DONE (2026-11-01: ресёрч проведён, вердикты применены владельцем)
 
 ## Задача от пользователя
 
@@ -147,6 +147,88 @@ grep'ом по package.json/.cmd/.mts/скиллам/докам):
 - `tasks/2026-10-24-python-ts-inventory.md` — журнал решения (этот файл).
 - Возможные удаления `.py`/тестов — по вердиктам (отдельные коммиты, с разрешения).
 - `tasks/README.md` — статус → DONE в конце.
+
+## Журнал решения (ресёрч выполнен 2026-11-01)
+
+Вердикты по КАЖДОМУ `.py` дерева `patches/` (греп вызывателей по .mts/.cmd/.ps1/.sh/
+package.json/скиллам; импортёры — по `grep "^from|^import"`):
+
+**Группа A — оставить python (torch/инференс; граница AGENTS):**
+
+- `cosyworker.py` — инференс CosyVoice; вызыватели: voicekit/worker.mts (шим).
+- `voxcpmworker.py` — **НОВЫЙ с инвентаризации** (2026-10-30): инференс VoxCPM2,
+  вызыватель voxcpm_bench.mts. Тот же класс, что cosyworker.
+- `voice_design.py` — инференс Qwen3-TTS; импортит `voicekit {paths, tts_env}`.
+- `asr_refs.py` — **НОВЫЙ с инвентаризации**: ASR-транскрипты рефов для
+  `voxcpm_bench --hifi` (whisper-инференс). Тот же класс.
+- `voicekit/{__init__,config,cv3,model_dir,paths,tts_env}` — шимы инференса
+  (config: cosyworker/voice_design; cv3: cosyworker; tts_env: cosyworker/model_dir/
+  voice_design; paths: voice_design/voice_autocommit; model_dir: гард test_model_dir).
+
+**Группа В — удалить (мёртвое/дубликаты портированного), НУЖЕН ОДИН «да» владельца:**
+
+- `trim_tail_burst.py` (221) — алгоритм портирован в `voicekit/trim.mts`
+  (trim.test.mts — тест-паритет); живых вызовов НЕТ, только доки («CLI-легаси»).
+- `levelnorm.py` (123) — паритет в `voicekit/audio.mts` (normalizeWav/LOUD_ARGS);
+  живых вызовов НЕТ.
+- `voicekit/contract.py` (94) — импортёров НЕТ; зеркало `cast.types.mts`/`cast_contract.mts`.
+- `voicekit/fs.py` (63) — импортёров НЕТ (TS-контур использует node:fs).
+- `output/voice/wake_at_23.py` (45) — 0 ссылок (артефакт; имя жило в
+  schtasks-истории, сейчас планировщик зовёт installed voice-sched-start.cmd).
+- `gen_ui_round.py` (88) — 0 ссылок; `images/ui/round*.png` (4 шт.) лежат в репе
+  с 2026-10 (зеркальный коммит 7b57b65cd). Потеря: перегенерация 9-slice пилюль —
+  вернуть из git-истории, если понадобится.
+
+**Группа Б — живое, решение владельца (мигрировать/оставить):**
+
+- `beastify.py` (149) — нелюдские пресеты; в КОДЕ живых вызовов НЕТ (греп
+  beastify.py по .mts/.sh/.cmd пуст), пресет-конфиг живёт в `voice_presets.mts`
+  (секция beastify). Озвученные beast-касты (King-On-The-Outside, Voidling)
+  уже имеют рефы. Предложение: **удалить** (YAGNI; фича возвращается из
+  git при новом нелюдском касте, тогда же — TS-порт).
+- `voice_autocommit.py` (198) + `voice_push_chunked.py` (334) — расписания
+  МЕРТВЫ: schtasks TSSR-VoicePush/TSSR-VoiceStart — One Time Only от 12.10,
+  Next Run N/A. ⚠ **ЖИВОЙ НАХОД: TSSR-voice-23 (Daily 23:00, Enabled) падает**
+  (Last Run 31.10, Last Result 1) — зовёт УСТАРЕВШУЮ установленную копию
+  `<игра>/tools/voice-sched-start.cmd` (пульт с 30.10 перевешан на node,
+  установленная копия не обновлялась). Решение владельцу: обновить installed
+  .cmd переустановкой мода или удалить schtasks, если ночной автозапуск не нужен.
+- `build_pack.py` (232) — `npm run build:pack`, pytest-гарды; работает.
+  Порт на TS возможен (zip = node:zlib/archiver), но не срочен — предлагаю
+  оставить до закрытия групп В и голосов.
+- `thermal_guard.py` (379) — `thermal-guard.cmd` + `test_thermal_guard.py`;
+  оставить (Win-специфика, живой защитник генерации) — кандидат на TS позже.
+- `shots_for_site.py` (96) + `read_persistent.py` (73) — stdlib-конвертация
+  скриншотов, зовутся из `shots_capture.ps1`; оставить (низкая ценность порта).
+
+**pytest:** 7 файлов — судьба по модулям: `test_model_dir` (группа A — остаётся),
+`test_build_layout` (гард сборки — остаётся), `test_voice_config` (рантайм-гард —
+остаётся), `conftest` (остаётся); `test_thermal_guard`/`test_voice_autocommit`/
+`test_voice_push_chunked` — по вердиктам владельца (вместе с модулями).
+
+## Применение (2026-11-01, разрешение владельца получено)
+
+- Удалены: `trim_tail_burst.py`, `levelnorm.py`, `voicekit/contract.py`,
+  `voicekit/fs.py`, `wake_at_23.py`, `gen_ui_round.py`, `voice_autocommit.py`
+  (+ `voice-autocommit.cmd`, `tests/test_voice_autocommit.py`).
+- `beastify.py`: импорт `levelnorm` заменён встроенными константами
+  (LOUD_I/TP/LRA из voicekit.config, дефолты -16/-1.5/11) — фича нелюдских
+  голосов сохранена.
+- `voicekit/__init__.py`: реэкспорт contract/fs убран.
+- Новый гард `tests/test_python_leftovers.py`: удалённые не возвращаются,
+  остаток .py компилируется, beastify-константы на месте, voicekit
+  импортируется без contract/fs.
+- Доки поправлены: AGENTS.md (дерево/таблица/тримминг/pytest-команда),
+  tssr-voice SKILL.md, README.md, MOD.md, cast.types.mts.
+- Schtasks владельца: TSSR-voice-23 (ночной, падал на несуществующем
+  installed `.cmd`) + мёртвые TSSR-VoicePush/TSSR-VoiceStart — УДАЛЕНЫ
+  (выбор владельца: старт озвучки вручную через пульт).
+- Регресс: pytest **67 passed** (включая новый гард), node --test
+  **546 pass / 0 fail / 5 skipped**, `npm run build:pack` — успешно.
+- Оставлено осознанно: `beastify.py` (фича), `voice_push_chunked.py`
+  (живой CLI, расписание мертво), `build_pack.py`/`thermal_guard.py`/
+  `shots_for_site.py`/`read_persistent.py` (работают; TS-порт — низкий
+  приоритет), вся группа A (torch-инференс + шимы).
 
 ## Связи
 

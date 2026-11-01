@@ -42,7 +42,8 @@
   - **Стиль кнопок — Material-подобные пилюли** (правка владельца «строгие
     прямоугольники -> красивее»): 9-slice рамка скруглённых картинок
     `images/ui/round*.png` + TintMatrix-окраска (в Ren'Py 7.4 нет нативного
-    border-radius). Ассеты генерятся `tools/generate/scripts/gen_ui_round.py` (stdlib-only).
+    border-radius). Ассеты генерировались одноразовым stdlib-тулом (выпилен
+    2026-11-01; перегенерация — из git-истории).
   - Два hook-экрана: `tssr_menu_hook` (главное меню, показ штатным label'ом
     `before_main_menu` — движок в меню overlay-экраны прячет, поэтому этому
     показ не нужен от списка) и `tssr_game_hook` (в `config.overlay_screens` —

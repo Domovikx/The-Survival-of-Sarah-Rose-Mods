@@ -156,11 +156,22 @@ trim_tail_burst, gen_ui_round, shots_for_site, thermal_guard,
 voice_autocommit, voice_push_chunked, read_persistent, build_pack,
 voicekit/{paths,contract,fs,tts_env,config,cv3,model_dir}.
 
-### Осталось (не в объёме 2026-10-22)
+### 2026-10-30 — порт пульта закрыл «Осталось»
 
-- [ ] Порт `voice_ctl.mts` + очередей (компактные пути-приёмки ниже:
-      `npm run voice:generate`, `voice:status`, пауза без python).
-- [ ] Сверка чисел `voice_status.mts` vs python на одном дереве (python
-      voice_status.py уже удалён — сверка невозможна как была задумана;
-      кросс-проверка заменена на 16 тестов портов + смоук на реальном дереве).
-- [ ] Пункт приёмки про `voice_queue.sh` заменён — НЕТ: очереди остались bash.
+- **`voice_ctl.mts`** — пульт очередями (Windows, node, только stdlib):
+  status/start/stop/soft-stop/pause/resume/watch/logs; пауза — NtSuspendProcess
+  через child_process powershell (порция suspend-вызова ушла в пульт);
+  12 `.cmd` перевешаны на node; `voice_ctl.py` и `tests/test_voice_ctl.py`
+  УДАЛЕНЫ; тесты `voice_ctl.test.mts` 12/12. Коммит 37d6a341f (+ 5e6d0f82c —
+  input-aware throttling/EcoQoS/affinity).
+- Остаток bash: `voice_queue.sh` остаётся bash-обёрткой (запуск очереди с
+  правильным приоритетом/логом из пульта) — вне критерия «python-файлов не
+  остаётся» (bash, не python).
+
+### Остаток (актуально 2026-11-01)
+
+- [x] Группа В инвентаризации — УДАЛЕНО 2026-11-01 (trim_tail_burst, levelnorm,
+      voicekit/{contract,fs}, wake_at_23, gen_ui_round, voice_autocommit;
+      вердикты и регресс — в `tasks/2026-10-24-python-ts-inventory.md`).
+- [ ] Опциональные порты группы Б: `build_pack.py`, `thermal_guard.py`,
+      `shots_for_site.py`/`read_persistent.py` — низкий приоритет (KISS: работают).

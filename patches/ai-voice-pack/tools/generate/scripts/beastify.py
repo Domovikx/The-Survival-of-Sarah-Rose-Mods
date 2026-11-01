@@ -26,12 +26,17 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from levelnorm import LOUD_I, LOUD_TP, LOUD_LRA  # noqa: E402
-
 FFMPEG = 'ffmpeg'
 FFPROBE = 'ffprobe'
 from voicekit import config as _cfg  # noqa: E402
 SR = int(_cfg.get('audio', 'sr', 24000))
+
+# Выравнивание -16 LUFS / TP -1.5 / LRA 11 (встроено из levelnorm.py при его
+# выпиле 2026-11-01; те же значения применяет voicekit/audio.mts)
+_LOUD = _cfg.section('audio').get('loudness', {})
+LOUD_I = float(_LOUD.get('i', -16.0))
+LOUD_TP = float(_LOUD.get('tp', -1.5))
+LOUD_LRA = float(_LOUD.get('lra', 11.0))
 
 # пресеты живут в config/voice_presets.yaml -> beastify (см. voicekit.config).
 # Здесь только минимальный фолбэк, если файла конфига нет.
