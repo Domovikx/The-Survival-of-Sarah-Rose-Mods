@@ -52,6 +52,12 @@
   - Проверка перед правкой: «что из этого станет проще/короче/единственным
     источником?» Если ответа нет — правка лишняя, значит YAGNI: не делай её.
 - **НИКОГДА не коммитить без явного разрешения пользователя.**
+- **Общие тулзы и задачи НЕ в этом репо** (договорённость 2026-11-01): всё, что не
+  привязано к TSSR (веб-поиск, LLM-интеграции типа Strata, глобальные скиллы,
+  ресёрч-задачи сервисов) заводится в **`C:\Users\Domo\workspace\indie-ops\`**
+  (скиллы в `skills/`, задачи в `tasks/` — формат и протокол ресёрча в их
+  README и `tasks/AGENT.md`); сюда — только ссылка на задачу там. Проектная
+  тулза, выросшая до общей, переносится туда.
 - **ДЛИНА НЕ ЯВЛЯЕТСЯ И НИКОГДА НЕ БУДЕТ КРИТЕРИЕМ КАЧЕСТВА ПЕРЕВОДА**
   (приказ владельца 2026-10-26, после двух рецидивов: ratio-лимит выпилен
   24.10, класс D «короткий msgid → длинный» выпилен 26.10). Переводы не
@@ -259,9 +265,12 @@ tools/generate/scripts/
 
 ### Ребут ПК: порядок запуска (двойной клик, без админа)
 
-1. LLM — действий НЕ требует: LM Studio стартует автозагрузкой
-   (Startup → `start-lmstudio.cmd`: сервер + qwen3.5-9b на GPU);
-   контроль: `lms server status`. Освободить VRAM под озвучку —
+1. LLM — **автозагрузка ОТКЛЮЧЕНА владельцем 2026-11-01** (ярлык
+   `LM Studio Server.lnk` переименован в `.disabled` в shell:startup —
+   не жрать VRAM/CPU после ребута без дела). Запуск вручную, когда нужен
+   (po:translate, чат-задачи): `tools/generate/scripts/start-lmstudio.cmd`
+   (сервер + qwen3.5-9b на GPU); контроль: `lms server status`.
+   Освободить VRAM под озвучку —
    `tools/generate/scripts/stop-lmstudio.cmd`
 2. `tools/generate/scripts/voice-start.cmd` — обе очереди озвучки (resumable, низкий приоритет)
 3. `tools/generate/scripts/vox-start.cmd` — Vox-очередь 11 языков (VoxCPM,
@@ -405,7 +414,7 @@ node tools/generate/scripts/voice_batch.mts --lang ru --dry-run  # план фр
 (перевод) и `.opencode/skills/po-audit/SKILL.md` (поиск проблем в готовом).
 
 ```bash
-npm run po:translate -- --lang es   # построчный перевод: LM Studio + LLM-судья
+npm run po:translate -- --lang es   # построчный перевод: Strata + LLM-судья
 npm run po:translate:status         # стоп / пустых / скорость по всем языкам
 npm run po:translate:stop           # чистая остановка с сохранением прогресса
 npm run po:audit                    # «в чём лажа» в уже переведённом
@@ -625,9 +634,38 @@ cd patches/ai-voice-pack && python -m pytest tests/ -v
 Железо: Ryzen 7 7800X3D, 32 ГБ RAM, **NVIDIA RTX 5070 Ti 16 ГБ (CUDA)**,
 Windows 11.
 
-### Запуск и остановка (скрипты в tools/generate/scripts/)
+### Пульт бэкендов: scripts/llm_backend.mts (2026-11-01)
 
-**LM Studio** (winget `ElementLabs.LMStudio`, v0.4.26) в headless-режиме:
+**Strata — ОСНОВНОЙ бэкенд LLM** (решение владельца 2026-11-01, A/B против
+Colibri: prefill ×6, стабильность под нагрузкой; журнал —
+`tasks/2026-11-01-strata-local-llm.md`). Порт **8080**, модель
+`qwen3.6-35b-a3b-ud-q4_k_xl` (VRAM ~15.5 ГБ + RAM ~24 ГБ — параллельно с ней
+НИЧЕГО тяжёлого: не LM Studio, не vox, не вторая LLM).
+
+```bash
+node scripts/llm_backend.mts status     # кто поднят (проба портов) + активный
+node scripts/llm_backend.mts use colibri|strata|lmstudio  # переключить (конфиг tmp/llm_backend.json)
+# Старт Strata (~90 с, детач). ВАЖНО: --parallel 8 (дефолт «auto» = 1 слот на
+# 16-гигабайтной карте → вся очередь сериализуется, first token 10.8с!) и
+# --context 16k (8 слотов × 32k KV не влезают: 1.43 ГБ/слот × 8 > 7.9 свободных):
+PY="$LOCALAPPDATA/Strata/terminal/current/python/python.exe"
+"$PY" "$LOCALAPPDATA/Strata/terminal/current/strata.py" launch --model ud-q4_k_xl \
+  --family qwen36 --context 16k --parallel 8 --vision off --tune skip \
+  --access local --port 8080
+# Стоп: ... launch --stop ; проверка слотов: ... strata.py status → «Slots ... /8»
+```
+
+Приоритет разрешения: CLI-флаги `--base-url/--model` > env `TSSR_LLM_URL/
+TSSR_LLM_MODEL` > env `TSSR_LLM=<name>` > конфиг > дефолт (strata). Все
+потребители (po_translate, po_judge_check, commit_msg, emotion_judge,
+emotion_tag) зовут `resolveBackend()` — **дефолты в их коде не править**.
+Провайдеры opencode: `strata-local/`, `colibri-local/`, `lmstudio-local/`.
+Colibri (порт 8000, `%LOCALAPPDATA%\colibri-install`, тот же GGUF) —
+запасной (ниша: экономия RAM); LM Studio — легаси/чат-сабагенты.
+Подробности команд всех трёх — скилл `lmstudio-ctl`.
+
+### LM Studio (легаси)
+
 CLI `~/.lmstudio/bin/lms.exe`, сервер на **127.0.0.1:1234**
 (OpenAI-compatible `/v1`). ВСЕГДА используй `127.0.0.1:1234`, не localhost.
 
@@ -673,16 +711,18 @@ CLI `~/.lmstudio/bin/lms.exe`, сервер на **127.0.0.1:1234**
   в `models` провайдера `~/.config/opencode/opencode.json`;
 - `qwen3.5:27b` (17–20 ГБ) в 16 ГБ VRAM не влезает целиком — не ставить;
 - **`emotion_tag.mts --llm-url` зовёт OpenAI-compatible `/v1/chat/completions`
-  (порт 2026-10-22, заменил ollama `/api/generate`) — работает и с LM Studio
-  (`http://127.0.0.1:1234`), и с ollama (`http://127.0.0.1:11434`); модель —
-  `--llm-model` (по умолчанию phi4-mini; для LM Studio — `qwen/qwen3.5-9b`).
+  (порт 2026-10-22, заменил ollama `/api/generate`) — работает с любым
+  бэкендом из пульта (`resolveBackend()`): Strata `:8080`, Colibri `:8000`,
+  LM Studio `:1234`, ollama `:11434`; модель — `--llm-model` (дефолт берётся
+  из активного бэкенда).
 
 ### Подключение к opencode
 
-`~/.config/opencode/opencode.json` — провайдер `lmstudio-local`
-(openai-compatible, baseURL **http://127.0.0.1:1234/v1** — именно 127.0.0.1,
-не localhost!). Модель: qwen/qwen3.5-9b. Выбор в TUI: `/models` (или
-Shift+Tab) → LM Studio Local → qwen/qwen3.5-9b.
+`~/.config/opencode/opencode.json` — провайдеры **`strata-local`**
+(baseURL http://127.0.0.1:8080/v1, модель qwen3.6-35b-a3b-ud-q4_k_xl),
+`colibri-local` (:8000, qwen3.6-colibri) и `lmstudio-local` (:1234,
+qwen/qwen3.5-9b) — ВСЕГДА 127.0.0.1, не localhost. Выбор в TUI: `/models`
+(или Shift+Tab) → нужный провайдер.
 
 ВАЖНО (грабли 2026-09-04): если провайдера НЕТ в списке моделей — проверь
 `~/.config/opencode/opencode.jsonc` (грузится поверх opencode.json и

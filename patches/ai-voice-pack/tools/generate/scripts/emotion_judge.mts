@@ -18,6 +18,7 @@ import { pathToFileURL } from "node:url";
 
 import { EMOTIONS_JSON, voicedEntries } from "./emotion_tag.mts";
 import type { CatalogEntry } from "./voice_batch.mts";
+import { resolveBackend } from "../../../../../scripts/llm_backend.mts";
 
 export const JUDGE_SYSTEM =
   "You are a voice-direction QA reviewer for an adult visual novel. You get ONE game line " +
@@ -83,8 +84,9 @@ interface Opts {
 
 export async function run(opts: Opts): Promise<number> {
   const voiced = voicedEntries();
-  const baseUrl = process.env.LLM_URL ?? "http://127.0.0.1:1234";
-  const model = process.env.LLM_MODEL ?? "qwen/qwen3.5-9b";
+  const backend = resolveBackend();
+  const baseUrl = process.env.LLM_URL ?? backend.url;
+  const model = process.env.LLM_MODEL ?? backend.model;
 
   // источник тона: черновик (по умолчанию, если есть) или POT
   let draft: Record<string, string> = {};

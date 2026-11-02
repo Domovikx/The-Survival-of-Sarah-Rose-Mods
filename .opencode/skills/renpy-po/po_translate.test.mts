@@ -67,17 +67,30 @@ test("неизвестный язык падает с понятной ошиб�
 });
 
 test("parseArgs: дефолты и переопределения", () => {
-  const d = parseArgs(["--lang", "es"]);
-  assert.equal(d.lang, "es");
-  assert.equal(d.concurrency, 1);
-  assert.equal(d.threshold, 9);
-  assert.equal(d.judge, true);
-  assert.equal(d.model, "qwen/qwen3.5-9b");
-  const c = parseArgs(["--lang", "ja", "--limit", "5", "--no-judge", "--dry", "--concurrency", "3"]);
-  assert.equal(c.limit, 5);
-  assert.equal(c.judge, false);
-  assert.equal(c.dry, true);
-  assert.equal(c.concurrency, 3);
+  // Герметичность: пиним бэкенд через env, чтобы локальный tmp/llm_backend.json
+  // (переключение пультом scripts/llm_backend.mts) не ломал тест.
+  process.env.TSSR_LLM = "strata";
+  try {
+    const d = parseArgs(["--lang", "es"]);
+    assert.equal(d.lang, "es");
+    assert.equal(d.concurrency, 1);
+    assert.equal(d.threshold, 9);
+    assert.equal(d.judge, true);
+    assert.equal(d.model, "qwen3.6-35b-a3b-ud-q4_k_xl");
+    const c = parseArgs(["--lang", "ja", "--limit", "5", "--no-judge", "--dry", "--concurrency", "3"]);
+    assert.equal(c.limit, 5);
+    assert.equal(c.judge, false);
+    assert.equal(c.dry, true);
+    assert.equal(c.concurrency, 3);
+    // env-оверрайд модели (разовый запуск на другом бэкенде)
+    process.env.TSSR_LLM_MODEL = "other-model";
+    assert.equal(parseArgs(["--lang", "es"]).model, "other-model");
+    delete process.env.TSSR_LLM_MODEL;
+    // CLI-флаг выше env
+    assert.equal(parseArgs(["--lang", "es", "--model", "cli-model"]).model, "cli-model");
+  } finally {
+    delete process.env.TSSR_LLM;
+  }
 });
 
 test("extractJson: чистый JSON, JSON в обрамлении, мусор", () => {

@@ -1,17 +1,21 @@
 /**
  * po_translate.mts — система локальных高质量-переводов po/<lang>.po на
- * локальной LLM (LM Studio, OpenAI-compatible). Построчный перевод: каждая
- * запись — отдельный запрос с контекстом сцены, авточеками качества,
+ * локальной LLM (Strata, OpenAI-compatible на 127.0.0.1:8080; с 2026-11-01
+ * бэкенд — qwen3.6-35b-a3b-ud-q4_k_xl, решение владельца «качество
+ * первично», см. tasks/2026-11-01-strata-local-llm.md). Построчный перевод:
+ * каждая запись — отдельный запрос с контекстом сцены, авточеками качества,
  * судьёй-ревьюером и ретраем по фидбэку. Резюмабелен: переведённые не
  * трогаются, файл флушится каждые N записей (сбой процесса теряет ≤N).
  *
  * Конфиг выбран экспериментом 2026-10-23 (матрица A–F на qwen/mimo,
- * см. tasks/): qwen3.5-9b + reasoning_effort=none + temp 0.3 + few-shot
- * + retry + судья. ВАЖНО: thinking в LM Studio выключается ТОЛЬКО полем
- * reasoning_effort="none" (enable_thinking=false и think:false игнорируются,
- * reasoning съедает max_tokens и content пустой — ловушка №1).
+ * см. tasks/): temp 0.3 + few-shot + retry + судья; reasoning_effort=none.
+ * ВАЖНО: thinking выключается ТОЛЬКО полем reasoning_effort="none" —
+ * проверено и на LM Studio (enable_thinking=false игнорируется, баг
+ * lmstudio#1990), и на Strata (thinking:{type:"disabled"} НЕ работает,
+ * reasoning_effort="none" — работает, 2026-11-01): reasoning съедает
+ * max_tokens и content пустой — ловушка №1.
  *
- * ЗАПУСК (LM Studio поднят, модель загружена):
+ * ЗАПУСК (Strata поднята: strata launch --model ud-q4_k_xl ...):
  *   node .opencode/skills/renpy-po/po_translate.mts --lang es --limit 50
  *
  * УПРАВЛЕНИЕ ПО ТРЕБОВАНИЮ (механизм чистого стопа под коммит-чекпоинты,
@@ -44,8 +48,8 @@
  *                     «упрямых», которых судья гоняет по кругу)
  *   --no-judge        без LLM-судьи (только авточеки) — быстрее, но хуже
  *   --dry             только план (сколько записей, без перевода)
- *   --base-url URL    LM Studio (по умолчанию http://127.0.0.1:1234)
- *   --model NAME      модель (по умолчанию qwen/qwen3.5-9b)
+ *   --base-url URL    LLM-сервер (по умолчанию http://127.0.0.1:8080 — Strata)
+ *   --model NAME      модель (по умолчанию qwen3.6-35b-a3b-ud-q4_k_xl)
  *
  * Выход: po/<lang>.po перезаписан на месте (round-trip через renderPo
  * проверен байт-в-байт для всех 10 языков), отчёт и JSONL-выборка для
@@ -57,6 +61,7 @@ import { fileURLToPath, pathToFileURL } from "node:url";
 
 import { parsePo, renderPo, writePoAtomic } from "./po_core.mts";
 import type { PoEntry } from "./po_core.mts";
+import { resolveBackend } from "../../../scripts/llm_backend.mts";
 import { poHeaderLines } from "./po_update.mts";
 import { langProfile, languageRules } from "./po_langs.mts";
 import { loadPotIndex } from "./pot_resolve.mts";
@@ -107,8 +112,8 @@ export function parseArgs(argv: string[]): Opts {
     tries: Math.max(1, Number(f("tries", "3"))),
     judge: !argv.includes("--no-judge"),
     dry: argv.includes("--dry"),
-    baseUrl: f("base-url", "http://127.0.0.1:1234"),
-    model: f("model", "qwen/qwen3.5-9b"),
+    baseUrl: f("base-url", resolveBackend().url),
+    model: f("model", resolveBackend().model),
   };
 }
 

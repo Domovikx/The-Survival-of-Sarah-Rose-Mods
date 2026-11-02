@@ -6,8 +6,8 @@
  * Работает ТОЛЬКО при обычном `git commit` (без -m/-F/-C/-c, без merge/squash):
  * если сообщение уже задано пользователем или хуком — выходим и не трогаем файл.
  *
- * Вход: git diff --cached (stat + урезанный патч) -> qwen3.5-9b на
- * 127.0.0.1:1234 -> валидация формата Conventional Commits -> COMMIT_EDITMSG.
+ * Вход: git diff --cached (stat + урезанный патч) -> Strata qwen3.6-35b на
+ * 127.0.0.1:8080 -> валидация формата Conventional Commits -> COMMIT_EDITMSG.
  *
  * Безопасность (правило «не мешать»):
  *   - любой сбой/таймаут/отсутствие LLM => exit 0, файл НЕ трогается,
@@ -23,9 +23,10 @@ import { readFileSync, writeFileSync } from "node:fs";
 // СТИЛЬ (длина subject, переносы, markdown) живёт отдельно от СТРУКТУРЫ
 // (type(scope)) — см. commit_style.mts о том, почему это не про переводы.
 import { checkCommitMessage } from "./commit_style.mts";
+import { resolveBackend } from "./llm_backend.mts";
 
-const LLM_URL = "http://127.0.0.1:1234/v1/chat/completions";
-const MODEL = "qwen/qwen3.5-9b";
+const LLM_URL = `${resolveBackend().url}/v1/chat/completions`;
+const MODEL = resolveBackend().model;
 const TIMEOUT_MS = 30_000;
 const MAX_TOKENS = 400;
 /** Обрезка diff перед отправкой (po-файлы весят мегабайты). */

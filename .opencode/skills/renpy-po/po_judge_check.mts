@@ -20,6 +20,7 @@ import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { parsePo, type PoEntry } from "./po_core.mts";
 import { judgeVerified } from "./po_translate.mts";
+import { resolveBackend } from "../../../scripts/llm_backend.mts";
 
 const REPO = process.cwd();
 const PO = join(REPO, "patches", "ai-voice-pack", "po");
@@ -34,8 +35,8 @@ const has = (name: string): boolean => args.includes(`--${name}`);
 const LANG = flag("lang");
 const THRESHOLD = Number(flag("threshold", "9"));
 const JSON_OUT = has("json");
-const BASE = flag("base-url", "http://127.0.0.1:1234");
-const MODEL = flag("model", "qwen/qwen3.5-9b");
+const BASE = flag("base-url", resolveBackend().url);
+const MODEL = flag("model", resolveBackend().model);
 
 if (!LANG) {
   console.error("нужен --lang <код>");

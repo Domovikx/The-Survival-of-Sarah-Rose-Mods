@@ -9,7 +9,7 @@
  * создается ложное впечатление, что оно уже закоммичено.
  *
  * Сообщение коммита ГЕНЕРИРУЕТСЯ локальной LLM: хук .husky/prepare-commit-msg
- * вызывает scripts/commit_msg.mts (qwen3.5-9b на 127.0.0.1:1234). Скрипт не
+ * вызывает scripts/commit_msg.mts (Strata qwen3.6-35b на 127.0.0.1:8080). Скрипт не
  * передаёт -m, чтобы хук отработал; GIT_EDITOR=true чтобы git не открывал
  * редактор (нужен флаг --edit).
  *
@@ -156,7 +156,7 @@ if (dry) {
 // `git commit -- <пути>` записывает рабочее содержимое этих путей и НЕ трогает
 // остальное содержимое index — чужие стейджи остаются висеть, но не уезжают.
 const env: NodeJS.ProcessEnv = edit ? {} : { GIT_EDITOR: "true" };
-console.log("\n[po:commit] коммит (сообщение пишет локальная qwen3.5-9b)...");
+console.log("\n[po:commit] коммит (сообщение пишет локальная LLM на Strata)...");
 const out = run("git", ["commit", "--", ...poPaths], { env });
 
 const head = run("git", ["log", "-1", "--format=%B"]).trimEnd();

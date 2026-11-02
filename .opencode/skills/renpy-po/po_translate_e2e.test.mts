@@ -18,8 +18,8 @@ import type { PoEntry } from "./po_core.mts";
 
 const ON = process.env.TSSR_PO_E2E === "1";
 const REPO = join(import.meta.dirname, "..", "..", "..");
-const BASE = process.env.TSSR_PO_E2E_URL ?? "http://127.0.0.1:1234";
-const MODEL = process.env.TSSR_PO_E2E_MODEL ?? "qwen/qwen3.5-9b";
+const BASE = process.env.TSSR_PO_E2E_URL ?? "http://127.0.0.1:8080";
+const MODEL = process.env.TSSR_PO_E2E_MODEL ?? "qwen3.6-35b-a3b-ud-q4_k_xl";
 
 const CJK: Record<string, RegExp> = {
   ja: /[\u3040-\u30ff\u4e00-\u9fff]/g,

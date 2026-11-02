@@ -13,8 +13,8 @@
  *                            фразы; нейтральные остаются без тона (модель
  *                            берёт тон из текста)
  *   --llm-url URL            разметка локальной LLM через OpenAI-compatible
- *                            /v1/chat/completions (работает и с LM Studio
- *                            127.0.0.1:1234, и с ollama 11434); каждая фраза
+ *                            /v1/chat/completions (Strata 127.0.0.1:8080,
+ *                            LM Studio 1234, ollama 11434); каждая фраза
  *                            получает тон (DEFAULT_EMO для нейтральных)
  *   --tagged                 LLM: пере-размечать только уже помеченные
  *   --resume                 LLM: продолжить после обрыва — уже размеченные
@@ -27,6 +27,8 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
+
+import { resolveBackend } from "../../../../../scripts/llm_backend.mts";
 
 import { loadCatalog, type CatalogEntry } from "./voice_batch.mts";
 
@@ -254,7 +256,7 @@ export async function run(opts: MainOpts): Promise<number> {
   }
 
   if (opts.llmUrl) {
-    const model = opts.llmModel ?? "phi4-mini";
+    const model = opts.llmModel ?? resolveBackend().model;
     let tagged = 0;
     const t0 = Date.now();
     for (let i = 1; i <= voiced.length; i++) {
