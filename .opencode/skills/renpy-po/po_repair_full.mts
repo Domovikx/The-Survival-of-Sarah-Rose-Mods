@@ -42,10 +42,12 @@ import {
   chat,
   extractJson,
   extractTranslation,
+  genderLine,
   judgeVerified,
   systemPrompt,
 } from "./po_translate.mts";
 import { poHeaderLines } from "./po_update.mts";
+import { potIndex } from "./pot_resolve.mts";
 import { resolveBackend } from "../../../scripts/llm_backend.mts";
 
 const REPO = join(dirname(fileURLToPath(import.meta.url)), "..", "..", "..");
@@ -143,8 +145,9 @@ async function main(): Promise<void> {
   const voice = entries.filter((e) => e.msgid && e.msgstr.trim());
 
   function emotionOf(e: PoEntry): string | null {
-    const line = e.comments.find((c) => c.startsWith("emotion:"));
-    return line ? line.slice("emotion:".length).trim() || null : null;
+    // Тон/пол живут в POT (DRY); в po комментов НЕТ — старая реализация по
+    // комментариям po всегда возвращала null (правка шла без тона и без пола).
+    return potIndex().emotion(e.msgctxt, e.msgid);
   }
 
   const states = loadStatesFrom(jsonlPath);
@@ -184,14 +187,15 @@ async function main(): Promise<void> {
     );
   }
 
-  /** Промпт правки: правила перевода + замечания судьи. */
+  /** Промпт правки: правила перевода + замечания судьи + тон/пол из POT. */
   function repairUser(e: PoEntry, emotion: string | null, priorScore: number, issues: string[]): string {
     const issueList = issues.length ? issues.map((i) => `- ${i}`).join("\n") : "- (замечаний нет — оценка ниже порога)";
     const tone = emotion ? `\nTone of this line: ${emotion}` : "";
+    const gender = genderLine(e.msgctxt, e.msgid);
     return [
       `A translation of this game line was REJECTED by a quality reviewer (score ${priorScore}/10).`,
       `Fix it: address every issue below, keep everything that is already correct`,
-      `(names, quotes, placeholders, register, tone).${tone}`,
+      `(names, quotes, placeholders, register, tone, grammatical GENDER agreement).${tone}${gender ? `\n${gender}` : ""}`,
       ``,
       `EN source:`,
       e.msgid,

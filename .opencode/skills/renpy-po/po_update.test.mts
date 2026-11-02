@@ -161,3 +161,26 @@ test("повторный запуск по освежённому po — иде�
   assert.equal(twice.stats.legacyKept, once.stats.legacyKept, "legacy-записи не дублируются");
   assert.equal(twice.stats.retargeted, 0, "ретаргет уже применён");
 });
+
+test("speaker_gender течёт в .po, прочие комментарии вырезаются (исключение 2026-11-02)", () => {
+  const pot0 = potOf(SCRIPT_V1);
+  const entries = parsePo(pot0).filter((e) => e.msgid);
+  const hello = entries.find((e) => e.msgid === "Hello there!");
+  assert.ok(hello, "фикстура: строка есть");
+  hello.comments = [
+    "speaker_gender: M",
+    "arc: StoryBeginnings",
+    "uid: deadbeefdeadbeefdeadbeefdeadbeef",
+    "emotion: Warmly",
+  ];
+  const potPatched = renderPo(entries, poHeaderLines(pot0));
+  const po1 = poFromPot(potPatched);
+  const { entries: merged } = mergePoUpdate(po1, potPatched);
+  const h = merged.find((e) => e.msgid === "Hello there!");
+  assert.deepEqual(h?.comments, ["speaker_gender: M"], "в .po течёт ТОЛЬКО speaker_gender");
+  // идемпотентность повторного merge
+  const po2 = renderPo(merged, poHeaderLines(po1));
+  const again = mergePoUpdate(po2, potPatched);
+  const h2 = again.entries.find((e) => e.msgid === "Hello there!");
+  assert.deepEqual(h2?.comments, ["speaker_gender: M"], "повторный merge идемпотентен");
+});

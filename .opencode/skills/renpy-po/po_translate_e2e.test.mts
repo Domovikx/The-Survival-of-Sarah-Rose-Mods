@@ -44,7 +44,7 @@ function onTargetLang(lang: string, tr: string): boolean {
 
 /** Ранее отклонённые строки языка (msgids) — материал для добора. */
 function rejectedMsgids(lang: string, limit: number): string[] {
-  const f = join(REPO, "tmp", `po_translate_${lang}.jsonl`);
+  const f = join(REPO, "patches", "ai-voice-pack", "po", `${lang}.jsonl`);
   if (!existsSync(f)) return [];
   const out: string[] = [];
   const seen = new Set<string>();

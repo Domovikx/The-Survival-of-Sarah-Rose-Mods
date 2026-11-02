@@ -132,11 +132,14 @@ export function mergePoUpdate(poText: string, potText: string): UpdateResult {
     stats.legacyKept += 1;
   }
 
-  // Контракт языкового .po (DRY 2026-10-23): из POT в .po НЕ течёт НИЧЕГО —
-  // ни тона, ни arc/scene/uid: машинные метаданные живут только в POT и
-  // читаются обратным пайплайном pot_resolve.mts по ключу (msgctxt, msgid).
+  // Контракт языкового .po (DRY 2026-10-23): из POT в .po не течёт машинных
+  // метаданных (arc/scene/uid/тон) — они живут только в POT и читаются
+  // pot_resolve.mts по ключу (msgctxt, msgid). Исключение (решение владельца
+  // 2026-11-02): `#. speaker_gender: M|F|?` течёт инлайном — вынужденная мера
+  // для ревью «кто говорит» (короткий алиас spk_g отклонён — имя читаемое).
   for (const e of merged) {
-    e.comments = [];
+    const g = e.comments.find((c) => c.startsWith("speaker_gender:"));
+    e.comments = g ? [g] : [];
   }
 
   merged.sort(

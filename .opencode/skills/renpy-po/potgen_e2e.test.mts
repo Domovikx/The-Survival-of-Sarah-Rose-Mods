@@ -25,6 +25,7 @@ import {
   speakersMtsPath,
 } from "./potgen.mts";
 import { mergePoUpdate } from "./po_update.mts";
+import { SPEAKER_GENDER } from "../../../patches/ai-voice-pack/casts/gender.mts";
 
 const REPO_ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "..", "..");
 const GAME = process.env.TSSR_GAME ?? "C:/Program Files (x86)/Steam/steamapps/common/The Survival of Sarah Rose/game";
@@ -38,10 +39,18 @@ const HAVE_GAME = existsSync(join(GAME, "script.rpy"));
  * `#. emotion_new:` (2026-10-26) — иначе регенерация потеряла бы новый
  * тон и байт-в-байт сравнение упало бы после overlay.
  */
-function toneOpts(): { emotions?: Record<string, string>; emotionsNew?: Record<string, string> } {
+async function toneOpts(): Promise<{
+  emotions?: Record<string, string>;
+  emotionsNew?: Record<string, string>;
+  genders?: Record<string, string>;
+}> {
   if (!existsSync(POT_PATH)) return {};
   const text = readFileSync(POT_PATH, "utf-8");
-  return { emotions: loadEmotionsFromPot(text), emotionsNew: loadEmotionsFromPot(text, "emotion_new:") };
+  return {
+    emotions: loadEmotionsFromPot(text),
+    emotionsNew: loadEmotionsFromPot(text, "emotion_new:"),
+    genders: SPEAKER_GENDER, // тег #. speaker_gender (2026-11-02)
+  };
 }
 
 /** Дата из заголовка POT: "POT-Creation-Date: YYYY-MM-DD HH:MM+0000\n". */
@@ -101,9 +110,9 @@ test(
 test(
   "e2e: закоммиченный template.pot байт-в-байт совпадает со свежей генерацией (иначе — npm run potgen)",
   { skip: (!HAVE_GAME || !existsSync(POT_PATH)) && "нет игры или шаблона" },
-  () => {
+  async () => {
     const committed = readFileSync(POT_PATH, "utf-8");
-    const fresh = renderPot(scanGame(GAME, toneOpts()), potCreationDate(committed));
+    const fresh = renderPot(scanGame(GAME, await toneOpts()), potCreationDate(committed));
     if (fresh !== committed) {
       let i = 0;
       const n = Math.min(fresh.length, committed.length);
@@ -173,7 +182,7 @@ test(
 test(
   "e2e: симуляция новой версии игры — POT регенерируется, переводы переживают через po_update",
   { skip: !HAVE_GAME && "нет установки игры (TSSR_GAME)" },
-  () => {
+  async () => {
     // 1. Копия .rpy в repo tmp (правило: только локальный tmp репозитория).
     const simRoot = join(REPO_ROOT, "tmp", "e2e-newver");
     const copyDir = join(simRoot, "game");
@@ -182,7 +191,7 @@ test(
     for (const f of readdirSync(GAME)) {
       if (f.endsWith(".rpy")) copyFileSync(join(GAME, f), join(copyDir, f));
     }
-    const tones = toneOpts();
+    const tones = await toneOpts();
     const stripDate = (t: string): string => t.replace(/"POT-Creation-Date:[^"]*"/, "");
 
     // 2. Детерминизм: копия даёт POT, байт-в-байт равный закоммиченному.

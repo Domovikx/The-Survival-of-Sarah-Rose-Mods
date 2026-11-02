@@ -53,7 +53,7 @@
  *
  * Выход: po/<lang>.po перезаписан на месте (round-trip через renderPo
  * проверен байт-в-байт для всех 10 языков), отчёт и JSONL-выборка для
- * ушной проверки — tmp/po_translate_<lang>.log / .jsonl.
+ * ушной проверки — po/<lang>.log / po/<lang>.jsonl (рядом с переводом).
  */
 import { appendFileSync, existsSync, readFileSync, rmSync, statSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
@@ -64,7 +64,7 @@ import type { PoEntry } from "./po_core.mts";
 import { resolveBackend } from "../../../scripts/llm_backend.mts";
 import { poHeaderLines } from "./po_update.mts";
 import { langProfile, languageRules } from "./po_langs.mts";
-import { loadPotIndex } from "./pot_resolve.mts";
+import { potIndex } from "./pot_resolve.mts";
 
 // Последовательные await здесь ОСМЫСЛЕННЫ: перевод идёт строго построчно
 // (требование владельца — максимальное качество), а воркеры — это N
@@ -292,6 +292,32 @@ export function actionableJudgeIssues(issues: string[], lang: string): string[] 
 }
 
 /** User prompt: контекст соседних строк + тон из POT (обратный резолв) + спикер + EN-строка. */
+/**
+ * Строка пола спикера для промпта — переводчику И судье (одни правила рода).
+ * Источник: `#. speaker_gender:` в POT (контракт каста, casts/gender.mts);
+ * null — тега нет (не речь / данных нет). Красный флаг 2026-11-02: без пола
+ * модель перевела «Xanthippe (М): Но я радА» — женский род на мужчине.
+ */
+export function genderLine(msgctxt: string, msgid: string): string | null {
+  const g = potIndex().gender(msgctxt, msgid);
+  if (g === "M") {
+    return (
+      `speaker gender: M (мужчина) — EVERY agreement must be masculine: past tense, adjectives, adverbs ` +
+      `(«он пошёл», «я рад», «мой/моя->мой»); a feminine ending like «я рада» or «он пошла» is a DEFECT`
+    );
+  }
+  if (g === "F") {
+    return (
+      `speaker gender: F (женщина) — EVERY agreement must be feminine ` +
+      `(«она пошла», «я рада», «моя»); a masculine ending is a DEFECT`
+    );
+  }
+  if (g === "?") {
+    return `speaker gender: unknown (?) — infer it from the scene context once and keep every agreement consistent`;
+  }
+  return null;
+}
+
 export function userPrompt(
   entry: { msgctxt: string; msgid: string },
   prev: string[],
@@ -305,6 +331,8 @@ export function userPrompt(
     const emo = emotion ?? "Curiously observing";
     parts.push(`emotion: ${emo}`);
     parts.push(`speaker: ${entry.msgctxt || '"speaker:Narrator"'}`);
+    const gl = genderLine(entry.msgctxt, entry.msgid);
+    if (gl) parts.push(gl);
   } else {
     // UI/menu/speaker-name (демо-e2e, 2026-10-25): никакой выдуманной эмоции
     // диктора и бессмысленного «speaker: menu» — строка переводится как интерфейс.
@@ -668,8 +696,12 @@ export function judgeSystem(msgctxt: string): string {
 /** User-часть промпта судьи: языковой гейт + профиль + эмоция/категория + EN + TR. */
 export function judgeUser(lang: string, entry: PoEntry, tr: string, emotion: string | null): string {
   const p = langProfile(lang);
-  const emo = emotion ?? "-";
   const speech = isSpeechCtx(entry.msgctxt);
+  // Тон и пол — с фолбэком в POT: recheck-инструменты передают emotion=null
+  // (в po файлах комментов нет — DRY 2026-10-23), без фолбэка судья не видела
+  // ни тона, ни рода. Красный флаг 2026-11-02: «Xanthippe (М) → я радА».
+  const emo = emotion ?? (speech ? potIndex().emotion(entry.msgctxt, entry.msgid) : null) ?? "-";
+  const gl = speech ? genderLine(entry.msgctxt, entry.msgid) : null;
   // ЯЗЫКОВОЙ ГЕЙТ (бага 2026-10-25: it.po засорён испанским, pl — немецким,
   // судья ставил 9-10, потому что «по смыслу» перевод был верен): судья
   // обязан первым делом проверить, что candidate вообще на ЦЕЛЕВОМ языке.
@@ -708,7 +740,7 @@ export function judgeUser(lang: string, entry: PoEntry, tr: string, emotion: str
       // одно предложение judgeNotes, а JUDGE_SYSTEM требовал «lexicon in the
       // task rules» — судья досочивала по памяти и противоречила себе
       // («semen -> cum» против «esperma -> semen»), из-за чего ретраи топтались.
-      `${languageRules(lang)}\n\n${p.judgeNotes}\n\nemotion: ${emo}\nspeaker: ${entry.msgctxt || "-"}`
+      `${languageRules(lang)}\n\n${p.judgeNotes}\n\nemotion: ${emo}\nspeaker: ${entry.msgctxt || "-"}${gl ? `\n${gl}` : ""}`
     : `${p.judgeNotes}\n\ncategory: ${entry.msgctxt} (interface string — no narrator/emotion rules apply)`;
   // ФИКС 2026-10-26: авточек уже пропустил идентичность (имя/бренд/клавиша),
   // а судья вешала на неё «wrong language» и строка висела вечно
@@ -1029,7 +1061,7 @@ export function ctlStatus(langs: string[]): void {
     ).length;
     const running = isRunning(lang);
     const flag = stopRequested(lang);
-    const jsonlPath = join(TMP_DIR, `po_translate_${lang}.jsonl`);
+    const jsonlPath = join(PO_DIR, `${lang}.jsonl`);
     let done = 0;
     let rej = 0;
     let last = "-";
@@ -1079,13 +1111,13 @@ async function main(): Promise<void> {
     console.error(`${o.lang}: прогон уже идёт (см. po:translate:status). Дубль не запускаем.`);
     process.exit(1);
   }
-  const pot = loadPotIndex(); // DRY: тон/arc/scene — из POT обратным пайплайном
+  const pot = potIndex(); // DRY: тон/arc/scene/пол — из POT обратным пайплайном (общий кэш)
   const poPath = join(PO_DIR, `${o.lang}.po`);
   const text = readFileSync(poPath, "utf-8").replace(/\r\n/g, "\n");
   const header = poHeaderLines(text);
   const entries = parsePo(text).filter((e) => e.msgid);
-  const logPath = join(TMP_DIR, `po_translate_${o.lang}.log`);
-  const jsonlPath = join(TMP_DIR, `po_translate_${o.lang}.jsonl`);
+  const logPath = join(PO_DIR, `${o.lang}.log`);
+  const jsonlPath = join(PO_DIR, `${o.lang}.jsonl`);
 
   const ctxtList = o.ctxt
     .split(",")
@@ -1179,6 +1211,8 @@ async function main(): Promise<void> {
         const x = entries[idx + k];
         return x ? [`${x.msgctxt || ""} ${x.msgid}`] : [];
       };
+      // Пол спикера в каждую запись jsonl — ревью-журнал рядом с po (2026-11-02)
+      const gender = pot.gender(entry.msgctxt, entry.msgid) ?? undefined;
       try {
         const r = await translateEntry(
           o.baseUrl,
@@ -1202,7 +1236,14 @@ async function main(): Promise<void> {
           }
           appendFileSync(
             jsonlPath,
-            JSON.stringify({ lang: o.lang, msgid: r.msgid, msgstr: r.tr, judge: r.judgeScore, tries: r.tries }) + "\n",
+            JSON.stringify({
+              lang: o.lang,
+              msgid: r.msgid,
+              msgstr: r.tr,
+              judge: r.judgeScore,
+              tries: r.tries,
+              gender,
+            }) + "\n",
           );
         } else {
           rejected++;
@@ -1215,6 +1256,7 @@ async function main(): Promise<void> {
               issues: r.issues,
               judge: r.judgeScore,
               tries: r.tries,
+              gender,
             }) + "\n",
           );
         }
@@ -1230,7 +1272,10 @@ async function main(): Promise<void> {
       } catch (e) {
         rejected++;
         console.error(`  СБОЙ [${idx}]: ${String(e).slice(0, 200)}`);
-        appendFileSync(jsonlPath, JSON.stringify({ lang: o.lang, msgid: entry.msgid, error: String(e) }) + "\n");
+        appendFileSync(
+          jsonlPath,
+          JSON.stringify({ lang: o.lang, msgid: entry.msgid, error: String(e), gender }) + "\n",
+        );
       }
     }
   };

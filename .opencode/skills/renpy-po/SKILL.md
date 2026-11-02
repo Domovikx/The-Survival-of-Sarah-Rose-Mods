@@ -23,7 +23,7 @@ plural-формами) и `po/es.po` (испанский, кандидат №1 
 **Решение владельца (2026-10-20): каталог `po/` — источник истины текстовой
 стороны.** Карта источников:
 
-- `po/template.pot` — EN-текст + контексты + uid + тон; пишет ТОЛЬКО potgen
+- `po/template.pot` — EN-текст + контексты + uid + тон + пол спикера; пишет ТОЛЬКО potgen
   (e2e-гард байт-в-байт против игры);
 - `po/template.speakers.mts` — типизированный список спикеров POT
   (POT_SPEAKERS / PotSpeaker, `export type PotSpeaker = (typeof
@@ -65,23 +65,19 @@ npm run po:update
 #. arc: UnionKingdom
 #. scene: MercenaryQueen1
 #. uid: 928b18805931076c6fd6fe86d3d240c4
+#. speaker_gender: M
 #. emotion: Warmly, with affection
 msgctxt "speaker:Voice"
 msgid "Go to the ships!"
 msgstr ""
 ```
 
-Это формат POT. В языковом ru.po/es.po из POT течёт **только тон** —
-arc/scene/uid не дублируются (решение владельца 2026-10-22, прецедент
-NeonTranslator TCCN): связь идёт ключом (msgctxt, msgid) — через ключ
-запись .po резолвится в POT и оттуда берёт арку/сцену/uid:
-
-```po
-#. emotion: Warmly, with affection
-msgctxt "speaker:Voice"
-msgid "Go to the ships!"
-msgstr "На корабли!"
-```
+Это формат POT. В языковых ru.po/es.po из POT течёт **ТОЛЬКО `speaker_gender`**
+(исключение 2026-11-02: пол — вынужденная мера для инлайн-ревью «кто говорит»;
+arc/scene/uid/тон — НЕ течёт, DRY 2026-10-23; короткий алиас spk_g
+владелец отклонил — имя читаемое `speaker_gender`):
+связь идёт ключом (msgctxt, msgid), запись .po резолвится в POT и оттуда берёт
+арку/сцену/uid/тон через `pot_resolve.mts`.
 
 Контексты (msgctxt дисамбигует одинаковые реплики, как в Neon):
 
@@ -103,13 +99,21 @@ msgstr "На корабли!"
 ## Метаданные озвучки (комментарии `#.`)
 
 Полный набор (`arc/scene/uid/emotion`) живёт ТОЛЬКО в template.pot, и в
-языковые `po/*.po` не течёт **НИЧЕГО** (DRY 2026-10-23: раньше в .po течёк
+языковые `po/*.po` течёт **ТОЛЬКО `speaker_gender`** — исключение 2026-11-02 (решение
+владельца): пол спикера инлайном для ревью «кто говорит» (имя читаемое
+`speaker_gender`, алиас `spk_g` отклонён). Всё остальное — **НИЧЕГО** (DRY 2026-10-23: раньше в .po течёк
 только тон — убрано, экономия ~2.3 MB на язык / 22.8 MB на все 10). Кто
 нуждается в тоне/арке — берёт обратным пайплайном
-`pot_resolve.mts` (`loadPotIndex().resolve(msgctxt, msgid)` →
-`{uid, arc, scene, emotion, category, speaker}`, `null` при дрейфе), связь с
-POT идёт ключом (msgctxt, msgid). po:update (po_update.mts) комментарии в .po
-не пишет; po_translate читает тон через резолвер. Потребители резолвера:
+`pot_resolve.mts` (`potIndex().resolve(msgctxt, msgid)` →
+{uid, arc, scene, emotion, **gender**, category, speaker}, `null` при дрейфе), связь с
+POT идёт ключом (msgctxt, msgid). po:update (po_update.mts) копирует в .po
+**только `speaker_gender`**, остальные комментарии вырезает; po_translate читает тон и
+пол через резолвер (кэш `potIndex()`).
+**Пол спикера (`#. speaker_gender: M|F|?`)**: источник — контракт
+`casts/voices/{Имя}/{Имя}.mts` (поле `gender`), разворачивается
+`casts/gender.mts` при генерации POT (бага 2026-11-02: без тега модель
+перевела «Xanthippe (М) → Но я радА» — женский род на мужчине; тег идёт в
+промпт переводчика И судьи — родовые окончания становятся проверяемыми). Потребители резолвера:
 `po_translate.mts` (промпт+судья), будущие тулы ревью/озвучки. Каждый вид
 комментария:
 

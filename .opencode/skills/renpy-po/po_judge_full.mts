@@ -10,10 +10,13 @@
  * Использование:
  *   node .opencode/skills/renpy-po/po_judge_full.mts --lang ru
  *   node .opencode/skills/renpy-po/po_judge_full.mts --lang ru --concurrency 2 --limit 500
+ *   node .opencode/skills/renpy-po/po_judge_full.mts --lang ru --fast --limit 150  # A/B
  *
  * Флаги: --concurrency N (по умолчанию 1; сумма с po-очередью ≤ kv-slots Colibri=8),
  *        --limit N (строк в этом запуске), --threshold N (по умолчанию 9),
+ *        --fast (ОДИН вызов судьи вместо цепочки — режим A/B),
  *        --base-url/--model (оверрайд бэкенда).
+ * Окружение: TSSR_JUDGE_JSONL — путь к файлу статусов (для A/B-прогонов).
  *
  * Выход: прогресс в stdout; сводка в конце. Exit 0 — все ≥ порога,
  * 1 — есть ниже порога (список в tmp/po_judge_full_<lang>.bad.txt).
@@ -22,7 +25,7 @@ import { appendFileSync, existsSync, readFileSync, writeFileSync } from "node:fs
 import { join } from "node:path";
 
 import { parsePo, type PoEntry } from "./po_core.mts";
-import { judgeVerified } from "./po_translate.mts";
+import { judge, judgeVerified } from "./po_translate.mts";
 import { resolveBackend } from "../../../scripts/llm_backend.mts";
 
 const REPO = process.cwd();
@@ -41,6 +44,8 @@ const LIMIT = Number(flag("limit", "0"));
 const backend = resolveBackend();
 const BASE = flag("base-url", backend.url);
 const MODEL = flag("model", backend.model);
+/** --fast: ОДИН вызов судьи вместо цепочки judgeVerified (A/B для ускорения). */
+const FAST = args.includes("--fast");
 
 if (!/\S/.test(LANG) || LANG.includes("/") || LANG.includes("..")) {
   console.error("нужен --lang <код> (без / и ..)");
@@ -48,7 +53,8 @@ if (!/\S/.test(LANG) || LANG.includes("/") || LANG.includes("..")) {
 }
 
 const poPath = join(PO, `${LANG}.po`);
-const jsonlPath = join(REPO, "tmp", `po_judge_full_${LANG}.jsonl`);
+// TSSR_JUDGE_JSONL — переопределение для A/B-прогонов (свежие файлы статусов)
+const jsonlPath = process.env.TSSR_JUDGE_JSONL || join(REPO, "tmp", `po_judge_full_${LANG}.jsonl`);
 const badPath = join(REPO, "tmp", `po_judge_full_${LANG}.bad.txt`);
 
 const entries = parsePo(readFileSync(poPath, "utf-8").replace(/\r\n/g, "\n")).filter((e) => e.msgid && e.msgstr.trim());
@@ -105,7 +111,9 @@ async function worker(): Promise<void> {
   for (;;) {
     const e = targets.shift();
     if (!e) return;
-    const r = await judgeVerified(BASE, MODEL, LANG, e, e.msgstr, emotionOf(e), THRESHOLD);
+    const r = FAST
+      ? await judge(BASE, MODEL, LANG, e, e.msgstr, emotionOf(e))
+      : await judgeVerified(BASE, MODEL, LANG, e, e.msgstr, emotionOf(e), THRESHOLD);
     const row: Row = {
       msgid: e.msgid,
       msgstr: e.msgstr,

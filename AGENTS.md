@@ -624,7 +624,7 @@ Unicode-ударение **U+0301** после ударной гласной Р�
 
 ```bash
 # Вся TS-матрица (из корня репы; скиллы + пайплайн + scripts/):
-node --test $(find .opencode/skills patches/ai-voice-pack/tools scripts -name "*.test.mts" -not -path "*/node_modules/*")
+node --test $(find .opencode/skills patches/ai-voice-pack/tools patches/ai-voice-pack/casts scripts -name "*.test.mts" -not -path "*/node_modules/*")
 # Гард сборки — pytest только для остатка python (voicekit/beastify/voice_design/build):
 cd patches/ai-voice-pack && python -m pytest tests/ -v
 ```

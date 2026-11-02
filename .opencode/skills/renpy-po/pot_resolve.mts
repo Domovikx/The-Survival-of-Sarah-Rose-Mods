@@ -35,6 +35,8 @@ export interface PotMeta {
   scene: string | null;
   /** Тон диктора (`#. emotion:`), null — не задан (не speaker-строка). */
   emotion: string | null;
+  /** Пол спикера (`#. speaker_gender:` из контракта), null — тега нет (не речь/нет данных). */
+  gender: string | null;
   /** Категория: dialogue | narration | menu | ui (правила как в voice_batch). */
   category: string;
   /** Для speaker:* — имя говорящего (без префикса), иначе null. */
@@ -79,6 +81,7 @@ export class PotIndex {
         // МИГРАЦИЯ 2026-10-26: действующий тон = emotion_new ?? emotion
         // (po-контуру — промпту и судье — нужен тот тон, что реально звучит)
         emotion: commentOf(e.comments, "emotion_new:") ?? commentOf(e.comments, "emotion:"),
+        gender: commentOf(e.comments, "speaker_gender:"),
         category,
         speaker,
       });
@@ -95,6 +98,11 @@ export class PotIndex {
     return this.resolve(msgctxt, msgid)?.emotion ?? null;
   }
 
+  /** Только пол спикера (`#. speaker_gender:`): null — тега нет. */
+  gender(msgctxt: string, msgid: string): string | null {
+    return this.resolve(msgctxt, msgid)?.gender ?? null;
+  }
+
   get size(): number {
     return this.byKey.size;
   }
@@ -106,6 +114,17 @@ export function loadPotIndex(path: string = DEFAULT_POT): PotIndex {
     throw new Error(`template.pot не найден: ${path} (запусти npm run potgen)`);
   }
   return new PotIndex(readFileSync(path, "utf-8"));
+}
+
+let cachedIndex: PotIndex | null = null;
+
+/**
+ * Кэшированный индекс для вызовов ИЗ промптов (userPrompt/judgeUser): POT
+ * многомегабайтный, парсим один раз на процесс. Тот же смысл, что и однократный
+ * loadPotIndex в main po:translate.
+ */
+export function potIndex(): PotIndex {
+  return (cachedIndex ??= loadPotIndex());
 }
 
 // Диагностика при прямом запуске: node pot_resolve.mts
