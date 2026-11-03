@@ -111,8 +111,8 @@ test("ГРАНИЦА: тон живёт ТОЛЬКО в template.pot — в po/*
     scanned++;
     const hit = readFileSync(join(poDir, f), "utf-8")
       .split("\n")
-      // speaker_gender в .po ЛЕГАЛЕН (решение владельца 2026-11-02, инлайн-ревью);
-      // из машинных метаданных в .po не должен течь только тон (DRY 2026-10-23).
+      // В .po не течёт НИКАКИХ машинных метаданных (2026-11-03): ни тона,
+      // ни пола — пол сверяется по casts/gender.mts.
       .find((l) => l.startsWith("#. emotion:"));
     if (hit) offenders.push(`${f}: ${hit.slice(0, 70)}`);
   }
@@ -121,26 +121,4 @@ test("ГРАНИЦА: тон живёт ТОЛЬКО в template.pot — в po/*
 
   // позитивный контроль: если в шаблоне тона вдруг нет — проверка пустая
   assert.ok(readFileSync(DEFAULT_POT, "utf-8").includes("#. emotion:"), "в template.pot нет тона!");
-});
-
-test("spk_g (пол спикера) резолвится из POT; без тега — null (бага 2026-11-02)", () => {
-  const pot = `
-msgid ""
-msgstr ""
-"Language: xx\n"
-
-#. speaker_gender: M
-msgctxt "speaker:Xanthippe"
-msgid "But I'm happy it didn't end in tragedy."
-msgstr ""
-
-#. uid: bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
-msgctxt "speaker:Somebody"
-msgid "A line without a gender tag."
-msgstr ""
-`.replace(/\r\n/g, "\n");
-  const idx = new PotIndex(pot);
-  assert.equal(idx.gender("speaker:Xanthippe", "But I'm happy it didn't end in tragedy."), "M");
-  assert.equal(idx.resolve("speaker:Xanthippe", "But I'm happy it didn't end in tragedy.")?.gender, "M");
-  assert.equal(idx.gender("speaker:Somebody", "A line without a gender tag."), null, "без тега — null");
 });

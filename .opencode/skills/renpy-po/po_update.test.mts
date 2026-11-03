@@ -162,7 +162,7 @@ test("повторный запуск по освежённому po — иде�
   assert.equal(twice.stats.retargeted, 0, "ретаргет уже применён");
 });
 
-test("speaker_gender течёт в .po, прочие комментарии вырезаются (исключение 2026-11-02)", () => {
+test("в .po не течёт НИКАКИХ комментариев, включая пол (сверка пола — casts/gender.mts)", () => {
   const pot0 = potOf(SCRIPT_V1);
   const entries = parsePo(pot0).filter((e) => e.msgid);
   const hello = entries.find((e) => e.msgid === "Hello there!");
@@ -177,10 +177,12 @@ test("speaker_gender течёт в .po, прочие комментарии вы
   const po1 = poFromPot(potPatched);
   const { entries: merged } = mergePoUpdate(po1, potPatched);
   const h = merged.find((e) => e.msgid === "Hello there!");
-  assert.deepEqual(h?.comments, ["speaker_gender: M"], "в .po течёт ТОЛЬКО speaker_gender");
+  // Исключение на пол отменено владельцем 2026-11-03: тег в po вводил в
+  // заблуждение (нарратор F = голос озвучки), пол берётся из casts/gender.mts.
+  assert.deepEqual(h?.comments, [], "в .po не течёт НИКАКИХ комментариев");
   // идемпотентность повторного merge
   const po2 = renderPo(merged, poHeaderLines(po1));
   const again = mergePoUpdate(po2, potPatched);
   const h2 = again.entries.find((e) => e.msgid === "Hello there!");
-  assert.deepEqual(h2?.comments, ["speaker_gender: M"], "повторный merge идемпотентен");
+  assert.deepEqual(h2?.comments, [], "повторный merge идемпотентен");
 });

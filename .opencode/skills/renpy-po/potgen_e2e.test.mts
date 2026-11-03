@@ -27,7 +27,6 @@ import {
   speakersMtsPath,
 } from "./potgen.mts";
 import { mergePoUpdate } from "./po_update.mts";
-import { SPEAKER_GENDER } from "../../../patches/ai-voice-pack/casts/gender.mts";
 
 const REPO_ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "..", "..");
 const GAME = process.env.TSSR_GAME ?? "C:/Program Files (x86)/Steam/steamapps/common/The Survival of Sarah Rose/game";
@@ -44,14 +43,12 @@ const HAVE_GAME = existsSync(join(GAME, "script.rpy"));
 async function toneOpts(): Promise<{
   emotions?: Record<string, string>;
   emotionsNew?: Record<string, string>;
-  genders?: Record<string, string>;
 }> {
   if (!existsSync(POT_PATH)) return {};
   const text = readFileSync(POT_PATH, "utf-8");
   return {
     emotions: loadEmotionsFromPot(text),
     emotionsNew: loadEmotionsFromPot(text, "emotion_new:"),
-    genders: SPEAKER_GENDER, // тег #. speaker_gender (2026-11-02)
   };
 }
 

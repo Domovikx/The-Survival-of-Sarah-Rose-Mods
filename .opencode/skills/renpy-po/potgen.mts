@@ -92,8 +92,6 @@ import {
   renderPuml,
   DEFAULT_OUT as PUML_DEFAULT,
 } from "../arc-branching/arc_branching.mts";
-// Пол спикера: литеральная БД casts (сверка с контрактами — guard-тестом) → тег #. speaker_gender.
-import { SPEAKER_GENDER } from "../../../patches/ai-voice-pack/casts/gender.mts";
 
 const SKILL_DIR = dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = join(SKILL_DIR, "..", "..", "..");
@@ -201,8 +199,6 @@ export interface PotEntry {
    * новый тон. Действующий тон = emotion_new ?? emotion (см. loadCatalog).
    */
   emotionNew?: string;
-  /** Пол спикера из контракта (`M`|`F`|`?`) — тег `#. speaker-gender:` (2026-11-02). */
-  gender?: string;
   arc?: string; // арка текущего label (правила arcOfLabel) — роутинг аудио POT-мапы
   scene?: string; // label записи (сцена) — тоньше арки, таргетинг --scene
   /**
@@ -438,8 +434,6 @@ export interface ScanOptions {
   emotions?: Record<string, string>;
   /** md5(msgid) -> НОВЫЙ тон (roundtrip `#. emotion_new:` + overlay `--emotions`). */
   emotionsNew?: Record<string, string>;
-  /** Спикер (без "speaker:") -> пол из контракта (M|F|?) — см. casts/gender.mts. */
-  genders?: Record<string, string>;
 }
 
 /** Строит каталог POT по всем .rpy в gameDir. */
@@ -490,14 +484,6 @@ export function scanGame(gameDir: string, opts: ScanOptions = {}): PotCatalog {
       if (nu) e.emotionNew = nu; // миграционный слой — старый НЕ перетирается
     }
   }
-  // Пол спикера (контракт → тег): только речевые строки, как и тон (2026-11-02).
-  if (opts.genders) {
-    for (const e of catalog.entries.values()) {
-      if (!e.msgctxt.startsWith("speaker:")) continue;
-      const g = opts.genders[e.msgctxt.slice("speaker:".length)];
-      if (g) e.gender = g;
-    }
-  }
   return catalog;
 }
 
@@ -538,7 +524,6 @@ export function renderPot(catalog: PotCatalog, now: Date = new Date()): string {
     // 2026-11-02). Даёт тестам последовательности самодостаточный артефакт:
     // POT читается текстом и сверяется с game/*.rpy без повторного скана.
     if (e.srcFile && e.srcLine) out.push(`#. src: ${e.srcFile}:${e.srcLine}`);
-    if (e.gender) out.push(`#. speaker_gender: ${e.gender}`);
     if (e.emotion) out.push(`#. emotion: ${e.emotion}`);
     if (e.emotionNew) out.push(`#. emotion_new: ${e.emotionNew}`); // миграционный слой 2026-10-26
     out.push(`msgctxt "${poEscape(e.msgctxt)}"`);
@@ -710,8 +695,7 @@ async function main(): Promise<void> {
     }
   }
 
-  const genders = SPEAKER_GENDER;
-  const catalog = scanGame(gameDir, { emotions, emotionsNew, genders });
+  const catalog = scanGame(gameDir, { emotions, emotionsNew });
   const s = catalog.stats;
   mkdirSync(dirname(outFile), { recursive: true });
   writeFileSync(outFile, renderPot(catalog), "utf-8");
