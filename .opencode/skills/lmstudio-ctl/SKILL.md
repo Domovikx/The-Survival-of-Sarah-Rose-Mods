@@ -33,15 +33,14 @@ node scripts/llm_backend.mts show       # активный бэкенд + ист
 node scripts/llm_backend.mts list       # реестр
 node scripts/llm_backend.mts use colibri  # переключить (пишет tmp/llm_backend.json)
 # разовый оверрайд без переключения:
-TSSR_LLM=strata node .opencode/skills/renpy-po/po_translate.mts --lang es
+TSSR_LLM=strata npm run emotion:judge
 ```
 
 Приоритет разрешения: CLI-флаги `--base-url/--model` > env `TSSR_LLM_URL/
 TSSR_LLM_MODEL` > env `TSSR_LLM=<name>` > конфиг `tmp/llm_backend.json` >
-дефолт (strata). Потребители (po_translate, po_judge_check, commit_msg,
-emotion_judge, emotion_tag) читают `resolveBackend()` из
-`scripts/llm_backend.mts` — **дефолты в их коде НЕ править, переключение
-только пультом**.
+дефолт (strata). Потребители (`emotion_judge`, `emotion_tag`) читают
+`resolveBackend()` из `scripts/llm_backend.mts` — **дефолты в их коде НЕ
+править, переключение только пультом**.
 
 ## Жизненный цикл (порядок обязателен)
 
@@ -88,9 +87,9 @@ powershell -File patches/ai-voice-pack/tools/generate/scripts/stop-lmstudio.cmd
 
 ## Проверка «никто другой не использует»
 
-Перед stop — убедись, что очередь/сабагенты закончили: у po-очереди есть
-чистый стоп `npm run po:translate:stop` (дожидается текущей записи, пишет
-чекпоинт — запуск потом продолжается с места).
+Перед stop — убедись, что сабагенты закончили: po-очередей больше нет
+(переводчик удалён 2026-11-03), живые держатели LLM — прогоны разметки
+эмоций (`emotion_tag` / `emotion_judge`).
 
 ## Troubleshooting
 

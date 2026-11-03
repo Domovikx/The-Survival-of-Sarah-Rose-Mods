@@ -20,8 +20,8 @@
  *   node scripts/llm_backend.mts use --url http://127.0.0.1:9 --model foo
  *   TSSR_LLM=strata node ...                       # разовый выбор через env
  *
- * Потребители: po_translate, po_judge_check, commit_msg, emotion_judge,
- * emotion_tag (импорт resolveBackend; дефолты флагов берутся отсюда).
+ * Потребители: emotion_judge, emotion_tag (импорт resolveBackend;
+ * дефолты флагов берутся отсюда).
  */
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";

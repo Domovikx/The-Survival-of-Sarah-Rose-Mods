@@ -18,10 +18,9 @@ import { existsSync, readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
-import { parsePo } from "./po_core.mts";
+import { ALL_LANGS, parsePo } from "./po_core.mts";
 import type { PoEntry } from "./po_core.mts";
 import { loadPotIndex } from "./pot_resolve.mts";
-import { ALL_LANGS } from "./po_translate.mts";
 
 const SKILL_DIR = dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = join(SKILL_DIR, "..", "..", "..");

@@ -80,8 +80,7 @@ npm run emotion:audit -- --draft # то же для tmp/emotions_tagged.json (Д
 Шаг 4 — **судья-выборка**: `npm run emotion:judge` (stride-выборка 20 из
 черновика, LLM-балл «тон подходит строке/спикеру/сцене», порог 8;
 `--pot` — проверить текущий тон POT, `--uid <uid>...` — точечно,
-`--n`, `--threshold`, env `LLM_URL`/`LLM_MODEL`). `po:judge` тут НЕ годится —
-он судит переводы, а не тон.
+`--n`, `--threshold`, env `LLM_URL`/`LLM_MODEL`).
 Шаг 5 — **применение**: `npm run potgen -- --emotions tmp/emotions_tagged.json` —
 новый тон ложится в слой **`#. emotion_new:`**, действующий `#. emotion:`
 сохраняется (см. «Плавную миграцию»).

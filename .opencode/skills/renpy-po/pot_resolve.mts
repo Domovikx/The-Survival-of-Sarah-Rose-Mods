@@ -119,9 +119,8 @@ export function loadPotIndex(path: string = DEFAULT_POT): PotIndex {
 let cachedIndex: PotIndex | null = null;
 
 /**
- * Кэшированный индекс для вызовов ИЗ промптов (userPrompt/judgeUser): POT
- * многомегабайтный, парсим один раз на процесс. Тот же смысл, что и однократный
- * loadPotIndex в main po:translate.
+ * Кэшированный индекс для вызовов ИЗ промптов (скилл translate): POT
+ * многомегабайтный, парсим один раз на процесс.
  */
 export function potIndex(): PotIndex {
   return (cachedIndex ??= loadPotIndex());

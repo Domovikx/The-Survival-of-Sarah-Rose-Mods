@@ -133,15 +133,14 @@ translate ru strings:
 ## Workflow
 
 Полный цикл — см. также `list-translation-files` (находит непереведённое)
-и команду `/translate-arc` → `orchestrator` (сам перевод):
+и скилл `translate` (сам перевод, построчно):
 
 ```text
 1. node extract_texts.mts extract   → Перегенерация tl/<lang> из игры
    (существующие переводы сохраняются по old; новые/изменённые строки
    падают с плейсхолдером new == old — это и есть «надо перевести»)
 2. npm run tlstat                   → Список файлов с непереведёнными (old == new)
-3. /translate-arc <файлы>           → orchestrator: по одному агенту на файл,
-   каждый правит new построчно (skill-translate-rpy) и ревьюит (skill-review-rpy)
+3. перевод файлов скилом `translate` → построчно, микро-правила, ревью владельца
 4. node extract_texts.mts verify    → Проверка прогресса
 5. node dedup_translations.mts      → Дедуп при необходимости
 ```

@@ -55,7 +55,7 @@ read-only установка).
 1. Зарегенерил tl (`renpy-extract extract`) или обновилась игра
 2. Запустил аудит — посмотри LOST_TRANS/NOTINGAME/MISSING (это баги)
 3. DROPPED/ADDED глазами: legit-правки игры vs мусор старого экстрактора
-4. Новые `[UNTRANSLATED]` из ADDED — на перевод через `/translate-arc`
+4. Новые `[UNTRANSLATED]` из ADDED — на перевод скилом `translate`
 
 ## Тесты
 

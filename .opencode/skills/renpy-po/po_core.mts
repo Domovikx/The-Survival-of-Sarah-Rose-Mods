@@ -13,6 +13,9 @@
 import { renameSync, writeFileSync } from "node:fs";
 
 /** Запись PO-файла. */
+/** Коды языков po/<lang>.po — ЕДИНЫЙ список (po_fix, po_list). */
+export const ALL_LANGS: string[] = ["de", "es", "fr", "it", "ja", "ko", "pl", "pt", "ru", "zh"];
+
 export interface PoEntry {
   msgid: string;
   msgctxt: string;

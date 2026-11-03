@@ -7,7 +7,7 @@
  * и po_audit.mts), поэтому отчёт ревьюера конвертируется без ручной работы.
  *
  * Операции:
- *   clear  — msgstr = "" (возврат в очередь po:translate на перепрогон)
+ *   clear  — msgstr = "" (возврат строки на повторный перевод)
  *   set    — msgstr = <text> (ручная правка, когда перевод знаете точно)
  *
  * Запуск:
@@ -23,9 +23,8 @@ import { readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
-import { parsePo, renderPo, writePoAtomic } from "./po_core.mts";
+import { ALL_LANGS, parsePo, renderPo, writePoAtomic } from "./po_core.mts";
 import { poHeaderLines } from "./po_update.mts";
-import { ALL_LANGS, isRunning } from "./po_translate.mts";
 
 const SKILL_DIR = dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = join(SKILL_DIR, "..", "..", "..");
@@ -156,10 +155,6 @@ function main(): void {
   }
   let total = 0;
   for (const [lang, ops] of byLang) {
-    if (isRunning(lang)) {
-      console.error(`${lang}: прогон ИДЁТ — правки отменены (иначе flush перетрёт). Жди завершения.`);
-      process.exit(2);
-    }
     const r = applyFixes(lang, ops, parsed.dry);
     total += r.changed;
     const mode = parsed.dry ? "[dry] изменено БЫЛО бы" : "изменено";

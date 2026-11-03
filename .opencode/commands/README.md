@@ -42,6 +42,5 @@ $ARGUMENTS
 
 - `renpy-extract` — извлечение/проверка переводов
 - `list-translation-files` — статус перевода по аркам
-- `translate-arc` — перевод арки через orchestrator
 
 Чтобы добавить новую команду, создай `<имя>.md`.
