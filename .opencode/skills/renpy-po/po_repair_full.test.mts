@@ -51,26 +51,25 @@ test("classify: завершённые состояния пропускаютс
     ["human", { human: true }],
   ]);
   const voice = ["ok", "rep", "fail", "human", "new"].map((m) => entry(m));
-  const { tasks, shakyHuman } = classify(voice, states);
-  assert.equal(shakyHuman.length, 0);
+  const tasks = classify(voice, states);
   assert.equal(tasks.length, 1, "только новая строка");
   assert.equal(tasks[0].kind, "judge");
   assert.equal(tasks[0].entry.msgid, "new");
 });
 
-test("classify: голый ok=false → repair с прежним скором; shaky → human без правки", () => {
+test("classify: голый ok=false → repair с прежним скором (длина строки не влияет)", () => {
   const states = new Map<string, State>([
     ["A long defective translation line here", { ok: false, score: 4, issues: ["semantic error"] }],
-    ["Escape", { ok: false, score: 3, issues: ["wrong language"] }], // ≤15 символов = shaky
+    ["Escape", { ok: false, score: 3, issues: ["wrong language"] }],
   ]);
   const voice = [entry("A long defective translation line here"), entry("Escape")];
-  const { tasks, shakyHuman } = classify(voice, states);
-  assert.equal(tasks.length, 1);
+  const tasks = classify(voice, states);
+  assert.equal(tasks.length, 2, "короткая строка тоже идёт в правку");
   assert.equal(tasks[0].kind, "repair");
   assert.equal(tasks[0].prior?.score, 4);
   assert.deepEqual(tasks[0].prior?.issues, ["semantic error"]);
-  assert.equal(shakyHuman.length, 1);
-  assert.equal(shakyHuman[0].msgid, "Escape");
+  assert.equal(tasks[1].entry.msgid, "Escape");
+  assert.equal(tasks[1].kind, "repair");
 });
 
 test("classify: repair идёт перед judge, дубли msgid не плодятся", () => {
@@ -81,7 +80,7 @@ test("classify: repair идёт перед judge, дубли msgid не плод
     entry("defect line number one here"), // дубль
     entry("another brand new line here"),
   ];
-  const { tasks } = classify(voice, states);
+  const tasks = classify(voice, states);
   assert.equal(tasks.length, 3, "дубль msgid схлопнут");
   assert.equal(tasks[0].kind, "repair", "правки первыми");
   assert.equal(tasks[1].kind, "judge");

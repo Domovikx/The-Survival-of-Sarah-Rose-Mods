@@ -45,7 +45,7 @@ export interface UpdateStats {
 }
 
 export interface UpdateResult {
-  entries: PoEntry[]; // записи без шапки, отсортированы (msgid, msgctxt)
+  entries: PoEntry[]; // записи без шапки, в порядке POT (хвост — legacy)
   headerLines: string[]; // шапка исходного po (комментарии + msgid "")
   stats: UpdateStats;
 }
@@ -142,11 +142,9 @@ export function mergePoUpdate(poText: string, potText: string): UpdateResult {
     e.comments = g ? [g] : [];
   }
 
-  merged.sort(
-    (a, b) =>
-      (a.msgid < b.msgid ? -1 : a.msgid > b.msgid ? 1 : 0) ||
-      (a.msgctxt < b.msgctxt ? -1 : a.msgctxt > b.msgctxt ? 1 : 0),
-  );
+  // Порядок НЕ сортируем (2026-11-02): .po наследует порядок POT, а тот —
+  // порядок исходников игры. Сортировка по msgid разрывала диалог и делала
+  // «соседние реплики» случайными (контекст для переводчика/судьи).
   return { entries: merged, headerLines: poHeaderLines(poText), stats };
 }
 

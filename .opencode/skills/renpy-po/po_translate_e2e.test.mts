@@ -42,24 +42,26 @@ function onTargetLang(lang: string, tr: string): boolean {
   return !/[\u0400-\u04ff\u3040-\u30ff\u4e00-\u9fff\uac00-\ud7af]/.test(tr);
 }
 
-/** Ранее отклонённые строки языка (msgids) — материал для добора. */
-function rejectedMsgids(lang: string, limit: number): string[] {
-  const f = join(REPO, "patches", "ai-voice-pack", "po", `${lang}.jsonl`);
+/**
+ * Тяжёлые строки языка (msgids) — материал для добора: реплики диалога
+ * длиной 30–150 символов, последние в файле. Раньше брались из po/<lang>.jsonl
+ * по отметке rejected; журнал выпилен 2026-11-02 (дублировал po), поэтому
+ * выборка детерминированная из самого po — класс строк тот же (длинная
+ * реплика = больше шансов на падеж/регистр/утечку языка).
+ */
+function hardSampleMsgids(lang: string, limit: number): string[] {
+  const f = join(REPO, "patches", "ai-voice-pack", "po", `${lang}.po`);
   if (!existsSync(f)) return [];
+  const ents = parsePo(readFileSync(f, "utf-8").replace(/\r\n/g, "\n"));
   const out: string[] = [];
   const seen = new Set<string>();
-  const lines = readFileSync(f, "utf-8").split("\n").filter(Boolean);
-  for (let i = lines.length - 1; i >= 0 && out.length < limit; i--) {
-    let r: { rejected?: boolean; error?: unknown; msgid?: string };
-    try {
-      r = JSON.parse(lines[i]) as typeof r;
-    } catch {
-      continue;
-    }
-    if (!r.rejected || r.error || !r.msgid || r.msgid.length < 30 || r.msgid.length > 150) continue;
-    if (seen.has(r.msgid)) continue;
-    seen.add(r.msgid);
-    out.push(r.msgid);
+  for (let i = ents.length - 1; i >= 0 && out.length < limit; i--) {
+    const e = ents[i];
+    if (!e.msgid || e.msgid.length < 30 || e.msgid.length > 150) continue;
+    if (!(e.msgctxt ?? "").startsWith("speaker:")) continue;
+    if (seen.has(e.msgid)) continue;
+    seen.add(e.msgid);
+    out.push(e.msgid);
   }
   return out;
 }
@@ -81,7 +83,7 @@ test(
     let total = 0;
 
     for (const lang of LANGS) {
-      const msgids = rejectedMsgids(lang, 3);
+      const msgids = hardSampleMsgids(lang, 3);
       if (!msgids.length) continue;
       stats[lang] = { ok: 0, rej: 0, leak: 0 };
 
@@ -125,7 +127,7 @@ test(
     console.log(`E2E принято ${totalOk}/${total}`);
 
     // Принимать должно ХОТЯ БЫ ЧАСТЬ — иначе цепочка сломана целиком
-    assert.ok(total > 0, "не нашлось отклонённых строк для E2E");
+    assert.ok(total > 0, "не нашлось тяжёлых строк для E2E");
     assert.ok(totalOk > 0, `ни одна строка не принята (${totalOk}/${total}) — цепочка не работает`);
 
     // Идеальная защита от утечки: ни одного принятого чужого языка

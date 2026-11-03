@@ -11,8 +11,14 @@
  *               → judgeVerified(кандидат) → ≥порога?
  *                 ДА  → writePoAtomic(.po) → JSONL {repaired}   (файл меняется!)
  *                 НЕТ → JSONL {repair_failed} → human-лист (append), файл НЕ трогаем
- *   SHAKY (≤15 символов) при провале → JSONL {human} без правки: судья на коротких
- *               строках ненадёжен (ложные тревоги), их покрывает po:audit.
+ *
+ * Исключений по длине строки НЕТ (2026-11-02): раньше короткие (≤15 символов)
+ * при провале автоматически уходили в human-лист «без правки» — считалось, что
+ * судья на обрывках врёт. Порог выпилен по решению владельца: это магическое
+ * число (длина не критерий), а защита дублировала главный шлюз — в файл и так
+ * пишется ТОЛЬКО кандидат ≥ порога. Побочный ущерб старого правила был реальным:
+ * короткие строки с настоящей ошибкой («A cunt.» → «Как последняя сука.») никто
+ * не чинил, они просто копились в списке на ручной разбор.
  *
  * Правило владельца: порог НЕ двигается — в файл пишется только кандидат ≥ порога.
  * Резюме: JSONL append-only, статус строки = ПОСЛЕДНЯЯ запись по msgid.
@@ -55,7 +61,6 @@ const REPO = join(dirname(fileURLToPath(import.meta.url)), "..", "..", "..");
 /** Статус строки: последняя запись JSONL по msgid побеждает. */
 export interface State {
   ok?: boolean;
-  shaky?: boolean;
   human?: boolean;
   repaired?: boolean;
   repair_failed?: boolean;
@@ -89,30 +94,26 @@ export function loadStatesFrom(path: string): Map<string, State> {
 /**
  * Классификация строк в задачи. Чистая функция (без побочных эффектов):
  *   ok/repaired/repair_failed/human → пропуск;
- *   ok=false (голый) + shaky → shakyHuman (на ручной разбор, без правки);
- *   ok=false (голый) + НЕ shaky → task repair (с прежним скором/замечаниями);
+ *   ok=false (голый) → task repair (с прежним скором/замечаниями);
  *   нет статуса → task judge. Правки идут первыми (порядок: repair → judge).
  */
-export function classify(voice: PoEntry[], states: Map<string, State>): { tasks: Task[]; shakyHuman: PoEntry[] } {
+export function classify(voice: PoEntry[], states: Map<string, State>): Task[] {
   const tasks: Task[] = [];
-  const shakyHuman: PoEntry[] = [];
   const seen = new Set<string>();
   for (const e of voice) {
     if (seen.has(e.msgid)) continue;
     seen.add(e.msgid);
     const st = states.get(e.msgid);
-    const shaky = e.msgid.trim().length <= 15;
     if (st?.ok || st?.repaired || st?.human || st?.repair_failed) continue;
     if (st && st.ok === false) {
-      if (shaky) shakyHuman.push(e);
-      else tasks.push({ kind: "repair", entry: e, prior: { score: st.score ?? -1, issues: st.issues ?? [] } });
+      tasks.push({ kind: "repair", entry: e, prior: { score: st.score ?? -1, issues: st.issues ?? [] } });
     } else {
       tasks.push({ kind: "judge", entry: e });
     }
   }
   // Правки первыми — файл улучшается сразу, затем новые строки.
   tasks.sort((a, b) => (a.kind === b.kind ? 0 : a.kind === "repair" ? -1 : 1));
-  return { tasks, shakyHuman };
+  return tasks;
 }
 
 async function main(): Promise<void> {
@@ -150,16 +151,51 @@ async function main(): Promise<void> {
     return potIndex().emotion(e.msgctxt, e.msgid);
   }
 
+  // СОСЕДИ ПО СЦЕНЕ (2026-11-02). Порядок po = порядок исходников игры, поэтому
+  // соседние по индексу строки — реальный диалог, а не случайные однофамильцы
+  // из алфавитной сортировки. Границу сцены держим явно: дедуп кладёт строку в
+  // ПЕРВУЮ сцену, где она встретилась, поэтому сосед по индексу может оказаться
+  // из другой сцены — такой сосед не контекст, а шум.
+  //
+  // Индекс строится по ПОЛНОМУ списку `entries` (не по `voice`): соседняя
+  // реплика — контекст и тогда, когда её перевод ещё пустой.
+  const idxOf = new Map<string, number>();
+  entries.forEach((e, i) => {
+    const k = `${e.msgctxt}\u0000${e.msgid}`;
+    if (!idxOf.has(k)) idxOf.set(k, i);
+  });
+  const sceneCache = new Map<string, string | null>();
+  function sceneOf(e: PoEntry): string | null {
+    const k = `${e.msgctxt}\u0000${e.msgid}`;
+    if (!sceneCache.has(k)) sceneCache.set(k, potIndex().resolve(e.msgctxt, e.msgid)?.scene ?? null);
+    return sceneCache.get(k) ?? null;
+  }
+
+  /** До трёх предыдущих и одной следующей реплики ТОЙ ЖЕ сцены (EN-текст). */
+  function neighborsOf(e: PoEntry): { prev: string[]; next: string[] } {
+    const i = idxOf.get(`${e.msgctxt}\u0000${e.msgid}`);
+    const scene = sceneOf(e);
+    if (i === undefined || !scene) return { prev: [], next: [] };
+    const pick = (step: -1 | 1): string[] => {
+      // Асимметрия 3+1 (2026-11-03, решение владельца): предыдущие реплики
+      // несут антецеденты, следующая — только реакция.
+      const limit = step === -1 ? 3 : 1;
+      const out: string[] = [];
+      for (let k = i + step; k >= 0 && k < entries.length && out.length < limit; k += step) {
+        const x = entries[k];
+        if (sceneOf(x) !== scene) break;
+        out.push(`${x.msgctxt} ${x.msgid}`);
+      }
+      return step === -1 ? out.reverse() : out;
+    };
+    return { prev: pick(-1), next: pick(1) };
+  }
+
   const states = loadStatesFrom(jsonlPath);
-  const { tasks, shakyHuman } = classify(voice, states);
+  const tasks = classify(voice, states);
 
   function appendRow(row: Record<string, unknown>): void {
     appendFileSync(jsonlPath, `${JSON.stringify(row)}\n`, "utf-8");
-  }
-
-  for (const e of shakyHuman) {
-    appendRow({ msgid: e.msgid, ok: false, shaky: true, human: true });
-    appendFileSync(failedPath, `SHAKY(не правим): ${e.msgid}\n\n`, "utf-8");
   }
 
   const LIMIT_N = Number(flag("limit", "0"));
@@ -168,7 +204,6 @@ async function main(): Promise<void> {
   const repairCount = tasks.filter((t) => t.kind === "repair").length;
   console.log(
     `[po:repair-full] ${LANG}: переведено ${voice.length} | статусов из JSONL ${states.size}` +
-      (shakyHuman.length ? ` | shaky→human ${shakyHuman.length}` : "") +
       ` | к работе ${tasks.length} (правок ${repairCount})` +
       ` | порог ${THRESHOLD} | ${MODEL} (c=${CONCURRENCY})`,
   );
@@ -187,15 +222,32 @@ async function main(): Promise<void> {
     );
   }
 
-  /** Промпт правки: правила перевода + замечания судьи + тон/пол из POT. */
+  /**
+   * Промпт правки: правила перевода + замечания судьи + тон/пол из POT +
+   * соседние реплики ТОЙ ЖЕ сцены (порядок po = порядок игры).
+   */
   function repairUser(e: PoEntry, emotion: string | null, priorScore: number, issues: string[]): string {
     const issueList = issues.length ? issues.map((i) => `- ${i}`).join("\n") : "- (замечаний нет — оценка ниже порога)";
     const tone = emotion ? `\nTone of this line: ${emotion}` : "";
     const gender = genderLine(e.msgctxt, e.msgid);
+    const { prev, next } = neighborsOf(e);
+    const scene = sceneOf(e);
+    const ctx: string[] = [];
+    if (prev.length || next.length) {
+      ctx.push(
+        ``,
+        `Scene${scene ? ` "${scene}"` : ""} — neighbouring lines, for CONTEXT ONLY. ` +
+          `Read them to get the situation and what this line answers; translate ONLY the line marked [THIS LINE], never a neighbour:`,
+        ...prev,
+        `[THIS LINE] ${e.msgctxt} ${e.msgid}`,
+        ...next,
+      );
+    }
     return [
       `A translation of this game line was REJECTED by a quality reviewer (score ${priorScore}/10).`,
       `Fix it: address every issue below, keep everything that is already correct`,
       `(names, quotes, placeholders, register, tone, grammatical GENDER agreement).${tone}${gender ? `\n${gender}` : ""}`,
+      ...ctx,
       ``,
       `EN source:`,
       e.msgid,
@@ -231,7 +283,7 @@ async function main(): Promise<void> {
         const gates = checkTranslation(e, cand, LANG);
         if (gates.length) gateErr = `шлюз: ${gates.join("; ")}`;
         else {
-          const v = await judgeVerified(BASE, MODEL, LANG, e, cand, emotion, THRESHOLD);
+          const v = await judgeVerified(BASE, MODEL, LANG, e, cand, emotion, THRESHOLD, neighborsOf(e).prev);
           verdict = v.score;
           verdictIssues = v.issues;
           if (v.score < THRESHOLD) gateErr = `судья ${v.score}/10: ${v.issues.join("; ") || "-"}`;
@@ -268,15 +320,10 @@ async function main(): Promise<void> {
 
   async function doJudge(e: PoEntry): Promise<void> {
     const emotion = emotionOf(e);
-    const shaky = e.msgid.trim().length <= 15;
-    const r = await judgeVerified(BASE, MODEL, LANG, e, e.msgstr, emotion, THRESHOLD);
+    const r = await judgeVerified(BASE, MODEL, LANG, e, e.msgstr, emotion, THRESHOLD, neighborsOf(e).prev);
     if (r.score >= THRESHOLD) {
       appendRow({ msgid: e.msgid, ok: true, score: r.score, issues: r.issues });
       stats.judgeOk++;
-    } else if (shaky) {
-      appendRow({ msgid: e.msgid, ok: false, shaky: true, human: true, score: r.score });
-      appendFileSync(failedPath, `SHAKY(не правим): ${e.msgid} — ${r.score}/10\n\n`, "utf-8");
-      stats.failed++;
     } else {
       await doRepair(e, r.score, r.issues);
     }

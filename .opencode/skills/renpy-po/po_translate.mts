@@ -26,8 +26,8 @@
  *   npm run po:translate:stop -- --lang es   чистая остановка (флаг в
  *                                            tmp/po_translate_<lang>.stop;
  *                                            без --lang — все языки)
- *   npm run po:translate:status              все языки: идёт/стоп, пустые,
- *                                            счёт jsonl, время активности
+ *   npm run po:translate:status              все языки: идёт/стоп, переведено,
+ *                                            пустые, время активности (mtime po)
  * Худшая задержка стопа = текущая запись (ретраи LLM тоже проверяют флаг).
  * После стопа pid-файл удаляется; убитый kill'ом прогон оставляет
  * устаревший pid — status показывает «стоп», старт его перетирает.
@@ -52,10 +52,13 @@
  *   --model NAME      модель (по умолчанию qwen3.6-35b-a3b-ud-q4_k_xl)
  *
  * Выход: po/<lang>.po перезаписан на месте (round-trip через renderPo
- * проверен байт-в-байт для всех 10 языков), отчёт и JSONL-выборка для
- * ушной проверки — po/<lang>.log / po/<lang>.jsonl (рядом с переводом).
+ * проверен байт-в-байт для всех 10 языков); отчёт — только stdout.
+ * Журналов рядом с po НЕТ (2026-11-02): po/<lang>.jsonl дублировал msgstr
+ * (он и так в po), а rejected-строки и замечания судьи ведут инструменты
+ * качества — po_judge_full (tmp/po_judge_full_<lang>.bad.txt) и
+ * po_repair_full (tmp/po_repair_full_<lang>.failed.txt).
  */
-import { appendFileSync, existsSync, readFileSync, rmSync, statSync, writeFileSync } from "node:fs";
+import { existsSync, readFileSync, rmSync, statSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
@@ -693,8 +696,29 @@ export function judgeSystem(msgctxt: string): string {
   return isSpeechCtx(msgctxt) ? JUDGE_SYSTEM : JUDGE_UI_SYSTEM;
 }
 
+/**
+ * Окно контекста переводчика: 3 строки ДО + 1 ПОСЛЕ (решение владельца
+ * 2026-11-03; было 2+2). Асимметрия осмысленная: предыдущие реплики несут
+ * антецеденты (кто кому отвечает, о чём речь), следующая — только реакция.
+ * Суммарный объём тот же → скорость не меняется. Вынесено из воркера, чтобы
+ * окно закрепил тест, а не только глазами.
+ */
+export function translatorContext<T>(items: T[], idx: number): { prev: T[]; next: T[] } {
+  const at = (k: number): T[] => {
+    const x = items[idx + k];
+    return x === undefined ? [] : [x];
+  };
+  return { prev: [...at(-3), ...at(-2), ...at(-1)], next: at(1) };
+}
+
 /** User-часть промпта судьи: языковой гейт + профиль + эмоция/категория + EN + TR. */
-export function judgeUser(lang: string, entry: PoEntry, tr: string, emotion: string | null): string {
+export function judgeUser(
+  lang: string,
+  entry: PoEntry,
+  tr: string,
+  emotion: string | null,
+  prev: string[] = [],
+): string {
   const p = langProfile(lang);
   const speech = isSpeechCtx(entry.msgctxt);
   // Тон и пол — с фолбэком в POT: recheck-инструменты передают emotion=null
@@ -751,7 +775,18 @@ export function judgeUser(lang: string, entry: PoEntry, tr: string, emotion: str
       `(character name, brand, UI key, or a word written the same in ${p.name}) — it is NOT a language leak. ` +
       `Do NOT report "wrong language" for it; judge only completeness and terminology.`
     : "";
-  return `${context}\n\n${sourceBlock}\n\n${candidateBlock}\nTARGET(${lang}): ${tr}\n\n${gate}${idNote}`;
+  // СОСЕДНИЕ РЕПЛИКИ СВЕРХУ (предложение владельца 2026-11-03): 2 строки ДО
+  // дают судье сцену — местомы/отсылки/продолжение мысли перестают быть
+  // загадкой. Раньше судья видела одну строку в вакууме и на обрывках
+  // выдумывала придирки (кейс «A cunt.»: 0/10 и «wrong language» на русском
+  // переводе-эхо). Контекст — только для понимания: судится строго CANDIDATE.
+  const prevBlock = prev.length
+    ? `CONTEXT (2 previous lines of the scene — English by design, reference ONLY: do NOT judge them, ` +
+      `do NOT translate them, do NOT report them as a language leak):\n` +
+      prev.map((l) => `  ${l}`).join("\n") +
+      "\n\n"
+    : "";
+  return `${context}\n\n${prevBlock}${sourceBlock}\n\n${candidateBlock}\nTARGET(${lang}): ${tr}\n\n${gate}${idNote}`;
 }
 
 /** Медиана трёх баллов (устойчивый вердикт при шуме судьи). */
@@ -778,12 +813,13 @@ export async function judgeStable(
   emotion: string | null,
   threshold: number,
   note = "",
+  prev: string[] = [],
 ): Promise<{ score: number; issues: string[] }> {
-  const first = await judge(baseUrl, model, lang, entry, tr, emotion, note);
+  const first = await judge(baseUrl, model, lang, entry, tr, emotion, note, prev);
   // вне серой зоны [threshold-2; threshold) — один замер достаточен
   if (first.score < threshold - 2 || first.score >= threshold) return first;
-  const again = await judge(baseUrl, model, lang, entry, tr, emotion, note);
-  const third = await judge(baseUrl, model, lang, entry, tr, emotion, note);
+  const again = await judge(baseUrl, model, lang, entry, tr, emotion, note, prev);
+  const third = await judge(baseUrl, model, lang, entry, tr, emotion, note, prev);
   const all = [first, again, third];
   const median = medianOf(all.map((r) => r.score));
   return all.find((r) => r.score === median) ?? first;
@@ -805,8 +841,9 @@ export async function judgeVerified(
   tr: string,
   emotion: string | null,
   threshold: number,
+  prev: string[] = [],
 ): Promise<{ score: number; issues: string[] }> {
-  let v = await judgeStable(baseUrl, model, lang, entry, tr, emotion, threshold);
+  let v = await judgeStable(baseUrl, model, lang, entry, tr, emotion, threshold, "", prev);
   if (v.score >= 0 && v.score < threshold && v.issues.length > 0) {
     const actionable = actionableJudgeIssues(v.issues, lang);
     const first = actionable.length ? await filterConfirmed(baseUrl, model, lang, entry, tr, actionable) : [];
@@ -829,6 +866,7 @@ export async function judgeVerified(
           `factually wrong about the candidate, or demanding a FORBIDDEN term, or not backed by any rule line). ` +
           `Re-review the candidate on its own merits: name a concrete violation ` +
           `(quote the exact fragment and the exact rule line) or score 9-10 with []. JSON only.`,
+        prev,
       );
       // ЗАМЫКАЕМ ЦИКЛ: замечания АПЕЛЛЯЦИИ тоже фильтруются — иначе судья
       // просто перечисляет новые придирки (инцидент: «use 'la penetró'» —
@@ -862,8 +900,9 @@ export async function judge(
   tr: string,
   emotion: string | null,
   note = "",
+  prev: string[] = [],
 ): Promise<{ score: number; issues: string[] }> {
-  const user = judgeUser(lang, entry, tr, emotion) + (note ? `\n\nAPPEAL: ${note}` : "");
+  const user = judgeUser(lang, entry, tr, emotion, prev) + (note ? `\n\nAPPEAL: ${note}` : "");
   const raw = await chat(
     baseUrl,
     [
@@ -975,7 +1014,7 @@ export async function translateEntry(
       }
       // Полный контур: стабильный замер -> фильтры -> верификатор замечаний
       // -> апелляция (см. judgeVerified). Порог НЕ двигается.
-      const v = await judgeVerified(baseUrl, model, lang, entry, tr, emotion, threshold);
+      const v = await judgeVerified(baseUrl, model, lang, entry, tr, emotion, threshold, prevLines);
       if (v.score > best.score) best = { tr, score: v.score, issues: v.issues };
       if (v.score >= threshold) {
         return { line: 0, msgid: entry.msgid, tr, tries: t + 1, judgeScore: v.score, rejected: false, issues: [] };
@@ -1051,30 +1090,20 @@ export function ctlStop(langs: string[]): void {
   }
 }
 
-/** ctl status: по всем языкам — идёт/стоп, пустых, jsonl, активность. */
+/** ctl status: по всем языкам — идёт/стоп, переведено/пустых, активность (mtime po). */
 export function ctlStatus(langs: string[]): void {
   for (const lang of langs) {
     const poPath = join(PO_DIR, `${lang}.po`);
     if (!existsSync(poPath)) continue;
-    const empty = parsePo(readFileSync(poPath, "utf-8").replace(/\r\n/g, "\n")).filter(
-      (e) => e.msgid && !e.msgstr.trim(),
-    ).length;
+    const all = parsePo(readFileSync(poPath, "utf-8").replace(/\r\n/g, "\n")).filter((e) => e.msgid);
+    const empty = all.filter((e) => !e.msgstr.trim()).length;
     const running = isRunning(lang);
     const flag = stopRequested(lang);
-    const jsonlPath = join(PO_DIR, `${lang}.jsonl`);
-    let done = 0;
-    let rej = 0;
-    let last = "-";
-    if (existsSync(jsonlPath)) {
-      const lines = readFileSync(jsonlPath, "utf-8").trimEnd().split("\n");
-      for (const l of lines) {
-        if (l.includes('"rejected":true') || l.includes('"error"')) rej++;
-        else done++;
-      }
-      last = new Date(statSync(jsonlPath).mtimeMs).toISOString().slice(11, 16);
-    }
+    const last = new Date(statSync(poPath).mtimeMs).toISOString().slice(11, 16);
     const state = running ? (flag ? "ИДЁТ (стоп запрошен)" : "ИДЁТ") : flag ? "остановлен (флаг висит)" : "стоп";
-    console.log(`${lang}: ${state} | пустых ${empty} | jsonl ok=${done} rejected=${rej} | последняя запись ${last}Z`);
+    console.log(
+      `${lang}: ${state} | переведено ${all.length - empty}/${all.length} | пустых ${empty} | запись ${last}Z`,
+    );
   }
 }
 
@@ -1116,8 +1145,6 @@ async function main(): Promise<void> {
   const text = readFileSync(poPath, "utf-8").replace(/\r\n/g, "\n");
   const header = poHeaderLines(text);
   const entries = parsePo(text).filter((e) => e.msgid);
-  const logPath = join(PO_DIR, `${o.lang}.log`);
-  const jsonlPath = join(PO_DIR, `${o.lang}.jsonl`);
 
   const ctxtList = o.ctxt
     .split(",")
@@ -1207,20 +1234,18 @@ async function main(): Promise<void> {
       const i = cursor++;
       if (i >= queue.length) return;
       const { idx, entry } = queue[i];
-      const ctxAt = (k: number): string[] => {
-        const x = entries[idx + k];
-        return x ? [`${x.msgctxt || ""} ${x.msgid}`] : [];
-      };
-      // Пол спикера в каждую запись jsonl — ревью-журнал рядом с po (2026-11-02)
-      const gender = pot.gender(entry.msgctxt, entry.msgid) ?? undefined;
       try {
+        // КОНТЕКСТ: 3 строки ДО + 1 ПОСЛЕ (см. translatorContext) — именно
+        // эти строки переводчик видит в CONTEXT (previous/following lines).
+        const { prev: ctxPrev, next: ctxNext } = translatorContext(entries, idx);
+        const asLine = (x: PoEntry): string => `${x.msgctxt || ""} ${x.msgid}`;
         const r = await translateEntry(
           o.baseUrl,
           o.model,
           o.lang,
           entry,
-          [...ctxAt(-2), ...ctxAt(-1)],
-          [...ctxAt(1), ...ctxAt(2)],
+          ctxPrev.map(asLine),
+          ctxNext.map(asLine),
           o.judge,
           o.threshold,
           pot.emotion(entry.msgctxt, entry.msgid),
@@ -1234,31 +1259,12 @@ async function main(): Promise<void> {
             judgeSum += r.judgeScore;
             judgeN++;
           }
-          appendFileSync(
-            jsonlPath,
-            JSON.stringify({
-              lang: o.lang,
-              msgid: r.msgid,
-              msgstr: r.tr,
-              judge: r.judgeScore,
-              tries: r.tries,
-              gender,
-            }) + "\n",
-          );
         } else {
           rejected++;
-          appendFileSync(
-            jsonlPath,
-            JSON.stringify({
-              lang: o.lang,
-              msgid: r.msgid,
-              rejected: true,
-              issues: r.issues,
-              judge: r.judgeScore,
-              tries: r.tries,
-              gender,
-            }) + "\n",
-          );
+          // Замечания судьи — в stdout (журнал-jsonl выпилен 2026-11-02:
+          // msgstr дублировал po, а причины отказов теперь нечего хранить
+          // в файле — их видно здесь и в инструментах качества).
+          console.log(`  ОТКЛОН [${r.judgeScore}] ${r.msgid.slice(0, 60)}: ${r.issues.join("; ").slice(0, 160)}`);
         }
         const done = translated + rejected;
         if (done % 5 === 0) {
@@ -1272,10 +1278,6 @@ async function main(): Promise<void> {
       } catch (e) {
         rejected++;
         console.error(`  СБОЙ [${idx}]: ${String(e).slice(0, 200)}`);
-        appendFileSync(
-          jsonlPath,
-          JSON.stringify({ lang: o.lang, msgid: entry.msgid, error: String(e), gender }) + "\n",
-        );
       }
     }
   };
@@ -1297,11 +1299,10 @@ async function main(): Promise<void> {
 
   const sec = (Date.now() - t0) / 1000;
   const summary =
-    `${stopped ? "ОСТАНОВЛЕН по запросу (чекпоинт): " : ""}${poPath}: переведено ${translated}, отклонено (в отчёт) ${rejected}, из ${queue.length} в прогоне; ` +
+    `${stopped ? "ОСТАНОВЛЕН по запросу (чекпоинт): " : ""}${poPath}: переведено ${translated}, отклонено (остались пустыми) ${rejected}, из ${queue.length} в прогоне; ` +
     `осталось пустых в файле: ~${totalEmpty - translated}; время ${sec.toFixed(0)}с` +
     (judgeN ? `; судья средний ${(judgeSum / judgeN).toFixed(2)}/10` : "");
   console.log(summary);
-  appendFileSync(logPath, `${new Date().toISOString()} ${summary}\n`);
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {

@@ -18,32 +18,32 @@ state "СТАРТ" as START #e2e8f0
 
 state "Уровень 0" as LEVEL0 {
   state "Prologue" as Prologue : 238 строк
-  state "StoryBeginnings" as StoryBeginnings : 1025 строк
+  state "StoryBeginnings" as StoryBeginnings : 1027 строк
   state "WarArc" as WarArc : 703 строк
 }
 
 state "Уровень 1" as LEVEL1 {
-  state "Other" as Other : 10224 строк
+  state "Other" as Other : 10198 строк
 }
 
 state "Уровень 2" as LEVEL2 {
   state "VargaMarionPath" as VargaMarionPath : 1745 строк
-  state "UnionKingdom" as UnionKingdom : 5339 строк
-  state "HassarPath" as HassarPath : 2913 строк
+  state "UnionKingdom" as UnionKingdom : 5342 строк
+  state "HassarPath" as HassarPath : 2915 строк
   state "AlfredArc" as AlfredArc : 3045 строк
   state "Training" as Training : 1552 строк
-  state "SailorPath" as SailorPath : 3889 строк
+  state "SailorPath" as SailorPath : 3890 строк
   state "WarriorPath" as WarriorPath : 8984 строк
-  state "BlackMonolith" as BlackMonolith : 6215 строк
-  state "PrisonArc" as PrisonArc : 3072 строк
-  state "MagePath" as MagePath : 7034 строк
+  state "BlackMonolith" as BlackMonolith : 6217 строк
+  state "PrisonArc" as PrisonArc : 3081 строк
+  state "MagePath" as MagePath : 7036 строк
 }
 
 state "Уровень 3" as LEVEL3 {
-  state "LifeInRahayal" as LifeInRahayal : 2583 строк
-  state "HollowWorld" as HollowWorld : 4507 строк
-  state "SailorArc" as SailorArc : 2747 строк
-  state "DemonArc" as DemonArc : 1226 строк
+  state "LifeInRahayal" as LifeInRahayal : 2585 строк
+  state "HollowWorld" as HollowWorld : 4508 строк
+  state "SailorArc" as SailorArc : 2748 строк
+  state "DemonArc" as DemonArc : 1227 строк
 }
 
 state "Уровень 4" as LEVEL4 {

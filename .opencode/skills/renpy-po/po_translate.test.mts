@@ -28,6 +28,7 @@ import {
   parseArgs,
   salvageIssues,
   extractTranslation,
+  translatorContext,
   stopRequested,
   systemPrompt,
   userPrompt,
@@ -449,6 +450,46 @@ test("судья: LANGUAGE GATE первым пунктом (чужой язык
   const ui = judgeUser("pl", mkEntry({ msgctxt: '"ui"', msgid: "Keyboard" }), "Klawiatura", null);
   assert.match(ui, /Polski \(pl\)/);
   assert.ok(!ui.includes("emotion:"), "UI-гейт без эмоции");
+});
+
+test("судья видит 2 предыдущие реплики (контекст сцены, 2026-11-03)", () => {
+  const prev = [
+    "speaker:Narrator Alaric stands up, flashing his teeth.",
+    "speaker:Alaric Why are you being like this?",
+  ];
+  const withCtx = judgeUser(
+    "ru",
+    mkEntry({ msgctxt: '"speaker:Alaric"', msgid: "A cunt." }),
+    "Пизда.",
+    "Sarcastically amused",
+    prev,
+  );
+  const ctx = withCtx.indexOf("CONTEXT (2 previous lines");
+  const src = withCtx.indexOf("SOURCE (always English");
+  assert.ok(ctx > 0, "блок соседей присутствует");
+  assert.ok(ctx < src, "контекст идёт ДО источника (судья читает сцену раньше строки)");
+  for (const l of prev) assert.ok(withCtx.includes(l), `сосед на месте: ${l}`);
+  assert.match(withCtx, /do NOT judge them/, "соседей судить нельзя — контекст, а не объект");
+  // Без prev блок не появляется (старые вызовы не меняют формат промпта).
+  const bare = judgeUser(
+    "ru",
+    mkEntry({ msgctxt: '"speaker:Alaric"', msgid: "A cunt." }),
+    "Пизда.",
+    "Sarcastically amused",
+  );
+  assert.ok(!bare.includes("CONTEXT (2 previous lines"), "без prev блока нет");
+});
+
+test("окно контекста переводчика: 3 строки ДО + 1 ПОСЛЕ, без выхода за края", () => {
+  // Решение владельца 2026-11-03 (было 2+2): антецеденты важнее реакции,
+  // суммарный объём тот же — скорость не меняется.
+  const items = ["a", "b", "c", "d", "e"];
+  assert.deepEqual(translatorContext(items, 3), { prev: ["a", "b", "c"], next: ["e"] }, "3 ДО + 1 ПОСЛЕ");
+  assert.deepEqual(translatorContext(items, 2), { prev: ["a", "b"], next: ["d"] }, "до строки2 всего 2 соседа");
+  assert.deepEqual(translatorContext(items, 0), { prev: [], next: ["b"] }, "начало: не заворачиваем");
+  assert.deepEqual(translatorContext(items, 4), { prev: ["b", "c", "d"], next: [] }, "конец: next пуст");
+  assert.deepEqual(translatorContext([], 0), { prev: [], next: [] });
+  assert.deepEqual(translatorContext(items, 99), { prev: [], next: [] }, "индекс мимо массива");
 });
 
 test("реплика-имя «Thomas...» не отбраковывается как «не переведено» (инцидент 2026-10-26)", () => {

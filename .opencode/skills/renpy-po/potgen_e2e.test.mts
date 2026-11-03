@@ -9,17 +9,19 @@
  */
 
 import assert from "node:assert/strict";
-import { dirname, join } from "node:path";
+import { basename, dirname, join } from "node:path";
 import { copyFileSync, existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { test } from "node:test";
 
 import { parsePo, renderPo } from "./po_core.mts";
 import {
+  collectRpyFiles,
   loadEmotionsFromPot,
   parseLabelMap,
   renderPot,
   renderSpeakersMts,
+  rpyUnescape,
   scanGame,
   speakerCtx,
   speakersMtsPath,
@@ -124,6 +126,184 @@ test(
           `Свежая: ...${ctx(fresh)}... vs закоммиченная: ...${ctx(committed)}... ` +
           `— запусти npm run potgen и закоммить`,
       );
+    }
+  },
+);
+
+/** `#. src: файл:строка` из блока POT — откуда взята запись (или null). */
+function srcOfBlock(block: string): { file: string; line: number } | null {
+  const m = /^#\. src: ([^:\n]+):(\d+)$/m.exec(block);
+  return m ? { file: m[1], line: Number(m[2]) } : null;
+}
+
+/** Блоки POT (без шапки) -> строки-источники + ключи. */
+function srcRows(): Array<{ key: string; msgid: string; file?: string; line: number }> {
+  const text = readFileSync(POT_PATH, "utf-8").replace(/\r\n/g, "\n");
+  return text
+    .split("\n\n")
+    .filter((b) => /^msgid "/m.test(b))
+    .map((b) => {
+      const mid = /^msgid "(.*)"$/m.exec(b)?.[1] ?? "";
+      const ctx = /^msgctxt "(.*)"$/m.exec(b)?.[1] ?? "";
+      const s = srcOfBlock(b);
+      // Ключ — в НОРМАЛИЗОВАННОМ виде (как отдаёт parsePo): иначе экранированные
+      // кавычки в msgid дают другой ключ, чем в po-файлах.
+      const msgid = rpyUnescape(mid);
+      return { key: `${rpyUnescape(ctx)}\u0000${msgid}`, msgid, file: s?.file, line: s?.line ?? -1 };
+    })
+    .filter((r) => r.msgid); // шапка (msgid "") — не запись
+}
+
+test(
+  "e2e: последовательность POT = порядок исходников игры (артефакт #. src:)",
+  { skip: (!HAVE_GAME || !existsSync(POT_PATH)) && "нет игры или шаблона" },
+  () => {
+    // КРИТИЧНО (правило владельца 2026-11-02): переводчик и судья берут
+    // контекст из СОСЕДНИХ строк po, а po наследует порядок POT. Любая
+    // инверсия = чужая реплика вместо соседа по сцене = испорченный перевод.
+    // Проверяем сам артефакт: у каждой записи есть `#. src: файл:строка`,
+    // и она сверяется с НАСТОЯЩИМИ файлами игры на диске.
+    const rows = srcRows().filter((r) => r.file);
+    assert.ok(rows.length > 60000, `записей с #. src: ${rows.length}`);
+
+    // 1. POT открывается с начала прохождения — script.rpy (label start:) первым.
+    assert.equal(rows[0].file, "script.rpy", `POT начинается с ${rows[0].file}: «${rows[0].msgid.slice(0, 60)}»`);
+
+    // 2. Каждый файл — ровно ОДИН непрерывный блок (чужой файл не вклинивается).
+    const blocks = new Map<string, { first: number; last: number }>();
+    const starts = new Map<string, number>();
+    rows.forEach((r, i) => {
+      const prev = rows[i - 1];
+      if (!prev || prev.file !== r.file) starts.set(r.file!, (starts.get(r.file!) ?? 0) + 1);
+      const b = blocks.get(r.file!);
+      if (b) b.last = i;
+      else blocks.set(r.file!, { first: i, last: i });
+    });
+    for (const [file, n] of starts) {
+      assert.equal(n, 1, `файл ${file} начинает блок ${n} раза — файлы чередуются, соседи рвутся`);
+    }
+    for (const [file, b] of blocks) {
+      assert.equal(
+        rows.slice(b.first, b.last + 1).every((r) => r.file === file),
+        true,
+        `записи ${file} разорваны: внутри блока есть чужие`,
+      );
+    }
+    assert.ok((blocks.get("script.rpy")?.last ?? -1) > 60000, "блок script.rpy слишком мал");
+
+    // 3. Внутри файла номера строк не убывают — это и есть последовательность.
+    for (let i = 1; i < rows.length; i++) {
+      const a = rows[i - 1];
+      const b = rows[i];
+      if (a.file === b.file && b.line < a.line) {
+        assert.fail(
+          `инверсия в ${b.file}: строка ${b.line} идёт после ${a.line} — «${b.msgid.slice(0, 60)}». ` +
+            `Запусти npm run potgen`,
+        );
+      }
+    }
+
+    // 4. Правдивость src: строка исходника РЕАЛЬНО содержит msgid.
+    const linesByFile = new Map<string, string[]>();
+    for (const f of collectRpyFiles(GAME)) {
+      const base = basename(f);
+      if (!linesByFile.has(base)) linesByFile.set(base, readFileSync(f, "utf-8").split("\n"));
+    }
+    let checked = 0;
+    for (const r of rows) {
+      const lines = linesByFile.get(r.file!);
+      assert.ok(lines, `файл ${r.file} не найден в игре`);
+      const raw = lines[r.line - 1];
+      // Обе нормы: say/нарратор в POT — unescaped, UI-строки potgen — как есть.
+      if (raw === undefined || !(raw.includes(r.msgid) || rpyUnescape(raw).includes(r.msgid))) {
+        assert.fail(`${r.file}:${r.line} не содержит msgid «${r.msgid.slice(0, 60)}» — src врёт`);
+      }
+      checked++;
+    }
+    assert.ok(checked > 60000, `проверено строк: ${checked}`);
+
+    // 5. Дублей ключей нет (дедуп: один ключ = одна запись = один сосед).
+    const seen = new Set<string>();
+    for (const r of rows) {
+      assert.ok(!seen.has(r.key), `дубль ключа в POT: «${r.msgid.slice(0, 60)}»`);
+      seen.add(r.key);
+    }
+  },
+);
+
+test(
+  "e2e: po/<lang>.po наследуют последовательность template.pot (10 языков)",
+  { skip: (!HAVE_GAME || !existsSync(POT_PATH)) && "нет игры или шаблона" },
+  () => {
+    // Перевод идёт по .po — если их порядок разошёлся с POT, контекст
+    // соседних реплик у переводчика/судьи ломается уже в po, а не в POT.
+    const potKeys = srcRows().map((r) => r.key);
+    const poDir = join(REPO_ROOT, "patches", "ai-voice-pack", "po");
+    const langs = readdirSync(poDir)
+      .filter((f) => f.endsWith(".po"))
+      .sort();
+    assert.ok(langs.length >= 10, `найдено po: ${langs.length}`);
+    for (const f of langs) {
+      const entries = parsePo(readFileSync(join(poDir, f), "utf-8").replace(/\r\n/g, "\n")).filter((e) => e.msgid);
+      let i = 0;
+      for (const e of entries) {
+        if (e.flags.includes("legacy")) break; // выпавшие из POT — только хвостом
+        const key = `${e.msgctxt}\u0000${e.msgid}`;
+        assert.equal(key, potKeys[i], `${f}: запись ${i} разошлась с POT («${e.msgid.slice(0, 50)}»)`);
+        i++;
+      }
+      assert.equal(i, potKeys.length, `${f}: покрыто ${i} из ${potKeys.length} записей POT`);
+      for (const e of entries.slice(i)) {
+        assert.ok(e.flags.includes("legacy"), `${f}: после префикса не-legacy запись «${e.msgid.slice(0, 50)}»`);
+      }
+    }
+  },
+);
+
+test(
+  "e2e: POT повторяет последовательность script.rpy (свежий скан игры)",
+  { skip: (!HAVE_GAME || !existsSync(POT_PATH)) && "нет игры или шаблона" },
+  () => {
+    // Правило владельца (2026-11-02): порядок строк script.rpy и POT обязан
+    // совпадать — переводчик и судья берут контекст из соседних строк, и
+    // нарушение последовательности = чужие реплики вместо соседей по сцене.
+    const committed = parsePo(readFileSync(POT_PATH, "utf-8").replace(/\r\n/g, "\n")).filter((e) => e.msgid);
+    const byKey = new Map([...scanGame(GAME).entries.values()].map((e) => [`${e.msgctxt}\u0000${e.msgid}`, e]));
+    const srcOf = (e: { msgctxt: string; msgid: string }) => byKey.get(`${e.msgctxt}\u0000${e.msgid}`);
+
+    // 1. POT открывается с начала прохождения (файл `label start:` — первым).
+    const first = committed[0];
+    assert.equal(
+      srcOf(first)?.srcFile,
+      "script.rpy",
+      `POT начинается не с script.rpy (а с ${srcOf(first)?.srcFile ?? "?"}): «${first.msgid.slice(0, 60)}»`,
+    );
+
+    // 2. Записи script.rpy — непрерывным блоком (чужой файл не вклинивается).
+    const idx: number[] = [];
+    const lines: number[] = [];
+    committed.forEach((e, i) => {
+      const src = srcOf(e);
+      if (src?.srcFile === "script.rpy") {
+        idx.push(i);
+        lines.push(src.srcLine ?? -1);
+      }
+    });
+    assert.ok(idx.length > 60000, `script-записей в POT: ${idx.length}`);
+    assert.equal(
+      idx[idx.length - 1] - idx[0] + 1,
+      idx.length,
+      "записи другого файла вклиниваются внутрь блока script.rpy",
+    );
+
+    // 3. Внутри блока — строго в порядке строк исходника (не по алфавиту).
+    for (let i = 1; i < lines.length; i++) {
+      if (lines[i] < lines[i - 1]) {
+        assert.fail(
+          `инверсия порядка: строка ${lines[i]} идёт после ${lines[i - 1]} — ` +
+            `«${committed[idx[i]].msgid.slice(0, 60)}». Запусти npm run potgen`,
+        );
+      }
     }
   },
 );

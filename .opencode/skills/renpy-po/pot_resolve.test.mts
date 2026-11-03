@@ -90,9 +90,12 @@ test("боевой template.pot: индекс строится, размер = �
   assert.equal(m.arc, "AlfredArc");
   assert.equal(m.emotion, "Reflective and slightly weary", "индекс отдаёт НОВЫЙ тон (emotion_new)");
   // старый слой в POT сохранён (плавная миграция) — просто уже не действующий
+  // Ищем блок по ТОЧНОМУ msgid, а не по подстроке: в POT есть другие строки
+  // про Al'Gahaem («…a city which existed by success»), и после перехода на
+  // порядок исходников (2026-11-02) первой по тексту оказалась не эта.
   const raw = readFileSync(DEFAULT_POT, "utf8")
     .split(/\n\n/)
-    .find((b) => b.includes("Al'Gahaem was a city"));
+    .find((b) => b.includes('msgid "Al\'Gahaem was a city that was hard for Sarah to wrap her mind around."'));
   assert.match(raw ?? "", /^#\. emotion: Thoughtfully puzzled$/m, "старый слой цел");
 });
 

@@ -187,17 +187,24 @@ test("экранированные кавычки доходят до msgid и �
   assert.ok(pot.includes('msgid "He said \\"Hi\\"."'));
 });
 
-test("рендер детерминирован и отсортирован по (msgid, msgctxt)", () => {
+test("рендер детерминирован и НЕ сортирует: порядок = порядок исходников игры", () => {
   const gameDir = makeFixtureGame();
-  const a = renderPot(scanGame(gameDir), new Date(0));
+  const catalog = scanGame(gameDir);
+  const a = renderPot(catalog, new Date(0));
   const b = renderPot(scanGame(gameDir), new Date(0));
-  assert.equal(a, b);
-  const entries = parsePo(a).filter((e) => e.msgid);
-  const keys = entries.map((e) => [e.msgid, e.msgctxt] as const);
-  const sorted = [...keys].sort(
+  assert.equal(a, b, "два прогона дают байт-в-байт (порядок обхода стабилен)");
+  // Порядок в POT обязан совпадать с порядком обхода .rpy: сортировка по
+  // msgid убивала последовательность реплик (контекст соседей для
+  // переводчика/судьи). Порядок записи в каталоге = первое появление.
+  const want = [...catalog.entries.values()].map((e) => [e.msgid, e.msgctxt] as const);
+  const got = parsePo(a)
+    .filter((e) => e.msgid)
+    .map((e) => [e.msgid, e.msgctxt] as const);
+  assert.deepEqual(got, want);
+  const sorted = [...want].sort(
     (x, y) => (x[0] < y[0] ? -1 : x[0] > y[0] ? 1 : 0) || (x[1] < y[1] ? -1 : x[1] > y[1] ? 1 : 0),
   );
-  assert.deepEqual(keys, sorted);
+  assert.notDeepEqual(got, sorted, "и порядок НЕ алфавитный (иначе тест ничего не ловит)");
 });
 
 test("POT рендерится и парсится обратно без потерь", () => {
@@ -387,4 +394,23 @@ test("arc/scene записей: внутри label по правилам, сна
   assert.ok(shared.some((c) => c === "scene: OpeningScene"));
   const uiComments = byId.get("ui\u0000Continue") ?? [];
   assert.ok(!uiComments.some((c) => c.startsWith("arc: ") || c.startsWith("scene: ")), "ui-запись без якорей");
+});
+
+test("порядок: файл точки входа (label start) идёт первым, строки — в порядке исходника", () => {
+  // Регресс критичного бага 2026-11-02: чистый алфавит ставил script.rpy
+  // (вся история игры) ПОСЛЕДНИМ — POT начинался с подписей галерей, а
+  // первая реплика игры лежала в середине файла. Контекст перевода берётся
+  // из соседних строк, поэтому последовательность исходника священна.
+  const dir = join(REPO_ROOT, "tmp", "po-fixture-order");
+  rmSync(dir, { recursive: true, force: true });
+  mkdirSync(dir, { recursive: true });
+  // alpha.rpy сортируется ПЕРЕД zeta.rpy, но игра стартует с zeta (label start).
+  writeFileSync(join(dir, "alpha.rpy"), 'label alpha:\n    "Alpha one."\n    "Alpha two."\n', "utf-8");
+  writeFileSync(join(dir, "zeta.rpy"), 'label start:\n    "Opening one."\n    "Opening two."\n', "utf-8");
+
+  const all = [...scanGame(dir).entries.values()];
+  assert.deepEqual(
+    all.map((e) => `${e.srcFile}:${e.srcLine} ${e.msgid}`),
+    ["zeta.rpy:2 Opening one.", "zeta.rpy:3 Opening two.", "alpha.rpy:2 Alpha one.", "alpha.rpy:3 Alpha two."],
+  );
 });

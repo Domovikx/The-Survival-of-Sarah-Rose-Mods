@@ -79,7 +79,7 @@
 
 import { createHash } from "node:crypto";
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
-import { dirname, join } from "node:path";
+import { basename, dirname, join } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
 import { normalizeText, parsePo, poEscape } from "./po_core.mts";
@@ -205,6 +205,13 @@ export interface PotEntry {
   gender?: string;
   arc?: string; // арка текущего label (правила arcOfLabel) — роутинг аудио POT-мапы
   scene?: string; // label записи (сцена) — тоньше арки, таргетинг --scene
+  /**
+   * Источник ПЕРВОЙ встречи (имя файла + номер строки) — для тестов порядка:
+   * POT обязан повторять последовательность script.rpy, иначе ломается
+   * контекст соседних реплик для переводчика/судьи. В POT НЕ рендерится.
+   */
+  srcFile?: string;
+  srcLine?: number;
 }
 
 /** uid каталога и аудио = md5(текста): та же формула, что у catalog/emotions. */
@@ -278,6 +285,10 @@ export function parseRpyFile(filePath: string, catalog: PotCatalog, defineDispla
   // отступе: тело label всегда отступлено).
   let currentLabel: string | null = null;
 
+  // Источник первой встречи (тесты порядка POT): где и на какой строке.
+  const fileBase = basename(filePath);
+  let curLine = 0;
+
   const add = (msgid: string, msgctxt: string): void => {
     if (!msgid) return;
     // Арка и сцена — от текущего label (сюжетные файлы; галереи — без них).
@@ -293,7 +304,16 @@ export function parseRpyFile(filePath: string, catalog: PotCatalog, defineDispla
       if (!slot.arc && arc !== undefined) slot.arc = arc;
       if (!slot.scene && lab !== undefined) slot.scene = lab;
     } else {
-      catalog.entries.set(key, { msgid, msgctxt, n: 1, uid: uidOf(msgid), arc, scene: lab });
+      catalog.entries.set(key, {
+        msgid,
+        msgctxt,
+        n: 1,
+        uid: uidOf(msgid),
+        arc,
+        scene: lab,
+        srcFile: fileBase,
+        srcLine: curLine,
+      });
     }
   };
 
@@ -303,6 +323,7 @@ export function parseRpyFile(filePath: string, catalog: PotCatalog, defineDispla
   let imageIndent = -1;
 
   for (let i = 0; i < lines.length; i++) {
+    curLine = i + 1; // 1-based: как в редакторе, чтобы тесты читались человеком
     const raw = lines[i];
     const stripped = raw.trim();
     if (!stripped || stripped.startsWith("#")) continue;
@@ -480,7 +501,7 @@ export function scanGame(gameDir: string, opts: ScanOptions = {}): PotCatalog {
   return catalog;
 }
 
-/** Рендерит каталог в текст template.pot (заголовок + записи, отсортированные). */
+/** Рендерит каталог в текст template.pot (заголовок + записи в порядке исходников). */
 export function renderPot(catalog: PotCatalog, now: Date = new Date()): string {
   const ts = now.toISOString().slice(0, 16).replace("T", " ") + "+0000";
   const out: string[] = [
@@ -494,21 +515,29 @@ export function renderPot(catalog: PotCatalog, now: Date = new Date()): string {
     '"Content-Transfer-Encoding: 8bit\\n"',
     "",
   ];
-  const sorted = [...catalog.entries.values()].sort(
-    (a, b) =>
-      (a.msgid < b.msgid ? -1 : a.msgid > b.msgid ? 1 : 0) ||
-      (a.msgctxt < b.msgctxt ? -1 : a.msgctxt > b.msgctxt ? 1 : 0),
-  );
+  // ПОРЯДОК РЕЧИ = ПОРЯДОК ИСХОДНИКОВ (2026-11-02). Раньше здесь была
+  // сортировка по msgid — она убивала последовательность сцен: соседние
+  // строки становятся случайными (для «A cunt.» соседом оказывалась реплика
+  // Старейшины из другой сцены), а переводчик и судья читают соседей как
+  // контекст. Порядок = порядок обхода .rpy (collectRpyFiles: файл точки
+  // входа `label start:` — первым, далее по алфавиту; внутри файла —
+  // построчно), первое появление дубля побеждает. Каждая запись несёт
+  // `#. src: файл:строка` — самодостаточное доказательство порядка для тестов.
+  const ordered = [...catalog.entries.values()];
   // Инвентарь лейблов (label → arc): полный список — scene-комментарии
   // неполны (дедуп схлопывает сцены без уникальных строк), рантайм-мапе
   // (label_arc.json) нужен каждый сюжетный label. Блок сразу после шапки.
   for (const lab of [...(catalog.labels ?? new Map<string, string>()).keys()].sort()) {
     out.push(`#. label-map: ${lab}=${catalog.labels.get(lab)}`);
   }
-  for (const e of sorted) {
+  for (const e of ordered) {
     if (e.arc) out.push(`#. arc: ${e.arc}`);
     if (e.scene) out.push(`#. scene: ${e.scene}`);
     out.push(`#. uid: ${e.uid}`);
+    // Источник ПЕРВОЙ встречи: файл и строка исходника (предложение владельца
+    // 2026-11-02). Даёт тестам последовательности самодостаточный артефакт:
+    // POT читается текстом и сверяется с game/*.rpy без повторного скана.
+    if (e.srcFile && e.srcLine) out.push(`#. src: ${e.srcFile}:${e.srcLine}`);
     if (e.gender) out.push(`#. speaker_gender: ${e.gender}`);
     if (e.emotion) out.push(`#. emotion: ${e.emotion}`);
     if (e.emotionNew) out.push(`#. emotion_new: ${e.emotionNew}`); // миграционный слой 2026-10-26

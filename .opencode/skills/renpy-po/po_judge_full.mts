@@ -25,7 +25,7 @@ import { appendFileSync, existsSync, readFileSync, writeFileSync } from "node:fs
 import { join } from "node:path";
 
 import { parsePo, type PoEntry } from "./po_core.mts";
-import { judge, judgeVerified } from "./po_translate.mts";
+import { isSymbolicMsgid, judge, judgeVerified } from "./po_translate.mts";
 import { resolveBackend } from "../../../scripts/llm_backend.mts";
 
 const REPO = process.cwd();
@@ -57,7 +57,24 @@ const poPath = join(PO, `${LANG}.po`);
 const jsonlPath = process.env.TSSR_JUDGE_JSONL || join(REPO, "tmp", `po_judge_full_${LANG}.jsonl`);
 const badPath = join(REPO, "tmp", `po_judge_full_${LANG}.bad.txt`);
 
-const entries = parsePo(readFileSync(poPath, "utf-8").replace(/\r\n/g, "\n")).filter((e) => e.msgid && e.msgstr.trim());
+// Шлюз символьных msgid (фальш-стоп в прогоне de 2026-11-02: судья ставила 0
+// на `<` -> `<` — идентичность по дизайну, как и в po_translate, где авто-чек
+// такие строки пропускает без судьи). Правильную идентичность не судим;
+// испорченную (msgstr != msgid) — судим как обычную строку.
+const all = parsePo(readFileSync(poPath, "utf-8").replace(/\r\n/g, "\n")).filter((e) => e.msgid);
+const entries = all.filter((e) => e.msgstr.trim() && !(isSymbolicMsgid(e.msgid) && e.msgstr.trim() === e.msgid.trim()));
+
+/**
+ * 2 предыдущие реплики по порядку po (= порядок игры, 2026-11-03) — контекст
+ * судьи. Считается по ПОЛНОМУ списку (без фильтра «переведено»): сосед — это
+ * соседняя строка файла, даже если её перевод ещё пустой.
+ */
+const prevOf = new Map<string, string[]>();
+all.forEach((e, i) => {
+  const prev = [all[i - 2], all[i - 1]].filter((x): x is PoEntry => Boolean(x)).map((x) => `${x.msgctxt} ${x.msgid}`);
+  prevOf.set(`${e.msgctxt}\u0000${e.msgid}`, prev);
+});
+const prevFor = (e: PoEntry): string[] => prevOf.get(`${e.msgctxt}\u0000${e.msgid}`) ?? [];
 
 /** Тон — так же, как в po_translate/po_judge_check: из комментариев POT. */
 function emotionOf(e: PoEntry): string | null {
@@ -99,7 +116,6 @@ interface Row {
   score: number;
   issues: string[];
   ok: boolean;
-  shaky: boolean;
 }
 
 const bad: Row[] = [];
@@ -112,15 +128,14 @@ async function worker(): Promise<void> {
     const e = targets.shift();
     if (!e) return;
     const r = FAST
-      ? await judge(BASE, MODEL, LANG, e, e.msgstr, emotionOf(e))
-      : await judgeVerified(BASE, MODEL, LANG, e, e.msgstr, emotionOf(e), THRESHOLD);
+      ? await judge(BASE, MODEL, LANG, e, e.msgstr, emotionOf(e), "", prevFor(e))
+      : await judgeVerified(BASE, MODEL, LANG, e, e.msgstr, emotionOf(e), THRESHOLD, prevFor(e));
     const row: Row = {
       msgid: e.msgid,
       msgstr: e.msgstr,
       score: r.score,
       issues: r.issues,
       ok: r.score >= THRESHOLD,
-      shaky: e.msgid.trim().length <= 15,
     };
     // Допись ПОСЛЕ каждой строки — обрыв теряет максимум одну запись.
     appendFileSync(jsonlPath, `${JSON.stringify(row)}\n`, "utf-8");

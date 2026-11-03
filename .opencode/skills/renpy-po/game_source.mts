@@ -14,7 +14,7 @@
  * (лейбл был не досчитан, тл-заголовок сцены — Arc: Other).
  */
 
-import { readdirSync } from "node:fs";
+import { readFileSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 
 /** Файлы, чьи лейблы не несут сюжет (галерея/реплеи) — арка не ставится.
@@ -100,7 +100,7 @@ export function arcOfLabel(label: string): string | undefined {
   return "Other";
 }
 
-/** Рекурсивно собирает .rpy файлы (мимо tl/ и скрытых каталогов), по возрастанию. */
+/** Рекурсивно собирает .rpy файлы: файл точки входа игры — первым, далее по возрастанию. */
 export function collectRpyFiles(gameDir: string): string[] {
   const files: string[] = [];
   const walk = (dir: string): void => {
@@ -110,6 +110,10 @@ export function collectRpyFiles(gameDir: string): string[] {
     } catch {
       return;
     }
+    // Порядок обхода детерминированный (2026-11-02): readdir отдаёт записи
+    // в порядке ФС, а порядок файлов задаёт порядок реплик в POT/po — он должен
+    // быть воспроизводимым (иначе «соседи» строк прыгают между машинами).
+    dirents.sort((a, b) => (a.name < b.name ? -1 : a.name > b.name ? 1 : 0));
     for (const d of dirents) {
       const full = join(dir, d.name);
       if (d.isDirectory()) {
@@ -125,5 +129,23 @@ export function collectRpyFiles(gameDir: string): string[] {
     }
   };
   walk(gameDir);
-  return files.sort();
+  files.sort();
+  // ПОРЯДОК ИГРЫ (критично: контекст перевода берётся из соседних строк).
+  // Чистый алфавит ставил script.rpy (вся история) ПОСЛЕДНИМ: первые 2 236
+  // записей POT оказывались подписями галерей, а первая реплика игры —
+  // «Castle Reinmeer» — лежала в середине файла. Файл с точкой входа
+  // (`label start:`) идёт ПЕРВЫМ: POT/po открываются с начала прохождения,
+  // дальше — остальные файлы по алфавиту.
+  const entryIdx = files.findIndex((f) => hasEntryPoint(f));
+  if (entryIdx > 0) files.unshift(...files.splice(entryIdx, 1));
+  return files;
+}
+
+/** Есть ли в файле точка входа игры `label start:` (Ren'Py стартует с неё). */
+function hasEntryPoint(path: string): boolean {
+  try {
+    return /^label\s+start\s*:/m.test(readFileSync(path, "utf-8"));
+  } catch {
+    return false;
+  }
 }

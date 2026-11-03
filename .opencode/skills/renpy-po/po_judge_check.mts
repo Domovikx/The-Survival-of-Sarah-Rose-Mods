@@ -50,6 +50,16 @@ if (!/\S/.test(LANG) || LANG.includes("/") || LANG.includes("..")) {
 }
 const entries = parsePo(readFileSync(poPath, "utf-8").replace(/\r\n/g, "\n")).filter((e) => e.msgid);
 
+/** 2 предыдущие реплики по порядку po (= порядок игры, 2026-11-03) — контекст судьи. */
+const prevOf = new Map<string, string[]>();
+entries.forEach((e, i) => {
+  prevOf.set(
+    `${e.msgctxt}\u0000${e.msgid}`,
+    [entries[i - 2], entries[i - 1]].filter((x): x is PoEntry => Boolean(x)).map((x) => `${x.msgctxt} ${x.msgid}`),
+  );
+});
+const prevFor = (e: PoEntry): string[] => prevOf.get(`${e.msgctxt}\u0000${e.msgid}`) ?? [];
+
 /** Цепочка проверки: файл (по строке), stdin или все пустые. */
 function pickTargets(): PoEntry[] {
   if (has("empty")) {
@@ -96,46 +106,32 @@ interface Row {
   score: number;
   issues: string[];
   ok: boolean;
-  /** Короткие строки: судья на них НЕНАДЁЖЕН (ложит «wrong language» на
-   * явный перевод цели (es `Test` корректно переведён, а судья кричит про чужой язык)). Балл показываем,
-   * но помечаем — решение принимает человек/агент, а не цифра. */
-  shaky: boolean;
 }
 const rows: Row[] = [];
-let shakyCount = 0;
 
 for (const e of targets) {
   // последовательно намеренно: LM Studio обслуживает очередь по одной,
   // параллельный запрос лишь замедлил бы обе стороны
   // eslint-disable-next-line no-await-in-loop
-  const r = await judgeVerified(BASE, MODEL, LANG, e, e.msgstr, emotionOf(e), THRESHOLD);
-  const shaky = e.msgid.trim().length <= 15;
-  const row: Row = { msgid: e.msgid, score: r.score, issues: r.issues, ok: r.score >= THRESHOLD, shaky };
+  const r = await judgeVerified(BASE, MODEL, LANG, e, e.msgstr, emotionOf(e), THRESHOLD, prevFor(e));
+  const row: Row = { msgid: e.msgid, score: r.score, issues: r.issues, ok: r.score >= THRESHOLD };
   rows.push(row);
-  if (row.shaky) shakyCount++;
   if (JSON_OUT) {
     console.log(JSON.stringify({ lang: LANG, ...row }));
   } else {
-    const tag = row.ok ? "OK " : row.shaky ? "≈  " : "НИЖЕ";
+    const tag = row.ok ? "OK " : "НИЖЕ";
     console.log(`  ${tag} ${String(row.score).padStart(2)}/10 | ${row.msgid.slice(0, 78)}`);
     if (!row.ok) for (const i of row.issues.slice(0, 3)) console.log(`         - ${i}`);
   }
 }
 
 const bad = rows.filter((r) => !r.ok);
-const badReal = bad.filter((r) => !r.shaky);
 const worst = rows.length ? Math.min(...rows.map((r) => r.score)) : "-";
 console.log(`\n[po:judge-check] принято ${rows.length - bad.length}/${rows.length} | худший балл ${worst}`);
-if (shakyCount) {
-  console.log(
-    `[po:judge-check] из них ${shakyCount} — КОРОТКИЕ строки (≤15 символов), где судья ненадёжен: ` +
-      `балл ниже порога для них НЕ считаю провалом, решение за человеком/агентом`,
-  );
-}
 
-if (badReal.length) {
-  console.log(`[po:judge-check] ниже порога (надёжные строки): ${badReal.length}`);
-  for (const b of badReal) console.log(`  ${b.score}/10  ${b.msgid.slice(0, 90)}`);
+if (bad.length) {
+  console.log(`[po:judge-check] ниже порога: ${bad.length}`);
+  for (const b of bad) console.log(`  ${b.score}/10  ${b.msgid.slice(0, 90)}`);
   process.exit(1);
 }
 process.exit(0);
