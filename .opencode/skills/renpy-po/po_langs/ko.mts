@@ -23,5 +23,4 @@ ${EROTIC_NOTE}
     ["I'm a princess of noble birth.", "나는 귀족 가문의 공주입니다."],
     ["Rolls back to earlier dialogue.", "이전 대화로 되돌립니다."],
   ],
-  judgeNotes: `Korean-specific: speech level consistency per relationship (반말 for intimates, 존댓말 for royalty), natural Korean syntax, explicit register per lexicon.`,
 };

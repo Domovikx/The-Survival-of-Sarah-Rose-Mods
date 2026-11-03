@@ -52,5 +52,4 @@ ${EROTIC_NOTE}
       "¿Una puta barata de barco que me chupará la polla apenas le dé la orden?",
     ],
   ],
-  judgeNotes: `Spanish-specific: gender agreement (Sarah = FEMALE), tú not usted/usteded, no vosotros, neutral ES+LatAm vocabulary, lexicon table respected (no clinical terms in scenes, "cunt"="coño" anatomy not insult, "fuck!" shout = "¡Joder!" not "¡Mierda!").`,
 };

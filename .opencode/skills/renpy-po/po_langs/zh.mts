@@ -23,5 +23,4 @@ ${EROTIC_NOTE}
     ["Sarah can't do it, she drops the dagger.", "莎拉做不到，她丢下了匕首。"],
     ["Sarah has her pride, refuse to perform.", "莎拉有她的骄傲，拒绝表演。"],
   ],
-  judgeNotes: `Chinese-specific: pronoun consistency (她 = Sarah), natural Chinese syntax (no translationese), explicit register per lexicon.`,
 };

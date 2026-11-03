@@ -47,6 +47,13 @@
  *   --tries N         попыток на строку (по умолчанию 3; больше — для добора
  *                     «упрямых», которых судья гоняет по кругу)
  *   --no-judge        без LLM-судьи (только авточеки) — быстрее, но хуже
+ *   --improve        РЕЖИМ УЛУЧШЕНИЯ (2026-11-03): обрабатывает и УЖЕ
+ *                    переведённые строки — один универсальный переводчик
+ *                    «переводит пустые, перепроверяет и улучшает заполненные».
+ *                    Стадия судьи выключена (решение владельца), запись в po
+ *                    после КАЖДОЙ строки (flush-every по умолчанию 1), каждое
+ *                    изменение печатается в stdout и в tmp/po_improve_<lang>.changes.log,
+ *                    резюм — по журналу обработанных индексов (tmp/po_improve_<lang>.done).
  *   --dry             только план (сколько записей, без перевода)
  *   --base-url URL    LLM-сервер (по умолчанию http://127.0.0.1:8080 — Strata)
  *   --model NAME      модель (по умолчанию qwen3.6-35b-a3b-ud-q4_k_xl)
@@ -58,7 +65,7 @@
  * качества — po_judge_full (tmp/po_judge_full_<lang>.bad.txt) и
  * po_repair_full (tmp/po_repair_full_<lang>.failed.txt).
  */
-import { existsSync, readFileSync, rmSync, statSync, writeFileSync } from "node:fs";
+import { appendFileSync, existsSync, readFileSync, rmSync, statSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
@@ -91,6 +98,8 @@ export interface Opts {
   threshold: number;
   tries: number;
   judge: boolean;
+  /** Режим улучшения: обрабатывает и переведённые строки (переводчик+улучшатель). */
+  improve: boolean;
   dry: boolean;
   baseUrl: string;
   model: string;
@@ -102,6 +111,11 @@ export function parseArgs(argv: string[]): Opts {
     const i = argv.indexOf(`--${name}`);
     return i >= 0 && argv[i + 1] ? argv[i + 1] : def;
   };
+  // --improve: один универсальный переводчик (перевод + улучшение файла).
+  // ДОКТРИНА 2026-11-03 (владелец): СУДЕЙ НЕТ — качество проверяет и улучшает
+  // сам переводчик в одной задаче. Стадия судьи доступна только явным --judge
+  // (эксперименты/инструментальные прогоны), по умолчанию выключена.
+  const improve = argv.includes("--improve");
   return {
     lang: f("lang", ""),
     ctl: f("ctl", ""),
@@ -110,10 +124,11 @@ export function parseArgs(argv: string[]): Opts {
     limit: Number(f("limit", "0")),
     startLine: Number(f("start-line", "0")),
     concurrency: Math.max(1, Number(f("concurrency", "1"))),
-    flushEvery: Math.max(1, Number(f("flush-every", "20"))),
+    flushEvery: Math.max(1, Number(f("flush-every", improve ? "1" : "20"))),
     threshold: Number(f("threshold", "9")),
     tries: Math.max(1, Number(f("tries", "3"))),
-    judge: !argv.includes("--no-judge"),
+    judge: argv.includes("--judge"),
+    improve,
     dry: argv.includes("--dry"),
     baseUrl: f("base-url", resolveBackend().url),
     model: f("model", resolveBackend().model),
@@ -301,18 +316,40 @@ export function actionableJudgeIssues(issues: string[], lang: string): string[] 
  * null — тега нет (не речь / данных нет). Красный флаг 2026-11-02: без пола
  * модель перевела «Xanthippe (М): Но я радА» — женский род на мужчине.
  */
+/**
+ * Инструкция по согласованию пола для модели (переводчик / судья / правка).
+ *
+ * КРАСНЫЙ ФЛАГ 2026-11-03 («Марион обратилась», «Марион помахала»): в
+ * casts/gender.mts Narrator помечен `F` — это ЖЕНСКИЙ ГОЛОС ОЗВУЧКИ, а не
+ * грамматический род. Инструкция звучала как «EVERY agreement must be
+ * feminine», и модель переносила род нарратора на ПЕРСОНАЖЕЙ рассказа:
+ * правильное «Марион обратился» (Marion = M) правилось в «обратилась» и
+ * судилось на 10/10. В наррации согласуются ПЕРСОНАЖИ, у нарратора
+ * грамматического согласования нет вовсе.
+ *
+ * Масштабируемость (языков N): текст только на английском, БЕЗ примеров из
+ * конкретного языка — одинаково работает для ru/es/ja/zh и остальных.
+ */
 export function genderLine(msgctxt: string, msgid: string): string | null {
+  const bare = msgctxt.replace(/^"|"$/g, "");
+  // Нарратор: не «род рассказчика», а прямое предупреждение от такой ошибки.
+  if (bare === "speaker:Narrator") {
+    return (
+      `this line is NARRATION: grammatical agreement follows the CHARACTERS mentioned (their own gender, from the ` +
+      `scene/names), NEVER the narrator — do not masculinize or feminize the subject to match the narrator`
+    );
+  }
   const g = potIndex().gender(msgctxt, msgid);
   if (g === "M") {
     return (
-      `speaker gender: M (мужчина) — EVERY agreement must be masculine: past tense, adjectives, adverbs ` +
-      `(«он пошёл», «я рад», «мой/моя->мой»); a feminine ending like «я рада» or «он пошла» is a DEFECT`
+      `speaker gender: M — the SPEAKER is male: his own first-person/reflexive forms and predicates about HIM are ` +
+      `masculine; third persons keep their OWN gender (a female character stays feminine)`
     );
   }
   if (g === "F") {
     return (
-      `speaker gender: F (женщина) — EVERY agreement must be feminine ` +
-      `(«она пошла», «я рада», «моя»); a masculine ending is a DEFECT`
+      `speaker gender: F — the SPEAKER is female: her own first-person/reflexive forms and predicates about HER are ` +
+      `feminine; third persons keep their OWN gender (a male character stays masculine)`
     );
   }
   if (g === "?") {
@@ -322,7 +359,7 @@ export function genderLine(msgctxt: string, msgid: string): string | null {
 }
 
 export function userPrompt(
-  entry: { msgctxt: string; msgid: string },
+  entry: { msgctxt: string; msgid: string; msgstr?: string },
   prev: string[],
   next: string[],
   feedback: string,
@@ -362,6 +399,22 @@ export function userPrompt(
     }
   }
   parts.push(`EN: ${JSON.stringify(entry.msgid).slice(1, -1)}`);
+  // Режим улучшения (2026-11-03): если строка уже переведена — модель получает
+  // и текущий текст, и задачу «улучши или верни без изменений». Одна стадия,
+  // отдельного судьи нет: автор не судит сам себя, а модель решает внутри задачи.
+  const cur = entry.msgstr?.trim();
+  if (cur) {
+    parts.push(
+      "",
+      "Current translation (already in the file):",
+      JSON.stringify(cur).slice(1, -1),
+      "",
+      "TASK: return the BEST version of the EN source in the target language. " +
+        "If the current translation is already correct and natural, return it EXACTLY unchanged. " +
+        "Otherwise return an improved one: natural target idiom (no word-for-word calques, no invented " +
+        "words), correct register and gender agreement, and the same action intensity as the source.",
+    );
+  }
   if (next.length) parts.push("", "CONTEXT (following lines):", ...next);
   if (feedback) parts.push("", feedback);
   return parts.join("\n");
@@ -640,7 +693,7 @@ export async function filterConfirmed(
   issues: string[],
 ): Promise<string[]> {
   const rules = languageRules(lang);
-  const notes = langProfile(lang).judgeNotes;
+  const notes = ""; // judgeNotes выпилен из профилей (2026-11-03, судей нет)
   const out: string[] = [];
   for (const issue of issues) {
     const user =
@@ -666,6 +719,10 @@ export async function filterConfirmed(
 const JUDGE_SYSTEM = `You are a strict localization QA reviewer for an adult visual novel (EN -> target language, one file may serve several regions). Judge the candidate translation against the English source, speaker, and emotion tag.
 
 Score 0-10 and list issues. Check: completeness (nothing dropped/added), fidelity to the emotion tag, grammar/gender agreement of the target language, register (frank erotic prose — NO clinical terms in scenes; the target-language lexicon in the task rules is MANDATORY), address-form consistency, naturalness (no Anglicisms/translationese). NEVER penalize translation length (CJK and UI labels legitimately differ in character count).
+
+ARTISTIC FIDELITY outranks word-for-word: judge how the line READS in the target language. A fluent natural rendering that keeps meaning, tone and register is CORRECT even when it does not mirror the English wording or reorders it; a stilted per-word rendering of English phrasing or anatomy is a DEFECT — report "literal calque: <the exact fragment>" and score at most 7, EVEN when every source word is present (all words being there is not a reason to reward it). Correct grammar is NOT enough: if the phrasing is one a native speaker would never write — a translated-English noun phrase or compound lifted word by word — it is a calque, regardless of how well it matches the English.
+ADDED OR AMPLIFIED MEANING: when the candidate strengthens, softens or otherwise changes the action or emotion relative to the source (EN "putting her down" rendered as hurling, "took her arm" rendered as seizing/gripping hard, "looked" rendered as "glared"), report "added intensity: <the exact candidate fragment>" and score at most 6. Never assume absence of such a change just because the words match — check the VERB intensity itself. A repair that fixes a wording complaint but introduces an amplified action must NOT reach 9-10.
+INVENTED WORDS: a form the target language does not actually have — a one-to-one coinage of an English compound or concept with no basis in that language — is a defect: report "invented word: <the exact fragment>" and score at most 6. Correct grammar is NOT evidence that the word exists.
 
 COMPLETENESS IS CHECKED FIRST, clause by clause: walk the SOURCE sentence and find the CANDIDATE counterpart of EVERY clause. Coverage is about MEANING, not word overlap: a paraphrase, a synonym, an equivalent idiom, one idiomatic word, reordered words or a REQUIRED replacement of a target-forbidden term all COUNT as covered; a nuance adverb (sudden, still, just, even) counts as covered whenever the candidate conveys the situation. NEVER report a "drop" for a single word, a nuance or a stylistic difference, and NEVER label an agreement/spelling problem as a drop (that belongs to grammar, not completeness).
 Genuine loss only = a whole clause/sentence with no counterpart at all; then score at most 6 and put "dropped: <the exact source fragment>" FIRST in issues. Content invented by the candidate that the source does not say = "added: <the exact candidate fragment>", same rule. Never spend the issue list on style when content is at stake.
@@ -764,8 +821,8 @@ export function judgeUser(
       // одно предложение judgeNotes, а JUDGE_SYSTEM требовал «lexicon in the
       // task rules» — судья досочивала по памяти и противоречила себе
       // («semen -> cum» против «esperma -> semen»), из-за чего ретраи топтались.
-      `${languageRules(lang)}\n\n${p.judgeNotes}\n\nemotion: ${emo}\nspeaker: ${entry.msgctxt || "-"}${gl ? `\n${gl}` : ""}`
-    : `${p.judgeNotes}\n\ncategory: ${entry.msgctxt} (interface string — no narrator/emotion rules apply)`;
+      `${languageRules(lang)}\n\nemotion: ${emo}\nspeaker: ${entry.msgctxt || "-"}${gl ? `\n${gl}` : ""}`
+    : `category: ${entry.msgctxt} (interface string — no narrator/emotion rules apply)`;
   // ФИКС 2026-10-26: авточек уже пропустил идентичность (имя/бренд/клавиша),
   // а судья вешала на неё «wrong language» и строка висела вечно
   // (Test, Mouse, Shah Mahda). Один разрешает, второй vetoes — цикл неразрешим.
@@ -1058,6 +1115,10 @@ export async function translateEntry(
 
 const STOP_FLAG = (lang: string): string => join(TMP_DIR, `po_translate_${lang}.stop`);
 const PID_FILE = (lang: string): string => join(TMP_DIR, `po_translate_${lang}.pid`);
+/** Поток изменений режима --improve: «было → стало» построчно (удобно tail -f). */
+const CHANGES_FILE = (lang: string): string => join(TMP_DIR, `po_improve_${lang}.changes.log`);
+/** Обработанные индексы: резюм --improve после сбоя БЕЗ блоков и повторов. */
+const DONE_FILE = (lang: string): string => join(TMP_DIR, `po_improve_${lang}.done`);
 
 /** Флаг чистой остановки на месте? (воркер проверяет перед каждой записью) */
 export function stopRequested(lang: string): boolean {
@@ -1130,6 +1191,7 @@ async function main(): Promise<void> {
   if (!o.lang) {
     console.error(
       "Usage: node po_translate.mts --lang es [--limit N] [--start-line N] [--dry] [--no-judge]\n" +
+        "       node po_translate.mts --lang ru --improve [--limit N]  перепроверить и улучшить файл (без судьи)\n" +
         "       node po_translate.mts --ctl stop [--lang es]   чистая остановка\n" +
         "       node po_translate.mts --ctl status [lang es]    статус прогонов",
     );
@@ -1163,9 +1225,10 @@ async function main(): Promise<void> {
         e.msgstr = e.msgid;
         symbolicWrong++;
       }
-      continue;
-    }
-    if (isSymbolicMsgid(e.msgid)) {
+      // Режим --improve: переводчик перепроверяет и УЛУЧШАЕТ уже заполненное
+      // (пустые — переводит). Символику/идентичность не трогаем (выше).
+      if (!o.improve || isSymbolicMsgid(e.msgid)) continue;
+    } else if (isSymbolicMsgid(e.msgid)) {
       // Символьный msgid → идентичность БЕЗ LLM: модель галлюцинирует по
       // контексту (см. checkTranslation — судья ставил 9–10 на бреде).
       e.msgstr = e.msgid;
@@ -1183,10 +1246,26 @@ async function main(): Promise<void> {
   // --start-line трактуется как порядковый индекс ЗАПИСИ (не строки файла):
   // резюм без флагов = с начала, точный докачка — по индексу из лога.
   const startIdx = o.startLine > 0 ? targets.findIndex((t) => t.idx >= o.startLine) : 0;
-  const queue = (startIdx >= 0 ? targets.slice(startIdx) : targets).slice(0, o.limit || undefined);
+  // Режим --improve: резюм БЕЗ блоков — уже обработанные индексы пропускаются
+  // (журнал DONE_FILE), поэтому рестарт не переигрывает весь файл заново.
+  const doneSet = new Set<number>();
+  if (o.improve && existsSync(DONE_FILE(o.lang))) {
+    for (const l of readFileSync(DONE_FILE(o.lang), "utf-8").split("\n")) {
+      if (l.trim() && Number.isInteger(Number(l))) doneSet.add(Number(l));
+    }
+  }
+  const queue = (startIdx >= 0 ? targets.slice(startIdx) : targets)
+    .slice(0, o.limit || undefined)
+    .filter((t) => !doneSet.has(t.idx));
 
   const totalEmpty = targets.length;
-  console.log(`${poPath}: непереведённых ${totalEmpty}, к переводу в этом прогоне ${queue.length}`);
+  console.log(
+    `${poPath}: ${o.improve ? "строк к перепроверке/улучшению" : "непереведённых"} ${totalEmpty}` +
+      ` (уже обработано ранее: ${doneSet.size}), к работе в этом прогоне ${queue.length}`,
+  );
+  if (o.improve) {
+    console.log(`режим: УЛУЧШЕНИЕ (без стадии судьи) | поток изменений: ${CHANGES_FILE(o.lang)}`);
+  }
   console.log(
     `язык: ${profile.name} | модель: ${o.model} | судья: ${o.judge ? `вкл (порог ${o.threshold})` : "выкл"} | попыток: ${o.tries} | параллелизм: ${o.concurrency}`,
   );
@@ -1213,6 +1292,7 @@ async function main(): Promise<void> {
   writeFileSync(PID_FILE(o.lang), String(process.pid), "utf-8");
 
   let translated = 0;
+  let unchanged = 0;
   let rejected = 0;
   let judgeSum = 0;
   let judgeN = 0;
@@ -1239,6 +1319,7 @@ async function main(): Promise<void> {
         // эти строки переводчик видит в CONTEXT (previous/following lines).
         const { prev: ctxPrev, next: ctxNext } = translatorContext(entries, idx);
         const asLine = (x: PoEntry): string => `${x.msgctxt || ""} ${x.msgid}`;
+        const before = entry.msgstr;
         const r = await translateEntry(
           o.baseUrl,
           o.model,
@@ -1252,9 +1333,24 @@ async function main(): Promise<void> {
           o.tries,
         );
         if (r.tr) {
-          entry.msgstr = r.tr;
-          translated++;
-          dirty++;
+          if (r.tr !== before) {
+            entry.msgstr = r.tr;
+            translated++;
+            dirty++;
+            // ПОТОК ИЗМЕНЕНИЙ: каждая правка видна сразу (stdout + хроника
+            // в changes-лог) — владелец смотрит «было → стало» в реальном времени.
+            const change =
+              `[изменено] ${entry.msgctxt} ${entry.msgid.slice(0, 90)}\n` +
+              `   БЫЛО:  ${before.slice(0, 240)}\n` +
+              `   СТАЛО: ${r.tr.slice(0, 240)}\n`;
+            if (o.improve) {
+              console.log(change.trimEnd());
+              appendFileSync(CHANGES_FILE(o.lang), change, "utf-8");
+            }
+          } else {
+            unchanged++;
+          }
+          if (o.improve) appendFileSync(DONE_FILE(o.lang), `${idx}\n`, "utf-8");
           if (r.judgeScore >= 0) {
             judgeSum += r.judgeScore;
             judgeN++;
@@ -1266,11 +1362,12 @@ async function main(): Promise<void> {
           // в файле — их видно здесь и в инструментах качества).
           console.log(`  ОТКЛОН [${r.judgeScore}] ${r.msgid.slice(0, 60)}: ${r.issues.join("; ").slice(0, 160)}`);
         }
-        const done = translated + rejected;
+        const done = translated + rejected + unchanged;
         if (done % 5 === 0) {
           const sec = (Date.now() - t0) / 1000;
           console.log(
-            `  [${done}/${queue.length}] ok=${translated} rejected=${rejected} ${(sec / done).toFixed(1)}с/зап` +
+            `  [${done}/${queue.length}] ok=${translated} без-изменений=${unchanged} rejected=${rejected} ` +
+              `${(sec / done).toFixed(1)}с/зап` +
               (judgeN ? ` судья≈${(judgeSum / judgeN).toFixed(1)}` : ""),
           );
         }

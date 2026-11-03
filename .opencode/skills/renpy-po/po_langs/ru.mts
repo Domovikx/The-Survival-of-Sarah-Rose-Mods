@@ -18,5 +18,4 @@ ${EROTIC_NOTE}
     ["она была (?:уставш|счастлив)(?:а|о)", "род: она → -а"],
   ],
   fewshot: [["Why did the Gods not prevent this?", "Почему боги не предотвратили это?"]],
-  judgeNotes: `Russian-specific: gender agreement (она была ... -а), ты/Вы consistency, explicit register per lexicon.`,
 };

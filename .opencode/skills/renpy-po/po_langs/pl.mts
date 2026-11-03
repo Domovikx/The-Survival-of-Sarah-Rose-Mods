@@ -42,5 +42,4 @@ ${EROTIC_NOTE}
     ["I'm a princess of noble birth.", "Jestem księżniczką z urodzenia."],
     ["Motion for Jaeid to go into the water.", "Ruch: wejście do wody"],
   ],
-  judgeNotes: `Polish-specific: case agreement on every adjective-noun pair, ty/Pani consistency, explicit register per lexicon.`,
 };

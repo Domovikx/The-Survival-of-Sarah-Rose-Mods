@@ -170,7 +170,23 @@ export function renderPo(entries: PoEntry[], headerLines: string[]): string {
 export function writePoAtomic(path: string, content: string): void {
   const tmp = `${path}.part`;
   writeFileSync(tmp, content, "utf-8");
-  renameSync(tmp, path);
+  // Windows: rename регулярно отдаёт EPERM, если файл в этот миг держит
+  // антивирус/индексатор/редактор владельца (инцидент 2026-11-03: в режиме
+  // --improve запись идёт после КАЖДОЙ строки и шанс на захват максимальный).
+  // Rename атомарен и идемпотентен — ретраим до 8× по 60 мс, дальше — правда
+  // ошибка. Сон синхронный (Atomics.wait): запись не должна пропускать
+  // следующий flush вперёд, иначе порядок строк в файле поедет.
+  let lastErr: unknown;
+  for (let attempt = 0; attempt < 8; attempt++) {
+    try {
+      renameSync(tmp, path);
+      return;
+    } catch (e) {
+      lastErr = e;
+      Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, 60);
+    }
+  }
+  throw lastErr;
 }
 
 export function normalizeText(s: string): string {

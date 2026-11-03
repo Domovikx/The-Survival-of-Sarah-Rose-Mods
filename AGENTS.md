@@ -409,12 +409,20 @@ node tools/generate/scripts/voice_batch.mts --lang ru --dry-run  # план фр
 ## Переводы (po)
 
 Источник фраз — `po/template.pot` (ключ uid = md5 текста), переводы —
-`po/<lang>.po`, 10 языков. Сам пайплайн НЕ пересказывается здесь: правила
-качества, шлюзы и пороги — в `.opencode/skills/renpy-po/SKILL.md`
-(перевод) и `.opencode/skills/po-audit/SKILL.md` (поиск проблем в готовом).
+`po/<lang>.po`, 10 языков. Сам пайплайн НЕ пересказывается здесь: **правила
+качества — единственный источник** `.opencode/skills/translation-quality/SKILL.md`
+(рамка MQM, принципы, без примеров перевода слов; языковые эквиваленты — только
+в `po_langs/<lang>.mts`), поиск проблем в готовом — `npm run po:audit`.
+Перевод и улучшение — ОДИН инструмент, судей в пайплайне нет:
+`node .opencode/skills/renpy-po/po_translate.mts --lang <код> --improve`.
 
 ```bash
-npm run po:translate -- --lang es   # построчный перевод: Strata + LLM-судья
+node .opencode/skills/renpy-po/po_translate.mts --lang ru --improve
+                                    # ЕДИНЫЙ режим: перевод пустых + перепроверка
+                                    #   и улучшение заполненных; судей нет;
+                                    #   запись в po после каждой строки, поток
+                                    #   «было → стало»: tmp/po_improve_ru.changes.log
+npm run po:translate -- --lang es --no-judge   # перевод только пустых строк
 npm run po:translate:status         # стоп / пустых / скорость по всем языкам
 npm run po:translate:stop           # чистая остановка с сохранением прогресса
 npm run po:audit                    # «в чём лажа» в уже переведённом
@@ -770,10 +778,11 @@ CPU-режим (по умолчанию) не затронут.
 
 ## Решённые вопросы (архив решений)
 
-- Судья перевода **остаётся**: поблочный проход сабагентом без судьи в ~3 раза
-  медленнее (7.4–9.8 vs 2.7 с/бл, медиана) и в ~8 раз медленнее больших
-  прогонов (2026-11-02; `tasks/2026-11-01-strata-local-llm.md`). Режим
-  «переведи или улучши» в skill-translate-rpy — только для точечного ревью.
+- ~~Судья перевода остаётся~~ — **ОТМЕНЕНО владельцем 2026-11-03**: судей в
+  пайплайне больше нет (нет). Единый инструмент — переводчик, он сам
+  проверяет и улучшает (`po_translate --improve`); скилл-источник правил
+  `translation-quality` (старые скиллы перевода/ревью удалены как не-DRY).
+  Замеры 2026-11-02 про скорость с/без судьи — в `tasks/2026-11-01-strata-local-llm.md`.
 - EN-рефы голосов — **не нужны**: EN-озвучка 100 % на тех же рефах (2026-10-18).
 - WAV vs OGG — **Opus 24k mono** (2026-10-13; `tasks/archive/2026-10-12-audio-compression-research.md`, `tasks/archive/2026-10-13-opus-migration.md`).
 - Нет файла озвучки — **молчание**, без крашей (README FAQ, строка `voice.missing`).

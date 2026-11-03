@@ -29,6 +29,7 @@ import {
   salvageIssues,
   extractTranslation,
   translatorContext,
+  genderLine,
   stopRequested,
   systemPrompt,
   userPrompt,
@@ -56,7 +57,6 @@ test("профили самодостаточны: правила, запрет�
   for (const [code, p] of Object.entries(LANGS)) {
     assert.ok(p.rules.length > 500, `${code}: rules слишком короткие`);
     assert.ok(p.forbidden.length >= 3, `${code}: мало запретов`);
-    assert.ok(p.judgeNotes.length > 50, `${code}: judgeNotes пустые`);
     // КРИТ-ФИКС 2026-10-24: полей lenMin/lenMax больше нет — длина не проверяется
     assert.ok(!("lenMin" in p) && !("lenMax" in p), `${code}: lenMin/lenMax должны быть выпилены`);
     assert.equal(p.code, code);
@@ -480,6 +480,32 @@ test("судья видит 2 предыдущие реплики (контек�
   assert.ok(!bare.includes("CONTEXT (2 previous lines"), "без prev блока нет");
 });
 
+test("genderLine: у нарратора НЕТ грамматического пола (red flag 2026-11-03)", () => {
+  // Инцидент: Narrator = F (женский ГОЛОС озвучки), инструкция «EVERY
+  // agreement must be feminine» правила «Марион обратился» (Marion = M) в
+  // «обратилась» — и судья ставил за это 10/10.
+  const line = genderLine(
+    "speaker:Narrator",
+    "Marion turned to Thomas now, pleading for his support instead of Varga.",
+  );
+  assert.ok(line, "наррация получает инструкцию");
+  assert.match(line, /NARRATION/);
+  assert.match(line, /NEVER the narrator/);
+  assert.ok(!line.includes("EVERY agreement"), "старое отравляющее требование удалено");
+  assert.ok(!/[а-яё]/i.test(line), "без кириллицы — работает во всех языках (es/ja/zh/...)");
+});
+
+test("genderLine: пол ограничивается СОБСТВЕННЫМ согласованием говорящего", () => {
+  const m = genderLine("speaker:Alaric", "A cunt.");
+  assert.ok(m && /speaker gender: M/.test(m), "мужчина резолвится");
+  assert.match(m, /third persons keep their OWN gender/, "третьи лица не наследуют род говорящего");
+  assert.ok(!m.includes("EVERY agreement"), "нет требования на ВСЁ предложение");
+  assert.ok(!/[а-яё]/i.test(m), "текст инструкции языконезависим");
+  const f = genderLine("speaker:Kate", "A cup like this, wouldn't be hard to sell that off at the local market.");
+  assert.ok(f && /speaker gender: F/.test(f), "женщина резолвится");
+  assert.ok(!/[а-яё]/i.test(f));
+});
+
 test("окно контекста переводчика: 3 строки ДО + 1 ПОСЛЕ, без выхода за края", () => {
   // Решение владельца 2026-11-03 (было 2+2): антецеденты важнее реакции,
   // суммарный объём тот же — скорость не меняется.
@@ -836,4 +862,40 @@ test("верификатор замечаний: parseVerdict + промпт с 
   assert.match(VERIFY_ONE_SYSTEM, /unrelated to, contradicts/, "нет шага проверки фиделити");
   assert.match(VERIFY_ONE_SYSTEM, /claims content was DROPPED/, "нет шага проверки полноты через SOURCE");
   assert.match(VERIFY_ONE_SYSTEM, /Only if all checks pass, ACCEPT/, "нет требования тройной проверки");
+});
+
+test("--improve: режим без судьи, запись после каждой строки", () => {
+  const o = parseArgs(["--lang", "ru", "--improve"]);
+  assert.equal(o.improve, true, "режим включён");
+  assert.equal(o.judge, false, "стадия судьи выключена (решение владельца 2026-11-03)");
+  assert.equal(o.flushEvery, 1, "запись в po после каждой строки (реалтайм)");
+  // обычный режим не задет
+  const plain = parseArgs(["--lang", "ru"]);
+  assert.equal(plain.improve, false);
+  assert.equal(plain.judge, true, "без --improve судья по умолчанию остаётся");
+  assert.equal(plain.flushEvery, 20);
+});
+
+test("userPrompt с уже переведённой строкой: задача «улучши или верни без изменений»", () => {
+  const withTr = userPrompt(
+    { msgctxt: "speaker:Narrator", msgid: "She sunk back into the bed.", msgstr: "Она опустилась на кровать." },
+    [],
+    [],
+    "",
+    "Calmly",
+  );
+  assert.match(withTr, /Current translation \(already in the file\)/);
+  assert.match(withTr, /return it EXACTLY unchanged/);
+  assert.ok(withTr.includes("Она опустилась на кровать."), "текущий перевод показан модели");
+  // порядок: EN раньше текущего перевода (модель сверяет перевод с источником)
+  assert.ok(withTr.indexOf("EN:") < withTr.indexOf("Current translation"));
+  // пустая строка — обычный перевод, блок не появляется
+  const fresh = userPrompt(
+    { msgctxt: "speaker:Narrator", msgid: "She sunk back into the bed.", msgstr: "" },
+    [],
+    [],
+    "",
+    "Calmly",
+  );
+  assert.ok(!fresh.includes("Current translation"), "для пустой строки блока нет");
 });

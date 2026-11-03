@@ -26,5 +26,4 @@ ${EROTIC_NOTE}
     ["Skips dialogue while held down.", "押し続けたままにすると、対話をスキップします。"],
     ["Turn around to see the source of the sound.", "音の元を確認するために振り返れ"],
   ],
-  judgeNotes: `Japanese-specific: keigo consistency per relationship (casual for intimates, polite for monarchs), natural Japanese syntax (no translationese), explicit register per lexicon.`,
 };

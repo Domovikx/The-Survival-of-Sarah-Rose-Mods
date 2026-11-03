@@ -20,6 +20,8 @@
     "po:translate:status": "node .opencode/skills/renpy-po/po_translate.mts --ctl status",
     "po:prefill": "node .opencode/skills/renpy-po/prefill.mts",
     "po:audit": "node .opencode/skills/renpy-po/po_audit.mts",
+    "po:repair": "node .opencode/skills/renpy-po/po_repair_full.mts",
+    "po:repair:report": "node .opencode/skills/renpy-po/po_repair_full.mts --report",
     "speakers:audit": "node patches/ai-voice-pack/tools/generate/scripts/speaker_map.mts sync",
     "speakers:audit:emit": "node patches/ai-voice-pack/tools/generate/scripts/speaker_map.mts sync --emit",
     "speakers:check": "node patches/ai-voice-pack/tools/generate/scripts/speaker_map.mts check",

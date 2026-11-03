@@ -39,5 +39,4 @@ ${EROTIC_NOTE}
     ["Hand over some of Sarah's jewelry.", "Entregue parte das joias de Sarah."],
     ["I think that's enough for me for tonight.", "Acho que é o suficiente para mim por hoje."],
   ],
-  judgeNotes: `Portuguese-specific: BR/PT-neutral vocabulary, você-based addressing (no tu-conjugation), gender agreement, explicit register per lexicon.`,
 };

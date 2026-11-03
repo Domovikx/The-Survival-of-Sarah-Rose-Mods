@@ -67,12 +67,29 @@ export interface State {
   score?: number;
   issues?: string[];
   err?: string;
+  /** Для отчёта ревью: текст ДО и ПОСЛЕ правки (пишется только при repair). */
+  old?: string;
+  new?: string;
 }
 
 export interface Task {
   kind: "repair" | "judge";
   entry: PoEntry;
   prior?: { score: number; issues: string[] };
+}
+
+/**
+ * Инфраструктурный отказ LLM — НЕ вердикт о качестве строки.
+ *
+ * Инцидент 2026-11-03: транзиентный `HTTP 400 Context size...` (слоты LM
+ * Studio были перегружены чужой активностью) дал 25 отказов из 180 строк, и
+ * все они уезжали в `repair_failed` — то есть НАВСЕГДА в failed.txt, мимо
+ * последующих блоков. Плохая линия и упавший сервис обязаны различаться:
+ * инфраструктурный сбой НЕ ставит статус (строка снова уйдёт в суд) и НЕ
+ * пишется в failed.txt (там — только реальные дефекты для ревью).
+ */
+export function isInfraErr(s: string): boolean {
+  return /__ERROR__|LLM не ответила|HTTP \d{3}|Engine protocol|ECONNRESET|timed? ?out|Socket|ошибка:\s/i.test(s);
 }
 
 /** Загрузка статусов из JSONL: последняя запись по msgid побеждает, битые строки пропускаются. */
@@ -191,8 +208,91 @@ async function main(): Promise<void> {
     return { prev: pick(-1), next: pick(1) };
   }
 
+  /**
+   * ОТЧЁТ для владельца (читает журнал, po НЕ трогает): покрытие, статусы,
+   * разбивка по аркам и последние правки «было → стало» — ровно та
+   * поверхность, которую надо отревьюить после блока. Зовётся по `--report`
+   * и автоматически в конце каждого блока.
+   */
+  function printReport(recent: number): void {
+    const st = loadStatesFrom(jsonlPath);
+    let ok = 0;
+    let fixed = 0;
+    let failed = 0;
+    let human = 0;
+    let errored = 0;
+    const arcs = new Map<string, { total: number; done: number; fix: number; fail: number }>();
+    for (const e of voice) {
+      const arc = potIndex().resolve(e.msgctxt, e.msgid)?.arc ?? "_unknown";
+      const a = arcs.get(arc) ?? { total: 0, done: 0, fix: 0, fail: 0 };
+      a.total++;
+      const s = st.get(e.msgid);
+      if (s) {
+        a.done++;
+        if (s.repaired) {
+          a.fix++;
+          fixed++;
+        } else if (s.repair_failed) {
+          a.fail++;
+          failed++;
+        } else if (s.human) human++;
+        else if (s.ok) ok++;
+        else errored++;
+      }
+      arcs.set(arc, a);
+    }
+    const total = voice.length;
+    const done = ok + fixed + failed + human + errored;
+    console.log(
+      `\n[po:repair-report] ${LANG}: покрыто ${done} из ${total} (${((100 * done) / Math.max(1, total)).toFixed(1)}%)`,
+    );
+    console.log(
+      `  ok ${ok} | исправлено ${fixed} | не прошло ${failed} | human ${human}${errored ? ` | ошибок ${errored}` : ""}`,
+    );
+    console.log(`  арки:`);
+    for (const [arc, a] of [...arcs.entries()].sort((x, y) => y[1].done - x[1].done || y[1].total - x[1].total)) {
+      const pct = a.total ? `${((100 * a.done) / a.total).toFixed(0)}%` : "-";
+      const tail = `${a.fix ? ` fix ${a.fix}` : ""}${a.fail ? ` fail ${a.fail}` : ""}`;
+      console.log(
+        `    ${arc.padEnd(20)} ${String(a.done).padStart(6)}/${String(a.total).padEnd(6)} ${pct.padStart(4)}${tail}`,
+      );
+    }
+    // Поверхность ревью = только исправленные строки (судейство файл не трогает).
+    if (existsSync(jsonlPath)) {
+      const fixes = readFileSync(jsonlPath, "utf-8")
+        .split("\n")
+        .flatMap((l) => {
+          if (!l.trim()) return [];
+          try {
+            const j = JSON.parse(l) as State & { msgid?: string };
+            return j.repaired && j.msgid ? [j] : [];
+          } catch {
+            return [];
+          }
+        });
+      const last = fixes.slice(-recent);
+      if (last.length) {
+        console.log(`  последние ${last.length} из ${fixes.length} исправлений:`);
+        for (const j of last) {
+          console.log(`    «${String(j.msgid).slice(0, 72)}»`);
+          console.log(`      БЫЛО: ${String(j.old ?? "?").slice(0, 120)}`);
+          console.log(`      СТАЛО: ${String(j.new ?? "?").slice(0, 120)}`);
+        }
+      } else {
+        console.log(`  исправлений пока нет (0 из ${fixes.length})`);
+      }
+    }
+    console.log(`  не прошли → ${failedPath}`);
+  }
+
   const states = loadStatesFrom(jsonlPath);
   const tasks = classify(voice, states);
+
+  // Только отчёт, без LLM: прогресс по блокам ревью.
+  if (args.includes("--report")) {
+    printReport(Number(flag("recent", "20")));
+    process.exit(0);
+  }
 
   function appendRow(row: Record<string, unknown>): void {
     appendFileSync(jsonlPath, `${JSON.stringify(row)}\n`, "utf-8");
@@ -212,7 +312,7 @@ async function main(): Promise<void> {
     process.exit(0);
   }
 
-  const stats = { judgeOk: 0, repaired: 0, failed: 0, done: 0 };
+  const stats = { judgeOk: 0, repaired: 0, failed: 0, infra: 0, done: 0 };
   let statesBase = states.size;
 
   function progressLine(): string {
@@ -247,6 +347,10 @@ async function main(): Promise<void> {
       `A translation of this game line was REJECTED by a quality reviewer (score ${priorScore}/10).`,
       `Fix it: address every issue below, keep everything that is already correct`,
       `(names, quotes, placeholders, register, tone, grammatical GENDER agreement).${tone}${gender ? `\n${gender}` : ""}`,
+      `Fix the MEANING, not the words: render the phrasing naturally in the target language ` +
+        `(a per-word calque of English anatomy/constructions is itself a defect), and never AMPLIFY or SOFTEN ` +
+        `the action relative to the English source (putting down is not hurling; took is not seized) — ` +
+        `an invented intensifier is a new defect.`,
       ...ctx,
       ``,
       `EN source:`,
@@ -307,6 +411,13 @@ async function main(): Promise<void> {
         issues: verdictIssues,
       }); // ...ПОТОМ статус
       stats.repaired++;
+    } else if (isInfraErr(gateErr)) {
+      // Сбой сервиса, а не вердикт о качестве: БЕЗ статуса (нет ok/repair_failed)
+      // → строка снова уйдёт в суд на следующем блоке и НЕ попадёт в failed.txt
+      // (там только реальные дефекты для ревью).
+      appendRow({ msgid: e.msgid, err: gateErr.slice(0, 300) });
+      stats.failed++;
+      stats.infra++;
     } else {
       appendRow({ msgid: e.msgid, ok: false, repair_failed: true, score: verdict, err: gateErr.slice(0, 300) });
       appendFileSync(
@@ -324,6 +435,12 @@ async function main(): Promise<void> {
     if (r.score >= THRESHOLD) {
       appendRow({ msgid: e.msgid, ok: true, score: r.score, issues: r.issues });
       stats.judgeOk++;
+    } else if (r.score < 0 || isInfraErr(r.issues.join("; "))) {
+      // Судья не ответила (транспорт/слоты) — в правку НЕ шлём: она упадёт тем
+      // же способом и отравит строку repair_failed. Без статуса = пересуд.
+      appendRow({ msgid: e.msgid, err: `судья не ответил: ${r.issues.join("; ").slice(0, 200)}` });
+      stats.failed++;
+      stats.infra++;
     } else {
       await doRepair(e, r.score, r.issues);
     }
@@ -337,9 +454,12 @@ async function main(): Promise<void> {
         if (t.kind === "repair") await doRepair(t.entry, t.prior?.score ?? -1, t.prior?.issues ?? []);
         else await doJudge(t.entry);
       } catch (err) {
-        // строку не теряем: статус остался прежним — перезапуск доработает
-        appendRow({ msgid: t.entry.msgid, ok: false, error: String((err as Error).message).slice(0, 200) });
+        // Без статуса ok/repair_failed → строка переидёт в суд на следующем
+        // блоке (не уезжает навсегда в failed.txt).
+        const msg = String((err as Error).message).slice(0, 200);
+        appendRow({ msgid: t.entry.msgid, err: msg });
         stats.failed++;
+        if (isInfraErr(msg)) stats.infra++;
       }
       stats.done++;
       if (stats.done % 25 === 0) console.log(`  ${progressLine()}`);
@@ -351,9 +471,12 @@ async function main(): Promise<void> {
   const sec = (Date.now() - t0) / 1000;
   console.log(
     `\n[po:repair-full] выполнено ${stats.done} за ${sec.toFixed(0)}с | ` +
-      `новых ok ${stats.judgeOk} | ИСПРАВЛЕНО В ФАЙЛ ${stats.repaired} | не прошло ${stats.failed}`,
+      `новых ok ${stats.judgeOk} | ИСПРАВЛЕНО В ФАЙЛ ${stats.repaired} | не прошло ${stats.failed}` +
+      (stats.infra ? ` (из них инфра-отказов ${stats.infra} — пересудятся на следующем блоке)` : ""),
   );
   console.log(`файл: ${poPath} | не прошли: ${failedPath}`);
+  // Автотчёт в конце каждого блока — владелец видит прогресс сразу.
+  printReport(10);
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {

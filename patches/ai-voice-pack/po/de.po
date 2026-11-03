@@ -1,63 +1,14 @@
-#
- 
-T
-S
-S
-R
- 
-D
-E
- 
-t
-r
-a
-n
-s
-l
-a
-t
-i
-o
-n
- 
-—
- 
-с
-к
-е
-л
-е
-т
- 
-и
-з
- 
-p
-o
-/
-t
-e
-m
-p
-l
-a
-t
-e
-.
-p
-o
-t
- 
-(
-D
-e
-u
-t
-s
-c
-h
-)
-.
+# TSSR DE translation — скелет из po/template.pot (Deutsch).
+# msgstr "" = не переведено; заполняется построчно переводчиком.
+msgid ""
+msgstr ""
+"Project-Id-Version: TSSR-Mods 1.0\n"
+"PO-Revision-Date: 2026-10-23 00:00+0000\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. speaker_gender: F
 msgctxt "speaker:Narrator"

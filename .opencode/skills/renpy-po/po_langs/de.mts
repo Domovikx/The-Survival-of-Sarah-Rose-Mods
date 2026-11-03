@@ -32,5 +32,4 @@ ${EROTIC_NOTE}
     ["I'm a princess of noble birth.", "Ich bin eine Prinzessin von edlem Blut."],
     ["Rolls back to earlier dialogue.", "Zurück zum früheren Dialog."],
   ],
-  judgeNotes: `German-specific: adjective ending agreement (declension), du/Ihr consistency, explicit register per lexicon, no clinical terms in scenes.`,
 };

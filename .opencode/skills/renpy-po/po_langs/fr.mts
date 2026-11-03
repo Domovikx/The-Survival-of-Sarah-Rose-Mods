@@ -28,5 +28,4 @@ ${EROTIC_NOTE}
     ["I'll take your proposal into consideration.", "Je prendrai votre proposition en considération."],
     ["Let's keep drinking. I have some wine in my room.", "Continuons à boire. J'ai du vin dans ma chambre."],
   ],
-  judgeNotes: `French-specific: past-participle and adjective gender agreement (elle = féminin), tu/vous consistency, explicit register per lexicon.`,
 };

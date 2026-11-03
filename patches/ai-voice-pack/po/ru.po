@@ -14,22 +14,22 @@ msgstr ""
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
 msgid "The Survival of Sarah Rose is an epic fantasy game. Production on TSSR is still ongoing."
-msgstr "The Survival of Sarah Rose (Выживание Сары Роуз) — эпическая фэнтези-игра. Разработка TSSR продолжается."
+msgstr "The Survival of Sarah Rose — это эпическая фэнтези-игра. Разработка TSSR всё ещё продолжается."
 
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
 msgid "What you are about to play is a work-in-progress."
-msgstr "Впереди вас ждёт игра, которая ещё в процессе разработки."
+msgstr "То, во что вы собираетесь играть, — это работа в процессе разработки."
 
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
 msgid "TSSR takes place in a dark fantasy setting."
-msgstr "TSSR разворачивается в тёмном фэнтези-мире."
+msgstr "Действие TSSR происходит в мире тёмного фэнтези."
 
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
 msgid "The events and stories depicted within, while fictional, may be triggering to some audiences."
-msgstr "Показанные в ней события и истории, хотя и вымышленные, могут содержать откровенные или тревожные сцены."
+msgstr "События и истории, изображённые в игре, хотя и вымышленные, могут быть триггерными для некоторых зрителей."
 
 msgctxt "speaker-name"
 msgid "Sarah"
@@ -157,7 +157,7 @@ msgstr "Мэтью"
 
 msgctxt "speaker-name"
 msgid "Eula"
-msgstr "Юла"
+msgstr "Еула"
 
 msgctxt "speaker-name"
 msgid "Gideon"
@@ -309,37 +309,37 @@ msgstr "На протяжении веков он был домом рода Р�
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
 msgid "Ruling with both wisdom and strength, the Rose family ensured centuries of prosperity for the nation of Rosanna."
-msgstr "Управляя с мудростью и силой, род Роуз веками обеспечивал процветание королевства Розанна."
+msgstr "Правя с мудростью и силой, род Роуз веками обеспечивал процветание королевства Розанна."
 
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
 msgid "But nothing lasts forever and rumors of new dangers have begun to spread."
-msgstr "Но ничто не вечно, и слухи о новых опасностях начали распространяться."
+msgstr "Но ничто не вечно, и слухи о новых опасностях уже начали распространяться."
 
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
 msgid "An ambitious warlord to the east threatens war."
-msgstr "Честолюбивый военачальник на востоке угрожает войной."
+msgstr "Амбициозный военачальник на востоке угрожает войной."
 
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
 msgid "Something has begun to stir the hearts of all creatures wicked."
-msgstr "Что-то начало зарождаться в сердцах всех порочных существ."
+msgstr "Что-то начало разжигать сердца всех нечестивых созданий."
 
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
 msgid "But perhaps most dangerous of all, enemies are rising from within Rosanna."
-msgstr "Но, возможно, самое опасное — враги восстают изнутри самой Розанны."
+msgstr "Но, пожалуй, самое опасное из всех — враги поднимаются изнутри самой Розанны."
 
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
 msgid "Some wear their threats on their sleeves, whilst others hide their intentions behind smiling faces."
-msgstr "Одни носят угрозу напоказ, а другие прячут замыслы за улыбками."
+msgstr "Некоторые открыто демонстрируют свою угрозу, в то время как другие прячут свои намерения за улыбкой."
 
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
 msgid "The Rose family can feel it in the air..."
-msgstr "Род Роуз чувствует это в воздухе..."
+msgstr "Семья Роуз чувствует это в воздухе..."
 
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
@@ -354,7 +354,7 @@ msgstr "Среди этих многочисленных опасностей С
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
 msgid "She will need to learn who she can trust, who would seek to betray her, how to keep her nation safe, but above all..."
-msgstr "Ей предстоит научиться отличать друзей от врагов, понять, как защитить свою родину, но прежде всего — выжить."
+msgstr "Ей предстоит узнать, кого она может доверять, кто будет стремиться предать её и как сохранить свою страну в безопасности, но прежде всего..."
 
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
@@ -369,7 +369,7 @@ msgstr "Король Орвелл вернулся из своего путеш�
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
 msgid "He enters the great hall of Castle Reinmeer, the snow of an early winter drifting in behind him."
-msgstr "Он входит в большой зал замка Рейнмир, а следом за ним влетает снег ранней зимы."
+msgstr "Он входит в великий зал замка Рейнмир, за его спиной кружит снег ранней зимы."
 
 #. speaker_gender: M
 msgctxt "speaker:King Orwell Rose"
@@ -404,17 +404,17 @@ msgstr "Тебя не было почти пять месяцев! Если ты
 #. speaker_gender: M
 msgctxt "speaker:King Orwell Rose"
 msgid "You've grown older but I don't think you've grown up yet."
-msgstr "Ты стала старше, но, кажется, не повзрослела."
+msgstr "Ты стала старше, но я не думаю, что ты повзрослела."
 
 #. speaker_gender: F
 msgctxt "speaker:Sarah"
 msgid "So mean!"
-msgstr "Злюка!"
+msgstr "Насколько ты злая!"
 
 #. speaker_gender: M
 msgctxt "speaker:King Orwell Rose"
 msgid "Speaking of growing up, have you seen..."
-msgstr "Кстати о взрослении, ты не видела..."
+msgstr "Говоря о взрослении, ты видел..."
 
 #. speaker_gender: M
 msgctxt "speaker:Thomas"
@@ -463,7 +463,7 @@ msgstr "Сара и Томас хором"
 #. speaker_gender: M
 msgctxt "speaker:King Orwell Rose"
 msgid "Good. Now, where is the royal assistant? I need begin drafting letters immediately."
-msgstr "Хорошо. Где королевский помощник? Мне нужно немедленно начать писать письма."
+msgstr "Хорошо. Где королевский помощник? Мне нужно немедленно приступить к составлению писем."
 
 #. speaker_gender: F
 msgctxt "speaker:Sarah"
@@ -483,12 +483,12 @@ msgstr "Да, отец."
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
 msgid "King Orwell and Sarah are walking through an empty hallway towards the library. Their steps softly echo."
-msgstr "Король Орвелл и Сара идут по пустому коридору к библиотеке. Их шаги мягко отдаются эхом."
+msgstr "Король Орвелл и Сара идут по пустому коридору к библиотеке. Их шаги мягко отзываются эхом."
 
 #. speaker_gender: M
 msgctxt "speaker:King Orwell Rose"
 msgid "I hope your brother has been keeping to his studies while I was away."
-msgstr "Надеюсь, твой брат занимался уроками, пока я был далеко."
+msgstr "Надеюсь, твой брат занимался учёбой, пока я был в отъезде."
 
 #. speaker_gender: F
 msgctxt "speaker:Sarah"
@@ -558,7 +558,7 @@ msgstr "Никто никогда не приходил в наш замок п�
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
 msgid "Sarah puts her hands on her father's shoulder."
-msgstr "Сара кладёт руку на плечо отцу."
+msgstr "Сара кладёт руки на плечи отца."
 
 #. speaker_gender: F
 msgctxt "speaker:Sarah"
@@ -588,7 +588,7 @@ msgstr "Любой может быть королём в спокойные вр
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
 msgid "For a moment, both are quiet."
-msgstr "На мгновение оба молчат."
+msgstr "На мгновение оба замолкают."
 
 #. speaker_gender: F
 msgctxt "speaker:Sarah"
@@ -627,7 +627,7 @@ msgstr "Король Орвелл задумывается, прежде чем 
 #. speaker_gender: M
 msgctxt "speaker:King Orwell Rose"
 msgid "You know that every year I visit a different part of the kingdom, and this year, I went to see the eastern provinces."
-msgstr "Ты знаешь, что каждый год я посещаю разные части королевства, а в этом году я поехал в восточные провинции."
+msgstr "Ты знаешь, что каждый год я посещаю разные части королевства, а в этом году отправился на восточные провинции."
 
 #. speaker_gender: M
 msgctxt "speaker:King Orwell Rose"
@@ -647,17 +647,17 @@ msgstr "Очень смешно..."
 #. speaker_gender: M
 msgctxt "speaker:King Orwell Rose"
 msgid "But it wasn't like that at all. Everywhere I went, it was the same thing. People talking about a man called Hassar."
-msgstr "Но дело обстояло совсем не так. Куда бы я ни поехал, везде одно и то же. Люди говорили о человеке по имени Хассар."
+msgstr "Но дело обстояло совсем иначе. Куда бы я ни поехал, везде всё было одинаково. Люди говорили о человеке по имени Хассар."
 
 #. speaker_gender: F
 msgctxt "speaker:Sarah"
 msgid "Hassar? I've never heard a name like that before."
-msgstr "Хассар? Я раньше не слышала такого имени."
+msgstr "Хассар? Я никогда раньше не слышала такого имени."
 
 #. speaker_gender: M
 msgctxt "speaker:King Orwell Rose"
 msgid "It's Eastern, from beyond even the furthest provinces of our kingdom, across the vast eastern desert."
-msgstr "Это восточное имя, из земель за самыми дальними провинциями нашего королевства, через бескрайнюю восточную пустыню."
+msgstr "Это восточное, из земель за самыми дальними провинциями нашего королевства, через бескрайнюю восточную пустыню."
 
 #. speaker_gender: M
 msgctxt "speaker:King Orwell Rose"
@@ -686,7 +686,7 @@ msgstr "Сказать пока рано. Я не отправлю армию в
 
 msgctxt "menu"
 msgid "Let it be."
-msgstr "Не настаивать."
+msgstr "Пусть будет так."
 
 #. speaker_gender: F
 msgctxt "speaker:Sarah"
@@ -766,17 +766,17 @@ msgstr "Но с Томасом было непросто. Дело было не
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
 msgid "No, her brother Thomas was one of those unique people whose interests continually drifted from one topic to another."
-msgstr "Нет, её брат Томас был из тех уникальных людей, чьи интересы постоянно перескакивали с одной темы на другую."
+msgstr "Нет, её брат Томас был одним из тех редких людей, чьи интересы постоянно плавали с одной темы на другую."
 
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
 msgid "His interests could stay fixed for months, only to completely shift in less than a day."
-msgstr "Его интересы могли держаться месяцами, только чтобы полностью смениться менее чем за день."
+msgstr "Его интересы могли оставаться неизменными месяцами, лишь чтобы полностью сменить их за день."
 
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
 msgid "Once he had spend an entire week learning everything there was to learn about how glass was made."
-msgstr "Однажды он провёл целую неделю, изучая всё, что можно узнать о том, как делают стекло."
+msgstr "Однажды он провёл целую неделю, изучая всё, что только можно было узнать о том, как делают стекло."
 
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
@@ -806,7 +806,7 @@ msgstr "И это всё, чем ты занимаешься целыми дня
 #. speaker_gender: F
 msgctxt "speaker:Sarah"
 msgid "AAAH!"
-msgstr "ААА!"
+msgstr "АААХ!"
 
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
@@ -871,12 +871,12 @@ msgstr "Конечно, уронил лицо в тарелку, какая ра
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
 msgid "Thomas walks over to Sarah's desk and picks up the book."
-msgstr "Томас подходит к столу Сары и берёт книгу."
+msgstr "Томас подходит к столу Сары и поднимает книгу."
 
 #. speaker_gender: M
 msgctxt "speaker:Thomas"
 msgid "Are you seriously reading this garbage?"
-msgstr "Ты серьёзно читаешь эту ерунду?"
+msgstr "Ты всерьёз читаешь эту ерунду?"
 
 #. speaker_gender: F
 msgctxt "speaker:Sarah"
@@ -926,17 +926,17 @@ msgstr "Да, я знаю, но иногда это просто через кр
 #. speaker_gender: M
 msgctxt "speaker:Thomas"
 msgid "All this, ruling a kingdom, it just comes easy for him."
-msgstr "Всё это, управление королевством, ему просто легко даётся."
+msgstr "Всё это, править королевством — ему это даётся легко."
 
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
 msgid "Sarah looks at her brother, his eyes fixed to the floor."
-msgstr "Сара смотрит на брата, его взгляд прикован к полу."
+msgstr "Сара смотрит на брата, его взгляд устремлён в пол."
 
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
 msgid "She gets up and puts her arms around him."
-msgstr "Она встаёт и обнимает его."
+msgstr "Она встает и обнимает его."
 
 #. speaker_gender: F
 msgctxt "speaker:Sarah"
@@ -976,12 +976,12 @@ msgstr "Не всё останется таким, как сейчас, Тома
 #. speaker_gender: M
 msgctxt "speaker:Thomas"
 msgid "Yeah...I guess I could try to be better."
-msgstr "Да... наверное, я мог бы стараться больше."
+msgstr "Да... я, наверное, смогу постараться стать лучше."
 
 #. speaker_gender: F
 msgctxt "speaker:Sarah"
 msgid "Just show some effort, even if you hate it. Pretending is half of what it takes to be a king."
-msgstr "Просто покажи хоть какие-то усилия, даже если ненавидишь это. Притворство — половина королевского ремесла."
+msgstr "Просто приложи хоть какие-то усилия, даже если ненавидишь это. Притворство — половина того, что нужно, чтобы стать королём."
 
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
@@ -1006,7 +1006,7 @@ msgstr "Пожалуйста, как раньше."
 #. speaker_gender: F
 msgctxt "speaker:Sarah"
 msgid "Yeah, when we were six. We're not kids anymore, it's not appropriate."
-msgstr "Да, когда нам было шесть. Мы уже не дети, это не годится."
+msgstr "Да, когда нам было шесть. Мы уже не дети, так что это неприлично."
 
 #. speaker_gender: M
 msgctxt "speaker:Thomas"
@@ -1369,7 +1369,7 @@ msgstr "Сара вежливо улыбалась, слушая жалобы М
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
 msgid "A man waved at Marion from across the room, and Marion waved back."
-msgstr "Мужчина помахал Мариону из другого конца зала, и Марион помахал в ответ."
+msgstr "Мужчина махнул Мариону из-за угла комнаты, и она ему ответила тем же."
 
 #. speaker_gender: M
 msgctxt "speaker:Marion"
@@ -1663,7 +1663,7 @@ msgstr "Сара пытается вспомнить неделю после с�
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
 msgid "She had to do so much, in a way, it spared her from dealing with her grief."
-msgstr "Ей нужно было сделать так много, что это, в каком-то смысле, избавило её от необходимости справляться с горем."
+msgstr "Ей пришлось столько делать, что в какой-то мере это отсрочило столкновение с горем."
 
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
@@ -1855,7 +1855,7 @@ msgstr "Сара, хотя бы чтобы не смущать мужчину, �
 #. speaker_gender: F
 msgctxt "speaker:Sarah"
 msgid "Thank you, kind sir."
-msgstr "Благодарю вас, добрый господин."
+msgstr "Спасибо, добрый сэр."
 
 #. speaker_gender: M
 msgctxt "speaker:Varga"
@@ -1865,7 +1865,7 @@ msgstr "Не стоит, эм, миледи. Моя госпожа? Принце
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
 msgid "The man stumbles, trying to find the words."
-msgstr "Мужчина запинается, подбирая слова."
+msgstr "Мужчина шатается, пытаясь подобрать слова."
 
 #. speaker_gender: F
 msgctxt "speaker:Sarah"
@@ -2000,7 +2000,7 @@ msgstr "Что ж, я был командиром, который разбил �
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
 msgid "Varga had said it very matter-of-factly."
-msgstr "Варга сказал это очень буднично."
+msgstr "Варга сказал это очень деловито."
 
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
@@ -2395,7 +2395,7 @@ msgstr "А потом, однажды ночью, они привели мужч
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
 msgid "Sarah felt her chest tighten as her friend shared her grief."
-msgstr "У Сары сжалось сердце, когда подруга делилась своей болью."
+msgstr "Сара почувствовала, как сжимается грудь, пока подруга делилась своей болью."
 
 #. speaker_gender: F
 msgctxt "speaker:Kate"
@@ -2635,7 +2635,7 @@ msgstr "Кейт улыбнулась Саре."
 #. speaker_gender: F
 msgctxt "speaker:Kate"
 msgid "Thank you, Sarah, that means a lot to me."
-msgstr "Спасибо, Сара. Это много для меня значит."
+msgstr "Спасибо, Сара. Это очень важно для меня."
 
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
@@ -2710,7 +2710,7 @@ msgstr "Сара с удивлением заметила, что Марион, 
 #. speaker_gender: M
 msgctxt "speaker:Marion"
 msgid "My own father passed when I was still young."
-msgstr "Мой собственный отец умер, когда я был ещё молод."
+msgstr "Мой собственный отец ушёл из жизни, когда мне было ещё совсем мало лет."
 
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
@@ -2790,7 +2790,7 @@ msgstr "Что ж, уже поздно, и я боюсь, что если про
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
 msgid "Marion performed a near perfect bow before leaving."
-msgstr "Марион сделал почти идеальный поклон перед уходом."
+msgstr "Марион сделала почти идеальный поклон перед уходом."
 
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
@@ -3040,7 +3040,7 @@ msgstr "Ну, не вали это на меня, Сара. Я пьяна, а у
 #. speaker_gender: F
 msgctxt "speaker:Sarah"
 msgid "I didn't know I needed one, in my castle. In my own bedroom."
-msgstr "Я не знала, что мне нужно оправдание в моём замке. В моей собственной спальне."
+msgstr "Я не знала, что мне нужна одна, в моём замке. В моей собственной спальне."
 
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
@@ -3085,7 +3085,7 @@ msgstr "В чём дело, Сара? Ты же не спишь голой по�
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
 msgid "Sarah felt a rush to her head, turning her red."
-msgstr "Сара почувствовала, как кровь прилила к лицу, заливая его румянцем."
+msgstr "Сара почувствовала, как кровь прилила к голове и покраснила её лицо."
 
 msgctxt "menu"
 msgid "Don't stop Kate."
@@ -3189,7 +3189,7 @@ msgstr "Сара попыталась возразить."
 #. speaker_gender: F
 msgctxt "speaker:Sarah"
 msgid "We were just kids, doing stupid kid stuff."
-msgstr "Мы были просто детьми, делали глупые детские вещи."
+msgstr "Мы были просто детьми, занимались глупыми детскими делами."
 
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
@@ -3259,7 +3259,7 @@ msgstr "Кейт небрежно провела руками по своей г
 #. speaker_gender: F
 msgctxt "speaker:Kate"
 msgid "Oops, now we're uneven again."
-msgstr "Упс, теперь счёт снова неравный."
+msgstr "Ой, теперь мы снова не равны."
 
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
@@ -3294,7 +3294,7 @@ msgstr "Тихий стон сорвался с губ Сары. Она прот
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
 msgid "Kate, for her part, took it as the latter."
-msgstr "Кейт, со своей стороны, восприняла это как второе."
+msgstr "Кейт же восприняла это именно так."
 
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
@@ -3339,7 +3339,7 @@ msgstr "Кейт взяла руку Сары и потянула её межд�
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
 msgid "Sarah felt how wet Kate had gotten. Instinctively, Sarah's fingers began to explore Kate."
-msgstr "Сара почувствовала, как влажно у Кейт. Инстинктивно пальцы Сары начали исследовать Кейт."
+msgstr "Сара почувствовала, насколько влажной стала Кейт. Инстинктивно пальцы Сары начали исследовать тело Кейт."
 
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
@@ -3589,7 +3589,7 @@ msgstr "Кейт на мгновение отстранилась, прерва�
 #. speaker_gender: F
 msgctxt "speaker:Kate"
 msgid "It meant a lot to me too."
-msgstr "Это тоже много для меня значило."
+msgstr "Мне это тоже было очень важно."
 
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
@@ -3623,7 +3623,7 @@ msgstr "Ты пьяна, иди к себе."
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
 msgid "Sarah is surprised by how harsh she sounds."
-msgstr "Сара удивлена, как резко она звучит."
+msgstr "Сара удивлена тем, насколько резким её голос оказался."
 
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
@@ -3693,7 +3693,7 @@ msgstr "Опять она за своё, подумала Сара. Задева
 #. speaker_gender: F
 msgctxt "speaker:Sarah"
 msgid "Do you enjoy teasing me like that?"
-msgstr "Тебе нравится дразнить меня так?"
+msgstr "Ты получаешь удовольствие, когда так со мной шалишь?"
 
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
@@ -3758,7 +3758,7 @@ msgstr "Часть её хотела этого. Закрыть двери сп�
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
 msgid "But, right before the edge, Sarah's senses returned to her."
-msgstr "Но прямо перед краем чувства вернулись к Саре."
+msgstr "Но прямо перед самым краем сознание Сары вернулось."
 
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
@@ -3798,7 +3798,7 @@ msgstr "Ладно, но я с тобой ещё не закончила."
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
 msgid "Kate rolled out of the bed and began crawling across the floor, collecting her clothes."
-msgstr "Кейт скатилась с кровати и начала ползать по полу, собирая одежду."
+msgstr "Кейт выкатилась из кровати и поползла по полу, собирая одежду."
 
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
@@ -3903,7 +3903,7 @@ msgstr "Сара просыпается в своей постели. Свет �
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
 msgid "She looks across her bedroom. Much like the rest of the castle, it had felt strangely empty since her father had passed."
-msgstr "Она оглядывает спальню. Как и весь замок, она казалась странно пустой после смерти отца."
+msgstr "Она смотрит на свою спальню. Как и остальная часть замка, она казалась странно пустой с тех пор, как умер её отец."
 
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
@@ -3918,7 +3918,7 @@ msgstr "Она вспомнила визит Кейт прошлой ночью.
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
 msgid "Sarah considered apologizing to her friend next time she saw her."
-msgstr "Сара подумала извиниться перед подругой при следующей встрече."
+msgstr "Сара подумала о том, чтобы извиниться перед подругой в следующий раз, когда увидит её."
 
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
@@ -4143,7 +4143,7 @@ msgstr "Сара рассмеялась."
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
 msgid "Thomas simply squeezed her hands, and repeated himself."
-msgstr "Томас просто сжал её руку и повторил."
+msgstr "Томас просто сжал её руки и повторил."
 
 #. speaker_gender: M
 msgctxt "speaker:Thomas"
@@ -4934,7 +4934,7 @@ msgstr "До Сары внезапно дошло, что она полност�
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
 msgid "Please, Sarah prayed to herself, don't let anyone see us...but she didn't stop Kate."
-msgstr "Пожалуйста, молила себя Сара, пусть никто нас не увидит... но она не остановила Кейт."
+msgstr "Пожалуйста, шептала себе Сара, чтобы никто нас не увидел... но она не смогла остановить Кейт."
 
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
@@ -5024,7 +5024,7 @@ msgstr "Кейт грубо дёрнула Сару за волосы, удер�
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
 msgid "Kate continued slowly pushing her fingers into Sarah, only to slowly pull them out again."
-msgstr "Кейт продолжала медленно вводить пальцы в Сару, чтобы медленно вытащить их снова."
+msgstr "Кейт продолжала медленно вводить пальцы в Сару, лишь чтобы так же медленно вынимать их обратно."
 
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
@@ -5109,7 +5109,7 @@ msgstr "Кейт вытащила пальцы из Сары и схватила
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
 msgid "Kate reached around and Sarah felt something being pushed into her mouth. Kate quickly shoved her fingers back into Sarah, continuing where she had left off."
-msgstr "Кейт протянула руку, и Сара почувствовала, как что-то засунули ей в рот. Кейт быстро вернула пальцы обратно в Сару, продолжая с того места, где остановилась."
+msgstr "Кейт дотянулась, и Сара почувствовала, как что-то засовывают ей в рот. Кейт быстро вдавила свои пальцы обратно в Сарины губы, продолжая с того места, где остановилась."
 
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
@@ -5239,7 +5239,7 @@ msgstr "Сара почувствовала странное ощущение м
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
 msgid "Kate flashed a quick grin, holding up Sarah's underwear."
-msgstr "Кейт быстро усмехнулась, помахав бельём Сары."
+msgstr "Кейт быстро усмехнулась, поднимая трусики Сары."
 
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
@@ -5298,7 +5298,7 @@ msgstr "Это слишком опасно. Нужно быть осторожн
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
 msgid "Kate sneaked Sarah a quick kiss."
-msgstr "Кейт быстро чмокнула Сару."
+msgstr "Кейт тайком поцеловала Сару."
 
 #. speaker_gender: F
 msgctxt "speaker:Kate"
@@ -5507,7 +5507,7 @@ msgstr "Клянусь."
 #. speaker_gender: M
 msgctxt "speaker:High Priest"
 msgid "Should you speak falsely, what would you desire of the gods?"
-msgstr "Если вы говорите лживо, какой кары вы желаете от богов?"
+msgstr "Если бы ты солгал, чего бы ты просил у богов?"
 
 #. speaker_gender: M
 msgctxt "speaker:Thomas"
@@ -5711,7 +5711,7 @@ msgstr "Сара с удивлением посмотрела на него."
 #. speaker_gender: F
 msgctxt "speaker:Sarah"
 msgid "What do you mean?"
-msgstr "Что вы имеете в виду?"
+msgstr "Что ты имеешь в виду?"
 
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
@@ -15013,7 +15013,7 @@ msgstr "Она пытается пошевелиться, но обнаружи�
 #. speaker_gender: F
 msgctxt "speaker:Sarah"
 msgid "What are you doing?"
-msgstr "Что вы делаете?"
+msgstr "Что ты делаешь?"
 
 #. speaker_gender: F
 msgctxt "speaker:Carolyn"
@@ -15473,7 +15473,7 @@ msgstr "Сара удивлённо подняла взгляд."
 #. speaker_gender: F
 msgctxt "speaker:Sarah"
 msgid "Do what?"
-msgstr "Чего не делать?"
+msgstr "Что делать?"
 
 #. speaker_gender: F
 msgctxt "speaker:Carolyn"
@@ -15483,7 +15483,7 @@ msgstr "Мучать себя мыслями вроде стыда."
 #. speaker_gender: F
 msgctxt "speaker:Sarah"
 msgid "How did you know?"
-msgstr "Откуда вы знаете?"
+msgstr "Как ты узнала?"
 
 #. speaker_gender: F
 msgctxt "speaker:Carolyn"
@@ -19702,7 +19702,7 @@ msgstr "Сара покачала головой. Несмотря на заме
 #. speaker_gender: F
 msgctxt "speaker:Sarah"
 msgid "I did."
-msgstr "Понравилось."
+msgstr "Я сделала."
 
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
@@ -20546,7 +20546,7 @@ msgstr "Ступай, займись армией. Я здесь буду в п�
 #. speaker_gender: M
 msgctxt "speaker:Varga"
 msgid "Are you sure?"
-msgstr "Уверена?"
+msgstr "Ты уверен?"
 
 #. speaker_gender: F
 msgctxt "speaker:Sarah"
@@ -33908,7 +33908,7 @@ msgstr "Такие вещи держат вельмож жирными и дов
 #. speaker_gender: F
 msgctxt "speaker:Maeiv"
 msgid "You think this is vile?"
-msgstr "Вы считаете это отвратительным?"
+msgstr "Ты думаешь, это мерзко?"
 
 #. speaker_gender: F
 msgctxt "speaker:Narrator"
@@ -35248,7 +35248,7 @@ msgstr "Герцог Антонио рассмеялся."
 #. speaker_gender: M
 msgctxt "speaker:Duke Antonio"
 msgid "Please."
-msgstr "Да ладно."
+msgstr "Пожалуйста."
 
 #. speaker_gender: M
 msgctxt "speaker:Duke Antonio"

@@ -37,5 +37,4 @@ ${EROTIC_NOTE}
     ["Ignore, turn around and leave.", "Ignora, gira e vai."],
     ["Rolls back to earlier dialogue.", "Riavvolge al dialogo precedente."],
   ],
-  judgeNotes: `Italian-specific: gender agreement (era stanca, una donna...), tu/Lei consistency, explicit register per lexicon.`,
 };

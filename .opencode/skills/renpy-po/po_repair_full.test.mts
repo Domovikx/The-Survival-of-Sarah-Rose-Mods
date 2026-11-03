@@ -9,7 +9,7 @@ import { join } from "node:path";
 import { test } from "node:test";
 
 import type { PoEntry } from "./po_core.mts";
-import { classify, loadStatesFrom, type State } from "./po_repair_full.mts";
+import { classify, isInfraErr, loadStatesFrom, type State } from "./po_repair_full.mts";
 
 function entry(msgid: string, msgstr = "перевод"): PoEntry {
   return { msgid, msgstr, msgctxt: "", refs: [], comments: [], flags: [], translator: [] };
@@ -85,4 +85,26 @@ test("classify: repair идёт перед judge, дубли msgid не плод
   assert.equal(tasks[0].kind, "repair", "правки первыми");
   assert.equal(tasks[1].kind, "judge");
   assert.equal(tasks[2].kind, "judge");
+});
+
+test("isInfraErr: транспортный сбой LLM ≠ дефект перевода", () => {
+  // Инцидент 2026-11-03: 25 отказов из 180 строк из-за HTTP 400 от слотов LM
+  // Studio — если считать их дефектами, они навсегда уезжают в failed.txt.
+  assert.ok(isInfraErr('__ERROR__ LLM не ответила: Error: HTTP 400 {"error":"Engine protocol predict stream"}'));
+  assert.ok(isInfraErr("ошибка: LLM не ответила: Error: HTTP 400 ..."));
+  assert.ok(isInfraErr("судья -1/10: __ERROR__ LLM не ответила: Error: HTTP 400"));
+  // Реальные вердикты — НЕ инфраструктура (их место в failed.txt для ревью).
+  assert.ok(!isInfraErr("шлюз: msgstr == msgid"));
+  assert.ok(!isInfraErr("судья 4/10: dropped: I'll walk with you. (Candidate says ...)"));
+  assert.ok(!isInfraErr("wrong language: Кравел"));
+  assert.ok(!isInfraErr("literal calque: верхняя часть руки"));
+});
+
+test("инфра-ошибка не ставит статус: строка пересудивается, а не уезжает в failed", () => {
+  const infra = classify([entry("infra line")], new Map<string, State>([["infra line", { err: "HTTP 400 ..." }]]));
+  assert.equal(infra.length, 1, "строка вернулась в работу");
+  assert.equal(infra[0].kind, "judge", "и на СУД, а не на правку с мусорным prior из ошибки");
+  // repair_failed остаётся «навсегда-пропуском» — только для реальных дефектов.
+  const rep = classify([entry("real defect")], new Map<string, State>([["real defect", { repair_failed: true }]]));
+  assert.equal(rep.length, 0);
 });
