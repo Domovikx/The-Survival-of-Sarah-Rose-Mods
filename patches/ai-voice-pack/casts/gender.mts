@@ -51,6 +51,8 @@ export const SPEAKER_GENDER: Record<string, SpeakerGender> = {
   "Alfred": "M",
   "Ambassador": "M",
   "Announcer": "M",
+  // 0 реплик в игре (2026-11-03): пол неизвестен → модель решает по контексту
+  "Arthur": "?",
   "Atilla": "M",
   "Ayaka": "F",
   "Barion": "M",
@@ -60,6 +62,8 @@ export const SPEAKER_GENDER: Record<string, SpeakerGender> = {
   "Basilisk": "M",
   "Blacksmith": "M",
   "Both": "F",
+  // 0 реплик в игре (2026-11-03): пол неизвестен → модель решает по контексту
+  "Bran": "?",
   "Brigand": "M",
   "Caleb": "M",
   "Camp Guard": "M",
@@ -84,6 +88,8 @@ export const SPEAKER_GENDER: Record<string, SpeakerGender> = {
   "Emmissary": "M",
   "Engineer": "M",
   "Engineers": "M",
+  // 0 реплик в игре (2026-11-03): пол неизвестен → модель решает по контексту
+  "Enya": "?",
   "Ephraim": "M",
   "Eula": "F",
   "Examinator": "M",
@@ -179,10 +185,14 @@ export const SPEAKER_GENDER: Record<string, SpeakerGender> = {
   "Sophia": "F",
   "Spearmen": "M",
   "Squire": "M",
+  // сцена: «a group of three women», «Synara and her cronies»
+  "Synara": "F",
   "Tailor": "M",
   "The Official": "M",
   "Thomas": "M",
   "Tirion": "M",
+  // 0 реплик в игре (2026-11-03): пол неизвестен → модель решает по контексту
+  "Took": "?",
   "Tribesman": "M",
   "Vaelen": "M",
   "Varga": "M",
