@@ -95,7 +95,9 @@ export function resolveBackend(): LlmBackend {
       const cfg = readConfig();
       if (!cfg) return null;
       const named = byName(cfg.name);
-      if (named) return named;
+      // Оверрайды конфига (`use <name> --model/--url`) применяются к реестровой
+      // записи, иначе модель из конфига молча терялась (баг 2026-11-03).
+      if (named) return { ...named, url: cfg.url ?? named.url, model: cfg.model ?? named.model };
       if (cfg.url && cfg.model) return { name: cfg.name ?? "custom", url: cfg.url, model: cfg.model };
       return null;
     })() ??
