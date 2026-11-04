@@ -1581,7 +1581,7 @@ msgstr "Простите, конечно! Меня зовут Варга. Вар
 
 msgctxt "speaker:Narrator"
 msgid "Sarah observes the man."
-msgstr "Сара смотрит на мужчину. Он высокий, с коротко стриженными и ухоженными чёрными волосами — как у солдата. Он явно смущён. Она говорит: «Я Сара». Он отвечает: «А вы?», но не называет своего имени. Затем он извиняется и представляет себя как Варга Нортвуд."
+msgstr "Сара смотрит на мужчину."
 
 msgctxt "speaker:Narrator"
 msgid "He's tall, black hair, kept short and kempt, the way a soldier would."
@@ -2837,7 +2837,7 @@ msgstr "Кейт наклонилась ближе, не нарушая свое
 
 msgctxt "speaker:Narrator"
 msgid "Kate whispered to Sarah."
-msgstr "Кейт прошептала Саре: «Я хочу, чтобы ты пришла ко мне, Сара»."
+msgstr "Кейт прошептала Саре."
 
 msgctxt "speaker:Kate"
 msgid "I want you to come for me, Sarah."
@@ -9185,7 +9185,7 @@ msgstr "Я пришёл сюда не только для того, чтобы �
 
 msgctxt "speaker:Narrator"
 msgid "Sarah looked confused."
-msgstr "Сара с недоумением посмотрела на него. Слёзы всё ещё стояли у неё в глазах. Яэид сказал: «Не спешите благодарить меня, принцесса». Он добавил, что пришёл не просто спасти её — его послал хан Хассар лично обеспечить её безопасное прохождение. Теперь же он спросил: «Безопасное прохождение? Куда?»"
+msgstr "Сара с недоумением посмотрела на него."
 
 msgctxt "speaker:Sarah"
 msgid "Safe passage? Where?"
@@ -44597,7 +44597,7 @@ msgstr "Им придётся зачать ребёнка. Чем раньше, 
 
 msgctxt "speaker:Narrator"
 msgid "And sooner, usually meant frequent."
-msgstr "Она не много знала об этом деле, но одно была уверена: «раньше», как правило, означало «чаще»."
+msgstr "«раньше», как правило, означало «чаще»."
 
 msgctxt "speaker:Narrator"
 msgid "She didn't know much about this business, but she knew that much."
@@ -46953,7 +46953,7 @@ msgstr "Сара потянулась назад связанными рукам
 
 msgctxt "speaker:Narrator"
 msgid "Sarah lectured him."
-msgstr "Сара напомнила ему: «Эй, помнишь — внешность важна!»"
+msgstr "Сара напомнила ему."
 
 msgctxt "speaker:Sarah"
 msgid "Hey, remember, appearances!"
@@ -64897,7 +64897,7 @@ msgstr "Нам нужно действовать быстро. Собери до
 
 msgctxt "speaker:Narrator"
 msgid "Kate quickly added."
-msgstr "Кейт быстро добавила: «Также возьми всё ценное — украшения и тому подобное. Нам могут понадобиться деньги в пути»."
+msgstr "Кейт быстро добавила."
 
 msgctxt "speaker:Kate"
 msgid "Also, grab anything of value, your jewelry, that sort of thing. We might need money along our route."
@@ -69909,7 +69909,7 @@ msgstr "Мы ведь так долго путешествовали вмест�
 
 msgctxt "speaker:Narrator"
 msgid "Ephraim added."
-msgstr "Ефраим добавил: «Ох, я забыл... Откуда ты? Здесь это ведь запрещено, да?»"
+msgstr "Ефраим добавил."
 
 msgctxt "speaker:Ephraim"
 msgid "And there aren't always women around."
@@ -70249,7 +70249,7 @@ msgstr "Чёрт, сделай это..."
 
 msgctxt "speaker:Narrator"
 msgid "Belmont groaned."
-msgstr "Бельмонт стонал: «Я забыл, насколько ты подтянутая»."
+msgstr "Бельмонт стонал."
 
 msgctxt "speaker:Captain Belmont"
 msgid "I forgot how fit you were."
@@ -103909,7 +103909,7 @@ msgstr "Неужели она и вправду без толку отсосал
 
 msgctxt "speaker:Narrator"
 msgid "Atilla released his grip."
-msgstr "Атилла отпустил её, но сказал: «И я обучу тебя. Но сначала мне нужно понять, с чем я имею дело»."
+msgstr "Атилла отпустил её."
 
 msgctxt "speaker:Atilla"
 msgid "And I will. But I need to know what I'm working with."
@@ -104265,7 +104265,7 @@ msgstr "Ты же не можешь ходить в платье, как буд�
 
 msgctxt "speaker:Narrator"
 msgid "Sarah spoke softly."
-msgstr "Сара тихо сказала: «Правда, спасибо. Для меня это очень много значит»."
+msgstr "Сара тихо сказала."
 
 msgctxt "speaker:Sarah"
 msgid "Really, thank you. This means a lot to me."
@@ -166687,7 +166687,7 @@ msgstr "Этого было достаточно, чтобы держать Са
 
 msgctxt "speaker:Narrator"
 msgid "Sarah begged."
-msgstr "Сара взмолилась: «Обещаешь, что после церемонии, когда станешь рыцарем, займёшься со мной сексом орально?»"
+msgstr "Сара взмолилась."
 
 msgctxt "speaker:Kate"
 msgid "You promise after the ceremony, when you make a Knight, you'll go down on me?"
@@ -269739,7 +269739,7 @@ msgstr "Мастер."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah quickly added."
-msgstr "Сара быстро добавила: «К чему?» Деймон ответил: «Ты моя собственность, и я могу использовать тебя как пожелаю. Твоё тело — это то, что мне нужно. Всё остальное не имеет значения»."
+msgstr "Сара быстро добавила."
 
 msgctxt "speaker:Daemon"
 msgid "You are mine to use. Your body is what I have need of. All the rest is secondary."
