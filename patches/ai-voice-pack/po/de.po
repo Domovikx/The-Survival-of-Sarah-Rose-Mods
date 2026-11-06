@@ -12,19 +12,19 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "The Survival of Sarah Rose is an epic fantasy game. Production on TSSR is still ongoing."
-msgstr ""
+msgstr "The Survival of Sarah Rose ist ein episches Fantasyspiel. Die Produktion von TSSR ist noch im Gange."
 
 msgctxt "speaker:Narrator"
 msgid "What you are about to play is a work-in-progress."
-msgstr ""
+msgstr "Was du gleich spielen wirst, ist ein Werk in Arbeit."
 
 msgctxt "speaker:Narrator"
 msgid "TSSR takes place in a dark fantasy setting."
-msgstr ""
+msgstr "TSSR spielt in einem düsteren Fantasy-Universum."
 
 msgctxt "speaker:Narrator"
 msgid "The events and stories depicted within, while fictional, may be triggering to some audiences."
-msgstr ""
+msgstr "Die darin dargestellten Ereignisse und Geschichten sind zwar fiktiv, könnten aber für einige Zuschauer auslösend wirken."
 
 msgctxt "speaker-name"
 msgid "Sarah"
@@ -288,19 +288,19 @@ msgstr "Hugh"
 
 msgctxt "speaker:Narrator"
 msgid "Castle Reinmeer"
-msgstr "Schloss Reinmeer"
+msgstr "Die große Burg ruht im Herzen des Landes Rosanna."
 
 msgctxt "speaker:Narrator"
 msgid "The great castle rests at the heart of the nation of Rosanna."
-msgstr ""
+msgstr "Das große Schloss ruht im Herzen der Nation Rosanna."
 
 msgctxt "speaker:Narrator"
 msgid "For centuries, it has been the home of the Rose family."
-msgstr ""
+msgstr "Seit Jahrhunderten war es die Heimat der Rose-Familie."
 
 msgctxt "speaker:Narrator"
 msgid "Ruling with both wisdom and strength, the Rose family ensured centuries of prosperity for the nation of Rosanna."
-msgstr ""
+msgstr "Mit sowohl Weisheit als auch Stärke regierend, sorgte die Familie Rose für Jahrhunderte des Wohlstands im Land Rosanna."
 
 msgctxt "speaker:Narrator"
 msgid "But nothing lasts forever and rumors of new dangers have begun to spread."
@@ -308,23 +308,23 @@ msgstr "Aber nichts währt ewig, und Gerüchte von neuen Gefahren beginnen sich 
 
 msgctxt "speaker:Narrator"
 msgid "An ambitious warlord to the east threatens war."
-msgstr "Ein ehrgeiziger Kriegsherr im Osten droht den Ausbruch eines Krieges."
+msgstr "Ein ehrgeiziger Warlord im Osten droht mit Krieg."
 
 msgctxt "speaker:Narrator"
 msgid "Something has begun to stir the hearts of all creatures wicked."
-msgstr ""
+msgstr "Etwas hat begonnen, die Herzen aller bösen Kreaturen zu erregen."
 
 msgctxt "speaker:Narrator"
 msgid "But perhaps most dangerous of all, enemies are rising from within Rosanna."
-msgstr "Aber vielleicht waren die Feinde aus dem Inneren Rosannas am gefährlichsten."
+msgstr "Doch vielleicht ist das Gefährlichste von allem, dass Feinde innerhalb Rosannas aufsteigen."
 
 msgctxt "speaker:Narrator"
 msgid "Some wear their threats on their sleeves, whilst others hide their intentions behind smiling faces."
-msgstr ""
+msgstr "Manche tragen ihre Drohungen offen zur Schau, während andere ihre Absichten hinter lächelnden Gesichtern verbergen."
 
 msgctxt "speaker:Narrator"
 msgid "The Rose family can feel it in the air..."
-msgstr ""
+msgstr "Die Rose-Familie spürt es in der Luft ..."
 
 msgctxt "speaker:Narrator"
 msgid "Danger."
@@ -332,23 +332,23 @@ msgstr "Gefahr."
 
 msgctxt "speaker:Narrator"
 msgid "Amidst these many dangers, Sarah Rose, eldest daughter of the Rose clan, must walk her path."
-msgstr "Inmitten dieser vielen Gefahren muss Sarah Rose, die älteste Tochter des Hauses Rose, ihren Weg gehen."
+msgstr "Inmitten all dieser Gefahren muss Sarah Rose, die älteste Tochter des Rosenclans, ihren eigenen Weg gehen."
 
 msgctxt "speaker:Narrator"
 msgid "She will need to learn who she can trust, who would seek to betray her, how to keep her nation safe, but above all..."
-msgstr ""
+msgstr "Sie wird lernen müssen, wem sie vertrauen kann, wer sie zu verraten versuchen würde, wie sie ihr Volk sicher halten kann – aber vor allem ..."
 
 msgctxt "speaker:Narrator"
 msgid "She must survive."
-msgstr ""
+msgstr "Sie muss überleben."
 
 msgctxt "speaker:Narrator"
 msgid "King Orwell has returned from his travels through the provinces of Rosanna."
-msgstr "König Orwell ist von seinen Reisen durch die Provinzen von Rosanna zurückgekehrt."
+msgstr "König Orwell ist von seinen Reisen durch die Provinzen Rosannas zurückgekehrt."
 
 msgctxt "speaker:Narrator"
 msgid "He enters the great hall of Castle Reinmeer, the snow of an early winter drifting in behind him."
-msgstr "Er betritt den großen Saal des Schlosses Reinmeer, während der Schnee eines frühen Winters hinter ihm herweht."
+msgstr "Er betritt die große Halle von Schloss Reinmeer, während der Schnee eines frühen Winters hinter ihm hereinweht."
 
 msgctxt "speaker:King Orwell Rose"
 msgid "Finally, home again."
@@ -356,7 +356,7 @@ msgstr "Endlich wieder zu Hause."
 
 msgctxt "speaker:Narrator"
 msgid "King Orwell pluts his travel bag down."
-msgstr "King Orwell legt seinen Reisekoffer auf den Boden."
+msgstr "König Orwell lässt plötzlich seine Reisetasche fallen."
 
 msgctxt "speaker:Sarah"
 msgid "FATHER!"
@@ -364,7 +364,7 @@ msgstr "VATER!"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah leaps into her father's arms."
-msgstr "Sarah springt in die Arme ihres Vaters."
+msgstr "Sarah springt ihrem Vater in die Arme."
 
 msgctxt "speaker:King Orwell Rose"
 msgid "Ooh, Sarah, my back! Please daugher, I'm not as young as I was, and you've grown much too big to just be jumping on me."
@@ -380,11 +380,11 @@ msgstr "Du bist älter geworden, aber ich glaube nicht, dass du erwachsen geword
 
 msgctxt "speaker:Sarah"
 msgid "So mean!"
-msgstr "Wie gemein..."
+msgstr "Wie gemein!"
 
 msgctxt "speaker:King Orwell Rose"
 msgid "Speaking of growing up, have you seen..."
-msgstr "Sprich von Erwachsenwerden. Hast du gesehen..."
+msgstr "Apropos Erwachsenwerden – hast du etwa schon mal …"
 
 msgctxt "speaker:Thomas"
 msgid "DAD!"
@@ -396,11 +396,11 @@ msgstr "Thomas Rose, der jüngere Bruder von Sarah und Thronerbe, umarmte seinen
 
 msgctxt "speaker:Thomas"
 msgid "I've missed you so much dad!"
-msgstr "Ich habe dich so vermisst, Papa!"
+msgstr "Ich habe dich so sehr vermisst, Papa!"
 
 msgctxt "speaker:Narrator"
 msgid "King Orwell grabs his son by the shoulders and holds him at a distance."
-msgstr "King Orwell packa seinen Sohn an den Schultern und hält ihn auf Distanz."
+msgstr "König Orwell packt seinen Sohn an den Schultern und hält ihn auf Abstand."
 
 msgctxt "speaker:King Orwell Rose"
 msgid "I missed you too son, but remember: composure. It's not befitting for a future king to be running around like a wild child."
@@ -412,7 +412,7 @@ msgstr "Das gilt für euch beide."
 
 msgctxt "speaker:Narrator"
 msgid "King Orwell looks sternly at his daughter."
-msgstr "King Orwell sieht seine Tochter streng an."
+msgstr "König Orwell blickt seine Tochter streng an."
 
 msgctxt "speaker:Sarah and Thomas in unison"
 msgid "Yes Father."
@@ -424,11 +424,11 @@ msgstr "Sarah und Thomas im Chor"
 
 msgctxt "speaker:King Orwell Rose"
 msgid "Good. Now, where is the royal assistant? I need begin drafting letters immediately."
-msgstr "Gut. Wo ist nun der königliche Assistent? Ich muss sofort mit dem Schreiben von Briefen beginnen."
+msgstr "Gut. Wo ist denn jetzt der königliche Assistent? Ich muss sofort anfangen, die Briefe zu verfassen."
 
 msgctxt "speaker:Sarah"
 msgid "I think I saw him in the library, Father. I'll walk with you."
-msgstr "Ich glaube, ich habe ihn in der Bibliothek gesehen, Vater. Ich gehe mit Ihnen."
+msgstr "Ich glaube, ich habe ihn in der Bibliothek gesehen, Vater. Ich werde mit Ihnen gehen."
 
 msgctxt "speaker:King Orwell Rose"
 msgid "Fine, fine. Thomas, find a servant to carry this luggage to my room. And don't let me catch you doing it yourself again."
@@ -440,19 +440,19 @@ msgstr "Ja, Vater."
 
 msgctxt "speaker:Narrator"
 msgid "King Orwell and Sarah are walking through an empty hallway towards the library. Their steps softly echo."
-msgstr "König Orwell und Sarah gehen durch einen leeren Flur Richtung Bibliothek. Ihre Schritte hallen sanft nach."
+msgstr "Ich glaube, ich habe ihn in der Bibliothek gesehen, Vater. Ich werde mit Ihnen gehen."
 
 msgctxt "speaker:King Orwell Rose"
 msgid "I hope your brother has been keeping to his studies while I was away."
-msgstr "Ich hoffe, dein Bruder hat sich während meiner Abwesenheit an seine Studien gehalten."
+msgstr "Ich hoffe, dein Bruder hat sich an sein Studium gehalten, während ich weg war."
 
 msgctxt "speaker:Sarah"
 msgid "He did...in a way."
-msgstr "Er tat... auf seine Art."
+msgstr "Er tat es … auf eine gewisse Weise."
 
 msgctxt "speaker:King Orwell Rose"
 msgid "What does that that mean, exactly?"
-msgstr "Was bedeutet das genau?"
+msgstr "Was genau bedeutet das denn?"
 
 msgctxt "speaker:Sarah"
 msgid "He's been doing a lot of reading, just, maybe not those books you gave him."
@@ -460,27 +460,27 @@ msgstr "Er hat viel gelesen, nur vielleicht nicht die Bücher, die du ihm gegebe
 
 msgctxt "speaker:Narrator"
 msgid "King Orwell stops walking and lets out a deep sigh."
-msgstr "König Orwell hält inne und seufzt tief."
+msgstr "King Orwell Rose hält inne und stößt einen tiefen Seufzer aus."
 
 msgctxt "speaker:King Orwell Rose"
 msgid "Then what did he study?"
-msgstr "Und was hat er studiert?"
+msgstr "Was hat er denn dann studiert?"
 
 msgctxt "speaker:Sarah"
 msgid "Master Thyme's books on nature."
-msgstr "Die Bücher von Meister Thyme über die Natur."
+msgstr "Meister Thymes Bücher über die Natur."
 
 msgctxt "speaker:Narrator"
 msgid "King Orwell stares out onto the courtyard, a stern look on his face. Snow is slowly drifting down."
-msgstr "King Orwell starrt auf den Hof, das Gesicht steif vor Ernst. Langsam fällt der Schnee herab."
+msgstr "King Orwell blickt mit strenger Miene auf den Hof hinaus; sanft schneit es."
 
 msgctxt "speaker:King Orwell Rose"
 msgid "I'm going to have to talk with your brother."
-msgstr "Ich muss mit deinem Bruder sprechen."
+msgstr "Ich werde mich wohl mit deinem Bruder unterhalten müssen."
 
 msgctxt "speaker:Sarah"
 msgid "Try to go easy on him Father. I read some of those books on military strategy you gave him. They're very boring."
-msgstr "Versuch doch, ihm etwas mehr Zeit zu geben, Vater. Ich habe einige der von dir geschenkten Bücher über Militärstrategie gelesen. Sie sind sehr langweilig."
+msgstr "Versuch doch, mit ihm sanft umzugehen, Vater. Ich habe einige jener Bücher über Militärstrategie gelesen, die du ihm gegeben hast. Sie sind wirklich sehr langweilig."
 
 msgctxt "speaker:King Orwell Rose"
 msgid "Of course they are. I didn't give them to him for his enjoyment."
@@ -488,11 +488,11 @@ msgstr "Natürlich sind es die. Ich habe sie ihm nicht zum Spaß gegeben."
 
 msgctxt "speaker:King Orwell Rose"
 msgid "Your brother will be king one day, and when that day comes he needs to be ready."
-msgstr "Tu hermano será rey un día, y cuando llegue ese día, necesitará estar preparado."
+msgstr "Dein Bruder wird eines Tages König sein, und wenn dieser Tag kommt, muss er bereit dafür sein."
 
 msgctxt "speaker:Narrator"
 msgid "King Orwell's voice grows louder."
-msgstr "Die Stimme des Königs Orwell wird lauter."
+msgstr "König Orwell Roses Stimme wird lauter."
 
 msgctxt "speaker:King Orwell Rose"
 msgid "Nobody ever came to our castle asking me for advice on rare types of birds from the eastern desert!"
@@ -516,7 +516,7 @@ msgstr "Außerdem ist es eine neue Zeit. Vielleicht ist nicht alles, was ein Kö
 
 msgctxt "speaker:Narrator"
 msgid "King Orwell shrugs."
-msgstr "King Orwell schüttelt ab."
+msgstr "König Orwell Rose zuckt mit den Schultern."
 
 msgctxt "speaker:King Orwell Rose"
 msgid "Anyone can be a king in the easy times. It's the bad times that a king needs to be ready for. And your brother isn't ready."
@@ -524,51 +524,51 @@ msgstr "Jeder kann König sein, wenn es leicht ist. Aber in schlechten Zeiten br
 
 msgctxt "speaker:Narrator"
 msgid "For a moment, both are quiet."
-msgstr "Für einen Moment herrschte Stille zwischen beiden."
+msgstr "Einen Moment lang sind beide still."
 
 msgctxt "speaker:Sarah"
 msgid "Father...did something happen on your trip?"
-msgstr "Vater... ist etwas auf deiner Reise passiert?"
+msgstr "Vater ... ist auf deiner Reise etwas passiert?"
 
 msgctxt "speaker:King Orwell Rose"
 msgid "A lot...too much to talk about. You can ask me tomorrow, okay?"
-msgstr "Viel...zu viel zum Besprechen. Du kannst mich morgen fragen, okay?"
+msgstr "Viel... viel zu viel, um darüber zu sprechen. Du kannst mich morgen fragen, okay?"
 
 msgctxt "speaker:Narrator"
 msgid "Choose"
-msgstr "Wähle"
+msgstr "Wähle."
 
 msgctxt "menu"
 msgid "Pressure him."
-msgstr "Drück ihn."
+msgstr "Dränge ihn."
 
 msgctxt "speaker:Sarah"
 msgid "Father, I can see that something is worrying you. Please, tell me now. You'll sleep better having shared."
-msgstr "Vater, ich sehe, dass dich etwas beunruhigt. Bitte, sag es mir jetzt. Du wirst besser schlafen, wenn du es mit mir geteilt hast."
+msgstr "Vater, ich sehe, dass dich etwas beunruhigt. Bitte sag es mir jetzt. Du wirst besser schlafen, wenn du es mit mir geteilt hast."
 
 msgctxt "speaker:King Orwell Rose"
 msgid "Perceptive as always, daughter."
-msgstr "Wie immer aufmerksame, Tochter."
+msgstr "Scharfsinnig wie immer, Tochter."
 
 msgctxt "speaker:Narrator"
 msgid "King Orwell takes a moment to think about his answer."
-msgstr "King Orwell nimmt sich einen Moment Zeit, um über seine Antwort nachzudenken."
+msgstr "König Orwell denkt einen Moment über seine Antwort nach."
 
 msgctxt "speaker:King Orwell Rose"
 msgid "You know that every year I visit a different part of the kingdom, and this year, I went to see the eastern provinces."
-msgstr "Du weißt, dass ich jedes Jahr einen anderen Teil des Königreichs besuche und dieses Jahr die östlichen Provinzen bereist habe."
+msgstr "Du weißt doch, dass ich jedes Jahr einen anderen Teil des Königreichs besuche – und dieses Jahr bin ich in den östlichen Provinzen gewesen."
 
 msgctxt "speaker:King Orwell Rose"
 msgid "I expected the usual: complaints about road repairs, demands for more money from the city holders, maybe someone trying to ask for your hand in marriage."
-msgstr "Ich erwartete das Übliche: Klagen über Straßenreparaturen, Forderungen nach mehr Geld von den Stadtherrn, vielleicht jemanden, der um deine Hand anhebt."
+msgstr "Ich hatte das Übliche erwartet: Beschwerden über Straßenreparaturen, Forderungen nach mehr Geld von den Stadtherrn und vielleicht jemanden, der um deine Hand anhalten wollte."
 
 msgctxt "speaker:Narrator"
 msgid "King Orwell winks at his daughter."
-msgstr "King Orwell blinzelt seiner Tochter zu."
+msgstr "König Orwell zwinkert seiner Tochter zu."
 
 msgctxt "speaker:Sarah"
 msgid "Very funny..."
-msgstr "Sehr lustig..."
+msgstr "Sehr witzig …"
 
 msgctxt "speaker:King Orwell Rose"
 msgid "But it wasn't like that at all. Everywhere I went, it was the same thing. People talking about a man called Hassar."
@@ -580,7 +580,7 @@ msgstr "Hassar? Ich habe noch nie einen Namen wie diesen gehört."
 
 msgctxt "speaker:King Orwell Rose"
 msgid "It's Eastern, from beyond even the furthest provinces of our kingdom, across the vast eastern desert."
-msgstr "Es kommt von Osten, jenseits der entferntesten Provinzen unseres Königreichs, über die weite östliche Wüste."
+msgstr "Es kommt aus dem Osten, von jenseits selbst der fernsten Provinzen unseres Königreichs, über die weite östliche Wüste hinaus."
 
 msgctxt "speaker:King Orwell Rose"
 msgid "It didn't matter who I talked to: rich, poor, soldier, farmer. They all kept talking about this Hassar."
@@ -604,31 +604,31 @@ msgstr "Es ist noch zu früh, um es zu sagen. Ich werde keine Armee auf Grund ei
 
 msgctxt "menu"
 msgid "Let it be."
-msgstr "Lass es sein."
+msgstr "Sei's drum."
 
 msgctxt "speaker:Sarah"
 msgid "Ok father, tomorrow we'll talk."
-msgstr "Ok Vater, morgen sprechen wir darüber."
+msgstr "Okay, Vater, morgen reden wir darüber."
 
 msgctxt "speaker:King Orwell Rose"
 msgid "I've kept you long enough, Sarah. I'll walk the rest of the way to the library myself."
-msgstr "Ich habe dich lange genug warten lassen, Sarah. Ich werde den Rest des Weges bis zur Bibliothek selbst gehen."
+msgstr "Ich habe dich schon lange genug hiergehalten, Sarah. Den Rest des Weges zur Bibliothek werde ich selbst gehen."
 
 msgctxt "speaker:King Orwell Rose"
 msgid "I need to be alone with my thoughts for a bit."
-msgstr "Ich brauche einen Moment für mich selbst, um meine Gedanken zu ordnen."
+msgstr "Ich muss mich für einen Moment allein mit meinen Gedanken beschäftigen."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah embraces her father, hugging him more tightly than she herself had even expected, holding him."
-msgstr "Sarah umarmt ihren Vater und drückt ihn fester an sich, als sie selbst erwartet hätte, während sie ihn festhält."
+msgstr "Sarah umarmt ihren Vater, hält ihn fester, als sie selbst erwartet hatte, und bleibt an ihm hängen."
 
 msgctxt "speaker:Sarah"
 msgid "We see how hard you work for us, for everyone, Father. Just remember to also think about yourself sometimes."
-msgstr "Wir sehen, wie sehr du für uns, für alle arbeitest, Vater. Denk auch manchmal an dich selbst."
+msgstr "Wir sehen doch, wie hart du für uns arbeitest – für alle, Vater. Denk aber auch mal an dich selbst."
 
 msgctxt "speaker:King Orwell Rose"
 msgid "I'll look after myself, if you look after that brother of yours for me, promise?"
-msgstr "Ich kümmere mich um mich selbst, wenn du dich für mich um deinen Bruder kümmerst, versprochen?"
+msgstr "Ich werde auf mich selbst aufpassen – wenn du nur auf diesen Bruder von dir aufpasst, versprichst du das?"
 
 msgctxt "speaker:Sarah"
 msgid "Promise!"
@@ -636,19 +636,19 @@ msgstr "Versprochen!"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah had returned to her bedroom late that night."
-msgstr "Sarah war spät in der Nacht wieder in ihrem Schlafzimmer zurück."
+msgstr "Sarah war spät in dieser Nacht in ihr Schlafzimmer zurückgekehrt."
 
 msgctxt "speaker:Narrator"
 msgid "Outside, the snow picked up. The snowstorm made the castle feel cut off from the rest of world. Isolated."
-msgstr "Außerhalb nahm der Schnee zu. Der Schneesturm ließ die Burg wie abgeschnitten von der übrigen Welt wirken. Isoliert."
+msgstr "Draußen wurde der Schnee stärker. Der Schneesturm ließ das Schloss wie von der übrigen Welt abgeschnitten wirken – isoliert."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah's eyes drift towards the thick tome, sitting on the edge of her desk."
-msgstr "Sarahs Augen wanderten zum dicken Buch, das auf dem Rand ihres Schreibtisches lag."
+msgstr "Sarahs Augen schweifen zu dem dicken Buch, das am Rand ihres Schreibtisches liegt."
 
 msgctxt "speaker:Narrator"
 msgid "The title reads: A historical account of cavalry flanking manoeuvres in the 8th and 9th century."
-msgstr "Der Titel lautet: Historische Abhandlung über Kavallerie-Manöver der 8. und 9. Jahrhundert."
+msgstr "Der Titel lautet: Eine historische Abhandlung über die Flankenmanöver der Kavallerie im 8. und 9. Jahrhundert."
 
 msgctxt "speaker:Sarah"
 msgid "Thomas wasn't wrong. These books are very dry."
@@ -656,11 +656,11 @@ msgstr "Thomas hatte recht. Diese Bücher sind sehr trocken."
 
 msgctxt "speaker:Narrator"
 msgid "When her father had given Thomas the books, she knew Thomas would get distracted, as he usually did."
-msgstr "Als ihr Vater Thomas die Bücher gegeben hatte, wusste sie, dass er abgelenkt werden würde, wie es ihm sonst immer geschah."
+msgstr "Als ihr Vater ihr die Bücher gegeben hatte, wusste sie, dass Thomas sich ablenken würde, so wie er es sonst auch tat."
 
 msgctxt "speaker:Narrator"
 msgid "She had hoped to read the books on his behalf and give Thomas a summary so he could at least learn something."
-msgstr "Sie hatte gehofft, die Bücher für ihn zu lesen und Thomas eine Zusammenfassung zu geben, damit er zumindest etwas lernen konnte."
+msgstr "Sie hatte gehofft, die Bücher an seiner Stelle zu lesen und Thomas eine Zusammenfassung zu geben, damit er zumindest etwas lernen könnte."
 
 msgctxt "speaker:Narrator"
 msgid "But Thomas was difficult. It wasn't that he was stupid, or even that he was lazy. If he was, Sarah thought, that would almost be easier."
@@ -672,15 +672,15 @@ msgstr "Nein, ihr Bruder Thomas war einer dieser einzigartigen Menschen, deren I
 
 msgctxt "speaker:Narrator"
 msgid "His interests could stay fixed for months, only to completely shift in less than a day."
-msgstr "Sein Interesse konnte monatelang auf dasselbe Thema fixiert bleiben, nur um dann in weniger als einem Tag vollständig zu wechseln."
+msgstr "Seine Interessen konnten monatelang stabil bleiben, nur um sich dann in weniger als einem Tag komplett zu ändern."
 
 msgctxt "speaker:Narrator"
 msgid "Once he had spend an entire week learning everything there was to learn about how glass was made."
-msgstr "Er hatte eine ganze Woche damit verbracht, alles zu lernen, was es über die Herstellung von Glas gab."
+msgstr "Einmal hatte er eine ganze Woche damit verbracht, alles zu lernen, was es über die Herstellung von Glas zu wissen gab."
 
 msgctxt "speaker:Narrator"
 msgid "Once Thomas was interested in a thing, it seemed to completely envelop his every waking moment, and he rarely stopped until he understood the object of his obsession."
-msgstr "Einmal, wenn Thomas sich für etwas interessierte, schien es sein ganzes Wachsein vollständig zu umhüllen, und er hörte selten auf, bis er das Objekt seiner Besessenheit verstanden hatte."
+msgstr "Als Thomas sich einmal für etwas interessierte, schien es jeden wachen Moment seines Lebens vollständig einzunehmen, und er hörte selten auf, bevor er das Objekt seiner Besessenheit verstanden hatte."
 
 msgctxt "speaker:Narrator"
 msgid "Had Thomas been obsessed with war, he could have been a general unlike any other, but out of his many interests, war never seemed to be one of them."
@@ -688,31 +688,31 @@ msgstr "Hätte Thomas sich vom Krieg besessen gefühlt, hätte er ein General se
 
 msgctxt "speaker:Narrator"
 msgid "Sarah had often wondered why. For most boys his age, war seemed to be the only thing they cared for. Soldiers, battle, glory."
-msgstr "Sarah hatte sich oft gefragt, warum. Für die meisten Jungen seines Alters schien der Krieg die einzige Sache zu sein, an der sie interessiert waren. Soldaten, Schlachten, Ruhm."
+msgstr "Sarah hatte sich oft gefragt, warum das so war. Für die meisten Jungen in seinem Alter schien der Krieg das Einzige zu sein, was sie interessierte – Soldaten, Schlachten, Ruhm."
 
 msgctxt "speaker:Narrator"
 msgid "Perhaps, Sarah speculated, it was simply his nature. Too kind to hurt anything, and so too soft for war, even the theory of war."
-msgstr "Vielleicht spekulierte Sarah, es sei einfach sein Wesen. Zu gutmütig, um etwas zu verletzen, und daher zu weich für den Krieg, selbst für die Theorie des Krieges."
+msgstr "Vielleicht, so spekulierte Sarah, war es einfach seine Natur. Zu gütig, um irgendetwas zu verletzen, und deshalb auch zu sanft für den Krieg, selbst die Theorie des Krieges."
 
 msgctxt "speaker:Thomas"
 msgid "Is this all you do all day? so boring."
-msgstr "Ist das alles, was du den ganzen Tag machst? So langweilig."
+msgstr "Ist das alles, was du den ganzen Tag tust? Wie langweilig."
 
 msgctxt "speaker:Sarah"
 msgid "AAAH!"
-msgstr "Ahh!"
+msgstr "Aaaah!"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah lets out a high-pitched scream and spins around."
-msgstr "Sarah lässt einen hohen Schrei entweichen und dreht sich herum."
+msgstr "Sarah stößt einen hohen Schrei aus und wirbelt herum."
 
 msgctxt "speaker:Narrator"
 msgid "Standing in the corner of her room is her brother, Thomas."
-msgstr "In der Ecke ihres Zimmers steht ihr Bruder, Thomas."
+msgstr "In der Ecke ihres Zimmers steht ihr Bruder Thomas."
 
 msgctxt "speaker:Sarah"
 msgid "What are you doing creeping around my room? You should be in bed by now."
-msgstr "Was machst du eigentlich, dich so leise durch mein Zimmer zu schleichen? Du solltest längst ins Bett sein."
+msgstr "Was machst du hier eigentlich und schleichen dich durch mein Zimmer? Du solltest längst im Bett liegen."
 
 msgctxt "speaker:Thomas"
 msgid "I know, I know. I tried, but I was staring at the ceiling and I just couldn't get to sleep."
@@ -724,7 +724,7 @@ msgstr "Dann dachte ich mir natürlich, dass meine liebe Schwester das gleiche S
 
 msgctxt "speaker:Sarah"
 msgid "I sleep just fine, for your information."
-msgstr "Ich schlaf ganz gut, versprochen."
+msgstr "Ich schlafe doch ganz gut, nur damit du das weißt."
 
 msgctxt "speaker:Thomas"
 msgid "Pleeeeease don't send me back, ok? I really can't fall asleep."
@@ -748,15 +748,15 @@ msgstr "Sarah lacht."
 
 msgctxt "speaker:Sarah"
 msgid "Sure, slipped into it, whatever."
-msgstr "Sicher, sie schlich sich einfach hinein, egal."
+msgstr "Klar, hab mich da reingeschlichen, was auch immer."
 
 msgctxt "speaker:Narrator"
 msgid "Thomas walks over to Sarah's desk and picks up the book."
-msgstr "Thomas geht zu Saras Schreibtisch und hebt das Buch auf."
+msgstr "Thomas geht zu Sarahs Schreibtisch und nimmt das Buch auf."
 
 msgctxt "speaker:Thomas"
 msgid "Are you seriously reading this garbage?"
-msgstr "Liest du wirklich diesen Mist?"
+msgstr "Liest du ernsthaft diesen Müll?"
 
 msgctxt "speaker:Sarah"
 msgid "It's not as bad as you make it out to be. Also, you should try maybe doing what dad asks for a change."
@@ -764,7 +764,7 @@ msgstr "Es ist nicht so schlimm, wie du es darstellst. Und vielleicht solltest d
 
 msgctxt "speaker:Narrator"
 msgid "Thomas rolls his eyes."
-msgstr "Thomas rollt mit den Augen."
+msgstr "Thomas verdreht die Augen."
 
 msgctxt "speaker:Thomas"
 msgid "We can't all be perfect like you."
@@ -772,23 +772,23 @@ msgstr "Wir können nicht alle so perfekt sein wie du."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah smiles at her brother."
-msgstr "Sarah lächelte ihren Bruder an."
+msgstr "Sarah lächelt ihren Bruder an."
 
 msgctxt "speaker:Sarah"
 msgid "True."
-msgstr "Wahr."
+msgstr "Stimmt."
 
 msgctxt "speaker:Thomas"
 msgid "Show off."
-msgstr "Präsenziere dich!"
+msgstr "Angeberin."
 
 msgctxt "speaker:Sarah"
 msgid "But seriously, Thomas, you should listen to Dad at least some of the time. He's only trying to do what is best for us."
-msgstr "Aber im Ernst, Thomas, du solltest wenigstens teilweise auf deinen Vater hören. Er versucht nur, das Beste für uns zu tun."
+msgstr "Aber im Ernst, Thomas, du solltest wenigstens manchmal auf Papa hören. Er will doch nur das Beste für uns tun."
 
 msgctxt "speaker:Narrator"
 msgid "Thomas casually drops the tome back on the desk."
-msgstr "Thomas legt das Buch lässig zurück auf den Schreibtisch."
+msgstr "Thomas legt das Buch beiläufig wieder auf den Schreibtisch."
 
 msgctxt "speaker:Thomas"
 msgid "Yeah, I know, but sometimes it just gets a bit much. Read this, train that, study such. Like, no matter how much I try, I just can't be like him, Sarah."
@@ -796,15 +796,15 @@ msgstr "Ja, ich weiß, aber manchmal wird es einfach zu viel. Lies das, trainier
 
 msgctxt "speaker:Thomas"
 msgid "All this, ruling a kingdom, it just comes easy for him."
-msgstr "Alles das, ein Königreich zu regieren – fällt ihm einfach so."
+msgstr "All das hier, ein Königreich zu regieren – das fällt ihm einfach leicht."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah looks at her brother, his eyes fixed to the floor."
-msgstr "Sarah blickt ihren Bruder an, dessen Blick fest auf den Boden gerichtet ist."
+msgstr "Sarah sieht ihren Bruder an, seine Augen sind auf den Boden gerichtet."
 
 msgctxt "speaker:Narrator"
 msgid "She gets up and puts her arms around him."
-msgstr "Sie stand auf und legte die Arme um ihn."
+msgstr "Sie steht auf und legt ihre Arme um ihn."
 
 msgctxt "speaker:Sarah"
 msgid "That's not true. He told me how difficult it was, growing up under his father. How nothing he ever did was good enough."
@@ -812,11 +812,11 @@ msgstr "Das stimmt nicht. Er hat mir erzählt, wie schwer es für ihn war, unter
 
 msgctxt "speaker:Sarah"
 msgid "Grandfather used to beat him, mercilessly."
-msgstr "Der Großvater hat ihn früher gefoltert, gnadenlos."
+msgstr "Der Großvater hat ihn früher gnadenlos geschlagen."
 
 msgctxt "speaker:Narrator"
 msgid "Thomas sudenly looks up, a shocked expression on his face."
-msgstr "Thomas blickte plötzlich auf, das Gesicht voller Schock."
+msgstr "Thomas blickt plötzlich auf, ein schockierter Ausdruck auf seinem Gesicht."
 
 msgctxt "speaker:Thomas"
 msgid "I didn't know that."
@@ -824,11 +824,11 @@ msgstr "Das wusste ich nicht."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah keeps hugging her brother."
-msgstr "Sarah hält ihren Bruder fest umarmt."
+msgstr "Sarah hält ihren Bruder weiterhin fest im Arm."
 
 msgctxt "speaker:Sarah"
 msgid "He's tried to give us more freedom than he ever had. But you know, he's also preparing us for the real world."
-msgstr "Er hat versucht uns mehr Freiheit zu geben als er selbst je hatte. Aber wisst ihr, er bereitet uns auch auf die echte Welt vor."
+msgstr "Er hat uns mehr Freiheit gegeben, als er je selbst hatte. Aber weißt du, er bereitet uns auch auf die echte Welt vor."
 
 msgctxt "speaker:Sarah"
 msgid "Not everything is going to stay like things are now, Thomas. One day you will be king, and when that day comes, you need to be ready."
@@ -836,19 +836,19 @@ msgstr "No todo va a permanecer igual, Tomás. Un día serás rey, y cuando lleg
 
 msgctxt "speaker:Thomas"
 msgid "Yeah...I guess I could try to be better."
-msgstr "Ja... ich denke, ich könnte versuchen, besser zu sein."
+msgstr "Ja ... ich schätze, ich könnte versuchen, besser zu werden."
 
 msgctxt "speaker:Sarah"
 msgid "Just show some effort, even if you hate it. Pretending is half of what it takes to be a king."
-msgstr "Zeig wenigstens etwas Anstrengung, auch wenn du es hasst. Vortäuschen ist die Hälfte dessen, was ein König braucht."
+msgstr "Zeig wenigstens ein bisschen Anstrengung, selbst wenn du es hasst. Sich so zu tun, als ob, ist die Hälfte dessen, was man braucht, um ein König zu sein."
 
 msgctxt "speaker:Narrator"
 msgid "Thomas looks at the bed."
-msgstr "Thomas blickt auf das Bett."
+msgstr "Thomas schaut zum Bett."
 
 msgctxt "speaker:Thomas"
 msgid "Could I sleep here tonight?"
-msgstr "Könnte ich hier heute Nacht schlafen?"
+msgstr "Könnte ich heute Nacht hier schlafen?"
 
 msgctxt "speaker:Sarah"
 msgid "Thomas..."
@@ -856,7 +856,7 @@ msgstr "Thomas..."
 
 msgctxt "speaker:Thomas"
 msgid "Please, like we used to."
-msgstr "Bitte, wie früher."
+msgstr "Bitte, so wie früher."
 
 msgctxt "speaker:Sarah"
 msgid "Yeah, when we were six. We're not kids anymore, it's not appropriate."
@@ -864,19 +864,19 @@ msgstr "Ja, als wir sechs waren. Wir sind keine Kinder mehr, das passt nicht."
 
 msgctxt "speaker:Thomas"
 msgid "Pleeeeeease."
-msgstr "Bitte..."
+msgstr "Bitteeeeee."
 
 msgctxt "menu"
 msgid "Okay, just this once."
-msgstr "Einverstanden, diesmal nur."
+msgstr "Okay, nur dieses eine Mal."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah and Thomas climb into the bed together."
-msgstr "Sarah und Thomas steigen gemeinsam ins Bett."
+msgstr "Sarah und Thomas klettern gemeinsam ins Bett."
 
 msgctxt "speaker:Narrator"
 msgid "Her brother hugs her, and she hugs him back."
-msgstr "Ihr Bruder umarmt sie, und sie umarmt ihn zurück."
+msgstr "Ihr Bruder umarmt sie, und sie umarmt ihn ebenfalls zurück."
 
 msgctxt "speaker:Narrator"
 msgid "They stay, locked in an embrace. It doesn't take long for Thomas to fall asleep."
@@ -884,7 +884,7 @@ msgstr "Sie bleiben stehen, fest in den Armen gehalten. Es dauert nicht lange, b
 
 msgctxt "speaker:Narrator"
 msgid "Sarah stares at the ornate ceiling. Her brother soundly asleep next to her."
-msgstr "Sarah starrt auf das kunstvoll verzierte Deckenbild. Ihr Bruder schläft fest neben ihr."
+msgstr "Sarah starrt an die verzierte Decke. Ihr Bruder schläft tief und fest neben ihr."
 
 msgctxt "speaker:Narrator"
 msgid "Nothing stays the same forever, but she wishes, some things could."
@@ -892,7 +892,7 @@ msgstr "Nichts bleibt für immer gleich, doch sie wünscht sich, dass einige Din
 
 msgctxt "menu"
 msgid "Grow up, little brother."
-msgstr "Werde groß, kleiner Bruder."
+msgstr "Werd erwachsen, kleiner Bruder."
 
 msgctxt "speaker:Thomas"
 msgid "Whatever."
@@ -900,43 +900,43 @@ msgstr "Egal."
 
 msgctxt "speaker:Narrator"
 msgid "Thomas storms off, angrily muttering to himself."
-msgstr "Thomas stürmt ab und murmert wütend vor sich hin."
+msgstr "Thomas stürmt wütend davon und murmelt vor sich hin."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah wakes to the first beams of light breaking through her curtains."
-msgstr "Sarah erwacht zum ersten Licht, das durch ihre Vorhänge bricht."
+msgstr "Sarah erwacht zu den ersten Lichtstrahlen, die durch ihre Vorhänge brechen."
 
 msgctxt "speaker:Narrator"
 msgid "Her brother is still asleep, next to her."
-msgstr "Ihr Bruder schläft noch immer neben ihr."
+msgstr "Ihr Bruder schläft noch neben ihr."
 
 msgctxt "speaker:Narrator"
 msgid "It all feels peaceful. She likes to bully him sometimes, but truthfully, she loves her brother."
-msgstr "Alles fühlt sich friedlich an. Manchmal mag sie ihn ein bisschen ausnutzen, aber ehrlich gesagt liebt sie ihren Bruder."
+msgstr "Es fühlt sich alles friedlich an. Manchmal mag sie ihn schikanieren, aber in Wahrheit liebt sie ihren Bruder."
 
 msgctxt "speaker:Narrator"
 msgid "She gently nudges him, knowing the banquet will start soon."
-msgstr "Sie stößt ihn sanft an, denn sie weiß, dass das Festmahl bald beginnt."
+msgstr "Sie stupst ihn sanft an, denn sie weiß, dass das Bankett bald beginnen wird."
 
 msgctxt "speaker:Sarah"
 msgid "Hey, time to wake up."
-msgstr "Hey, es ist Zeit zu wachwerden."
+msgstr "Hey, Zeit aufzuwachen."
 
 msgctxt "speaker:Narrator"
 msgid "Thomas grunts, acknowledging he's awake but hoping to be spared the day's official events."
-msgstr "Thomas grommelt, anerkennend dass er wach ist, aber hoffend, vor den offiziellen Ereignissen des Tages verschont zu werden."
+msgstr "Thomas grunzt, um zu zeigen, dass er wach ist, hofft aber gleichzeitig, den offiziellen Verpflichtungen des Tages zu entgehen."
 
 msgctxt "speaker:Sarah"
 msgid "Seriously, Thomas, you need to go to your room and get dressed before Dad comes and drags you to the banquet."
-msgstr "Ernsthaft, Thomas, du musst dich in dein Zimmer zurückziehen und anziehen, bevor Dad dich zum Bankett herüberzieht."
+msgstr "Im Ernst jetzt, Thomas – du musst in dein Zimmer gehen und dich anziehen, bevor Papa kommt und dich zum Bankett schleift."
 
 msgctxt "speaker:Narrator"
 msgid "Thomas drags himself from the bed."
-msgstr "Thomas schleift sich mühsam aus dem Bett."
+msgstr "Thomas schleppte sich mühsam aus dem Bett."
 
 msgctxt "speaker:Thomas"
 msgid "I'm going!"
-msgstr "Gehe ich hin!"
+msgstr "Ich gehe!"
 
 msgctxt "speaker:Narrator"
 msgid "Thomas turns around before leaving."
@@ -944,23 +944,23 @@ msgstr "Thomas dreht sich um, bevor er geht."
 
 msgctxt "speaker:Thomas"
 msgid "See you at the banquet."
-msgstr "Bis zum Festmahl."
+msgstr "Wir sehen uns beim Bankett."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah waves to her brother."
-msgstr "Sarah winkte ihrem Bruder zu."
+msgstr "Sarah winkt ihrem Bruder zu."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah gets out of the bed and begins to get dressed for the banquet."
-msgstr "Sarah verlässt das Bett und beginnt sich für das Bankett anzuziehen."
+msgstr "Sarah steigt aus dem Bett und beginnt, sich für das Bankett anzuziehen."
 
 msgctxt "speaker:Narrator"
 msgid "She watches herself in the mirror as she tries out a series of different dresses."
-msgstr "Sie betrachtet sich im Spiegel, während sie eine Reihe verschiedener Kleider ausprobiert."
+msgstr "Sie betrachtet sich im Spiegel, während sie eine Reihe unterschiedlicher Kleider anprobiert."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah feels the spectre of her mother, advising her with every choice."
-msgstr "Sarah spürt das Gespenst ihrer Mutter, die sie bei jeder Entscheidung berät."
+msgstr "Sarah spürt den Schatten ihrer Mutter, die sie bei jeder Wahl berät."
 
 msgctxt "speaker:Narrator"
 msgid "\"Ooh no, not this one. Try that one\", she would say when Sarah was still young."
@@ -968,15 +968,15 @@ msgstr "\"Oh nein, nicht dieses hier. Versuch das andere\", pflegte sie zu sagen
 
 msgctxt "speaker:Narrator"
 msgid "Her mother loved to dote on her, and Sarah had loved her doing it."
-msgstr "Su madre adoraba mimarla, y Sarah había amado que lo hiciera."
+msgstr "Ihre Mutter hatte es geliebt, sich um sie zu kümmern, und auch Sarah hatte das sehr geschätzt."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah felt herself tear up at the memories."
-msgstr "Sarah fühlte, wie sie bei den Erinnerungen in Tränen ausbrach."
+msgstr "Sarah spürte, wie sich ihre Augen bei den Erinnerungen füllten."
 
 msgctxt "speaker:Narrator"
 msgid "It was different for her, because she could still vaguely remember her mother. Thomas had been too small before she passed."
-msgstr "Für sie war es anders, denn sie konnte ihre Mutter noch vage in Erinnerung rufen. Thomas war zu klein gewesen, als sie starb."
+msgstr "Für sie war es anders, denn sie konnte sich noch vage an ihre Mutter erinnern. Thomas war zu klein gewesen, bevor sie starb."
 
 msgctxt "speaker:Narrator"
 msgid "She wondered if it was worse to feel this sadness, or to have no memory at all. Each seemed a different kind of cruelty."
@@ -984,7 +984,7 @@ msgstr "Sie fragte sich, ob es schlimmer sei, dieses Leid zu spüren, oder gar k
 
 msgctxt "speaker:Narrator"
 msgid "After her mother had passed, it has just been Sarah, Thomas and her father."
-msgstr "Nach dem Tod ihrer Mutter war es nur noch Sarah, Thomas und ihr Vater."
+msgstr "Nach dem Tod ihrer Mutter waren es nur noch Sarah, Thomas und ihr Vater."
 
 msgctxt "speaker:Narrator"
 msgid "Most kings would have remarried, but their father never had. When he lost their mother, she took part of his joy with her to the grave."
@@ -996,7 +996,7 @@ msgstr "Sein Vater hatte ihr einst erzählt, dass er nach dem Tod ihrer Mutter e
 
 msgctxt "speaker:Narrator"
 msgid "Sarah shakes her head and pushes away the memory. Composure. Just as Father always said."
-msgstr "Sarah schüttelt den Kopf und verbannt die Erinnerung. Fassung. Genau wie der Vater es immer gesagt hat."
+msgstr "Sarah schüttelt den Kopf und schiebt die Erinnerung beiseite. Gelassenheit – genau wie ihr Vater es immer gesagt hatte."
 
 msgctxt "speaker:Narrator"
 msgid "The tears could come later."
@@ -1008,7 +1008,7 @@ msgstr "Nur sie ist da – ihr Bett ist leer. Sie hofft, dass Thomas nicht zu se
 
 msgctxt "speaker:Narrator"
 msgid "Still, he should have known they were too old for that."
-msgstr "Immerhin sollte er gewusst haben, dass sie dafür zu alt waren."
+msgstr "Dennoch hätte er wissen müssen, dass sie dafür schon zu alt waren."
 
 msgctxt "speaker:Narrator"
 msgid "\"Ooh no, not this one, try that one\" she would say when Sarah was still small."
@@ -1016,75 +1016,75 @@ msgstr "\"Oh nein, nicht dieses, probier das andere\", sagte sie, als Sarah noch
 
 msgctxt "speaker:Narrator"
 msgid "Sarah shakes her head and pushes away the memory. Composure. Just as father always said."
-msgstr "Sarah schüttelte den Kopf und wischte die Erinnerung weg. Gelassenheit. Genau wie Vater es immer gesagt hatte."
+msgstr "Sarah schüttelte den Kopf und vertrieb die Erinnerung aus ihrem Gedächtnis. Gelassenheit. Genau wie ihr Vater es immer gesagt hatte."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah arrived in the great hall."
-msgstr "Sarah betrat den großen Saal."
+msgstr "Sarah trat in die große Halle ein."
 
 msgctxt "speaker:Narrator"
 msgid "Settled in the center was a large oak table, long enough to house dozens of people on each side."
-msgstr "In der Mitte stand ein großer Eichentisch, lang genug für Dutzende Personen an jeder Seite."
+msgstr "In der Mitte stand ein großer Eistisch, lang genug, um auf jeder Seite Dutzende von Menschen zu beherbergen."
 
 msgctxt "speaker:Narrator"
 msgid "Throughout the hall, servants ran up and down, placing plates, putting down silverware; some were ironing the sheet covering the oak table."
-msgstr "Im ganzen Saal eilten Knechte hereinhinaus, setzten Teller ab, legten Besteck hin; einige glätteten das Tuch auf dem Eichentisch."
+msgstr "Überall in der Halle liefen Diener auf und ab, legten Teller ab und stellten Silberbesteck bereit; einige bügelten dabei das Laken, das den Eistisch bedeckte."
 
 msgctxt "speaker:Narrator"
 msgid "She enjoyed seeing the castle like this: alive, vibrant."
-msgstr "Sie genoss es, das Schloss so zu sehen: lebendig, pulsierend."
+msgstr "Sie genoss es, das Schloss so zu sehen: lebendig und voller Energie."
 
 msgctxt "speaker:Narrator"
 msgid "Some servants passed by, lowering their heads, mumbling their respects to their princess. Sarah acknowledged them and their efforts with a small nod."
-msgstr "Einige Diener gingen vorüber, senkten ihre Köpfe und flüsterten ihre Ehrerbietung ihrer Prinzessin zu. Sarah nickte ihnen kurz zu und anerkannte ihre Anstrengungen."
+msgstr "Einige Diener gingen an ihr vorbei, senkten die Köpfe und murmelten ihr Respekt zu. Sarah erwiderte dies mit einem leichten Nicken und würdigte so ihre Bemühungen."
 
 msgctxt "speaker:Thomas"
 msgid "So busy."
-msgstr "So viel zu tun."
+msgstr "So beschäftigt."
 
 msgctxt "speaker:Narrator"
 msgid "Thomas strolled into the great hall, stopping next to his sister."
-msgstr "Thomas spazierte ruhig durch den großen Saal und blieb neben seiner Schwester stehen."
+msgstr "Thomas schlenderte in die große Halle und blieb neben seiner Schwester stehen."
 
 msgctxt "speaker:Sarah"
 msgid "At least you managed to get here in time."
-msgstr "Zumindest bist du rechtzeitig hier angekommen."
+msgstr "Zumindest hast du es noch rechtzeitig hierher geschafft."
 
 msgctxt "speaker:Thomas"
 msgid "Yes, a certain someone gave me some advice. Said I should put in more of an effort."
-msgstr "Ja, eine bestimmte Person hat mir einen Rat gegeben. Hat gesagt, ich sollte mehr in die Sache investieren."
+msgstr "Ja, eine gewisse Person hat mir einen Rat gegeben. Sie sagte, ich solle mich etwas mehr anstrengen."
 
 msgctxt "speaker:Sarah"
 msgid "Sounds like a smart person."
-msgstr "Klingt nach einem klugen Menschen."
+msgstr "Das klingt nach einem klugen Menschen."
 
 msgctxt "speaker:Thomas"
 msgid "She likes to think she is."
-msgstr "Sie mag glauben, dass sie es ist."
+msgstr "Sie hält sich wohl für eine kluge Person."
 
 msgctxt "speaker:Narrator"
 msgid "Thomas winks at his sister."
-msgstr "Thomas blinzelt seiner Schwester zu."
+msgstr "Thomas zwinkert seiner Schwester zu."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah rolls her eyes."
-msgstr "Sarah rollt mit den Augen."
+msgstr "Sarah verdreht die Augen."
 
 msgctxt "speaker:Narrator"
 msgid "At least he's trying, she thinks to herself."
-msgstr "Zumindest versucht er es, denkt sie zu sich."
+msgstr "Wenigstens versucht er es, denkt sie bei sich."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah watches the people slowly fill into the great hall."
-msgstr "Sarah beobachtet, wie die Menschen langsam den großen Saal füllen."
+msgstr "Sarah sieht zu, wie die Leute langsam die große Halle füllen."
 
 msgctxt "speaker:Narrator"
 msgid "The court nobles were amongst the first. Always priding themselves on their own importance, each representing an important family."
-msgstr "Die Hofadligen waren unter den Ersten. Sie priesen stets ihre eigene Bedeutung und repräsentierten jeweils eine einflussreiche Familie."
+msgstr "Die Hofadligen gehörten zu den Ersten. Sie waren stets stolz auf ihre eigene Bedeutung, und jeder von ihnen repräsentierte eine wichtige Familie."
 
 msgctxt "speaker:Narrator"
 msgid "They had crowded around a young man with a thin frame and long, flowing blonde hair, reaching to his shoulders."
-msgstr "Sie hatten sich um einen jungen Mann mit einem dünnen Körperbau und langem, fließendem blonden Haar versammelt, das ihm bis zu den Schultern reichte."
+msgstr "Sie hatten sich um einen jungen Mann mit einem schmächtigen Körperbau und langen, wallenden blonden Haaren, die ihm bis zu den Schultern reichten, gedrängt."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah knew him and wasn't surprised to see him, Marion Achillea, from the Achillea family."
@@ -1092,23 +1092,23 @@ msgstr "Sarah kannte ihn und war nicht überrascht, Marion Achillea aus dem Haus
 
 msgctxt "speaker:Narrator"
 msgid "The Achillea family was one of the oldest and most prestigious families of Rosanna. They had fought with Sarah's ancestors in establishing the Rose dynasty. For their efforts, they were well rewarded."
-msgstr "Die Familie Achillea war eine der ältesten und angesehensten Familien von Rosanna. Sie hatten mit den Vorfahren Sarahs bei der Gründung der Rose-Dynastie gekämpft. Als Dank für ihre Bemühungen wurden sie reich belohnt."
+msgstr "Die Familie Achillea gehörte zu den ältesten und angesehensten Familien Rosannas. Sie hatten mit Sarahs Vorfahren bei der Gründung der Rose-Dynastie gekämpft und dafür eine großzügige Belohnung erhalten."
 
 msgctxt "speaker:Narrator"
 msgid "Ever since, the Achillea family had thrived. Some old families fell, others faded away into irrelevance, but the Achillea family had withstood every challenge."
-msgstr "Seitdem hatte das Geschlecht der Achillea gediehen. Manche alte Häuser waren untergegangen, andere waren in die Bedeutungslosigkeit abgedriftet, doch das Geschlecht der Achillea hatte jede Herausforderung standgehalten."
+msgstr "Seitdem war die Familie Achillea aufgestiegen. Einige alte Familien waren untergegangen, andere hatten an Bedeutung verloren, doch die Familie Achillea hatte jeder Herausforderung standgehalten."
 
 msgctxt "speaker:Narrator"
 msgid "And Marion was their scion, first amongst all his peers. He walked around the room with a confidence that could only be the result of years of cultivation."
-msgstr "Und Marion war ihr Erbe, der Erste unter all seinen Gleichgestellten. Er spazierte durch den Raum mit einer Selbstsicherheit, die nur das Ergebnis jahrelanger Kultivierung sein konnte."
+msgstr "Und Marion war ihr Nachkomme, der Erste unter all seinen Gleichgestellten. Er ging durch den Raum mit einer Selbstsicherheit, die nur das Ergebnis jahrelanger Kultivierung sein konnte."
 
 msgctxt "speaker:Narrator"
 msgid "Marion was one of those nobles who knew exactly what station he belonged to, because he had been told so repeatedly from birth, and had his beliefs reaffirmed all his life."
-msgstr "Marion war einer jener Adligen, die genau wussten, zu welcher Stellung sie gehörten, weil man es ihnen von Geburt an immer wieder gesagt hatte und ihre Überzeugung ihr Leben lang bestärkt wurde."
+msgstr "Marion gehörte zu jenen Adligen, die genau wussten, welcher Stellung sie angehörten, denn ihnen war dies seit ihrer Geburt immer wieder gesagt worden, und ihre Überzeugungen wurden ihr ein Leben lang bestätigt."
 
 msgctxt "speaker:Narrator"
 msgid "Marion crossed the room to meet them."
-msgstr "Marion überquerte den Raum und trat auf sie zu."
+msgstr "Marion überquerte den Raum, um ihnen entgegenzugehen."
 
 msgctxt "speaker:Marion"
 msgid "Prince Thomas, Princess Sarah."
@@ -1116,15 +1116,15 @@ msgstr "Prinz Thomas, Prinzessin Sarah."
 
 msgctxt "speaker:Narrator"
 msgid "Marion gave a quick bow."
-msgstr "Marion neigte sich schnell."
+msgstr "Marion verneigte sich kurz."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah and Thomas gave a brief bow in acknowledgement."
-msgstr "Sarah und Thomas neigten kurz den Kopf zur Anerkennung."
+msgstr "Sarah und Thomas verneigten sich kurz zur Anerkennung."
 
 msgctxt "speaker:Sarah"
 msgid "Good to see you, Marion. I hope your travels went well."
-msgstr "Gut dich zu sehen, Marion. Ich hoffe, deine Reise war erfolgreich."
+msgstr "Schön dich wiederzusehen, Marion. Ich hoffe, deine Reisen verliefen gut."
 
 msgctxt "speaker:Narrator"
 msgid "Marion shrugs."
@@ -1132,15 +1132,15 @@ msgstr "Marion zuckt mit den Schultern."
 
 msgctxt "speaker:Marion"
 msgid "As well as was to be expected. I'm just glad to be back here in the capital. Travelling with your father to the Eastern districts has been exhausting."
-msgstr "Genau wie zu erwarten war. Ich bin nur froh, wieder hier in der Hauptstadt zu sein. Die Reise mit deinem Vater in die Ostviertel hat mich völlig ausgezehrt."
+msgstr "Das war ja auch nicht weiter überraschend. Ich bin einfach froh, hier in der Hauptstadt zurückzusein. Die Reise mit deinem Vater in die östlichen Viertel war erschöpfend."
 
 msgctxt "speaker:Sarah"
 msgid "How so?"
-msgstr "Wie denn?"
+msgstr "Wie meinst du das?"
 
 msgctxt "speaker:Marion"
 msgid "Every day, the same endless stream of meetings. Everyone wanting something. Just one dull face after the other. It makes you feel like a bookkeeper."
-msgstr "Jeden Tag, dieselbe endlose Flut von Terminen. Jeder will etwas. Nichts als ein langweiliges Gesicht nach dem anderen. Es lässt dich wie einen Buchhalter fühlen."
+msgstr "Jeden Tag derselbe endlose Strom von Besprechungen. Jeder will etwas. Einfach ein langweiliges Gesicht nach dem anderen. Das lässt dich wie einen Buchhalter fühlen."
 
 msgctxt "speaker:Marion"
 msgid "Not to mention, after months of being on the road, you begin to miss the luxuries of the capital. You wouldn't serve up their idea of fine dining to a dog. But, we manage."
@@ -1148,19 +1148,19 @@ msgstr "Nicht zu vergessen, dass nach monatelangen Reisen auf der Straße man di
 
 msgctxt "speaker:Narrator"
 msgid "Sarah politely smiled as she listened to Marion complain. From Marion, even a little could be too much."
-msgstr "Sarah lächelte höflich, während sie Marions Klagen ausstand. Bei Marion reichte schon das Geringste."
+msgstr "Sarah lächelte höflich, als sie Marion zuhörte, wie dieser sich beklagte. Selbst von Marion konnte selbst ein kleines bisschen zu viel sein."
 
 msgctxt "speaker:Narrator"
 msgid "A man waved at Marion from across the room, and Marion waved back."
-msgstr "Ein Mann winkte Marion von der anderen Seite des Saals zu, und Marion winkte zurück."
+msgstr "Ein Mann winkte Marion von der anderen Seite des Raumes zu, und Marion winkte zurück."
 
 msgctxt "speaker:Marion"
 msgid "Excuse me, Prince, Princess. Duty calls."
-msgstr "Entschuldigung, Prinz, Prinzessin. Der Dienst ruft."
+msgstr "Entschuldigt, Prinz, Prinzessin. Die Pflicht ruft."
 
 msgctxt "speaker:Narrator"
 msgid "Marion turns around to walk over to the man."
-msgstr "Marion dreht sich um und geht auf den Mann zu."
+msgstr "Marion dreht sich um, um zum Mann hinzugehen."
 
 msgctxt "speaker:Thomas"
 msgid "Ugh, I can't stand the guy."
@@ -1172,7 +1172,7 @@ msgstr "Sarah nickt."
 
 msgctxt "speaker:Sarah"
 msgid "He can be a bit much, but his family is important, so that makes him important."
-msgstr "Er kann ein bisschen zu viel sein, aber seine Familie ist wichtig, und das macht ihn auch wichtig."
+msgstr "Er mag zwar ein bisschen viel sein, aber seine Familie ist wichtig, und das macht ihn ebenfalls wichtig."
 
 msgctxt "speaker:Sarah"
 msgid "You should remember to keep him as a friend."
@@ -1180,15 +1180,15 @@ msgstr "Du solltest daran denken, ihn als Freund zu behalten."
 
 msgctxt "speaker:Thomas"
 msgid "When I'm king, shouldn't he want to be my friend?"
-msgstr "Wenn ich König bin, sollte er nicht mein Freund sein wollen?"
+msgstr "Wenn ich König bin, sollte er dann nicht mein Freund sein wollen?"
 
 msgctxt "speaker:Sarah"
 msgid "You'll only be king when enough people like him agree that you are. A king sits atop a mountain. Only when the base holds, does the peak."
-msgstr "Du wirst erst König sein, wenn genug Leute zustimmen, dass du es bist. Ein König thront auf einem Berggipfel. Erst wenn das Fundament hält, steht die Spitze."
+msgstr "Du wirst erst dann König sein, wenn genug Leute, die ihn mögen, dir zustimmen. Ein König thront auf einem Berg. Nur wenn die Basis standhält, existiert auch der Gipfel."
 
 msgctxt "speaker:Thomas"
 msgid "You sound like Father."
-msgstr "Du klangst wie der Vater."
+msgstr "Du klingst wie Vater."
 
 msgctxt "speaker:Sarah"
 msgid "That doesn't mean I'm not right."
@@ -1196,27 +1196,27 @@ msgstr "Das bedeutet nicht, dass ich unrecht habe."
 
 msgctxt "speaker:Sarah"
 msgid "Besides, have you seen Father yet?"
-msgstr "Übrigens, hast du den Vater schon gesehen?"
+msgstr "Außerdem – hast du Vater schon gesehen?"
 
 msgctxt "speaker:Narrator"
 msgid "Thomas had stopped listening, distracted by a plate of food being carried past him."
-msgstr "Thomas hatte aufgehört zuzuhören, abgelenkt von einem Teller Essen, der an ihm vorbeigetragen wurde."
+msgstr "Thomas hatte aufhören hören, abgelenkt von einem Teller mit Essen, der an ihm vorbeigebracht wurde."
 
 msgctxt "speaker:Narrator"
 msgid "Suddenly, the door to the great hall is slammed open."
-msgstr "Plötzlich stürzte die Tür zur großen Halle auf."
+msgstr "Plötzlich wird die Tür zur großen Halle aufgestoßen."
 
 msgctxt "speaker:Narrator"
 msgid "A servant runs into the room, half stumbling, drenched in sweat."
-msgstr "Ein Diener stürmt herein, stolpernd und von Schweiß durchtränkt."
+msgstr "Ein Diener stürmt ins Zimmer, halb stolpernd, schweißgebadet."
 
 msgctxt "speaker:Narrator"
 msgid "He tries to simultaneously catch his breath and struggle to get the words out."
-msgstr "Er versucht, gleichzeitig Luft zu schnappen und die Worte herauszupressen."
+msgstr "Er versucht, gleichzeitig wieder zu Atem zu kommen und die Worte herauszubringen."
 
 msgctxt "speaker:Narrator"
 msgid "Everyone in the great hall has gone silent, all staring at the man."
-msgstr "Jeder im großen Saal ist verstummt und starrt alle auf den Mann."
+msgstr "Alle im großen Saal sind verstummt und starren auf den Mann."
 
 msgctxt "speaker:Servant"
 msgid "The king! The king is dead!"
@@ -1228,11 +1228,11 @@ msgstr "Diener"
 
 msgctxt "speaker:Narrator"
 msgid "As the words hit Sarah, everything around her is drowned out."
-msgstr "Als die Worte Sarah trafen, versank alles um sie herum in Stille."
+msgstr "Als die Worte Sarah erreichen, verschwindet alles um sie herum im Nichts."
 
 msgctxt "speaker:Narrator"
 msgid "She sees the nobles react: some in anger, some turned white."
-msgstr "Sie sieht, wie die Adligen reagieren: einige zornig, andere bleich."
+msgstr "Sie sieht die Adligen reagieren: einige mit Zorn, andere werden kreidebleich."
 
 msgctxt "speaker:Narrator"
 msgid "She sees her brother, looking at her, confused, as if he can't understand the words."
@@ -1240,11 +1240,11 @@ msgstr "Sie sieht ihren Bruder an, der sie verwirrt starrt, als könne er ihren 
 
 msgctxt "speaker:Narrator"
 msgid "She sees Marion, usually so composed, with a hint of fear in his eyes."
-msgstr "Sie sieht Marion, der normalerweise so gelassen ist, mit einem Hauch von Furcht in seinen Augen."
+msgstr "Sie sieht Marion, sonst immer so beherrscht, mit einem Hauch von Angst in den Augen."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah wanders out of the great hall in a haze, ignoring everything around her."
-msgstr "Sarah verlässt den großen Saal in einem Nebel, ignoriert alles um sich herum."
+msgstr "Sarah schreitet benommen aus der großen Halle hinaus und ignoriert alles um sich herum."
 
 msgctxt "speaker:Narrator"
 msgid "She needs to find her father."
@@ -1252,43 +1252,43 @@ msgstr "Sie muss ihren Vater finden."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah storms into the bedchamber of her father. Servants try to stop her, but she brushes past them."
-msgstr "Sarah stürmt in das Schlafzimmer ihrer Vaters. Diener versuchen, sie aufzuhalten, doch sie stürmt an ihnen vorbei."
+msgstr "Sarah stürmt in das Schlafgemach ihres Vaters. Diener versuchen, sie aufzuhalten, doch sie wehrt sich ab und geht an ihnen vorbei."
 
 msgctxt "speaker:Narrator"
 msgid "She is brought to a pause by the sight."
-msgstr "Der Anblick lässt sie innehalten."
+msgstr "Sie wird durch den Anblick abrupt zum Stillstand gebracht."
 
 msgctxt "speaker:Narrator"
 msgid "Her father is lying in his bed, his skin white as paper, eyes wide open."
-msgstr "Ihr Vater liegt in seinem Bett, die Haut weiß wie Papier, die Augen weit aufgerissen."
+msgstr "Ihr Vater liegt in seinem Bett, seine Haut weiß wie Papier, die Augen weit offen."
 
 msgctxt "speaker:Narrator"
 msgid "The sheets are drenched in dark blood. So dark it has nearly turned black."
-msgstr "Die Laken sind durchtränkt von dunklem Blut. So dunkel, dass es fast schwarz geworden ist."
+msgstr "Die Bettlaken sind mit dunklem Blut durchtränkt – so dunkel, dass es fast schwarz geworden ist."
 
 msgctxt "speaker:Narrator"
 msgid "Lodged in his chest, a dagger, buried so deep she can only see the handle."
-msgstr "In seinem Brustkorb steckte ein Dolch, so tief vergraben, dass sie nur den Griff sah."
+msgstr "Ein Dolch steckte in seiner Brust, so tief vergraben, dass sie nur den Griff sehen konnte."
 
 msgctxt "speaker:Sarah"
 msgid "Father..."
-msgstr "Vater..."
+msgstr "Vater …"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah tries to call out to her father, but her voice is weak and soft."
-msgstr "Sarah versucht, ihren Vater zu rufen, aber ihre Stimme ist schwach und leise."
+msgstr "Sarah versucht, ihren Vater zu rufen, doch ihre Stimme ist schwach und leise."
 
 msgctxt "speaker:Narrator"
 msgid "How could this have happened? Just yesterday, he had returned home. They had spoken as if they had all the time in the world between them."
-msgstr "Wie konnte das geschehen? Gestern noch war er heimgekehrt. Sie hatten sich unterhalten, als hätte die Welt für sie alle Zeit der Welt."
+msgstr "Wie konnte das nur geschehen? Erst gestern war er doch nach Hause zurückgekehrt. Sie hatten sich noch gesprochen, als hätten sie die ganze Zeit der Welt vor sich."
 
 msgctxt "speaker:Narrator"
 msgid "And now he was dead."
-msgstr "Und nun war er tot."
+msgstr "Und jetzt war er tot."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah kneels by the edge of the bed and reaches out to hold her father's hand."
-msgstr "Sarah kniete am Bettrand und streckte die Hand aus, um den ihres Vaters zu ergreifen."
+msgstr "Sarah kniet am Bettrand und streckt die Hand aus, um die ihres Vaters zu ergreifen."
 
 msgctxt "speaker:Narrator"
 msgid "His hand feels cold to the touch, and stiff. These are her father's hands, but not as she remembers them. His hands don't hold hers back."
@@ -1304,11 +1304,11 @@ msgstr "Sarah weiß, dass ihre Gebete nicht gehört werden, doch sie betet trotz
 
 msgctxt "speaker:Narrator"
 msgid "Behind her, she hears her brother enter the room, and scream."
-msgstr "Hinter ihr hört sie ihren Bruder in den Raum eintreten und schreien."
+msgstr "Hinter ihr hört sie ihren Bruder den Raum betreten und schreien."
 
 msgctxt "speaker:Narrator"
 msgid "She listens as the servants drag him away, kicking and screaming until he is too far to hear."
-msgstr "Sie hört zu, wie die Diener ihn wegziehen, während er sich wehrt und schreit, bis er so weit entfernt ist, dass er nicht mehr hören kann."
+msgstr "Sie hört zu, wie die Diener ihn fortzerren; er tritt auf und schreit, bis er zu weit entfernt ist, um noch gehört zu werden."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah stays with her father, holding his hand."
@@ -1316,103 +1316,103 @@ msgstr "Sarah bleibt bei ihrem Vater und hält seine Hand."
 
 msgctxt "speaker:Narrator"
 msgid "She stays with him until nightfall. Until the servants are forced to carry her away."
-msgstr "Sie bleibt bei ihm bis zum Einbruch der Dunkelheit. Bis die Diener gezwungen sind, sie wegzutragen."
+msgstr "Sie bleibt bei ihm bis zum Einbruch der Nacht – bis die Diener sie gewaltsam wegtragen müssen."
 
 msgctxt "speaker:Narrator"
 msgid "The day of King Orwell's funeral has arrived."
-msgstr ""
+msgstr "Der Tag von König Orwells Beerdigung ist gekommen."
 
 msgctxt "speaker:Narrator"
 msgid "A week has passed since his body was found."
-msgstr "Eine Woche ist vergangen, seit sein Leichnam gefunden wurde."
+msgstr "Eine Woche ist vergangen, seit sein Körper gefunden wurde."
 
 msgctxt "speaker:Narrator"
 msgid "In attendance are all the great houses and families of Rosanna, come to pay their final respects."
-msgstr ""
+msgstr "Anwesend sind alle großen Häuser und Familien von Rosanna, die gekommen sind, um ihre letzte Ehrung darzubringen."
 
 msgctxt "speaker:Narrator"
 msgid "Beloved in life and beloved in death, a nation mourns the passing of their king."
-msgstr "Geliebt im Leben und geliebt im Tod, trauert eine Nation um den Verstorbenen ihres Königs."
+msgstr "Geliebt zu Lebzeiten und auch im Tod betrauert eine ganze Nation den Tod ihres Königs."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah looks out over the crowd of people that have fitted themselves into the great hall."
-msgstr ""
+msgstr "Sarah blickt über die Menge von Menschen, die sich in der großen Halle versammelt haben."
 
 msgctxt "speaker:Thomas"
 msgid "Sarah..."
-msgstr ""
+msgstr "Sarah ..."
 
 msgctxt "speaker:Narrator"
 msgid "Thomas embraces his sister."
-msgstr ""
+msgstr "Thomas umarmt seine Schwester."
 
 msgctxt "speaker:Thomas"
 msgid "Who would have wanted to hurt Dad?"
-msgstr ""
+msgstr "Wer hätte da Vater verletzen wollen?"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah can't find the will to hug him back."
-msgstr ""
+msgstr "Sarah: Das ist schon in Ordnung, Thomas. Wir müssen nur heute durchstehen. Lass diese Fragen für einen weiteren Tag ruhen."
 
 msgctxt "speaker:Sarah"
 msgid "It's okay Thomas, we just need to get through today. Let those questions rest for another day."
-msgstr ""
+msgstr "Es ist in Ordnung, Thomas. Wir müssen nur den heutigen Tag überstehen. Lass diese Fragen noch einen Tag ruhen."
 
 msgctxt "speaker:Thomas"
 msgid "Then what?"
-msgstr ""
+msgstr "Was dann?"
 
 msgctxt "speaker:Narrator"
 msgid "Thomas sounded exasperated."
-msgstr ""
+msgstr "Thomas klang verärgert."
 
 msgctxt "speaker:Sarah"
 msgid "Then another day. Coronation. Another day. On and on, Thomas. We just need to keep moving forward. Dad might not be here anymore, but he's watching over us."
-msgstr ""
+msgstr "Dann ein weiterer Tag. Die Krönung. Wieder ein weiterer Tag. So geht das immer weiter, Thomas. Wir müssen einfach weitergehen. Papa ist vielleicht nicht mehr hier, aber er wacht über uns."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah turns to her brother, looking deep into his eyes. His eyes are bloodshot from the crying that he hides from her."
-msgstr ""
+msgstr "Sarah dreht sich zu ihrem Bruder um und blickt ihm tief in die Augen. Seine Augen sind blutunterlaufen vom Weinen, das er vor ihr verbirgt."
 
 msgctxt "speaker:Sarah"
 msgid "We need to make him proud now. Remember: composure."
-msgstr ""
+msgstr "Wir müssen ihn jetzt stolz machen. Denk daran: Gelassenheit."
 
 msgctxt "speaker:Narrator"
 msgid "Thomas turns away from her, staring off into the distance, trying to look at nothing at all."
-msgstr ""
+msgstr "Thomas wendet sich von ihr ab, starrt in die Ferne und versucht, als würde er gar nichts sehen."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah tries to remember the week since her father's death."
-msgstr ""
+msgstr "Sarah versucht, sich an die Woche seit dem Tod ihres Vaters zu erinnern."
 
 msgctxt "speaker:Narrator"
 msgid "She had to do so much, in a way, it spared her from dealing with her grief."
-msgstr ""
+msgstr "Sie musste so viel tun – auf eine Weise, die sie davor bewahrte, sich mit ihrem Schmerz auseinanderzusetzen."
 
 msgctxt "speaker:Narrator"
 msgid "Invitations, decorations, preparations. An endless amount of work for her to lose herself in."
-msgstr ""
+msgstr "Einladungen, Dekorationen, Vorbereitungen – eine endlose Menge an Arbeit, in die sie sich vertiefen konnte."
 
 msgctxt "speaker:Narrator"
 msgid "Thomas, on the other hand, had turned inwards. He had grown more somber, and she had found him on some nights, walking through the dark unlit castle halls."
-msgstr ""
+msgstr "Thomas hingegen hatte sich in sich selbst zurückgezogen. Er war düsterer geworden, und mancherlei Nächte hatte sie ihn durch die dunklen, unbeleuchteten Hallen des Schlosses gehen sehen."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah made a mental note, she needed to talk to her brother. It pained her to admit it, but he wasn't strong. He needed to know he could lean on her."
-msgstr ""
+msgstr "Sarah machte sich eine mentale Notiz: Sie musste mit ihrem Bruder sprechen. Es tat ihr weh, es zuzugeben, aber er war nicht stark. Er musste wissen, dass er sich auf sie stützen konnte."
 
 msgctxt "speaker:Narrator"
 msgid "The events of the day proceeded. Priests read out the last rites. Some spoke words of comfort."
-msgstr ""
+msgstr "Die Ereignisse des Tages schritten voran. Priester sprachen die letzten Riten aus. Einige sprachen tröstende Worte."
 
 msgctxt "speaker:Narrator"
 msgid "Not before long, Sarah and Thomas found themselves in the middle of the great hall, walking in linked arms, floating from one group of nobles to the next."
-msgstr ""
+msgstr "Nicht lange danach fanden sich Sarah und Thomas mitten in der großen Halle wieder, gingen Arm in Arm und schwebten von einer Gruppe Adliger zur nächsten."
 
 msgctxt "speaker:Nobleman"
 msgid "Our condolences."
-msgstr ""
+msgstr "Unser Beileid."
 
 msgctxt "speaker-name"
 msgid "Nobleman"
@@ -1420,7 +1420,7 @@ msgstr "Adeliger"
 
 msgctxt "speaker:Noblewoman"
 msgid "He was a great man."
-msgstr ""
+msgstr "Er war ein großartiger Mann."
 
 msgctxt "speaker-name"
 msgid "Noblewoman"
@@ -1428,7 +1428,7 @@ msgstr "Edeldame"
 
 msgctxt "speaker:Ambassador"
 msgid "He will be missed."
-msgstr ""
+msgstr "Er wird vermisst werden."
 
 msgctxt "speaker-name"
 msgid "Ambassador"
@@ -1436,67 +1436,67 @@ msgstr "Botschafter"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah didn't want to sound cynical, she was sure that many of them truly meant what they said. It just seemed like words, not just these words but all words, seemed so empty right now."
-msgstr ""
+msgstr "Sarah wollte nicht zynisch klingen; sie war sich sicher, dass viele von ihnen es wirklich ernst meinten. Es schien jedoch nur wie Worte – nicht nur diese, sondern alle Worte –, die in diesem Moment so leer wirkten."
 
 msgctxt "speaker:Narrator"
 msgid "Soon, she found herself subjected to a torrent of sympathies. It all became too much."
-msgstr ""
+msgstr "Bald sah sie sich einem Strom von Mitgefühl ausgesetzt. All das wurde ihr zu viel."
 
 msgctxt "speaker:Sarah"
 msgid "Thomas, I need to take a moment, please carry on without me."
-msgstr ""
+msgstr "Thomas, ich brauche einen Moment – bitte mach ohne mich weiter."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah unlinked her arm from her brother and quickly walked away."
-msgstr ""
+msgstr "Sarah löste ihren Arm von dem ihres Bruders und ging schnell davon."
 
 msgctxt "speaker:Narrator"
 msgid "Fresh air, that's what she needed."
-msgstr ""
+msgstr "Frische Luft – genau das brauchte sie."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah was slowly walking across the battlements of Castle Reinmeer."
-msgstr ""
+msgstr "Sarah schritt langsam über die Zinnen der Burg Reinmeer."
 
 msgctxt "speaker:Narrator"
 msgid "From a distance, she could still hear the sounds of the funeral. The endless kind words she couldn't stand right now."
-msgstr ""
+msgstr "Aus der Ferne konnte sie noch die Geräusche der Beerdigung hören. Die endlosen, wohlwollenden Worte, die sie gerade jetzt nicht ertragen konnte."
 
 msgctxt "speaker:Narrator"
 msgid "Ever since her father had returned home, the cold had grown harsher with each day."
-msgstr ""
+msgstr "Seit ihr Vater nach Hause zurückgekehrt war, wurde die Kälte mit jedem Tag härter."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah loved the summer, but today, she was happy for the stinging cold and the few snowflakes drifting in the wind. Dark clouds in the sky."
-msgstr ""
+msgstr "Sarah liebte den Sommer, doch heute freute sie sich über die stechende Kälte und die wenigen Schneeflocken, die im Wind schwebten. Dunkle Wolken zogen am Himmel auf."
 
 msgctxt "speaker:Narrator"
 msgid "Seems right, Sarah thought to herself, that the world looks this bleak without your father. Nature itself mourns your passing."
-msgstr ""
+msgstr "Das scheint richtig zu sein, dachte Sarah bei sich – dass die Welt ohne deinen Vater so trostlos aussieht. Die Natur selbst trauert um dein Verschwinden."
 
 msgctxt "speaker:Narrator"
 msgid "Looking out out over the edge of the battlements, Sarah saw the many lights of the city, cutting through the dark. Beyond that, the great forests where she used to play as a child."
-msgstr ""
+msgstr "Als Sarah über den Rand der Wehrtürme blickte, sah sie die zahlreichen Lichter der Stadt, die durch die Dunkelheit schnitten. Dahinter erstreckten sich die großen Wälder, in denen sie als Kind gespielt hatte."
 
 msgctxt "speaker:Narrator"
 msgid "Would she have another day as free of care as she did back then? As she did even only a week ago?"
-msgstr ""
+msgstr "Würde sie noch einmal einen Tag so sorgenfrei haben wie damals? Wie selbst erst vor einer Woche?"
 
 msgctxt "speaker:Narrator"
 msgid "So consumed in busy work, Sarah had not paid much attention to the questions that still needed to be answered."
-msgstr ""
+msgstr "So sehr sie von ihrer arbeitsreichen Tätigkeit in Anspruch genommen war, hatte Sarah den Fragen, die noch beantwortet werden mussten, kaum Aufmerksamkeit geschenkt."
 
 msgctxt "speaker:Narrator"
 msgid "Her brother would soon become king, and she knew that he would need her help. But what did either of them know of ruling a nation?"
-msgstr ""
+msgstr "Ihr Bruder würde bald König werden, und sie wusste, dass er ihre Hilfe brauchen würde. Aber was wussten beide schon davon, ein ganzes Land zu regieren?"
 
 msgctxt "speaker:Narrator"
 msgid "Already, in the days before the funeral, people had begun to approach her. Servants of all ranks, trying to procure favor with her."
-msgstr "Schon vor der Beerdigung hatten sich Menschen an sie gewandt. Diener aller Ränge, die um Gunst buhlten."
+msgstr "Schon in den Tagen vor der Beerdigung hatten Menschen begonnen, sie aufzusuchen – Diener aller Ränge, die versuchten, bei ihr Gunst zu erlangen."
 
 msgctxt "speaker:Narrator"
 msgid "She could keep them away, on account of her grief, but she knew that soon, the burdens of rule would truly fall on them."
-msgstr ""
+msgstr "Sie konnte sie wegen ihrer Trauer fernhalten, doch sie wusste, dass die Last der Herrschaft bald wahrhaftig auf ihnen ruhen würde."
 
 msgctxt "speaker:Narrator"
 msgid "And none of that even began to deal questions, such as who was responsible for her father's death."
@@ -1504,115 +1504,115 @@ msgstr "Und keines davon begann, Fragen zu klären, wie etwa wer für den Tod ih
 
 msgctxt "speaker:Sarah"
 msgid "Dad...do you think we're ready?"
-msgstr "Vater... glaubst du, wir sind bereit?"
+msgstr "Papa ... glaubst du, wir sind bereit?"
 
 msgctxt "speaker:Narrator"
 msgid "The howling winds were her only answer."
-msgstr ""
+msgstr "Die heulenden Winde waren ihre einzige Antwort."
 
 msgctxt "speaker:Varga"
 msgid "Excuse me, but can I offer you my cloak?"
-msgstr ""
+msgstr "Entschuldigen Sie, aber dürfte ich Ihnen meinen Umhang anbieten?"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah turned, surprised by the voice. She sees a tall man standing on the battlements next to her."
-msgstr ""
+msgstr "Sarah drehte sich überrascht um. Sie sah einen großen Mann, der neben ihr auf den Zinnen stand."
 
 msgctxt "speaker:Varga"
 msgid "It's too cold for you to be out here in nothing more than a dress."
-msgstr ""
+msgstr "Es ist viel zu kalt für dich, hier draußen in nichts weiter als einem Kleid zu sein."
 
 msgctxt "speaker:Narrator"
 msgid "The man holds out a thick black cloak, large enough to envelop her completely, fashioned out of a wolf skin."
-msgstr ""
+msgstr "Der Mann hält einen dicken schwarzen Umhang hin, groß genug, um sie vollständig zu umhüllen, gefertigt aus Wolfsfell."
 
 msgctxt "speaker:Sarah"
 msgid "It's okay, I don't mind the cold. I like it."
-msgstr ""
+msgstr "Das macht nichts, die Kälte stört mich nicht. Ich mag sie."
 
 msgctxt "speaker:Varga"
 msgid "I understand, but it's colder than you think. Hypothermia can sneak up on you."
-msgstr ""
+msgstr "Ich verstehe, aber es ist kälter, als du denkst. Eine Unterkühlung kann dich ganz unerwartet treffen."
 
 msgctxt "speaker:Narrator"
 msgid "The man pushes his cloak into Sarah's hands."
-msgstr ""
+msgstr "Der Mann schiebt seinen Umhang in Sarahs Hände."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah, if only to not embarrass the man, accepts and puts on the cloak."
-msgstr ""
+msgstr "Sarah nahm den Umhang an – wenn auch nur, um den Mann nicht in Verlegenheit zu bringen."
 
 msgctxt "speaker:Sarah"
 msgid "Thank you, kind sir."
-msgstr ""
+msgstr "Danke Ihnen, gütiger Herr."
 
 msgctxt "speaker:Varga"
 msgid "No problem at all, uhm, my lady. My liege? Princess?"
-msgstr ""
+msgstr "Kein Problem überhaupt, ähm, meine Dame. Mein Herr? Prinzessin?"
 
 msgctxt "speaker:Narrator"
 msgid "The man stumbles, trying to find the words."
-msgstr ""
+msgstr "Der Mann stottert, als er nach den Worten sucht."
 
 msgctxt "speaker:Sarah"
 msgid "It's ok, kind sir, don't mind the formalities. My name is Sarah Rose."
-msgstr ""
+msgstr "Keine Sorge, werter Herr, machen Sie sich nicht über die Formalitäten Gedanken. Mein Name ist Sarah Rose."
 
 msgctxt "speaker:Varga"
 msgid "I know who you are."
-msgstr ""
+msgstr "Ich weiß, wer Sie sind."
 
 msgctxt "speaker:Narrator"
 msgid "A short pause."
-msgstr "Ein kurzes Pausieren."
+msgstr "Eine kurze Pause."
 
 msgctxt "speaker:Sarah"
 msgid "And...you are?"
-msgstr "Und... wer bist du?"
+msgstr "Und ... wer sind Sie?"
 
 msgctxt "speaker:Narrator"
 msgid "The man seems flustered."
-msgstr ""
+msgstr "Der Mann wirkt sichtlich verlegen."
 
 msgctxt "speaker:Varga"
 msgid "I'm so sorry, of course, my name is Varga. Varga Northwood."
-msgstr ""
+msgstr "Es tut mir wirklich leid – natürlich! Mein Name ist Varga. Varga Northwood."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah observes the man."
-msgstr ""
+msgstr "Sarah beobachtet den Mann."
 
 msgctxt "speaker:Narrator"
 msgid "He's tall, black hair, kept short and kempt, the way a soldier would."
-msgstr ""
+msgstr "Er ist groß, hat schwarze Haare, kurz und ordentlich gehalten, so wie ein Soldat sie führen würde."
 
 msgctxt "speaker:Narrator"
 msgid "A large scar runs across the side of his cheek, blemishing what would otherwise be a very handsome face."
-msgstr "Ein großer Narbenstrich zieht sich über die Seite seiner Wange und verderbt ein ansonsten sehr gutaussehendes Gesicht."
+msgstr "Eine große Narbe zieht sich über seine Wange und entwertet ein Gesicht, das sonst sehr attraktiv wäre."
 
 msgctxt "speaker:Sarah"
 msgid "Sir Northwood...I can't say I'm familiar with that family name. What part of Rosanna do you hail from?"
-msgstr ""
+msgstr "Sir Northwood ... Ich kann nicht sagen, dass ich mit diesem Familiennamen vertraut bin. Aus welchem Teil von Rosanna stammen Sie?"
 
 msgctxt "speaker:Narrator"
 msgid "The man looks away, seemingly embarassed."
-msgstr ""
+msgstr "Der Mann wendet den Blick ab, scheinbar verlegen."
 
 msgctxt "speaker:Varga"
 msgid "Well...the woods up north, actually. Mine is what you could call a more recent addition to the noble families."
-msgstr ""
+msgstr "Nun ... eigentlich aus den Wäldern da oben. Meine Familie ist sozusagen eine neuere Ergänzung zu den adligen Häusern."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah suddenly understands. That explains. Newly promoted nobility, equal in title but lacking the years of experience in protocol."
-msgstr ""
+msgstr "Sarah versteht plötzlich. Das erklärt alles: Er ist ein neu beförderter Adliger – im Titel gleichgestellt, aber ohne die jahrelange Erfahrung in Protokollfragen."
 
 msgctxt "speaker:Varga"
 msgid "I'm sorry if I'm messing this up, it's my first time at such a formal event."
-msgstr ""
+msgstr "Es tut mir leid, wenn ich das alles vermassle – es ist mein erstes Mal bei einer solch formellen Veranstaltung."
 
 msgctxt "speaker:Sarah"
 msgid "It's alright."
-msgstr ""
+msgstr "Macht nichts."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah gently puts her hand on the man's arm."

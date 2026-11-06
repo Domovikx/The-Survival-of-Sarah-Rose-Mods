@@ -401,7 +401,7 @@ msgstr "Я так скучал по тебе, папа!"
 
 msgctxt "speaker:Narrator"
 msgid "King Orwell grabs his son by the shoulders and holds him at a distance."
-msgstr "Король Орвелл схватил сына за плечи и отстранил его на некоторое расстояние: «Я тоже скучал по тебе, сын мой, но помни: сохраняй самообладание. Будущему королю не пристало бегать повсюду, как дикому ребёнку»."
+msgstr "Король Орвелл схватил сына за плечи и отстранил его на некоторое расстояние."
 
 msgctxt "speaker:King Orwell Rose"
 msgid "I missed you too son, but remember: composure. It's not befitting for a future king to be running around like a wild child."
@@ -709,7 +709,7 @@ msgstr "Сара издаёт пронзительный крик и резко 
 
 msgctxt "speaker:Narrator"
 msgid "Standing in the corner of her room is her brother, Thomas."
-msgstr "Ты чего лезешь в мою комнату? Тебе уже давно пора быть в постели."
+msgstr "Стоит в углу её комнаты её брат — Томас."
 
 msgctxt "speaker:Sarah"
 msgid "What are you doing creeping around my room? You should be in bed by now."
@@ -1169,7 +1169,7 @@ msgstr "Тьфу, я не выношу этого парня."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah nods."
-msgstr "Она может быть немного слишком уж напористой, но его семья важна, а значит, и он важен."
+msgstr "Сара кивает."
 
 msgctxt "speaker:Sarah"
 msgid "He can be a bit much, but his family is important, so that makes him important."
@@ -1277,7 +1277,7 @@ msgstr "Отец..."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah tries to call out to her father, but her voice is weak and soft."
-msgstr "Отец..."
+msgstr "Сара пытается позвать отца, но её голос слаб и тих."
 
 msgctxt "speaker:Narrator"
 msgid "How could this have happened? Just yesterday, he had returned home. They had spoken as if they had all the time in the world between them."
@@ -1493,7 +1493,7 @@ msgstr "Его брат вскоре станет королём, и он зна
 
 msgctxt "speaker:Narrator"
 msgid "Already, in the days before the funeral, people had begun to approach her. Servants of all ranks, trying to procure favor with her."
-msgstr "Ещё до похорон люди начали подходить к ней — слуги всех рангов, пытаясь завоевать её благосклонность. Она могла бы отстранить их из-за горя, но знала: скоро бремя правления действительно ляжет на них обоих. Брат станет королём, и ему понадобится её помощь, но что они оба знают об управлении государством?"
+msgstr "Уже в дни перед похоронами люди начали подходить к ней. Слуги всех рангов пытались завоевать её расположение."
 
 msgctxt "speaker:Narrator"
 msgid "She could keep them away, on account of her grief, but she knew that soon, the burdens of rule would truly fall on them."
@@ -1773,7 +1773,7 @@ msgstr "За спиной её хрустнула ветка."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah spun around towards the source of the sounds."
-msgstr "Сара обернулась к источнику звуков. Она была умнее своих лет, но всё ещё, казалось, стеснялась своего низкого происхождения. Сара встречала достаточно аристократов, чтобы понять: титулы — плохая замена хорошему сердцу. За её спиной хрустнула ветка. В некотором отстоянии стояла женщина с седыми волосами и нежной белой кожей, словно она могла раствориться в снегу."
+msgstr "Сара резко обернулась к источнику звуков."
 
 msgctxt "speaker:Narrator"
 msgid "Standing a little distance off is a woman with grey hair, and soft white skin as if she could fade into the snow."
@@ -2097,7 +2097,7 @@ msgstr "Его зовут Ваэлен, и он — глава наёмниче�
 
 msgctxt "speaker:Narrator"
 msgid "Sarah had listened attentively to her friend."
-msgstr "Сара внимательно слушала свою подругу. Она понимала мотивы Кейт, но не была уверена, как относиться к последней части её рассказа. Всё, что она видела, — это то, что Кейт, казалось, была счастлива просто рассказать ей об этом."
+msgstr "Сара внимательно слушала свою подругу Кейт."
 
 msgctxt "speaker:Narrator"
 msgid "She could understand Kate's motivations, but she wasn't sure what to make of the last part of her story. All she could see was that Kate seemed happy just telling her about it."
@@ -2389,7 +2389,7 @@ msgstr "Даже Марион сегодня проявил другую сто�
 
 msgctxt "speaker:Narrator"
 msgid "Sarah laid back in her bed."
-msgstr "Сара откинулась на спину в кровати, пытаясь отогнать все впечатления дня и заставить себя уснуть. Сара знала: насильно заставляя себя спать, она лишь гарантировала себе бессонную ночь."
+msgstr "Сара откинулась на спину в кровати."
 
 msgctxt "speaker:Narrator"
 msgid "She tried to push away all the impressions of the day, trying to force herself asleep. Forcing sleep, Sarah knew, was a recipe for no sleep at all."
@@ -2509,7 +2509,7 @@ msgstr "Кейт обернулась, чтобы взглянуть на Сар
 
 msgctxt "speaker:Narrator"
 msgid "Feeling watched, Sarah drew her blankets closer."
-msgstr "Почувствовав, что за ней наблюдают, Сара плотнее прижалась к одеялу. Кэйт, стоявшая рядом, хихикнула: «О-о, стесняешься?» — её голос звучал игриво и с ноткой насмешки."
+msgstr "Почувствовав, что за ней наблюдают, Сара притянула к себе одеяла."
 
 msgctxt "speaker:Kate"
 msgid "Ooh, feeling shy?"
@@ -2697,11 +2697,11 @@ msgstr "Из уст Сары вырвался тихий стон. Одной р
 
 msgctxt "speaker:Narrator"
 msgid "Kate, for her part, took it as the latter."
-msgstr "Для Кейт это было лишь лёгкое прикосновение, но Сара почувствовала, как по её телу пронзил электрический разряд. Она выгнула спину и сама подвинулась навстречу прикосновениям Кейт."
+msgstr "Кейт же восприняла это как последнее."
 
 msgctxt "speaker:Narrator"
 msgid "As Kate continued to grope Sarah's exposed breasts, Sarah felt herself writhing under Kate's every movement."
-msgstr "Пока Кейт продолжала касаться обнажённой груди Сары, та чувствовала, как извивается под каждым её движением. Сара больше не замечала происходящего вокруг, и когда она снова открыла глаза, то увидела, что Кейт уже сняла с неё последние куски одежды."
+msgstr "Пока Кейт продолжала касаться обнажённой груди Сары, та чувствовала, как её тело извивается под каждым движением Кейт."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah didn't notice what was happening around her anymore, and when she opened her eyes again, she saw Kate had removed the last pieces of her clothes."
@@ -2709,7 +2709,7 @@ msgstr "Сара больше не замечала того, что проис�
 
 msgctxt "speaker:Narrator"
 msgid "Kate had pulled back the blankets and now sat fully nude on top of Sarah."
-msgstr "Кейт откинула одеяла и теперь сидела совершенно обнажённой поверх Сары. Сара, не замечая происходящего вокруг, снова открыла глаза и увидела, что Кейт сняла последние остатки её одежды."
+msgstr "Кейт откинула одеяла и теперь сидела совершенно обнажённой поверх Сары."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah couldn't help but be curious about Kate's body, she had never seen another woman's body quite like her own. Certainly never in a situation like this."
@@ -2793,7 +2793,7 @@ msgstr "Там, где Сара лишь беспомощно возилась �
 
 msgctxt "speaker:Narrator"
 msgid "With practiced effort, Kate got to work on Sarah."
-msgstr "С уверенностью, отточенной практикой, Кейт принялась за дело с Сарой: её пальцы уже проникли между ног Сары и двигались всё глубже, вызывая у той новые волны возбуждения."
+msgstr "С опытным усилием Кейт принялась за дело с Сарой."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah moaned loudly, with every twitch of Kate's fingers."
@@ -3181,7 +3181,7 @@ msgstr "Она оделась и отправилась в зал заседан
 
 msgctxt "speaker:Narrator"
 msgid "Sarah awakes in her bed. Light is filtering in through the window."
-msgstr "Она просыпается в своей постели. Свет проникает через окно. Она оглядывает свою спальню — как и остальной замок, она кажется странно пустой с тех пор, как умер её отец."
+msgstr "Сара просыпается в своей постели. Свет проникает через окно."
 
 msgctxt "speaker:Narrator"
 msgid "She looks across her bedroom. Much like the rest of the castle, it had felt strangely empty since her father had passed."
@@ -3225,11 +3225,11 @@ msgstr "Она была спроектирована с учётом секре�
 
 msgctxt "speaker:Narrator"
 msgid "Some people had nicknamed the room, the crypt. Standing in the room now, Sarah understood what they meant."
-msgstr "Некоторые называли эту комнату криптой. Стоя в ней сейчас, Сара поняла, что они имели в виду. Потолок был низким, а окон нигде не было. Кроме центрального стола, комната была пустой. Её создавали с мыслью о тайне — здесь негде было спрятаться, но это же и придавало помещению удушающую тесноту."
+msgstr "Некоторые называли эту комнату криптой. Стоя здесь, Сара поняла, что они имели в виду."
 
 msgctxt "speaker:Narrator"
 msgid "She saw that Thomas had arrived before her."
-msgstr "Она увидела, что Томас прибыл раньше неё. Он не поприветствовал её, когда она подошла, а продолжал смотреть вдаль, погружённый в свои мысли."
+msgstr "Она увидела, что Томас приехал раньше неё."
 
 msgctxt "speaker:Narrator"
 msgid "He did not greet her as she approached, staring off into the distance, lost in thought."
@@ -3249,7 +3249,7 @@ msgstr "Ох, я не услышал, как ты вошла."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah sat down in the chair next to her brother."
-msgstr "Сара села на стул рядом со своим братом. Она увидела те же тёмные круги под его глазами, что и накануне."
+msgstr "Сара села на стул рядом со своим братом."
 
 msgctxt "speaker:Narrator"
 msgid "She saw the same dark rings around his eyes as from the day before."
@@ -3445,7 +3445,7 @@ msgstr "Ой! А-ах... э-э, да, спасибо, что пришли на �
 
 msgctxt "speaker:Narrator"
 msgid "Barion was the first to speak."
-msgstr "Конечно, мой господин."
+msgstr "Барион заговорил первым."
 
 msgctxt "speaker:Barion"
 msgid "Of course, my liege."
@@ -3729,7 +3729,7 @@ msgstr "Ты права. Проведём полную коронацию. Не 
 
 msgctxt "speaker:Narrator"
 msgid "Lady Carolyn bowed her head."
-msgstr "Конечно, мой господин."
+msgstr "Леди Каролин поклонилась."
 
 msgctxt "speaker:Carolyn"
 msgid "Of course, my liege."
@@ -3913,7 +3913,7 @@ msgstr "Но она была не одна."
 
 msgctxt "speaker:Narrator"
 msgid "She could hear footsteps coming up from where she had just came."
-msgstr "Она услышала шаги, доносившиеся оттуда, откуда только что пришла. Повернувшись, Сара не слишком удивилась, увидев идущую к ней Кейт."
+msgstr "Она услышала шаги, доносившиеся оттуда, откуда только что пришла."
 
 msgctxt "speaker:Narrator"
 msgid "Turning around, Sarah was not too surprised when she saw Kate walking up."
@@ -6565,7 +6565,7 @@ msgstr "Но если вы отвергнете это предложение, �
 
 msgctxt "speaker:Narrator"
 msgid "By now, the gathering of nobles was screaming and had begun throwing things at the emissary, so outraged were they at his demands."
-msgstr "К этому моменту собравшиеся знатные лица уже кричали и начали бросать предметы в посланника — настолько разгневали его требования. Посланник оставался совершенно неподвижным, не обращая внимания на крики толпы."
+msgstr "К этому моменту собравшаяся знать уже кричала и начала бросать в посланника предметы, настолько разъярённые его требованиями."
 
 msgctxt "speaker:Narrator"
 msgid "The Emissary remained perfectly still, unbothered with the screams of the crowd."
@@ -8317,7 +8317,7 @@ msgstr "Теперь они были достаточно далеко друг 
 
 msgctxt "speaker:Sarah"
 msgid "I wanted you to ask about Thomas, how he did."
-msgstr "Разве я только что не говорила, как он поступил?"
+msgstr "Я же хотела, чтобы ты спросил о Томасе и о том, как он поступил."
 
 msgctxt "speaker:Marion"
 msgid "Didn't I just say how he did?"
@@ -8577,7 +8577,7 @@ msgstr "Боюсь, мне нужно будет быть в другом мес
 
 msgctxt "speaker:Narrator"
 msgid "With one last graceful bow, Marion took off for the celebrations, leaving Sarah behind."
-msgstr "Это всё, о чём я только мог просить тебя, Сара."
+msgstr "С последним грациозным поклоном Марион отправился на празднества, оставив Сару позади."
 
 msgctxt "speaker:Narrator"
 msgid "With much to consider, Sarah returned to her bedroom."
@@ -10285,7 +10285,7 @@ msgstr "Они все могут идти к чёрту, если думают, 
 
 msgctxt "speaker:Narrator"
 msgid "Sarah marched back to the bed and let herself fall back into it."
-msgstr "Сара решительно вернулась к кровати и рухнула на неё, явно не собираясь уступать ни в чём. Варга, сидевший рядом, с сомнением спросил о замке, но она лишь холодно отмахнулась — сегодня никто не будет указывать ей, что делать."
+msgstr "Сара подошла к кровати и позволила себе упасть на неё."
 
 msgctxt "speaker:Narrator"
 msgid "Varga sat down on the bed next to her."
@@ -10457,7 +10457,7 @@ msgstr "Она слышала, как стоны Варги становилис
 
 msgctxt "speaker:Narrator"
 msgid "As he grew louder, Sarah could hear the echoes of his pleasure bouncing off the walls, and she could hear her own slopping sounds, as she performed oral sex on him."
-msgstr "Услышав эхо их звуков, она почувствовала, как внутри неё закипает жар."
+msgstr "По мере того как его стоны становились всё громче, Сара слышала, как эхо его удовольствия отскакивает от стен, а также свои собственные влажные звуки во время орального секса с ним."
 
 msgctxt "speaker:Narrator"
 msgid "Hearing the echoes they produced, began to release a heat in Sarah."
@@ -10765,7 +10765,7 @@ msgstr "И он так и сделал. Второго стука не посл�
 
 msgctxt "speaker:Narrator"
 msgid "Sarah laid there, sprawled out on her bed, raging at everyone else."
-msgstr "Сара лежала на кровати, разбросавшись по ней и яростно злясь на всех остальных. Она не хотела никого видеть — даже его. Он ушёл. Второго стука не последовало. Теперь они превратили её в дурака."
+msgstr "Сара лежала на кровати, разбросавшись по ней и яростно злясь на всех остальных."
 
 msgctxt "speaker:Narrator"
 msgid "They had made a fool out of her."
@@ -14985,7 +14985,7 @@ msgstr "Всё тело Сары напряглось, когда пальцы �
 
 msgctxt "speaker:Narrator"
 msgid "Still chained to the bedpost by the shackles, there was no possible resistance she could offer, though Sarah knew the truth."
-msgstr "Она знала правду: это были не кандалы, как и не физическая сила леди Кэролайн, которые удерживали её на месте."
+msgstr "Она всё ещё была прикована к изголовью кровати кандалами, и ей было невозможно сопротивляться, хотя Сара знала правду."
 
 msgctxt "speaker:Narrator"
 msgid "She knew the truth that it wasn't the manacles, any more than Lady Carolyn's phyiscal strength, that kept her in place."
@@ -21345,7 +21345,7 @@ msgstr "Из уголка своего взгляда она увидела, к�
 
 msgctxt "speaker:Narrator"
 msgid "Sarah leaned back into her throne, idly passing some documents between her hands."
-msgstr "Сара откинулась на спинку трона и беззаботно перебирала документами в руках. Она видела, как к ней взглянул шпионский мастер Кравель, но он продолжал смотреть на неё."
+msgstr "Сара откинулась на спинку трона и беззаботно перебирала документами в руках."
 
 msgctxt "speaker:Narrator"
 msgid "She saw Kravel still looking at her."
@@ -21493,7 +21493,7 @@ msgstr "Королевский гонец."
 
 msgctxt "speaker:Narrator"
 msgid "From Normandi, one of the neighbouring kingdoms to Rosanna, a member of the Union Kingdoms."
-msgstr "Королёвский гонец! Ваше Высочество!"
+msgstr "Из Нормандии, одного из соседних королевств Розанны, член Союза Королевств."
 
 msgctxt "speaker:Royal Messenger"
 msgid "Your Grace!"
@@ -21749,7 +21749,7 @@ msgstr "Её муж прибыл первым."
 
 msgctxt "speaker:Narrator"
 msgid "Varga, her Warmaster was the first to arrive."
-msgstr "Хотя выражение его лица было суровым, Сара заметила в нём лёгкую тревогу."
+msgstr "Варга, её Воитель, первым прибыл."
 
 msgctxt "speaker:Narrator"
 msgid "Though his expression was stern, Sarah could detect a hint of worry in his face."
@@ -21781,7 +21781,7 @@ msgstr "Если у неё и были какие-то опасения, то п
 
 msgctxt "speaker:Narrator"
 msgid "Calm and collected as always, she sat down, a thick ledger of accounts placed down in front of her."
-msgstr "Спокойная и собранная, как всегда, она села; перед ней лежала толстая бухгалтерская книга с записями о счетах. Она наблюдала, как леди Кэролайн открывает книгу и делает заметки — работая даже в короткие перерывы между другими делами."
+msgstr "Спокойная и собранная, как всегда, она села за стол, положив перед собой толстый реестр счетов."
 
 msgctxt "speaker:Narrator"
 msgid "She watched Lady Carolyn open the ledger, making notes. Always working, even in the brief moments between other work."
@@ -21793,7 +21793,7 @@ msgstr "Сара наблюдала, как дверь тихо закрылас
 
 msgctxt "speaker:Narrator"
 msgid "Walking softly across the hall, her brother Thomas."
-msgstr "Он сел неподалёку от неё, но на некотором расстоянии."
+msgstr "Тихо пройдя по коридору, её брат Томас сел немного в стороне от неё."
 
 msgctxt "speaker:Narrator"
 msgid "He took a seat near her, but a ways off."
@@ -29521,7 +29521,7 @@ msgstr "Почему так?"
 
 msgctxt "speaker:Sarah"
 msgid "I didn't take you for one who appreciated gardens and flowers."
-msgstr "Я не считал тебя любительницей садов и цветов."
+msgstr "Я не думала, что ты из тех, кто ценит сады и цветы."
 
 msgctxt "speaker:Duke Antonio"
 msgid "No, people tend not to think of me like that."
@@ -37025,7 +37025,7 @@ msgstr "Когда она вошла, то застала его склонив�
 
 msgctxt "speaker:Duke Antonio"
 msgid "Carry the..."
-msgstr "Он тихо пробормотал себе под нос."
+msgstr "Неси..."
 
 msgctxt "speaker:Narrator"
 msgid "He mumbled softly to himself."
@@ -37749,11 +37749,11 @@ msgstr "Но со мной ты вдруг начинаешь говорить �
 
 msgctxt "speaker:Marshal Edmond"
 msgid "I didn't mean to-"
-msgstr "Я не имела в виду-"
+msgstr "Я не хотел..."
 
 msgctxt "speaker:Sarah"
 msgid "You did. Which is fine. Do not apologize."
-msgstr "Ты имела в виду. Всё в порядке. Не извиняйся."
+msgstr "Да, так и было. И это нормально. Не извиняйся."
 
 msgctxt "speaker:Sarah"
 msgid "Plenty have underestimated me. Thought me unfit for the seat."
@@ -38297,7 +38297,7 @@ msgstr "Каждый из них знал, что это был момент з�
 
 msgctxt "speaker:Narrator"
 msgid "More work would remain to be done to make their Union official."
-msgstr "Однако пока им оставалось лишь сделать самую короткую паузу."
+msgstr "Однако пока им оставалось ещё немало работы, чтобы сделать их союз официальным."
 
 msgctxt "speaker:Narrator"
 msgid "But for now, they could take the briefest of pauses."
@@ -39545,7 +39545,7 @@ msgstr "Сара почувствовала, как Томас сжал её р�
 
 msgctxt "speaker:Narrator"
 msgid "In unison, the siblings began to walk."
-msgstr "Братья и сёстры начали идти вместе."
+msgstr "Одновременно брат и сестра начали идти."
 
 msgctxt "speaker:Narrator"
 msgid "A few steps out from around the corner, and then they turned."
@@ -39553,7 +39553,7 @@ msgstr "Сделав несколько шагов за углом, они ра�
 
 msgctxt "speaker:Narrator"
 msgid "Suddenly, Sarah could see down the aisle, across the great hall, decorated in a splendor that matched the work put into her own appearance."
-msgstr "Внезапно Сара смогла разглядеть конец прохода, на другом конце огромного зала, украшенного великолепием, соответствующим тщательности, с которой была наряжена она сама. Сестры и братья уже отошли от угла, но тут же развернулись. Стены были увешаны знаменами всех домов, а с потолка свисали широкие полосы золота, серебра и красного цвета, которые ловили свет, делая сам воздух почти сияющим."
+msgstr "Внезапно Сара смогла разглядеть дальний конец зала — он был украшен с таким же великолепием, с каким была одета она сама."
 
 msgctxt "speaker:Narrator"
 msgid "Banners of every house decorated the walls, as great streaks of gold, silver and red hung from the ceiling, catching the light and turning the air itself almost radiant."
@@ -41717,7 +41717,7 @@ msgstr "Объединить их дома... это просто имело с�
 
 msgctxt "speaker:Narrator"
 msgid "Rosanna had been vulnerable after the death of her father, and the Tribesmen had proven to be the first test."
-msgstr "Розанна была уязвима после смерти отца, а племенники оказались первым испытанием. Она знала их достаточно долго: их семья была одной из старейших и самых влиятельных на Розанне. Соединение их домов... казалось вполне логичным. Они почти всё потеряли."
+msgstr "Розанна была уязвима после смерти своего отца, а племениты оказались первым испытанием."
 
 msgctxt "speaker:Narrator"
 msgid "They had nearly lost everything."
@@ -42009,7 +42009,7 @@ msgstr "Затем зазвучали трубы, и слуги распахну
 
 msgctxt "speaker:Narrator"
 msgid "Sarah saw a sea of heads, turning about, all looking at her."
-msgstr "Сара видела море голов, которые поворачивались и смотрели на неё. Это событие не могло остаться без внимания ни у кого из них — но даже для неё самой всё это было уже почти слишком."
+msgstr "Сара увидела море голов: все поворачивались и смотрели на неё."
 
 msgctxt "speaker:Narrator"
 msgid "She had been no stranger to being the center of attention, but this was nearly too much, even for her."
@@ -42913,7 +42913,7 @@ msgstr "Ты уставилась."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah went red in the face, realizing she had been caught."
-msgstr "Сара покраснела, поняв, что её застали с похотливым взглядом на мускулистый живот Мариона. Она не могла отвести глаза — его тело было доказательством благородного происхождения и мастерства воина. А он, заметив её пристальное внимание, лишь усмехнулся: «Ты уставилась»."
+msgstr "Сара покраснела, поняв, что её поймали."
 
 msgctxt "speaker:Sarah"
 msgid "No, I..."
@@ -43817,7 +43817,7 @@ msgstr "Мой лорд... если я могу изложить свою поз
 
 msgctxt "speaker:Narrator"
 msgid "Thomas gestured."
-msgstr "Пожалуйста."
+msgstr "Томас жестом подал знак."
 
 msgctxt "speaker:Thomas"
 msgid "Please."
@@ -45645,7 +45645,7 @@ msgstr "Если город был сожжён, можно было ожида�
 
 msgctxt "speaker:Narrator"
 msgid "Without the bodies, there was only one other troubling truth."
-msgstr "Без тел оставалась лишь одна ещё более тревожная истина: многие жители Восточных провинций страдали от рабства в руках племён."
+msgstr "Без тел оставалась лишь одна ещё более тревожная истина."
 
 msgctxt "speaker:Narrator"
 msgid "Many of the inhabitants of the Eastern Provinces had suffered slavery at the hands of the Tribes."
@@ -46497,7 +46497,7 @@ msgstr "Джаид взмахнул рукой над оазисом."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah took in all of the natural beauty. That a place of such life could exist, hidden among the desert, was hard to believe."
-msgstr "Это красиво."
+msgstr "Это невероятно красиво. Трудно поверить, что такое жизненное и прекрасное место могло спрятаться где-то в пустыне."
 
 msgctxt "speaker:Sarah"
 msgid "It's beautiful."
@@ -52073,7 +52073,7 @@ msgstr "Развернись."
 
 msgctxt "speaker:Narrator"
 msgid "Again, Sarah found herself obeying him before she even really questioned it."
-msgstr "Снова Сара обнаружила, что подчиняется ему, даже не успев по-настоящему задаться вопросом, почему. Это было легко — смотреть на него так, ведь его взгляд часто был суровым, а вся его личность — властной. Хассар приказал ей повернуться. Раньше никто бы не осмелился говорить с ней подобным образом. Но в этой жизни действовали другие правила."
+msgstr "Снова Сара обнаружила, что подчиняется ему, даже не успев по-настоящему задуматься об этом."
 
 msgctxt "speaker:Narrator"
 msgid "Nobody would have dared to speak to her like this before. But in this life, there were other rules."
@@ -52821,7 +52821,7 @@ msgstr "Но до нас доходят вести — то тут, то там.
 
 msgctxt "speaker:Sophia"
 msgid "I heard the horns of war blast when the Khan's legion rode out towards Rosanna."
-msgstr "И я слышала, как их боевые рога прорезали воздух в торжестве, когда они вернулись."
+msgstr "Я слышала, как зазвучали военные рога, когда легион хана выступил к Розанне."
 
 msgctxt "speaker:Sophia"
 msgid "And I heard their horn blast in triumph when they returned."
@@ -53005,7 +53005,7 @@ msgstr "Я не верила тому, что говорили девушки."
 
 msgctxt "speaker:Sophia"
 msgid "But sure enough, I sat up there and watched one of the Tribesmen go to the slave pen for the men."
-msgstr "Но вот он — тот самый красивый парень, каким всегда и был."
+msgstr "Но, конечно же, я села там и стала наблюдать, как один из племенитов направился к яме с мужчинами-рабами."
 
 msgctxt "speaker:Sophia"
 msgid "There he was, same handsome boy he always been."
@@ -55801,7 +55801,7 @@ msgstr "Прости, Сара. Вот, выпей это."
 
 msgctxt "speaker:Narrator"
 msgid "He pushed a pitcher of water towards her and Sarah eagerly drank."
-msgstr "Он пододвинул к ней кувшин с водой, и Сара с нетерпением выпила его. Он извинился перед ней, а она посмотрела на него в панике, видя лишь его смех."
+msgstr "Он пододвинул к ней кувшин с водой, и Сара с нетерпением выпила его."
 
 msgctxt "speaker:Narrator"
 msgid "The cooled water reduced the burning sensation, though some of it lingered."
@@ -57053,7 +57053,7 @@ msgstr "События того дня и Соплеменник на рынке
 
 msgctxt "speaker:Narrator"
 msgid "They had weighed on Sarah's mind all day."
-msgstr "Они всю ночь не давали Саре покоя."
+msgstr "Опять же, в случае с Розанной они заплатили бы за это очень дорого."
 
 msgctxt "speaker:Sarah"
 msgid "Jaeid..."
@@ -58429,7 +58429,7 @@ msgstr "Её роль в этой мерзкой имитации коронац
 
 msgctxt "menu"
 msgid "Crown Kamal"
-msgstr "Она укрепила руки."
+msgstr "Венчать Камала"
 
 msgctxt "speaker:Narrator"
 msgid "Her hands steadied."
@@ -60229,7 +60229,7 @@ msgstr "Их собирают. Заставляют работать. Возвр
 
 msgctxt "speaker:Narrator"
 msgid "Inside the tent, there forms its own hierarchy."
-msgstr "Внутри палатки возникает своя иерархия. Мужчины, более сильные и не встречающие сопротивления, присваивают себе большую часть еды."
+msgstr "Внутри палатки формируется собственная иерархия."
 
 msgctxt "speaker:Narrator"
 msgid "The men, stronger and unopposed, seize most of the food for themselves."
@@ -61257,7 +61257,7 @@ msgstr "Тем не менее он трахал её ещё сильнее, п�
 
 msgctxt "speaker:Narrator"
 msgid "Sarah could hear the sounds of the bedframe creaking as it shook from the force."
-msgstr "Сара слышала, как скрипела рама кровати от силы его толчков. Он наслаждался тем, насколько влажной она стала для него, и продолжал трахать её безжалостно."
+msgstr "Она слышала, как скрипела рама кровати от силы толчков."
 
 msgctxt "speaker:Narrator"
 msgid "He was breaking her in."
@@ -61933,7 +61933,7 @@ msgstr "Сара почувствовала, как её тело задрожа
 
 msgctxt "speaker:Narrator"
 msgid "To be this man's slave was one thing. That was a state of being that could change."
-msgstr "Быть рабыней этого человека — это одно. Но носить на теле неизгладимую метку, доказывающую, что она навсегда стала его собственностью..."
+msgstr "Быть рабыней этого человека — это одно. Такое положение могло бы измениться."
 
 msgctxt "speaker:Narrator"
 msgid "But to carry on her body an indelible mark, showing her to be his property forever..."
@@ -64733,7 +64733,7 @@ msgstr "После того как обменялись последними л�
 
 msgctxt "speaker:Narrator"
 msgid "Sarah felt the stinging feeling of the needle entering her skin right above her ass, near her lower back."
-msgstr "Она вздрогнула."
+msgstr "Сара почувствовала жгучее ощущение от иглы, вошедшей в её кожу прямо над ягодицей, у самой поясницы."
 
 msgctxt "speaker:Narrator"
 msgid "She winced."
@@ -65473,7 +65473,7 @@ msgstr "Сара рассмеялась."
 
 msgctxt "speaker:Narrator"
 msgid "Kate shook her head in disgust."
-msgstr "Уф, ты же отвратительна, Сара."
+msgstr "Кейт с отвращением покачала головой."
 
 msgctxt "speaker:Kate"
 msgid "Ugh, you're vile Sarah."
@@ -66749,7 +66749,7 @@ msgstr "Именно на второй день внезапно откинул�
 
 msgctxt "speaker:Narrator"
 msgid "Two men came into the tent. Neither seemed to notice Sarah and each fell into their own bunk."
-msgstr "Это были солдаты — это было очевидно, но они казались...молодыми. По её прикидке, не старше самой Сары."
+msgstr "В палатку вошли двое мужчин. Ни один из них, казалось, не заметил Сару — каждый просто улегся на свою койку."
 
 msgctxt "speaker:Narrator"
 msgid "They were soldiers, that much was obvious, but they also seemed...young. No older than Sarah, she estimated."
@@ -67169,7 +67169,7 @@ msgstr "Те двое мужчин больше не говорили с ней 
 
 msgctxt "speaker:Narrator"
 msgid "Sarah had been lying awake, facing the tent, trying to process what had happend."
-msgstr "У неё было слишком много мыслей, чтобы заснуть."
+msgstr "Сара лежала без сна, глядя на палатку и пытаясь осмыслить то, что произошло."
 
 msgctxt "speaker:Narrator"
 msgid "She had too many thoughts running through her mind to sleep."
@@ -68625,7 +68625,7 @@ msgstr "Мы тренировались весь день, ты вся в пот
 
 msgctxt "speaker:Narrator"
 msgid "Sarah couldn't deny that the idea of a shower sounded appealing right now."
-msgstr "Сара не могла отрицать, что мысль о душе звучала сейчас весьма привлекательно. Она только что закончила тренировку, была вся в поту и явно нуждалась в очищении. Кэйт предложила ей отдать вещи на хранение, пока та будет мыться."
+msgstr "Сара не могла отрицать, что мысль о душе звучала сейчас весьма привлекательно."
 
 msgctxt "speaker:Sarah"
 msgid "Fine. Turn around."
@@ -68633,7 +68633,7 @@ msgstr "Хорошо. Повернись."
 
 msgctxt "speaker:Narrator"
 msgid "Kate rolled her eyes at Sarah amused."
-msgstr "Кейт с усмешкой закатила глаза, глядя на Сару: они весь день тренировались, Кейт вся в поту, и ей нужно было принять душ."
+msgstr "Кейт с усмешкой закатала глаза, глядя на Сару."
 
 msgctxt "speaker:Kate"
 msgid "Really? You think there's anything I haven't seen?"
@@ -68909,7 +68909,7 @@ msgstr "В те дни Кейт просто тренировалась сама
 
 msgctxt "speaker:Narrator"
 msgid "However, she had begun to wonder."
-msgstr "Однако ей начало казаться, что это было не так уж и удивительно."
+msgstr "Однако она уже начала задумываться."
 
 msgctxt "speaker:Narrator"
 msgid "What did Kate have to do that was more important than this?"
@@ -69333,7 +69333,7 @@ msgstr "С рукой, всё ещё зажатой в щите, и Кейт, т
 
 msgctxt "speaker:Narrator"
 msgid "With Kate's arm still trapped in the shield, and her neck pinned to the ground by Sarah who was standing over her, Kate knew she had lost."
-msgstr "С Кейт, чья рука всё ещё была заперта в щите, а шея прижата к земле Сарой, стоявшей над ней, Кейт поняла, что проиграла. Сара продолжала давить на её шею, не давая Кейт подняться. Кейт пыталась сопротивляться, но её тело было полностью под контролем Сары."
+msgstr "Кейт, чья рука всё ещё была заперта в щите, а шея прижата к земле Сарой, стоявшей над ней, поняла, что проиграла."
 
 msgctxt "speaker:Kate"
 msgid "Surrender, surrender!"
@@ -69661,7 +69661,7 @@ msgstr "Я хочу знать, что это значит для тебя, по
 
 msgctxt "speaker:Narrator"
 msgid "Sarah could see that her words had impacted Kate."
-msgstr "Сара видела, что её слова затронули Кейт. После того как они обнялись и поцеловались, она хотела понять, что всё это значит для Кейт — ведь Кейт тоже испытывала к ней сильные чувства."
+msgstr "Сара видела, что её слова затронули Кейт."
 
 msgctxt "speaker:Narrator"
 msgid "Kate pushes her lips up against Sarah, and for a moment, the two lovers kiss."
@@ -70013,7 +70013,7 @@ msgstr "Эй, блондинка!"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah turned her head towards the voice and saw captain Belmont, standing on the upper deck of his ship, waving at her."
-msgstr "Она тут же снова отвернулась, проигнорировав этого мерзкого мужчину. Она притворилась, будто продолжает совершать покупки."
+msgstr "Сара повернула голову в сторону голоса и увидела капитана Бельмонта, стоящего на верхней палубе своего корабля и машущего ей рукой."
 
 msgctxt "speaker:Narrator"
 msgid "She instantly turned her head away again, ignoring the vile man. She pretended to continue shopping."
