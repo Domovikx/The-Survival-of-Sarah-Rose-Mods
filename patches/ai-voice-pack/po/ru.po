@@ -13,7 +13,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "The Survival of Sarah Rose is an epic fantasy game. Production on TSSR is still ongoing."
-msgstr "The Survival of Sarah Rose — это эпическая фэнтези-игра. Разработка TSSR всё ещё продолжается."
+msgstr "The Survival of Sarah Rose — это эпическая фэнтезийная игра. Разработка TSSR всё ещё продолжается."
 
 msgctxt "speaker:Narrator"
 msgid "What you are about to play is a work-in-progress."
@@ -2325,7 +2325,7 @@ msgstr "Давай, Томас, тебе нужен отдых. В ближай�
 
 msgctxt "speaker:Narrator"
 msgid "Thomas did not even protest, he simply turned around and left for his chambers."
-msgstr "Томас даже не возразил — он просто развернулся и ушёл в свои покои. Сарра посмотрела на брата: тёмные круги окружили его глаза. «Иди отдыхай, Томас, тебе это нужно», — сказала она. «В ближайшие дни и недели нас ждёт ещё много работы». И именно тогда Сарра поняла, что брат действительно вымотан до предела."
+msgstr "Томас даже не возразил: он просто развернулся и ушёл в свои покои."
 
 msgctxt "speaker:Narrator"
 msgid "That's when Sarah knew her brother was truly exhausted."
@@ -6833,7 +6833,7 @@ msgstr "Как такое вообще могло случиться? Армия
 
 msgctxt "speaker:Narrator"
 msgid "When nobody had an answer, Kravel spoke up."
-msgstr "Когда никто не мог найти ответа, заговорил Кравел. — Мой господин, восточную пустыню всегда было сложно контролировать. Территория там огромная, а местных жителей не так-то просто убедить с помощью взятки."
+msgstr "Когда никто не мог найти ответа, заговорил Кравел."
 
 msgctxt "speaker:Kravel"
 msgid "My lord, the eastern desert has always been difficult to spy on. The territory is enormous, and the people there, they aren't as easily convinced by a bribe."
@@ -23581,7 +23581,7 @@ msgstr "Так было уже много лет — с тех пор, как о
 
 msgctxt "speaker:Narrator"
 msgid "For a while, Sarah could have pretended that it was something other than it was, training, special counsel."
-msgstr "Но прошло совсем немного времени, и она поняла, что всё это было лишь притворством."
+msgstr "Некоторое время Сара могла делать вид, что всё это было чем-то другим, а не тем, чем являлось на самом деле — тренировкой или специальной консультацией."
 
 msgctxt "speaker:Narrator"
 msgid "But it hadn't been long before she realized that it had all been pretend."
@@ -28145,7 +28145,7 @@ msgstr "Из своего опыта правления Сара знала: к�
 
 msgctxt "speaker:Narrator"
 msgid "Maeiv, for her part, played it perfectly."
-msgstr "Маив, со своей стороны, сыграла это идеально. Каждая её деталь была создана до совершенства. Каждое малейшее движение, даже те, что притворялись естественными, было отработано и безупречно."
+msgstr "Маив, со своей стороны, сыграла идеально."
 
 msgctxt "speaker:Narrator"
 msgid "Every part of her crafted to perfection. Every slight movement, even those that pretended to be natural, practiced and perfect."
@@ -29325,7 +29325,7 @@ msgstr "В такой ситуации Розанне пришлось бы пр
 
 msgctxt "menu"
 msgid "Agree, pledge your industry to Maeiv"
-msgstr "Согласись и пообещай использовать промышленность своей страны для оснащения её армий."
+msgstr "Согласись: предоставь свою промышленность Маив."
 
 msgctxt "speaker:Sarah"
 msgid "This we can do. I will pledge to use my nation's industry to equip your armies."
@@ -30729,7 +30729,7 @@ msgstr "Войдя в комнату, она увидела Эдмонда, си
 
 msgctxt "speaker:Narrator"
 msgid "She took the room in as she entered."
-msgstr "Она огляделась по сторонам, войдя в комнату."
+msgstr "Она окинула комнату взглядом, войдя в неё."
 
 msgctxt "speaker:Narrator"
 msgid "Sparse. Efficient. Much like how she imagined the man himself to be."
@@ -32589,7 +32589,7 @@ msgstr "Сара представляла себе немало сценарие
 
 msgctxt "speaker:Narrator"
 msgid "A servant, come to inform her. An assassin, in the dead of night."
-msgstr "Вместо этого она обнаружила то, чего никак не ожидала: слугу, пришедшего сообщить ей новость, и убийцу, появившегося посреди ночи."
+msgstr "Слуга, пришедший сообщить ей новость. Убийца, появившийся посреди ночи."
 
 msgctxt "speaker:Narrator"
 msgid "Instead, she found something she had not expected."
@@ -75033,7 +75033,7 @@ msgstr "Сара села за столик в углу."
 
 msgctxt "speaker:Narrator"
 msgid "With her back to the wall, looking out over the easy and happy faces of the other patrons, she was struck by an odd feeling."
-msgstr "Спиной к стене и глядя на беззаботные лица других посетителей, она ощутила странное чувство — будто долгая боль внезапно прошла, будто бесконечный шум наконец-то затих."
+msgstr "Спиной к стене и глядя на беззаботные лица других посетителей, она ощутила странное чувство. Это было похоже на давно перенесённую боль, которая внезапно исчезла, или на бесконечный шум, что наконец-то утих."
 
 msgctxt "speaker:Narrator"
 msgid "It was like a pain, long suffered, nwo suddenly gone. Like an unending noise, suddenly quieted."
@@ -81345,7 +81345,7 @@ msgstr "Наполненная, она снова закричала, пока �
 
 msgctxt "speaker:Narrator"
 msgid "All around her, Sarah could see others."
-msgstr "Вокруг неё Сара видела других: пары, группы, а некоторых — в одиночестве; все они были поглощены безумием страсти и желания."
+msgstr "Вокруг неё Сара видела других."
 
 msgctxt "speaker:Narrator"
 msgid "Couples, groups, some alone, all of them lost in a frenzy of lust and desire."
@@ -87185,7 +87185,7 @@ msgstr "Она ненавидела себя ещё сильнее за то, ч
 
 msgctxt "speaker:Narrator"
 msgid "Hated how she had made peace with it, learned to enjoy it."
-msgstr "Она ненавидела себя за то, что смирилась с этим и научилась получать от этого удовольствие."
+msgstr "Она ненавидела то, как примирилась с этим и научилась получать от этого удовольствие."
 
 msgctxt "speaker:Narrator"
 msgid "In her mind, she could recall every instance. Every debasement. She saw herself, moaning and submitting to him. Giving parts of herself to him that were once only her own."
@@ -89069,7 +89069,7 @@ msgstr "Давай просто вернёмся к работе прямо се
 
 msgctxt "speaker:Narrator"
 msgid "Together, Sarah and Nick went back to work, preparing the ship for departure."
-msgstr "Работая до глубокой ночи, они смогли убрать последние предметы из своего списка, подготовив корабль к отплытию."
+msgstr "Сара и Николас вместе вернулись к работе и к утру закончили подготовку корабля к отплытию."
 
 msgctxt "speaker:Narrator"
 msgid "Working deep into the night, they managed to clear out the last of the items on their list, making the ship ready for departure."
@@ -89245,7 +89245,7 @@ msgstr "Сара подошла ближе к капитану."
 
 msgctxt "speaker:Narrator"
 msgid "Turning around, she stuck out her rear, bringing her ass lower and pushing it up against Belmont's cock."
-msgstr "Повернувшись, она выставила свою задницу вперёд, опустив её ниже и прижав к члену Бельмонта. Она медленно начала двигать бёдрами вверх-вниз, чувствуя, как его твёрдый член давит между её ягодицами."
+msgstr "Поворнувшись, она выставила зад, опустив его ниже и прижав к члену Бельмонта."
 
 msgctxt "speaker:Narrator"
 msgid "She could feel his rock hard cock pressing between her cheeks as she slowly began to slide her ass up and down against it."
@@ -91053,7 +91053,7 @@ msgstr "Сара почувствовала к нему жалость."
 
 msgctxt "speaker:Narrator"
 msgid "On top of Nick's endless and grueling work, he had to endure the humiliation of knowing that the captain had her, while he lay alone in his bunk at night."
-msgstr "К тому же, из-за бесконечной и изнурительной работы Николаса ему приходилось терпеть унижение от осознания того, что капитан была с Сарой, пока он ночью лежал один в своей каюте."
+msgstr "Помимо бесконечной и изнурительной работы Ника, ему ещё приходилось переносить унижение от мысли, что капитан была с ней, пока он ночью лежал один в своей каюте."
 
 msgctxt "speaker:Narrator"
 msgid "Adding to that the fact that he had allowed to put his manhood in a cage, Sarah feared that Nick might snap."
@@ -100117,7 +100117,7 @@ msgstr "Отверстие было маленьким — почти слишк
 
 msgctxt "speaker:Narrator"
 msgid "Finally on the other side, Sarah saw the endless white void of the Hyral mountain range."
-msgstr "Наконец оказавшись на другой стороне, Сара увидела бесконечную белую пустоту горного хребта Хирал — тот самый жестокий зимний пейзаж, который и в прошлый раз её погубил."
+msgstr "Наконец оказавшись на другой стороне, Сара увидела бескрайнюю белую пустоту горного хребта Хирал."
 
 msgctxt "speaker:Narrator"
 msgid "That same brutal winter landscape that had ruined her last time."
@@ -101497,7 +101497,7 @@ msgstr "Шаг за шагом Сара поняла, что существую�
 
 msgctxt "speaker:Narrator"
 msgid "New depths she could survive."
-msgstr "Новые глубины унижения, которые она могла вынести."
+msgstr "Новые глубины, которые она могла вынести."
 
 msgctxt "speaker:Narrator"
 msgid "As she walked through the orc crowd, serving them their food, the orcs made no hint of restraint."
@@ -114953,11 +114953,11 @@ msgstr "Каждая часть тела женщины доносила до С
 
 msgctxt "speaker:Narrator"
 msgid "Finding the right angle, Sarah began thrusting her fingers into the woman."
-msgstr "Найдя правильный угол, Сара начала вводить пальцы в тело женщины."
+msgstr "Найдя правильный угол, Сара начала толкать пальцы внутрь женщины."
 
 msgctxt "speaker:Narrator"
 msgid "Building up to a steady rhythm, Sarah began to piston her fingers in and out of the woman."
-msgstr "Достигая стабильного ритма, Сара начала вводить и выводить пальцы из женщины, словно поршень. Каждое движение заставляло тело женщины реагировать: спина выгибалась, грудь выпячивалась, ноги раскрывались ещё шире. Каждая её часть говорила Саре, чего она хочет — и в этот момент женщина желала Сару так же сильно, как и сама Сара."
+msgstr "Достигая стабильного ритма, Сара начала вводить и выводить пальцы из тела женщины, словно поршень."
 
 msgctxt "speaker:Narrator"
 msgid "With each thrust, Sarah tried to read the woman's body, read what she liked, how she wanted it."
@@ -117577,7 +117577,7 @@ msgstr "Она не хотела слишком долго стоять на м�
 
 msgctxt "speaker:Narrator"
 msgid "Just as had been predicted, the loss of the Mythran prince had thrown the Mythran camp into disarray."
-msgstr "Как и ожидалось, потеря принца Митрана погрузила лагерь Митранов в хаос. Обычные солдаты, чьи офицеры были заняты политическими интригами, вскоре стали дезорганизованными и скучающими."
+msgstr "Как и ожидалось, гибель принца Митрана повергла митранский лагерь в полный хаос."
 
 msgctxt "speaker:Narrator"
 msgid "With the officers more occupied with playing politics, the ordinary Mythran soldiers soon grew disorganized and bored."
@@ -118493,7 +118493,7 @@ msgstr "Большая часть мира — это просто люди, к�
 
 msgctxt "speaker:Sarah"
 msgid "You're a cynic."
-msgstr "Ну, если я и такая, то это чёртов мир сделал меня такой."
+msgstr "Ты циничка."
 
 msgctxt "speaker:Kate"
 msgid "Well, if I am, the fucking world made me one."
@@ -119373,7 +119373,7 @@ msgstr "Когда Сара обернулась, она увидела, как 
 
 msgctxt "speaker:Narrator"
 msgid "Gideon."
-msgstr "Гидеон. У нас проблемы?"
+msgstr "Гидеон."
 
 msgctxt "speaker:Gideon"
 msgid "Having trouble, are we?"
@@ -123875,7 +123875,7 @@ msgstr "Воспоминания об их первом совместном о�
 
 msgctxt "speaker:Narrator"
 msgid "It had by now been year since the first time Kate had seduced her."
-msgstr "Прошёл уже год с тех пор, как Кейт впервые соблазнила её."
+msgstr "С того самого первого раза, когда Кейт соблазнила её, прошло уже целый год."
 
 msgctxt "speaker:Narrator"
 msgid "A flame had been awakened in her ever since that nothing could stomp out."
@@ -134403,7 +134403,7 @@ msgstr "На мгновение она увидела, как дух изогн�
 
 msgctxt "speaker:Razaphel"
 msgid "You have asked me all you wish to know, but one question still remains to you."
-msgstr "Ты спросила у меня всё, что хотела узнать, но один вопрос всё ещё остаётся для тебя."
+msgstr "Ты уже спросила у меня всё, что хотела узнать, но один вопрос для тебя всё ещё остаётся."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah considered, but knew the question that still lingered."
@@ -145211,7 +145211,7 @@ msgstr "Их тяжёлое дыхание. Её стоны. Его стоны."
 
 msgctxt "speaker:Narrator"
 msgid "Before long, she felt him thrusting into her, holding her waist for balance, and she the trunk for her own balance."
-msgstr "Вскоре она почувствовала, как он начал толкаться внутри неё, обхватив её талию для равновесия, а она — ствол кровати, чтобы удержаться самой. Их тяжёлое дыхание, её стоны и его вздохи сливались в единый ритм."
+msgstr "Вскоре она почувствовала, как он начал толкаться в неё, держась за её талию для равновесия, а она — за корпус кровати, чтобы удержаться."
 
 msgctxt "speaker:Narrator"
 msgid "The sound of skin, slapping against skin, the cries of pleasure."
@@ -146735,7 +146735,7 @@ msgstr "Она красивая..."
 
 msgctxt "speaker:Sarah"
 msgid "She was. And she took a lot of pride in it too. She would never even let me see her without first getting ready."
-msgstr "Она была такой же со мной. И очень гордилась этим. Она бы никогда не позволила мне увидеть себя, не пригласившись сначала."
+msgstr "Она была такой. И очень гордилась этим. Она бы никогда не позволила мне увидеть себя, не приведя сначала себя в порядок."
 
 msgctxt "speaker:Sarah"
 msgid "She was the same with me. Always combing my hair, fixing up my dresses..."
@@ -157783,7 +157783,7 @@ msgstr "Кейт подскочила вперёд, обхватив Сару з
 
 msgctxt "speaker:Narrator"
 msgid "Falling to her knees, she burried her crying face into Sarah's body."
-msgstr "Упав на колени, она уткнула заплаканное лицо в тело Сары. Она больше не говорила, а лишь плакала."
+msgstr "Опустившись на колени, она уткнула заплаканное лицо в тело Сары."
 
 msgctxt "speaker:Narrator"
 msgid "She didn't speak again, only wept."
@@ -162107,7 +162107,7 @@ msgstr "Бездумно Сара продолжала подчиняться."
 
 msgctxt "speaker:Narrator"
 msgid "Around her, their bodies swirled and gathered."
-msgstr "Вокруг неё их тела кружились и сгущались. Их сильные руки и мускулистые тела обхватывали и хватали её."
+msgstr "Вокруг неё их тела закружились и сгустились."
 
 msgctxt "speaker:Narrator"
 msgid "Their strong arms and muscled frames, gripping and grabbing at her."
@@ -163595,7 +163595,7 @@ msgstr "Я лишь прошу вас всех сегодня, пока эта �
 
 msgctxt "speaker:Sarah"
 msgid "I ask only..."
-msgstr "Я прошу лишь одного: кто здесь готов добровольно отдать свою жизнь?"
+msgstr "Я прошу лишь одного..."
 
 msgctxt "speaker:Sarah"
 msgid "Whom here pledges their lives willingly?"
@@ -181027,7 +181027,7 @@ msgstr "Тяжёлые, грубые голоса."
 
 msgctxt "speaker:Guard Captain"
 msgid "They're here somewhere!"
-msgstr "Они где-то здесь! Разорите всё, если придётся!"
+msgstr "Они где-то здесь! Разнесите всё вдребезги, если придётся!"
 
 msgctxt "speaker:Guard Captain"
 msgid "Tear up everything if you have to!"
@@ -182059,7 +182059,7 @@ msgstr "Так что разведи их пошире, иначе я приве
 
 msgctxt "speaker:Narrator"
 msgid "Sarah was close to screaming at him, but again, she swallowed her pride."
-msgstr "Сара была готова закричать на него, но снова сдержала гнев. Она отвернулась и развела ноги."
+msgstr "Сара едва не закричала на него, но опять же сдержала свою гордость."
 
 msgctxt "speaker:Narrator"
 msgid "She turned her face away from him and spread her legs apart."
@@ -190583,7 +190583,7 @@ msgstr "Они продвигались успешно, и она видела �
 
 msgctxt "speaker:Narrator"
 msgid "It was with good spirits that their wagon turned further along the road, coming upon the first sign of human life, outside of the old road itself, that Sarah had seen for days."
-msgstr "Именно с хорошим настроением их повозка двинулась дальше по дороге, наткнувшись на первый за многие дни признак человеческой жизни — небольшое каменное сооружение, преграждавшее путь."
+msgstr "Именно в хорошем расположении духа их повозка свернула дальше по дороге, где они обнаружили первый за много дней знак человеческой жизни вне самой старой дороги."
 
 msgctxt "speaker:Narrator"
 msgid "A small stone construct had been put up, blocking the road."
@@ -208247,7 +208247,7 @@ msgstr "Она увидела, как Ксан покраснел и в отча
 
 msgctxt "speaker:Xanthippe"
 msgid "I'm so sorry, I didn't know, I didn't think."
-msgstr "Прости, я просто... Я так давно не жил ни с кем другим, боюсь, немного потерял социальные навыки."
+msgstr "Прости меня... Я просто не знал, я не думал."
 
 msgctxt "speaker:Xanthippe"
 msgid "Sorry, I just, I haven't lived with anyone else for so long, I fear I might have desocialized a bit."
@@ -210135,7 +210135,7 @@ msgstr "Сара знала, что он прав."
 
 msgctxt "speaker:Narrator"
 msgid "Having seen what became of her country, her people..."
-msgstr "Но хуже всего была не сама резня, а осознание того, что она ничего не могла сделать для своего народа. Что ей оставалось лишь стоять в стороне и позволять всему этому происходить."
+msgstr "Увидев, чем кончились её страна и её народ..."
 
 msgctxt "speaker:Narrator"
 msgid "But worse than the carnage was knowing she could do nothing for her people. That she had to stand by and let it all happen."
@@ -210523,7 +210523,7 @@ msgstr "Возможно, он был прав. Но одна лишь эта м
 
 msgctxt "speaker:Narrator"
 msgid "Could she ever become like him? Stand idly by and watch innocents suffer, because some great design demands it?"
-msgstr "Могла ли она вообще стать такой же холодной? Просто стоять в стороне и наблюдать, как страдают невинные, лишь бы какой-то великий замысел требовал этого?"
+msgstr "Могла бы она когда-нибудь стать такой же холодной? Просто стоять в стороне и смотреть, как страдают невинные, лишь потому, что этого требует некий великий замысел?"
 
 msgctxt "speaker:Narrator"
 msgid "Would she even want to be that cold?"
@@ -211095,7 +211095,7 @@ msgstr "Шах махнул рукой, отпуская их обоих. Сов
 
 msgctxt "speaker:Narrator"
 msgid "Sarah tried to imagine if Thomas had been like this..."
-msgstr "Сара пыталась представить: был ли Томас таким же, когда племенитяне вторглись, а ему пришлось в одиночку защищать Розанну? Были ли у него тогда такие тихие моменты страха?"
+msgstr "Сара попыталась представить, был ли Томас таким же..."
 
 msgctxt "speaker:Narrator"
 msgid "When the tribesmen invaded, and he had been left all alone to defend Rosanna, did he have these quiet moments of fear?"
@@ -217679,7 +217679,7 @@ msgstr "Коридоры должны были иметь точное коли�
 
 msgctxt "speaker:Narrator"
 msgid "In the first year, Sarah had dedicated significant amounts of her intellect on trying to solve the puzzle that was the house."
-msgstr "В первый год Сара посвятила значительную часть своего интеллекта попыткам разгадать загадку, которой было это дом. Она говорила сама с собой, пытаясь понять его логику, но дом постоянно ускользал от её понимания. Только когда Зан сказал ей отказаться от этой идеи, она наконец смирилась с тем, что дом был за пределами её способностей к познанию."
+msgstr "В первый год Сара посвятила значительную часть своего интеллекта попыткам разгадать загадку, которой был этот дом."
 
 msgctxt "speaker:Narrator"
 msgid "Only when Xan had told her to give up on it, did she finally relent and accept that the house was beyond her ability to grasp."
@@ -218775,7 +218775,7 @@ msgstr "Сара, стремясь почувствовать воду на св
 
 msgctxt "speaker:Narrator"
 msgid "Sarah struggled to get rid of the first pieces."
-msgstr "Сара с трудом избавлялась от первых предметов одежды. По мере того как она снимала каждый следующий, это становилось всё легче и легче, и вскоре она уже стягивала с себя последние вещи."
+msgstr "Сара с трудом избавлялась от первых кусочков одежды."
 
 msgctxt "speaker:Narrator"
 msgid "But as each piece came off, the next one seemed easier and easier, and before long, she felt herself pulling away the last of her clothes."
@@ -233151,7 +233151,7 @@ msgstr "И как только ты достигнешь такого состо
 
 msgctxt "speaker:Narrator"
 msgid "Sarah shivered. Trapped in an animal form forever sounded like a nightmare."
-msgstr "Сара задрожала. Мысль о том, что она могла бы остаться в такой ловушке навсегда, если всё испортит, звучала как настоящий кошмар."
+msgstr "Сара задрожала. Мысль о том, что она может навсегда оказаться в ловушке в животной форме, звучала как кошмар."
 
 msgctxt "speaker:Sarah"
 msgid "You mean...I could be trapped like that forever if I mess up?"
@@ -235071,7 +235071,7 @@ msgstr "Она вздохнула и с силой захлопнула книг
 
 msgctxt "speaker:Narrator"
 msgid "All day."
-msgstr "Весь день — с утра до вечера — она занималась учёбой."
+msgstr "Весь день."
 
 msgctxt "speaker:Narrator"
 msgid "All day from morning to evening, she had been studying."
@@ -239851,7 +239851,7 @@ msgstr "Сара закричала, пока продолжалась пытк�
 
 msgctxt "speaker:Voice"
 msgid "No more of that."
-msgstr "Больше никакого притворства. Никаких споров. И вообще ничего от тебя больше не услышишь."
+msgstr "Больше этого не будет."
 
 msgctxt "speaker:Voice"
 msgid "No more pretense. No more argument. No more from you at all."
@@ -246275,7 +246275,7 @@ msgstr "Что-то в них казалось ей знакомым — как 
 
 msgctxt "speaker:Narrator"
 msgid "One of the great statues was of a man, holding a spear with one hand, and holding back a wolf with the other."
-msgstr "Одна из великих статуй изображала человека, который одной рукой держал копье, а другой сдерживал волка. Волк был легко размером с самого человека — огромное существо."
+msgstr "Одна из великих статуй изображала мужчину, который одной рукой держал копье, а другой сдерживал волка."
 
 msgctxt "speaker:Narrator"
 msgid "The wolf was easily the size of the man itself, a massive beast."
@@ -258791,7 +258791,7 @@ msgstr "Он наконец отложил газету, которую чита
 
 msgctxt "speaker:Captain"
 msgid "Was there anything you needed from me?"
-msgstr "Да, Капитан, у меня просто возникла мысль проверить, всё ли в порядке."
+msgstr "Было ли у вас от меня что-нибудь нужно?"
 
 msgctxt "speaker:Sarah"
 msgid "No, Captain, I just thought I'd check to see if everything was going well."
@@ -263059,7 +263059,7 @@ msgstr "И растущая истина между ними."
 
 msgctxt "speaker:Narrator"
 msgid "That in all of the world, their souls had been made to fit one another."
-msgstr "И Сара почувствовала, как её сердце бешено заколотилось: ведь во всём мире их души словно созданы друг для друга."
+msgstr "И в этом была истинная правда: во всём мире их души были созданы, чтобы идеально подходить друг другу."
 
 msgctxt "speaker:Narrator"
 msgid "And Sarah felt her heart surge."
@@ -267995,7 +267995,7 @@ msgstr "Но остальные маги из Ордена не дали ему 
 
 msgctxt "speaker:Narrator"
 msgid "Dozens, Sarah could count."
-msgstr "Десятки магов — их Сара могла пересчитать — обрушили всю свою мощь на это одно чудовище."
+msgstr "Десятки магов — их Сара могла пересчитать."
 
 msgctxt "speaker:Narrator"
 msgid "Dozens of mages all together, raining down their power on this one beast."
