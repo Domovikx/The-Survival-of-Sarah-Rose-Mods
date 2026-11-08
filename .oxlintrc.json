@@ -10,7 +10,7 @@
     "builtin": true,
     "node": true
   },
-  "ignorePatterns": ["dist", "site/dist", "site/test-results", "site/playwright-report", "tmp"],
+  "ignorePatterns": ["dist", "site/dist", "site/test-results", "site/playwright-report"],
   "overrides": [
     {
       "files": ["site/**"],

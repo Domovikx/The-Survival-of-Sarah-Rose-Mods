@@ -1,0 +1,11 @@
+import { readFileSync, writeFileSync } from "node:fs";
+import { parsePo, renderPo } from "../.opencode/skills/renpy-po/po_core.mts";
+const text = readFileSync("patches/ai-voice-pack/po/ru.po", "utf-8");
+const t0 = Date.now();
+const entries = parsePo(text).filter((e) => e.msgid);
+const t1 = Date.now();
+const out = renderPo(entries, text.split("\n\n")[0].split("\n"));
+const t2 = Date.now();
+writeFileSync("tmp/_bench.part", out, "utf-8");
+const t3 = Date.now();
+console.log(`parsePo ${t1 - t0} мс | renderPo ${t2 - t1} мс | write ${t3 - t2} мс (${out.length} байт)`);

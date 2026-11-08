@@ -1,0 +1,11 @@
+import { readFileSync } from "node:fs";
+const p = "patches/ai-voice-pack/po/es.po";
+const text = readFileSync(p, "utf-8");
+console.log("CRLF?", text.includes("\r\n"));
+const block = text.split("\n\n")[0];
+const lines = block.split("\n");
+console.log("headerLines:", lines.length);
+lines.forEach((l, i) => console.log(`  ${i + 1}: ${JSON.stringify(l)}`));
+console.log("--- далее в файле (после блока) ---");
+const after = text.slice(block.length + 2).split("\n").slice(0, 6);
+after.forEach((l, i) => console.log(`  ${i + 1}: ${JSON.stringify(l)}`));
