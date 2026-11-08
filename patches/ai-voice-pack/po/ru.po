@@ -13,7 +13,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "The Survival of Sarah Rose is an epic fantasy game. Production on TSSR is still ongoing."
-msgstr "The Survival of Sarah Rose — это эпическая фэнтезийная игра. Разработка TSSR всё ещё продолжается."
+msgstr "The Survival of Sarah Rose — это эпическая фэнтези-игра. Разработка TSSR всё ещё продолжается."
 
 msgctxt "speaker:Narrator"
 msgid "What you are about to play is a work-in-progress."
@@ -4925,7 +4925,7 @@ msgstr "Прежде чем она успела это осознать, кор�
 
 msgctxt "speaker:Narrator"
 msgid "Varga and his family, they had made her completely forget to play politics."
-msgstr "Она была благодарна за это отвлечение внимания."
+msgstr "Варга и его семья заставили её совершенно забыть о политике."
 
 msgctxt "speaker:Narrator"
 msgid "She was grateful for the distraction."
@@ -6693,7 +6693,7 @@ msgstr "Если его варварская орда придёт на нашу
 
 msgctxt "speaker:Narrator"
 msgid "The emissary bowed low one last time."
-msgstr "Посланник в последний раз низко поклонилась."
+msgstr "Посланник в последний раз низко поклонился."
 
 msgctxt "speaker:Emissary"
 msgid "King Thomas, with great sadness, I receive your message and will carry it back to my Khan."
@@ -8445,7 +8445,7 @@ msgstr "О чём именно они беспокоятся?"
 
 msgctxt "speaker:Narrator"
 msgid "Marion crossed his arms."
-msgstr "Войны вроде этой обходятся дорого. И именно они оплачивали большую часть расходов."
+msgstr "Марион скрестил руки."
 
 msgctxt "speaker:Marion"
 msgid "Wars like these are expensive. It's them who've been footing most of the bill."
@@ -11469,7 +11469,7 @@ msgstr "Сара становилась всё более и более раст
 
 msgctxt "speaker:Sarah"
 msgid "What does she mean, Kravel?"
-msgstr "Что он имеет в виду, Кравел?"
+msgstr "Что она имеет в виду, Кравел?"
 
 msgctxt "speaker:Kravel"
 msgid "Well, she is right, and wrong, in a way."
@@ -12933,7 +12933,7 @@ msgstr "Затем этот ублюдок Марион ушёл и начал �
 
 msgctxt "speaker:Narrator"
 msgid "Lily raised her hands in apology."
-msgstr "Простите за выражения, моя леди."
+msgstr "Лили подняла руки, извиняясь."
 
 msgctxt "speaker:Lily"
 msgid "Excuse the language, my lady."
@@ -13697,11 +13697,11 @@ msgstr "Больше всего злостности кнута, которую 
 
 msgctxt "speaker:Narrator"
 msgid "Floggings were a public affair, meant to in equal measure inflict pain and humiliation."
-msgstr "Пленение было публичным зрелищем, призванным в равной мере причинить боль и унижение."
+msgstr "Порки были публичным делом, призванным в равной мере причинить боль и унизить."
 
 msgctxt "speaker:Narrator"
 msgid "The girl would heal from the lashes, but Sarah doubted she would heal from the humiliation of it any time soon."
-msgstr "Девушка могла бы оправиться от порок, но Сара сомневалась, что так скоро сможет исцелиться от унижения."
+msgstr "Девушка исцелится от порки, но Сара сомневалась, что она так скоро оправится от унижения."
 
 msgctxt "speaker:Narrator"
 msgid "No time to feel regret now, Sarah concluded."
@@ -13849,7 +13849,7 @@ msgstr "Леди Каролин рассеянно провела пальцам
 
 msgctxt "speaker:Carolyn"
 msgid "Nothing a few more hours won't fix."
-msgstr "Ничто не испортит несколько лишних часов."
+msgstr "Ничего такого, что не смогли бы исправить ещё несколько часов."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah felt Lady Carolyn's hand fall on her shoulders."
@@ -14345,7 +14345,7 @@ msgstr "Всё это из-за чего? Из-за того, что она ук
 
 msgctxt "speaker:Narrator"
 msgid "Sarah felt tears begin to form in her eyes."
-msgstr "Сара... но ты..."
+msgstr "Сара почувствовала, как у неё на глаза навернулись слёзы."
 
 msgctxt "speaker:Sarah"
 msgid "I...but you..."
@@ -17257,7 +17257,7 @@ msgstr "Проходит более часа, прежде чем кто-либ�
 
 msgctxt "speaker:Narrator"
 msgid "Her warmaster has his arm around her shoulder."
-msgstr "Его тёплый хозяин обнимает её за плечо."
+msgstr "Её Warmaster обнимает её за плечо."
 
 msgctxt "speaker:Varga"
 msgid "The soldiers will bring him with us, back home, to Castle Reinmeer, where he belongs. His body will be safe there, alright?"
@@ -17869,7 +17869,7 @@ msgstr "Конечно, не говори им об этом, пока они н
 
 msgctxt "speaker:Sarah"
 msgid "Spoil them, Thomas. It's what an uncle is for."
-msgstr "Искажи им всё, Томас. Для этого ведь и нужен дядя."
+msgstr "Испорти их, Томас. Для этого ведь и нужен дядя."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah looked at Thomas, casually nursing his cup of wine. When he first returned, a gathering like this would have been too much for him."
@@ -18365,7 +18365,7 @@ msgstr "Леди Каролин была единственной, кто, ка�
 
 msgctxt "speaker:Narrator"
 msgid "Perhaps it was because she had seen her grow up around the castle and knew that so much of what Sarah pretended to be was just that, pretend."
-msgstr "Возможно, это было потому, что он видел, как она росла в замке, и знал: многое из того, кем Сара притворялась, было всего лишь игрой."
+msgstr "Возможно, это было потому, что она видела, как та росла в замке, и знала: многое из того, кем Сара притворялась, было всего лишь игрой."
 
 msgctxt "speaker:Narrator"
 msgid "Regardless, their sessions, though sparing, had continued across the years."
@@ -18745,7 +18745,7 @@ msgstr "Через несколько месяцев все проблемы б�
 
 msgctxt "speaker:Tirion"
 msgid "I send my report back to the Holy Conclave. They send back a letter, praising my efforts."
-msgstr "Я отправил им новый отчёт и спросил, что мне следует предпринять дальше."
+msgstr "Я отправляю свой отчёт обратно в Священную Конклавию. В ответ они присылают письмо, восхваляющее мои труды."
 
 msgctxt "speaker:Tirion"
 msgid "I send them a new letter, asking what next should I undertake."
@@ -21161,7 +21161,7 @@ msgstr "Могла ли она действительно осудить чел�
 
 msgctxt "menu"
 msgid "Find in favor of House Greytower"
-msgstr "Это было мелкое разногласие."
+msgstr "Найти в пользу дома Грейтауэр"
 
 msgctxt "speaker:Narrator"
 msgid "The matter was a small dispute."
@@ -21265,7 +21265,7 @@ msgstr "Торговец низко поклонился и медленно о�
 
 msgctxt "menu"
 msgid "Condemn Oliver to death"
-msgstr "Оливер, ты осуждён на смерть."
+msgstr "Осудить Оливера на смерть"
 
 msgctxt "speaker:Narrator"
 msgid "Hers was a kingdom of rules and laws."
@@ -22805,7 +22805,7 @@ msgstr "Если всё это и окажется ловушкой, твое п
 
 msgctxt "speaker:Sarah"
 msgid "And if I knew in my final moments that I had lured you along with me to a pointless death..."
-msgstr "И что тогда будет с нашими детьми?"
+msgstr "А что, если бы я в последние мгновения своей жизни знала, что заманила тебя со мной на бессмысленную смерть..."
 
 msgctxt "speaker:Sarah"
 msgid "And what of our children?"
@@ -22981,7 +22981,7 @@ msgstr "И потом бывали ночи подобные этой, когд�
 
 msgctxt "speaker:Narrator"
 msgid "To wreck every limb in her body with pleasure."
-msgstr "Разрушить каждое членение в её теле от удовольствия."
+msgstr "Измотать каждую конечность её тела удовольствием."
 
 msgctxt "speaker:Narrator"
 msgid "Times to be wanted as a wife. Times to be wanted as a woman."
@@ -24009,7 +24009,7 @@ msgstr "Сара почувствовала острую боль в одной 
 
 msgctxt "speaker:Narrator"
 msgid "A loud pang rang out across the room."
-msgstr "Громкая боль пронзила комнату."
+msgstr "Резкий звук раздался по комнате."
 
 msgctxt "speaker:Sarah"
 msgid "Aaaah!!"
@@ -24345,7 +24345,7 @@ msgstr "Его голос затих."
 
 msgctxt "speaker:Sarah"
 msgid "Was it just the rebellion?"
-msgstr "Это была просто реакция на бунт?"
+msgstr "Это был просто бунт?"
 
 msgctxt "speaker:Narrator"
 msgid "Thomas shook his head."
@@ -24377,7 +24377,7 @@ msgstr "Он вздохнул."
 
 msgctxt "speaker:Thomas"
 msgid "Look at the realm."
-msgstr "Посмотри, как процветает Розанна."
+msgstr "Посмотри на королевство."
 
 msgctxt "speaker:Thomas"
 msgid "Look how Rosanna prospers."
@@ -27121,7 +27121,7 @@ msgstr "Сара содрогнулась."
 
 msgctxt "speaker:Narrator"
 msgid "On the other side, she more nobles, men and ladies alike, gorging themselves on the food."
-msgstr "С другой стороны, она — более благородная, — вместе с мужчинами и дамами уплетала еду."
+msgstr "С другой стороны сидели аристократы — и мужчины, и женщины, — которые нагло поглощали еду."
 
 msgctxt "speaker:Narrator"
 msgid "The table stretched for most of the length of the room."
@@ -29901,7 +29901,7 @@ msgstr "Сара боролась с собой, пытаясь обрести �
 
 msgctxt "speaker:Sarah"
 msgid "I...I am not an experience!"
-msgstr "Я... я не впечатление!"
+msgstr "Я... я не какой-то опыт!"
 
 msgctxt "speaker:Duke Antonio"
 msgid "But you are, my dear. To be able to know that I have seen something as rare as you..."
@@ -30249,7 +30249,7 @@ msgstr "Отвратительно! Ты чуть меня не задел!"
 
 msgctxt "speaker:Narrator"
 msgid "Antonio grinned as he began to put his cock away."
-msgstr "Антонио усмехнулся и начал уходить со своим членом."
+msgstr "Антонио улыбнулся и начал убирать свой член обратно в штаны."
 
 msgctxt "speaker:Duke Antonio"
 msgid "Almost. So in other words, I didn't."
@@ -31441,7 +31441,7 @@ msgstr "Ничьей было бы недостаточно. Ей нужно б�
 
 msgctxt "speaker:Narrator"
 msgid "Sarah knew her own position. Firmly against."
-msgstr "Сара знала свою позицию. Твёрдо за."
+msgstr "Сара знала свою позицию. Твёрдо была против."
 
 msgctxt "speaker:Maeiv"
 msgid "I propose that we submit out votes anonymously."
@@ -34773,7 +34773,7 @@ msgstr "Но эти предложения будут действовать с�
 
 msgctxt "speaker:Narrator"
 msgid "Sarah had hoped to come here and discuss. Bargain. Anything to gain the votes she needed."
-msgstr "Она не предполагала, что всё дойдёт до такого."
+msgstr "Сара надеялась прийти сюда и поговорить. Поторговаться. Сделать всё, чтобы получить нужные голоса."
 
 msgctxt "speaker:Narrator"
 msgid "She had not imagined it would come down to this."
@@ -36069,7 +36069,7 @@ msgstr "По решению этого совета мы приступим к �
 
 msgctxt "speaker:Narrator"
 msgid "Sarah had managed to secure her victory on the matter."
-msgstr "Она не смогла добиться поддержки для своей позиции."
+msgstr "Саре удалось одержать победу в этом вопросе."
 
 msgctxt "speaker:Narrator"
 msgid "She had failed to secure the support for her position."
@@ -36777,7 +36777,7 @@ msgstr "Сара предполагала, что всё займёт всего
 
 msgctxt "speaker:Sarah"
 msgid "We can-"
-msgstr "Ааааааааа!!!!"
+msgstr "Мы можем—"
 
 msgctxt "speaker:Sarah"
 msgid "Aaaaaahhhh!!!!"
@@ -39133,7 +39133,7 @@ msgstr "Клянусь, что не с радостью, но с величай�
 
 msgctxt "speaker:Sarah"
 msgid "High Queen of the Union."
-msgstr "Перед всеми богами, известными Пантеону, я приношу вам и Союзу, который вы представляете, свои клятвы."
+msgstr "Верховная Королева Союза."
 
 msgctxt "speaker:Narrator"
 msgid "As one, all of the people gathered in the hall leapt to their feet."
@@ -42161,7 +42161,7 @@ msgstr "Церемония уже началась, и они должны бы�
 
 msgctxt "speaker:Narrator"
 msgid "Sarah could hear the high priest begin to utter the words."
-msgstr "Она поняла: она уже была здесь раньше."
+msgstr "Сара слышала, как верховный жрец начал произносить слова."
 
 msgctxt "speaker:Narrator"
 msgid "She had been here before, she realized."
@@ -42841,7 +42841,7 @@ msgstr "Точно так."
 
 msgctxt "speaker:Narrator"
 msgid "Marion waited for a moment, continueing to take her body in with his eyes."
-msgstr "Марион на мгновение замерла, продолжая обводить её тело взглядом."
+msgstr "Марион на мгновение замер, продолжая обводить её тело взглядом."
 
 msgctxt "speaker:Narrator"
 msgid "Then, slowly, he stopped leaning against the wall."
@@ -43253,7 +43253,7 @@ msgstr "Сара выгнула спину и громко закричала, �
 
 msgctxt "speaker:Narrator"
 msgid "Continuing to take her, she now felt the orgasm in her body pulse with every thrust."
-msgstr "Продолжая проникать в неё, он теперь чувствовал, как оргазм пульсирует в её теле с каждым толчком."
+msgstr "Продолжая проникать в неё, она теперь чувствовала, как оргазм пульсирует в её теле с каждым толчком."
 
 msgctxt "speaker:Narrator"
 msgid "Drowning out everything else, she released all pretense and cried out in mad pleasure."
@@ -43617,7 +43617,7 @@ msgstr "Сара пересекла комнату и заняла своё об
 
 msgctxt "speaker:Narrator"
 msgid "Marion was sitting on the other side."
-msgstr "Марион сидела с другой стороны."
+msgstr "Марион сидел с другой стороны."
 
 msgctxt "speaker:Narrator"
 msgid "He had taken a more prominent place in the room, as was fitting his new station."
@@ -44201,7 +44201,7 @@ msgstr "Мы подберём подходящий момент. Уверена,
 
 msgctxt "menu"
 msgid "Reject her invitation"
-msgstr "Принеси её приглашение."
+msgstr "Отклонить её приглашение"
 
 msgctxt "speaker:Sarah"
 msgid "I'm sorry, but I do not think I can accept."
@@ -44317,7 +44317,7 @@ msgstr "Я предполагаю, что лорд Грейтауэр будет
 
 msgctxt "speaker:Marion"
 msgid "So he will order his son to court."
-msgstr "Значит, он прикажет своему сыну пойти в суд."
+msgstr "Значит, он прикажет своему сыну ехать ко двору."
 
 msgctxt "speaker:Marion"
 msgid "He will not directly confront the Crown."
@@ -44809,7 +44809,7 @@ msgstr "Удовольствие между её ногами росло с ка
 
 msgctxt "speaker:Narrator"
 msgid "She could hear the wet sounds of his lips, echoing up from between her legs."
-msgstr "Она слышала влажные звуки его губ, разносившиеся снизу, из-за её ног."
+msgstr "Она слышала влажные звуки его губ, разносившиеся снизу, между её ног."
 
 msgctxt "speaker:Narrator"
 msgid "The force, as he leaned more firmly into her, his fingers digging into her skin, her body."
@@ -44933,7 +44933,7 @@ msgstr "Марион схватил свой член и начал ласкат
 
 msgctxt "speaker:Narrator"
 msgid "Faster and faster, looking down at his naked wife, it did not take him much to bring himself to finish."
-msgstr "Всё быстрее и быстрее, глядя на своего обнажённого мужа, ей не потребовалось много времени, чтобы довести себя до конца."
+msgstr "Всё быстрее и быстрее, глядя на свою обнажённую жену, ему не потребовалось много времени, чтобы довести себя до конца."
 
 msgctxt "speaker:Narrator"
 msgid "Or perhaps the proceeding act had brought him close enough."
@@ -45377,7 +45377,7 @@ msgstr "Только когда он закончил, он наконец от�
 
 msgctxt "speaker:Narrator"
 msgid "Sarah stumbled to her hands and knees."
-msgstr "Сара упала на колени."
+msgstr "Она упала на руки и колени."
 
 msgctxt "speaker:Narrator"
 msgid "She could feel her face, drenched in his seed."
@@ -46033,7 +46033,7 @@ msgstr "Завершив первый круг вокруг костра, она
 
 msgctxt "speaker:Narrator"
 msgid "They made eye contact, and with her eyes, Sarah told him to go faster."
-msgstr "Они встретились взглядами, и Сарой своими глазами он понял: нужно идти быстрее."
+msgstr "Они встретились взглядами, и Сара своими глазами велела ему идти быстрее."
 
 msgctxt "speaker:Narrator"
 msgid "He understood."
@@ -46345,7 +46345,7 @@ msgstr "Сев у костра, она наелась досыта."
 
 msgctxt "speaker:Narrator"
 msgid "After she was finished, the officer came to bring her back to the cart."
-msgstr "Однако он не связал её снова."
+msgstr "Когда она закончила, офицер пришёл, чтобы отвести её обратно к повозке."
 
 msgctxt "speaker:Narrator"
 msgid "However, he did not tie her back up."
@@ -46809,7 +46809,7 @@ msgstr "Тем временем племениты ценили мой упор�
 
 msgctxt "speaker:Jaeid"
 msgid "This meant that they began instructing me on how to read, and allowed me to study many different fields of study, physics, biology, languages. It was a new world for me."
-msgstr "Понимаешь, Сара, в моей старой жизни мне чётко говорили, чего я стою и какой должна быть моя жизнь, но здесь, среди племенлян, во мне увидели ценность и позволили подняться до уровня, соответствующего моим способностям."
+msgstr "Это означало, что они начали учить меня читать и позволили изучать множество различных областей — физику, биологию, языки. Для меня это был новый мир."
 
 msgctxt "speaker:Jaeid"
 msgid "You see, Sarah, in my old life I had been told exactly what I was worth and what my life was meant to be, but here, among the tribesmen, they saw value in me, and they allowed me to rise according to my value."
@@ -46941,7 +46941,7 @@ msgstr "Достигнув вершины дюны и снова оказавш�
 
 msgctxt "speaker:Narrator"
 msgid "Jaeid whispered."
-msgstr "Прости за видимость."
+msgstr "Джаид прошептал."
 
 msgctxt "speaker:Jaeid"
 msgid "Sorry, appearances."
@@ -47349,7 +47349,7 @@ msgstr "Впервые она, казалось, уловила истинный
 
 msgctxt "speaker:Jaeid"
 msgid "Promise me, Sarah, please."
-msgstr "Попроси меня, Сара."
+msgstr "Обещай мне, Сара, прошу."
 
 msgctxt "speaker:Narrator"
 msgid "He kept his voice down for fear of being overheard."
@@ -48429,7 +48429,7 @@ msgstr "Что касается секса, он заботится о наши�
 
 msgctxt "speaker:Narrator"
 msgid "Naydeen looked into Sarah's eyes."
-msgstr "Найдин посмотрел в глаза Саре."
+msgstr "Найдин посмотрела в глаза Саре."
 
 msgctxt "speaker:Naydeen"
 msgid "What do you know of such things, anyway?"
@@ -49201,7 +49201,7 @@ msgstr "Хань улыбнулся."
 
 msgctxt "speaker:Hassar"
 msgid "No, but I will not pretend that I am immune to your beauty."
-msgstr "Нет, но я не буду притворяться, будто моя красота на тебя не действует."
+msgstr "Нет, но я не буду притворяться, что твоя красота на меня не действует."
 
 msgctxt "speaker:Hassar"
 msgid "In this place, I fear it is you who excercises more power than I."
@@ -49945,7 +49945,7 @@ msgstr "Эта вода просто невероятна."
 
 msgctxt "speaker:Naydeen"
 msgid "It flows here from a nearby desert oasis. The irrigation project was quite a challenge, all things considered."
-msgstr "Но говорят, что эта вода обладает уникальными свойствами, по словам местных племён."
+msgstr "Она течёт здесь из близлежащего пустынного оазиса. Ирригационный проект, учитывая всё, оказался довольно сложной задачей."
 
 msgctxt "speaker:Naydeen"
 msgid "But the water is said to contain unique properties by the tribes."
@@ -50021,7 +50021,7 @@ msgstr "Она не выглядела ни рабыней, ни обеспок�
 
 msgctxt "speaker:Sarah"
 msgid "No...I guess you don't."
-msgstr "Нет... Полагаю, ты не похожа."
+msgstr "Нет... Полагаю, это не так."
 
 msgctxt "speaker:Naydeen"
 msgid "The Khan has many wives, as is his right by virtue of his status and our society, but I was his first."
@@ -50965,7 +50965,7 @@ msgstr "Так удивлённая внезапным ощущением, Са�
 
 msgctxt "speaker:Narrator"
 msgid "The sensation of Naydeen's fingers, now pressed between her legs, was too much."
-msgstr "Ощущение от пальцев Найдин, теперь прижатых к её ногам, было слишком сильным."
+msgstr "Ощущение от пальцев Найдин, теперь прижатых к её половым органам, было слишком сильным."
 
 msgctxt "speaker:Narrator"
 msgid "It was overpowering, so much of it she could hardly stand it, and yet in equal measure Sarah wanted more of it."
@@ -51181,7 +51181,7 @@ msgstr "Внезапно она почувствовала, как Найдин 
 
 msgctxt "speaker:Narrator"
 msgid "She pulled the rod from between Sarah's legs."
-msgstr "Она вытащила стержень из-под ног Сары."
+msgstr "Она вытащила стержень из-между ног Сары."
 
 msgctxt "speaker:Naydeen"
 msgid "Turn around."
@@ -51245,7 +51245,7 @@ msgstr "Сара попыталась ответить смиренно, но н
 
 msgctxt "speaker:Narrator"
 msgid "She cried out as she felt Naydeen resume her thrusts."
-msgstr "Она вскрикнула, чувствуя, как Найдин возобновил свои толчки."
+msgstr "Она вскрикнула, чувствуя, как Найдин возобновила свои толчки."
 
 msgctxt "speaker:Narrator"
 msgid "Bend over and pinned down, Sarah had never felt more vulnerable than now."
@@ -52225,7 +52225,7 @@ msgstr "Каждый раз, когда он брал её, он входил в
 
 msgctxt "speaker:Narrator"
 msgid "Another slap rang out as he brought the palm of his hands down on her ass."
-msgstr "Ещё одна шлепок раздалась, когда он обрушил ладонь на её задницу."
+msgstr "Ещё один шлепок раздался, когда он обрушил ладонь на её задницу."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah nearly cried out from the pain."
@@ -52969,7 +52969,7 @@ msgstr "Софья встала повыше, и её живот поднялс�
 
 msgctxt "speaker:Narrator"
 msgid "Toned, strong."
-msgstr "Мой народ не особо сражается, поэтому племенным воинам не составило особого труда."
+msgstr "Подтянутая, сильная."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah held her breath for a moment."
@@ -53337,7 +53337,7 @@ msgstr "Некоторые девушки там обслуживали мужч
 
 msgctxt "speaker:Sophia"
 msgid "So if I'm going to have to serve any of them, might as well serve the strongest of them, right?"
-msgstr "В конце концов, у него ведь есть и свои очарования."
+msgstr "Если уж мне и служить кому-то из них, то лучше самому сильному, правда?"
 
 msgctxt "speaker:Sophia"
 msgid "Besides, he isn't entirely without his charms."
@@ -53749,7 +53749,7 @@ msgstr "Она всё ещё находила странным, как част�
 
 msgctxt "speaker:Narrator"
 msgid "Play modest for him, she wondered. What was the point? What part of her had he not seen by now?"
-msgstr "Но... что теперь? Она задумалась: стоит ли ему притворяться скромной. Какой в этом был смысл? Что из неё он до сих пор не увидел?"
+msgstr "Играть для него в скромность, задумалась она. Какой в этом был смысл? Какую же её часть он до сих пор не увидел?"
 
 msgctxt "speaker:Sarah"
 msgid "But...what now?"
@@ -54001,7 +54001,7 @@ msgstr "Внезапно Сара услышала движение в конц�
 
 msgctxt "speaker:Jasmine"
 msgid "Why on earth are you making such a wicked racket?"
-msgstr "Да ладно тебе, ты и минуты как дома, а я уже в стрессе!"
+msgstr "Да зачем ты вообще производишь такой дьявольский шум?"
 
 msgctxt "speaker:Jasmine"
 msgid "I swear, you're home not for a minute and I'm already stressed!"
@@ -54705,7 +54705,7 @@ msgstr "В худшем случае, даже если они признают 
 
 msgctxt "speaker:Narrator"
 msgid "The idea that if her honour were violated, it would be Jaeid who would be compensated, made Sarah shudder."
-msgstr "Но какую честь она действительно имела, учитывая своё нынешнее положение?"
+msgstr "Мысль о том, что если бы её честь была нарушена, то именно Джаид получил бы компенсацию, заставила Сару содрогнуться."
 
 msgctxt "speaker:Narrator"
 msgid "But what honour did she really have, given her current station?"
@@ -56569,7 +56569,7 @@ msgstr "Каждый раз, когда она думала, что уже пр�
 
 msgctxt "speaker:Narrator"
 msgid "Behind her she could hear him grunting at the pleasure he took from her body."
-msgstr "Позади неё он мычал от удовольствия, которое доставляло ей его тело."
+msgstr "За своей спиной она слышала его хрипы — он наслаждался её телом."
 
 msgctxt "speaker:Narrator"
 msgid "But trapped beneath him, Sarah could not deny the ways of her own body either."
@@ -56685,7 +56685,7 @@ msgstr "Сара хотела выбросить деньги."
 
 msgctxt "speaker:Narrator"
 msgid "Instead, she grabbed it and held onto it."
-msgstr "Вместо этого она схватила их и крепко прижала к себе."
+msgstr "Вместо этого она схватила их и крепко сжала в руке."
 
 msgctxt "speaker:Narrator"
 msgid "In a place like this, with as little power as she had, she was in no position to throw money away."
@@ -57053,7 +57053,7 @@ msgstr "События того утра, Соплеменник на рынке
 
 msgctxt "speaker:Narrator"
 msgid "They had weighed on Sarah's mind all day."
-msgstr "Опять же, в случае с Розанной они заплатили бы за это очень дорого."
+msgstr "Они всю дорогу занимали мысли Сары."
 
 msgctxt "speaker:Sarah"
 msgid "Jaeid..."
@@ -58785,7 +58785,7 @@ msgstr "Сара бросилась к нему в объятия и крепк�
 
 msgctxt "menu"
 msgid "Sleep with Jaeid"
-msgstr "Спокойно я умру тысячей смертей в славе, чем проживу одну жизнь во позоре."
+msgstr "Спать с Джаидом"
 
 msgctxt "speaker:Narrator"
 msgid "Holding him in her embrace, Sarah hugged him tighter and tighter."
@@ -58897,7 +58897,7 @@ msgstr "Несмотря на всю его силу, она видела лиш
 
 msgctxt "speaker:Sarah"
 msgid "Were you ever scared?"
-msgstr "Ты когда-нибудь боялся?"
+msgstr "Ты когда-нибудь боялась?"
 
 msgctxt "speaker:Jaeid"
 msgid "Sometimes. Only fools who die young are never scared."
@@ -59917,7 +59917,7 @@ msgstr "Не в силах что-либо сказать, старый солд
 
 msgctxt "speaker:Narrator"
 msgid "He reached over, grabbing one of her legs and pulling her with her legs split, on top of him, straddling him. Sarah felt her own hot, wet sex pressing against the old soldiers midriff. Why did her body always betray her?"
-msgstr "На мгновение она наблюдала, как глаза старого солдата скользили по её телу. Сидя верхом на нём, она мало что могла скрыть от его взора или прикосновений. А как его собственность, у неё также почти не было возможности возразить."
+msgstr "Он потянулся к ней, схватил одну из её ног и притянул её к себе с широко расставленными ногами, заставляя сесть верхом на него. Сара почувствовала, как её собственная горячая, влажная киска прижалась к животу старого солдата. Почему её тело всегда предавало её?"
 
 msgctxt "speaker:Narrator"
 msgid "For a moment, she watched as the old soldier’s eyes roamed across her body. Sitting on top of him, there was little he could not see or feel of her. And as his property, she also bore little ability to object."
@@ -60261,7 +60261,7 @@ msgstr "До падения Розанны он был мастером по и�
 
 msgctxt "speaker:Narrator"
 msgid "Sarah does not speak."
-msgstr "Она чувствует, как у неё опускается сердце."
+msgstr "Сара не говорит."
 
 msgctxt "speaker:Narrator"
 msgid "Looking across the tent, she finds hateful eyes gazing at her."
@@ -61397,7 +61397,7 @@ msgstr "Этот человек, достаточно старый, чтобы �
 
 msgctxt "speaker:Narrator"
 msgid "Sarah could feel his seed seep from between her legs."
-msgstr "Сара чувствовала, как его семя вытекает из-под её ног."
+msgstr "Сара почувствовала, как его семя вытекает из-под её ног."
 
 msgctxt "speaker:Narrator"
 msgid "And not only had he taken her, but he had made her finish. For the briefest of moment, Sarah could not deny that she had enjoyed it."
@@ -62649,7 +62649,7 @@ msgstr "Ну, я имею в виду, он будет здесь какое-т�
 
 msgctxt "speaker:Narrator"
 msgid "Sarah did know what she meant."
-msgstr "Сара знала, что он имел в виду."
+msgstr "Сара точно знала, что она имела в виду."
 
 msgctxt "speaker:Narrator"
 msgid "Perhaps it went some way to explaining the old man's endless appetite, taking what he could, knowing that out on war he might not get any."
@@ -65333,7 +65333,7 @@ msgstr "Она видит, что дверь в их кабину распахн
 
 msgctxt "speaker:Narrator"
 msgid "Standing in the doorway, is captain Belmont, masturbating to Sarah and Kate."
-msgstr "В дверях стоит капитан Бельмонт, мастурбируя под взглядом Сары и Кейт."
+msgstr "В дверях стоял капитан Бельмонт и мастурбировал, глядя на Сару и Кейт."
 
 msgctxt "speaker:Narrator"
 msgid "Kate, with her head under the blankets and between Sarah's legs, is too busy to notice."
@@ -67981,7 +67981,7 @@ msgstr "Давайте, садитесь."
 
 msgctxt "speaker:Narrator"
 msgid "Both Sarah and Kate sat down on the chairs in front of the desk."
-msgstr "Оба сели на стулья перед столом."
+msgstr "Обе сели на стулья перед столом."
 
 msgctxt "speaker:Narrator"
 msgid "Sitting from behind his desk, Vaelen observed them."
@@ -69525,7 +69525,7 @@ msgstr "Наклонившись низко и глубоко, при этом �
 
 msgctxt "speaker:Narrator"
 msgid "She felt a surprised spasm from Kate's body, and a muffled moan expressed from between her own legs by Kate."
-msgstr "Она почувствовала неожиданное сокращение мышц в теле Кейт, а из-за её ног донёсся приглушённый стон."
+msgstr "Она ощутила неожиданный спазм в теле Кейт, а из-между её собственных ног донёсся приглушённый стон Кейт."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah slid out her tongue, imitating Kate's skillful performance, and slowly slid it from atop Kate's mound down to her slit."
@@ -69577,7 +69577,7 @@ msgstr "Сара не знала, можно ли назвать это горд
 
 msgctxt "speaker:Narrator"
 msgid "She rolled off Kate, freeing her from between her legs."
-msgstr "Она скатилась с Кейт, высвободившись из-под её ног."
+msgstr "Она скатилась с Кейт, освободив её из-под своих ног."
 
 msgctxt "speaker:Narrator"
 msgid "Exhausted, the two women were laying besides each other, each upside down from the other, each breathing heavily."
@@ -70245,7 +70245,7 @@ msgstr "Она разделась для капитана и вернулась 
 
 msgctxt "speaker:Captain Belmont"
 msgid "Fuck me…"
-msgstr "Чёрт, сделай это..."
+msgstr "Трахни меня…"
 
 msgctxt "speaker:Narrator"
 msgid "Belmont groaned."
@@ -70521,7 +70521,7 @@ msgstr "Громче!"
 
 msgctxt "speaker:Narrator"
 msgid "He spanked her again."
-msgstr "Он снова дал ей пощёчину."
+msgstr "Он снова отшлепал её."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah repeated the phrase, again and again. She heard her own voice, screaming like a mad woman how she loved his cock…"
@@ -71245,7 +71245,7 @@ msgstr "Она начала продолжать то, что начал кап�
 
 msgctxt "speaker:Narrator"
 msgid "Belmont grunted, leaning back to let Sarah do her work."
-msgstr "Бельмонт хмыкнул и откинулся назад, позволяя Саре продолжить то, что он начал."
+msgstr "Бельмонт хмыкнул и откинулся назад, давая Саре продолжать свою работу."
 
 msgctxt "speaker:Captain Belmont"
 msgid "No trip to pay for."
@@ -72849,7 +72849,7 @@ msgstr "Сара почувствовала, как кончик его член
 
 msgctxt "speaker:Sarah"
 msgid "A cock hungry slut...pretending to be a deck hand."
-msgstr "Слухи о том, что я — похотливая шлюха... притворяющаяся палубным рабочим."
+msgstr "Похотливая шлюха... притворяющаяся палубным рабочим."
 
 msgctxt "speaker:Narrator"
 msgid "And with that confession, Sarah felt captain Belmont lean in, pressing his cock into her asshole."
@@ -73517,7 +73517,7 @@ msgstr "Она чувствовала, как её внутренности ра
 
 msgctxt "speaker:Narrator"
 msgid "Down near to her own sex, she felt him."
-msgstr "Низко, у самого своего пола, она почувствовала его."
+msgstr "Низко, у самой своей киски, она почувствовала его."
 
 msgctxt "speaker:Narrator"
 msgid "She cupped his balls with her hand, large enough to fill her palm."
@@ -73913,7 +73913,7 @@ msgstr "Я всегда считала замок в Розанне велича
 
 msgctxt "speaker:Captain Belmont"
 msgid "Yeah, all kinds of people go around thinkin wherever they are is the center of the world."
-msgstr "Они забывают, что существует множество разных миров."
+msgstr "Да, всевозможные люди ходят вокруг, думая, что то место, где они находятся, — центр всего мира."
 
 msgctxt "speaker:Captain Belmont"
 msgid "They forgettin there's all sorts of worlds out there."
@@ -76069,7 +76069,7 @@ msgstr "Она быстро присоединилась к ним."
 
 msgctxt "speaker:Narrator"
 msgid "The official marched them through the streets with a steady pace, and Sarah did her best to keep up."
-msgstr "Официант вёл их по улицам ровным шагом, а Сара изо всех сил старалась не отставать."
+msgstr "Официал вёл их по улицам ровным шагом, а Сара изо всех сил старалась не отставать."
 
 msgctxt "speaker:Narrator"
 msgid "After some time, the official turned and raised his hands."
@@ -76193,7 +76193,7 @@ msgstr "Я уверен, что они все весьма талантливы.
 
 msgctxt "speaker:Narrator"
 msgid "The Headmaster sighed."
-msgstr "Директор вздохнула."
+msgstr "Директор вздохнул."
 
 msgctxt "speaker:Alfred"
 msgid "Fine, I'll take it from here."
@@ -76713,7 +76713,7 @@ msgstr "Я же! Просто... возьми мерки!"
 
 msgctxt "speaker:Narrator"
 msgid "The tailor went back to his work."
-msgstr "Хвостовик вернулся к своей работе."
+msgstr "Портной вернулся к своей работе."
 
 msgctxt "speaker:Narrator"
 msgid "Again and again, he ran his hands over her body."
@@ -77025,7 +77025,7 @@ msgstr "Глупые девушки за это уже лишились руки
 
 msgctxt "speaker:Narrator"
 msgid "Sarah felt a growing panic."
-msgstr "Тем не менее она кивнула."
+msgstr "Сара почувствовала нарастающую панику."
 
 msgctxt "speaker:Narrator"
 msgid "Still, she nodded."
@@ -78397,7 +78397,7 @@ msgstr "Пожалуйста, Сара... пообещай мне, что не �
 
 msgctxt "speaker:Kim"
 msgid "Promise me! I don't want you to end up getting hurt."
-msgstr "Победи меня! Я не хочу, чтобы тебе в итоге причинили боль."
+msgstr "Обещай мне! Я не хочу, чтобы тебе в итоге причинили боль."
 
 msgctxt "speaker:Kim"
 msgid "Good."
@@ -78801,7 +78801,7 @@ msgstr "Мужчина подошёл к ней ближе."
 
 msgctxt "speaker:Gilead"
 msgid "You were..."
-msgstr "Ты же слушала!"
+msgstr "Ты была..."
 
 msgctxt "speaker:Gilead"
 msgid "You were listening!"
@@ -79181,7 +79181,7 @@ msgstr "Я... я прости. Мне нужна твоя помощь... пож
 
 msgctxt "speaker:Narrator"
 msgid "The tailor put his work away."
-msgstr "Художник убрал свою работу."
+msgstr "Портной убрал свою работу."
 
 msgctxt "speaker:Tailor"
 msgid "That's better."
@@ -80305,7 +80305,7 @@ msgstr "Она пересчитала свою плату."
 
 msgctxt "speaker:Narrator"
 msgid "It wasn't much, but then again, she hadn't expected much."
-msgstr "Это было немного, но, с другой стороны, она и не esperaba многого."
+msgstr "Это было немного, но, с другой стороны, она и не ожидала большего."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah put the money away, stashing it in the small nightstand next to her bed."
@@ -80349,7 +80349,7 @@ msgstr "Что он сказал?"
 
 msgctxt "speaker:Sarah"
 msgid "Something about working the night shift. A masquerade he called it."
-msgstr "Это то, что сказал директор — про работу в ночную смену. Он назвал это маскарадом."
+msgstr "Это было что-то про работу в ночную смену. Он назвал это маскарадом."
 
 msgctxt "speaker:Narrator"
 msgid "Kim smiled and nodded."
@@ -82509,7 +82509,7 @@ msgstr "Им не повезло."
 
 msgctxt "speaker:Gilead"
 msgid "And here you are now. Working in a strange land. A servant."
-msgstr "И вот ты здесь. Работаете в чужой стране. Служанкой."
+msgstr "И вот ты здесь. Работаешь в чужой стране. Служанкой."
 
 msgctxt "speaker:Sarah"
 msgid "I...am simply trying to survive. Master Gilead."
@@ -82893,7 +82893,7 @@ msgstr "Не успела она и понять, что произошло, к�
 
 msgctxt "speaker:Narrator"
 msgid "Albert disabled the machine."
-msgstr "На сегодня достаточно. Не хочу, чтобы твой мозг взорвался."
+msgstr "Альберт выключил машину."
 
 msgctxt "speaker:Albert"
 msgid "That's enough for today. Don't want to fry your brain."
@@ -86837,7 +86837,7 @@ msgstr "Эта кошка — моя. Поняла?"
 
 msgctxt "speaker:Captain Belmont"
 msgid "Whose does this pussy belong to? Answer me."
-msgstr "Чья же эта шлюха? Отвечай мне."
+msgstr "Чья же это киска? Отвечай мне."
 
 msgctxt "speaker:Sarah"
 msgid "You...you, captain Belmont. This pussy belongs to you."
@@ -87021,7 +87021,7 @@ msgstr "Тебе бы это понравилось, блондинка?"
 
 msgctxt "speaker:Captain Belmont"
 msgid "Would you like it if your pussy was shaped specially for my cock?"
-msgstr "Хотелось бы тебе этого, блондинка?"
+msgstr "Хотелось бы тебе, чтобы твоя киска была сделана специально под мой член?"
 
 msgctxt "speaker:Narrator"
 msgid "Invading deeper into her, Sarah could hear the first sounds slip from her lips beyond any ability to control."
@@ -88021,7 +88021,7 @@ msgstr "Нет, он не владеет мной."
 
 msgctxt "speaker:Nickolas"
 msgid "So who cares then?"
-msgstr "Ну и кто тогда cares?"
+msgstr "Ну и кто тогда волнует?"
 
 msgctxt "speaker:Sarah"
 msgid "Nick...he gave me a chance when nobody else did in this world. Gave me a job."
@@ -91429,7 +91429,7 @@ msgstr "Ты принимаешь эти условия?"
 
 msgctxt "speaker:Narrator"
 msgid "Belmont began to chuckle."
-msgstr "Бельмонт начала хихикать."
+msgstr "Бельмонт начал хихикать."
 
 msgctxt "speaker:Captain Belmont"
 msgid "Tell ya what kid, I heard your terms now how about you hear mine?"
@@ -91725,7 +91725,7 @@ msgstr "Ты не можешь быть серьёзным!"
 
 msgctxt "speaker:Nickolas"
 msgid "The water is freezing, we'll be dead in less than a minute!"
-msgstr "Да ты серьёзно?!"
+msgstr "Вода ледяная, мы умрём меньше чем через минуту!"
 
 msgctxt "speaker:Captain Belmont"
 msgid "Suppose the odds ain't all that decent, but the other odds is staying on my boat and get cut down."
@@ -92033,7 +92033,7 @@ msgstr "Вскоре она вернулась в пещеру с двумя р�
 
 msgctxt "speaker:Narrator"
 msgid "She dropped the lumber in front of Nick."
-msgstr "Она бросила дрова передником Ника."
+msgstr "Она бросила дрова перед Ником."
 
 msgctxt "speaker:Sarah"
 msgid "Get a fire started, now!"
@@ -92417,7 +92417,7 @@ msgstr "Она знала, что сражаться с ним бессмысл�
 
 msgctxt "speaker:Narrator"
 msgid "Raising her arms, she allowed the captain to lift her shirt over her head, throwing it to the side."
-msgstr "Подняв руки, она позволила капитану надеть на себя рубашку через голову и отбросить её в сторону."
+msgstr "Подняв руки, она позволила капитану стянуть её рубашку через голову и отбросить её в сторону."
 
 msgctxt "speaker:Narrator"
 msgid "One of his hands cupped her breasts, pinching her nipples hard."
@@ -92941,7 +92941,7 @@ msgstr "Оглянувшись вниз с недоумением, она вдр
 
 msgctxt "speaker:Narrator"
 msgid "Dripping out from her pussy were remnant sof the captain's load. Drop after drop of cum, usually sliding out of her onto her legs, now dripped down."
-msgstr "Из её киски сочилась оставшаяся часть нагрузки капитана. Капля за каплей спермы, которая обычно стекала по ногам, теперь капала вниз."
+msgstr "Из её влагалища сочилась оставшаяся часть нагрузки капитана. Капля за каплей сперма — то, что обычно стекало по ногам, — теперь капала вниз."
 
 msgctxt "speaker:Narrator"
 msgid "Down onto Nick."
@@ -95201,7 +95201,7 @@ msgstr "Там священника пришлось немного убедит
 
 msgctxt "speaker:Captain Belmont"
 msgid "Today. Like I said, he was a little bit of trouble, but nothin some coin didn't fix."
-msgstr "Сегодня. Как я и говорил, она доставила мне немного проблем, но ничего такого, чего не решило бы немного монет."
+msgstr "Сегодня. Как я и говорил, он доставил мне немного проблем, но ничего такого, чего не решило бы немного монет."
 
 msgctxt "speaker:Narrator"
 msgid "Today. It was all happening so fast."
@@ -99497,7 +99497,7 @@ msgstr "Их ловят или покупают?"
 
 msgctxt "speaker:Raza"
 msgid "Slavers trade in these mountains."
-msgstr "Рабыни торгуют в этих горах."
+msgstr "Работорговцы торгуют в этих горах."
 
 msgctxt "speaker:Raza"
 msgid "Orcs catch slaves. Sometimes buy slaves. Which are you?"
@@ -100629,7 +100629,7 @@ msgstr "Затем, когда оба уже насытились желание
 
 msgctxt "speaker:Narrator"
 msgid "Only for the goblin to wake hours later, urges renewed, and seizing on her again."
-msgstr "Чёрт. Сон. Секс. Сон. Секс. Сон."
+msgstr "Лишь чтобы гоблин проснулся спустя часы, с обновлёнными желаниями, и снова взялся за неё."
 
 msgctxt "speaker:Narrator"
 msgid "Fuck. Sleep. Fuck. Sleep. Fuck. Sleep."
@@ -101549,7 +101549,7 @@ msgstr "Сара тихо дрожала, пока вождь стоял ряд�
 
 msgctxt "speaker:Narrator"
 msgid "Gorak, the chieftain, roared and the other orcs followed, stomping their fists and feet."
-msgstr "Горак, вождь, взревел, и другие орки последовали за ним, бьёте кулаками и топчуте ногами."
+msgstr "Горак, вождь, взревел, и остальные орки последовали за ним, бьют кулаками и топчут ногами."
 
 msgctxt "speaker:Narrator"
 msgid "The sound was deafening in the small space."
@@ -103009,7 +103009,7 @@ msgstr "Да, это ничего, просто игнорируй."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah eyed Caleb's bulge."
-msgstr "Сара присмотрелась к выпирающему животу Калеба."
+msgstr "Сара посмотрела на то, что выпирало у Калеба."
 
 msgctxt "speaker:Sarah"
 msgid "Well, I wouldn't call what you have nothing."
@@ -103745,7 +103745,7 @@ msgstr "Ширина члена орка была такова, что част�
 
 msgctxt "speaker:Narrator"
 msgid "She could feel her chin get wet with her own drool, and she could feel herself get wet at the realization."
-msgstr "Она чувствовала, как её подбородок мокрые от собственной слюны, и ощущала, как сама стала влажной от этого осознания."
+msgstr "Она чувствовала, как её подбородок мокнет от собственной слюны, и ощущала, как сама становится влажной от этого осознания."
 
 msgctxt "speaker:Atilla"
 msgid "Bigger than you're used to, huh?"
@@ -105857,7 +105857,7 @@ msgstr "Её взгляд скользил вверх-вниз по собств
 
 msgctxt "speaker:Narrator"
 msgid "Sarah had always been thin, it was what she had thought was health. It was what her society had told her a healthy woman looked like."
-msgstr "Сара всегда была худой — именно это она и считало здоровьем. Именно так её общество и описывало здоровую женщину."
+msgstr "Сара всегда была худой — именно таким, по её мнению, должно было быть здоровье. Именно так её общество учило выглядеть здоровую женщину."
 
 msgctxt "speaker:Narrator"
 msgid "But now, standing in this tent, she was in awe of her own body. She traced the muscles running all across her physique."
@@ -106085,7 +106085,7 @@ msgstr "Она не двигалась, оставаясь раскинутой 
 
 msgctxt "speaker:Narrator"
 msgid "The sweat dripped down her body, onto him. His seed flowed from between her legs."
-msgstr "Пот стекал по её телу, попадая на него. Его семя вытекало из-под её ног."
+msgstr "Пот стекал по её телу, попадая на него. Его семя вытекало из-между её ног."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah breathed heavily as she recovered on top of the orc."
@@ -106301,7 +106301,7 @@ msgstr "Предупреждение: один из этих путей прив
 
 msgctxt "menu"
 msgid "Sarah knows that Atilla is right, something breaks between them."
-msgstr "Ты не ошибаешься..."
+msgstr "Сара знает: Атилла прав... И что-то между ними ломается."
 
 msgctxt "speaker:Sarah"
 msgid "You're not wrong..."
@@ -107361,7 +107361,7 @@ msgstr "Так было до тех пор, пока его правитель, 
 
 msgctxt "speaker:Narrator"
 msgid "Too arrogant to apologize, the Shah had blamed the prince."
-msgstr "Слишком гордая, чтобы извиниться, шах обвинила в этом принца."
+msgstr "Слишком гордый, чтобы извиниться, шах обвинил в этом принца."
 
 msgctxt "speaker:Narrator"
 msgid "Now, the prince's father had sent an army, supported by mercenaries, to settle the matter."
@@ -110501,7 +110501,7 @@ msgstr "Внезапно зверь метнулся назад, удивлён�
 
 msgctxt "speaker:Narrator"
 msgid "Sarah could see something in the beast's movements. An uncertainty."
-msgstr "Сара видела в движениях зверя нечто определённое. Неуверенность."
+msgstr "Сара видела в движениях зверя что-то такое. Неуверенность."
 
 msgctxt "speaker:Narrator"
 msgid "The moment passed as the thing launched itself upwards, descending upon her again, now from above."
@@ -111097,7 +111097,7 @@ msgstr "Сара делала то, что всегда: когда казало
 
 msgctxt "speaker:Narrator"
 msgid "She closed her eyes and dreamed of Rosanna."
-msgstr "Она закрыла глаза и приснилась Розанна."
+msgstr "Она закрыла глаза и помечтала о Розанне."
 
 msgctxt "speaker:Narrator"
 msgid "Her nation, far across the sea."
@@ -111861,7 +111861,7 @@ msgstr "Нет... Думаю, ты права. Может быть, это пр�
 
 msgctxt "speaker:Narrator"
 msgid "Sarah didn't think the girl meant anything by it, but still the words, stung her."
-msgstr "Сара не думала, что слова девушки значат что-то серьёзное, но всё же они задело её."
+msgstr "Сара не думала, что слова девушки значат что-то особенное, но они всё равно задели её."
 
 msgctxt "speaker:Sarah"
 msgid "Well, just tell me if you want to be alone. I'll understand."
@@ -112481,7 +112481,7 @@ msgstr "Сара не хотела позволить Кейт забрать в
 
 msgctxt "speaker:Narrator"
 msgid "Sliding a free hand down past Samayra's body, Sarah reached between the girl's legs."
-msgstr "Проведя свободной рукой вниз по телу Самайры, Сара дотронулась до её ног."
+msgstr "Проведя свободной рукой ниже по телу Самайры, Сара просунула её между ног девушки."
 
 msgctxt "speaker:Narrator"
 msgid "Finding Kate already there, for a moment, their hands fumbled, until a pact was struck."
@@ -112905,7 +112905,7 @@ msgstr "Я не закончила, но это не страшно."
 
 msgctxt "speaker:Sarah"
 msgid "Watching you come was more than enough for me."
-msgstr "Наблюдать за тем, как ты подходила, было для меня более чем достаточно."
+msgstr "Наблюдать за тем, как ты кончаешь, было для меня более чем достаточно."
 
 msgctxt "speaker:Narrator"
 msgid "She looked deep into Samayra's eyes."
@@ -113605,7 +113605,7 @@ msgstr "Противник посмотрел на солдата-мужчину
 
 msgctxt "speaker:Narrator"
 msgid "The male soldier revealed his hands, showing the bone sculptures he had kept hidden, and smiled."
-msgstr "Мужской солдат раскрыл свои карты, показав скрываемые им костяные скульптуры, и улыбнулся."
+msgstr "Мужской солдат раскрыл свои руки, показывая костяные скульптуры, которые он держал в секрете, и улыбнулся."
 
 msgctxt "speaker:Narrator"
 msgid "The other soldiers cheered for his win, and the opponent only groaned, throwing the money he had lost towards the man."
@@ -113941,7 +113941,7 @@ msgstr "К тому же, я сомневаюсь, что у меня будет
 
 msgctxt "speaker:Narrator"
 msgid "Sarah smiled at him as she pushed her onto her back and crawled on top of the bed."
-msgstr "Сара улыбнулась ему, пока отталкивала его на спину и забиралась на кровать сверху."
+msgstr "Сара улыбнулась ему, оттолкнув его на спину, и залезла на кровать сверху."
 
 msgctxt "speaker:Sarah"
 msgid "Maybe, that depends on how you do tonight."
@@ -116469,7 +116469,7 @@ msgstr "Как ты здесь оказался..."
 
 msgctxt "speaker:Narrator"
 msgid "Looting, she had no doubt. The tribesmen must have seized it, and with no use for art, sold it off to some merchant, passing hands until one day it dissapeared into this vault."
-msgstr "Лутание, в этом он не сомневался. Племенники, должно быть, захватили её, а поскольку искусство им было бесполезно, продали какому-то торговцу; картина переходила из рук в руки, пока однажды не исчезла в этом хранилище."
+msgstr "Грабёж, в этом она не сомневалась. Племенники, должно быть, захватили её, а поскольку искусство им было бесполезно, продали какому-то торговцу; произведение переходило из рук в руки, пока однажды не исчезла в этом хранилище."
 
 msgctxt "speaker:Narrator"
 msgid "What a prize it must have been, the painting of the last royal family of Rosanna."
@@ -117957,7 +117957,7 @@ msgstr "У нас и так мало припасов."
 
 msgctxt "speaker:Sarah"
 msgid "Getting back to Lethram, we can manage, but heading deeper into the desert..."
-msgstr "Вэлэн, если мы сойдем с пути, то можем там и умереть."
+msgstr "Вернёмся в Летрам — ещё справимся, но если направимся глубже в пустыню..."
 
 msgctxt "speaker:Sarah"
 msgid "Vaelen, if we get off course, we could die out there."
@@ -121202,7 +121202,7 @@ msgstr "Я однажды отсосала старому моряку"
 
 msgctxt "speaker:Sarah"
 msgid "I once blew an old sailor."
-msgstr "Я однажды застрелила старого моряка."
+msgstr "Я однажды отсосала старому моряку."
 
 msgctxt "speaker:Narrator"
 msgid "Gideon scratched his chin."
@@ -122059,7 +122059,7 @@ msgstr "Оглянувшись вниз, она не увидела ничего
 
 msgctxt "speaker:Sarah"
 msgid "Witchcraft..."
-msgstr "Ведомство колдовства..."
+msgstr "Колдовство..."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah muttered the word to herself as she began climbing back up the hill, trudging through the shifting sands of the dune."
@@ -122067,7 +122067,7 @@ msgstr "Сара пробормотала это слово себе под но
 
 msgctxt "speaker:Narrator"
 msgid "With each step, Sarah could feel her legs sink further."
-msgstr "Но с каждым шагом она тянулась вперёд, впиваясь руками в песок и таща себя вверх по склону."
+msgstr "Но с каждым шагом она чувствовала, как её ноги погружаются всё глубже."
 
 msgctxt "speaker:Narrator"
 msgid "But with each step, she reached forward, clawing her hands, digging deep into the sand and pulls herself up along the hill."
@@ -128055,7 +128055,7 @@ msgstr "Сара рассмеялась и поднялась."
 
 msgctxt "speaker:Narrator"
 msgid "Looking down at Kate, she could feel herself eager to repay the favor."
-msgstr "Смотря на Кейт, он чувствовал, что ему не терпится отплатить ей тем же."
+msgstr "Смотря на Кейт сверху вниз, она чувствовала, как сама жаждала отплатить ей той же монетой."
 
 msgctxt "speaker:Narrator"
 msgid "Still, Sarah wasn't blind to her old friend. She knew she deflected with jokes and sex."
@@ -129231,7 +129231,7 @@ msgstr "Миссия, далеко за пределами досягаемос�
 
 msgctxt "speaker:Carolyn"
 msgid "A place where I could meet the famous Rose Knight and test if she was who I suspected. And you proved to be so much more."
-msgstr "Место, где я могла бы встретить знаменитого Рыцаря Розы и проверить, действительно ли он тот, за кого меня считали. А ты оказался намного больше."
+msgstr "Место, где я могла бы встретить знаменитого Рыцаря Розы и проверить, действительно ли она была тем, кем я подозревала. А ты оказался намного больше."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah could see Lady Carolyn grow more animated as she spoke."
@@ -131391,7 +131391,7 @@ msgstr "Свободно выставив ногу вперёд, она подо
 
 msgctxt "speaker:Narrator"
 msgid "Sarah spun her blade and drove the handle into Kate's hip."
-msgstr "Сара развернула клинок и вонзила рукоять ему в бок Кейт."
+msgstr "Сара развернула клинок и вонзила рукоять ей в бок Кейт."
 
 msgctxt "speaker:Narrator"
 msgid "With each blow, Sarah could see Kate stepping, moving, trying to create distance, but Sarah would not allow it."
@@ -132227,7 +132227,7 @@ msgstr "Сара не могла уже различить, кто из них �
 
 msgctxt "speaker:Narrator"
 msgid "Wrapping her hands around Kate's breasts, fingering her, sliding her tongue across every inch of her body."
-msgstr "Обхватив руками грудь Кейт, он ласкал её пальцами, проводя языком по каждой дюйме её тела."
+msgstr "Обхватив руками грудь Кейт, она ласкала её пальцами, проводя языком по каждой дюйме её тела."
 
 msgctxt "speaker:Narrator"
 msgid "And every action, returned in kind."
@@ -132483,7 +132483,7 @@ msgstr "Женщина изящно поклонилась."
 
 msgctxt "speaker:Dio"
 msgid "Dio, War-Sister to Cassius, his troublesome burden to bear I fear."
-msgstr "Дио, моя война-сестра Кассия — боюсь, я стану для него обременительным бременем."
+msgstr "Дио — война-сестра Кассия; боюсь, он теперь вынужден нести это его проблемное бремя."
 
 msgctxt "speaker:Narrator"
 msgid "Cassius waved his hand in objection."
@@ -132839,7 +132839,7 @@ msgstr "Учеников, которые демонстрируют выдающ
 
 msgctxt "speaker:Cassius"
 msgid "Some are send to be trained as officers, generals, whatever the empire requires."
-msgstr "Но некоторых выбирают для обучения в более специализированных школах."
+msgstr "Кого-то отправляют обучаться на офицеров, генералов — на всё, чего требует империя."
 
 msgctxt "speaker:Cassius"
 msgid "But some are selected for more nuanced schools."
@@ -135179,7 +135179,7 @@ msgstr "Я же говорила им, что конструкции плохи�
 
 msgctxt "speaker:Carolyn"
 msgid "Perhaps a whipping or two, to set an example."
-msgstr "Может, пара порок не помешали бы, чтобы подать пример другим."
+msgstr "Может, устроить пару порки — чтобы подать пример."
 
 msgctxt "speaker:Sarah"
 msgid "No need. I survived."
@@ -135971,7 +135971,7 @@ msgstr "Сара смутно помнила, что слышала стук в�
 
 msgctxt "speaker:Narrator"
 msgid "As she felt Carolyn's fingers pistoning, in and out of her, Sarah began to moan."
-msgstr "Она слышала приглушённые собственные крики, пока Каролин безостановочно её целовала."
+msgstr "Почувствовав, как пальцы Каролин ритмично входят и выходят из неё, Сара начала стонать."
 
 msgctxt "speaker:Narrator"
 msgid "She could hear her own cries muffled as Carolyn never ceased to kiss her."
@@ -137731,7 +137731,7 @@ msgstr "Я всё ещё ранена после падения."
 
 msgctxt "speaker:Narrator"
 msgid "Cassius looks at her."
-msgstr "Я вижу это."
+msgstr "Кассий смотрит на неё."
 
 msgctxt "speaker:Cassius"
 msgid "I can see this."
@@ -138435,7 +138435,7 @@ msgstr "Он так часто говорил о своём будущем и о
 
 msgctxt "speaker:Narrator"
 msgid "If not for his calm and serious personality, he could have passed for a crazed man raving on the streets. By the end, perhaps he had been as much."
-msgstr "Если бы не её спокойный и серьёзный характер, её можно было бы принять за безумца, бормочущего на улицах. К концу пути она, возможно, и сама стала такой же."
+msgstr "Если бы не его спокойный и серьёзный характер, его можно было бы принять за безумца, бормочущего на улицах. К концу пути она, возможно, и сама стала такой же."
 
 msgctxt "speaker:Sarah"
 msgid "I didn't enjoy it..."
@@ -141183,7 +141183,7 @@ msgstr "Тогда это был один из учеников плотника
 
 msgctxt "speaker:Mayor"
 msgid "After, the attacks became more frequent and grew more violent."
-msgstr "После этого напали всё чаще, и становилось всё жестожнее."
+msgstr "Потом нападения стали происходить всё чаще и становились всё более жестокими."
 
 msgctxt "speaker:Mayor"
 msgid "We couldn't deny something was going on."
@@ -141567,7 +141567,7 @@ msgstr "А ты, я так понимаю, Рыцарь Розы."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah was surprised to hear him call her that."
-msgstr "Она... кто тебе это сказал?"
+msgstr "Сара была удивлена, услышав, как он назвал её так."
 
 msgctxt "speaker:Sarah"
 msgid "I...who told you that?"
@@ -143787,7 +143787,7 @@ msgstr "Знаешь?"
 
 msgctxt "speaker:Sarah"
 msgid "That you are hurting them. Is it on purpose?"
-msgstr "Ты знаешь? Знал?"
+msgstr "Ты же знаешь, что ранíš их. Это нарочно?"
 
 msgctxt "speaker:Narrator"
 msgid "Garret's face twisted in pain."
@@ -143899,7 +143899,7 @@ msgstr "Город будет спасён, и люди будут помнит�
 
 msgctxt "speaker:Sarah"
 msgid "You've made quite a plan for yourself."
-msgstr "А как же я? А если я не хочу, чтобы на моих руках была твоя кровь?"
+msgstr "У тебя ведь довольно хитроумный план."
 
 msgctxt "speaker:Sarah"
 msgid "And what about me? What if I don't want your blood on my hands?"
@@ -144555,7 +144555,7 @@ msgstr "Но всё, что раньше казалось неприятным, 
 
 msgctxt "speaker:Narrator"
 msgid "Holding her down by her waist, she felt him enter her."
-msgstr "Удерживая её за талию, он вошёл в неё."
+msgstr "Удерживая её за талию, она почувствовала, как он вошёл в неё."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah cried out, in part surprised at how wet she already was for him."
@@ -144615,7 +144615,7 @@ msgstr "Никакой цивилизации. Никакой человечно
 
 msgctxt "speaker:Narrator"
 msgid "Sarah cried out as he plunged his massive member deep inside of her."
-msgstr "Сара вскрикнула ещё громче, когда осознала, что никто другой их не слышит."
+msgstr "Сара вскрикнула, когда он глубоко вонзил в неё свой огромный член."
 
 msgctxt "speaker:Narrator"
 msgid "She cried out louder when she realized nobody else could hear them."
@@ -148039,7 +148039,7 @@ msgstr "Сара продолжала обдумывать эти вопросы
 
 msgctxt "speaker:Narrator"
 msgid "All around her, the quiet of the night and the soft movement of the wind."
-msgstr "Вокруг него царила ночная тишина, а ветер тихо шевелил всё вокруг."
+msgstr "Вокруг неё царила ночная тишина, а ветер тихо шевелил всё вокруг."
 
 msgctxt "speaker:Narrator"
 msgid "Peace."
@@ -148875,7 +148875,7 @@ msgstr "Ощущая собственные ощущения своего тел
 
 msgctxt "speaker:Narrator"
 msgid "Rubbing furiously against her clit, Sarah could feel the pounding waves of pleasure rushing out across her body."
-msgstr "Садясь яростно на свой клитор, Сара чувствовала, как мощные волны удовольствия прокатываются по всему её телу."
+msgstr "Яростно потирая свой клитор, Сара чувствовала, как ударные волны наслаждения прокатываются по всему её телу."
 
 msgctxt "speaker:Narrator"
 msgid "So close to that edge."
@@ -149127,7 +149127,7 @@ msgstr "Куда бы ты ни пошла, я последую за тобой.
 
 msgctxt "speaker:Narrator"
 msgid "Sarah smiled at the notion. Samayra was nothing if not loyal."
-msgstr "Сара улыбнулась этой мысли. Самайра была верна, если не считать ничего другого."
+msgstr "Сара улыбнулась этой мысли. Самайра была верна — и ни тени сомнения в этом не было."
 
 msgctxt "speaker:Sarah"
 msgid "What then? Worried I might get hurt?"
@@ -149431,7 +149431,7 @@ msgstr "Здесь же были только они вдвоём."
 
 msgctxt "speaker:Narrator"
 msgid "Pressing her fingers deeper inside of Samayra, she found no resistance in the girl."
-msgstr "Прижимая пальцы всё глубже к себе, она не почувствовала отпора у девушки."
+msgstr "Впивая пальцы всё глубже в тело Самайры, она не встретила у девушки никакого сопротивления."
 
 msgctxt "speaker:Sarah"
 msgid "You're soaking wet."
@@ -151887,7 +151887,7 @@ msgstr "А как насчёт тебя самого?"
 
 msgctxt "speaker:Narrator"
 msgid "Gilead raised one eyebrow."
-msgstr "Гилеад? Я?"
+msgstr "Гилеад приподнял бровь."
 
 msgctxt "speaker:Gilead"
 msgid "Me?"
@@ -152303,7 +152303,7 @@ msgstr "Племенитяне действительно несколько у�
 
 msgctxt "speaker:Gilead"
 msgid "To underestimate them would be most foolish."
-msgstr "Потерять их в оценке было бы крайне глупо."
+msgstr "Недооценивать их было бы крайне глупо."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah knew the reports...but her only source for those had been Carolyn."
@@ -153875,7 +153875,7 @@ msgstr "Сара почувствовала, как на её лице появ�
 
 msgctxt "menu"
 msgid "Sleep with Belmont"
-msgstr "Ты... ты, чёрт возьми..."
+msgstr "Переспать с Бельмонтом"
 
 msgctxt "speaker:Sarah"
 msgid "You...you fucking..."
@@ -154347,7 +154347,7 @@ msgstr "Да! Я..."
 
 msgctxt "speaker:Narrator"
 msgid "Her mouth was one thing, but to have him inside of her..."
-msgstr "Её слова — это одно, но когда он оказался внутри неё..."
+msgstr "Её рот был одним делом, но то, что он оказался внутри неё..."
 
 msgctxt "speaker:Captain Belmont"
 msgid "Fine, you want me to grab your wrist and walk the two of us out into the hall?"
@@ -154615,7 +154615,7 @@ msgstr "Затем, наконец, она почувствовала, как о
 
 msgctxt "speaker:Narrator"
 msgid "Content, he fell back into a chair."
-msgstr "Боже, Блондинка. Вот именно это мне и было нужно."
+msgstr "Довольный, он откинулся в кресле."
 
 msgctxt "speaker:Captain Belmont"
 msgid "Gods, Blondie. That's just what I needed."
@@ -154927,7 +154927,7 @@ msgstr "Капитан Бельмонт быстро ушёл, выбежав з
 
 msgctxt "speaker:Narrator"
 msgid "Sarah smiled, happy to have dealt with him."
-msgstr "Сара улыбнулась, довольная тем, что развелась с ним."
+msgstr "Сара улыбалась, довольная тем, что справилась с ним."
 
 msgctxt "menu"
 msgid "Refuse Belmont a loan"
@@ -156199,7 +156199,7 @@ msgstr "В любом случае, как я уже говорила — я з�
 
 msgctxt "speaker:Sarah"
 msgid "Back to work for the both of us."
-msgstr "Оба нам обратно к работе."
+msgstr "Оба мы вернёмся к работе."
 
 msgctxt "speaker:Narrator"
 msgid "Kate waved before leaving, then turned and strode out the tent."
@@ -156227,7 +156227,7 @@ msgstr "Она с трудом поднялась с пола — всё тел�
 
 msgctxt "speaker:Narrator"
 msgid "Soldier life had made it easier to sleep anywhere, but she still much preferred a proper bed."
-msgstr "Военная жизнь научила его спать где угодно, но он всё равно гораздо больше предпочитал настоящую кровать."
+msgstr "Военная жизнь научила её спать где угодно, но она всё равно гораздо больше предпочитала настоящую кровать."
 
 msgctxt "speaker:Narrator"
 msgid "The fire near her feet had gone out, nothing but ashes now."
@@ -156959,7 +156959,7 @@ msgstr "Просто какой-то неблагодарный ублюдок, 
 
 msgctxt "speaker:Narrator"
 msgid "The scout spat on the ground."
-msgstr "Скаут плюнула на землю."
+msgstr "Скаут плюнул на землю."
 
 msgctxt "speaker:Scout"
 msgid "Fuck rank. I didn't sign up for this. She almost got us killed!"
@@ -158875,7 +158875,7 @@ msgstr "Она легко провела пальцами по его стары
 
 msgctxt "speaker:Atilla"
 msgid "I dreamed of you so often..."
-msgstr "Я так часто снился тебе..."
+msgstr "Я так часто тебе снился..."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah watched as he pulled off the final pieces of his armor."
@@ -158911,7 +158911,7 @@ msgstr "Какие ещё размеры мог бы иметь такой во�
 
 msgctxt "speaker:Sarah"
 msgid "When you dreamed of me, what did you do?"
-msgstr "Когда ты снился мне, что ты делал?"
+msgstr "Когда ты видел меня во сне, что ты делал?"
 
 msgctxt "speaker:Narrator"
 msgid "A space between them remained. A border neither quite dared to cross yet."
@@ -159591,7 +159591,7 @@ msgstr "Саре почти захотелось рассмеяться."
 
 msgctxt "speaker:Sarah"
 msgid "A...pardon?"
-msgstr "Ам...нистия?"
+msgstr "Помил...ование?"
 
 msgctxt "speaker:Emmissary"
 msgid "Yes. He will forgive all of you for your attempts at usurping him rightful throne."
@@ -160899,7 +160899,7 @@ msgstr "Тогда... где они?"
 
 msgctxt "speaker:Narrator"
 msgid "The old Tribesman shrugged."
-msgstr "Старый соплеменник пожертвовал плечами."
+msgstr "Старый соплеменник пож плечами."
 
 msgctxt "speaker:Tribesman"
 msgid "Who knows."
@@ -162391,7 +162391,7 @@ msgstr "Вне досягаемости стрел, но не вне зоны д
 
 msgctxt "speaker:Narrator"
 msgid "Break the walls, then advance and seize on the breach."
-msgstr "Прорвите стены, а затем avance и воспользуйтесь проломом."
+msgstr "Прорвите стены, затем продвигайтесь вперёд и воспользуйтесь проломом."
 
 msgctxt "speaker:Narrator"
 msgid "Close the gap fast enough so the Trbiesmen would not meet them on open fields, where their army would be strongest."
@@ -164383,7 +164383,7 @@ msgstr "У неё была работа, и это отвлечение уже �
 
 msgctxt "menu"
 msgid "Enforce your own justice"
-msgstr "Неужели? Ты лишаешь нас права искать справедливости?"
+msgstr "Отправить правосудие своими руками"
 
 msgctxt "speaker:Man"
 msgid "No? You deny us a right to seek justice?"
@@ -165683,7 +165683,7 @@ msgstr "Напоминание, которое продержится ещё н�
 
 msgctxt "speaker:Narrator"
 msgid "Sarah remained sprawled out on the desk, covered in sweat, his cum dripping from between her legs."
-msgstr "Сара всё ещё лежала на столе, вся в поту, а сперма его стекала из-за её ног."
+msgstr "Сара всё ещё лежала на столе, вся в поту, а сперма его стекала между её ног."
 
 msgctxt "speaker:Narrator"
 msgid "Most of it had been spend inside of her, but his seed was plentiful."
@@ -166055,7 +166055,7 @@ msgstr "Ты пришла в Баград и спасла меня."
 
 msgctxt "speaker:Samayra"
 msgid "A nobody. You risked your life, facing down a demon, just to save me, a girl that meant nothing to you."
-msgstr "Никто из нас. Ты рисковала жизнью, столкнулась с демоном — и всё это лишь ради того, чтобы спасти меня, девушку, которая ничего для тебя не значила."
+msgstr "Никто. Ты рисковала жизнью, столкнулась с демоном — и всё это лишь ради того, чтобы спасти меня, девушку, которая ничего для тебя не значила."
 
 msgctxt "speaker:Samayra"
 msgid "That's who you are, Sarah."
@@ -166439,7 +166439,7 @@ msgstr "Знаешь что?"
 
 msgctxt "speaker:Kate"
 msgid "That I was coming over tonight."
-msgstr "Я знала, что ты придёшь сегодня вечером."
+msgstr "Что я зайду сегодня вечером."
 
 msgctxt "speaker:Kate"
 msgid "I think you did."
@@ -166455,7 +166455,7 @@ msgstr "Возможно, ты слишком высоко себя ценишь
 
 msgctxt "speaker:Narrator"
 msgid "Holding Sarah by the waist she pushed her up against the desk."
-msgstr "Держа Сару за талию, он прижал её к столу."
+msgstr "Держа Сару за талию, она прижала её к столу."
 
 msgctxt "speaker:Kate"
 msgid "Nah, you were probably getting desperate already."
@@ -166763,7 +166763,7 @@ msgstr "Сара повернулась, упав со стола на коле�
 
 msgctxt "speaker:Narrator"
 msgid "Tired, but eager to prove herself, she placed her hungry mouth between Kate's legs."
-msgstr "Уставшая, но стремясь доказать себя, она прижалась голодным ртом к ногам Кейт."
+msgstr "Уставшая, но стремясь доказать себя, она прижала голодный рот между ног Кейт."
 
 msgctxt "speaker:Narrator"
 msgid "She tasted all of her as Kate leaned back on the desk, holding Sarah's head in place with a firm grip."
@@ -167239,7 +167239,7 @@ msgstr "Остальные заканчивают приготовления. П
 
 msgctxt "speaker:Atilla"
 msgid "My blade is always sharp."
-msgstr "Моя клинок всегда остра."
+msgstr "Мой клинок всегда остр."
 
 msgctxt "speaker:Sarah"
 msgid "Of course. I should have known."
@@ -170459,7 +170459,7 @@ msgstr "Тогда я слишком боялась тебя, чтобы ска�
 
 msgctxt "speaker:Sarah"
 msgid "But you made me so wet."
-msgstr "Но ты так меня увлажнил."
+msgstr "Но ты так меня увлажнила."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah parted her lips and leaned forward, taking him into her mouth."
@@ -170487,7 +170487,7 @@ msgstr "Легко — у него оставалось ещё нескольк�
 
 msgctxt "speaker:Narrator"
 msgid "Her other hand, she pressed between his legs, feeling the weight of his balls in her hand."
-msgstr "Другой рукой она прижалась к его ногам, ощущая в ладони вес его яичек."
+msgstr "Другой рукой она прижалась между его ног, ощущая в ладони вес его яичек."
 
 msgctxt "speaker:Narrator"
 msgid "More approving grunts."
@@ -170659,7 +170659,7 @@ msgstr "Я до сих пор хороший муж?"
 
 msgctxt "speaker:Sarah"
 msgid "You keep fucking me like this and I'll give it all up."
-msgstr "Если будешь и дальше так со мной спать, я всё брошу."
+msgstr "Если ты будешь и дальше так со мной трахаться, я всё брошу."
 
 msgctxt "speaker:Atilla"
 msgid "We could live in this cave. Just fuck and hunt all day."
@@ -171655,7 +171655,7 @@ msgstr "Стоны, которые она чувствует, но пытает�
 
 msgctxt "speaker:Narrator"
 msgid "Being taken like this, fucked as if she were nothing more than a piece of meat to him, it oddly begins to arouse her."
-msgstr "Будучи взятым таким образом, трахнутой так, будто для него она была не более чем куском мяса, это странным образом начинает возбуждать её."
+msgstr "Будучи взятой вот так, трахнутой словно кусок мяса для него, она, как ни странно, начинает испытывать возбуждение."
 
 msgctxt "speaker:Narrator"
 msgid "She had been stripped of everything, title, money, respect."
@@ -173231,7 +173231,7 @@ msgstr "Двигая два пальца внутри себя и стимули
 
 msgctxt "speaker:Narrator"
 msgid "Back to the moment when she had been on her knees in front of Alaric, taking all of him into her mouth."
-msgstr "И сейчас она уже видела, как он смотрит на неё."
+msgstr "И снова она оказалась на коленях перед Алариком, забирая всё его тело в свой рот."
 
 msgctxt "speaker:Narrator"
 msgid "And now she could see how he watched her."
@@ -176123,7 +176123,7 @@ msgstr "Он схватил её за запястье и резко потян�
 
 msgctxt "speaker:Other man"
 msgid "Shall we call over the guards? Ask them to sort this out?"
-msgstr "Ну как, договорились? Хм?"
+msgstr "Ну как, а? Вызовем стражу? Попросим их разобраться с этим?"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah felt her vision go blurry."
@@ -176431,7 +176431,7 @@ msgstr "Давай, встань рядом со мной — она справ�
 
 msgctxt "speaker:Narrator"
 msgid "With his cock still firmly in her mouth, and his hands on her hair, Sarah could hardly turn her head."
-msgstr "Её член всё ещё твёрдо был во рту, а руки держали её за волосы — Сара едва могла повернуть голову."
+msgstr "Его член всё ещё твёрдо был во рту, а руки держали её за волосы — Сара едва могла повернуть голову."
 
 msgctxt "speaker:Narrator"
 msgid "But from the corner of her eyes, she saw the other man join them."
@@ -176439,7 +176439,7 @@ msgstr "Но краем глаза она увидела, как к ним пр�
 
 msgctxt "speaker:Narrator"
 msgid "Large, jovial and fat. A brainless expression on his face. A drunkard's smile."
-msgstr "Больший, жизнерадостный и толстый. На его лице — безмозглый выражение. Улыбка пьяницы."
+msgstr "Крупный, весёлый и толстый. На лице — безмозглый взгляд. Улыбка пьяницы."
 
 msgctxt "speaker:Narrator"
 msgid "If she had to describe a man that she would be less attracted to, she could not imagine how."
@@ -176867,7 +176867,7 @@ msgstr "Это было бы проще. Это было бы правдивее
 
 msgctxt "speaker:Narrator"
 msgid "Because as much as she hated him...she wanted him more."
-msgstr "И точно так же, как она ненавидела другого мужчину... так же сильно, в тот самый миг, она и хотела его."
+msgstr "И точно так же, как она презирала другого мужчину... так же сильно она в этот момент желала его."
 
 msgctxt "speaker:Narrator"
 msgid "And just as much as she despised the other man...so too did she, in that moment, want him more."
@@ -178363,7 +178363,7 @@ msgstr "Сара направилась к двери."
 
 msgctxt "speaker:Narrator"
 msgid "Just as she got close, she heard a strange scratching sound, not unlike rats moving."
-msgstr "Как только она подошла ближе, то услышала странный скрежещущий звук, не unlike движение крыс."
+msgstr "Как только она приблизилась, она услышала странный скребущий звук, не похожий на движения крыс."
 
 msgctxt "speaker:Narrator"
 msgid "And as suddenly as she heard it, the sound was gone again."
@@ -180099,7 +180099,7 @@ msgstr "Решение?"
 
 msgctxt "speaker:Hugh"
 msgid "Yes. You said that you can't make any more coin while you're here, but that's not quite true."
-msgstr "Да. Ты сказала, что не можете заработать больше монет, пока вы здесь, но это не совсем так."
+msgstr "Да. Ты сказала, что не можешь заработать больше монет, пока ты здесь, но это не совсем так."
 
 msgctxt "speaker:Hugh"
 msgid "Well, you're not the only one that I provide shelter to. I have a good few rooms, all fine gentleman trying to stay ahead of the law."
@@ -180391,7 +180391,7 @@ msgstr "Сара стиснула зубы и медленно начала ла
 
 msgctxt "speaker:Narrator"
 msgid "Looking down, she could see it grow and harden even more."
-msgstr "Оглянувшись, она увидела, как он растёт и становится ещё твёрже."
+msgstr "Оглянувшись вниз, она увидела, как он становится всё больше и твёрже."
 
 msgctxt "speaker:Narrator"
 msgid "Alaric was by no means small, but Hugh was clearly bigger."
@@ -180703,7 +180703,7 @@ msgstr "Я не с тобой разговаривал, идиот. Я гово�
 
 msgctxt "speaker:Narrator"
 msgid "Another slap rang out as he spanked her across the ass."
-msgstr "Ещё одна шлепок раздалась, когда он стукнул её по заднице."
+msgstr "Ещё один шлепок раздался, когда он шлепнул её по заднице."
 
 msgctxt "speaker:Sarah"
 msgid "Aaah!! Aaah!!"
@@ -181639,7 +181639,7 @@ msgstr "Ваша честь, мы представляем несколько п
 
 msgctxt "speaker:Guard Captain"
 msgid "In addition, we provide testimony from the co-conspirator of the defendant. He took part in her crimes, but she was the main instigator."
-msgstr "Кроме того, мы предоставляем показания соучастницы обвиняемой. Он принимал участие в её преступлениях, но именно она была главной подстрекательницей."
+msgstr "Кроме того, мы предоставляем показания соучастника обвиняемой. Он принимал участие в её преступлениях, но именно она была главной подстрекательницей."
 
 msgctxt "speaker:Narrator"
 msgid "The judge received the papers and went through them."
@@ -182379,7 +182379,7 @@ msgstr "Медленно распаковывая вещи, она начала 
 
 msgctxt "speaker:Narrator"
 msgid "A bar of soap. Some towels. Toiletries."
-msgstr "Помпа мыла. Несколько полотенец. Туалетные принадлежности."
+msgstr "Половинка мыла. Несколько полотенец. Туалетные принадлежности."
 
 msgctxt "speaker:Narrator"
 msgid "That was essentially all of it. From a princess, down to this."
@@ -182839,7 +182839,7 @@ msgstr "Сара смотрела, как Еула откинулась наза
 
 msgctxt "menu"
 msgid "Have sex with Eula"
-msgstr "Займись со мной сексом."
+msgstr "Заняться сексом с Еулой?"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah realized that Eula was probably right. She knew more about prison life than she did."
@@ -186515,7 +186515,7 @@ msgstr "Потому что Зигмунд предостерёг меня от 
 
 msgctxt "speaker:Narrator"
 msgid "Sakar suddenly laughed."
-msgstr "О-о, да? А что он сказал?"
+msgstr "Сакар внезапно рассмеялся."
 
 msgctxt "speaker:Sakar"
 msgid "Ooh, did he now? What did he say?"
@@ -186887,7 +186887,7 @@ msgstr "Он снова вытянул к ней локоть."
 
 msgctxt "speaker:Sarah"
 msgid "If you think I'm gonna touch your disgusting hands, you're insane."
-msgstr "Если думаешь, что я трону твои отвратительные руки, то ты с ума сошёл."
+msgstr "Если думаешь, что я трону твои отвратительные руки, то ты с ума сошла."
 
 msgctxt "speaker:Narrator"
 msgid "Sakar laughed."
@@ -187259,7 +187259,7 @@ msgstr "Вы отступите в сторону, и мы уйдём своим
 
 msgctxt "speaker:Narrator"
 msgid "The other robber laughed."
-msgstr "Другой грабитель рассмеялась."
+msgstr "Другой грабитель рассмеялся."
 
 msgctxt "speaker:Robber"
 msgid "That's one way of resolving this. How about I tell you my way, grandpa?"
@@ -187491,7 +187491,7 @@ msgstr "У тебя бывают по-настоящему жестокие уб
 
 msgctxt "speaker:Narrator"
 msgid "Sarah felt uneasy at how untroubled Sigmund seemed to be at having just killed two men."
-msgstr "Разве тебе не дурно от того, что ты их убил?"
+msgstr "Сара чувствовала себя неловко от мысли, что Зигмунду было так легко убить этих двоих."
 
 msgctxt "speaker:Sarah"
 msgid "Don't you feel bad about killing them?"
@@ -188627,7 +188627,7 @@ msgstr "Боже знает, чем он там занимается в лесу
 
 msgctxt "speaker:Sigmund"
 msgid "I keep telling him to stick to the road, but he's got a mind of his own."
-msgstr "Я всё время говорю ей, чтобы она держалась дороги, но у неё свой ум."
+msgstr "Я всё время говорю ему, чтобы он держался дороги, но у него свой ум."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah looked back into the fire."
@@ -189507,7 +189507,7 @@ msgstr "К своему удивлению, она увидела, что Сак
 
 msgctxt "speaker:Narrator"
 msgid "He handed it to her."
-msgstr "Он протянул её ему."
+msgstr "Он протянул ей это."
 
 msgctxt "speaker:Narrator"
 msgid "She knew the proper response was to refuse him, allow him to offer it again, but she was too eager for warmth."
@@ -189639,7 +189639,7 @@ msgstr "Правила, которые диктовали её жизнь, зд�
 
 msgctxt "speaker:Narrator"
 msgid "She watched as he leaned in closer, his arm pinning her up against the tree."
-msgstr "Она наблюдала, как он наклонился ближе, прижав её руку к дереву."
+msgstr "Она наблюдала, как он наклонился ближе, прижав её к дереву рукой."
 
 msgctxt "speaker:Narrator"
 msgid "She could feel the warmth of his breath, passing over her skin."
@@ -191035,7 +191035,7 @@ msgstr "Хорошо, я могу проявить терпение до нас�
 
 msgctxt "speaker:Captain"
 msgid "But I'm gonna fuck this attitude right out of you."
-msgstr "Но я вытрачу это твоё высокомерие с помощью секса."
+msgstr "Но я вытрахаю из тебя эту заносчивость!"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah watched the man storm out of the tent before she could even respond."
@@ -191339,7 +191339,7 @@ msgstr "Под ней она видела его член, раскачиваю�
 
 msgctxt "speaker:Narrator"
 msgid "Pulling on her waist, she could feel him pull her onto the tip of his cock, pressing it up against the entrance of her pussy."
-msgstr "Притягивая её за талию, он почувствовал, как она наклонилась к кончику его члена, прижимая его ко входу во влагалище."
+msgstr "Притягивая её за талию, она почувствовала, как он притягивал её к кончику своего члена, прижимая его ко входу во влагалище."
 
 msgctxt "speaker:Captain"
 msgid "The boys promised me first crack at you for delivering them to you tonight."
@@ -191487,7 +191487,7 @@ msgstr "Сара знала, что никогда не скажет этому 
 
 msgctxt "speaker:Narrator"
 msgid "Another slap rang out across the tent."
-msgstr "Ещё одна шлепок прозвучала по всей палатке."
+msgstr "Ещё один шлепок прозвучал по всей палатке."
 
 msgctxt "speaker:Narrator"
 msgid "Then another."
@@ -192511,7 +192511,7 @@ msgstr "Я отплатю тебе... если хочешь."
 
 msgctxt "speaker:Sakar"
 msgid "You ever been fucked in the ass before?"
-msgstr "Ты когда-нибудь трахали в задницу?"
+msgstr "Тебя когда-нибудь трахали в задницу?"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah's eyes shot up from the ground, staring at Sakar in disbelief. Why was he always so crude."
@@ -196767,7 +196767,7 @@ msgstr "Маленькие точки вдали — это хижинки, гд
 
 msgctxt "speaker:Narrator"
 msgid "A shodden path ran from the house, all the way out to the nearby cluster of tiny buildings."
-msgstr "Из дома вёл неровный тропинка, уходящий прямо к расположенному неподалёку скоплению крошечных зданий."
+msgstr "Из дома вела ухабистая тропинка, уходящая до самого близкого скопления крошечных зданий."
 
 msgctxt "speaker:Narrator"
 msgid "In a great city, those tiny brick buildings would have warranted little attention."
@@ -197243,7 +197243,7 @@ msgstr "А Мариус — та помощь, которой он мог бы �
 
 msgctxt "speaker:Alfred"
 msgid "You came to my house, and now you blame me for what you started?"
-msgstr "Ты пришла ко мне домой, а теперь винишь меня в том, что ты сам начал?"
+msgstr "Ты пришла ко мне домой, а теперь винишь меня в том, что ты сама начала?"
 
 msgctxt "speaker:Sarah"
 msgid "Me?!"
@@ -199687,7 +199687,7 @@ msgstr "Сара добралась до этого нелегко, но в ит
 
 msgctxt "speaker:Narrator"
 msgid "Princess to exile. Wife to Alfred. Farmer."
-msgstr "Она никогда больше не выйдет замуж."
+msgstr "Принцесса в изгнании. Жена Альфреда. Фермер."
 
 msgctxt "menu"
 msgid "Lie to Marius about his father"
@@ -201511,7 +201511,7 @@ msgstr "Надеюсь, ты не против — цена была хорош�
 
 msgctxt "speaker:Marius"
 msgid "Mind?!"
-msgstr "Сара, ты невероятна!"
+msgstr "Не против?"
 
 msgctxt "speaker:Marius"
 msgid "Sarah, you're amazing!"
@@ -203939,7 +203939,7 @@ msgstr "Посмотри, как ты ждёшь, даже когда меня �
 
 msgctxt "speaker:Alfred"
 msgid "Slut."
-msgstr "Слюшка."
+msgstr "Развратница."
 
 msgctxt "speaker:Sarah"
 msgid "Shut...up..."
@@ -203963,7 +203963,7 @@ msgstr "Я... не..."
 
 msgctxt "speaker:Alfred"
 msgid "Then why did you scream when you came in the yard?"
-msgstr "Тогда почему ты кричал, когда вошёл во двор?"
+msgstr "Тогда почему ты кричал, когда кончал во дворе?"
 
 msgctxt "speaker:Narrator"
 msgid "The fantasy of him knew the same truth that Sarah did."
@@ -204031,7 +204031,7 @@ msgstr "Сара рухнула на кровать."
 
 msgctxt "speaker:Narrator"
 msgid "Mind and body exhausted, she sank into a deep sleep."
-msgstr "Истощённые разумом и телом, они погрузились в глубокий сон."
+msgstr "Устав душой и телом, она погрузилась в глубокий сон."
 
 msgctxt "speaker:Narrator"
 msgid "The next morning, Sarah woke early."
@@ -205199,7 +205199,7 @@ msgstr "На лице Мариуса отразилось выражение п�
 
 msgctxt "speaker:Narrator"
 msgid "To hear Sarah confirm his father's story was a dagger to his heart."
-msgstr "Услышать, как Сара подтвердила слова её отца, было для него ножом в сердце."
+msgstr "Услышать, как Сара подтвердила слова его отца, было для него ножом в сердце."
 
 msgctxt "speaker:Sarah"
 msgid "Now...I...I love...I love your father..."
@@ -206855,7 +206855,7 @@ msgstr "Сара взяла его руку и пожала её. Его лад�
 
 msgctxt "speaker:Sarah"
 msgid "Xant...Xanthiff...Xanthir..."
-msgstr "Ксан... Ксантипп... Ксантир..."
+msgstr "Ксантиппа... Ксантипп... Ксантир..."
 
 msgctxt "speaker:Narrator"
 msgid "The man laughed at her struggling to pronounce his name."
@@ -206863,15 +206863,15 @@ msgstr "Мужчина рассмеялся над тем, как она пыт�
 
 msgctxt "speaker:Xanthippe"
 msgid "Like I said, just call me Xan, nobody ever manages to pronounce it."
-msgstr "Как я уже говорил, зови меня просто Зан — никто всё равно не справляется с моим полным именем."
+msgstr "Как я уже говорил, зови меня просто Ксантиппа — никто всё равно не справляется с моим полным именем."
 
 msgctxt "speaker:Sarah"
 msgid "Ok, thank you Xan. Not just for saving me, but also letting me stay here. I wouldn't have known what to do. I don't have anywhere else to go."
-msgstr "Хорошо, спасибо тебе, Зан. Не только за то, что спас меня, но и за то, что позволил остаться здесь. Я бы не знала, что делать. Мне больше некуда идти."
+msgstr "Хорошо, спасибо тебе, Ксантиппа. Не только за то, что спас меня, но и за то, что позволил остаться здесь. Я бы не знала, что делать. Мне больше некуда идти."
 
 msgctxt "speaker:Narrator"
 msgid "Xan sat down in his chair and looked at her."
-msgstr "Ксантиппа села в кресло и посмотрела на неё."
+msgstr "Ксантиппа сел в кресло и посмотрел на неё."
 
 msgctxt "speaker:Xanthippe"
 msgid "Yeah...about that."
@@ -206907,7 +206907,7 @@ msgstr "Глубокой ночью Сара рассказала свою ис�
 
 msgctxt "speaker:Narrator"
 msgid "Xan, for his part, seemed to be both deeply interested in her story, as well as strangely without judgement."
-msgstr "Зан, со своей стороны, казался одновременно глубоко заинтересованным в её истории и странным образом лишённым осуждения."
+msgstr "Ксантиппа, со своей стороны, казался одновременно глубоко заинтересованным в её истории и странным образом лишённым осуждения."
 
 msgctxt "speaker:Narrator"
 msgid "He never questioned her decisions, scolded her, or tried to give advice."
@@ -206991,7 +206991,7 @@ msgstr "В общем, если ты меня простишь, я очень у
 
 msgctxt "speaker:Narrator"
 msgid "Xan nodded."
-msgstr "Ксан кивнула."
+msgstr "Ксантиппа кивнула."
 
 msgctxt "speaker:Xanthippe"
 msgid "Of course, just use any of the empty rooms. I'll be in here for a bit more, studying, in case you need anything."
@@ -206999,7 +206999,7 @@ msgstr "Конечно, просто воспользуйся любой из п
 
 msgctxt "speaker:Narrator"
 msgid "Sarah waved as she left, but found that Xan had already turned back towards his books."
-msgstr "Сара помахала рукой, уходя, но обнаружила, что Зан уже вернулся к своим книгам."
+msgstr "Сара помахала рукой, уходя, но обнаружила, что Ксантиппа уже вернулся к своим книгам."
 
 msgctxt "speaker:Narrator"
 msgid "Down the hallway, she found one of several rooms, each in a condition as if they'd never even been lived in since the house was sold. Untouched."
@@ -207043,7 +207043,7 @@ msgstr "Она покачала головой. Абсурд."
 
 msgctxt "speaker:Narrator"
 msgid "She and Xan had set into an easy routine."
-msgstr "Она и Зан уже вошли в привычный ритм жизни."
+msgstr "Она и Ксантиппа уже вошли в привычный ритм жизни."
 
 msgctxt "speaker:Narrator"
 msgid "He was at every moment absorbed into one of his many books, and only late at night did Sarah occasionally manage to lure him away from the books for a conversation."
@@ -207075,7 +207075,7 @@ msgstr "Единственное, что казалось необычным, �
 
 msgctxt "speaker:Narrator"
 msgid "Still, this too was not too strange. Xan often wandered around the house. She would often find him sitting in odd corners, reading his books."
-msgstr "Тем не менее, и это было не слишком странно. Зан часто бродил по дому. Она часто находила его сидящим в странных углах, читающим свои книги."
+msgstr "Тем не менее, и это было не слишком странно. Ксантиппа часто бродил по дому. Она часто находила его сидящим в странных углах, читающим свои книги."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah pulled the rag over her face and set on her task of dusting any and every surface she could find."
@@ -207127,7 +207127,7 @@ msgstr "Глаза этого существа скользили по его т
 
 msgctxt "speaker:Razaphel"
 msgid "You're not that decrepit wizard..."
-msgstr "Ты ведь не тот самый decrepit волшебник..."
+msgstr "Ты же не тот самый обветшалый маг..."
 
 msgctxt "speaker:Narrator"
 msgid "The smoke that made up the body of the thing, or what passed for a body, swirled around."
@@ -207275,7 +207275,7 @@ msgstr "Дверь с грохотом распахивается."
 
 msgctxt "speaker:Narrator"
 msgid "Xan rushed in, placing himself between Sarah and the creature."
-msgstr "Зан бросился внутрь, встав между Сарой и существом."
+msgstr "Ксантиппа бросился внутрь, встав между Сарой и существом."
 
 msgctxt "speaker:Narrator"
 msgid "A light radiated from each of his hands, swirling around his arms, driving back the darkness."
@@ -207315,7 +207315,7 @@ msgstr "Внутри него Сара видела, как оно вращае�
 
 msgctxt "speaker:Narrator"
 msgid "Finally, Xan turned around to Sarah."
-msgstr "Наконец-то Зант обернулась к Саре."
+msgstr "Наконец-то Ксантиппа обернулся к Саре."
 
 msgctxt "speaker:Xanthippe"
 msgid "Are you fine? Did he say anything?"
@@ -207327,7 +207327,7 @@ msgstr "Я в порядке... оно просто... хотело погово
 
 msgctxt "speaker:Narrator"
 msgid "Xan sighed, relieved."
-msgstr "Ксан вздохнул с облегчением."
+msgstr "Ксантиппа вздохнул с облегчением."
 
 msgctxt "speaker:Xanthippe"
 msgid "Yeah, he likes to do that, talk. He'll talk all day if you let him."
@@ -207339,7 +207339,7 @@ msgstr "Что... что это такое? Я никогда раньше не 
 
 msgctxt "speaker:Narrator"
 msgid "Xan tossled his own hair, trying to find the words to explain."
-msgstr "Ксан растрепал собственные волосы, пытаясь найти слова для объяснения."
+msgstr "Ксантиппа растрепал собственные волосы, пытаясь найти слова для объяснения."
 
 msgctxt "speaker:Xanthippe"
 msgid "You're right that you've never seen such a thing. They're rare, in our world anyway, I can't imagine there are more than a dozen in the entire world."
@@ -207363,7 +207363,7 @@ msgstr "Сара уставилась на Ксана, растерянная. �
 
 msgctxt "speaker:Narrator"
 msgid "Xan sighed."
-msgstr "Ксан вздохнула."
+msgstr "Ксантиппа вздохнула."
 
 msgctxt "speaker:Xanthippe"
 msgid "I'll tell you the story as briefly as I can."
@@ -207403,7 +207403,7 @@ msgstr "Все жаждали служить ей, хотя бы для того
 
 msgctxt "speaker:Narrator"
 msgid "Xan paused for a moment, collecting himself."
-msgstr "Ксант на мгновение замерла, собираясь с мыслями."
+msgstr "Ксантиппа на мгновение замер, собираясь с мыслями."
 
 msgctxt "speaker:Xanthippe"
 msgid "She ruled for a long time, and the empire reached its peak. But then, as is the fate of all humans, age came for her."
@@ -207459,7 +207459,7 @@ msgstr "Это продолжалось до тех пор, пока не при
 
 msgctxt "speaker:Xanthippe"
 msgid "A thought that perhaps, if these gods would not grant her request, she ought to ask the gods of another world."
-msgstr "Он подумал, что если эти боги не исполнят его просьбу, то ему стоит обратиться к богам другого мира."
+msgstr "Она подумала, что если эти боги не исполнят её просьбу, то ей стоит обратиться к богам другого мира."
 
 msgctxt "speaker:Xanthippe"
 msgid "Empress Ayamari believed there must be many worlds out there, who each had their own gods. In such a great universe, surely, one would answer her desire and let her save her people?"
@@ -207467,7 +207467,7 @@ msgstr "Императрица Аямари считала, что во всел
 
 msgctxt "speaker:Narrator"
 msgid "A tear ran past Xan's face."
-msgstr "Слеза скатилась по лицу Зан."
+msgstr "Слеза скатилась по лицу Ксантиппа."
 
 msgctxt "speaker:Xanthippe"
 msgid "The research began and soon a suitable ritual was found."
@@ -207551,7 +207551,7 @@ msgstr "Не дави, напомнила она себе."
 
 msgctxt "speaker:Sarah"
 msgid "That's fine, Xan. Thank you for telling me all this. I've never heard of it before."
-msgstr "Всё в порядке, Ксан. Спасибо, что рассказала мне всё это. Я никогда раньше об этом не слышала."
+msgstr "Всё в порядке, Ксантиппа. Спасибо, что рассказала мне всё это. Я никогда раньше об этом не слышала."
 
 msgctxt "speaker:Xanthippe"
 msgid "Yes, it's so long ago, and so many empires rose and fell, the story has been lost to most people, except for my order."
@@ -207567,11 +207567,11 @@ msgstr "Вместе они покинули комнату, оставив ду
 
 msgctxt "speaker:Narrator"
 msgid "In the warmth of the living room, they ate and spoke, but not long after, Xan fell back distracted into his books."
-msgstr "В тепле гостиной они ели и разговаривали, но вскоре Ксан снова отвлёкся на свои книги."
+msgstr "В тепле гостиной они ели и разговаривали, но вскоре Ксантиппа снова отвлёкся на свои книги."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah told him she was going to sleep, but if he heard her, Xan gave no indication."
-msgstr "Сара сказала ему, что собирается спать, но если он и услышал её, то Ксан не выказал никаких признаков этого."
+msgstr "Сара сказала ему, что собирается спать, но если он и услышал её, то Ксантиппа не выказал никаких признаков этого."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah collapsed into her bed, staring at the ceiling."
@@ -207579,7 +207579,7 @@ msgstr "Сара рухнула на кровать, уставившись в �
 
 msgctxt "speaker:Narrator"
 msgid "Moments turned to hours as she spend trying to make sense of everything that Xan had told her."
-msgstr "Минуты переходили в часы, пока она пыталась понять всё, что сказал ей Зан."
+msgstr "Минуты переходили в часы, пока она пыталась понять всё, что сказал ей Ксантиппа."
 
 msgctxt "speaker:Narrator"
 msgid "Outside, the city softly fell asleep, while Sarah could not."
@@ -207667,7 +207667,7 @@ msgstr "Скажи мне, где прячется маг? Прямо за дв�
 
 msgctxt "speaker:Sarah"
 msgid "Xan doesn't know I'm here. I sneaked out."
-msgstr "Зан не знает, что я здесь. Я выскользнула."
+msgstr "Ксантиппа не знает, что я здесь. Я выскользнула."
 
 msgctxt "speaker:Narrator"
 msgid "The thing's face shifted."
@@ -207723,7 +207723,7 @@ msgstr "Так вот что привело тебя сюда? Чтобы обс
 
 msgctxt "speaker:Sarah"
 msgid "You told me...that you know who Xan is...that he keeps secrets from me..."
-msgstr "Ты сказал мне... что знаешь, кто такой Ксан... что он скрывает от меня секреты..."
+msgstr "Ты сказал мне... что знаешь, кто такой Ксантиппа... что он скрывает от меня секреты..."
 
 msgctxt "speaker:Razaphel"
 msgid "This I did."
@@ -208163,7 +208163,7 @@ msgstr "Наконец-то она набралась сил лишь насто
 
 msgctxt "speaker:Narrator"
 msgid "She walked the hallway naked, praying Xan was either asleep or too busy studying to notice."
-msgstr "Она шла по коридору нагишом, молясь, чтобы Зан либо спал, либо был слишком занят учёбой, чтобы заметить её."
+msgstr "Она шла по коридору нагишом, молясь, чтобы Ксантиппа либо спал, либо был слишком занят учёбой, чтобы заметить её."
 
 msgctxt "speaker:Narrator"
 msgid "When she returned to her bedroom, she collapsed into the bed."
@@ -208231,7 +208231,7 @@ msgstr "Сара дико схватилась за простыни, подтя
 
 msgctxt "speaker:Sarah"
 msgid "Xan!"
-msgstr "Ксан!"
+msgstr "Ксантиппа!"
 
 msgctxt "speaker:Xanthippe"
 msgid "What?"
@@ -208243,7 +208243,7 @@ msgstr "Я... я не прилична!"
 
 msgctxt "speaker:Narrator"
 msgid "She saw Xan turn red as he franctically spun himself around, facing away from the bed."
-msgstr "Она увидела, как Ксан покраснел и в отчаянии развернулся спиной к кровати."
+msgstr "Она увидела, как Ксантиппа покраснел и в отчаянии развернулся спиной к кровати."
 
 msgctxt "speaker:Xanthippe"
 msgid "I'm so sorry, I didn't know, I didn't think."
@@ -208255,7 +208255,7 @@ msgstr "Прости... Я просто так долго не жил ни с к
 
 msgctxt "speaker:Narrator"
 msgid "Sarah quickly got dressed as Xan kept his back to her."
-msgstr "Сара быстро оделась, пока Зан продолжал стоять к ней спиной."
+msgstr "Сара быстро оделась, пока Ксантиппа продолжал стоять к ней спиной."
 
 msgctxt "speaker:Sarah"
 msgid "Alright, I'm dressed, what were you saying?"
@@ -208271,7 +208271,7 @@ msgstr "Неделю назад я связался со своим магиче
 
 msgctxt "speaker:Narrator"
 msgid "Xan was holding out a sharp, rectangular pendant."
-msgstr "Ксант держал в руках острый прямоугольный кулон."
+msgstr "Ксантиппа держал в руках острый прямоугольный кулон."
 
 msgctxt "speaker:Sarah"
 msgid "It's...a necklace?"
@@ -208323,7 +208323,7 @@ msgstr "Ты понимаешь, что это значит?"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah looked Xan in the eyes, she shook her head."
-msgstr "Сара посмотрела Зант в глаза и покачала головой."
+msgstr "Сара посмотрела Ксантиппа в глаза и покачала головой."
 
 msgctxt "speaker:Xanthippe"
 msgid "I could take you and as my apprentice! I could teach you how to tap into your magical abilities."
@@ -208331,7 +208331,7 @@ msgstr "Я мог бы взять тебя в ученицы! Я мог бы н�
 
 msgctxt "speaker:Narrator"
 msgid "Sarah had imagined a lot of things for her life, but never that."
-msgstr "Сара представляла себе многое в своей жизни, но никогда — такое. Она посмотрела Ксан в глаза и покачала головой."
+msgstr "Сара представляла себе многое в своей жизни, но никогда — такое. Она посмотрела Ксантиппа в глаза и покачала головой."
 
 msgctxt "speaker:Sarah"
 msgid "You mean...I could learn to wield magic?"
@@ -208359,7 +208359,7 @@ msgstr "Это была идея, которая, казалось, её и вп
 
 msgctxt "speaker:Narrator"
 msgid "Xan stepped across the room and grabbed her by the shoulders."
-msgstr "Ксант перешла через комнату и схватила её за плечи."
+msgstr "Ксантиппа перешла через комнату и схватила её за плечи."
 
 msgctxt "speaker:Xanthippe"
 msgid "Don't you see, Sarah? You thought you had no path in life left, and you just randomly end up on my doorstep, as a magical potentiate?"
@@ -208387,7 +208387,7 @@ msgstr "Сара неохотно сделала то, о чём ей сказа
 
 msgctxt "speaker:Narrator"
 msgid "Xan raised the relic above her hands and dropped it into the palm of her hands."
-msgstr "Ксан подняла реликвию над своими руками и опустила ей в ладонь."
+msgstr "Ксантиппа поднял реликвию над руками и опустил её в ладонь."
 
 msgctxt "speaker:Narrator"
 msgid "The moment it made contact with her skin, a bright light began to shine forth from the object."
@@ -208451,7 +208451,7 @@ msgstr "Ну, не то чтобы они где-то в мире... В цита
 
 msgctxt "speaker:Narrator"
 msgid "Xan was running around the room in a frenzy."
-msgstr "Зан носился по комнате в полном возбуждении."
+msgstr "Ксантиппа носился по комнате в полном возбуждении."
 
 msgctxt "speaker:Xanthippe"
 msgid "I can't wait for you to begin learning all of this!"
@@ -208467,7 +208467,7 @@ msgstr "Ох, и нельзя забыть про введение мастер�
 
 msgctxt "speaker:Narrator"
 msgid "Sarah watched, detached, as Xan began to pull books off shelves and out of chests that she had barely realized were there."
-msgstr "Сара отстранённо наблюдала, как Зант начал вытаскивать с полок и из сундуков книги, о существовании которых она едва догадывалась."
+msgstr "Сара отстранённо наблюдала, как Ксантиппа начал вытаскивать с полок и из сундуков книги, о существовании которых она едва догадывалась."
 
 msgctxt "speaker:Narrator"
 msgid "One stack after the other was pushed into her arms."
@@ -208475,7 +208475,7 @@ msgstr "Одна стопка за другой оказывалась у неё
 
 msgctxt "speaker:Narrator"
 msgid "Struggling to hold onto them, Sarah began to throw some onto the bed, but soon as she did Xan would add more to the pile."
-msgstr "Пытаясь удержать их, Сара начала бросать некоторые книги на кровать, но как только она это делала, Ксан тут же добавляла в кучу ещё больше."
+msgstr "Пытаясь удержать их, Сара начала бросать некоторые книги на кровать, но как только она это делала, Ксантиппа тут же добавляла в кучу ещё больше."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah dropped the entire pile of books from her hand, onto the bed."
@@ -208483,11 +208483,11 @@ msgstr "Сара роняет всю стопку книг с рук на кро
 
 msgctxt "speaker:Sarah"
 msgid "Xan..."
-msgstr "Зан..."
+msgstr "Ксантиппа..."
 
 msgctxt "speaker:Narrator"
 msgid "Xan continued collecting more books."
-msgstr "Зан продолжал собирать всё больше и больше книг."
+msgstr "Ксантиппа продолжал собирать всё больше и больше книг."
 
 msgctxt "speaker:Narrator"
 msgid "Raising her voice, she found his attention."
@@ -208511,7 +208511,7 @@ msgstr "Если хочешь, чтобы я стала магом, тебе п�
 
 msgctxt "speaker:Narrator"
 msgid "Xan suddenly looked embarrassed for his enthusiasm."
-msgstr "Ксант внезапно смутился от своего собственного энтузиазма."
+msgstr "Ксантиппа внезапно смутился от своего собственного энтузиазма."
 
 msgctxt "speaker:Xanthippe"
 msgid "Sarah...I'm sorry."
@@ -208531,7 +208531,7 @@ msgstr "Мне следовало дать тебе время осмыслит�
 
 msgctxt "speaker:Narrator"
 msgid "Xan opened the door and stepped out."
-msgstr "Зант открыла дверь и вышла."
+msgstr "Ксантиппа открыла дверь и вышла."
 
 msgctxt "speaker:Xanthippe"
 msgid "I'll be in the study when you're ready."
@@ -208635,11 +208635,11 @@ msgstr "Сара вошла в кабинет, оставив сомнения �
 
 msgctxt "speaker:Sarah"
 msgid "Xan."
-msgstr "Зан."
+msgstr "Ксантиппа."
 
 msgctxt "speaker:Narrator"
 msgid "Xan looked up at her. She suspected there was a hint of worry in his eyes."
-msgstr "Зан посмотрел на неё. Она почувствовала, что в его глазах была тень беспокойства."
+msgstr "Ксантиппа посмотрел на неё. Она почувствовала, что в его глазах была тень беспокойства."
 
 msgctxt "speaker:Sarah"
 msgid "I've made up my mind. I'll become your apprentice."
@@ -208647,7 +208647,7 @@ msgstr "Я приняла решение. Я стану твоей учениц�
 
 msgctxt "speaker:Narrator"
 msgid "Xan stood up and embraced Sarah."
-msgstr "Ксант встал и обнял Сарру."
+msgstr "Ксантиппа встал и обнял Сарру."
 
 msgctxt "speaker:Xanthippe"
 msgid "Sarah! That's amazing."
@@ -208659,7 +208659,7 @@ msgstr "Мне так жаль за мою прежнюю поспешность
 
 msgctxt "speaker:Narrator"
 msgid "Xan looked confused."
-msgstr "Зан выглядел сбитым с толку."
+msgstr "Ксантиппа выглядел сбитым с толку."
 
 msgctxt "speaker:Sarah"
 msgid "I'll become your apprentice, but I don't want you to go easy on me."
@@ -208687,7 +208687,7 @@ msgstr "Не жди, что овладеешь древнейшим искусс
 
 msgctxt "speaker:Sarah"
 msgid "I understand, Xan. Just promise me that you'll go fast."
-msgstr "Я понимаю, Ксан. Просто пообещай мне, что будешь действовать быстро."
+msgstr "Я понимаю, Ксантиппа. Просто пообещай мне, что будешь действовать быстро."
 
 msgctxt "speaker:Xanthippe"
 msgid "I promise."
@@ -208699,7 +208699,7 @@ msgstr "И маг сдержал своё слово."
 
 msgctxt "speaker:Narrator"
 msgid "For the remainder of the day, Xan began to teach Sarah the introductions to magic."
-msgstr "В оставшуюся часть дня Зан начал обучать Сару основам магии. Он демонстрировал ей различные её проявления: разрушительные, созидательные и совершенно потусторонние."
+msgstr "В оставшуюся часть дня Ксантиппа начал обучать Сару основам магии."
 
 msgctxt "speaker:Narrator"
 msgid "He performed small spells, showing her the possibilities. Destructive, creative, and utterly otherworldly."
@@ -208739,7 +208739,7 @@ msgstr "После этого мы перейдём к изучению того
 
 msgctxt "speaker:Narrator"
 msgid "On and on went Xan."
-msgstr "И так без конца продолжал Ксан."
+msgstr "И так без конца продолжал Ксантиппа."
 
 msgctxt "speaker:Narrator"
 msgid "And yet, Sarah never tired. She hang on his every word."
@@ -208747,7 +208747,7 @@ msgstr "И всё же Сара никогда не уставала. Она л�
 
 msgctxt "speaker:Narrator"
 msgid "Before she had well and truly realized it, night had set in, and even the inexhaustible Xan seemed near to sleep."
-msgstr "Не успела она толком это осознать, как уже наступила ночь, и даже неиссякаемый Ксан, казалось, был на грани сна."
+msgstr "Не успела она толком это осознать, как уже наступила ночь, и даже неиссякаемый Ксантиппа, казалось, был на грани сна."
 
 msgctxt "speaker:Xanthippe"
 msgid "We'll continue this further tomorrow. It's been a long time since I've had to talk so much, you'll have to excuse me."
@@ -208763,7 +208763,7 @@ msgstr "Не прости меня — это было тяжело для на�
 
 msgctxt "speaker:Narrator"
 msgid "Xan gratefully nodded and left towards his room to sleep."
-msgstr "Ксан с благодарностью кивнула и ушла в свою комнату спать."
+msgstr "Ксантиппа с благодарностью кивнул и ушёл в свою комнату спать."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah took in the room, now all alone. It's many tomes, trinkets and relics."
@@ -209311,7 +209311,7 @@ msgstr "Почти каждый день проходил одинаково."
 
 msgctxt "speaker:Narrator"
 msgid "Xan was an excellent instructor, but he showed her little mercy. Always pressing her, always demanding more."
-msgstr "Зан был превосходным инструктором, но к ней он проявлял мало сострадания. Он постоянно давил на неё, всегда требовал большего."
+msgstr "Ксантиппа был превосходным инструктором, но к ней он проявлял мало сострадания. Он постоянно давил на неё, всегда требовал большего."
 
 msgctxt "speaker:Narrator"
 msgid "Someone else might have complained, but Sarah knew that this was what she had asked for."
@@ -209347,7 +209347,7 @@ msgstr "Нет, не так — вот так."
 
 msgctxt "speaker:Narrator"
 msgid "Xan demonstrated the movement again. By now he must have done it over a hundred times."
-msgstr "Зант снова показал это движение. К этому моменту он, должно быть, делал это уже более ста раз."
+msgstr "Ксантиппа снова показал это движение. К этому моменту он, должно быть, делал это уже более ста раз."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah did her best to imitate his every gesture."
@@ -209375,7 +209375,7 @@ msgstr "Сущность, форма, движение, отпечаток, вы
 
 msgctxt "speaker:Narrator"
 msgid "When she watched Xan perform his magics, it seemed to her easy and obvious, but whenever she attempted it, the parts never seemed to come together."
-msgstr "Когда она смотрела на то, как Зан исполняет свою магию, это казалось ей простым и очевидным, но всякий раз, когда она пыталась сделать то же самое, части никак не складывались воедино."
+msgstr "Когда она смотрела на то, как Ксантиппа исполняет свою магию, это казалось ей простым и очевидным, но всякий раз, когда она пыталась сделать то же самое, части никак не складывались воедино."
 
 msgctxt "speaker:Narrator"
 msgid "Sooner or later, one element of the mix would slip up. Then she tried again, focussing too much on what went wrong, and then the other parts would slip."
@@ -209391,7 +209391,7 @@ msgstr "Отлично, — рассудила Сара, — я могу ста�
 
 msgctxt "speaker:Narrator"
 msgid "Still, Xan had complimented her, told her that some mages needed months to produce that spell."
-msgstr "Тем не менее, Ксан хвалил её, говоря, что некоторым магам требуются месяцы, чтобы овладеть этим заклинанием."
+msgstr "Тем не менее, Ксантиппа хвалил её, говоря, что некоторым магам требуются месяцы, чтобы овладеть этим заклинанием."
 
 msgctxt "speaker:Narrator"
 msgid "It was one of Sarah's constant fears, going slow."
@@ -209407,7 +209407,7 @@ msgstr "Сара прислонилась к стене. Она чувствов
 
 msgctxt "speaker:Narrator"
 msgid "Xan was busy sorting through the pile of books on his desk."
-msgstr "Ксан была занята тем, что перебирала стопку книг на своём столе."
+msgstr "Ксантиппа был занят тем, что перебирал стопку книг на своём столе."
 
 msgctxt "speaker:Xanthippe"
 msgid "Yes, Sarah?"
@@ -209427,7 +209427,7 @@ msgstr "Я имею в виду: если пройти мимо его фаса�
 
 msgctxt "speaker:Narrator"
 msgid "Xan smiled."
-msgstr "Ксан улыбнулась."
+msgstr "Ксантиппа улыбнулась."
 
 msgctxt "speaker:Xanthippe"
 msgid "Yes, it's true that this house does not abide by the rules of the world outside."
@@ -209479,7 +209479,7 @@ msgstr "Всё это так странно... Я никак не могу к э
 
 msgctxt "speaker:Narrator"
 msgid "Xan laughed."
-msgstr "Xanthippe рассмеялась."
+msgstr "Ксантиппа рассмеялся."
 
 msgctxt "speaker:Xanthippe"
 msgid "This is nothing, Sarah. A lot of things you imagine are fixed are maleable in this world."
@@ -209503,7 +209503,7 @@ msgstr "Есть здесь дверь, которая ведёт к Розан�
 
 msgctxt "speaker:Narrator"
 msgid "Xan pauzed. He put down the books and tried to gather himself."
-msgstr "Ксантиппа замолчала. Она отложила книги и попыталась собраться с мыслями."
+msgstr "Ксантиппа замолчал. Он отложил книги и попытался собраться с мыслями."
 
 msgctxt "speaker:Xanthippe"
 msgid "Sarah..."
@@ -209539,7 +209539,7 @@ msgstr "Ты лишь навредишь себе, если пойдёшь ту�
 
 msgctxt "speaker:Narrator"
 msgid "Sarah stared at Xan."
-msgstr "Сара пристально смотрела на Ксан."
+msgstr "Сара пристально смотрела на Ксантиппа."
 
 msgctxt "speaker:Sarah"
 msgid "I'm still a princess. It might not mean much in practice, without a kingdom or an army, but I still owe a duty to my people."
@@ -209547,7 +209547,7 @@ msgstr "Я всё ещё принцесса. На практике это мож
 
 msgctxt "speaker:Narrator"
 msgid "Xan shook his head."
-msgstr "Ксан покачал головой."
+msgstr "Ксантиппа покачал головой."
 
 msgctxt "speaker:Xanthippe"
 msgid "You're not, Sarah. You're on a path to something different now, something greater."
@@ -209559,7 +209559,7 @@ msgstr "Ты не можешь всю жизнь смотреть назад."
 
 msgctxt "speaker:Sarah"
 msgid "Please, Xan, just let me see."
-msgstr "Пожалуйста, Зан, просто дай мне посмотреть."
+msgstr "Пожалуйста, Ксантиппа, просто дай мне посмотреть."
 
 msgctxt "speaker:Narrator"
 msgid "Xan looked around, perhaps hoping for an escape, but then gave in."
@@ -209583,7 +209583,7 @@ msgstr "Ты думаешь, что я так силён, но я всего л�
 
 msgctxt "speaker:Narrator"
 msgid "Xan stormed past her and motioned with his hands for her to keep up."
-msgstr "Ксант промчался мимо неё и жестами призывал её не отставать."
+msgstr "Ксантиппа промчался мимо неё и жестами призывал её не отставать."
 
 msgctxt "speaker:Narrator"
 msgid "In only a moment, Sarah found herself standing before a door that had never been where it now was."
@@ -209599,7 +209599,7 @@ msgstr "Следуй за мной."
 
 msgctxt "speaker:Narrator"
 msgid "Xan grabbed her hand, opened the door, and together the two stepped through."
-msgstr "Ксан схватила её за руку, открыла дверь, и они вместе шагнули внутрь."
+msgstr "Ксантиппа схватила её за руку, открыла дверь, и они вместе шагнули внутрь."
 
 msgctxt "speaker:Narrator"
 msgid "It was night."
@@ -209643,7 +209643,7 @@ msgstr "Тогда почему магов так редко упоминают 
 
 msgctxt "speaker:Narrator"
 msgid "Xan chuckled."
-msgstr "Ксан усмехнулась."
+msgstr "Ксантиппа усмехнулась."
 
 msgctxt "speaker:Xanthippe"
 msgid "Perceptive. Putting your education to good use I see."
@@ -209675,7 +209675,7 @@ msgstr "Она подошла к окну и выглянула наружу —
 
 msgctxt "speaker:Narrator"
 msgid "Peering out from the window, Sarah saw the horrors that Xan had hoped to spare her."
-msgstr "Заглянув в окно, Сара увидела те ужасы, которых Зант так хотела от неё скрыть."
+msgstr "Заглянув в окно, Сара увидела те ужасы, которых Ксантиппа так хотела от неё скрыть."
 
 msgctxt "speaker:Narrator"
 msgid "The house was situated near the city square, dead in the center of the capital. It gave Sarah a good vantage point."
@@ -209747,7 +209747,7 @@ msgstr "Нам нужно ей помочь."
 
 msgctxt "speaker:Narrator"
 msgid "Xan had joined Sarah near the window and watched the same horror play out."
-msgstr "Зантиппа присоединилась к Саре у окна и наблюдала за тем же ужасом."
+msgstr "Ксантиппа присоединилась к Саре у окна и наблюдала за тем же ужасом."
 
 msgctxt "speaker:Xanthippe"
 msgid "Horrid, the things humans to do one another."
@@ -209759,7 +209759,7 @@ msgstr "Но он не сделал ни одного движения, кото
 
 msgctxt "speaker:Sarah"
 msgid "Xan, you need to do something. You can save her!"
-msgstr "Зан, ты должен что-то сделать. Ты же можешь её спасти!"
+msgstr "Ксантиппа, ты должен что-то сделать. Ты же можешь её спасти!"
 
 msgctxt "speaker:Xanthippe"
 msgid "Save her? What do you suggest I do, step out and snap my fingers, turn him to ash?"
@@ -209787,7 +209787,7 @@ msgstr "Тогда убьёшь их всех! Не говори мне, что 
 
 msgctxt "speaker:Narrator"
 msgid "Xan rubbed his temples."
-msgstr "Ксан потер виски."
+msgstr "Ксантиппа потер виски."
 
 msgctxt "speaker:Xanthippe"
 msgid "Think, Sarah. Suppose I survive the square, then what? They sound the alarm and soon the entire city garrison will descend on me."
@@ -209823,7 +209823,7 @@ msgstr "Я прожил долгую жизнь, Сара. Я видел, как
 
 msgctxt "speaker:Narrator"
 msgid "Xan waved his hand at the view."
-msgstr "Ксант махнул рукой на пейзаж."
+msgstr "Ксантиппа махнул рукой на пейзаж."
 
 msgctxt "speaker:Xanthippe"
 msgid "Every tragedy you see here has played out countless times before, and it will again. It's just human nature."
@@ -209859,7 +209859,7 @@ msgstr "Если ты этого не усвоишь, то выгорите. Т�
 
 msgctxt "speaker:Narrator"
 msgid "Xan seized her by the shoulders."
-msgstr "Ксан схватила её за плечи."
+msgstr "Ксантиппа схватила её за плечи."
 
 msgctxt "speaker:Xanthippe"
 msgid "We operate on the scope of the whole world, Sarah. We measure not the years but the centuries. Our duty is towards the whole of the human race."
@@ -209899,7 +209899,7 @@ msgstr "Но у Сары не было выбора."
 
 msgctxt "speaker:Narrator"
 msgid "Xan would not intercede, this she now knew, and she wasn't yet powerful enough to do anything."
-msgstr "Зан не собиралась вмешиваться — теперь это стало ясно, да и сил у неё пока не хватало, чтобы что-то сделать."
+msgstr "Ксантиппа не собиралась вмешиваться — теперь это стало ясно, да и сил у неё пока не хватало, чтобы что-то сделать."
 
 msgctxt "speaker:Narrator"
 msgid "And so the girl suffered her fate, and Sarah turned her eyes away from it."
@@ -209939,7 +209939,7 @@ msgstr "С тех пор как она снова увидела свою род
 
 msgctxt "speaker:Narrator"
 msgid "Many nights even Xan would retire to bed earlier than her."
-msgstr "Многие ночи даже Зан укладывался спать раньше неё."
+msgstr "Многие ночи даже Ксантиппа укладывался спать раньше неё."
 
 msgctxt "speaker:Narrator"
 msgid "Before, she had engaged with her lessons as if they had simply been classes, the kind she had been taught growing up in Castle Reinmeer."
@@ -210011,7 +210011,7 @@ msgstr "Сара смотрела на это и продолжала навяз
 
 msgctxt "speaker:Narrator"
 msgid "Suddenly, she watched as Xan began to move his hand, performing movements and speaking words she had never seen before."
-msgstr "Внезапно она увидела, как Зан начал двигать рукой, совершая движения и произнося слова, которых она никогда раньше не видела."
+msgstr "Внезапно она увидела, как Ксантиппа начал двигать рукой, совершая движения и произнося слова, которых она никогда раньше не видела."
 
 msgctxt "speaker:Narrator"
 msgid "No sooner did she notice, did the orb's energy dissipate, sparing what was left of the mage's shield."
@@ -210151,7 +210151,7 @@ msgstr "Думаю, мне просто нужно было время, чтоб
 
 msgctxt "speaker:Narrator"
 msgid "Sarah could see Xan studying her. Trying to unravel her inner thoughts."
-msgstr "Сара видела, что Зан пристально её изучает. Пытался разгадать её внутренние мысли."
+msgstr "Сара видела, что Ксантиппа пристально её изучает. Пытался разгадать её внутренние мысли."
 
 msgctxt "speaker:Narrator"
 msgid "Could he see, she wondered, what was in her mind?"
@@ -210319,7 +210319,7 @@ msgstr "Это ужасно. Так жить невозможно."
 
 msgctxt "speaker:Narrator"
 msgid "Xan waved his hand as if to dismiss her."
-msgstr "Ксант махнул рукой, словно пытаясь отмахнуться от неё."
+msgstr "Ксантиппа махнул рукой, словно пытаясь отмахнуться от неё."
 
 msgctxt "speaker:Xanthippe"
 msgid "You'll learn to appreciate it."
@@ -210407,7 +210407,7 @@ msgstr "Я не прошу стать твоей подругой. Я лишь �
 
 msgctxt "speaker:Narrator"
 msgid "Xan rapped his knuckles across the desk."
-msgstr "Ксан стукнул костяшками пальцев по столу."
+msgstr "Ксантиппа стукнул костяшками пальцев по столу."
 
 msgctxt "speaker:Xanthippe"
 msgid "You're right, it's not."
@@ -210443,7 +210443,7 @@ msgstr "Будущее, в котором каждая душа — будь т�
 
 msgctxt "speaker:Narrator"
 msgid "Sarah listened intently as Xan spoke."
-msgstr "Это звучит как фантасмагория."
+msgstr "Сара внимательно слушала, когда говорил Ксантиппа."
 
 msgctxt "speaker:Sarah"
 msgid "It sounds like a fantasy."
@@ -210567,7 +210567,7 @@ msgstr "Она успела увидеть места и встретить лю
 
 msgctxt "speaker:Narrator"
 msgid "With every passing year, it surprised Sarah that Xan still seemed so distant to her. So much of the mage was still a mystery."
-msgstr "С каждым годом Сара всё больше удивлялась тому, насколько далёким ей всё ещё казался Зан. Огромная часть его сущности оставалась для неё тайной."
+msgstr "С каждым годом Сара всё больше удивлялась тому, насколько далёким ей всё ещё казался Ксантиппа. Огромная часть его сущности оставалась для неё тайной."
 
 msgctxt "speaker:Narrator"
 msgid "He allowed her to come with him on his travels, and she helped him do his bidding, but Sarah only ever saw fragments of a design."
@@ -210579,11 +210579,11 @@ msgstr "Были даны обещания, торговали влиянием,
 
 msgctxt "speaker:Narrator"
 msgid "Sarah could see they were working towards something, yet she did not know what, nor did Xan ever tell her much of it."
-msgstr "Сара видела, что они работали над чем-то, но не знала, что именно, и Зан никогда не рассказывал ей об этом много."
+msgstr "Сара видела, что они работали над чем-то, но не знала, что именно, и Ксантиппа никогда не рассказывал ей об этом много."
 
 msgctxt "speaker:Narrator"
 msgid "There was a loneliness in that house, made worse by how Xan kept her at a distance."
-msgstr "В том доме царило одиночество, которое ещё больше усугублялось тем, как Зан держал её на расстоянии."
+msgstr "В том доме царило одиночество, которое ещё больше усугублялось тем, как Ксантиппа держал её на расстоянии."
 
 msgctxt "speaker:Narrator"
 msgid "Perhaps it was this fact that drove Sarah into the arms of the spirit."
@@ -210663,7 +210663,7 @@ msgstr "В отчаянии Шах пытался найти любого пот
 
 msgctxt "speaker:Narrator"
 msgid "That was, until Xan told Sarah that they were going to offer the city their protection."
-msgstr "Так было до тех пор, пока Зан не сказал Саре, что они собираются предложить городу свою защиту."
+msgstr "Так было до тех пор, пока Ксантиппа не сказал Саре, что они собираются предложить городу свою защиту."
 
 msgctxt "speaker:Narrator"
 msgid "It was not unheard of for mages to step unto a battlefield, but Sarah could not help wonder why this battle was worth their intervention."
@@ -210675,7 +210675,7 @@ msgstr "Я сомневаюсь, что они смогут продержать
 
 msgctxt "speaker:Narrator"
 msgid "Xan stood off to the side, his neck craned, seemingly trying to find someone or something."
-msgstr "Ксантиспа стояла в стороне, вытянув шею и словно пытаясь кого-то или что-то найти."
+msgstr "Ксантиппа стоял в стороне, вытянув шею и словно пытаясь кого-то или что-то найти."
 
 msgctxt "speaker:Xanthippe"
 msgid "Maybe."
@@ -210727,7 +210727,7 @@ msgstr "Какая нам разница, если он рухнет из-за �
 
 msgctxt "speaker:Narrator"
 msgid "Xan turned his attention to Sarah."
-msgstr "Зант перевёл своё внимание на Сару."
+msgstr "Ксантиппа перевёл своё внимание на Сару."
 
 msgctxt "speaker:Xanthippe"
 msgid "We don't, not really, but Bagrad and its palace are still home to a hoard of treasures."
@@ -210815,7 +210815,7 @@ msgstr "Ну... на самом деле я даже не знаю, где он�
 
 msgctxt "speaker:Narrator"
 msgid "Sarah was surprised to hear this. Xan was often the person who had all the answers."
-msgstr "Сара была удивлена, услышав это. Ксант часто была той, кто знал все ответы."
+msgstr "Сара была удивлена, услышав это. Ксантиппа часто была той, кто знал все ответы."
 
 msgctxt "speaker:Sarah"
 msgid "You don't know where it is?"
@@ -210895,7 +210895,7 @@ msgstr "Почтенный шах, мы с глубоким почтением �
 
 msgctxt "speaker:Narrator"
 msgid "Xan always struck Sarah as a man of many faces."
-msgstr "Зан всегда казался Саре человеком с множеством масок."
+msgstr "Ксантиппа всегда казался Саре человеком с множеством масок."
 
 msgctxt "speaker:Narrator"
 msgid "At home he was distant and academic, but out in the world he always managed to fit in wherever he was, whether in some back alley or a royal palace."
@@ -210963,7 +210963,7 @@ msgstr "Мне обещали поддержку вашего ордена, а �
 
 msgctxt "speaker:Narrator"
 msgid "Xan raised his hand in protest."
-msgstr "Ксан поднял руку в знак протеста."
+msgstr "Ксантиппа поднял руку в знак протеста."
 
 msgctxt "speaker:Xanthippe"
 msgid "Trust me, Shah Mahda, our order makes right on its promise. Together, the both of us, are each talented mages with years of experience and training."
@@ -211075,7 +211075,7 @@ msgstr "Мой военный совет скоро соберётся, чтоб
 
 msgctxt "speaker:Narrator"
 msgid "Xan bowed low again."
-msgstr "Ксан снова низко поклонилась."
+msgstr "Ксантиппа снова низко поклонилась."
 
 msgctxt "speaker:Xanthippe"
 msgid "It would be a great honour for both of us."
@@ -211131,7 +211131,7 @@ msgstr "Неужели нас двоих хватит, чтобы что-то и
 
 msgctxt "speaker:Narrator"
 msgid "Xan stared into the distance."
-msgstr "Ксант уставилась вдаль."
+msgstr "Ксантиппа уставился вдаль."
 
 msgctxt "speaker:Xanthippe"
 msgid "Maybe, it depends on how the fighting plays out. But it doesn't matter."
@@ -211155,7 +211155,7 @@ msgstr "Верно, так что нам стоит хотя бы попытат
 
 msgctxt "speaker:Narrator"
 msgid "Xan suddenly turned towards Sarah."
-msgstr "Зант внезапно повернулся к Саре."
+msgstr "Ксантиппа внезапно повернулся к Саре."
 
 msgctxt "speaker:Xanthippe"
 msgid "Speaking of that, you need to get friendly with the Shah's daughter."
@@ -211167,7 +211167,7 @@ msgstr "Я сейчас не особо ищу новых друзей."
 
 msgctxt "speaker:Narrator"
 msgid "Xan flashed a pained grin."
-msgstr "Ксан изобразил мучительную улыбку."
+msgstr "Ксантиппа изобразил мучительную улыбку."
 
 msgctxt "speaker:Xanthippe"
 msgid "She's the Shah's daughter. Outside of the Shah himself, there might not be anyone who knows as much about this palace."
@@ -211235,7 +211235,7 @@ msgstr "Да, я буду там через мгновение."
 
 msgctxt "speaker:Narrator"
 msgid "Xan turned to Sarah."
-msgstr "Ксан повернулся к Саре."
+msgstr "Ксантиппа повернулся к Саре."
 
 msgctxt "speaker:Xanthippe"
 msgid "Remember what I told you, go make a friend."
@@ -212139,7 +212139,7 @@ msgstr "И что? Есть ли какие-нибудь слабые места
 
 msgctxt "speaker:Narrator"
 msgid "Xan grunted."
-msgstr "Ксант хмыкнула."
+msgstr "Ксантиппа хмыкнул."
 
 msgctxt "speaker:Xanthippe"
 msgid "The entire city is one giant weak point. It won't be long before the Mythran forces realize that, then their entire army will follow."
@@ -212163,7 +212163,7 @@ msgstr "Даже при том, что все его войска собраны
 
 msgctxt "speaker:Narrator"
 msgid "Sarah listened as Xan painted a bleak picture."
-msgstr "Сара слушала, как Ксант рисовал мрачную картину."
+msgstr "Сара слушала, как Ксантиппа рисовал мрачную картину."
 
 msgctxt "speaker:Sarah"
 msgid "So what then? The city is doomed?"
@@ -212179,7 +212179,7 @@ msgstr "Какие у нас есть варианты?"
 
 msgctxt "speaker:Narrator"
 msgid "Xan paused, seemingly trying to find the right words."
-msgstr "Ксант на мгновение замолчала, словно пытаясь подобрать нужные слова."
+msgstr "Ксантиппа на мгновение замолчал, словно пытаясь подобрать нужные слова."
 
 msgctxt "speaker:Xanthippe"
 msgid "The Bagrad army will cluster near the central gate. If the Mythran army wants to enter the city, they will have to pass through it."
@@ -212219,7 +212219,7 @@ msgstr "Если хотя бы один из них попадёт по тебе
 
 msgctxt "speaker:Narrator"
 msgid "Xan seemed to consider her point, but only for a moment."
-msgstr "Ксан, кажется, обдумала её слова, но лишь на миг."
+msgstr "Ксантиппа, кажется, обдумала её слова, но лишь на миг."
 
 msgctxt "speaker:Xanthippe"
 msgid "Don't worry about me, Sarah. I can take care of myself. I can weave barriers to keep myself safe, and it will only be for a moment."
@@ -212311,7 +212311,7 @@ msgstr "Я всё ещё не думаю, что твоя роль в этом �
 
 msgctxt "speaker:Narrator"
 msgid "Xan put a hand on her shoulder."
-msgstr "Ксан положила руку ей на плечо."
+msgstr "Ксантиппа положила руку ей на плечо."
 
 msgctxt "speaker:Xanthippe"
 msgid "Don't worry about me, I've survived worse. You just make sure to keep yourself safe."
@@ -213339,7 +213339,7 @@ msgstr "Внезапно это место показалось таким уж�
 
 msgctxt "speaker:Narrator"
 msgid "Perhaps she had been too harsh on the girl."
-msgstr "Возможно, он был слишком суров к этой девушке."
+msgstr "Возможно, она была слишком сурова к этой девушке."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah had no desire to get lost in any secret tunnels, certainly not the day before a battle."
@@ -213751,7 +213751,7 @@ msgstr "Кроме неё, здесь не было никого. Каждый �
 
 msgctxt "speaker:Narrator"
 msgid "Xan had met with her shortly at the start of the day."
-msgstr "Ксан встретился с ней в начале дня."
+msgstr "Ксантиппа встретился с ней в начале дня."
 
 msgctxt "speaker:Narrator"
 msgid "They had discussed strategy, he had offered some words of comfort, but in the end there wasn't much else he could offer."
@@ -213839,7 +213839,7 @@ msgstr "Неужели они проиграли битву? Неужели ми
 
 msgctxt "speaker:Narrator"
 msgid "No, it couldn't be. Xan would have come back for her."
-msgstr "Нет, это невозможно. Ксан бы вернулся за ней."
+msgstr "Нет, это невозможно. Ксантиппа бы вернулся за ней."
 
 msgctxt "speaker:Narrator"
 msgid "Unless he died."
@@ -214063,7 +214063,7 @@ msgstr "Девушка, которую она считала своей подр
 
 msgctxt "speaker:Narrator"
 msgid "The thief. The drunkard. The traitor."
-msgstr "Ворка. Пьяница. Предательница."
+msgstr "Воровка. Пьяница. Предательница."
 
 msgctxt "speaker:Sarah"
 msgid "Who do you think you are to question me about anything?"
@@ -214255,7 +214255,7 @@ msgstr "Возможность покончить с чьей-то жизнью 
 
 msgctxt "speaker:Narrator"
 msgid "Sarah began to understand how Xan, having done this for centuries, could have turned so cold."
-msgstr "Сара начала понимать, как Зан, делавший это на протяжении веков, мог стать таким холодным."
+msgstr "Сара начала понимать, как Ксантиппа, делавший это на протяжении веков, мог стать таким холодным."
 
 msgctxt "speaker:Narrator"
 msgid "Would she?"
@@ -214291,7 +214291,7 @@ msgstr "Сара мгновенно принимает боевую стойку
 
 msgctxt "speaker:Narrator"
 msgid "It's Xan."
-msgstr "Это Зан."
+msgstr "Это Ксантиппа."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah watches her mentor stride across the room."
@@ -214351,7 +214351,7 @@ msgstr "Значит, они скоро будут здесь?"
 
 msgctxt "speaker:Narrator"
 msgid "Xan stroked his chin."
-msgstr "Ксан погладил себя по подбородку."
+msgstr "Ксантиппа погладил себя по подбородку."
 
 msgctxt "speaker:Xanthippe"
 msgid "Maybe. The city is like a maze, and the small alleys will keep the Mythran army from moving too fast..."
@@ -214391,7 +214391,7 @@ msgstr "Самайра показала мне. Она провела меня �
 
 msgctxt "speaker:Narrator"
 msgid "Xan began to laugh."
-msgstr "Ксант начала смеяться."
+msgstr "Ксантиппа начала смеяться."
 
 msgctxt "speaker:Xanthippe"
 msgid "Incredible. You really are amazing, Sarah."
@@ -214415,7 +214415,7 @@ msgstr "И как ты предлагаешь это сделать? Мы даж
 
 msgctxt "speaker:Narrator"
 msgid "Xan was quiet for a moment, before resuming."
-msgstr "Ксан на мгновение замолчала, прежде чем продолжить."
+msgstr "Ксантиппа на мгновение замолчала, прежде чем продолжить."
 
 msgctxt "speaker:Xanthippe"
 msgid "You're right. It's somewhere in the tunnels that run under the palace, but I don't know much more than that."
@@ -214511,7 +214511,7 @@ msgstr "Я знал, что был дураком, доверившись вам
 
 msgctxt "speaker:Narrator"
 msgid "Xan looked at Sarah, before fixing his gaze back on the Shah."
-msgstr "Ксантиппа посмотрела на Сару, а затем снова устремила взгляд на шаха."
+msgstr "Ксантиппа посмотрел на Сару, а затем снова устремил взгляд на шаха."
 
 msgctxt "speaker:Xanthippe"
 msgid "I inflicted great casualties on the enemy, slowing their advance. My apprentice repelled a sneak attack from a mercenary party."
@@ -214531,7 +214531,7 @@ msgstr "Требуйте всё, что хотите, но от меня нич�
 
 msgctxt "speaker:Narrator"
 msgid "Xan stomped his heel on the ground, shaking the earth. This got them the Shah's attention."
-msgstr "Зант с силой топнул пяткой по земле, заставив её затрястись. Это привлекло внимание шаха."
+msgstr "Ксантиппа с силой топнул пяткой по земле, заставив её затрястись. Это привлекло внимание шаха."
 
 msgctxt "speaker:Xanthippe"
 msgid "Listen to me you fool."
@@ -214591,7 +214591,7 @@ msgstr "А как же её жизнь?"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah and Xan watched the Shah struggle."
-msgstr "Сара и Зан смотрели, как шах боролся. Они видели, с какой мучительной борьбой он справлялся."
+msgstr "Сара и Ксантиппа смотрели, как шах боролся. Они видели, с какой мучительной борьбой он справлялся."
 
 msgctxt "speaker:Shah Mahda"
 msgid "Curse the both of you..."
@@ -214619,11 +214619,11 @@ msgstr "Это я обещаю тебе, Шах."
 
 msgctxt "speaker:Narrator"
 msgid "Xan fished the sheet of paper from the ground and studied it for a moment."
-msgstr "Ксан поднял с земли листок бумаги и некоторое время изучал его."
+msgstr "Ксантиппа поднял с земли листок бумаги и некоторое время изучал его."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah looked to her side and watched Xan study the metal doors that blocked their access to the vault."
-msgstr "Сара посмотрела в сторону и наблюдала, как Ксан изучает металлические двери, преграждающие им доступ к хранилищу."
+msgstr "Сара посмотрела в сторону и наблюдала, как Ксантиппа изучает металлические двери, преграждающие им доступ к хранилищу."
 
 msgctxt "speaker:Sarah"
 msgid "Now what?"
@@ -214683,7 +214683,7 @@ msgstr "Дыра, оставленная их магией, пылала алы�
 
 msgctxt "speaker:Narrator"
 msgid "Xan stepped forward and passed through the opening first. Sarah followed soon after."
-msgstr "Зан шагнул вперёд и первым прошёл через проём. Вслед за ним вскоре последовала Сара."
+msgstr "Ксантиппа шагнул вперёд и первым прошёл через проём. Вслед за ним вскоре последовала Сара."
 
 msgctxt "speaker:Narrator"
 msgid "On the other side, Sarah felt a chill pass over her body."
@@ -214699,7 +214699,7 @@ msgstr "Застой в воздухе словно говорил ей, что 
 
 msgctxt "speaker:Narrator"
 msgid "Xan waved his hand, bringing a light to the vault."
-msgstr "Зан махнул рукой, и свет озарил сводное пространство."
+msgstr "Ксантиппа махнул рукой, и свет озарил сводное пространство."
 
 msgctxt "speaker:Narrator"
 msgid "To Sarah's surprise, the light reached far and deeper into the darkness, but she could not make out the other end, so large was the vault."
@@ -214755,7 +214755,7 @@ msgstr "Хорошо, я пойду налево, а ты — направо."
 
 msgctxt "speaker:Narrator"
 msgid "With that, Xan took off."
-msgstr "С этими словами Ксан ушла."
+msgstr "С этими словами Ксантиппа ушла."
 
 msgctxt "speaker:Narrator"
 msgid "Once, artist and labourers poured their sweat and tears into creating these masterworks, all so they could end up here, forgotten."
@@ -214775,7 +214775,7 @@ msgstr "Старый материал холста легко воспламен
 
 msgctxt "speaker:Narrator"
 msgid "It was as Xan had said a stone that shone with light of crimson, but it was also not quite a gemstone or a ruby."
-msgstr "Это было именно так, как говорил Зан: камень сиял багровым светом, но в то же время он не был ни драгоценным камнем, ни рубином."
+msgstr "Это было именно так, как говорил Ксантиппа: камень сиял багровым светом, но в то же время он не был ни драгоценным камнем, ни рубином."
 
 msgctxt "speaker:Narrator"
 msgid "She tried to remind herself, because the object seemed to almost reach out to her, begging to be seized."
@@ -215107,7 +215107,7 @@ msgstr "Осознание ударило Сару, словно кирпич."
 
 msgctxt "speaker:Narrator"
 msgid "She had known Xan was old. Like all mages, he lived a long life, centuries she had imagined..."
-msgstr "Она знала, что Зан был стар. Как и все маги, он проживал долгую жизнь — столетия, которые она себе представляла..."
+msgstr "Она знала, что Ксантиппа был стар. Как и все маги, он проживал долгую жизнь — столетия, которые она себе представляла..."
 
 msgctxt "speaker:Narrator"
 msgid "But if the spirit's words were true..."
@@ -215179,7 +215179,7 @@ msgstr "И всё же, а что, если дух говорил правду? 
 
 msgctxt "speaker:Narrator"
 msgid "And Xan, he had tricked and lied to her, used her towards his own ends. Was it wrong to betray someone who betrayed her first?"
-msgstr "А Ксан — он обманывал и лгал ей, использовал для собственных целей. Разве было неправильно предать того, кто предал её первым?"
+msgstr "А Ксантиппа — он обманывал и лгал ей, использовал для собственных целей. Разве было неправильно предать того, кто предал её первым?"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah didn't know what to do."
@@ -215191,7 +215191,7 @@ msgstr "Внезапно послышался звук стремительны�
 
 msgctxt "speaker:Narrator"
 msgid "Xan drew close."
-msgstr "Зан подошёл ближе."
+msgstr "Ксантиппа подошёл ближе."
 
 msgctxt "speaker:Razaphel"
 msgid "Remember my words. Hold close the stone and you can break free!"
@@ -215203,7 +215203,7 @@ msgstr "С этими словами дух исчез."
 
 msgctxt "speaker:Narrator"
 msgid "Xan came rushing up from a distance."
-msgstr "Зан подбежал к Саре с большого расстояния."
+msgstr "Ксантиппа подбежал к Саре с большого расстояния."
 
 msgctxt "speaker:Xanthippe"
 msgid "Sarah!"
@@ -215227,7 +215227,7 @@ msgstr "Всё в порядке, просто не приближайся к н
 
 msgctxt "speaker:Narrator"
 msgid "Xan moved up, stepping in between Sarah and the fate stone."
-msgstr "Ксант подошёл ближе, встав между Сарой и Камнем Судьбы."
+msgstr "Ксантиппа подошёл ближе, встав между Сарой и Камнем Судьбы."
 
 msgctxt "speaker:Narrator"
 msgid "Pulling a satin scarf from his pocket, he carefully wrapped the stone without touching it and placed it in his pocket."
@@ -215247,7 +215247,7 @@ msgstr "Я не могу дождаться, когда избавлюсь от 
 
 msgctxt "speaker:Narrator"
 msgid "Xan began to walk away, until Sarah stopped him."
-msgstr "Зант начала уходить, пока Сара её не остановила."
+msgstr "Ксантиппа начал уходить, пока Сара его не остановила."
 
 msgctxt "speaker:Sarah"
 msgid "You gave them your word."
@@ -215279,7 +215279,7 @@ msgstr "Нет!"
 
 msgctxt "speaker:Narrator"
 msgid "Xan seemed shocked by her outburst."
-msgstr "Ксант, казалось, был потрясён её вспышкой."
+msgstr "Ксантиппа, казалось, был потрясён её вспышкой."
 
 msgctxt "speaker:Sarah"
 msgid "We promised them that we would protect them. Even if that only means allowing them to run away, or giving them enough time to safely surrender...we promised!"
@@ -215343,7 +215343,7 @@ msgstr "Обе развернулись и направились к тронн�
 
 msgctxt "speaker:Narrator"
 msgid "Sarah and Xan arrived back at the throne room."
-msgstr "Сара и Ксан вернулись в тронный зал."
+msgstr "Сара и Ксантиппа вернулись в тронный зал."
 
 msgctxt "speaker:Narrator"
 msgid "When they had left, it was empty, but by now the first army units of the Mythran army had begun to swarm in."
@@ -215487,7 +215487,7 @@ msgstr "Нам нужно уходить, пока ещё можем..."
 
 msgctxt "speaker:Sarah"
 msgid "Xan...you can't do that...we promised them..."
-msgstr "Зан... ты не можешь этого сделать... мы ведь им обещали..."
+msgstr "Ксантиппа... ты не можешь этого сделать... мы ведь им обещали..."
 
 msgctxt "speaker:Xanthippe"
 msgid "And they'll be dead soon. What does it matter if we keep a promise to a dead man?"
@@ -215507,7 +215507,7 @@ msgstr "Признай. Мы проиграли — такое иногда сл
 
 msgctxt "speaker:Narrator"
 msgid "Xan began to walk away, but Sarah found herself unable to move."
-msgstr "Её глаза встретились с глазами Самайры."
+msgstr "Ксантиппа начал уходить, но Сара обнаружила, что не может пошевелиться."
 
 msgctxt "speaker:Narrator"
 msgid "Her eyes found those of Samayra."
@@ -215523,7 +215523,7 @@ msgstr "Сара не могла заставить себя последова�
 
 msgctxt "speaker:Narrator"
 msgid "Xan turned around and spoke louder."
-msgstr "Ксан обернулся и заговорил громче."
+msgstr "Ксантиппа обернулся и заговорил громче."
 
 msgctxt "speaker:Xanthippe"
 msgid "Sarah! Come, immediately."
@@ -215571,7 +215571,7 @@ msgstr "Кажется, это всё, что я когда-либо у вас �
 
 msgctxt "speaker:Narrator"
 msgid "Xan turned back to Sarah again."
-msgstr "Зант снова повернулась к Саре."
+msgstr "Ксантиппа снова повернулся к Саре."
 
 msgctxt "speaker:Xanthippe"
 msgid "Sarah, we need to leave, now!"
@@ -215715,7 +215715,7 @@ msgstr "Чёрный, жирный язык вылез из его пасти, �
 
 msgctxt "speaker:Narrator"
 msgid "Were it not for Xan pulling her, Sarah realized she would never have found the courage to move."
-msgstr "Если бы не то, что Зан потянул её за собой, Сара поняла бы: у неё никогда не хватило бы смелости пошевелиться."
+msgstr "Если бы не то, что Ксантиппа потянул её за собой, Сара поняла бы: у неё никогда не хватило бы смелости пошевелиться."
 
 msgctxt "speaker:Narrator"
 msgid "The soldiers, trained and battle-hardened, took up their arms and surrounded the creature, as if it were a thing that could be fought."
@@ -215771,11 +215771,11 @@ msgstr "Человек, который знал, что всё равно убь
 
 msgctxt "speaker:Narrator"
 msgid "Xan and Sarah reached the end of the room."
-msgstr "Армия, некогда ярчайший пример военной дисциплины, полностью рухнула."
+msgstr "Ксан и Сара дошли до конца комнаты."
 
 msgctxt "speaker:Narrator"
 msgid "Xan placed his hand on the wall, and with a concentrated blast of magic, ripped a hole through it."
-msgstr "Ксан положил руку на стену и, сосредоточившись, мощным магическим взрывом проделал в ней дыру."
+msgstr "Ксантиппа положил руку на стену и, сосредоточившись, мощным магическим взрывом проделал в ней дыру."
 
 msgctxt "speaker:Xanthippe"
 msgid "Ok, this will get us out, we need to get to the warp point that takes us back to the house, alright?"
@@ -215903,7 +215903,7 @@ msgstr "Каждый из них молится, чтобы существо и�
 
 msgctxt "speaker:Narrator"
 msgid "They cross the vast throne room, each near exhaustion as they finally get back to the exit that Xan had made."
-msgstr "Они пересекают огромную тронную залу, оба почти на грани истощения, и наконец возвращаются к выходу, который создал Зан."
+msgstr "Они пересекают огромную тронную залу, оба почти на грани истощения, и наконец возвращаются к выходу, который создал Ксантиппа."
 
 msgctxt "speaker:Narrator"
 msgid "They stumble into the hallways of Bagrad palace, for the first time since it began, feeling even a faint sense of safety."
@@ -215967,7 +215967,7 @@ msgstr "Прошло здесь."
 
 msgctxt "speaker:Narrator"
 msgid "Xan leads them through the door, leading through more corridors, and finally, appearing before the waypoint."
-msgstr "Ксан ведёт их через дверь, дальше по коридорам, и наконец они оказываются перед «waypoint»."
+msgstr "Ксантиппа ведёт их через дверь, дальше по коридорам, и наконец они оказываются перед «waypoint»."
 
 msgctxt "speaker:Narrator"
 msgid "The waypoint. The magical portal that connected between Xan's house and the palace. Only when correctly manipulated did it function, otherwise, it was a door like any other."
@@ -215975,7 +215975,7 @@ msgstr "Пункт назначения. Магический портал, со
 
 msgctxt "speaker:Narrator"
 msgid "Xan turned to Sarah and Samayra."
-msgstr "Зан повернулся к Саре и Самайре."
+msgstr "Ксантиппа повернулся к Саре и Самайре."
 
 msgctxt "speaker:Xanthippe"
 msgid "Fine, you saved the girl, but this is as far as it goes. She'll have to take care of herself."
@@ -216015,7 +216015,7 @@ msgstr "Мы поговорим об этом позже, я тебе обеща
 
 msgctxt "speaker:Narrator"
 msgid "Xan waved his hand across the handle of the door, and opened it, revealing the entrance to the house."
-msgstr "Зан провёл рукой по дверной ручке и открыл дверь, обнажив вход в дом."
+msgstr "Ксантиппа провёл рукой по дверной ручке и открыл дверь, обнажив вход в дом."
 
 msgctxt "speaker:Narrator"
 msgid "They stepped through and the door was closed behind them, sealing the exit."
@@ -216047,7 +216047,7 @@ msgstr "Она продолжала говорить успокаивающие 
 
 msgctxt "speaker:Narrator"
 msgid "Xan was pacing back and forth."
-msgstr "Зант ходила туда-сюда."
+msgstr "Ксантиппа ходил туда-сюда."
 
 msgctxt "speaker:Xanthippe"
 msgid "What a disaster this turned out to be..."
@@ -216059,7 +216059,7 @@ msgstr "Ты знаешь, что это была за тварь?"
 
 msgctxt "speaker:Narrator"
 msgid "Xan stopped pacing and looked at her."
-msgstr "Ксан перестал ходить взад-вперёд и посмотрел на неё."
+msgstr "Ксантиппа перестал ходить взад-вперёд и посмотрел на неё."
 
 msgctxt "speaker:Xanthippe"
 msgid "Yes."
@@ -216207,7 +216207,7 @@ msgstr "Сара никогда по-настоящему не забудет о
 
 msgctxt "speaker:Narrator"
 msgid "Together, Sarah and Xan exit into the hallways of Bagrad palace."
-msgstr "Вместе Сара и Зан выходят в коридоры дворца Баград."
+msgstr "Вместе Сара и Ксантиппа выходят в коридоры дворца Баград."
 
 msgctxt "speaker:Narrator"
 msgid "Together, they move down the hall."
@@ -216215,7 +216215,7 @@ msgstr "Вместе они двигаются по коридору."
 
 msgctxt "speaker:Narrator"
 msgid "Xan leads her through the door, leading through more corridors, and finally, appearing before the waypoint."
-msgstr "Зан ведёт её через дверь, проходит ещё несколько коридоров и наконец останавливается перед контрольной точкой."
+msgstr "Ксантиппа ведёт её через дверь, проходит ещё несколько коридоров и наконец останавливается перед контрольной точкой."
 
 msgctxt "speaker:Narrator"
 msgid "With a single step, they breached a distance of a million steps."
@@ -216243,7 +216243,7 @@ msgstr "Я обещала, что буду защищать её... но я та
 
 msgctxt "speaker:Narrator"
 msgid "Xan knelt down next to her, placing one hand on her shoulder."
-msgstr "Ксан опустилась на колени рядом с ней и положила одну руку ей на плечо."
+msgstr "Ксантиппа опустилась на колени рядом с ней и положила одну руку ей на плечо."
 
 msgctxt "speaker:Xanthippe"
 msgid "There was nothing to be done about it, Sarah. You did the right thing."
@@ -216283,7 +216283,7 @@ msgstr "Сара выбралась из постели и пошла в каб�
 
 msgctxt "speaker:Narrator"
 msgid "Arriving in the study, she found Xan already awake, waiting by the window, looking out at the city."
-msgstr "Придя в кабинет, она обнаружила, что Ксан уже проснулась и ждала у окна, глядя на город."
+msgstr "Придя в кабинет, она обнаружила, что Ксантиппа уже проснулась и ждала у окна, глядя на город."
 
 msgctxt "speaker:Xanthippe"
 msgid "You'd never know it by these people that a great civilization ended yesterday."
@@ -216295,7 +216295,7 @@ msgstr "Ты ведь тоже, кажется, не особо заботилс
 
 msgctxt "speaker:Narrator"
 msgid "Xan kept staring out the window."
-msgstr "Зан продолжал смотреть в окно."
+msgstr "Ксантиппа продолжал смотреть в окно."
 
 msgctxt "speaker:Xanthippe"
 msgid "Maybe. But then again, I've seen what it once was. What was left of it when we got there was just a shadow."
@@ -216315,7 +216315,7 @@ msgstr "Бесчисленные мертвецы, город в руинах �
 
 msgctxt "speaker:Narrator"
 msgid "Xan turned around."
-msgstr "Зант обернулся."
+msgstr "Ксантиппа обернулся."
 
 msgctxt "speaker:Xanthippe"
 msgid "Everything we came for, really. So on that front we can't be too upset."
@@ -216323,7 +216323,7 @@ msgstr "Всё, ради чего мы пришли, по сути. Так чт�
 
 msgctxt "speaker:Narrator"
 msgid "Xan waved his hands towards the table."
-msgstr "Зан махнул руками в сторону стола."
+msgstr "Ксантиппа махнул руками в сторону стола."
 
 msgctxt "speaker:Narrator"
 msgid "Resting atop it was the fate stone, still glimmering with that mysteries crimson light."
@@ -216467,7 +216467,7 @@ msgstr "Предать Ксана"
 
 msgctxt "speaker:Narrator"
 msgid "She knew Xan would never change his mind. Nor could she fight him."
-msgstr "Она знала, что Ксан никогда не передумает. И бороться с ним у неё тоже не было сил."
+msgstr "Она знала, что Ксантиппа никогда не передумает. И бороться с ним у неё тоже не было сил."
 
 msgctxt "speaker:Narrator"
 msgid "Not alone, at least."
@@ -216503,7 +216503,7 @@ msgstr "Ты, кажется, расстроена."
 
 msgctxt "speaker:Sarah"
 msgid "Xan just told me he was going to take me to the citadel..."
-msgstr "Ксан только что сказал мне, что собирается отвезти меня в цитадель..."
+msgstr "Ксантиппа только что сказал мне, что собирается отвезти меня в цитадель..."
 
 msgctxt "speaker:Razaphel"
 msgid "I see."
@@ -216803,7 +216803,7 @@ msgstr "Я изучала магию, чтобы стать свободной �
 
 msgctxt "speaker:Narrator"
 msgid "Xan stepped forward into the room."
-msgstr "Зант шагнул в комнату."
+msgstr "Ксантиппа шагнул в комнату."
 
 msgctxt "speaker:Xanthippe"
 msgid "Well then you've made a very big mistake, because so long as you live, you're mine."
@@ -216827,7 +216827,7 @@ msgstr "У тебя нет выбора! Сколько ещё раз мне э�
 
 msgctxt "speaker:Narrator"
 msgid "Xan took another step forward."
-msgstr "Ксант сделала ещё один шаг вперёд."
+msgstr "Ксантиппа сделал ещё один шаг вперёд."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah watched his eyes slide down to the flask."
@@ -216843,7 +216843,7 @@ msgstr "Тогда она увидела, как его глаза расшир�
 
 msgctxt "speaker:Narrator"
 msgid "Xan had realized, but only by a fraction of a second too late, the truth of his situation."
-msgstr "Зан понял правду о своём положении, но лишь на долю секунды слишком поздно."
+msgstr "Ксантиппа понял правду о своём положении, но лишь на долю секунды слишком поздно."
 
 msgctxt "speaker:Narrator"
 msgid "Razaphel leapt out from the flask, it's face warped and distorted, revealing rows and rows of razor sharp teeth."
@@ -216855,7 +216855,7 @@ msgstr "Рот духа со всей силой осадного механиз
 
 msgctxt "speaker:Narrator"
 msgid "Xan screamed out at the injury."
-msgstr "Зан закричал от боли."
+msgstr "Ксантиппа закричал от боли."
 
 msgctxt "speaker:Narrator"
 msgid "But he was fast."
@@ -216871,7 +216871,7 @@ msgstr "Ты, сука!"
 
 msgctxt "speaker:Narrator"
 msgid "Xan raised his remaining hand, sending out a shockwave that slammed Sarah into the wall."
-msgstr "Зант поднял оставшуюся руку, высвободив ударную волну, которая впечатала Сару в стену."
+msgstr "Ксантиппа поднял оставшуюся руку, высвободив ударную волну, которая впечатала Сару в стену."
 
 msgctxt "speaker:Narrator"
 msgid "With the remainder of his power, he began to drive his burning hand into the spirit's body."
@@ -216891,7 +216891,7 @@ msgstr "Сара отползая назад, попыталась встать 
 
 msgctxt "speaker:Narrator"
 msgid "With energy swirling around her arms, she gatherd up her own magical fire, and began to unleash on Xan."
-msgstr "Окружив руки магической энергией, она собрала свой собственный огненный поток и начала обрушивать его на Ксан."
+msgstr "Окружив руки магической энергией, она собрала свой собственный огненный поток и начала обрушивать его на Ксантиппа."
 
 msgctxt "speaker:Narrator"
 msgid "Even with one hand, she offered little challenge to the mage."
@@ -216979,7 +216979,7 @@ msgstr "Вся голова Зана исчезла, растворившись 
 
 msgctxt "speaker:Narrator"
 msgid "She watched as Xan tried to drive the spirit away, flailing his remaining arm with burning magic."
-msgstr "Она наблюдала, как Ксан пытался отогнать духа, размахивая оставшейся рукой и выпуская из неё пылающую магию."
+msgstr "Она наблюдала, как Ксантиппа пытался отогнать духа, размахивая оставшейся рукой и выпуская из неё пылающую магию."
 
 msgctxt "speaker:Narrator"
 msgid "But the spirit could tolerate the pain, because it knew victory was near."
@@ -217683,7 +217683,7 @@ msgstr "В первый год Сара посвятила значительн�
 
 msgctxt "speaker:Narrator"
 msgid "Only when Xan had told her to give up on it, did she finally relent and accept that the house was beyond her ability to grasp."
-msgstr "Только когда Зан сказал ей бросить эту затею, она наконец-то смирилась и признала, что дом был за пределами её понимания."
+msgstr "Только когда Ксантиппа сказал ей бросить эту затею, она наконец-то смирилась и признала, что дом был за пределами её понимания."
 
 msgctxt "speaker:Narrator"
 msgid "Still, on occasion, she could not resist pondering the mystery."
@@ -217771,7 +217771,7 @@ msgstr "Он знал, что ты испытываешь ко мне симпа
 
 msgctxt "speaker:Sarah"
 msgid "interrogations."
-msgstr "Откуда ты знала об этом месте?"
+msgstr "Допросы."
 
 msgctxt "speaker:Razaphel"
 msgid "Tortures, to be more exact."
@@ -217887,7 +217887,7 @@ msgstr "Сара держала её в руке и подняла взгляд 
 
 msgctxt "speaker:Sarah"
 msgid "Do you have any idea what Xan was working on in here?"
-msgstr "Ты хоть представляешь, над чем здесь работал Зан?"
+msgstr "Ты хоть представляешь, над чем здесь работал Ксантиппа?"
 
 msgctxt "speaker:Razaphel"
 msgid "Nothing I could ever be sure of. Whenever he brought me here, it was he who was asking me the questions."
@@ -218295,7 +218295,7 @@ msgstr "Я знала, что это не обычный дом — я дога�
 
 msgctxt "speaker:Sarah"
 msgid "That it was Xan who was doing it."
-msgstr "Это был Ксан."
+msgstr "Это был Ксантиппа."
 
 msgctxt "speaker:Narrator"
 msgid "The spirit flinched at the mention of the mage's name."
@@ -218467,7 +218467,7 @@ msgstr "И, как можно догадаться, существо с радо
 
 msgctxt "speaker:Sarah"
 msgid "And Xan was his master?"
-msgstr "И Ксан был его хозяином?"
+msgstr "И Ксантиппа был его хозяином?"
 
 msgctxt "speaker:Razaphel"
 msgid "He was the most powerful thing in this house, and so the creature bend itself to his mercy."
@@ -218499,7 +218499,7 @@ msgstr "Полагаю, именно поэтому ты и смогла вне�
 
 msgctxt "speaker:Razaphel"
 msgid "Before, the house hid the room because its master did not want you to find it."
-msgstr "Раньше дом прятал эту комнату, потому что её хозяин не хотел, чтобы ты её нашла."
+msgstr "Раньше дом прятал эту комнату, потому что его хозяин не хотел, чтобы ты её нашла."
 
 msgctxt "speaker:Razaphel"
 msgid "Then, after the mage was gone, the house knew you were searching for something, and it offered it to you."
@@ -219591,7 +219591,7 @@ msgstr "На мгновение Сара убедила себя, что это�
 
 msgctxt "menu"
 msgid "Investigate the sound"
-msgstr "Пренебреги этим, это ничего не значит"
+msgstr "Прочувствуй звук"
 
 msgctxt "menu"
 msgid "Let it go, it's nothing"
@@ -220923,7 +220923,7 @@ msgstr "Удовольствие достигло своего пика, и Са
 
 msgctxt "speaker:Narrator"
 msgid "Every muscle contorted, twisting in sickening pleasure."
-msgstr "Каждый мышца исказился, скручиваясь в тошнотворном наслаждении."
+msgstr "Каждая мышца исказилась, скручиваясь в тошнотворном наслаждении."
 
 msgctxt "speaker:Narrator"
 msgid "And she cried out, cried out his name, cried out nearing to madness."
@@ -221239,7 +221239,7 @@ msgstr "И тут была ещё и книга."
 
 msgctxt "speaker:Narrator"
 msgid "The book Razaphel claimed was the foundation of the order of mages that Xan had belonged to, but of which Sarah knew frighteningly little."
-msgstr "Книга, которую Разафель называл основой ордена магов, к которому принадлежал Зан, но о которой Сара знала пугающе мало."
+msgstr "Книга, которую Разафель называл основой ордена магов, к которому принадлежал Ксантиппа, но о которой Сара знала пугающе мало."
 
 msgctxt "speaker:Narrator"
 msgid "If she had listened to him and gone to the citadel, she no doubt would know more."
@@ -221383,7 +221383,7 @@ msgstr "Центральная библиотека?"
 
 msgctxt "speaker:Razaphel"
 msgid "Yes. I suspect Xan kept you from that room as well, but it is quite easy to find should you be willing enough to find it."
-msgstr "Да. Я подозреваю, что Ксан и от той комнаты тебя удерживал, но найти её довольно просто — лишь бы ты захотела."
+msgstr "Да. Я подозреваю, что Ксантиппа и от той комнаты тебя удерживал, но найти её довольно просто — лишь бы ты захотела."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah stood up from behind the desk."
@@ -221483,7 +221483,7 @@ msgstr "Она положила руку на ручку, толкнула дв�
 
 msgctxt "speaker:Narrator"
 msgid "Sarah had come across many unnatural things since she had begun her studies under Xan."
-msgstr "К тому времени Сара уже поняла, что мало что в этом доме имело смысл."
+msgstr "Сара с тех пор, как начала свои исследования под руководством Ксана, видела много сверхъестественного."
 
 msgctxt "speaker:Narrator"
 msgid "Witnessing so many things that staggered the mind, over time, Sarah felt herself grow numb to them."
@@ -221955,7 +221955,7 @@ msgstr "В этот момент Сара приняла решение."
 
 msgctxt "speaker:Narrator"
 msgid "She wanted to know more about the order of mages that Xan had belonged to, if only to know how she could keep herself safe."
-msgstr "Она хотела узнать больше об ордене магов, в котором состоял Зан, хотя бы для того, чтобы понять, как защитить себя."
+msgstr "Она хотела узнать больше об ордене магов, в котором состоял Ксантиппа, хотя бы для того, чтобы понять, как защитить себя."
 
 msgctxt "speaker:Narrator"
 msgid "To achieve that, she'd need to study. To learn enough so she could learn more still."
@@ -222639,7 +222639,7 @@ msgstr "Сара уже бывала на месте Самайры."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah knew how it felt."
-msgstr "Сара произнесла эти слова, почти умоляя."
+msgstr "Сара знала, каково это."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah spoke the words half begging."
@@ -226619,7 +226619,7 @@ msgstr "Ты знаешь, как мой род появился в вашем �
 
 msgctxt "speaker:Narrator"
 msgid "Sarah did know. Xan had told her a long time ago."
-msgstr "Сара знала. Зан рассказал ей об этом давно."
+msgstr "Сара знала. Ксантиппа рассказал ей об этом давно."
 
 msgctxt "speaker:Narrator"
 msgid "An arrogant Empress. A failed ritual. Worlds colliding."
@@ -228603,7 +228603,7 @@ msgstr "Твой дом?"
 
 msgctxt "speaker:Metis"
 msgid "Has Xan moved out?"
-msgstr "Ксан уже уехал?"
+msgstr "Ксантиппа уже уехал?"
 
 msgctxt "speaker:Narrator"
 msgid "Instantly, Sarah felt a nervousness grow inside of her."
@@ -228691,7 +228691,7 @@ msgstr "Он знал Ксана по имени. Знал и местополо
 
 msgctxt "speaker:Sarah"
 msgid "Well, Xan is currently away."
-msgstr "Ну, Зан сейчас в отъезде."
+msgstr "Ну, Ксантиппа сейчас в отъезде."
 
 msgctxt "speaker:Narrator"
 msgid "Metis shrugged."
@@ -229239,7 +229239,7 @@ msgstr "Я могу подождать ещё несколько часов."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah shrugged, pretending to be casual."
-msgstr "Сара вздохнула. Этот человек не уходил."
+msgstr "Сара пожала плечами, изображая непринуждённость."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah sighed. The man wasn't leaving."
@@ -229259,7 +229259,7 @@ msgstr "Самайра всё ещё спала рядом с ней."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah had come to know her as a surprisingly heavy sleeper."
-msgstr "Сара привыкла к тому, что он спал на удивление крепко."
+msgstr "Сара привыкла к тому, что она спала на удивление крепко."
 
 msgctxt "speaker:Narrator"
 msgid "She decided to get up out of bed and let Samayra sleep."
@@ -229335,7 +229335,7 @@ msgstr "Ничего страшного, мы просто... у нас не т�
 
 msgctxt "speaker:Metis"
 msgid "Yeah...Xan can be that way. I think he was more made to be alone. I guess that explains why he so rarely takes on new students."
-msgstr "Да... Ксан может таким и быть. Думаю, ему больше подходит жизнь в одиночестве. Наверное, поэтому он так редко берёт новых учеников."
+msgstr "Да... Ксантиппа может таким и быть. Думаю, ему больше подходит жизнь в одиночестве. Наверное, поэтому он так редко берёт новых учеников."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah frowned and gestured at his feet."
@@ -229379,7 +229379,7 @@ msgstr "Затем он рассмеялся."
 
 msgctxt "speaker:Metis"
 msgid "No, I guess Xan wouldn't be the type to talk about that. Ever so private."
-msgstr "Нет, полагаю, Зан не из тех, кто стал бы говорить об этом. Он уж слишком приватный."
+msgstr "Нет, полагаю, Ксантиппа не из тех, кто стал бы говорить об этом. Он уж слишком приватный."
 
 msgctxt "speaker:Sarah"
 msgid "He didn't really tell me much about the order at all, really."
@@ -229403,7 +229403,7 @@ msgstr "Ей нужно было быть осторожной. Не слишк�
 
 msgctxt "speaker:Sarah"
 msgid "Only if you feel like telling me, I'm sure Xan will get around to it in time, when I'm ready."
-msgstr "Только если тебе захочется мне рассказать. Уверена, Ксан со временем до этого доберётся, когда я буду готова."
+msgstr "Только если тебе захочется мне рассказать. Уверена, Ксантиппа со временем до этого доберётся, когда я буду готова."
 
 msgctxt "speaker:Metis"
 msgid "When you're ready, ooh sure."
@@ -229415,7 +229415,7 @@ msgstr "Что это должно означать?"
 
 msgctxt "speaker:Metis"
 msgid "Well, let's say there is a good reason Xan might not have mentioned me. We didn't really end on a good note."
-msgstr "Ну, скажем так: есть веская причина, по которой Ксан, возможно, и не упомянул меня. Мы ведь не слишком-то хорошо расстались."
+msgstr "Ну, скажем так: есть веская причина, по которой Ксантиппа, возможно, и не упомянул меня. Мы ведь не слишком-то хорошо расстались."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah continued preparing her breakfast, hoping to appear disintrested."
@@ -229427,7 +229427,7 @@ msgstr "Ох. А почему так?"
 
 msgctxt "speaker:Metis"
 msgid "Well, like you said. Xan likes to decide the tempo. Decide when you're ready. When you're not."
-msgstr "Ну, как ты и сказала. Зан любит сам определять темп. Решать, когда ты готова, а когда нет."
+msgstr "Ну, как ты и сказала. Ксантиппа любит сам определять темп. Решать, когда ты готова, а когда нет."
 
 msgctxt "speaker:Metis"
 msgid "For a while I was studying under him and that worked fine. But after several years, I told him I wanted to run, not walk."
@@ -229439,7 +229439,7 @@ msgstr "Метис ткнул вилкой в кусок колбасы — жи
 
 msgctxt "speaker:Metis"
 msgid "But Xan was always pushing back. So eventually, I said I was going to leave and continue my studies on my own."
-msgstr "Но Ксан всегда сопротивлялся. Поэтому в конце концов я сказал ему, что уйду и буду продолжать обучение самостоятельно."
+msgstr "Но Ксантиппа всегда сопротивлялся. Поэтому в конце концов я сказал ему, что уйду и буду продолжать обучение самостоятельно."
 
 msgctxt "speaker:Metis"
 msgid "He wasn't a big fan of that."
@@ -229555,7 +229555,7 @@ msgstr "Надеюсь, я не буду просить слишком мног�
 
 msgctxt "speaker:Metis"
 msgid "I can see if Xan comes home."
-msgstr "Я могу понять, если Зан вернётся домой."
+msgstr "Я могу понять, если Ксантиппа вернётся домой."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah kept his eyes. She wasn't sure what she saw in them. Did he know anything. Was he genuinely wondering?"
@@ -229599,7 +229599,7 @@ msgstr "Я не совсем на уровне Зана, но я изучил н
 
 msgctxt "speaker:Metis"
 msgid "I know Xan can get stuck on the basics. Floating, fire, maybe teleporting. All a bit mundane after a while."
-msgstr "Я знаю, что Ксан может застрять на основах — полёте, огне, возможно, телепортации. Со временем всё это становится довольно обыденным."
+msgstr "Я знаю, что Ксантиппа может застрять на основах — полёте, огне, возможно, телепортации. Со временем всё это становится довольно обыденным."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah eyed him."
@@ -229651,7 +229651,7 @@ msgstr "К тому же у неё всегда была естественна�
 
 msgctxt "speaker:Narrator"
 msgid "Transmogrification was the art of transforming the body. Xan had warned her of the risks and always told her to stay away from such studies."
-msgstr "Трансмодификация была искусством преобразования тела. Ксан предупреждал её об опасностях и всегда говорил ей держаться подальше от подобных исследований."
+msgstr "Трансмодификация была искусством преобразования тела. Ксантиппа предупреждал её об опасностях и всегда говорил ей держаться подальше от подобных исследований."
 
 msgctxt "speaker:Narrator"
 msgid "Lastly, Daemonology was a field Sarah was almost entirely unfamiliar with."
@@ -229659,7 +229659,7 @@ msgstr "Наконец, Демонология была областью, с к�
 
 msgctxt "speaker:Narrator"
 msgid "Xan had only spoken of it on a few occasions, always dismissive."
-msgstr "Зан говорил об этом лишь изредка, и всегда с пренебрежением."
+msgstr "Ксантиппа говорил об этом лишь изредка, и всегда с пренебрежением."
 
 msgctxt "menu"
 msgid "Study Botany"
@@ -229723,11 +229723,11 @@ msgstr "Трансмогрификация — опасная область, н
 
 msgctxt "speaker:Metis"
 msgid "No wonder Xan never wanted you to learn about it. He was the same with me."
-msgstr "Неудивительно, что Ксан никогда не хотел, чтобы ты об этом узнала. С мной он поступал точно так же."
+msgstr "Неудивительно, что Ксантиппа никогда не хотел, чтобы ты об этом узнала. С мной он поступал точно так же."
 
 msgctxt "speaker:Metis"
 msgid "That's an interesting choice. But I'm not sure that Xan would approve."
-msgstr "Это интересный выбор. Но я не уверен, что Ксан это одобрит."
+msgstr "Это интересный выбор. Но я не уверен, что Ксантиппа это одобрит."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah kept her eyes on him. His body language didn't seem to give much away."
@@ -229851,7 +229851,7 @@ msgstr "Сара смотрела, как девушка снова улыбну
 
 msgctxt "speaker:Narrator"
 msgid "Still, she didn't want to press her too much. Samayra would talk to her if she was ready."
-msgstr "Тем не менее, он не хотел слишком сильно её давить. Самайра заговорила бы с ним, когда сама была бы готова."
+msgstr "Тем не менее, она не хотела слишком сильно её давить. Самайра заговорила бы с ней, когда сама была бы готова."
 
 msgctxt "speaker:Samayra"
 msgid "No!"
@@ -230291,7 +230291,7 @@ msgstr "Еда. Питьё. Дрова для камина."
 
 msgctxt "speaker:Narrator"
 msgid "Fortunately, the city of Lethram had an abundance of everything and money was no real obstacle, given what Xan had left behind."
-msgstr "К счастью, в городе Летрам было всё в изобилии, а деньги не представляли собой настоящей проблемы, учитывая то, что оставил после себя Зан."
+msgstr "К счастью, в городе Летрам было всё в изобилии, а деньги не представляли собой настоящей проблемы, учитывая то, что оставил после себя Ксантиппа."
 
 msgctxt "speaker:Narrator"
 msgid "Every week, Sarah made her way down to the local market and placed her order slip with one of the general merchants."
@@ -232731,7 +232731,7 @@ msgstr "Со временем куча становилась всё больш�
 
 msgctxt "speaker:Narrator"
 msgid "Seeing the pile reminded her of the mess that Xan would usually leave behind."
-msgstr "Увидев эту груду, она вспомнила о беспорядке, который обычно оставлял за собой Зан."
+msgstr "Увидев эту груду, она вспомнила о беспорядке, который обычно оставлял за собой Ксантиппа."
 
 msgctxt "speaker:Narrator"
 msgid "More alike than she might have liked to admit."
@@ -232811,7 +232811,7 @@ msgstr "Сара вошла глубже в комнату."
 
 msgctxt "speaker:Narrator"
 msgid "She hadn't used this room...not since Xan."
-msgstr "Она не пользовалась этой комнатой... не с тех пор, как Зан."
+msgstr "Она не пользовалась этой комнатой... не с тех пор, как Ксантиппа."
 
 msgctxt "speaker:Metis"
 msgid "So, you're ready to get started?"
@@ -233195,7 +233195,7 @@ msgstr "Изменение свойств?"
 
 msgctxt "speaker:Metis"
 msgid "Gosh, Xan really has been keeping you back, hasn't he?"
-msgstr "Боже, Ксан и вправду сильно тебя сдерживал, не так ли?"
+msgstr "Боже, Ксантиппа и вправду сильно тебя сдерживал, не так ли?"
 
 msgctxt "speaker:Metis"
 msgid "Property alterations are the most simply form of transmogrification. Basically, altering certain properties of your body."
@@ -233339,7 +233339,7 @@ msgstr "Эта лёгкость — отклонение от нормы, и с�
 
 msgctxt "speaker:Narrator"
 msgid "Sarah felt her feet touching the ground."
-msgstr "Я понимаю... и это относится ко всем изменениям?"
+msgstr "Сара почувствовала, как её ноги коснулись земли."
 
 msgctxt "speaker:Sarah"
 msgid "I see...and that's true of all changes?"
@@ -233383,7 +233383,7 @@ msgstr "Метис опёрся о край стола."
 
 msgctxt "speaker:Metis"
 msgid "Well...did Xan tell you of the history of our Order? The fall of the ancient empire."
-msgstr "Ну... Ксан рассказывал тебе об истории нашего Ордена? О падении древней империи?"
+msgstr "Ну... Ксантиппа рассказывал тебе об истории нашего Ордена? О падении древней империи?"
 
 msgctxt "speaker:Sarah"
 msgid "He's told enough."
@@ -233443,7 +233443,7 @@ msgstr "Это имеет смысл... кажется."
 
 msgctxt "speaker:Metis"
 msgid "I'm glad you think so. Xan was never as open-minded about it. He always chastised me for my interests in this field."
-msgstr "Я рад, что ты так думаешь. Зан никогда не был таким открытым в этом вопросе. Он всегда отчитывал меня за интерес к этой области."
+msgstr "Я рад, что ты так думаешь. Ксантиппа никогда не был таким открытым в этом вопросе. Он всегда отчитывал меня за интерес к этой области."
 
 msgctxt "speaker:Metis"
 msgid "Speaking of, is that old spirit still drifting about here?"
@@ -233631,7 +233631,7 @@ msgstr "Так как же мне это на самом деле сделать
 
 msgctxt "speaker:Metis"
 msgid "Just like me. I bet Xan gets annoyed at you just the same."
-msgstr "Точно как я. Бьюсь об заклад, Зан тебя точно так же бесит."
+msgstr "Точно как я. Бьюсь об заклад, Ксантиппа тебя точно так же бесит."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah only smiled and nodded."
@@ -235171,7 +235171,7 @@ msgstr "Сара схватила свои вещи и направилась в
 
 msgctxt "speaker:Narrator"
 msgid "She would go to Alaric and check on him. Just to make sure he was safe. That was it."
-msgstr "Она пообещала себе это."
+msgstr "Она собиралась пойти к Аларику и проверить, всё ли с ним в порядке. Просто убедиться, что он в безопасности. Вот и всё."
 
 msgctxt "speaker:Narrator"
 msgid "She promised it to herself."
@@ -235515,7 +235515,7 @@ msgstr "Ты оставил её?"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah had brought him the vase as a gift. Her small attempt to inject even a fraction of life into the otherwise desolate room."
-msgstr "Она сохранила её? "
+msgstr "Сара дарила ему вазу — это была её крошечная попытка привнести хоть немного жизни в эту совершенно унылую комнату."
 
 msgctxt "speaker:Alaric"
 msgid "Yeah, of course. Why? You thought I'd pawn it off first chance I got?"
@@ -235591,7 +235591,7 @@ msgstr "Ты и вправду злишься на меня за то, что я
 
 msgctxt "speaker:Sarah"
 msgid "No, I'm sorry. I was just teasing you. It's really nice that you did that."
-msgstr "Нет, прости. Я просто дразнила тебя. На самом деле очень приятно, что ты это сделал."
+msgstr "Нет, прости. Я просто дразнила тебя. На самом деле очень приятно, что ты это сделала."
 
 msgctxt "speaker:Narrator"
 msgid "She rolled around in the bed and watched Alaric's face."
@@ -235771,7 +235771,7 @@ msgstr "Её взгляд снова упал на цветок — на роз�
 
 msgctxt "speaker:Sarah"
 msgid "Did you really steal that flower?"
-msgstr "Ты и правда украл этот цветок?"
+msgstr "Ты и правда украла этот цветок?"
 
 msgctxt "speaker:Alaric"
 msgid "Looks the same whether I paid for it or not, right?"
@@ -235891,7 +235891,7 @@ msgstr "Но я сам прокладываю себе путь в жизни �
 
 msgctxt "speaker:Narrator"
 msgid "Sarah was surprised by his harsh reaction."
-msgstr "Она просто кивнула."
+msgstr "Сара удивилась его резкой реакции."
 
 msgctxt "speaker:Narrator"
 msgid "She just nodded."
@@ -237303,7 +237303,7 @@ msgstr "У неё за время взросления было много уч�
 
 msgctxt "speaker:Narrator"
 msgid "Xan had been a different kind of teacher. More distant. More hesitant with what he showed her."
-msgstr "Зан же был учителем иного типа. Более отстранённым. Он с большей нерешительностью делился тем, что знал."
+msgstr "Ксантиппа же был учителем иного типа. Более отстранённым. Он с большей нерешительностью делился тем, что знал."
 
 msgctxt "speaker:Narrator"
 msgid "Metis by contrast seemed easy, almost eager to share what he knew."
@@ -237399,7 +237399,7 @@ msgstr "Она тут же почувствовала перемену темп�
 
 msgctxt "speaker:Narrator"
 msgid "She had been here only a few times before, whenever Xan tasked her to run some errands for her."
-msgstr "Она бывала здесь лишь несколько раз прежде — всякий раз, когда Зан поручала ей выполнить какие-нибудь мелкие дела."
+msgstr "Она бывала здесь лишь несколько раз прежде — всякий раз, когда Ксантиппа поручала ей выполнить какие-нибудь мелкие дела."
 
 msgctxt "speaker:Narrator"
 msgid "He had never really taken much time to teach her the art of potions or botany."
@@ -238155,7 +238155,7 @@ msgstr "Неплохо, да?"
 
 msgctxt "speaker:Sarah"
 msgid "Xan never showed me anything like that..."
-msgstr "Ксан никогда не показывал мне ничего подобного..."
+msgstr "Ксантиппа никогда не показывал мне ничего подобного..."
 
 msgctxt "speaker:Metis"
 msgid "Yeah, he's not big on transmogrification."
@@ -238379,7 +238379,7 @@ msgstr "Заставь себя"
 
 msgctxt "speaker:Narrator"
 msgid "Metis was holding her back, same as Xan was."
-msgstr "Он сдерживал её так же, как и Зан."
+msgstr "Он сдерживал её так же, как и Ксантиппа."
 
 msgctxt "speaker:Narrator"
 msgid "He was holding her back because he did not know the extend of her power."
@@ -238527,7 +238527,7 @@ msgstr "Её рука в недоумении схватилась за неё �
 
 msgctxt "speaker:Metis"
 msgid "Are you alright?"
-msgstr "Ты побледнела?"
+msgstr "Ты в порядке?"
 
 msgctxt "speaker:Metis"
 msgid "You look pale?"
@@ -240735,7 +240735,7 @@ msgstr "Сара продолжала гладить существо, кото�
 
 msgctxt "speaker:Metis"
 msgid "Xan is a little different about such things, but I guess you'll have to fight that out with him."
-msgstr "Ксан немного по-другому к таким вещам относится, но, полагаю, тебе придётся это с ним прояснить."
+msgstr "Ксантиппа немного по-другому к таким вещам относится, но, полагаю, тебе придётся это с ним прояснить."
 
 msgctxt "speaker:Metis"
 msgid "Anyway, you take care of all this. I left some more books for you to study up on on the table over there."
@@ -241003,7 +241003,7 @@ msgstr "Он небрежно бросил его на стол."
 
 msgctxt "speaker:Metis"
 msgid "When Xan comes back, can you give him that?"
-msgstr "Когда Зан вернётся, можешь передать ему это?"
+msgstr "Когда Ксантиппа вернётся, можешь передать ему это?"
 
 msgctxt "speaker:Metis"
 msgid "I had hoped to speak with him directly, but now with the ship and all that...it's too much trouble and I'd rather it didn't wait."
@@ -241475,7 +241475,7 @@ msgstr "Сара начала читать."
 
 msgctxt "speaker:Metis"
 msgid "Dear Xan, I write you this letter because I fear that our paths did not cross."
-msgstr "Дорогой Зан, я пишу тебе это письмо, потому что боюсь, что наши пути так и не пересеклись."
+msgstr "Дорогой Ксантиппа, я пишу тебе это письмо, потому что боюсь, что наши пути так и не пересеклись."
 
 msgctxt "speaker:Metis"
 msgid "When you are reading this, I will already be well on my way towards the Isles of Karpath."
@@ -241623,7 +241623,7 @@ msgstr "Там, где императрица слила два мира в од
 
 msgctxt "speaker:Narrator"
 msgid "Xan had told her stories from that place. And if she could believe it, he had even walked that city at its peak."
-msgstr "Ксан рассказывал ей истории из того места. И если она могла в это поверить, то он даже бродил по тому городу на пике его расцвета."
+msgstr "Ксантиппа рассказывал ей истории из того места. И если она могла в это поверить, то он даже бродил по тому городу на пике его расцвета."
 
 msgctxt "speaker:Narrator"
 msgid "And now the mysterious letter, speaking of unexplained phenomena..."
@@ -242383,7 +242383,7 @@ msgstr "Продолжайте защищаться от орков"
 
 msgctxt "speaker:Narrator"
 msgid "Whatever Xan had taught her was just theory."
-msgstr "Всё, чему её научил Зан, было лишь теорией."
+msgstr "Всё, чему её научил Ксантиппа, было лишь теорией."
 
 msgctxt "speaker:Narrator"
 msgid "This was reality. And in the real world, an axe from an orc was a lot more pressing than a goblin."
@@ -244275,7 +244275,7 @@ msgstr "Разве вся причина того, что она оказала�
 
 msgctxt "speaker:Sarah"
 msgid "Saw...sawry..."
-msgstr "Она... видела... криво..."
+msgstr "Прости... про-сти..."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah could barely speak the word properly."
@@ -246071,7 +246071,7 @@ msgstr "Сара сплюнула на землю."
 
 msgctxt "speaker:Narrator"
 msgid "She had given them a proper scare."
-msgstr "Она добряк их напугала."
+msgstr "Она хорошенько их напугала."
 
 msgctxt "speaker:Narrator"
 msgid "They would warn the others that there was a girl in the ruins, not to be messed with."
@@ -246191,7 +246191,7 @@ msgstr "Здесь каждая улица, лестница или площад
 
 msgctxt "speaker:Narrator"
 msgid "Xan had told her the stories."
-msgstr "Ксан уже рассказывал ей эти истории."
+msgstr "Ксантиппа уже рассказывал ей эти истории."
 
 msgctxt "speaker:Narrator"
 msgid "The people who had lived here had been human, no different than her."
@@ -246391,7 +246391,7 @@ msgstr "Она приближалась к сердцу города?"
 
 msgctxt "speaker:Narrator"
 msgid "Xan had shown her a map once, a long time ago."
-msgstr "Ксан когда-то давно показал ей карту."
+msgstr "Ксантиппа когда-то давно показал ей карту."
 
 msgctxt "speaker:Narrator"
 msgid "The shape of the city itself was circular, with all the great roads leading towards the same place."
@@ -246799,7 +246799,7 @@ msgstr "Самайра слегка отодвинула свой спальны
 
 msgctxt "menu"
 msgid "Sleep with Samayra"
-msgstr "Прячься со мной?"
+msgstr "Переспать с Самайрой"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah doubted for a moment."
@@ -246819,7 +246819,7 @@ msgstr "И Сара часто находила голос разума лишь
 
 msgctxt "speaker:Narrator"
 msgid "And she could not deny her attraction to Samayra."
-msgstr "И он не мог отрицать свою привлекательность к Самайре."
+msgstr "И она не могла отрицать своё влечение к Самайре."
 
 msgctxt "speaker:Narrator"
 msgid "The magical wards would have to keep them safe. The girl was worth the risk."
@@ -247579,7 +247579,7 @@ msgstr "Известна? А что именно известно?"
 
 msgctxt "speaker:Hecate"
 msgid "That it's you! Xan had told me so much about you, his new apprentice."
-msgstr "Это же ты! Зан так много рассказывал мне о тебе, своей новой ученице."
+msgstr "Это же ты! Ксантиппа так много рассказывал мне о тебе, своей новой ученице."
 
 msgctxt "speaker:Hecate"
 msgid "But every time I asked to meet her, he'd say not yet. He's always so protective of his charges."
@@ -247795,7 +247795,7 @@ msgstr "Рыцарь лишь закатил глаза."
 
 msgctxt "speaker:Hecate"
 msgid "Look, Sarah, I'm sure that Xan is teaching you well...but I'm one of the most talented Witches of this age."
-msgstr "Слушай, Сара, я уверена, что Зан тебя хорошо учит... но я одна из самых талантливых ведьм этой эпохи."
+msgstr "Слушай, Сара, я уверена, что Ксантиппа тебя хорошо учит... но я одна из самых талантливых ведьм этой эпохи."
 
 msgctxt "speaker:Hecate"
 msgid "There's a reason I took your little barriers apart like they were nothing."
@@ -247871,7 +247871,7 @@ msgstr "Ого!"
 
 msgctxt "speaker:Hecate"
 msgid "Xan sure keeps himself busy, always adding to his collection."
-msgstr "Ксан, конечно, не сидит без дела — он постоянно пополняет свою коллекцию."
+msgstr "Ксантиппа, конечно, не сидит без дела — он постоянно пополняет свою коллекцию."
 
 msgctxt "speaker:Hecate"
 msgid "Honestly, when I heard the news, I thought you were likely dead."
@@ -248391,7 +248391,7 @@ msgstr "Геката рассмеялась."
 
 msgctxt "speaker:Hecate"
 msgid "That's what Xan told you, I bet."
-msgstr "Это же тебе Зан сказал, я уверена."
+msgstr "Это же тебе Ксантиппа сказал, я уверена."
 
 msgctxt "speaker:Narrator"
 msgid "All that she knew about this place had been either from Xan, or from old books."
@@ -248675,7 +248675,7 @@ msgstr "Цитадель — обитель магического ордена.
 
 msgctxt "speaker:Narrator"
 msgid "Xan had said he'd take her there..."
-msgstr "Ксан сказал, что отведёт её туда..."
+msgstr "Ксантиппа сказал, что отведёт её туда..."
 
 msgctxt "speaker:Hecate"
 msgid "As for the general direction, I follow the pulsing energy."
@@ -248687,7 +248687,7 @@ msgstr "Ты изучала это в Цитадели? Зачем?"
 
 msgctxt "speaker:Hecate"
 msgid "Oh, I forgot Xan kept you all to himself."
-msgstr "Ох, я забыла: Зан держал тебя только для себя."
+msgstr "Ох, я забыла: Ксантиппа держал тебя только для себя."
 
 msgctxt "speaker:Hecate"
 msgid "The Order has an obsession with the past. You have nearly as many classes related to history as you do spellcasting."
@@ -249491,7 +249491,7 @@ msgstr "Кровь покрыла большую часть её вещей."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah padded herself down."
-msgstr "Сара прижалась к земле."
+msgstr "Сара ощупала себя."
 
 msgctxt "speaker:Narrator"
 msgid "She was not mortally wounded."
@@ -250327,7 +250327,7 @@ msgstr "А существо?"
 
 msgctxt "speaker:Gabriel"
 msgid "Dead, or currently dying."
-msgstr "Он оказался зажат под обломками камней."
+msgstr "Оно мертво или сейчас умирает."
 
 msgctxt "speaker:Gabriel"
 msgid "It got trapped underneath all the falling rocks."
@@ -251131,7 +251131,7 @@ msgstr "Когда Сара села, она увидела, что Самайр
 
 msgctxt "speaker:Samayra"
 msgid "Where did you go?"
-msgstr "Ты так тихо себя вела..."
+msgstr "Куда ты делась?"
 
 msgctxt "speaker:Samayra"
 msgid "You were so quiet..."
@@ -251503,7 +251503,7 @@ msgstr "Повсюду были знакомые вывески магазино
 
 msgctxt "speaker:Narrator"
 msgid "The early movements of the market, coming to life."
-msgstr "Как и всегда, торговцы рыбой уже привозили свои тележки со свежим уловом прямо с причала."
+msgstr "Ранние движения рынка постепенно оживали."
 
 msgctxt "speaker:Narrator"
 msgid "As always, the fish merchants were bringing in their carts fresh from the dock."
@@ -253131,7 +253131,7 @@ msgstr "Ну, рада, что смогла тебя развлечь."
 
 msgctxt "speaker:Captain Belmont"
 msgid "Yous was always good at entertainin me with your mouth, Blondie."
-msgstr "Ты всегда умела меня развлекать своими словами, блондинка."
+msgstr "Ты всегда умела развлекать меня своим ртом, блондинка."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah let out a surprised laugh."
@@ -253967,7 +253967,7 @@ msgstr "У тебя-то есть задница, блондинка."
 
 msgctxt "speaker:Captain Belmont"
 msgid "No insult intended, I like a girl with a firm ass."
-msgstr "Никакого обиды я не имел в виду: мне нравятся девушки с упругой талией."
+msgstr "Да без обид, но мне нравятся девушки с упругой попой."
 
 msgctxt "speaker:Sarah"
 msgid "Look, I lost, I took my clothes off. Fair is fair."
@@ -254455,7 +254455,7 @@ msgstr "Сара подняла голову, всё ещё ошеломлённ
 
 msgctxt "speaker:Captain Belmont"
 msgid "I was talkin to ya."
-msgstr "Эй, блондинка."
+msgstr "Я же с тобой разговаривал."
 
 msgctxt "speaker:Sarah"
 msgid "I...what?"
@@ -255539,7 +255539,7 @@ msgstr "Она увидела, как воздух вокруг её рук ис
 
 msgctxt "speaker:Narrator"
 msgid "Everything Xan had ever taught her was that individual lives didn't matter. That a mage had to look at the bigger picture."
-msgstr "Всё, чему когда-либо учил её Зан, сводилось к тому, что жизни отдельных людей не имеют значения. Маг должен был видеть общую картину."
+msgstr "Всё, чему когда-либо учил её Ксантиппа, сводилось к тому, что жизни отдельных людей не имеют значения. Маг должен был видеть общую картину."
 
 msgctxt "speaker:Narrator"
 msgid "But that couldn't be true, Sarah thought as the beast advanced on her."
@@ -255551,7 +255551,7 @@ msgstr "Она услышала тихие всхлипы девочки, кот
 
 msgctxt "speaker:Narrator"
 msgid "A force pulled on her that ran deeper than any cold logic that Xan had tried to instil in her."
-msgstr "Сила потянула её за что-то гораздо более глубокое, чем любая холодная логика, которую Зан пытался в ней привить."
+msgstr "Сила потянула её за что-то гораздо более глубокое, чем любая холодная логика, которую Ксантиппа пытался в ней привить."
 
 msgctxt "speaker:Narrator"
 msgid "And she rushed forward."
@@ -255987,7 +255987,7 @@ msgstr "Затем все звери разом устремились к ней
 
 msgctxt "speaker:Narrator"
 msgid "The distance between them gave Sarah plenty of time to prepare."
-msgstr "Расстояние между ними дало Сараме достаточно времени подготовиться."
+msgstr "Расстояние между ними дало Саре достаточно времени подготовиться."
 
 msgctxt "speaker:Narrator"
 msgid "Magical energy roared up from within her chest, surging out into every limb."
@@ -257619,7 +257619,7 @@ msgstr "Вот так-то."
 
 msgctxt "speaker:Narrator"
 msgid "He lifted her up again, only to drop her down even harder."
-msgstr "Он снова поднял её, лишь чтобы обрушить на себя ещё с большей силой."
+msgstr "Он снова поднял её, лишь чтобы обрушить на неё ещё с большей силой."
 
 msgctxt "speaker:Narrator"
 msgid "Harder and faster with each motion, he began to impale her on him, over and over again."
@@ -257967,7 +257967,7 @@ msgstr "Она быстро поцеловала его."
 
 msgctxt "speaker:Alaric"
 msgid "Ugh, fuck you for making me say all that sweet shit."
-msgstr "Тьфу, чёрт возьми, спасибо тебе за то, что заставила меня говорить всю эту сладкую чушь."
+msgstr "Чёрт, заставила же меня говорить всю эту сладкую чушь."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah felt his strong hands, grabbing her waist."
@@ -259983,7 +259983,7 @@ msgstr "Короткий миг спокойствия, прежде чем её
 
 msgctxt "speaker:Narrator"
 msgid "But this had been what Xan had warned her about, years ago."
-msgstr "Но именно об этом и предупреждал её Зан много лет назад."
+msgstr "Но именно об этом и предупреждал её Ксантиппа много лет назад."
 
 msgctxt "speaker:Narrator"
 msgid "What the mages had been tasked with fighting."
@@ -260563,7 +260563,7 @@ msgstr "Здесь давно никто не был."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah had not seen a reason to visit Rahayal before now, and Xan obviously hadn't either. Not since she..."
-msgstr "Сара до этого не видела причин посещать Рахайал, и Зан, очевидно, тоже. Не с тех пор, как она..."
+msgstr "Сара до этого не видела причин посещать Рахайал, и Ксантиппа, очевидно, тоже. Не с тех пор, как она..."
 
 msgctxt "speaker:Narrator"
 msgid "She shook her head, disregarding the thought."
@@ -260575,7 +260575,7 @@ msgstr "Войдя внутрь, она почувствовала, что зд�
 
 msgctxt "speaker:Narrator"
 msgid "Nestled between the buildings around it, the apartment offered the kind of privacy that Xan had valued."
-msgstr "Расположенная между окружающими зданиями, квартира давала именно ту приватность, которую ценил Ксан."
+msgstr "Расположенная между окружающими зданиями, квартира давала именно ту приватность, которую ценил Ксантиппа."
 
 msgctxt "speaker:Narrator"
 msgid "She heard Samayra follow her."
@@ -260643,7 +260643,7 @@ msgstr "Войдя внутрь, Сара увидела небольшую ко
 
 msgctxt "speaker:Narrator"
 msgid "A relic from when Xan had last been here, years ago."
-msgstr "Реликвия со времён, когда Зан был здесь в последний раз — много лет назад."
+msgstr "Реликвия со времён, когда Ксантиппа был здесь в последний раз — много лет назад."
 
 msgctxt "speaker:Narrator"
 msgid "Whatever he had been researching back then, she didn't have a clue."
@@ -261019,7 +261019,7 @@ msgstr "Она никогда раньше не встречала ноктор�
 
 msgctxt "speaker:Narrator"
 msgid "Still, she had heard enough rumors and stories, even Xan warned her about them."
-msgstr "Тем не менее, она уже слышала достаточно слухов и историй; даже Зан предупреждал её о них."
+msgstr "Тем не менее, она уже слышала достаточно слухов и историй; даже Ксантиппа предупреждал её о них."
 
 msgctxt "speaker:Narrator"
 msgid "They worried Xan, because of their longevity, which seemed to function without any use of magic."
@@ -261719,7 +261719,7 @@ msgstr "Откажи ему"
 
 msgctxt "speaker:Sarah"
 msgid "Sorry, but I have a friend inside."
-msgstr "Прости, но у меня внутри есть друг."
+msgstr "Прости, но у меня тут друг внутри."
 
 msgctxt "speaker:Narrator"
 msgid "She sees Alaric frown."
@@ -261971,7 +261971,7 @@ msgstr "Ты ведь уже сталкивалась с этим раньше, 
 
 msgctxt "speaker:Narrator"
 msgid "Sarah offers a small laugh."
-msgstr "Ты и не подозреваешь обо мне ни малейшего."
+msgstr "Сара тихо усмехается."
 
 msgctxt "speaker:Sarah"
 msgid "You don't know the first thing about me."
@@ -263159,7 +263159,7 @@ msgstr "Сара вздыхает, и звуки её вздохов эхом о
 
 msgctxt "speaker:Narrator"
 msgid "When Xan had still been alive, he had done more than teach her magic. He had also shown her the edges of the world."
-msgstr "Когда Зан ещё был жив, он делал для неё гораздо больше, чем просто обучал магии: он также показал ей самые дальние пределы этого мира."
+msgstr "Когда Ксантиппа ещё был жив, он делал для неё гораздо больше, чем просто обучал магии: он также показал ей самые дальние пределы этого мира."
 
 msgctxt "speaker:Narrator"
 msgid "He had always told her that the magic itself was only a small part of their order."
@@ -263603,7 +263603,7 @@ msgstr "Так что спрашивать людей, как они зараб�
 
 msgctxt "speaker:Narrator"
 msgid "Sarah brought the glass to her lips and smiled."
-msgstr "Ох, так ты и есть проблема, да?"
+msgstr "Сара приподнесла бокал к губам и улыбнулась."
 
 msgctxt "speaker:Sarah"
 msgid "Oh, you're trouble, huh?"
@@ -264407,7 +264407,7 @@ msgstr "Ей понадобится вся возможная поддержка
 
 msgctxt "speaker:Narrator"
 msgid "Other than what little Xan had told her."
-msgstr "Кроме того малого, что ей рассказал Зан."
+msgstr "Кроме того малого, что ей рассказал Ксантиппа."
 
 msgctxt "speaker:Narrator"
 msgid "They seemed eager to help, and Sarah knew the power that mages could offer."
@@ -264803,7 +264803,7 @@ msgstr "План?"
 
 msgctxt "speaker:Hecate"
 msgid "Poor you, Xan really did a bad job teaching you."
-msgstr "Бедняжка, Ксан и вправду ужасно тебя научил."
+msgstr "Бедняжка, Ксантиппа и вправду ужасно тебя научил."
 
 msgctxt "speaker:Narrator"
 msgid "She gestured at the man in the white robe with her head."
@@ -265247,7 +265247,7 @@ msgstr "Она увидела, как он посмотрел на неё с о�
 
 msgctxt "speaker:Oryon"
 msgid "Could have what?"
-msgstr "Что мы могли бы сделать?"
+msgstr "Могли бы что?"
 
 msgctxt "speaker:Oryon"
 msgid "Used our magic to sway the course of battle?"
@@ -266355,11 +266355,11 @@ msgstr "Подозреваю, вы правы. Слишком много сер�
 
 msgctxt "speaker:Oryon"
 msgid "Xan warned me about that."
-msgstr "Зан предупреждала меня об этом."
+msgstr "Ксантиппа предупреждала меня об этом."
 
 msgctxt "speaker:Sarah"
 msgid "Xan did...what..."
-msgstr "Зан ведь... что именно он сделал?"
+msgstr "Ксантиппа ведь... что именно он сделал?"
 
 msgctxt "speaker:Oryon"
 msgid "You think he did not inform me of the new student that he took on?"
@@ -266395,7 +266395,7 @@ msgstr "Не волнуйся, это не обвинение, а просто �
 
 msgctxt "speaker:Oryon"
 msgid "And while the loss of the house was regretable, Xan himself knew well enough the fire he played with."
-msgstr "И хотя потеря дома была прискорбна, сам Зан прекрасно осознавал, с каким огнём играл."
+msgstr "И хотя потеря дома была прискорбна, сам Ксантиппа прекрасно осознавал, с каким огнём играл."
 
 msgctxt "speaker:Narrator"
 msgid "But the gathering seemed to carry on as it always did."
@@ -266435,7 +266435,7 @@ msgstr "Одна жизнь, какой бы драгоценной она ни 
 
 msgctxt "speaker:Oryon"
 msgid "And Xan knew the risk he took when he took you on as his apprentice."
-msgstr "И Зан знал риск, на который он пошёл, когда взял тебя в ученицы."
+msgstr "И Ксантиппа знал риск, на который он пошёл, когда взял тебя в ученицы."
 
 msgctxt "speaker:Sarah"
 msgid "You've said that...before..."
@@ -266463,7 +266463,7 @@ msgstr "Хорошо."
 
 msgctxt "speaker:Oryon"
 msgid "Xan was old, much like myself and the other founders, he was alive during the First Empire."
-msgstr "Ксан был стар, почти как я и другие основатели; он жил во времена Первой Империи."
+msgstr "Ксантиппа был стар, почти как я и другие основатели; он жил во времена Первой Империи."
 
 msgctxt "speaker:Oryon"
 msgid "Back then, the Gods of our world still walked in living flesh among us."
@@ -266859,7 +266859,7 @@ msgstr "Сара просто чувствует себя чуточку хуж�
 
 msgctxt "speaker:Hecate"
 msgid "Had a rather dull boring with one of our founders, I imagine."
-msgstr "Да-да, Габриэль, не волнуйся. Саре просто стало чуточку хуже."
+msgstr "Наверное, это было довольно скучно и однообразно с одним из наших основателей."
 
 msgctxt "speaker:Narrator"
 msgid "Gabriel laughed."
@@ -267647,7 +267647,7 @@ msgstr "Она черпала энергию из окружающего про�
 
 msgctxt "speaker:Narrator"
 msgid "All as Xan had once taught her, which by now, was second nature to her."
-msgstr "Всё было именно так, как когда-то научил её Зан, и теперь это стало для неё второй натурой."
+msgstr "Всё было именно так, как когда-то научил её Ксантиппа, и теперь это стало для неё второй натурой."
 
 msgctxt "speaker:Narrator"
 msgid "Magical pale fire rushed out, meeting the first Voidling she saw."
@@ -270015,7 +270015,7 @@ msgstr "И пусть эта метка послужит напоминание�
 
 msgctxt "speaker:Narrator"
 msgid "Sarah felt the world spinning."
-msgstr "Как... как это могло случиться?"
+msgstr "Сара почувствовала, как мир закружился у неё под ногами."
 
 msgctxt "speaker:Sarah"
 msgid "How...how did this happen."
@@ -270283,7 +270283,7 @@ msgstr "Мастер наконец-то отпустил тебя!"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah wondered how the girl could possibly look so happy in a place this depressed."
-msgstr "Сара... Эй, Далия..."
+msgstr "Сара недоумевала, как эта девушка могла выглядеть столь счастливой в столь унылом месте."
 
 msgctxt "speaker:Sarah"
 msgid "I...hey, Dalia..."
@@ -272171,7 +272171,7 @@ msgstr "Да... да, Мастер?"
 
 msgctxt "speaker:Daemon"
 msgid "Sarah here has so rudely refused to do her part."
-msgstr "Так вот, вместо этого всё ложится на тебя."
+msgstr "Значит, вместо неё это придётся сделать тебе."
 
 msgctxt "speaker:Daemon"
 msgid "So it falls on you instead."
@@ -273975,7 +273975,7 @@ msgstr "Но со временем, когда дни перешли в неде
 
 msgctxt "speaker:Narrator"
 msgid "He taught her how her Master desired to be pleased."
-msgstr "Он учил её тому, как его Мастер желал получать удовольствие."
+msgstr "Он учил её тому, как её Мастер желал получать удовольствие."
 
 msgctxt "speaker:Narrator"
 msgid "How she could undress for him. How to pose for him. How to speak."
@@ -276459,7 +276459,7 @@ msgstr "Левый триггер\\nЛевый бампер"
 
 msgctxt "ui"
 msgid "Right Shoulder"
-msgstr "Правый бампер"
+msgstr "Правое плечо"
 
 msgctxt "ui"
 msgid "D-Pad, Sticks"
