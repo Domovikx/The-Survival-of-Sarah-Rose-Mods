@@ -12,19 +12,19 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "The Survival of Sarah Rose is an epic fantasy game. Production on TSSR is still ongoing."
-msgstr ""
+msgstr "『The Survival of Sarah Rose』は壮大なファンタジーゲームです。TSSRの制作はまだ進行中です。"
 
 msgctxt "speaker:Narrator"
 msgid "What you are about to play is a work-in-progress."
-msgstr ""
+msgstr "これからプレイするものは、現在制作中の作品です。"
 
 msgctxt "speaker:Narrator"
 msgid "TSSR takes place in a dark fantasy setting."
-msgstr ""
+msgstr "TSSRはダークファンタジーの設定で行われる。"
 
 msgctxt "speaker:Narrator"
 msgid "The events and stories depicted within, while fictional, may be triggering to some audiences."
-msgstr ""
+msgstr "ここに描かれている出来事や物語はフィクションですが、一部の読者にとっては衝撃的かもしれません。"
 
 msgctxt "speaker-name"
 msgid "Sarah"
@@ -288,59 +288,59 @@ msgstr "ヒュー"
 
 msgctxt "speaker:Narrator"
 msgid "Castle Reinmeer"
-msgstr ""
+msgstr "レインミール城は、ロザンナ王国の中心にそびえ立っている。"
 
 msgctxt "speaker:Narrator"
 msgid "The great castle rests at the heart of the nation of Rosanna."
-msgstr ""
+msgstr "壮大な城はロザンナ王国の中心にそびえ立っている。"
 
 msgctxt "speaker:Narrator"
 msgid "For centuries, it has been the home of the Rose family."
-msgstr ""
+msgstr "何世紀もの間、ここはローズ家の居場所であった。"
 
 msgctxt "speaker:Narrator"
 msgid "Ruling with both wisdom and strength, the Rose family ensured centuries of prosperity for the nation of Rosanna."
-msgstr ""
+msgstr "知恵と力を兼ね備えて統治したローズ家は、国ロザンナに数世紀にわたる繁栄をもたらした。"
 
 msgctxt "speaker:Narrator"
 msgid "But nothing lasts forever and rumors of new dangers have begun to spread."
-msgstr ""
+msgstr "しかし、永遠に続くものなど何もなく、新たな危険の噂が広まり始めている。"
 
 msgctxt "speaker:Narrator"
 msgid "An ambitious warlord to the east threatens war."
-msgstr ""
+msgstr "東方の野心的な戦士が戦争をちらつかせている。"
 
 msgctxt "speaker:Narrator"
 msgid "Something has begun to stir the hearts of all creatures wicked."
-msgstr ""
+msgstr "何かが悪しき者たちの心をかき乱し始めている。"
 
 msgctxt "speaker:Narrator"
 msgid "But perhaps most dangerous of all, enemies are rising from within Rosanna."
-msgstr ""
+msgstr "しかし、おそらく何よりも危険なのは、ロザンナの内部から敵が立ち上がっていることだ。"
 
 msgctxt "speaker:Narrator"
 msgid "Some wear their threats on their sleeves, whilst others hide their intentions behind smiling faces."
-msgstr ""
+msgstr "ある者は脅しを公然と示すが、別の者は微笑む顔の後ろにその意図を隠している。"
 
 msgctxt "speaker:Narrator"
 msgid "The Rose family can feel it in the air..."
-msgstr ""
+msgstr "ローズ家は空気中にそれを感じ取ることができる…"
 
 msgctxt "speaker:Narrator"
 msgid "Danger."
-msgstr ""
+msgstr "危険だ。"
 
 msgctxt "speaker:Narrator"
 msgid "Amidst these many dangers, Sarah Rose, eldest daughter of the Rose clan, must walk her path."
-msgstr ""
+msgstr "数々の危険の中で、ローズ家の長女であるサラ・ローズは、自らの道を歩まなければならない。"
 
 msgctxt "speaker:Narrator"
 msgid "She will need to learn who she can trust, who would seek to betray her, how to keep her nation safe, but above all..."
-msgstr ""
+msgstr "彼女は誰を信じられるのか、誰が自分を裏切ろうとするのか、そしてどうすれば国を守れるのかを学ばなければならない。だが何よりも…"
 
 msgctxt "speaker:Narrator"
 msgid "She must survive."
-msgstr ""
+msgstr "彼女は生き残らなければならない。"
 
 msgctxt "speaker:Narrator"
 msgid "King Orwell has returned from his travels through the provinces of Rosanna."
@@ -368,11 +368,11 @@ msgstr "サラは父親の腕の中に飛び込んだ。"
 
 msgctxt "speaker:King Orwell Rose"
 msgid "Ooh, Sarah, my back! Please daugher, I'm not as young as I was, and you've grown much too big to just be jumping on me."
-msgstr "うわ、サラ、背中！お嬢さん、もう若い頃じゃないんだから、そんなに大きく成長したのに、私の上に乗って遊ぶなんて。"
+msgstr "うわ、サラ、背中！娘よ、もう若い頃じゃないんだから、そんなに大きく成長したのに、私の上に乗って遊ぶなんて。"
 
 msgctxt "speaker:Sarah"
 msgid "You were gone for almost five months! If you thought I wasn't going to hug you, you don't know me at all."
-msgstr "あなたはほぼ 5 ヶ月も居なかったのよ！私があなたを抱きしめたいなんて思っていないなんて、私を何も知らないわ。"
+msgstr "あなたは5ヶ月近くもいなかったのよ！もし私があなたを抱きしめないと思ったなら、私のことを全く分かってないわ。"
 
 msgctxt "speaker:King Orwell Rose"
 msgid "You've grown older but I don't think you've grown up yet."
@@ -660,7 +660,7 @@ msgstr "父がトーマスに本を渡したとき、彼女はいつものよう
 
 msgctxt "speaker:Narrator"
 msgid "She had hoped to read the books on his behalf and give Thomas a summary so he could at least learn something."
-msgstr "本を読む代わりに要約を渡して、少なくとも何かを学んでもらおうと願っていた。"
+msgstr "彼女は彼の代わりに本を読み、要約を伝えて、少なくとも何か学ばせたいと願っていた。"
 
 msgctxt "speaker:Narrator"
 msgid "But Thomas was difficult. It wasn't that he was stupid, or even that he was lazy. If he was, Sarah thought, that would almost be easier."
@@ -924,7 +924,7 @@ msgstr "おい、目覚めなさい。"
 
 msgctxt "speaker:Narrator"
 msgid "Thomas grunts, acknowledging he's awake but hoping to be spared the day's official events."
-msgstr "トーマスがうなずき、目覚めていることを認めたが、その日の公式行事を逃れたいと願っている。"
+msgstr "トマスはうめき声を漏らし、自分が目覚めていることを認めつつも、今日の公式行事を免れたいと願っている。"
 
 msgctxt "speaker:Sarah"
 msgid "Seriously, Thomas, you need to go to your room and get dressed before Dad comes and drags you to the banquet."
@@ -964,7 +964,7 @@ msgstr "サラは母の幽霊が、彼女のあらゆる選択にアドバイス
 
 msgctxt "speaker:Narrator"
 msgid "\"Ooh no, not this one. Try that one\", she would say when Sarah was still young."
-msgstr "「うわっ、ダメだ。こっちのやってみて」そう言っていたのは、サラがまだ小さかった頃のことです"
+msgstr "「あらら、これはだめよ。あれを試してみて」"
 
 msgctxt "speaker:Narrator"
 msgid "Her mother loved to dote on her, and Sarah had loved her doing it."
@@ -1004,15 +1004,15 @@ msgstr "涙は後でいい。"
 
 msgctxt "speaker:Narrator"
 msgid "Save for herself, her bed is empty. She hopes Thomas won't be too upset that she had send him away."
-msgstr "自分以外を除けば、彼女のベッドは空だ。トーマスが自分を追い返したことにあまり悲しまないことを願っている。"
+msgstr "彼女自身を除けば、彼女のベッドは空っぽだった。彼女は、自分がトマスを追い返したことについて、彼があまりにも傷つかないことを願っていた。"
 
 msgctxt "speaker:Narrator"
 msgid "Still, he should have known they were too old for that."
-msgstr "それでも、彼らはもうその年齢ではなかったはずだ。"
+msgstr "それでも、彼なら二人がもうそんな年齢じゃないと分かっていたはずなのに。"
 
 msgctxt "speaker:Narrator"
 msgid "\"Ooh no, not this one, try that one\" she would say when Sarah was still small."
-msgstr "「おっ、ダメだ、これじゃねえ。こっちや」"
+msgstr "「うわあ、だめだ、これは違う。あれを試してみて」——サラがまだ幼かった頃、誰かがそう言っていたものだ。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah shakes her head and pushes away the memory. Composure. Just as father always said."
@@ -1088,7 +1088,7 @@ msgstr "若く痩せた体躯と、肩まで届く長い金髪を持つ青年の
 
 msgctxt "speaker:Narrator"
 msgid "Sarah knew him and wasn't surprised to see him, Marion Achillea, from the Achillea family."
-msgstr "サラは彼を知っており、アキレア家のマリオ・アキレアであることに驚きはしなかった。"
+msgstr "サラは彼のことを知っていたし、彼——アキレア家のマリオン——を見ても驚きはなかった。"
 
 msgctxt "speaker:Narrator"
 msgid "The Achillea family was one of the oldest and most prestigious families of Rosanna. They had fought with Sarah's ancestors in establishing the Rose dynasty. For their efforts, they were well rewarded."
@@ -1124,7 +1124,7 @@ msgstr "サラとトーマスは礼を交わした。"
 
 msgctxt "speaker:Sarah"
 msgid "Good to see you, Marion. I hope your travels went well."
-msgstr "また会えて光栄だ、マリアン。旅は順調だったかな"
+msgstr "お会いできて嬉しいわ、マリオン。あなたの旅が順調だったといいのだけど。"
 
 msgctxt "speaker:Narrator"
 msgid "Marion shrugs."
@@ -1172,7 +1172,7 @@ msgstr "サラは頷いた。"
 
 msgctxt "speaker:Sarah"
 msgid "He can be a bit much, but his family is important, so that makes him important."
-msgstr "少し面倒くさいところもあるけど、家族が大事なのだから、それだけで彼は立派な男だ。"
+msgstr "彼は少々手に負えないところもあるけれど、彼の家族は大切だから、それによって彼も大切な存在になるのよ。"
 
 msgctxt "speaker:Sarah"
 msgid "You should remember to keep him as a friend."
@@ -1184,7 +1184,7 @@ msgstr "王様なら、彼が私の友達になりたいと願うべきではな
 
 msgctxt "speaker:Sarah"
 msgid "You'll only be king when enough people like him agree that you are. A king sits atop a mountain. Only when the base holds, does the peak."
-msgstr "王座は、それを認める者たちが集まるまでには届かない。山頂に君臨するには、まず麓が支えでなければならない。"
+msgstr "あなたが王になれるのは、彼を認める人々が十分な数に達した時だけよ。王というのは山の頂上に座る存在。その麓がしっかり支えてこそ、頂上も成り立つの。"
 
 msgctxt "speaker:Thomas"
 msgid "You sound like Father."
@@ -1240,7 +1240,7 @@ msgstr "兄貴が、困惑した顔で彼女を見つめている。まるで彼
 
 msgctxt "speaker:Narrator"
 msgid "She sees Marion, usually so composed, with a hint of fear in his eyes."
-msgstr "マリオンの目をじっと見て、彼の瞳に浮かぶ微かな恐怖を察する。"
+msgstr "彼女は、いつも落ち着き払っているマリオン（男性）が、目に微かな恐怖を浮かべているのを見た。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah wanders out of the great hall in a haze, ignoring everything around her."
@@ -274236,7 +274236,7 @@ msgstr "遠くへ手を伸ばし、死の世界に堕ちた魔術師。デーモ
 
 msgctxt "ui"
 msgid "Image% d of% d is blocked."
-msgstr "画像%d はブロックされています。"
+msgstr "画像%d/%d はブロックされています。"
 
 msgctxt "ui"
 msgid "The Survival of Sarah Rose"

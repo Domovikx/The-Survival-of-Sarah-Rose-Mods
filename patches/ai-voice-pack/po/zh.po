@@ -12,19 +12,19 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "The Survival of Sarah Rose is an epic fantasy game. Production on TSSR is still ongoing."
-msgstr ""
+msgstr "The Survival of Sarah Rose 是一部史诗奇幻游戏。TSSR 的制作仍在进行中。"
 
 msgctxt "speaker:Narrator"
 msgid "What you are about to play is a work-in-progress."
-msgstr ""
+msgstr "你即将体验的是一款仍在开发中的作品。"
 
 msgctxt "speaker:Narrator"
 msgid "TSSR takes place in a dark fantasy setting."
-msgstr ""
+msgstr "TSSR的故事发生在一个黑暗奇幻的世界中。"
 
 msgctxt "speaker:Narrator"
 msgid "The events and stories depicted within, while fictional, may be triggering to some audiences."
-msgstr ""
+msgstr "其中所描绘的事件与故事虽是虚构的，但对某些观众而言可能具有触发性影响。"
 
 msgctxt "speaker-name"
 msgid "Sarah"
@@ -288,59 +288,59 @@ msgstr "休"
 
 msgctxt "speaker:Narrator"
 msgid "Castle Reinmeer"
-msgstr ""
+msgstr "雷恩米尔城堡矗立在罗萨纳国的中心地带。"
 
 msgctxt "speaker:Narrator"
 msgid "The great castle rests at the heart of the nation of Rosanna."
-msgstr ""
+msgstr "这座宏伟的城堡坐落于罗萨娜王国的心脏地带。"
 
 msgctxt "speaker:Narrator"
 msgid "For centuries, it has been the home of the Rose family."
-msgstr ""
+msgstr "几个世纪以来，这里都是罗斯家族的家园。"
 
 msgctxt "speaker:Narrator"
 msgid "Ruling with both wisdom and strength, the Rose family ensured centuries of prosperity for the nation of Rosanna."
-msgstr ""
+msgstr "罗斯家族以智慧与力量并济进行统治，确保了罗桑纳王国数百年的繁荣昌盛。"
 
 msgctxt "speaker:Narrator"
 msgid "But nothing lasts forever and rumors of new dangers have begun to spread."
-msgstr ""
+msgstr "但没有什么是永恒的，关于新危险的传闻已经开始流传。"
 
 msgctxt "speaker:Narrator"
 msgid "An ambitious warlord to the east threatens war."
-msgstr ""
+msgstr "东方一位野心勃勃的军阀正在威胁要发动战争。"
 
 msgctxt "speaker:Narrator"
 msgid "Something has begun to stir the hearts of all creatures wicked."
-msgstr ""
+msgstr "有什么东西开始在所有邪恶生灵的内心之中悄然搅动。"
 
 msgctxt "speaker:Narrator"
 msgid "But perhaps most dangerous of all, enemies are rising from within Rosanna."
-msgstr ""
+msgstr "但或许最危险的，是敌人正在从罗桑娜内部崛起。"
 
 msgctxt "speaker:Narrator"
 msgid "Some wear their threats on their sleeves, whilst others hide their intentions behind smiling faces."
-msgstr ""
+msgstr "有些人将威胁明摆在外，而另一些人则用微笑的面容掩盖真实意图。"
 
 msgctxt "speaker:Narrator"
 msgid "The Rose family can feel it in the air..."
-msgstr ""
+msgstr "罗斯家族能感受到空气中的那种气息……"
 
 msgctxt "speaker:Narrator"
 msgid "Danger."
-msgstr ""
+msgstr "危险。"
 
 msgctxt "speaker:Narrator"
 msgid "Amidst these many dangers, Sarah Rose, eldest daughter of the Rose clan, must walk her path."
-msgstr ""
+msgstr "在诸多危险之中，玫瑰家族的长女莎拉·罗斯必须走自己的道路。"
 
 msgctxt "speaker:Narrator"
 msgid "She will need to learn who she can trust, who would seek to betray her, how to keep her nation safe, but above all..."
-msgstr ""
+msgstr "她将不得不学会该信任谁、谁会想要背叛她、如何守护国家的安宁，但最重要的是……"
 
 msgctxt "speaker:Narrator"
 msgid "She must survive."
-msgstr ""
+msgstr "她必须活下来。"
 
 msgctxt "speaker:Narrator"
 msgid "King Orwell has returned from his travels through the provinces of Rosanna."
@@ -368,7 +368,7 @@ msgstr "Sarah 扑进她父亲的怀里。"
 
 msgctxt "speaker:King Orwell Rose"
 msgid "Ooh, Sarah, my back! Please daugher, I'm not as young as I was, and you've grown much too big to just be jumping on me."
-msgstr "哦，莎拉，我的背！亲爱的女儿，我不像以前那么年轻了，你长得也太大了，不能再这样跳在我身上。"
+msgstr "哦，莎拉，我的背啊！亲爱的女儿，求你了，我可不像以前那么年轻了，而且你也长得太大了，不能还这样往我身上跳。"
 
 msgctxt "speaker:Sarah"
 msgid "You were gone for almost five months! If you thought I wasn't going to hug you, you don't know me at all."
@@ -1000,7 +1000,7 @@ msgstr "莎拉摇摇头，将那段记忆甩开。保持冷静。就像父亲总
 
 msgctxt "speaker:Narrator"
 msgid "The tears could come later."
-msgstr "眼泪可以稍后再来。"
+msgstr "眼泪可以稍后再流。"
 
 msgctxt "speaker:Narrator"
 msgid "Save for herself, her bed is empty. She hopes Thomas won't be too upset that she had send him away."
@@ -1172,7 +1172,7 @@ msgstr "莎拉点了点头。"
 
 msgctxt "speaker:Sarah"
 msgid "He can be a bit much, but his family is important, so that makes him important."
-msgstr "他有点烦人，但他家世显赫，所以他也算重要。"
+msgstr "他确实有点让人难以忍受，但他的家人很重要，所以他也因此变得重要起来。"
 
 msgctxt "speaker:Sarah"
 msgid "You should remember to keep him as a friend."
@@ -1304,7 +1304,7 @@ msgstr "萨拉知道她的祈祷不会被听见，但她依然虔诚地祈求。
 
 msgctxt "speaker:Narrator"
 msgid "Behind her, she hears her brother enter the room, and scream."
-msgstr "她身后传来哥哥进屋的动静，他大喊了一声。"
+msgstr "在她身后，她听到哥哥走进房间并尖叫起来。"
 
 msgctxt "speaker:Narrator"
 msgid "She listens as the servants drag him away, kicking and screaming until he is too far to hear."
@@ -274236,7 +274236,7 @@ msgstr "一个法力无边却迷失于死寂世界的法师，沦为恶魔的奴
 
 msgctxt "ui"
 msgid "Image% d of% d is blocked."
-msgstr "图片%d 已被屏蔽。"
+msgstr "图片 %d/%d 已被屏蔽。"
 
 msgctxt "ui"
 msgid "The Survival of Sarah Rose"

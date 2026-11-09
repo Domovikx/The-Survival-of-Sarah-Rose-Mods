@@ -12,19 +12,19 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "The Survival of Sarah Rose is an epic fantasy game. Production on TSSR is still ongoing."
-msgstr ""
+msgstr "The Survival of Sarah Rose는 서사 판타지 게임입니다. TSSR의 제작은 아직 진행 중입니다."
 
 msgctxt "speaker:Narrator"
 msgid "What you are about to play is a work-in-progress."
-msgstr ""
+msgstr "당신이 곧 플레이하게 될 것은 아직 개발 중인 작품입니다."
 
 msgctxt "speaker:Narrator"
 msgid "TSSR takes place in a dark fantasy setting."
-msgstr ""
+msgstr "TSSR은 다크 판타지 세계를 배경으로 하고 있습니다."
 
 msgctxt "speaker:Narrator"
 msgid "The events and stories depicted within, while fictional, may be triggering to some audiences."
-msgstr ""
+msgstr "이 안에 묘사된 사건과 이야기들은 허구이지만, 일부 시청자들에게는 충격적일 수 있습니다."
 
 msgctxt "speaker-name"
 msgid "Sarah"
@@ -288,59 +288,59 @@ msgstr "휴"
 
 msgctxt "speaker:Narrator"
 msgid "Castle Reinmeer"
-msgstr ""
+msgstr "레인미어 성"
 
 msgctxt "speaker:Narrator"
 msgid "The great castle rests at the heart of the nation of Rosanna."
-msgstr ""
+msgstr "위대한 성은 로자나 국가의 중심에 자리 잡고 있습니다."
 
 msgctxt "speaker:Narrator"
 msgid "For centuries, it has been the home of the Rose family."
-msgstr ""
+msgstr "수 세기 동안 이곳은 로즈 가문의 고향이었다."
 
 msgctxt "speaker:Narrator"
 msgid "Ruling with both wisdom and strength, the Rose family ensured centuries of prosperity for the nation of Rosanna."
-msgstr ""
+msgstr "지혜와 강인함을 겸비한 로즈 가문의 통치는 로자나 국가에 수 세기에 걸친 번영을 안겨주었다."
 
 msgctxt "speaker:Narrator"
 msgid "But nothing lasts forever and rumors of new dangers have begun to spread."
-msgstr ""
+msgstr "하지만 영원한 것은 없으며, 새로운 위험에 대한 소문이 퍼지기 시작했습니다."
 
 msgctxt "speaker:Narrator"
 msgid "An ambitious warlord to the east threatens war."
-msgstr ""
+msgstr "동쪽의 야심 찬 전쟁 영주가 전쟁을 위협하고 있습니다."
 
 msgctxt "speaker:Narrator"
 msgid "Something has begun to stir the hearts of all creatures wicked."
-msgstr ""
+msgstr "무언가가 모든 악한 생물의 마음속에서 꿈틀대기 시작했다."
 
 msgctxt "speaker:Narrator"
 msgid "But perhaps most dangerous of all, enemies are rising from within Rosanna."
-msgstr ""
+msgstr "하지만 아마도 가장 위험한 것은 로자나의 내부에서 적이 일어나고 있다는 사실이다."
 
 msgctxt "speaker:Narrator"
 msgid "Some wear their threats on their sleeves, whilst others hide their intentions behind smiling faces."
-msgstr ""
+msgstr "어떤 이들은 위협을 대놓고 드러내지만, 다른 이들은 미소 뒤에 자신의 의도를 숨기기도 하지."
 
 msgctxt "speaker:Narrator"
 msgid "The Rose family can feel it in the air..."
-msgstr ""
+msgstr "장미 가문은 공기 중에 감도는 것을 느낄 수 있습니다..."
 
 msgctxt "speaker:Narrator"
 msgid "Danger."
-msgstr ""
+msgstr "위험."
 
 msgctxt "speaker:Narrator"
 msgid "Amidst these many dangers, Sarah Rose, eldest daughter of the Rose clan, must walk her path."
-msgstr ""
+msgstr "이 수많은 위험 속에서 로즈 가문의 장녀인 사라 로즈는 자신의 길을 걸어야만 한다."
 
 msgctxt "speaker:Narrator"
 msgid "She will need to learn who she can trust, who would seek to betray her, how to keep her nation safe, but above all..."
-msgstr ""
+msgstr "그녀는 누구를 믿을 수 있는지, 누가 자신을 배신하려 할지, 어떻게 국가를 안전하게 지킬지를 배워야 하지만, 무엇보다도..."
 
 msgctxt "speaker:Narrator"
 msgid "She must survive."
-msgstr ""
+msgstr "그녀는 살아남아야만 한다."
 
 msgctxt "speaker:Narrator"
 msgid "King Orwell has returned from his travels through the provinces of Rosanna."
@@ -380,7 +380,7 @@ msgstr "나이가 들어도 아직 성숙해 보이지는 않아."
 
 msgctxt "speaker:Sarah"
 msgid "So mean!"
-msgstr "너도 너무 잔인하군..."
+msgstr "정말 못됐네요!"
 
 msgctxt "speaker:King Orwell Rose"
 msgid "Speaking of growing up, have you seen..."
@@ -444,7 +444,7 @@ msgstr "킹 오웰과 사라가 도서관으로 가는 빈 복도를 걷고 있�
 
 msgctxt "speaker:King Orwell Rose"
 msgid "I hope your brother has been keeping to his studies while I was away."
-msgstr "아버님이 떠나신 동안 오를이 형은 공부를 잘 하고 있었나 보네요."
+msgstr "형님이 제가 없는 동안 공부에만 집중하고 있었으면 좋겠네요."
 
 msgctxt "speaker:Sarah"
 msgid "He did...in a way."
@@ -496,7 +496,7 @@ msgstr "킹 오를의 목소리가 커진다."
 
 msgctxt "speaker:King Orwell Rose"
 msgid "Nobody ever came to our castle asking me for advice on rare types of birds from the eastern desert!"
-msgstr "어린 시절부터 동쪽 사막의 희귀한 새에 대해 조언을 구하러 저의 성으로 찾아온 사람이 한 명도 없었습니다!"
+msgstr "동쪽 사막의 희귀한 새에 대한 조언을 구하는 사람은 아무도 우리 성으로 찾아온 적이 없었어!"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah puts her hands on her father's shoulder."
@@ -528,7 +528,7 @@ msgstr "잠시 동안 둘 다 조용했다."
 
 msgctxt "speaker:Sarah"
 msgid "Father...did something happen on your trip?"
-msgstr "아버님... 여행 중 무슨 일이 있었나요?"
+msgstr "아버지... 여행 중에 무슨 일이라도 있었나요?"
 
 msgctxt "speaker:King Orwell Rose"
 msgid "A lot...too much to talk about. You can ask me tomorrow, okay?"
@@ -564,7 +564,7 @@ msgstr "보통의 일들을 예상했습니다: 도로 수리 불평, 도시 주
 
 msgctxt "speaker:Narrator"
 msgid "King Orwell winks at his daughter."
-msgstr "킹 오를이는 딸에게 눈짓하며 웃는다."
+msgstr "킹 오웰이 딸에게 윙크를 보낸다."
 
 msgctxt "speaker:Sarah"
 msgid "Very funny..."
@@ -628,7 +628,7 @@ msgstr "아버님, 저희와 모든 이를 위해 얼마나 열심히 일하는�
 
 msgctxt "speaker:King Orwell Rose"
 msgid "I'll look after myself, if you look after that brother of yours for me, promise?"
-msgstr "그의 형을 대신 돌봐주겠다면, 내가 스스로는 잘 할 거야. 약속해?"
+msgstr "제가 스스로 잘 돌볼 테니, 당신의 그 동생을 대신 잘 돌봐주겠다고 약속해 줄래요?"
 
 msgctxt "speaker:Sarah"
 msgid "Promise!"
@@ -712,7 +712,7 @@ msgstr "방 구석에 그녀의 형인 토머스 서 있다."
 
 msgctxt "speaker:Sarah"
 msgid "What are you doing creeping around my room? You should be in bed by now."
-msgstr "왜 내 방에 숨어서 들어와? 이제야 잠자리에 들었어야지."
+msgstr "내 방에서 왜 몰래 돌아다니는 거야? 넌 벌써 잠자리에 들었어야 하는데."
 
 msgctxt "speaker:Thomas"
 msgid "I know, I know. I tried, but I was staring at the ceiling and I just couldn't get to sleep."
@@ -728,7 +728,7 @@ msgstr "잘 자고 있어. 알아두렴."
 
 msgctxt "speaker:Thomas"
 msgid "Pleeeeease don't send me back, ok? I really can't fall asleep."
-msgstr "플리이이이이이이, 날 돌려보내지 마, 알았어? 정말 잠들 수가 없잖아."
+msgstr "제발 저를 다시 보내지 마세요, 네? 정말 잠이 오질 않아요."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah sighs."
@@ -740,7 +740,7 @@ msgstr "좋습니다, 잠시만 머물 수 있습니다. 내일 아버님이 돌
 
 msgctxt "speaker:Thomas"
 msgid "I didn't fall asleep in the soup!"
-msgstr "국물에 잠이 들었어?"
+msgstr "수프에서 잠들지 않았어요!"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah laughs."
@@ -888,7 +888,7 @@ msgstr "사라가 화려한 천장을 응시한다. 그녀 옆에 그녀의 형�
 
 msgctxt "speaker:Narrator"
 msgid "Nothing stays the same forever, but she wishes, some things could."
-msgstr "영원히 같은 것은 없지만, 그녀는 어떤 것들이 달라지지 않기를 바랐습니다."
+msgstr "무엇도 영원히 그대로 있지는 않지만, 그녀는 몇 가지 일들이 그랬으면 하고 바라본다."
 
 msgctxt "menu"
 msgid "Grow up, little brother."
@@ -924,7 +924,7 @@ msgstr "에이, 깨어나야 해."
 
 msgctxt "speaker:Narrator"
 msgid "Thomas grunts, acknowledging he's awake but hoping to be spared the day's official events."
-msgstr "토머스 씨, 깨어 계시군요. 오늘 공식 행사만은 넘겨주실 수 있기를 바란답니다."
+msgstr "토마스는 신음 소리를 내며 자신이 깨어났음을 인정했지만, 오늘 하루의 공식적인 행사들은 피하고 싶다는 희망을 품고 있었다."
 
 msgctxt "speaker:Sarah"
 msgid "Seriously, Thomas, you need to go to your room and get dressed before Dad comes and drags you to the banquet."
@@ -964,7 +964,7 @@ msgstr "사라가 어머니의 그림자가 선택마다 조언을 해주는 듯
 
 msgctxt "speaker:Narrator"
 msgid "\"Ooh no, not this one. Try that one\", she would say when Sarah was still young."
-msgstr "오우, 아니 이거 말고 저거 해봐”라고 사라가 아직 어릴 때 자주 말했지."
+msgstr "\"어머, 아니, 이건 안 돼. 저 걸 입어봐,\" 그녀는 사라가 아직 어렸을 때 이렇게 말하곤 했지."
 
 msgctxt "speaker:Narrator"
 msgid "Her mother loved to dote on her, and Sarah had loved her doing it."
@@ -992,7 +992,7 @@ msgstr "대부분의 왕은 재혼했을 테지만, 아버지는 그렇지 않�
 
 msgctxt "speaker:Narrator"
 msgid "Her father had once told her that when their mother died, he had lost so much of himself, that he couldn't risk loving someone like that ever again."
-msgstr "아버지는 어머니가 돌아가신 후 자신을 잃어버린 듯했다며, 다시는 그런 사람을 사랑할 수 없다던 말씀으로 기억합니다."
+msgstr "어느 날 아버지는 그녀에게 이렇게 말한 적이 있었다. 어머니가 돌아가셨을 때 그는 너무나 많은 것을 잃었기에, 다시는 누군가를 그런 식으로 사랑할 위험을 감수할 수 없다고."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah shakes her head and pushes away the memory. Composure. Just as Father always said."
@@ -1008,7 +1008,7 @@ msgstr "그녀만 남았을 뿐, 그녀의 침대는 비어 있었다. 그녀가
 
 msgctxt "speaker:Narrator"
 msgid "Still, he should have known they were too old for that."
-msgstr "아마도 그 나이에는 그런 일이 불가능했어야 했다."
+msgstr "그래도 그는 그들이 이미 너무 컸다는 걸 알았어야 했다."
 
 msgctxt "speaker:Narrator"
 msgid "\"Ooh no, not this one, try that one\" she would say when Sarah was still small."
@@ -1044,7 +1044,7 @@ msgstr "이렇게 바빠."
 
 msgctxt "speaker:Narrator"
 msgid "Thomas strolled into the great hall, stopping next to his sister."
-msgstr "토마스는 거대한 홀로 걸어 들어와 자매의 곁에 멈췄다."
+msgstr "토마스는 대연회장으로 걸어 들어와 여동생 옆에 멈춰 섰다."
 
 msgctxt "speaker:Sarah"
 msgid "At least you managed to get here in time."
@@ -1064,7 +1064,7 @@ msgstr "그녀는 자신이 그런 사람이라고 믿고 싶어했다."
 
 msgctxt "speaker:Narrator"
 msgid "Thomas winks at his sister."
-msgstr "토머스 형이 여동생에게 눈웃음을 지었다."
+msgstr "토마스가 동생에게 윙크를 했다."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah rolls her eyes."
@@ -1240,7 +1240,7 @@ msgstr "그녀는 자신을 바라보며 혼란스러워하는 형을 본다."
 
 msgctxt "speaker:Narrator"
 msgid "She sees Marion, usually so composed, with a hint of fear in his eyes."
-msgstr "마리온을 본다. 평소처럼 차분한 그가 눈빛에 두려움의 그림자를 띠고 있다."
+msgstr "그녀는 평소 침착하던 마리온의 눈에 두려움이 스치는 것을 보았다."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah wanders out of the great hall in a haze, ignoring everything around her."
@@ -1304,7 +1304,7 @@ msgstr "사라가 기도가 들리지는 않을 것임을 알지만, 그래도 �
 
 msgctxt "speaker:Narrator"
 msgid "Behind her, she hears her brother enter the room, and scream."
-msgstr "그녀 뒤에서 형이 방으로 들어와 비명을 지르는 소리가 들렸다."
+msgstr "그녀의 뒤에서 형이 방으로 들어오며 소리치는 소리가 들린다."
 
 msgctxt "speaker:Narrator"
 msgid "She listens as the servants drag him away, kicking and screaming until he is too far to hear."

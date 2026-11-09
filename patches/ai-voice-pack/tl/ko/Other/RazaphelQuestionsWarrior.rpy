@@ -1,0 +1,28 @@
+# -*- encoding: utf-8 -*-
+# Arc: Other | Scene: RazaphelQuestionsWarrior
+
+translate ko strings:
+
+    old "Where are the Gods?"
+    new "신들 어디에 있나요?"
+
+    old "What happened to your race?"
+    new "너희 종족에 무슨 일이 있었니?"
+
+    old "Why your world?"
+    new "왜 그 세상이야?"
+
+    old "Why did the Gods not prevent this?"
+    new "왜 신들은 이를 막지 않았을까?"
+
+    old "I have asked all that I need to know"
+    new "요청한 모든 정보를 얻었습니다"
+
+    old "A design in which every path bends towards the same desination."
+    new "모든 길은 같은 목적지로 굽어가는 설계다."
+
+    old "Place your hands upon the monolith"
+    new "모노리트를 손으로 감싸세요"
+
+    old "Reject Razaphel's offer"
+    new "Razaphel 의 제안을 거절하기"

@@ -12,19 +12,19 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "The Survival of Sarah Rose is an epic fantasy game. Production on TSSR is still ongoing."
-msgstr ""
+msgstr "Gra The Survival of Sarah Rose to epicka fantasy. Produkcja TSSR wciąż trwa."
 
 msgctxt "speaker:Narrator"
 msgid "What you are about to play is a work-in-progress."
-msgstr ""
+msgstr "To, w co zaraz zagrasz, to dzieło wciąż w trakcie tworzenia."
 
 msgctxt "speaker:Narrator"
 msgid "TSSR takes place in a dark fantasy setting."
-msgstr ""
+msgstr "TSSR rozgrywa się w mrocznym świecie fantasy."
 
 msgctxt "speaker:Narrator"
 msgid "The events and stories depicted within, while fictional, may be triggering to some audiences."
-msgstr ""
+msgstr "Wydarzenia i historie przedstawione w tej grze, choć fikcyjne, mogą być dla niektórych widzów bolesne lub wywołujące negatywne reakcje."
 
 msgctxt "speaker-name"
 msgid "Sarah"
@@ -288,59 +288,59 @@ msgstr "Hugh"
 
 msgctxt "speaker:Narrator"
 msgid "Castle Reinmeer"
-msgstr ""
+msgstr "Zamek Reinmeer"
 
 msgctxt "speaker:Narrator"
 msgid "The great castle rests at the heart of the nation of Rosanna."
-msgstr ""
+msgstr "Wielki zamek spoczywa w samym sercu państwa Rosanna."
 
 msgctxt "speaker:Narrator"
 msgid "For centuries, it has been the home of the Rose family."
-msgstr ""
+msgstr "Przez wieki był to dom rodu Rose."
 
 msgctxt "speaker:Narrator"
 msgid "Ruling with both wisdom and strength, the Rose family ensured centuries of prosperity for the nation of Rosanna."
-msgstr ""
+msgstr "Rządząc zarówno z mądrością, jak i siłą, rodzina Rose zapewniła państwu Rosanna wieki prosperity."
 
 msgctxt "speaker:Narrator"
 msgid "But nothing lasts forever and rumors of new dangers have begun to spread."
-msgstr ""
+msgstr "Ale nic nie trwa wiecznie, a plotki o nowych zagrożeniach zaczęły się rozprzestrzeniać."
 
 msgctxt "speaker:Narrator"
 msgid "An ambitious warlord to the east threatens war."
-msgstr ""
+msgstr "Ambitny watażka na wschodzie zagraża wojną."
 
 msgctxt "speaker:Narrator"
 msgid "Something has begun to stir the hearts of all creatures wicked."
-msgstr ""
+msgstr "Coś zaczęło poruszać serca wszystkich złych stworzeń."
 
 msgctxt "speaker:Narrator"
 msgid "But perhaps most dangerous of all, enemies are rising from within Rosanna."
-msgstr ""
+msgstr "Ale być może najniebezpieczniejsi ze wszystkich są wrogowie, którzy powstają wewnątrz Rosanny."
 
 msgctxt "speaker:Narrator"
 msgid "Some wear their threats on their sleeves, whilst others hide their intentions behind smiling faces."
-msgstr ""
+msgstr "Niektórzy noszą swoje groźby na rękawach, podczas gdy inni ukrywają swoje intencje za uśmiechniętymi twarzami."
 
 msgctxt "speaker:Narrator"
 msgid "The Rose family can feel it in the air..."
-msgstr ""
+msgstr "Rodzina Rose czuje to w powietrzu..."
 
 msgctxt "speaker:Narrator"
 msgid "Danger."
-msgstr ""
+msgstr "Niebezpieczeństwo."
 
 msgctxt "speaker:Narrator"
 msgid "Amidst these many dangers, Sarah Rose, eldest daughter of the Rose clan, must walk her path."
-msgstr ""
+msgstr "Wśród tych wszystkich niebezpieczeństw Sarah Rose, najstarsza córka rodu Rose, musi przejść własną drogą."
 
 msgctxt "speaker:Narrator"
 msgid "She will need to learn who she can trust, who would seek to betray her, how to keep her nation safe, but above all..."
-msgstr ""
+msgstr "Będzie musiała nauczyć się, komu może zaufać, kto chciałby ją zdradzić, jak zapewnić bezpieczeństwo swojemu narodowi, ale przede wszystkim..."
 
 msgctxt "speaker:Narrator"
 msgid "She must survive."
-msgstr ""
+msgstr "Muszy przetrwać."
 
 msgctxt "speaker:Narrator"
 msgid "King Orwell has returned from his travels through the provinces of Rosanna."
@@ -480,7 +480,7 @@ msgstr "Będę musiał porozmawiać z Twoim bratem."
 
 msgctxt "speaker:Sarah"
 msgid "Try to go easy on him Father. I read some of those books on military strategy you gave him. They're very boring."
-msgstr "Spróbuj się z nim nie kłócić, ojcze. Przeczytałam niektóre z tych książek o strategii wojskowej, które mi dałeś. Są bardzo nudne."
+msgstr "Postaraj się być dla niego łagodniejszy, ojcze. Czytałam kilka tych książek o strategii wojskowej, które mu dałeś. Są strasznie nudne."
 
 msgctxt "speaker:King Orwell Rose"
 msgid "Of course they are. I didn't give them to him for his enjoyment."
@@ -616,7 +616,7 @@ msgstr "Trzymam Cię już wystarczająco długo, Sarah. Resztę drogi do bibliot
 
 msgctxt "speaker:King Orwell Rose"
 msgid "I need to be alone with my thoughts for a bit."
-msgstr "Muszę na chwilę zostać sama ze swoimi myślami."
+msgstr "Muszę na chwilę zostać sam ze swoimi myślami."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah embraces her father, hugging him more tightly than she herself had even expected, holding him."
@@ -676,7 +676,7 @@ msgstr "Jego pasje mogły trwać miesiącami, by w mniej niż jeden dzień całk
 
 msgctxt "speaker:Narrator"
 msgid "Once he had spend an entire week learning everything there was to learn about how glass was made."
-msgstr "Kiedy całe tydzień poświęcił na to, by nauczyć się wszystkiego o produkcji szkła."
+msgstr "Kiedyś spędził cały tydzień na uczeniu się wszystkiego, co tylko można było dowiedzieć się o wytwarzaniu szkła."
 
 msgctxt "speaker:Narrator"
 msgid "Once Thomas was interested in a thing, it seemed to completely envelop his every waking moment, and he rarely stopped until he understood the object of his obsession."
@@ -748,7 +748,7 @@ msgstr "Sarah się śmieje."
 
 msgctxt "speaker:Sarah"
 msgid "Sure, slipped into it, whatever."
-msgstr "Jasne, weszła do niego, kurwa."
+msgstr "Jasne, wpadłem w to, nieważne."
 
 msgctxt "speaker:Narrator"
 msgid "Thomas walks over to Sarah's desk and picks up the book."
@@ -896,7 +896,7 @@ msgstr "Dorośnij, młody bracie."
 
 msgctxt "speaker:Thomas"
 msgid "Whatever."
-msgstr "Coś ty, kurwa."
+msgstr "Nieważne."
 
 msgctxt "speaker:Narrator"
 msgid "Thomas storms off, angrily muttering to himself."
@@ -968,7 +968,7 @@ msgstr "\"O nie, nie to! Spróbuj tej drugiej\", mówiła, gdy Sarah była jeszc
 
 msgctxt "speaker:Narrator"
 msgid "Her mother loved to dote on her, and Sarah had loved her doing it."
-msgstr "Jej matka uwielbiała ją poprzytulać i Sarah kochała to."
+msgstr "Jej matka uwielbiała ją rozpieszczać, a Sarah kochała, gdy tak robiła."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah felt herself tear up at the memories."
@@ -1004,7 +1004,7 @@ msgstr "Łzy można było odłożyć na później."
 
 msgctxt "speaker:Narrator"
 msgid "Save for herself, her bed is empty. She hopes Thomas won't be too upset that she had send him away."
-msgstr "Pozostając sama, jej łóżko jest puste. Mam nadzieję, że Thomas nie będzie zbyt zły na to, że wysłałam go stąd."
+msgstr "Poza nią sama, jej łóżko jest puste. Ma nadzieję, że Thomas nie będzie zbyt zły, że go odesłała."
 
 msgctxt "speaker:Narrator"
 msgid "Still, he should have known they were too old for that."
@@ -1068,7 +1068,7 @@ msgstr "Thomas mruga do swojej siostry."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah rolls her eyes."
-msgstr "Sarah mruga oczyma."
+msgstr "Sarah przewraca oczami."
 
 msgctxt "speaker:Narrator"
 msgid "At least he's trying, she thinks to herself."
@@ -1132,7 +1132,7 @@ msgstr "Marion macha ręką."
 
 msgctxt "speaker:Marion"
 msgid "As well as was to be expected. I'm just glad to be back here in the capital. Travelling with your father to the Eastern districts has been exhausting."
-msgstr "Jak się spodziewano. Jestem tylko wdzięczna, że wróciłam do stolicy. Podróż z twoim ojcem do wschodnich dzielnic była wyczerpująca."
+msgstr "To było do przewidzenia. Cieszę się tylko, że wróciłem tutaj, do stolicy. Podróż z twoim ojcem do wschodnich dzielnic była wyczerpująca."
 
 msgctxt "speaker:Sarah"
 msgid "How so?"
@@ -1152,7 +1152,7 @@ msgstr "Sarah uśmiechnęła się uprzejmie, słuchając narzekań Marion. U Mar
 
 msgctxt "speaker:Narrator"
 msgid "A man waved at Marion from across the room, and Marion waved back."
-msgstr "Mężczyzna machnął do Mariona z drugiego końca sali, a Marion odpowiedziała mu gestem."
+msgstr "Mężczyzna pomachał do Mariona z drugiego końca pokoju, a Marion odpowiedział mu machnięciem ręki."
 
 msgctxt "speaker:Marion"
 msgid "Excuse me, Prince, Princess. Duty calls."
@@ -1240,7 +1240,7 @@ msgstr "Widzi swojego brata patrzącego na nią z niedowierzaniem, jakby nie mó
 
 msgctxt "speaker:Narrator"
 msgid "She sees Marion, usually so composed, with a hint of fear in his eyes."
-msgstr "Widzi Marion, zwykle tak skomponowanego, z nutką strachu w oczach."
+msgstr "Widzi Mariona, zwykle tak opanowanego, ze śladem strachu w jego oczach."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah wanders out of the great hall in a haze, ignoring everything around her."

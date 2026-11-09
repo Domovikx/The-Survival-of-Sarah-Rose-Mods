@@ -100,6 +100,22 @@ agreement (trust it, never guess from the name):` — пары
 7. `Output ONLY JSON {"scene":"…","tr":"…"}.` — **temperature 0**; при срабатывании
    гейта повтор с temp 0.7, затем 1.0 (при temp0 брак детерминирован).
 
+## Инструменты QA (лежат рядом с этим SKILL.md; команды — из корня репы)
+
+```bash
+node .opencode/skills/translate/translate_run.mts <lang> [LIMIT] [--retrans <файл индексов>] [--improve]
+node .opencode/skills/translate/translate_review.mts <lang> [--all]     # механическое ревью
+node .opencode/skills/translate/translate_judge.mts <lang> <n> [--file <idx>] [--spread]  # судья
+bash .opencode/skills/translate/review_cycle.sh <lang>                  # цикл мониторинга30 мин
+```
+
+Общее ядро: `judge_client.mts` (промпт судьи v10, алиасы имён, `judgeLine`),
+`review_common_run.mts` (`commonRun`/`contentWords` — общий словесный фрагмент).
+Стенды E2E: `judge_probe.mts` (64 дефекта + чистые выборки), `judge_fp_probe.mts`
+(6 фраз-ложняков), `common_run_selftest.mts`. Место — по докам OpenCode
+(«scripts beside SKILL.md», opencode.ai/docs/skills, проверено 2026-11-08);
+миграция из `tmp/` — задача `tasks/2026-11-08-tmp-tools-to-opencode-structure.md`.
+
 ## QA-чеклист (до применения перевода)
 
 Механически: утечка/склейка с соседней строкой (tr ≈ перевод соседа при разных

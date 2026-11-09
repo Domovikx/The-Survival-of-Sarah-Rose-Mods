@@ -15,7 +15,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "The Survival of Sarah Rose is an epic fantasy game. Production on TSSR is still ongoing."
-msgstr "The Survival of Sarah Rose es un juego de fantasía épica. La producción de TSSR aún está en curso."
+msgstr "The Survival of Sarah Rose es un juego de fantasía épica. La producción de TSSR todavía continúa."
 
 msgctxt "speaker:Narrator"
 msgid "What you are about to play is a work-in-progress."
@@ -387,7 +387,7 @@ msgstr "¡Tan cruel!"
 
 msgctxt "speaker:King Orwell Rose"
 msgid "Speaking of growing up, have you seen..."
-msgstr "Dicho de crecer, ¿has visto..."
+msgstr "Hablando de hacerse mayor, ¿has visto...?"
 
 msgctxt "speaker:Thomas"
 msgid "DAD!"
@@ -507,7 +507,7 @@ msgstr "Sarah pone sus manos en el hombro de su padre."
 
 msgctxt "speaker:Sarah"
 msgid "Dad, please, calm down. Thomas knows this, but you also need to accept that he isn't you."
-msgstr "Papá, por favor, calma. Thomas lo sabe, pero tú también necesitas aceptar que él no eres tú."
+msgstr "Papá, por favor, cálmate. Tomás lo sabe, pero también tienes que aceptar que él no es como tú."
 
 msgctxt "speaker:Sarah"
 msgid "All this military stuff, it doesn't come as naturally to him as it did to you."
@@ -595,7 +595,7 @@ msgstr "¿Nos atacaron?"
 
 msgctxt "speaker:King Orwell Rose"
 msgid "No, nothing so serious. But there are rumors. Rumors that tell of him breaking the tribes of the desert, unifying them."
-msgstr "No, nada tan grave. Pero hay rumores. Rumores que hablan de cómo rompe a las tribus del desierto y las une."
+msgstr "No, nada tan grave. Pero hay rumores. Rumores que cuentan cómo él sometió a las tribus del desierto y las unificó."
 
 msgctxt "speaker:Sarah"
 msgid "Should we be worried?"
@@ -619,7 +619,7 @@ msgstr "Te he retenido lo suficiente, Sarah. Caminaré el resto del camino hacia
 
 msgctxt "speaker:King Orwell Rose"
 msgid "I need to be alone with my thoughts for a bit."
-msgstr "Necesito estar sola con mis pensamientos por un rato."
+msgstr "Necesito estar solo con mis pensamientos por un rato."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah embraces her father, hugging him more tightly than she herself had even expected, holding him."
@@ -743,7 +743,7 @@ msgstr "De acuerdo, puedes quedarte, pero solo un rato. Mañana tendremos el ban
 
 msgctxt "speaker:Thomas"
 msgid "I didn't fall asleep in the soup!"
-msgstr "¡No me quedé dormida en la sopa!"
+msgstr "¡No me quedé dormido en la sopa!"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah laughs."
@@ -751,7 +751,7 @@ msgstr "Sarah se ríe."
 
 msgctxt "speaker:Sarah"
 msgid "Sure, slipped into it, whatever."
-msgstr "Claro, se deslizó en ella, al diablo."
+msgstr "Claro, me metí ahí, lo que sea."
 
 msgctxt "speaker:Narrator"
 msgid "Thomas walks over to Sarah's desk and picks up the book."
@@ -767,7 +767,7 @@ msgstr "No es tan malo como lo pintas. Además, deberías intentar hacer lo que 
 
 msgctxt "speaker:Narrator"
 msgid "Thomas rolls his eyes."
-msgstr "Thomas frunje los ojos."
+msgstr "Tomás pone los ojos en blanco."
 
 msgctxt "speaker:Thomas"
 msgid "We can't all be perfect like you."
@@ -783,7 +783,7 @@ msgstr "Verdad."
 
 msgctxt "speaker:Thomas"
 msgid "Show off."
-msgstr "¡Muestra eso! ¡Muestra esa polla!"
+msgstr "Presume."
 
 msgctxt "speaker:Sarah"
 msgid "But seriously, Thomas, you should listen to Dad at least some of the time. He's only trying to do what is best for us."
@@ -1007,7 +1007,7 @@ msgstr "Las lágrimas podrían esperar."
 
 msgctxt "speaker:Narrator"
 msgid "Save for herself, her bed is empty. She hopes Thomas won't be too upset that she had send him away."
-msgstr "Salvo por ella, su cama está vacía. Espera que Thomas no se sienta demasiado molesto por haberle mandado a dormir."
+msgstr "A excepción de ella misma, su cama está vacía. Espera que Thomas no se sienta demasiado mal por haberlo enviado lejos."
 
 msgctxt "speaker:Narrator"
 msgid "Still, he should have known they were too old for that."
@@ -1135,7 +1135,7 @@ msgstr "Marion encoge los hombros."
 
 msgctxt "speaker:Marion"
 msgid "As well as was to be expected. I'm just glad to be back here in the capital. Travelling with your father to the Eastern districts has been exhausting."
-msgstr "Así como era de esperar. Solo estoy contenta de estar de vuelta aquí en la capital. Viajar con tu padre a los distritos orientales ha sido agotador."
+msgstr "Como era de esperar. Simplemente me alegro de estar de vuelta aquí, en la capital. Viajar con tu padre hasta los distritos orientales ha sido agotador."
 
 msgctxt "speaker:Sarah"
 msgid "How so?"
@@ -276215,7 +276215,7 @@ msgstr "Sobre"
 
 msgctxt "ui"
 msgid "Version [config.version!t]\\n"
-msgstr "Versión %s"
+msgstr "Versión [config.version!t]\n"
 
 msgctxt "ui"
 msgid "Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\\n\\n[renpy.license!t]"

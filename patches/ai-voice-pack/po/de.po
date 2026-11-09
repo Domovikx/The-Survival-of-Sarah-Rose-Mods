@@ -288,7 +288,7 @@ msgstr "Hugh"
 
 msgctxt "speaker:Narrator"
 msgid "Castle Reinmeer"
-msgstr "Die große Burg ruht im Herzen des Landes Rosanna."
+msgstr "Burg Reinmeer"
 
 msgctxt "speaker:Narrator"
 msgid "The great castle rests at the heart of the nation of Rosanna."
@@ -440,7 +440,7 @@ msgstr "Ja, Vater."
 
 msgctxt "speaker:Narrator"
 msgid "King Orwell and Sarah are walking through an empty hallway towards the library. Their steps softly echo."
-msgstr "Ich glaube, ich habe ihn in der Bibliothek gesehen, Vater. Ich werde mit Ihnen gehen."
+msgstr "König Orwell und Sarah gehen durch einen leeren Korridor in Richtung Bibliothek. Ihre Schritte hallen sanft nach."
 
 msgctxt "speaker:King Orwell Rose"
 msgid "I hope your brother has been keeping to his studies while I was away."
@@ -460,7 +460,7 @@ msgstr "Er hat viel gelesen, nur vielleicht nicht die Bücher, die du ihm gegebe
 
 msgctxt "speaker:Narrator"
 msgid "King Orwell stops walking and lets out a deep sigh."
-msgstr "King Orwell Rose hält inne und stößt einen tiefen Seufzer aus."
+msgstr "König Orwell hält inne und stößt einen tiefen Seufzer aus."
 
 msgctxt "speaker:King Orwell Rose"
 msgid "Then what did he study?"
@@ -492,7 +492,7 @@ msgstr "Dein Bruder wird eines Tages König sein, und wenn dieser Tag kommt, mus
 
 msgctxt "speaker:Narrator"
 msgid "King Orwell's voice grows louder."
-msgstr "König Orwell Roses Stimme wird lauter."
+msgstr "König Orwells Stimme wird lauter."
 
 msgctxt "speaker:King Orwell Rose"
 msgid "Nobody ever came to our castle asking me for advice on rare types of birds from the eastern desert!"
@@ -516,7 +516,7 @@ msgstr "Außerdem ist es eine neue Zeit. Vielleicht ist nicht alles, was ein Kö
 
 msgctxt "speaker:Narrator"
 msgid "King Orwell shrugs."
-msgstr "König Orwell Rose zuckt mit den Schultern."
+msgstr "König Orwell zuckt mit den Schultern."
 
 msgctxt "speaker:King Orwell Rose"
 msgid "Anyone can be a king in the easy times. It's the bad times that a king needs to be ready for. And your brother isn't ready."
@@ -740,7 +740,7 @@ msgstr "Ok, du kannst bleiben, aber nur für eine Weile. Morgen gibt es das Fest
 
 msgctxt "speaker:Thomas"
 msgid "I didn't fall asleep in the soup!"
-msgstr "Ich hab mir die Suppe nicht ins Gesicht gegessen!"
+msgstr "Ich bin doch nicht in der Suppe eingeschlafen!"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah laughs."
@@ -780,7 +780,7 @@ msgstr "Stimmt."
 
 msgctxt "speaker:Thomas"
 msgid "Show off."
-msgstr "Angeberin."
+msgstr "Angeber."
 
 msgctxt "speaker:Sarah"
 msgid "But seriously, Thomas, you should listen to Dad at least some of the time. He's only trying to do what is best for us."
@@ -992,7 +992,7 @@ msgstr "Die meisten Könige hätten sich wieder verheiratet, doch ihr Vater tat 
 
 msgctxt "speaker:Narrator"
 msgid "Her father had once told her that when their mother died, he had lost so much of himself, that he couldn't risk loving someone like that ever again."
-msgstr "Sein Vater hatte ihr einst erzählt, dass er nach dem Tod ihrer Mutter einen Teil von sich selbst verloren habe und daher niemals wieder jemanden lieben könne."
+msgstr "Ihr Vater hatte ihr einst gesagt, als ihre Mutter gestorben sei, habe er so viel von sich selbst verloren, dass er es nie wieder riskieren könne, jemanden auf diese Weise zu lieben."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah shakes her head and pushes away the memory. Composure. Just as Father always said."
@@ -1060,7 +1060,7 @@ msgstr "Das klingt nach einem klugen Menschen."
 
 msgctxt "speaker:Thomas"
 msgid "She likes to think she is."
-msgstr "Sie hält sich wohl für eine kluge Person."
+msgstr "Sie denkt wohl gerne, dass sie das ist."
 
 msgctxt "speaker:Narrator"
 msgid "Thomas winks at his sister."
@@ -1196,7 +1196,7 @@ msgstr "Das bedeutet nicht, dass ich unrecht habe."
 
 msgctxt "speaker:Sarah"
 msgid "Besides, have you seen Father yet?"
-msgstr "Außerdem – hast du Vater schon gesehen?"
+msgstr "Außerdem, hast du den Vater schon gesehen?"
 
 msgctxt "speaker:Narrator"
 msgid "Thomas had stopped listening, distracted by a plate of food being carried past him."
@@ -276212,7 +276212,7 @@ msgstr "Über"
 
 msgctxt "ui"
 msgid "Version [config.version!t]\\n"
-msgstr "Version %s\\n"
+msgstr "Version [config.version!t]\n"
 
 msgctxt "ui"
 msgid "Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\\n\\n[renpy.license!t]"
@@ -276224,7 +276224,7 @@ msgstr "Laden"
 
 msgctxt "ui"
 msgid "Page {}"
-msgstr "Seite %s"
+msgstr "Seite {}"
 
 msgctxt "ui"
 msgid "Automatic saves"

@@ -13,7 +13,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "The Survival of Sarah Rose is an epic fantasy game. Production on TSSR is still ongoing."
-msgstr "The Survival of Sarah Rose — это эпическая фэнтези-игра. Разработка TSSR всё ещё продолжается."
+msgstr "«The Survival of Sarah Rose» — это эпическая фэнтезийная игра. Разработка TSSR всё ещё продолжается."
 
 msgctxt "speaker:Narrator"
 msgid "What you are about to play is a work-in-progress."
@@ -377,7 +377,7 @@ msgstr "Ты был в отъезде почти пять месяцев! Есл
 
 msgctxt "speaker:King Orwell Rose"
 msgid "You've grown older but I don't think you've grown up yet."
-msgstr "Ты стала старше, но я не думаю, что ты ещё повзрослела."
+msgstr "Ты стала старше, но не думаю, что ты ещё повзрослела."
 
 msgctxt "speaker:Sarah"
 msgid "So mean!"
@@ -1041,7 +1041,7 @@ msgstr "Некоторые слуги проходили мимо, опуска�
 
 msgctxt "speaker:Thomas"
 msgid "So busy."
-msgstr "Как же тут шумно."
+msgstr "Как же тут много дел."
 
 msgctxt "speaker:Narrator"
 msgid "Thomas strolled into the great hall, stopping next to his sister."
@@ -1081,7 +1081,7 @@ msgstr "Сара смотрит, как люди медленно наполня
 
 msgctxt "speaker:Narrator"
 msgid "The court nobles were amongst the first. Always priding themselves on their own importance, each representing an important family."
-msgstr "Дворцовые сановники были среди первых. Всегда гордившись собственной важностью, они — каждая из которых представляла знатную семью — прибыли первыми."
+msgstr "Придворные аристократы были среди первых. Всегда гордившиеся собственной важностью, они — каждый из них — представляли знатную семью."
 
 msgctxt "speaker:Narrator"
 msgid "They had crowded around a young man with a thin frame and long, flowing blonde hair, reaching to his shoulders."
@@ -274239,7 +274239,7 @@ msgstr "Маг, который зашёл слишком далеко. Поги�
 
 msgctxt "ui"
 msgid "Image% d of% d is blocked."
-msgstr "Изображение% d из% d заблокировано."
+msgstr "Изображение %d из %d заблокировано."
 
 msgctxt "ui"
 msgid "The Survival of Sarah Rose"
