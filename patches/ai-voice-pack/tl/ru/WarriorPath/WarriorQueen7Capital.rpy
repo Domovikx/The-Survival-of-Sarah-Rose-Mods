@@ -1,146 +1,145 @@
 # -*- encoding: utf-8 -*-
 # Arc: WarriorPath | Scene: WarriorQueen7Capital
-# Source: C:\Program Files (x86)\Steam\steamapps\common\The Survival of Sarah Rose\game\script.rpy
 
 translate ru strings:
 
     old "On Sarah's orders, her army had begun to set itself atop the hill that overlooked the Capital."
-    new "По приказу Сары её армия начала располагаться на вершине холма, с которого открывался вид на столицу."
+    new "По приказу Сары её армия начала занимать высоту, с которой открывался вид на столицу."
 
     old "The valley beneath and the land between her army and the capital was mostly farmland."
-    new "Долина внизу и земля между её армией и столицей были в основном фермерскими угодьями."
+    new "Долина внизу и земля между её армией и столицей в основном состояли из пахотных полей."
 
     old "With the season of winter upon them, the fields were left empty."
-    new "С наступлением зимы поля опустели."
+    new "С наступлением зимы поля остались пустыми."
 
     old "Still, even from so far away, Sarah could see the movements in the Capital."
-    new "И всё же, даже с такого расстояния, Сара видела движение в столице."
+    new "Тем не менее, даже с такого большого расстояния Сара могла видеть движения в столице."
 
     old "The Tribesmen, moving like ants across the walls of the city. The occasional scout group that dared outside."
-    new "Племенники, снующие как муравьи по стенам города. Изредка — группы разведчиков, отваживающихся выйти наружу."
+    new "Племенитяне двигались по стенам города, словно муравьи. Время от времени за его пределы осмеливалась выходить разведывательная группа."
 
     old "Still, from this position, it was impossible for any Tribesmen to come upon them by surprise."
-    new "Впрочем, с этой позиции ни один Племенник не мог застать их врасплох."
+    new "Тем не менее, из этого места ни один племенитянин не мог застать их врасплох."
 
     old "The moment even the smallest group left the gates of the Capital, they stood out, black dots against white snow."
-    new "Как только даже самая маленькая группа покидала ворота столицы, они становились заметны — чёрные точки на белом снегу."
+    new "В тот момент, когда даже самая маленькая группа покинула ворота Столицы, они выделялись — чёрные точки на фоне белого снега."
 
     old "As her army prepared, there was a nervous and anxious energy all around."
-    new "Пока её армия готовилась, вокруг царила нервная и тревожная атмосфера."
+    new "Пока её армия готовилась, повсюду царила нервная и напряжённая атмосфера."
 
     old "The men were eager for the fight, but equally frightend of it."
-    new "Солдаты рвались в бой, но в равной мере и боялись его."
+    new "Мужчины жаждали битвы, но в равной степени и боялись её."
 
     old "For most, this carnage did not come natural nor easy."
     new "Для большинства эта бойня не была ни естественной, ни лёгкой."
 
     old "Turning farmers into soldiers was never easy."
-    new "Превратить фермеров в солдат никогда не было легко."
+    new "Превращать фермеров в солдат никогда не было легко."
 
     old "And this was what had worried Sarah most."
     new "И именно это больше всего беспокоило Сару."
 
     old "The Tribesmen army, from what she could tell by sight and from her reports, was decidely smaller than her army."
-    new "Армия Племенников, насколько она могла судить по виду и донесениям, была определённо меньше её собственной."
+    new "Племенная армия, насколько она могла судить по виду и докладам, была определённо меньше её собственной армии."
 
     old "But they were battle-hardend warriors."
     new "Но они были закалёнными в боях воинами."
 
     old "Every single Tribesmen had been trained from birth to fight."
-    new "Каждый Племенник с рождения был обучен сражаться."
+    new "Каждый без исключения племенит был обучен с самого рождения сражаться."
 
     old "Most of them were veterans of not just one campaign, but multiple."
-    new "Большинство из них были ветеранами не одной, а множества кампаний."
+    new "Большинство из них были ветеранами не одного похода, а сразу нескольких."
 
     old "They were eager for the fight, and more than that, they were even eager for a good death."
-    new "Они жаждали боя, и более того — они жаждали достойной смерти."
+    new "Они жаждали битвы, и более того — даже стремились к достойной смерти."
 
     old "For a Tribesmen, to die in combat was such an honorable thing that sometimes after a great battle, some expressed regret for having survived it."
-    new "Для Племенника умереть в бою было настолько почётно, что порой после великой битвы некоторые выражали сожаление, что выжили."
+    new "Для воина племени умереть в бою было такой честью, что порой после великой битвы некоторые из них выражали сожаление о том, что выжили."
 
     old "That was far from how the people of Rosanna lived."
-    new "Это было совсем не так, как жили люди Розанны."
+    new "Это было далеко от того, как жили люди Розанны."
 
     old "Her people yearned for good harvests and easy lives."
-    new "Её народ стремился к хорошим урожаям и лёгкой жизни."
+    new "Её народ жаждал обильных урожаев и лёгкой жизни."
 
     old "But such kindness and soft living as a weakness in times of war."
-    new "Но такая доброта и мягкая жизнь стали слабостью во времена войны."
+    new "Но такая доброта и беззаботная жизнь стали слабостью во времена войны."
 
     old "It was a weakness that had exposed them to the occupation of the Tribesmen."
-    new "Это была слабость, которая сделала их уязвимыми для оккупации Племенников."
+    new "Это была слабость, которая и привела к тому, что племена оккупировали их земли."
 
     old "And now, Sarah prayed that her people could be as brutal as they were kind. To be strong today so they might earn easier lives tomorrow."
-    new "И теперь Сара молилась, чтобы её народ мог быть таким же жестоким, каким он был добрым. Быть сильными сегодня, чтобы заслужить более лёгкую жизнь завтра."
+    new "И теперь Сара молилась о том, чтобы её народ смог стать таким же жестоким, как и добрым. Чтобы быть сильными сегодня — и тем самым заслужить более лёгкую жизнь завтра."
 
     old "From the corner of her eyes, Sarah saw Kate approach."
-    new "Краем глаза Сара заметила приближающуюся Кейт."
+    new "Краем глаза Сара увидела, как подошла Кейт."
 
     old "Her voice was soft, filled with a seriousness that was usually lacking."
-    new "Её голос был мягким, наполненным серьёзностью, которой обычно не хватало."
+    new "Её голос был нежным, но в нём звучала серьёзность, которой у неё обычно не было."
 
     old "Hey. Are your men ready?"
     new "Эй. Твои люди готовы?"
 
     old "You know they are."
-    new "Ты знаешь, что готовы."
+    new "Ты же знаешь, что они готовы."
 
     old "Of course. Just asking out of habit I guess."
-    new "Конечно. Просто спрашиваю по привычке, наверное."
+    new "Конечно. Наверное, просто спрашиваю по привычке."
 
     old "The two of them stood for a while in silence."
-    new "Они оба стояли некоторое время в тишине."
+    new "Они вдвоём какое-то время стояли в молчании."
 
     old "Below the hill, the Capital of Rosanna. Strangely quiet."
-    new "Внизу под холмом — столица Розанны. На удивление тихая."
+    new "Под холмом раскинулась столица Розанны. Странно тихо."
 
     old "Does it feel weird? Being home?"
-    new "Не странно ли? Быть дома?"
+    new "Это кажется странным? Быть дома?"
 
     old "I've been home for a while now."
-    new "Я уже некоторое время дома."
+    new "Я уже некоторое время как дома."
 
     old "Yeah...but that's where all your memories took place. Just about everything before you left..."
-    new "Да... но ведь с этим местом связаны все твои воспоминания. Почти всё до того, как ты ушла..."
+    new "Да... но ведь именно там происходили все твои воспоминания. Почти всё, что случилось до твоего ухода..."
 
     old "Left."
     new "Ушла."
 
     old "Sarah knew Kate still struggled with what she had done all those years ago."
-    new "Сара знала, что Кейт всё ещё переживает из-за того, что сделала много лет назад."
+    new "Сара знала, что Кейт всё ещё мучается из-за того, что она сделала много лет назад."
 
     old "The lies. The betrayal."
     new "Ложь. Предательство."
 
     old "Don't feel bad about it. The lying, I mean."
-    new "Не вини себя за это. За ложь, я имею в виду."
+    new "Не вини себя за это. Я имею в виду ту ложь."
 
     old "She saw Kate look down, the shame was obvious on her face."
-    new "Она видела, как Кейт опустила взгляд, стыд был очевиден на её лице."
+    new "Она увидела, как Кейт опустила взгляд: на её лице был явный стыд."
 
     old "I can't help it..."
-    new "Я не могу с этим справиться..."
+    new "Я ничего не могу с этим поделать..."
 
     old "Her voice was soft again, close to a whisper."
     new "Её голос снова стал мягким, почти шёпотом."
 
     old "You were my only friend...and I betrayed even you."
-    new "Ты была моей единственной подругой... и я предала даже тебя."
+    new "Ты была моей единственной подругой... а я предала даже тебя."
 
     old "What does that say about a person?"
     new "Что это говорит о человеке?"
 
     old "You did do that. You did plenty of other things."
-    new "Да, ты сделала это. Ты сделала и много других вещей."
+    new "Ты ведь так и сделала. И делала много чего ещё."
 
     old "The thing about you Kate, and you've been like this even when we were kids..."
-    new "Дело в тебе, Кейт, ты была такой, даже когда мы были детьми..."
+    new "Вот что с тобой такое, Кейт... Ты и тогда, когда мы были детьми, уже была такой."
 
     old "You let the bad things lay on you, and all the good slips off."
-    new "Ты позволяешь плохому оставаться на себе, а всё хорошее ускользает."
+    new "Ты позволяешь всему плохому оседать на тебе, а всё хорошее просто соскальзывает."
 
     old "You forget every kindness you ever showed me, yet you remember forever the one time you hurt me."
-    new "Ты забываешь каждую проявленную ко мне доброту, но вечно помнишь тот единственный раз, когда причинила мне боль."
+    new "Ты забыла каждую доброту, которую когда-либо проявила ко мне, но зато навсегда запомнила тот единственный раз, когда ранила меня."
 
     old "In her eyes, she saw the glimmer of tears."
     new "В её глазах она увидела блеск слёз."
@@ -149,16 +148,16 @@ translate ru strings:
     new "Её собственные глаза были ясными. Неподвижными."
 
     old "I'm here today in no small part because of you."
-    new "Я здесь сегодня во многом благодаря тебе."
+    new "Я здесь сегодня не в последнюю очередь благодаря тебе."
 
     old "Yes, in part of what you did to me all those years ago...but your kindness too."
-    new "Да, отчасти из-за того, что ты сделала со мной много лет назад... но и из-за твоей доброты тоже."
+    new "Да, отчасти из-за того, что ты сделал со мной все те годы назад... но и благодаря твоей доброте тоже."
 
     old "Your betrayal...it doesn't weigh on me. So don't let it weigh on you."
-    new "Твоё предательство... оно не тяготит меня. Так что не позволяй ему тяготить тебя."
+    new "Твоё предательство... оно не давит на меня. Так что не позволяй ему давить и на тебя."
 
     old "Sarah saw tears fall from Kate's eyes, falling and cutting into the snow."
-    new "Сара увидела, как слёзы упали из глаз Кейт, падая и врезаясь в снег."
+    new "Сара видела, как из глаз Кейт катились слёзы, падая и оставляя глубокие борозды в снегу."
 
     old "Kate never would find the words she wanted to say."
     new "Кейт так и не смогла найти слова, которые хотела сказать."
@@ -167,190 +166,199 @@ translate ru strings:
     new "Пойдём, проветри голову."
 
     old "We have a battle to fight."
-    new "У нас битва впереди."
+    new "У нас есть битва, которую нужно выиграть."
 
     old "Kate wiped away the tears and nodded."
     new "Кейт вытерла слёзы и кивнула."
 
+    old "You're right."
+    new "Ты права."
+
     old "Sarah pointed towards the city in the near distance."
-    new "Сара указала на город неподалёку."
+    new "Сара указала на город вдали."
 
     old "That's home. Yeah, for me that's what I think of when I remembered Rosanna all those years."
-    new "Это дом. Да, для меня это то, о чём я думала, вспоминая Розанну все эти годы."
+    new "Это дом. Да, именно об этом я и думаю, когда вспоминаю Розанну — ту женщину, что была мне так близка столько лет."
 
     old "Those halls...my room...the throne...seeing my father and..."
-    new "Эти залы... моя комната... трон... видеть моего отца и..."
+    new "Эти залы... моя комната... трон... видеть своего отца и..."
 
     old "Sarah couldn't say Thomas' name."
     new "Сара не могла произнести имя Томаса."
 
     old "I lived a whole life in those halls, believing I'd play a role that I never got to play."
-    new "Я прожила целую жизнь в этих залах, веря, что сыграю роль, которую мне так и не довелось сыграть."
+    new "Я прожила целую жизнь в этих залах, веря, что исполню роль, которой так и не смогла сыграть."
 
     old "But instead..."
     new "Но вместо этого..."
 
     old "I'm here now."
-    new "Я здесь сейчас."
+    new "Я уже здесь."
 
     old "And I'm done, crying and worrying over what my life should have been, or could have been."
-    new "И я покончила с плачем и переживаниями о том, какой моя жизнь должна была быть или могла бы быть."
+    new "И я больше не буду плакать и переживать из-за того, какой моей жизнью должно было стать или могло бы стать."
 
     old "We all only get this one life."
-    new "У всех нас есть только одна жизнь."
+    new "У всех нас всего одна такая жизнь."
 
     old "Let neither of us waste it on regret."
-    new "Пусть никто из нас не тратит её на сожаления."
+    new "Давай ни одна из нас не будет тратить её на сожаления."
 
     old "Sarah and Kate stood together for a moment longer, sharing a silence as only friends could."
-    new "Сара и Кейт постояли вместе ещё мгновение, разделяя тишину так, как это могут только друзья."
+    new "Сара и Кейт ещё мгновение стояли вместе, разделяя молчание, доступное лишь подругам."
 
     old "As the army continued its final preparations, Kate left to rejoin her unit."
-    new "Пока армия продолжала последние приготовления, Кейт ушла, чтобы вернуться в свой отряд."
+    new "Пока армия продолжала последние приготовления, Кейт ушла, чтобы присоединиться к своему подразделению."
 
     old "Sarah studied the field for a while longer, enjoying the brief solitude."
-    new "Сара ещё некоторое время изучала поле, наслаждаясь кратким одиночеством."
+    new "Сара ещё некоторое время разглядывала поле, наслаждаясь короткой минутой одиночества."
 
     old "She turned only when she heard the sound of crushing snow."
-    new "Она обернулась, только когда услышала звук хрустящего снега."
+    new "Она обернулась только тогда, когда услышала звук ломающегося снега."
 
     old "Little one."
     new "Малышка."
 
     old "She heard his voice before she saw him."
-    new "Она услышала его голос прежде, чем увидела его."
+    new "Она услышала его голос до того, как увидела его."
 
     old "Felt her heart at peace."
-    new "Почувствовала, как сердце успокоилось."
+    new "Почувствовала, как её сердце обрело покой."
+
+    old "Atilla."
+    new "Атилла."
 
     old "I'm happy you came."
-    new "Я рад, что ты пришла."
+    new "Я рада, что ты пришёл."
 
     old "The others are finishing up their preparations. Checking their armor, sharpening their blades."
-    new "Остальные заканчивают приготовления. Проверяют броню, точат клинки."
+    new "Остальные заканчивают приготовления. Проверяют доспехи, точат клинки."
 
     old "My blade is always sharp."
-    new "Мой клинок всегда остёр."
+    new "Мой клинок всегда остр."
 
     old "Of course. I should have known."
-    new "Конечно. Я должен был догадаться."
+    new "Конечно. Я должна была это понять."
 
     old "He walked up besides her."
-    new "Он подошёл и встал рядом с ней."
+    new "Он подошёл к ней с бока."
 
     old "Whenever she saw him, she rememberd how she'd always forget how tall he was."
-    new "Всякий раз, видя его, она вспоминала, как постоянно забывала, какой он высокий."
+    new "Каждый раз, когда она видела его, она вспоминала, как всегда забывала, насколько он высок."
 
     old "Such a towering figure."
-    new "Такая возвышающаяся фигура."
+    new "Какая же высокая фигура."
 
     old "Her eyes traced his broad arms that wielded a slab of metal that most would struggle to even lift."
-    new "Её глаза проследили его широкие руки, владеющие глыбой металла, которую большинство с трудом бы даже подняло."
+    new "Её взгляд скользил по его широким рукам, которые сжимали металлическую плиту, поднять которую для большинства было бы непросто."
 
     old "Will we win today?"
-    new "Мы победим сегодня?"
+    new "Мы сегодня победим?"
 
     old "He was quiet for a while."
     new "Он некоторое время молчал."
 
     old "She asked him becaus she knew he would always give her an honest answer."
-    new "Она спросила его, потому что знала — он всегда даст ей честный ответ."
+    new "Она спросила его, потому что знала, что он всегда даст ей честный ответ."
 
     old "It is possible."
     new "Это возможно."
 
     old "I was hoping for some insight. I could get a peasant boy to tell me that it's possible."
-    new "Я надеялась на более глубокое понимание. Крестьянский мальчик мог бы сказать мне, что это возможно."
+    new "Я надеялась на какие-то инсайты. Я могла бы заставить какого-нибудь крестьянского парня сказать мне, что это возможно."
 
     old "What should I do? Lie and fill your heart with confidence?"
-    new "Что мне делать? Солгать и наполнить твоё сердце уверенностью?"
+    new "Что мне делать? Сказать ложь и наполнить твоё сердце уверенностью?"
 
     old "Or lie and make you anxious for the battle to come?"
-    new "Или солгать и заставить тебя тревожиться о предстоящей битве?"
+    new "Или солгать и заставить тебя тревожиться о грядущей битве?"
 
     old "I can speak only the truth, Sarah."
     new "Я могу говорить только правду, Сара."
 
     old "And the truth is that victory is not certain. Nor is defeat."
-    new "И правда в том, что победа не гарантирована. Как и поражение."
+    new "И правда заключается в том, что победа не гарантирована. Как и поражение."
 
     old "Yeah, I know."
     new "Да, я знаю."
 
     old "I guess I just didn't want to hear it."
-    new "Наверное, я просто не хотела это слышать."
+    new "Наверное, я просто не хотела этого слышать."
 
     old "Remember it."
-    new "Запомни это."
+    new "Помни об этом."
 
     old "Your acts shape the world. Your decisions. You will determine this day."
     new "Твои поступки формируют мир. Твои решения. Ты определишь этот день."
 
     old "Thanks, I didn't have enough on my shoulders."
-    new "Спасибо, мне и так не хватало груза на плечах."
+    new "Спасибо, но и так на моих плечах уже было недостаточно."
 
     old "Be grateful."
     new "Будь благодарна."
 
     old "Grateful that you are one of the few that can truly act in this world."
-    new "Благодарна за то, что ты одна из немногих, кто действительно может действовать в этом мире."
+    new "Благодарна тому, что ты одна из немногих, кто действительно способен действовать в этом мире."
 
     old "Most of the men and women gathered on this field will live or die through no reason, other than the decisions you make."
-    new "Большинство мужчин и женщин, собравшихся на этом поле, будут жить или умирать без иной причины, кроме решений, которые ты принимаешь."
+    new "Большинство мужчин и женщин, собравшихся на этом поле, будут жить или умрут не по какой-то причине, кроме решений, которые ты принимаешь."
 
     old "Is it not worse to live like that?"
-    new "Разве не хуже жить вот так?"
+    new "Разве не хуже жить так?"
 
     old "Perhaps. But the burden of it..."
-    new "Возможно. Но бремя этого..."
+    new "Возможно. Но это бремя..."
 
     old "The burden is the burden."
-    new "Бремя есть бремя."
+    new "Ноша остаётся ношей."
 
     old "I could see it, even in the early days of your training."
-    new "Я видел это, ещё в первые дни твоего обучения."
+    new "Я видел это даже в первые дни твоих тренировок."
 
     old "You were strong."
-    new "Ты была сильной."
+    new "Ты была сильна."
 
     old "He paused, before adding more."
-    new "Он помедлил, прежде чем добавить."
+    new "Он сделал паузу, прежде чем добавить ещё."
 
     old "You are strong now as well."
-    new "Ты сильна и сейчас."
+    new "Ты и сейчас сильна."
 
     old "She realized she still lived by his praise, despite all the years."
-    new "Она поняла, что всё ещё дорожит его похвалой, несмотря на все годы."
+    new "Она поняла, что, несмотря на все прошедшие годы, её жизнь по-прежнему определялась его похвалами."
 
     old "He suddenly went quiet, shifting about in an unusual way."
-    new "Он внезапно замолчал, заёрзав необычным образом."
+    new "Он внезапно замолчал и начал неестественно суетиться."
 
     old "Awkwardness from someone unfamiliar to the emotion."
-    new "Неловкость от того, кто не привык к таким эмоциям."
+    new "Неловкость возникла у того, кто не привык к таким эмоциям."
 
     old "What? You want to ask me something?"
     new "Что? Ты хочешь меня о чём-то спросить?"
 
     old "As per usual, he coverd his vulnerabilities with pretend anger."
-    new "Как обычно, он прикрывал свою уязвимость показным гневом."
+    new "Как обычно, он скрывал свою уязвимость за притворной злостью."
 
     old "It's nothing!"
-    new "Ничего!"
+    new "Это ничего!"
 
     old "He shouted."
-    new "Крикнул он."
+    new "Он закричал."
 
     old "For all the world, that mask worked."
-    new "Для всего мира эта маска работала."
+    new "С виду казалось, что эта маска действительно работала."
 
     old "But he was a fool for trying it on the only person that saw through it."
-    new "Но он был глупцом, пытаясь применить её к единственному человеку, который видел её насквозь."
+    new "Но он был дураком, раз решил попробовать это на единственном человеке, который всё раскусил."
 
     old "Come on, ask me. I can see something is on your mind."
-    new "Давай, спроси меня. Я вижу, что у тебя на уме что-то есть."
+    new "Давай же, спроси меня. Я вижу, что у тебя на уме что-то есть."
 
     old "And shouting at me doesn't scare me. It hasn't scared me for a while."
-    new "И крик на меня меня не пугает. Он уже давно меня не пугает."
+    new "И крики на меня меня не пугают. Они уже давно перестали меня пугать."
+
+    old "I..."
+    new "Я..."
 
     old "I wanted to ask you to meet with me."
     new "Я хотел попросить тебя встретиться со мной."
@@ -359,19 +367,19 @@ translate ru strings:
     new "Встретиться?"
 
     old "If we win this battle today...if we survive..."
-    new "Если мы выиграем эту битву сегодня... если выживем..."
+    new "Если мы сегодня выиграем эту битву... если выживем..."
 
     old "I know that you will have many things to do...politics, coronations, and other such absurdities."
-    new "Я знаю, что у тебя будет много дел... политика, коронации и прочие подобные нелепости."
+    new "Я знаю, что у тебя будет много дел... политика, коронации и прочие подобные абсурды."
 
     old "But I...I wanted to ask if you would meet with me."
     new "Но я... я хотел спросить, не встретишься ли ты со мной."
 
     old "Atilla pointed into the far distance, a slight way off from the city."
-    new "Атилла указал вдаль, чуть поодаль от города."
+    new "Атилла указал в далекую точку, немного отклонившись от города."
 
     old "The royal forests that lay to the north of the capital. Her family had used it for hunting."
-    new "Королевские леса к северу от столицы. Её семья использовала их для охоты."
+    new "Королевские леса, что раскинулись к северу от столицы. Её семья использовала их для охоты."
 
     old "We can meet there..."
     new "Мы можем встретиться там..."
@@ -380,25 +388,25 @@ translate ru strings:
     new "Знаешь, если ты просто хочешь..."
 
     old "Sarah didn't finish her sentence."
-    new "Сара не закончила фразу."
+    new "Сара не договорила."
 
     old "There are rooms in the castle, private rooms where we can-"
-    new "В замке есть комнаты, личные покои, где мы можем-"
+    new "В замке есть комнаты, частные комнаты, где мы можем..."
 
     old "His face was still flustered."
-    new "Его лицо всё ещё было растерянным."
+    new "Его лицо всё ещё было раскрасневшимся."
 
     old "No...it's not that, it's...please meet me in the forest...after."
-    new "Нет... дело не в этом, просто... пожалуйста, встреться со мной в лесу... после."
+    new "Нет... дело не в этом, это... пожалуйста, встречайся со мной в лесу... позже."
 
     old "Sure, but only because you're acting sort of..."
-    new "Конечно, но только потому что ты ведёшь себя как-то..."
+    new "Конечно, но только потому, что ты ведёшь себя как-то..."
 
     old "You know, I've called you a lot of things in my life."
-    new "Знаешь, я называла тебя многими вещами в своей жизни."
+    new "Знаешь, за всю свою жизнь я называла тебя самыми разными словами."
 
     old "But until now, I never thought I'd call you cute."
-    new "Но до сих пор я никогда не думала, что назову тебя милым."
+    new "Но до сих пор я и не думала, что когда-нибудь назову тебя милым."
 
     old "She saw a panic on his face."
     new "Она увидела панику на его лице."
@@ -410,175 +418,175 @@ translate ru strings:
     new "Сара улыбнулась, высунув ему язык."
 
     old "The two of them laughed. A moment where it all felt normal."
-    new "Они оба рассмеялись. Момент, когда всё казалось нормальным."
+    new "Они вдвоём рассмеялись. На мгновение всё казалось нормальным."
 
     old "Before the carnage."
-    new "Перед бойней."
+    new "До резни."
 
     old "Hours later, Sarah rode out at the front of her army."
-    new "Часы спустя Сара выехала вперёд своей армии."
+    new "Спустя несколько часов Сара ехала во главе своей армии."
 
     old "A last inspection, though it didn't matter. She knew they were ready."
-    new "Последний осмотр, хотя это уже не имело значения. Она знала, что они готовы."
+    new "Последняя проверка, хотя это уже не имело значения. Она знала, что они готовы."
 
     old "All of them stood at attention."
     new "Все они стояли по стойке смирно."
 
     old "United. Disciplined. Ready."
-    new "Едины. Дисциплинированы. Готовы."
+    new "Единство. Дисциплина. Готовность."
 
     old "Even the Rosannan peasants seemed like daunting soldiers with their armor."
-    new "Даже розаннские крестьяне казались грозными солдатами в своих доспехах."
+    new "Даже крестьяне из Розанны казались пугающими солдатами в своих доспехах."
 
     old "As she rode along the front of the line, soldiers greeted her."
-    new "Когда она ехала вдоль передней линии, солдаты приветствовали её."
+    new "Когда она проезжала вдоль переднего края строя, солдаты приветствовали её."
 
     old "The Legions of Mythran, send by Gilead, greeted her with raised fists."
-    new "Легионы Митрана, посланные Гилеадом, приветствовали её поднятыми кулаками."
+    new "Легии Митрана, посланные Гилеадом, приветствовали её поднятыми кулаками."
 
     old "So trained and uniform, they almost didn't seem like individual soldiers."
-    new "Такие обученные и единообразные, они почти не казались отдельными солдатами."
+    new "Так обучены и одинаково одеты, что они почти не казались отдельными солдатами."
 
     old "In the rear, she saw the siege weapons she had brought, aimed at the city."
-    new "В тылу она увидела осадные орудия, которые привезла, нацеленные на город."
+    new "В тылу она увидела принесённые ею осадные орудия, направленные на город."
 
     old "Sarah looked at her army."
-    new "Сара взглянула на свою армию."
+    new "Сара посмотрела на свою армию."
 
     old "There were her own soldiers from the mercenary company."
-    new "Там были её собственные солдаты из наёмной роты."
+    new "Были и её собственные люди — солдаты из наёмнической компании."
 
     old "Then there were her own people."
-    new "А затем — её собственный народ."
+    new "Затем были её собственные люди."
 
     old "She could see her army still carried the losses of their previous encounter with the Tribesmen."
-    new "Она видела, что её армия всё ещё несёт потери от предыдущей встречи с Племенниками."
+    new "Она видела, что её армия всё ещё несла потери от предыдущего столкновения с племенными воинами."
 
     old "They were not at full strength."
-    new "Они были не в полной силе."
+    new "Они были не в полном составе."
 
     old "In the valley below, she saw the Tribesmen armies gather."
-    new "В долине внизу она увидела, как собираются армии Племенников."
+    new "В долине внизу она увидела, как собираются армии племенников."
 
     old "Their position on the hill was an advantage. It allowed them to fire on the Capital while staying out of range from the Tribesmen and their archers."
-    new "Их позиция на холме была преимуществом. Это позволяло им обстреливать столицу, оставаясь вне досягаемости Племенников и их лучников."
+    new "Их положение на холме было преимуществом. Оно позволяло им обстреливать столицу, оставаясь вне досягаемости племенян и их лучников."
 
     old "Being uphill also meant that the Tribesmen cavalry would not be able to carry out a charge as easily."
-    new "Быть на возвышенности также означало, что кавалерия Племенников не сможет так легко провести атаку."
+    new "Однако это также означало, что кавалерия племен не сможет так легко осуществить атаку."
 
     old "Still, she knew the Tribesmen were equally skilled at war."
-    new "И всё же она знала, что Племенники были столь же искусны в войне."
+    new "Тем не менее она знала: племенитяне были так же искусны в войне."
 
     old "Below they had gathered outside of the city, lined up in their own formations."
     new "Внизу они собрались за пределами города, выстроившись в свои собственные формации."
 
     old "They were not going to wait out their fate inside of the city walls. They had come to meet them on the battlefield."
-    new "Они не собирались ждать своей участи внутри городских стен. Они вышли встретить их на поле боя."
+    new "Они не собирались ждать своей судьбы внутри городских стен. Они пришли встретить их на поле боя."
 
     old "For now, each army waited, anxious and restless."
-    new "Пока что каждая армия ждала, тревожно и беспокойно."
+    new "Пока что каждая из армий ждала, полная тревоги и беспокойства."
 
     old "Sarah had relied on Lady Carolyn's spy network in the Capital to stay informed."
-    new "Сара полагалась на шпионскую сеть леди Кэролайн в столице, чтобы оставаться в курсе событий."
+    new "Сара полагалась на шпионскую сеть леди Каролин в столице, чтобы оставаться в курсе событий."
 
     old "Ever since the Tribesmen had occupied the city, it had been reduced to a husk of its former glory."
-    new "С тех пор как Племенники заняли город, он превратился в тень своей былой славы."
+    new "С тех пор как племениты заняли город, он превратился в пустую оболочку своей былой славы."
 
     old "Most of the noble families had fled during The Fall, taking with them whatever they could carry."
     new "Большинство знатных семей бежали во время Падения, забрав с собой всё, что могли унести."
 
     old "Those families that didn't flee, or failed to, quickly learned that the Tribesmen culture had no understanding of nobility or titles."
-    new "Те семьи, которые не бежали или не смогли, быстро поняли, что культура Племенников не признаёт знатности или титулов."
+    new "Тем семьям, которые не бежали или не смогли это сделать, быстро стало ясно: культура племенников совершенно не знала ни знатности, ни титулов."
 
     old "Being an old family meant nothing to the Tribesmen."
-    new "Быть старинным родом ничего не значило для Племенников."
+    new "Быть представителем старого рода для племенитов ничего не значило."
 
     old "Their estates were taken over, their fortunes looted."
-    new "Их поместья были захвачены, состояния разграблены."
+    new "Их поместья отняли, а богатства разграбили."
 
     old "There was hardly any economy to speak of. Instead, the Tribesmen simply looted and carried off their wealth back to their capital of Al'Gahaem."
-    new "Экономики практически не существовало. Вместо этого Племенники просто грабили и увозили богатства в свою столицу Аль'Гахаэм."
+    new "Экономики там почти и не существовало. Вместо этого племенитяне просто грабили всё ценное и уносили богатства обратно в свою столицу — Аль-Гахам."
 
     old "And so, the cities of Rosanna dwindled and died."
-    new "И так города Розанны приходили в упадок и умирали."
+    new "И так города Розанны пришли в упадок и погибли."
 
     old "Extracting more wealth was the only objective."
-    new "Извлечение большего богатства было единственной целью."
+    new "Извлечение ещё большего богатства было единственной целью."
 
     old "And after the easiest things were stolen, they went after the harder things."
-    new "И после того, как самое лёгкое было украдено, они взялись за более сложное."
+    new "И после того, как всё самое лёгкое было украдено, они взялись за то, что было сложнее."
 
     old "Rounding up citizens, driving them into the mines and forcing them to work endlessly to produce more."
-    new "Сгоняя граждан, загоняя их в шахты и заставляя работать без устали, чтобы производить больше."
+    new "Собирали граждан толпами, загоняли их в шахты и заставляли работать без остановки, чтобы добыть ещё больше."
 
     old "More iron. More coal. More gold."
     new "Больше железа. Больше угля. Больше золота."
 
     old "They were made to work until their hands broke, and then others would take their place."
-    new "Их заставляли работать, пока их руки не ломались, а затем другие занимали их место."
+    new "Их заставляли работать, пока руки не ломались, а потом на их место приходили другие."
 
     old "But the Tribesmen were not rulers. They had no care for even the things they exploited."
-    new "Но Племенники не были правителями. Им было безразлично даже то, что они эксплуатировали."
+    new "Но племенники не были правителями. Им было всё равно даже на те вещи, которыми они пользовались."
 
     old "So over the years, the mines collapsed, until even those offered up no more."
-    new "Так со временем шахты обрушились, пока и они не перестали давать добычу."
+    new "И вот с годами шахты пришли в упадок, пока даже те, кого заставляли работать, не перестали давать что-либо ценное."
 
     old "And in the end, when nearly everything had been stolen, the people learned that there was still more to be taken from them."
-    new "И в конце концов, когда почти всё было украдено, люди узнали, что у них всё ещё можно отнять."
+    new "И в конце концов, когда было украдено почти всё, люди поняли, что с них ещё можно было взять гораздо больше."
 
     old "Today, the Tribesmen made most of their wealth off the slave trade."
-    new "В наши дни Племенники получали большую часть своего богатства от работорговли."
+    new "Сегодня племенитяне получали большую часть своего богатства от работорговли."
 
     old "Raiding the villages, town and cities."
-    new "Совершая набеги на деревни, посёлки и города."
+    new "Ограбление деревень, городов и поселений."
 
     old "Whenever some local warlord needed money, they would send more slaves into the desert."
-    new "Когда какому-нибудь местному полководцу нужны были деньги, они отправляли больше рабов в пустыню."
+    new "Каждый раз, когда какому-нибудь местному военачальнику нужны были деньги, они отправляли в пустыню ещё больше рабов."
 
     old "So, year on year, the lands of Rosanna dwindled in resources and people, leaving it desolate and cold."
-    new "Так год за годом земли Розанны истощались ресурсами и людьми, оставляя её пустынной и холодной."
+    new "Так, год за годом, земли Розанны обеднели в ресурсах и людях, оставаясь пустынными и холодными."
 
     old "Sarah felt her heart tremble at the sight of the destruction."
-    new "Сара почувствовала, как её сердце дрогнуло при виде разрушений."
+    new "Сара почувствовала, как ее сердце затрепетало при виде разрушений."
 
     old "But it would end today."
-    new "Но сегодня этому придёт конец."
+    new "Но сегодня всему пришёл конец."
 
     old "One way or another."
     new "Так или иначе."
 
     old "Sarah drew her blade from its sheath and held it up in the air."
-    new "Сара вытащила клинок из ножен и подняла его в воздух."
+    new "Сара извлекла свой клинок из ножен и подняла его в воздух."
 
     old "The steel from the blade, glimmered."
-    new "Сталь клинка сверкнула."
+    new "Сталь лезвия заблистала."
 
     old "She cried out her command, and one by one, Sarah heard the loud thuds of the trebuchet slings."
-    new "Она выкрикнула команду, и один за другим Сара услышала громкие удары пращей требушетов."
+    new "Она отдала приказ, и одна за другой до неё донеслись громкие удары пращ из катапульт."
 
     old "She watched as the giant boulders soared through the air."
-    new "Она смотрела, как гигантские валуны взмывают в воздух."
+    new "Она наблюдала, как гигантские валуны взлетали в воздух."
 
     old "Before they could even land, Sarah saw the Tribesmen react."
-    new "Прежде чем они успели приземлиться, Сара увидела, как Племенники отреагировали."
+    new "Прежде чем они успели даже приземлиться, Сара увидела, что племенники отреагировали."
 
     old "Their clustered army broke, all at once, like an ant colony seperating into countless units."
-    new "Их сомкнутая армия распалась, вся разом, словно муравьиная колония, разделяющаяся на бесчисленные отряды."
+    new "Их плотный строй рухнул разом — словно муравьиная колония, распадающаяся на бесчисленные группы."
 
     old "All together, they surged forward to the sound of a Tribal warhorn."
-    new "Все вместе они ринулись вперёд под звук племенного боевого рога."
+    new "Все вместе они ринулись вперёд под звуки племенного боевого рога."
 
     old "When the rocks from the trebuchets finally landed, they struck only a handful of Tribesmen."
-    new "Когда камни из требушетов наконец упали, они поразили лишь горстку Племенников."
+    new "Когда камни из требушетов наконец-то прилетели, они поразили лишь горстку племенников."
 
     old "Behind their army, some of the boulders struck against the walls and landed inside of the city, sending up smoke."
-    new "Позади их армии некоторые валуны ударились о стены и упали внутрь города, поднимая дым."
+    new "За их армией некоторые валуны ударились о стены и попали внутрь города, подняв облака дыма."
 
     old "Carried on the wind, Sarah heard the nearing battle cries of the Tribesmen as they surged across the snowy field."
-    new "Ветер донёс до Сары приближающиеся боевые кличи Племенников, когда они хлынули через заснеженное поле."
+    new "Несомые ветром, крики племенитов, приближавшихся к битве, достигли ушей Сары, пока они неслись по заснеженному полю."
 
     old "Their horses were powerful, Desert trained."
-    new "Их кони были могучими, обученными в пустыне."
+    new "Их лошади были могучими — вышколенными в пустыне."
 
     old "Even despite the snow, they moved fast and decisive."
     new "Даже несмотря на снег, они двигались быстро и решительно."
@@ -587,652 +595,661 @@ translate ru strings:
     new "Они преодолеют расстояние между армиями в мгновение ока."
 
     old "She doubted her siege weapons would even be able to reload in time for a second salvo."
-    new "Она сомневалась, что её осадные орудия успеют перезарядиться для второго залпа."
+    new "Она сомневалась, что их осадные орудия вообще успеют перезарядиться к моменту второй очереди выстрелов."
 
     old "Sarah cried out her second command, and her army began to move as one."
-    new "Сара выкрикнула вторую команду, и её армия начала двигаться как единое целое."
+    new "Сара отдала вторую команду, и её армия начала действовать как единое целое."
 
     old "Moving forward, they took to the field, guarding all the approaches on the hill, moving towards the Tribesmen."
-    new "Двигаясь вперёд, они вышли на поле, охраняя все подходы к холму, направляясь к Племенникам."
+    new "Двигаясь вперёд, они вышли на поле боя, охраняя все подходы к холму и продвигаясь к воинам племён."
 
     old "Sarah heard the war drum beat, mixing with the war cries of the approaching Tribesmen."
-    new "Сара слышала бой боевого барабана, смешивающийся с боевыми кличами приближающихся Племенников."
+    new "Сара услышала бой военного барабана, смешивающийся с боевыми кличами приближающихся племенников."
 
     old "She herself fell back into the center of her army, able to overlook and issue commands in every direction."
-    new "Она сама отступила в центр своей армии, откуда могла обозревать и отдавать приказы во всех направлениях."
+    new "Она сама отступила в центр своей армии, чтобы иметь возможность наблюдать за всем полем боя и отдавать приказы во всех направлениях."
 
     old "The distance between her army and the Tribesmen had shrunk."
-    new "Расстояние между её армией и Племенниками сократилось."
+    new "Дистанция между её армией и племенными воинами сократилась."
 
     old "Now so close, she could hear the beating and stomping of their horses."
-    new "Теперь так близко, что она слышала биение и топот их коней."
+    new "Теперь они были так близко, что она слышала удары и топот их лошадей."
 
     old "Snow dusted up as the horde closed the gap."
-    new "Снег взметнулся, когда орда сократила разрыв."
+    new "Снег поднялся в воздух, когда орда сократила дистанцию."
 
     old "Then, rushing up all as one, their armies connected."
-    new "Затем, ринувшись все как один, их армии столкнулись."
+    new "Затем, устремившись вперёд как единое целое, их армии столкнулись."
 
     old "A violent exploison of steel, horses and men, clashing into each other."
-    new "Жестокий взрыв стали, коней и людей, врезающихся друг в друга."
+    new "Насильственный взрыв стали, лошадей и людей — они сталкивались друг с другом."
 
     old "Instantly, the Tribesmen cut deep into their front lines."
-    new "Мгновенно Племенники врезались глубоко в их передовые линии."
+    new "Трибсмены мгновенно прорвали передние линии противника."
 
     old "The surging power of their cavalry charge was muted by moving uphill, but still it was stunning to see."
-    new "Сокрушительная сила их кавалерийской атаки была приглушена движением в гору, но всё равно это было потрясающее зрелище."
+    new "Растущая мощь их кавалерийского натиска ослабла из-за подъёма в гору, но зрелище всё равно оставалось поразительным."
 
     old "Sarah watched with awe as the first lines broke and the Tribesmen cut through."
-    new "Сара с благоговением смотрела, как первые линии дрогнули и Племенники прорвались."
+    new "Сара с благоговением наблюдала, как первые линии фронта прорвались, а племенники пробились сквозь них."
 
     old "They swung their curved blades with skill, finding the gaps in between the formation to strike at individual soldiers."
-    new "Они с умением размахивали своими изогнутыми клинками, находя промежутки в строю, чтобы поражать отдельных солдат."
+    new "Они умело орудовали изогнутыми клинками, находя бреши в построении, чтобы атаковать отдельных солдат."
 
     old "Sarah watched as countless men died."
-    new "Сара видела, как бесчисленные солдаты погибали."
+    new "Сара смотрела, как гибнут бесчисленные люди."
 
     old "But even as the screams rose, she saw that it was not so one-sided."
-    new "Но даже когда крики усиливались, она видела, что всё было не так односторонне."
+    new "Но даже когда раздавались крики, она поняла, что всё было не так уж и односторонне."
 
     old "With their momentum broken on the first lines, the Tribesmen now fought on equal footing with her own soldiers."
-    new "Потеряв импульс на первых линиях, Племенники теперь сражались на равных с её собственными солдатами."
+    new "После того как их импульс был сломан на первых линиях, племениты теперь сражались на равных со своими солдатами."
 
     old "Spearmen raised up their weapons, stabbing them madly towards the Tribesmen."
-    new "Копейщики поднимали оружие, бешено тыча им в Племенников."
+    new "Копейщики подняли оружие и начали бешено наносить удары по племенникам."
 
     old "When their weapons found no purchase in the Tribesmen, they would cut into their horses."
-    new "Когда их оружие не находило цели в Племенниках, они вонзали его в их коней."
+    new "Когда их оружие не находило опоры в телах племенитов, оно вместо этого впивалось в их лошадей."
 
     old "Stumbling, she saw one of the great beasts falling, dragging along its rider."
-    new "Споткнувшись, она увидела, как один из огромных зверей падает, увлекая за собой всадника."
+    new "Пошатнувшись, она увидела, как одно из огромных чудовищ упало, утащив за собой своего всадника."
 
     old "Once too the ground, they made easy killing."
-    new "Оказавшись на земле, их было легко убить."
+    new "Оказавшись на земле, они легко убивали."
 
     old "Some of the Tribesmen, nearest to the front, leapt from their horses with almost impossible acrobatics."
-    new "Некоторые из Племенников, ближайшие к фронту, спрыгивали с коней с почти невозможной акробатикой."
+    new "Некоторые из племенников, стоявших ближе всего к передовой, с почти невероятной акробатикой спрыгнули со своих лошадей."
 
     old "Landing behind her spearmen, they drove deeper into her army's center."
-    new "Приземлившись позади её копейщиков, они продвигались глубже в центр её армии."
+    new "Приземлившись позади своих копейщиков, они проникли ещё глубже в центр её армии."
 
     old "Watching, Sarah saw the flanks of her army moving up, surrounding the Tribesmen and closing off their escape."
-    new "Наблюдая, Сара увидела, как фланги её армии поднимаются, окружая Племенников и отрезая им путь к отступлению."
+    new "Наблюдая за происходящим, Сара увидела, как фланги её армии сдвигаются в стороны, окружая воинов племени и отрезая им путь к отступлению."
 
     old "Suicide, she thought."
-    new "Самоубийство, подумала она."
+    new "Самоубийство, — подумала она."
 
     old "Their charge, deadly as it had been, was madness."
-    new "Их атака, какой бы смертоносной она ни была, была безумием."
+    new "Их атака, какой бы смертоносной она ни была, была чистым безумием."
 
     old "Soon they would be surrounded on all sides and cut down."
-    new "Скоро их окружат со всех сторон и перебьют."
+    new "Скоро они окажутся окружены со всех сторон и будут уничтожены."
 
     old "Unless..."
-    new "Если только..."
+    new "Разве что..."
 
     old "Sarah realized their true intent as the Tribesmen pushed further."
-    new "Сара поняла их истинный замысел, когда Племенники продвинулись дальше."
+    new "Сара поняла их истинный замысел, когда племенитяне продвигались всё дальше."
 
     old "The were committing everything to strike into the center of her army, to drive as deep into it as they could."
-    new "Они бросали всё, чтобы ударить в центр её армии, проникнуть как можно глубже."
+    new "Они были готовы поставить всё на кон, чтобы ударить в центр её армии и проникнуть туда как можно глубже."
 
     old "Because she was there."
     new "Потому что она была там."
 
     old "They weren't planning on defeating her army at all, they simply hoped to kill her."
-    new "Они вовсе не планировали разбить её армию — они просто надеялись убить её."
+    new "Они вовсе не собирались побеждать её армию — они просто надеялись убить её."
 
     old "And if she died, her army would wither around her."
-    new "И если бы она умерла, её армия рассыпалась бы вокруг неё."
+    new "И если бы она умерла, её армия увяла бы вокруг неё."
 
     old "Rally around me!"
-    new "Сплотиться вокруг меня!"
+    new "Соберитесь вокруг меня!"
 
     old "Sarah cried out the words to her closest guards."
-    new "Сара выкрикнула эти слова своим ближайшим охранникам."
+    new "Сара крикнула эти слова своим ближайшим стражникам."
 
     old "All the while, she watched the Tribesmen press further."
-    new "Всё это время она наблюдала, как Племенники продвигаются дальше."
+    new "Всё это время она смотрела, как племенитяне подходят всё ближе."
 
     old "Behind her, walls of her own soldiers, standing in formation."
-    new "Позади неё — стены её собственных солдат, стоящих в строю."
+    new "За спиной у неё — стены из собственных солдат, стоящих в строю."
 
     old "Trapped between the advancing Tribesmen and her own soldiers, she knew she had no way to fall back further."
-    new "Зажатая между наступающими Племенниками и своими солдатами, она знала, что не может отступить дальше."
+    new "Оказавшись в ловушке между наступающими племенными воинами и собственными солдатами, она поняла, что отступать ей уже некуда."
 
     old "Ahead, she saw the Tribesmen coming ever closer."
-    new "Впереди она видела, как Племенники подходят всё ближе."
+    new "Впереди она видела, как племенитяне подходили всё ближе."
 
     old "Their advance had slowed, but they still moved through her army like a surgical knife, seeking out the only target they cared for."
-    new "Их продвижение замедлилось, но они всё ещё двигались сквозь её армию, как хирургический нож, выискивая единственную цель, которая их заботила."
+    new "Их наступление замедлилось, но они по-прежнему пробирались сквозь её армию, как хирургический скальпель, отыскивая единственную цель, которая их волновала."
+
+    old "Her."
+    new "Она."
 
     old "Some were so near, she could see make out the features on their faces."
     new "Некоторые были так близко, что она могла разглядеть черты их лиц."
 
     old "Behind them, she saw her army envelop the enemy, rushing up behind them."
-    new "Позади них она видела, как её армия охватывает врага, заходя с тыла."
+    new "За их спинами она увидела, как её армия окружила врага, устремившись им в тыл."
 
     old "But it wouldn't matter. Not if they were too late."
-    new "Но это не имело бы значения. Если бы они опоздали."
+    new "Но это уже не имело значения. Не если они опоздали."
 
     old "Move up these units, shore up the core and-"
-    new "Продвиньте эти отряды, укрепите ядро и-"
+    new "Передвигните эти отряды, укреплите ядро и—"
 
     old "An arrow flew through the air, striking her in her chest."
-    new "Стрела пронеслась по воздуху, вонзившись ей в грудь."
+    new "Стрела пролетела по воздуху и ударила её в грудь."
 
     old "So hard the impact, Sarah gasped for air as she fell backwards from her seat."
-    new "Удар был такой силы, что Сара задохнулась, падая назад с седла."
+    new "Удар был настолько сильным, что Сара захватывала ртом воздух, когда падала назад со своего места."
 
     old "She felt the air knocked from her lungs as she crashed against the earth."
-    new "Она почувствовала, как воздух выбило из лёгких, когда она ударилась о землю."
+    new "Она почувствовала, как воздух вырвался из лёгких, когда она рухнула на землю."
 
     old "All around her, the moving bodies of soldiers, pressed up against one another, shifting at they were pressed back by the Tribesmen."
-    new "Вокруг неё — движущиеся тела солдат, прижатые друг к другу, смещающиеся, когда Племенники теснили их назад."
+    new "Вокруг неё двигались тела солдат, прижатые друг к другу и сдвинутые назад племенными воинами."
 
     old "Summoning all her strength, Sarah pushed herself to her feet."
     new "Собрав все силы, Сара поднялась на ноги."
 
     old "All around her, the chaotic swirl of battle grew ever more fierce."
-    new "Вокруг неё хаотичный водоворот битвы становился всё более яростным."
+    new "Вокруг неё хаотичный вихрь битвы становился всё более яростным."
 
     old "Sarah touched her chest where the arrow had struck."
     new "Сара коснулась груди в том месте, куда попала стрела."
 
     old "Grabbing the shaft, she pulled it free from her chest."
-    new "Схватив древко, она вытащила его из груди."
+    new "Хватив за древко, она вытащила его из своей груди."
 
     old "The arrow came out clean, the head glittering with steel, but no blood."
-    new "Стрела вышла чистой, наконечник блестел сталью, но крови не было."
+    new "Стрела вышла чистой — наконечник блестел сталью, но крови не было."
 
     old "It had struck her, but did not pierce her armor."
-    new "Она попала в неё, но не пробила броню."
+    new "Она ударила её, но не пробила доспехи."
 
     old "She sighed a breath of relief."
     new "Она вздохнула с облегчением."
 
     old "Instantly, she shifted her focus back on the battle."
-    new "Мгновенно она переключила внимание обратно на битву."
+    new "Мгновенно она снова сосредоточила всё своё внимание на битве."
 
     old "Knocked from her horse, she could no longer look over her army so easily."
-    new "Сбитая с лошади, она больше не могла так легко обозревать свою армию."
+    new "Сбитая с лошади, она уже не могла так легко следить за своей армией."
 
     old "What was happening?"
-    new "Что происходит?"
+    new "Что же происходило?"
 
     old "Where are they?!"
     new "Где они?!"
 
     old "Sarah yelled, but in the growing chaos, nobody seemed to hear."
-    new "Сара крикнула, но в нарастающем хаосе никто, казалось, не слышал."
+    new "Сара закричала, но в растущем хаосе её, казалось, никто не услышал."
 
     old "Then, suddenly, a Tribesman landed before her."
-    new "Затем внезапно перед ней приземлился Племенник."
+    new "Тут внезапно перед ней приземлился Соплеменник."
 
     old "They had cut so deep into her army."
-    new "Они врезались так глубоко в её армию."
+    new "Они нанесли такой глубокий удар по её армии."
 
     old "Around her, the soldiers moved, drawing their blades and meeting the Tribesman head-on."
-    new "Вокруг неё солдаты двинулись, обнажая клинки и встречая Племенника лицом к лицу."
+    new "Вокруг неё солдаты двигались, обнажая клинки и бросаясь в атаку на Соплеменника."
 
     old "Sarah watched as he spun, twisting his body with impossible speed, cutting down two soldiers of her own."
-    new "Сара смотрела, как он крутанулся, извиваясь телом с невозможной скоростью, сразив двух её собственных солдат."
+    new "Сара смотрела, как он закружился, с немыслимой скоростью повернув тело и зарубив двух своих же солдат."
 
     old "They fell to the earth, their bodies mixed in with the mud and snow and blood."
-    new "Они упали на землю, их тела смешались с грязью, снегом и кровью."
+    new "Они рухнули на землю, их тела смешались с грязью, снегом и кровью."
 
     old "The Tribesman advanced one step."
-    new "Племенник шагнул вперёд."
+    new "Соплеменник сделал шаг вперёд."
 
     old "Sarah saw as one spearmen stepped up behind him, driving his spear into the Tribesman's back."
-    new "Сара увидела, как один из копейщиков подошёл сзади и вонзил копьё Племеннику в спину."
+    new "Сара увидела, как один из воинов подошёл к нему сзади и вонзил копье в спину соплеменника."
 
     old "It pierced what little armor he wore, the tip of it stabbing out through his chest."
-    new "Оно пронзило те скудные доспехи, что были на нём, остриё вышло наружу через грудь."
+    new "Оно пробило ту немногочисленную броню, что была на нём, а острие вышло прямо через грудь."
 
     old "Still alive, the Tribesman spun around, swinging his blade."
-    new "Всё ещё живой, Племенник развернулся, взмахнув клинком."
+    new "Соплеменник всё ещё был жив: он развернулся и замахал своим клинком."
 
     old "Sarah seized the moment of distraction, leaping forward and planting her blade in the tribesman's neck."
-    new "Сара воспользовалась моментом отвлечения, прыгнув вперёд и вонзив клинок в шею Племенника."
+    new "Сара воспользовалась моментом, когда враг отвлёкся: она бросилась вперёд и вонзила клинок ему в шею."
 
     old "This time, he dropped."
-    new "На этот раз он упал."
+    new "На этот раз он рухнул."
 
     old "She watched as her blade was coated in fresh blood, dripping."
-    new "Она смотрела, как её клинок покрылся свежей кровью, капающей вниз."
+    new "Она смотрела, как её клинок покрылся свежей кровью, которая с него капала."
 
     old "Around her, the uniform line increasingly collapsed."
-    new "Вокруг неё строй всё больше распадался."
+    new "Вокруг неё единый строй всё больше распадался."
 
     old "More and more Tribesmen seemed to mix into the melee, fighting on foot with her own soldiers."
-    new "Всё больше Племенников, казалось, вливались в схватку, сражаясь в пешем строю с её солдатами."
+    new "Всё больше и больше членов племени, казалось, вливались в рукопашную схватку, сражаясь пешком вместе с её собственными солдатами."
 
     old "In the chaos, it was hard to see where the lines of battle were drawn, if they even still existed."
-    new "В хаосе было трудно разглядеть, где проходят линии боя, если они вообще ещё существовали."
+    new "В этом хаосе было трудно понять, где проходят линии фронта — если они вообще ещё существовали."
 
     old "Sarah watched pockets of soldiers, clashing with Tribesmen."
-    new "Сара видела группы солдат, сталкивающиеся с Племенниками."
+    new "Сара наблюдала за группами солдат, сталкивающимися с племенными воинами."
 
     old "The dirt, grime and gore, covering the earth with a hellish colour."
-    new "Грязь, копоть и кровь покрывали землю адским цветом."
+    new "Грязь, мусор и кровь окрашивали землю в адские цвета."
 
     old "Her eyes met with a Tribesman that seemed to recognize her."
-    new "Её глаза встретились с Племенником, который, казалось, узнал её."
+    new "Её взгляд встретился со Соплеменником, который, казалось, узнал её."
 
     old "Sarah raised her blade as he advanced."
-    new "Сара подняла клинок, когда он приблизился."
+    new "Сара подняла свой клинок, когда он бросился к ней."
 
     old "The Tribesman lunged, swiping at her with his curved blade."
-    new "Племенник рванулся, рубанув её своим изогнутым клинком."
+    new "Соплеменник бросился на неё, замахиваясь изогнутым клинком."
 
     old "Sarah stepped back, trying her best to keep her distance."
-    new "Сара отступила, стараясь держать дистанцию."
+    new "Сара отступила, изо всех сил стараясь сохранить дистанцию."
 
     old "But all around her, she found herself stumbling into other bodies, her feet sinking into the deepening mud."
-    new "Но вокруг она натыкалась на другие тела, её ноги увязали в углубляющейся грязи."
+    new "Но повсюду она натыкалась на чужие тела, а её ноги увязали в густеющем болоте."
 
     old "In the midsts of all the noise and chaos, the Tribesmen advanced again."
-    new "Среди всего шума и хаоса Племенники снова наступали."
+    new "Посреди всего шума и хаоса племениты снова двинулись вперёд."
 
     old "This time, his blade swung closer."
-    new "На этот раз его клинок взметнулся ближе."
+    new "На этот раз его клинок замахнулся ближе."
 
     old "Sarah raised her own, blocking his attack."
-    new "Сара подняла свой, блокируя его атаку."
+    new "Сара подняла своё оружие, блокируя его атаку."
 
     old "The sharp sound of metal on metal rung out, drowned in so many other noises."
-    new "Резкий звук металла о металл разнёсся, утонув во множестве других шумов."
+    new "Резкий звон металла о металл раздался, но был поглотен множеством других звуков."
 
     old "Sarah felt her army ringing from his blow."
-    new "Сара почувствовала, как её рука зазвенела от его удара."
+    new "Сара почувствовала, как её тело отдаёт от его удара."
 
     old "The Tribesman stared directly at her as he moved closer, all of his murderous intent aimed at her."
-    new "Племенник смотрел прямо на неё, приближаясь, все его смертоносные намерения были направлены на неё."
+    new "Соплеменник смотрел прямо на неё, приближаясь — всё его убийственное намерение было направлено на неё."
 
     old "Behind him, she saw more of them."
-    new "Позади него она видела ещё."
+    new "За его спиной она увидела ещё больше таких же."
 
     old "She had to escape, but in the midsts of this madness, it had become hard to tell which direction was even safe."
-    new "Она должна была бежать, но среди этого безумия стало трудно понять, какое направление вообще безопасно."
+    new "Ей нужно было бежать, но посреди этого безумия стало трудно понять, в каком направлении вообще можно было оказаться в безопасности."
 
     old "For a third time, the Tribesman raised his curved blade."
-    new "В третий раз Племенник поднял свой изогнутый клинок."
+    new "В третий раз Соплеменник занёс свой изогнутый клинок."
 
     old "Sarah, waiting for the moment, lunged forward."
-    new "Сара, выждав момент, рванулась вперёд."
+    new "Сара, выжидая подходящий момент, бросилась вперёд."
 
     old "Instantly covering the distance, she drove her plated shoulder into his chest."
-    new "Мгновенно преодолев расстояние, она врезала своим бронированным плечом ему в грудь."
+    new "Мгновенно преодолев расстояние, она ударила его бронированным плечом в грудь."
 
     old "She felt his chest crack as she rammed into him."
-    new "Она почувствовала, как его грудь хрустнула, когда она врезалась в него."
+    new "Она почувствовала, как его грудь треснула от её удара."
 
     old "The ground, turned to mud from blood and stomped snow, betrayed the Tribesman."
-    new "Земля, превратившаяся в грязь от крови и утоптанного снега, подвела Племенника."
+    new "Земля, превратившаяся в грязь от крови и растопанного снега, подвела соплеменника."
 
     old "His balance lost, he slipped, falling to the ground."
     new "Потеряв равновесие, он поскользнулся и упал на землю."
 
     old "Sarah swung down her blade, striking him in the upper leg."
-    new "Сара обрушила свой клинок, поразив его в верхнюю часть ноги."
+    new "Сара обрушила свой клинок, нанеся ему удар в верхнюю часть ноги."
 
     old "A panicked expression on his face, he raised his blade to block her attack."
-    new "С паническим выражением на лице он поднял клинок, чтобы блокировать её атаку."
+    new "На его лице отразилась паника, и он поднял клинок, чтобы заблокировать её атаку."
 
     old "Instead, Sarah swung low, catching his wrist that held the blade."
-    new "Вместо этого Сара ударила низко, задев его запястье, державшее клинок."
+    new "Вместо этого Сара нанесла низкий удар, попав по запястью, в котором он держал клинок."
 
     old "He cried out as his wrist exploded with blood and gore, cut nearly in half."
-    new "Он вскрикнул, когда его запястье взорвалось кровью и плотью, перерубленное почти пополам."
+    new "Он закричал, когда его запястье взорвалось кровью и плотью, почти разрубленное пополам."
 
     old "Sarah watched his blade fall to the earth."
-    new "Сара видела, как его клинок упал на землю."
+    new "Сара смотрела, как его клинок упал на землю."
 
     old "She raised her blade, preparing to end him."
-    new "Она подняла клинок, готовясь прикончить его."
+    new "Она подняла клинок, готовясь покончить с ним."
 
     old "Just before she swung, she spotted the others."
-    new "Прямо перед тем, как ударить, она заметила остальных."
+    new "Сразу перед тем, как она замахнулась, она заметила остальных."
 
     old "More and more Tribesmen joined the growing frenzy."
-    new "Всё больше Племенников присоединялось к нарастающему безумию."
+    new "Всё больше и больше членов племени присоединялись к нарастающей бешености битвы."
 
     old "Most were fighting her own men, but some saw gaps in the swirling melee."
-    new "Большинство сражалось с её людьми, но некоторые видели бреши в круговерти схватки."
+    new "Большинство сражались со своими же людьми, но некоторые замечали брешь в хаотичной схватке."
 
     old "And they had spotted her."
-    new "И они заметили её."
+    new "И они тоже заметили её."
 
     old "Sarah back away from the Tribesman that laid on the ground. Alive or dead, he wouldn't be fighting again either way."
-    new "Сара отступила от Племенника, лежащего на земле. Жив он или мёртв, в любом случае он больше не будет сражаться."
+    new "Сара, отступай от соплеменника, что лежит на земле. Жив он или мёртв — в любом случае больше не будет сражаться."
 
     old "Three Tribesmen leapt over their own."
-    new "Трое Племенников перепрыгнули через своего."
+    new "Трое воинов племени перепрыгнули через своих же."
 
     old "They moved swiftly, approaching her from the center and each of her flanks."
-    new "Они двигались стремительно, приближаясь к ней с центра и с обоих флангов."
+    new "Они двигались стремительно, приближаясь к ней спереди и с обеих сторон."
 
     old "Sarah backed up as far as she could, blade raised in defense."
-    new "Сара отступила насколько могла, подняв клинок в защите."
+    new "Сара отступила как можно дальше, подняв клинок для защиты."
 
     old "Her heart was pounding in her chest, adrenaline pumping as she saw the first Tribesman swing."
-    new "Её сердце колотилось в груди, адреналин бурлил, когда она увидела, как первый Племенник замахнулся."
+    new "Её сердце бешено колотилось в груди, адреналин хлестал по жилам, когда она увидела, как первый соплеменник замахивается на неё."
+
+    old "Razaphel."
+    new "Разафель."
 
     old "Sarah called on the spirit."
-    new "Сара призвала духа."
+    new "Сара призвала дух."
 
     old "Yes, old friend?"
     new "Да, старый друг?"
 
     old "Rip them apart."
-    new "Разорви их на части."
+    new "Разорви их на куски."
 
     old "Sarah uttered the words only in her mind, but they were clear."
-    new "Сара произнесла эти слова лишь в мыслях, но они были чёткими."
+    new "Сара произнесла эти слова лишь мысленно, но они прозвучали отчётливо."
 
     old "Surging forth from space unkown, the spirit Razaphel rushed out from around her."
-    new "Вырвавшись из неведомого пространства, дух Разафел устремился наружу из-за неё."
+    new "Вырвавшись из неведомого пространства, дух Разафель выскочил из-за неё."
 
     old "Like a black mist, it rushed towards the Tribesman."
-    new "Словно чёрный туман, он ринулся к Племенникам."
+    new "Словно чёрный туман, оно устремилось к Соплеменнику."
 
     old "For men unfamiliar with fear, their faces were now covered with it."
-    new "Для людей, не знакомых со страхом, их лица теперь были им покрыты."
+    new "Для мужчин, не привыкших к страху, их лица теперь были покрыты им."
 
     old "A dread they had not yet tasted."
-    new "Ужас, которого они ещё не вкушали."
+    new "Страх, которого они ещё не знали."
 
     old "The first screamed as the spirit's tendril slashed through his throat, cutting it wide open."
-    new "Первый закричал, когда щупальце духа полоснуло его по горлу, распоров его настежь."
+    new "Первый закричал, когда щупальце духа разорвало ему горло, оставив широкую рану."
 
     old "A torrent of blood from his throat painted his chest red as he collapsed."
-    new "Поток крови из его горла окрасил грудь в красный, когда он рухнул."
+    new "Поток крови из его горла окрасил грудь в красный цвет, когда он рухнул на землю."
 
     old "They had been ready to die. Every Tribesman was trained to expect death."
-    new "Они были готовы умереть. Каждый Племенник был обучен ожидать смерти."
+    new "Они были готовы умереть. Каждый соплеменник был обучен ожидать смерти."
 
     old "But only death in combat."
-    new "Но только смерти в бою."
+    new "Но только смерть в бою."
 
     old "This. This was something different for them."
-    new "Это. Это было для них чем-то иным."
+    new "Вот это. Вот это было для них чем-то совершенно иным."
 
     old "Sarah saw one of them swing at the spirit."
-    new "Сара увидела, как один из них взмахнул оружием в сторону духа."
+    new "Сара увидела, как один из них замахнулся на духа."
 
     old "His arm had not completed the full arc before the spirit latched onto it."
-    new "Его рука не успела завершить полную дугу, как дух вцепился в неё."
+    new "Его рука ещё не успела описать полный дуг, когда дух вцепился в неё."
 
     old "Its face mask parted and teeth like sharpened ivory clamped shut, ripping it clean off."
-    new "Его личина разошлась, и зубы, подобные заточенной слоновой кости, сомкнулись, оторвав её начисто."
+    new "Маска на его лице распахнулась, и зубы, острые как слоновая кость, с силой сомкнулись, полностью отрывая её."
 
     old "The man looked stunned at the place where his arm had used to be."
-    new "Мужчина ошеломлённо уставился на место, где раньше была его рука."
+    new "Мужчина был ошеломлён тем местом, где до этого находилась его рука."
 
     old "The spirit crushed his head with a black tendril as if it was nothing."
-    new "Дух раздавил его голову чёрным щупальцем, словно это было пустяком."
+    new "Дух раздавил его голову чёрным щупальцем, будто это ничего не значило."
 
     old "The last of the Tribesmen turned to run."
-    new "Последний из Племенников развернулся, чтобы бежать."
+    new "Последний из племенников повернулся, чтобы бежать."
 
     old "Sarah saw the spirit swipe at the man, cutting off both of his legs at the knee."
-    new "Сара видела, как дух рубанул по мужчине, отсекая обе ноги по колено."
+    new "Сара увидела, как дух замахал на мужчину, отрезав ему обе ноги по коленям."
 
     old "She watched as the Tribesman fell into the wet mud, dragging himself, confused at why he could no longer walk."
-    new "Она смотрела, как Племенник упал в мокрую грязь, волоча себя, сбитый с толку тем, что больше не может идти."
+    new "Она смотрела, как Соплеменник упал в мокрую грязь, таща себя за собой и недоумевая, почему больше не может ходить."
 
     old "Razaphel rushed up towards the man, seizing his skull, and shattering it last."
-    new "Разафел ринулся к мужчине, схватив его череп и раздробив его напоследок."
+    new "Разафель подскочил к мужчине, схватил его за череп и раздробил."
 
     old "It turned its wicked face mask towards her."
-    new "Он повернул свою зловещую личину к ней."
+    new "Он повернул к ней свою зловещую маску."
 
     old "You're welcome."
-    new "Пожалуйста."
+    new "Не за что."
 
     old "With that, it faded from existence, back to whatever void held it."
-    new "С этими словами он исчез из бытия, вернувшись в ту пустоту, что удерживала его."
+    new "С этими словами оно исчезло из существования, вернувшись в ту пустоту, что его и держала."
 
     old "Perhaps other soldiers had seen what had happened, but in the chaos, they'd likely believe it was a figment of their imagination."
-    new "Возможно, другие солдаты видели, что произошло, но в хаосе они, скорее всего, посчитали бы это плодом воображения."
+    new "Возможно, другие солдаты видели то, что произошло, но в этом хаосе они, скорее всего, приняли бы это за плод своего воображения."
 
     old "Sarah saw him and thought of him."
     new "Сара увидела его и подумала о нём."
 
     old "Or had she thought of him and then seen him?"
-    new "Или она подумала о нём, а затем увидела его?"
+    new "Или она сначала подумала о нём, а потом увидела?"
 
     old "In the pulsing madness of the moment, she could no longer tell which had come first."
-    new "В пульсирующем безумии момента она больше не могла сказать, что было сначала."
+    new "В этом пульсирующем безумии момента она уже не могла понять, что из этого было раньше."
 
     old "Whichever it was, the great orc landed with a crash in between her and the Tribesmen."
-    new "Как бы то ни было, великий орк с грохотом приземлился между ней и Племенниками."
+    new "Как бы то ни было, огромный орк с грохотом приземлился между ней и воинами племени."
 
     old "He released a primal scream that likes of which Sarah had never heard in her life."
-    new "Он издал первобытный крик, подобного которому Сара никогда в жизни не слышала."
+    new "Он издал первобытный крик — такой, какого Сара никогда не слышала в своей жизни."
 
     old "The pounding fear she had once felt for him on their first meeting, returned."
-    new "Тот ошеломляющий страх, который она когда-то испытывала перед ним при первой встрече, вернулся."
+    new "Страх, который она когда-то испытывала к нему при их первой встрече, снова охватил её."
 
     old "Atilla swung his massive two-handed sword, cutting apart two of the Tribesman as if they were nothing."
-    new "Атилла взмахнул своим огромным двуручным мечом, разрубив двоих Племенников, словно они были пустым местом."
+    new "Атилла замахнулся своим огромным двуручным мечом и рассёк двух соплеменников, словно они ничего не значили."
 
     old "Their bodies exploded in mists of blood and gore."
-    new "Их тела взорвались облаками крови и плоти."
+    new "Их тела разлетелись в кровавом тумане."
 
     old "Sarah watched in awe of his force, the sheer magnitude of his incredible physical body."
-    new "Сара смотрела в благоговении перед его силой, перед невероятной мощью его физического тела."
+    new "Сара с благоговением смотрела на его силу — на невероятную мощь его чудовищного тела."
 
     old "The kind no man, Tribesman or otherwise, could hope to match."
-    new "Такой, какой ни один человек, Племенник или кто-либо ещё, не мог надеяться превзойти."
+    new "Такая сила, с которой ни один мужчина — будь то соплеменник или кто-то ещё — не мог бы сравниться."
 
     old "Atilla lunged forward, dropping his massive sword."
-    new "Атилла рванулся вперёд, бросив свой массивный меч."
+    new "Атилла бросился вперёд, опустив свой огромный меч."
 
     old "Sarah watched as Atilla moved with a speed that seemed impossible for someone his size."
-    new "Сара смотрела, как Атилла движется со скоростью, казавшейся невозможной для кого-то его размеров."
+    new "Сара смотрела, как Атилла двигался с такой скоростью, которая казалась невозможной для человека его размеров."
 
     old "Atilla clamped his massive fist around the Tribesman's head."
-    new "Атилла сжал свой массивный кулак вокруг головы Племенника."
+    new "Атилла сжал свою огромную руку вокруг головы Соплеменника."
 
     old "The Tribesman swung his blade, catching Atilla on the arm, but he had swung poorly."
-    new "Племенник взмахнул клинком, задев Атиллу по руке, но удар был плохим."
+    new "Соплеменник замахнулся клинком и ударил Атиллу по руке, но удар его получился слабым."
 
     old "The blade barely cut into Atilla's skin, leaving only a trace of blood."
     new "Клинок едва порезал кожу Атиллы, оставив лишь след крови."
 
     old "Atilla grabbed the Tribesman's head with his other hand, wrapping one around the back of the man's head and another around the front."
-    new "Атилла схватил голову Племенника другой рукой, обхватив одной рукой затылок, а другой — лицо."
+    new "Атилла схватил Соплеменника за голову другой рукой: одну обхватил сзади, а другую — спереди."
 
     old "The Tribesman dropped his blade as he instintively reached up, trying to pull the orc's hands from around his face."
-    new "Племенник выронил клинок, инстинктивно потянувшись вверх, пытаясь оторвать руки орка от своего лица."
+    new "Соплеменник выбросил меч из рук и инстинктивно замахал руками, пытаясь оттолкнуть руки орка от своего лица."
 
     old "Sarah heard the man's panicked screams, muffled on the orc's palms."
-    new "Сара слышала панические крики мужчины, приглушённые ладонями орка."
+    new "Сара услышала панические крики мужчины, приглушённые ладонями орка."
 
     old "Then the crushing sounds."
-    new "Затем звуки дробления."
+    new "Затем раздались звуки сокрушения."
 
     old "The man's panicked screams gave way to the kind of scream that only the dying can release."
-    new "Панические крики мужчины сменились тем криком, который может издавать только умирающий."
+    new "Панические крики мужчины сменились тем самым воплем, который могут издавать лишь умирающие."
 
     old "In between his screaming, more sounds of breaking and shattering bone."
-    new "Между его криками — новые звуки ломающихся и раскалывающихся костей."
+    new "Между его криками раздавались звуки ломающихся и трескающихся костей."
 
     old "Sarah saw Atilla's muscles flex."
-    new "Сара видела, как напряглись мышцы Атиллы."
+    new "Сара увидела, как напряглись мышцы Атиллы."
 
     old "Then, all as once, his hands collapsed in on each other."
-    new "Затем, разом, его руки сомкнулись друг с другом."
+    new "Затем, всё разом, его руки обмякли и сошлись друг с другом."
 
     old "The Tribesman, silenced, his head gone, crushed between the orc's massive hands."
-    new "Племенник затих, его голова исчезла, раздавленная между массивными руками орка."
+    new "Соплеменник замолчал — его голова исчезла, раздавленная между огромными руками орка."
 
     old "Atilla turned to face her."
     new "Атилла повернулся к ней."
+
+    old "Are you alright?"
+    new "Ты в порядке?"
 
     old "Sarah, wordlessly, nodded."
     new "Сара молча кивнула."
 
     old "Good. Fall back deeper into the line."
-    new "Хорошо. Отступай глубже в строй."
+    new "Хорошо. Отступай глубже в линию."
 
     old "They are trying to kill you, but they will not succeed."
-    new "Они пытаются убить тебя, но у них не получится."
+    new "Они пытаются убить тебя, но им это не удастся."
 
     old "I will be fine. It is you they hunt."
-    new "Со мной всё будет в порядке. Они охотятся на тебя."
+    new "Я буду в порядке. Это тебя они ищут."
 
     old "Now go!"
-    new "А теперь иди!"
+    new "Теперь беги!"
 
     old "Sarah turned and ran."
-    new "Сара развернулась и побежала."
+    new "Сара обернулась и побежала."
 
     old "Sarah her and thought of her."
-    new "Сара увидела её и подумала о ней."
+    new "Сара — она? Или сначала она подумала о ней, а потом увидела её?"
 
     old "Or had she thought of her and then seen her?"
-    new "Или она подумала о ней, а затем увидела её?"
+    new "Или же она сначала подумала о ней, а потом увидела?"
 
     old "Kate rushed up besides her."
-    new "Кейт подбежала к ней."
+    new "Кейт подбежала к ней, оказавшись рядом."
 
     old "You need to fall back!"
     new "Тебе нужно отступить!"
 
     old "I can't leave-"
-    new "Я не могу уйти-"
+    new "Я не могу уйти—"
 
     old "Fuck that!"
-    new "К чёрту!"
+    new "Чёрт с этим!"
 
     old "They're trying to a cut a path straight to you."
-    new "Они пытаются прорубить путь прямо к тебе."
+    new "Они пытаются проложить себе путь прямо к тебе."
 
     old "You have to retreat into the back lines!"
-    new "Ты должна отступить в тыл!"
+    new "Тебе нужно отступать в задние ряды!"
 
     old "The Tribesmen continued to move towards them."
-    new "Племенники продолжали двигаться к ним."
+    new "Трибсмены продолжали двигаться к ним."
 
     old "But-"
-    new "Но-"
+    new "Но..."
 
     old "One of the Tribesmen leapt forward, swinging his blade."
-    new "Один из Племенников прыгнул вперёд, взмахнув клинком."
+    new "Один из племенитов бросился вперёд, замахиваясь клинком."
 
     old "Kate rushed up, standing between Sarah and the attacker, blocking his blade."
-    new "Кейт подскочила, встав между Сарой и нападающим, блокируя его клинок."
+    new "Кейт подбежала, встав между Сарой и нападавшим, чтобы заблокировать его клинок."
 
     old "Sarah watched as Kate pulled a dagger from her hip, stabbing the Tribesman in his hip."
-    new "Сара видела, как Кейт вытащила кинжал с бедра и вонзила его Племеннику в бедро."
+    new "Сара смотрела, как Кейт вытащила кинжал из-за пояса и ударила Соплеменника в бедро."
 
     old "The man stumbled backwards, surprised by the sudden attack."
-    new "Мужчина отшатнулся, удивлённый внезапной атакой."
+    new "Мужчина пошатнулся и отступил назад, удивлённый внезапной атакой."
 
     old "Blood flowed from the wound, rushing out in waves as his heart pumped its lasts beats."
-    new "Кровь хлынула из раны, вытекая волнами, пока его сердце совершало последние удары."
+    new "Кровь хлынула из раны, вырываясь волнами, пока сердце билось в последние мгновения."
 
     old "He died, confusion still on his face."
-    new "Он умер, замешательство всё ещё было на его лице."
+    new "Он умер, на лице всё ещё застыло недоумение."
 
     old "Too proud a warrior, he had not expected a cheap trick like the one Kate had pulled."
-    new "Слишком гордый воин, он не ожидал такого дешёвого трюка, какой применила Кейт."
+    new "Слишком гордый воин — он не ожидал такого дешёвого трюка, как тот, что провернула Кейт."
 
     old "But Kate lived, and he didn't. That was war also."
-    new "Но Кейт выжила, а он — нет. Это тоже была война."
+    new "Но Кейт осталась жива, а он — нет. Это тоже была война."
 
     old "One of the other Tribesmen leapt forward, thrusting his blade."
-    new "Ещё один Племенник прыгнул вперёд, выбросив клинок."
+    new "Один из других членов племени бросился вперёд, нанося удар клинком."
 
     old "Sarah spun, dodging the blade by only inches."
-    new "Сара крутанулась, уклоняясь от клинка в дюймах."
+    new "Сара развернулась, увернувшись от клинка на несколько дюймов."
 
     old "She drove her plated fist into his face, throwing him back."
-    new "Она врезала бронированным кулаком ему в лицо, отбросив его назад."
+    new "Она вонзила свой бронированный кулак ему в лицо, отбросив его назад."
 
     old "The man stumbled, but kept his footing."
-    new "Мужчина пошатнулся, но устоял на ногах."
+    new "Человек пошатнулся, но удержался на ногах."
 
     old "Next to her, Sarah saw Kate was engaged with the other Tribesman, their blades clashing."
-    new "Рядом с собой Сара увидела, что Кейт схватилась с другим Племенником, их клинки скрестились."
+    new "Рядом с ней Сара увидела, что Кейт сражалась с другим соплеменником — их клинки столкнулись."
 
     old "Sarah raised her own, swinging it towards the Tribesman."
-    new "Сара подняла свой и взмахнула им в сторону Племенника."
+    new "Сара подняла свой собственный и замахнулась им на Соплеменника."
 
     old "Swing, swing, stab."
-    new "Взмах, взмах, укол."
+    new "Взмах, взмах, удар."
 
     old "Sarah advanced on the man, repeating the attack patern that she had practiced more than she could remember."
-    new "Сара наступала на мужчину, повторяя атакующий рисунок, который она отрабатывала больше, чем могла запомнить."
+    new "Сара бросилась к мужчине, повторяя ту же последовательность атак, что она отрабатывала чаще, чем могла вспомнить."
 
     old "The Tribesman's art was more graceful, spinning and twisting in ways that were only possible for someone carrying little armor."
-    new "Искусство Племенника было более грациозным, он крутился и извивался так, как это было возможно только для того, кто носил мало брони."
+    new "Искусство Соплеменника было более изящным: он вращался и изгибался так, как это было возможно лишь для того, кто носил лёгкие доспехи."
 
     old "He spun, his blade catching her own, blocking his strike."
-    new "Он крутанулся, его клинок встретился с её, блокируя его удар."
+    new "Он развернулся, его клинок перехватил её собственный, заблокировав удар."
 
     old "Sarah, for her part, focussed on her own footwork."
     new "Сара, со своей стороны, сосредоточилась на работе ног."
 
     old "The Tribesman was deadly, but the ground, now turned to mud, was equally dangerous."
-    new "Племенник был смертоносен, но земля, превратившаяся в грязь, была столь же опасна."
+    new "Соплеменник был смертоносен, но земля, теперь превратившаяся в грязь, была не менее опасна."
 
     old "One slip and she'd be done for."
-    new "Один неверный шаг — и она пропала."
+    new "Одна ошибка — и ей конец."
 
     old "Sarah gripped the handle of her blade with both hands."
-    new "Сара сжала рукоять клинка обеими руками."
+    new "Сара крепко схватила рукоять своего клинка обеими руками."
 
     old "Swinging the sword overhead with all the force she could muster, she struck at the Tribesman."
-    new "Взмахнув мечом над головой со всей силы, на которую была способна, она ударила Племенника."
+    new "Заводя меч над головой со всей силы, на которую была способна, она нанесла удар по Соплеменнику."
 
     old "Again, he spun, twisting his body, deflecting her attacks with his curved blade."
-    new "Снова он крутанулся, извиваясь телом, отражая её атаки своим изогнутым клинком."
+    new "Снова он развернулся, скручивая тело, и отбил её атаки своим изогнутым клинком."
 
     old "Sarah continued her advance, swinging her blade with the same practiced pace."
-    new "Сара продолжала наступление, взмахивая клинком в том же отработанном темпе."
+    new "Сара продолжала наступление, размахивая клинком с той же отточенной уверенностью."
 
     old "Their blades clattered, ringing out as they moved across the chaotic melee."
-    new "Их клинки лязгали, звеня, пока они перемещались в хаотичной схватке."
+    new "Их клинки зазвенели, отдаваясь эхом в хаотичной схватке."
 
     old "The Tribesman lashed out at her, but his blade bounced off her armor."
-    new "Племенник нанёс удар, но его клинок отскочил от её брони."
+    new "Соплеменник замахал на неё, но его клинок отскочил от доспехов."
 
     old "Suddenly, Sarah stepped forward, closing the distance between them."
     new "Внезапно Сара шагнула вперёд, сокращая расстояние между ними."
 
     old "Catching his arm before he could pull it back, Sarah gripped the Tribesman, pulling him close."
-    new "Перехватив его руку прежде, чем он успел её отдёрнуть, Сара схватила Племенника, притягивая его к себе."
+    new "Поймав его за руку до того, как он успел отвести её назад, Сара схватила Соплеменника и притянула к себе."
 
     old "Wrestling, the two of them stumbled about."
-    new "Борясь, они оба зашатались."
+    new "Борясь друг с другом, они оба спотыкались и метались."
 
     old "Too close, neither could properly swing their blade at the other."
-    new "Слишком близко — ни один не мог как следует взмахнуть клинком."
+    new "Слишком близко — никто не мог как следует замахнуться на другого."
 
     old "But Sarah understood this sooner."
     new "Но Сара поняла это раньше."
 
     old "Striking the Tribesman in the face with her free hand, she heard his nose break."
-    new "Ударив Племенника свободной рукой по лицу, она услышала, как хрустнул его нос."
+    new "Ударив свободной рукой соплеменника по лицу, она услышала, как у него сломался нос."
 
     old "As she kept him entangled, she brought her hand down on his face, again and again."
-    new "Продолжая удерживать его, она опускала руку на его лицо снова и снова."
+    new "Пока она держала его в объятиях, она раз за разом обрушивала руку на его лицо."
 
     old "His resistance slowly yielded, until he was little more than a ragdoll in her grip."
-    new "Его сопротивление медленно угасло, пока он не стал почти тряпичной куклой в её хватке."
+    new "Его сопротивление постепенно ослабевало, пока он не превратился почти в безжизненную тряпичную куклу в её хватке."
 
     old "Releasing her grip on him, his body fell to the ground."
-    new "Разжав хватку, она отпустила его, и его тело упало на землю."
+    new "Отпустив его, она увидела, как его тело рухнуло на землю."
 
     old "With all the force left in her body, Sarah raised her leg and brought it down."
-    new "Со всей оставшейся в теле силой Сара подняла ногу и опустила её."
+    new "Используя все силы, что ещё оставались в её теле, Сара подняла ногу и обрушила её вниз."
 
     old "The shattering sound of plated steel meeting brittle bone was one she hoped she could soon forget."
-    new "Дробящий звук встречи бронированной стали с хрупкой костью был тем, что она надеялась скоро забыть."
+    new "Звук разбитой брони, ударившейся о хрупкую кость, был тем, что она надеялась вскоре забыть."
 
     old "Sarah did not look down, she knew enough that he was dead."
     new "Сара не смотрела вниз — она и так знала, что он мёртв."
@@ -1241,16 +1258,16 @@ translate ru strings:
     new "Она повернула голову."
 
     old "Just in time, she saw Kate drive her blade through the remaining Tribesman's chest."
-    new "Как раз вовремя она увидела, как Кейт вонзила клинок в грудь оставшегося Племенника."
+    new "Как раз вовремя она увидела, как Кейт вонзила клинок в грудь оставшегося соплеменника."
 
     old "The man fell backwards onto the ground, a gurgling noise, then death."
-    new "Мужчина упал на спину на землю, булькающий звук, затем смерть."
+    new "Мужчина рухнул на спину, издал булькающий звук — и умер."
 
     old "Sarah saw Kate, her face covered in blood."
-    new "Сара увидела Кейт, её лицо было залито кровью."
+    new "Сара увидела Кейт — её лицо было в крови."
 
     old "Kate! Are you-"
-    new "Кейт! Ты-"
+    new "Кейт! Ты..."
 
     old "I'm fine!"
     new "Я в порядке!"
@@ -1262,79 +1279,79 @@ translate ru strings:
     new "Это не моя кровь... в основном."
 
     old "Just fall back to the backline!"
-    new "Просто отступай в тыл!"
+    new "Просто отступите на заднюю линию!"
 
     old "Organize the attack from the rear!"
-    new "Организуй атаку с тыла!"
+    new "Организуйте атаку с тыла!"
 
     old "She knew Kate was right."
     new "Она знала, что Кейт права."
 
     old "Saying nothing else, Sarah turned and began to run."
-    new "Не сказав больше ни слова, Сара развернулась и побежала."
+    new "Ничего больше не сказав, Сара развернулась и начала бежать."
 
     old "Sarah felt every muscle in her body scream, but she would not yield."
-    new "Сара чувствовала, как каждый мускул её тела кричит, но она не сдавалась."
+    new "Сара чувствовала, как каждая мышца в её теле кричит от боли, но она не собиралась уступать."
 
     old "She rushed through the lines of soldiers, retreating from the melee."
-    new "Она пронеслась сквозь ряды солдат, отступая из схватки."
+    new "Она прорвалась сквозь ряды солдат, отступая от схватки."
 
     old "Frantically, she pushed men aside, screaming for them to let her pass."
-    new "В отчаянии она расталкивала мужчин, крича, чтобы её пропустили."
+    new "В отчаянии она отталкивала мужчин в сторону, крича, чтобы они пропустили её."
 
     old "Let me through!"
     new "Пропустите меня!"
 
     old "Slowly, with each passing step, the chaos of the melee was further and further behind."
-    new "Медленно, с каждым шагом, хаос схватки оставался всё дальше позади."
+    new "Медленно, с каждым шагом, хаос сражения оставался всё дальше и дальше позади."
 
     old "Finally, she broke through the last of them, reaching the rear of her army."
-    new "Наконец она прорвалась сквозь последних, достигнув тыла своей армии."
+    new "Наконец она прорвалась сквозь последних из них, добравшись до тыла своей армии."
 
     old "Sarah stumbled to the ground, but swiftly pushed herself back onto her feet."
-    new "Сара упала на землю, но быстро поднялась обратно на ноги."
+    new "Сара упала на землю, но быстро поднялась на ноги."
 
     old "There was no time to stop."
     new "Не было времени останавливаться."
 
     old "Horse!"
-    new "Коня!"
+    new "Лошадь!"
 
     old "She looked about."
     new "Она огляделась."
 
     old "Get me a fucking horse, now!"
-    new "Дайте мне грёбаного коня, сейчас же!"
+    new "Доставь мне, чёрт возьми, коня, сейчас же!"
 
     old "A panicked scout ran over."
     new "Паникующий разведчик подбежал."
 
     old "Commander! Are you-"
-    new "Командир! Вы-"
+    new "Командир! Ты-"
 
     old "Your horse, now!"
-    new "Твоего коня, живо!"
+    new "Твой конь — и то сейчас!"
 
     old "I...of course!"
     new "Я... конечно!"
 
     old "The young man dismounted, giving his horse to her."
-    new "Молодой человек спешился, отдавая ей своего коня."
+    new "Молодой человек спешився и отдал ей свою лошадь."
 
     old "Sarah mounted as swiftly as she could."
-    new "Сара вскочила в седло так быстро, как могла."
+    new "Сара села на коня так быстро, как только могла."
 
     old "As soon as she was atop the horse, she could look out across her army again."
-    new "Как только она оказалась на коне, она смогла снова оглядеть свою армию."
+    new "Как только она оказалась в седле, то снова смогла оглядеть свою армию."
 
     old "From the higher vantage point, she surveyed the battle."
-    new "С более высокой точки она оценила битву."
+    new "С более высокой точки обзора она окинула взглядом битву."
 
     old "Just as she had thought, the Tribesman army had made a mad dash for her position."
-    new "Как она и думала, армия Племенников совершила бешеный бросок к её позиции."
+    new "Как она и думала, армия соплеменников яростно устремилась к её позиции."
 
     old "But with her now safely out of reach, their charge had come to a halt."
-    new "Но теперь, когда она была вне досягаемости врага, их атака остановилась."
+    new "Но теперь, когда она была в безопасности и вне досягаемости, их атака остановилась."
 
     old "You!"
     new "Ты!"
@@ -1343,433 +1360,433 @@ translate ru strings:
     new "Сара указала на одного из разведчиков."
 
     old "Ride up along the right flank, tell them to advance!"
-    new "Скачи вдоль правого фланга, скажи им наступать!"
+    new "Езжайте вверх по правому флангу и прикажите им наступать!"
 
     old "Tell them to close up the gap, prevent the Tribesman from falling back!"
-    new "Скажи им закрыть разрыв, не дать Племенникам отступить!"
+    new "Прикажи им сократить дистанцию, не дай соплеменнику отступить!"
 
     old "The man nodded and raced off in a franctic pace."
-    new "Мужчина кивнул и умчался в бешеном темпе."
+    new "Человек кивнул и помчался прочь с неистовой скоростью."
 
     old "She pointed at another."
     new "Она указала на другого."
 
     old "Report the same to the left flank, move!"
-    new "То же самое на левый фланг, вперёд!"
+    new "Сообщи то же левому флангу — и двигайся!"
 
     old "Another messenger raced off with similar haste."
-    new "Другой посыльный умчался с такой же поспешностью."
+    new "Ещё один гонец устремился прочь с такой же поспешностью."
 
     old "Sarah looked out across her army and saw the Tribesman's charge falter."
-    new "Сара оглядела свою армию и увидела, как атака Племенников захлебнулась."
+    new "Сара посмотрела на свою армию и увидела, как атака соплеменника замедлилась."
 
     old "There were now several lines between herself and the enemy, and their progess had grinded to a halt."
-    new "Теперь между ней и врагом было несколько линий, и их продвижение остановилось."
+    new "Теперь между ней и врагом было уже несколько рядов войск, а их продвижение полностью остановилось."
 
     old "Still, even from this distance, Sarah could see they were fighting like demons."
-    new "И всё же, даже с этого расстояния, Сара видела, что они сражаются как демоны."
+    new "Тем не менее, даже на таком расстоянии Сара видела, что они сражались как демоны."
 
     old "A lesser army might have surrendered."
-    new "Меньшая армия могла бы сдаться."
+    new "Менее сильная армия могла бы сдаться."
 
     old "But these men were eager for a good death."
-    new "Но эти люди жаждали достойной смерти."
+    new "Но эти люди жаждали хорошей смерти."
 
     old "And Sarah was eager to give it to them."
-    new "И Сара была готова дать им её."
+    new "И Сара жаждала дать им это."
 
     old "She saw how her commands were relayed and her army sprung to life."
-    new "Она видела, как её приказы передавались, и её армия ожила."
+    new "Она видела, как передавались её приказы, и как её армия мгновенно ожила."
 
     old "The flanks on each far end of her army began to move forward."
     new "Фланги на каждом дальнем конце её армии начали двигаться вперёд."
 
     old "Wrapping around the center, they closed off the only escape that had been available to the Tribesmen."
-    new "Огибая центр, они отрезали единственный путь к отступлению, который был у Племенников."
+    new "Окружив центр, они перекрыли единственный выход, который до сих пор был открыт для племенников."
 
     old "Sarah watched as less then a few dozen Tribesmen realized what was happening and managed to escape the encirclement."
-    new "Сара видела, как менее нескольких десятков Племенников поняли, что происходит, и сумели вырваться из окружения."
+    new "Сара видела, как менее нескольких десятков племенников поняли, что происходит, и сумели избежать окружения."
 
     old "The others, too lost in the frenzy of battle, did not retreat."
-    new "Остальные, слишком потерянные в безумии битвы, не отступили."
+    new "Остальные, слишком поглощённые яростью битвы, тоже не отступили."
 
     old "The flanking units, mostly spearmen, had not yet seen battle and were eager for it."
-    new "Фланговые отряды, в основном копейщики, ещё не видели боя и жаждали его."
+    new "Фланговые отряды, в основном копейщики, ещё не участвовали в бою и жаждали сражения."
 
     old "Attacking the Tribesmen from behind, they found easy targets that were exhausted and caught by surprise."
-    new "Атакуя Племенников сзади, они находили лёгкие цели — истощённых и застигнутых врасплох."
+    new "Атакуя племенитян со спины, они обнаружили лёгкие цели — измотанных и застигнутых врасплох врагов."
 
     old "With heavy shields and long spears, even the common Rosannan footsoldier found it easy to kill these sons of war."
-    new "С тяжёлыми щитами и длинными копьями даже обычный розаннский пехотинец легко убивал этих сынов войны."
+    new "С тяжёлыми щитами и длинными копьями даже обычный розаннский пехотинец без труда убивал этих сыновей войны."
 
     old "Pressed on all sides, surrounded, the Tribesmen continued to fight."
-    new "Зажатые со всех сторон, окружённые, Племенники продолжали сражаться."
+    new "Окружённые со всех сторон и оказавшись под давлением, племенники продолжали сражаться."
 
     old "But their position had deteriorated so quickly that even they struggled to adapt."
-    new "Но их положение ухудшилось так быстро, что даже они с трудом приспосабливались."
+    new "Но их положение ухудшилось так быстро, что даже им самим было трудно приспособиться."
 
     old "While each of them was reduced to fighting as a single warrior, her army moved as one."
-    new "В то время как каждый из них был низведён до боя одиночного воина, её армия двигалась как единое целое."
+    new "Хотя каждый из них был вынужден сражаться как отдельный воин, её армия двигалась как единое целое."
 
     old "The advancing Rosannan army pushed the Tribesmen together from all sides."
-    new "Наступающая розаннская армия сжимала Племенников со всех сторон."
+    new "Наступающая армия Розанны сжимала племенитян со всех сторон."
 
     old "Their great advantage, their horses, turned meaningless in the frenzy of such a close melee."
-    new "Их великое преимущество — кони — стало бессмысленным в безумии такой плотной схватки."
+    new "Их главное преимущество — лошади — стало совершенно бесполезным в яростном ближнем бою."
 
     old "Sarah smiled as she saw the core of the Tribesmen formation shrink."
-    new "Сара улыбнулась, видя, как ядро строя Племенников сжимается."
+    new "Сара улыбнулась, увидев, как сжимается ядро формирования племенитов."
 
     old "One by one, layer by layer, her army took the Tribesmen forces apart."
-    new "Один за другим, слой за слоем, её армия разбирала силы Племенников на части."
+    new "Один за другим, слой за слоем, её армия разгромила силы племенян."
 
     old "They had gambled a lot on the hope that they might kill her and break apart her army."
-    new "Они поставили многое на надежду, что смогут убить её и разбить её армию."
+    new "Они много рисковали, надеясь, что смогут убить её и разбить её армию."
 
     old "But they had fallen short."
-    new "Но они не справились."
+    new "Но им этого не удалось."
 
     old "And in war, there was no partial victory."
-    new "А на войне не бывает частичной победы."
+    new "И в войне не бывает частичной победы."
 
     old "Sarah called another messenger over."
-    new "Сара подозвала другого посыльного."
+    new "Сара позвала ещё одного гонца."
 
     old "Report along the line, finish up the last of the Tribesmen, then reposition to move on the capital."
-    new "Передай по линии: добить последних Племенников, затем перестроиться для наступления на столицу."
+    new "Доложи по линии, добей последних племеников, а затем передислоцируйся, чтобы перейти к столице."
 
     old "Also, instruct the engineers to keep firing, I want to see the city wall crumble."
-    new "Также прикажи инженерам продолжать обстрел, я хочу увидеть, как рухнет городская стена."
+    new "К тому же, прикажите инженерам не прекращать огонь — я хочу видеть, как рухнет городская стена."
 
     old "Yes, Commander!"
     new "Да, командир!"
 
     old "The young man rushed off along the length of the line, spreading her instructions as fast as he could manage."
-    new "Молодой человек поспешил вдоль линии, распространяя её указания так быстро, как только мог."
+    new "Молодой человек бросился вдоль всей линии, как можно быстрее передавая ей указания."
 
     old "In little time at all, the last of the Tribesmen were put to death."
-    new "Вскоре последние Племенники были преданы смерти."
+    new "В кратчайшие сроки последние из племенитов были убиты."
 
     old "Once the victory had become clear, a mad zeal seemed to spread through the formation."
-    new "Как только победа стала очевидной, безумное рвение, казалось, распространилось по строю."
+    new "Как только победа стала ясна, по всей формации будто пронёсся безумный пыл."
 
     old "No longer were they hesitant for war. They were hungry for it."
-    new "Они больше не колебались перед войной. Они были голодны до неё."
+    new "Они больше не колебались перед войной. Они жаждали её."
 
     old "Sarah heard them sing out their battle songs in eager anticipation for marching on the city."
-    new "Сара слышала, как они распевали боевые песни в нетерпеливом ожидании марша на город."
+    new "Сара слышала, как они пели боевые песни в нетерпеливом предвкушении штурма города."
 
     old "They had feared the Tribesmen, as well they should have, but now they learned they were as mortal as any other man."
-    new "Они боялись Племенников, и правильно делали, но теперь они узнали, что те так же смертны, как и любой другой человек."
+    new "Они боялись племенитов, и не зря, но теперь поняли, что те так же смертны, как и любой другой человек."
 
     old "They could be broken."
-    new "Их можно сломать."
+    new "Их можно было сломить."
 
     old "Sarah watched her army fall back into formation."
-    new "Сара смотрела, как её армия возвращается в строй."
+    new "Сара наблюдала, как её армия возвращалась в строй."
 
     old "Overhead, she saw the boulders of the trebuchets, flying across the sky, striking the outer walls of the city."
-    new "Над головой она видела валуны требушетов, летящие по небу и ударяющие во внешние стены города."
+    new "Над головой она увидела валуны от требушетов, которые летели по небу и били во внешние стены города."
 
     old "Larges plumes of dust rose up."
-    new "Большие шлейфы пыли поднимались вверх."
+    new "Густые облака пыли взметнулись в воздух."
 
     old "Stones, scattering, walls breaking, the violent roar of the siege."
-    new "Камни разлетаются, стены рушатся, яростный рёв осады."
+    new "Камни разлетались в стороны, стены рушились, и во всё это вторгался яростный рев осады."
 
     old "Sarah looked at one of her officers."
-    new "Сара взглянула на одного из своих офицеров."
+    new "Сара посмотрела на одного из своих офицеров."
 
     old "What is the situation with the Tribesmen?"
-    new "Какова ситуация с Племенниками?"
+    new "Какова ситуация с племенными воинами?"
 
     old "This attack was a large portion of their forces, but it wasn't all of them."
-    new "Эта атака была значительной частью их сил, но не всеми."
+    new "Эта атака включала большую часть их сил, но не всех."
 
     old "How many remain?"
-    new "Сколько осталось?"
+    new "Сколько их ещё осталось?"
 
     old "Hard to say, they're hiding behind their walls."
-    new "Трудно сказать, они прячутся за своими стенами."
+    new "Трудно сказать — они прячутся за своими стенами."
 
     old "Best estimate, maybe less than five-thousand."
-    new "По лучшим оценкам, может быть, меньше пяти тысяч."
+    new "По самым скромным подсчётам — возможно, менее пяти тысяч."
 
     old "A sizeable force, but far fewer than she had in her own army."
-    new "Значительные силы, но гораздо меньше, чем было в её собственной армии."
+    new "Значительная сила, но гораздо меньшая, чем у неё самой в своей армии."
 
     old "Still, when she moved into the city, it would be a brutal slog."
-    new "И всё же, когда она войдёт в город, это будет жестокая мясорубка."
+    new "Тем не менее, когда она войдёт в город, это будет жестокая и тяжёлая борьба."
 
     old "Block-by-block, she would have to fight her way through the city. Attacks could come from any direction."
-    new "Квартал за кварталом ей придётся пробиваться через город. Атаки могли последовать с любого направления."
+    new "Квартал за кварталом ей придётся пробиваться через город. Атаки могут прийти с любой стороны."
 
     old "And the march to Castle Reinmeer was long."
-    new "И марш до замка Рейнмир был долгим."
+    new "И поход к замку Рейнмир был долгим."
 
     old "Then there was the Castle itself, no easy target itself."
-    new "Потом был сам замок — отнюдь не лёгкая цель."
+    new "А ещё был сам замок — тоже непростая цель."
 
     old "Still, it had to be done."
-    new "И всё же это нужно было сделать."
+    new "Тем не менее, это нужно было сделать."
 
     old "Sarah watched the walls of the city until finally a large boulder struck true."
-    new "Сара смотрела на стены города, пока наконец большой валун не попал точно."
+    new "Сара смотрела на городские стены, пока наконец огромный валун не попал точно в цель."
 
     old "The integrity of the entire length of the wall gave out all at once."
-    new "Целостность всей длины стены рухнула разом."
+    new "Целостность всей длины стены разом рухнула."
 
     old "Along the rest of the wall, Sarah saw other gaps emerge. Even the city gate seemed close to collapsing."
-    new "Вдоль остальной стены Сара видела, как появляются другие проломы. Даже городские ворота, казалось, вот-вот рухнут."
+    new "По остальной части стены Сара заметила новые проломы. Даже городские ворота, казалось, вот-вот должны были рухнуть."
 
     old "Sarah grabbed the horn that was tied to her waist."
     new "Сара схватила рог, привязанный к её поясу."
 
     old "She drew in as much air as she could, filling her lungs, and brought the horn to her lips."
-    new "Она вдохнула столько воздуха, сколько могла, наполнив лёгкие, и поднесла рог к губам."
+    new "Она набрала в лёгкие столько воздуха, сколько могла, и поднесла рог к губам."
 
     old "Exhaling with great force, she let out a titanous blast from the horn."
-    new "Выдохнув с огромной силой, она издала титанический звук из рога."
+    new "С силой выдохнув, она выпустила из рога титанический звук."
 
     old "The deep, pounding sound seemed to reverberate into her bones."
-    new "Глубокий, пульсирующий звук, казалось, отдавался в её костях."
+    new "Глубокий, гулкий звук, казалось, отдавался в её костях."
 
     old "All at once, her army began to march, advancing on the city."
-    new "Вся разом её армия начала марш, наступая на город."
+    new "Внезапно её армия начала маршировать, двигаясь к городу."
 
     old "Sarah lowered the horn and watched in awe at the sheer size of her army."
-    new "Сара опустила рог и с благоговением смотрела на огромные размеры своей армии."
+    new "Сара опустила рог и с благоговением смотрела на огромное войско."
 
     old "Remaining near the rear, she advanced along with her army, staying wary of any other surprise attacks."
-    new "Оставаясь ближе к тылу, она продвигалась вместе с армией, остерегаясь других внезапных атак."
+    new "Оставаясь ближе к тылу, она двигалась вместе со своей армией, не теряя бдительности на случай новых внезапных атак."
 
     old "Her army could win the battle, but if she died the blow to morale could undo much of their advantage."
-    new "Её армия могла выиграть битву, но если бы она умерла, удар по морали мог свести на нет большую часть их преимущества."
+    new "Её армия могла выиграть битву, но если бы она погибла, то удар по морали мог бы свести на нет большую часть их преимущества."
 
     old "She didn't enjoy letting others risk their lives on her account, but she also knew she wasn't just one person anymore."
-    new "Ей не нравилось позволять другим рисковать жизнями ради неё, но она также знала, что больше не была просто одним человеком."
+    new "Ей не нравилось заставлять других рисковать жизнями из-за неё, но она также понимала, что теперь была уже не просто одним человеком."
 
     old "Looking upon her home, she knew she was becoming so much more."
-    new "Глядя на свой дом, она знала, что становится чем-то гораздо большим."
+    new "Глядя на свой дом, она поняла, что стала намного больше, чем прежде."
 
     old "The army crossed the field."
     new "Армия пересекла поле."
 
     old "A few arrows fell on them as they advanced, but the large volley she had expected did not come."
-    new "Несколько стрел упало на них, пока они продвигались, но большого залпа, которого она ожидала, не последовало."
+    new "На них обрушилось несколько стрел, пока они продвигались вперёд, но той мощной шквальной очереди, которую она ожидала, так и не последовало."
 
     old "The Tribesmen were experienced in war, but sieges were something they had far less experience with."
-    new "Племенники были опытны в войне, но в осадах у них было гораздо меньше опыта."
+    new "Племенники были опытны в войне, но осады — это то, с чем они сталкивались гораздо реже."
 
     old "Least of all, defending from a siege."
-    new "Уж точно не в обороне от осады."
+    new "Меньше всего — защищаться от осады."
 
     old "It was then perhaps no surprise they had failed to prepare as well as they could have."
-    new "Возможно, неудивительно, что они не подготовились так хорошо, как могли бы."
+    new "Возможно, тогда не было ничего удивительного в том, что им не удалось подготовиться так хорошо, как они могли бы."
 
     old "As they neared the walls of the city, the gaps were large enough for her soldiers to advance safely."
-    new "Когда они приблизились к стенам города, проломы были достаточно велики, чтобы её солдаты могли безопасно продвигаться."
+    new "По мере того как они приближались к городским стенам, проломы оказались достаточно большими, чтобы её солдаты могли безопасно продвинуться вперёд."
 
     old "Her army moved into the city, passing through the damaged sections of the wall."
     new "Её армия вошла в город, проходя через повреждённые участки стены."
 
     old "They were hardly more than a few steps in when the Tribesmen began their attack."
-    new "Они едва сделали несколько шагов, как Племенники начали атаку."
+    new "Они сделали всего несколько шагов, когда племениты начали атаку."
 
     old "Using the narrow streets of the capital to their advantage, they hoped to compensate for their smaller numbers."
-    new "Используя узкие улицы столицы в своих интересах, они надеялись компенсировать свою малочисленность."
+    new "Используя узкие улицы столицы в своих интересах, они надеялись компенсировать меньшее численное превосходство противника."
 
     old "Arrows, shot from windows and rooftops."
-    new "Стрелы, пущенные из окон и с крыш."
+    new "Стрелы, выпущенные из окон и с крыш."
 
     old "Small groups, carrying out cavalry charges, hitting and running, only to dissapear in some side-street."
-    new "Небольшие группы, совершающие кавалерийские налёты, нанося удары и убегая, чтобы исчезнуть в каком-нибудь переулке."
+    new "Маленькие отряды совершали кавалерийские атаки: наносили удар и убегали, исчезая в какой-нибудь боковой улочке."
 
     old "They were trying to bleed her army out."
-    new "Они пытались обескровить её армию."
+    new "Они пытались истощить её армию."
 
     old "But on her orders, her army kept advancing."
     new "Но по её приказу армия продолжала наступать."
 
     old "Sarah knew that with her numbers, her advantage was too significant."
-    new "Сара знала, что с её численностью её преимущество было слишком значительным."
+    new "Сара знала: с таким численным превосходством её преимущество было слишком велико."
 
     old "And so, despite the ongoing attacks from the Tribesmen, her army advanced deeper and deeper into the capital."
-    new "И поэтому, несмотря на продолжающиеся атаки Племенников, её армия продвигалась всё глубже в столицу."
+    new "И вот, несмотря на непрекращающиеся атаки племенников, её армия продвигалась всё глубже и глубже в столицу."
 
     old "As they all slowly passed through the broken walls, the streets of the city began to swell with soldiers."
-    new "Когда они все медленно проходили через разрушенные стены, улицы города начали заполняться солдатами."
+    new "Пока они медленно проходили через разрушенные стены, улицы города начали заполняться солдатами."
 
     old "Where at first the Tribesmen had been able to attack and dissapear into small streets, now Sarah's soldiers covered every angle."
-    new "Там, где сначала Племенники могли атаковать и исчезать в маленьких улочках, теперь солдаты Сары прикрывали каждый угол."
+    new "Сначала племениты могли атаковать и исчезать в узких улочках, но теперь солдаты Сары контролировали каждый угол города."
 
     old "More and more of them flooded every part of the city."
-    new "Всё больше их заполняло каждую часть города."
+    new "Всё больше и больше их людей наводнило каждый уголок города."
 
     old "And with each street and square lost, the Tribesmen were pushed back into a smaller part of the city."
-    new "И с каждой потерянной улицей и площадью Племенников оттесняли в меньшую часть города."
+    new "И с каждой проигранной улицей и площадью племенитяне отступали в всё меньшую часть города."
 
     old "Already, Sarah could hear the cries of joy from the citizens, locked in their houses."
-    new "Сара уже слышала крики радости горожан, запертых в своих домах."
+    new "Уже сейчас Сара слышала радостные крики горожан, запертых в своих домах."
 
     old "As the Tribesmen lost ground, they found themselves increasingly concentrated into smaller and smaller spaces."
-    new "Теряя позиции, Племенники оказывались всё более сконцентрированными во всё меньших пространствах."
+    new "По мере того как племенитяне теряли позиции, они оказывались всё более плотно сжатыми на всё меньших и меньших пространствах."
 
     old "Their hit-and-run tactics were increasingly becoming futile."
-    new "Их тактика «бей-беги» становилась всё более бесполезной."
+    new "Их тактика внезапных нападений становилась всё более бесполезной."
 
     old "When they did attack now, they did so in larger numbers. More regular fighting."
-    new "Когда они теперь атаковали, то делали это в больших количествах. Более регулярные бои."
+    new "Но такие бои оставляли свой след."
 
     old "But that kind of fighting took its toll."
-    new "Но такой бой брал своё."
+    new "Но такой бой дался обеим сторонам тяжело."
 
     old "It took its toll on both sides, but the Tribesmen did not have the numbers to spare for such a grinding conflict."
-    new "Он брал своё с обеих сторон, но у Племенников не было лишних сил для такой изнурительной борьбы."
+    new "Это сказалось на обеих сторонах, но у племенян не осталось сил на такой изнурительный конфликт."
 
     old "Sarah watched as their numbers dwindled."
-    new "Сара видела, как их число редело."
+    new "Сара смотрела, как их число уменьшалось."
 
     old "How with each passing moment, the Tribesmen fell back further, surrendering more ground."
-    new "Как с каждым мгновением Племенники отступали всё дальше, сдавая всё больше территории."
+    new "Как с каждым мгновением племенитяне отступали всё дальше, уступая всё больше территории."
 
     old "By now, most of the city had been liberated."
-    new "К настоящему моменту большая часть города была освобождена."
+    new "К этому моменту большая часть города уже была освобождена."
 
     old "And the only place to fall back to for the Tribesmen, was the Castle."
-    new "И единственным местом, куда могли отступить Племенники, был Замок."
+    new "И единственное место, куда могли отступить племенники, — это замок."
 
     old "Sarah pressed her forces on, giving pursuit to the Tribesmen forces."
-    new "Сара подгоняла свои силы, преследуя войска Племенников."
+    new "Сара продолжала наступление, преследуя силы племенитян."
 
     old "Finally, they relented and retreated all the way into the castle proper."
-    new "Наконец они сдались и отступили прямо в замок."
+    new "Наконец они уступили и отступили прямо в саму крепость."
 
     old "Letting the gate fall shut behind them, they withdrew to their last and final position."
-    new "Захлопнув за собой ворота, они отошли на свою последнюю и окончательную позицию."
+    new "Опустив ворота, они отступили к своей последней и окончательной позиции."
 
     old "Sarah watched as their haggard forces tried to set up their last defense."
-    new "Сара смотрела, как их измотанные силы пытались организовать последнюю оборону."
+    new "Сара смотрела, как их измождённые силы пытались выстроить последнюю оборону."
 
     old "Her own forces had been wounded, but for the most part, her army was still plenty able to keep on the fight."
-    new "Её собственные силы были ранены, но по большей части её армия всё ещё была вполне способна продолжать бой."
+    new "Её собственные силы были ранены, но в целом её армия всё ещё была вполне способна продолжать бой."
 
     old "It was the Tribesmen that had ran out of steam."
-    new "Это Племенники выдохлись."
+    new "Именно племенники уже выдохлись."
 
     old "The central road of the city that led up to the Castle was the most direct route of attack."
-    new "Центральная дорога города, ведущая к Замку, была самым прямым путём атаки."
+    new "Центральная дорога города, ведущая к замку, была самым прямым путем для атаки."
 
     old "It would also be the quickest way to end this."
-    new "Это также был бы самый быстрый способ покончить с этим."
+    new "Это было бы и самым быстрым способом всё закончить."
 
     old "Send up the vanguard, have them take the castle gates. Once they're open, move up the rest of our forces."
-    new "Пошлите авангард, пусть захватят ворота замка. Как только они откроются, подтяните остальные силы."
+    new "Отправь авангард, пусть они захватят ворота замка. Как только они откроются, выведи вперёд остальные наши силы."
 
     old "As ordered, Sarah watched her vanguard unit advance on the castle."
-    new "Следуя приказу, Сара смотрела, как её авангард наступает на замок."
+    new "Как было приказано, Сара наблюдала за тем, как её авангард наступает на замок."
 
     old "The vanguard consisted of the best soldiers from her mercenary company and Rosannan Knights that had survived The Fall."
-    new "Авангард состоял из лучших солдат её наёмной роты и розаннских рыцарей, переживших Падение."
+    new "Авангард состоял из лучших солдат её наёмнической компании и розаннских рыцарей, переживших Падение."
 
     old "Her most experienced soldiers, they would make for more than a decent match to the Tribesmen."
-    new "Её самые опытные солдаты, они были более чем достойными противниками для Племенников."
+    new "Её самые опытные воины — им-то не раз придётся сразиться с племенниками."
 
     old "As they moved on the castle gates, the Tribesmen tried to stop their advance by firing arrows."
-    new "Когда они двинулись к воротам замка, Племенники попытались остановить их, стреляя стрелами."
+    new "Пока они двигались к замковым воротам, племенники пытались остановить их наступление, стреляя в них стрелами."
 
     old "But the heavy plated armor and large shields of the vanguard unit meant that not a single arrow found purchase."
-    new "Но тяжёлая броня и большие щиты авангарда означали, что ни одна стрела не достигла цели."
+    new "Но тяжёлая латная броня и большие щиты авангарда означали, что ни одна стрела не смогла пробить их защиту."
 
     old "Reaching the castle gates, they brought out their siege axes and got to work."
-    new "Достигнув ворот замка, они достали осадные топоры и принялись за работу."
+    new "Достигнув ворот замка, они достали осадные топоры и принялись за дело."
 
     old "With each swing, they chipped away at the large, solid wood door that blocked the entrance into the castle."
-    new "С каждым ударом они откалывали куски от большой, массивной деревянной двери, преграждавшей вход в замок."
+    new "С каждым взмахом топора они откалывали куски от огромной, прочной деревянной двери, преграждавшей вход в замок."
 
     old "The gates of Castle Reinmeer were solid, but even they could not endure forever."
-    new "Ворота замка Рейнмир были крепки, но даже они не могли держаться вечно."
+    new "Ворота замка Рейнмир были прочными, но даже они не могли выдержать вечность."
 
     old "Meanwhile, so close to the gate, the Tribesmen could no longer properly fire their arrows, leaving the vanguard to hack away."
-    new "Тем временем, так близко к воротам, Племенники больше не могли как следует стрелять из луков, оставив авангард рубить ворота."
+    new "Тем временем, оказавшись так близко к воротам, племенники больше не могли как следует стрелять из своих луков, и авангарду оставалось лишь продолжать рубить."
 
     old "Eventually, Sarah saw the door splinter."
     new "В конце концов Сара увидела, как дверь раскололась."
 
     old "A hole, large enough for maybe two men to move through."
-    new "Отверстие, достаточно большое для прохода, может, двоих."
+    new "Отверстие, достаточно большое, чтобы через него могли пройти, возможно, двое мужчин."
 
     old "Without wasting a moment, they did."
-    new "Не теряя ни мгновения, они это сделали."
+    new "Не теряя ни секунды, они это сделали."
 
     old "On the other side, they found the Tribesmen waiting for them, attacking as they tried to move through."
-    new "По ту сторону они обнаружили поджидающих Племенников, которые атаковали их, когда те пытались пройти."
+    new "С другой стороны они обнаружили, что племенные воины уже ждут их и нападают, пока те пытаются прорваться."
 
     old "At first, the vanguard struggled, but with each man that moved through, they were able to push the Tribesmen back further."
-    new "Сначала авангарду было трудно, но с каждым прошедшим солдатом они могли оттеснять Племенников всё дальше."
+    new "Сначала авангард с трудом продвигался, но с каждым человеком, который проходил через отверстие, им удавалось отталкивать племенников всё дальше."
 
     old "Before long, they had secured their position on the other end of the door and pushed the Tribesmen back into the Castle square."
-    new "Вскоре они закрепились на другой стороне двери и оттеснили Племенников обратно на замковую площадь."
+    new "Вскоре они уже укрепили свою позицию на другой стороне двери и оттеснили племенитян обратно на площадь замка."
 
     old "Rather than advance further, the vanguard seized the Castle gate."
     new "Вместо того чтобы продвигаться дальше, авангард захватил ворота замка."
 
     old "Pulling on the winch, they activated the machinery that had held the gates closed."
-    new "Потянув за лебёдку, они привели в действие механизм, удерживавший ворота закрытыми."
+    new "Потянув за лебедку, они активировали механизм, который до этого удерживал ворота в закрытом положении."
 
     old "They swung open with a deep and heavy thud."
     new "Они распахнулись с глубоким и тяжёлым стуком."
 
     old "Sarah heard her own army scream out in celebration as they saw that the final obstacle to their victory had been thrown open."
-    new "Сара услышала, как её собственная армия закричала в ликовании, увидев, что последнее препятствие на пути к победе распахнуто."
+    new "Сара услышала крики своей армии в знак торжества: они увидели, что последнее препятствие на пути к победе было устранено."
 
     old "Before she could even issue the command, she saw her soldiers running up the road towards the castle."
-    new "Прежде чем она успела отдать приказ, она увидела, как её солдаты бегут по дороге к замку."
+    new "Прежде чем она успела даже отдать приказ, она увидела, как её солдаты побежали по дороге к замку."
 
     old "Each was eager not to be denied their share of the glory of this day."
-    new "Каждый жаждал не быть обделённым своей долей славы этого дня."
+    new "Каждый из них рвался не остаться без своей доли славы этого дня."
 
     old "The vanguard fell back, allowing the core of the army to move into the castle."
-    new "Авангард отступил, позволив ядру армии войти в замок."
+    new "Авангард отступил, позволив основному корпусу армии войти в замок."
 
     old "The Tribesmen fought bravely, but their numbers had dwindled so far that they could no longer mount a proper defense."
-    new "Племенники сражались храбро, но их число настолько сократилось, что они больше не могли организовать достойную оборону."
+    new "Племенники сражались храбро, но их число так сильно уменьшилось, что они больше не могли организовать нормальную оборону."
 
     old "Sarah's forces moved through the castle like a torrential surge, pushing through the Tribesmen forces."
-    new "Силы Сары прошли через замок, как стремительный поток, сметая силы Племенников."
+    new "Силы Сары хлынули сквозь замок, словно бурный поток, сметая на своём пути отряды племенников."
 
     old "It was a battle for only a moment. Then it was a slaughter."
-    new "Это была битва лишь на мгновение. Затем это была бойня."
+    new "Это была битва лишь на мгновение. А затем началась резня."
 
     old "Sarah entered the castle when most of the fighting had been settled."
-    new "Сара вошла в замок, когда большая часть боя уже была завершена."
+    new "Сара вошла в замок, когда основная часть сражения уже закончилась."
 
     old "All about, she saw the bodies of the Tribesmen sprawled. Hacked up. Blood smeared."
-    new "Повсюду она видела тела Племенников, разбросанные, изрубленные, залитые кровью."
+    new "Повсюду она видела разбросанные тела членов племени — изуродованные, с кровью на них."
 
     old "Here and there, some of her own soldiers were being treated for injuries of their own."
-    new "Там и сям некоторых её собственных солдат перевязывали после ранений."
+    new "Где-то и там-сям некоторых из её собственных солдат лечили от ран."
 
     old "A loud cheer rose up from the soldiers as they watched Sarah enter the castle grounds."
-    new "Громкое приветствие разнеслось от солдат, когда они увидели, как Сара входит на территорию замка."
+    new "От солдат поднялся громкий клич, когда они видели, как Сара входит на территорию замка."
 
     old "She raised her own fist in the air, triumphant."
-    new "Она подняла свой кулак в воздух, торжествуя."
+    new "Она торжествующе подняла свой кулак в воздух."
 
     old "She felt her own heart pounding in her chest at the sight."
-    new "Она почувствовала, как её сердце забилось в груди при виде этого."
+    new "При виде этого она почувствовала, как её собственное сердце бешено заколотилось в груди."
 
     old "As her eyes fell on her ancestral home, the memories flooded back to her."
-    new "Когда её глаза упали на родовой дом, воспоминания нахлынули на неё."
+    new "Когда её взгляд упал на родовой дом, воспоминания хлынули обратно."
 
     old "And she was caught for a brief moment by a feeling she had lost for years."
-    new "И на краткий миг её охватило чувство, которое она потеряла годы назад."
+    new "И на мгновение её охватило чувство, которое она не испытывала уже много лет."
 
     old "She felt at home."
-    new "Она чувствовала себя как дома."
+    new "Она почувствовала себя как дома."
 
     old "Sarah watched one of the soldiers swing an axe, ending the pleading of a wounded Tribesman."
-    new "Сара видела, как один из солдат взмахнул топором, прекратив мольбы раненого Племенника."
+    new "Сара смотрела, как один из солдат замахивается топором, прерывая мольбы раненого соплеменника."
 
     old "Her enemies were broken."
     new "Её враги были сломлены."
@@ -1778,100 +1795,103 @@ translate ru strings:
     new "Её победа была несомненна."
 
     old "Sarah kept her stride, marching directly into the castle itself."
-    new "Сара продолжала шагать, направляясь прямо в замок."
+    new "Она не сбавила шага, идя прямо к самому замку."
 
     old "She held back the desire to explore her own home, to feel the memories she was desperate for."
-    new "Она сдерживала желание исследовать собственный дом, ощутить воспоминания, по которым отчаянно тосковала."
+    new "Она сдерживала желание исследовать свой собственный дом, чтобы вновь ощутить те самые воспоминания, в которых так отчаянно нуждалась."
 
     old "Instead, she walked directly to the Throne Room."
-    new "Вместо этого она направилась прямо в Тронный зал."
+    new "Вместо этого она направилась прямо в тронный зал."
 
     old "Two soldiers pulled open the grand doors that lead to the Throne Room."
-    new "Двое солдат распахнули величественные двери, ведущие в Тронный зал."
+    new "Два солдата распахнули грандиозные двери, ведущие в Тронный зал."
 
     old "Inside there was more carnage. More slaughter."
-    new "Внутри было ещё больше резни. Больше бойни."
+    new "Внутри было ещё больше бойни. Ещё больше убийств."
 
     old "This had been the last stand of the Tribesmen."
-    new "Это был последний рубеж Племенников."
+    new "Это была последняя отчаянная битва племенников."
 
     old "Judging by the blood and bodies, it seemed like they had not given up easily, even in the end."
-    new "Судя по крови и телам, они не сдались легко даже в конце."
+    new "Судя по крови и телам, казалось, что они не сдавались легко даже в конце."
 
     old "On the far end of the room, a large and fat man sat on hands and knees."
-    new "В дальнем конце комнаты сидел на коленях крупный толстый мужчина."
+    new "На другом конце комнаты сидел на коленях большой и толстый мужчина."
 
     old "Around him, soldiers."
-    new "Вокруг него — солдаты."
+    new "Вокруг него были солдаты."
 
     old "They were taunting him, kicking him."
-    new "Они дразнили его, пинали."
+    new "Они дразнили его и пинали."
 
     old "Each time they did, the man seemed to shriek and flinch."
-    new "Каждый раз мужчина, казалось, вскрикивал и вздрагивал."
+    new "Каждый раз, когда они это делали, мужчина, казалось, кричал и вздрагивал."
 
     old "Sarah stopped only a few paces away from him."
     new "Сара остановилась всего в нескольких шагах от него."
 
     old "You look different than I had imagined."
-    new "Ты выглядишь иначе, чем я себе представляла."
+    new "Ты выглядишь не так, как я себе представляла."
 
     old "The fat man looked up, fear spread all across his face and deep in his eyes."
-    new "Толстяк поднял взгляд, страх разлился по всему его лицу и в глубине глаз."
+    new "Толстяк поднял голову; страх расползся по всему его лицу и глубоко застыл в глазах."
+
+    old "You..."
+    new "Ты..."
 
     old "Yes, me."
     new "Да, я."
 
     old "Princess Sarah Rose, I-"
-    new "Принцесса Сара Роуз, я-"
+    new "Принцесса Сара Роуз, я..."
 
     old "Oh."
-    new "О."
+    new "Ох."
 
     old "I'm a Princess, again?"
     new "Я снова принцесса?"
 
     old "From what I've gathered you used quite a lot of flowery language to describe me in the last few years."
-    new "Насколько я поняла, в последние годы ты использовал довольно цветистые выражения для описания меня."
+    new "Судя по тому, что я поняла, за последние несколько лет ты использовал довольно много цветистых выражений, чтобы описать меня."
 
     old "See, I've read reports that told me your favorite name for me was the Blonde Whore."
-    new "Видишь ли, я читала донесения, в которых говорилось, что твоё любимое имя для меня было «Блондинистая шлюха»."
+    new "Видишь, я читала отчёты, в которых говорилось, что твоё любимое прозвище для меня — «Блондинка-шлюха»."
 
     old "No! I would never, I-"
-    new "Нет! Я бы никогда, я-"
+    new "Нет! Я бы никогда не..."
 
     old "And one report said that during a particularly debauched feast, you went on a long description of what you would do to me, once you captured me."
-    new "И одно донесение говорило, что во время особенно разнузданного пира ты подробно описал, что сделаешь со мной, когда захватишь меня."
+    new "И один из отчетов гласил, что во время одного особенно развратного пира ты долго и подробно описывал, что сделаешь со мной, как только поймаешь."
 
     old "She saw more fear on his face."
-    new "Она увидела ещё больше страха на его лице."
+    new "Она увидела на его лице ещё больший страх."
 
     old "He stammered, but couldn't manage to say a word."
-    new "Он заикался, но не мог вымолвить ни слова."
+    new "Он заикался, но не смог сказать ни слова."
 
     old "Come on, Governor Kamal."
-    new "Давай, губернатор Камал."
+    new "Да ладно тебе, губернатор Камал."
 
     old "I was told you were such an amusing person. Always up for a feast, a party, a joke."
-    new "Мне говорили, что ты такой забавный человек. Всегда не прочь попировать, повеселиться, пошутить."
+    new "Мне говорили, что ты такой забавный человек. Всегда готов к пиру, вечеринке или шутке."
 
     old "And now all I find in my Throne Room is a slobbering, crying, pig-of-a-man."
-    new "А теперь я вижу в своём Тронном зале только слюнявого, плачущего человека-свинью."
+    new "И вот всё, что я нахожу в своей тронной зале — это слюнявый, плачущий человек-свинья."
 
     old "You're not really living up to the image of a Tribesman, I must admit."
-    new "Ты не совсем соответствуешь образу Племенника, должна признать."
+    new "Надо признать, ты совсем не соответствуешь образу соплеменника."
 
     old "He trembled as he raised his head."
     new "Он дрожал, поднимая голову."
 
     old "I...I have heard reports of you as well, Lady Rose!"
-    new "Я... я тоже слышал донесения о вас, леди Роуз!"
+    new "Я... я тоже слышал о вас, леди Роуз!"
 
     old "Did you? And what did they say?"
-    new "Правда? И что они говорили?"
+    new "Разве? И что же они сказали?"
 
     old "That you are just! You are rightious and kind! You will do what is right!"
-    new "Что вы справедливы! Вы праведны и добры! Вы сделаете то, что правильно!"
+    new "Вы же справедливы! Вы праведны и добры! Вы ведь сделаете то, что правильно!"
 
     old "And you think this means I will spare you?"
     new "И ты думаешь, это значит, что я пощажу тебя?"
@@ -1880,487 +1900,490 @@ translate ru strings:
     new "Моя... моя жизнь в ваших руках... умоляю вас..."
 
     old "Beg?"
-    new "Умоляешь?"
+    new "Просил?"
 
     old "Did my Brother get a chance to beg?"
-    new "У моего брата был шанс умолять?"
+    new "Разве у моего брата был шанс попросить о пощаде?"
 
     old "She saw him shaking."
-    new "Она видела, как он трясётся."
+    new "Она увидела, как он дрожал."
 
     old "I know you were in charge of the army that invaded Rosanna all those years ago."
-    new "Я знаю, что ты командовал армией, вторгшейся в Розанну много лет назад."
+    new "Я знаю, что именно ты командовал армией, которая вторглась в Розанну все те годы назад."
 
     old "Your Khan might have given the order, but you led the army."
     new "Твой хан мог отдать приказ, но ты вёл армию."
 
     old "And while you left destruction in your wake, you sat yourself up on my Throne, and lived large."
-    new "И пока ты оставлял разрушение на своём пути, ты уселся на моём Троне и жил в своё удовольствие."
+    new "И пока ты оставлял за собой лишь разрушение, сам же устроился на моём троне и жил в роскоши."
 
     old "She gestured at his corpulent form."
-    new "Она указала на его тучную фигуру."
+    new "Она указала на его тучное тело."
 
     old "Living quite large, I see."
-    new "Жил весьма вольготно, как я погляжу."
+    new "Кажется, ты неплохо зажил в роскоши."
 
     old "A few of the soldiers uttered a cruel laugh."
-    new "Несколько солдат издали жестокий смешок."
+    new "Некоторые солдаты злобно рассмеялись."
 
     old "Please! I can..."
-    new "Умоляю! Я могу..."
+    new "Пожалуйста! Я могу..."
 
     old "Can what?"
-    new "Что можешь?"
+    new "Чего?"
 
     old "I can leave!"
     new "Я могу уйти!"
 
     old "I will take what is left of my men and I will leave your lands!"
-    new "Я заберу остатки своих людей и покину ваши земли!"
+    new "Я заберу тех, кто ещё остался из моих людей, и покину ваши земли!"
 
     old "I will go far into the desert and I will tell everyone who will hear of your victory!"
-    new "Я уйду далеко в пустыню и расскажу всем, кто захочет слушать, о вашей победе!"
+    new "Я уйду вглубь пустыни и расскажу всем, кто услышит об этой победе!"
 
     old "Nobody...nobody will doubt that you have reclaimed your land when I spread the word that I surrendered to you."
-    new "Никто... никто не усомнится, что вы отвоевали свою землю, когда я разнесу весть, что сдался вам."
+    new "Никто... никто не усомнится в том, что вы вернули себе свою землю, когда я расскажу всем, что сдался вам."
 
     old "And...and they will know of your kindness!"
-    new "И... и они узнают о вашей доброте!"
+    new "И... и они узнают о твоей доброте!"
 
     old "A woman so gracious that she could forgive even the likes of me!"
-    new "Женщина, столь милостивая, что могла простить даже такого, как я!"
+    new "Женщина настолько благородная, что способна простить даже такого, как я!"
 
     old "It's a nice idea, and I'll give you credit for trying."
-    new "Хорошая мысль, и я отдам тебе должное за попытку."
+    new "Это хорошая идея, и я признаю твою смелость за то, что ты попробовал."
 
     old "But I think I have other ways of sending a message to people."
-    new "Но я думаю, у меня есть другие способы отправить послание людям."
+    new "Но, думаю, у меня есть и другие способы донести до людей своё сообщение."
 
     old "Sarah gestured at the soldiers."
-    new "Сара указала солдатам."
+    new "Сара указала на солдат."
 
     old "Men, hold him down."
-    new "Солдаты, держите его."
+    new "Мужики, держите его."
 
     old "NOOO!!!!"
-    new "НЕЕЕЕТ!!!!"
+    new "НЕТ-Т-Т-Т!!!!"
 
     old "Kamal shrieked like a pig to the slaughter as the soldiers grabbed his arms and twisted them."
-    new "Камал визжал, как свинья на заклание, когда солдаты схватили его за руки и выкрутили их."
+    new "Камал взвыл, словно свинья на убой, когда солдаты схватили его за руки и начали их выкручивать."
 
     old "As they pushed his fat body into the ground, he writhed around as if it made any difference."
-    new "Когда они прижали его толстое тело к земле, он извивался, словно это могло что-то изменить."
+    new "Пока они прижимали его толстое тело к земле, он извивался так, будто это могло что-то изменить."
 
     old "Come now, Kamal."
     new "Ну же, Камал."
 
     old "Sarah drew the blade from its sheath."
-    new "Сара вытащила клинок из ножен."
+    new "Сара выхватила клинок из ножен."
 
     old "She held it close to his neck, studying where to strike."
-    new "Она поднесла его к его шее, прицеливаясь, куда ударить."
+    new "Она прижала клинок к его шее, размышляя, куда нанести удар."
 
     old "You're going to die."
     new "Ты умрёшь."
 
     old "NOOO!!! WAIT!!!"
-    new "НЕЕЕЕТ!!! ПОДОЖДИ!!!"
+    new "НЕТ!!! ПОДОЖДИ!!!"
 
     old "His panicked screams could be heard through the entire hall."
-    new "Его панические крики были слышны во всём зале."
+    new "Его панические крики были слышны по всему залу."
 
     old "The least you can do is go out with a little dignity."
-    new "Самое меньшее, что ты можешь сделать, — уйти с достоинством."
+    new "Хотя бы с достоинством уходи."
 
     old "Sarah raised the sword over her head."
     new "Сара подняла меч над головой."
 
     old "Then she swung the blade with a plowing motion, bringing it down on his neck."
-    new "Затем она взмахнула клинком рубящим движением, опуская его ему на шею."
+    new "Затем она провела лезвием движением, словно пахала, и обрушила его на его шею."
 
     old "The steel sliced through his neck, clean."
-    new "Сталь рассекла его шею, чисто."
+    new "Сталь чисто рассекла его шею."
 
     old "His cries silenced."
-    new "Его крики затихли."
+    new "Его крики утихли."
 
     old "Sarah watched as Kamal's head rolled from its stump."
-    new "Сара смотрела, как голова Камала покатилась с обрубка."
+    new "Сара смотрела, как голова Камала скатилась с его шеи."
 
     old "Blood poured out from his neck. His massive body, slumped."
     new "Кровь хлынула из его шеи. Его массивное тело обмякло."
 
     old "All at once, Sarah felt as if a great weight had fallen from her shoulders."
-    new "Внезапно Сара почувствовала, будто огромный груз свалился с её плеч."
+    new "Внезапно Сара почувствовала, словно с её плеч свалился огромный груз."
 
     old "The battle was really over."
     new "Битва действительно закончилась."
 
     old "She stumbled past the soldiers and Kamal's body."
-    new "Она прошла мимо солдат и тела Камала."
+    new "Она спотыкаясь прошла мимо солдат и тела Камала."
 
     old "Get rid of his body."
     new "Избавьтесь от его тела."
 
     old "As for the head, put that up on a spike with the others."
-    new "Что касается головы — насадите её на кол вместе с остальными."
+    new "Что касается головы, поставь её на шпиль вместе с остальными."
 
     old "Sarah stood at the steps of the Throne."
-    new "Сара стояла у ступеней Трона."
+    new "Сара стояла на ступенях Трона."
 
     old "For a brief moment, she paused."
-    new "На краткий миг она остановилась."
+    new "На короткое мгновение она замерла."
 
     old "There, atop the steps, the throne loomed large."
-    new "Там, на вершине ступеней, трон возвышался огромный."
+    new "Там, на вершине ступеней, возвышался трон."
 
     old "Faded memories of a lifetime ago, came over her."
-    new "Поблёкшие воспоминания целой жизни назад нахлынули на неё."
+    new "К ней вернулись смутные воспоминания о жизни, которая была так давно."
 
     old "A girl had grown up here."
     new "Здесь выросла девочка."
 
     old "But the memories felt as if they belonged to someone else. Too distant from whom she had become."
-    new "Но воспоминания казались принадлежащими кому-то другому. Слишком далёкие от того, кем она стала."
+    new "Но эти воспоминания казались такими, будто они принадлежали кому-то другому. Слишком далёкими от той, кем она сама стала."
 
     old "Sarah could see herself sitting on the stairs, playing while her father held court."
-    new "Сара видела себя сидящей на ступенях, играющей, пока её отец вёл заседание двора."
+    new "Сара видела себя сидящей на лестнице, играющей, пока её отец заседал."
 
     old "And if the court sessions dragged on, she would sit at his feet."
-    new "А если судебные заседания затягивались, она садилась у его ног."
+    new "И если судебные заседания затягивались, она сидела у его ног."
 
     old "She would close her eyes and listen to his deep voice as he handed out justice."
     new "Она закрывала глаза и слушала его глубокий голос, когда он вершил правосудие."
 
     old "More than once she would fall asleep entirely, woken only when her Father picked her up and carried her to her room."
-    new "Не раз она засыпала, просыпаясь только тогда, когда Отец поднимал её и нёс в её комнату."
+    new "Не раз она засыпала совсем, просыпаясь лишь тогда, когда отец поднимал её и нёс в её комнату."
 
     old "As she grew older, she replaced her toys for books, sitting on the step, reading."
-    new "Став старше, она заменила игрушки на книги, сидя на ступеньке и читая."
+    new "По мере того как она взрослела, игрушки сменились книгами: она садилась на ступеньку и читала."
 
     old "At rare times, her Father had even asked her for advice."
-    new "В редкие времена Отец даже спрашивал у неё совета."
+    new "Иногда её отец даже просил её дать совет."
 
     old "Looking back, Sarah now realized he probably already knew the answers to the questions he had posed her."
-    new "Оглядываясь назад, Сара теперь понимала, что он, вероятно, уже знал ответы на вопросы, которые задавал ей."
+    new "Оглядываясь назад, Сара теперь понимала, что он, вероятно, уже знал ответы на вопросы, которые задал ей."
 
     old "He had simply been preparing her. Preparing her to help Thomas."
-    new "Он просто готовил её. Готовил её помогать Томасу."
+    new "Он просто готовил её. Готовил к тому, чтобы она помогла Томасу."
 
     old "It was hollow and empty without him."
-    new "Без него было пусто и одиноко."
+    new "Без него всё было пустым и безжизненным."
 
     old "As her eyes fell back on the throne, she imagined that he was sitting there."
-    new "Когда её взгляд снова упал на трон, она представила, что он сидит там."
+    new "Когда её взгляд снова упал на трон, она представила, будто он сидит там."
 
     old "It should have been you..."
     new "Это должен был быть ты..."
 
     old "Sarah spoke the words so softly only she could hear."
-    new "Сара произнесла эти слова так тихо, что только она могла их слышать."
+    new "Сара произнесла эти слова так тихо, что слышать их могла только она сама."
 
     old "He had a kind and soft heart."
-    new "У него было доброе и мягкое сердце."
+    new "У него было доброе и нежное сердце."
 
     old "Sarah feared her own, and how cold it had become."
-    new "Сара боялась своего собственного и того, насколько холодным оно стало."
+    new "Сара боялась себя и того, насколько холодными стали её чувства."
 
     old "Gripping her sword, she searched herself for answers."
-    new "Сжимая меч, она искала ответы в себе."
+    new "Схватив за рукоять меча, она искала в себе ответы."
 
     old "She had the heart of a conqueror, but that did not mean she was fit for a throne. Fit to rule."
-    new "У неё было сердце завоевателя, но это не значило, что она подходит для трона. Подходит, чтобы править."
+    new "У неё было сердце завоевателя, но это не означало, что она годилась на трон. Годилась лишь править."
 
     old "History was filled with great Warlords who left only legacy and ruin."
-    new "История полна великих полководцев, оставивших после себя только наследие и руины."
+    new "История была полна великих военачальников, оставивших после себя лишь наследие и руины."
 
     old "Was she to be one of them?"
-    new "Была ли она одной из них?"
+    new "Станет ли она одной из них?"
 
     old "She remembered Thomas smiling at her in the library, when she had caught him sneaking out of his sword training."
-    new "Она вспомнила, как Томас улыбался ей в библиотеке, когда она застала его сбегающим с тренировки по фехтованию."
+    new "Она помнила, как Томас улыбался ей в библиотеке, когда она застала его за тем, что он тайно выбегал с тренировки по фехтованию."
 
     old "He had loved her. And she had loved him."
     new "Он любил её. И она любила его."
 
     old "Perhaps he would have made a better King, but life had not played out like that."
-    new "Возможно, он стал бы лучшим Королём, но жизнь распорядилась иначе."
+    new "Возможно, он стал бы лучшим королём, но жизнь не сложилась так."
 
     old "Sarah cleared her mind, sharpened her focus."
-    new "Сара прояснила разум, обострила внимание."
+    new "Сара очистила свой разум и обострила концентрацию."
 
     old "Step by step, she began to ascend towards the Throne."
-    new "Шаг за шагом она начала подниматься к Трону."
+    new "Шаг за шагом она начала подниматься к трону."
 
     old "With each step, she neared closer, and the Throne seemed to loom ever larger."
-    new "С каждым шагом она приближалась, и Трон, казалось, вырастал всё больше."
+    new "С каждым шагом она приближалась всё ближе, и трон, казалось, становился всё больше."
 
     old "When she reached the final step, the Throne was all she could hold in her mind's eye."
-    new "Когда она достигла последней ступени, в её мыслях был только Трон."
+    new "Когда она достигла последней ступени, Трон стал единственным, что она могла удержать перед мысленным взором."
 
     old "She would claim it."
-    new "Она займёт его."
+    new "Она заберёт его."
 
     old "Not for herself. But for her Father. Her Mother. And Thomas."
-    new "Не для себя. А ради своего Отца. Своей Матери. И Томаса."
+    new "Не для себя. А для своего Отца. Своей Матери. И Томаса."
 
     old "She would rule and make them proud."
-    new "Она будет править и сделает их гордыми."
+    new "Она будет править и заставит их гордиться ею."
 
     old "She would rule and make sense of all the carnage and ruin that had come before."
-    new "Она будет править и осмыслит всю бойню и разрушения, что были прежде."
+    new "Она бы правила и нашла смысл во всех тех бойнях и разрушениях, что были до неё."
 
     old "Sarah turned around, looking out across the Grand Hall."
-    new "Сара обернулась, оглядывая Большой Зал."
+    new "Сара обернулась и посмотрела на Великий зал."
 
     old "In heavy silene, the gathered soldiers looked on."
-    new "В тяжёлой тишине собравшиеся солдаты наблюдали."
+    new "В густой тишине собравшиеся солдаты наблюдали за происходящим."
 
     old "Then, she sat down."
     new "Затем она села."
 
     old "A simple motion, yet nothing had ever felt more heavy to her in all her life."
-    new "Простое движение, но никогда в жизни ничто не казалось ей более тяжёлым."
+    new "Простое движение, но никогда ещё ничего не казалось ей таким тяжёлым за всю её жизнь."
 
     old "Sarah felt herself sinking into the crimson velvet of the Throne, her arms leaning on the armrests, her back pressing up against the hard oak."
-    new "Сара чувствовала, как утопает в малиновом бархате Трона, её руки лежали на подлокотниках, спина прижималась к твёрдому дубу."
+    new "Сара почувствовала, как она погружается в багровый бархат Трона, её руки опирались на подлокотники, а спина прижималась к твёрдому дубу."
 
     old "And before her, the soldiers fell to their knees."
-    new "И перед ней солдаты опустились на колени."
+    new "И перед ней воины пали на колени."
 
     old "Something sacred had transpired, and all had become possessed by it."
-    new "Произошло нечто священное, и все были охвачены этим."
+    new "Что-то святое произошло, и все словно одержимы этим."
 
     old "Hail, Sarah Rose!"
     new "Славься, Сара Роуз!"
 
     old "They cried out their loyalty all at once."
-    new "Они выкрикнули свою верность все разом."
+    new "Они разом воскликнули о своей преданности."
 
     old "Then again, and again, and again."
-    new "Затем снова, и снова, и снова."
+    new "И снова, и снова, и снова."
 
     old "The chant, grew, like the beating of a drum."
-    new "Пение росло, как бой барабана."
+    new "Хор голосов разрастался, подобно битью барабана."
 
     old "And from her seat, Sarah saw the world change and unfold before her."
-    new "И со своего места Сара видела, как мир меняется и разворачивается перед ней."
+    new "И со своего места Сара увидела, как мир изменился и раскрылся перед ней."
 
     old "The ritual was complete."
     new "Ритуал был завершён."
 
     old "The proper rituals would be followed at a later time, but she knew as well as they did, that in this moment she had seized the throne."
-    new "Надлежащие ритуалы будут проведены позже, но она знала так же хорошо, как и они, что в этот момент она захватила трон."
+    new "Настоящие ритуалы будут проведены позже, но она знала так же хорошо, как и они, что в этот самый миг она уже захватила трон."
 
     old "She had become Queen."
-    new "Она стала Королевой."
+    new "Она стала королевой."
 
     old "As they looked up from bended knee, Sarah saw their eager faces, drawn with deep joy."
-    new "Когда они подняли взгляд от преклонённых колен, Сара увидела их нетерпеливые лица, озарённые глубокой радостью."
+    new "Поднимаясь с колен, они увидели её лица — полные нетерпения и глубокой радости."
 
     old "Warriors, all of them. Stained with blood or marked by injury."
-    new "Воины, все до одного. Запятнанные кровью или отмеченные ранами."
+    new "Воины, все до одного. Покровлённые кровью или отмеченные ранами."
 
     old "And yet, on their faces, pure bliss."
     new "И всё же на их лицах — чистое блаженство."
 
     old "The pain and exhaustion had been lifted from their bodies and their hearts."
-    new "Боль и истощение были сняты с их тел и сердец."
+    new "Боль и изнурение покинули их тела и сердца."
 
     old "Every tragedy, sacrifice and brutality, worth this moment."
-    new "Каждая трагедия, жертва и жестокость стоили этого момента."
+    new "Каждая трагедия, каждая жертва и каждая жестокость были достойны этого момента."
 
     old "And every face was directed at her."
     new "И каждое лицо было обращено к ней."
 
     old "The Nexus of their faith."
-    new "Средоточие их веры."
+    new "Центр их веры."
 
     old "Sarah was marching through the heavy snow."
-    new "Сара шла через глубокий снег."
+    new "Сара шла сквозь густой снег."
 
     old "With each step, she felt her boots sinking deeper."
-    new "С каждым шагом она чувствовала, как её сапоги увязают всё глубже."
+    new "С каждым шагом она чувствовала, как ботинки уходят всё глубже."
 
     old "Despite that, she pressed on. She had a promise to keep."
-    new "Несмотря на это, она продолжала идти. У неё было обещание, которое нужно сдержать."
+    new "Несмотря на это, она продолжала идти. У неё было обещание, которое нужно было сдержать."
 
     old "Behind her, she could still hear the celebrations going on."
-    new "Позади она всё ещё слышала празднования."
+    new "За её спиной она всё ещё слышала продолжающиеся празднества."
 
     old "The entire city was celebrating, her soldiers and her people alike."
     new "Весь город праздновал — и её солдаты, и её народ."
 
     old "She smiled as she looked back at it."
-    new "Она улыбнулась, оглядываясь на это."
+    new "Она улыбнулась, оглянувшись на это."
 
     old "This was probably the first time in many years since there had been a proper reason to celebrate."
-    new "Это был, вероятно, первый раз за много лет, когда появился настоящий повод для праздника."
+    new "Это, вероятно, был первый за много лет случай, когда появилась настоящая причина для празднования."
 
     old "Her people deserved it."
     new "Её народ заслужил это."
 
     old "And a part of her felt guilty when she turned away from it and continued to walk."
-    new "И часть её чувствовала вину, когда она отвернулась и продолжила идти."
+    new "И часть её чувствовала себя виноватой, когда она отвернулась от этого и пошла дальше."
 
     old "Walk towards the royal forest."
-    new "Идти к королевскому лесу."
+    new "Иди к королевскому лесу."
 
     old "She should have been with her people...but the truth was that she felt a great obligation still."
-    new "Она должна была быть со своим народом... но правда была в том, что она всё ещё чувствовала огромное обязательство."
+    new "Ей следовало бы быть со своим народом... но правда заключалась в том, что она по-прежнему чувствовала огромное обязательство."
 
     old "She had promised to meet with him in the royal forest after the battle."
     new "Она обещала встретиться с ним в королевском лесу после битвы."
 
     old "If he was still alive, though she doubted anything could kill him."
-    new "Если он всё ещё был жив, хотя она сомневалась, что что-то могло убить его."
+    new "Если он всё ещё был жив — хотя она сомневалась, что что-то вообще могло его убить."
 
     old "As she neared the tree line, the sky above grew darker."
-    new "Когда она приблизилась к кромке леса, небо над ней потемнело."
+    new "Когда она приблизилась к опушке леса, небо над головой стало ещё темнее."
 
     old "Heavy clouds darkened stars and moon, cloaking the world in shaded black."
-    new "Тяжёлые облака затмили звёзды и луну, окутав мир чёрной тенью."
+    new "Тяжёлые тучи затмили звёзды и луну, окутав мир теневым мраком."
 
     old "Sarah heard an owl. Otherwise, the forest was quiet."
-    new "Сара услышала сову. В остальном лес был тих."
+    new "Сара услышала сову. В остальном в лесу было тихо."
 
     old "She kept walking."
     new "Она продолжала идти."
 
     old "Sarah had told everyone she was tired and wanted to retreat to her room for the night and not be disturbed."
-    new "Сара сказала всем, что устала и хочет удалиться в свою комнату на ночь, чтобы её не беспокоили."
+    new "Сара солгала всем: сказала, что устала, и хотела отступить в свою комнату на ночь, чтобы её не беспокоили."
 
     old "She felt bad for lying about that too."
-    new "Ей было стыдно и за эту ложь тоже."
+    new "Ей было плохо от того, что она и об этом солгала."
 
     old "Passing an old tree, Sarah smiled as she remembered it."
-    new "Проходя мимо старого дерева, Сара улыбнулась, вспомнив его."
+    new "Проходя мимо старого дерева, Сара улыбнулась, вспомнив о нём."
 
     old "Its large roots had made it the perfect hiding spot when she played hide-and-seek here."
-    new "Его большие корни делали его идеальным укрытием, когда она играла здесь в прятки."
+    new "Его огромные корни делали это место идеальным укрытием, когда она играла здесь в прятки."
 
     old "That was a lifetime ago."
-    new "Это было целую жизнь назад."
+    new "Это было целую вечность назад."
 
     old "Looking around, Sarah saw nobody. Heard nothing."
-    new "Оглядываясь, Сара никого не видела. Ничего не слышала."
+    new "Оглянувшись, Сара не увидела никого. Не услышала ничего."
 
     old "For a brief moment, she felt her heart quicken."
-    new "На краткий миг она почувствовала, как её сердце забилось чаще."
+    new "На короткое мгновение её сердце бешено заколотилось."
 
     old "He couldn't have been..."
-    new "Не может быть, чтобы он..."
+    new "Он ведь не мог быть..."
 
     old "Then, the sound of heavy footsteps, stepping on snow."
-    new "Затем — звук тяжёлых шагов по снегу."
+    new "Затем раздался звук тяжёлых шагов по снегу."
 
     old "You look relieved."
     new "Ты выглядишь облегчённой."
 
     old "Surely you didn't think I had died in battle."
-    new "Ты ведь не думала, что я погиб в бою."
+    new "Ты же не думала, что я погиб в бою?"
 
     old "These Tribesmen are good warriors, but they're not that good."
-    new "Эти Племенники — хорошие воины, но не настолько хорошие."
+    new "Эти племенитяне — неплохие воины, но не настолько уж и хороши."
 
     old "He walked closer to her, crossing the distance between them."
-    new "Он подошёл ближе к ней, преодолевая расстояние между ними."
+    new "Он подошёл ближе к ней, преодолев расстояние между ними."
 
     old "Suddenly, he reached out with one hand."
     new "Внезапно он протянул одну руку."
 
     old "Sarah felt it brush up against her face."
-    new "Сара почувствовала, как она коснулась её лица."
+    new "Сара почувствовала, как это коснулось её лица."
 
     old "His skin was like coarse leather, yet despite all his strength, his touch was tender."
-    new "Его кожа была грубой, как выделанная кожа, но, несмотря на всю его силу, прикосновение было нежным."
+    new "Его кожа была похожа на грубую кожу, но, несмотря на всю свою силу, он касался её нежно."
 
     old "He brushed back some of her hair."
-    new "Он отвёл назад несколько её прядей."
+    new "Он убрал прядь её волос."
 
     old "You're injured."
     new "Ты ранена."
 
     old "A few scratches. Nothing I can't survive."
-    new "Несколько царапин. Ничего, что я не переживу."
+    new "Несколько царапин. Ничего такого, чего я не смогу пережить."
 
     old "How about you? Any injuries?"
-    new "А ты? Есть ранения?"
+    new "А ты? Есть раны?"
 
     old "A few, but I heal quick."
-    new "Несколько, но я быстро заживаю."
+    new "Немногие, но я быстро исцеляюсь."
 
     old "Well, what's a few more scars for you?"
-    new "Что для тебя ещё несколько шрамов?"
+    new "Ну, а тебе что ещё пара шрамов?"
 
     old "Most I earned fighting for fools or for gold."
-    new "Большинство я получил, сражаясь за дураков или за золото."
+    new "Большую часть я заработал, сражаясь за дураков или за золото."
 
     old "These scars I'll bear gladly."
-    new "Эти шрамы я буду носить с радостью."
+    new "Эти шрамы я с радостью понесу."
 
     old "Charmer."
-    new "Льстец."
+    new "Чаровница."
 
     old "She looked around the clearing in the forest."
-    new "Она оглядела поляну в лесу."
+    new "Она оглядывала поляну в лесу."
 
     old "It's peaceful."
-    new "Здесь мирно."
+    new "Здесь спокойно."
 
     old "I thought it best if we meet here."
-    new "Я подумал, что лучше встретиться здесь."
+    new "Я решил, что нам лучше всего встретиться здесь."
 
     old "Away from...judging eyes."
-    new "Подальше от... осуждающих глаз."
+    new "Далеко от... осуждающих взглядов."
 
     old "I took the Throne today...I sat on it and..."
-    new "Я заняла Трон сегодня... я села на него и..."
+    new "Я сегодня заняла трон... села на него и..."
 
     old "Sarah didn't have the heart to say."
-    new "У Сары не было сил сказать."
+    new "У Сары не хватило духу сказать."
 
     old "Yes, I heard."
     new "Да, я слышал."
 
     old "Things will be different."
-    new "Всё будет по-другому."
+    new "Всё будет иначе."
 
     old "For a while, the two lovers stood in silence."
     new "Некоторое время двое влюблённых стояли в тишине."
 
     old "Then, Sarah looked up and gathered all the courage she could."
-    new "Затем Сара подняла взгляд и собрала всё своё мужество."
+    new "Тогда Сара подняла голову и собрала всё мужество, на которое была способна."
 
     old "Don't tell me that you came here to say you're leaving..."
-    new "Не говори мне, что пришёл сказать, что уходишь..."
+    new "Не говори мне, что ты приехал сюда, чтобы сказать, что уезжаешь..."
 
     old "Not again..."
-    new "Только не снова..."
+    new "Опять нет..."
 
     old "Atilla looked at her with a stoic expression."
-    new "Атилла посмотрел на неё со стоическим выражением."
+    new "Атилла посмотрел на неё со стоическим выражением лица."
 
     old "I know that it would be right...simpler...easier."
     new "Я знаю, что это было бы правильно... проще... легче."
+
+    old "But..."
+    new "Но..."
 
     old "No, I will not leave. Not again."
     new "Нет, я не уйду. Не снова."
 
     old "Sarah felt her heart pounding in her chest."
-    new "Сара почувствовала, как её сердце забилось в груди."
+    new "Сара почувствовала, как её сердце бешено колотится в груди."
 
     old "Maybe I am being selfish-"
-    new "Может, я эгоистична-"
+    new "Возможно, я просто эгоист..."
 
     old "No...I don't want you to leave either."
-    new "Нет... я тоже не хочу, чтобы ты уходил."
+    new "Нет... Я тоже не хочу, чтобы ты уходил."
 
     old "No matter what they say...no matter the risks..."
-    new "Что бы они ни говорили... какими бы ни были риски..."
+    new "Неважно, что они говорят... неважно, какие риски..."
 
     old "I'll give up a lot for my country...but I won't give up you."
-    new "Я многим пожертвую ради своей страны... но не откажусь от тебя."
+    new "Я готова на многое ради своей страны... но я никогда не откажусь от тебя."
 
     old "What fools we are..."
     new "Какие же мы дураки..."
@@ -2369,73 +2392,73 @@ translate ru strings:
     new "Сара увидела, как он полез в карман."
 
     old "Then it is settled. I will stay."
-    new "Значит, решено. Я остаюсь."
+    new "Тогда всё решено. Я останусь."
 
     old "He looked directly at her with his piercing golden eyes."
-    new "Он посмотрел прямо на неё своими пронзительными золотыми глазами."
+    new "Он посмотрел прямо на неё своими пронзительными золотистыми глазами."
 
     old "Those impossibly beautiful eyes."
-    new "Эти невероятно красивые глаза."
+    new "Эти невероятно прекрасные глаза."
 
     old "Sarah...I didn't only ask you to come here to tell you I'm staying..."
-    new "Сара... я попросил тебя прийти сюда не только чтобы сказать, что остаюсь..."
+    new "Сара... Я просил тебя прийти сюда не только для того, чтобы сказать, что остаюсь..."
 
     old "Sarah watched as he pulled the object from his pocket."
-    new "Сара смотрела, как он достаёт предмет из кармана."
+    new "Сара наблюдала, как он достал предмет из кармана."
 
     old "She felt herself stumble, her vision going faint."
-    new "Она почувствовала, как пошатнулась, её зрение помутилось."
+    new "Она почувствовала, как пошатнулась, а зрение затуманилось."
 
     old "No, no, no."
-    new "Нет, нет, нет."
+    new "Нет-нет-нет."
 
     old "Panic, racing thoughts, her heart, pounding."
-    new "Паника, мысли неслись, сердце колотилось."
+    new "Паника, сумбурные мысли, её сердце бешено колотилось."
 
     old "Atilla held up a necklace of translucent silver, incased within it, a blue flower."
-    new "Атилла поднял ожерелье из полупрозрачного серебра, внутри которого был заключён голубой цветок."
+    new "Атилла поднял ожерелье из полупрозрачного серебра, в котором был заключён синий цветок."
 
     old "She could feel own pulse, racing."
-    new "Она чувствовала, как её собственный пульс учащается."
+    new "Она чувствовала собственный пульс, бешено колотящийся в груди."
 
     old "I have told you of this necklace, long ago."
-    new "Я рассказывал тебе об этом ожерелье, давным-давно."
+    new "Я уже рассказывал тебе об этом кольце давным-давно."
 
     old "Sarah remembered."
     new "Сара вспомнила."
 
     old "One night, while he had still been training her, she had slept in his tent."
-    new "Однажды ночью, когда он всё ещё обучал её, она спала в его палатке."
+    new "Однажды ночью, пока он всё ещё обучал её, она спала в его палатке."
 
     old "Laying on his chest, her eyes had roamed his belongings, and among the many things, she had spotted the necklace."
-    new "Лёжа на его груди, её глаза блуждали по его вещам, и среди множества предметов она заметила ожерелье."
+    new "Лежа на его груди, она обводила взглядом его вещи и среди множества предметов заметила ожерелье."
 
     old "Atilla was a warrior, and he possessed mostly practical objects. Weapons, armor."
-    new "Атилла был воином, и у него были в основном практичные предметы. Оружие, доспехи."
+    new "Атилла был воином, и у него в основном были практичные вещи: оружие, доспехи."
 
     old "The necklace had stood out to her."
-    new "Ожерелье выделялось для неё."
+    new "Ожерелье привлекло её внимание."
 
     old "She asked him what it was, and he had spoken softly, telling her."
-    new "Она спросила его, что это, и он мягко заговорил, рассказывая ей."
+    new "Она спросила его, что это такое, и он тихо объяснил ей."
 
     old "In Orc tradition, a man must perform an act of bravery to demonstrate his seriousness when asking for a mate."
-    new "В оркской традиции мужчина должен совершить акт храбрости, чтобы продемонстрировать свою серьёзность, прося пару."
+    new "В традиции орков мужчина должен совершить героический поступок, чтобы показать своей спутнице, насколько серьёзно он относится к их союзу."
 
     old "A gift must show to the partner, that they have wagered their life. To show how serious they are in their ask."
-    new "Подарок должен показать партнёру, что они поставили на кон свою жизнь. Чтобы показать, насколько они серьёзны в своей просьбе."
+    new "Подарок должен показать партнёру, что тот пошёл на риск собственной жизнью — и тем самым продемонстрировать всю серьёзность своих намерений."
 
     old "Sarah felt her chest glow as she looked at the necklace."
-    new "Сара почувствовала тепло в груди, глядя на ожерелье."
+    new "Сара почувствовала, как её грудь засветилась, когда она посмотрела на ожерелье."
 
     old "This flower, I plucked from the only place where it grows."
-    new "Этот цветок, я сорвал в единственном месте, где он растёт."
+    new "Этот цветок я сорвал там, где он растёт лишь в одном месте."
 
     old "The peak of the tallest mountain in the Hyral Mountains."
-    new "Вершина высочайшей горы в Хиральских горах."
+    new "Вершина самой высокой горы в горах Хирал."
 
     old "This flower I had forged by a blacksmith into this necklace of Ghost Silver, one of the rarest metals, claimed from slain Mythran soldiers."
-    new "Этот цветок я велел кузнецу заключить в это ожерелье из Призрачного Серебра, одного из редчайших металлов, добытого с убитых митранских солдат."
+    new "Этот цветок я отдал кузнецу, чтобы он превратил его в это ожерелье из Призрачного серебра — одного из редчайших металлов, добытых у павших митранских воинов."
 
     old "And this necklace..."
     new "И это ожерелье..."
@@ -2444,301 +2467,307 @@ translate ru strings:
     new "Его голос смягчился."
 
     old "This necklace, I gave to my first wife, whom I had promised my heart."
-    new "Это ожерелье, я подарил своей первой жене, которой отдал своё сердце."
+    new "Это ожерелье я подарил своей первой жене, которой обещал своё сердце."
 
     old "Sarah felt the tears stream down her face."
-    new "Сара почувствовала, как слёзы потекли по её лицу."
+    new "Сара почувствовала, как слёзы хлынули по её лицу."
 
     old "When she passed, my body remained but my spirit had died with her."
-    new "Когда она ушла, моё тело осталось, но мой дух умер вместе с ней."
+    new "Когда она умерла, моё тело осталось в живых, но мой дух погиб вместе с ней."
 
     old "And for years, I believed violence was the only purpose that remained to me."
-    new "И годами я верил, что насилие — единственная цель, оставшаяся мне."
+    new "И годами я верил, что насилие — это единственная цель, которая у меня осталась."
 
     old "He held out the necklace."
     new "Он протянул ожерелье."
 
     old "Ever since we met, I feel as if I am reborn, my spirit come back to life."
-    new "С тех пор как мы встретились, я чувствую себя заново рождённым, мой дух вернулся к жизни."
+    new "С тех пор как мы встретились, я чувствую себя будто перерождённым — мой дух снова ожил."
 
     old "Nobody in all the world knows me as you do. Nobody that I have told as many of my secrets to."
-    new "Никто в целом мире не знает меня так, как ты. Никому я не рассказывал столько своих секретов."
+    new "Никто в этом мире не знает меня так, как ты. Никому я не открывал столько своих секретов."
 
     old "You, more than anyone, knows what this necklace mean to me..."
-    new "Ты, больше чем кто-либо, знаешь, что значит для меня это ожерелье..."
+    new "Ты больше кого-либо знаешь, что это ожерелье значит для меня..."
 
     old "And so you must also know what it means that I now offer it to you..."
-    new "И поэтому ты должна знать, что значит то, что я предлагаю его тебе..."
+    new "И поэтому ты должна также понимать, что значит то, что я теперь предлагаю его тебе..."
 
     old "Before all Gods as witness, will you marry me?"
     new "Пред всеми Богами в свидетели, ты выйдешь за меня?"
 
     old "The words released a surge of emotions within Sarah."
-    new "Эти слова вызвали бурю эмоций внутри Сары."
+    new "Слова вызвали в Саре прилив эмоций."
 
     old "Panic, and happiness, and fear, and joy, and sadness and love."
     new "Паника, счастье, страх, радость, печаль и любовь."
 
     old "All of it, together, mixing within her in a maddening spiral."
-    new "Всё вместе, смешиваясь внутри неё в безумной спирали."
+    new "Всё это вместе смешивалось в ней, образу безумную спираль."
 
     old "And all she knew to do was to speak the only truth that remained in her heart."
-    new "И всё, что она могла сделать — произнести единственную правду, оставшуюся в её сердце."
+    new "И всё, что она знала, — это то, как произнести единственную истину, оставшуюся в её сердце."
 
     old "Atilla...a thousand times, yes."
-    new "Атилла... тысячу раз, да."
+    new "Атилла... тысячу раз — да."
 
     old "A smile came over his face, more genuine and true than any she had previously seen."
-    new "Улыбка озарила его лицо, более искренняя и настоящая, чем все, что она видела прежде."
+    new "На его лице появилась улыбка — более искренняя и настоящая, чем любая другая, которую она видела до этого."
 
     old "Oh, she wondered, how wrong the world was about him. How poorly they knew him."
-    new "О, она думала, как же мир ошибался на его счёт. Как плохо они его знали."
+    new "О, она задавалась вопросом: насколько же мир ошибался в своих суждениях о нём. Насколько плохо они его знали."
 
     old "Atilla stepped forward and gently placed the necklace around her neck."
-    new "Атилла шагнул вперёд и нежно надел ожерелье ей на шею."
+    new "Атилла шагнул вперёд и нежно накинул ожерелье ей на шею."
 
     old "Sarah felt the sharp cold from the metal on her skin as he closed the latch."
-    new "Сара почувствовала острый холод металла на коже, когда он застегнул застёжку."
+    new "Сара почувствовала острую холодность металла на своей коже, когда он застегнул замок."
 
     old "His face was solemn again."
-    new "Его лицо снова стало торжественным."
+    new "Его лицо снова стало серьёзным."
 
     old "I know that we cannot be as we are here...out there."
-    new "Я знаю, что мы не можем быть такими, как здесь... там, снаружи."
+    new "Я знаю, что мы не можем быть такими, как здесь... там."
 
     old "Sarah placed her hand on his powerful chest."
     new "Сара положила руку на его мощную грудь."
 
     old "This is who I really am...who we really are."
-    new "Это та, кто я на самом деле... кто мы на самом деле."
+    new "Это и есть то, кто я на самом деле... кто мы на самом деле."
 
     old "It's the rest of the world where we have to pretend."
-    new "Это в остальном мире нам придётся притворяться."
+    new "Это остальной мир — там нам придётся притворяться."
 
     old "But it is only you and I who will ever really know each other."
-    new "Но только ты и я будем по-настоящему знать друг друга."
+    new "Но только мы вдвоём когда-либо по-настоящему узнаем друг друга."
 
     old "So let them have our fake selves."
-    new "Так пусть у них будут наши фальшивые 'я'."
+    new "Так пусть они получают наших фальшивых двойников."
 
     old "Let us go out and smile and pretend for their sakes."
-    new "Давай выйдем и будем улыбаться и притворяться ради них."
+    new "Пойдём же мы наружу, будем улыбаться и притворяться ради них."
 
     old "And between us, we will have our truth, and they shall have our meager shades."
-    new "А между нами будет наша правда, а им достанутся наши бледные тени."
+    new "А между нами у нас будет наша истина, а им достанутся лишь наши бледные тени."
 
     old "He nodded softly."
     new "Он мягко кивнул."
 
     old "She felt his powerful hand, stroking her cheek."
-    new "Она почувствовала его сильную руку, гладящую её по щеке."
+    new "Она почувствовала его мощную руку, поглаживающую её щеку."
 
     old "Come."
-    new "Пойдём."
+    new "Приди."
 
     old "She took his hand."
     new "Она взяла его за руку."
 
     old "Walking through the forest, Sarah guided Atilla through twisting and bending trees."
-    new "Идя через лес, Сара вела Атиллу между изогнутыми деревьями."
+    new "Идя через лес, Сара вела Атиллу между изогнутыми и наклонёнными деревьями."
 
     old "She guided him, by memory alone, to a nearby cave."
-    new "Она вела его, по памяти, к ближайшей пещере."
+    new "Она привела его, полагаясь лишь на память, к ближайшей пещере."
 
     old "Sheltered from the snow, the two of them entered."
-    new "Укрытые от снега, они вдвоём вошли."
+    new "Укрытые от снега, они вдвоём вошли внутрь."
 
     old "With years of practice between them, they made a fire from the nearby branches."
-    new "С годами практики между ними они разожгли огонь из ближайших веток."
+    new "Благодаря многолетнему опыту, они развели огонь из ближайших веток."
 
     old "In only a few moments, the cave had become a warm fortress from the cold outside."
-    new "Всего через несколько мгновений пещера стала тёплой крепостью от холода снаружи."
+    new "Всего за несколько мгновений пещера превратилась в тёплую крепость, защищающую от холода снаружи."
 
     old "You know this place well."
     new "Ты хорошо знаешь это место."
 
     old "There was a time I knew every tree and every branch in this place."
-    new "Было время, когда я знала каждое дерево и каждую ветку в этом месте."
+    new "Было время, когда я знала здесь каждое дерево и каждую ветку."
 
     old "She looked at him as he began to take off his armor, throwing it aside, he revealed his powerful body."
-    new "Она смотрела на него, когда он начал снимать доспехи, отбрасывая их в сторону, обнажая своё могучее тело."
+    new "Она посмотрела на него, когда он начал снимать доспехи, отбрасывая их в сторону и обнажая своё могучее тело."
 
     old "Richer by a few scars."
     new "Богаче на несколько шрамов."
 
     old "We were both so far from home when we first met."
-    new "Мы оба были так далеко от дома, когда встретились."
+    new "Когда мы впервые встретились, мы оба были так далеко от дома."
 
     old "It's still strange for me to see you here."
-    new "Мне всё ещё странно видеть тебя здесь."
+    new "Для меня всё ещё странно видеть тебя здесь."
 
     old "Strange?"
     new "Странно?"
 
     old "Like...two parts of different lives, meeting."
-    new "Словно... две части разных жизней встречаются."
+    new "Как будто... две части разных жизней встретились."
 
     old "This land where I grew up, and all the memories...and then you, and all the memories of my life after..."
-    new "Эта земля, где я выросла, и все воспоминания... а затем ты, и все воспоминания моей последующей жизни..."
+    new "Эта земля, где я выросла, и все эти воспоминания... а потом ты — и все воспоминания о моей дальнейшей жизни..."
 
     old "In my head I see them as so distinct...but they're all the same."
-    new "В голове я вижу их такими разными... но все они — часть одного целого."
+    new "В моей голове они кажутся такими разными... но на самом деле — всё одно."
 
     old "Sarah watched as Atilla threw off the last of his clothes, standing entirely naked before her."
-    new "Сара смотрела, как Атилла сбросил последнюю одежду, стоя перед ней полностью обнажённым."
+    new "Сара смотрела, как Атилла сбросил последнюю одежду и предстал перед ней полностью обнажённым."
 
     old "Her eyes traced every part of his body."
-    new "Её глаза скользили по каждой части его тела."
+    new "Её глаза обводили каждую часть его тела."
 
     old "Then she began to take off her own clothes."
-    new "Затем она начала снимать свою одежду."
+    new "Затем она начала снимать с себя одежду."
 
     old "The fire had warmed the cave enough to be naked and comfortable."
-    new "Огонь достаточно прогрел пещеру, чтобы быть голыми и чувствовать себя комфортно."
+    new "Огонь уже достаточно согрел пещеру, чтобы можно было быть голым и чувствовать себя комфортно."
 
     old "As she pulled off the last pieces of her own clothing, she saw him looking at her body, spellbound."
-    new "Когда она стянула последние части одежды, она увидела, как он смотрит на её тело, заворожённый."
+    new "Пока она снимала с себя последние куски одежды, она увидела, что он смотрит на её тело, словно зачарованный."
 
     old "Are we making a mistake?"
     new "Мы совершаем ошибку?"
 
     old "Even if we are...would you want to stop?"
-    new "Даже если так... ты бы хотела остановиться?"
+    new "Даже если мы и ошибаемся... ты бы хотела остановиться?"
+
+    old "Never."
+    new "Никогда."
 
     old "Sarah walked up to him, so little space between them, she could feel his breath on her skin."
-    new "Сара подошла к нему, между ними было так мало места, что она чувствовала его дыхание на своей коже."
+    new "Сара подошла к нему так близко, что между ними почти не осталось пространства — она чувствовала его дыхание на своей коже."
 
     old "The world would never understand, but she would."
-    new "Мир бы никогда не понял, но она бы поняла."
+    new "Мир никогда бы не понял, но она — да."
 
     old "Sarah fell down to her knees in front of him."
-    new "Сара опустилась на колени перед ним."
+    new "Сара опустилась перед ним на колени."
 
     old "You remember the first time?"
-    new "Помнишь первый раз?"
+    new "Ты помнишь первый раз?"
+
+    old "Don't worry."
+    new "Не волнуйся."
 
     old "I was too scared of you tell you back then..."
-    new "Я тогда слишком боялась сказать тебе..."
+    new "Тогда я слишком боялась тебя, чтобы сказать тебе..."
 
     old "But you made me so wet."
-    new "Но ты сделал меня такой мокрой."
+    new "Но ты так меня увлажнила."
 
     old "Sarah parted her lips and leaned forward, taking him into her mouth."
-    new "Сара разомкнула губы и наклонилась вперёд, принимая его в рот."
+    new "Сара раздвинула губы и наклонилась вперёд, принимая его в рот."
 
     old "The thick head of his cock slid past her lips, pressing deeper into her mouth."
-    new "Толстая головка его члена скользнула за её губы, проникая глубже в рот."
+    new "Толстая головка его члена скользнула мимо её губ, проникая всё глубже в рот."
 
     old "As she ran her tongue along the length of his shaft, she found even his taste familiar."
-    new "Проводя языком вдоль его ствола, она обнаружила, что даже его вкус был знакомым."
+    new "Пока она водила языком вдоль всего его стержня, она поняла, что даже его вкус ей знаком."
 
     old "Above her, she heard him groaning approvingly."
-    new "Над собой она слышала его одобрительный стон."
+    new "Сверху она услышала, как он с одобрением застонал."
 
     old "She reached out with one hand, wrapping it around the length of him she could not fit into her mouth."
-    new "Она протянула одну руку, обхватив ту его часть, которую не могла вместить ртом."
+    new "Она протянула руку и обхватила его член той рукой, которой не могла охватить ротом."
 
     old "Easy enough, he had inches to spare."
-    new "Достаточно легко — у него были лишние дюймы."
+    new "Легко — у него оставалось ещё несколько дюймов."
 
     old "Her other hand, she pressed between his legs, feeling the weight of his balls in her hand."
-    new "Другой рукой она провела между его ног, чувствуя вес его яичек в ладони."
+    new "Другой рукой она прижалась между его ног, ощущая в ладони вес его яичек."
 
     old "More approving grunts."
-    new "Ещё одобрительное ворчание."
+    new "Более одобрительные хрипы."
 
     old "Sarah bobbed her head back and forth along the length of him, feeling out the inches with her tongue."
-    new "Сара двигала головой вперёд-назад вдоль его длины, ощущая каждый дюйм языком."
+    new "Сара качала головой взад-вперёд по всей длине его тела, ощущая языком каждый дюйм."
 
     old "Finally, she leaned back, allowing him to slip from her mouth."
-    new "Наконец она откинулась назад, позволяя ему выскользнуть изо рта."
+    new "Наконец она откинулась назад, позволив ему выскользнуть из её рта."
 
     old "She looked up at him, a mischievous smile on her face."
-    new "Она посмотрела на него с озорной улыбкой на лице."
+    new "Она подняла на него глаза с озорной улыбкой на лице."
 
     old "Do I make a good wife so far?"
-    new "Я пока неплохая жена?"
+    new "Я до сих пор хороша в роли жены?"
 
     old "Without answering, Atilla climbed down to the ground."
-    new "Не отвечая, Атилла опустился на землю."
+    new "Не отвечая, Атилла спустился на пол."
 
     old "His powerful hands wrapped around her waist, lifting her up from the ground with no effort to him at all."
-    new "Его сильные руки обхватили её талию, поднимая её с земли без малейшего усилия."
+    new "Его сильные руки обвили её талию, и он без малейших усилий поднял её с земли."
 
     old "Sarah let out a shriek of joy as he lifted her up and brought her back down on him."
-    new "Сара вскрикнула от радости, когда он поднял её и опустил обратно на себя."
+    new "Сара издала радостный крик, когда он поднял её и снова опустил на себя."
 
     old "She felt his eager and strong hands rushing across her body, seizing it."
-    new "Она чувствовала, как его нетерпеливые и сильные руки скользят по её телу, сжимая его."
+    new "Она почувствовала, как его нетерпеливые и сильные руки пролетели по её телу, схватив его."
 
     old "Still on his lap, she felt him angle her body just so, to give him access to her."
-    new "Всё ещё на его коленях, она чувствовала, как он наклоняет её тело, чтобы получить доступ к ней."
+    new "Всё ещё находясь у него на коленях, она почувствовала, как он повернул её тело под нужным углом, чтобы получить доступ к ней."
 
     old "Sarah wrapped her arms around his neck, feeling his iron muscles, preparing herself."
-    new "Сара обвила руками его шею, чувствуя его железные мускулы, готовясь."
+    new "Сара обхватила его шею руками, ощущая его стальные мышцы и готовя себя."
 
     old "Gods!!!"
     new "Боги!!!"
 
     old "Sarah cried out loudly as she felt him enter her."
-    new "Сара громко вскрикнула, почувствовав, как он вошёл в неё."
+    new "Сара громко закричала, когда почувствовала, что он вошёл в неё."
 
     old "Already more than wet for him, she managed to fit him."
-    new "Уже более чем мокрая для него, она смогла вместить его."
+    new "Уже более чем влажная для него, она умудрилась принять его."
 
     old "Between her legs and deep inside, she felt every inch of him, pressing apart her insides, pushing up against her womb."
-    new "Между ног и глубоко внутри она чувствовала каждый его дюйм, раздвигающий её внутренности, упирающийся в её матку."
+    new "Между её ног и глубоко внутри она ощущала каждый дюйм его тела: он раздвигал её внутренности и давил на матку."
 
     old "Painful, but the kind of pain she craved from him."
-    new "Боль, но та боль, которой она жаждала от него."
+    new "Болезненно — но именно та боль, которой она от него жаждала."
 
     old "With one hand on her ass, the other pulling her hair back, he began to take her."
-    new "Одной рукой на её заднице, другой оттягивая её волосы назад, он начал брать её."
+    new "Одной рукой он держал её за задницу, а другой отводил волосы назад, начиная проникать в неё."
 
     old "Strong as she was, in his hands, she felt powerless. Powerless and safe."
-    new "Сильной, как она была, в его руках она чувствовала себя бессильной. Бессильной и в безопасности."
+    new "Как бы сильна она ни была, в его руках она чувствовала себя беспомощной. Беспомощной и в безопасности."
 
     old "He bucked his hips to the same motion that he moved her body."
-    new "Он двигал бёдрами в том же ритме, что и её тело."
+    new "Он толкнул бёдрами в том же ритме, что и двигал её тело."
 
     old "Her head pulled back from her hair, Sarah could not hide her moaning, not that she had any intention of hiding it."
-    new "С запрокинутой за волосы головой Сара не могла скрыть своих стонов, впрочем, она и не собиралась этого делать."
+    new "Откинув голову назад из-за волос, Сара не могла скрыть своих стонаний — да ей это и не было на уме."
 
     old "Here, in this cave, it was their own private world. Where they could be true."
-    new "Здесь, в этой пещере, был их собственный мир. Где они могли быть настоящими."
+    new "Здесь, в этой пещере, был их собственный частный мир. Мир, где они могли быть искренними друг с другом."
 
     old "Sarah moaned louder as she felt him enter her deeper."
-    new "Сара застонала громче, чувствуя, как он входит в неё глубже."
+    new "Сара застонала громче, чувствуя, как он проникает в неё глубже."
 
     old "She wrapped her arms more tightly around his body, feeling his skin with her fingers."
-    new "Она обвила руками его тело ещё крепче, ощущая его кожу пальцами."
+    new "Она обхватила его тело руками ещё крепче, ощущая его кожу под пальцами."
 
     old "He fucked her rough and violent, as she wanted him to."
-    new "Он трахал её грубо и яростно, как она и хотела."
+    new "Он трахал её грубо и яростно — как она того и хотела."
 
     old "But beneath it, she felt his love for her as well."
-    new "Но под этим она чувствовала и его любовь к ней."
+    new "Но под всем этим она чувствовала и его любовь к ней."
 
     old "That was Atilla to her. The surface, and the deeper version of him. The real truth that only she knew about."
-    new "Таким был Атилла для неё. Поверхность и глубокая суть. Настоящая правда, о которой знала только она."
+    new "Для неё Атилла был именно таким: и внешней оболочкой, и его более глубокой сущностью — настоящей истиной, известной лишь ей одной."
 
     old "Sarah leaned forward and pressed her lips up against his."
-    new "Сара наклонилась вперёд и прижалась губами к его губам."
+    new "Сара наклонилась вперёд и прижала свои губы к его."
 
     old "Parting her mouth, she let slip her eager tongue, meeting with his."
-    new "Разомкнув губы, она пустила свой нетерпеливый язык, встретившись с его."
+    new "Открыв рот, она выпустила свой нетерпеливый язык, который встретился с его языком."
 
     old "She felt him enter her between her legs, and enter her mouth, his hands seizing every part of her body."
-    new "Она чувствовала, как он входит в неё между ног и входит в её рот, его руки хватают каждую часть её тела."
+    new "Она почувствовала, как он вошёл в неё между ног и вошёл в её рот, а его руки схватили каждую часть её тела."
 
     old "All the while, he never broke the rhythm, taking her hard and fast."
-    new "Всё это время он не сбивал ритм, беря её жёстко и быстро."
+    new "Всё это время он не нарушал ритма, беря её жёстко и быстро."
 
     old "Before long, Sarah felt every sense of the world around her slip away."
-    new "Вскоре Сара почувствовала, как все ощущения внешнего мира ускользают."
+    new "Вскоре Сара почувствовала, как все её чувства к окружающему миру исчезли."
 
     old "Riding atop him, feeling him inside of her, the droning pleasure rising up that drowned all other things."
-    new "Восседая на нём, чувствуя его внутри, нарастающее гудящее удовольствие, заглушавшее всё остальное."
+    new "Сидя верхом на нём и чувствуя его внутри себя, она ощущала, как нарастающее наслаждение затмляет всё остальное."
 
     old "The world faded."
     new "Мир исчез."
@@ -2747,46 +2776,46 @@ translate ru strings:
     new "Больше никаких королевств, войн или политики."
 
     old "Not even this place, this cave, or the fire."
-    new "Даже этого места, этой пещеры или огня."
+    new "Даже не это место, эта пещера или огонь."
 
     old "Only them."
     new "Только они."
 
     old "Sarah parted her lips and let out a loud cry as she came."
-    new "Сара разомкнула губы и издала громкий крик, кончая."
+    new "Сара приоткрыла губы и громко закричала, достигая оргазма."
 
     old "She felt every inch of him slip in and out of her, drawing out the orgasm to its limit."
-    new "Она чувствовала, как каждый его дюйм скользит в неё и из неё, продлевая оргазм до предела."
+    new "Она чувствовала, как каждый дюйм его тела скользит в неё и из неё, растягивая оргазм до самого предела."
 
     old "She sank her nails in his skin, needing any outlet she could find for her release."
-    new "Она вонзила ногти в его кожу, нуждаясь в любом выходе для своей разрядки."
+    new "Она впила ногти ему в кожу, нуждаясь в любом выходе для своего освобождения."
 
     old "As the orgasm subsided, she looked at him with mad lust and love."
-    new "Когда оргазм утих, она посмотрела на него с безумной похотью и любовью."
+    new "Когда оргазм утих, она посмотрела на него с безумной страстью и любовью."
 
     old "His golden eyes meeting hers."
-    new "Его золотые глаза встретились с её."
+    new "Его золотые глаза встретились с её глазами."
 
     old "Do I make a good husband so far?"
-    new "Я пока неплохой муж?"
+    new "Я до сих пор хороший муж?"
 
     old "You keep fucking me like this and I'll give it all up."
-    new "Будешь продолжать трахать меня так, и я всё брошу."
+    new "Если ты будешь и дальше так со мной трахаться, я всё брошу."
 
     old "We could live in this cave. Just fuck and hunt all day."
-    new "Мы могли бы жить в этой пещере. Просто трахаться и охотиться целыми днями."
+    new "Мы могли бы жить в этой пещере. Просто трахаться и охотиться весь день."
 
     old "Sarah knew he wasn't serious, just as she knew she'd actually give it all up for him."
-    new "Сара знала, что он не серьёзен, как и знала, что на самом деле бросила бы всё ради него."
+    new "Сара знала, что он не был серьёзен, точно так же, как знала, что на самом деле готова была отказаться от всего ради него."
 
     old "He began to buck again, sliding inside of her, slowly."
-    new "Он снова начал двигаться, скользя внутри неё, медленно."
+    new "Он снова начал толкаться, медленно входя в неё."
 
     old "But I'm not finished with you yet."
-    new "Но я с тобой ещё не закончил."
+    new "Но я ещё не закончил с тобой."
 
     old "Sarah moaned loudly as he felt every inch of him."
-    new "Сара громко застонала, чувствуя каждый его дюйм."
+    new "Сара громко застонала, когда он ощущал каждый дюйм своего тела внутри неё."
 
     old "Gods, she hoped not."
     new "Боги, она надеялась, что нет."
@@ -2795,40 +2824,40 @@ translate ru strings:
     new "Мир, это место и даже время исчезли."
 
     old "Before long, there was only the pleasure of the moment."
-    new "Вскоре осталось только удовольствие момента."
+    new "Вскоре осталось только наслаждение от этого момента."
 
     old "The sensation that drowned out everything else and made the world so simple."
-    new "Ощущение, заглушавшее всё остальное и делавшее мир таким простым."
+    new "Это ощущение, которое заглушило всё остальное и сделало мир таким простым."
 
     old "She surrendered her body to him, moving and twisting to his instructing hand."
-    new "Она отдала своё тело ему, двигаясь и извиваясь под его направляющей рукой."
+    new "Она отдала ему своё тело, двигаясь и извиваясь под его направляющей рукой."
 
     old "On top of him. Below him."
-    new "Сверху него. Снизу него."
+    new "Над ним. Под ним."
 
     old "On her hands and knees."
-    new "На руках и коленях."
+    new "На коленях и ладонях."
 
     old "The slapping sound of flesh hitting flesh."
-    new "Звук шлепков плоти о плоть."
+    new "Звук плоти, ударяющейся о плоть."
 
     old "Grabbing her breasts, slapping her ass, pulling her hair."
-    new "Сжимая её грудь, шлёпая по заднице, дёргая за волосы."
+    new "Хватая её за грудь, шлёпая по заднице и теребя за волосы."
 
     old "Feeling his massive size inside of her, over and over again, ravaging her as only he could."
-    new "Чувствуя его огромный размер внутри себя снова и снова, терзая её так, как только он мог."
+    new "Она чувствовала его огромное тело внутри себя — снова и снова, пока он неистово овладевал ею так, как мог только он."
 
     old "How often she came, she could no longer hope to recount."
-    new "Как часто она кончала, она уже не надеялась сосчитать."
+    new "Сколько раз она достигала оргазма, она уже не могла вспомнить."
 
     old "When he finished inside of her, she mindlessly sucked his cock until he was hard again."
-    new "Когда он кончил внутрь неё, она машинально сосала его член, пока он снова не стал твёрдым."
+    new "Когда он кончил внутри неё, она бездумно сосала его член, пока он снова не стал твёрдым."
 
     old "Only for the motions to repeat."
-    new "Только чтобы повторить всё сначала."
+    new "Дело было лишь в том, чтобы повторить движения."
 
     old "He had the stamina of several men and was eager to prove himself to her."
-    new "У него была выносливость нескольких мужчин, и он жаждал доказать это ей."
+    new "У него была выносливость нескольких мужчин, и он жаждал доказать ей свою состоятельность."
 
     old "After he finished for a final time, Sarah collapsed forward into a bed of their crumpled up clothes."
     new "После того как он кончил в последний раз, Сара рухнула вперёд на постель из их смятой одежды."
@@ -2840,226 +2869,232 @@ translate ru strings:
     new "Я не могу... я больше не могу..."
 
     old "I want to...but I can't..."
-    new "Я хочу... но не могу..."
+    new "Я хочу... но я больше не могу..."
 
     old "She heard him softly laugh."
-    new "Она услышала, как он мягко рассмеялся."
+    new "Она услышала его тихий смех."
 
     old "Then she felt his powerful hand, stroking her hair."
-    new "Затем она почувствовала его сильную руку, гладящую её по волосам."
+    new "Затем она почувствовала его сильную руку, поглаживающую её волосы."
+
+    old "Don't worry."
+    new "Не волнуйся."
 
     old "We have a whole life ahead of us."
     new "У нас впереди целая жизнь."
 
     old "Sarah smiled, even as every muscle in her body roared from exhaustion."
-    new "Сара улыбнулась, даже когда каждый мускул её тела кричал от изнеможения."
+    new "Сара улыбалась, даже когда каждая мышца в её теле ревет от истощения."
 
     old "He was hers and she was is. Forever."
-    new "Он был её, а она — его. Навсегда."
+    new "Он принадлежал ей, а она — ему. Навсегда."
 
     old "The crackling fire warmed her body, shielding her from the cold that lingered just beyond the cave's entrance."
-    new "Потрескивающий огонь согревал её тело, защищая от холода, что таился за входом в пещеру."
+    new "Треск огня согревал её тело, оберегая от холода, что таился за входом в пещеру."
 
     old "Her head, laying on his lap, she dreamed of the life that would be theirs."
-    new "Её голова покоилась на его коленях, и она мечтала о жизни, которая будет их."
+    new "Её голова лежала у него на коленях, и она мечтала о жизни, которая станет их общей."
 
     old "From her throne, Sarah looked out across the Grand Hall."
-    new "Со своего трона Сара оглядела Большой Зал."
+    new "С со своего трона Сара смотрела на Великий зал."
 
     old "Only a few days had passed since she had taken the city and driven out the Tribesmen."
-    new "Прошло всего несколько дней с тех пор, как она взяла город и изгнала Племенников."
+    new "Прошло всего несколько дней с тех пор, как она захватила город и изгнала племенников."
 
     old "Most had died in the fighting, a rare few had escaped like cowards, no doubt fleeing back to their desert."
-    new "Большинство погибло в бою, редкие немногие сбежали как трусы, без сомнения устремившись обратно в пустыню."
+    new "Большинство погибло в бою, лишь горстка спаслась, словно трусы, и, без сомнения, бежала обратно в свою пустыню."
 
     old "Reports from across the country showed that the Tribesmen were in retreat in most places."
-    new "Донесения со всей страны показывали, что Племенники отступают в большинстве мест."
+    new "Репортажи со всей страны показывали, что племенники отступали почти повсюду."
 
     old "With the core of their army defeated, and little reason to stay, they had begun to abandon the smaller towns and cities."
-    new "С разгромом ядра их армии и отсутствием причин оставаться, они начали покидать мелкие города и посёлки."
+    new "После того как основная часть их армии была разбита и у них почти не осталось причин оставаться, они начали покидать малые города и поселения."
 
     old "In a few places, the citizens had even become emboldened by the news of Sarah's victory."
-    new "В некоторых местах горожане даже осмелели от новости о победе Сары."
+    new "В некоторых местах граждане даже осмелели от новостей о победе Сары."
 
     old "The citizens, sensing the tides change, had risen up to take care of the Tribesmen themselves."
-    new "Горожане, чувствуя смену течения, восстали, чтобы самим разобраться с Племенниками."
+    new "Граждане, почувствовав, что времена изменились, поднялись, чтобы сами разобраться с племенными воинами."
 
     old "Even though people celebrated, Sarah's heart was heavy."
-    new "Хотя люди праздновали, сердце Сары было тяжело."
+    new "Несмотря на то, что люди праздновали, сердце Сары было тяжёлым."
 
     old "For just as there were reports of the Tribesmen in retreat, so too were there reports of the damage they had left behind."
-    new "Ибо как были донесения об отступлении Племенников, так были и донесения об ущербе, который они оставили."
+    new "Именно так же, как поступали сообщения об отступлении племенников, доносились и вести о разрушениях, которые они оставили после себя."
 
     old "Already, she was receiving pleading messages from noble families."
-    new "Она уже получала умоляющие послания от знатных семей."
+    new "Она уже получала мольбы от знатных семей."
 
     old "Many families that had failed to escape the country in time had seen their daughters and sons sold into slavery."
-    new "Многие семьи, не успевшие вовремя покинуть страну, видели, как их дочерей и сыновей продавали в рабство."
+    new "Многие семьи, которые не успели вовремя покинуть страну, увидели, как их сыновей и дочерей продали в рабство."
 
     old "Now they were pleading with Sarah to send an army into the desert to save them."
     new "Теперь они умоляли Сару отправить армию в пустыню, чтобы спасти их."
 
     old "Her instinct was to stay and consolidate."
-    new "Её инстинкт подсказывал остаться и закрепиться."
+    new "Её инстинкт подсказывал оставаться здесь и укреплять позиции."
 
     old "She sat upon the throne, but it would take a long time to restore the damage caused by the Tribesmen."
-    new "Она сидела на троне, но потребуется много времени, чтобы восстановить ущерб, причинённый Племенниками."
+    new "Она сидела на троне, но на восстановление ущерба, причинённого племенными воинами, уйдёт ещё очень много времени."
 
     old "Not to mention her own army, tired and exhausted from the campaign."
-    new "Не говоря уже о её собственной армии, уставшей и измотанной кампанией."
+    new "Не говоря уже о собственной армии, уставшей и измотанной после похода."
 
     old "She was in no position to start a new war."
-    new "Она была не в том положении, чтобы начинать новую войну."
+    new "Она была в совершенно не том положении, чтобы начинать новую войну."
 
     old "Still, she could not help but sympathize."
-    new "И всё же она не могла не сочувствовать."
+    new "Тем не менее, она не могла не почувствовать сочувствия."
 
     old "If it had been her own brother that had been taken, she would have marched into the desert without question."
-    new "Если бы это был её собственный брат, она без колебаний двинулась бы в пустыню."
+    new "Если бы это был её собственный брат, которого схватили, она без колебаний пошла бы в пустыню."
 
     old "It seemed cruel to let others suffer their fate, even if it was the right strategic move."
-    new "Казалось жестоким позволить другим страдать от их судьбы, даже если это был правильный стратегический ход."
+    new "Казалось жестокым позволять другим страдать от их судьбы, даже если это было правильным стратегическим ходом."
 
     old "Before her, Sarah saw the gathered Lord and Ladies of Rosanna, bending their knee."
-    new "Перед собой Сара увидела собравшихся Лордов и Леди Розанны, преклоняющих колено."
+    new "Перед ней Сара увидела собравшихся лордов и леди Розанны, кланяющихся до колен."
 
     old "Together, they had sworn their oaths anew."
-    new "Вместе они принесли свои клятвы заново."
+    new "Вместе они заново принесли свои клятвы."
 
     old "Years ago, they had sworn them to her Father, and now they swore those same words to her."
-    new "Годы назад они клялись её Отцу, и теперь они произносили те же слова ей."
+    new "Годы назад они принесли клятву её Отцу, а теперь повторяли те же слова перед ней."
 
     old "The momentum of her victory had silenced any doubters."
-    new "Инерция её победы заставила замолчать любых сомневающихся."
+    new "Импульс её победы заставил замолчать всех сомневающихся."
 
     old "And in the entire nation of Rosanna, there was nobody who held a stronger claim than her."
-    new "И во всей стране Розанна не было никого с более сильными правами на трон, чем у неё."
+    new "И во всей стране Розанны не было никого, чьи права были бы сильнее её."
 
     old "The High Priest stood near her, the crown trembling in his frail hands."
-    new "Верховный Жрец стоял рядом, корона дрожала в его хрупких руках."
+    new "Верховный жрец стоял рядом с ней, и корона дрожала в его хрупких руках."
 
     old "He spoke the holy words of the ritual that would confirm her as Queen."
-    new "Он произносил священные слова ритуала, который должен был утвердить её Королевой."
+    new "Он произнёс священные слова ритуала, которые должны были утвердить её как королеву."
 
     old "Sarah never had much patience for such things, even when she had still been young. She had even less now."
-    new "У Сары никогда не было большого терпения к таким вещам, даже когда она была молода. Теперь его стало ещё меньше."
+    new "У Сары никогда не было особого терпения к подобным вещам, даже когда она была ещё молода. А теперь — тем более."
 
     old "Still, the rituals were important."
-    new "И всё же ритуалы были важны."
+    new "Тем не менее ритуалы были важны."
 
     old "They signaled to the people that things were returning to normal."
-    new "Они сигнализировали народу, что всё возвращается к нормальной жизни."
+    new "Они давали понять людям, что всё возвращается в нормальное русло."
 
     old "Spread across the room, she saw their eager faces, yearning for a return to normal days."
-    new "Рассредоточенные по залу, она видела их нетерпеливые лица, жаждущие возвращения обычных дней."
+    new "Раскинувшись по всей комнате, она увидела их полные энтузиазма лица, жаждущие возвращения к обычным дням."
 
     old "Gone, the tyranny of the Tribesmen."
-    new "Прочь, тирания Племенников."
+    new "Прочь с тиранией племен!"
 
     old "Her family could trace its lineage back centuries, to the founding of the country."
-    new "Её семья могла проследить свою родословную на столетия назад, до основания страны."
+    new "Её семья могла проследить своё происхождение на протяжении веков — до самого основания страны."
 
     old "And for most of it, they had ruled justly."
     new "И большую часть этого времени они правили справедливо."
 
     old "Sarah hoped she would prove worthy of their trust."
-    new "Сара надеялась, что окажется достойной их доверия."
+    new "Сара надеялась, что она окажется достойной их доверия."
 
     old "And...and so..."
-    new "И... и так..."
+    new "И... и вот так..."
 
     old "The old man continued."
     new "Старик продолжил."
 
     old "Do you...Sarah...Sarah Rose, eldest daughter, first in line..."
-    new "Принимаешь ли ты... Сара... Сара Роуз, старшая дочь, первая в очереди..."
+    new "Ты... Сара... Сара Роуз, старшая дочь, первая в очереди..."
 
     old "Sarah looked at him with some pity."
-    new "Сара посмотрела на него с некоторой жалостью."
+    new "Сара посмотрела на него с некоторым сочувствием."
 
     old "Speak the words, old man, she hurried him along with her thoughts."
-    new "Говори слова, старик, — подгоняла она его мысленно."
+    new "«Проговори эти слова, старик», — мысленно поторопила она его."
 
     old "Do you take on...the great burden...of this crown..."
-    new "Принимаешь ли ты на себя... великое бремя... этой короны..."
+    new "Ты берёшь на себя... это великое бремя... этой короны?"
 
     old "Sarah spoke the words firmly."
-    new "Сара произнесла слова твёрдо."
+    new "Сара твёрдо произнесла эти слова."
 
     old "Then...by all the Gods...I crown you...Queen Sarah Rose."
-    new "Тогда... всеми Богами... я короную тебя... Королева Сара Роуз."
+    new "Тогда... во имя всех Богов... я венчаю тебя... королевой Сарой Роуз."
 
     old "His trembling hands placed the crown on her head."
-    new "Его дрожащие руки возложили корону ей на голову."
+    new "Его дрожащие руки положили корону ей на голову."
 
     old "Sarah felt the metalic weight of the thing pressing into her skull."
-    new "Сара почувствовала металлический вес этой штуки, давящей на её череп."
+    new "Сара почувствовала металлический вес этой вещи, давящей на её череп."
 
     old "Heavy. Uncomfortable."
-    new "Тяжело. Неудобно."
+    new "Тяжёлая. Неприятная."
 
     old "Fitting, she thought, for a crown."
-    new "Уместно, подумала она, для короны."
+    new "Подобающе, — подумала она, — для короны."
 
     old "She watched as the crowd exploded with cheers and applause."
     new "Она смотрела, как толпа взорвалась криками и аплодисментами."
 
     old "So loud, the sounds echoed from the wall, shaking the coloured glass that covered the windows."
-    new "Так громко, что звуки отражались от стен, сотрясая цветные стёкла, покрывавшие окна."
+    new "Так громко, что звуки отразились от стен, заставив задрожать цветное остекление окон."
 
     old "Hail, Queen Sarah Rose!"
-    new "Славься, Королева Сара Роуз!"
+    new "Дорогая королева Сара Роуз!"
 
     old "They cried out her name, louder and louder."
-    new "Они выкрикивали её имя, громче и громче."
+    new "Они кричали её имя всё громче и громче."
 
     old "All the while, Sarah sat and watched their worship of her."
-    new "Всё это время Сара сидела и смотрела на их поклонение ей."
+    new "Всё это время Сара сидела и наблюдала за их поклонением ей."
 
     old "But her thoughts did not linger with her people."
-    new "Но её мысли не задерживались на народе."
+    new "Но её мысли не задерживались на людях."
 
     old "Instead, she felt the pressing weight of a heavy hand that gripped her shoulder."
-    new "Вместо этого она почувствовала давящий вес тяжёлой руки, сжавшей её плечо."
+    new "Вместо этого она ощутила давящий вес тяжёлой руки, которая крепко схватила её за плечо."
 
     old "She did not see him, but she knew him."
-    new "Она не видела его, но узнала его."
+    new "Она не видела его, но знала его."
 
     old "Do not be afraid of the weight of the crown."
-    new "Не бойся веса короны."
+    new "Не бойся тяжести короны."
 
     old "You will carry it well."
-    new "Ты будешь нести его достойно."
+    new "Ты будешь хорошо его нести."
 
     old "Sarah smiled softly as she heard his ghostly voice. Real or imagined."
-    new "Сара мягко улыбнулась, услышав его призрачный голос. Реальный или воображаемый."
+    new "Сара мягко улыбнулась, услышав его призрачный голос. Реальный или вымышленный."
 
     old "What if I'm not worthy?"
-    new "А если я недостойна?"
+    new "А что, если я не достойна?"
 
     old "Who can be, of such an inhuman burden?"
-    new "Кто может быть достоин такого нечеловеческого бремени?"
+    new "Кто же может вынести такое бесчеловечное бремя?"
+
+    old "You were..."
+    new "Ты была..."
 
     old "She felt him grip her shoulder."
-    new "Она почувствовала, как он сжал её плечо."
+    new "Она почувствовала, как он схватил её за плечо."
 
     old "You saw me and gave me your trust."
     new "Ты видела меня и доверилась мне."
 
     old "Just as they now do the same for you."
-    new "Так же как они теперь делают то же для тебя."
+    new "Точно так же, как они сейчас поступают с тобой."
 
     old "And if I mess it up? What if I don't know what to do?"
-    new "А если я всё испорчу? Что, если я не буду знать, что делать?"
+    new "А что, если я всё испорчу? А что, если я просто не буду знать, что делать?"
 
     old "You have your mother's heart."
     new "У тебя сердце твоей матери."
 
     old "What better compass could you ask for?"
-    new "Какого лучшего компаса ты могла бы просить?"
+    new "Какой ещё лучший компас ты могла бы пожелать?"
 
     old "Sarah looked up but found nobody standing beside her."
-    new "Сара подняла взгляд, но никого не обнаружила рядом."
+    new "Сара подняла голову, но не увидела никого рядом с собой."
 
     old "She softly smiled."
     new "Она мягко улыбнулась."
@@ -3068,14 +3103,13 @@ translate ru strings:
     new "Перед ней толпа всё ещё кричала и вопила."
 
     old "Sarah looked at her people."
-    new "Сара посмотрела на свой народ."
+    new "Сара посмотрела на своих людей."
 
     old "She straightened her back, striking a regal pose."
-    new "Она выпрямила спину, приняв королевскую позу."
+    new "Она выпрямила спину, приняв величественную позу."
 
     old "And in her mind, repeated the words of her father."
-    new "И в мыслях повторила слова своего отца."
+    new "И в её сознании повторялись слова её отца."
 
     old "Follow your heart."
     new "Следуй за своим сердцем."
-

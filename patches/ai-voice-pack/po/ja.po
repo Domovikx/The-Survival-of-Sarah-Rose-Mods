@@ -8260,7 +8260,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Speak privately with Marion"
-msgstr "マリンと個人的に話す"
+msgstr "マリオンと二人きりで話す"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah walked up to Marion before he could be dragged away."
@@ -15424,7 +15424,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Retire for the evening"
-msgstr "夕暮れに引退する"
+msgstr "今夜は休もう"
 
 msgctxt "speaker:Narrator"
 msgid "Feeling tired, nearing exhaustion, Sarah knew she needed to sleep."
@@ -18184,7 +18184,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Ask her to sneak away with you"
-msgstr "彼女に密かに連れ去られるように頼む"
+msgstr "彼女に一緒にこっそり抜け出そうと誘ってみて"
 
 msgctxt "speaker:Sarah"
 msgid "Lily..."
@@ -36288,7 +36288,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Support another"
-msgstr "支援する"
+msgstr "もう一人を支援する"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah knew almost instantly that it could not be her."
@@ -45448,7 +45448,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Resist Marion"
-msgstr "マリオンの誘惑に抵抗せよ"
+msgstr "マリオンに抵抗する"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah gathered all the strength she could."
@@ -51828,7 +51828,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Distract him with your body"
-msgstr "彼の体で気を逸らせろ"
+msgstr "体で彼の注意をそらせ"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah met the Khan's eyes, refusing to bow her head."
@@ -53520,7 +53520,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Have sex with Sophia"
-msgstr "ソフィアと親密になる"
+msgstr "ソフィアとセックスする"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah met Sophia's eyes."
@@ -53536,7 +53536,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Refuse, go to the library"
-msgstr "拒否、図書館へ行く"
+msgstr "拒否して図書館へ行く"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah flinched and backed away."
@@ -68360,7 +68360,7 @@ msgstr "エフライムとカレブに相談する"
 
 msgctxt "menu"
 msgid "Ask Atilla, the orc."
-msgstr "アッティラ、オークに尋ねる"
+msgstr "アッティラ、そのオークに尋ねよう。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah knew what she had to do."
@@ -70192,7 +70192,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Take the bet."
-msgstr "賭けをかける"
+msgstr "賭けに乗る"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah thought about it for a moment. This was her chance to prove the captain wrong, and get some money. 20.000 pieces of gold would solve a lot of her problems."
@@ -82728,7 +82728,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Refuse to spy on Caliban"
-msgstr "スパイを拒否する"
+msgstr "カリバンを監視することを拒否せよ"
 
 msgctxt "speaker:Sarah"
 msgid "The risk if I was to be caught...it would be too great."
@@ -88844,7 +88844,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Disagree, fight back against Belmont"
-msgstr "ベルムントに反論する"
+msgstr "反対して、ベルモントに反撃しろ"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah couldn't stand to let Belmont talk down to Nick, even if he was the captain."
@@ -89328,7 +89328,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Press the issue"
-msgstr "問題を押す"
+msgstr "問題を推し進める"
 
 msgctxt "speaker:Narrator"
 msgid "For him, she'd try, if only one more time."
@@ -112300,7 +112300,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Play along with Kate, tease Samayra"
-msgstr "Kate と付き合う、Samayra をからかう"
+msgstr "ケイトに合わせて演じて、サマヤラをからかってごらん"
 
 msgctxt "speaker:Sarah"
 msgid "Is that so Samayra?"
@@ -112628,7 +112628,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Tell Kate to stop it, seriously"
-msgstr "Kateにやめさせるように頼む"
+msgstr "ケイトに「本気でやめて」って言って"
 
 msgctxt "speaker:Narrator"
 msgid "As much fun as it was to tease Samayra, Sarah could see the girl wasn't having fun."
@@ -117376,7 +117376,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Stay with the mercenary company"
-msgstr "傭兵団に付き合う"
+msgstr "傭兵団と共に留まる"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah doubted if Ephraim could ever be a good soldier again, but she also knew he was valuable to her."
@@ -120916,7 +120916,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "The truth is you fucked more men than women"
-msgstr "真実は、あなたが男性よりも多くの女性とセックスしたということだ"
+msgstr "本当のところ、お前は女より男と寝た回数の方が多いんだろ"
 
 msgctxt "speaker:Sarah"
 msgid "The truth is you fucked more men than women"
@@ -157748,7 +157748,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Forgive Kate"
-msgstr "カイトを許して"
+msgstr "ケイトを許して"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah knew she could not punish her friend."
@@ -174568,7 +174568,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Stay"
-msgstr "独り"
+msgstr "留まる"
 
 msgctxt "speaker:Narrator"
 msgid "The guards were already too close. She was wearing nothing at all."
@@ -183500,7 +183500,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Leave Lethram"
-msgstr "去る"
+msgstr "レスラムを離れる"
 
 msgctxt "speaker:Narrator"
 msgid "She wasn't safe anywhere in this forsaken city. She would have to leave."
@@ -188164,7 +188164,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Obey Sakar"
-msgstr "服従する"
+msgstr "サカールに従え"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah did as he instructed her. There was no part of her left that wanted to resist him."
@@ -190904,7 +190904,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Give yourself over to the soldiers"
-msgstr "Razaphel に身を委ねる"
+msgstr "兵士たちに身を委ねる"
 
 msgctxt "speaker:Narrator"
 msgid "Hearing the captain's proposal, Sarah feels her cheeks turn red."
@@ -197072,7 +197072,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "I won't tell Marius anything"
-msgstr "マリオスには何も言わない"
+msgstr "マリアスには何も言わない"
 
 msgctxt "speaker:Sarah"
 msgid "I won't say anything."
@@ -252592,7 +252592,7 @@ msgstr "二人の間には、新たな理解が芽生えていた。"
 
 msgctxt "menu"
 msgid "Spend the day alone"
-msgstr "Samayra と一日を過ごす"
+msgstr "一人で一日を過ごす"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah wanted a day to herself, selfish as that was."
@@ -254964,7 +254964,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Tell him to get lost"
-msgstr "追放してやる"
+msgstr "彼に失せろと伝えろ"
 
 msgctxt "speaker:Sarah"
 msgid "If you think I'm going to get drink with you, you're not just a pig, but you're stupid as well."
@@ -265336,7 +265336,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Betray the order"
-msgstr "裏切る"
+msgstr "秩序を裏切る"
 
 msgctxt "speaker:Narrator"
 msgid "In an instant, Sarah saw her opportunity as Oryon glanced away."
@@ -276296,7 +276296,7 @@ msgstr "見えないテキスト"
 
 msgctxt "ui"
 msgid "After Choices"
-msgstr "後で"
+msgstr "選択後"
 
 msgctxt "ui"
 msgid "Transitions"
@@ -276356,7 +276356,7 @@ msgstr "入る"
 
 msgctxt "ui"
 msgid "Advances dialogue and activates the interface."
-msgstr "進める"
+msgstr "対話を進め、インターフェースを起動する"
 
 msgctxt "ui"
 msgid "Space"

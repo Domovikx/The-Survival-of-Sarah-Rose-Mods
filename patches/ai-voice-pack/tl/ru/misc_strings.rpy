@@ -3,101 +3,149 @@
 
 translate ru strings:
 
-    old "Advisor"
-    new "Советник"
+    old "Sarah"
+    new "Сара"
 
-    old "Alaric"
-    new "Аларик"
+    old "King Orwell Rose"
+    new "Король Орвелл Роуз"
 
-    old "Albert"
-    new "Альберт"
+    old "Thomas"
+    new "Томас"
 
-    old "Alfred"
-    new "Альфред"
+    old "Hassar"
+    new "Хассар"
 
-    old "Ambassador"
-    new "Посол"
+    old "Marion"
+    new "Марион"
 
-    old "Announcer"
-    new "Глашатай"
+    old "Varga"
+    new "Варга"
 
-    old "Arthur"
-    new "Артур"
-
-    old "Atilla"
-    new "Атилла"
-
-    old "Automatic saves"
-    new "Автоматические сохранения"
-
-    old "Ayaka"
-    new "Аяка"
+    old "Kate"
+    new "Кейт"
 
     old "Barion"
     new "Барион"
 
-    old "Barkeep"
-    new "Бармен"
-
-    old "Barkeeper"
-    new "Бармен"
-
-    old "Barman"
-    new "Бармен"
-
-    old "Basilisk"
-    new "Василиск"
-
-    old "Blacksmith"
-    new "Кузнец"
-
-    old "Both"
-    new "Оба"
-
-    old "Bran"
-    new "Бран"
-
-    old "Brigand"
-    new "Разбойник"
-
-    old "Caleb"
-    new "Калеб"
-
-    old "Camp Guard"
-    new "Лагерный стражник"
-
-    old "Camp Soldier"
-    new "Лагерный солдат"
-
-    old "Captain"
-    new "Капитан"
-
-    old "Captain Belmont"
-    new "Капитан Бельмонт"
-
-    old "Captain of the guard"
-    new "Капитан стражи"
+    old "Kravel"
+    new "Кравел"
 
     old "Carolyn"
     new "Каролин"
 
+    old "Captain Belmont"
+    new "Капитан Бельмонт"
+
+    old "Caleb"
+    new "Калеб"
+
+    old "Ephraim"
+    new "Ефраим"
+
+    old "Atilla"
+    new "Атилла"
+
+    old "Vaelen"
+    new "Ваэлен"
+
+    old "Jaeid"
+    new "Джаид"
+
+    old "Xanthippe"
+    new "Ксантиппа"
+
+    old "Razaphel"
+    new "Разафель"
+
+    old "Alaric"
+    new "Аларик"
+
+    old "Shah Mahda"
+    new "Шах-Махда"
+
+    old "Samayra"
+    new "Самайра"
+
+    old "Lily"
+    new "Лили"
+
+    old "Mary"
+    new "Мэри"
+
+    old "Bran"
+    new "Бран"
+
+    old "Took"
+    new "Тук"
+
+    old "Synara"
+    new "Синара"
+
+    old "Nickolas"
+    new "Николас"
+
+    old "Sigmund"
+    new "Зигмунд"
+
+    old "Krip"
+    new "Крип"
+
+    old "Sakar"
+    new "Сакар"
+
+    old "Matthew"
+    new "Мэтью"
+
+    old "Eula"
+    new "Еула"
+
+    old "Gideon"
+    new "Гидеон"
+
+    old "Sophia"
+    new "Софья"
+
+    old "Naydeen"
+    new "Найдин"
+
+    old "Enya"
+    new "Эня"
+
+    old "Ayaka"
+    new "Аяка"
+
+    old "Dio"
+    new "Дио"
+
     old "Cassius"
     new "Кассий"
 
-    old "City Official"
-    new "Городской чиновник"
+    old "Metis"
+    new "Метис"
 
-    old "Courier"
-    new "Курьер"
+    old "Jasmine"
+    new "Джазмин"
 
-    old "Court Offical"
-    new "Придворный"
+    old "Orwen"
+    new "Оруэн"
 
-    old "Court Official"
-    new "Придворный"
+    old "Miriam"
+    new "Мириам"
 
-    old "Curator"
-    new "Хранитель"
+    old "Tirion"
+    new "Тирион"
+
+    old "Maeiv"
+    new "Маив"
+
+    old "Marshal Edmond"
+    new "Маршал Эдмонд"
+
+    old "Duke Antonio"
+    new "Герцог Антонио"
+
+    old "Garret"
+    new "Гаррет"
 
     old "Daemon"
     new "Демон"
@@ -105,188 +153,56 @@ translate ru strings:
     old "Dalia"
     new "Далия"
 
-    old "Damian"
-    new "Дамиан"
+    old "Kamal"
+    new "Камал"
 
-    old "Dio"
-    new "Дио"
-
-    old "Duke Antonio"
-    new "Герцог Антонио"
-
-    old "Elsa"
-    new "Эльза"
-
-    old "Emissary"
-    new "Эмиссар"
-
-    old "Emmissary"
-    new "Эмиссар"
-
-    old "Engineer"
-    new "Инженер"
-
-    old "Engineers"
-    new "Инженеры"
-
-    old "Enya"
-    new "Эня"
-
-    old "Ephraim"
-    new "Ефраим"
-
-    old "Eula"
-    new "Юла"
-
-    old "Examinator"
-    new "Экзаменатор"
-
-    old "Female Soldier"
-    new "Женщина-солдат"
-
-    old "Female soldier"
-    new "Женщина-солдат"
-
-    old "Founder"
-    new "Основатель"
-
-    old "Gabriel"
-    new "Габриэль"
-
-    old "Garret"
-    new "Гаррет"
-
-    old "Gideon"
-    new "Гидеон"
-
-    old "Gilead"
-    new "Гилеад"
-
-    old "Gorak"
-    new "Горак"
-
-    old "Guard"
-    new "Стражник"
-
-    old "Guard Captain"
-    new "Капитан стражи"
-
-    old "Guards"
-    new "Стражники"
-
-    old "Hassar"
-    new "Хассар"
-
-    old "Hecate"
-    new "Геката"
-
-    old "High Priest"
-    new "Верховный жрец"
-
-    old "Hugh"
-    new "Хью"
-
-    old "Innkeeper"
-    new "Трактирщик"
+    old "Ramsey"
+    new "Рамзи"
 
     old "Jacob"
     new "Яков"
 
-    old "Jaeid"
-    new "Джаид"
+    old "Elsa"
+    new "Эльза"
 
-    old "Jasmine"
-    new "Джазмин"
-
-    old "Judge"
-    new "Судья"
-
-    old "Kamal"
-    new "Камал"
-
-    old "Kate"
-    new "Кейт"
+    old "Alfred"
+    new "Альфред"
 
     old "Kim"
     new "Ким"
 
-    old "King Orwell Rose"
-    new "Король Орвелл Роуз"
+    old "Nathan"
+    new "Натан"
 
-    old "King-On-The-Outside"
-    new "Король снаружи"
+    old "Gilead"
+    new "Гилеад"
 
-    old "Kravel"
-    new "Кравел"
+    old "Albert"
+    new "Альберт"
 
-    old "Krip"
-    new "Крип"
+    old "Gabriel"
+    new "Габриэль"
 
-    old "Lily"
-    new "Лили"
+    old "Hecate"
+    new "Геката"
 
-    old "Maeiv"
-    new "Маив"
-
-    old "Male Soldier"
-    new "Мужчина-солдат"
-
-    old "Male soldier"
-    new "Мужчина-солдат"
-
-    old "Man"
-    new "Мужчина"
-
-    old "Marion"
-    new "Марион"
+    old "Damian"
+    new "Дамиан"
 
     old "Marius"
     new "Мариус"
 
-    old "Marshal Edmond"
-    new "Маршал Эдмонд"
+    old "Arthur"
+    new "Артур"
 
-    old "Mary"
-    new "Мэри"
+    old "Hugh"
+    new "Хью"
 
-    old "Master"
-    new "Мастер"
+    old "Sarah and Thomas in unison"
+    new "Сара и Томас хором"
 
-    old "Matthew"
-    new "Мэтью"
-
-    old "Mayor"
-    new "Мэр"
-
-    old "Merchant"
-    new "Торговец"
-
-    old "Metis"
-    new "Метис"
-
-    old "Miriam"
-    new "Мириам"
-
-    old "Mythran Officer"
-    new "Мифранский офицер"
-
-    old "Mythran Prince"
-    new "Мифранский принц"
-
-    old "Mythran Soldier"
-    new "Мифранский солдат"
-
-    old "Nathan"
-    new "Натан"
-
-    old "Naydeen"
-    new "Найдин"
-
-    old "Nickolas"
-    new "Николас"
-
-    old "Noble wife"
-    new "Дворянка"
+    old "Servant"
+    new "Слуга"
 
     old "Nobleman"
     new "Дворянин"
@@ -294,177 +210,251 @@ translate ru strings:
     old "Noblewoman"
     new "Дворянка"
 
-    old "Officer"
-    new "Офицер"
+    old "Ambassador"
+    new "Посол"
 
-    old "Official"
-    new "Чиновник"
+    old "High Priest"
+    new "Верховный жрец"
 
-    old "Old Captain"
-    new "Старый капитан"
+    old "Noble wife"
+    new "Дворянка"
 
-    old "Old man"
-    new "Старик"
+    old "Emissary"
+    new "Эмиссар"
 
-    old "Old Tribesman"
-    new "Старый соплеменник"
-
-    old "Orc"
-    new "Орк"
-
-    old "Orwen"
-    new "Оруэн"
-
-    old "Oryon"
-    new "Орион"
-
-    old "Other man"
-    new "Другой мужчина"
-
-    old "Page {}"
-    new "Страница {}"
+    old "Guard"
+    new "Стражник"
 
     old "Peasant girl"
     new "Крестьянка"
 
-    old "People"
-    new "Люди"
+    old "Soldier"
+    new "Солдат"
 
-    old "Priest"
-    new "Священник"
+    old "Both"
+    new "Оба"
 
-    old "Quick saves"
-    new "Быстрые сохранения"
+    old "Basilisk"
+    new "Василиск"
 
-    old "Ragged Man"
-    new "Оборванец"
+    old "Merchant"
+    new "Торговец"
 
-    old "Ramsey"
-    new "Рамзи"
-
-    old "Raza"
-    new "Раза"
-
-    old "Razaphel"
-    new "Разафель"
-
-    old "Robber"
-    new "Грабитель"
-
-    old "Romanov Twin"
-    new "Близнец Романовых"
+    old "Announcer"
+    new "Глашатай"
 
     old "Royal Messenger"
     new "Королевский гонец"
 
-    old "Sailor"
-    new "Моряк"
+    old "Captain of the guard"
+    new "Капитан стражи"
 
-    old "Sakar"
-    new "Сакар"
-
-    old "Samayra"
-    new "Самайра"
-
-    old "Sarah"
-    new "Сара"
-
-    old "Sarah and Thomas in unison"
-    new "Сара и Томас хором"
-
-    old "Scholar"
-    new "Учёный"
-
-    old "Scout"
-    new "Разведчик"
-
-    old "Second man"
-    new "Второй мужчина"
-
-    old "Servant"
-    new "Слуга"
-
-    old "Servants"
-    new "Слуги"
-
-    old "Shah Mahda"
-    new "Шах-Махда"
-
-    old "Siege crew"
-    new "Осадный расчёт"
-
-    old "Sigmund"
-    new "Зигмунд"
-
-    old "Slave"
-    new "Раб"
-
-    old "Slave Woman"
-    new "Рабыня"
-
-    old "Soldier"
-    new "Солдат"
-
-    old "Soldiers"
-    new "Солдаты"
-
-    old "Sophia"
-    new "Софья"
-
-    old "Spearmen"
-    new "Копейщики"
+    old "Guard Captain"
+    new "Капитан стражи"
 
     old "Squire"
     new "Оруженосец"
 
-    old "Synara"
-    new "Синара"
-
-    old "Tailor"
-    new "Портной"
-
-    old "The Official"
-    new "Чиновник"
-
-    old "The Survival of Sarah Rose"
-    new "Выживание Сары Роуз"
-
-    old "Thomas"
-    new "Томас"
-
-    old "Tirion"
-    new "Тирион"
-
-    old "Took"
-    new "Тук"
-
-    old "Tribesman"
-    new "Соплеменник"
-
-    old "Vaelen"
-    new "Ваэлен"
-
-    old "Varga"
-    new "Варга"
-
     old "Voice"
     new "Голос"
-
-    old "Voidling"
-    new "Пустотник"
-
-    old "Woman"
-    new "Женщина"
-
-    old "Woodland Spirit"
-    new "Лесной дух"
-
-    old "Xanthippe"
-    new "Ксантиппа"
-
-    old "Young man"
-    new "Молодой человек"
 
     old "Young woman"
     new "Молодая женщина"
 
+    old "Officer"
+    new "Офицер"
+
+    old "Camp Guard"
+    new "Лагерный стражник"
+
+    old "Camp Soldier"
+    new "Лагерный солдат"
+
+    old "City Official"
+    new "Городской чиновник"
+
+    old "The Official"
+    new "Чиновник"
+
+    old "Innkeeper"
+    new "Трактирщик"
+
+    old "Official"
+    new "Чиновник"
+
+    old "Slave"
+    new "Раб"
+
+    old "Woman"
+    new "Женщина"
+
+    old "Man"
+    new "Мужчина"
+
+    old "Tailor"
+    new "Портной"
+
+    old "Girl"
+    new "Девочка"
+
+    old "Advisor"
+    new "Советник"
+
+    old "Priest"
+    new "Священник"
+
+    old "Old Captain"
+    new "Старый капитан"
+
+    old "Orc"
+    new "Орк"
+
+    old "Gorak"
+    new "Горак"
+
+    old "Raza"
+    new "Раза"
+
+    old "Examinator"
+    new "Экзаменатор"
+
+    old "Siege crew"
+    new "Осадный расчёт"
+
+    old "Mythran Prince"
+    new "Мифранский принц"
+
+    old "Male Soldier"
+    new "Мужчина-солдат"
+
+    old "Male soldier"
+    new "Мужчина-солдат"
+
+    old "Female Soldier"
+    new "Женщина-солдат"
+
+    old "Female soldier"
+    new "Женщина-солдат"
+
+    old "Slave Woman"
+    new "Рабыня"
+
+    old "Ragged Man"
+    new "Оборванец"
+
+    old "Mythran Officer"
+    new "Мифранский офицер"
+
+    old "Mythran Soldier"
+    new "Мифранский солдат"
+
+    old "Blacksmith"
+    new "Кузнец"
+
+    old "Mayor"
+    new "Мэр"
+
+    old "Woodland Spirit"
+    new "Лесной дух"
+
+    old "Scout"
+    new "Разведчик"
+
+    old "Soldiers"
+    new "Солдаты"
+
+    old "Emmissary"
+    new "Эмиссар"
+
+    old "Tribesman"
+    new "Соплеменник"
+
+    old "Old Tribesman"
+    new "Старый соплеменник"
+
+    old "Engineer"
+    new "Инженер"
+
+    old "Spearmen"
+    new "Копейщики"
+
+    old "Engineers"
+    new "Инженеры"
+
+    old "Second man"
+    new "Второй мужчина"
+
+    old "Guards"
+    new "Стражники"
+
+    old "People"
+    new "Люди"
+
+    old "Brigand"
+    new "Разбойник"
+
+    old "Court Official"
+    new "Придворный"
+
+    old "Judge"
+    new "Судья"
+
+    old "Court Offical"
+    new "Придворный"
+
+    old "Other man"
+    new "Другой мужчина"
+
+    old "Robber"
+    new "Грабитель"
+
+    old "Captain"
+    new "Капитан"
+
+    old "Young man"
+    new "Молодой человек"
+
+    old "Old man"
+    new "Старик"
+
+    old "Servants"
+    new "Слуги"
+
+    old "Curator"
+    new "Хранитель"
+
+    old "Scholar"
+    new "Учёный"
+
+    old "Romanov Twin"
+    new "Близнец Романовых"
+
+    old "Barkeeper"
+    new "Бармен"
+
+    old "Master"
+    new "Мастер"
+
+    old "King-On-The-Outside"
+    new "Король снаружи"
+
+    old "Barkeep"
+    new "Бармен"
+
+    old "Sailor"
+    new "Моряк"
+
+    old "Courier"
+    new "Курьер"
+
+    old "Barman"
+    new "Бармен"
+
+    old "Founder"
+    new "Основатель"
+
+    old "Oryon"
+    new "Орион"
+
+    old "Voidling"
+    new "Пустотник"

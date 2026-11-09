@@ -3,12 +3,6 @@
 
 translate ja strings:
 
-    old "A dreadful silence came over the room as a everyone turned their heads to see the source of the disturbance."
-    new "全員が騒ぎの元を確認するために首を傾げた時、部屋は恐ろしい沈黙に包まれた。"
-
-    old "A gift?"
-    new "贈り物？"
-
     old "None may threaten Rosanna; make an example of him!"
     new "ロザンナを脅すような男には、見せしめを与えろ！"
 

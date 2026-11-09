@@ -11,8 +11,11 @@
  * но он python и со своим форматом po — здесь свой TS-конвейер (политика проекта).
  *
  * Запуск:
- *   node .opencode/skills/renpy-po/po2tl.mts <lang> [--dry] [--out <каталог>]
- *   (по умолчанию out = patches/ai-voice-pack/tl/<lang> — пересборка целиком)
+ *   node .opencode/skills/renpy-po/po2tl.mts <lang> [--demo] [--dry] [--out <каталог>]
+ *   (по умолчанию out = patches/ai-voice-pack/tl/<lang> — пересборка целиком;
+ *    --demo — только демо-скоуп: menu + ui + speaker-name + scene=start + arc=Prologue —
+ *    политика поставки 2026-11-09: в патч1 идёт ru + en, остальные языки — демо,
+ *    полные переводы — по спросу (бусти/площадки), в патч их не кладём)
  */
 import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
@@ -31,6 +34,29 @@ export interface TlFile {
 }
 
 const HEADER = "# -*- encoding: utf-8 -*-";
+
+/** Сцены демо-скоупа сверх арки Prologue (поставка 2026-11-09, решение
+ *  владельца: «маркетинг и крючки важны» — смерть отца, детектив-вопрос
+ *  «Кто захотел навредить папе?», романтические тизеры (Кейт/Варга) и
+ *  финал на ПЕРВОМ ВЫБОРЕ (интерактивность = триггер купить полную игру):
+ *  демо-скоуп = menu/ui/имена + start + Prologue + сцены по ChooseThePath). */
+export const DEMO_SCENES = new Set([
+  "start",
+  "DayOfTheFuneral",
+  "MeetingOnTheBattlements",
+  "MeetingKateInTheGarden",
+  "SecondPartOfFuneral",
+  "SarahsBedroomAfterFuneral",
+  "TheMorningAfterKate",
+  "CoronationDay",
+  "ChooseThePath",
+]);
+
+/** Демо-скоуп поставки: меню/имена + старт + Prologue + сцены-крючки (2026-11-09). */
+export function isDemoScope(msgctxt: string, meta: PotMeta | null): boolean {
+  if (msgctxt === "menu" || msgctxt === "ui" || msgctxt === "speaker-name") return true;
+  return Boolean(meta && (meta.arc === "Prologue" || DEMO_SCENES.has(meta.scene ?? "")));
+}
 
 /** Чистая сборка: po-записи + резолвер POT-метаданных → файлы tl. */
 export function buildTlFiles(
@@ -86,6 +112,7 @@ function main(): void {
     process.exit(1);
   }
   const dry = process.argv.includes("--dry");
+  const demoOnly = process.argv.includes("--demo");
   const outArg = process.argv.indexOf("--out");
   const outRoot = outArg >= 0 ? process.argv[outArg + 1] : join(REPO_ROOT, "patches", "ai-voice-pack", "tl", lang);
 
@@ -93,8 +120,9 @@ function main(): void {
     /\r\n/g,
     "\n",
   );
-  const entries = parsePo(poText).filter((e) => e.msgid);
   const pot = loadPotIndex();
+  let entries = parsePo(poText).filter((e) => e.msgid);
+  if (demoOnly) entries = entries.filter((e) => isDemoScope(e.msgctxt, pot.resolve(e.msgctxt, e.msgid)));
   const files = buildTlFiles(entries, lang, (c, m) => pot.resolve(c, m));
 
   let pairs = 0;

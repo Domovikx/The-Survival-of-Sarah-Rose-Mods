@@ -5,6 +5,7 @@ import { join } from "node:path";
 
 import { parsePo, renderPo, writePoAtomic } from "../../../.opencode/skills/renpy-po/po_core.mts";
 import { potIndex } from "../../../.opencode/skills/renpy-po/pot_resolve.mts";
+import { isDemoScope } from "../../../.opencode/skills/renpy-po/po2tl.mts";
 import { resolveBackend } from "../../../scripts/llm_backend.mts";
 import { SPEAKER_GENDER } from "../../../patches/ai-voice-pack/casts/gender.mts";
 
@@ -46,6 +47,11 @@ const RETRANS: number[] | null =
         .map(Number)
         .filter(Number.isFinite)
     : null;
+
+// --demo: только демо-скоуп поставки (menu/ui/имена + start + Prologue +
+// сцены по ChooseThePath, 2026-11-09: не тратим ресурсы на то, что не идёт
+// в патч1; полные переводы — по спросу).
+const DEMO_ONLY = process.argv.includes("--demo");
 
 // правила — из скилла (единый источник)
 const skill = readFileSync(SKILL, "utf-8");
@@ -245,6 +251,7 @@ if (RETRANS) {
     if (!IMPROVE && (done.has(i) || entries[i].msgstr.trim())) continue;
     const e = entries[i];
     if (ARC && potIndex().resolve(e.msgctxt, e.msgid)?.arc !== ARC) continue;
+    if (DEMO_ONLY && !isDemoScope(e.msgctxt, potIndex().resolve(e.msgctxt, e.msgid))) continue;
     queue.push(i);
   }
 }
@@ -500,7 +507,7 @@ const worker = async (): Promise<void> => {
 };
 
 console.log(
-  `прогон ${PO} | ${TARGET[LANG]} | ${model} | арка: ${ARC || "—"} | к работе ${total} (уже сделано ${IMPROVE ? "—" : done.size})${RETRANS ? " | MODE=retrans: ремонт строк из файла" : IMPROVE ? " | MODE=improve: ничего не записывается" : ""}`,
+  `прогон ${PO} | ${TARGET[LANG]} | ${model} | арка: ${ARC || "—"}${DEMO_ONLY ? " | DEMO-скоуп" : ""} | к работе ${total} (уже сделано ${IMPROVE ? "—" : done.size})${RETRANS ? " | MODE=retrans: ремонт строк из файла" : IMPROVE ? " | MODE=improve: ничего не записывается" : ""}`,
 );
 // Главный поток под защитой: сбой воркера не должен висеть на интервале —
 // flush + clearInterval + ясный код выхода (инцидент 2026-11-07).

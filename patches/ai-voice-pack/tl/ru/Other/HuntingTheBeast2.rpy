@@ -1,590 +1,604 @@
 # -*- encoding: utf-8 -*-
 # Arc: Other | Scene: HuntingTheBeast2
-# Source: C:\Program Files (x86)\Steam\steamapps\common\The Survival of Sarah Rose\game\script.rpy
 
 translate ru strings:
 
     old "Waking early to the first rays of dawn, Sarah was surprised at how well rested she was."
-    new "Проснувшись рано с первыми лучами зари, Сара удивилась, как хорошо она отдохнула."
+    new "Проснувшись рано под первыми лучами зари, Сара была удивлена тем, насколько хорошо она отдохнула."
 
     old "They quickly ate breakfast and gathered up their camp before moving deeper into the forest."
-    new "Они быстро позавтракали, собрали лагерь и двинулись дальше в лес."
+    new "Они быстро позавтракали и собрали свой лагерь, прежде чем углубиться в лес."
 
     old "It's odd."
     new "Странно."
 
+    old "What is?"
+    new "Что такое?"
+
     old "I'm so...energetic today. Usually when I sleep outdoors it's a nightmare on my back."
-    new "Я сегодня такая... энергичная. Обычно, когда я сплю на природе, это сущий кошмар для моей спины."
+    new "Я такая... энергичная сегодня. Обычно, когда я сплю на улице, это просто кошмар."
 
     old "Yeah, the forest here is known for such things."
-    new "Да, этот лес славится такими вещами."
+    new "Да, здешний лес известен такими вещами."
 
     old "It has a magical, healing property."
-    new "У него есть магические, целебные свойства."
+    new "У него есть магическое, исцеляющее свойство."
 
     old "More supersition."
-    new "Очередное суеверие."
+    new "Опять эти суеверия."
 
     old "Garret shook his head."
     new "Гаррет покачал головой."
 
     old "No, it is true that most people live far longer than most."
-    new "Нет, правда в том, что большинство живёт здесь намного дольше."
+    new "Нет, это правда: большинство людей живут намного дольше, чем думают."
 
     old "Has that actually been researched?"
-    new "Это кто-то исследовал?"
+    new "Разве это когда-нибудь изучали?"
 
     old "No fancy scholars with degrees out here, just stories I suppose. But a lot of stories."
-    new "Никаких учёных с дипломами здесь нет, только истории, полагаю. Но историй много."
+    new "Здесь нет никаких учёных с дипломами — только истории, полагаю. Но их очень много."
 
     old "They say it's the spirits."
     new "Говорят, это духи."
 
     old "The Woodland spirits you spoke about?"
-    new "Лесные духи, о которых ты говорил?"
+    new "А эти лесные духи, о которых ты говорила?"
 
     old "They say that if the spirits like you, they'll give you easy dreams and heal your body."
-    new "Говорят, если духам ты понравишься, они подарят тебе лёгкие сны и исцелят тело."
+    new "Говорят, что если духи тебя полюбуют, то подарят тебе лёгкие сны и исцелят твоё тело."
 
     old "And if they don't?"
-    new "А если нет?"
+    new "А если они не послушаются?"
 
     old "Well, they say children that don't listen to their parents are taken into the forest by the spirits, never to be seen again."
-    new "Ну, говорят, детей, которые не слушаются родителей, духи уводят в лес, и их больше никто не видит."
+    new "Ну, говорят, что детей, которые не слушают родителей, духи уносят в лес — и они больше никогда не возвращаются."
 
     old "But that's more to keep the children from wandering too far in alone."
-    new "Но это скорее для того, чтобы дети не забредали далеко в одиночку."
+    new "Но это скорее для того, чтобы дети не уходили слишком далеко одни."
 
     old "Sarah smiled at Garret sharing stories of his village."
-    new "Сара улыбнулась, слушая, как Гаррет рассказывает истории своей деревни."
+    new "Сара улыбнулась Гаррету за то, что он поделился с ней историями из своей деревни."
 
     old "Life here was different than from where she had grown up, but it was comforting to know that people told stories like these everywhere."
-    new "Жизнь здесь отличалась от той, где она выросла, но было приятно знать, что люди везде рассказывают такие истории."
+    new "Жизнь здесь отличалась от той, что была там, где она выросла, но было утешительно знать, что повсюду рассказывают такие истории."
 
     old "Where I'm from they say it's the Bog Witch that will come and get you."
-    new "Там, откуда я родом, говорят, что придёт Болотная Ведьма и заберёт тебя."
+    new "У меня на родине говорят, что это Болотная ведьма придёт и заберёт тебя."
 
     old "Guess every society sometimes dreams about getting rid of poorly behaved children."
-    new "Наверное, в каждом обществе иногда мечтают избавиться от непослушных детей."
+    new "Думаю, каждое общество иногда мечтает избавиться от плохо себя ведущих детей."
 
     old "Where is that from, anyway, your story?"
-    new "А откуда ты, кстати? Откуда эта история?"
+    new "А откуда вообще эта твоя история?"
 
     old "Rosanna. Where I grew up."
-    new "Розанна. Там, где я выросла."
+    new "Розанна. Откуда я родом."
 
     old "You're a far way from home then."
-    new "Значит, ты далеко от дома."
+    new "Ты ведь далеко от дома."
 
     old "Haven't been there in years. Who knows if it's even still a home to me."
-    new "Не была там много лет. Кто знает, дом ли это ещё для меня."
+    new "Я не была там уже много лет. Кто знает, может быть, это место даже больше не мой дом."
 
     old "Well, it's a place that meant something to you. That's important enough in its own right."
-    new "Что ж, это место, которое что-то для тебя значило. Это уже само по себе важно."
+    new "Ну, это место что-то значило для тебя. И одно это уже достаточно важно."
 
     old "You're a lot softer than you pretend to be."
-    new "Ты гораздо мягче, чем притворяешься."
+    new "Ты куда мягче, чем притворяешься."
 
     old "Garret laughed, his booming voice echoing deep into the forest."
-    new "Гаррет рассмеялся, его гулкий голос эхом разнёсся по лесу."
+    new "Гаррет рассмеялся, и его громогласный голос разнёсся далеко вглубь леса."
 
     old "Don't go around telling that to the townsfolk."
-    new "Не рассказывай об этом горожанам."
+    new "Не ходи и не рассказывай об этом городским жителям."
 
     old "I like them to be scared of me. Keeps them from annoying me too much."
-    new "Мне нравится, когда они меня боятся. Так они меньше докучают."
+    new "Мне нравится, когда они меня боятся. Это мешает им слишком сильно меня досаждать."
 
     old "Together the two continued moving deeper into the forest."
-    new "Вдвоём они продолжили углубляться в лес."
+    new "Вместе они двинулись ещё глубже в лес."
 
     old "Hours passed and soon the sun began to set again."
-    new "Прошли часы, и солнце снова начало садиться."
+    new "Прошли часы, и вскоре солнце снова начало заходить."
 
     old "Sarah was surprised by how little she felt her muscles. As if the day's march had done nothing to her."
-    new "Сара удивилась, что мышцы почти не болят. Словно дневной переход никак на неё не повлиял."
+    new "Сара была удивлена тем, насколько слабо она ощущала свои мышцы. Словно дневной марш никак не повлиял на неё."
 
     old "I'm still feeling great...maybe this place really is magical."
-    new "Я всё ещё чувствую себя прекрасно... может, это место правда волшебное."
+    new "Я всё ещё чувствую себя отлично... может быть, это место и правда волшебное."
 
     old "I guess the spirits like you. That's good."
-    new "Видимо, духам ты нравишься. Это хорошо."
+    new "Похоже, духи тебя любят. Это хорошо."
 
     old "Garret gestured ahead, another clearing."
-    new "Гаррет указал вперёд — очередная поляна."
+    new "Гаррет указал вперёд — там была ещё одна поляна."
 
     old "There, we can set up tonight's camp there."
-    new "Вон там мы можем разбить сегодняшний лагерь."
+    new "Вот там мы можем разбить лагерь на эту ночь."
 
     old "The sun continued to set quickly, and they each moved quick in their own right, setting up camp before total night fall."
-    new "Солнце быстро садилось, и они поспешили разбить лагерь до наступления полной темноты."
+    new "Солнце продолжало быстро садиться, и они оба действовали быстро по-своему, разбивая лагерь до наступления полной темноты."
 
     old "This time Garret prepared the campfire."
-    new "На этот раз Гаррет развёл костёр."
+    new "На этот раз Гаррет разжёг костёр."
 
     old "Well, a Huntsman that can't start a fire would surely be a terrible one."
-    new "Что ж, охотник, который не умеет разжечь костёр, был бы ужасным охотником."
+    new "Ну, охотник, который не может развести огонь, наверняка был бы ужасным."
 
     old "They each sat down again."
-    new "Они снова уселись."
+    new "Они оба снова сели."
 
     old "So far, they had not come across any tracks that hinted at the Beast."
-    new "Пока они не наткнулись на следы Зверя."
+    new "Пока что им не встретилось никаких следов, которые указывали бы на Зверя."
 
     old "You think we'll find something soon?"
-    new "Думаешь, мы скоро что-нибудь найдём?"
+    new "Ты думаешь, мы скоро что-нибудь найдём?"
 
     old "Usually, the tracks we find are a bit up ahead, but we won't find anything tonight. Best we stay to camp."
-    new "Обычно следы мы находим чуть дальше, но сегодня ночью ничего не найдём. Лучше остаться в лагере."
+    new "Обычно следы, которые мы находим, ведут немного вперёд, но сегодня вечером нам ничего не удастся найти. Лучше всего остаться здесь и разбить лагерь."
 
     old "Sitting by the fire, she could feel the comforting heat on her face."
-    new "Сидя у костра, она чувствовала приятное тепло на лице."
+    new "Сидя у огня, она ощущала на лице приятное тепло."
 
     old "Her heavy armor chafed against her skin."
-    new "Тяжёлая броня натирала кожу."
+    new "Её тяжёлые доспехи натёрли кожу."
 
     old "It was made for combat more than for marching, and definitely had not been made for walking in a forest."
-    new "Она была создана для боя, а не для маршей, и уж точно не для прогулок по лесу."
+    new "Она была создана скорее для боя, чем для марша, и уж точно не для ходьбы по лесу."
 
     old "Take off armor"
-    new "Снять броню"
+    new "Снять доспехи"
 
     old "Sarah began to unclasp her armor."
-    new "Сара начала расстёгивать броню."
+    new "Сара начала расстёгивать доспехи."
 
     old "She saw Garret's startled face."
-    new "Она увидела удивлённое лицо Гаррета."
+    new "Она увидела ошеломлённое лицо Гаррета."
+
+    old "What are you doing?"
+    new "Что вы делаете?"
 
     old "This armor has been scraping and cutting against my skin since I stepped into this forest."
-    new "Эта броня натирает и режет мою кожу с тех пор, как я вошла в этот лес."
+    new "Эти доспехи терлись и резали мою кожу с того самого момента, как я вошла в этот лес."
 
     old "We've made camp, the least I can do is be comfortable for the night."
-    new "Мы разбили лагерь, самое меньшее, что я могу сделать, — чувствовать себя комфортно этой ночью."
+    new "Мы уже разбили лагерь, так что меньшее, что я могу сделать, — это обеспечить себе комфорт на ночь."
 
     old "She saw Garret look away."
-    new "Она увидела, как Гаррет отвёл взгляд."
+    new "Она увидела, что Гаррет отвёл взгляд."
 
     old "I-I-"
-    new "Я-я-"
+    new "Я-я-..."
 
     old "Sarah laughed as she dropped the last piece of armor among the rest."
-    new "Сара рассмеялась, бросая последнюю часть брони к остальным."
+    new "Сара рассмеялась, бросая последний кусок доспеха к остальным."
 
     old "What? Never seen a girl in her underwear before?"
-    new "Что? Никогда не видел девушку в нижнем белье?"
+    new "Что? Никогда раньше не видел девушку в нижнем белье?"
 
     old "Of course I have!"
-    new "Конечно, видел!"
+    new "Конечно же!"
 
     old "But...I just wasn't expecting you to..."
     new "Но... я просто не ожидал, что ты..."
 
     old "You live in a mercenary company, you learn to get over your prudishness very quickly."
-    new "Живёшь в отряде наёмников — быстро учишься избавляться от стыдливости."
+    new "Ты же живёшь в наёмнической компании — там очень быстро учишься избавляться от своей стыдливости."
 
     old "Privacy is a luxury you don't get much of."
-    new "Уединение — роскошь, которую редко получаешь."
+    new "Конфиденциальность — это роскошь, которой у тебя не так уж много."
 
     old "Garret kept looking away."
     new "Гаррет продолжал отводить взгляд."
 
     old "Really, Garret. I don't mind. You don't have to look away on my accord."
-    new "Правда, Гаррет. Я не против. Тебе не нужно отворачиваться ради меня."
+    new "Правда же, Гаррет? Я не против. Тебе не нужно отводить взгляд по моей воле."
 
     old "Slowly he turned his head back, staring at her from across the fire."
-    new "Медленно он повернул голову обратно, глядя на неё через костёр."
+    new "Он медленно повернул голову назад, глядя на неё через огонь."
 
     old "She felt his eyes now fixed on her body."
-    new "Она чувствовала, как его взгляд застыл на её теле."
+    new "Она почувствовала, что его взгляд теперь был прикован к её телу."
 
     old "A silence lingered."
-    new "Повисла тишина."
+    new "Тишина затянулась."
 
     old "What? You're usually so talkative."
-    new "Что? Обычно ты такой разговорчивый."
+    new "Что? Ты же обычно такой болтливый."
 
     old "I don't usually find myself in the forest with half-dressed women."
-    new "Обычно я не оказываюсь в лесу с полураздетой женщиной."
+    new "Я обычно не оказываюсь в лесу с полуголыми женщинами."
 
     old "Your lucky day then, I suppose."
-    new "Тогда тебе повезло, полагаю."
+    new "Ну что ж, полагаю, тебе сегодня повезло."
 
     old "She saw from his body was still awkward."
-    new "Она видела, что он всё ещё смущён."
+    new "Она видела, что его тело всё ещё было неловким."
 
     old "There was something amusing to her about the idea of this tall and confident Huntsman, now turned quiet and awkward."
-    new "Было что-то забавное в том, что этот высокий и уверенный охотник вдруг стал тихим и смущённым."
+    new "Ей было до смешного забавно думать об этом высоком и уверенном в себе Охотнике, который теперь превратился в тихого и неловкого человека."
 
     old "Come on, you've seen more than this before."
-    new "Да ладно, ты видел и больше."
+    new "Да ладно, ты же и раньше такое видел."
 
     old "I've been alone for a while now..."
-    new "Я уже давно один..."
+    new "Я уже некоторое время был один..."
 
     old "She suddenly saw the awkwardness of his face turn to shame."
-    new "Она вдруг увидела, как его смущение превратилось в стыд."
+    new "Она вдруг увидела, как неловкость на его лице сменилась стыдом."
 
     old "Whatever fun she imagined to have been having, quickly soured. She began to feel bad."
-    new "Всё веселье, которое она себе представляла, быстро угасло. Ей стало неловко."
+    new "Какая бы радость она ни представляла себе в тот момент, она быстро испарилась. Ей стало не по себе."
 
     old "Garret...I'm sorry, I was only teasing you."
-    new "Гаррет... прости, я просто дразнила тебя."
+    new "Гаррет... Прости, я просто дразнила тебя."
 
     old "Garret shrugged and turned his head."
-    new "Гаррет пожал плечами и отвернулся."
+    new "Гаррет пожал плечами и повернул голову."
 
     old "It's just, I am not as comfortable with this as you are."
-    new "Просто... мне не так комфортно с этим, как тебе."
+    new "Просто... я не так комфортно себя чувствую в этом, как ты."
 
     old "You said you've been alone for a while."
-    new "Ты сказал, что уже давно один."
+    new "Ты же говорила, что уже некоторое время была одна."
 
     old "What...is a while, exactly?"
-    new "А что значит... «давно»?"
+    new "Что... такое «некоторое время» на самом деле?"
 
     old "Long."
-    new "Давно."
+    new "Долго."
 
     old "I thought we were being honest with each other here."
-    new "Я думала, мы тут честны друг с другом."
+    new "Я думала, мы здесь были честны друг с другом."
 
     old "Years."
     new "Годы."
 
     old "He spat out the word, as if it was a vile confession."
-    new "Он выплюнул это слово, словно это было грязное признание."
+    new "Он выплюнул это слово, будто оно было мерзким признанием."
 
     old "Slowly, he spoke more."
-    new "Медленно он продолжил."
+    new "Медленно он продолжил говорить."
 
     old "Five...five years...I think..."
     new "Пять... пять лет... кажется..."
 
     old "Sarah looked at him. Every part of him, from his voice to his body language, seemed to tremble at being so exposed."
-    new "Сара посмотрела на него. Каждая его часть — от голоса до языка тела — дрожала от такой уязвимости."
+    new "Сара посмотрела на него. Каждая его часть, от голоса до языка тела, казалось, дрожала от того, что он оказался в таком уязвимом положении."
 
     old "There was a vulnerability in him, but it seemed at the same time uneasy to him."
-    new "В нём чувствовалась уязвимость, но она одновременно казалась ему непривычной."
+    new "В нём была уязвимость, но в то же время она казалась ему неестественной."
 
     old "A man more used to being guarded than seen."
-    new "Человек, привыкший быть скрытным, а не открытым."
+    new "Человек, привыкший скорее скрывать себя, чем показываться на всеобщее обозрение."
 
     old "That's fine."
-    new "Всё в порядке."
+    new "Это нормально."
 
     old "She saw him look up at her, surprise marked his face."
-    new "Она увидела, как он поднял на неё взгляд, удивление застыло на его лице."
+    new "Она увидела, как он поднял на неё взгляд; удивление отразилось на его лице."
 
     old "I said it's fine. I mean...you must have had your reasons."
-    new "Я сказала, всё в порядке. В смысле... у тебя, должно быть, были на то причины."
+    new "Я сказала, что всё в порядке. Я имею в виду... у тебя ведь должны были быть свои причины."
 
     old "It's nothing to be ashamed of."
-    new "В этом нет ничего постыдного."
+    new "В этом нет ничего такого, чего стоило бы стыдиться."
 
     old "She saw him seemingly calm down."
     new "Она увидела, что он, кажется, успокоился."
 
     old "I don't want you to think I am strange."
-    new "Я не хочу, чтобы ты думала, что я странный."
+    new "Я не хочу, чтобы ты думал, будто я странный."
 
     old "Well, you're still strange. But I like strange."
-    new "Ну, ты всё равно странный. Но мне нравятся странные."
+    new "Ну, ты всё ещё странный. Но мне нравятся странные люди."
 
     old "Garret smiled."
     new "Гаррет улыбнулся."
 
     old "I am sorry if I made you uncomfortable."
-    new "Прости, если я заставила тебя чувствовать себя неловко."
+    new "Прости, если я заставил тебя почувствовать себя некомфортно."
 
     old "No, I should have apologized to you. I should have known that just because I was comfortable, didn't mean you would be."
-    new "Нет, это я должен был извиниться перед тобой. Я должен был понимать, что если мне комфортно, не значит, что и тебе комфортно."
+    new "Нет, мне следовало извиниться перед тобой. Мне следовало понять: то, что я сама чувствовала себя комфортно, ещё не значит, что так же будет и у тебя."
 
     old "Sleep with Garret"
-    new "Переспать с Гарретом"
+    new "Проведи ночь с Гарретом."
 
     old "Having seen him so vulnerable, and now slowly more at ease, Sarah was happy."
-    new "Увидев его таким уязвимым, а теперь постепенно успокаивающимся, Сара была счастлива."
+    new "Увидев его таким уязвимым, а теперь и медленно приходящим в себя, Сара была счастлива."
 
     old "She still felt guilty at having ever made him so uncomfortable."
-    new "Она всё ещё чувствовала вину за то, что заставила его чувствовать себя так неловко."
+    new "Она всё ещё чувствовала себя виноватой за то, что когда-то заставила его так нервничать."
 
     old "Can I ask you a question?"
-    new "Могу я задать тебе вопрос?"
+    new "Можно мне задать тебе один вопрос?"
 
     old "Why have you not been with a woman for all these years?"
-    new "Почему ты не был с женщиной все эти годы?"
+    new "Почему ты все эти годы не был ни с одной женщиной?"
 
     old "I mean...you're not unattractive."
-    new "В смысле... ты не непривлекателен."
+    new "Я имею в виду... ты ведь не некрасивый."
 
     old "She saw his face turn somewhat red again."
-    new "Она увидела, что его лицо снова покраснело."
+    new "Она увидела, как его лицо снова немного покраснело."
 
     old "As a Huntsman, you're somewhat outside of the town. A loner."
-    new "Как охотник, ты в некотором роде вне города. Одиночка."
+    new "Как охотник, ты несколько оторван от города. Одиночка."
 
     old "It's easy to just not...engage."
-    new "Легко просто... не вступать в отношения."
+    new "Легко просто не... вступать в контакт."
 
     old "There was a woman, years ago, that liked to walk in the forest with me. With her I felt easy..."
-    new "Была одна женщина, много лет назад, которая любила гулять со мной по лесу. С ней мне было легко..."
+    new "Давным-давно была женщина, которая любила гулять со мной в лесу. С ней мне было легко..."
 
     old "What happened to her?"
-    new "Что с ней случилось?"
+    new "Что с ней стало?"
 
     old "She realized she could do better than lowly hunter. Married some merchant and left town."
-    new "Она поняла, что может найти кого-то получше простого охотника. Вышла замуж за какого-то купца и уехала."
+    new "Она поняла, что заслуживает большего, чем какой-то жалкий охотник. Вышла замуж за какого-то торговца и покинула город."
 
     old "I was a distraction for her."
-    new "Я был для неё развлечением."
+    new "Я был для неё просто отвлечением внимания."
 
     old "Sarah saw in his face a hint of pain."
-    new "Сара увидела на его лице проблеск боли."
+    new "Сара увидела в его лице намёк на боль."
 
     old "And she was more to you than you meant to her?"
-    new "И она значила для тебя больше, чем ты для неё?"
+    new "И она была для тебя чем-то большим, чем ты предполагал для неё?"
 
     old "Garret nodded, staring into the fire."
     new "Гаррет кивнул, глядя в огонь."
 
     old "What of it. Such things happen."
-    new "Что с того. Всякое бывает."
+    new "Ну и что? Такое случается."
 
     old "Heartbreak is not uncommon, but that doesn't mean it didn't matter to you."
-    new "Разбитое сердце — не редкость, но это не значит, что для тебя это не имело значения."
+    new "Разбитое сердце — не редкость, но это не значит, что оно не имело для тебя значения."
 
     old "Garret grew more quiet."
-    new "Гаррет стал ещё тише."
+    new "Гаррет замолчал ещё больше."
 
     old "He stared into the fire for a while longer."
-    new "Он ещё некоторое время смотрел в огонь."
+    new "Он ещё некоторое время пристально смотрел в огонь."
 
     old "But what about the rest?"
-    new "Но как насчёт остального?"
+    new "Но а остальные-то?"
 
     old "He looked up, confused."
-    new "Он поднял взгляд, озадаченный."
+    new "Он поднял голову, сбитый с толку."
 
     old "The rest?"
-    new "Остального?"
+    new "Остальное?"
 
     old "Well...you're a man. You're old, but not that old."
-    new "Ну... ты мужчина. Ты взрослый, но не настолько старый."
+    new "Ну... ты же мужчина. Ты старый, но не настолько уж."
 
     old "You still have...urges, right?"
-    new "У тебя ведь всё ещё есть... желания, верно?"
+    new "У тебя всё ещё... есть желания, да?"
 
     old "She saw his face turn red and look away."
     new "Она увидела, как его лицо покраснело и он отвёл взгляд."
 
+    old "Of course!"
+    new "Конечно!"
+
     old "I am not dead below the waist, but such things..."
-    new "Я не мёртв ниже пояса, но такие вещи..."
+    new "Я не умер ниже пояса, но вот такие вещи..."
 
     old "I see to them myself..."
-    new "Я справляюсь с ними сам..."
+    new "Я сам за ними присмотрю..."
 
     old "His voice trailed off and went quiet."
-    new "Его голос затих и умолк."
+    new "Его голос угас и стих."
 
     old "Sarah crawled past the campfire."
-    new "Сара переползла через костёр."
+    new "Сара проползла мимо костра."
 
     old "She felt him shudder as she sat down next to him."
-    new "Она почувствовала, как он вздрогнул, когда она села рядом."
+    new "Она почувствовала, как он содрогнулся, когда села рядом с ним."
 
     old "It's not wrong to want something."
-    new "Нет ничего плохого в том, чтобы чего-то хотеть."
+    new "Хотеть чего-то — это не неправильно."
 
     old "She saw him look back at her, the light of the fire playing in his eyes."
-    new "Она увидела, как он посмотрел на неё, свет костра играл в его глазах."
+    new "Она увидела, как он обернулся к ней, а свет костра заиграл в его глазах."
+
+    old "Sarah..."
+    new "Сара..."
 
     old "His voice was soft and delicate."
     new "Его голос был мягким и нежным."
 
     old "She held his gaze."
-    new "Она встретила его взгляд."
+    new "Она не отводила от него взгляд."
 
     old "Sarah reached around her back and past her waist, taking off her own underwear in one swift motion."
-    new "Сара завела руку за спину и одним быстрым движением сняла с себя бельё."
+    new "Сара провела рукой по спине и талии, одним быстрым движением снимая с себя нижнее бельё."
 
     old "She could feel his eyes fixated on her body, his hands still hestitant."
-    new "Она чувствовала, как его взгляд прикован к её телу, а руки всё ещё нерешительны."
+    new "Она чувствовала, как его взгляд застыл на её теле, а руки всё ещё оставались нерешительными."
 
     old "Naked besides the fire, she felt exposed. But in the midsts of the forest, she also felt as if they were the only people in the world."
-    new "Обнажённая у костра, она чувствовала себя беззащитной. Но посреди леса ей также казалось, что они единственные люди в мире."
+    new "Голая у огня, она чувствовала себя открытой. Но посреди леса ей также казалось, будто они — единственные люди на свете."
 
     old "We should not..."
-    new "Нам не стоит..."
+    new "Нам не следует..."
 
     old "His answer never came."
-    new "Он так и не ответил."
+    new "Его ответа так и не последовало."
 
     old "The last of his resistance broken, Sarah felt his massive hands wrap around her body."
-    new "С последними остатками его сломленного сопротивления Сара почувствовала, как его массивные руки обхватили её тело."
+    new "Последняя искра его сопротивления угасла, и Сара почувствовала, как его огромные руки обхватили её тело."
 
     old "A warrior, stripped of armor and weapons, she was now just a woman."
-    new "Лишённая доспехов и оружия, она была теперь просто женщиной."
+    new "Воин, лишившаяся доспехов и оружия, теперь была всего лишь женщиной."
 
     old "Held in his hands, she felt as vulnerable as she felt safe."
-    new "В его руках она чувствовала себя такой же уязвимой, сколь и защищённой."
+    new "Держимая в его руках, она чувствовала себя такой же уязвимой, как и безопасной."
 
     old "He gripped with one hand at her breasts, with another at her waist."
-    new "Одной рукой он сжал её грудь, другой — её талию."
+    new "Он одной рукой обхватил её грудь, а другой — талию."
 
     old "His touches were awkward yet eager."
-    new "Его прикосновения были неуклюжими, но нетерпеливыми."
+    new "Его прикосновения были неловкими, но полными желания."
 
     old "She felt his hands roam across her body so swiftly, as he feared she might change her mind in a moment."
-    new "Она чувствовала, как его руки так быстро блуждают по её телу, словно он боялся, что она передумает в любой момент."
+    new "Она почувствовала, как его руки так стремительно скользнули по её телу — словно он боялся, что она в любой миг может передумать."
 
     old "Suddenly, she felt his hands retreat."
-    new "Внезапно она почувствовала, что его руки отступили."
+    new "Внезапно она почувствовала, как его руки отступили."
 
     old "Furiously, he began to pull on his own clothes, stripping away his shirt, undoing his pants."
-    new "Лихорадочно он начал стягивать с себя одежду, сбрасывая рубашку, расстёгивая штаны."
+    new "В ярости он начал снимать с себя одежду: сорвал рубашку и расстёгнул брюки."
 
     old "Sarah marveled at how quickly he came undressed."
-    new "Сара поразилась тому, как быстро он разделся."
+    new "Сара поража­лась тому, как быстро он разделся."
 
     old "In the light of the fire, she took in all of him."
-    new "В свете костра она рассматривала его всего."
+    new "В свете огня она охватила его всем существом."
 
     old "His body was massive and solid, tall and broad of shoulder, arms wide and strong."
-    new "Его тело было массивным и крепким, высоким и широкоплечим, руки большими и сильными."
+    new "Его тело было массивным и крепким, высоким и широким в плечах, с широкими и сильными руками."
 
     old "All of it build by a lifetime of living off the land."
-    new "Всё это было создано жизнью, прожитой за счёт земли."
+    new "Всё это было выковано за всю жизнь, прожитую в гармонии с дикой природой."
 
     old "She allowed her eyes to roam across his chest, covered in black hairs."
-    new "Она позволила глазам скользить по его груди, покрытой чёрными волосами."
+    new "Она позволила своим глазам скользнуть по его груди, покрытой чёрными волосами."
 
     old "Slowly her eyes travelled lower still and saw his manhood, already erect, matching the dimensions of the rest of his body."
-    new "Медленно её взгляд опустился ещё ниже и увидел его плоть, уже возбуждённую, под стать размерам остального тела."
+    new "Постепенно её взгляд спустился ещё ниже и увидел его мужское достоинство — уже эрегированное, такого же размера, как и остальная часть тела."
 
     old "As his now naked body leaned back closer to her and his hands seized her body again, Sarah felt a heat build in her own chest."
-    new "Когда его обнажённое тело снова придвинулось к ней, а руки вновь схватили её, Сара почувствовала жар в своей груди."
+    new "Когда его теперь обнажённое тело прижалось к ней ещё плотнее, а руки вновь охватили её, Сара почувствовала, как в груди нарастает жар."
 
     old "There was a raw masculinity about him that she found enthralling, and felt herself slowly falling into."
-    new "В нём была первобытная мужественность, которая завораживала её, и она чувствовала, что медленно поддаётся ей."
+    new "В нём была какая-то необузданная мужественность, которая её завораживала, и она чувствовала, как медленно падает в её плен."
 
     old "Reaching up, she pressed her own hands up against his chest, hard as rock."
-    new "Потянувшись вверх, она прижала ладони к его груди, твёрдой как камень."
+    new "Подняв руки, она прижала свои ладони к его груди — твёрдой, как камень."
 
     old "In his eyes, she could see he was losing himself to his desire."
-    new "В его глазах она видела, что он теряет голову от желания."
+    new "В его глазах она видела, что он терял себя из-за своего желания."
 
     old "Years, she thought. Years of loneliness, of not having felt a woman's body."
-    new "Годы, подумала она. Годы одиночества, годы без женского тела."
+    new "Годы, — подумала она. Годы одиночества, когда она не чувствовала женского тела."
 
     old "She wanted to have him, as much as she wanted to give herself to him."
-    new "Она хотела обладать им так же сильно, как хотела отдать себя ему."
+    new "Она хотела обладать им так же сильно, как и отдать себя ему."
 
     old "Sarah pushed him away, and for a brief moment, she that same hestitation in his face."
-    new "Сара оттолкнула его, и на краткий миг она увидела ту же нерешительность на его лице."
+    new "Сара оттолкнула его, и на мгновение в его лице снова появилось то самое колебание."
 
     old "Did I...do something wrong?"
     new "Я... сделал что-то не так?"
 
     old "She turned around and crawled onto all fours."
-    new "Она развернулась и встала на четвереньки."
+    new "Она обернулась и поползла на четвереньки."
 
     old "Sarah bend lower and raised her ass. Slightly parting her legs, she turned her head to face him."
-    new "Сара нагнулась ниже и приподняла задницу. Слегка раздвинув ноги, она повернула голову к нему."
+    new "Сара наклонилась ниже и приподняла ягодицы. Слегка разведя ноги, она повернула голову к нему."
 
     old "Take me like this."
-    new "Возьми меня так."
+    new "Прими меня вот так."
 
     old "She felt him position himself behind her, his large hands wrapping around her thin waist."
-    new "Она почувствовала, как он расположился позади неё, его большие руки обхватили её тонкую талию."
+    new "Она почувствовала, как он занял позицию за её спиной, а его большие руки обхватили её тонкую талию."
 
     old "Sarah could feel how wet she already was."
-    new "Сара чувствовала, насколько она уже была влажной."
+    new "Сара чувствовала, насколько влажной она уже была."
 
     old "Then he pressed the tip of his cock up between her legs."
-    new "Затем он прижал кончик своего члена между её ног."
+    new "Затем он прижал кончик своего члена к промежности между её ногами."
 
     old "Sarah moaned, unable to restrain herself at the sudden touch."
     new "Сара застонала, не в силах сдержаться от внезапного прикосновения."
 
     old "He was eager, but was eager too."
-    new "Он был нетерпелив, но она — тоже."
+    new "Он был полон желания, но и она была не менее жаждуща."
 
     old "She felt him slide into her with little resistance."
-    new "Она почувствовала, как он скользнул в неё с лёгкостью."
+    new "Она почувствовала, как он с лёгкостью проник в неё."
 
     old "The size of him, she had thus far only seen, she could now feel every inch."
-    new "Его размер — который она до этого лишь видела — теперь она чувствовала каждым дюймом."
+    new "Его размер — до этого она видела его лишь на глаз, но теперь могла ощутить каждый дюйм."
 
     old "She cried out as he drove himself deeper inside of her. The size of him pressing up against her insides."
-    new "Она вскрикнула, когда он вошёл в неё глубже. Его размер давил на неё изнутри."
+    new "Она вскрикнула, когда он вошёл в неё ещё глубже. Его размеры давили на её внутренние органы."
 
     old "As his grip tightened on her waist, she could feel him begin to slowly thrust."
-    new "Когда его хватка на её талии усилилась, она почувствовала, как он начал медленно двигаться."
+    new "Когда его хватка на её талии усилилась, она почувствовала, как он начал медленно толкаться."
 
     old "Despite the years, it all came back to him by instinct."
     new "Несмотря на годы, всё вернулось к нему инстинктивно."
 
     old "As the pleasure build, she could his eager hands exploring her body still."
-    new "По мере нарастания удовольствия она чувствовала, как его нетерпеливые руки всё ещё исследуют её тело."
+    new "По мере нарастания наслаждения она ощущала, как его нетерпеливые руки продолжают исследовать её тело."
 
     old "Seizing her waist, gripping her ass and running along the spine of her back."
-    new "Сжимая её талию, хватая её зад и проводя вдоль позвоночника."
+    new "Схватив её за талию, он обхватил ягодицы и провёл руками вдоль позвоночника."
 
     old "Every small touch, as if to remind himself that she was real."
-    new "Каждое маленькое прикосновение, словно чтобы напомнить себе, что она реальна."
+    new "Каждое лёгкое прикосновение, словно он хотел напомнить себе, что она реальна."
 
     old "And Sarah moaned to every touch, both for herself and for him."
-    new "И Сара стонала от каждого прикосновения — и за себя, и за него."
+    new "И Сара стонала при каждом прикосновении — и сама для себя, и ради него."
 
     old "She felt small beneath him, yet his every touch reminded her only of how safe he made her feel."
-    new "Она чувствовала себя маленькой под ним, но каждое его прикосновение лишь напоминало ей, как безопасно она с ним себя чувствует."
+    new "Она чувствовала себя маленькой под ним, однако каждое его прикосновение напоминало ей лишь о том, насколько безопасно он её делал."
 
     old "Suddenly, his pace quickened."
     new "Внезапно его темп ускорился."
 
     old "She felt his fingers digging into her skin, gripping onto her."
-    new "Она почувствовала, как его пальцы впиваются в её кожу, сжимая её."
+    new "Она чувствовала, как его пальцы впиваются в её кожу, крепко сжимая её."
 
     old "He swelled up inside of her and felt his seed pouring into her."
-    new "Он разбух внутри неё, и она почувствовала, как его семя изливается в неё."
+    new "Он вздулся внутри неё и почувствовал, как его семя изливается в неё."
 
     old "She heard him groan loudly as he finished."
-    new "Она услышала, как он громко застонал, кончая."
+    new "Она услышала, как он громко застонал, когда закончил."
 
     old "Her body rocked from the last of his thrust, drawing out what final pleasures there were to be had."
-    new "Её тело качнулось от последнего толчка, извлекая последние остатки удовольствия."
+    new "Её тело содрогнулось от последнего его толчка, извлекая последние оставшиеся удовольствия."
+
+    old "I'm sorry..."
+    new "Прости..."
 
     old "His apology came quickly, as he was still inside of her."
-    new "Его извинения последовали быстро, пока он всё ещё был внутри неё."
+    new "Его извинения последовали быстро — он всё ещё был внутри неё."
 
     old "Sarah began to laugh."
     new "Сара начала смеяться."
 
     old "No, don't be."
-    new "Нет, не надо."
+    new "Нет, не будь таким."
 
     old "I should have lasted longer but I..."
     new "Я должен был продержаться дольше, но я..."
 
     old "Stop worrying about it."
-    new "Хватит переживать об этом."
+    new "Хватит об этом беспокоиться."
 
     old "Sarah felt him pull out of her and fall down into the grass."
-    new "Сара почувствовала, как он вышел из неё и упал в траву."
+    new "Сара почувствовала, как он вытащил себя из неё и рухнул в траву."
 
     old "She turned around and crawled on top of him, laying on his chest."
-    new "Она развернулась и заползла на него сверху, ложась на его грудь."
+    new "Она обернулась и заползла к нему сверху, улегшись на его грудь."
 
     old "She could feel his heart race. His chest rising and falling with each breath."
-    new "Она чувствовала, как колотится его сердце. Его грудь вздымалась и опускалась с каждым вздохом."
+    new "Она чувствовала, как бьётся его сердце. Его грудь поднималась и опускалась с каждым вдохом."
 
     old "After so many years, I think I should have expected that you wouldn't last long."
-    new "После стольких лет, думаю, я должна была ожидать, что ты не продержишься долго."
+    new "После стольких лет я думаю, что должна была ожидать, что ты долго не продержишься."
 
     old "Sarah laughed as she rested her head on his chest, hearing the beating of his heart."
-    new "Сара рассмеялась, положив голову ему на грудь и слушая биение его сердца."
+    new "Сара рассмеялась, положив голову ему на грудь и услышав стук его сердца."
 
     old "If you want to make it up to me, then make it up to me next time."
-    new "Если хочешь загладить вину, загладь её в следующий раз."
+    new "Если хочешь искупить свою вину передо мной, то сделай это в следующий раз."
 
     old "She saw Garret look down at her."
     new "Она увидела, как Гаррет посмотрел на неё сверху вниз."
@@ -593,32 +607,31 @@ translate ru strings:
     new "В следующий раз?"
 
     old "Well, I think you owe me now. It's only fair."
-    new "Ну, я думаю, ты теперь мне должен. Это только справедливо."
+    new "Ну, думаю, теперь ты мне должен. Это же справедливо."
 
     old "She smiled as she looked at him."
     new "Она улыбнулась, глядя на него."
 
     old "And maybe we can work on that stamina of yours together."
-    new "И, может, мы вместе поработаем над твоей выносливостью."
+    new "И, может быть, мы сможем вместе поработать над твоей выносливостью."
 
     old "Resting atop him, in the aftermath of their sex, the warm air of the fire, they could each be blissfully quiet."
-    new "Лежа на нём, после их близости, в тепле костра, они могли блаженно молчать."
+    new "Лежа на нём после их секса, они вдвоём наслаждались тёплым воздухом от огня и блаженным молчанием."
 
     old "At some point that neither could remember, peace made way for sleep."
-    new "В какой-то момент, которого никто из них не запомнил, покой уступил место сну."
+    new "В какой-то момент, о котором никто из них не помнил, мир уступил место сну."
 
     old "Best we try to get some sleep now. We have a long day ahead."
-    new "Лучше нам сейчас попытаться поспать. Впереди долгий день."
+    new "Нам лучше попытаться поспать сейчас. Впереди нас ждёт долгий день."
 
     old "Sarah fell back, head resting against the backpack, swiftly dreaming."
-    new "Сара откинулась назад, прислонившись головой к рюкзаку, и быстро погрузилась в сон."
+    new "Сара откинулась назад, опустив голову на рюкзак, и быстро погрузилась в сон."
 
     old "Perhaps if she had been alone, she would have taken off her armor for the night."
-    new "Возможно, если бы она была одна, она сняла бы броню на ночь."
+    new "Возможно, будь она одна, она бы сняла доспехи на ночь."
 
     old "But in truth, she barely knew Garret."
-    new "Но по правде, она едва знала Гаррета."
+    new "Но по правде говоря, она едва знала Гаррета."
 
     old "She'd be better off getting a good night's sleep."
-    new "Лучше ей как следует выспаться."
-
+    new "Ей бы лучше хорошенько выспаться."

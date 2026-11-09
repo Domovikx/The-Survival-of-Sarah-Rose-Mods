@@ -9,14 +9,8 @@ translate ko strings:
     old "Say you don't trust the spirit"
     new "신을 믿지 않는다고 말해"
 
-    old "A few patrons were seated by their own tables, occupied in their own conversations"
-    new "몇몇 손님은 자신의 테이블에 앉아各自的 대화에 몰두하고 있었다"
-
     old "Do what he wants"
     new "그의 뜻대로 하라"
-
-    old "A good meal, wasted on her."
-    new "좋은 음식, 그녀에게 낭비된 것."
 
     old "Convince Alaric"
     new "알라릭을 설득하기"

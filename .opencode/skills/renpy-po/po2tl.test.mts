@@ -7,7 +7,7 @@ import { test } from "node:test";
 
 import { parsePo } from "./po_core.mts";
 import { PotIndex } from "./pot_resolve.mts";
-import { buildTlFiles } from "./po2tl.mts";
+import { buildTlFiles, isDemoScope } from "./po2tl.mts";
 
 const POT = `msgid ""
 msgstr ""
@@ -126,4 +126,28 @@ test("детерминизм: повторный сбор даёт тот же �
     again.map((f) => f.body),
     files.map((f) => f.body),
   );
+});
+
+test("isDemoScope: menu/ui/имена + start + Prologue входят, прочее — нет", () => {
+  assert.equal(isDemoScope("menu", null), true);
+  assert.equal(isDemoScope("ui", null), true);
+  assert.equal(isDemoScope("speaker-name", null), true);
+  // Prologue-строка из фикстуры входит, Other-строка — нет
+  assert.equal(isDemoScope("speaker:Sarah", pot.resolve("speaker:Sarah", "Line one\nline two")), true);
+  assert.equal(isDemoScope("speaker:Narrator", pot.resolve("speaker:Narrator", "Drift line")), false);
+});
+
+test("isDemoScope: сцены-крючки до первого выбора входят (политика D)", () => {
+  const meta = (scene: string) => ({
+    uid: "",
+    arc: "StoryBeginnings",
+    scene,
+    emotion: null,
+    category: "dialogue",
+    speaker: "X",
+  });
+  assert.equal(isDemoScope("speaker:Sarah", meta("DayOfTheFuneral")), true);
+  assert.equal(isDemoScope("speaker:Sarah", meta("MeetingOnTheBattlements")), true);
+  assert.equal(isDemoScope("speaker:Sarah", meta("ChooseThePath")), true);
+  assert.equal(isDemoScope("speaker:Sarah", meta("TheInsidePathBegins")), false); // после выбора — не демо
 });

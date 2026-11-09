@@ -1,6 +1,5 @@
 # -*- encoding: utf-8 -*-
 # Arc: UnionKingdom | Scene: UnionKingdom5
-# Source: C:\Program Files (x86)\Steam\steamapps\common\The Survival of Sarah Rose\game\script.rpy
 
 translate ru strings:
 
@@ -8,166 +7,166 @@ translate ru strings:
     new "Сара прибыла на место сбора."
 
     old "All through the courtyard, there was a busy and anxious buzzing of people."
-    new "По всему двору слышался деловой и тревожный гул людей."
+    new "По всему двору слышалось суетливое и тревожное гудение людей."
 
     old "Soldiers, servants, each hard at work preparing for her departure for Normandi to attend the Union Council."
-    new "Солдаты, слуги — каждый усердно готовился к её отъезду в Норманди для участия в Союзном Совете."
+    new "Солдаты, слуги — все усердно трудились, готовясь к её отъезду в Нормандию для участия в заседании Совета Союза."
 
     old "A few days back, the royal messenger had been send back, carrying with him the message of her acceptance."
-    new "Несколько дней назад королевский гонец был отправлен обратно с известием о её согласии."
+    new "Несколько дней назад королевский гонец вернулся с сообщением о том, что она приняла предложение."
 
     old "They would know she was coming. Whatever this would prove to be, it had been set in motion."
-    new "Они будут знать, что она едет. Чем бы это ни оказалось, оно было приведено в движение."
+    new "Они знали бы, что она приедет. Чем бы это ни оказалось, процесс уже был запущен."
 
     old "Sarah found herself almost hoping for an excuse. Something to delay her departure."
-    new "Сара почти надеялась на предлог. Что-то, чтобы отсрочить её отъезд."
+    new "Сара обнаружила, что почти надеялась найти предлог. Что-нибудь, чтобы отсрочить её отъезд."
 
     old "From the corner of her eyes, she saw Varga appear."
-    new "Краем глаза она увидела появившегося Варгу."
+    new "Краем глаза она заметила появление Варги."
 
     old "Her husband."
-    new "Её мужа."
+    new "Её муж."
 
     old "Stoic as always, though she knew to read his face well enough to see the soft cracks."
-    new "Невозмутимый, как всегда, хотя она умела достаточно хорошо читать его лицо, чтобы замечать едва заметные трещины."
+    new "Спокойный, как всегда, хотя она и умела читать его лицо достаточно хорошо, чтобы заметить в нём едва уловимые трещины."
 
     old "I see they are nearly ready."
-    new "Вижу, они почти готовы."
+    new "Я вижу, они почти готовы."
 
     old "Stating facts rather than emotion. She loved his grounded emotions, almost as much as she hated it."
-    new "Он констатирует факты, а не эмоции. Она любила его приземлённые эмоции почти так же сильно, как ненавидела это."
+    new "Она любила его сдержанность — почти так же сильно, как и ненавидела её."
 
     old "Yes, it won't be long now before the captain of the guard declares we are ready."
-    new "Да, теперь уже недолго до того, как капитан стражи объявит, что мы готовы."
+    new "Да, скоро уже не пройдёт и минуты, как капитан стражи объявит, что мы готовы."
 
     old "Sarah saw more crates of supplies being carried onto the wagons."
-    new "Сара видела, как на повозки грузили ещё ящики с припасами."
+    new "Сара видела, как на повозки загружают ещё больше ящиков с припасами."
 
     old "The trip to Normandi was not impossible far, little over a week, but with an entourage like this they would require provisions."
-    new "Поездка в Норманди была не такой уж далёкой, чуть больше недели, но с такой свитой требовались припасы."
+    new "Поездка в Нормандию была не то чтобы невероятно далекой — чуть больше недели, но с таким отрядом им понадобятся припасы."
 
     old "I told these two we could wave you out from atop the ramparts, but they insisted to see you in person."
     new "Я сказал этим двоим, что мы можем помахать тебе с крепостных стен, но они настояли увидеть тебя лично."
 
     old "Sarah could see her son and daughter, clinging to their father's legs, hiding behind him."
-    new "Сара видела своего сына и дочь, цепляющихся за ноги отца, прячущихся за ним."
+    new "Сара видела своего сына и дочь: они вцепились в ноги отца и прятались за его спиной."
 
     old "Sarah kneeled down and smiled."
     new "Сара опустилась на колени и улыбнулась."
 
     old "Is that so?"
-    new "Вот как?"
+    new "Разве так?"
 
     old "You know I'll be back in less than a month, right?"
-    new "Знаете, я вернусь меньше чем через месяц, верно?"
+    new "Ты же знаешь, что я вернусь меньше чем через месяц, да?"
 
     old "Sarah could see Miriam, her daughter, begin to sob."
-    new "Сара видела, как Мириам, её дочь, начала всхлипывать."
+    new "Сара видела, как Мириам, её дочь, начала рыдать."
 
     old "Ooh, hey, don't cry. Come here."
-    new "Ой, не плачь. Иди сюда."
+    new "Ох, эй, не плачь. Иди сюда."
 
     old "Sarah opened her arms and Miriam jumped into the embrace."
-    new "Сара раскрыла объятия, и Мириам прыгнула в них."
+    new "Сара раскинула руки, и Мириам бросилась ей в объятия."
 
     old "Orwen, her son, older by a few years than his sister and pretending to be stronger than he was, held back for a moment."
-    new "Орвен, её сын, на несколько лет старше сестры и притворяющийся сильнее, чем был, мгновение колебался."
+    new "Оруэн, её сын, который был на несколько лет старше сестры и притворялся сильнее, чем был на самом деле, на мгновение остановился."
 
     old "You too, Orwen, come here."
-    new "Ты тоже, Орвен, иди сюда."
+    new "Ты тоже, Оруэн, иди сюда."
 
     old "At his mother's invitation, he jumped into her arms."
-    new "По приглашению матери он прыгнул в её объятия."
+    new "По приглашению матери он бросился ей в объятия."
 
     old "For a while, Sarah endured their sobbing."
-    new "Некоторое время Сара терпела их всхлипывания."
+    new "Некоторое время Сара терпела их рыдания."
 
     old "Their father had left more then a few times, relating to his duties as Warmaster."
-    new "Их отец уезжал довольно часто по своим обязанностям Военного Магистра."
+    new "Их отец уходил не раз — это было связано с его обязанностями как Повелителя Войны."
 
     old "Over time, they had come to get used to that."
     new "Со временем они к этому привыкли."
 
     old "But their mother leaving was a new fact, and like all new things, the children were quickly uneased by them."
-    new "Но отъезд матери был чем-то небывалым, и, как и всё новое, дети быстро забеспокоились."
+    new "Но уход их матери стал для них новой реальностью, и, как и всё новое, он быстро привёл детей в смятение."
 
     old "Slowly, the sobbing quieted and Sarah released them both from her arms."
-    new "Медленно всхлипывания затихли, и Сара отпустила их обоих."
+    new "Постепенно рыдания утихли, и Сара отпустила их обоих из своих объятий."
 
     old "There, now don't be too sad, alright?"
-    new "Ну вот, не грустите слишком сильно, хорошо?"
+    new "Вот, теперь не будь такими грустными, хорошо?"
 
     old "Dad is right here and he's not going anywhere. He'll keep you safe. And I'll be back before you know it, promise."
-    new "Папа здесь, и он никуда не денется. Он защитит вас. А я вернусь раньше, чем вы заметите, обещаю."
+    new "Папа прямо здесь, и он никуда не уйдёт. Он защитит тебя. А я вернусь раньше, чем ты успеешь заметить — обещаю."
 
     old "Is it dangerous?"
     new "Это опасно?"
 
     old "Sarah smiled, making sure not to show a moment of doubt."
-    new "Сара улыбнулась, стараясь не выдать ни мгновения сомнения."
+    new "Сара улыбнулась, стараясь не выдать мимолётное сомнение."
 
     old "No, I'm just going to visit my friend, Queen Maeiv. We're going to talk, and then I'll be home again."
-    new "Нет, я просто навещу мою подругу, королеву Мейв. Мы поговорим, и потом я снова буду дома."
+    new "Нет, я просто собираюсь навестить свою подругу, королеву Маив. Мы поговорим, а потом я снова буду дома."
 
     old "Talk about what?"
-    new "А о чём?"
+    new "О чём говорить?"
 
     old "Grown-up things, very boring. You want me to tell you?"
-    new "О взрослых вещах, очень скучно. Хотите, я расскажу?"
+    new "Взрослые дела — очень скучные. Хочешь, я тебе расскажу?"
 
     old "Hearing that the matters were in the realm of grown-ups, her daughter quickly shook her head, fearing to be bored."
-    new "Услышав, что дела касаются взрослых, дочь быстро покачала головой, боясь заскучать."
+    new "Услышав, что речь идёт о взрослых делах, её дочь быстро покачала головой, боясь заскучать."
 
     old "She turned to her son."
-    new "Она повернулась к сыну."
+    new "Она повернулась к своему сыну."
 
     old "Now Orwen."
-    new "Теперь Орвен."
+    new "Теперь Оруэн."
 
     old "He stood to attention, as if the world's smallest soldier."
-    new "Он встал по стойке смирно, словно самый маленький солдат в мире."
+    new "Он вытянулся во весь рост, как самый маленький солдат в мире."
 
     old "You promise to look out for your sister, and not give your father too much trouble?"
-    new "Обещаешь присматривать за сестрой и не доставлять отцу слишком много хлопот?"
+    new "Ты обещаешь заботиться о своей сестре и не доставлять отцу слишком много хлопот?"
 
     old "I promise!"
-    new "Обещаю!"
+    new "Я обещаю!"
 
     old "Sarah watched Varga reach down and tossle the boy's hair."
-    new "Сара наблюдала, как Варга наклонился и взъерошил мальчику волосы."
+    new "Сара смотрела, как Варга наклонился и взъерошил волосы мальчика."
 
     old "Hey, don't go making promises to your mom that you can't keep."
-    new "Эй, не давай маме обещаний, которые не сможешь сдержать."
+    new "Эй, не давай маме обещаний, которые и так не сможешь сдержать."
 
     old "You're always trouble."
-    new "Ты всегда доставляешь хлопоты."
+    new "Ты вечно доставляешь неприятности."
 
     old "Sarah watched as Orwen jumped up and grabbed for his father, who quickly pulled him into a wrestling match that the boy had no chance of winning."
-    new "Сара смотрела, как Орвен вскочил и схватился за отца, который быстро втянул его в борьбу, в которой у мальчика не было шансов победить."
+    new "Сара наблюдала, как Оруэн подпрыгнул и схватился за отца, который тут же потянул его в борьбу, которую мальчик не имел ни малейшего шанса выиграть."
 
     old "Watching like this, she saw her family and all she left behind."
-    new "Наблюдая так, она видела свою семью и всё, что оставляла позади."
+    new "Наблюдая за всем этим, она увидела свою семью и всё, что оставила позади."
 
     old "More than ever, Sarah now wished for her own safe return."
-    new "Сильнее, чем когда-либо, Сара желала благополучно вернуться домой."
+    new "Больше, чем когда-либо, Сара теперь желала собственной безопасной дороги назад."
 
     old "As Varga dropped Orwen back down and held Miriam aside, the two had the briefest moment of privacy."
-    new "Когда Варга опустил Орвена и отвёл Мириам в сторону, у них была короткая минута уединения."
+    new "Пока Варга укладывал Оруэна обратно на землю и отодвигал Мириам в сторону, у них двоих возникла кратчайшая минута уединения."
 
     old "Promise me you won't do anything risky."
-    new "Обещай мне, что не сделаешь ничего рискованного."
+    new "Обещай мне, что не будешь делать ничего рискованного."
 
     old "I thought you loved me for being risky."
-    new "Я думала, ты любишь меня за мою склонность к риску."
+    new "Я думала, ты любишь меня за то, что я рискованная."
 
     old "I always knew that hoping you to change would be a fools effort."
-    new "Я всегда знал, что надеяться изменить тебя было бы глупой затеей."
+    new "Я всегда знал, что надеяться на твои перемены — это было глупое занятие."
 
     old "But please..."
     new "Но, пожалуйста..."
 
     old "His voice was soft, and contained in it, his pleading for a promise."
-    new "Его голос был мягким, и в нём содержалась его мольба об обещании."
+    new "Его голос был нежным и нес в себе мольбу об обещании."
 
     old "I will come back to you. All of you."
     new "Я вернусь к тебе. Ко всем вам."
@@ -176,169 +175,175 @@ translate ru strings:
     new "Её глаза скользнули к их детям."
 
     old "If only because these two would be the end of you without me."
-    new "Хотя бы потому, что эти двое погубили бы тебя без меня."
+    new "Даже если только потому, что эти двое стали бы для тебя концом без меня."
 
     old "Her husband smiled and they kissed and embraced."
     new "Её муж улыбнулся, и они поцеловались и обнялись."
 
     old "Sarah waved as Varga seized their children and carried them off, allowing her to focus back on her impending departure."
-    new "Сара помахала, когда Варга схватил детей и унёс их, позволяя ей снова сосредоточиться на предстоящем отъезде."
+    new "Сара помашала рукой, пока Варга схватил их детей и унёс их прочь, позволив ей вновь сосредоточиться на предстоящем отъезде."
 
     old "Her Warmaster."
-    new "Её Военный Магистр."
+    new "Её Вормастер."
 
     old "Stoic as always."
-    new "Невозмутимый, как всегда."
+    new "Спокойная, как всегда."
 
     old "I see you're almost ready."
-    new "Вижу, ты почти готова."
+    new "Я вижу, ты почти готова."
 
     old "Won't be long now before the captain of the guard declares that we are ready to leave."
-    new "Уже недолго до того, как капитан стражи объявит, что мы готовы к отъезду."
+    new "Не пройдёт и минуты, как капитан стражи объявит, что мы готовы отправляться."
 
     old "Varga inspected the wagons from a distance."
-    new "Варга осмотрел повозки издалека."
+    new "Варга осматривал повозки издалека."
 
     old "They're all capable men, I've made sure of it."
-    new "Все они способные люди, я убедился в этом."
+    new "Это всё способные люди — я позаботился об этом."
 
     old "I would expect nothing less of my Warmster."
-    new "Я бы и не ожидала меньшего от моего Военного Магистра."
+    new "Я бы и не ожидала ничего меньшего от своего Вормстера."
 
     old "He looked proud at the compliment."
-    new "Он казался польщённым комплиментом."
+    new "Он с гордостью воспринял этот комплимент."
 
     old "Sarah...if you ask, I can still come along."
-    new "Сара... если ты попросишь, я всё ещё могу поехать."
+    new "Сара... если ты спросишь, я всё ещё могу пойти с тобой."
 
     old "Your offer is kind, but you will be needed here."
     new "Твоё предложение любезно, но ты будешь нужен здесь."
 
     old "Trust that you are serving me best in your current station."
-    new "Верь, что ты лучше всего служишь мне на своём текущем посту."
+    new "Поверь, что ты служишь мне лучше всего на своей нынешней должности."
+
+    old "I understand."
+    new "Я понимаю."
 
     old "But if they so much as harm a hair on your head..."
-    new "Но если они посмеют тронуть хоть волос на твоей голове..."
+    new "Но если они хотя бы тронут хоть один волос на твоей голове..."
 
     old "Then war."
     new "Тогда война."
 
     old "He paused for a moment, then nodded sternly."
-    new "Он помедлил мгновение, затем сурово кивнул."
+    new "Он на мгновение замолчал, а затем строго кивнул."
+
+    old "Yes."
+    new "Да."
 
     old "A silence lingered a moment longer."
-    new "Тишина задержалась ещё на мгновение."
+    new "Тишина задержалась на мгновение дольше."
 
     old "Sarah prayed that it would not come to that."
     new "Сара молилась, чтобы до этого не дошло."
 
     old "Thank you, Varga."
-    new "Спасибо, Варга."
+    new "Спасибо тебе, Варга."
 
     old "Thank you for everything you've done in supporting me."
-    new "Спасибо за всё, что ты сделал, поддерживая меня."
+    new "Спасибо тебе за всё, что ты сделал, поддерживая меня."
 
     old "I could never have asked for a more loyal friend."
-    new "Я не могла бы просить о более верном друге."
+    new "Я никогда не могла бы попросить о более верном друге."
 
     old "And I could ask for no greater praise. All I ask is the same any of us ask. Come back to us."
-    new "И я не мог бы просить о большей похвале. Всё, о чём я прошу, — то же, о чём просит любой из нас. Вернись к нам."
+    new "И я не могу пожелать себе большей похвалы. Всё, чего я прошу, — это того же самого, чего просим и мы. Вернись к нам."
 
     old "Sarah placed a hand over her heart."
-    new "Сара приложила руку к сердцу."
+    new "Сара прижала руку к сердцу."
 
     old "I swear I will."
-    new "Клянусь, что вернусь."
+    new "Клянусь, я это сделаю."
 
     old "With it, the two said the last of their goodbyes and Sarah watched Varga depart."
-    new "С этим они сказали последние слова прощания, и Сара смотрела, как Варга уходит."
+    new "С этим они обменялись последними словами прощания, а Сара проводила Варгу взглядом."
 
     old "Sarah turned as she suddenly saw her brother approach."
-    new "Сара обернулась, когда внезапно увидела приближающегося брата."
+    new "Сара обернулась, внезапно увидев своего брата."
 
     old "Aah, time out of your many books to come and give your dear sister a goodbye?"
-    new "Ах, выкроил время среди своих многочисленных книг, чтобы попрощаться с дорогой сестрой?"
+    new "Ах, так у тебя нашлось время между твоими бесчисленными книгами, чтобы прийти и попрощаться со своей дорогой сестрой?"
 
     old "All these people are worried about you."
-    new "Все эти люди волнуются о тебе."
+    new "Все эти люди беспокоятся о тебе."
 
     old "I might be the only one who knows that it's Queen Maeiv who should be worried."
-    new "Я, возможно, единственный, кто знает, что это королеве Мейв стоит волноваться."
+    new "Возможно, я единственный, кто знает, что именно королева Маив должна беспокоиться."
 
     old "Sarah gestured at backpack that rested near her brother's feet."
-    new "Сара указала на рюкзак, стоявший у ног брата."
+    new "Сара указала на рюкзак, лежавший у ног её брата."
 
     old "What's that?"
     new "Что это?"
 
     old "My gift. Or as close as one as I could manage."
-    new "Мой подарок. Вернее, настолько близко к этому, насколько я смог."
+    new "Это мой подарок. Или хотя бы то, насколько я смог подойти к нему."
 
     old "It's all the books that I could find on recent Normandi history."
-    new "Это все книги, которые я смог найти по новейшей истории Норманди."
+    new "Это все книги, которые я смог найти о недавней истории Нормандии."
 
     old "Knowledge is its own form of power."
-    new "Знание — это своя собственная форма власти."
+    new "Знания — это сама по себе форма власти."
 
     old "Thank you, Thomas. It's very kind."
-    new "Спасибо, Томас. Это очень мило."
+    new "Спасибо, Томас. Это очень мило с твоей стороны."
 
     old "She motioned for one of the servants to carry it onto the wagons."
-    new "Она сделала знак одному из слуг отнести это на повозки."
+    new "Она дала знак одному из слуг, чтобы тот занёс их на повозки."
 
     old "I'll promise to read as much of it as I can."
-    new "Обещаю прочитать столько, сколько смогу."
+    new "Я обещаю прочитать из него столько, сколько смогу."
 
     old "At least I'll have something to do on the road there."
-    new "По крайней мере, будет чем заняться в дороге."
+    new "По крайней мере, у меня будет чем заняться в дороге."
 
     old "She saw Thomas study the wagons."
     new "Она увидела, как Томас изучал повозки."
 
     old "You won't forget to look out for yourself while I'm gone?"
-    new "Ты не забудешь заботиться о себе, пока меня не будет?"
+    new "Ты ведь не забудешь позаботиться о себе, пока меня не будет?"
 
     old "Her brother seemed flustered."
-    new "Её брат казался смущённым."
+    new "Ее брат, казалось, смутился."
 
     old "What are you talking about?"
     new "О чём ты говоришь?"
 
     old "I've had to pick you off the library floor more than a few times."
-    new "Мне приходилось поднимать тебя с пола библиотеки уже не раз."
+    new "Мне приходилось не раз поднимать тебя с пола библиотеки."
 
     old "Oh, that..."
-    new "Ах, это..."
+    new "Ох, это..."
 
     old "Yes, that! I'm not asking you to change, Thomas, but you also can't live like a recluse."
-    new "Да, это! Я не прошу тебя меняться, Томас, но ты не можешь жить как затворник."
+    new "Да, именно так! Я не прошу тебя меняться, Томас, но ты ведь тоже не можешь жить как отшельник."
 
     old "You have people who love you. More than just me."
-    new "У тебя есть люди, которые любят тебя. Не только я."
+    new "У тебя есть люди, которые тебя любят. И не только я."
 
     old "I know, I'll...do my best."
-    new "Знаю, я... постараюсь."
+    new "Я знаю... я постараюсь."
 
     old "I guess that's about all I can ask of you."
-    new "Думаю, это всё, что я могу у тебя попросить."
+    new "Полагаю, это всё, о чём я могу тебя просить."
 
     old "She suddenly poked her brother underneath his ribs."
     new "Она внезапно ткнула брата под рёбра."
 
     old "And go meet with some of those girls from the party. I've had their mothers complain you won't even meet with them."
-    new "И сходи на встречу с некоторыми из тех девушек с вечеринки. Мне их матери жаловались, что ты даже не хочешь с ними встречаться."
+    new "И пойдёшь встречаться с некоторыми из тех девушек с вечеринки? Их матери уже жаловались, что ты даже не хочешь с ними видеться."
 
     old "What? All I'm asking is for you to meet with them. It will do you good."
-    new "Что? Я всего лишь прошу тебя встретиться с ними. Это пойдёт тебе на пользу."
+    new "Что? Всё, о чём я прошу, — это чтобы ты с ними встретился. Это тебе только на пользу."
 
     old "Waste my time on a stroll in the gardens?"
-    new "Тратить моё время на прогулку в садах?"
+    new "Потратить моё время на прогулку по саду?"
 
     old "The sun alone will do you good."
-    new "Даже просто солнце пойдёт тебе на пользу."
+    new "Один лишь солнечный свет тебе пойдёт на пользу."
 
     old "Besides, some of these girls are more like you than you'd think."
-    new "Кроме того, некоторые из этих девушек больше похожи на тебя, чем ты думаешь."
+    new "К тому же, некоторые из этих девушек похожи на тебя гораздо больше, чем ты думаешь."
 
     old "According to her mother, Lady Arison spends nearly as much time in the library as you do."
     new "По словам её матери, леди Арисон проводит в библиотеке почти столько же времени, сколько и ты."
@@ -347,10 +352,10 @@ translate ru strings:
     new "Томас закатил глаза."
 
     old "You can go and...I don't know, sit and read in silence next to each other."
-    new "Вы могли бы пойти и... я не знаю, сидеть и читать в тишине рядом друг с другом."
+    new "Можешь пойти и... я не знаю, сидеть и молча читать книгу рядом друг с другом."
 
     old "That actually doesn't sound as bad as you make it out to be."
-    new "На самом деле это звучит не так плохо, как ты это представляешь."
+    new "На самом деле это звучит не так уж и плохо, как ты это представляешь."
 
     old "Promise me you'll try?"
     new "Обещай мне, что попробуешь?"
@@ -359,203 +364,202 @@ translate ru strings:
     new "Томас вздохнул и кивнул."
 
     old "Yes, Sarah. I promise. But if you don't make it back home, I promise I'll marry to the worst of them all, so you'd better come home."
-    new "Да, Сара. Обещаю. Но если ты не вернёшься домой, обещаю, что женюсь на худшей из них, так что лучше возвращайся."
+    new "Да, Сара. Я обещаю. Но если ты не вернёшься домой, я клянусь, что женюсь на самой ужасной из всех возможных женщин, так что тебе лучше вернуться."
 
     old "Sarah suddenly rushed forward and hugged her brother."
-    new "Сара внезапно бросилась вперёд и обняла брата."
+    new "Сара вдруг рванулась вперёд и обняла брата."
 
     old "She felt him slowly returning the hug, awkwardly."
-    new "Она почувствовала, как он медленно, неуклюже ответил на объятие."
+    new "Она почувствовала, как он медленно ответил на её объятие — неловко."
 
     old "The two siblings stood in embrace for a short while before they broke."
-    new "Брат и сестра стояли в объятиях недолго, прежде чем разомкнули их."
+    new "Два брата и сестра недолго стояли в объятиях, прежде чем разделились."
 
     old "Sarah looked at her brother."
-    new "Сара посмотрела на брата."
+    new "Сара посмотрела на своего брата."
 
     old "She truly hoped he'd be alright."
     new "Она искренне надеялась, что с ним всё будет в порядке."
 
     old "Sarah and Thomas exchanged the last of their words and Sarah watched as her brother turned and left."
-    new "Сара и Томас обменялись последними словами, и Сара смотрела, как брат повернулся и ушёл."
+    new "Сара и Томас обменялись последними словами, а затем Сара смотрела, как её брат повернулся и ушёл."
 
     old "Studying the wagons, Sarah could see that they were nearly ready for departure."
-    new "Осматривая повозки, Сара видела, что они почти готовы к отъезду."
+    new "Изучая повозки, Сара видела, что они были почти готовы к отъезду."
 
     old "She had put it all off as long as she could."
-    new "Она откладывала это так долго, как могла."
+    new "Она откладывала это как могла дольше."
 
     old "Looking around the walls of Castle Reinmeer, she tried to take it all in."
-    new "Оглядывая стены замка Рейнмир, она пыталась всё запомнить."
+    new "Оглядевшись по стенам замка Рейнмир, она попыталась всё это впитать."
 
     old "This place had been the center of her life for so many years now..."
-    new "Это место было центром её жизни уже так много лет..."
+    new "Это место так много лет было центром её жизни..."
 
     old "Leaving it felt almost alien, especially considering how many people she left behind."
-    new "Покидать его казалось почти непривычным, особенно учитывая, сколько людей она оставляла."
+    new "Оставление этого места казалось ей почти чуждым, особенно если учесть, сколько людей она оставила позади."
 
     old "But they would wait for her."
     new "Но они будут ждать её."
 
     old "And she would wait for the hour of her return, to see them all again."
-    new "И она будет ждать часа своего возвращения, чтобы увидеть их всех снова."
+    new "И она будет ждать часа своего возвращения, чтобы снова увидеть всех их."
 
     old "She committed herself to the thought, as if to will it into reality."
-    new "Она погрузилась в эту мысль, словно пытаясь заставить её сбыться."
+    new "Она полностью посвятила себя этой мысли, словно пытаясь воплотить её в реальность."
 
     old "Sarah saw Lily walk up to her."
-    new "Сара увидела, как Лили подходит к ней."
+    new "Сара увидела, как Лили подошла к ней."
 
     old "Nearly ready, I think."
-    new "Почти готовы, думаю."
+    new "Почти готова, думаю."
 
     old "Sarah nodded and smiled."
     new "Сара кивнула и улыбнулась."
 
     old "She was happy that Lily would join her."
-    new "Она была рада, что Лили присоединится к ней."
+    new "Она была счастлива, что Лили присоединится к ней."
 
     old "Perhaps even more just for the company than her skill with a blade."
-    new "Возможно, даже больше ради компании, чем её навыков владения мечом."
+    new "Возможно, даже скорее ради компании, чем из-за её умения обращаться с клинком."
 
     old "I'm glad you're here with me."
-    new "Я рада, что ты здесь, со мной."
+    new "Я рада, что ты здесь со мной."
 
     old "Sarah watched as Lily awkwardly tried to hide her own smile."
-    new "Сара смотрела, как Лили неловко пыталась скрыть свою улыбку."
+    new "Сара смотрела, как Лили неловко пыталась скрыть собственную улыбку."
 
     old "I'm just keeping my vow..."
     new "Я просто выполняю свою клятву..."
 
     old "Ah, the unquestionable honor of Lily Hightower, fear those who might besmirch it."
-    new "Ах, бесспорная честь Лили Хайтауэр, бойся тех, кто может её запятнать."
+    new "Ах, это неоспоримое достоинство Лили Хайтауэр — бойтесь тех, кто посмеет его осквернить."
 
     old "Hey, if you're gonna act like a-"
     new "Эй, если ты собираешься вести себя как —"
 
     old "A what? Mind what you call the ruler of this country."
-    new "Как кто? Следи за тем, как называешь правительницу этой страны."
+    new "Что за «что»? Осторожнее с тем, как называешь правительницу этой страны."
 
     old "She saw Lily grin."
     new "Она увидела, как Лили ухмыльнулась."
 
     old "Well...whatever I was going to call you, it has now slipped my mind."
-    new "Что ж... как бы я тебя ни собиралась назвать, это вылетело у меня из головы."
+    new "Ну... как бы я ни собиралась тебя назвать, теперь я уже забыла."
 
     old "That's what I thought."
-    new "То-то же."
+    new "Я так и думала."
 
     old "The two women laughed, breaking their pretend feud."
-    new "Две женщины рассмеялись, прекращая свою притворную ссору."
+    new "Обе женщины рассмеялись, положив конец своей притворной вражде."
 
     old "I think I'll have to talk to the captain about my seating."
-    new "Думаю, мне нужно поговорить с капитаном о моём месте."
+    new "Думаю, мне придётся поговорить с капитаном насчёт моего места."
 
     old "Your seating?"
     new "Твоём месте?"
 
     old "On the wagon, yeah."
-    new "На повозке, да."
+    new "В повозке, да."
 
     old "Oh Lily, please. You're riding with me in the main carriage."
-    new "О, Лили, пожалуйста. Ты поедешь со мной в главной карете."
+    new "Ох, Лили, прошу тебя. Ты будешь ездить со мной в главном вагоне."
 
     old "It's really no problem, I can-"
-    new "Это правда не проблема, я могу-"
+    new "Это правда не проблема, я могу—"
 
     old "Sarah threw up a hand and ended the discussion."
-    new "Сара подняла руку, закончив обсуждение."
+    new "Сара махнула рукой, прерывая разговор."
 
     old "Your my bodyguard, so you'll have to be close if anything happens, right?"
-    new "Ты мой телохранитель, так что должна быть рядом, если что-то случится, верно?"
+    new "Ты же моя охранница, так что тебе придётся быть близко, если что-то случится, верно?"
 
     old "Yeah, but-"
-    new "Да, но-"
+    new "Да, но..."
 
     old "Good. And the whole trip is more than a week."
-    new "Хорошо. А вся поездка займёт больше недели."
+    new "Хорошо. К тому же вся поездка длится больше недели."
 
     old "What else am I going to do, stare out the window? I need someone to talk to or I'll go mad."
-    new "Что мне ещё делать, смотреть в окно? Мне нужно с кем-то говорить, иначе я сойду с ума."
+    new "Что мне ещё делать — смотреть в окно? Мне нужно с кем-то поговорить, иначе я сойду с ума."
 
     old "What? Can't the soldiers make for conversation?"
-    new "Что? Разве солдаты не годятся для разговора?"
+    new "Что? Разве солдаты не могут быть хорошими собеседниками?"
 
     old "Oh, they're very good at their jobs, but their jobs don't require being great conversationalists."
-    new "О, они очень хороши в своей работе, но их работа не требует быть отличными собеседниками."
+    new "Ох, они очень хорошо справляются со своей работой, но от них не требуется быть отличными собеседниками."
 
     old "Alright then, I'll ride with you."
-    new "Ладно тогда, я поеду с тобой."
+    new "Ну ладно тогда, я поеду с тобой."
 
     old "For your protection, of course."
-    new "Для твоей защиты, конечно."
+    new "Конечно же, ради твоей безопасности."
 
     old "Of course."
     new "Конечно."
 
     old "Sarah watched as Lily was called away by one of the soldiers, attending to some task on one of the wagons."
-    new "Сара смотрела, как Лили отозвал один из солдат для выполнения какого-то задания с одной из повозок."
+    new "Сара смотрела, как Лили отозвал один из солдат, чтобы та выполнила какое-то задание у одной из повозок."
 
     old "Looking out over all the business, it all struck Sarah as somewhat of a beehive."
-    new "Оглядывая всю эту суету, Сара подумала, что это напоминает улей."
+    new "Смотря на всю эту суету, Сара видела в ней что-то вроде улья."
 
     old "A busy, chaotic, almost maddening scene."
-    new "Оживлённое, хаотичное, почти безумное зрелище."
+    new "Суетная, хаотичная, почти сводящая с ума сцена."
 
     old "And yet..."
     new "И всё же..."
 
     old "Among it all, some kind of order, even if the individual elements of that order couldn't see it, or even realize it."
-    new "Среди всего этого — какой-то порядок, даже если отдельные элементы этого порядка не могли его видеть или даже осознавать."
+    new "Среди всего этого существовал своего рода порядок — пусть даже отдельные его элементы не могли его разглядеть или даже осознать."
 
     old "She smiled as the last of the preparations were carried out."
-    new "Она улыбнулась, когда последние приготовления были завершены."
+    new "Она улыбнулась, когда завершались последние приготовления."
 
     old "Then, as she had hoped yet equally feared, the captain of the guard called out."
-    new "Затем, как она и надеялась, и в равной мере боялась, капитан стражи выкрикнул."
+    new "Тогда, как она и надеялась, но в то же время и боялась, капитан стражи крикнул."
 
     old "Ready to depart at your order!"
-    new "Готовы к отбытию по вашему приказу!"
+    new "Готов отправиться по вашему приказу!"
 
     old "All eyes fell on her as the courtyard went quiet."
-    new "Все взгляды упали на неё, когда двор затих."
+    new "Все взгляды устремились на неё, когда во дворе воцарилась тишина."
 
     old "Sarah walked towards the carriage. Each step felt like one closer to her doom."
-    new "Сара направилась к карете. Каждый шаг казался шагом ближе к её гибели."
+    new "Сара пошла к повозке. Каждый шаг ощущался как ещё один шаг навстречу своей гибели."
 
     old "She shook her head."
     new "Она покачала головой."
 
     old "She needed to exhude strength, now more than ever."
-    new "Ей нужно было излучать силу, сейчас больше, чем когда-либо."
+    new "Ей нужно было излучать силу — сейчас больше, чем когда-либо."
 
     old "Sarah stepped into the carriage."
-    new "Сара села в карету."
+    new "Сара вошла в карету."
 
     old "When the door fell shut, she looked out over the sea of faces."
-    new "Когда дверь закрылась, она посмотрела на море лиц."
+    new "Когда дверь захлопнулась, она взглянула на море лиц."
 
     old "It had gone quiet, not so segregated from the outside world."
-    new "Стало тихо, но она не чувствовала себя отрезанной от внешнего мира."
+    new "Стало тихо — уже не так отрезанно от внешнего мира."
 
     old "She saw some of the servants clasp their hands in prayer."
-    new "Она видела, как некоторые слуги сжали руки в молитве."
+    new "Она увидела, как некоторые слуги сложили руки в молитве."
 
     old "The soldiers saluted."
     new "Солдаты отдали честь."
 
     old "Then, the carts shook and began to move."
-    new "Затем повозки вздрогнули и начали двигаться."
+    new "Затем повозки затряслись и пришли в движение."
 
     old "At first slow, but quickly gathering speed."
-    new "Сначала медленно, но быстро набирая скорость."
+    new "Сначала медленно, но вскоре набрав скорость."
 
     old "The world she knew and had grown up in, dissapeared behind her."
-    new "Мир, который она знала и в котором выросла, исчез позади неё."
+    new "Мир, который она знала и в котором выросла, исчез за её спиной."
 
     old "From castle to city, to the city gates, and then out onto the open road."
-    new "От замка к городу, к городским воротам, а затем на открытую дорогу."
+    new "От замка до города, до городских ворот, а затем — на открытую дорогу."
 
     old "Sarah watched the world transform as she was carried off towards an uncertain place."
-    new "Сара смотрела, как мир преображается, пока её несли в неизвестность."
-
+    new "Сара смотрела, как мир преображается, пока её уносило в неведомое место."

@@ -1,453 +1,469 @@
 # -*- encoding: utf-8 -*-
 # Arc: MagePath | Scene: MagePath5
-# Source: C:\Program Files (x86)\Steam\steamapps\common\The Survival of Sarah Rose\game\script.rpy
 
 translate ru strings:
 
     old "Months passed and seasons turned."
-    new "Месяцы проходили, времена года сменялись."
+    new "Прошли месяцы, сменились времена года."
 
     old "Sarah had lost all relation to time, perhaps even the world outside of the wizard's house."
-    new "Сара потеряла всякое ощущение времени, и, возможно, даже мира за пределами дома волшебника."
+    new "Сара утратила всякое чувство времени — а может, даже и самого мира за пределами дома волшебника."
 
     old "There was only the study, and her endless lessons."
-    new "Был только кабинет и её бесконечные уроки."
+    new "Оставались только кабинет и её бесконечные уроки."
 
     old "Ever since she had seen her home country again, she had become posessed with a purpose."
-    new "С тех пор как она снова увидела свою родину, ею овладела цель."
+    new "С тех пор как она снова увидела свою родную страну, её охватило новое предназначение."
 
     old "Many nights even Xan would retire to bed earlier than her."
-    new "Многие ночи даже Ксан уходил спать раньше неё."
+    new "Многие ночи даже Ксантиппа укладывался спать раньше неё."
 
     old "Before, she had engaged with her lessons as if they had simply been classes, the kind she had been taught growing up in Castle Reinmeer."
-    new "Раньше она относилась к своим урокам как к простым занятиям, вроде тех, что ей преподавали, когда она росла в замке Рейнмир."
+    new "Раньше она относилась к своим урокам так, словно это были просто занятия — такие же, какие ей преподавали в детстве в замке Рейнмир."
 
     old "Now, she understood them for what they were. The path towards power, towards mastery of magic."
-    new "Теперь она понимала, чем они были на самом деле. Путём к силе, к мастерству магии."
+    new "Теперь она поняла их истинный смысл — это путь к власти, к полному овладению магией."
 
     old "The thing that would allow her to change the world."
-    new "То, что позволит ей изменить мир."
+    new "То самое, что позволит ей изменить мир."
 
     old "Sarah raised up her hand. Guiding the tempo of her movement now came natural to her, no longer forced."
-    new "Сара подняла руку. Управлять темпом своих движений теперь получалось естественно, без усилий."
+    new "Сара подняла руку. Темп её движений теперь был естественным, а не натянутым."
 
     old "A muscle long unused but now trained was flexed."
-    new "Мышца, долго бездействовавшая, но теперь натренированная, напряглась."
+    new "Мышца, которой давно не пользовались, но которая теперь была натренирована, напряглась."
 
     old "The feeling of the energy around her, within her, she had learned to guide it without becoming distracted by it."
-    new "Ощущение энергии вокруг неё и внутри неё — она научилась направлять её, не отвлекаясь."
+    new "Ощущение энергии вокруг неё и внутри себя — она научилась направлять её, не отвлекаясь на это."
 
     old "Then, all things faded."
-    new "И тогда всё исчезло."
+    new "Затем всё исчезло."
 
     old "There was no more room. No air around her. No noise."
-    new "Не стало пространства. Ни воздуха вокруг. Ни звуков."
+    new "Больше не было места. Никакого воздуха вокруг неё. Никаких звуков."
 
     old "Only the perfection of her form, the gathering static of her power, and then the utterance of her words."
-    new "Только совершенство её формы, нарастающий гул её силы, а затем произнесение слов."
+    new "Только совершенство её формы, нарастающая статика её силы — и затем произнесённые ею слова."
 
     old "The passed from her lips as if nearly silent, but in her mind, their meaning screamed and roared as she imprinted her will onto the magical energies."
-    new "Они слетели с её губ почти беззвучно, но в её сознании их смысл кричал и ревел, когда она впечатывала свою волю в магические энергии."
+    new "Слова покинули её губы почти беззвучно, но в её сознании их смысл кричал и ревел, пока она налагала свою волю на магические энергии."
 
     old "By her will alone, she crushed, broke, reshaped and forged the magical energies into the shape that she needed...demanded."
-    new "Одной лишь своей волей она сокрушала, ломала, перекраивала и ковала магические энергии в ту форму, которая была ей нужна...на которой она настаивала."
+    new "Одной лишь силой воли она сокрушила, сломала, переформировала и выковала магическую энергию в ту форму, которая ей была нужна... которую она требовала."
 
     old "As wind to a hurricane. As water to a tsunami. As a spark to a blaze."
     new "Как ветер для урагана. Как вода для цунами. Как искра для пламени."
 
     old "The seperate energies forged together became more than their parts. Sarah extended her palm, and manifested her will."
-    new "Разрозненные энергии, скованные вместе, стали чем-то бо́льшим. Сара вытянула ладонь и проявила свою волю."
+    new "Отдельные энергии, соединившись, стали чем-то большим, чем сумма их частей. Сара вытянула ладонь и проявила свою волю."
 
     old "From her extended palm, an orb of near pure light erupted, firing off towards Xan."
-    new "Из её вытянутой ладони вырвалась сфера почти чистого света, устремившись к Ксану."
+    new "Из её вытянутой ладони вырвалась сфера почти чистого света и устремилась к Зану."
 
     old "Splitting across the room, the orb crashed into Xan's barrier. Had he not been ready for it, even the mighty mage would have paid dearly."
-    new "Рассекая комнату, сфера врезалась в барьер Ксана. Не будь он готов к этому, даже могущественный маг поплатился бы сполна."
+    new "Разлетаясь по всей комнате, сфера врезалась в барьер Зана. Если бы он не был к этому готов, даже такой могущественный маг, как он, заплатил бы за это дорого."
 
     old "Sparks scattered across the room as the orb sliced and spun, its force splintering fragments of Xan's magical shield."
-    new "Искры разлетелись по комнате, пока сфера резала и вращалась, её сила крошила осколки магического щита Ксана."
+    new "Искры разлетелись по всей комнате, когда орб резался и вращался, его сила расщепляла осколки магического щита Ксана."
 
     old "Sarah looked on, and continued to impress her will upon her creation, pushing the orb deeper into Xan's defenses."
-    new "Сара наблюдала и продолжала впечатывать свою волю в своё творение, проталкивая сферу всё глубже в защиту Ксана."
+    new "Сара смотрела на это и продолжала навязывать свою волю своему творению, толкая сферу всё глубже в оборону Ксана."
 
     old "Suddenly, she watched as Xan began to move his hand, performing movements and speaking words she had never seen before."
-    new "Внезапно она увидела, как Ксан начал двигать рукой, совершая пассы и произнося слова, которых она никогда прежде не видела."
+    new "Внезапно она увидела, как Ксантиппа начал двигать рукой, совершая движения и произнося слова, которых она никогда раньше не видела."
 
     old "No sooner did she notice, did the orb's energy dissipate, sparing what was left of the mage's shield."
-    new "Не успела она заметить, как энергия сферы рассеялась, пощадив остатки щита мага."
+    new "Не успела она это заметить, как энергия сферы рассеялась, сохранив то, что осталось от магического щита Зана."
 
     old "Not fair. You're using new spells."
-    new "Нечестно. Ты используешь новые заклинания."
+    new "Это нечестно. Ты используешь новые заклинания."
 
     old "Sorry, but I wasn't about to let my head get taken off for a practice lesson."
-    new "Прости, но я не собирался позволять оторвать себе голову ради тренировочного урока."
+    new "Прости, но я не собирался позволять, чтобы мне отрубили голову ради какого-то тренировочного урока."
 
     old "You mean I was close."
-    new "То есть я была близка."
+    new "Ты имеешь в виду, что я была близка."
 
     old "My barrier would not have held much longer."
-    new "Мой барьер долго бы не продержался."
+    new "Мой барьер и так не продержался бы долго."
 
     old "Sarah eyed Xan. She might have nearly shattered his barrier, but he did not appear to be in much distress about it."
-    new "Сара посмотрела на Ксана. Она почти разбила его барьер, но он, кажется, не был этим особенно расстроен."
+    new "Сара посмотрела на Ксантиппу. Возможно, она едва не разрушила его барьер, но он, казалось, не слишком обеспокоен этим."
 
     old "So I almost defeated you?"
     new "Значит, я почти победила тебя?"
 
     old "Maybe, if I had kept up the barrier and done nothing else."
-    new "Может быть, если бы я поддерживал барьер и ничего больше не делал."
+    new "Возможно, если бы я продолжал поддерживать барьер и больше ничего не делал."
 
     old "But you'll have to understand that in a fight, a real fight, no magic user would just stand and absorb your hits like that."
-    new "Но ты должна понять, что в бою, в настоящем бою, ни один маг не будет просто стоять и поглощать твои удары."
+    new "Но ты должна понимать: в настоящем бою — реальном бою — ни один маг не стал бы просто стоять и принимать твои удары, как это."
 
     old "In a real fight."
     new "В настоящем бою."
 
     old "The mage was gone."
-    new "Мага не стало."
+    new "Мага уже не было."
 
     old "Sarah felt his hand slapping the back of her head."
-    new "Сара почувствовала, как его рука шлёпнула её по затылку."
+    new "Сара почувствовала, как его ладонь шлепнула её по затылку."
 
     old "A real mage would have been moving."
-    new "Настоящий маг двигался бы."
+    new "Настоящий маг уже бы двигался."
 
     old "There was nobody behind her."
-    new "За ней никого не было."
+    new "За её спиной никого не было."
 
     old "And you're far from ready for that."
-    new "И ты пока далека от готовности к этому."
+    new "И ты ещё далека от того, чтобы быть к этому готовой."
 
     old "Sarah turned back around to face Xan."
-    new "Сара обернулась обратно к Ксану."
+    new "Сара обернулась к Ксанту."
 
     old "Magic. That much should be obvious by now."
-    new "Магия. Это уже должно быть очевидно."
+    new "Магия. Это уже давно должно было стать очевидным."
 
     old "That's always your answer to everything."
-    new "Это всегда твой ответ на всё."
+    new "Это у тебя всегда один и тот же ответ на всё."
 
     old "And it's almost always true."
-    new "И это почти всегда верно."
+    new "И это почти всегда правда."
 
     old "Still...how long before I can do that?"
-    new "И всё же...сколько времени пройдёт, прежде чем я смогу так?"
+    new "Всё-таки... сколько ещё времени мне ждать, прежде чем я смогу это сделать?"
 
     old "Xan considered his answer for a moment."
-    new "Ксан на мгновение задумался над ответом."
+    new "Ксантиппа на мгновение задумалась над своим ответом."
 
     old "For most, I would say years, but for you Sarah, I don't know. Maybe months, maybe only weeks..."
-    new "Для большинства я бы сказал — годы, но для тебя, Сара, я не знаю. Может быть, месяцы, может, всего лишь недели..."
+    new "Для большинства, я бы сказал, это заняло бы годы, но для тебя, Сара... я не знаю. Возможно, месяцы, а может быть, всего лишь недели..."
 
     old "You're progressing so much faster than even I could have even dared to hope."
-    new "Ты прогрессируешь гораздо быстрее, чем я даже смел надеяться."
+    new "Ты прогрессируешь так быстро, что даже я не осмелился бы и надеяться на такое."
 
     old "Sarah smiled at his compliment."
     new "Сара улыбнулась его комплименту."
 
     old "She knew she was progressing fast. Even when the mage had said nothing of it, she could see in his face, his stunned surprise by how fast she now mastered certain arts."
-    new "Она знала, что прогрессирует быстро. Даже когда маг ничего не говорил об этом, она видела по его лицу его ошеломлённое удивление тем, как быстро она теперь овладевает некоторыми искусствами."
+    new "Она знала, что прогрессирует очень быстро. Даже когда маг ничего об этом не говорил, она видела по его лицу — по ошеломлённому удивлению в глазах — насколько стремительно она теперь овладевает определёнными искусствами."
 
     old "A prodigy, huh?."
-    new "Вундеркинд, да?"
+    new "Гений, да?"
 
     old "A natural aptitude, but such is no replacement for commitment. That's what's changed."
-    new "Природная одарённость, но она не заменит целеустремлённости. Вот что изменилось."
+    new "Природный дар — да, но он не заменит преданности делу. Вот что изменилось."
 
     old "You think I wasn't trying before?"
-    new "Думаешь, я не старалась раньше?"
+    new "Думаешь, я и раньше не старалась?"
 
     old "Maybe you were, but not like you've been working for the last few months."
-    new "Может, и старалась, но не так, как в последние несколько месяцев."
+    new "Возможно, ты и старалась раньше, но это было совсем не то же самое, что твоя работа в последние несколько месяцев."
 
     old "Sarah knew he was right."
     new "Сара знала, что он прав."
 
     old "Having seen what became of her country, her people..."
-    new "Увидев, что стало с её страной, её народом..."
+    new "Увидев, чем кончились её страна и её народ..."
 
     old "But worse than the carnage was knowing she could do nothing for her people. That she had to stand by and let it all happen."
-    new "Но хуже бойни было осознание, что она ничего не могла сделать для своего народа. Что ей пришлось стоять в стороне и позволить всему этому случиться."
+    new "Но хуже самой резни было то, что она понимала: ничего не может сделать для своего народа. Что ей остаётся только стоять в стороне и позволять всему этому происходить."
 
     old "She would never let herself be that weak again."
-    new "Она никогда больше не позволит себе быть такой слабой."
+    new "Она больше никогда не позволит себе быть такой слабой."
 
     old "I think it just took some time to click for me, you know?"
-    new "Думаю, мне просто нужно было время, чтобы дошло, понимаешь?"
+    new "Думаю, мне просто нужно было время, чтобы всё осознать, понимаешь?"
 
     old "Sarah could see Xan studying her. Trying to unravel her inner thoughts."
-    new "Сара видела, как Ксан изучает её. Пытается распутать её сокровенные мысли."
+    new "Сара видела, что Ксантиппа пристально её изучает. Пытался разгадать её внутренние мысли."
 
     old "Could he see, she wondered, what was in her mind?"
-    new "Может ли он видеть, гадала она, что у неё на уме?"
+    new "Она задавалась вопросом: неужели он видит то, что у неё на уме?"
 
     old "Magic comes to each in their own speed. For you perhaps faster than most, but still, you should not push yourself too much. There is plenty of time."
-    new "Магия приходит к каждому в своём темпе. К тебе, возможно, быстрее, чем к большинству, но всё же не стоит слишком себя подгонять. У нас полно времени."
+    new "Магия приходит к каждому со своей скоростью. У тебя, возможно, она проявляется быстрее, чем у большинства, но всё равно не стоит слишком себя напрягать. Времени ещё предостаточно."
 
     old "Plenty of time?"
-    new "Полно времени?"
+    new "Много времени?"
 
     old "Xan paused for a moment."
-    new "Ксан на миг замолчал."
+    new "Ксантиппа на мгновение замолчала."
 
     old "Of course. You have a lifetime to master it."
-    new "Конечно. У тебя целая жизнь, чтобы овладеть ею."
+    new "Конечно. У тебя есть целая жизнь, чтобы овладеть ею."
 
     old "Sarah wasn't a fool. She knew that wasn't what he had meant to say. Still, it was pointless to press him."
-    new "Сара не была дурой. Она знала, что это не то, что он хотел сказать. Но давить на него было бессмысленно."
+    new "Сара была не дура. Она понимала, что он не это хотел сказать. Всё же настаивать на этом было бессмысленно."
 
     old "Xan had habit of going his own pace. Only revealing what he wanted to, and never a fraction more. She decided to drop it."
-    new "У Ксана была привычка идти в своём темпе. Раскрывать лишь то, что он хотел, и ни на йоту больше. Она решила оставить это."
+    new "У Ксана была привычка двигаться в собственном темпе. Он раскрывал лишь то, что сам хотел, и никогда не говорил ни слова больше. Она решила оставить эту тему."
 
     old "So, now that I've mastered that spell, what comes next?"
-    new "Итак, теперь, когда я освоила это заклинание, что дальше?"
+    new "Итак, раз уж я освоила это заклинание, что дальше?"
 
     old "I hardly doubt you've mastered it."
-    new "Я бы не сказал, что ты его освоила."
+    new "Я едва ли сомневаюсь, что ты его освоила."
 
     old "Fine, whatever, I can do it just fine. I want to know what comes next."
-    new "Ладно, неважно, я могу делать его нормально. Я хочу знать, что дальше."
+    new "Ну ладно, как хочешь. Я и сама справлюсь. Мне просто нужно знать, что дальше."
 
     old "Didn't I just say you shouldn't rush?"
     new "Разве я только что не сказал, что не стоит спешить?"
 
     old "I've barely broken a sweat. I can keep going."
-    new "Я даже не вспотела. Могу продолжать."
+    new "Я почти не вспотела. Я могу продолжать."
 
     old "You, maybe, but I'm not as young as I may appear. Holding off those attacks takes a lot out of me."
-    new "Ты, может быть, и да, но я не так молод, как могу выглядеть. Сдерживание этих атак отнимает у меня много сил."
+    new "Ты, может быть, и можешь, но я уже не так молод, как могу показаться. Сдерживание тех атак отнимает у меня очень много сил."
 
     old "She watched Xan shuffle across the room, dropping down into his chair."
-    new "Она наблюдала, как Ксан прошаркал через комнату и плюхнулся в своё кресло."
+    new "Она смотрела, как Ксантипп перешагивает через комнату и опускается в кресло."
 
     old "There were other things she could do. Train by herself. Study even more. But something kept her here."
-    new "Были и другие дела, которыми она могла заняться. Тренироваться самой. Учиться ещё больше. Но что-то удерживало её здесь."
+    new "Были и другие вещи, которые она могла бы делать. Тренироваться в одиночку. Учиться ещё больше. Но что-то удерживало её здесь."
 
     old "Had it been what he said earlier?"
-    new "Было ли это из-за того, что он сказал раньше?"
+    new "Неужели это было то, о чём он говорил ранее?"
 
     old "What comes after this?"
-    new "Что будет после этого?"
+    new "Что дальше?"
 
     old "The next spell? Ooh, I'll have to see, I'm thinking your first transubstantion spell, that should prove a challenge."
-    new "Следующее заклинание? О, надо подумать, я склоняюсь к твоему первому заклинанию трансфигурации, это должно стать испытанием."
+    new "Следующее заклинание? О-о, надо будет посмотреть... Думаю, твоё первое заклинание трансубстанции станет настоящим испытанием."
 
     old "No, I'm not talking about the next spell, or the spell after that."
-    new "Нет, я не о следующем заклинании или о том, что будет после."
+    new "Нет, я говорю не о следующем заклинании и не о том, что будет после него."
 
     old "I'm asking where this road leads to? In the long term."
-    new "Я спрашиваю, куда ведёт этот путь? В долгосрочной перспективе."
+    new "Я спрашиваю, куда ведёт эта дорога? В долгосрочной перспективе."
 
     old "You'll be my apprentice for a few years more, until I decide you've learned enough."
-    new "Ты будешь моей ученицей ещё несколько лет, пока я не решу, что ты научилась достаточно."
+    new "Ты будешь моей ученицей ещё несколько лет — пока я не решу, что ты достаточно многому научилась."
 
     old "Then you'll be introduced to the masters in the citadel, who can decide whether you're ready."
-    new "Затем тебя представят магистрам в цитадели, которые решат, готова ли ты."
+    new "Затем тебя представят мастерам в цитадели, и они решат, готова ли ты."
 
     old "If they allow it, you will be included into our order as a mage of the first tower."
-    new "Если они позволят, ты будешь принята в наш орден как маг первой башни."
+    new "Если они позволят, тебя примут в наш орден как мага первой башни."
 
     old "From there, you will continue your studies. Every few years you will advance, if you learn enough, to the ranks tower."
-    new "Оттуда ты продолжишь обучение. Каждые несколько лет ты будешь повышаться, если научишься достаточно, до следующего башенного ранга."
+    new "Оттуда ты продолжишь своё обучение. Каждые несколько лет ты будешь продвигаться по рангам башен, если усвоишь достаточно знаний."
 
     old "When you're a mage of the fifth tower, you will be allowed to take on an apprentice."
     new "Когда ты станешь магом пятой башни, тебе будет позволено взять ученика."
 
     old "Then you will teach them as I taught you."
-    new "И тогда ты будешь учить их, как я учил тебя."
+    new "Тогда ты будешь обучать их так же, как я обучал тебя."
 
     old "Maybe one day, centuries from now, you can retire to the elder circle, guide our order, and so on."
-    new "Может быть, однажды, через столетия, ты сможешь уйти в совет старейшин, направлять наш орден и так далее."
+    new "Возможно, однажды, спустя столетия, ты сможешь уйти в старейший круг, стать наставником нашего ордена и так далее."
 
     old "Sarah listened as Xan painted a picture of her life."
-    new "Сара слушала, как Ксан рисует картину её жизни."
+    new "Сара слушала, как Ксантипа рисовала картину её жизни."
+
+    old "That sounds nice."
+    new "Звучит неплохо."
 
     old "Exactly. This life of ours, studying magic, it can be very orderly. Very measured."
-    new "Именно. Эта наша жизнь, изучение магии — она может быть очень упорядоченной. Очень размеренной."
+    new "Точно. Эта наша жизнь, изучение магии, может быть очень упорядоченной. Очень размеренной."
 
     old "You'll always know where you stand."
-    new "Ты всегда будешь знать, что к чему."
+    new "Тебе всегда будет ясно, где ты стоишь."
 
     old "It did sound nice to Sarah. Clean, orderly, decisive. No more doubt."
-    new "Саре это и правда казалось приятным. Чисто, упорядоченно, решительно. Больше никаких сомнений."
+    new "Саре это и вправду показалось приятным. Чисто, упорядоченно, решительно. Больше никаких сомнений."
 
     old "That sounds horrible."
     new "Это звучит ужасно."
 
+    old "That sounds horrible."
+    new "Это звучит ужасно."
+
+    old "What do you mean?"
+    new "Что вы имеете в виду?"
+
     old "To be locked away in some citadel? Studying for centuries, all to what end? So I can watch the world turn by?"
-    new "Быть запертой в какой-то цитадели? Учиться столетиями, и всё ради чего? Чтобы я могла наблюдать, как мир проходит мимо?"
+    new "Быть запертой в какой-то цитадели? Учиться веками — и ради чего? Чтобы я могла просто смотреть, как мир вращается мимо?"
 
     old "The opposite. From that vantage point, you will see the world."
-    new "Наоборот. С этой точки обзора ты увидишь мир."
+    new "Именно так. С этой точки обзора ты увидишь мир."
 
     old "Rather than be trapped inside of it, you can watch the turning of human society."
-    new "Вместо того чтобы быть запертой внутри него, ты сможешь наблюдать за движением человеческого общества."
+    new "Вместо того чтобы оказаться в ловушке внутри него, ты сможешь наблюдать за ходом человеческой цивилизации."
 
     old "Yeah, by standing outside of it, detached."
-    new "Да, стоя в стороне, отстранённо."
+    new "Да — именно так: стоя вне его, отстранённо."
+
+    old "Exactly."
+    new "Именно так."
 
     old "It's horrid. That's no way to live."
-    new "Это ужасно. Так нельзя жить."
+    new "Это ужасно. Так жить невозможно."
 
     old "Xan waved his hand as if to dismiss her."
-    new "Ксан махнул рукой, словно отметая её слова."
+    new "Ксантиппа махнул рукой, словно пытаясь отмахнуться от неё."
 
     old "You'll learn to appreciate it."
-    new "Ты научишься ценить это."
+    new "Ты научишься это ценить."
 
     old "Sarah doubted that she ever would."
-    new "Сара сомневалась, что когда-нибудь научится."
+    new "Сара сомневалась, что когда-нибудь сможет это принять."
 
     old "But what about you?"
-    new "Но как насчёт тебя?"
+    new "А как же ты?"
 
     old "Xan looked up surprised."
-    new "Ксан удивлённо поднял взгляд."
+    new "Ксантиппа удивлённо подняла голову."
+
+    old "What about me?"
+    new "А как же я?"
 
     old "You're in here, out in the real world. You're not in the citadel, you're not studying in any tower."
-    new "Ты здесь, в реальном мире. Ты не в цитадели, ты не учишься в какой-то башне."
+    new "Ты же здесь, в реальном мире. Ты не в цитадели и не учишься ни в какой башне."
 
     old "That's true, but I have my own labors to attend to."
-    new "Это верно, но у меня есть свои труды, которыми нужно заниматься."
+    new "Это правда, но у меня есть свои труды, которыми нужно заняться."
 
     old "Studying all alone in this house?"
-    new "Учиться в полном одиночестве в этом доме?"
+    new "Учишься совсем одна в этом доме?"
 
     old "I get out, don't worry. Endless doors and rooms lead to ever corner of the world."
-    new "Я выхожу, не волнуйся. Бесконечные двери и комнаты ведут в каждый уголок мира."
+    new "Я выйду, не волнуйся. Бесконечные двери и комнаты ведут в каждый уголок мира."
 
     old "Before I ran into you, I was quite busy."
-    new "Пока я не наткнулся на тебя, я был довольно занят."
+    new "До того, как я наткнулся на тебя, у меня было довольно много дел."
 
     old "Sarah looked at Xan, trying to gain a measure of him."
-    new "Сара посмотрела на Ксана, пытаясь понять, что он за человек."
+    new "Сара посмотрела на Ксантиппу, пытаясь оценить его."
 
     old "Doing what?"
-    new "Чем?"
+    new "Чем занимался?"
 
     old "My works."
-    new "Моими трудами."
+    new "Мои работы."
 
     old "Which are."
-    new "Какими именно."
+    new "Это они."
 
     old "None of your concern, apprentice."
-    new "Не твоего ума дело, ученица."
+    new "Это тебя не касается, ученица."
 
     old "Xan kept a smile on his face as he spoke."
-    new "Ксан сохранял улыбку на лице, пока говорил."
+    new "Зантхиппа продолжал улыбаться, пока говорил."
 
     old "You do this a lot, you know. Keeping me in the dark..."
-    new "Ты часто так делаешь, знаешь ли. Держишь меня в неведении..."
+    new "Ты так часто это делаешь, знаешь ли. Держишь меня в неведении..."
 
     old "I've taught you magic, isn't that enough?"
-    new "Я научил тебя магии, разве этого недостаточно?"
+    new "Я научил тебя магии — разве этого недостаточно?"
 
     old "For all you've taught me, for all you've done for me, I still barely know you any better than when we first met."
-    new "При всём том, чему ты меня научил, при всём, что ты для меня сделал, я всё ещё знаю тебя ненамного лучше, чем когда мы впервые встретились."
+    new "Несмотря на всё, чему ты меня научила, на всё, что ты для меня сделала, я до сих пор едва знаю тебя лучше, чем когда мы только встретились."
 
     old "Do teachers and students need to be friends?"
-    new "Разве учителям и ученикам обязательно быть друзьями?"
+    new "Разве учителя и ученики должны быть друзьями?"
 
     old "I'm not asking to be your friend. I just wish you'd let me understand what it is you do. It can't just be magic for magic's sake, I don't believe it."
-    new "Я не прошу быть твоим другом. Я просто хочу, чтобы ты позволил мне понять, чем ты занимаешься. Это не может быть просто магия ради магии, я в это не верю."
+    new "Я не прошу стать твоей подругой. Я лишь хочу, чтобы ты позволила мне понять, что же ты на самом деле делаешь. Не может же это быть просто магия ради самой магии — я в это не верю."
 
     old "Xan rapped his knuckles across the desk."
-    new "Ксан постучал костяшками по столу."
+    new "Ксантиппа стукнул костяшками пальцев по столу."
+
+    old "You're right, it's not."
+    new "Ты права, это не так."
 
     old "We spoke of it, months ago when I took you to visit Rosanna."
-    new "Мы говорили об этом месяцы назад, когда я возил тебя в Розанну."
+    new "Мы говорили об этом ещё несколько месяцев назад, когда я вёл тебя на встречу с Розанной."
 
     old "Memories flooded Sarah's mind. Memories she hoped would stay buried."
-    new "Воспоминания нахлынули на Сару. Воспоминания, которые, как она надеялась, останутся погребёнными."
+    new "Воспоминания хлынули в сознание Сары. Воспоминания, которые она надеялась оставить погребёнными."
 
     old "As mages, we live very long lives. And as an order, we observe the world from far above."
-    new "Как маги, мы живём очень долго. И как орден, мы наблюдаем за миром с высоты."
+    new "Как маги, мы живём очень долго. А как орден — наблюдаем за миром с большой высоты."
 
     old "But, while we observe, we do not only observe."
-    new "Но, наблюдая, мы не только наблюдаем."
+    new "Но, пока мы наблюдаем, мы не только наблюдаем."
 
     old "The council has plans, designs, that it hopes can come about."
     new "У совета есть планы, замыслы, которые, как он надеется, могут осуществиться."
 
     old "The council believes that with the proper guidance, we can steer this world towards peace, towards a future where the horrors of war, famine and all other tragedies can be done away with."
-    new "Совет верит, что с помощью правильного руководства мы сможем направить этот мир к миру, к будущему, где ужасы войны, голода и всех прочих трагедий будут устранены."
+    new "Совет верит, что при правильном руководстве мы сможем направить этот мир к миру, к будущему, в котором ужасы войны, голода и все остальные трагедии будут искоренены."
 
     old "A future where every soul, be it a king or a peasant, will be valued and safeguarded."
-    new "Будущее, где каждая душа, будь то король или крестьянин, будет цениться и оберегаться."
+    new "Будущее, в котором каждая душа — будь то король или крестьянин — будет цениться и защищена."
 
     old "Sarah listened intently as Xan spoke."
-    new "Сара внимательно слушала, пока Ксан говорил."
+    new "Сара внимательно слушала, когда говорил Ксантиппа."
 
     old "It sounds like a fantasy."
-    new "Звучит как фантастика."
+    new "Это звучит как фэнтези."
 
     old "Perhaps, and it certainly is for now. But you do not see as we have seen."
-    new "Возможно, и сейчас это, безусловно, так. Но ты не видела того, что видели мы."
+    new "Возможно, и сейчас это так. Но ты не видишь того, что видели мы."
 
     old "The world is brutal, but it used to be much more so."
     new "Мир жесток, но раньше он был гораздо более жестоким."
 
     old "That is what we offer. A steady hand. And that is what I do, and some others. We are agents of that steady hand, seeking to implement this project of peace."
-    new "Вот что мы предлагаем. Твёрдую руку. И этим занимаюсь я и некоторые другие. Мы — агенты этой твёрдой руки, стремящиеся воплотить этот проект мира."
+    new "Это то, что мы предлагаем. Стабильную руку. И именно этим я занимаюсь, как и некоторые другие. Мы — агенты этой стабильной руки, стремящиеся реализовать проект мира."
 
     old "You pretend to be everywhere, and yet, I barely saw a single mage in my entire life."
     new "Вы притворяетесь, что вы везде, и всё же я едва ли видела хоть одного мага за всю свою жизнь."
 
     old "And that's how the council likes it."
-    new "И совету это нравится."
+    new "Именно так это и нравится совету."
 
     old "We are powerful, but we are few. We cannot bend this world through brute force, even if we might have a lot of it."
-    new "Мы могущественны, но нас мало. Мы не можем согнуть этот мир грубой силой, даже если у нас её много."
+    new "Мы сильны, но нас мало. Мы не можем сломить этот мир грубой силой, даже если у нас её и немало."
 
     old "This world needs a steady hand, but that hand must also be gentle."
-    new "Этот мир нуждается в твёрдой руке, но эта рука должна быть также нежной."
+    new "Этому миру нужна твёрдая рука, но она должна быть при этом нежной."
 
     old "A nudge here, a tug there."
-    new "Подталкивая здесь, потянув там."
+    new "Здесь лёгкий толчок, там — незначительный потяг."
 
     old "Slowly we help the world along, to bring about the paradise that must be."
-    new "Медленно мы помогаем миру двигаться вперёд, чтобы привести к раю, который должен наступить."
+    new "Мы медленно направляем мир в нужную сторону, чтобы создать тот рай, который должен существовать."
 
     old "And Rosanna? That's just a stepping stone towards that paradise?"
-    new "А Розанна? Это просто ступенька на пути к этому раю?"
+    new "А Розанна? Она ведь просто ступенька на пути к тому раю?"
 
     old "It will sound cruel, but I will be honest with you Sarah, yes."
-    new "Это прозвучит жестоко, но я буду с тобой честен, Сара: да."
+    new "Это может прозвучать жестоко, но я буду с тобой честен, Сара — да."
 
     old "Your nation held millions of people, but it is home to less than one-hundreth of the world's total population."
-    new "Твоя страна вмещала миллионы людей, но в ней живёт менее одной сотой от всего населения мира."
+    new "Твоя нация вмещала миллионы людей, но в ней живёт меньше одной сотой от общей численности населения мира."
 
     old "I know the names of nations long forgotten. I walked their streets and witnessed them fall into ruin. Do you weep for them?"
-    new "Я знаю названия давно забытых народов. Я ходил по их улицам и видел, как они обращались в руины. Ты плачешь о них?"
+    new "Я знаю названия давно забытых наций. Я ходил по их улицам и видел, как они пришли в упадок. Ты плачешь из-за них?"
 
     old "You don't, because they mean nothing to you, and Rosanna still means everything to you."
-    new "Ты не плачешь, потому что они для тебя ничего не значат, а Розанна всё ещё значит для тебя всё."
+    new "Ты не плачешь по ним, потому что они ничего для тебя не значат, а вот Розанна до сих пор значит для тебя всё."
 
     old "But that is a flaw in your perspective, a flaw that you will learn to overcome in the years that follow."
-    new "Но это изъян твоего мировоззрения, изъян, который ты научишься преодолевать в грядущие годы."
+    new "Но это изъян твоего восприятия — изъян, который ты научишься преодолевать в последующие годы."
 
     old "Sarah listened to what Xan told her."
-    new "Сара выслушала то, что сказал ей Ксан."
+    new "Сара слушала то, что рассказал ей Ксантипп."
 
     old "Sarah watched the mage retire to his room and sat by herself as night set in."
-    new "Сара смотрела, как маг удаляется в свою комнату, и сидела одна, когда наступила ночь."
+    new "Сара смотрела, как маг ушёл в свою комнату, и сидела одна, пока наступала ночь."
 
     old "Maybe he was right. But the thought alone scared her."
-    new "Может быть, он был прав. Но одна эта мысль пугала её."
+    new "Возможно, он был прав. Но одна лишь эта мысль пугала её."
 
     old "Could she ever become like him? Stand idly by and watch innocents suffer, because some great design demands it?"
-    new "Сможет ли она когда-нибудь стать такой, как он? Стоять в стороне и смотреть, как страдают невинные, потому что этого требует какой-то великий замысел?"
+    new "Могла бы она когда-нибудь стать такой же холодной? Просто стоять в стороне и смотреть, как страдают невинные, лишь потому, что этого требует некий великий замысел?"
 
     old "Would she even want to be that cold?"
-    new "Захочет ли она вообще быть такой холодной?"
+    new "Хотела бы она вообще стать такой холодной?"
 
     old "She wanted power, enough to reshape the world, but what if following this path would change her?"
-    new "Она хотела силу, достаточную, чтобы изменить мир, но что, если следование этим путём изменит её?"
+    new "Она хотела власти — достаточной, чтобы переделать мир, — но что, если этот путь изменит её саму?"
 
     old "What if she gained the power to change the world, but in the process lost the will to change it?"
-    new "Что, если она получит силу изменить мир, но в процессе потеряет желание его менять?"
+    new "Что, если она обретёт силу изменить мир, но в процессе этого утратит волю к самим изменениям?"
 
     old "She had put herself upon this path to forget the painful memories of her home, but she now found her mind drifting to Rosanna more than ever."
-    new "Она встала на этот путь, чтобы забыть болезненные воспоминания о доме, но теперь её мысли возвращались к Розанне чаще, чем когда-либо."
-
+    new "Она выбрала этот путь, чтобы забыть болезненные воспоминания о доме, но теперь её мысли возвращались к Розанне чаще, чем когда-либо прежде."

@@ -1,467 +1,472 @@
 # -*- encoding: utf-8 -*-
 # Arc: MagePath | Scene: MagePath7
-# Source: C:\Program Files (x86)\Steam\steamapps\common\The Survival of Sarah Rose\game\script.rpy
 
 translate ru strings:
 
     old "With the Shah and his advisors retreating to the war room, princess Samayra was left to herself by the dais."
-    new "Когда шах и его советники удалились в военный зал, принцесса Самайра осталась одна у помоста."
+    new "Когда шах и его советники удалились в военную комнату, принцесса Самайра осталась одна у помоста."
 
     old "Sarah strode across the room and stopped near the steps of the throne."
-    new "Сара пересекла зал и остановилась возле ступеней трона."
+    new "Сара шагнула через комнату и остановилась у ступеней трона."
 
     old "She'd have to try, if only to tell Xan that she did."
-    new "Она должна была попытаться, хотя бы ради того, чтобы сказать Ксану, что попыталась."
+    new "Ей пришлось бы попробовать — хотя бы для того, чтобы сказать Зану, что она так и сделала."
 
     old "The girl seemed almost startled at being addressed so directly."
-    new "Девушка, казалось, почти испугалась такого прямого обращения."
+    new "Девушка, казалось, была почти ошеломлена тем, что с ней заговорили так прямо."
 
     old "Ooh, uhm, hello?"
-    new "Ой, эм, привет?"
+    new "Ох, эм... здравствуйте?"
 
     old "My name's Sarah."
     new "Меня зовут Сара."
 
     old "It remained quiet."
-    new "Она молчала."
+    new "Осталось тихо."
 
     old "You're Samayra, right?"
-    new "Ты же Самайра, верно?"
+    new "Ты же Самайра, да?"
+
+    old "How did you know?"
+    new "Откуда вы знаете?"
 
     old "I was just here, with the mage, I heard your father mention your name."
-    new "Я была здесь, с магом, и слышала, как твой отец упомянул твоё имя."
+    new "Я просто была здесь, с магом — я слышала, как твой отец упомянул твоё имя."
 
     old "Ooh, I'm sorry, I didn't pay much attention."
-    new "Ой, прости, я не особо вслушивалась."
+    new "Ох, прости, я не особо обращала внимание."
 
     old "If you're looking for my father, he's gone off to his war room."
-    new "Если ты ищешь моего отца, он ушёл в свой военный зал."
+    new "Если ищете моего отца, то он ушёл в свою военную комнату."
 
     old "Sarah tried to make eye contact, but the girl mostly looked to the floor."
-    new "Сара попыталась поймать её взгляд, но девушка большей частью смотрела в пол."
+    new "Сара попыталась установить зрительный контакт, но девушка в основном смотрела на пол."
 
     old "That's fine, I was really hoping to talk to you."
-    new "Всё в порядке, я очень надеялась поговорить с тобой."
+    new "Это нормально, я очень надеялась поговорить с тобой."
 
     old "She looked up in sudden surprise."
-    new "Она внезапно удивлённо подняла взгляд."
+    new "Она внезапно подняла голову с удивлением."
 
     old "Me? Why would you want to talk to me?"
-    new "Со мной? Зачем тебе говорить со мной?"
+    new "Я? С чего бы тебе захотелось со мной говорить?"
 
     old "Yeah. I've never been to Bagrad palace before, and I was just feeling, I don't know, lonely?"
-    new "Да. Я никогда раньше не была во дворце Баграда, и мне просто стало... не знаю... одиноко?"
+    new "Да. Я никогда раньше не была во дворце Баград, и мне просто было... ну, не знаю, одиноко?"
 
     old "Sarah saw smile creep across Samayra's face, as though she recognized what Sarah was saying."
-    new "Сара заметила, как по лицу Самайры расплылась улыбка, будто она узнала в словах Сары что-то знакомое."
+    new "Сара увидела, как по лицу Самайры прокралась улыбка, будто она поняла, что говорила Сара."
 
     old "Yes, it can be a lonely place."
-    new "Да, здесь бывает одиноко."
+    new "Да, здесь действительно может быть одиноко."
 
     old "The rooms haven't been prepared yet, and I keep getting lost in these hallways. I was hoping maybe you could show me around?"
-    new "Комнаты ещё не подготовили, и я постоянно теряюсь в этих коридорах. Может, ты могла бы показать мне дворец?"
+    new "Комнаты ещё не приготовили, да я и сама постоянно теряюсь в этих коридорах. Я надеялась, что ты, может быть, сможешь показать мне всё вокруг?"
 
     old "Uhm...I could ask one of the servants, maybe..."
-    new "Эм... я могла бы попросить кого-нибудь из слуг, наверное..."
+    new "Э-э... Я могла бы спросить одного из слуг, может быть..."
 
     old "But I'd like it to be you."
     new "Но я бы хотела, чтобы это была ты."
 
     old "Sarah watched the girl look around, but there was nobody to tell her how to respond."
-    new "Сара видела, как девушка оглядывается по сторонам, но рядом никого не было, кто подсказал бы ей, как ответить."
+    new "Сара смотрела, как девушка осматривается, но ей некому было сказать, что делать."
 
     old "Ooh...sure, yes, I could do that, I know every spot in the palace. Where do you want to go?"
-    new "Ой... конечно, да, я могу это сделать, я знаю каждый уголок во дворце. Куда ты хочешь пойти?"
+    new "Ох... конечно, да, я могу так сделать — я знаю каждый уголок этого дворца. Куда ты хочешь пойти?"
 
     old "The palace was build like a tomb. Endless stone slabs and few windows to be found. She wanted to see the sky."
-    new "Дворец был построен как гробница. Бесконечные каменные плиты и почти ни одного окна. Ей хотелось увидеть небо."
+    new "Дворец был построен словно гробница. Бесконечные каменные плиты и лишь редкие окна. Она хотела увидеть небо."
 
     old "The gardens, perhaps? I heard they're beautiful."
-    new "Может быть, сады? Я слышала, они прекрасны."
+    new "Сад, может быть? Я слышала, они там прекрасны."
 
     old "Sarah watched Samayra's face light up."
-    new "Сара увидела, как лицо Самайры озарилось."
+    new "Сара видела, как лицо Самайры озарилось радостью."
 
     old "They are! Here, follow me and I'll take you there."
-    new "О, да! Пойдём, я провожу тебя."
+    new "Они здесь! Иди за мной, я тебя туда отведу."
 
     old "Sarah felt Samayra grab her hand. She began to pull her along. The timid girl seemed to have vanished for a moment."
-    new "Сара почувствовала, как Самайра схватила её за руку и потащила за собой. Робкая девушка будто исчезла на мгновение."
+    new "Сара почувствовала, как Самайра схватила её за руку. Та потянула её за собой. Сдержанная девушка на мгновение словно исчезла."
 
     old "The gardens of Bagrad palace are really famous. We use special airducts and waterways to create specific environments for the plants to thrive in."
-    new "Сады дворца Баграда очень знамениты. Мы используем специальные воздуховоды и каналы, чтобы создавать особые условия для растений."
+    new "Сады дворца Баград действительно знамениты. Мы используем специальные воздуховоды и водные каналы, чтобы создать для растений определённые условия, в которых они смогут процветать."
 
     old "The goal is to mimic the plant's natural environment."
-    new "Цель — воссоздать естественную среду каждого растения."
+    new "Цель состоит в том, чтобы имитировать естественную среду обитания растения."
 
     old "You'll see plants here that don't grow anywhere else in the world."
-    new "Ты увидишь здесь растения, которые больше нигде в мире не растут."
+    new "Здесь ты увидишь растения, которые не растут больше нигде в мире."
 
     old "Sarah walked along with Samayra through the great hallways of the palace."
-    new "Сара шла вместе с Самайрой по огромным коридорам дворца."
+    new "Сара шла вместе с Самайрой по величественным залам дворца."
 
     old "Where before the presence of servants had been sparse, here the palace seemed nearly deserted, except for the occasional guard patrol."
-    new "Если раньше слуг было мало, то здесь дворец казался почти безлюдным, если не считать редких стражников."
+    new "Там, где раньше слуги встречались редко, дворец теперь казался почти безлюдным — разве что изредка проходили патрули стражников."
 
     old "Torches mounted on the walls kept the hallway illuminated, but so vast was the palace that the torches didn't so much bring light as seem to struggle to hold the darkness off."
-    new "Факелы на стенах освещали коридор, но дворец был так огромен, что они не столько давали свет, сколько с трудом сдерживали тьму."
+    new "Фонари, прикреплённые к стенам, освещали коридор, но дворец был настолько огромен, что они не столько давали свет, сколько, казалось, с трудом удерживали тьму."
 
     old "We don't get many visitors, so it's always nice when I get a chance to show them off."
-    new "У нас редко бывают гости, так что всегда приятно, когда есть возможность показать сады."
+    new "У нас не так уж часто бывают гости, поэтому всегда приятно, когда у меня появляется шанс познакомить их с этим местом."
 
     old "Otherwise it's mostly just me and father who get to appreciate them."
-    new "А так в основном только мы с отцом можем ими любоваться."
+    new "Иначе их ценят в основном только я с отцом."
 
     old "It seemed strang to Sarah. Castle Reinmeer had always buzzed with and endless coming-and-going of nobles from all over Rosanna and its neighbouring kingdoms."
-    new "Это казалось Саре странным. Замок Рейнмир всегда гудел от бесконечной череды знати со всей Розанны и соседних королевств."
+    new "Это показалось Саре странным. Замок Рейнмир всегда гудел от непрерывного прихода и ухода знати со всей Розанны и соседних королевств."
 
     old "Doesn't anyone visit?"
-    new "Неужели никто не приезжает?"
+    new "Разве никто не приходит в гости?"
 
     old "Ooh, they do, sometimes, but it's not like it used to be. Father told me that when he was young there used to be visitors every day, but they've stopped coming. Now we maybe get visitors every month."
-    new "Ой, приезжают, иногда, но уже не так, как раньше. Отец говорил, что в его молодости гости бывали каждый день, но они перестали приезжать. Теперь у нас гости, может, раз в месяц."
+    new "Ох, бывали они иногда, но уже не так, как раньше. Отец рассказывал мне, что в его молодости гости приходили каждый день, но потом перестали. Теперь мы, может быть, и получаем их раз в месяц."
 
     old "It was the slow tragedy of an empire that did not fall in one day, but instead, seemed to have been falling for centuries."
-    new "Это была медленная трагедия империи, которая пала не за один день, а, казалось, рушилась веками."
+    new "Это была медленная трагедия империи, которая не пала за один день, а, казалось, рушилась на протяжении столетий."
 
     old "A gradual yet ongoing collapse."
-    new "Постепенный, но непрекращающийся упадок."
+    new "Постепенный, но непрерывный коллапс."
 
     old "One day, Sarah realized, there might be nobody left in the city."
-    new "Однажды, поняла Сара, в городе может никого не остаться."
+    new "Однажды Сара поняла: возможно, в городе уже не останется никого."
 
     old "Just monuments, great works that the people of the world no longer cared or had need for."
-    new "Лишь монументы, великие творения, которые людям этого мира были больше не нужны и не интересны."
+    new "Всего лишь памятники — великие произведения, о которых люди мира уже не заботятся и которые им больше не нужны."
 
     old "You said earlier that the palace can be a lonely place. Are you?"
-    new "Ты сказала ранее, что во дворце бывает одиноко. Тебе одиноко?"
+    new "Ты говорила раньше, что дворец может быть одиноким местом. Ты такая?"
 
     old "Am I what?"
-    new "Одиноко ли мне?"
+    new "Я что?"
 
     old "Lonely."
     new "Одиноко."
 
     old "The girl fiddled with her thumbs as they walked."
-    new "Девушка теребила большие пальцы, пока они шли."
+    new "Девушка возилась с большими пальцами, пока они шли."
 
     old "Maybe, sometimes. But I'm the princess of Bagrad. Our family stands apart from everyone else. We're meant to be alone."
-    new "Может быть, иногда. Но я принцесса Баграда. Наша семья стоит особняком от всех остальных. Мы должны быть одни."
+    new "Возможно, иногда. Но я ведь принцесса Баграда. Наша семья стоит особняком от всех остальных. Нам суждено быть в одиночестве."
 
     old "Sarah listened, but Samayra didn't seem very convinced of the words she was saying."
-    new "Сара слушала, но Самайра, похоже, не очень верила собственным словам."
+    new "Сара слушала, но Самайра, казалось, не совсем верила словам, которые сама произносила."
 
     old "Did your father tell you that?"
-    new "Это тебе отец сказал?"
+    new "Твой отец говорил тебе об этом?"
 
     old "She looked up in surprise."
-    new "Она удивлённо подняла взгляд."
+    new "Она удивлённо подняла голову."
 
     old "It didn't really sound like you believed it yourself."
-    new "Не похоже было, что ты сама в это веришь."
+    new "Это не очень-то звучало так, будто ты сама в это веришь."
 
     old "Maybe, I don't know..."
-    new "Может быть, я не знаю..."
+    new "Возможно... я не знаю..."
 
     old "Father tells me a lot of things, and I try to listen. He knows a lot about a lot."
-    new "Отец рассказывает мне много всего, и я стараюсь слушать. Он много чего знает."
+    new "Отец рассказывает мне много всего, и я стараюсь его слушать. Он очень много знает о многом."
 
     old "I'm sure you're educated, right?"
-    new "Ты ведь образованна, я полагаю?"
+    new "Я уверена, ты ведь образован, да?"
 
     old "I am, of course, but it's different. My father has seen so much of the world, and I've never even left the palace."
-    new "Конечно, но это другое. Мой отец видел так много в этом мире, а я никогда даже не покидала дворец."
+    new "Я, конечно, образована, но это другое. Мой отец повидал так много всего в мире, а я даже из дворца не выходила."
 
     old "The confession struck Sarah."
-    new "Это признание поразило Сару."
+    new "Признание поразило Сару."
 
     old "The idea of this girl, so nearly her own age, and yet trapped in this palace for an entire lifetime."
-    new "Мысль о том, что эта девушка, почти ровесница Сары, всю жизнь заперта в этом дворце."
+    new "Представь себе эту девочку: она почти ровесница, но при этом всю свою жизнь провела в заточении в этом дворце."
 
     old "It seemed cruel to her."
-    new "Это казалось ей жестоким."
+    new "Ей это казалось жестоким."
 
     old "You've never left?"
-    new "Ты никогда не покидала его?"
+    new "Ты ведь никогда не уходишь?"
 
     old "Never. Everything I need is in here, and everything that isn't can be brought to me. Why should I ever leave?"
-    new "Никогда. Всё, что мне нужно, есть здесь, а всё остальное могут принести. Зачем мне когда-либо уходить?"
+    new "Никогда. Всё, что мне нужно, есть здесь, а всё остальное могут принести мне. Зачем мне вообще уходить?"
 
     old "It was a cage. A comfortable one, but a cage all the same."
-    new "Это была клетка. Удобная, но всё же клетка."
+    new "Это была клетка. Комфортная, но всё же клетка."
 
     old "Don't you want to see the world?"
     new "Разве ты не хочешь увидеть мир?"
 
     old "Maybe. I've tried talking to father about it, but he won't listen. He says it's much too dangerous."
-    new "Может быть. Я пыталась говорить с отцом об этом, но он не слушает. Он говорит, что это слишком опасно."
+    new "Возможно. Я пыталась поговорить об этом с отцом, но он не хочет слушать. Он говорит, что это слишком опасно."
 
     old "But who knows, look where we are now..."
-    new "Но кто знает, посмотри, где мы сейчас..."
+    new "Но кто знает — посмотрите, где мы теперь..."
 
     old "An army of outsiders is camped outside of our gates."
-    new "Армия чужаков стоит лагерем за нашими воротами."
+    new "Армия чужаков разбилась лагерем у наших ворот."
 
     old "The girl suddenly laughed. It was the kind of laugh that was meant to cover up pain."
-    new "Девушка внезапно рассмеялась. Это был смех, которым пытаются прикрыть боль."
+    new "Девушка внезапно рассмеялась. Это был тот самый смех, которым пытались скрыть боль."
 
     old "I've spend all my life hiding here to stay safe from the outside world, and now the outside world has come to my doorstep."
-    new "Я всю жизнь пряталась здесь, чтобы уберечься от внешнего мира, и теперь внешний мир сам пришёл к моему порогу."
+    new "Я всю свою жизнь пряталась здесь, чтобы быть в безопасности от внешнего мира, а теперь этот самый мир явился прямо к моим дверям."
 
     old "Samayra suddenly stopped. Her shoulders began to shake, a soft sob escaped her mouth."
-    new "Самайра внезапно остановилась. Её плечи начали дрожать, изо рта вырвался тихий всхлип."
+    new "Самайра внезапно остановилась. Её плечи задрожали, и из уст вырвался тихий рыд."
 
     old "Please, you're a mage, you have incredible power..."
-    new "Пожалуйста, ты маг, у тебя невероятная сила..."
+    new "Пожалуйста, ты же маг, у тебя невероятная сила..."
 
     old "Will you keep me and my father safe if the army...if they get inside the city?"
-    new "Ты защитишь меня и моего отца, если армия... если они войдут в город?"
+    new "Ты защитишь меня и моего отца, если армия... если они проникнут в город?"
 
     old "Sarah placed one hand on Samayra and kept it there until her sobbing slowly ebbed."
-    new "Сара положила руку Самайре на плечо и держала её там, пока та не перестала всхлипывать."
+    new "Сара положила одну руку на Самайру и не убирала её, пока рыдания той медленно не утихли."
 
     old "With her other hand, she grabbed Samayra's face and lifted it up, forcing her to meet her eyes."
-    new "Другой рукой она взяла Самайру за лицо и приподняла, заставляя встретиться взглядом."
+    new "Другой рукой она схватила Самайру за лицо, подняла его вверх и заставила посмотреть ей в глаза."
 
     old "I promise you, I'll do everything in my power to protect your family."
-    new "Я обещаю тебе, что сделаю всё, что в моих силах, чтобы защитить твою семью."
+    new "Я обещаю тебе: сделаю всё, что в моих силах, чтобы защитить твою семью."
 
     old "A genuine smile crept over Samayra's face."
-    new "Искренняя улыбка расплылась по лицу Самайры."
+    new "На лице Самайры появилась искренняя улыбка."
 
     old "The two began to walk again and soon found themselves in the gardens of the palace."
-    new "Они снова пошли и вскоре оказались в дворцовых садах."
+    new "Они снова зашагали и вскоре оказались в садах дворца."
 
     old "It was stunning."
     new "Это было потрясающе."
 
     old "Sarah had seen much in her life, especially since she had met Xan, but this place was utterly unique."
-    new "Сара многое повидала в своей жизни, особенно после встречи с Ксаном, но это место было совершенно уникальным."
+    new "Сара за свою жизнь видела многое, особенно с тех пор, как встретила Ксена, но это место было абсолютно неповторимым."
 
     old "Trees, bushes and flowers of seemingly endless variations, stood spread out over a great space."
-    new "Деревья, кусты и цветы, казалось, бесчисленных разновидностей были рассажены на огромном пространстве."
+    new "Деревья, кусты и цветы, казалось бы, бесконечных вариаций, раскинулись по огромному пространству."
 
     old "Above them, the dark night was undone by the countless stars in heaven, which seemed to Sarah to shine brighter here than anywhere else."
-    new "Над ними тёмную ночь разрывали бесчисленные звёзды в небесах, которые, как казалось Саре, сияли здесь ярче, чем где-либо ещё."
+    new "Над ними тёмная ночь растворялась в бесчисленных звёздах на небе, которые Саре казались ярче, чем где-либо ещё."
 
     old "Even in the dark, the many colours and shapes of the plants nearly overwhelmed the senses."
-    new "Даже в темноте множество цветов и форм растений почти переполняло чувства."
+    new "Даже в темноте множество цветов и форм растений едва не ошеломляли чувства."
 
     old "As the two walked into the garden and the plants began to surround them in every direction, Sarah could almost believe she wasn't in the palace anymore."
-    new "Когда они вошли в сад и растения начали окружать их со всех сторон, Сара почти поверила, что больше не во дворце."
+    new "Когда они вдвоём вошли в сад, а растения начали окружать их со всех сторон, Сара почти поверила, что больше не находится во дворце."
 
     old "Samayra turned to Sarah as they walked through the garden."
     new "Самайра повернулась к Саре, пока они шли по саду."
 
     old "This is my favorite place in the entire palace."
-    new "Это моё любимое место во всём дворце."
+    new "Это моё самое любимое место во всем дворце."
 
     old "When I'm here, I can almost kind of imagine what the world outside must look like."
-    new "Когда я здесь, я могу почти представить, как, наверное, выглядит мир снаружи."
+    new "Когда я здесь, я почти могу представить, как должен выглядеть мир снаружи."
 
     old "I get that, but I've been all over the world, and I've never seen a place like this before."
-    new "Я понимаю, но я объездила весь мир и никогда не видела такого места."
+    new "Я понимаю это, но я объездила весь мир и никогда раньше не видела такого места."
 
     old "Samayra grabbed Sarah's hand and began to guide her again."
-    new "Самайра схватила Сару за руку и снова повела её."
+    new "Самайра схватила Сару за руку и снова начала вести её."
 
     old "Here, follow me!"
-    new "Сюда, за мной!"
+    new "Иди за мной!"
 
     old "There was an excitement to her that overpowered her otherwise demure nature."
-    new "В ней чувствовалось возбуждение, которое пересиливало её обычно сдержанный нрав."
+    new "В ней было такое волнение, что оно подавляло её иначе сдержанный характер."
 
     old "Sarah let herself be guided, weaving in between the plants, going deeper and deeper into the garden, which by now was thick as jungle."
-    new "Сара позволила вести себя, лавируя между растений, уходя всё глубже в сад, который к этому моменту стал густым, как джунгли."
+    new "Сара позволила себе быть ведомой, пробираясь между растениями всё глубже и глубже в сад, который к этому моменту стал густым, как джунгли."
 
     old "After a brief few minutes, they reached a clearing near the center. A small bench sat out under an arbor, covered in an exotic plant that Sarah had never seen before."
-    new "Спустя несколько минут они добрались до поляны ближе к центру. Под беседкой стояла небольшая скамейка, увитая экзотическим растением, которого Сара никогда раньше не видела."
+    new "Спустя несколько минут они добрались до поляны в центре сада. Под аркой стояла маленькая скамейка, укрытая диковинным растением, которого Сара никогда прежде не видела."
 
     old "Samayra sat down on the bench and motioned for Sarah to join her, which she did."
-    new "Самайра села на скамейку и жестом пригласила Сару присоединиться, что та и сделала."
+    new "Самайра села на скамью и жестом пригласила Сару присоединиться к ней, та же селась."
 
     old "This is where I go when I want to be alone. It's so hidden, I don't think even my father knows about it."
-    new "Сюда я прихожу, когда хочу побыть одна. Здесь так укромно, что, кажется, даже мой отец не знает об этом месте."
+    new "Это то место, куда я прихожу, когда хочу остаться одна. Оно так хорошо спрятано, что, думаю, даже мой отец о нём не знает."
 
     old "Sarah looked around the clearing. Near the edges, plants of all kinds grew so thick they blocked any view in or out."
-    new "Сара оглядела поляну. У краёв растения всех видов росли так густо, что полностью скрывали вид как внутрь, так и наружу."
+    new "Сара оглядела поляну. У её краёв росли такие густые растения всех видов, что они полностью загораживали вид внутрь и наружу."
 
     old "She turned towards Samayra, who she found eagerly staring at her."
-    new "Она повернулась к Самайре и обнаружила, что та с нетерпением смотрит на неё."
+    new "Она повернулась к Самайре и увидела, что та с нетерпением смотрит на неё."
 
     old "You're so pretty."
     new "Ты такая красивая."
 
     old "To her own surprise, Sarah found herself embarassed at the compliment."
-    new "К собственному удивлению, Сара смутилась от комплимента."
+    new "К своему удивлению, Сара обнаружила, что этот комплимент заставил её смутиться."
 
     old "Sarah said the words half laughing."
-    new "Сара сказала это, слегка смеясь."
+    new "Сара произнесла эти слова, полусмеясь."
 
     old "Ooh, sorry..."
-    new "Ой, прости..."
+    new "Ох, прости..."
 
     old "I mean, we don't get a lot of people here who look like you. Your blonde hair, I just, I meant..."
-    new "Я имею в виду, у нас тут нечасто бывают люди, похожие на тебя. Твои светлые волосы, я просто, я хотела сказать..."
+    new "Я имею в виду, у нас здесь нечасто бывают люди, похожие на тебя. Твои светлые волосы... я просто... я хотела сказать..."
 
     old "I'm sorry, I'm rambling, I don't know why I said that."
-    new "Прости, я болтаю лишнее, не знаю, зачем я это сказала."
+    new "Прости, я что-то несу чушь... Не знаю, почему это сказала."
 
     old "It's ok. You're very pretty too."
-    new "Всё в порядке. Ты тоже очень красивая."
+    new "Ничего страшного. Ты тоже очень красивая."
 
     old "Samayra smiled at her compliment."
-    new "Самайра улыбнулась её комплименту."
+    new "Самайра улыбнулась в ответ на комплимент."
 
     old "Where are you from, anyway?"
-    new "А ты откуда родом?"
+    new "Куда ты вообще родом?"
 
     old "I live in Lethram now, but I was born in Rosanna."
-    new "Сейчас я живу в Летрэме, но родилась в Розанне."
+    new "Я сейчас живу в Лэтраме, но родилась я в Розанне."
 
     old "Mentioning the word caused a sadness to come over Samayra's face."
-    new "Упоминание этого слова вызвало печаль на лице Самайры."
+    new "Упоминание этого слова заставило грусть отразиться на лице Самайры."
 
     old "Sarah realized she should have known better."
-    new "Сара поняла, что должна была знать лучше."
+    new "Сара поняла, что должна была бы лучше понимать ситуацию."
 
     old "It had been like this ever since the fall of Rosanna to the eastern tribesmen. Everywhere you went, mentioning Rosanna would invite stares of pity."
-    new "Так было с самого падения Розанны под натиском восточных племён. Куда бы ты ни пошла, упоминание Розанны вызывало сочувственные взгляды."
+    new "Так было с тех пор, как Розанна пала под натиском восточных племен. Куда бы ты ни пошёл, упоминание Розанны вызывало лишь сочувствующие взгляды."
 
     old "Rosanna's people had become either refugees if they were lucky, or slaves to the tribesmen. A pitied people, everywhere they went."
-    new "Люди Розанны стали либо беженцами, если им повезло, либо рабами племён. Народ, вызывающий жалость, куда бы они ни пошли."
+    new "Народ Розанны стал либо беженцами, если им повезло, либо рабами у племенников. Их повсюду встречали с жалостью."
 
     old "I'm so sorry for you, I heard about what happened there. It's horrible."
-    new "Мне так жаль тебя, я слышала о том, что там произошло. Это ужасно."
+    new "Мне так жаль тебя. Я слышала о том, что там произошло. Это ужасно."
 
     old "Sarah waved her hand, hoping to dismiss the topic."
-    new "Сара махнула рукой, надеясь закрыть эту тему."
+    new "Сара махнула рукой, надеясь отмахнуться от этой темы."
 
     old "Don't worry. It's been many years, I've managed to move on."
-    new "Не волнуйся. Прошло много лет, я смогла двигаться дальше."
+    new "Не волнуйся. Прошло уже много лет, я сумела с этим смириться."
 
     old "To Sarah's surprise, Samayra did not let it go. Sarah nearly physically jolted when she felt Samayra embrace her."
-    new "К удивлению Сары, Самайра не оставила эту тему. Сара почти физически вздрогнула, когда почувствовала объятия Самайры."
+    new "К удивлению Сары, Самайра не отпустила эту тему. Когда она почувствовала, как Самайра обнимает её, Сара едва не вздрогнула."
 
     old "Sarah began to softly sob."
-    new "Сара начала тихо всхлипывать."
+    new "Сара начала тихо рыдать."
 
     old "Why did this still hurt her so?"
-    new "Почему это всё ещё так больно?"
+    new "Почему это до сих пор так сильно её ранило?"
 
     old "Why was she still so weak that even a kind hug could cause her to breakdown."
-    new "Почему она всё ещё настолько слаба, что даже добрые объятия могут заставить её сломаться."
+    new "Почему она всё ещё была так слаба, что даже добрые объятия могли заставить её сломаться?"
 
     old "Maybe it had been years since someone had shown her a simple kindness like this, and with ease, Sarah felt her walls break."
-    new "Возможно, прошли годы с тех пор, как кто-то проявлял к ней такую простую доброту, и Сара с лёгкостью почувствовала, как её стены рушатся."
+    new "Возможно, прошло уже много лет с тех пор, как кто-то проявил к ней такую простую доброту, и Сара без труда почувствовала, как её внутренние преграды рухнули."
 
     old "She wept, openly into Samayra's shoulders. Wordlessly, the princess of Bagrad held her."
-    new "Она плакала, открыто, уткнувшись в плечо Самайры. Принцесса Баграда молча обнимала её."
+    new "Она рыдала, открыто прижимаясь к плечу Самайры. Без слов принцесса Баграда обнимала её."
 
     old "After a few minutes, Sarah managed to regain her composure, breaking free from the embrace and wiping her tears away."
-    new "Через несколько минут Сара взяла себя в руки, высвободилась из объятий и вытерла слёзы."
+    new "Через несколько минут Сара наконец смогла прийти в себя, отстранилась от объятий и утерла слёзы."
 
     old "I'm sorry about that, I don't know what happened."
-    new "Прости, я не знаю, что на меня нашло."
+    new "Прости за это... Я не знаю, что произошло."
+
+    old "It's ok."
+    new "Всё в порядке."
 
     old "I cry too, sometimes."
     new "Я тоже иногда плачу."
 
     old "Sometimes father would go on far away visits, and I would be here all alone, and it just felt so lonely."
-    new "Иногда отец уезжал в дальние поездки, и я оставалась здесь совсем одна, и было так одиноко."
+    new "Иногда отец уезжал в дальние поездки, а я оставалась здесь совсем одна — и мне было так одиноко."
 
     old "I would just come here and cry till I felt better."
-    new "Я просто приходила сюда и плакала, пока не становилось легче."
+    new "Я просто приходила сюда и плакала, пока мне не становилось лучше."
 
     old "I think it helps, in a way, you know? Letting all the emotions out so they don't stay inside of you."
-    new "Думаю, это помогает, в каком-то смысле, понимаешь? Выпустить все эмоции наружу, чтобы они не оставались внутри."
+    new "Думаю, это в каком-то смысле помогает, знаешь? Когда даёшь волю всем эмоциям, чтобы они не оставались внутри тебя."
 
     old "Yeah, maybe that's true. It's been a long time since I cried like that though."
-    new "Да, возможно, это правда. Хотя прошло много времени с тех пор, как я так плакала."
+    new "Да, может быть, это и правда. Но я уже давно так не плакала."
 
     old "Samayra smiled back at her."
     new "Самайра улыбнулась ей в ответ."
 
     old "Well, if you get too sad, it's easy. You just have to throw all the emotions out."
-    new "Что ж, если тебе слишком грустно, всё просто. Нужно просто выбросить все эмоции наружу."
+    new "Ну, если ты станешь слишком грустной, это легко сделать. Просто нужно выплеснуть все эмоции наружу."
 
     old "Sarah gave Samayra a confused look."
-    new "Сара удивлённо посмотрела на Самайру."
+    new "Сара растерянно посмотрела на Самайру."
 
     old "Throw them out?"
-    new "Выбросить?"
+    new "Выбросить их?"
 
     old "Yeah, like this!"
     new "Да, вот так!"
 
     old "Suddenly, Samayra leapt off the bench and landed perfectly balanced on one foot."
-    new "Внезапно Самайра спрыгнула со скамейки и приземлилась, идеально балансируя на одной ноге."
+    new "Внезапно Самайра спрыгнула со скамьи и идеально сбалансированно приземлилась на одну ногу."
 
     old "For as small and lithe as she was, Samayra excercised a great strength from the tip of her toes, spinning her body around on one foot."
-    new "Несмотря на свой маленький и гибкий стан, Самайра проявила большую силу, вращаясь на одной ноге с самых кончиков пальцев."
+    new "Несмотря на то, насколько она была маленькой и гибкой, Самайра проявляла огромную силу даже кончиками пальцев ног, вращаясь на одной ноге."
 
     old "As she spun she turned her body into the movement, placing down her other foot."
-    new "Кружась, она вложила всё тело в движение и опустила другую ногу."
+    new "Вращаясь, она включила тело в движение, опустив другую ногу."
 
     old "Her body effortlessly followed the movements of her legs. Gracefully and with ease she made her body flow like water."
-    new "Её тело без усилий следовало за движениями ног. Грациозно и легко она заставляла его струиться, словно воду."
+    new "Её тело без усилий следовало за движениями ног. С лёгкостью и изяществом она заставляла своё тело течь, словно вода."
 
     old "Each step followed into the next, at every moment, her body turning and turning, her hair wildly flailing around."
-    new "Каждый шаг перетекал в следующий, каждое мгновение её тело вращалось и вращалось, волосы бешено развевались."
+    new "Каждый шаг следовал за следующим; в каждый миг её тело продолжало вращаться, а волосы бешено развевались вокруг."
 
     old "There was a chaos here, but it was also obvious that Samayra excercised a control over it."
-    new "В этом был хаос, но было очевидно, что Самайра контролирует его."
+    new "Здесь царил хаос, но было очевидно, что Самайра полностью им овладела."
 
     old "Sarah was entranced by the sight."
-    new "Сара была зачарована этим зрелищем."
+    new "Сара была ошеломлена этим зрелищем."
 
     old "It was not merely the beauty of Samayra, or the beauty of her performance, but Sarah could also feel an old part of herself return."
-    new "Дело было не просто в красоте Самайры или её танца — Сара чувствовала, как возвращается старая часть её самой."
+    new "Это была не просто красота Самайры или красота её выступления — Сара также чувствовала, как к ней возвращается какая-то древняя часть самой себя."
 
     old "Sarah remembered her own dancing lessons, how she had dedicated month after month to mastering the many dances that would be expected of a Rosannian princess."
-    new "Сара вспомнила свои уроки танцев, как она месяцами осваивала многочисленные танцы, которые ожидались от розаннской принцессы."
+    new "Она вспомнила свои уроки танцев — как месяцами усердно осваивала множество танцев, которые ожидали от принцессы Росаннии, и как после каждого нового достижения спешила к отцу, чтобы продемонстрировать ему свой прогресс."
 
     old "She remembered how she would rush to her father, whenever she had mastered a new dance, and how she would show it to him."
-    new "Она вспомнила, как бежала к отцу, каждый раз освоив новый танец, и показывала ему."
+    new "Она вспоминала, как, освоив новый танец, спешила к отцу и показывала его ему."
 
     old "Sarah suddenly recognized herself in Samayra in a way she had not yet before."
-    new "Сара внезапно узнала себя в Самайре так, как не узнавала раньше."
+    new "Сара вдруг узнала себя в Самайре так, как ещё ни разу до этого не делала."
 
     old "Join and dance."
-    new "Присоединиться и танцевать."
+    new "Присоединись и станцуй."
 
     old "It's not enough for Sarah to watch. From a place deep within herself, she wants to join."
-    new "Саре недостаточно просто смотреть. Откуда-то из самой глубины души ей хочется присоединиться."
+    new "Саре недостаточно просто наблюдать. Из самой глубины её существа рождается желание присоединиться."
 
     old "Sarah gives in to the desire."
-    new "Сара поддаётся этому желанию."
+    new "Сара поддается этому желанию."
 
     old "She leaps off the bench, landing in th grass near Samayra."
-    new "Она спрыгивает со скамейки, приземляясь в траву рядом с Самайрой."
+    new "Она спрыгивает со скамьи, приземляясь в траве рядом с Самайрой."
 
     old "Samayra is surprised at first, but does not break her performance."
-    new "Самайра сначала удивлена, но не прекращает своего танца."
+    new "Самайра сначала удивлена, но не прерывает своё выступление."
 
     old "Sarah draws from her own experience, her training."
-    new "Сара черпает из собственного опыта, своей подготовки."
+    new "Сара опирается на собственный опыт и подготовку."
 
     old "It takes a few moments for the two to find their rhythm."
-    new "Им требуется несколько мгновений, чтобы найти общий ритм."
+    new "Паре требуется несколько мгновений, чтобы найти общий ритм."
 
     old "But with each step, twirl and leap, the two slowly begin to discover the patterns of the other's movements."
-    new "Но с каждым шагом, поворотом и прыжком они начинают постигать рисунок движений друг друга."
+    new "Но с каждым шагом, вращением и прыжком они постепенно начинают постигать закономерности движений друг друга."
 
     old "Modulating, adapting, altering, the two find a matching pace."
-    new "Меняясь, подстраиваясь, корректируя, они находят единый темп."
+    new "Модулируясь, приспосабливаясь, изменяясь, они обе находят совпадающий темп."
 
     old "Sarah and Samayra dance in circles, each stepping in the motion of the other, matching, responding. Each leads and follows at the same time."
-    new "Сара и Самайра танцуют по кругу, каждая вторит движению другой, подстраивается, отвечает. Каждая ведёт и следует одновременно."
+    new "Сара и Самайра танцуют по кругу: каждая следует движениям другой, синхронизируясь и реагируя. Каждая ведёт и следует одновременно."
 
     old "Sarah spins and throws her hair around and begins to lose herself."
-    new "Сара кружится, разбрасывая волосы, и начинает терять себя."
+    new "Сара кружится, отбрасывает волосы назад и начинает терять себя."
 
     old "For a moment, there is no magic, no duty, no war. There's only two people, each caught in a moment with the other. Life turns simple and small."
-    new "На миг нет ни магии, ни долга, ни войны. Есть лишь два человека, застывших в моменте друг с другом. Жизнь становится простой и маленькой."
+    new "На мгновение не остаётся ни магии, ни долга, ни войны. Есть только двое людей, каждый из которых полностью поглощён моментом, проведённым с другим. Жизнь становится простой и малой."
 
     old "Sarah turns back around and sees Samayra, standing still, breathing heavily from the exhaustion."
     new "Сара оборачивается и видит Самайру: та стоит неподвижно, тяжело дыша от усталости."
@@ -473,143 +478,145 @@ translate ru strings:
     new "Сара обхватывает руками талию Самайры и притягивает её к себе."
 
     old "She can feel Samayra's breasts pressing against hers."
-    new "Она чувствует, как грудь Самайры прижимается к её груди."
+    new "Она чувствует, как грудь Самайры прижимается к её собственной."
 
     old "This close, she can see the sudden uncertainty in Samayra's eyes."
-    new "Так близко она видит внезапную неуверенность в глазах Самайры."
+    new "На таком расстоянии она видит внезапную неуверенность в глазах Самайры."
 
     old "Sarah wants her to know her. She begins to pull on Samayra's waist, guiding her, leading her, into a classic Rosannan dance."
-    new "Сара хочет, чтобы та узнала её. Она начинает тянуть Самайру за талию, направляя её, ведя в классический розаннский танец."
+    new "Сара хочет, чтобы она знала её. Она начинает тянуть Самайру за талию, направляя, ведя её в классический танец Розанны."
 
     old "The moves are new to Samayra, but she adapts quickly to the guidance of Sarah."
-    new "Движения незнакомы Самайре, но она быстро приспосабливается к руководству Сары."
+    new "Для Самайры эти движения в новинку, но она быстро подчиняется указаниям Сары."
 
     old "Before long, the two are dancing slowly through the garden clearing, in perfect unity."
-    new "Вскоре они уже медленно танцуют по поляне в полном единстве."
+    new "Вскоре они уже медленно танцуют по саду в идеальном единстве."
 
     old "Their faces are close."
-    new "Их лица близко."
+    new "Их лица близки."
 
     old "Sarah becomes more aware as they slow down."
-    new "Сара начинает осознавать всё яснее по мере того, как они замедляются."
+    new "Сара становилась всё более осознанной, пока они замедляли темп."
 
     old "This was a dance more meant for one's wedding than for two women."
-    new "Это был танец, больше предназначенный для свадьбы, чем для двух женщин."
+    new "Это был танец, скорее предназначенный для свадьбы, чем для двух женщин."
 
     old "And yet she doesn't break, nor does Samayra."
-    new "И всё же она не прерывается, как и Самайра."
+    new "И всё же она не сломается, как и Самайра."
 
     old "She can feel her breath upon her face. Is she aware of mine, Sarah wonders."
-    new "Она чувствует её дыхание на своём лице. Чувствует ли она моё, гадает Сара."
+    new "Она чувствует её дыхание на своём лице. Осознает ли она моё? — задается вопросом Сара."
 
     old "Sarah kisses her."
     new "Сара целует её."
 
     old "She can feel Samayra's stunned reaction, her body suddenly tense, but it gives way to surrender as Samayra's mouth opens and her tongue meets hers."
-    new "Она чувствует ошеломлённую реакцию Самайры, её тело напрягается, но потом уступает, и рот Самайры открывается, встречая её язык."
+    new "Она ощущает её застывшую реакцию: тело внезапно напрягается, но тут же расслабляется в подчинении, когда рот Самайры открывается, а язык касается её собственного."
 
     old "What am I doing, Sarah thinks."
-    new "Что я делаю, думает Сара."
+    new "Что я делаю? — думает Сара."
 
     old "But her reason is powerless here. From a far more primal place, she wants to hold Samayra, hold every part of her."
-    new "Но разум бессилен здесь. Откуда-то из гораздо более древнего места ей хочется обнимать Самайру, держать каждую частичку её."
+    new "Но её разум здесь бессилен. Из куда более первобытного места она хочет обнять Самайру — удержать каждую её часть."
 
     old "Suddenly, she can feel Samayra break their kiss."
-    new "Внезапно она чувствует, как Самайра прерывает их поцелуй."
+    new "Внезапно она чувствует, как Самайра прерывает поцелуй."
 
     old "Their eyes meet again, and for a moment, neither speaks."
-    new "Их взгляды снова встречаются, и мгновение никто не говорит ни слова."
+    new "Их взгляды снова встречаются, и на мгновение никто из них не произносит ни слова."
+
+    old "Why did you do that?"
+    new "Почему ты так сделала?"
 
     old "The question seems genuine."
     new "Вопрос кажется искренним."
 
     old "Did you not want me to?"
-    new "Разве ты не хотела этого?"
+    new "Разве ты не хотела, чтобы я это сделала?"
 
     old "Sarah can see Samayra is afraid to answer."
-    new "Сара видит, что Самайра боится отвечать."
+    new "Сара видит, что Самайра боится ответить."
 
     old "Instead, Samayra answers without words, leaning back in and kissing Sarah."
-    new "Вместо этого Самайра отвечает без слов — наклоняется и целует Сару."
+    new "Вместо этого Самайра отвечает без слов: она отклоняется назад и целует Сару."
 
     old "Under the stars, hidden in the garden, the two fall into each other."
     new "Под звёздами, спрятавшись в саду, они падают в объятия друг друга."
 
     old "After some time has passed, the two finally break from one another."
-    new "Спустя какое-то время они наконец отрываются друг от друга."
+    new "Спустя некоторое время они наконец отстраняются друг от друга."
 
     old "In their eyes, each can see a longing for more, yet each knows it can't happen here."
-    new "В глазах друг друга каждая видит желание большего, но обе знают, что здесь это невозможно."
+    new "В их глазах каждая видит жажду большего, но обе знают: здесь этого не может случиться."
 
     old "The council will end soon...I'll be expected..."
-    new "Совет скоро закончится... меня будут ждать..."
+    new "Совещание скоро закончится... Меня ждут..."
 
     old "Sarah turned away, staring out into the brush."
-    new "Сара отвернулась, уставившись в кусты."
+    new "Сара отвернулась, глядя на кусты."
 
     old "Of course, I don't know what I was thinking. We should go back inside."
-    new "Конечно, я не знаю, о чём я думала. Нам пора вернуться внутрь."
+    new "Конечно, я не знаю, о чём я тогда думала. Нам стоит вернуться внутрь."
 
     old "Samayra is the first walk away, grabbing Sarah's hands and pulling her along."
-    new "Самайра первой отходит, хватая Сару за руку и увлекая за собой."
+    new "Самайра отходит первой, хватает Сару за руки и тянет её за собой."
 
     old "She gives Sarah one last kiss, before guiding her by the hand back into the palace."
-    new "Она дарит Саре последний поцелуй, прежде чем взять её за руку и повести обратно во дворец."
+    new "Она дарит Саре последний поцелуй, а затем ведёт её за руку обратно во дворец."
 
     old "Neither speaks of what transpired as they walk the hallways of the palace, but it lingers in the silence between them."
-    new "Ни одна не говорит о том, что произошло, пока они идут по коридорам дворца, но это витает в тишине между ними."
+    new "Ни одна из них не упоминает произошедшее, пока они идут по коридорам дворца, но это молчаливо витает в воздухе между ними."
 
     old "Sit still and observe"
-    new "Сидеть и наблюдать"
+    new "Сиди смирно и наблюдай"
 
     old "Sarah remains seated, happy to simply watch Samayra dance."
-    new "Сара остаётся сидеть, счастливая просто наблюдать за танцем Самайры."
+    new "Сара остаётся сидеть, с радостью просто наблюдая за танцем Самайры."
 
     old "Samayra's performance slowly reaches its crescendo as she leaps off the ground, her body spinning in the air, landing perfectly balanced on one foot."
-    new "Танец Самайры медленно достигает крещендо: она отрывается от земли, её тело кружится в воздухе, приземляясь в идеальном равновесии на одну ногу."
+    new "Выступление Самайры постепенно достигает своего апогея: она отталкивается от пола, её тело вращается в воздухе и приземляется идеально сбалансированно на одной ноге."
 
     old "She turns towards Sarah and makes a small bow."
     new "Она поворачивается к Саре и делает небольшой поклон."
 
     old "Wow, you're incredible..."
-    new "Ого, ты невероятна..."
+    new "Ого, ты просто невероятна..."
 
     old "Sarah applauds, her admiration is genuine."
-    new "Сара аплодирует, её восхищение искренне."
+    new "Сара аплодирует — её восхищение искренне."
 
     old "I've been taking lessons since I was four years old. Whenever I get sad or lonely, I just come here and dance till it fades."
-    new "Я беру уроки с четырёх лет. Когда мне грустно или одиноко, я просто прихожу сюда и танцую, пока это не пройдёт."
+    new "Я занимаюсь уроками с четырёх лет. Каждый раз, когда мне становится грустно или одиноко, я просто прихожу сюда и танцую, пока всё это не исчезнет."
 
     old "I started lessons when I was twelve, I think I'd just slow you down."
-    new "Я начала уроки в двенадцать, думаю, я бы тебя только задерживала."
+    new "Я начала занятия, когда мне было двенадцать — думаю, я бы тебя только замедлила."
 
     old "Samayra looked at Sarah with one raised eyebrow."
-    new "Самайра посмотрела на Сару, приподняв бровь."
+    new "Самайра посмотрела на Сару, приподняв одну бровь."
 
     old "I didn't know they taught mages dancing classes."
-    new "Я не знала, что магов учат танцам."
+    new "Я и не знала, что магов учат танцам."
 
     old "Sarah realized she had revealed more than she had intended."
-    new "Сара поняла, что сказала больше, чем намеревалась."
+    new "Сара поняла, что раскрыла больше, чем хотела."
 
     old "Ooh, just, something I liked to do on my own. It's nothing."
-    new "Ой, просто... я любила заниматься этим сама. Ничего особенного."
+    new "Ох, просто... такое, чем я любила заниматься одна. Это ничего."
 
     old "Sarah could see in Samayra's face that she hadn't been very convincing with her lie. Sarah couldn't blame her, she didn't even believe herself."
-    new "Сара видела по лицу Самайры, что её ложь была не очень убедительной. Она не могла винить её — она и сама себе не верила."
+    new "Сара видела по лицу Самайры, что та не слишком-то убедительно солгала. Но она не могла её винить — ведь даже сама не верила в эту ложь."
 
     old "I think we've been out here for a while now. The council will end soon, we should probably head back inside before they start to miss us."
-    new "Думаю, мы уже довольно долго здесь. Совет скоро закончится, нам, наверное, стоит вернуться внутрь, пока нас не хватились."
+    new "Думаю, мы уже довольно долго здесь. Совет скоро закончится, так что нам, наверное, стоит вернуться внутрь, пока нас не начали искать."
 
     old "I'll be needing your help though. Without you as a guide I think I'd get lost in these gardens."
-    new "Но мне понадобится твоя помощь. Без тебя как проводника я, думаю, заблудилась бы в этих садах."
+    new "Однако мне понадобится твоя помощь. Без тебя как проводника, думаю, я бы заблудилась в этих садах."
 
     old "Samayra took Sarah's hands and winked at her."
     new "Самайра взяла Сару за руки и подмигнула ей."
 
     old "Good thing you have me as a guide then."
-    new "Хорошо, что я у тебя есть в качестве проводника."
+    new "Хорошо, что тогда у тебя есть я как проводник."
 
     old "Allowing herself to be softly pulled along, Sarah walked back through the gardens, hand in hand with Samayra."
-    new "Позволяя мягко вести себя, Сара пошла обратно через сады, рука об руку с Самайрой."
-
+    new "Позволив мягко вести себя за руку, Сара прошла обратно через сады рука об руку с Самайрой."

@@ -1,116 +1,115 @@
 # -*- encoding: utf-8 -*-
 # Arc: StoryBeginnings | Scene: SarahAndThomasSpeak
-# Source: C:\Program Files (x86)\Steam\steamapps\common\The Survival of Sarah Rose\game\script.rpy
 
 translate ru strings:
 
     old "Some days had passed and Sarah had spend them trying to forget about Kate's visit to her bedroom."
-    new "Прошло несколько дней, и Сара провела их, пытаясь забыть о ночном визите Кейт."
+    new "Некоторые дни уже прошли, и Сара потратила их на попытки забыть о визите Кейт в её спальню."
 
     old "Her words of warning, her attempt to take her away from Castle Reinmeer, it had all been so very odd."
-    new "Её предупреждения, попытка увезти её из замка Рейнмир — всё это было так странно."
+    new "Её слова-предупреждения, попытка увести её от замка Рейнмир — всё это было так невероятно странно."
 
     old "But Sarah had soon found that Kate had been too cryptic. Sarah couldn't afford to be distracted, speculating about what dangers might be out there."
-    new "Но Сара вскоре поняла, что Кейт была слишком загадочна. Сара не могла позволить себе отвлекаться на размышления о том, какие опасности могут быть снаружи."
+    new "Но Сара вскоре поняла, что Кейт была слишком загадочной. Ей нельзя было позволить отвлекаться, размышляя о том, какие опасности могут подстерегать её впереди."
 
     old "There were plenty of real dangers all around her."
-    new "Вокруг хватало реальных опасностей."
+    new "Вокруг неё действительно существовало множество настоящих угроз."
 
     old "Having finished reviewing some of the weekly reports, Sarah found herself wandering the castle, ending up in the great hall."
-    new "Закончив просматривать еженедельные отчёты, Сара обнаружила, что бродит по замку, и оказалась в большом зале."
+    new "Закончив просматривать некоторые из еженедельных отчётов, Сара обнаружила, что бродит по замку и в итоге оказалась в большом зале."
 
     old "Sitting atop the stairs near the dais, she found her brother Thomas."
-    new "Сидя на ступенях у помоста, она нашла своего брата Томаса."
+    new "Сев на верхнюю ступеньку лестницы у помоста, она обнаружила своего брата Томаса."
 
     old "She observed him as she approached, and noticed that he did not notice her."
-    new "Она наблюдала за ним, приближаясь, и заметила, что он её не замечает."
+    new "Она наблюдала за ним, приближаясь, и заметила, что он её не замечал."
 
     old "He might be in this room, but in his head, he was very far away."
-    new "Он был в этом зале, но мыслями — очень далеко."
+    new "Он мог быть в этой комнате, но в своей голове он был очень далеко."
 
     old "Already prone to overthinking, her brother had turned almost entirely inward following the coronation."
-    new "Склонный к излишним размышлениям, после коронации брат почти полностью ушёл в себя."
+    new "Уже склонный к излишним размышлениям, после коронации её брат почти полностью ушёл в себя."
 
     old "Only cheerful thoughts, I hope?"
-    new "Надеюсь, мысли весёлые?"
+    new "Только весёлые мысли, надеюсь?"
 
     old "Thomas looked up, startled."
-    new "Томас вздрогнул и поднял голову."
+    new "Томас поднял голову, вздрогнув от неожиданности."
 
     old "Huh?"
     new "А?"
 
     old "I said, I hope you're having cheerful thoughts."
-    new "Я говорю, надеюсь, мысли весёлые."
+    new "Я сказала: «Надеюсь, у тебя только весёлые мысли?»"
 
     old "Ooh...sorry, I wasn't paying attention."
-    new "Ох... прости, я задумался."
+    new "Ох... прости, я не обращал внимания."
 
     old "Sarah flattened her dress and set down next to her brother."
-    new "Сара одёрнула платье и села рядом с братом."
+    new "Сара разгладила платье и села рядом с братом."
 
     old "She poked him with her elbow."
-    new "Она ткнула его локтём."
+    new "Она ткнула его локтем."
 
     old "Come on Thomas, share with me. We promised we were going to get through this together. That means trusting me enough to let me into your head."
-    new "Давай, Томас, поделись со мной. Мы обещали пройти через это вместе. А значит, доверять мне настолько, чтобы впустить в свои мысли."
+    new "Давай же, Томас, поделись со мной. Мы ведь обещали пройти через это вместе. А значит, ты должен доверять мне достаточно, чтобы позволить мне заглянуть в твою голову."
 
     old "Thomas nodded, but still seemed to stare into the distance."
-    new "Томас кивнул, но всё ещё смотрел в пустоту."
+    new "Томас кивнул, но всё ещё, казалось, смотрел вдаль."
 
     old "You're right..."
     new "Ты права..."
 
     old "It's just, ever since the coronation, it's all gotten even worse."
-    new "Просто с коронации всё стало только хуже."
+    new "Просто... с самого момента коронации всё стало только хуже."
 
     old "What has?"
-    new "Что?"
+    new "Что изменилось?"
 
     old "The expectations that people seem to have. They come up to me, asking me to weigh in on one problem after the other."
-    new "Ожидания, которые у людей есть. Они подходят, просят меня решить одну проблему за другой."
+    new "Ожидания, которые, кажется, есть у людей. Они подходят ко мне и просят высказать своё мнение по одной проблеме за другой."
 
     old "And it's not just that, but they're also...different with me..."
-    new "И не только это, они ещё и... ведут себя иначе..."
+    new "И дело не только в этом — они со мной... другие..."
 
     old "Different how?"
-    new "Иначе — как?"
+    new "В чём именно они отличаются?"
 
     old "I used to know what people were about, you know? If they liked me, or didn't like me. But now, everyone is always smiling at me."
-    new "Раньше я понимал, что люди из себя представляют, понимаешь? Нравлюсь я им или нет. А теперь все мне всё время улыбаются."
+    new "Раньше я знал, какие люди такие, понимаешь? Нравился ли им я или нет. А сейчас все постоянно мне улыбаются."
 
     old "Thomas paused for a moment."
-    new "Томас замолчал на мгновение."
+    new "Томас на мгновение замолчал."
 
     old "But, it's like, their smiles aren't real, and I can see it, you know?"
-    new "Но их улыбки будто ненастоящие, и я это вижу, понимаешь?"
+    new "Но ведь их улыбки не искренние — я это вижу, понимаешь?"
 
     old "Sarah understood what her brother was getting at."
-    new "Сара понимала, к чему клонит брат."
+    new "Сара поняла, к чему клонил её брат."
 
     old "Ever since their father had died, it was true that more and more people seemed to want to ingratiate themselves with them."
-    new "После смерти отца и правда всё больше людей стремились втереться к ним в доверие."
+    new "С тех пор как умер их отец, действительно казалось, что всё больше людей хотели заискивать перед ними."
 
     old "Where before they had just been the heirs to the throne, now Thomas was actually king, and it made all the difference."
-    new "Раньше они были лишь наследниками трона, а теперь Томас стал королём, и это меняло всё."
+    new "Раньше они были всего лишь наследниками престола, а теперь Томас стал настоящим королем — и это кардинально всё изменило."
 
     old "Sarah put an arm around her brother."
     new "Сара обняла брата за плечи."
 
     old "I know things are different, Thomas, and it will take some time to get used to it."
-    new "Я знаю, всё изменилось, Томас, и потребуется время, чтобы привыкнуть."
+    new "Я знаю, что всё изменилось, Томас, и нам понадобится время, чтобы к этому привыкнуть."
 
     old "But we'll get through this, you and me. And whenever things get too much, remember that I'm here for you. Always."
-    new "Но мы справимся, ты и я. И когда станет слишком тяжело, помни, что я рядом. Всегда."
+    new "Но мы справимся с этим, ты и я. А когда станет слишком тяжело, помни: я всегда буду рядом с тобой."
 
     old "Thomas nodded, but the words didn't seem to affect him much."
-    new "Томас кивнул, но слова, казалось, не тронули его."
+    new "Томас кивнул, но слова, кажется, не произвели на него особого впечатления."
 
     old "People come up to me and ask me to settle disputes between noble houses I've never even heard of, or make military decisions, as if I know anything about that stuff..."
-    new "Ко мне приходят и просят разрешить споры между знатными домами, о которых я даже не слышал, или принять военные решения, будто я хоть что-то в этом понимаю..."
+    new "Люди подходят ко мне и просят разрешать споры между аристократическими домами, о которых я даже не слышал, или принимать военные решения — как будто я что-то понимаю в этом..."
 
     old "It's all just too much, and I just keep thinking about Dad, and how he would do everything better..."
-    new "Всё это слишком, и я всё время думаю о папе и о том, как он сделал бы всё лучше..."
+    new "Всё это просто слишком тяжело, и я всё время думаю об отце — о том, как он бы со всем справился гораздо лучше..."
 
     old "Sarah pulled her brother closer."
     new "Сара притянула брата ближе."
@@ -119,110 +118,112 @@ translate ru strings:
     new "Я тоже скучаю, Томас."
 
     old "The two siblings sat in silence for a while."
-    new "Брат с сестрой какое-то время сидели молча."
+    new "Оба брата и сестра некоторое время сидели в молчании."
 
     old "An idea came to Sarah."
-    new "Саре пришла в голову идея."
+    new "У Сары возникла идея."
 
     old "You know, Thomas, maybe the problem is that you're trying to do everything all at once. You're not giving yourself the time to learn how to be king."
-    new "Знаешь, Томас, может, проблема в том, что ты пытаешься делать всё сразу. Ты не даёшь себе времени научиться быть королём."
+    new "Знаешь, Томас, возможно, проблема в том, что ты пытаешься сделать всё сразу. Ты просто не даёшь себе время научиться тому, как быть королём."
+
+    old "What do you mean?"
+    new "Что вы имеете в виду?"
 
     old "Well, you're comparing yourself to father, but he was king for more than thirty years. Of course you can't be as good as him overnight."
-    new "Ты сравниваешь себя с отцом, но он был королём больше тридцати лет. Конечно, ты не можешь быть таким же хорошим сразу."
+    new "Ну, ты сравниваешь себя с отцом, но он был королем больше тридцати лет. Конечно, ты не можешь стать таким же хорошим, как он, за одну ночь."
 
     old "Thomas nodded, understanding what his sister was getting at."
-    new "Томас кивнул, понимая, к чему клонит сестра."
+    new "Томас кивнул, понимая, о чём говорит его сестра."
 
     old "Father often told me about his earliest days, how he struggled with the same things you're talking about."
-    new "Отец часто рассказывал мне о своих первых днях, как он боролся с тем же, о чём ты говоришь."
+    new "Отец часто рассказывал мне о своих первых днях — о том, как он боролся с теми же вещами, о которых ты говоришь."
 
     old "And he said, a good king knows when to lead and when to listen. Maybe the problem is that you're taking on too much all at once."
-    new "И он сказал: хороший король знает, когда вести, а когда слушать. Может, проблема в том, что ты берёшь на себя слишком много сразу."
+    new "И он сказал: хороший правитель знает, когда нужно вести, а когда — слушать. Возможно, проблема в том, что ты берёшь на себя слишком много сразу."
 
     old "For the first time that day, Thomas looked directly at his sister."
-    new "Впервые за день Томас посмотрел сестре прямо в глаза."
+    new "Впервые за день Томас посмотрел прямо на сестру."
 
     old "So what do I do? I can't just ignore these issues, can I?"
-    new "Так что мне делать? Я не могу просто игнорировать эти вопросы, верно?"
+    new "Так что же мне делать? Я ведь не могу просто игнорировать эти проблемы, верно?"
 
     old "No, you can't, but we could add more people to the council. People who know about war, and know about the inner workings of the noble families."
-    new "Нет, не можешь, но мы можем добавить в совет новых людей. Тех, кто знает о войне и о внутренних делах знатных семей."
+    new "Нет, не можешь, но мы могли бы добавить в совет ещё людей. Людей, которые знают о войне и о том, как устроены аристократические семьи изнутри."
 
     old "Who?"
-    new "Кого?"
+    new "Кто?"
 
     old "Lord Marion and Lord Varga."
-    new "Лорда Мариона и лорда Варгу."
+    new "Лорд Марион и лорд Варга."
 
     old "Sarah could see Thomas frown."
-    new "Сара заметила, как Томас нахмурился."
+    new "Сара видела, как Томас нахмурился."
 
     old "Really? You want to add Marion to the council?"
-    new "Серьёзно? Ты хочешь включить Мариона в совет?"
+    new "Правда? Ты хочешь добавить Мариона в совет?"
 
     old "I know you don't like him, but you're not looking for friends. You're looking for someone who is good at what they do."
-    new "Я знаю, он тебе не нравится, но ты ищешь не друзей. Ты ищешь тех, кто хорош в своём деле."
+    new "Я знаю, он тебе не нравится, но ты же ищешь не друзей. Ты ищешь того, кто действительно умеет делать свою работу."
 
     old "And Marion's family is one of the oldest in Rosanna, and he knows just about everyone. He could be a real help to us."
-    new "А семья Мариона — одна из старейших в Розанне, и он знает практически всех. Он может нам очень помочь."
+    new "И семья Мариона — одна из самых старых в Розанне, а сам он знает практически всех. Он может стать для нас настоящей поддержкой."
 
     old "And Varga, he's proven himself in battle, I've heard people say he's a genius at war. With him on the council, you can learn everything he knows."
     new "А Варга проявил себя в бою, я слышала, люди говорят, он гений войны. С ним в совете ты сможешь научиться всему, что он знает."
 
     old "Rely on them for their skills, not their personalities."
-    new "Полагайся на их навыки, а не на личности."
+    new "Полагайся на них из-за их навыков, а не из-за их характеров."
 
     old "Thomas looked away and contemplated his sister's advice. After some time, he responded."
-    new "Томас отвернулся и обдумал совет сестры. Спустя какое-то время он ответил."
+    new "Томас отвёл взгляд и задумался над советом сестры. Спустя некоторое время он ответил."
 
     old "You're right. I don't have to like them, but if you say they're as good as they are, we can use all the help we can get."
-    new "Ты права. Мне не обязательно их любить, но если ты говоришь, что они так хороши, нам пригодится любая помощь."
+    new "Ты права. Мне не обязательно их любить, но если ты говоришь, что они действительно так хороши, как говорят, то нам нужна любая доступная помощь."
 
     old "Sarah patted her brother on the back."
-    new "Сара похлопала брата по спине."
+    new "Сара похлопала своего брата по спине."
 
     old "I'll draft the letters to extend the invitation to both of them."
-    new "Я составлю письма с приглашениями для них обоих."
+    new "Я составлю письма, чтобы отправить им обоим расширенные приглашения."
 
     old "What if they say no?"
-    new "А если они откажутся?"
+    new "А что, если они откажут?"
 
     old "Sarah shrugged."
     new "Сара пожала плечами."
 
     old "Then we'll just order their heads off."
-    new "Тогда просто прикажем отрубить им головы."
+    new "Тогда мы просто прикажем отрубить им головы."
 
     old "Sarah drew her hand across her throat, signalling decapitation. She added an exaggerated death sound for effect."
-    new "Сара провела рукой по горлу, изображая обезглавливание. Для эффекта она добавила утрированный звук смерти."
+    new "Сара провела рукой по горлу, показывая на отсечение головы, и для эффекта добавила преувеличенный звук смерти."
 
     old "Thomas broke into laughter."
     new "Томас расхохотался."
 
     old "Sarah laughed along with her brother, but more than anything, she was happy to see him smile again."
-    new "Сара смеялась вместе с братом, но больше всего она была рада снова видеть его улыбку."
+    new "Сара рассмеялась вместе с братом, но больше всего она была рада видеть его улыбку снова."
 
     old "It reminded her that the brother she knew, the easy-going quick-to-laugh brother, was still in there, despite the trauma."
-    new "Это напомнило ей, что брат, которого она знала — лёгкий, быстро смеющийся брат — всё ещё здесь, несмотря на травму."
+    new "Это напоминало ей, что брат, которого она знала — тот самый беззаботный и легко смеющийся — все еще был там, внутри него, несмотря на травму."
 
     old "Not long after, a messenger arrived for Thomas."
-    new "Вскоре к Томасу прибыл гонец."
+    new "Вскоре после этого к Томасу пришёл гонец."
 
     old "He opened the letter and read it. After, he sighed and stood up."
-    new "Он открыл письмо и прочитал. Потом вздохнул и встал."
+    new "Он открыл письмо и прочитал его. Затем он вздохнул и встал."
 
     old "The work never ends."
-    new "Работе нет конца."
+    new "Работа никогда не заканчивается."
 
     old "Sarah held onto his hand and gave it a quick squeeze."
-    new "Сара взяла его за руку и быстро сжала."
+    new "Сара схватила его за руку и быстро сжала."
 
     old "Thomas smiled, comforted by the gesture."
-    new "Томас улыбнулся, утешенный этим жестом."
+    new "Томас улыбнулся, утешённый этим жестом."
 
     old "Sarah watched as her brother began to walk away, down one of the many hallways of Castle Reinmeer."
-    new "Сара смотрела, как брат уходит по одному из многих коридоров замка Рейнмир."
+    new "Сара наблюдала, как её брат начал уходить по одному из многочисленных коридоров замка Рейнмир."
 
     old "Though his shoulders still hung low, she hoped that his crown weighed a little less on him now."
-    new "Хотя его плечи всё ещё были опущены, она надеялась, что корона стала весить хоть немного меньше."
-
+    new "Хотя его плечи всё ещё были поникшими, она надеялась, что теперь его корона давила на него немного легче."

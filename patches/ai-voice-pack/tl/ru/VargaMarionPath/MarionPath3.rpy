@@ -1,6 +1,5 @@
 # -*- encoding: utf-8 -*-
 # Arc: VargaMarionPath | Scene: MarionPath3
-# Source: C:\Program Files (x86)\Steam\steamapps\common\The Survival of Sarah Rose\game\script.rpy
 
 translate ru strings:
 
@@ -8,80 +7,79 @@ translate ru strings:
     new "Сара проснулась на следующий день."
 
     old "Except for herself, the bed was empty."
-    new "Кроме неё, кровать была пуста."
+    new "Кроме неё самой, кровать была пуста."
 
     old "Light was already creeping through the curtains."
-    new "Свет уже пробивался сквозь шторы."
+    new "Свет уже проникал сквозь шторы."
 
     old "What time was it?"
     new "Который час?"
 
     old "She wondered where Marion could be. Likely busy, as he always appeared to be."
-    new "Она гадала, где мог быть Марион. Вероятно, занят, как и всегда."
+    new "Она гадала, где же может быть Марион. Наверное, тот занят — как ему это всегда удавалось."
 
     old "Sarah couldn't blame him."
-    new "Сара не могла винить его."
+    new "Сара не могла его винить."
 
     old "There was a lot of work to be done."
-    new "Предстояло много работы."
+    new "Оставалось ещё много работы."
 
     old "They had defeated the Tribes, but victory was not so clean."
-    new "Они победили Племена, но победа была не такой уж безоблачной."
+    new "Они победили племена, но победа оказалась не такой уж и чистой."
 
     old "Endless reports had begun to make their way to the capital, petitions urging Thomas to act."
-    new "Бесконечные отчёты начали поступать в столицу, прошения, призывающие Томаса действовать."
+    new "Бесконечные донесения уже начали поступать в столицу, а вместе с ними и петиции, призывающие Томаса действовать."
 
     old "For while the Capital had managed to repel the Tribes and break their army, the Eastern Provinces had not been so fortunate."
-    new "Ибо если Столице и удалось отразить Племена и разбить их армию, то Восточным Провинциям повезло гораздо меньше."
+    new "Хотя столице удалось отразить племена и разбить их армию, восточным провинциям так не повезло."
 
     old "Many towns had been raided, pillaged, burned."
-    new "Многие города были разграблены, разорены, сожжены."
+    new "Многие города подверглись нападению, были разграблены и сожжены."
 
     old "Reports told of entire towns, sometimes even cities, ruined."
-    new "В отчётах говорилось о целых городах, иногда даже крупных, превращённых в руины."
+    new "Доклады рассказывали об уничтоженных целых посёлках, а иногда даже городах."
 
     old "Worse still, scouts often spoke of how few bodies they actually discovered among the ruins."
-    new "Хуже того, разведчики часто упоминали, как мало тел они на самом деле находили среди руин."
+    new "Хуже того, разведчики часто рассказывали о том, как мало тел им удавалось найти среди руин."
 
     old "If a city was burned, one expected countless dead."
-    new "Если город сожжён, можно ожидать бесчисленных жертв."
+    new "Если город был сожжён, можно было ожидать бесчисленных жертв."
 
     old "Without the bodies, there was only one other troubling truth."
-    new "Без тел оставалась лишь одна тревожная правда."
+    new "Без тел оставалась лишь одна ещё более тревожная истина."
 
     old "Many of the inhabitants of the Eastern Provinces had suffered slavery at the hands of the Tribes."
-    new "Многие жители Восточных Провинций попали в рабство к Племенам."
+    new "Многие жители Восточных провинций страдали от рабства в руках племен."
 
     old "Some had been freed, after the battle outside the Capital, but many were not accounted for."
-    new "Некоторых освободили после битвы у Столицы, но многие так и не нашлись."
+    new "Некоторые были освобождены после битвы у столицы, но многие так и не были найдены."
 
     old "Sons. Daughters. Wives. Carried off in chains to Gods knew where."
-    new "Сыновья. Дочери. Жёны. Уведены в цепях — бог весть чего и куда."
+    new "Сыновья. Дочери. Жёны. Их утащили в цепях — бог знает, куда."
 
     old "Their farms, burned. Their cattle, killed and left to rot in the sun."
-    new "Их фермы сожжены. Их скот убит и оставлен гнить на солнце."
+    new "Их фермы сожжены. Их скот убит и оставлен гнить под палящим солнцем."
 
     old "Those who had managed to escape the Tribes, had found their homes gone."
-    new "Те, кому удалось сбежать от Племён, обнаружили, что их домов больше нет."
+    new "Те, кому удалось сбежать от племен, обнаружили, что их дома исчезли."
 
     old "They still had their lives, but such things were cheap when one had no money, family or home."
-    new "Они всё ещё были живы, но жизнь дёшево стоит, когда у тебя нет ни денег, ни семьи, ни дома."
+    new "У них ещё оставалась жизнь, но такие вещи стоили дёшево, когда у человека не было ни денег, ни семьи, ни дома."
 
     old "Some of these men and women had been farmers for generations, reaching back beyond even their grandparents."
-    new "Некоторые из этих мужчин и женщин были фермерами поколениями, уходя корнями даже дальше своих дедов."
+    new "Некоторые из этих мужчин и женщин были фермерами на протяжении поколений — их семьи занимались этим ещё до времён их дедушек и бабушек."
 
     old "All the certainty of their lives had been wiped away."
-    new "Вся уверенность в завтрашнем дне была стёрта."
+    new "Вся уверенность в их жизни была стёрта."
 
     old "The cities of Rosanna were swelling with refugees."
-    new "Города Розанны были переполнены беженцами."
+    new "Города Розанны переполнялись беженцами."
 
     old "And as was so often the case, those who still had something, resented and feared those who now had nothing."
-    new "И, как это часто бывает, те, у кого ещё что-то оставалось, негодовали и боялись тех, у кого не осталось ничего."
+    new "И как это часто бывало, те, у кого ещё что-то оставалось, испытывали неприязнь и страх перед теми, кто теперь ничего не имел."
 
     old "For in them, they saw their own worst fears reflected."
-    new "Ибо в них они видели отражение своих собственных худших страхов."
+    new "Ведь в них они видели отражение своих собственных худших страхов."
 
     old "That they were not all so different, and that they likewise lived upon the edge between surviving and ruin."
-    new "Что они не так уж и отличаются, и что они тоже живут на грани между выживанием и крахом."
-
+    new "То, что они не были так уж и разными, и что сами они тоже жили на грани между выживанием и гибелью."

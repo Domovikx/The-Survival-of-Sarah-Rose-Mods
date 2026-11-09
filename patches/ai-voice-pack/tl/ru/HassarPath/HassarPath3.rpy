@@ -1,329 +1,328 @@
 # -*- encoding: utf-8 -*-
 # Arc: HassarPath | Scene: HassarPath3
-# Source: C:\Program Files (x86)\Steam\steamapps\common\The Survival of Sarah Rose\game\script.rpy
 
 translate ru strings:
 
     old "Sarah woke to the rise of natural light."
-    new "Сара проснулась от восхода естественного света."
+    new "Сара проснулась с первым лучами естественного света."
 
     old "The intricate construction of the sanctum made it hard to trace where anything ever really came from."
-    new "Замысловатое устройство святилища не позволяло понять, откуда что берётся."
+    new "Сложная конструкция святилища делала трудным определение того, откуда вообще что-либо здесь берётся."
 
     old "Trapped in the center of the palace, it was like a maze within a maze."
-    new "Зажатый в центре дворца, он был словно лабиринт в лабиринте."
+    new "Оказавшись в ловушке в центре дворца, она поняла, что это словно лабиринт внутри лабиринта."
 
     old "Still, Sarah was glad that there was at least a natural rhythm to the day. Something ordinary in this otherwise odd place."
-    new "И всё же Сара радовалась, что у дня был хотя бы естественный ритм. Что-то привычное в этом странном месте."
+    new "Тем не менее, Сара была рада, что в дне хотя бы оставался естественный ритм. Что-то обыденное в этом иначе странном месте."
 
     old "She stretched her arms out."
-    new "Она потянулась."
+    new "Она вытянула руки."
 
     old "A relaxing pain ran through her arms, the kind that did not stress her, but rather only reminded her of the extends of her body."
-    new "Приятная боль пробежала по рукам — та, что не тревожит, а лишь напоминает о границах тела."
+    new "По её рукам пробежала расслабляющая боль — та самая, что не причиняла страданий, а лишь напоминала ей о пределах её тела."
 
     old "Part of her hated herself for having slept so well, knowing that in this very city, many of her countrymen likely did not enjoy the luxuries she did."
-    new "Часть её ненавидела себя за то, что спала так крепко, зная: в этом же городе многие её соотечественники наверняка лишены той роскоши, что есть у неё."
+    new "Часть неё ненавидела себя за то, что так хорошо спала, зная, что в этом самом городе многие её соотечественники, вероятно, не наслаждались теми роскошами, которыми она пользовалась."
 
     old "But then again, neither had they enjoyed her luxuries in Rosanna either."
-    new "Но с другой стороны, в Розанне у них тоже не было её привилегий."
+    new "Но с другой стороны, и они-то в Розанне не пользовались её роскошью."
 
     old "Sarah sighed. Even in defeat, she bore the advantages of her birth."
-    new "Сара вздохнула. Даже в поражении она несла на себе бремя своего происхождения."
+    new "Сара вздохнула. Даже в поражении она обладала преимуществами своего происхождения."
 
     old "As she climbed out of her bed, she gazed across the room."
-    new "Выбравшись из постели, она окинула комнату взглядом."
+    new "Вставая с постели, она окинула взглядом комнату."
 
     old "The splendor of it still seemed so excessive as to border on absurd."
-    new "Её великолепие казалось настолько чрезмерным, что граничило с абсурдом."
+    new "Его великолепие всё ещё казалось настолько чрезмерным, что граничило с абсурдом."
 
     old "The more she studied it, the more she noticed that there were objects that seemed clearly different from the others."
-    new "Чем дольше она рассматривала её, тем больше замечала предметы, заметно отличавшиеся от остальных."
+    new "Чем больше она их изучала, тем больше замечала предметов, которые казались явно отличными от остальных."
 
     old "Loot, she realized."
-    new "Трофеи, поняла она."
+    new "Добыча, поняла она."
 
     old "The tribesmen had a trivial economy of their own, rather, they relied on raiding the neighbouring regions for their wealth."
-    new "У племён не было собственной экономики — они полагались на набеги на соседние земли."
+    new "У племен была своя примитивная экономика — вернее, они полагались на грабеж соседних регионов, чтобы добыть богатства."
 
     old "Judging by the room, it had worked well for them."
-    new "Судя по комнате, это неплохо срабатывало."
+    new "Судя по комнате, она им хорошо служила."
 
     old "Sarah walked through the door, leaving her room behind."
-    new "Сара вышла за дверь, оставив комнату позади."
+    new "Сара прошла через дверь, оставив свою комнату позади."
 
     old "As she moved through the twisting hallways of the sanctum, Sarah found herself naturally drawn back to the bathhouse, where she had first entered."
-    new "Петляя по коридорам святилища, Сара сама не заметила, как вернулась в купальню, откуда вошла сюда впервые."
+    new "Пока она двигалась по извилистым коридорам святилища, Сара сама собой вернулась к бане — тому самому месту, куда вошла в первый раз."
 
     old "The soft mist that moved across the surface of the water, hinted at its heat."
-    new "Лёгкий туман, струившийся над поверхностью воды, намекал на её тепло."
+    new "Мягкий туман, скользящий по поверхности воды, намекал на её тепло."
 
     old "It felt instantly relaxing to her skin."
-    new "Кожа мгновенно ощутила расслабляющее тепло."
+    new "Это мгновенно расслабило её кожу."
 
     old "Closing her eyes, Sarah took a deep breath, the scented air filling her nostrils."
-    new "Закрыв глаза, Сара глубоко вдохнула — ароматный воздух наполнил ноздри."
+    new "Закрыв глаза, Сара глубоко вздохнула, и ароматный воздух наполнил её ноздри."
 
     old "For a moment, she was at peace."
-    new "На миг она ощутила покой."
+    new "На мгновение она обрела покой."
 
     old "Suddenly, Sarah opened her eyes again in response to the sound of something moving in the water."
-    new "Внезапно Сара снова открыла глаза, услышав плеск воды."
+    new "Внезапно Сара снова открыла глаза в ответ на звук чего-то движущегося в воде."
 
     old "She saw Naydeen, swimming towards her."
-    new "Она увидела Найдин, плывущую к ней."
+    new "Она увидела Найдин, плывшую к ней."
 
     old "Hi Sarah, I hope you had a good night sleep."
-    new "Привет, Сара. Надеюсь, ты хорошо выспалась."
+    new "Привет, Сара, надеюсь, ты хорошо выспалась за ночь."
 
     old "Sarah smiled and nodded at Naydeen."
     new "Сара улыбнулась и кивнула Найдин."
 
     old "Yes, I slept surprisingly well, actually."
-    new "Да, я спала на удивление хорошо."
+    new "Да, на самом деле я спала удивительно хорошо."
 
     old "I bet you did."
-    new "Спорить не буду."
+    new "Уверена, да."
 
     old "Sarah saw Naydeen wink at her. She didn't know what to make of it. Had Hassar spoken to her of what had transpired between them?"
-    new "Сара заметила, как Найдин подмигнула ей. Она не знала, что и думать. Неужели Хассар рассказал ей о том, что произошло между ними?"
+    new "Сара увидела, как Найдин подмигнула ей. Она не знала, что об этом думать. Неужели Хассар рассказал ей о том, что произошло между ними?"
 
     old "The bed was incredibly soft, and the room...it's beautiful."
-    new "Кровать была невероятно мягкой, а комната... она прекрасна."
+    new "Постель была невероятно мягкой, а комната... она просто великолепна."
 
     old "I told you, we are well provided for."
-    new "Я же говорила, нас хорошо обеспечивают."
+    new "Я же говорила — у нас всё в достатке."
 
     old "She motioned towards Sarah."
-    new "Она поманила Сару."
+    new "Она указала на Сару."
 
     old "Come, join me."
-    new "Иди сюда, присоединяйся."
+    new "Давай, присоединяйся ко мне."
 
     old "For a moment she was hesitant, but Sarah couldn't deny that she wanted to feel the water on her skin."
-    new "Мгновение она колебалась, но не могла отрицать, что хочет ощутить воду на коже."
+    new "На мгновение она колебалась, но Сара не могла отрицать, что хотела почувствовать воду на своей коже."
 
     old "Slowly walking into the pool, Sarah could feel the warm water rise up along her body."
-    new "Медленно входя в бассейн, Сара чувствовала, как тёплая вода поднимается вдоль тела."
+    new "Медленно входя в бассейн, Сара чувствовала, как тёплая вода поднимается по её телу."
 
     old "As it neared her hips, Sarah could feel whatever tension that was left in her body, fade away into nothingness."
-    new "Когда вода достигла бёдер, Сара ощутила, как последнее напряжение в теле уходит в небытие."
+    new "Когда вода достигла её бёдер, Сара почувствовала, как всё оставшееся напряжение в её теле растворилось в пустоте."
 
     old "Whatever soothing properties the mist in the room had, the water held it in tenfold."
-    new "Какими бы успокаивающими ни были испарения в комнате, вода усиливала их в десять раз."
+    new "Какие бы успокаивающие свойства ни имел туман в этой комнате, вода обладала ими в десять раз сильнее."
 
     old "This water is incredible."
-    new "Эта вода невероятна."
+    new "Эта вода просто невероятна."
 
     old "It flows here from a nearby desert oasis. The irrigation project was quite a challenge, all things considered."
-    new "Она поступает сюда из близлежащего оазиса. Оросительный проект был той ещё задачей, учитывая все обстоятельства."
+    new "Она течёт здесь из близлежащего пустынного оазиса. Ирригационный проект, учитывая всё, оказался довольно сложной задачей."
 
     old "But the water is said to contain unique properties by the tribes."
-    new "Но племена говорят, что эта вода обладает особыми свойствами."
+    new "Но говорят, что в этой воде содержатся уникальные свойства, по словам племен."
 
     old "Sarah began to slowly swim, drawing nearer to Naydeen."
-    new "Сара начала медленно плыть, приближаясь к Найдин."
+    new "Сара начала медленно плавать, приближаясь к Найдин."
 
     old "You know a lot about the tribesmen, don't you?"
-    new "Ты много знаешь о племенах, не так ли?"
+    new "Ты ведь много знаешь о племени, не так ли?"
 
     old "Naydeen smiled as she swam close to Sarah."
-    new "Найдин улыбнулась, подплывая ближе к Саре."
+    new "Найдин улыбнулась, подплывая к Саре."
 
     old "I should, I am one of them."
-    new "Ещё бы, я одна из них."
+    new "Я должна — я одна из них."
 
     old "Sarah couldn't say she was entirely surprised. The complexion of her skin had hinted as much."
-    new "Сара не могла сказать, что это стало полной неожиданностью. Об этом говорил оттенок её кожи."
+    new "Сара не могла сказать, что была полностью удивлена. Её цвет кожи уже намекал на это."
 
     old "Does that surprise you?"
-    new "Тебя это удивляет?"
+    new "Это тебя удивляет?"
 
     old "Not entirely, only, I thought only slaves were kept here."
-    new "Не совсем. Просто я думала, что здесь держат только рабов."
+    new "Не совсем. Просто я думала, что здесь содержатся только рабы."
 
     old "Naydeen shook her head."
     new "Найдин покачала головой."
 
     old "I am no slave. Quite the opposite."
-    new "Я не рабыня. Как раз наоборот."
+    new "Я не рабыня. Совсем наоборот."
 
     old "Her face grew serious."
     new "Её лицо стало серьёзным."
 
     old "I am the Khan's wife."
-    new "Я жена хана."
+    new "Я — жена хана."
 
     old "Sarah was stunned. She had imagined Naydeen was here on account of the same reasons as her. A conquered people."
-    new "Сара была ошеломлена. Она думала, что Найдин здесь по той же причине, что и она. Из покорённого народа."
+    new "Сара была ошеломлена. Она думала, что Найдин пришла сюда по тем же причинам, что и она сама — как представительница покорённого народа."
 
     old "But instead, she was his wife."
     new "Но вместо этого она оказалась его женой."
 
     old "That's...he keeps his wife locked up here?"
-    new "То есть... он держит свою жену взаперти здесь?"
+    new "Это... он держит свою жену взаперти здесь?"
 
     old "Again, with the language, sweet child. Locked up? Do I look like I am in prison?"
-    new "Опять ты за своё, милое дитя. Взаперти? Я похожа на заключённую?"
+    new "Опять это с языком, милая дитя. Заперта? Я что, похожа на заключённую?"
 
     old "Sarah watched Naydeen swim, her beautiful body only visible through the prism of the water's surface."
-    new "Сара смотрела, как Найдин плывёт — её прекрасное тело было видно лишь сквозь призму водной глади."
+    new "Сара смотрела, как Найдин плавает, и её прекрасное тело было видно лишь сквозь призматический слой водной поверхности."
 
     old "She didn't appear a slave, nor in any worry."
-    new "Она не выглядела ни рабыней, ни встревоженной."
+    new "Она не выглядела ни рабыней, ни обеспокоенной."
 
     old "No...I guess you don't."
-    new "Нет... пожалуй, нет."
+    new "Нет... Полагаю, это не так."
 
     old "The Khan has many wives, as is his right by virtue of his status and our society, but I was his first."
-    new "У хана много жён — таково его право по статусу и по обычаям нашего общества, — но я была первой."
+    new "У хана много жён — так положено по его статусу и нашим обычаям, но я была его первой."
 
     old "Sarah could see Naydeen smiled and drew some pride from that fact."
-    new "Сара видела, что Найдин улыбнулась, гордясь этим."
+    new "Сара видела, как Найдин улыбнулась, и чувствовала в этом некоторую гордость."
 
     old "So why are you here then?"
-    new "Тогда зачем ты здесь?"
+    new "Так зачем же ты тогда здесь?"
 
     old "Because in all the city there is no better place to be."
-    new "Потому что во всём городе нет места лучше."
+    new "Потому что во всём этом городе нет места лучше."
 
     old "And should I want to leave, I need only ask my husband, and I will be provided with an escort to leave."
-    new "И если я захочу уйти, мне достаточно попросить мужа, и мне предоставят сопровождение."
+    new "И если я захочу уйти, мне нужно лишь попросить своего мужа, и мне предоставят сопровождение для отъезда."
 
     old "Sarah watched as Naydeen swam closer. Her voice softened."
-    new "Сара смотрела, как Найдин подплывает ближе. Её голос смягчился."
+    new "Сара наблюдала, как Найдин подплывала ближе. Её голос смягчился."
 
     old "But you'll find, should you leave, that the city of Al'Gahaem is a nasty place."
-    new "Но если ты уйдёшь, то поймёшь, что Аль-Гахаем — отвратительное место."
+    new "Но ты обнаружишь, если уйдёшь, что город Ал'Гахем — место отвратительное."
 
     old "Noise. Filth. Constant buzzing."
-    new "Шум. Грязь. Постоянное жужжание."
+    new "Шум. Грязь. Постоянный гул."
 
     old "It is all the things this place is not. So I much rather remain here."
-    new "В нём есть всё, чего нет здесь. Так что я предпочитаю оставаться тут."
+    new "Это всё то, чем не является это место. Поэтому я гораздо скорее останусь здесь."
 
     old "Sarah watched the incredible bathhouse, the paradise that had been built in the heart of the palace, just for her and the others."
-    new "Сара оглядела невероятную купальню — рай, построенный в сердце дворца только для неё и остальных."
+    new "Сара смотрела на невероятную баню — рай, построенный в самом сердце дворца специально для неё и остальных."
 
     old "But even if it's nice, isn't this still a prison of sorts?"
-    new "Но даже если здесь хорошо, разве это не своего рода тюрьма?"
+    new "Но даже если здесь и хорошо, разве это всё равно не своего рода тюрьма?"
 
     old "Have you ever heard of a prison you can leave whenever you want?"
-    new "Ты когда-нибудь слышала о тюрьме, из которой можно выйти, когда захочешь?"
+    new "Ты когда-нибудь слышала о тюрьме, из которой можно уйти, когда только захочешь?"
 
     old "Sarah considered. She had to admit she never had. She shook her head."
-    new "Сара задумалась. Пришлось признать, что нет. Она покачала головой."
+    new "Сара задумалась. Приходилось ей признать — она никогда такого не слышала. Она покачала головой."
 
     old "But, is this all you can do? Just swim and...exist?"
-    new "Но неужели это всё, что ты можешь? Просто плавать и... существовать?"
+    new "Но разве это всё, на что ты способна? Просто плавать и... существовать?"
 
     old "The compound is large."
     new "Комплекс большой."
 
     old "There is the bathhouse, yes, but there are also the private quarters."
-    new "Здесь есть купальня, да, но есть и личные покои."
+    new "Есть и баня, да, но есть ещё и личные покои."
 
     old "Then there are the gardens. The library. The dressing hall. The viewing tower."
-    new "А ещё сады. Библиотека. Одевальная. Смотровая башня."
+    new "Затем есть сады. Библиотека. Зал для переодевания. Смотровая башня."
 
     old "Really, if there is even a thing you might miss, ask and Hassar will provide it."
-    new "Право слово, если тебе чего-то не хватает, попроси — и Хассар предоставит это."
+    new "Правда, если тебе хоть что-то может понадобиться, просто спроси — и Хассар всё предоставит."
 
     old "Sarah and Naydeen swam towards the edge of the pool, resting against the side of it."
-    new "Сара и Найдин подплыли к краю бассейна, опершись на бортик."
+    new "Сара и Найдин доплыли до края бассейна и прислонились к его бортику."
 
     old "But I suspect I don't need to tell you about the gardens."
-    new "Но, подозреваю, мне не нужно рассказывать тебе о садах."
+    new "Но я подозреваю, что мне не нужно рассказывать тебе о садах."
 
     old "Naydeen winked again."
-    new "Найдин снова подмигнула."
+    new "Найдин снова подмигивала."
 
     old "I...what are you implying?"
-    new "Я... на что ты намекаешь?"
+    new "Я... что ты имеешь в виду?"
 
     old "Naydeen reached out and brushed Sarah's hair from her face."
-    new "Найдин протянула руку и убрала волосы с лица Сары."
+    new "Найдин протянула руку и убрала прядь волос с лица Сары."
 
     old "Don't worry. The Khan holds no secrets from us. He told me about your evening in the garden."
     new "Не волнуйся. У хана нет секретов от нас. Он рассказал мне о вашем вечере в саду."
 
     old "To have debased herself like that was one thing. To now have other people know about it, somehow worse."
-    new "Унизиться так было одно дело. Но то, что теперь об этом знают другие, — почему-то ещё хуже."
+    new "То, что она так унизилась, — это одно. Но то, что теперь и другие об этом знают, — как-то даже хуже."
 
     old "I didn't, it just-"
-    new "Я не... это просто-"
+    new "Я не делала этого, это просто..."
 
     old "Naydeen shushed her to be still."
-    new "Найдин заставила её замолчать."
+    new "Найдин приглушила голос, чтобы Сара затихла."
 
     old "It's ok, Sarah. I'm happy for you."
-    new "Всё в порядке, Сара. Я рада за тебя."
+    new "Всё в порядке, Сара. Я за тебя рада."
 
     old "Sarah looked at her, confused."
-    new "Сара растерянно посмотрела на неё."
+    new "Сара посмотрела на неё с недоумением."
 
     old "Yes, I had hoped you would come to see that Khan Hassar is a worthy man. One worth your affections."
-    new "Да, я надеялась, что ты увидишь: хан Хассар — достойный мужчина. Тот, кто заслуживает твоей привязанности."
+    new "Да, я надеялась, что ты поймёшь: Хан Хассар — достойный мужчина. Достойный твоей любви."
 
     old "I don't love him if that's what you're saying."
-    new "Я не люблю его, если ты на это намекаешь."
+    new "Я не люблю его, если ты это имеешь в виду."
 
     old "Of course not. Such things do not happen overnight. But I pray you will come to see what me and the others see in him."
-    new "Конечно нет. Такое не происходит в одночасье. Но я молюсь, чтобы ты со временем увидела в нём то же, что видим мы с остальными."
+    new "Конечно нет. Такие вещи не случаются за одну ночь. Но я молюсь, чтобы ты со временем поняла то, что вижу в нём я и остальные."
 
     old "For you to have showed your respect for him like that, and so soon, it makes me happy."
-    new "То, что ты так скоро выразила ему своё уважение, делает меня счастливой."
+    new "То, что ты так скоро проявила к нему уважение, очень меня радует."
 
     old "Sarah, not knowing what to say, opted to say nothing."
-    new "Сара, не зная, что сказать, предпочла промолчать."
+    new "Сара, не зная, что сказать, решила ничего не говорить."
 
     old "The two women suddenly looked to the side as a new figure emerged."
-    new "Обе женщины внезапно повернули головы — появилась новая фигура."
+    new "Обе женщины вдруг посмотрели в сторону, когда появилась новая фигура."
 
     old "A woman walked up towards the edge of the pool and slowly entered."
     new "Женщина подошла к краю бассейна и медленно вошла в воду."
 
     old "For a moment, Sarah struggled to understand her proportions."
-    new "Мгновение Сара пыталась осознать её пропорции."
+    new "На мгновение Сара не могла понять, как соотносятся её пропорции."
 
     old "Thin of face, and thin of frame, the woman struck her as almost frail...except for her belly."
-    new "Худая лицом и худощавая телом, женщина показалась ей почти хрупкой... если не считать живота."
+    new "Худое лицо и тонкое телосложение — эта женщина казалась ему почти хрупкой... если не считать её живота."
 
     old "Large and bloated, protruding far ahead of her."
-    new "Большой и вздутый, выступающий далеко вперёд."
+    new "Большой и раздутый, он сильно выступал вперёд."
 
     old "Only after a moment did Sarah understand."
-    new "Лишь через мгновение Сара поняла."
+    new "Только через мгновение Сара поняла."
 
     old "Pregnant."
-    new "Беременна."
+    new "Беременная."
 
     old "The woman was with child."
-    new "Женщина ждала ребёнка."
+    new "Женщина была беременна."
 
     old "Once submerged in the water, the woman casually swam up to the both of them."
-    new "Оказавшись в воде, женщина непринуждённо подплыла к ним обеим."
+    new "Оказавшись под водой, женщина беззаботно доплыла до них обеих."
 
     old "A new friend, have we?"
-    new "У нас новая подруга?"
+    new "Новая подруга, так?"
 
     old "Naydeen smiled at the woman."
     new "Найдин улыбнулась женщине."
 
     old "Ayaka, meet Sarah. Sarah, meet Ayaka."
-    new "Аяка, познакомься с Сарой. Сара, это Аяка."
+    new "Аяка, познакомься с Сарой. Сара, познакомься с Аякой."
 
     old "The woman extended her hand and Sarah took it."
-    new "Женщина протянула руку, и Сара пожала её."
+    new "Женщина протянула руку, и Сара взяла её."
 
     old "Ayaka, but you can just call me Aya, everbody does really."
-    new "Аяка, но можешь звать меня просто Ая — меня все так зовут."
+    new "Аяка, но можешь просто звать меня Ая — так ведь все и делают."
 
     old "Nice to meet you."
     new "Приятно познакомиться."
 
     old "It seemed so odd to Sarah, to be exchanging pleasantries with these women as thought this was all completely normal."
-    new "Саре казалось странным обмениваться любезностями с этими женщинами, будто всё это совершенно нормально."
+    new "Саре казалось диковинным обмениваться любезностями с этими женщинами, будто всё это было совершенно нормально."
 
     old "Did you manage to sleep well, Aya?"
     new "Тебе удалось хорошо выспаться, Ая?"
@@ -332,265 +331,265 @@ translate ru strings:
     new "Аяка кивнула."
 
     old "As well as could be hoped. Sleeping sideways really helps a lot. I feel like he's kicking a lot less."
-    new "Насколько это возможно. Спать на боку очень помогает. Кажется, он стал пинаться гораздо меньше."
+    new "Сколько можно было надеяться. Сон на боку действительно очень помогает. Мне кажется, он пинается гораздо реже."
 
     old "Sarah watched as the woman traced the outline of her swollen belly with her hands, lovingly and gentle."
-    new "Сара смотрела, как женщина обводит очертания своего округлившегося живота руками — любовно и нежно."
+    new "Сара смотрела, как женщина с любовью и нежностью проводила руками по контурам её раздутого живота."
 
     old "The way a mother would."
-    new "Так, как это делает мать."
+    new "Как это делает мать."
 
     old "You're pregnant..."
     new "Ты беременна..."
 
     old "Sarah saw Aya smile at her."
-    new "Сара увидела, как Ая улыбнулась ей."
+    new "Сара увидела, как Аяка улыбнулась ей."
 
     old "How astute of you."
-    new "Какая проницательность."
+    new "Как проницательно с твоей стороны."
 
     old "But yes, I am. Nearing on eight months. We should be close."
-    new "Но да, это так. Почти восемь месяцев. Уже скоро."
+    new "Но да, я беременна. Уже почти восемь месяцев. Нам должно быть близко."
 
     old "Sarah could see Aya smile at the idea."
-    new "Сара видела, как Ая улыбнулась этой мысли."
+    new "Сара видела, как Ая улыбнулась при этой мысли."
 
     old "You've been here for that long?"
-    new "Ты здесь так долго?"
+    new "Ты так давно здесь?"
 
     old "Aya shook her head."
-    new "Ая покачала головой."
+    new "Аяка покачала головой."
 
     old "No, quite a lot longer. Perhaps, closer to two years?"
-    new "Нет, гораздо дольше. Пожалуй, почти два года?"
+    new "Нет, гораздо дольше. Может быть, ближе к двум годам?"
 
     old "Sarah could see Aya looking at Naydeen for confirmation."
-    new "Сара видела, как Ая взглянула на Найдин в поисках подтверждения."
+    new "Сара видела, как Ая посмотрела на Найдин в поисках подтверждения."
 
     old "About two years, almost, I think."
-    new "Около двух лет, почти, я думаю."
+    new "Примерно два года, почти, я думаю."
 
     old "Aya laughed."
     new "Ая рассмеялась."
 
     old "Time can be a bit weird here. You'd best figure out a way to keep track or you're going to lose it entirely."
-    new "Со временем здесь всё странно. Лучше придумай способ следить за ним, иначе совсем потеряешь счёт."
+    new "Время здесь может вести себя немного странно. Тебе лучше придумать способ следить за ним — иначе ты его совсем потеряешь."
 
     old "Aya placed her hands on her belly again, looking down at it with awe at her own miracle."
-    new "Ая снова положила руки на живот, глядя на него с благоговением перед собственным чудом."
+    new "Ая снова положила руки на живот, с благоговением глядя на него и восхищаясь собственным чудом."
 
     old "I was a noble lady from a small house on a border province in the far-east."
-    new "Я была знатной дамой из небольшого дома в пограничной провинции на дальнем востоке."
+    new "Я была знатной леди из небольшого дома в приграничной провинции на Дальнем Востоке."
 
     old "When the tribesmen came, they captured me and brought me here. I've been here ever since."
-    new "Когда пришли кочевники, они захватили меня и привезли сюда. С тех пор я здесь."
+    new "Когда пришли воины племени, они схватили меня и привели сюда. С тех пор я здесь."
 
     old "A story not unfamiliar to Sarah."
-    new "История, знакомая Саре."
+    new "Это история, не чуждая Саре."
 
     old "The same happened to me. Did you lose a lot of people close to you?"
-    new "Со мной случилось то же самое. Ты потеряла многих близких?"
+    new "То же самое произошло и со мной. Ты потеряла много близких людей?"
 
     old "Aya suddenly laughed, catching Sarah by surprise."
     new "Ая внезапно рассмеялась, застав Сару врасплох."
 
     old "Ooh no, not a single one."
-    new "О, нет, ни единого."
+    new "Ох нет, ни одного."
 
     old "My brothers and my father mounted for war when the hordes came."
-    new "Мои братья и отец сели на коней, когда пришли орды."
+    new "Мои братья и отец отправились на войну, когда пришли орды."
 
     old "Then, when the first frontier unit was wiped out, they suddenly claimed they needed to perform a tactical retreat beyond the mountain pass."
-    new "А когда первый пограничный отряд был уничтожен, они вдруг заявили, что им нужно совершить тактическое отступление за горный перевал."
+    new "Затем, когда первый пограничный отряд был уничтожен, они вдруг заявили, что им необходимо совершить тактическое отступление за горный перевал."
 
     old "The whole house was packed up and we fled away beyond the mountains."
-    new "Весь дом собрался, и мы бежали за горы."
+    new "Весь дом был собран в узел, и мы бежали за горы."
 
     old "Aya paused for a moment."
-    new "Ая замолчала на мгновение."
+    new "Аяка на мгновение замолчала."
 
     old "Or at least, we were supposed to."
-    new "Или, по крайней мере, должны были."
+    new "Или, по крайней мере, так нам следовало поступить."
 
     old "My brothers and father went to lead the head of the caravan, and my sisters and myself were near the back."
-    new "Мои братья и отец ушли возглавлять караван, а мы с сёстрами были в хвосте."
+    new "Мои братья и отец отправились вперёд, чтобы вести караван, а сёстры и я остались у самого конца."
 
     old "When the Khan's horde descended on our caravan, we were not even halfway there yet."
-    new "Когда орда хана напала на наш караван, мы ещё и половины пути не прошли."
+    new "Когда ханская орда напала на наш караван, мы ещё даже не были на полпути."
 
     old "My brothers never so much as drew their swords."
-    new "Мои братья даже мечи не обнажили."
+    new "Мои братья даже мечей своих не обнажили."
 
     old "Aya laughed again."
-    new "Ая снова рассмеялась."
+    new "Аяка снова рассмеялась."
 
     old "All my life they told me, a woman's duty is this, a man's duty is such."
-    new "Всю жизнь они твердили мне: долг женщины — это, долг мужчины — то."
+    new "Всю жизнь мне говорили: долг женщины — вот это, а долг мужчины — то."
 
     old "Aya impersonated their voices as she told the story."
-    new "Ая передразнивала их голоса, рассказывая историю."
+    new "Ая изображала их голоса, рассказывая эту историю."
 
     old "And all my life I was the perfect lady, performing my every duty just as was expected of me."
-    new "И всю жизнь я была идеальной леди, исполняя каждую обязанность так, как от меня ждали."
+    new "И всю жизнь я была идеальной леди, выполняя каждую свою обязанность в точности так, как этого от меня ожидали."
 
     old "But where were they when it mattered? Where were they to discharge their manly duty?"
-    new "Но где они были, когда это имело значение? Где они были, чтобы исполнить свой мужской долг?"
+    new "Но где же они были, когда это стало по-настоящему важно? Где они были, чтобы исполнить свой мужской долг?"
 
     old "Aya spat in the water."
     new "Ая плюнула в воду."
 
     old "Cowards the lot of them."
-    new "Трусы, все до одного."
+    new "Трусы все до одного."
 
     old "Sarah could see the anger in Aya's face and wasn't sure if it was her place to say anything."
-    new "Сара видела гнев на лице Аи и не была уверена, стоит ли ей что-то говорить."
+    new "Сара видела гнев на лице Аи и не была уверена, уместно ли ей что-либо говорить."
 
     old "Anyway, ever since I've been here."
-    new "В общем, с тех пор я здесь."
+    new "В любом случае, с тех пор, как я здесь."
 
     old "And your child...it's..."
-    new "А твой ребёнок... он..."
+    new "А твой ребёнок... это..."
 
     old "Aya nodded."
     new "Ая кивнула."
 
     old "When I first came here, I rejected Hassar."
-    new "Когда я только попала сюда, я отвергала Хассара."
+    new "Когда я только пришла сюда, я отвергла Хассара."
 
     old "I think I even spat in his face."
-    new "Кажется, я даже плюнула ему в лицо."
+    new "Думаю, я даже плюнула ему в лицо."
 
     old "But when I learned of the betrayal of my family, how they had disgraced me, I began to hate them."
-    new "Но когда я узнала о предательстве своей семьи, о том, как они меня опозорили, я начала их ненавидеть."
+    new "Но когда я узнала о предательстве моей семьи, о том, как они опозорили меня, я начала их ненавидеть."
 
     old "I cried and raged and cried again, but no matter what, Hassar remained."
-    new "Я плакала, ярилась и снова плакала, но Хассар оставался рядом."
+    new "Я плакала, бешено злилась и снова плакала, но что бы я ни делала, Хассар всегда оставался."
 
     old "He listened. Let me cry. Let me rage. But he always listened."
     new "Он слушал. Позволял мне плакать. Позволял мне злиться. Но он всегда слушал."
 
     old "When it mattered...he was here for me."
-    new "Когда это было нужно... он был рядом."
+    new "Когда дело доходило до самого важного... он был рядом со мной."
 
     old "Aya sighed."
     new "Ая вздохнула."
 
     old "After that, I still rejected him, but my rejections grew softer and softer."
-    new "После этого я всё ещё отвергала его, но мои отказы становились всё мягче."
+    new "После этого я всё равно продолжала от него отказываться, но мои отказы становились всё мягче и мягче."
 
     old "Eventually, with some liquid courage, I finally decided to give in to him."
-    new "В конце концов, подогретая жидкой храбростью, я решила уступить ему."
+    new "В конце концов, придав себе смелости с помощью алкоголя, я наконец-то решила уступить ему."
 
     old "After that night, I couldn't imagine why I ever rejected him at all."
-    new "После той ночи я не могла понять, почему вообще его отвергала."
+    new "После той ночи я уже не могла понять, зачем вообще когда-то отвергала его."
 
     old "Pride? Loyalty? It all seemed so meaningless compared to just...being happy."
-    new "Гордость? Верность? Всё это казалось таким бессмысленным по сравнению с... счастьем."
+    new "Гордость? Верность? Всё это казалось таким бессмысленным по сравнению с тем, чтобы просто... быть счастливым."
 
     old "Aya breathed in deep and breathed out again, as if letting go of the stress."
-    new "Ая глубоко вдохнула и выдохнула, словно отпуская напряжение."
+    new "Ая глубоко вздохнула и снова выдохнула, словно избавляясь от напряжения."
 
     old "Then, a few months later, this happened."
-    new "А несколько месяцев спустя случилось это."
+    new "Затем, через несколько месяцев, случилось вот это."
 
     old "Sarah watched as Aya rubbed her own belly, a huge smile on her face."
-    new "Сара смотрела, как Ая гладит свой живот с огромной улыбкой на лице."
+    new "Сара смотрела, как Ая терла своё же брюхо с огромной улыбкой на лице."
 
     old "I was so scared to tell him, when I first realized. Scared he would be angry with him."
-    new "Я так боялась сказать ему, когда впервые поняла. Боялась, что он разозлится."
+    new "Я так боялась сказать ему об этом, когда только поняла. Боялась, что он разозлится на него."
 
     old "But it was the opposite."
-    new "Но вышло наоборот."
+    new "Но всё оказалось с точностью до наоборот."
 
     old "I think I never saw him as happy as I did when I finally told him."
-    new "Кажется, я никогда не видела его таким счастливым, как в тот миг, когда я наконец сказала ему."
+    new "Думаю, я никогда не видела его таким счастливым, как тогда, когда я наконец-то ему всё рассказала."
 
     old "Listening to the story, Sarah continued to be confused by the man that had conquered her people."
-    new "Слушая эту историю, Сара всё больше путалась в человеке, покорившем её народ."
+    new "Слушая эту историю, Сара всё так же не могла понять этого человека, который покорил её народ."
 
     old "How could a man be capable of such kindness and such brutality, all at the same time."
-    new "Как один человек мог быть способен на такую доброту и такую жестокость одновременно."
+    new "Как человек мог быть способен на такую доброту и такую жестокость — всё это одновременно?"
 
     old "And yet, looking at Aya, Sarah saw nothing but love in her face for the man that had made her a slave."
     new "И всё же, глядя на Аю, Сара видела в её лице только любовь к человеку, сделавшему её рабыней."
 
     old "Would she ever be so foolish? Sarah couldn't imagine it."
-    new "Неужели она сама могла бы быть такой глупой? Сара не могла этого представить."
+    new "Могла ли она когда-нибудь быть такой глупой? Сара не могла себе этого представить."
 
     old "Then again, she could not have imagined doing what she had done in the garden, and still she had."
-    new "С другой стороны, она не могла вообразить, что сделает то, что сделала в саду, — и всё же сделала."
+    new "С другой стороны, она и представить себе не могла, что способна на то, что сделала в саду, но всё же сделала."
 
     old "Anyway, I need to get some excercise in, the doctor told me it was good for the baby."
-    new "Ладно, мне нужно размяться, доктор сказал, это полезно для ребёнка."
+    new "В любом случае, мне нужно немного потренироваться — врач сказал, что это полезно для ребёнка."
 
     old "It was nice to meet you Sarah, I'm sure we'll speak again."
-    new "Было приятно познакомиться, Сара. Уверена, мы ещё поговорим."
+    new "Приятно было познакомиться, Сара. Уверена, мы ещё поговорим."
 
     old "Sarah watched as Aya pushed herself off the side of the pool, swimming away as fast as her body allowed."
-    new "Сара смотрела, как Ая оттолкнулась от бортика и поплыла прочь так быстро, как позволяло её тело."
+    new "Сара смотрела, как Ая оттолкнулась от края бассейна и поплыла прочь так быстро, как только позволяло ей тело."
 
     old "Sarah followed her with her eyes for a moment, trying to make sense of all she'd heard."
-    new "Сара проводила её взглядом, пытаясь осмыслить всё, что услышала."
+    new "Сара некоторое время следила за ней взглядом, пытаясь осмыслить всё услышанное."
 
     old "Ayaka is a nice girl."
-    new "Аяка — славная девушка."
+    new "Аяка — хорошая девочка."
 
     old "She took some time to get used to this place, but I think she's never been happier since."
-    new "Ей потребовалось время, чтобы привыкнуть к этому месту, но, кажется, она никогда не была счастливее."
+    new "Ей потребовалось некоторое время, чтобы привыкнуть к этому месту, но, думаю, с тех пор она не была так счастлива."
 
     old "She does seem happy."
-    new "Она и правда кажется счастливой."
+    new "Она и вправду кажется счастливой."
 
     old "How does she know the child will be a boy?"
     new "Откуда она знает, что ребёнок будет мальчиком?"
 
     old "She has no idea, but she knows the Khan favors sons and so she simply hopes that by pretending, the world will follow."
-    new "Понятия не имеет, но знает, что хан благоволит сыновьям, и просто надеется, что если притворяться, то и мир подстроится."
+    new "Она понятия не имеет, но знает, что хан предпочитает сыновей, и поэтому просто надеется, что, притворяясь, заставит и весь мир последовать её примеру."
 
     old "It could be a daughter just as easy."
-    new "С таким же успехом могла бы быть и дочь."
+    new "Это вполне могла бы быть и дочь."
 
     old "Sarah nodded, understanding."
-    new "Сара понимающе кивнула."
+    new "Сара кивнула, поняв."
 
     old "Have you given any consideration to what I told you?"
-    new "Ты подумала о том, что я тебе говорила?"
+    new "Ты вообще задумывалась о том, что я тебе говорила?"
 
     old "Sarah tried to recall."
     new "Сара попыталась вспомнить."
 
     old "Consideration of what?"
-    new "О чём?"
+    new "О чём именно?"
 
     old "Serving the Khan does not come easy to most women, and he has his particularities."
-    new "Служение хану даётся большинству женщин нелегко, и у него есть свои особенности."
+    new "Служить Хану нелегко для большинства женщин, да и у него свои особые предпочтения."
 
     old "His tastes."
     new "Его вкусы."
 
     old "If you want, I can teach you. Show you how to please a man."
-    new "Если хочешь, я могу научить тебя. Показать, как угодить мужчине."
+    new "Хочешь, я могу научить тебя. Показать, как доставлять мужчине удовольствие."
 
     old "Sarah felt herself grow red in the face."
-    new "Сара почувствовала, как заливается краской."
+    new "Сара почувствовала, как её лицо покраснело."
 
     old "Agree, let Naydeen teach you"
-    new "Согласиться, позволить Найдин научить"
+    new "Согласись, пусть Найдин научит тебя."
 
     old "Despite her embrasement, Sarah gave her a quick nod."
-    new "Несмотря на смущение, Сара быстро кивнула."
+    new "Несмотря на смущение, Сара быстро кивнула ей."
 
     old "Naydeen gave her a soft smile."
-    new "Найдин мягко улыбнулась ей."
+    new "Найдин одарила её мягкой улыбкой."
 
     old "Don't worry, I will be gentle."
     new "Не волнуйся, я буду нежна."
 
     old "But for now, let's relax. We can continue this matter tonight."
-    new "А пока давай расслабимся. Мы продолжим этот разговор сегодня вечером."
+    new "Но пока давай расслабимся. Мы можем продолжить этот разговор сегодня вечером."
 
     old "Sarah watched as Naydeen began to swam, and she found herself following her."
-    new "Сара смотрела, как Найдин поплыла, и сама не заметила, как последовала за ней."
+    new "Сара смотрела, как Найдин начала плавать, и обнаружила, что следует за ней."
 
     old "Refuse"
     new "Отказаться"
@@ -602,61 +601,61 @@ translate ru strings:
     new "Найдин улыбнулась ей."
 
     old "Very well. Perhaps it is better for you to find your own way to it."
-    new "Хорошо. Возможно, тебе лучше найти свой собственный путь."
+    new "Очень хорошо. Возможно, тебе лучше самой найти к нему дорогу."
 
     old "Sarah watched as Naydeen began to swim. Sarah remained, watching her from a distance."
-    new "Сара смотрела, как Найдин поплыла. Сара осталась, наблюдая за ней издалека."
+    new "Сара смотрела, как Найдин начала плавать. Она осталась, наблюдая за ней издалека."
 
     old "For a while longer, Sarah remained in the pool, trapped by its alluring properties."
-    new "Сара ещё какое-то время оставалась в бассейне, пленённая его манящими свойствами."
+    new "Ещё некоторое время Сара оставалась в бассейне, пленённая его соблазнительной притягательностью."
 
     old "Time had a ways of slipping away from her in this place."
-    new "В этом месте время имело обыкновение ускользать от неё."
+    new "В этом месте время как-то ускользало от неё."
 
     old "Before she knew it, the day had passed and she returned to her room, eager to sleep."
-    new "Не успела она опомниться, как день прошёл, и она вернулась в свою комнату, желая лишь спать."
+    new "Не успела она опомниться, как день уже прошёл, и она вернулась в свою комнату, жадно желая уснуть."
 
     old "She felt her heart ache with guilt for her relaxation."
-    new "Сердце ныло от чувства вины за то, что она позволила себе расслабиться."
+    new "Она почувствовала, как сердце сжалось от чувства вины за то, что позволила себе расслабиться."
 
     old "Walking through her room, Sarah casually ran her fingers past some of the objects."
-    new "Проходя по комнате, Сара рассеянно провела пальцами по некоторым предметам."
+    new "Пройдясь по своей комнате, Сара небрежно провела пальцами по некоторым вещам."
 
     old "Solid, weighty, each had an air of quality about them."
-    new "Твёрдые, увесистые — каждый дышал качеством."
+    new "Твёрдые, тяжёлые — каждый из них источал ощущение качества."
 
     old "Catching herself, Sarah scolded herself for becoming too familiar with the place."
-    new "Сара одёрнула себя, ругая за то, что слишком привыкает к этому месту."
+    new "Поймав себя на этом, Сара отругала себя за то, что стала слишком привыкать к этому месту."
 
     old "She had to keep herself from thinking of this as her room, rather than her prison, lest she forget what it was."
-    new "Она должна была не позволять себе думать об этом как о своей комнате, а не как о тюрьме, чтобы не забыть, что это такое."
+    new "Ей приходилось сдерживать себя, чтобы не считать эту комнату своим домом, а не тюрьмой, иначе она могла бы забыть, что это на самом деле."
 
     old "A sound near the door caused her to turn."
     new "Звук у двери заставил её обернуться."
 
     old "Standing in the opening of the door, Sarah saw Naydeen, leaning up against the entrance."
-    new "В дверном проёме стояла Найдин, прислонившись к косяку."
+    new "Стоя в дверном проёме, Сара увидела Найдин, прислонившуюся к входу."
 
     old "Sarah suddenly remembered what she had agreed to."
-    new "Сара внезапно вспомнила, на что согласилась."
+    new "Сара вдруг вспомнила, на что она согласилась."
 
     old "Hi."
     new "Привет."
 
     old "Her voice was soft and weak as she said it."
-    new "Голос её был тихим и слабым."
+    new "Её голос был мягким и слабым, когда она это произнесла."
 
     old "Naydeen smiled at her, knowingly."
-    new "Найдин понимающе улыбнулась."
+    new "Найдин улыбнулась ей с понимающим видом."
 
     old "I'm here for our appointment."
-    new "Я пришла на нашу встречу."
+    new "Я здесь ради нашей встречи."
 
     old "Sarah felt herself grow flustered."
-    new "Сара почувствовала, что смущается."
+    new "Сара почувствовала, как её охватывает смущение."
 
     old "Ooh...I thought that, you meant, sometimes in the future..."
-    new "Оу... я думала, ты имела в виду, когда-нибудь в будущем..."
+    new "Ох... А я-то думала, ты имел в виду, что это случится когда-нибудь в будущем..."
 
     old "Naydeen shrugged as she walked into the room."
     new "Найдин пожала плечами, входя в комнату."
@@ -665,512 +664,520 @@ translate ru strings:
     new "Зачем ждать?"
 
     old "Do you have any standing appointments or other engagements that I am unaware of?"
-    new "У тебя есть какие-то постоянные дела или другие обязательства, о которых я не знаю?"
+    new "У тебя есть какие-то заранее запланированные дела или другие обязательства, о которых я не знаю?"
 
     old "She asked it playfully, knowing Sarah had nothing else."
-    new "Она спросила игриво, зная, что у Сары ничего нет."
+    new "Она спросила это с шуткой, зная, что у Сары больше ничего не было."
 
     old "No, but..."
     new "Нет, но..."
 
     old "So why not tonight then?"
-    new "Тогда почему не сегодня?"
+    new "Так почему бы не сегодня вечером?"
 
     old "Sarah had no answer."
-    new "У Сары не нашлось ответа."
+    new "У неё не было ответа."
 
     old "Don't worry, dear. I will teach you how you were supposed to be taught."
-    new "Не волнуйся, дорогая. Я научу тебя так, как тебя должны были научить."
+    new "Не волнуйся, дорогая. Я научу тебя тому, чему тебя должны были научить."
 
     old "It is a cruel thing, really, how little they prepare the women of your country for matter such as these."
     new "Это жестоко, правда, как мало готовят женщин твоей страны к таким вещам."
 
     old "But if the Khan finds out...won't he be angry?"
-    new "Но если хан узнает... разве он не разозлится?"
+    new "Но если Хан узнает... разве он не разозлится?"
 
     old "Among the tribes, it is considered tradition for the older women to introduce the younger women to this part of their lives."
-    new "У племён считается традицией, когда старшие женщины посвящают младших в эту часть их жизни."
+    new "В племенах считается традицией, чтобы старшие женщины обучали младших этой части их жизни."
 
     old "Naydeen sat down on the edge of the bed."
     new "Найдин села на край кровати."
 
     old "She patted next to her."
-    new "Она похлопала рядом с собой."
+    new "Она похлопала по месту рядом с собой."
 
     old "Come, sit."
     new "Иди, садись."
 
     old "Obdiently, Sarah did as she told her, sitting down next to her on the bed."
-    new "Послушно Сара сделала, как та велела, сев рядом на кровать."
+    new "Послушно Сара сделала, как ей сказали, и села рядом с ней на кровать."
 
     old "She had spoken to Naydeen a few times now, but suddenly the energy in the room appeared very different. Charged."
-    new "Она говорила с Найдин уже несколько раз, но внезапно атмосфера в комнате стала совсем иной. Напряжённой."
+    new "Она уже несколько раз говорила с Найдин, но вдруг энергия в комнате изменилась — она стала совершенно иной. Напряжённой."
 
     old "Men know so very little of the desires of women. They thrust it in and squirm around on top of us, thinking that because they feel good, we feel good."
-    new "Мужчины так мало знают о желаниях женщин. Они втыкают и ёрзают сверху, думая, что раз им хорошо, то и нам хорошо."
+    new "Мужчины так мало знают о желаниях женщин. Они просто вталкивают себя и извиваются сверху, думая, что раз им хорошо, то и нам должно быть хорошо."
 
     old "Sarah felt her leg jolt as Naydeen placed her hand on her upper leg."
-    new "Сара вздрогнула, когда Найдин положила руку ей на бедро."
+    new "Сара почувствовала, как её нога дёрнулась, когда Найдин положила руку на верхнюю часть её ноги."
 
     old "Among the tribes, we train our younger women to learn and understand their own bodies. Prepare them to deal with their husbands."
-    new "У племён мы учим молодых женщин познавать и понимать собственное тело. Готовим их к отношениям с мужьями."
+    new "В племенах мы обучаем наших молодых женщин тому, как познавать и понимать собственное тело. Готовим их к общению с мужьями."
 
     old "We make our women strong. Teach them what they desire. To speak out their needs."
-    new "Мы делаем наших женщин сильными. Учим их понимать, чего они хотят. Говорить о своих потребностях."
+    new "Мы делаем наших женщин сильными. Учим их тому, чего они хотят. Учим открыто говорить о своих потребностях."
 
     old "So when they meet their husbands on their wedding night, they can be confident enough to break their husbands and rebuild them."
-    new "Чтобы в брачную ночь они были достаточно уверены, чтобы сломать своих мужей и перестроить их заново."
+    new "Таким образом, когда они встретят своих мужей в первую брачную ночь, у них хватит уверенности, чтобы сломать их и перестроить заново."
 
     old "Make proper men out of them, both on the battlefield and in the bedroom."
-    new "Сделать из них настоящих мужчин — и на поле боя, и в спальне."
+    new "Делаем из них настоящих мужчин — и на поле боя, и в спальне."
 
     old "Sarah swallowed, her mouth turned dry as she felt Naydeen's hand wander."
-    new "Сара сглотнула, во рту пересохло, когда она почувствовала, как рука Найдин скользит."
+    new "Сара сглотнула — во рту у неё пересохло, когда она почувствовала, как рука Найдин блуждает."
 
     old "Does that make sense to you?"
-    new "Тебе это понятно?"
+    new "Это тебе понятно?"
 
     old "That makes sense"
-    new "Звучит разумно"
+    new "Это имеет смысл?"
 
     old "What if you desire no man?"
-    new "А если я не хочу ни одного мужчины?"
+    new "А что, если ты не желаешь ни одного мужчину?"
 
     old "Sarah turned to look at Naydeen."
     new "Сара повернулась, чтобы посмотреть на Найдин."
 
+    old "What if you desire no man?"
+    new "А что, если ты не желаешь ни одного мужчину?"
+
     old "Aah, I see. Is that how you have always felt?"
-    new "Аа, понимаю. Ты всегда так чувствовала?"
+    new "Ах, я понимаю. Так вот как ты всегда себя чувствовала?"
 
     old "Sarah felt a part of herself surface that she had forever kept secret from any other."
-    new "Сара почувствовала, как часть её, которую она вечно скрывала от всех, выходит на поверхность."
+    new "Сара почувствовала, как на поверхность вышла та часть её самой, которую она вечно хранила в секрете от всех остальных."
 
     old "She nodded, revealing it for the first time to another soul."
-    new "Она кивнула, впервые открывая это другой душе."
+    new "Она кивнула, впервые открывая это душу другого человека."
 
     old "You never liked any of the boys, growing up?"
-    new "Тебе никогда не нравился ни один из мальчиков, когда ты росла?"
+    new "Ты никогда не любила ни одного из парней, пока росла?"
 
     old "All her life, she knew she would have to one day marry, and forever she had dreaded it."
-    new "Всю жизнь она знала, что однажды ей придётся выйти замуж, и всю жизнь страшилась этого."
+    new "Всю свою жизнь она знала, что однажды ей придётся выйти замуж, и это ужасало её с самого начала."
 
     old "For a moment in her life she had imagined herself devoid of such feelings at all."
-    new "Одно время она даже воображала, что лишена таких чувств вовсе."
+    new "На мгновение в своей жизни она представляла себя совершенно лишённой таких чувств."
 
     old "As the other girls in the castle gossiped of love, or spied on the squires, she was unmoved by it."
-    new "Пока другие девушки в замке сплетничали о любви или подсматривали за оруженосцами, она оставалась равнодушной."
+    new "Пока другие девушки в замке перешёптывались о любви или тайно наблюдали за оруженосцами, её это совершенно не трогало."
 
     old "But as she grew older, Sarah knew that she did possess those same desires..."
-    new "Но повзрослев, Сара поняла, что те же желания живут и в ней..."
+    new "Но по мере того, как она взрослела, Сара поняла, что на самом деле испытывает те же самые желания..."
 
     old "Only different objects on which she poured out those needs."
-    new "Просто на иные объекты изливались эти потребности."
+    new "Только другие объекты, на которые она изливала эти потребности."
 
     old "Kate had lighted that first spark."
     new "Кейт зажгла ту первую искру."
 
     old "And in the years after, the occasional servant girl whose eyes were impossibly beautiful."
-    new "А в последующие годы — та или иная служанка с невероятно красивыми глазами."
+    new "И в последующие годы — случайные служанки, чьи глаза были невероятно прекрасны."
 
     old "But Sarah had also known her station, and her society. Such things could not be."
-    new "Но Сара также знала своё положение и своё общество. Такого не могло быть."
+    new "Но Сара также знала своё положение и общество, к которому принадлежала. Подобное было невозможно."
 
     old "She looked into Naydeen's eyes, deep and dark, seemingly dragging her in."
-    new "Она заглянула в глаза Найдин — глубокие, тёмные, словно затягивающие внутрь."
+    new "Она посмотрела Найдин в глаза — глубокие и тёмные, словно затягивающие её в себя."
 
     old "Such things could not be in her world...but they could be in this one."
-    new "Такого не могло быть в её мире... но могло быть в этом."
+    new "Такие вещи не могли существовать в её мире... но в этом — вполне."
 
     old "Here, there seemed to be none of the restrictions that plagued her growing up."
-    new "Здесь, казалось, не было ограничений, что преследовали её всю жизнь."
+    new "Здесь, казалось, не было никаких ограничений, которые преследовали её в детстве."
 
     old "Freedom, of a kind, she realized."
-    new "Свобода, своего рода, поняла она."
+    new "Свобода, своего рода, — осознала она."
 
     old "Well...I will tell the Khan for you."
-    new "Что ж... я расскажу хану за тебя."
+    new "Ну... я сообщу об этом Хану за тебя."
 
     old "Sarah felt a fear rise in her chest."
-    new "Сара почувствовала, как страх поднимается в груди."
+    new "Сара почувствовала, как в груди у неё поднялся страх."
 
     old "What if he becomes angry with me? If I am of no use to him..."
-    new "А если он разозлится на меня? Если я бесполезна для него..."
+    new "А что, если он разозлится на меня? Если я ему не нужна..."
 
     old "Naydeen smiled and patted Sarah's back."
     new "Найдин улыбнулась и похлопала Сару по спине."
 
     old "Don't worry. He will understand and he will respect your wishes. You will still have value to him, even without your body."
-    new "Не волнуйся. Он поймёт и уважит твои желания. Ты всё ещё будешь ценна для него, даже без твоего тела."
+    new "Не волнуйся. Он поймёт и будет уважать твои желания. Ты всё равно будешь иметь для него ценность, даже без своего тела."
 
     old "But what if he doesn't?"
-    new "А если нет?"
+    new "Но что, если он этого не сделает?"
 
     old "Then I will make him understand. He might be Khan, but I am his first wife. My voice carries weight."
-    new "Тогда я заставлю его понять. Может, он и хан, но я его первая жена. Мой голос имеет вес."
+    new "Тогда я заставлю его понять. Он может быть и ханом, но я — его первая жена. Моё слово имеет вес."
 
     old "Naydeen smiled and leaned closer to her."
-    new "Найдин улыбнулась и наклонилась ближе."
+    new "Найдин улыбнулась и наклонилась к ней поближе."
 
     old "Now let us not be distracted by the future. Let's stay here."
-    new "А теперь не будем отвлекаться на будущее. Останемся здесь."
+    new "Теперь давай не будем отвлекаться на будущее. Останемся здесь."
 
     old "Naydeen leaned in closer and pressed her lips up against Sarah's."
-    new "Найдин подалась ближе и прижалась губами к губам Сары."
+    new "Найдин наклонилась ближе и прижала свои губы к губам Сары."
 
     old "The sensation of it was one thing, but more even than that, Sarah felt her mind overran by thoughts."
-    new "Само ощущение было одним, но больше того — разум Сары захлестнули мысли."
+    new "Ощущение от этого было одним делом, но ещё сильнее — Сара чувствовала, как её разум переполняется мыслями."
 
     old "She shouldn't. This was not permitted. It was wrong."
-    new "Ей не следовало. Это было запретно. Это было неправильно."
+    new "Ей не следовало. Это было запрещено. Это было неправильно."
 
     old "Instead, Sarah found herself partingh her own lips, meeting and matching Naydeen's."
-    new "Вместо этого Сара обнаружила, что размыкает губы навстречу губам Найдин."
+    new "Вместо этого Сара обнаружила, что сама раздвинула губы, встречая и отвечая на поцелуй Найдин."
 
     old "Her body moved to a will of its own, betraying whatever weak objections she raised in her mind."
-    new "Её тело двигалось по собственной воле, предавая все слабые возражения, что она мысленно выдвигала."
+    new "Её тело начало двигаться само по себе, предавая все слабые возражения, которые она пыталась высказать в мыслях."
 
     old "She felt Naydeen's hands seize upon her body, one hand wrapping around her back, another seizing her breasts."
-    new "Она почувствовала, как руки Найдин смыкаются на её теле: одна обвивает спину, другая сжимает грудь."
+    new "Она почувствовала, как руки Найдин схватили её за тело: одна рука обвила спину, а другая крепко сжала грудь."
 
     old "Sarah felt her own erect nipples pressing up against the palm of Naydeen's hand."
-    new "Сара ощутила, как её затвердевшие соски упираются в ладонь Найдин."
+    new "Сара почувствовала, как её собственные эрегированные соски прижались к ладони Найдин."
 
     old "Her mind raced, but with each kiss, it seemed to settle."
-    new "Мысли метались, но с каждым поцелуем, казалось, успокаивались."
+    new "Её разум метался в суматохе, но с каждым поцелуем, казалось, успокаивался."
 
     old "Each time she felt Naydeen's tongue slide into her mouth, responding in kind, Sarah felt herself slip further away from any resistance."
-    new "Каждый раз, чувствуя язык Найдин у себя во рту и отвечая тем же, Сара ощущала, как ускользает от любого сопротивления."
+    new "Каждый раз, когда она чувствовала, как язык Найдин скользит в её рот и отвечает тем же, Сара ощущала, как всё больше отдаляется от всякого сопротивления."
 
     old "Sarah felt herself pushed back, slowly falling backwards into the bed as Naydeen climbed on top of her."
-    new "Сара почувствовала, как её толкают назад, медленно падая на кровать, пока Найдин забирается сверху."
+    new "Сара почувствовала, как её оттолкнули назад, и она медленно упала на кровать, пока Найдин забиралась к ней сверху."
 
     old "There was an aggressiveness to her, which Sarah found oddly comforting."
-    new "В ней была агрессия, которую Сара находила странно утешительной."
+    new "В ней была какая-то агрессия, которая, однако, странным образом успокаивала Сару."
 
     old "She simply need to not resist, and Naydeen would do the rest."
-    new "Ей нужно было просто не сопротивляться, и Найдин сделает всё остальное."
+    new "Ей нужно было лишь не сопротивляться, а Найдин сама обо всём позаботится."
 
     old "And yet, Sarah also found herself unable to resist reacting to Naydeen in turn."
-    new "И всё же Сара не могла удержаться от ответной реакции."
+    new "И всё же Сара тоже оказалась не в силах устоять перед тем, чтобы не ответить Найдин."
 
     old "Reaching out with her own eager hands, touching her soft skin, seizing on her breasts, opening her mouth for her."
-    new "Она тянулась своими жадными руками, касалась мягкой кожи, сжимала её грудь, открывала рот навстречу."
+    new "Протянув к ней свои нетерпеливые руки, она коснулась её нежной кожи, схватила за грудь и открыла рот, чтобы принять её."
 
     old "For a moment, their two bodies entwined, each feverishly exploring the other."
-    new "На миг их тела сплелись, лихорадочно исследуя друг друга."
+    new "На мгновение их тела переплелись, и оба лихорадочно исследовали друг друга."
 
     old "Sarah breathed heavy next to Naydeen's ear."
-    new "Сара тяжело дышала возле уха Найдин."
+    new "Сара тяжело дышала рядом с ухом Найдин."
 
     old "More..."
     new "Ещё..."
 
     old "She heard Naydeen softly chuckle."
-    new "Она услышала, как Найдин тихо усмехнулась."
+    new "Она услышала тихий смешок Найдин."
 
     old "Suddenly, it felt to her as if a bolt of lightning shot out across her body from between her legs."
-    new "Внезапно ей показалось, будто молния ударила по телу, вспыхнув между ног."
+    new "Внезапно ей показалось, будто молния ударила по всему телу от самого низа."
 
     old "AAaaaaH!"
-    new "Ааааах!"
+    new "А-а-а-ах!"
 
     old "So surprised by the sudden sensation, Sarah felt her body twist and unknowingly she cried out from the pleasure."
-    new "Столь удивлённая внезапным ощущением, Сара почувствовала, как тело выгнулось, и она невольно вскрикнула от удовольствия."
+    new "Так удивлённая внезапным ощущением, Сара почувствовала, как её тело скрутило, и она невольно закричала от наслаждения."
 
     old "The sensation of Naydeen's fingers, now pressed between her legs, was too much."
-    new "Ощущение пальцев Найдин, прижатых теперь между её ног, было слишком сильным."
+    new "Ощущение от пальцев Найдин, теперь прижатых к её половым органам, было слишком сильным."
 
     old "It was overpowering, so much of it she could hardly stand it, and yet in equal measure Sarah wanted more of it."
-    new "Это было ошеломляюще, так много, что она едва выдерживала, и в равной мере Сара хотела ещё."
+    new "Это было слишком сильно — настолько, что она едва могла это вынести, и всё же в равной мере Сара хотела ещё большего."
 
     old "She felt her body twist and bend, both at the pleasure Naydeen produced in her, as well as to beg her for more of it."
-    new "Она чувствовала, как тело извивается — и от наслаждения, которое дарила ей Найдин, и в мольбе о большем."
+    new "Она почувствовала, как её тело изогнулось и согнулось — и от удовольствия, которое Найдин доставила ей, и от желания попросить у неё ещё."
 
     old "All her life she had been forced to bury these thoughts in her mind."
-    new "Всю жизнь её заставляли хоронить эти мысли глубоко внутри."
+    new "Всю свою жизнь она была вынуждена хоронить эти мысли в глубине сознания."
 
     old "Now she found a lifetime of them unearthed all at once."
-    new "Теперь же все они разом вырвались наружу."
+    new "Теперь она обнаружила, что целая жизнь таких мыслей всплыла у неё разом."
 
     old "Moaning for more, Sarah felt herself frustrated as she suddenly felt Naydeen slightly pull back from her."
-    new "Стоная и прося ещё, Сара почувствовала разочарование, когда Найдин вдруг слегка отстранилась."
+    new "Стоня и требуя большего, Сара почувствовала разочарование, когда внезапно ощутила, как Найдин слегка отстранилась от неё."
 
     old "Why are you stopping?"
     new "Почему ты останавливаешься?"
 
     old "Sarah spoke the words between bated breaths, almost demanding an explanation."
-    new "Сара выговорила эти слова между прерывистыми вздохами, почти требуя объяснений."
+    new "Сара произнесла эти слова между сдерживаемыми вздохами, почти требуя объяснений."
 
     old "So eager for something she never knew she could have."
-    new "Так жаждет того, о чём и не знала, что может иметь."
+    new "Так жаждущая того, о чём никогда и не знала, что это возможно."
 
     old "Be patient and trust me."
-    new "Наберись терпения и доверься мне."
+    new "Будь терпелива и доверяй мне."
 
     old "Your pleasure is fine, Sarah, but remember why we are here."
     new "Твоё удовольствие — это прекрасно, Сара, но помни, зачем мы здесь."
 
     old "Sarah wracked her mind, now fogged with desire."
-    new "Сара напрягла память, затуманенную желанием."
+    new "Сара мучительно пыталась собраться с мыслями, но её разум уже затуманило сильное желание."
 
     old "I...to teach me..."
-    new "Я... научить меня..."
+    new "Я... научи меня..."
 
     old "Exactly, and so I will take you as a man does."
-    new "Именно. И я возьму тебя так, как берёт мужчина."
+    new "Именно так, и поэтому я возьму тебя так, как это делает мужчина."
 
     old "Sarah watched as Naydeen leaned back and grabbed something from near the bed."
-    new "Сара смотрела, как Найдин откинулась назад и взяла что-то рядом с кроватью."
+    new "Сара смотрела, как Найдин откинулась назад и схватила что-то у кровати."
 
     old "Fumbling around for a moment with it, Sarah watched as Naydeen put on a harness of some kind."
-    new "Повозившись мгновение, Сара увидела, как Найдин надевает на себя какую-то упряжь."
+    new "Немного поколебавшись с ним, Сара увидела, как Найдин надевает на себя какой-то ремень."
 
     old "Tied around her waist and between her legs, Sarah saw an object protrude from between Naydeen's legs."
-    new "Привязанный к талии и между ног, Сара увидела предмет, торчащий между бёдер Найдин."
+    new "Привязанный к её талии и между ног, объект выступал из-под ног Найдин."
 
     old "Men are not so necessary when we have things like this."
-    new "Мужчины не так уж и нужны, когда у нас есть такие штуки."
+    new "Мужчины не так уж и необходимы, когда у нас есть такие вещи."
 
     old "It is not the real thing, but you will find it can mimic it closely enough."
-    new "Это не настоящая вещь, но ты увидишь, что она достаточно близка к оригиналу."
+    new "Это не настоящее, но ты обнаружишь, что оно способно достаточно точно его имитировать."
 
     old "Sarah watched as Naydeen crawled back to her, resuming her assault on her body."
-    new "Сара смотрела, как Найдин заползает обратно, возобновляя атаку на её тело."
+    new "Сара наблюдала, как Найдин подползла к ней и возобновила свою атаку на её тело."
 
     old "She felt her hands, wrapping around her legs and waist, pulling her in closer."
-    new "Она чувствовала, как руки обвиваются вокруг её ног и талии, притягивая ближе."
+    new "Она почувствовала, как чьи-то руки обхватили её ноги и талию, притягивая к себе ещё ближе."
 
     old "Sarah instinctively parted her legs for her."
-    new "Сара инстинктивно раздвинула ноги."
+    new "Сара инстинктивно раздвинула для неё ноги."
 
     old "Feeling Naydeen's lips press up against her own, her tongue reaching deep inside of her, Sarah felt her body react."
-    new "Чувствуя, как губы Найдин прижимаются к её губам, а язык проникает глубоко внутрь, Сара ощутила, как тело откликается."
+    new "Почувствовав, как губы Найдин прижались к её собственным, а язык проник глубоко внутрь, Сара ощутила реакцию своего тела."
 
     old "The way her hands moved past her waist, gripped firmly on her body, pulled her against her own, feeling her breasts press upon her own."
-    new "Как её руки скользнули за талию, крепко схватили, притянули к себе — Сара чувствовала, как грудь Найдин прижимается к её груди."
+    new "То, как её руки скользили ниже талии, крепко обхватили её тело, притянули к себе, заставляя почувствовать, как её собственная грудь прижимается к ней."
 
     old "Sarah could feel a haze form in her mind."
-    new "Сара чувствовала, как в сознании застилается туман."
+    new "Сара чувствовала, как в её сознании начал образовываться туман."
 
     old "Why did this feel so good?"
-    new "Почему это было так хорошо?"
+    new "Почему это было так приятно?"
 
     old "Sarah could feel even the question slip and fade from her mind."
-    new "Сара чувствовала, как даже этот вопрос ускользает и тает в сознании."
+    new "Сара чувствовала, как даже этот вопрос ускользает из её сознания и исчезает."
 
     old "She didn't want to even question something so obvious. It felt right to her, and that was all that mattered in the moment."
-    new "Она не хотела подвергать сомнению нечто столь очевидное. Это казалось ей правильным — и это было всё, что имело значение в тот миг."
+    new "Она даже не хотела подвергать сомнению нечто столь очевидное. Ей казалось, что так правильно, и в этот миг только это имело значение."
 
     old "Sarah felt Naydeen dig her fingers into her waist, when suddenly, a sensation sprang up from between her legs and show out across her body."
-    new "Сара почувствовала, как пальцы Найдин впиваются в её талию, когда внезапно ощущение вспыхнуло между ног и разлилось по телу."
+    new "Сара почувствовала, как Найдин вонзает пальцы ей в талию, и вдруг между ног возникло ощущение, которое расползлось по всему телу."
 
     old "She threw her head back, her back aching, and she howled for her."
-    new "Она запрокинула голову, спина выгнулась, и она застонала ради неё."
+    new "Она откинула голову назад, спина ломилась от боли, и она закричала в её сторону."
 
     old "Moaning out from the pleasure. Moaning out in submission to Naydeen. Sarah could no longer tell which from either."
-    new "Стонала от удовольствия. Стонала в подчинении Найдин. Сара уже не могла различить, что есть что."
+    new "Она стонала от наслаждения. Стонала в подчинении Найдин. Сара уже не могла понять, что из этого было правдой."
 
     old "She felt the rod, attached to the harness that Naydeen was wearing, penetrate deep inside of her."
-    new "Она почувствовала, как стержень, прикреплённый к упряжи, проникает глубоко внутрь."
+    new "Она почувствовала, как стержень, прикрепленный к упряжи на Найдин, проник глубоко внутрь неё."
 
     old "Naydeen was true to her word, taking her slow and gentle, but to Sarah the sudden feeling of Naydeen inside of her, drove her deeper into ectascy."
-    new "Найдин сдержала слово: брала медленно и нежно, но для Сары внезапное ощущение Найдин внутри толкало её всё глубже в экстаз."
+    new "Найдин держала своё слово: она проникала в неё медленно и нежно, но для Сары это внезапное ощущение Найдин внутри неё лишь глубже вгоняло её в экстаз."
 
     old "What had come before now appeared merely prelude, as Sarah felt her body thrash, unable to stop or even willing to stop."
-    new "Всё, что было раньше, теперь казалось лишь прелюдией: Сара чувствовала, как тело бьётся, не в силах остановиться и даже не желая этого."
+    new "То, что было до этого, теперь казалось лишь прелюдией: тело Сары билось в конвульсиях — она не могла остановиться и даже не хотела."
 
     old "Slowly, she felt the rod slide back out of her, and in again, as Naydeen began to find her tempo."
-    new "Медленно она чувствовала, как стержень скользит наружу и снова внутрь — Найдин начала находить свой ритм."
+    new "Медленно она почувствовала, как стержень снова скользнул из неё, а затем вновь вошёл, пока Найдин начинала находить свой ритм."
 
     old "Do you wish you could spend every night with me?"
-    new "Хочешь проводить каждую ночь со мной?"
+    new "Ты бы хотела проводить со мной каждую ночь?"
 
     old "Sarah spoke the word with hushed reverance for the woman who now claimed her body."
-    new "Сара произнесла слово с тихим благоговением перед женщиной, завладевшей её телом."
+    new "Сара произнесла это слово с тихим благоговением перед женщиной, которая теперь владела её телом."
 
     old "Look at you. You'll learn to love the real thing even more."
     new "Посмотри на себя. Ты научишься любить настоящее ещё сильнее."
 
     old "Sarah couldn't imagine that anything might feel even better than this."
-    new "Сара не могла представить, что что-то может быть ещё лучше."
+    new "Сара не могла представить, что что-то может принести ещё больше удовольствия, чем это."
 
     old "Sarah could feel Naydeen bucking her hips, with each motion finding a better angle, taking her deeper."
-    new "Сара чувствовала, как Найдин двигает бёдрами, с каждым движением находя лучший угол, проникая глубже."
+    new "Сара чувствовала, как Найдин двигает бёдрами: каждое движение находило лучший угол и проникало всё глубже."
 
     old "Whatever resistance of modesty had once possessed her now quickly faded to nothing."
-    new "Всякое сопротивление скромности, владевшее ею прежде, быстро сошло на нет."
+    new "Какая-то остаточная скромность, что когда-то сковывала её, теперь стремительно испарилась без следа."
 
     old "Sarah reached out with eager hands to feel Naydeen's body in her hands."
-    new "Сара потянулась жадными руками, чтобы ощутить тело Найдин в своих ладонях."
+    new "Сара протянула полные желания руки, чтобы ощутить тело Найдин в своих ладонях."
 
     old "She panted like an animal in heat, for in this moment, she was."
-    new "Она дышала, как животное в течке — ибо в этот миг она им и была."
+    new "Она тяжело дышала, как животное в течке, ведь в этот миг она им и была."
 
     old "Moaning loudly as Naydeen continued to take her, Sarah held nothing back."
-    new "Громко стонала, пока Найдин продолжала брать её, — Сара не сдерживалась."
+    new "Громко стоня, пока Найдин продолжала проникать в неё, Сара не сдерживалась ни на секунду."
 
     old "She grabbed onto Naydeen's waist, pulling on her body, begging her to go faster."
-    new "Она вцепилась в талию Найдин, притягивая к себе, умоляя ускориться."
+    new "Она схватилась за талию Найдин, притягивая её тело и умоляя двигаться быстрее."
 
     old "She found her desperation answered as Naydeen increased her pace."
-    new "Её отчаяние было услышано — Найдин ускорилась."
+    new "Она почувствовала, что её отчаяние нашло отклик: Найдин ускорила темп."
 
     old "Feeling the sweat builing on her body, Sarah could feel that same sweat sliding past Naydeen's body, tracing a line past her perfect breasts."
-    new "Чувствуя, как пот выступает на теле, Сара ощущала, как тот же пот скользит по телу Найдин, очерчивая линию вдоль её совершенной груди."
+    new "Почувствовав, как пот покрывает её тело, Сара ощущала, как тот же пот скользит по телу Найдин, обволакивая её идеальные груди."
 
     old "On her back, Sarah looked up at the woman who ravished her, and found herself lost in worship of the woman's body."
-    new "Лёжа на спине, Сара смотрела на женщину, что брала её, и потерялась в поклонении её телу."
+    new "На спине Сара подняла глаза на женщину, которая покоряла её, и обнаружила, что потерялась в обожании её тела."
 
     old "Her body had a strength that seemed to do nothing to diminish the femininity of it."
-    new "В её теле чувствовалась сила, ничуть не умалявшая женственности."
+    new "Её тело обладало силой, которая, казалось, нисколько не умаляла его женственности."
 
     old "Spreading her legs around Naydeen's waist, pulling her deeper inside of herself, Sarah could not imagine anything more right than this."
-    new "Раздвинув ноги вокруг талии Найдин, втягивая её глубже в себя, Сара не могла вообразить ничего правильнее этого."
+    new "Раскинув ноги вокруг талии Найдин и притягивая её глубже к себе, Сара не могла представить ничего более правильного, чем это."
 
     old "The heat of their bodies and the heat of the desert air made the room swelter."
-    new "Жар их тел и зной пустынного воздуха сделали комнату душной."
+    new "Жара их тел и зной пустынного воздуха превратили комнату в настоящую печь."
 
     old "A bead of sweat fell from Naydeen's face, landing on Sarah's stomach."
-    new "Капля пота упала с лица Найдин на живот Сары."
+    new "Капля пота скатилась со лба Найдин и упала на живот Сары."
 
     old "Sarah wished it would never stop."
-    new "Сара желала, чтобы это никогда не кончалось."
+    new "Сара хотела, чтобы это никогда не прекращалось."
 
     old "Suddenly, she felt Naydeen shift her hands across her body, taking hold of her firmly and beginning to twist her body."
-    new "Внезапно она почувствовала, как Найдин перемещает руки по её телу, крепко хватает и начинает поворачивать."
+    new "Внезапно она почувствовала, как Найдин переместила руки по её телу, крепко схватила её и начала поворачивать."
 
     old "She pulled the rod from between Sarah's legs."
-    new "Она вытащила стержень из Сары."
+    new "Она вытащила стержень из-между ног Сары."
 
     old "Turn around."
-    new "Повернись."
+    new "Обернись."
 
     old "The command came swift and harsh."
-    new "Команда прозвучала резко и строго."
+    new "Приказ прозвучал быстро и жестоко."
 
     old "Sarah obediently turned her body around, laying down on her stomach."
-    new "Сара послушно перевернулась, ложась на живот."
+    new "Сара послушно повернулась и легла на живот."
 
     old "Not more than a fraction passed before she felt the rod enter her again, now from behind."
-    new "Не прошло и мгновения, как она снова почувствовала стержень внутри — теперь сзади."
+    new "Не прошло и доли секунды, как она снова почувствовала, как член вошёл в неё — теперь сзади."
 
     old "She could feel Naydeen settling between her legs, spreading them apart and pulling up Sarah's rear so that she could still reach her sex."
-    new "Она чувствовала, как Найдин устраивается между её ног, раздвигает их и приподнимает ягодицы Сары, чтобы доставать до её лона."
+    new "Она чувствовала, как Найдин занимает место между её ногами, разводит их и приподнимает таз Сары так, чтобы всё ещё иметь доступ к её половым органам."
 
     old "For Sarah it was new and difficult to keep up, but in Naydeen's hands, it felt natural and easy."
-    new "Для Сары это было ново и трудно, но в руках Найдин казалось естественным и лёгким."
+    new "Для Сары это было ново и трудно давалось, но в руках Найдин всё ощущалось естественно и легко."
 
     old "Do as she says, Sarah reminded herself."
-    new "Делай, как она говорит, напомнила себе Сара."
+    new "Делай, как она говорит, — напомнила себе Сара."
 
     old "The Khan has so many playthings, perhaps it is only fair that I should have my own."
-    new "У хана так много игрушек, возможно, будет справедливо, если и у меня будет своя."
+    new "У хана так много игрушек — может, справедливо будет, если и у меня будет своя?"
 
     old "Sarah felt Naydeen place the palm of her hand, firmly on Sarah's upper back, pinning her down."
-    new "Сара почувствовала, как ладонь Найдин легла ей на спину, прижимая к постели."
+    new "Сара почувствовала, как Найдин твёрдо прижала её ладонью к верхней части спины, удерживая на месте."
 
     old "Would you want to be mine alone?"
-    new "Хочешь быть только моей?"
+    new "Хотела бы ты быть моей одной?"
 
     old "Sarah offered up her meek response, but it was the truth."
-    new "Сара дала робкий ответ, но это была правда."
+    new "Сара ответила кротко, но это была правда."
 
     old "I will take you as the men of the desert do."
-    new "Я возьму тебя, как берут мужчины пустыни."
+    new "Я заберу тебя так, как это делают мужчины пустыни."
 
     old "The Khan tolerates many things, but weakness is not be one of them."
-    new "Хан многое терпит, но слабость не входит в их число."
+    new "Хан терпит многое, но слабость — не одна из этих вещей."
 
     old "When the takes you, he will not hold back. You must be able to take him."
-    new "Когда он возьмёт тебя, он не будет сдерживаться. Ты должна быть в состоянии выдержать его."
+    new "Когда он возьмёт тебя, он не будет сдерживаться. Ты должна суметь принять его."
 
     old "Sarah offered up her meek response, but in this instance, she cared not for the Khan, only for Naydeen."
-    new "Сара дала робкий ответ, но в этот момент ей было всё равно на хана — только на Найдин."
+    new "Сара попыталась ответить смиренно, но на этот раз её забота была не о Хане, а только о Найдин."
 
     old "She cried out as she felt Naydeen resume her thrusts."
-    new "Она вскрикнула, почувствовав, как Найдин возобновляет толчки."
+    new "Она вскрикнула, чувствуя, как Найдин возобновила свои толчки."
 
     old "Bend over and pinned down, Sarah had never felt more vulnerable than now."
-    new "Согнутая и прижатая, Сара никогда не чувствовала себя более уязвимой."
+    new "Согнутая и прижатая к земле, Сара никогда ещё не чувствовала себя такой уязвимой."
 
     old "And yet, as she cried out in pleasure, she also knew that she felt safe in Naydeen's hands."
-    new "И всё же, вскрикивая от удовольствия, она знала, что в руках Найдин она в безопасности."
+    new "И всё же, когда она закричала от удовольствия, то также знала, что чувствует себя в безопасности в руках Найдин."
 
     old "The way she took hold of her body, grabbing at her, clawing at her."
-    new "Как она брала её тело, хватая, впиваясь пальцами."
+    new "То, как она схватила её за тело, обхватив и царапая пальцами."
 
     old "But always in a measure that Sarah, with her inexperienced body, could endure."
-    new "Но всегда в той мере, которую Сара с её неопытным телом могла выдержать."
+    new "Но всегда в такой мере, которую Сара со своим неопытным телом могла вынести."
 
     old "As she felt her body rock back and forth, Naydeen plunging deeper inside of her with each thrust, Sarah could that familiar pleasure."
-    new "Чувствуя, как тело раскачивается вперёд-назад, а Найдин с каждым толчком погружается всё глубже, Сара ощутила то знакомое удовольствие."
+    new "Пока её тело раскачивалось взад-вперёд, а Найдин с каждым толчком проникала всё глубже и глубже, Сара ощущала это знакомое наслаждение."
 
     old "But where before it ebbed and flowed, now it remained and build."
-    new "Но если прежде оно то отступало, то накатывало, теперь оно оставалось и нарастало."
+    new "Но если раньше это приливало и отступало, то теперь оставалось и нарастало."
 
     old "Each thrust added, each thrust grew the sensation."
-    new "Каждый толчок добавлял, каждый толчок усиливал ощущение."
+    new "Каждый толчок добавлял силы, каждый толчок усиливал это ощущение."
 
     old "Sarah could feel something coming, rushing up from within her as it swelled and burst over."
-    new "Сара чувствовала, как что-то приближается, несётся изнутри, разбухает и прорывается."
+    new "Сара чувствовала, что что-то приближается — оно поднималось изнутри неё, раздуваясь и вот-вот вырвавшись наружу."
 
     old "Every muscle in her body contorted as the orgasm came over her, and for a brief moment, Sarah imagined it had struck her blind."
-    new "Каждая мышца её тела свелась судорогой, когда оргазм накрыл её, и на краткий миг Саре показалось, что она ослепла."
+    new "Каждая мышца в её теле исказилась от нахлынувшего оргазма, и на короткое мгновение Саре показалось, что он ослепил её."
 
     old "She cried out as much as she still could, and she felt each thrust with an intensity she could not have before imagined."
-    new "Она кричала так громко, как могла, и чувствовала каждый толчок с интенсивностью, которую прежде не могла вообразить."
+    new "Она закричала так сильно, как только могла, и ощущала каждый толчок с такой интенсивностью, о которой раньше и представить не могла."
 
     old "Slowly, as the pleasure peaked and began to recede, Sarah felt the rocking of her body slow down as Naydeen gradually ceased her thrusts."
-    new "Медленно, когда наслаждение достигло пика и начало спадать, Сара почувствовала, как покачивания тела замедляются — Найдин постепенно прекращала толчки."
+    new "Постепенно, когда удовольствие достигло пика и начало спадать, Сара почувствовала, как движения её тела замедлились, а Найдин постепенно перестала совершать толчки."
 
     old "Finally, as the last of it left her body, Sarah felt Naydeen pull out from her."
-    new "Наконец, когда последние волны покинули тело, Сара почувствовала, как Найдин выходит из неё."
+    new "Наконец, когда последнее покинуло её тело, Сара ощутила, как Найдин вышла из неё."
 
     old "Her sex sensitive, Sarah could feel that same sensitivity all across her body, as though her skin was new and freshly exposed to the sultry air."
-    new "Чуткая между ног, Сара ощущала ту же остроту во всём теле — будто кожа обновилась и впервые открылась знойному воздуху."
+    new "Её половые органы были чувствительны, и Сара ощущала ту же чувствительность по всему телу — словно кожа стала новой, только что обнажённой для влажного, дурманящего воздуха."
 
     old "Each limb in her body felt racked from the excercise."
-    new "Каждая конечность ныла от напряжения."
+    new "Каждая конечность в её теле ощущалась измученной от этой нагрузки."
 
     old "She struggled to move, much more say anything, only laying there, regaining her strength."
-    new "Она с трудом могла пошевелиться, не то что говорить — только лежала, восстанавливая силы."
+    new "Она с трудом могла пошевелиться, не то что что-либо сказать, и лишь лежала там, набираясь сил."
 
     old "Sarah could feel Naydeen trace a finger past he spine. She twitched under her touch."
-    new "Сара чувствовала, как палец Найдин скользит вдоль её позвоночника. Она вздрагивала от прикосновения."
+    new "Сара почувствовала, как Найдин провела пальцем вдоль её позвоночника. Она дёрнулась от этого прикосновения."
+
+    old "Did you like that?"
+    new "Тебе это понравилось?"
 
     old "Sarah could only nod her head in response."
-    new "Сара могла лишь кивнуть в ответ."
+    new "Сара могла лишь кивнуть головой в ответ."
+
+    old "Good."
+    new "Хорошо."
 
     old "She felt Naydeen press her lips against her neck, kissing her gently, biting her softly."
-    new "Она чувствовала, как губы Найдин прижимаются к её шее, целуя нежно, покусывая мягко."
+    new "Она почувствовала, как Найдин прижала свои губы к её шее, нежно целуя и мягко кусая."
 
     old "Sarah wondered how this woman could solicit such a strong reaction from her, and yet she also wished she could surrender herself more to her."
-    new "Сара удивлялась, как эта женщина могла вызывать такую сильную реакцию, и в то же время желала отдаться ей ещё больше."
+    new "Сара не могла понять, как эта женщина смогла вызвать у неё столь яркую реакцию, но в то же время ей самой хотелось ещё больше поддаться её влиянию."
 
     old "Recover for now. We will continue soon enough."
-    new "Отдохни пока. Мы продолжим достаточно скоро."
+    new "Поправься пока. Мы ведь скоро продолжим."
 
     old "Continue?"
     new "Продолжим?"
 
     old "Sarah could barely get the word out."
-    new "Сара едва выговорила это слово."
+    new "Сара едва могла вымолвить слово."
 
     old "Of course, your training has only just begun."
-    new "Конечно, твоё обучение только началось."
+    new "Конечно же, твоя подготовка только началась."
 
     old "In this place, where Sarah could scarcely know who or what to trust, she would learn for the first time that some promises were true."
-    new "В этом месте, где Сара едва могла знать, кому или чему доверять, она впервые узнала, что некоторые обещания сбываются."
+    new "В этом месте, где Сара едва могла понять, кому или чему доверять, она впервые узнает, что некоторые обещания действительно выполняются."
 
     old "And Naydeen kept true to her word."
-    new "И Найдин сдержала слово."
+    new "И Найдин сдержала своё слово."
 
     old "Deep into the night, Naydeen continued to mentor Sarah in the arts of the body."
-    new "Глубокой ночью Найдин продолжала наставлять Сару в искусствах тела."
+    new "Глубоко ночью Найдин продолжала обучать Сару искусству владения телом."
 
     old "And Sarah proved herself a willing student."
-    new "И Сара показала себя прилежной ученицей."
+    new "И Сара доказала, что была преданной ученицей."
 
     old "When it ended, Sarah struggled to even recall, only remembering the fading moment of Naydeen's departure, and her own swift collapse into unconsciousness."
-    new "Когда всё закончилось, Сара с трудом могла вспомнить, запомнив лишь угасающий миг ухода Найдин и собственное быстрое погружение в беспамятство."
-
+    new "Когда всё закончилось, Сара едва могла что-либо вспомнить: ей осталась лишь смутная память о том, как Найдин уходила, и о собственном стремительном падении в беспамятство."

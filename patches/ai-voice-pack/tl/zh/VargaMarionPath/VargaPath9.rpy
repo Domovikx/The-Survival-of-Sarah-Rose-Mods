@@ -3,9 +3,6 @@
 
 translate zh strings:
 
-    old "A head on assault on the fort would be a disaster."
-    new "正面强攻堡垒只会是一场灾难。"
-
     old "Reason with him."
     new "和他谈谈"
 

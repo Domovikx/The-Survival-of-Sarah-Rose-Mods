@@ -1,20 +1,19 @@
 # -*- encoding: utf-8 -*-
 # Arc: Other | Scene: JustBeforeBattleOfRahayal
-# Source: C:\Program Files (x86)\Steam\steamapps\common\The Survival of Sarah Rose\game\script.rpy
 
 translate ru strings:
 
     old "Sarah rose early that next morning."
-    new "Сара проснулась рано на следующее утро."
+    new "Сара проснулась рано утром следующего дня."
 
     old "With dread in her heart, she took her position on the wall of the city, overlooking the fields beyond."
-    new "Со страхом в сердце она заняла позицию на городской стене, вглядываясь в поля вдали."
+    new "С тревогой в сердце она заняла своё место на городской стене, глядя на поля за ней."
 
     old "She could imagine it almost peaceful."
-    new "Ей это казалось почти мирным."
+    new "Она могла почти представить это мирным."
 
     old "But she had seen how quickly things could change."
-    new "Но она видела, как быстро всё может измениться."
+    new "Но она видела, как быстро всё могло измениться."
 
     old "Whatever would come..."
     new "Что бы ни случилось..."
@@ -23,11 +22,10 @@ translate ru strings:
     new "Она будет готова."
 
     old "Then, just as she felt as if she had convinced herself of her bravery, she watched she sky above her warp and twist."
-    new "И тут, когда ей показалось, что она убедила себя в своей храбрости, она увидела, как небо над ней искажается и скручивается."
+    new "Тогда, как раз когда ей показалось, что она наконец-то убедила себя в собственной храбрости, она увидела, как небо над ней исказилось и перекрутилось."
 
     old "Sarah saw a great rift tear through the heavens."
-    new "Сара увидела, как огромный разрыв разорвал небеса."
+    new "Сара увидела, как огромная трещина разорвала небеса."
 
     old "And as reality itself tore apart, she saw the countless white masks of the beasts emerge."
-    new "И когда сама реальность разорвалась, она увидела, как появляются бесчисленные белые маски чудовищ."
-
+    new "И пока сама реальность распадаться на части, она увидела, как появились бесчисленные белые маски зверей."

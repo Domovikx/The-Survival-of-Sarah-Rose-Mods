@@ -1,6 +1,5 @@
 # -*- encoding: utf-8 -*-
 # Arc: HyralArc | Scene: HyralGoblin
-# Source: C:\Program Files (x86)\Steam\steamapps\common\The Survival of Sarah Rose\game\script.rpy
 
 translate ru strings:
 
@@ -8,10 +7,10 @@ translate ru strings:
     new "Сара наклонилась ближе к гоблину."
 
     old "She lowered her own voice, speaking in a whisper."
-    new "Она понизила голос, говоря шёпотом."
+    new "Она понизила голос и заговорила шёпотом."
 
     old "If you help me escape, I'll promise I'll make sure that the humans in the town won't hurt you."
-    new "Если поможешь мне сбежать, обещаю, люди в городе не тронут тебя."
+    new "Если ты поможешь мне сбежать, я обещаю, что позабочусь о том, чтобы люди в городе не причинили тебе вреда."
 
     old "Good. Good."
     new "Хорошо. Хорошо."
@@ -20,7 +19,7 @@ translate ru strings:
     new "Как тебя зовут?"
 
     old "They call me Raza. What is your name?"
-    new "Меня зовут Раза. А тебя как зовут?"
+    new "Они зовут меня Раза. А тебя как зовут?"
 
     old "Now...can you get me out of here?"
     new "Теперь... ты можешь вытащить меня отсюда?"
@@ -29,67 +28,67 @@ translate ru strings:
     new "Раза покачал головой."
 
     old "No. Not now. Too many orc around. They will hear."
-    new "Нет. Не сейчас. Слишком много орков. Услышат."
+    new "Нет. Не сейчас. Слишком много орков вокруг. Они услышат."
 
     old "Sarah felt her heart sink. How much longer would she be trapped here?"
-    new "Сердце Сары упало. Сколько ещё она будет здесь заперта?"
+    new "Сердце Сары ушло в пятки. Сколько ещё времени она проведёт здесь в плену?"
 
     old "When can we escape?"
     new "Когда мы сможем сбежать?"
 
     old "Orc have feast tonight."
-    new "У орков пир сегодня ночью."
+    new "Орки сегодня устроят пир."
 
     old "I serve them extra strong wine. Then we escape."
-    new "Я подам им особо крепкое вино. Потом сбежим."
+    new "Я подам им особенно крепкое вино. А потом мы сбежим."
 
     old "The idea of escaping her tonight made her heart rush."
-    new "Мысль о побеге сегодня вечером заставила сердце биться быстрее."
+    new "Мысль о том, чтобы сбежать от неё сегодня ночью, заставила её сердце биться чаще."
 
     old "Okay...I'll wait."
-    new "Ладно... я подожду."
+    new "Хорошо... Я подожду."
 
     old "The goblin handed her an extra piece of bread."
-    new "Гоблин протянул ей лишний кусок хлеба."
+    new "Гоблин протянул ей дополнительный кусок хлеба."
 
     old "Eat. You need strength for tonight."
-    new "Ешь. Нужны силы на сегодняшнюю ночь."
+    new "Ешь. Тебе понадобятся силы на сегодня."
 
     old "Travel will be hard."
-    new "Путь будет трудным."
+    new "Путешествие будет тяжёлым."
 
     old "Sarah nodded as she eagerly accepted the second piece of bread."
-    new "Сара кивнула, с готовностью принимая второй кусок."
+    new "Сара кивнула, с нетерпением принимая второй кусок хлеба."
 
     old "As she watched the goblin leave, she sat down in her cell again, praying for the next to come soon."
-    new "Провожая гоблина взглядом, она снова села в камере, молясь, чтобы время пришло скорее."
+    new "Наблюдая за тем, как уходит гоблин, она снова села в своей камере, молясь, чтобы следующий пришёл скорее."
 
     old "Sarah didn't know when she had fallen asleep again."
-    new "Сара не знала, когда снова уснула."
+    new "Сара не знала, когда она снова уснула."
 
     old "She woke to a sudden sound at the edge of her cage."
-    new "Она проснулась от внезапного звука у края клетки."
+    new "Она очнулась от внезапного звука у края своей клетки."
 
     old "When she looked up, she saw the goblin had returned, as promised."
-    new "Подняв взгляд, она увидела, что гоблин вернулся, как обещал."
+    new "Когда она подняла голову, то увидела, что гоблин вернулся, как и обещал."
 
     old "Sarah, you wake!"
-    new "Сара, ты проснулась!"
+    new "Сара, ты очнулась!"
 
     old "It voice was sharp."
-    new "Голос был резким."
+    new "Его голос был резким."
 
     old "Sarah crawled up from the ground and towards the bars."
-    new "Сара поднялась с пола и подползла к прутьям решётки."
+    new "Сара поднялась с земли и пошла к прутьям."
 
     old "Raza! Are we ready to go?"
-    new "Раза! Мы готовы?"
+    new "Раза! Мы готовы идти?"
 
     old "I gave strong wine. Orcs don't know which way is up."
-    new "Я дал крепкое вино. Орки не знают, где верх."
+    new "Я дал им крепкое вино. Орки уже не знают, где верх, а где низ."
 
     old "He held up a small bag."
-    new "Он поднял маленькую сумку."
+    new "Он поднял небольшой мешочек."
 
     old "I brought clothes. Food. We ready to go."
     new "Я принёс одежду. Еду. Мы готовы идти."
@@ -98,59 +97,64 @@ translate ru strings:
     new "Она не могла поверить, что этот крошечный гоблин окажется её спасением."
 
     old "How are we going to break this lock?"
-    new "Как мы сломаем этот замок?"
+    new "Как нам сломать этот замок?"
 
     old "The goblin suddenly shook its head."
     new "Гоблин внезапно покачал головой."
 
     old "No. Not yet."
-    new "Нет. Ещё нет."
+    new "Нет. Пока не время."
 
     old "What do you mean? We have to leave tonight, right?"
-    new "Что значит? Мы должны уйти сегодня вечером, да?"
+    new "Что ты имеешь в виду? Нам же нужно уходить сегодня ночью, так?"
+
+    old "Yes."
+    new "Да."
 
     old "Then suddenly, it reached for the ragged loincloth that covered its lower body."
-    new "Затем внезапно он потянулся к рваной набедренной повязке."
+    new "Тут оно вдруг потянулось к рваному поясу, покрывавшему его нижнюю часть тела."
 
     old "Sarah nearly jumped back as she saw the creature's erection poke out from underneath."
-    new "Сара почти отпрыгнула, увидев эрекцию существа."
+    new "Сара чуть не отскочила назад, увидев, как эрекция существа торчит из-под его рваного набедренного повязки."
 
     old "What...what are you doing?!"
     new "Что... что ты делаешь?!"
 
     old "She couldn't help her voice from rising, so great was the shock."
-    new "Она не могла сдержать голос — так силён был шок."
+    new "Она не могла сдержать возгласа от такого шока."
 
     old "Raza help Sarah. Sarah help Raza."
-    new "Раза поможет Саре. Сара поможет Разе."
+    new "Раза помогает Саре. Сара помогает Разе."
 
     old "The creature poked its member through the bars, an impressive size given the creature's stature."
-    new "Существо просунуло член сквозь прутья — внушительный размер для его роста."
+    new "Существо протолкнуло свой член сквозь прутья — впечатляющий размер, учитывая его габариты."
 
     old "Give into Raza's demand"
-    new "Уступить требованию Разы"
+    new "Уступите требованиям Разы"
 
     old "Scold him"
-    new "Отчитать его"
+    new "Отругай его"
 
     old "Sarah gritted her teeth, angry at what the small creature dared to demand of her."
-    new "Сара стиснула зубы, злясь на то, что это маленькое существо осмелилось от неё требовать."
+    new "Сара стиснула зубы, разгневанная тем, как это маленькое существо осмелилось требовать от неё чего-то."
 
     old "Her situation might be dire, but she would not allow herself to be blackmailed by this thing."
-    new "Её положение могло быть отчаянным, но она не позволит этой твари шантажировать себя."
+    new "Её положение могло быть отчаянным, но она не позволит этому тварь шантажировать себя."
+
+    old "Get out!"
+    new "Уходи!"
 
     old "Sarah sat back down on the floor of her cell and lowered her head."
-    new "Сара снова села на пол камеры и опустила голову."
+    new "Сара снова села на пол своей камеры и опустила голову."
 
     old "She had been a fool to trust anyone, let alone such a lowly creature that she barely knew."
-    new "Она была дурой, что доверилась кому-то, особенно такой низкой твари, которую едва знала."
+    new "Она была дурицей, раз доверилась кому-либо, не говоря уже о таком жалком существе, которого она почти не знала."
 
     old "Of course he'd try to take advantage of the moment."
-    new "Конечно, он попытается использовать момент."
+    new "Конечно же, он попытался бы воспользоваться моментом."
 
     old "That's what they did."
-    new "Так они все делают."
+    new "Вот так они все и поступали."
 
     old "That's what they all did."
-    new "Так они все и делают."
-
+    new "Вот что они все и сделали."

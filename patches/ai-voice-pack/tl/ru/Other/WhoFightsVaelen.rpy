@@ -1,6 +1,5 @@
 # -*- encoding: utf-8 -*-
 # Arc: Other | Scene: WhoFightsVaelen
-# Source: C:\Program Files (x86)\Steam\steamapps\common\The Survival of Sarah Rose\game\script.rpy
 
 translate ru strings:
 
@@ -8,29 +7,28 @@ translate ru strings:
     new "Сара сразится с Ваэленом"
 
     old "Ask Kate to fight"
-    new "Попросить Кейт сразиться"
+    new "Попроси Кейт сразиться"
 
     old "Sarah considered asking Kate to fight in her place, but she could see the pain in Kate's eyes."
-    new "Сара подумывала попросить Кейт сразиться вместо себя, но видела боль в её глазах."
+    new "Сара подумывала попросить Кейт сразиться за неё, но видела боль в её глазах."
 
     old "Sarah could not bring herself to make Kate choose between herself and Vaelen."
-    new "Сара не могла заставить Кейт выбирать между собой и Ваэленом."
+    new "Сара не могла заставить себя заставить Кейт выбирать между собой и Ваэленом."
 
     old "Ask Cassius to fight"
-    new "Попросить Кассиуса сразиться"
+    new "Попроси Кассия сразиться"
 
     old "Ask Samayra to fight"
-    new "Попросить Самайру сразиться"
+    new "Попросить Самайру сражаться"
 
     old "Sarah's eyes fell on Samayra."
-    new "Взгляд Сары упал на Самайру."
+    new "Глаза Сары упали на Самайру."
 
     old "For a moment she considered asking her. Then she wondered what she was even thinking."
-    new "На мгновение она подумала попросить её. А затем удивилась, о чём она вообще думала."
+    new "На мгновение она подумала попросить её об этом. Затем засомневалась, о чём она вообще думает."
 
     old "The girl wouldn't even win in a fight against a training dummy."
-    new "Эта девчонка и с тренировочным манекеном не справится."
+    new "Девушка не победила бы даже в бою с тренировочным манекеном."
 
     old "She shook her head at her own foolishness."
-    new "Она покачала головой, удивляясь собственной глупости."
-
+    new "Она покачала головой, осознавая собственную глупость."
