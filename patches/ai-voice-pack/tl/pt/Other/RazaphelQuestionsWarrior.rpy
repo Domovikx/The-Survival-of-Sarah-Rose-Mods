@@ -18,9 +18,6 @@ translate pt strings:
     old "I have asked all that I need to know"
     new "Perguntei tudo o que precisava saber"
 
-    old "A design in which every path bends towards the same desination."
-    new "Um desenho em que cada caminho se curva para o mesmo destino."
-
     old "Place your hands upon the monolith"
     new "Coloca as tuas mãos sobre o monólito"
 

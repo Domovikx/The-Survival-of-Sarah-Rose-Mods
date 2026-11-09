@@ -3,9 +3,6 @@
 
 translate ko strings:
 
-    old "A good ruler lets the facts guide him, not hysteria."
-    new "선한 통치자는 공포가 아닌 사실을 따릅니다."
-
     old "We ready the army; best we be prepared."
     new "군대를 준비한다; 최대한 대비해야 한다."
 

@@ -3,9 +3,6 @@
 
 translate fr strings:
 
-    old "A bath? In this place?"
-    new "Une baignoire ? Dans ce genre d'endroit ?"
-
     old "Join Carolyn in the bath"
     new "Rejoignez Carolyn dans le bain"
 

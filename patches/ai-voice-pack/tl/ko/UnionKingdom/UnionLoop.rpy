@@ -6,9 +6,6 @@ translate ko strings:
     old "Meet with Queen Maeiv"
     new "마이브 여왕과 만남"
 
-    old "A fine argument, but I suspect your motives are not so pure."
-    new "훌륭한 논리지만, 당신의 동기가 그렇게 순수하지는 않다고 의심합니다."
-
     old "Agree, pledge your industry to Maeiv"
     new "동의하다, 메이브에게 당신의 열정을 맹세하라"
 
@@ -17,12 +14,6 @@ translate ko strings:
 
     old "Meet with Duke Antonio"
     new "두크 안토니오와 만남"
-
-    old "A mercy?"
-    new "자비심이라니?"
-
-    old "A common whore. I could go out into the city tonight and fuck a dozen like her."
-    new "하찮은 년이군. 오늘 밤 도시로 나가서 그녀 같은 여자를 십 명이나 성관계를 할 수 있어."
 
     old "Strip for him"
     new "그를 위해 옷을 벗어라"

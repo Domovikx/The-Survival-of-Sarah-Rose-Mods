@@ -3,9 +3,6 @@
 
 translate ko strings:
 
-    old "A bath? In this place?"
-    new "욕조? 이 곳에서?"
-
     old "Join Carolyn in the bath"
     new "카롤린과 함께 목욕하기"
 

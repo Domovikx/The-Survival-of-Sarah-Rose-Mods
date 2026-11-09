@@ -3,9 +3,6 @@
 
 translate pl strings:
 
-    old "A handful of guards...and me."
-    new "Garść strażników... i ja."
-
     old "Can you show me?"
     new "Możesz mi to pokazać?"
 

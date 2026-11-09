@@ -540,7 +540,7 @@ msgstr "Scegli"
 
 msgctxt "menu"
 msgid "Pressure him."
-msgstr "Prendilo."
+msgstr "Mettigli pressione."
 
 msgctxt "speaker:Sarah"
 msgid "Father, I can see that something is worrying you. Please, tell me now. You'll sleep better having shared."
@@ -13008,7 +13008,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Hold on to Lily"
-msgstr "Tieni a Lily"
+msgstr "Tieni stretta Lily."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah looked down at the girl, who suddenly looked so very vulnerable."
@@ -13640,7 +13640,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "She needs to be made an example of"
-msgstr "Deve essere fatta un esempio"
+msgstr "Deve essere usata come esempio."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah couldn't deny that in the grand scheme of things, some stolen food was hardly a problem."
@@ -18184,7 +18184,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Ask her to sneak away with you"
-msgstr "Chiedile di nascondersi con te"
+msgstr "Chiedile di sgattaiolare via con te."
 
 msgctxt "speaker:Sarah"
 msgid "Lily..."
@@ -22508,7 +22508,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Tell Varga what you were saying"
-msgstr "Dille a Varga cosa dicevi"
+msgstr "Dì a Varga cosa stavi dicendo."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah let her smile slip."
@@ -29368,7 +29368,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Refuse, you don't need her vote"
-msgstr "Rifiuta, non ha bisogno del suo voto"
+msgstr "Rifiuta, non hai bisogno del suo voto."
 
 msgctxt "speaker:Sarah"
 msgid "No. The resources and industry of my nation are my own. They will not go to support your armies."
@@ -33004,7 +33004,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Meet with Maeiv"
-msgstr "Incontra con Maeiv"
+msgstr "Incontrare Maeiv"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah finally managed to secure a meeting with Queen Maeiv."
@@ -33344,7 +33344,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "To good wine"
-msgstr "A buon vino"
+msgstr "Al buon vino"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah held up the cup."
@@ -36268,7 +36268,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Claim the role for yourself"
-msgstr "Assumi il ruolo per te stessa"
+msgstr "Prenditi tu questo ruolo."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah knew the answer before she dared to speak it."
@@ -41164,7 +41164,7 @@ msgstr "Una nazione dove le persone comuni non dovevano vivere nella paura dei p
 
 msgctxt "menu"
 msgid "Make an example out of her."
-msgstr "Fai un esempio di lei."
+msgstr "Fai di lei un esempio."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah knew she could not just be allowed to leave."
@@ -65340,7 +65340,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Sarah is so close, she doesn't stop Kate"
-msgstr "Sarah è così vicina che non si ferma a Kate"
+msgstr "Sarah è così vicina da non fermare Kate."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah makes eye contact with the captain."
@@ -65920,7 +65920,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Surrender to the captain completely"
-msgstr "Rendi completamente la tua resa al capitano"
+msgstr "Arrenditi completamente al capitano"
 
 msgctxt "speaker:Narrator"
 msgid "Belmont walks back up deck, his booming laugh ringing out over the ship."
@@ -70192,7 +70192,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Take the bet."
-msgstr "Fai la posta."
+msgstr "Accetta la scommessa."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah thought about it for a moment. This was her chance to prove the captain wrong, and get some money. 20.000 pieces of gold would solve a lot of her problems."
@@ -70608,7 +70608,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Leave the ship"
-msgstr "Abandona la nave"
+msgstr "Lascia la nave."
 
 msgctxt "speaker:Sarah"
 msgid "You’re disgusting!"
@@ -75976,7 +75976,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Take the servant job"
-msgstr "Accetta il lavoro di serva"
+msgstr "Prendi il lavoro da servitore."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah still got chills when she thought about the woman's warning."
@@ -88144,7 +88144,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Kiss Nick"
-msgstr "Besa a Nick"
+msgstr "Bacia Nick."
 
 msgctxt "speaker:Narrator"
 msgid "Damn it all to hell. She had one life to live and she wasn't gonna waste it living it on the terms of anyone else."
@@ -116796,7 +116796,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Take the real stone for yourself."
-msgstr "Prendila per te."
+msgstr "Prendi tu la pietra vera."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah didn't know how much she could trust the spirit, but it clearly knew a lot of things."
@@ -146072,7 +146072,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Keep on your armor"
-msgstr "Continua con l'armatura"
+msgstr "Mantieni l'armatura addosso."
 
 msgctxt "speaker:Sarah"
 msgid "My armor will suit me fine."
@@ -148204,7 +148204,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Meet with Kate"
-msgstr "Incontra con Kate"
+msgstr "Incontrare Kate."
 
 msgctxt "speaker:Narrator"
 msgid "She needed to get out of her own head."
@@ -161332,7 +161332,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Sleep with the Old Tribesman"
-msgstr "Dormi con il Vecchio Tribù"
+msgstr "Dormi col Vecio tribale."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah's voice was soft."
@@ -164140,7 +164140,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Set the mob loose, let them have their revenge"
-msgstr "Sgombra la turba, lascia che prendano la loro vendetta"
+msgstr "Scatenate la folla, lasciate che si vendichi"
 
 msgctxt "speaker:Narrator"
 msgid "She saw a smile creeping over the man's face."
@@ -164752,7 +164752,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Send the spearmen forward"
-msgstr "Invia gli spadaccini in avanti"
+msgstr "Lanciatori di lance! Avanzate!"
 
 msgctxt "speaker:Sarah"
 msgid "Spearmen! Advance!"
@@ -164832,7 +164832,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Send in the knights"
-msgstr "Invoca i cavalieri"
+msgstr "Invia i cavalieri!"
 
 msgctxt "speaker:Sarah"
 msgid "Knight! Advance!"
@@ -183500,7 +183500,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Leave Lethram"
-msgstr "Abbandonala"
+msgstr "Lascia Lethram"
 
 msgctxt "speaker:Narrator"
 msgid "She wasn't safe anywhere in this forsaken city. She would have to leave."
@@ -209100,7 +209100,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Give into the spirit"
-msgstr "Cedi al suo spirito"
+msgstr "Cedi allo spirito."
 
 msgctxt "speaker:Narrator"
 msgid "Was it pity that drove her to do it? Sarah hardly knew herself."
@@ -219040,7 +219040,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Make a move on her"
-msgstr "Fai un passo su di lei"
+msgstr "Prova a conquistarla."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah slowly felt her hands slide down past Samayra's body."
@@ -219588,7 +219588,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Investigate the sound"
-msgstr "Indaga nel suono"
+msgstr "Indaga sul rumore"
 
 msgctxt "menu"
 msgid "Let it go, it's nothing"
@@ -223408,7 +223408,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Rebuke the spirit"
-msgstr "Ribadire allo spirito"
+msgstr "Rinfaccia allo spirito."
 
 msgctxt "speaker:Sarah"
 msgid "I need to go, it's too late already."
@@ -223516,7 +223516,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Say you trust the spirit"
-msgstr "Dì che credi nello spirito"
+msgstr "Dì che ti fidi dello spirito."
 
 msgctxt "speaker:Sarah"
 msgid "Yes...I trust you."
@@ -223536,7 +223536,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Say you don't trust the spirit"
-msgstr "Di che non ti fidi dello spirito"
+msgstr "Dì che non ti fidi dello spirito."
 
 msgctxt "speaker:Sarah"
 msgid "No, I don't trust you."
@@ -250132,7 +250132,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Hold on, try to to speak"
-msgstr "Sostieniti, prova a parlare"
+msgstr "Aspetta, prova a parlare."
 
 msgctxt "speaker:Narrator"
 msgid "Every part of her wanted to escape, but there was still hope."
@@ -263200,7 +263200,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Go out and try to forget"
-msgstr "Sali e cerca di dimenticare"
+msgstr "Esci e prova a dimenticare."
 
 msgctxt "speaker:Narrator"
 msgid "The last thing she needed right now was to torture herself by being alone with her thoughts."
@@ -276420,7 +276420,7 @@ msgstr "Nasconde l'interfaccia utente."
 
 msgctxt "ui"
 msgid "Takes a screenshot."
-msgstr "Prende una screenshot."
+msgstr "Fa uno screenshot."
 
 msgctxt "ui"
 msgid "Toggles assistive {a=https://www.renpy.org/l/voicing}self-voicing{/a}."

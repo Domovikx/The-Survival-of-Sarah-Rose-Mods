@@ -14,6 +14,3 @@ translate pl strings:
 
     old "What if you desire no man?"
     new "A co jeśli nie pragniesz żadnego mężczyzny?"
-
-    old "A bead of sweat fell from Naydeen's face, landing on Sarah's stomach."
-    new "Kropla potu spłynęła z twarzy Naydeen i lądowała na brzuchu Sarah."

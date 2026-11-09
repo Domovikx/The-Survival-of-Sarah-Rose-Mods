@@ -11,9 +11,3 @@ translate fr strings:
 
     old "Condemn Oliver to death"
     new "Condamner Oliver à mort"
-
-    old "A hunting accident, so his father says..."
-    new "Un accident de chasse, selon ce que dit son père..."
-
-    old "A man walked in through the door to the Great Hall."
-    new "Un homme entra par la porte du Grand Hall."

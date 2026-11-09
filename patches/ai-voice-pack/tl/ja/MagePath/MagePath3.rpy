@@ -3,12 +3,6 @@
 
 translate ja strings:
 
-    old "A moment of pause."
-    new "一瞬の静寂。"
-
-    old "A laugh that sounded like a hiss, eminated from the creature."
-    new "生物から、ヒソヒソ音のような笑いが漏れた。"
-
     old "I liked it"
     new "気に入った"
 

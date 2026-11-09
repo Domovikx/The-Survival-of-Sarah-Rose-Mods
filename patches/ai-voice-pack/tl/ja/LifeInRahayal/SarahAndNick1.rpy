@@ -3,9 +3,6 @@
 
 translate ja strings:
 
-    old "A brutal peace, where as often, the weakest and poorest were made to pay the price."
-    new "残酷な平和。いつも通り、最も弱く貧しい者たちが代償を払う世界だ。"
-
     old "Make a fire"
     new "火を焚く"
 

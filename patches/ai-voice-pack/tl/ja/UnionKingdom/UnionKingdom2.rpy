@@ -11,9 +11,3 @@ translate ja strings:
 
     old "Condemn Oliver to death"
     new "オリバーを死刑にせよ"
-
-    old "A hunting accident, so his father says..."
-    new "狩猟中の事故だ、父がそう言うんだ…"
-
-    old "A man walked in through the door to the Great Hall."
-    new "大広間の扉を通って、男が入ってきた。"

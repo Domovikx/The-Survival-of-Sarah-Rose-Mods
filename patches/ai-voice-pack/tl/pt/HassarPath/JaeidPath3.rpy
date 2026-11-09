@@ -11,6 +11,3 @@ translate pt strings:
 
     old "You're looking for Faded Stars Ink"
     new "Você está procurando pela Tinta Estrela Desbotada"
-
-    old "A marking kit?"
-    new "Um kit de marcação?"

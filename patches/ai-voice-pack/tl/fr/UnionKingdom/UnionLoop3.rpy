@@ -9,14 +9,8 @@ translate fr strings:
     old "Say nothing"
     new "Ne dis rien"
 
-    old "A loud clap and a stinging pain on her ass. He spanked her."
-    new "Un gros claquement résonna sur ses fesses, douloureux. Il la fessaya."
-
     old "Bribe Antonio"
     new "Corrompre Antonio"
-
-    old "A merchant knows when to say yes to a good deal."
-    new "Un marchand sait quand accepter une bonne affaire."
 
     old "Do not bribe Antonio"
     new "Ne corromps pas Antonio"
@@ -32,6 +26,3 @@ translate fr strings:
 
     old "Refuse his request"
     new "Refuser sa demande"
-
-    old "A council of leaders would form the leadership of the Union."
-    new "Un conseil de dirigeants formerait la direction de l'Union."

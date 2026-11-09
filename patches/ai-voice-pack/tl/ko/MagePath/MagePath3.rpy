@@ -3,9 +3,6 @@
 
 translate ko strings:
 
-    old "A laugh that sounded like a hiss, eminated from the creature."
-    new "그 존재에서 뱀의 숨소리 같은 웃음이 터져 나왔다."
-
     old "I liked it"
     new "그걸 좋아했어"
 

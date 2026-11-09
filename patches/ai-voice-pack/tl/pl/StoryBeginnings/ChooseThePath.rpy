@@ -3,9 +3,6 @@
 
 translate pl strings:
 
-    old "A familiar voice responded."
-    new "Odpowiedział znajomy głos."
-
     old "Reach out and grab Kate's hand."
     new "Wyciągnij rękę i złap Kate za dłoń."
 

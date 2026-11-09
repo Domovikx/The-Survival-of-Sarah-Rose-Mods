@@ -6,9 +6,6 @@ translate pl strings:
     old "Strip completely naked"
     new "Zdejmij się całkowicie"
 
-    old "A good craftsmen must first study the object of his work."
-    new "Dobry rzemieślnik musi najpierw poznać przedmiot swojej pracy."
-
     old "Look at the bed next to you"
     new "Spójrz na łóżko obok"
 

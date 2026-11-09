@@ -21,9 +21,6 @@ translate ko strings:
     old "Sarah has her pride, refuse to perform."
     new "사라가 자존심을 버리지 않고 거절한다."
 
-    old "A field of grass stretched across the small plain, tall trees threw out shade across the bank, and in the center a pool of water."
-    new "작은 평야를 가로지른 잔디밭과 은행을 덮은 높은 나무의 그늘, 그리고 중앙에 있는 물웅덩이."
-
     old "Motion for Jaeid to go into the water."
     new "Jaeid에게 물속으로 들어갈 것을 제안하다."
 

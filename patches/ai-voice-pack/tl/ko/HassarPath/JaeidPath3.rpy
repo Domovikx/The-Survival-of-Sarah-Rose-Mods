@@ -11,6 +11,3 @@ translate ko strings:
 
     old "You're looking for Faded Stars Ink"
     new "잔상 별 잉크를 찾으시나요"
-
-    old "A marking kit?"
-    new "도장 키트?"

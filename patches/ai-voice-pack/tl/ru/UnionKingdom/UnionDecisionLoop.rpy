@@ -1,42 +1,40 @@
 # -*- encoding: utf-8 -*-
 # Arc: UnionKingdom | Scene: UnionDecisionLoop
-# Source: C:\Program Files (x86)\Steam\steamapps\common\The Survival of Sarah Rose\game\script.rpy
 
 translate ru strings:
 
     old "Attend the Union Council"
-    new "Посетить Совет Союза"
+    new "Я явлюсь на Совет Союза."
 
     old "I will attend the Union Council."
-    new "Я посещу Совет Союза."
+    new "Я пойду на Совет Союза."
 
     old "It is the wisest decision, given what little information we have."
-    new "Это мудрейшее решение, учитывая, как мало у нас информации."
+    new "Это самое мудрое решение, учитывая ту малость информации, которой мы располагаем."
 
     old "It will give me a chance to hear out Queen Maeiv's intentions and see what to make of them."
-    new "Это даст мне шанс выслушать намерения королевы Маэйв и понять, что о них думать."
+    new "Это даст мне шанс выслушать намерения королевы Маив и понять, что с ними делать."
 
     old "The others nodded, each affirming the wisdom in her decision."
     new "Остальные кивнули, каждый подтверждая мудрость её решения."
 
     old "As they all left the room, one by one, Sarah was soon left behind by herself."
-    new "Когда они покидали комнату один за другим, Сара вскоре осталась одна."
+    new "Пока все остальные один за другим покидали комнату, Сара вскоре осталась совсем одна."
 
     old "She stared at the walls of her council room and wondered."
-    new "Она смотрела на стены своей комнаты совета и размышляла."
+    new "Она уставилась на стены своего зала заседаний и задумалась."
 
     old "She was about to step into danger."
-    new "Она собиралась шагнуть в опасность."
+    new "Она вот-вот должна была шагнуть в опасность."
 
     old "She knew she should be angry or perhaps fearful."
-    new "Она знала, что должна злиться или, возможно, бояться."
+    new "Она знала, что должна была злиться или, может быть, бояться."
 
     old "Yet instead, in her heart, she found only excitement."
-    new "Но вместо этого в своём сердце она обнаружила лишь волнение."
+    new "Однако вместо этого в душе она почувствовала лишь волнение."
 
     old "Refuse to attend the Union Council"
-    new "Отказаться посещать Совет Союза"
+    new "Отказаться от посещения Совета Союза"
 
     old "For now, this is where the story ends."
-    new "Пока что здесь история заканчивается."
-
+    new "Пока что история заканчивается здесь."

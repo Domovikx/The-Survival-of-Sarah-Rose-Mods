@@ -3,9 +3,6 @@
 
 translate pl strings:
 
-    old "A group of orcs and goblins, armed with simple spears and crude knives, advanced across the plaza."
-    new "Grupa orków i goblinów uzbrojonych w proste kopie i dzikie noże podeszła przez plac."
-
     old "Attack the goblins"
     new "Atakuj goblinów"
 

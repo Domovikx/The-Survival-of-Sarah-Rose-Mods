@@ -3,9 +3,6 @@
 
 translate pl strings:
 
-    old "A home, she thought. That's what it reminded her of."
-    new "Dom, pomyślała. To tak o tym przypominało jej."
-
     old "Enter Rahayal"
     new "Wejdź do Rahayal"
 

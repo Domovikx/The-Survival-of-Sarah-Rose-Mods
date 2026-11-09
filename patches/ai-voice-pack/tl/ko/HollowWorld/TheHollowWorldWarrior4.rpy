@@ -3,9 +3,6 @@
 
 translate ko strings:
 
-    old "...at least I'll have seen the world."
-    new "...적어도 세상은 보게 되었군."
-
     old "The truth is you're a wanted man"
     new "진실은 당신이 쫓기는 남자라는 것입니다"
 

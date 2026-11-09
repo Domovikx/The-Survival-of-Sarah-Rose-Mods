@@ -3,9 +3,6 @@
 
 translate ko strings:
 
-    old "A light radiated from each of his hands, swirling around his arms, driving back the darkness."
-    new "그의 손에서 빛이 뿜어져 나와 팔을 감싸며 어둠을 물리쳤다."
-
     old "Sneak out and visit the spirit."
     new "정령을 찾아 숨어서 나가자."
 

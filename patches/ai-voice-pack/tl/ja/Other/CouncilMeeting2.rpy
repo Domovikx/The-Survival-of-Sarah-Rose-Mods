@@ -3,9 +3,6 @@
 
 translate ja strings:
 
-    old "A good ruler lets the facts guide him, not hysteria."
-    new "優れた指導者は、事実を導き手とする。"
-
     old "We ready the army; best we be prepared."
     new "兵站を整え、万全の備えを。"
 

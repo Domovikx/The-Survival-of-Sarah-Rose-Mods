@@ -3,9 +3,6 @@
 
 translate it strings:
 
-    old "A light radiated from each of his hands, swirling around his arms, driving back the darkness."
-    new "Una luce irradiava da ciascuna delle sue mani, vorticando attorno ai suoi braccia, respingendo le tenebre."
-
     old "Sneak out and visit the spirit."
     new "Sfuggire e visitare lo spirito."
 

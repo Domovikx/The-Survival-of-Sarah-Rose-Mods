@@ -3,9 +3,6 @@
 
 translate zh strings:
 
-    old "A good ruler lets the facts guide him, not hysteria."
-    new "一位优秀的统治者会让事实指引自己，而非歇斯底里。"
-
     old "We ready the army; best we be prepared."
     new "已整备军队；务必做好万全准备。"
 

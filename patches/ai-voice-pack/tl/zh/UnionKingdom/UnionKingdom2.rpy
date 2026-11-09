@@ -11,9 +11,3 @@ translate zh strings:
 
     old "Condemn Oliver to death"
     new "处死奥利弗"
-
-    old "A hunting accident, so his father says..."
-    new "打猎时出了意外，他父亲这么说的……"
-
-    old "A man walked in through the door to the Great Hall."
-    new "一个男人穿过大门，走进了大礼堂。"

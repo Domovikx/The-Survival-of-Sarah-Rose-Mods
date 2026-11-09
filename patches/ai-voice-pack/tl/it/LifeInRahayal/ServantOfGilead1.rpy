@@ -6,12 +6,6 @@ translate it strings:
     old "Strip completely naked"
     new "Svestiti completamente"
 
-    old "A good craftsmen must first study the object of his work."
-    new "Un buon artigiano deve prima studiare l'oggetto del suo lavoro."
-
-    old "A mason does not just blindly hack into his marble, nor do I start without properly inspecting the body."
-    new "Un muratore non incide ciecamente sul suo marmo, né io inizio senza aver opportunamente ispezionato il corpo."
-
     old "Look at the bed next to you"
     new "Guarda il letto accanto a te"
 
@@ -29,18 +23,6 @@ translate it strings:
 
     old "Lie to her"
     new "Mentirle"
-
-    old "A part of her hoped so. A part of her feared."
-    new "Una parte di lei sperava così. Una parte aveva paura."
-
-    old "A man, pale and tall, walked across the hall with a great stride."
-    new "Un uomo, pallido e alto, attraversava il corridoio con grandi passi."
-
-    old "A pause lingered, and the hall was quiet as a grave."
-    new "Un silenzio si era insinuato, e il corridoio era quieto come una tomba."
-
-    old "A masquerade?"
-    new "Una mascherata?"
 
     old "Fix the dress yourself"
     new "Raddrizza il vestito da te stessa"

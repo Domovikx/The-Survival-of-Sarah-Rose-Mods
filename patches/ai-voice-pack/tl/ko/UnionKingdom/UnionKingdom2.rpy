@@ -11,9 +11,3 @@ translate ko strings:
 
     old "Condemn Oliver to death"
     new "올리버에게 사형선고하다"
-
-    old "A hunting accident, so his father says..."
-    new "사냥 중 사고라니, 아버지가 그러시네요..."
-
-    old "A man walked in through the door to the Great Hall."
-    new "대회의실로 들어섰다."

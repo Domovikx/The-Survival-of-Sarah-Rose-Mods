@@ -3,9 +3,6 @@
 
 translate pl strings:
 
-    old "A head on assault on the fort would be a disaster."
-    new "Bezpośredni atak na twierdzę byłby katastrofą."
-
     old "Reason with him."
     new "Porozmawiaj z nim"
 

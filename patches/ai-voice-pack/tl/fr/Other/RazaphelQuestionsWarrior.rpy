@@ -18,9 +18,6 @@ translate fr strings:
     old "I have asked all that I need to know"
     new "J'ai demandé tout ce que je devais savoir"
 
-    old "A design in which every path bends towards the same desination."
-    new "Un dessein où chaque chemin se courbe vers la même destination."
-
     old "Place your hands upon the monolith"
     new "Placez vos mains sur le monolithe"
 

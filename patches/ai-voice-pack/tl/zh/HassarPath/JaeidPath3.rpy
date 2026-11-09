@@ -11,6 +11,3 @@ translate zh strings:
 
     old "You're looking for Faded Stars Ink"
     new "你在找‘淡星’墨水"
-
-    old "A marking kit?"
-    new "标记套装？"

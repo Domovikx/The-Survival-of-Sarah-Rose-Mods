@@ -3,9 +3,6 @@
 
 translate pt strings:
 
-    old "A bath? In this place?"
-    new "Um banho? Neste lugar?"
-
     old "Join Carolyn in the bath"
     new "Junte-se a Carolyn no banho"
 

@@ -3,9 +3,6 @@
 
 translate it strings:
 
-    old "A bath? In this place?"
-    new "Un bagno? Qui?"
-
     old "Join Carolyn in the bath"
     new "Unisciti a Carolyn nella vasca"
 

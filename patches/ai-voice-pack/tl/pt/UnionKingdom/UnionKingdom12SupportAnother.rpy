@@ -6,9 +6,6 @@ translate pt strings:
     old "Support Maeiv"
     new "Apoiar Maeiv"
 
-    old "A most wise decision, my dear."
-    new "Uma decisão muito sábia, minha querida."
-
     old "Support Edmond"
     new "Apoiar Edmond"
 

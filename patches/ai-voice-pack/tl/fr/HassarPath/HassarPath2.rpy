@@ -15,17 +15,8 @@ translate fr strings:
     old "Let the matter rest for now"
     new "Laissons cela pour l'instant"
 
-    old "A part of herself became cold and calculating."
-    new "Une partie d'elle-même devint froide et calculatrice."
-
     old "Sleep with the Khan"
     new "Coucher avec le Khan"
-
-    old "A deep grunt proceeded what she did not yet know would follow."
-    new "Un grondement profond précéda ce qu'elle ne savait pas encore suivre."
-
-    old "A long day behind her, the sleep came easy."
-    new "Après une longue journée, le sommeil vint facilement."
 
     old "Reject him"
     new "Rejetez-le"

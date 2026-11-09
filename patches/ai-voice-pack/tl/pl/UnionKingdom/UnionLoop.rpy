@@ -6,9 +6,6 @@ translate pl strings:
     old "Meet with Queen Maeiv"
     new "Spotkaj się z Królową Maeiv"
 
-    old "A fine argument, but I suspect your motives are not so pure."
-    new "Dobrze brzmiąca argumentacja, ale podejrzewam, że Twoja motywacja nie jest tak czysta."
-
     old "Agree, pledge your industry to Maeiv"
     new "Zgadzam się, oddaję swe umiejętności Maeiv"
 
@@ -17,9 +14,6 @@ translate pl strings:
 
     old "Meet with Duke Antonio"
     new "Spotkaj się z hrabią Antonim"
-
-    old "A common whore. I could go out into the city tonight and fuck a dozen like her."
-    new "Powszechna suka. Mogę wyjść na ulicę miasta dziś wieczorem i ruchać z dziesięciorgiem takich jak ona."
 
     old "Strip for him"
     new "Ogołoń dla niego"

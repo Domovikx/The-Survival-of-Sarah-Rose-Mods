@@ -3,12 +3,6 @@
 
 translate ko strings:
 
-    old "A leader for the whole of the Union."
-    new "전 연방 전체의 지도자."
-
-    old "A Union King."
-    new "연방의 왕."
-
     old "Claim the role for yourself"
     new "역할을 스스로 맡아라"
 

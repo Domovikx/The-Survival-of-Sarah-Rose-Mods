@@ -3,9 +3,6 @@
 
 translate zh strings:
 
-    old "A petty man."
-    new "卑鄙小人。"
-
     old "Accept Gilead's offer"
     new "接受盖拉德的提议"
 

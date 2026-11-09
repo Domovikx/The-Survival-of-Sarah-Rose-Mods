@@ -11,6 +11,3 @@ translate pl strings:
 
     old "Study Daemonology"
     new "Studium demonologii"
-
-    old "A good choice."
-    new "Dobra decyzja."

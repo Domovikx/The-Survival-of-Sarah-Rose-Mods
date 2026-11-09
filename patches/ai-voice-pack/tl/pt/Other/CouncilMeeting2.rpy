@@ -3,9 +3,6 @@
 
 translate pt strings:
 
-    old "A good ruler lets the facts guide him, not hysteria."
-    new "Um bom governante deixa os fatos guiá-lo, não a histeria."
-
     old "We ready the army; best we be prepared."
     new "Preparamos o exército; devemos estar prontos."
 

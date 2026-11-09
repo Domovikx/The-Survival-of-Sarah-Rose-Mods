@@ -3,9 +3,6 @@
 
 translate it strings:
 
-    old "A petty man."
-    new "Un uomo meschino."
-
     old "Accept Gilead's offer"
     new "Accetta l'offerta di Gilead"
 

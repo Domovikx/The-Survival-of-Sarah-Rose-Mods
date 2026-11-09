@@ -3,9 +3,6 @@
 
 translate ja strings:
 
-    old "A head on assault on the fort would be a disaster."
-    new "要塞への正面からの攻撃は、大惨事になるだろう。"
-
     old "Reason with him."
     new "彼と話し合う"
 

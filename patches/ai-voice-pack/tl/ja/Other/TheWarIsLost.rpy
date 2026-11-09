@@ -21,9 +21,6 @@ translate ja strings:
     old "Sarah has her pride, refuse to perform."
     new "サラはプライドが高く、拒み続ける。"
 
-    old "A field of grass stretched across the small plain, tall trees threw out shade across the bank, and in the center a pool of water."
-    new "小平原に広がる草地、岸辺には高い木々が影を落とし、中央には水たまりがあった。"
-
     old "Motion for Jaeid to go into the water."
     new "Jaeid を水中へ向かわせる提案"
 

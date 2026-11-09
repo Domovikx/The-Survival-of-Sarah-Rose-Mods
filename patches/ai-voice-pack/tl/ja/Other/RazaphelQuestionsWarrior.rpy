@@ -18,9 +18,6 @@ translate ja strings:
     old "I have asked all that I need to know"
     new "必要なことはすべてわかった"
 
-    old "A design in which every path bends towards the same desination."
-    new "すべての道が同じ目的地へと曲がる設計だ。"
-
     old "Place your hands upon the monolith"
     new "その巨大な柱に手を置け"
 

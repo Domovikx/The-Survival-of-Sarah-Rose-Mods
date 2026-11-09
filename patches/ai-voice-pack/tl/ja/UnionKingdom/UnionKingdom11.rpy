@@ -3,12 +3,6 @@
 
 translate ja strings:
 
-    old "A leader for the whole of the Union."
-    new "全連邦を率いる指導者。"
-
-    old "A Union King."
-    new "ユニオン王。"
-
     old "Claim the role for yourself"
     new "その役割を自らの手で受け取れ"
 

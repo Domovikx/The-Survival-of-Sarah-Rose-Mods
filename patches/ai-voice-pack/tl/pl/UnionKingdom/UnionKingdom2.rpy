@@ -11,6 +11,3 @@ translate pl strings:
 
     old "Condemn Oliver to death"
     new "Skazuj Olivera na śmierć"
-
-    old "A hunting accident, so his father says..."
-    new "Zgodnie z jego ojcem, był to wypadek łowiecki..."

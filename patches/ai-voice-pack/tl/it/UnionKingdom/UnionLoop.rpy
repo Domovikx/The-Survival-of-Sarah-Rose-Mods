@@ -6,9 +6,6 @@ translate it strings:
     old "Meet with Queen Maeiv"
     new "Incontra la Regina Maeiv"
 
-    old "A fine argument, but I suspect your motives are not so pure."
-    new "Un argomento valido, ma temo che i tuoi motivi non siano così puri."
-
     old "Agree, pledge your industry to Maeiv"
     new "Accetta. Prometti il tuo impegno a Maeiv"
 
@@ -17,12 +14,6 @@ translate it strings:
 
     old "Meet with Duke Antonio"
     new "Incontra il Duca Antonio"
-
-    old "A mercy?"
-    new "Una misericordia?"
-
-    old "A common whore. I could go out into the city tonight and fuck a dozen like her."
-    new "Una puttana comune. Potrei uscire in città stasera e fottere una dozzina come lei."
 
     old "Strip for him"
     new "Nuda per lui"

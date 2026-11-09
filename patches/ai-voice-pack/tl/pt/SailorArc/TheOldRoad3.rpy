@@ -3,9 +3,6 @@
 
 translate pt strings:
 
-    old "A moment later, Sigmund climbed back onto the cart."
-    new "Um momento depois, Sigmund subiu novamente no carrinho."
-
     old "Get Sigmund drunk"
     new "Deixe o Sigmund bêbado"
 
@@ -14,9 +11,6 @@ translate pt strings:
 
     old "Please, I'll do anything"
     new "Por favor, farei qualquer coisa."
-
-    old "A princess without a country, but a princess still..."
-    new "Uma princesa sem país, mas ainda uma princesa..."
 
     old "Agree, let the matter rest"
     new "Concordar, deixar a questão em paz"

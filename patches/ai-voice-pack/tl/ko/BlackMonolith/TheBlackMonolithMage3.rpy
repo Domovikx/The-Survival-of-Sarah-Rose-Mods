@@ -11,6 +11,3 @@ translate ko strings:
 
     old "Study Daemonology"
     new "데모노로지를 공부하다"
-
-    old "A good choice."
-    new "좋은 선택입니다."

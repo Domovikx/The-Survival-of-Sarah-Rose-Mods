@@ -3,9 +3,6 @@
 
 translate fr strings:
 
-    old "A home, she thought. That's what it reminded her of."
-    new "Une maison, pensa-t-elle. C'est ce à quoi cela la rappelait."
-
     old "Enter Rahayal"
     new "Entrer en Rahayal"
 

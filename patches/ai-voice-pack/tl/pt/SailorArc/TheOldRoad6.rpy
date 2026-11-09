@@ -3,9 +3,6 @@
 
 translate pt strings:
 
-    old "A home, she thought. That's what it reminded her of."
-    new "Uma casa, pensou ela. Era isso que lhe lembrava."
-
     old "Enter Rahayal"
     new "Entrar em Rahayal"
 

@@ -18,9 +18,6 @@ translate ko strings:
     old "I have asked all that I need to know"
     new "요청한 모든 정보를 얻었습니다"
 
-    old "A design in which every path bends towards the same desination."
-    new "모든 길은 같은 목적지로 굽어가는 설계다."
-
     old "Place your hands upon the monolith"
     new "모노리트를 손으로 감싸세요"
 

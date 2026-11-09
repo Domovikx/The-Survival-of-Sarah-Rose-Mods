@@ -9,9 +9,6 @@ translate ko strings:
     old "Be polite, have a drink"
     new "예의 바르게 행동하고 술 한 잔 하세요"
 
-    old "A drink couldn't hurt."
-    new "술 한 잔이 나쁘지 않을 거야."
-
     old "To prosperous cooperation"
     new "번영을 위한 협력"
 
@@ -21,14 +18,8 @@ translate ko strings:
     old "Yes, another!"
     new "네, 또 하나!"
 
-    old "A man should have a strong name."
-    new "남자는 강한 이름을 가져야 한다."
-
     old "No, this is plenty"
     new "아니요, 이 정도면 충분합니다"
-
-    old "A bore, much like your father."
-    new "진부하군. 아버지와도 마찬가지야."
 
     old "Refuse, best to be clear headed"
     new "거절. 명쾌하게 하는 게 낫다"
@@ -45,17 +36,5 @@ translate ko strings:
     old "Meet with Antonio"
     new "안토니오와 만남"
 
-    old "A man? Yes."
-    new "남자요? 네."
-
-    old "A clear and logical position."
-    new "명확하고 논리적인 입장이다."
-
     old "Meet with Edmond"
     new "에드몬드 만나기"
-
-    old "A fair assumption, I would say."
-    new "그건 타당한 추론이라고 할 수 있겠네."
-
-    old "A man or woman should rise or fall on account of their skills. Not their name."
-    new "사람은 실력으로 승부해야지 이름으로 판단하지 않아야 해."

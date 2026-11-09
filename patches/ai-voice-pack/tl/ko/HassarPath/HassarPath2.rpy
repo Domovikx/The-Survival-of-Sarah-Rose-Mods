@@ -18,8 +18,5 @@ translate ko strings:
     old "Sleep with the Khan"
     new "칸과 잠들기"
 
-    old "A long day behind her, the sleep came easy."
-    new "긴 하루를 보내고 그녀는 쉽게 잠들었다."
-
     old "Reject him"
     new "거절"

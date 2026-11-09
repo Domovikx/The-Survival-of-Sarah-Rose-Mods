@@ -3,9 +3,6 @@
 
 translate fr strings:
 
-    old "A head on assault on the fort would be a disaster."
-    new "Une attaque frontale du fort serait un désastre."
-
     old "Reason with him."
     new "Raison avec lui."
 

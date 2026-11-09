@@ -3,9 +3,6 @@
 
 translate fr strings:
 
-    old "A man like that goes about life, lying, cheating."
-    new "Un homme comme ça vit en mentant et en trichant."
-
     old "Punish Kate"
     new "Punir Kate"
 

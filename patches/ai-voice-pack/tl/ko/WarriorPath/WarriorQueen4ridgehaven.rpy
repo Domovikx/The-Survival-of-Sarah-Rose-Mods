@@ -3,9 +3,6 @@
 
 translate ko strings:
 
-    old "A man like that goes about life, lying, cheating."
-    new "그런 남자는 인생을 살아가며 거짓말하고 사기만 치는 거야."
-
     old "Punish Kate"
     new "Kate에게 벌을 주다"
 

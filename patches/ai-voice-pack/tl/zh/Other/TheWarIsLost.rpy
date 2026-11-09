@@ -21,9 +21,6 @@ translate zh strings:
     old "Sarah has her pride, refuse to perform."
     new "莎拉有她的骄傲，拒绝表演。"
 
-    old "A field of grass stretched across the small plain, tall trees threw out shade across the bank, and in the center a pool of water."
-    new "一片草地铺满了小平原，高大的树木在岸边投下阴影，中央是一汪水潭。"
-
     old "Motion for Jaeid to go into the water."
     new "让贾伊德下水。"
 

@@ -3,9 +3,6 @@
 
 translate zh strings:
 
-    old "A familiar voice responded."
-    new "一个熟悉的声音回应道。"
-
     old "Reach out and grab Kate's hand."
     new "伸出手，抓住凯特的手。"
 

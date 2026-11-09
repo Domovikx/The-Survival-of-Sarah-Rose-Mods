@@ -6,12 +6,6 @@ translate ko strings:
     old "Go into the greenhouse"
     new "온실로 들어가세요"
 
-    old "A bright flower, vibrant in colour, but not all that otherwordly."
-    new "밝고 생생한 꽃이지만, 그다지 초자연적이지는 않다."
-
-    old "A blistering assault of pleasure that drowned out all other senses, striking her blind."
-    new "쾌락의 타오르는 공격이 모든 감각을 덮어버려 시력을 앗아갔다."
-
     old "Forget it, heed Metis' warning"
     new "잊어버려, 메티스의 경고에 귀 기울여"
 

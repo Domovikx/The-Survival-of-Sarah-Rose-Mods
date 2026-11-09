@@ -604,7 +604,7 @@ msgstr "C'est trop tôt pour le dire. Je n'enverrai pas une armée dans le dése
 
 msgctxt "menu"
 msgid "Let it be."
-msgstr "Délaissé"
+msgstr "Soit."
 
 msgctxt "speaker:Sarah"
 msgid "Ok father, tomorrow we'll talk."
@@ -2532,7 +2532,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Don't stop Kate."
-msgstr "No pares a Kate."
+msgstr "N'arrête pas, Kate."
 
 msgctxt "speaker:Narrator"
 msgid "Kate tugs on the blankets a little harder."
@@ -3708,7 +3708,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Go for a big coronation."
-msgstr "Faire un grand couronnement."
+msgstr "Optez pour une grande cérémonie de couronnement."
 
 msgctxt "speaker:Sarah"
 msgid "Carolyn is right. The people need to see Rosanna is still strong, especially now with Father passing."
@@ -7012,7 +7012,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "The capital must not fall; call in the troops."
-msgstr "La capital no puede caer; llama a las tropas."
+msgstr "La capitale ne doit pas tomber ; faites appel aux troupes."
 
 msgctxt "speaker:Narrator"
 msgid "Thomas slammed the table."
@@ -11728,7 +11728,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Hang them. Send a message."
-msgstr "Écrase-les. Envoie un message."
+msgstr "Pendez-les. Envoyez un message."
 
 msgctxt "speaker:Narrator"
 msgid "She remembered Thomas, and how others sought to play on her weak heart. Never again."
@@ -13640,7 +13640,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "She needs to be made an example of"
-msgstr "Elle doit être punie d'exemple"
+msgstr "Il faut en faire un exemple."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah couldn't deny that in the grand scheme of things, some stolen food was hardly a problem."
@@ -46352,7 +46352,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Sarah has her pride, refuse to perform."
-msgstr "Sarah a sa fierté et refuse d'obéir."
+msgstr "Sarah a sa fierté : elle refuse de jouer."
 
 msgctxt "speaker:Narrator"
 msgid "Dissapointed, the old soldier put the tambourine away."
@@ -64192,7 +64192,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Escape"
-msgstr "Quitter"
+msgstr "Évasion"
 
 msgctxt "speaker:Narrator"
 msgid "There would be no other chance. If she wanted her freedom, she would have to seize this moment."
@@ -65340,7 +65340,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Sarah is so close, she doesn't stop Kate"
-msgstr "Sarah est si proche qu'elle ne s'arrête pas pour Kate"
+msgstr "Sarah est si proche qu'elle n'arrête pas Kate."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah makes eye contact with the captain."
@@ -65516,7 +65516,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Lie, say you don't have money"
-msgstr "Mente, dis que n'as pas d'argent"
+msgstr "Mentez, dites que vous n'avez pas d'argent."
 
 msgctxt "speaker:Sarah"
 msgid "We don't have any money on us, we can't pay you."
@@ -87448,7 +87448,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Don't hold back"
-msgstr "No te retengas"
+msgstr " Ne te retiens pas "
 
 msgctxt "speaker:Narrator"
 msgid "Sarah threw back her head and cried out, giving voice to the feelings of her body."
@@ -109244,7 +109244,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Agree with Kate"
-msgstr "Accorder avec Kate"
+msgstr "Êtes-vous d'accord avec Kate ?"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah couldn't help but find herself agreeing with Kate."
@@ -112740,7 +112740,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Seduce Samayra"
-msgstr "Enchanter Samayra"
+msgstr "Seduis Samayra."
 
 msgctxt "speaker:Narrator"
 msgid "Once under the covers, the two crawled up to each other. Sarah reached out, the tips of her fingers sliding across Samayra's body."
@@ -128852,7 +128852,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Insist, ask Lady Carolyn about Thomas"
-msgstr "Exigez que Lady Carolyn vous parle de Thomas"
+msgstr "Insistez, demandez à Lady Carolyn au sujet de Thomas."
 
 msgctxt "speaker:Sarah"
 msgid "No...I want to know. I owe him that."
@@ -129652,7 +129652,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Snap at him"
-msgstr "Mordre-le"
+msgstr "Fais-lui la gueule."
 
 msgctxt "speaker:Sarah"
 msgid "Well it wasn't you, now was it?"
@@ -153872,7 +153872,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Sleep with Belmont"
-msgstr "Dormir avec Alaric"
+msgstr "Dormir avec Belmont."
 
 msgctxt "speaker:Sarah"
 msgid "You...you fucking..."
@@ -160232,7 +160232,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Meet with the Tribesman"
-msgstr "Rencontrer le tribu"
+msgstr "Rencontrer le Tribal."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah made up her mind."
@@ -172328,7 +172328,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Agree, don't finish inside."
-msgstr "D'accord, ne finissez pas à l'intérieur."
+msgstr "D'accord, ne finis pas à l'intérieur."
 
 msgctxt "speaker:Narrator"
 msgid "But he was right."
@@ -174688,7 +174688,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Stay silent"
-msgstr "Rester silencieuse"
+msgstr "Reste silencieuse"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah stared back at the guards."
@@ -189436,7 +189436,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Sure, clear my head"
-msgstr "D'accord, clarifiez mon esprit"
+msgstr "Bien sûr, pour me vider la tête."
 
 msgctxt "speaker:Narrator"
 msgid "Still, Sarah wanted to clear her head."
@@ -224336,7 +224336,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Do what he wants"
-msgstr "Fais ce que tu veux"
+msgstr "Fais ce qu'il veut."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah felt her teeth grinding from the outrage of it."
@@ -276188,7 +276188,7 @@ msgstr "Sauvegarder"
 
 msgctxt "ui"
 msgid "Q.Load"
-msgstr "Q.Chercher"
+msgstr "Chargement"
 
 msgctxt "ui"
 msgid "Prefs"
@@ -276276,7 +276276,7 @@ msgstr "Plein écran"
 
 msgctxt "ui"
 msgid "Rollback Side"
-msgstr "Rembobiner Côté"
+msgstr "Retour latéral"
 
 msgctxt "ui"
 msgid "Disable"
@@ -276320,7 +276320,7 @@ msgstr "Volume sonore"
 
 msgctxt "ui"
 msgid "Test"
-msgstr "Témoigner contre Alaric"
+msgstr "Test"
 
 msgctxt "ui"
 msgid "Voice Volume"

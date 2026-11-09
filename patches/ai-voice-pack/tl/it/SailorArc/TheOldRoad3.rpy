@@ -3,9 +3,6 @@
 
 translate it strings:
 
-    old "A moment later, Sigmund climbed back onto the cart."
-    new "Un momento dopo, Sigmund risalì sul carro."
-
     old "Get Sigmund drunk"
     new "Inebriare Sigmund"
 

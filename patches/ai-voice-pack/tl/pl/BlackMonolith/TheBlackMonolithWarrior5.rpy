@@ -3,9 +3,6 @@
 
 translate pl strings:
 
-    old "A bath? In this place?"
-    new "Kąpiel? W tym miejscu?"
-
     old "Join Carolyn in the bath"
     new "Dołącz do Carolyn w kąpieli"
 

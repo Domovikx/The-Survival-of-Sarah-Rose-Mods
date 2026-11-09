@@ -9,9 +9,6 @@ translate pl strings:
     old "Let it go, it's nothing"
     new "Zostaw to, to nic"
 
-    old "A gust of cold night air rushed into the house."
-    new "Przebiegł przez dom lodowaty wiatr z nocy."
-
     old "Help Alaric"
     new "Pomóż Alaricowi"
 
@@ -20,9 +17,6 @@ translate pl strings:
 
     old "Keep drinking"
     new "Kontynuować picie"
-
-    old "A bad idea."
-    new "Zła decyzja."
 
     old "Call it a night"
     new "Zakończmy na dziś"
@@ -35,6 +29,3 @@ translate pl strings:
 
     old "Make him pay for what did all those years ago"
     new "Zmusz go do zapłaty za to, co zrobił w tamtych latach"
-
-    old "A few guards might come by, a day late, to inspect reports of a cry. And none would care for Alaric's sudden dissapearance."
-    new "Kilku strażników może przyjść dzień później, by sprawdzić raporty o krzyku. Nikt nie zadba o nagłe zniknięcie Alarika."

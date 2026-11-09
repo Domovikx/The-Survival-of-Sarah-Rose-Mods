@@ -11,6 +11,3 @@ translate ja strings:
 
     old "You're looking for Faded Stars Ink"
     new "フェードド・スターズインクを探しています"
-
-    old "A marking kit?"
-    new "印字キット？"

@@ -3,12 +3,6 @@
 
 translate pl strings:
 
-    old "A leader for the whole of the Union."
-    new "Przewodniczący dla całej Unii."
-
-    old "A Union King."
-    new "Król Zjednoczenia."
-
     old "Claim the role for yourself"
     new "Przypisz sobie tę rolę"
 

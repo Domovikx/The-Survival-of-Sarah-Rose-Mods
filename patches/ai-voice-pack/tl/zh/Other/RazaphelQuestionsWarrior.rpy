@@ -18,9 +18,6 @@ translate zh strings:
     old "I have asked all that I need to know"
     new "我已问完所需的一切"
 
-    old "A design in which every path bends towards the same desination."
-    new "一条所有路径都通向同一终点的蓝图。"
-
     old "Place your hands upon the monolith"
     new "将手放在巨石上"
 

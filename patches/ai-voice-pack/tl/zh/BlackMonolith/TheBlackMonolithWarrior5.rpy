@@ -3,9 +3,6 @@
 
 translate zh strings:
 
-    old "A bath? In this place?"
-    new "在这儿洗澡？"
-
     old "Join Carolyn in the bath"
     new "与卡洛琳共浴"
 

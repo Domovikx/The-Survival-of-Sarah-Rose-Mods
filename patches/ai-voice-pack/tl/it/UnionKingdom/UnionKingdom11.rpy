@@ -3,12 +3,6 @@
 
 translate it strings:
 
-    old "A leader for the whole of the Union."
-    new "Un leader per tutta l'Unione."
-
-    old "A Union King."
-    new "Un Re Unificato."
-
     old "Claim the role for yourself"
     new "Assumi il ruolo per te stessa"
 

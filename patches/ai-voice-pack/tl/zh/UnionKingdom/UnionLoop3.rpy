@@ -9,14 +9,8 @@ translate zh strings:
     old "Say nothing"
     new "什么都不说"
 
-    old "A loud clap and a stinging pain on her ass. He spanked her."
-    new "一声巨响伴随着屁股上火辣辣的疼痛，他狠狠地抽了她一下。"
-
     old "Bribe Antonio"
     new "收买安东尼奥"
-
-    old "A merchant knows when to say yes to a good deal."
-    new "商人知道何时该答应一笔好交易。"
 
     old "Do not bribe Antonio"
     new "别贿赂安东尼奥"
@@ -32,6 +26,3 @@ translate zh strings:
 
     old "Refuse his request"
     new "拒绝他的请求"
-
-    old "A council of leaders would form the leadership of the Union."
-    new "联盟的领导层将由领袖组成的议会来确立。"

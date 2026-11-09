@@ -3,9 +3,6 @@
 
 translate ko strings:
 
-    old "A head on assault on the fort would be a disaster."
-    new "성당에 대한 정면 공격은 재앙이 될 것입니다."
-
     old "Reason with him."
     new "그와 대화하라"
 

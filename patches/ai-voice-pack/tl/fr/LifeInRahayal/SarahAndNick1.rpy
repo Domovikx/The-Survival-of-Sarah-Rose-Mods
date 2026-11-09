@@ -3,9 +3,6 @@
 
 translate fr strings:
 
-    old "A brutal peace, where as often, the weakest and poorest were made to pay the price."
-    new "Une paix brutale, où, comme souvent, les plus faibles et les plus pauvres devaient payer le prix."
-
     old "Make a fire"
     new "Allume un feu"
 

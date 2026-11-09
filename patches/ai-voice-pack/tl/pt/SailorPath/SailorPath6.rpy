@@ -9,12 +9,6 @@ translate pt strings:
     old "Don't kiss Nick"
     new "Não beije o Nick"
 
-    old "A bit of slack, but nothing practice won't fix. Very good."
-    new "Um pouco de folga, mas nada que o treino não possa corrigir. Muito bem."
-
-    old "A lesson?"
-    new "Uma lição?"
-
     old "Agree, Nick is less of a man than the captain"
     new "Concordar, Nick é menos homem que o capitão"
 
@@ -26,9 +20,3 @@ translate pt strings:
 
     old "Let it go"
     new "Deixa ir"
-
-    old "A man."
-    new "Um homem."
-
-    old "A child would mean the end of that."
-    new "Uma criança significaria o fim disso."

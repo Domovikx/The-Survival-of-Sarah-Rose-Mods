@@ -3,9 +3,6 @@
 
 translate ja strings:
 
-    old "...at least I'll have seen the world."
-    new "……せめて、この世をみたことにはなりました。"
-
     old "The truth is you're a wanted man"
     new "正直に言うと、あなたは狙われている男だ"
 

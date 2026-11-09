@@ -3,9 +3,6 @@
 
 translate ja strings:
 
-    old "A moment later, Sigmund climbed back onto the cart."
-    new "少し後、シグムントは再び馬車に乗り込んだ。"
-
     old "Get Sigmund drunk"
     new "シグムンドを酔わせる"
 

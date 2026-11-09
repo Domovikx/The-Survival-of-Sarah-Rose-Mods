@@ -3,9 +3,6 @@
 
 translate fr strings:
 
-    old "A cart? What...what are you talking about?"
-    new "Un chariot ? Quoi... qu'est-ce que tu racontes ?"
-
     old "Escape"
     new "Quitter"
 

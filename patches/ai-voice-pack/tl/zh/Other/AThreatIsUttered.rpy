@@ -3,12 +3,6 @@
 
 translate zh strings:
 
-    old "A dreadful silence came over the room as a everyone turned their heads to see the source of the disturbance."
-    new "众人纷纷转头，探寻骚乱的源头，大厅里顿时陷入令人胆寒的死寂。"
-
-    old "A gift?"
-    new "礼物？"
-
     old "None may threaten Rosanna; make an example of him!"
     new "绝不允许有人威胁罗莎娜！将他处死，以儆效尤！"
 

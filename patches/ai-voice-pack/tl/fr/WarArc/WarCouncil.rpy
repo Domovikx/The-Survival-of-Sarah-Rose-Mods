@@ -3,9 +3,6 @@
 
 translate fr strings:
 
-    old "A lot has been asked of the nobility, and a lot we have given, but Thomas...my king...you will be asking them to leave their homes unguarded."
-    new "Beaucoup a été demandé à la noblesse, et beaucoup nous avons donné, mais Thomas... mon roi... vous allez leur demander de quitter leurs demeures sans gardes."
-
     old "The capital must not fall; call in the troops."
     new "La capital no puede caer; llama a las tropas."
 

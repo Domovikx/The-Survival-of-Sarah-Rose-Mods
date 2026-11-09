@@ -3,9 +3,6 @@
 
 translate zh strings:
 
-    old "A leader for the whole of the Union."
-    new "整个联盟的领袖。"
-
     old "Claim the role for yourself"
     new "认领你的角色"
 

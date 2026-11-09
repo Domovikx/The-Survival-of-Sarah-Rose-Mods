@@ -6,9 +6,6 @@ translate zh strings:
     old "Meet with Queen Maeiv"
     new "会见梅薇女王"
 
-    old "A fine argument, but I suspect your motives are not so pure."
-    new "说得好，但我怀疑你的动机并不纯粹。"
-
     old "Agree, pledge your industry to Maeiv"
     new "同意，将你的精力奉献给梅伊夫"
 
@@ -17,15 +14,6 @@ translate zh strings:
 
     old "Meet with Duke Antonio"
     new "会见公爵安东尼奥"
-
-    old "A mercy?"
-    new "慈悲？"
-
-    old "A proposal like this, equally bold as it was base."
-    new "如此大胆却又卑鄙的提议。"
-
-    old "A common whore. I could go out into the city tonight and fuck a dozen like her."
-    new "一个普通的婊子。我今晚就能上街，操上一打像她那样的货色。"
 
     old "Strip for him"
     new "为他脱衣"

@@ -3,9 +3,6 @@
 
 translate zh strings:
 
-    old "...at least I'll have seen the world."
-    new "……至少我也见识过这个世界了。"
-
     old "The truth is you're a wanted man"
     new "实话是，你是个被通缉的男人"
 

@@ -3,12 +3,6 @@
 
 translate pt strings:
 
-    old "A leader for the whole of the Union."
-    new "Uma líder para toda a União."
-
-    old "A Union King."
-    new "Um Rei da União."
-
     old "Claim the role for yourself"
     new "Assuma o papel para você"
 

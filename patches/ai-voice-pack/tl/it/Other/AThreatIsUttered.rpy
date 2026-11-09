@@ -3,12 +3,6 @@
 
 translate it strings:
 
-    old "A dreadful silence came over the room as a everyone turned their heads to see the source of the disturbance."
-    new "Un terribile silenzio calò sulla stanza mentre tutti voltarono la testa per vedere la fonte della perturbazione."
-
-    old "A gift?"
-    new "Un regalo?"
-
     old "None may threaten Rosanna; make an example of him!"
     new "Nessuno può minacciare Rosanna; fate di lui un esempio!"
 

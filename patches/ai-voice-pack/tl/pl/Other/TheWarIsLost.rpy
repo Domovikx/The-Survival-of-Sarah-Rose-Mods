@@ -21,9 +21,6 @@ translate pl strings:
     old "Sarah has her pride, refuse to perform."
     new "Sarah ma dumę i odmawia wystąpienia."
 
-    old "A field of grass stretched across the small plain, tall trees threw out shade across the bank, and in the center a pool of water."
-    new "Łąka z trawą rozciągała się na małej równinie, wysokie drzewa rzucały cień nad brzegiem, a w centrum znajdował się staw."
-
     old "Motion for Jaeid to go into the water."
     new "Ruch: wejście do wody"
 

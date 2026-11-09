@@ -3,9 +3,6 @@
 
 translate pl strings:
 
-    old "A laugh that sounded like a hiss, eminated from the creature."
-    new "Śmiech brzmiący jak syczenie wydobył się z bestii."
-
     old "I liked it"
     new "Podobało mi się"
 

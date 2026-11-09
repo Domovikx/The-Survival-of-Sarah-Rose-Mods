@@ -6,9 +6,6 @@ translate fr strings:
     old "Meet with Queen Maeiv"
     new "Rencontrer la Reine Maeiv"
 
-    old "A fine argument, but I suspect your motives are not so pure."
-    new "Un excellent argument, mais je soupçonne que vos motifs ne sont pas aussi purs."
-
     old "Agree, pledge your industry to Maeiv"
     new "Convénir, promettez votre assiduité à Maeiv"
 
@@ -17,12 +14,6 @@ translate fr strings:
 
     old "Meet with Duke Antonio"
     new "Rencontrer le duc Antonio"
-
-    old "A mercy?"
-    new "Une clémence ?"
-
-    old "A common whore. I could go out into the city tonight and fuck a dozen like her."
-    new "Une salope commune. Je pourrais sortir dans la ville ce soir et enculer une douzaine comme elle."
 
     old "Strip for him"
     new "Déshabille-toi pour lui"

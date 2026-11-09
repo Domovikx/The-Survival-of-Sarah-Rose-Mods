@@ -3,9 +3,6 @@
 
 translate ko strings:
 
-    old "A man blocked her path."
-    new "한 남자가 그녀의 길목을 막았다."
-
     old "I want to know why you did it."
     new "왜 그렇게 했는지 알고 싶습니다."
 

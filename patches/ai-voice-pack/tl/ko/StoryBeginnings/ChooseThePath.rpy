@@ -3,9 +3,6 @@
 
 translate ko strings:
 
-    old "A familiar voice responded."
-    new "익숙한 목소리가 대답했다."
-
     old "Reach out and grab Kate's hand."
     new "케이트의 손을 잡아라."
 

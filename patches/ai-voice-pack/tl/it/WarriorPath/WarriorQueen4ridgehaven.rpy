@@ -3,9 +3,6 @@
 
 translate it strings:
 
-    old "A man like that goes about life, lying, cheating."
-    new "Un uomo del genere passa la vita a mentire, a tradire."
-
     old "Punish Kate"
     new "Punisci Kate"
 

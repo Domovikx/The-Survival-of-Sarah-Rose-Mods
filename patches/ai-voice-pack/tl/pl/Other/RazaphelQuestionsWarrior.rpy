@@ -18,9 +18,6 @@ translate pl strings:
     old "I have asked all that I need to know"
     new "Zapytałem wszystko, co musiałem wiedzieć"
 
-    old "A design in which every path bends towards the same desination."
-    new "Projekt, w którym każda ścieżka krzywi się ku temu samemu celowi."
-
     old "Place your hands upon the monolith"
     new "Umieść dłonie na monolicie"
 

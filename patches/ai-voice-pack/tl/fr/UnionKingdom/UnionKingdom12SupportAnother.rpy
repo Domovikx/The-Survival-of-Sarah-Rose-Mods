@@ -6,9 +6,6 @@ translate fr strings:
     old "Support Maeiv"
     new "Soutenir Maeiv"
 
-    old "A most wise decision, my dear."
-    new "Une décision très sage, mon cher."
-
     old "Support Edmond"
     new "Soutenir Edmond"
 

@@ -3,9 +3,6 @@
 
 translate pl strings:
 
-    old "A bar of soap. Some towels. Toiletries."
-    new "Kawałek mydła. Niektóre ręczniki. Przydatki toaletowe."
-
     old "Have sex with Eula"
     new "Kochaj się z Eulą"
 

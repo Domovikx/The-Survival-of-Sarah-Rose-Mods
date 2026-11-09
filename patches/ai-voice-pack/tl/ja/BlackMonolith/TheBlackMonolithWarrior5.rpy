@@ -3,9 +3,6 @@
 
 translate ja strings:
 
-    old "A bath? In this place?"
-    new "入浴？この場所か？"
-
     old "Join Carolyn in the bath"
     new "キャロリンと入浴する"
 

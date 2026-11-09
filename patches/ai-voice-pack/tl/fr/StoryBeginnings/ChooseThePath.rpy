@@ -3,9 +3,6 @@
 
 translate fr strings:
 
-    old "A familiar voice responded."
-    new "Une voix familière répondit."
-
     old "Reach out and grab Kate's hand."
     new "Étends la main et attrape la main de Kate."
 

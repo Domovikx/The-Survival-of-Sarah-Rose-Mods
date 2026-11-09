@@ -18,11 +18,5 @@ translate pl strings:
     old "Sleep with the Khan"
     new "Śpij z Chanem"
 
-    old "A deep grunt proceeded what she did not yet know would follow."
-    new "Głębki charkot poprzedził to, czego jeszcze nie wiedziała."
-
-    old "A long day behind her, the sleep came easy."
-    new "Długi dzień za nią, sen nadszedł łatwo."
-
     old "Reject him"
     new "Odmów mu"

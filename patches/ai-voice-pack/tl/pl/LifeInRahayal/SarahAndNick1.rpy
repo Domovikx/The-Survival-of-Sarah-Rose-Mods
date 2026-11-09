@@ -3,9 +3,6 @@
 
 translate pl strings:
 
-    old "A brutal peace, where as often, the weakest and poorest were made to pay the price."
-    new "Okrutny pokój, w którym tak często płacili cenę najwięksi i najsłabsi."
-
     old "Make a fire"
     new "Zrób ogień"
 

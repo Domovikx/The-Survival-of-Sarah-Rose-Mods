@@ -6,9 +6,6 @@ translate ja strings:
     old "Support Maeiv"
     new "Maeivを支援する"
 
-    old "A most wise decision, my dear."
-    new "賢明な決断ですね、愛しい人。"
-
     old "Support Edmond"
     new "エドモンドを支援する"
 

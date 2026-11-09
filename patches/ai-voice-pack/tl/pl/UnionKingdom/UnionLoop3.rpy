@@ -26,6 +26,3 @@ translate pl strings:
 
     old "Refuse his request"
     new "Odmów mu"
-
-    old "A council of leaders would form the leadership of the Union."
-    new "Rada przywódców utworzyłaby kierownictwo Związku."

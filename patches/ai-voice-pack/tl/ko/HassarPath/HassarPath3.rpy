@@ -14,6 +14,3 @@ translate ko strings:
 
     old "What if you desire no man?"
     new "남자를 원하지 않는다면 어때?"
-
-    old "A bead of sweat fell from Naydeen's face, landing on Sarah's stomach."
-    new "나디엔의 땀방울이 얼굴에서 떨어져 사라하의 배에 착했다."

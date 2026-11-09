@@ -3,9 +3,6 @@
 
 translate fr strings:
 
-    old "...at least I'll have seen the world."
-    new "...au moins j'aurai vu le monde."
-
     old "The truth is you're a wanted man"
     new "La vérité, c'est que tu es un homme recherché."
 

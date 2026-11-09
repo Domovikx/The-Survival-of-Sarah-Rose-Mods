@@ -3,9 +3,6 @@
 
 translate ja strings:
 
-    old "A familiar voice responded."
-    new "馴染みのある声が返ってきた。"
-
     old "Reach out and grab Kate's hand."
     new "Kate の手を掴む。"
 

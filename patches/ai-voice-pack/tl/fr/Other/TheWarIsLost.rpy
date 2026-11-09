@@ -21,9 +21,6 @@ translate fr strings:
     old "Sarah has her pride, refuse to perform."
     new "Sarah a sa fierté et refuse d'obéir."
 
-    old "A field of grass stretched across the small plain, tall trees threw out shade across the bank, and in the center a pool of water."
-    new "Un champ d'herbe s'étendait à travers la petite plaine, de grands arbres projetaient leur ombre sur le bord, et au centre, un bassin d'eau."
-
     old "Motion for Jaeid to go into the water."
     new "Motion pour que Jaeid entre dans l'eau."
 

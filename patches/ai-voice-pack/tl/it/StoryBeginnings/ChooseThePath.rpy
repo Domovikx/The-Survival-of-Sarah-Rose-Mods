@@ -3,9 +3,6 @@
 
 translate it strings:
 
-    old "A familiar voice responded."
-    new "Una voce familiare rispose."
-
     old "Reach out and grab Kate's hand."
     new "Stendi la mano e afferra quella di Kate."
 

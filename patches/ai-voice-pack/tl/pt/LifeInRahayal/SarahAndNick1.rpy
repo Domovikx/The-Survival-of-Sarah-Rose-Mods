@@ -3,9 +3,6 @@
 
 translate pt strings:
 
-    old "A brutal peace, where as often, the weakest and poorest were made to pay the price."
-    new "Uma paz brutal, onde, como de costume, os mais fracos e pobres pagavam o preço."
-
     old "Make a fire"
     new "Fazer um fogo"
 

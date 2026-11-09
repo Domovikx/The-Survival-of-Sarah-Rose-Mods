@@ -3,9 +3,6 @@
 
 translate it strings:
 
-    old "A cart? What...what are you talking about?"
-    new "Un carrozza? Cosa... cosa stai dicendo?"
-
     old "Escape"
     new "Fuggi"
 

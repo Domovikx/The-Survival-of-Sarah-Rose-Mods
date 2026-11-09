@@ -6,9 +6,6 @@ translate it strings:
     old "Support Maeiv"
     new "Sostieni Maeiv"
 
-    old "A most wise decision, my dear."
-    new "Una decisione molto saggia, mia cara."
-
     old "Support Edmond"
     new "Sostieni Edmond"
 

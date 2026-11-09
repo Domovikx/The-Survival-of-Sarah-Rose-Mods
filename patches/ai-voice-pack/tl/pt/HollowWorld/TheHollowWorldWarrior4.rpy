@@ -3,9 +3,6 @@
 
 translate pt strings:
 
-    old "...at least I'll have seen the world."
-    new "...pelo menos terei visto o mundo."
-
     old "The truth is you're a wanted man"
     new "A verdade é que você é um homem procurado"
 

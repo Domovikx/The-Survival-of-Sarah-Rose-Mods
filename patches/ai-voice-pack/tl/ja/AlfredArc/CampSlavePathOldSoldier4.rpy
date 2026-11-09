@@ -3,9 +3,6 @@
 
 translate ja strings:
 
-    old "A cart? What...what are you talking about?"
-    new "馬車？いったい……何を言っているの？"
-
     old "Escape"
     new "脱出"
 

@@ -3,9 +3,6 @@
 
 translate fr strings:
 
-    old "A good ruler lets the facts guide him, not hysteria."
-    new "Un bon dirigeant laisse les faits guider sa main, pas l'hystérie."
-
     old "We ready the army; best we be prepared."
     new "Préparons l'armée ; mieux vaut être prêts."
 

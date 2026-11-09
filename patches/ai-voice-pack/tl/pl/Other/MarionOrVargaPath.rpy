@@ -8,6 +8,3 @@ translate pl strings:
 
     old "Reject Marion's proposal."
     new "Odrzuć propozycję Marion."
-
-    old "A joke, Marion. He probably thought you were a joke, and I suppose, in that regard, he was right."
-    new "Żart, Marion. Pewnie myślał, że jesteś żartem, i w tym względzie miał rację."
