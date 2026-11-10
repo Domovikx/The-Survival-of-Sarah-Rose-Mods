@@ -12,7 +12,7 @@ import { readFileSync } from "node:fs";
 import { parsePo } from "../../../.opencode/skills/renpy-po/po_core.mts";
 import { SPEAKER_GENDER } from "../../../patches/ai-voice-pack/casts/gender.mts";
 
-import { commonRun, contentWords } from "./review_common_run.mts";
+import { commonRun, contentWords, sharePhrase } from "./review_common_run.mts";
 
 const LANG = process.argv[2] ?? "ru"; // языковой аргумент: node translate_review.mts [lang]
 // --all: полная перепроверка корпуса — не фильтруем по HEAD, легаси-дефекты
@@ -126,20 +126,24 @@ entries.forEach((e, i) => {
   // 1. Утечка соседней строки (дубль или содержательное совпадение).
   for (const n of [entries[i - 1], entries[i + 1]]) {
     if (!n || !n.msgstr || !n.msgid || n.msgid === e.msgid || n.msgctxt === "speaker-name") continue;
-    const dup = tr.length >= 20 && n.msgstr.length >= 20 && sim(tr, n.msgstr) > 0.75 && sim(e.msgid, n.msgid) < 0.6;
+    const sameOrigin = sharePhrase(e.msgid, n.msgid);
+    const dup =
+      !sameOrigin &&
+      tr.length >= 20 &&
+      n.msgstr.length >= 20 &&
+      sim(tr, n.msgstr) > 0.75 &&
+      sim(e.msgid, n.msgid) < 0.6;
     // glue — только при РАЗНЫХ оригиналах: дубликаты строк в игре (одинаковые
-    // msgid с точкой/без) законно переводятся одинаково.
-    const glue = n.msgstr.length >= 20 && tr.includes(n.msgstr) && sim(e.msgid, n.msgid) < 0.6;
+    // msgid с точкой/без) законно переводятся одинаково. sameOrigin (оригиналы
+    // делят фразу ≥3 слов) исключает префикс-расширение реплики — E2E 2026-11-09.
+    const glue = !sameOrigin && n.msgstr.length >= 20 && tr.includes(n.msgstr) && sim(e.msgid, n.msgid) < 0.6;
     // Вклейка ЧАСТИ соседа (второе предложение из соседней строки): общий
     // словесный фрагмент, которого нет в оригиналах. Пороги калиброваны на ru
     // (E2E 2026-11-06): стоп-словa русские → на других языках просто порог
     // по длине фрагмента (без contentWords).
     const run = commonRun(tr, n.msgstr);
     const rw = run ? run.split(" ").length : 0;
-    const glued =
-      run &&
-      (LANG === "ru" ? rw >= 3 && contentWords(run) >= 2 : rw >= 4) &&
-      commonRun(e.msgid, n.msgid).split(" ").length < 3;
+    const glued = run && (LANG === "ru" ? rw >= 3 && contentWords(run) >= 2 : rw >= 4) && !sameOrigin;
     // Утечка — только если так было НЕ в HEAD (иначе легаси, его не трогаем).
     if ((dup || glue || glued) && (ALL || tr !== head) && !UTECHKA_ACCEPTED.has(i)) {
       hit(i, "УТЕЧКА", e, glued && !dup && !glue ? `вклейка соседа: «${run}»` : "");

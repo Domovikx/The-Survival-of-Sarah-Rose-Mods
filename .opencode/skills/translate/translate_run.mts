@@ -12,9 +12,20 @@ import { SPEAKER_GENDER } from "../../../patches/ai-voice-pack/casts/gender.mts"
 import { charsOf, judgeLine } from "./judge_client.mts";
 import { commonRun, contentWords } from "./review_common_run.mts";
 
-const LANG = process.argv[2] ?? "ru";
-const LIMIT = Number(process.argv[3] ?? 0) || 0;
-const ARC = process.argv[4] ?? ""; // фильтр по арке (пусто = весь файл)
+// Позиционные: <lang> [limit] [arc]; флаги и их значения (--retrans <файл>)
+// позициями не считаются (баг 2026-11-09: путь файла уходил в фильтр арки).
+const positional: string[] = [];
+for (let k = 2; k < process.argv.length; k++) {
+  const a = process.argv[k];
+  if (a.startsWith("--")) {
+    if (a === "--retrans") k++;
+    continue;
+  }
+  positional.push(a);
+}
+const LANG = positional[0] ?? "ru";
+const LIMIT = Number(positional[1] ?? 0) || 0;
+const ARC = positional[2] ?? ""; // фильтр по арке (пусто = весь файл)
 const TARGET: Record<string, string> = {
   ru: "Russian",
   es: "Spanish",
@@ -44,6 +55,7 @@ const RETRANS: number[] | null =
   retransArg >= 0
     ? readFileSync(process.argv[retransArg + 1], "utf-8")
         .split(/\s+/)
+        .filter((x) => x.trim())
         .map(Number)
         .filter(Number.isFinite)
     : null;
@@ -313,7 +325,7 @@ const worker = async (): Promise<void> => {
     const menuNote = /^(menu|ui)/.test(e.msgctxt)
       ? `NOTE: this is a MENU/UI LABEL — keep it a short action label in the same form as the EN (no full sentence).\n`
       : "";
-    const buildUser = (): string =>
+    const buildUser = (feedback = ""): string =>
       ctxBlock +
       namesBlock +
       `Said by: ${name}${genderNote}\nEN: ${e.msgid}\n${menuNote}\n` +
@@ -327,7 +339,13 @@ const worker = async (): Promise<void> => {
       `agreement follows the GENDER of each character (see NAMES), names are spelled EXACTLY as in NAMES. ` +
       `Never guess gender from a name itself — NAMES is the only source. ` +
       `Fix "tr" if it disagrees.\n` +
-      `Output ONLY JSON {"scene":"<research>","tr":"<translation>"}.`;
+      `Output ONLY JSON {"scene":"<research>","tr":"<translation>"}.` +
+      (feedback
+        ? `\n\nYour PREVIOUS attempt was REJECTED: ${feedback}\nReturn a corrected "tr" that fixes ONLY this problem and changes nothing else. ` +
+          `Translate ONLY the EN line above — never the content of neighbouring lines. ` +
+          `If the EN line is a short narration like "X whispered to Y.", the translation must be ONLY that attribution — the spoken words appear in a SEPARATE line and must NOT be added. ` +
+          `Translate LITERALLY, word for word: every word of the EN line and no other words.`
+        : "");
     // Шлюзы: мусор в переводе ловим без судьи (по инцидентам прогона).
     const badParts = (tr: string): string | null => {
       if (!tr) return "пустой перевод";
@@ -443,6 +461,7 @@ const worker = async (): Promise<void> => {
       }
       return null;
     };
+    let lastTr = ""; // для лога отклонённого кандидата (правило «полный лог»)
     try {
       const sys = `You translate this game into ${TARGET[LANG] ?? LANG}. Follow these rules:\n\n${rules}`;
       // Гейт судьи — только в режиме ремонта (--retrans): вклеенные/не те строки
@@ -459,12 +478,15 @@ const worker = async (): Promise<void> => {
       for (let attempt = 1; attempt <= 2 && bad; attempt++) {
         // Повторы с температурой: при temp0 модель ДЕТЕРМИНИРОВАННО повторяет
         // брак (глюк имени/кавычек) — только другой сэмпл может его обойти.
-        raw = await call(sys, buildUser(), attempt === 1 ? 0.7 : 1.0);
+        // Обратная связь с причиной отклонения (2026-11-09): лечит детерминированные
+        // склейки с соседней репликой (fr/it/zh[706]) — E2E-замер в журнале.
+        raw = await call(sys, buildUser(bad), attempt === 1 ? 0.7 : 1.0);
         tr = trOf(raw);
         scene = sceneOf(raw) || scene;
         bad = (await badParts(tr)) ?? (await judgeGate(tr));
         if (bad && process.env.DBG) console.log(`RAW>>>\n${raw}\n<<<RAW`);
       }
+      lastTr = tr;
       if (bad) throw new Error(bad);
       doneCount++;
       if (!tr) {
@@ -497,7 +519,9 @@ const worker = async (): Promise<void> => {
         if (!IMPROVE) pending.push(i);
         same++;
         doneCount++;
-        console.log(`  СТАРОЕ [${i}] ${String(err).slice(0, 90)} | оставлено: ${e.msgstr.slice(0, 60)}`);
+        console.log(
+          `  СТАРОЕ [${i}] ${String(err).slice(0, 90)} | кандидат: ${lastTr.slice(0, 60)} | оставлено: ${e.msgstr.slice(0, 60)}`,
+        );
       } else {
         failed++;
         console.log(`  ОШИБКА [${i}] ${String(err).slice(0, 140)}`);

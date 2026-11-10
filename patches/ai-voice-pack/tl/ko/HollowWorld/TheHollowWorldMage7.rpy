@@ -4,10 +4,10 @@
 translate ko strings:
 
     old "Say you trust the spirit"
-    new "정신을 신뢰한다고 말하라"
+    new "네... 당신을 믿어요."
 
     old "Say you don't trust the spirit"
-    new "신을 믿지 않는다고 말해"
+    new "영혼을 믿지 않는다고 말해봐."
 
     old "Do what he wants"
     new "그의 뜻대로 하라"

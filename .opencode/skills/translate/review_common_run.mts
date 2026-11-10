@@ -33,3 +33,8 @@ const STOP = new Set(
 );
 
 export const contentWords = (run: string): number => run.split(" ").filter((w) => w && !STOP.has(w)).length;
+
+/** Оригиналы делят фразу (≥3 слова общего хода) — префикс-расширение реплики:
+ *  общее начало перевода законно и утечкой (УТЕЧКА) не считается. E2E 2026-11-09:
+ *  pt/de[899] «He could be a serious threat.» / «…We should send scouts…» — FP. */
+export const sharePhrase = (idA: string, idB: string): boolean => commonRun(idA, idB).split(" ").length >= 3;

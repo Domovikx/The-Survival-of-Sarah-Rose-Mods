@@ -5,7 +5,7 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
 
-import { commonRun, contentWords } from "./review_common_run.mts";
+import { commonRun, contentWords, sharePhrase } from "./review_common_run.mts";
 
 test("commonRun: длинная вклейка соседа находится", () => {
   const run = commonRun(
@@ -28,4 +28,22 @@ test("contentWords: служебные слова не считаются сод
   assert.equal(contentWords("с тех пор как"), 0);
   assert.equal(contentWords("пара маленьких очков"), 3);
   assert.equal(contentWords("историями о своей жизни до того как"), 2);
+});
+
+test("sharePhrase: префикс-расширение оригиналов делит фразу (FP УТЕЧКА pt/de[899])", () => {
+  // соседи-префиксы: короткая реплика и её расширенная версия — общее начало
+  // перевода законно, утечкой не считается
+  assert.equal(
+    sharePhrase(
+      "He could be a serious threat.",
+      "He could be a serious threat. We should send scouts or spies to investigate.",
+    ),
+    true,
+  );
+  assert.equal(sharePhrase("She looked at him.", "She looked at him and smiled."), true);
+});
+
+test("sharePhrase: независимые оригиналы фразы не делят", () => {
+  assert.equal(sharePhrase("Let's not get carried away by mere rumors.", "He could be a serious threat."), false);
+  assert.equal(sharePhrase("It was raining.", "She left the room."), false);
 });
