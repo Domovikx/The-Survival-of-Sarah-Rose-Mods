@@ -88,15 +88,17 @@ test("боевой template.pot: индекс строится, размер = �
   const m = idx.resolve("speaker:Narrator", "Al'Gahaem was a city that was hard for Sarah to wrap her mind around.");
   assert.ok(m, "известная строка резолвится");
   assert.equal(m.arc, "AlfredArc");
-  assert.equal(m.emotion, "Reflective and slightly weary", "индекс отдаёт НОВЫЙ тон (emotion_new)");
-  // старый слой в POT сохранён (плавная миграция) — просто уже не действующий
-  // Ищем блок по ТОЧНОМУ msgid, а не по подстроке: в POT есть другие строки
-  // про Al'Gahaem («…a city which existed by success»), и после перехода на
-  // порядок исходников (2026-11-02) первой по тексту оказалась не эта.
+  assert.equal(m.emotion, "Reflective and slightly weary", "индекс отдаёт тон");
+  // Финал миграции (владелец 2026-11-10): emotion_new схлопнут в emotion —
+  // в POT ровно ОДИН слой тона, действующий = новый. Ищем блок по ТОЧНОМУ
+  // msgid, а не по подстроке: в POT есть другие строки про Al'Gahaem
+  // («…a city which existed by success»), и после перехода на порядок
+  // исходников (2026-11-02) первой по тексту оказалась не эта.
   const raw = readFileSync(DEFAULT_POT, "utf8")
     .split(/\n\n/)
     .find((b) => b.includes('msgid "Al\'Gahaem was a city that was hard for Sarah to wrap her mind around."'));
-  assert.match(raw ?? "", /^#\. emotion: Thoughtfully puzzled$/m, "старый слой цел");
+  assert.match(raw ?? "", /^#\. emotion: Reflective and slightly weary$/m, "действующий тон — единственный слой");
+  assert.doesNotMatch(raw ?? "", /^#\. emotion_new:/m, "слой emotion_new снят (схема завершена)");
 });
 
 test("ГРАНИЦА: тон живёт ТОЛЬКО в template.pot — в po/*.po его нет", () => {

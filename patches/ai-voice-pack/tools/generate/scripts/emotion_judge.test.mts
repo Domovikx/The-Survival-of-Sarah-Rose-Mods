@@ -1,51 +1,58 @@
 /**
- * Тесты emotion_judge.mts: разбор вердикта и сборка промпта судьи тона.
+ * emotion_judge.test.mts — чистые функции судьи тона.
+ * node --test patches/ai-voice-pack/tools/generate/scripts/emotion_judge.test.mts
  */
-
 import assert from "node:assert/strict";
 import { test } from "node:test";
 
-import { parseToneVerdict, toneJudgeUser } from "./emotion_judge.mts";
-import type { CatalogEntry } from "./voice_batch.mts";
+import { isDemoTone, JUDGE_SYSTEM, parseToneVerdict, toneJudgeUser } from "./emotion_judge.mts";
 
-const mk = (over: Partial<CatalogEntry> = {}): CatalogEntry => ({
-  uid: "u",
-  old: "I will never be free from the chains.",
-  new: "Я никогда не буду свободна от цепей.",
-  who: null,
-  who_name: "Sarah",
-  arc: "WarriorPath",
-  scene: "WarriorRahayal3",
-  category: "dialogue",
-  emotion: "Curiously observing",
-  ...over,
+test("isDemoTone: арка Prologue и демо-сцены входят", () => {
+  assert.equal(isDemoTone({ arc: "Prologue", scene: "OpeningScene" }), true);
+  assert.equal(isDemoTone({ arc: "StoryBeginnings", scene: "ChooseThePath" }), true);
+  assert.equal(isDemoTone({ arc: "StoryBeginnings", scene: "TheMorningAfterKate" }), true);
+  assert.equal(isDemoTone({ arc: "Other", scene: "start" }), true);
 });
 
-test("parseToneVerdict: score и issues из сырого JSON", () => {
-  assert.deepEqual(parseToneVerdict('{"score":9,"issues":[]}'), { score: 9, issues: [] });
-  assert.deepEqual(parseToneVerdict('{"score": "7", "issues": ["Off-key for the moment"]}'), {
-    score: 7,
-    issues: ["Off-key for the moment"],
-  });
-  // битый ответ -> score -1 (строка уходит в отчёт, не в принятые)
-  assert.equal(parseToneVerdict("мусор без json").score, -1);
-  assert.deepEqual(parseToneVerdict('{"score":10}').issues, []);
+test("isDemoTone: после первого выбора и прочие арки — не демо", () => {
+  assert.equal(isDemoTone({ arc: "StoryBeginnings", scene: "TheInsidePathBegins" }), false);
+  assert.equal(isDemoTone({ arc: "WarArc", scene: "WarCouncil" }), false);
+  assert.equal(isDemoTone({ arc: "Other", scene: null }), false);
 });
 
-test("toneJudgeUser: контекст строки + сам тон", () => {
-  const u = toneJudgeUser(mk(), "Resigned and defiant", "He rode her hard again.", "That was fine with her.");
-  assert.match(u, /Speaker: Sarah \| arc: WarriorPath \| scene: WarriorRahayal3/);
-  assert.match(u, /SOURCE \(EN\): I will never be free/);
-  assert.match(u, /RU translation: Я никогда не буду свободна/);
-  assert.match(u, /Previous line: He rode her hard again\./);
-  assert.match(u, /Next line: That was fine with her\./);
-  assert.ok(u.endsWith("TON: Resigned and defiant"), "тон — последним, ближе всего к вердикту");
+test("parseToneVerdict: балл и issues из JSON судьи", () => {
+  const v = parseToneVerdict('{"score": 9, "issues": []}');
+  assert.equal(v.score, 9);
+  assert.deepEqual(v.issues, []);
+  const bad = parseToneVerdict('{"score":"4","issues":["Wrong language","Off-key moment"]}');
+  assert.equal(bad.score, 4);
+  assert.deepEqual(bad.issues, ["Wrong language", "Off-key moment"]);
 });
 
-test("toneJudgeUser: Narrator и отсутствующие соседи/сцена не ломают промпт", () => {
-  const u = toneJudgeUser(mk({ who_name: null, scene: null, new: "" }), "Wistful memory");
-  assert.match(u, /Speaker: Narrator \| arc: WarriorPath$/m);
-  assert.ok(!u.includes("scene:"), "пустая сцена не подставляется");
-  assert.ok(!u.includes("RU translation"), "нет перевода — нет строки");
-  assert.ok(!u.includes("Previous line") && !u.includes("Next line"));
+test("parseToneVerdict: мусор на входе даёт -1", () => {
+  assert.equal(parseToneVerdict("не JSON").score, -1);
+});
+
+test("JUDGE_SYSTEM: спек разрешает эмоции и тоны нарратора (FP-классы волны 1)", () => {
+  // эмоциональные слова допустимы — судья не должен их валить как «не delivery state»
+  assert.match(JUDGE_SYSTEM, /EMOTION WORDS ARE ACCEPTABLE/);
+  // нарратор — озвученный диктор, у него есть стили доставки
+  assert.match(JUDGE_SYSTEM, /Narrator is a VOICED storyteller/);
+  // не требуем объём/темп/фонетику — их нет в спеке
+  assert.match(JUDGE_SYSTEM, /do NOT require volume, pacing/);
+});
+
+test("toneJudgeUser: перевод строки помечен как контекст, не инструкция", () => {
+  const e = {
+    uid: "u",
+    old: "She sighed.",
+    new: "Она вздохнула.",
+    who_name: "Narrator",
+    arc: "Prologue",
+    scene: "S1",
+    category: "narration",
+  };
+  const u = toneJudgeUser(e, "Weary and resigned");
+  assert.match(u, /Context translation \(reference only/);
+  assert.match(u, /TON: Weary and resigned/);
 });

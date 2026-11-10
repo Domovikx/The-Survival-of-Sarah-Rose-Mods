@@ -9,6 +9,7 @@
  * Запуск:
  *   node emotion_judge.mts                     # 20 случайных из черновика
  *   node emotion_judge.mts --n 40 --pot        # выборка из POT (текущий тон)
+ *   node emotion_judge.mts --pot --demo --n 2000  # сплошняком по ДЕМО-скоупу поставки
  *   node emotion_judge.mts --threshold 8       # порог принятия (по умолч. 8)
  *   node emotion_judge.mts --uid u1 u2         # точечная проверка
  *
@@ -20,20 +21,39 @@ import { pathToFileURL } from "node:url";
 import { EMOTIONS_JSON, voicedEntries } from "./emotion_tag.mts";
 import type { CatalogEntry } from "./voice_batch.mts";
 import { resolveBackend } from "../../../../../scripts/llm_backend.mts";
+import { DEMO_SCENES } from "../../../../../.opencode/skills/renpy-po/po2tl.mts";
 
 export const JUDGE_SYSTEM =
   "You are a voice-direction QA reviewer for an adult visual novel. You get ONE game line " +
-  "(source EN, speaker, arc/scene, neighbours) and the DELIVERY instruction (ton) chosen for it.\n\n" +
-  "Score 0-10 how well the ton fits:\n" +
-  "- 9-10: an English delivery state of THIS speaker in THIS moment; 2-6 words; matches the line's emotion.\n" +
-  "- 5-8: plausible but generic, off-key for the moment, or describing the content instead of the delivery.\n" +
-  "- 0-4: contradicts the line/scene, is not a delivery state at all, wrong language, or broken format.\n\n" +
+  "(source EN, speaker, arc/scene, neighbours) and the DELIVERY instruction (ton) chosen for it. " +
+  "The ton is the delivery state of the speaker (or the Narrator) AS they deliver this line.\n\n" +
+  "TON SPECIFICATION (what a good ton is — judge ONLY against this):\n" +
+  "- an English delivery state of THIS speaker in THIS moment; 2-6 words; matches the line's emotion;\n" +
+  "- a description of the state, not a command; EMOTION WORDS ARE ACCEPTABLE " +
+  '(e.g. "Weary and resigned", "Playful and teasing", "Softly intimate");\n' +
+  "- the Narrator is a VOICED storyteller and HAS delivery states too: neutral/observational " +
+  '("Measured and detached") and atmospheric ("Erotically and sensually") are both fine; ' +
+  "never flag a tone only because 'narrators should be neutral' — a storyteller's tone is normal;\n" +
+  "- do NOT require volume, pacing, phonetic cues or vocal technique — the spec does not include them;\n" +
+  "- the tone describes the delivery state, NOT a retelling of the line's content and NOT a " +
+  'narrative-function label (e.g. "Internal monologue").\n\n' +
+  "Score 0-10 how well the ton fits THIS spec:\n" +
+  "- 9-10: fits the spec and this moment.\n" +
+  "- 5-8: fits the spec but generic or slightly off-key for the moment.\n" +
+  "- 0-4: contradicts the line/scene, not a delivery state at all (retells content or is a label), " +
+  "wrong language (not English), broken format (not 2-6 words), or the speaker cannot deliver it.\n\n" +
   'Output STRICT JSON only: {"score":<0-10 int>,"issues":["...", ...]}. Each issue max 12 words; [] if good. ' +
   "No text outside the JSON.";
 
 export interface ToneVerdict {
   score: number;
   issues: string[];
+}
+
+/** Демо-скоуп поставки для ОЗВУЧИВАЕМЫХ записей: msgctxt у них speaker:*,
+ *  поэтому isDemoScope (po2tl) сводится к арке/сцене. Источник — DEMO_SCENES. */
+export function isDemoTone(e: Pick<CatalogEntry, "arc" | "scene">): boolean {
+  return e.arc === "Prologue" || DEMO_SCENES.has(e.scene ?? "");
 }
 
 /** JSON-вердикт из сырого ответа (чистая — тестируется). */
@@ -50,7 +70,7 @@ export function toneJudgeUser(e: CatalogEntry, ton: string, prev?: string | null
   const lines = [`Speaker: ${who} | arc: ${e.arc}${e.scene ? ` | scene: ${e.scene}` : ""}`];
   if (prev) lines.push(`Previous line: ${prev.slice(0, 200)}`);
   lines.push(`SOURCE (EN): ${e.old}`);
-  if (e.new) lines.push(`RU translation: ${e.new}`);
+  if (e.new) lines.push(`Context translation (reference only — never judge it): ${e.new}`);
   if (next) lines.push(`Next line: ${next.slice(0, 200)}`);
   lines.push(`TON: ${ton}`);
   return lines.join("\n");
@@ -80,6 +100,7 @@ interface Opts {
   n: number;
   threshold: number;
   pot: boolean;
+  demo: boolean;
   uids: string[];
 }
 
@@ -104,8 +125,9 @@ export async function run(opts: Opts): Promise<number> {
   let sample: CatalogEntry[];
   if (opts.uids.length) {
     sample = opts.uids.map((u) => voiced[idx.get(u) ?? -1]).filter(Boolean);
+    if (opts.demo) sample = sample.filter((e) => isDemoTone(e));
   } else {
-    const pool = voiced.filter((e) => tonOf(e).trim());
+    const pool = voiced.filter((e) => (!opts.demo || isDemoTone(e)) && tonOf(e).trim());
     const k = Math.max(1, Math.floor(pool.length / opts.n));
     sample = pool.filter((_, i) => i % k === 0).slice(0, opts.n);
   }
@@ -115,7 +137,7 @@ export async function run(opts: Opts): Promise<number> {
   }
 
   console.log(
-    `[emotion:judge] строк ${sample.length} | источник: ${opts.pot ? "POT" : "черновик"} | порог ${opts.threshold}`,
+    `[emotion:judge] строк ${sample.length} | источник: ${opts.pot ? "POT" : "черновик"}${opts.demo ? " | ДЕМО-скоуп" : ""} | порог ${opts.threshold}`,
   );
   let ok = 0;
   let worst = 10;
@@ -149,6 +171,7 @@ function parseCli(argv: string[]): Opts {
     n: Number(val("--n") ?? 20),
     threshold: Number(val("--threshold") ?? 8),
     pot: argv.includes("--pot"),
+    demo: argv.includes("--demo"),
     // без --uid НЕ берём argv целиком (indexOf = -1 -> slice(0) захватит всё)
     uids: at >= 0 ? argv.slice(at + 1).filter((a) => !a.startsWith("--")) : [],
   };
