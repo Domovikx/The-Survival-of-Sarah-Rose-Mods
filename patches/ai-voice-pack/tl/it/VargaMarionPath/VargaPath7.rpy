@@ -7,4 +7,4 @@ translate it strings:
     new "Lasciala andare con un'avvertenza."
 
     old "Make an example out of her."
-    new "Fai un esempio di lei."
+    new "Fai di lei un esempio."

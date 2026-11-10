@@ -82,7 +82,7 @@ translate zh strings:
     new "A"
 
     old "{#quick_page}Q"
-    new "{#quick_page}快"
+    new "{#quick_page}Q"
 
     old ">"
     new ">"
@@ -100,7 +100,7 @@ translate zh strings:
     new "全屏"
 
     old "Rollback Side"
-    new "回滚侧边"
+    new "回滚侧"
 
     old "Disable"
     new "禁用"

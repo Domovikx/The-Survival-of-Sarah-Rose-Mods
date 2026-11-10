@@ -7,7 +7,7 @@ translate fr strings:
     new "Enivrer Sigmund"
 
     old "Sure, clear my head"
-    new "D'accord, clarifiez mon esprit"
+    new "Bien sûr, pour me vider la tête."
 
     old "Please, I'll do anything"
     new "S'il vous plaît, je ferai n'importe quoi."

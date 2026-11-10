@@ -34,7 +34,7 @@ translate pl strings:
     new "Taka jesteś!"
 
     old "Speaking of growing up, have you seen..."
-    new "Mówiąc o dorastaniu, czy widziałaś..."
+    new "Mówiąc już o dorastaniu, widziałaś kiedykolwiek..."
 
     old "DAD!"
     new "TATA!"

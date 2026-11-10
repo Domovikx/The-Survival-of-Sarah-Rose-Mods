@@ -4,7 +4,7 @@
 translate it strings:
 
     old "Kiss Nick"
-    new "Besa a Nick"
+    new "Bacia Nick."
 
     old "Don't kiss Nick"
     new "Non baciare Nick"

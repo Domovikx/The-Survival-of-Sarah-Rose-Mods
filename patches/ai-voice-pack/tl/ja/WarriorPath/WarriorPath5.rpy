@@ -10,7 +10,7 @@ translate ja strings:
     new "Vaelen に真の石を渡せ"
 
     old "Stay with the mercenary company"
-    new "傭兵団に付き合う"
+    new "傭兵団と共に留まる"
 
     old "Live your own life"
     new "自らの人生を歩む"

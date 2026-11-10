@@ -16,4 +16,4 @@ translate ko strings:
     new "술을 계속 마시세요"
 
     old "Stay alone in the cabin"
-    new "카빈에 혼자 머무르기"
+    new "오두막에 혼자 남기"

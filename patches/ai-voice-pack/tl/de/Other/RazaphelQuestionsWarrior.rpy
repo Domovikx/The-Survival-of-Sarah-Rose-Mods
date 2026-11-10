@@ -22,4 +22,4 @@ translate de strings:
     new "Lege deine Hände auf den Monolith"
 
     old "Reject Razaphel's offer"
-    new "Aufforderung von Razaphel ablehnen"
+    new "Weiger dich, Razafael's Angebot anzunehmen."

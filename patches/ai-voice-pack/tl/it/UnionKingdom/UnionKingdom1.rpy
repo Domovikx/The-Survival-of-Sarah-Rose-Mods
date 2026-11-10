@@ -10,7 +10,7 @@ translate it strings:
     new "Dormi un po' più a lungo"
 
     old "Ask her to sneak away with you"
-    new "Chiedile di nascondersi con te"
+    new "Chiedile di sgattaiolare via con te."
 
     old "Let the matter rest"
     new "Lascia stare la questione per ora"

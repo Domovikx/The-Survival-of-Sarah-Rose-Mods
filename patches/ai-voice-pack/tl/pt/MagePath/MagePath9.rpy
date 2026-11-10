@@ -7,4 +7,4 @@ translate pt strings:
     new "Matar a Kate"
 
     old "Spare Kate"
-    new "Economize com Kate"
+    new "Poupe Kate."

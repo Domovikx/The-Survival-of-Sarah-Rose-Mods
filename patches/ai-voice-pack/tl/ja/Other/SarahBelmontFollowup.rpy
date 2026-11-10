@@ -10,7 +10,7 @@ translate ja strings:
     new "キャプテンに従いなさい"
 
     old "Take the bet."
-    new "賭けをかける"
+    new "賭けに乗る"
 
     old "Leave the ship"
     new "船を降りる"

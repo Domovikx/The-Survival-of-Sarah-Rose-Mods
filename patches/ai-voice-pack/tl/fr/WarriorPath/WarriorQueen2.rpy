@@ -7,7 +7,7 @@ translate fr strings:
     new "Tuer Belmont"
 
     old "Sleep with Belmont"
-    new "Dormir avec Alaric"
+    new "Dormir avec Belmont."
 
     old "Give Belmont a loan"
     new "Prêter de l'argent à Belmont"

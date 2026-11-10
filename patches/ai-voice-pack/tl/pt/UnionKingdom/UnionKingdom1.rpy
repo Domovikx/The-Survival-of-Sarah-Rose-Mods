@@ -10,7 +10,7 @@ translate pt strings:
     new "Descanse um pouco mais"
 
     old "Ask her to sneak away with you"
-    new "Peça para ela se esconder com você"
+    new "Pede-lhe para fugir contigo às escondidas."
 
     old "Let the matter rest"
     new "Deixe isso de lado por enquanto"

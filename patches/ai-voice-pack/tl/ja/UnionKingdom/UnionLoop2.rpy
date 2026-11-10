@@ -13,7 +13,7 @@ translate ja strings:
     new "繁栄への協力"
 
     old "To good wine"
-    new "良いワインのために"
+    new "良いワインに"
 
     old "Yes, another!"
     new "はい、また！"

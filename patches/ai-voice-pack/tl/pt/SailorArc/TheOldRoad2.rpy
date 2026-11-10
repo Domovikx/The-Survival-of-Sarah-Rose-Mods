@@ -10,7 +10,7 @@ translate pt strings:
     new "Fique e observe"
 
     old "Strip your clothes"
-    new "Despiça-se"
+    new "Tire suas roupas"
 
     old "Obey Sakar"
     new "Obedecer a Sakar"

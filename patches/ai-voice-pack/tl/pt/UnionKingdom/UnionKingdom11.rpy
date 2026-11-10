@@ -7,7 +7,7 @@ translate pt strings:
     new "Assuma o papel para você"
 
     old "Support another"
-    new "Apoie a outros"
+    new "Apoiar outro"
 
     old "Propose a council of rulers"
     new "Propor um conselho de governantes"

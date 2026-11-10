@@ -7,4 +7,4 @@ translate ja strings:
     new "嘘をついて"
 
     old "Distract him with your body"
-    new "彼の体で気を逸らせろ"
+    new "体で彼の注意をそらせ"

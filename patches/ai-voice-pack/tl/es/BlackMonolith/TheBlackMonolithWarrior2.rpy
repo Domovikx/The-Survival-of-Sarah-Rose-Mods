@@ -13,7 +13,7 @@ translate es strings:
     new "Afirma tu posición"
 
     old "Snap at him"
-    new "Muerdele"
+    new "Atácale"
 
     old "Ask Carolyn about Vaelen"
     new "Pregúntale a Carolyn sobre Vaelen"

@@ -10,13 +10,13 @@ translate ja strings:
     new "ニックの口づけは禁止"
 
     old "Agree, Nick is less of a man than the captain"
-    new "同意する、キャプテンの方が男らしい"
+    new "ニックはキャプテンほど男ではないと認める"
 
     old "Disagree, fight back against Belmont"
-    new "ベルムントに反論する"
+    new "反対して、ベルモントに反撃しろ"
 
     old "Press the issue"
-    new "問題を押す"
+    new "問題を推し進める"
 
     old "Let it go"
     new "放っておく"

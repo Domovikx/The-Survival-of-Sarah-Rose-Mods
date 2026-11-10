@@ -19,4 +19,4 @@ translate ko strings:
     new "결혼을 수락하다"
 
     old "Lie to Marius about his father"
-    new "마리우스의 아버지에게 거짓말하기"
+    new "마리우스에게 그의 아버지について 거짓말을 해"

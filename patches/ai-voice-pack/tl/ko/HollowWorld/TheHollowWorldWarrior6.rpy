@@ -16,7 +16,7 @@ translate ko strings:
     new "사마이라와 대화하러 가자"
 
     old "Tell Samayra about Thomas"
-    new "토머스에게 말하기"
+    new "사마이라에게 토마스에 대해 말해줘."
 
     old "Tell her to forget it"
     new "그걸 잊어버리게 해"

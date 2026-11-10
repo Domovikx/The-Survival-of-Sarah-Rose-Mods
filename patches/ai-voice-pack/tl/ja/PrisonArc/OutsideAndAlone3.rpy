@@ -10,4 +10,4 @@ translate ja strings:
     new "ドックを探索"
 
     old "Leave Lethram"
-    new "去る"
+    new "レスラムを離れる"

@@ -10,7 +10,7 @@ translate es strings:
     new "Invitar a Alaric"
 
     old "Turn him down"
-    new "Desvíalo"
+    new "Recházalo"
 
     old "Go out and try to forget"
     new "Ságate y trata de olvidar"

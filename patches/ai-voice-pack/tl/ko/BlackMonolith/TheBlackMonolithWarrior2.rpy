@@ -4,7 +4,7 @@
 translate ko strings:
 
     old "Insist, ask Lady Carolyn about Thomas"
-    new "카롤린 여자에게 토머스에 관해 간곡히 요청하라"
+    new "카롤린 레이디에게 토마스에 대해 단호하게 물으세요."
 
     old "Relent, let the matter rest"
     new "버려, 그건 잊어"

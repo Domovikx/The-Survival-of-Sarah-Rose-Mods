@@ -4,13 +4,13 @@
 translate pl strings:
 
     old "Give captain Belmonst a piece of your mind"
-    new "Wyraź swoje uczucia kapitanowi Belmonst"
+    new "Daj kapitanowi Belmonstowi nauczkę!"
 
     old "Follow the captain"
     new "Śledź kapitana"
 
     old "Take the bet."
-    new "Zadaj zakład."
+    new "Zaakceptuj zakład."
 
     old "Leave the ship"
     new "Zostaw statek"

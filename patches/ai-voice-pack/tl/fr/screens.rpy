@@ -34,7 +34,7 @@ translate fr strings:
     new "Sauvegarder"
 
     old "Q.Load"
-    new "Q.Chercher"
+    new "Chargement"
 
     old "Prefs"
     new "Préférences"
@@ -100,7 +100,7 @@ translate fr strings:
     new "Plein écran"
 
     old "Rollback Side"
-    new "Rembobiner Côté"
+    new "Retour latéral"
 
     old "Disable"
     new "Désactiver"
@@ -133,7 +133,7 @@ translate fr strings:
     new "Volume sonore"
 
     old "Test"
-    new "Témoigner contre Alaric"
+    new "Test"
 
     old "Voice Volume"
     new "Volume de la voix"

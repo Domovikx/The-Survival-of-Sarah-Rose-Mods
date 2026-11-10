@@ -19,4 +19,4 @@ translate ja strings:
     new "Caliban を監視する"
 
     old "Refuse to spy on Caliban"
-    new "スパイを拒否する"
+    new "カリバンを監視することを拒否せよ"

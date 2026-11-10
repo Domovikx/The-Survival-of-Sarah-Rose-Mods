@@ -25,7 +25,7 @@ translate zh strings:
     new "与吉迪恩去个更私密的地方"
 
     old "Take charge"
-    new "掌权"
+    new "掌控局面"
 
     old "Tell him to take charge"
     new "让他做主"

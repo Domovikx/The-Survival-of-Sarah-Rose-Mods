@@ -4,7 +4,7 @@
 translate zh strings:
 
     old "The Survival of Sarah Rose is an epic fantasy game. Production on TSSR is still ongoing."
-    new "The Survival of Sarah Rose 是一部史诗奇幻游戏。TSSR 的制作仍在进行中。"
+    new "《莎拉·罗丝的生存》（The Survival of Sarah Rose）是一款史诗奇幻游戏。TSSR的制作仍在进行中。"
 
     old "What you are about to play is a work-in-progress."
     new "你即将体验的是一款仍在开发中的作品。"

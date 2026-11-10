@@ -154,13 +154,13 @@ translate ko strings:
     new "마우스"
 
     old "Gamepad"
-    new "조이스틱"
+    new "게임패드로"
 
     old "Enter"
     new "확인"
 
     old "Advances dialogue and activates the interface."
-    new "진행"
+    new "대화 진행 및 인터페이스 활성화"
 
     old "Space"
     new "공간"

@@ -4,7 +4,7 @@
 translate pl strings:
 
     old "Go pray in the chapel later"
-    new "Później pomodlę się w kaplicy"
+    new "Idź się pomodlić do kaplicy później"
 
     old "Get some more rest"
     new "Odpocznij sobie jeszcze trochę"

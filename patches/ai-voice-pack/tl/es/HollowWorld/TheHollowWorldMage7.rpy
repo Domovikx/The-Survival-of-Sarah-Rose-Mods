@@ -7,10 +7,10 @@ translate es strings:
     new "Di que confías en el espíritu"
 
     old "Say you don't trust the spirit"
-    new "Di que no confías en el espíritu"
+    new "Di que no te fías del espíritu."
 
     old "Do what he wants"
-    new "¿Qué quiere que haga?"
+    new "Haz lo que quiera."
 
     old "Convince Alaric"
     new "Persuadir a Alaric"

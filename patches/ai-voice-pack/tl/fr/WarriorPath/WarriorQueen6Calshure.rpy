@@ -4,7 +4,7 @@
 translate fr strings:
 
     old "Meet with the Tribesman"
-    new "Rencontrer le tribu"
+    new "Rencontrer le Tribal."
 
     old "Enter Calshure with him"
     new "Entre Calshure avec lui"

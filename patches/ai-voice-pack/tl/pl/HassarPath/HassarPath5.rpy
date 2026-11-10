@@ -13,7 +13,7 @@ translate pl strings:
     new "Pływanie z Sophią"
 
     old "Have sex with Sophia"
-    new "Zajmij się seksiem z Sophią"
+    new "Połącz się seksualnie z Sophią"
 
     old "Refuse, go to the library"
     new "Odmów, idź do biblioteki"

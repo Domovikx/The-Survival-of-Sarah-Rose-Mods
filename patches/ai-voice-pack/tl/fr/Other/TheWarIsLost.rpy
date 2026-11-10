@@ -19,7 +19,7 @@ translate fr strings:
     new "Accepter le bol de nourriture."
 
     old "Sarah has her pride, refuse to perform."
-    new "Sarah a sa fierté et refuse d'obéir."
+    new "Sarah a sa fierté : elle refuse de jouer."
 
     old "Motion for Jaeid to go into the water."
     new "Motion pour que Jaeid entre dans l'eau."

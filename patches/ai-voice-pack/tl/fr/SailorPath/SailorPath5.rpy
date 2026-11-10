@@ -7,4 +7,4 @@ translate fr strings:
     new "Retenez-la"
 
     old "Don't hold back"
-    new "No te retengas"
+    new " Ne te retiens pas "

@@ -10,4 +10,4 @@ translate it strings:
     new "Esplora i moli"
 
     old "Leave Lethram"
-    new "Abbandonala"
+    new "Lascia Lethram"

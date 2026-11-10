@@ -19,7 +19,7 @@ translate ko strings:
     new "요청한 모든 정보를 얻었습니다"
 
     old "Place your hands upon the monolith"
-    new "모노리트를 손으로 감싸세요"
+    new "모노리스 위에 손을 얹어라."
 
     old "Reject Razaphel's offer"
-    new "Razaphel 의 제안을 거절하기"
+    new "라자펠의 제안을 거절하세요"

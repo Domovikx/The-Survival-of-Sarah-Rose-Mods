@@ -4,7 +4,7 @@
 translate fr strings:
 
     old "Agree with Kate"
-    new "Accorder avec Kate"
+    new "Êtes-vous d'accord avec Kate ?"
 
     old "Disagree with Kate"
     new "Désaccord avec Kate"

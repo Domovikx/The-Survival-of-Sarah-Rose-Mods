@@ -16,7 +16,7 @@ translate pt strings:
     new "Não subornes a Antonio"
 
     old "Convince him to support you"
-    new "Persuade-o a apoiá-la"
+    new "Convença-o de que ele deve apoiá-lo."
 
     old "Forget his vote"
     new "Esquece o voto dele"

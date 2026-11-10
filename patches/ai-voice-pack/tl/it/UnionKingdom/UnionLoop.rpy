@@ -10,7 +10,7 @@ translate it strings:
     new "Accetta. Prometti il tuo impegno a Maeiv"
 
     old "Refuse, you don't need her vote"
-    new "Rifiuta, non ha bisogno del suo voto"
+    new "Rifiuta, non hai bisogno del suo voto."
 
     old "Meet with Duke Antonio"
     new "Incontra il Duca Antonio"

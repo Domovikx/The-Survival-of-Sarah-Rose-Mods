@@ -13,7 +13,7 @@ translate de strings:
     new "Für eine florierende Zusammenarbeit"
 
     old "To good wine"
-    new "Gutem Wein"
+    new "Guter Wein!"
 
     old "Yes, another!"
     new "Ja, noch eine!"

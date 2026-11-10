@@ -4,7 +4,7 @@
 translate it strings:
 
     old "Meet with Maeiv"
-    new "Incontra con Maeiv"
+    new "Incontrare Maeiv"
 
     old "Be polite, have a drink"
     new "Sii educato, prendi un drink"
@@ -13,7 +13,7 @@ translate it strings:
     new "Per una fruttuosa collaborazione"
 
     old "To good wine"
-    new "A buon vino"
+    new "Al buon vino"
 
     old "Yes, another!"
     new "Sì, un'altra!"

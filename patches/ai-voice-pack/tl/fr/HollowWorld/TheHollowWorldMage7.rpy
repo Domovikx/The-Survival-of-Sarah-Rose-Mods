@@ -10,7 +10,7 @@ translate fr strings:
     new "Dites que vous ne faites pas confiance à l'esprit"
 
     old "Do what he wants"
-    new "Fais ce que tu veux"
+    new "Fais ce qu'il veut."
 
     old "Convince Alaric"
     new "Persuadir a Alaric"

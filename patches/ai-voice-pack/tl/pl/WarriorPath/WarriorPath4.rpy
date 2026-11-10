@@ -10,7 +10,7 @@ translate pl strings:
     new "Nie mów nic Kate"
 
     old "Save Samayra, intercede"
-    new "Zapisz Samayrę, wstaw się"
+    new "Zratuj Samayrę, wstaw się za nią."
 
     old "Play along with Kate, tease Samayra"
     new "Graj z Kate, podrywaj Samayrę"
@@ -43,4 +43,4 @@ translate pl strings:
     new "Ja też cię kocham, Kate!"
 
     old "We can't be more than this."
-    new "Nie możemy się na tym zatrzymać."
+    new "Nie możemy być czymś więcej niż to."

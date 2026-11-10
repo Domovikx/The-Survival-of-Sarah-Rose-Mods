@@ -31,7 +31,7 @@ translate de strings:
     new "Sag ihm, dass er die Führung übernimmt"
 
     old "Refuse him; I don't see you like that"
-    new "Weigere ihm das; ich sehe dich nicht so an"
+    new "Weigere dich; ich sehe dich nicht so."
 
     old "Go talk to Ephraim and Caleb"
     new "Sprich mit Ephraim und Caleb"

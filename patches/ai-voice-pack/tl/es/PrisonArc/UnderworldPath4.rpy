@@ -22,7 +22,7 @@ translate es strings:
     new "¡Escápate!"
 
     old "Go with the men"
-    new "Acompáñame, hombres"
+    new "Ve con los hombres"
 
     old "Consume Dreamstalk"
     new "Consumir Dreamstalk"

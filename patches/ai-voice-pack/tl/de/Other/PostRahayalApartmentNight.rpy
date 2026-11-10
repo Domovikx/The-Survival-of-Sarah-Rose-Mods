@@ -7,7 +7,7 @@ translate de strings:
     new "Verratet den Orden"
 
     old "Join forces with the mage Order"
-    new "Kämpfe mit dem Magierorden zusammen"
+    new "Schließe dich der Magier-Orden an."
 
     old "Spend the Night with them"
     new "Verbringe die Nacht mit ihnen"

@@ -10,7 +10,7 @@ translate zh strings:
     new "我只是为了获取情报。"
 
     old "Give into the spirit"
-    new "顺从她的意志"
+    new "屈服于灵体"
 
     old "Reject the spirit"
     new "拒绝灵体"

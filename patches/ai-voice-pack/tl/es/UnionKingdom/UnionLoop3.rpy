@@ -7,7 +7,7 @@ translate es strings:
     new "Ofrecerle un puesto"
 
     old "Say nothing"
-    new "No decir nada"
+    new "No digas nada"
 
     old "Bribe Antonio"
     new "Sobornar a Antonio"

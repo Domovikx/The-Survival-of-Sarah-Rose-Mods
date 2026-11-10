@@ -262,7 +262,7 @@ translate pl strings:
     new "Muszy odnaleźć swojego ojca."
 
     old "Sarah storms into the bedchamber of her father. Servants try to stop her, but she brushes past them."
-    new "Sarah wbiega do sypialni ojca. Kobiety służące próbują ją powstrzymać, ale ona odpycha je i przechodzi obok."
+    new "Sarah wpada w sypialnię swojego ojca. Służący próbują ją zatrzymać, lecz ona omija ich, nie zwracając na nich uwagi."
 
     old "She is brought to a pause by the sight."
     new "Zdumiała widokiem."

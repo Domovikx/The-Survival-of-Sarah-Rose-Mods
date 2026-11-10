@@ -4,7 +4,7 @@
 translate it strings:
 
     old "Investigate the sound"
-    new "Indaga nel suono"
+    new "Indaga sul rumore"
 
     old "Let it go, it's nothing"
     new "Lascialo andare, non è nulla"
@@ -19,7 +19,7 @@ translate it strings:
     new "Bevi ancora"
 
     old "Call it a night"
-    new "Chiamala notte"
+    new "Chiamala notte."
 
     old "Go back home"
     new "Torna a casa"

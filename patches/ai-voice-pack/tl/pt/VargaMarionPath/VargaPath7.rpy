@@ -7,4 +7,4 @@ translate pt strings:
     new "Deixa-a ir com um aviso."
 
     old "Make an example out of her."
-    new "Faça um exemplo dela."
+    new "Faça dela um exemplo."

@@ -4,7 +4,7 @@
 translate ko strings:
 
     old "Suggest sleeping with the spirit together"
-    new "정령과 함께 자자고 제안하기"
+    new "영혼과 함께 잠자리를 갖는 것을 제안하세요"
 
     old "Rebuke Razaphel"
     new "라자펠을 꾸짖다"

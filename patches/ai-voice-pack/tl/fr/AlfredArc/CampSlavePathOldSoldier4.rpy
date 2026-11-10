@@ -4,7 +4,7 @@
 translate fr strings:
 
     old "Escape"
-    new "Quitter"
+    new "Évasion"
 
     old "Stay here"
     new "Rester ici"

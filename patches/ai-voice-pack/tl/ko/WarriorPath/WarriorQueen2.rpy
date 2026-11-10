@@ -7,7 +7,7 @@ translate ko strings:
     new "벨몬트 처치"
 
     old "Sleep with Belmont"
-    new "Belmont 과 잠을 자다"
+    new "벨몬트와 잠자리를 가지세요."
 
     old "Give Belmont a loan"
     new "벨몬트에게 대출해 주기"

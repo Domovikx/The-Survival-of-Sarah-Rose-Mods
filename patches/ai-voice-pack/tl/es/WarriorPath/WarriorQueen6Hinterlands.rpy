@@ -7,7 +7,7 @@ translate es strings:
     new "Suelta la turba, deja que tengan su venganza"
 
     old "Tell the mob to disband"
-    new "Diles a la muchedumbre que se disuelvan"
+    new "Dile al grupo que se disuelva"
 
     old "Enforce your own justice"
     new "Imponer tu propia justicia"

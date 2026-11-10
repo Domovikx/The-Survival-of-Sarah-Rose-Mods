@@ -7,4 +7,4 @@ translate ja strings:
     new "Kateへの罰"
 
     old "Forgive Kate"
-    new "カイトを許して"
+    new "ケイトを許して"

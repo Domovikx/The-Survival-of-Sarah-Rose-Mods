@@ -10,7 +10,7 @@ translate pt strings:
     new "Entrar em Calshure com ele"
 
     old "Sleep with the Old Tribesman"
-    new "Dormir com o Velho Tribal"
+    new "Dormir com o Velho Tribu"
 
     old "Only let him touch you"
     new "Deixa-o apenas te tocar"

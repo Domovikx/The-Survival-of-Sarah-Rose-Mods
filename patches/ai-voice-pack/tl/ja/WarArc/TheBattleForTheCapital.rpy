@@ -19,7 +19,7 @@ translate ja strings:
     new "今夜はこれで十分です"
 
     old "Speak privately with Marion"
-    new "マリンと個人的に話す"
+    new "マリオンと二人きりで話す"
 
     old "I'll take your proposal into consideration."
     new "提案を考慮します。"

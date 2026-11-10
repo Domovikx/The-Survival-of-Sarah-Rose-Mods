@@ -13,7 +13,7 @@ translate it strings:
     new "Ripudiarlo"
 
     old "Go out and try to forget"
-    new "Sali e cerca di dimenticare"
+    new "Esci e prova a dimenticare."
 
     old "Go home alone"
     new "Torna a casa da solo"

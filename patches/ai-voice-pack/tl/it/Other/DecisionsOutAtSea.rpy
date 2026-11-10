@@ -10,7 +10,7 @@ translate it strings:
     new "Sarah perde il controllo."
 
     old "Sarah is so close, she doesn't stop Kate"
-    new "Sarah è così vicina che non si ferma a Kate"
+    new "Sarah è così vicina da non fermare Kate."
 
     old "Sarah puts a stop to it."
     new "Sarah mette fine a tutto."
@@ -28,7 +28,7 @@ translate it strings:
     new "Assolutamente no!"
 
     old "Surrender to the captain completely"
-    new "Rendi completamente la tua resa al capitano"
+    new "Arrenditi completamente al capitano"
 
     old "Negotiate down"
     new "Negozia"

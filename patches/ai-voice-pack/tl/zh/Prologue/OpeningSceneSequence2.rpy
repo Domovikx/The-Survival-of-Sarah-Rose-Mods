@@ -118,7 +118,7 @@ translate zh strings:
     new "受袭了吗？"
 
     old "No, nothing so serious. But there are rumors. Rumors that tell of him breaking the tribes of the desert, unifying them."
-    new "不，没那么严重。但确有流言。传闻他打破了沙漠诸部族的桎梏，将其统一。"
+    new "不，没那么严重。不过确实有传言——说他把沙漠里的各个部落都征服了，把它们统一了起来。"
 
     old "Should we be worried?"
     new "该担心吗？"

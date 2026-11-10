@@ -4,7 +4,7 @@
 translate ja strings:
 
     old "Give yourself over to the soldiers"
-    new "Razaphel に身を委ねる"
+    new "兵士たちに身を委ねる"
 
     old "Ask Sigmund to protect you"
     new "シグムンドに守ってもらう"

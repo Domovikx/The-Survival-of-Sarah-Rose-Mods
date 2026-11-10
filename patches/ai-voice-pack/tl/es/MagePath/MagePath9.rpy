@@ -7,4 +7,4 @@ translate es strings:
     new "Matar a Kate"
 
     old "Spare Kate"
-    new "Sobran a Kate"
+    new "Perdona a Kate."

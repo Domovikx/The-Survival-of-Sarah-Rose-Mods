@@ -10,7 +10,7 @@ translate de strings:
     new "Sag, dass du dem Geist nicht vertraust"
 
     old "Do what he wants"
-    new "Tue, was du willst"
+    new "Tut, was er will."
 
     old "Convince Alaric"
     new "Überzeuge Alaric"

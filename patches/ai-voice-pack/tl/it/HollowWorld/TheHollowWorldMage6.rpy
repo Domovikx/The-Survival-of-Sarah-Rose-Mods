@@ -13,4 +13,4 @@ translate it strings:
     new "Sottomettiti a Razaphel"
 
     old "Rebuke the spirit"
-    new "Ribadire allo spirito"
+    new "Rinfaccia allo spirito."

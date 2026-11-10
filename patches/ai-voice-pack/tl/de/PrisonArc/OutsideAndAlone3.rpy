@@ -10,4 +10,4 @@ translate de strings:
     new "Erkunden Sie die Docks"
 
     old "Leave Lethram"
-    new "Verlass sie hier."
+    new "Verlasse Lethram"

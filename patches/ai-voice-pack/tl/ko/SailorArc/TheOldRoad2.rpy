@@ -16,7 +16,7 @@ translate ko strings:
     new "사카르에게 복종"
 
     old "Refuse him"
-    new "폐하를 거절하십시오"
+    new "그를 거부해"
 
     old "Go back to camp"
     new "캠프로 돌아가자"

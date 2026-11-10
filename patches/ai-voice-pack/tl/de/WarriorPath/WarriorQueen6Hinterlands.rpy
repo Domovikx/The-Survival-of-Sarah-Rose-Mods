@@ -19,7 +19,7 @@ translate de strings:
     new "Rufe die Ritter herein."
 
     old "Let Kate Stay"
-    new "Kate hier lassen"
+    new "Lass Kate bleiben."
 
     old "Send Kate Away"
     new "Kate wegschicken"

@@ -25,4 +25,4 @@ translate ja strings:
     new "マリアンに服従する"
 
     old "Resist Marion"
-    new "マリオンの誘惑に抵抗せよ"
+    new "マリオンに抵抗する"

@@ -16,7 +16,7 @@ translate it strings:
     new "Parla con Lily"
 
     old "Hold on to Lily"
-    new "Tieni a Lily"
+    new "Tieni stretta Lily."
 
     old "Put her down in the grass"
     new "Mettila sull'erba"

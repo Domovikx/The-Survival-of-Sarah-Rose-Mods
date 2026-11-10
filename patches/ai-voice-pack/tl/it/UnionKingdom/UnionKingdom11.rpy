@@ -4,7 +4,7 @@
 translate it strings:
 
     old "Claim the role for yourself"
-    new "Assumi il ruolo per te stessa"
+    new "Prenditi tu questo ruolo."
 
     old "Support another"
     new "Sostieni un altro"

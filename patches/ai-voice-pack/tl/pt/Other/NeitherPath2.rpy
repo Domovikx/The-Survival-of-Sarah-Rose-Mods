@@ -7,7 +7,7 @@ translate pt strings:
     new "Deixe-os ir."
 
     old "Keep them as our hostages."
-    new "Mantenham-nos como reféns."
+    new "Mantenha-os como nossos reféns."
 
     old "Hang them. Send a message."
     new "Pende-os. Envie uma mensagem."

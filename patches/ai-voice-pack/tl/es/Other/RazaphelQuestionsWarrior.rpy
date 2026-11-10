@@ -16,7 +16,7 @@ translate es strings:
     new "¿Por qué los dioses no impidieron esto?"
 
     old "I have asked all that I need to know"
-    new "He preguntado todo lo que necesitaba saber"
+    new "He preguntado todo lo que necesitaba saber."
 
     old "Place your hands upon the monolith"
     new "Coloca tus manos sobre el monolito"

@@ -19,7 +19,7 @@ translate es strings:
     new "Aceptar el cuenco de comida."
 
     old "Sarah has her pride, refuse to perform."
-    new "Sarah tiene su orgullo y se niega a rendirse."
+    new "Sarah tiene su orgullo; se niega a actuar."
 
     old "Motion for Jaeid to go into the water."
     new "¡Que vaya al agua!"

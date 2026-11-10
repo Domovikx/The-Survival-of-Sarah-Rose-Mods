@@ -13,7 +13,7 @@ translate ko strings:
     new "소피아와 수영하기"
 
     old "Have sex with Sophia"
-    new "소피아와 성관계를 하세요"
+    new "소피아와 성관계하기"
 
     old "Refuse, go to the library"
     new "거절하고 도서관으로 가자"

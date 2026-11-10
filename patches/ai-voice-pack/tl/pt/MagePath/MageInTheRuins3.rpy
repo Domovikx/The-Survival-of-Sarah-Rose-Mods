@@ -19,7 +19,7 @@ translate pt strings:
     new "Vá com Belmont até o navio dele"
 
     old "Talk back"
-    new "Falar com a Lili"
+    new "Contra-argumente."
 
     old "Agree with Belmont"
     new "Concordar com Belmont"

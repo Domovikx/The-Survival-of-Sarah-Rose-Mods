@@ -16,7 +16,7 @@ translate es strings:
     new "No estoy de acuerdo, luchar contra Belmont"
 
     old "Press the issue"
-    new "Presiona el asunto"
+    new "Insiste en el asunto."
 
     old "Let it go"
     new "Déjalo ir"

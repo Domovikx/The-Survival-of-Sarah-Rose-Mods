@@ -10,4 +10,4 @@ translate ko strings:
     new "항구를 탐험하다"
 
     old "Leave Lethram"
-    new "그녀를 뒤로 남기다"
+    new "레스람을 떠나자"

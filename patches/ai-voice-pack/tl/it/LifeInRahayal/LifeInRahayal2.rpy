@@ -4,4 +4,4 @@
 translate it strings:
 
     old "Take the servant job"
-    new "Accetta il lavoro di serva"
+    new "Prendi il lavoro da servitore."

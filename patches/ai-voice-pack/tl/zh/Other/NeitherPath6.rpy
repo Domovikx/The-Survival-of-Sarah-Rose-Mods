@@ -4,7 +4,7 @@
 translate zh strings:
 
     old "Reason with him"
-    new "与他共理"
+    new "与他讲道理"
 
     old "Offer him mercy."
     new "施以仁慈"

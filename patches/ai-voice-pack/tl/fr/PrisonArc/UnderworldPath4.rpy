@@ -7,7 +7,7 @@ translate fr strings:
     new "Rester"
 
     old "Stay silent"
-    new "Rester silencieuse"
+    new "Reste silencieuse"
 
     old "Try to reason with them"
     new "Essaie de les raisonner"

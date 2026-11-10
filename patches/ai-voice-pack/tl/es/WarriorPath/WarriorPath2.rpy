@@ -7,4 +7,4 @@ translate es strings:
     new "Aceptar con Kate"
 
     old "Disagree with Kate"
-    new "No estar de acuerdo con Kate"
+    new "No estoy de acuerdo con Kate."

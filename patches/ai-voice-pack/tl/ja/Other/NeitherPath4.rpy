@@ -10,7 +10,7 @@ translate ja strings:
     new "小さな過ちだ。許してしまおう"
 
     old "Retire for the evening"
-    new "夕暮れに引退する"
+    new "今夜は休もう"
 
     old "Invite Lily in"
     new "Lily を招待"

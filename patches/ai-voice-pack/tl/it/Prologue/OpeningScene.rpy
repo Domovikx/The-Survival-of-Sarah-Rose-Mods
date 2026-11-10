@@ -22,7 +22,7 @@ translate it strings:
     new "Sarah si lancia tra le braccia del padre."
 
     old "Ooh, Sarah, my back! Please daugher, I'm not as young as I was, and you've grown much too big to just be jumping on me."
-    new "Oh, Sarah, la mia schiena! Per favore, figlia mia, non sono più giovane come una volta, e sei diventata troppo grande per saltarmi addosso così."
+    new "Oh, Sarah, la schiena! Ti prego, figlia mia: non sono più giovane come un tempo, e tu sei diventata molto troppo grande per continuare a balzarmi addosso."
 
     old "You were gone for almost five months! If you thought I wasn't going to hug you, you don't know me at all."
     new "Sei stato via per quasi cinque mesi! Se pensavi che non ti avrei abbracciato, non mi conosci affatto."

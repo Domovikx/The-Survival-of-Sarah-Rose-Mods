@@ -4,7 +4,7 @@
 translate it strings:
 
     old "She needs to be made an example of"
-    new "Deve essere fatta un esempio"
+    new "Deve essere usata come esempio."
 
     old "It was a small mistake, let it go"
     new "È stato un piccolo errore, lascialo andare"

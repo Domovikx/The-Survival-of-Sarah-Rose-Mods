@@ -10,7 +10,7 @@ translate ko strings:
     new "사라가 통제력을 잃었다."
 
     old "Sarah is so close, she doesn't stop Kate"
-    new "카테를 멈추지 않을 정도로 사라는 가까워졌다."
+    new "사라는 너무 가까워서 케이트를 멈추지 않는다."
 
     old "Sarah puts a stop to it."
     new "사라가 그것을 멈추게 한다."

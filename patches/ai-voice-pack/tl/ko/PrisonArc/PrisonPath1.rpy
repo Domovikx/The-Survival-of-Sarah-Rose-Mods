@@ -4,7 +4,7 @@
 translate ko strings:
 
     old "Have sex with Eula"
-    new "Eula와 성관계를 가지세요"
+    new "에우라와 섹스를 하고 싶지?"
 
     old "Refuse to have sex with Eula"
     new "Eula와 성관계를 거절하기"

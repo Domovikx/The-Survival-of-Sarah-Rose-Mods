@@ -4,7 +4,7 @@
 translate pt strings:
 
     old "Have sex with Eula"
-    new "Faça amor com Eula"
+    new "Tenha sexo com Eula"
 
     old "Refuse to have sex with Eula"
     new "Recusar-se a fazer sexo com Eula"

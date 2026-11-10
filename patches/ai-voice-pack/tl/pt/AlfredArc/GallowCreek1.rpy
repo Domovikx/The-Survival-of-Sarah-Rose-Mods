@@ -4,7 +4,7 @@
 translate pt strings:
 
     old "Stop Alfred"
-    new "Parar a Alfred"
+    new "Pare, Alfredo!"
 
     old "You will tell Marius everything"
     new "Você contará tudo ao Marius"

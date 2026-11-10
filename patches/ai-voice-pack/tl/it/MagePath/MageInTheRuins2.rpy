@@ -16,4 +16,4 @@ translate it strings:
     new "Prova a parlarci"
 
     old "Hold on, try to to speak"
-    new "Sostieniti, prova a parlare"
+    new "Aspetta, prova a parlare."

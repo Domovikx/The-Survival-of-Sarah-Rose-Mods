@@ -7,7 +7,7 @@ translate fr strings:
     new "Donne-lui ce qu'il veut."
 
     old "Agree, don't finish inside."
-    new "D'accord, ne finissez pas à l'intérieur."
+    new "D'accord, ne finis pas à l'intérieur."
 
     old "Ignore, just finish."
     new "Finissez simplement."

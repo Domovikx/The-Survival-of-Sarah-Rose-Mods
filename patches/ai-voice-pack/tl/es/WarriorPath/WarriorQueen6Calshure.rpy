@@ -4,13 +4,13 @@
 translate es strings:
 
     old "Meet with the Tribesman"
-    new "Reunirse con el Tribu"
+    new "Reunirse con el Tribal"
 
     old "Enter Calshure with him"
     new "Entrar con él a Calshure"
 
     old "Sleep with the Old Tribesman"
-    new "Duerme con el Anciano"
+    new "Acuéstate con el Anciano Tribu."
 
     old "Only let him touch you"
     new "Solo déjale que te toque"

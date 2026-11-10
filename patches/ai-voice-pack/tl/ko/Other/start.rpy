@@ -4,7 +4,7 @@
 translate ko strings:
 
     old "The Survival of Sarah Rose is an epic fantasy game. Production on TSSR is still ongoing."
-    new "The Survival of Sarah Rose는 서사 판타지 게임입니다. TSSR의 제작은 아직 진행 중입니다."
+    new "'사라 로즈의 생존(The Survival of Sarah Rose)'은 서사 판타지 게임입니다. TSSR의 제작은 아직 진행 중입니다."
 
     old "What you are about to play is a work-in-progress."
     new "당신이 곧 플레이하게 될 것은 아직 개발 중인 작품입니다."

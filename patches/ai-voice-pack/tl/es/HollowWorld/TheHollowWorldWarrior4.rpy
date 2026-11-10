@@ -19,7 +19,7 @@ translate es strings:
     new "Nací en Rosanna."
 
     old "I killed a young man"
-    new "Matar a un joven"
+    new "Maté a un joven."
 
     old "I once blew an old sailor"
     new "Una vez le chupé la polla a un viejo marinero."

@@ -19,7 +19,7 @@ translate de strings:
     new "Sarah legt das Kissen über ihr eigenes Gesicht."
 
     old "Lie, say you don't have money"
-    new "Lügen und behaupten, du hättest kein Geld"
+    new "Lüg doch, sag, du hättest kein Geld."
 
     old "Accept Belmont's offer."
     new "Belmonts Angebot annehmen."
@@ -31,10 +31,10 @@ translate de strings:
     new "Rind dich dem Kapitän völlig hin"
 
     old "Negotiate down"
-    new "Verhandeln"
+    new "Verhandle einen besseren Deal."
 
     old "Sarah gives herself up."
-    new "Sarah rinde sich auf."
+    new "Sarah ergibt sich."
 
     old "Kate gives herself up."
     new "Kate gibt sich selbst auf."

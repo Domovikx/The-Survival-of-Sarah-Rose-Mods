@@ -10,7 +10,7 @@ translate ja strings:
     new "Mariusにすべてを話す"
 
     old "I won't tell Marius anything"
-    new "マリオスには何も言わない"
+    new "マリアスには何も言わない"
 
     old "Tell Marius the truth of what happened"
     new "Mariusに真実を話す"

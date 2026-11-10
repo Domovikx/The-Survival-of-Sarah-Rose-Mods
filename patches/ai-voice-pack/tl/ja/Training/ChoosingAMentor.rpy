@@ -10,4 +10,4 @@ translate ja strings:
     new "エフライムとカレブに相談する"
 
     old "Ask Atilla, the orc."
-    new "アッティラ、オークに尋ねる"
+    new "アッティラ、そのオークに尋ねよう。"

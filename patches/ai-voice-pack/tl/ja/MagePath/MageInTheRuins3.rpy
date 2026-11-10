@@ -10,7 +10,7 @@ translate ja strings:
     new "アラリックを訪ねる"
 
     old "Spend the day alone"
-    new "Samayra と一日を過ごす"
+    new "一人で一日を過ごす"
 
     old "Have drinks with Captain Belmont"
     new "キャプテン・ベルモントと酒を飲む"
@@ -28,4 +28,4 @@ translate ja strings:
     new "帰宅する"
 
     old "Tell him to get lost"
-    new "追放してやる"
+    new "彼に失せろと伝えろ"

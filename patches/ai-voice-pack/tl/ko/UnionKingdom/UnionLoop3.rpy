@@ -4,13 +4,13 @@
 translate ko strings:
 
     old "Offer her a position"
-    new "그녀에게 권력을 제안하다"
+    new "그녀에게 자리를 제안해 보세요."
 
     old "Say nothing"
     new "말하지 마세요"
 
     old "Bribe Antonio"
-    new "안토니오 뇌물주기"
+    new "Antonio에게 뇌물을 주시오."
 
     old "Do not bribe Antonio"
     new "안토니오에게 뇌물을 주지 마라"

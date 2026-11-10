@@ -4,7 +4,7 @@
 translate it strings:
 
     old "Take the real stone for yourself."
-    new "Prendila per te."
+    new "Prendi tu la pietra vera."
 
     old "Give Vaelen the real stone."
     new "Dai a Vaelen la vera pietra."

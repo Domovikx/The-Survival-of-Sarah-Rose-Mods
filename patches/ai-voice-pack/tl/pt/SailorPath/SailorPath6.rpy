@@ -16,7 +16,7 @@ translate pt strings:
     new "Discordar e lutar contra Belmont"
 
     old "Press the issue"
-    new "Pressione o problema"
+    new "Insista no assunto."
 
     old "Let it go"
     new "Deixa ir"

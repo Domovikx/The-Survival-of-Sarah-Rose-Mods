@@ -10,4 +10,4 @@ translate fr strings:
     new "Gardez-les comme nos otages."
 
     old "Hang them. Send a message."
-    new "Écrase-les. Envoie un message."
+    new "Pendez-les. Envoyez un message."

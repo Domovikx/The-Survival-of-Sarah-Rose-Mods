@@ -7,7 +7,7 @@ translate zh strings:
     new "背叛教团"
 
     old "Join forces with the mage Order"
-    new "与法师团结盟"
+    new "与法师组织联手"
 
     old "Spend the Night with them"
     new "与他们共度一夜"

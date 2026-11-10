@@ -7,4 +7,4 @@ translate de strings:
     new "Kate töten"
 
     old "Spare Kate"
-    new "Kate sparen"
+    new "Spare Kate."

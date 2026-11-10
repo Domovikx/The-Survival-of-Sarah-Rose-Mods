@@ -10,7 +10,7 @@ translate it strings:
     new "L'ho fatto solo per le informazioni"
 
     old "Give into the spirit"
-    new "Cedi al suo spirito"
+    new "Cedi allo spirito."
 
     old "Reject the spirit"
     new "Rifiuta lo spirito"

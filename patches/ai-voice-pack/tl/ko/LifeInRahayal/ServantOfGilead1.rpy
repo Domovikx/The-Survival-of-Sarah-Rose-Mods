@@ -13,7 +13,7 @@ translate ko strings:
     new "사라가 흥분한다"
 
     old "Sarah is disgusted"
-    new "혐오한다"
+    new "사라는 역겹다."
 
     old "Ignore it, go back to sleep"
     new "그걸 무시하고 다시 자자"

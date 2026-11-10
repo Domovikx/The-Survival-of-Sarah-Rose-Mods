@@ -19,7 +19,7 @@ translate de strings:
     new "Gehe mit Belmont an sein Schiff"
 
     old "Talk back"
-    new "Zurückredet"
+    new "Widersprich doch!"
 
     old "Agree with Belmont"
     new "Einverstanden mit Belmont"
@@ -28,4 +28,4 @@ translate de strings:
     new "Zu Hause gehen"
 
     old "Tell him to get lost"
-    new "Verdammt, verschwinde!"
+    new "Sag ihm, er soll verschwinden."

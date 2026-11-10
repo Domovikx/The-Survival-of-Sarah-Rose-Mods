@@ -100,7 +100,7 @@ translate de strings:
     new "Vollbild"
 
     old "Rollback Side"
-    new "Zurückrollen"
+    new "Seitenmodus zurücksetzen"
 
     old "Disable"
     new "Deaktivieren"
@@ -187,7 +187,7 @@ translate de strings:
     new "Überspringt den Dialog, solange gedrückt gehalten wird."
 
     old "Tab"
-    new "Register"
+    new "Tab"
 
     old "Toggles dialogue skipping."
     new "Aktiviert das Überspringen von Dialogen."

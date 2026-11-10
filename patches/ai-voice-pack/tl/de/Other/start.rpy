@@ -4,7 +4,7 @@
 translate de strings:
 
     old "The Survival of Sarah Rose is an epic fantasy game. Production on TSSR is still ongoing."
-    new "The Survival of Sarah Rose ist ein episches Fantasyspiel. Die Produktion von TSSR ist noch im Gange."
+    new "The Survival of Sarah Rose ist ein episches Fantasy-Spiel. Die Entwicklung von TSSR dauert noch an."
 
     old "What you are about to play is a work-in-progress."
     new "Was du gleich spielen wirst, ist ein Werk in Arbeit."

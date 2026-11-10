@@ -13,7 +13,7 @@ translate de strings:
     new "Sarah ist erregt"
 
     old "Sarah is disgusted"
-    new "Sarah ist empört"
+    new "Sarah ist angewidert."
 
     old "Ignore it, go back to sleep"
     new "Ignorier es und geh zurück ins Bett"

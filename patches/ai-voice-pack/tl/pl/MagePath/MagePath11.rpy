@@ -4,7 +4,7 @@
 translate pl strings:
 
     old "Save Samayra."
-    new "Zapisz Samayrę."
+    new "Uratuj Samayrę."
 
     old "Leave her behind."
     new "Zostaw ją za sobą."

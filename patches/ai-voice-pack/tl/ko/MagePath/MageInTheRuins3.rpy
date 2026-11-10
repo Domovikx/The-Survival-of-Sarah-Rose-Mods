@@ -10,7 +10,7 @@ translate ko strings:
     new "알라릭을 방문하기"
 
     old "Spend the day alone"
-    new "한날 혼자 보내기"
+    new "혼자서 하루 보내기"
 
     old "Have drinks with Captain Belmont"
     new "벨몬트 대령과 술 마시기"

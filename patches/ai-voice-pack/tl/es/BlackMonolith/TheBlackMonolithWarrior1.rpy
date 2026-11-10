@@ -7,7 +7,7 @@ translate es strings:
     new "Llévate a Samayra de vuelta a tu tienda"
 
     old "Tell her to sleep it off"
-    new "Dile que duerma eso."
+    new "Dile que duerma para sobriarse"
 
     old "Go with Kate to her tent"
     new "Ve con Kate a su tienda"

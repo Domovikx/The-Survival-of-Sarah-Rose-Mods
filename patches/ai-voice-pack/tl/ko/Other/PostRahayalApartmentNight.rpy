@@ -4,7 +4,7 @@
 translate ko strings:
 
     old "Betray the order"
-    new "계급을 배신하다"
+    new "질서를 배신하라"
 
     old "Join forces with the mage Order"
     new "마법사 오더와 힘을 합치다"

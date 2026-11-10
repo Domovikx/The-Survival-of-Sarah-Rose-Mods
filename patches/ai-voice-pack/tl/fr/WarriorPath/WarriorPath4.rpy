@@ -19,7 +19,7 @@ translate fr strings:
     new "Dis à Kate d'arrêter, sérieusement"
 
     old "Seduce Samayra"
-    new "Enchanter Samayra"
+    new "Seduis Samayra."
 
     old "Go to sleep"
     new "Dormir"

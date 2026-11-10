@@ -7,4 +7,4 @@ translate ko strings:
     new "Kate에게 벌을 주다"
 
     old "Forgive Kate"
-    new "카이트 용서하기"
+    new "케이트를 용서해 줘."

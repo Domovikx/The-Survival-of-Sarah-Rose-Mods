@@ -7,10 +7,10 @@ translate it strings:
     new "Indossare il vestito"
 
     old "Keep on your armor"
-    new "Continua con l'armatura"
+    new "Mantieni l'armatura addosso."
 
     old "Meet with Kate"
-    new "Incontra con Kate"
+    new "Incontrare Kate."
 
     old "Meet with Samayra"
     new "Incontrare Samayra"

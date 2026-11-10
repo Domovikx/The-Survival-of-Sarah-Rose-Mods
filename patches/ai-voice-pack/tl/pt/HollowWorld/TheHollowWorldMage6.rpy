@@ -4,7 +4,7 @@
 translate pt strings:
 
     old "Suggest sleeping with the spirit together"
-    new "Sugere que durma com o espírito juntos"
+    new "Sugerir dormir junto com o espírito"
 
     old "Rebuke Razaphel"
     new "Admoestar a Razaphel"

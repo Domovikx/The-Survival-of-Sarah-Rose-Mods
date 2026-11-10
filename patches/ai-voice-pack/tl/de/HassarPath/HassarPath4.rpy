@@ -7,4 +7,4 @@ translate de strings:
     new "Erzähle ihr eine Lüge"
 
     old "Distract him with your body"
-    new "Abwehren mit deinem Körper"
+    new "Lenke ihn mit deinem Körper ab."

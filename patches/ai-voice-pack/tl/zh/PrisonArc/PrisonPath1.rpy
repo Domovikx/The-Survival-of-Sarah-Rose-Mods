@@ -7,4 +7,4 @@ translate zh strings:
     new "与露拉发生性关系"
 
     old "Refuse to have sex with Eula"
-    new "拒绝与欧洛伦发生性关系"
+    new "不，我不会和你上床的。"

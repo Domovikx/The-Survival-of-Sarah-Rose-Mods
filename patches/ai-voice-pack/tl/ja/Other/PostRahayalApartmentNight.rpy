@@ -4,7 +4,7 @@
 translate ja strings:
 
     old "Betray the order"
-    new "裏切る"
+    new "秩序を裏切る"
 
     old "Join forces with the mage Order"
     new "魔術師のオードと力を合わせろ"

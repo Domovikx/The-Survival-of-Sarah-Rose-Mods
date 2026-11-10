@@ -13,7 +13,7 @@ translate de strings:
     new "Antonio bestechen"
 
     old "Do not bribe Antonio"
-    new "Schmücke Antonio nicht"
+    new "Bestecke Antonio nicht."
 
     old "Convince him to support you"
     new "Überzeuge ihn, dich zu unterstützen"

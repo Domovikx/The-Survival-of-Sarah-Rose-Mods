@@ -4,10 +4,10 @@
 translate it strings:
 
     old "Say you trust the spirit"
-    new "Dì che credi nello spirito"
+    new "Dì che ti fidi dello spirito."
 
     old "Say you don't trust the spirit"
-    new "Di che non ti fidi dello spirito"
+    new "Dì che non ti fidi dello spirito."
 
     old "Do what he wants"
     new "Faccia quello che vuole"

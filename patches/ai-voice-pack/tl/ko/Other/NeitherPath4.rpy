@@ -16,7 +16,7 @@ translate ko strings:
     new "릴리를 초대하다"
 
     old "Kiss Lily"
-    new "릴리 키스"
+    new "릴리를 키스해"
 
     old "Push her back"
     new "그녀를 밀어내다"

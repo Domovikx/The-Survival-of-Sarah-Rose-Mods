@@ -13,7 +13,7 @@ translate ja strings:
     new "ソフィアと泳ぐ"
 
     old "Have sex with Sophia"
-    new "ソフィアと親密になる"
+    new "ソフィアとセックスする"
 
     old "Refuse, go to the library"
-    new "拒否、図書館へ行く"
+    new "拒否して図書館へ行く"

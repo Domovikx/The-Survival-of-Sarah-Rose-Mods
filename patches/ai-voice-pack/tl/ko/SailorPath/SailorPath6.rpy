@@ -10,10 +10,10 @@ translate ko strings:
     new "니키와 키스하지 마"
 
     old "Agree, Nick is less of a man than the captain"
-    new "동의, 벨몬트보다 니크는 남자가 못 돼"
+    new "닉은 대장보다 남자답지 못해."
 
     old "Disagree, fight back against Belmont"
-    new "Belmont 와 싸우기"
+    new "반대하고, 벨몬트에게 맞서 싸워라"
 
     old "Press the issue"
     new "문제 제기"

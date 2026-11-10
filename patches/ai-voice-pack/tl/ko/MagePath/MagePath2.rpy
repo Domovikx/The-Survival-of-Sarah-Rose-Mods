@@ -4,7 +4,7 @@
 translate ko strings:
 
     old "Sneak out and visit the spirit."
-    new "정령을 찾아 숨어서 나가자."
+    new "몰래 빠져나와 영혼을 만나러 가."
 
     old "Take off your clothes."
     new "옷을 벗어라."

@@ -22,7 +22,7 @@ translate pt strings:
     new "Matei um jovem."
 
     old "I once blew an old sailor"
-    new "Já fodi um velho marinheiro"
+    new "Eu já fiz sexo oral num velho marinheiro."
 
     old "I once had sex with an orc"
     new "Uma vez tive sexo com um orco."

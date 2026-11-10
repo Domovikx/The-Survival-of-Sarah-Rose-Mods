@@ -127,7 +127,7 @@ translate fr strings:
     new "C'est trop tôt pour le dire. Je n'enverrai pas une armée dans le désert sur un simple bruit, mais je sais aussi que tu peux sentir la guerre venir avant qu'elle ne soit là."
 
     old "Let it be."
-    new "Délaissé"
+    new "Soit."
 
     old "Ok father, tomorrow we'll talk."
     new "D'accord papa, on en parlera demain."

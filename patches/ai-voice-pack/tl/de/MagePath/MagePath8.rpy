@@ -10,4 +10,4 @@ translate de strings:
     new "Küsse Samayra"
 
     old "Push Samayra"
-    new "Stoß Samayra zurück"
+    new "Drück Samayra."

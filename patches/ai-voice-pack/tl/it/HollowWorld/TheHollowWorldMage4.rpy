@@ -4,7 +4,7 @@
 translate it strings:
 
     old "Make a move on her"
-    new "Fai un passo su di lei"
+    new "Prova a conquistarla."
 
     old "Break the hug"
     new "Rompere l'abbraccio"

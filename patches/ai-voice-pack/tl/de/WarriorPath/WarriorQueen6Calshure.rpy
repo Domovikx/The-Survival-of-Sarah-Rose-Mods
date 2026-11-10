@@ -22,7 +22,7 @@ translate de strings:
     new "Biete mehr Gold an"
 
     old "Refuse, start the siege"
-    new "Verweigern: Belagerung beginnen"
+    new "Weigere dich und beginne die Belagerung."
 
     old "Ignore his request, prepare the siege"
     new "Sein Bitten ignorieren, die Belagerung vorbereiten"

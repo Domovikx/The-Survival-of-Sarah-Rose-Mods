@@ -7,7 +7,7 @@ translate fr strings:
     new "Ramenez Samayra à votre tente"
 
     old "Tell her to sleep it off"
-    new "Dites-lui de dormir"
+    new "Dites-lui d'attendre que ça passe en dormant."
 
     old "Go with Kate to her tent"
     new "Va avec Kate à sa tente"

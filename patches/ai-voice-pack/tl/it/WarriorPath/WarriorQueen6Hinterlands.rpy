@@ -4,7 +4,7 @@
 translate it strings:
 
     old "Set the mob loose, let them have their revenge"
-    new "Sgombra la turba, lascia che prendano la loro vendetta"
+    new "Scatenate la folla, lasciate che si vendichi"
 
     old "Tell the mob to disband"
     new "Dì alla folla di sciogliersi"
@@ -13,10 +13,10 @@ translate it strings:
     new "Impone la tua giustizia"
 
     old "Send the spearmen forward"
-    new "Invia gli spadaccini in avanti"
+    new "Lanciatori di lance! Avanzate!"
 
     old "Send in the knights"
-    new "Invoca i cavalieri"
+    new "Invia i cavalieri!"
 
     old "Let Kate Stay"
     new "Lascia che Kate rimanga"

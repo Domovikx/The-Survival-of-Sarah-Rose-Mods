@@ -7,7 +7,7 @@ translate pl strings:
     new "Ubierz suknię"
 
     old "Keep on your armor"
-    new "Zostaw na zbroju"
+    new "Zachowaj swoją zbroję"
 
     old "Meet with Kate"
     new "Spotkaj się z Kate"

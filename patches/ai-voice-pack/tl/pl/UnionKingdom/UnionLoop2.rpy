@@ -13,7 +13,7 @@ translate pl strings:
     new "Do prosperującej współpracy"
 
     old "To good wine"
-    new "Do dobrego wina"
+    new "Dobrej jakości wino"
 
     old "Yes, another!"
     new "Tak, jeszcze jedna!"

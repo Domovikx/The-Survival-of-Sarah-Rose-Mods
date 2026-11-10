@@ -7,4 +7,4 @@ translate ko strings:
     new "고블린 공격"
 
     old "Keep defending against the orcs"
-    new "오크로부터 방어하기"
+    new "오르크들을 계속 막아라"

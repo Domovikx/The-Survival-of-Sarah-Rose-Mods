@@ -7,7 +7,7 @@ translate pt strings:
     new "Saia e visite o espírito."
 
     old "Take off your clothes."
-    new "Retire suas roupas."
+    new "Tire a roupa."
 
     old "Ignore, turn around and leave."
     new "Ignorar, vire as costas e saia."

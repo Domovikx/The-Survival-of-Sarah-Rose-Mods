@@ -13,10 +13,10 @@ translate ja strings:
     new "Samayraを救い、代弁せよ"
 
     old "Play along with Kate, tease Samayra"
-    new "Kate と付き合う、Samayra をからかう"
+    new "ケイトに合わせて演じて、サマヤラをからかってごらん"
 
     old "Tell Kate to stop it, seriously"
-    new "Kateにやめさせるように頼む"
+    new "ケイトに「本気でやめて」って言って"
 
     old "Seduce Samayra"
     new "サマヤラを誘惑する"

@@ -4,7 +4,7 @@
 translate zh strings:
 
     old "Betray Xan"
-    new "背叛贤"
+    new "背叛Xan"
 
     old "Submit and go to the citadel"
     new "提交并前往堡垒"

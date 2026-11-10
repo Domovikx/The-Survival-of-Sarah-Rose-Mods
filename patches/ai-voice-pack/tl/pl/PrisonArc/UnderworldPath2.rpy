@@ -7,7 +7,7 @@ translate pl strings:
     new "Daj mu to, czego chce."
 
     old "Agree, don't finish inside."
-    new "Zgodzić się, nie kończyć w środku."
+    new "Zgadzam się, nie kończ w środku."
 
     old "Ignore, just finish."
     new "Ignora, termina."

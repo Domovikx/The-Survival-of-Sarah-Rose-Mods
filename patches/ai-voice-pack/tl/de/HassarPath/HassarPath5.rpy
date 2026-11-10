@@ -16,4 +16,4 @@ translate de strings:
     new "Sex mit Sophia haben"
 
     old "Refuse, go to the library"
-    new "Verweigern, in die Bibliothek gehen"
+    new "Weigern Sie sich und gehen Sie zur Bibliothek."

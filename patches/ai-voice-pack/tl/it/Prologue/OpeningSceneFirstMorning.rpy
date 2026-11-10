@@ -79,7 +79,7 @@ translate it strings:
     new "Le lacrime potevano arrivare dopo."
 
     old "Save for herself, her bed is empty. She hopes Thomas won't be too upset that she had send him away."
-    new "A parte per sé stessa, il suo letto è vuoto. Spera che Tomás non sia troppo turbato dal fatto che lo abbia mandato via."
+    new "Tranne per lei, il suo letto è vuoto. Spera che Tomás non sia troppo turbato dal fatto che lo abbia mandato via."
 
     old "Still, he should have known they were too old for that."
     new "Dovrebbe averlo saputo: erano troppo vecchi per quello."

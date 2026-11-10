@@ -145,7 +145,7 @@ translate ko strings:
     new "아버님, 저희와 모든 이를 위해 얼마나 열심히 일하는지 우리는 잘 알고 있습니다. 때때로 자신도 고려해 주시기를 바랍니다."
 
     old "I'll look after myself, if you look after that brother of yours for me, promise?"
-    new "제가 스스로 잘 돌볼 테니, 당신의 그 동생을 대신 잘 돌봐주겠다고 약속해 줄래요?"
+    new "제가 스스로 잘 지낼 테니, 당신의 그 동생을 대신 잘 돌봐주겠다고 약속해 줄래요?"
 
     old "Promise!"
     new "약속해!"

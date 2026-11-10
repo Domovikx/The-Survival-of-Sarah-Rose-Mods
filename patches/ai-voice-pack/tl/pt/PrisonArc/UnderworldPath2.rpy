@@ -7,7 +7,7 @@ translate pt strings:
     new "Dê-lhe o que ele quer."
 
     old "Agree, don't finish inside."
-    new "Concordar, não termine dentro."
+    new "Concorde, não termine dentro de mim."
 
     old "Ignore, just finish."
     new "Ignore, termine só."

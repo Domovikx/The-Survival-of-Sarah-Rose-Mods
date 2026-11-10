@@ -115,7 +115,7 @@ translate ja strings:
     new "見えないテキスト"
 
     old "After Choices"
-    new "後で"
+    new "選択後"
 
     old "Transitions"
     new "遷移"
@@ -160,7 +160,7 @@ translate ja strings:
     new "入る"
 
     old "Advances dialogue and activates the interface."
-    new "進める"
+    new "対話を進め、インターフェースを起動する"
 
     old "Space"
     new "スペース"

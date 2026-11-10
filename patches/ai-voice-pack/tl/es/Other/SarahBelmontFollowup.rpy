@@ -13,7 +13,7 @@ translate es strings:
     new "Acepta la apuesta."
 
     old "Leave the ship"
-    new "Abandona el barco"
+    new "Abandona la nave"
 
     old "Ignore him"
     new "Ignóralo"

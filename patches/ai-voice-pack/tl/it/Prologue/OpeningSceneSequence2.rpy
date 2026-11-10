@@ -79,7 +79,7 @@ translate it strings:
     new "Scegli"
 
     old "Pressure him."
-    new "Prendilo."
+    new "Mettigli pressione."
 
     old "Father, I can see that something is worrying you. Please, tell me now. You'll sleep better having shared."
     new "Padre, vedo che qualcosa ti preoccupa. Per favore, dimmelo ora. Dormirai meglio dopo aver condiviso."

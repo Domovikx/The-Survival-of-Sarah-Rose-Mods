@@ -4,4 +4,4 @@
 translate zh strings:
 
     old "Take the servant job"
-    new "接下侍女的职位"
+    new "接这个仆人的工作"

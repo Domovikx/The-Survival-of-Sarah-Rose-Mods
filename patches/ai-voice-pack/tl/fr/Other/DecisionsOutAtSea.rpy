@@ -10,7 +10,7 @@ translate fr strings:
     new "Sarah perd le contrôle."
 
     old "Sarah is so close, she doesn't stop Kate"
-    new "Sarah est si proche qu'elle ne s'arrête pas pour Kate"
+    new "Sarah est si proche qu'elle n'arrête pas Kate."
 
     old "Sarah puts a stop to it."
     new "Sarah met fin à cela."
@@ -19,7 +19,7 @@ translate fr strings:
     new "Sarah se couvre le visage avec l'oreiller."
 
     old "Lie, say you don't have money"
-    new "Mente, dis que n'as pas d'argent"
+    new "Mentez, dites que vous n'avez pas d'argent."
 
     old "Accept Belmont's offer."
     new "Accepter l'offre de Belmont."

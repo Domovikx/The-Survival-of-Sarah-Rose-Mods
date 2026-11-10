@@ -16,4 +16,4 @@ translate pt strings:
     new "Ter sexo com Sophia"
 
     old "Refuse, go to the library"
-    new "Recusar, ir à biblioteca"
+    new "Recuse-se e vá para a biblioteca."

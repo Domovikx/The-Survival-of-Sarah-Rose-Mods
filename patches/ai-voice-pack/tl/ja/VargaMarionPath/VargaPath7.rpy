@@ -7,4 +7,4 @@ translate ja strings:
     new "警告を添えて、彼女を手放せ。"
 
     old "Make an example out of her."
-    new "彼女を戒めにする"
+    new "彼女を例に示せ。"

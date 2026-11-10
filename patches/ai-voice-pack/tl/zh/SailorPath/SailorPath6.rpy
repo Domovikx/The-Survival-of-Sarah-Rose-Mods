@@ -10,7 +10,7 @@ translate zh strings:
     new "别亲尼克"
 
     old "Agree, Nick is less of a man than the captain"
-    new "同意，尼克比船长更像条汉子"
+    new "同意吧，尼克比船长更不像个男人"
 
     old "Disagree, fight back against Belmont"
     new "不同意，与贝尔蒙特对抗"

@@ -19,4 +19,4 @@ translate zh strings:
     new "接受婚约"
 
     old "Lie to Marius about his father"
-    new "对马里乌斯谎称他的父亲"
+    new "对马利乌斯谎称他父亲的情况"

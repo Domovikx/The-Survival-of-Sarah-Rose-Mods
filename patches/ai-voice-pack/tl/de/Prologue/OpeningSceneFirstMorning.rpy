@@ -301,7 +301,7 @@ translate de strings:
     new "Sarah weiß, dass ihre Gebete nicht gehört werden, doch sie betet trotzdem."
 
     old "Behind her, she hears her brother enter the room, and scream."
-    new "Hinter ihr hört sie ihren Bruder den Raum betreten und schreien."
+    new "Hinter sich hört sie ihren Bruder den Raum betreten und aufschreien."
 
     old "She listens as the servants drag him away, kicking and screaming until he is too far to hear."
     new "Sie hört zu, wie die Diener ihn fortzerren; er tritt auf und schreit, bis er zu weit entfernt ist, um noch gehört zu werden."

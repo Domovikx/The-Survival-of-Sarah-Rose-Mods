@@ -7,4 +7,4 @@ translate pt strings:
     new "Faça uma jogada com ela"
 
     old "Break the hug"
-    new "Quebra o abraço"
+    new "Quebre o abraço"

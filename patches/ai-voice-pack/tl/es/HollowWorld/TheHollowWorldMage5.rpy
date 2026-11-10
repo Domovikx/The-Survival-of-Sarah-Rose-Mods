@@ -19,7 +19,7 @@ translate es strings:
     new "Sigue bebiendo"
 
     old "Call it a night"
-    new "Llámalo una noche"
+    new "Llámalo noche."
 
     old "Go back home"
     new "Vuelve a casa"

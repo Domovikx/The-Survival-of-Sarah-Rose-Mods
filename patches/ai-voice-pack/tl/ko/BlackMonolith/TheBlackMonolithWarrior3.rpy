@@ -7,7 +7,7 @@ translate ko strings:
     new "케이트와 맞서다"
 
     old "Try to outmanoeuvre her"
-    new "그녀를 속여 보자"
+    new "그녀를 속여 넘겨봐"
 
     old "Accept Cassius' invitation"
     new "카시우스의 초대 수락"

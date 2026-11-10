@@ -7,7 +7,7 @@ translate ko strings:
     new "실제 돌을 가져가라."
 
     old "Give Vaelen the real stone."
-    new "벨몬트 대장에게 진짜 돌을 주세요."
+    new "바엘렌에게 진짜 돌을 줘."
 
     old "Stay with the mercenary company"
     new "용병 회사에 머물기"

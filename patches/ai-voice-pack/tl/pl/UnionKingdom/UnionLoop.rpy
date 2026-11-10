@@ -13,7 +13,7 @@ translate pl strings:
     new "Odmówić, nie potrzebujesz jej głosu"
 
     old "Meet with Duke Antonio"
-    new "Spotkaj się z hrabią Antonim"
+    new "Spotkaj się z Księciem Antonio"
 
     old "Strip for him"
     new "Ogołoń dla niego"

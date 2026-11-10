@@ -4,7 +4,7 @@
 translate ko strings:
 
     old "Betray Xan"
-    new "Xan 배신"
+    new "Xan을 배신해"
 
     old "Submit and go to the citadel"
-    new "성전으로 제출하기"
+    new "제출하고 성채로 이동"

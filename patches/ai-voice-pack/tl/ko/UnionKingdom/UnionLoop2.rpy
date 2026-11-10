@@ -4,7 +4,7 @@
 translate ko strings:
 
     old "Meet with Maeiv"
-    new "마이브 여왕과 만나기"
+    new "마에이브와 만나기"
 
     old "Be polite, have a drink"
     new "예의 바르게 행동하고 술 한 잔 하세요"
@@ -13,7 +13,7 @@ translate ko strings:
     new "번영을 위한 협력"
 
     old "To good wine"
-    new "좋은 와인"
+    new "좋은 와인처럼"
 
     old "Yes, another!"
     new "네, 또 하나!"
@@ -28,7 +28,7 @@ translate ko strings:
     new "그녀에게 재산을 주세요"
 
     old "Offer her power over the nobility"
-    new "귀족들에게 권력을 주십시오"
+    new "그녀에게 귀족에 대한 권력을 제공하라"
 
     old "Give her nothing"
     new "아무것도 주지 마세요"

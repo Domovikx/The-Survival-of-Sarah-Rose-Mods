@@ -10,10 +10,10 @@ translate it strings:
     new "Segui il capitano"
 
     old "Take the bet."
-    new "Fai la posta."
+    new "Accetta la scommessa."
 
     old "Leave the ship"
-    new "Abandona la nave"
+    new "Lascia la nave."
 
     old "Ignore him"
     new "Ignoralo"

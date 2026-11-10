@@ -7,4 +7,4 @@ translate it strings:
     new "Dile una mentira"
 
     old "Distract him with your body"
-    new "Distrailo con il tuo corpo"
+    new "Distogli la sua attenzione col tuo corpo."

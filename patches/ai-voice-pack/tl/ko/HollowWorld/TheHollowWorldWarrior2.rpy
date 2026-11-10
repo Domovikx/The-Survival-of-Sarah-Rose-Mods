@@ -4,7 +4,7 @@
 translate ko strings:
 
     old "Intervene and save the woman"
-    new "여자를 구출하라"
+    new "개입해서 그 여자를 구해."
 
     old "Do nothing"
-    new "무시"
+    new "아무것도 하지 마"

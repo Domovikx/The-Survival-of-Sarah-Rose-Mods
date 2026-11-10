@@ -10,7 +10,7 @@ translate ja strings:
     new "もう少し休んで"
 
     old "Ask her to sneak away with you"
-    new "彼女に密かに連れ去られるように頼む"
+    new "彼女に一緒にこっそり抜け出そうと誘ってみて"
 
     old "Let the matter rest"
     new "今はこのままにしておく"

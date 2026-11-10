@@ -7,7 +7,7 @@ translate es strings:
     new "Estás buscando Tinta Eclipse Pálido"
 
     old "You're looking for White Moonfall Ink"
-    new "¿Estás buscando la tinta de Eclipse Pálido?"
+    new "Estás buscando la Tinta de la Luna Blanca."
 
     old "You're looking for Faded Stars Ink"
     new "Estás buscando la tinta de Estrellas Desvanecidas"

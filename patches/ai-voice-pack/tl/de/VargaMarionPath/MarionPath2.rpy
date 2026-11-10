@@ -13,7 +13,7 @@ translate de strings:
     new "Deine Einladung annehmen"
 
     old "Reject her invitation"
-    new "Vorschlag ablehnen"
+    new "Lehne ihre Einladung ab."
 
     old "Stand up to him"
     new "Steh auf gegen ihn"

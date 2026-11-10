@@ -13,7 +13,7 @@ translate ja strings:
     new "衣服を脱いでください"
 
     old "Obey Sakar"
-    new "服従する"
+    new "サカールに従え"
 
     old "Refuse him"
     new "断る"

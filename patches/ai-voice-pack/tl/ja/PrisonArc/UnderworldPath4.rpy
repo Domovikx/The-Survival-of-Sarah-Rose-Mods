@@ -4,7 +4,7 @@
 translate ja strings:
 
     old "Stay"
-    new "独り"
+    new "留まる"
 
     old "Stay silent"
     new "沈黙せよ"

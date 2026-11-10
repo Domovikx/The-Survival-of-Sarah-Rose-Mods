@@ -127,7 +127,7 @@ translate it strings:
     new "Auto-Avanzare il Tempo"
 
     old "Music Volume"
-    new "Volume Musica"
+    new "Volume musicale"
 
     old "Sound Volume"
     new "Volume audio"
@@ -199,7 +199,7 @@ translate it strings:
     new "Riavvolge al dialogo precedente."
 
     old "Page Down"
-    new "Avanti"
+    new "Avanti nel dialogo."
 
     old "Rolls forward to later dialogue."
     new "Avanza verso il dialogo successivo."
@@ -208,7 +208,7 @@ translate it strings:
     new "Nasconde l'interfaccia utente."
 
     old "Takes a screenshot."
-    new "Prende una screenshot."
+    new "Fa uno screenshot."
 
     old "Toggles assistive {a=https://www.renpy.org/l/voicing}self-voicing{/a}."
     new "Attiva la {a=https://www.renpy.org/l/voicing}voce{/a}."

@@ -4,4 +4,4 @@
 translate ko strings:
 
     old "Take the servant job"
-    new "종이 일을 맡으세요"
+    new "하인 일을 맡으세요"

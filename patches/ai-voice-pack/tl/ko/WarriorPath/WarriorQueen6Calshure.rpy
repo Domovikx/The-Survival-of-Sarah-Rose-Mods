@@ -4,13 +4,13 @@
 translate ko strings:
 
     old "Meet with the Tribesman"
-    new "삼라와 만나기"
+    new "부족인을 만나보세요."
 
     old "Enter Calshure with him"
     new "칼슈어와 함께 들어가기"
 
     old "Sleep with the Old Tribesman"
-    new "고대 부족인 자와 잠자"
+    new "고대 부족인과 잠자리를 갖는다"
 
     old "Only let him touch you"
     new "그에게만 몸을 맡겨라"

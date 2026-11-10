@@ -7,7 +7,7 @@ translate ja strings:
     new "正直に言うと、あなたは狙われている男だ"
 
     old "The truth is you fucked more men than women"
-    new "真実は、あなたが男性よりも多くの女性とセックスしたということだ"
+    new "本当のところ、お前は女より男と寝た回数の方が多いんだろ"
 
     old "The truth is that you have a sister who can't stand you"
     new "妹があなたを嫌うという事実がある"

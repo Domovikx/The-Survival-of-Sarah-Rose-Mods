@@ -4,7 +4,7 @@
 translate de strings:
 
     old "You're looking for Pale Eclipse Ink"
-    new "Du suchst nach Tinte für den blassen Eclipse"
+    new "Du suchst nach Pale Eclipse Ink."
 
     old "You're looking for White Moonfall Ink"
     new "Du suchst nach Tinte des weißen Monduntergangs"

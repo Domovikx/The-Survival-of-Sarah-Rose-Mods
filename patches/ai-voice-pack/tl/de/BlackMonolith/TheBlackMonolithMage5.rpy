@@ -7,7 +7,7 @@ translate de strings:
     new "Schlaf mit Alaric"
 
     old "Refuse to sleep with him"
-    new "Verweigere es ihm"
+    new "Weigere dich, mit ihm zu schlafen."
 
     old "Refuse to help him"
     new "Lehne es ab, ihm zu helfen"

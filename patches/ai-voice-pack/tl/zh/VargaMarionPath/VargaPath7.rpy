@@ -7,4 +7,4 @@ translate zh strings:
     new "让她带着警告离开。"
 
     old "Make an example out of her."
-    new "让她成为反面教材。"
+    new "拿她做个榜样吧。"
