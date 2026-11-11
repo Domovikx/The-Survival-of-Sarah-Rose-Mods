@@ -1,6 +1,11 @@
 import { expect, test, type Page } from "@playwright/test";
+import { readFileSync } from "node:fs";
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
 
 const BASE = "/The-Survival-of-Sarah-Rose-Mods/";
+const LOCALES_DIR = join(dirname(fileURLToPath(import.meta.url)), "..", "locales");
+const LANGS = ["en", "ru", "de", "es", "fr", "it", "ja", "ko", "pl", "pt", "zh"] as const;
 
 const trigger = (page: Page) => page.getByTestId("lang-switcher");
 const option = (page: Page, lang: string) => page.getByTestId(`lang-${lang}`);
@@ -71,6 +76,22 @@ test.describe("язык: переключатель", () => {
     await openMenu(page);
     await page.mouse.click(10, 400);
     await expect(menu(page)).toBeHidden();
+  });
+
+  test("каждый язык матрицы реально подключён (титул из своей локали)", async ({ page }) => {
+    // Гард «потеряшек»: незарегистрированная в i18n локаль молча фолбэчится
+    // в EN — титул остался бы английским и тест упал бы.
+    await page.goto(BASE);
+    for (const lang of LANGS) {
+      if (lang === "en") continue;
+      await openMenu(page);
+      await option(page, lang).click();
+      await expect(page.locator("html"), `html lang=${lang}`).toHaveAttribute("lang", lang);
+      const meta = JSON.parse(readFileSync(join(LOCALES_DIR, `${lang}.json`), "utf8")) as {
+        meta: { title: string };
+      };
+      await expect(page, `title ${lang}`).toHaveTitle(meta.meta.title);
+    }
   });
 
   test.describe("авто-определение по браузеру", () => {

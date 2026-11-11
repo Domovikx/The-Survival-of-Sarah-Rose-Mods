@@ -30,6 +30,14 @@ test.describe("локали: механическая перепроверка �
     for (const lang of LANGS) expect(files).toContain(`${lang}.json`);
   });
 
+  test("в locales/ нет файлов вне матрицы языков (лишние/потерянные)", () => {
+    const files = readdirSync(LOCALES_DIR)
+      .filter((f) => f.endsWith(".json"))
+      .map((f) => f.replace(/\.json$/, ""))
+      .sort();
+    expect(files).toEqual([...LANGS].sort());
+  });
+
   test("парити ключей: каждая локаль = набор ключей en", () => {
     const ref = keys(load("en")).sort();
     for (const lang of LANGS) {
