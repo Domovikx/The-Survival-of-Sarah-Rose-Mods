@@ -98,7 +98,7 @@ test("parseBenchCli: дефолты — тренировочный uid, ru, ну
   // дефолты пилота = новые дефолты шима (вердикт владельца 2026-10-27)
   assert.equal(o.picks, 0, "без --picks работаем режимом матрицы");
   assert.equal(o.cfg, DEFAULT_CFG);
-  assert.equal(o.cfg, 2.6, "cfg 2.6 — старт лестницы владельца (2.6 -0.2 .. 1.6), см. CFG_CALIBRATION");
+  assert.equal(o.cfg, 2.0, "cfg 2.0 — решение владельца 2026-11-10 (A/B: 2.6 уходил в ОР/шипение)");
   assert.equal(o.ts, DEFAULT_TIMESTEPS);
   assert.equal(o.ts, 30);
 });

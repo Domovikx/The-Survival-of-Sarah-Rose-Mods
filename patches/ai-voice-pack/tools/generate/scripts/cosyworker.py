@@ -4,8 +4,8 @@
 Роль (миграция python -> TS, см. AGENTS.md «Миграция python → TypeScript»):
 python остаётся ТОЛЬКО из-за torch — модель CV3 в node не запустить.
 Всё после инференса переехало на TS: оркестрация — voice_batch.mts,
-ретрай/trim/кодирование — voicekit/{worker,trim,audio}.mts.
-Шим больше НЕ пишет файлов: ни ffmpeg, ни trim, ни wav/opus.
+ретрай/кодирование — voicekit/{worker,audio}.mts.
+Шим больше НЕ пишет файлов: ни ffmpeg, ни wav/opus.
 
 Модель грузится ОДИН раз на процесс; TS-клиент (voicekit/worker.mts) шлёт
 задания по JSON-lines (stdin/stdout, без портов).
@@ -20,8 +20,8 @@ python остаётся ТОЛЬКО из-за torch — модель CV3 в nod
   -> {"cmd": "quit"}  -> ответ {"ok": true}, процесс завершается (код 0)
 
 pcm_b64 — СЫРОЙ PCM тензора: float32 LE mono, sr = sample_rate модели.
-Дальше всё на TS (worker.mts.generate): trim хвостовых артефактов
-(voicekit/trim.mts) -> loudnorm + libopus 24k c явным -ar sr
+Дальше всё на TS (worker.mts.generate): loudnorm + libopus 24k c явным -ar sr
+(хвостовой трим удалён 2026-11-10 — резал окончания слов)
 (voicekit/audio.mts) -> .part -> rename. Ретрай холодного фронтенда
 (TextEncodeInput) тоже на TS-стороне — шим просто отдаёт ok:false.
 

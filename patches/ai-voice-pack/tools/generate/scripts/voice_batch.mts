@@ -5,8 +5,8 @@
  *   ЭТОТ ФАЙЛ (TS) — каталог, фильтры, эмоции, пропуски/лечения, логи, ETA,
  *     выбор рефов, ffmpeg-лечения;
  *   cosyworker.py (python) — ТОЛЬКО инференс: модель один раз на процесс,
- *     протокол v2 отдаёт сырой PCM (base64); trim + opus — voicekit/
- *     {trim,audio}.mts через voicekit/worker.mts (JSON-lines).
+ *     протокол v2 отдаёт сырой PCM (base64); opus — voicekit/audio.mts
+ *     через voicekit/worker.mts (JSON-lines).
  *
  * Отличия от python-версии (осознанные):
  *   - резолв спикера: типизированный casts.mts (SPEAKERS -> VOICES -> реф)
@@ -20,6 +20,7 @@
  * Запуск:
  *   node voice_batch.mts [--arc A] [--scene S] [--char C] [--uid u1 u2]
  *       [--limit N] [--force] [--lang ru|en|<po-код>] [--seed N] [--dry-run]
+ *       [--demo]                        только демо-скоуп поставки (патч1)
  *       [--ref path] [--emotion E] [--emotion-tag T] [--emotion-ru R]
  *       [--no-emotion] [--text T] [--device cuda|cpu] [--python PATH]
  *       [--engine cosyvoice3|voxcpm2]   движок: свой шим/venv + метка variant
@@ -36,6 +37,7 @@ import { parseArgs } from "node:util";
 
 import { SPEAKERS, VOICES } from "../../../casts/casts.mts";
 import { parsePo } from "../../../../../.opencode/skills/renpy-po/po_core.mts";
+import { DEMO_SCENES } from "../../../../../.opencode/skills/renpy-po/po2tl.mts";
 import { BATCH } from "./voice_presets.mts";
 import { VoiceWorker } from "./voicekit/worker.mts";
 
@@ -60,7 +62,7 @@ export const DEFAULT_PYTHON = "C:/tools/cosyvoice3/.venv/Scripts/python.exe";
  *
  * Метка подставляется вместо имени спикера в имени файла:
  * `cosyvoice3` -> `{uid}__Sarah.opus` (контракт рантайма, как раньше),
- * `voxcpm2` -> `{uid}__VoxCPM2.opus` (миграция 2026-10-26, решение
+ * `voxcpm2` -> `{uid}__Vox__{Спикер}.opus` (миграция 2026-10-26, решение
  * владельца: «VoxCPM2 однозначно лучший» — новый слух лежит РЯДОМ со
  * старым, рантайм точным путём находит прежний, glob не путается).
  */
@@ -69,7 +71,7 @@ export const ENGINES = {
   voxcpm2: {
     shim: join(SCRIPTS_DIR, "voxcpmworker.py"),
     python: "C:/tools/voxcpm2/.venv/Scripts/python.exe",
-    tag: "VoxCPM2",
+    tag: "Vox",
   },
 } as const;
 export type EngineName = keyof typeof ENGINES;
@@ -201,6 +203,8 @@ export interface Args {
   lang: string;
   seed: number;
   dryRun: boolean;
+  /** Только демо-скоуп поставки (см. isDemoEntry): патч1 = демо-озвучка. */
+  demo: boolean;
   ref?: string;
   emotion?: string;
   emotionTag: string;
@@ -231,6 +235,13 @@ export function voiceForSpeaker(e: CatalogEntry): string | null {
   return (SPEAKERS as Record<string, string | null>)[name] ?? null;
 }
 
+/** Демо-скоуп поставки (2026-11-09) для ОЗВУЧИВАЕМЫХ записей: msgctxt у них
+ *  speaker:*, поэтому isDemoScope (po2tl) сводится к арке/сцене. ЕДИНСТВЕННЫЙ
+ *  предикат демо для генерации и судьи (DRY). */
+export function isDemoEntry(e: Pick<CatalogEntry, "arc" | "scene">): boolean {
+  return e.arc === "Prologue" || DEMO_SCENES.has(e.scene ?? "");
+}
+
 function basenameNoExt(p: string): string {
   const b = p.split(/[\\/]/).pop() || p;
   return b.replace(/\.[^.]+$/, "");
@@ -255,7 +266,9 @@ export function selectPhrases(entries: CatalogEntry[], args: Args): Phrase[] {
       variant = char;
     }
     if (!ref) return [];
-    if (ENGINES[args.engine ?? "cosyvoice3"].tag) variant = ENGINES[args.engine ?? "cosyvoice3"].tag;
+    // Метка движка СОХРАНЯЕТ спикера в имени (владелец 2026-11-10:
+    // «без спикера сложно ревьюить»): {uid}__Vox__{Спикер}.opus
+    if (ENGINES[args.engine ?? "cosyvoice3"].tag) variant = `${ENGINES[args.engine ?? "cosyvoice3"].tag}__${variant}`;
     if (args.emotion) variant += `_${args.emotionTag}`;
     const out = join(aiVoiceDir(args.lang), arc, `${uid}__${variant}.wav`);
     phrases.push({
@@ -278,6 +291,7 @@ export function selectPhrases(entries: CatalogEntry[], args: Args): Phrase[] {
 
   for (const e of entries) {
     if (e.category !== "dialogue" && e.category !== "narration") continue;
+    if (args.demo && !isDemoEntry(e)) continue;
     const voice = voiceForSpeaker(e);
     if (!voice) continue;
     if (args.arc && e.arc !== args.arc) continue;
@@ -294,7 +308,9 @@ export function selectPhrases(entries: CatalogEntry[], args: Args): Phrase[] {
       variant = voice;
     }
     if (!ref) continue; // не озвучен (нет активного рефа) — как в python
-    if (ENGINES[args.engine ?? "cosyvoice3"].tag) variant = ENGINES[args.engine ?? "cosyvoice3"].tag;
+    // Метка движка СОХРАНЯЕТ спикера в имени (владелец 2026-11-10:
+    // «без спикера сложно ревьюить»): {uid}__Vox__{Спикер}.opus
+    if (ENGINES[args.engine ?? "cosyvoice3"].tag) variant = `${ENGINES[args.engine ?? "cosyvoice3"].tag}__${variant}`;
     if (args.emotion) variant += `_${args.emotionTag}`;
     else if (args.noEmotion) variant += "_plain";
     const emo = args.noEmotion ? null : args.emotion || e.emotion || null;
@@ -380,6 +396,7 @@ const CLI_OPTIONS = {
   "lang": { type: "string", default: "ru" },
   "seed": { type: "string" },
   "dry-run": { type: "boolean", default: false },
+  "demo": { type: "boolean", default: false },
   "ref": { type: "string" },
   "emotion": { type: "string" },
   "emotion-tag": { type: "string", default: "em" },
@@ -414,6 +431,7 @@ export function parseCli(argv: string[]): Args {
     lang: values.lang ?? "ru",
     seed: values.seed ? parseInt(values.seed, 10) : BATCH.seed,
     dryRun: values["dry-run"] ?? false,
+    demo: values.demo ?? false,
     ref: values.ref,
     emotion,
     emotionTag: values["emotion-tag"] ?? "em",

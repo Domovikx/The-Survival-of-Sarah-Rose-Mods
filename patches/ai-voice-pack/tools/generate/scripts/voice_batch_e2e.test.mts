@@ -107,7 +107,7 @@ test("e2e en: второй язык — файл создаётся, длите�
 // --------------------------------------------- voxcpm2 (миграция 2026-10-26) ---
 
 test(
-  "e2e voxcpm2: свой шим/venv даёт {uid}__VoxCPM2.opus, контрактный файл не тронут",
+  "e2e voxcpm2: свой шим/venv даёт {uid}__Vox__{Спикер}.opus, контрактный файл не тронут",
   {
     skip: SKIP_VOX,
   },
@@ -115,8 +115,8 @@ test(
     const text = "Привет! Это проверочный прогон VoxCPM2 — слушаем качество нового движка.";
     const uid = createHash("md5").update(text, "utf8").digest("hex");
     const demoDir = join(PKG_ROOT, "audio", "ru", "Demo");
-    const opus = join(demoDir, `${uid}__VoxCPM2.opus`);
-    const wav = join(demoDir, `${uid}__VoxCPM2.wav`);
+    const opus = join(demoDir, `${uid}__Vox__Sarah.opus`);
+    const wav = join(demoDir, `${uid}__Vox__Sarah.wav`);
     const contract = join(demoDir, `${uid}__Sarah.opus`);
     try {
       // --keep-wav: исходный wav обязан лечь РЯДОМ с opus (диагностика конверта)

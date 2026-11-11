@@ -2,7 +2,7 @@
  * worker.test.mts — тесты клиента инференс-шима voicekit/worker.mts
  * (протокол v2 JSON-lines stdin/stdout; модель не нужна — спавнится fake_worker.mts).
  *
- * Кодирование (trim+ffmpeg) выполняет САМ worker — тестам записи файла
+ * Кодирование (ffmpeg) выполняет САМ worker — тестам записи файла
  * нужен ffmpeg в PATH (в системе пайплайна есть; без него — skip).
  *
  * Запуск: node --test patches/ai-voice-pack/tools/generate/scripts/voicekit/worker.test.mts
@@ -150,7 +150,7 @@ describe("VoiceWorker (протокол шима)", () => {
     }
   });
 
-  it("generateRaw: сырой PCM без trim/кодирования, файл не создаётся", async () => {
+  it("generateRaw: сырой PCM без кодирования, файл не создаётся", async () => {
     const w = makeWorker();
     try {
       const r = await w.generateRaw({ text: "сырой выход", ref: "ref.wav", out: join(tmp, "raw", "x.wav") });

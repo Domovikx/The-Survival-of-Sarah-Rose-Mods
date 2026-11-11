@@ -10,7 +10,7 @@
  *   -> {"cmd": "quit"}   <- шим завершается с кодом 0
  *
  * pcm_b64 — сырой PCM (float32 LE mono, sr = sample_rate модели). Всё после
- * инференса живёт ЗДЕСЬ: ретрай TextEncodeInput → trim (voicekit/trim.mts)
+ * инференса живёт ЗДЕСЬ: ретрай TextEncodeInput
  * → ffmpeg-цепочка корпусного формата (voicekit/audio.mts) → GenResult
  * {ok, dur, saved} — внешняя форма не менялась, voice_batch.mts не тронут.
  *
@@ -25,7 +25,6 @@ import { dirname } from "node:path";
 import { createInterface } from "node:readline";
 
 import { normalizeWav, opusPathFor, saveWavChain, tensorToOpus, writeWav16 } from "./audio.mts";
-import { trimTailBurst } from "./trim.mts";
 
 /** Задание на генерацию одной фразы. */
 export interface GenRequest {
@@ -70,7 +69,7 @@ export interface GenResult {
 }
 
 /**
- * Сырая генерация (generateRaw): PCM из шима БЕЗ trim и кодирования —
+ * Сырая генерация (generateRaw): PCM из шима БЕЗ кодирования —
  * для стенда перебора конфигов, которому нужен честный выход модели
  * (см. voxcpm_bench.mts).
  */
@@ -100,7 +99,7 @@ export interface WorkerOptions {
   args?: string[];
   /** Таймаут одного запроса, мс (default 5 мин — генерация на CPU дольше). */
   requestTimeoutMs?: number;
-  /** Логи: stderr шима + свои строки кодирования (trim/saved/WARN). */
+  /** Логи: stderr шима + свои строки кодирования (saved/WARN). */
   onLog?: (line: string) => void;
 }
 
@@ -228,7 +227,7 @@ export class VoiceWorker {
   }
 
   /**
-   * Сгенерировать одну фразу: шим → PCM → trim → opus (или wav-фолбэк)
+   * Сгенерировать одну фразу: шим → PCM → opus (или wav-фолбэк)
    * по пути req.out. Fail-soft как python cmd_gen: ошибка кодирования →
    * ok:false, исключение не летит наружу.
    */
@@ -248,7 +247,7 @@ export class VoiceWorker {
   }
 
   /**
-   * Сырая генерация: шим → PCM, БЕЗ trim и кодирования (см. RawResult).
+   * Сырая генерация: шим → PCM, БЕЗ кодирования (см. RawResult).
    * Нужна стенду перебора конфигов voxcpm_bench.mts: честный выход модели
    * без нормализации/ресемпла. Файлы не пишутся — владелец результата.
    */
@@ -295,12 +294,11 @@ export class VoiceWorker {
     });
   }
 
-  /** PCM из шима → trim → корпусное кодирование → GenResult. */
+  /** PCM из шима → корпусное кодирование → GenResult. */
   private encode(r: Record<string, unknown>, req: GenRequest, genMs: number): GenResult {
     const pcm = decodePcm(r);
     if (typeof pcm === "string") return { ok: false, error: pcm };
-    const { samples: raw, sr } = pcm;
-    const { samples, cuts } = trimTailBurst(raw, sr);
+    const { samples, sr } = pcm;
     mkdirSync(dirname(req.out), { recursive: true });
     const dur = Math.round((samples.length / sr) * 100) / 100;
 
@@ -323,10 +321,6 @@ export class VoiceWorker {
         this.opts.onLog?.("  WARN: opus-конверт не удался, wav остаётся фолбэком");
       }
       saved = req.out;
-    }
-    if (cuts.length) {
-      const parts = cuts.map((c) => `burst ${Math.round(c.durMs)}ms after ${Math.round(c.gapMs)}ms gap`);
-      this.opts.onLog?.(`  trim: ${parts.join(", ")}`);
     }
     this.opts.onLog?.(`  saved ${saved} (${dur.toFixed(1)}s, gen ${(genMs / 1000).toFixed(1)}s)`);
     return { ok: true, dur, saved };

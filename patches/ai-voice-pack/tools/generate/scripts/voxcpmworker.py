@@ -77,7 +77,9 @@ MODEL_DIR = r"C:/tools/voxcpm2/models/VoxCPM2"
 # История: cfg3.0 «захлебывался» -> 2.5 выиграл артефактную фразу, но «орил»
 # часть фраз (oversaturation; TTS-литература: оптимум 1.2-2.5).
 # ts30 оставлен: «больше шагов -> детальнее», ~2x времени против ts10.
-DEFAULT_CFG = 2.6
+# ОБНОВЛЕНО (владелец 2026-11-10, A/B на фразе Kate 39084078): cfg 2.6 уходил
+# в ОР и шипение -> принят cfg 2.0/ts30 (официальный дефолт VoxCPM2 = 2.0/10).
+DEFAULT_CFG = 2.0
 DEFAULT_TIMESTEPS = 30
 
 
@@ -117,7 +119,7 @@ class Worker:
     def load_model(self):
         """Однократная загрузка модели (до входа в цикл stdin)."""
         t0 = time.time()
-        # ДЕНОЙЗЕР ВКЛ ПО УМОЛЧАНИЮ (владелец 2026-10-28, прод-конфиг cfg2.6/ts30/dn);
+        # ДЕНОЙЗЕР ВКЛ ПО УМОЛЧАНИЮ (владелец 2026-10-28, прод-конфиг cfg2.0/ts30/dn;
         # VOXCPM_DENOISER=0 — отключить загрузку (отладка/память).
         self.denoiser_on = os.environ.get("VOXCPM_DENOISER", "1") != "0"
         self.model = VoxCPM.from_pretrained(self.args.model_dir, load_denoiser=self.denoiser_on)

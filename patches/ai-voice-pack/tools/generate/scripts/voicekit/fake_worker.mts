@@ -4,8 +4,7 @@
  * Говорит протоколом v2 (как cosyworker.py), но без модели:
  *   ping -> ok,
  *   gen -> ok: 1.5с синуса 24000 Гц как сырой PCM base64 (файл уже пишет
- *     сам worker.mts через trim+ffmpeg — как в проде; синус без паттерна
- *     «пауза+всплеск», trim его не трогает),
+ *     сам worker.mts через ffmpeg — как в проде),
  *   gen c text содержащим "FAIL" -> ok:false (тест fail-ветки),
  *   gen с text содержащим "WARMUP" -> ПЕРВЫЙ запрос ok:false с
  *     TextEncodeInput в ошибке, второй ok (тест ретрая worker.mts),

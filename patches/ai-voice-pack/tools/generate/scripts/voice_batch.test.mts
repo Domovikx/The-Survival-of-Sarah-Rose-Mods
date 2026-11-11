@@ -20,6 +20,7 @@ import {
   refActive,
   resolveRef,
   selectPhrases,
+  isDemoEntry,
   voiceForSpeaker,
 } from "./voice_batch.mts";
 
@@ -103,6 +104,22 @@ describe("фильтры selectPhrases", () => {
     const phrases = selectPhrases(entries, { ...baseArgs, uid: [target.uid] });
     assert.equal(phrases.length, 1);
     assert.equal(phrases[0].uid, target.uid);
+  });
+
+  it("--demo: только демо-скоуп поставки", () => {
+    const all = selectPhrases(entries, baseArgs);
+    const demo = selectPhrases(entries, { ...baseArgs, demo: true });
+    assert.ok(demo.length > 0 && demo.length < all.length, "демо строго уже полного набора");
+    // точная эквивалентность: --demo == ручной отсев входа по isDemoEntry
+    // (uid повторяются между сценами, поэтому проверяем на уровне выборок)
+    const manual = selectPhrases(
+      entries.filter((e) => isDemoEntry(e)),
+      baseArgs,
+    );
+    assert.deepEqual(
+      demo.map((p) => p.uid + "|" + p.voice),
+      manual.map((p) => p.uid + "|" + p.voice),
+    );
   });
 
   it("--no-emotion: суффикс _plain и эмоция сброшена", () => {
@@ -259,7 +276,7 @@ describe("миграция python → TS (кодирование перееха�
       !py.includes("tensor_to_opus") && !py.includes("wav_to_opus") && !py.includes("save_wav_chain"),
       "аудио-цепочка переехала в voicekit/audio.mts",
     );
-    assert.ok(!py.includes("trim_tail_burst"), "trim переехал в voicekit/trim.mts");
+    assert.ok(!py.includes("trim_tail_burst"), "хвостовой трим удалён полностью (2026-11-10) — и в python тоже");
     assert.ok(!py.includes("torchaudio"), "wav-цепочка переехала в voicekit/audio.mts");
   });
   it("voicekit/audio.mts: LOUD_ARGS и труба f32le на месте", () => {
@@ -286,32 +303,33 @@ describe("движок voxcpm2 (2026-10-26: вердикт владельца «
 
   it("ENGINES: у каждого движка свой шим и метка variant", () => {
     assert.equal(ENGINES.cosyvoice3.tag, "", "контракт рантайма: {uid}__{имя}.opus");
-    assert.equal(ENGINES.voxcpm2.tag, "VoxCPM2");
+    assert.equal(ENGINES.voxcpm2.tag, "Vox");
     assert.ok(ENGINES.cosyvoice3.shim.endsWith("cosyworker.py"));
     assert.ok(ENGINES.voxcpm2.shim.endsWith("voxcpmworker.py"));
     assert.notEqual(ENGINES.cosyvoice3.python, ENGINES.voxcpm2.python, "venv разные");
   });
 
-  it("selectPhrases: voxcpm2 -> {uid}__VoxCPM2.opus РЯДОМ со старыми (не перезапись)", () => {
+  it("selectPhrases: voxcpm2 -> {uid}__Vox__{Спикер}.opus РЯДОМ со старыми (не перезапись)", () => {
     const ph = selectPhrases(entries, { ...baseArgs, engine: "voxcpm2" }).slice(0, 30);
     assert.ok(ph.length > 0, "фразы отобрались");
     for (const p of ph) {
-      assert.equal(p.variant, "VoxCPM2");
-      assert.ok(p.out.endsWith("__VoxCPM2.wav"), `имя файла: ${p.out}`);
-      assert.ok(!/__Sarah/.test(p.out), "контрактный файл спикера не затрагивается");
+      // спикер остаётся в имени (владелец 2026-11-10: ревью видит, кто говорит);
+      // инфикс Vox__ гарантирует, что контрактный {uid}__{Спикер}.opus не затёрт
+      assert.equal(p.variant, `Vox__${p.voice}`, `variant: ${p.variant}`);
+      assert.ok(p.out.endsWith(`__Vox__${p.voice}.wav`), `имя файла: ${p.out}`);
     }
     // а без движка — прежний контракт: {uid}__{variant}.variant = имя
     // спикера/рефа (включая имена с пробелами вроде "Generic Male Mature")
     const plain = selectPhrases(entries, baseArgs).slice(0, 5);
     for (const p of plain) {
-      assert.notEqual(p.variant, "VoxCPM2", "без --engine метки движка нет");
+      assert.ok(!p.variant.startsWith("Vox__"), "без --engine метки движка нет");
       assert.ok(p.out.endsWith(`__${p.variant}.wav`), `контрактное имя: ${p.out}`);
     }
   });
 
   it("selectPhrases: --emotion сохраняет свой суффикс после метки движка", () => {
     const ph = selectPhrases(entries, { ...baseArgs, engine: "voxcpm2", emotion: "Whispering" })[0];
-    assert.equal(ph.variant, "VoxCPM2_em");
+    assert.match(ph.variant, /^Vox__.+_em$/);
   });
 
   it("--keep-wav: флаг парсится и доходит до генератора (диагностика wav→opus)", () => {

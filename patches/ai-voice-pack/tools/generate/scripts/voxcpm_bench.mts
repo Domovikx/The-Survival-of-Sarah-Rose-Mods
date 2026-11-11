@@ -139,7 +139,7 @@ export const TRAIN_UID = "2bd6a3aac9e53970fcbf557dcd253cf0";
 /** Дефолты стенда = дефолты шима. ЛЕСТНИЦА владельца (2026-10-27):
  * старт 2.6 (яркость) -> REJECT -> -0.2 за круг (2.6/2.4/2.2/2.0/1.8/1.6),
  * пол 1.6. Круги: `--uids @rejects --seed <42+k> --cfg <2.6-0.2*k>`. */
-export const DEFAULT_CFG = 2.6;
+export const DEFAULT_CFG = 2.0;
 export const DEFAULT_TIMESTEPS = 30;
 
 /**
@@ -913,6 +913,7 @@ export async function main(argv: string[] = process.argv.slice(2)): Promise<numb
     lang: o.lang,
     seed: o.seed,
     force: true,
+    demo: false,
     dryRun: false,
     noEmotion: false,
     keepWav: false,

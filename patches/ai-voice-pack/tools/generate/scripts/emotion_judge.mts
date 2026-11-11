@@ -20,8 +20,11 @@ import { pathToFileURL } from "node:url";
 
 import { EMOTIONS_JSON, voicedEntries } from "./emotion_tag.mts";
 import type { CatalogEntry } from "./voice_batch.mts";
+import { isDemoEntry } from "./voice_batch.mts";
 import { resolveBackend } from "../../../../../scripts/llm_backend.mts";
-import { DEMO_SCENES } from "../../../../../.opencode/skills/renpy-po/po2tl.mts";
+
+/** Демо-скоуп поставки для озвучиваемых — см. isDemoEntry (единый предикат). */
+export { isDemoEntry as isDemoTone };
 
 export const JUDGE_SYSTEM =
   "You are a voice-direction QA reviewer for an adult visual novel. You get ONE game line " +
@@ -50,11 +53,7 @@ export interface ToneVerdict {
   issues: string[];
 }
 
-/** Демо-скоуп поставки для ОЗВУЧИВАЕМЫХ записей: msgctxt у них speaker:*,
- *  поэтому isDemoScope (po2tl) сводится к арке/сцене. Источник — DEMO_SCENES. */
-export function isDemoTone(e: Pick<CatalogEntry, "arc" | "scene">): boolean {
-  return e.arc === "Prologue" || DEMO_SCENES.has(e.scene ?? "");
-}
+const isDemoTone = isDemoEntry;
 
 /** JSON-вердикт из сырого ответа (чистая — тестируется). */
 export function parseToneVerdict(raw: string): ToneVerdict {

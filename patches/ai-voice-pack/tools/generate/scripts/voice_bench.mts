@@ -306,6 +306,7 @@ export async function main(argv: string[] = process.argv.slice(2)): Promise<numb
     seed: o.generationSeed,
     force: true,
     dryRun: false,
+    demo: false,
     noEmotion: false,
     keepWav: false,
     wavOnly: false,
