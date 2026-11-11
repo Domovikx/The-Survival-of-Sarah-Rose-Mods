@@ -86,18 +86,6 @@ init python:
         'font_title_size': 75
     }
 
-    def set_style_size(style_name, size):
-        try:
-            getattr(style, style_name).size = size
-        except:
-            pass
-
-    def set_style_font(style_name, font):
-        try:
-            getattr(style, style_name).font = font
-        except:
-            pass
-
     # Шрифт по активному языку (рецепт NeonTranslator 2026-11-11: по-языковые
     # Noto для CJK; точка подключения — update_font_styles, тот же механизм,
     # что и размеры шрифтов).
@@ -122,52 +110,28 @@ init python:
         return int(os.environ.get("TSSR_SHOTS_VY", "0"))
 
     def tssr_apply_language_font():
-        # ЖИВОЕ переключение языка (баг 2026-11-11: EN->RU->zh->OK = квадратики
-        # в главном меню): Language() меняет переводы, но НЕ шрифт — шрифт
-        # применялся только при старте/«Применить и перезапустить». Тут
-        # обновляем gui.*/стили и пересобираем без рестарта.
+        # K-E10: смена языка на лету. Шрифты — через translate-style блоки
+        # (5.2); здесь gui.* + rebuild (только в рантайме!) + пересоздание
+        # экрана (отрисовка кэшируется виджетами).
         update_font_styles()
         gui.rebuild()
+        if renpy.get_screen("tssr_mod_menu"):
+            renpy.hide_screen("tssr_mod_menu")
+            renpy.show_screen("tssr_mod_menu")
         renpy.restart_interaction()
 
-    # (стиль -> persistent-ключ размера); шрифт применяется ко всем этим же стилям
-    TSSR_TEXT_STYLES = [
-        ('say_dialogue', 'font_text_size'), ('say_label', 'font_name_size'),
-        ('nvl_dialogue', 'font_text_size'), ('nvl_label', 'font_name_size'),
-        ('interface_text', 'font_interface_size'), ('gui_text', 'font_interface_size'),
-        ('history_text', 'font_text_size'), ('history_name', 'font_name_size'),
-        ('pref_label_text', 'font_label_size'), ('slot_time_text', 'font_interface_size'),
-        ('slot_name_text', 'font_interface_size'), ('game_menu_label_text', 'font_label_size'),
-        ('quick_button_text', 'font_interface_size'), ('choice_button_text', 'font_text_size'),
-        ('navigation_button_text', 'font_interface_size'), ('button_text', 'font_interface_size'),
-        ('label_text', 'font_interface_size'), ('prompt_text', 'font_interface_size'),
-        ('main_menu_text', 'font_interface_size'), ('about_text', 'font_interface_size'),
-        ('about_label_text', 'font_label_size'), ('page_label_text', 'font_label_size'),
-        ('page_button_text', 'font_interface_size'), ('slot_button_text', 'font_interface_size'),
-        ('radio_label_text', 'font_label_size'), ('radio_button_text', 'font_interface_size'),
-        ('check_label_text', 'font_label_size'), ('check_button_text', 'font_interface_size'),
-        ('slider_label_text', 'font_label_size'), ('slider_button_text', 'font_interface_size'),
-        ('mute_all_button_text', 'font_interface_size'), ('history_label_text', 'font_label_size'),
-        ('help_button_text', 'font_interface_size'), ('help_label_text', 'font_label_size'),
-        ('help_text', 'font_interface_size'), ('confirm_prompt_text', 'font_interface_size'),
-        ('confirm_button_text', 'font_interface_size'), ('skip_text', 'font_interface_size'),
-        ('notify_text', 'font_interface_size'), ('nvl_button_text', 'font_text_size'),
-        ('return_button_text', 'font_interface_size'),
-    ]
-
     def update_font_styles():
-        for _name, _key in TSSR_TEXT_STYLES:
-            set_style_size(_name, getattr(persistent, _key))
+        # МЕХАНИЗМ (вскрыто 2026-11-11): gui.* — источник; стили пер-языковыми
+        # translate-style блоками (5.2). ВАЖНО: gui.rebuild() НЕЛЬЗЯ звать при
+        # init (clean_store_backup ещё None -> AttributeError, падение старта) —
+        # rebuild живёт только в tssr_apply_language_font (рантайм).
+        gui.text_size = persistent.font_text_size
+        gui.name_text_size = persistent.font_name_size
+        gui.interface_text_size = persistent.font_interface_size
+        gui.label_text_size = persistent.font_label_size
+        gui.notify_text_size = persistent.font_notify_size
+        gui.title_text_size = persistent.font_title_size
         _f = tssr_current_font()
-        for _name, _key in TSSR_TEXT_STYLES:
-            set_style_font(_name, _f)
-        # ЖИРНЫЕ стили (заголовок/секции): в Literata-Bold нет CJK-глифов —
-        # для CJK-языков берём свой Noto (охота за квадратами 2026-11-11:
-        # «Sarah Rose — AI □□□□□□» в zh-панели). Для латиницы — Bold как был.
-        _fb = TSSR_LANG_FONT.get(preferences.language, "fonts/Literata-Bold.ttf")
-        for _s in ("tssr_mod_title", "tssr_mod_section"):
-            set_style_font(_s, _fb)
-        # gui.* — источник стилей игры (gui.text_properties) при пересборке
         gui.text_font = _f
         gui.name_text_font = _f
         gui.interface_text_font = _f
@@ -175,14 +139,8 @@ init python:
         gui.choice_button_text_font = _f
 
     def update_all():
-        gui.text_size = persistent.font_text_size
-        gui.name_text_size = persistent.font_name_size
-        gui.interface_text_size = persistent.font_interface_size
-        gui.label_text_size = persistent.font_label_size
-        gui.notify_text_size = persistent.font_notify_size
-        gui.title_text_size = persistent.font_title_size
+        # gui.* + пересборка — внутри update_font_styles (единый механизм)
         update_font_styles()
-        gui.rebuild()
         renpy.save_persistent()
         renpy.utter_restart()
 
@@ -479,6 +437,49 @@ screen tssr_mod_menu():
                 text _("Settings: language, voice, fonts, links."):
                     style "tssr_mod_hint"
 
+                ## ── Верхняя панель действий (UX 2026-11-11, владелец:
+                ## «сайт к шапке, дубль ОК наверху — не хочу скроллить вниз»;
+                ## донат-CTA: глагол + конкретная польза + тепло (маркетинг).
+                fixed:
+                    xfill True
+                    yfit True
+
+                    vbox:
+                        spacing 10
+                        xsize 720
+
+                        text _("Donations keep the patch alive: new languages, voices and AI costs. Thank you!"):
+                            style "tssr_mod_hint"
+                            xsize 720
+
+                        hbox:
+                            spacing 12
+
+                            textbutton _("Support the patch"):
+                                action OpenURL("https://boosty.to/domovikx")
+                                style "tssr_primary"
+
+                            textbutton _("Patch site"):
+                                action OpenURL("https://domovikx.github.io/The-Survival-of-Sarah-Rose-Mods/")
+                                style "tssr_link"
+
+                    hbox:
+                        spacing 16
+                        xalign 1.0
+
+                        if tssr_fs_dirty():
+                            textbutton _("Revert changes"):
+                                action [Function(tssr_fs_snapshot), Function(renpy.restart_interaction)]
+                                style "tssr_secondary"
+
+                            textbutton _("Apply and restart"):
+                                action Function(tssr_fs_apply)
+                                style "tssr_primary"
+                        else:
+                            textbutton _("OK"):
+                                action Return()
+                                style "tssr_primary"
+
                 frame:
                     style "tssr_divider"
 
@@ -566,32 +567,6 @@ screen tssr_mod_menu():
                     textbutton _("Reset to defaults"):
                         action [Function(tssr_fs_reset_draft), Function(renpy.restart_interaction)]
                         style "tssr_secondary"
-
-                frame:
-                    style "tssr_divider"
-
-                ## ── Ссылки ──────────────────────────────────────────────
-                ## Ссылки: ОДНА — лендинг (GitHub Pages). Разбор СЕО/маркетинга
-                ## (владелец): «проект» шире «патча» (hub локализации+озвучки,
-                ## статус, скачивание; «патч» = узкий технический фикс), а репа —
-                ## не витрина. ★ убрана: глифа U+2605 нет в Literata.
-                ## Boosty — когда будет постоянная ссылка.
-                text _("Links"):
-                    style "tssr_mod_section"
-
-                hbox:
-                    spacing 16
-
-                    textbutton _("Site"):
-                        action OpenURL("https://domovikx.github.io/The-Survival-of-Sarah-Rose-Mods/")
-                        style "tssr_link"
-
-                    # TODO(Boosty): раскомментировать, когда будет постоянный адрес:
-                    # textbutton _("TSSR Boosty"):
-                    #     action OpenURL("https://boosty.to/<slug>")
-
-                frame:
-                    style "tssr_divider"
 
                 ## ── Подвал: динамический (UX-формулировка владельца:
                 ## «назад, если ничего не менял, иначе — сохранить/применить»;
@@ -863,8 +838,8 @@ translate ru strings:
     old "Links"
     new "Ссылки и поддержка"
 
-    old "Site"
-    new "Сайт проекта"
+    old "Patch site"
+    new "Сайт патча"
 
     old "Apply and restart"
     new "Применить и перезапустить"
@@ -925,8 +900,8 @@ translate de strings:
     old "Links"
     new "Links und Unterstützung"
 
-    old "Site"
-    new "Projektseite"
+    old "Patch site"
+    new "Patch-Seite"
 
     old "Revert changes"
     new "Änderungen verwerfen"
@@ -990,8 +965,8 @@ translate es strings:
     old "Links"
     new "Enlaces y apoyo"
 
-    old "Site"
-    new "Sitio del proyecto"
+    old "Patch site"
+    new "Sitio del parche"
 
     old "Revert changes"
     new "Descartar cambios"
@@ -1055,8 +1030,8 @@ translate fr strings:
     old "Links"
     new "Liens et soutien"
 
-    old "Site"
-    new "Site du projet"
+    old "Patch site"
+    new "Site du patch"
 
     old "Revert changes"
     new "Annuler les modifications"
@@ -1120,8 +1095,8 @@ translate it strings:
     old "Links"
     new "Link e supporto"
 
-    old "Site"
-    new "Sito del progetto"
+    old "Patch site"
+    new "Sito della patch"
 
     old "Revert changes"
     new "Annulla modifiche"
@@ -1185,8 +1160,8 @@ translate ja strings:
     old "Links"
     new "リンクとサポート"
 
-    old "Site"
-    new "プロジェクトサイト"
+    old "Patch site"
+    new "パッチのサイト"
 
     old "Revert changes"
     new "変更を破棄"
@@ -1250,8 +1225,8 @@ translate ko strings:
     old "Links"
     new "링크 및 지원"
 
-    old "Site"
-    new "프로젝트 사이트"
+    old "Patch site"
+    new "패치 사이트"
 
     old "Revert changes"
     new "변경 취소"
@@ -1315,8 +1290,8 @@ translate pl strings:
     old "Links"
     new "Linki i wsparcie"
 
-    old "Site"
-    new "Strona projektu"
+    old "Patch site"
+    new "Strona łatki"
 
     old "Revert changes"
     new "Odrzuć zmiany"
@@ -1380,8 +1355,8 @@ translate pt strings:
     old "Links"
     new "Links e apoio"
 
-    old "Site"
-    new "Site do projeto"
+    old "Patch site"
+    new "Site do patch"
 
     old "Revert changes"
     new "Descartar alterações"
@@ -1445,8 +1420,8 @@ translate zh strings:
     old "Links"
     new "链接与支持"
 
-    old "Site"
-    new "项目网站"
+    old "Patch site"
+    new "补丁网站"
 
     old "Revert changes"
     new "放弃更改"
@@ -1481,3 +1456,607 @@ translate zh style tssr_mod_title:
 
 translate zh style tssr_mod_section:
     font "fonts/NotoSansCJKsc-Regular.otf"
+
+################################################################################
+## 5.2 Шрифты ВСЕХ текстовых стилей для CJK (живое переключение языка):
+##     единственный механизм, переживающий style.rebuild и смену языка
+##     (мутации стилей при живом переключении не работают — E2E 2026-11-11).
+################################################################################
+translate ja style tssr_mod_hint:
+    font "fonts/NotoSansCJKjp-Regular.otf"
+
+translate ja style tssr_mod_row:
+    font "fonts/NotoSansCJKjp-Regular.otf"
+
+translate ja style tssr_mod_value:
+    font "fonts/NotoSansCJKjp-Regular.otf"
+
+translate ja style tssr_mod_preview:
+    font "fonts/NotoSansCJKjp-Regular.otf"
+
+translate ja style tssr_step_text:
+    font "fonts/NotoSansCJKjp-Regular.otf"
+
+translate ja style tssr_lang_text:
+    font "fonts/NotoSansCJKjp-Regular.otf"
+
+translate ja style tssr_choice_text:
+    font "fonts/NotoSansCJKjp-Regular.otf"
+
+translate ja style tssr_badge_text:
+    font "fonts/NotoSansCJKjp-Regular.otf"
+
+translate ja style tssr_primary_text:
+    font "fonts/NotoSansCJKjp-Regular.otf"
+
+translate ja style tssr_secondary_text:
+    font "fonts/NotoSansCJKjp-Regular.otf"
+
+translate ja style tssr_link_text:
+    font "fonts/NotoSansCJKjp-Regular.otf"
+
+translate ja style default:
+    font "fonts/NotoSansCJKjp-Regular.otf"
+
+translate ja style input:
+    font "fonts/NotoSansCJKjp-Regular.otf"
+
+translate ja style hyperlink_text:
+    font "fonts/NotoSansCJKjp-Regular.otf"
+
+translate ja style title_text:
+    font "fonts/NotoSansCJKjp-Regular.otf"
+
+translate ja style subtitle_text:
+    font "fonts/NotoSansCJKjp-Regular.otf"
+
+translate ja style say_dialogue:
+    font "fonts/NotoSansCJKjp-Regular.otf"
+
+translate ja style say_label:
+    font "fonts/NotoSansCJKjp-Regular.otf"
+
+translate ja style nvl_dialogue:
+    font "fonts/NotoSansCJKjp-Regular.otf"
+
+translate ja style nvl_label:
+    font "fonts/NotoSansCJKjp-Regular.otf"
+
+translate ja style interface_text:
+    font "fonts/NotoSansCJKjp-Regular.otf"
+
+translate ja style gui_text:
+    font "fonts/NotoSansCJKjp-Regular.otf"
+
+translate ja style history_text:
+    font "fonts/NotoSansCJKjp-Regular.otf"
+
+translate ja style history_name:
+    font "fonts/NotoSansCJKjp-Regular.otf"
+
+translate ja style pref_label_text:
+    font "fonts/NotoSansCJKjp-Regular.otf"
+
+translate ja style slot_time_text:
+    font "fonts/NotoSansCJKjp-Regular.otf"
+
+translate ja style slot_name_text:
+    font "fonts/NotoSansCJKjp-Regular.otf"
+
+translate ja style game_menu_label_text:
+    font "fonts/NotoSansCJKjp-Regular.otf"
+
+translate ja style quick_button_text:
+    font "fonts/NotoSansCJKjp-Regular.otf"
+
+translate ja style choice_button_text:
+    font "fonts/NotoSansCJKjp-Regular.otf"
+
+translate ja style navigation_button_text:
+    font "fonts/NotoSansCJKjp-Regular.otf"
+
+translate ja style button_text:
+    font "fonts/NotoSansCJKjp-Regular.otf"
+
+translate ja style label_text:
+    font "fonts/NotoSansCJKjp-Regular.otf"
+
+translate ja style prompt_text:
+    font "fonts/NotoSansCJKjp-Regular.otf"
+
+translate ja style main_menu_text:
+    font "fonts/NotoSansCJKjp-Regular.otf"
+
+translate ja style about_text:
+    font "fonts/NotoSansCJKjp-Regular.otf"
+
+translate ja style about_label_text:
+    font "fonts/NotoSansCJKjp-Regular.otf"
+
+translate ja style page_label_text:
+    font "fonts/NotoSansCJKjp-Regular.otf"
+
+translate ja style page_button_text:
+    font "fonts/NotoSansCJKjp-Regular.otf"
+
+translate ja style slot_button_text:
+    font "fonts/NotoSansCJKjp-Regular.otf"
+
+translate ja style radio_label_text:
+    font "fonts/NotoSansCJKjp-Regular.otf"
+
+translate ja style radio_button_text:
+    font "fonts/NotoSansCJKjp-Regular.otf"
+
+translate ja style check_label_text:
+    font "fonts/NotoSansCJKjp-Regular.otf"
+
+translate ja style check_button_text:
+    font "fonts/NotoSansCJKjp-Regular.otf"
+
+translate ja style slider_label_text:
+    font "fonts/NotoSansCJKjp-Regular.otf"
+
+translate ja style slider_button_text:
+    font "fonts/NotoSansCJKjp-Regular.otf"
+
+translate ja style mute_all_button_text:
+    font "fonts/NotoSansCJKjp-Regular.otf"
+
+translate ja style history_label_text:
+    font "fonts/NotoSansCJKjp-Regular.otf"
+
+translate ja style help_button_text:
+    font "fonts/NotoSansCJKjp-Regular.otf"
+
+translate ja style help_label_text:
+    font "fonts/NotoSansCJKjp-Regular.otf"
+
+translate ja style help_text:
+    font "fonts/NotoSansCJKjp-Regular.otf"
+
+translate ja style confirm_prompt_text:
+    font "fonts/NotoSansCJKjp-Regular.otf"
+
+translate ja style confirm_button_text:
+    font "fonts/NotoSansCJKjp-Regular.otf"
+
+translate ja style skip_text:
+    font "fonts/NotoSansCJKjp-Regular.otf"
+
+translate ja style notify_text:
+    font "fonts/NotoSansCJKjp-Regular.otf"
+
+translate ja style nvl_button_text:
+    font "fonts/NotoSansCJKjp-Regular.otf"
+
+translate ja style return_button_text:
+    font "fonts/NotoSansCJKjp-Regular.otf"
+
+translate ko style tssr_mod_hint:
+    font "fonts/NotoSansCJKkr-Regular.otf"
+
+translate ko style tssr_mod_row:
+    font "fonts/NotoSansCJKkr-Regular.otf"
+
+translate ko style tssr_mod_value:
+    font "fonts/NotoSansCJKkr-Regular.otf"
+
+translate ko style tssr_mod_preview:
+    font "fonts/NotoSansCJKkr-Regular.otf"
+
+translate ko style tssr_step_text:
+    font "fonts/NotoSansCJKkr-Regular.otf"
+
+translate ko style tssr_lang_text:
+    font "fonts/NotoSansCJKkr-Regular.otf"
+
+translate ko style tssr_choice_text:
+    font "fonts/NotoSansCJKkr-Regular.otf"
+
+translate ko style tssr_badge_text:
+    font "fonts/NotoSansCJKkr-Regular.otf"
+
+translate ko style tssr_primary_text:
+    font "fonts/NotoSansCJKkr-Regular.otf"
+
+translate ko style tssr_secondary_text:
+    font "fonts/NotoSansCJKkr-Regular.otf"
+
+translate ko style tssr_link_text:
+    font "fonts/NotoSansCJKkr-Regular.otf"
+
+translate ko style default:
+    font "fonts/NotoSansCJKkr-Regular.otf"
+
+translate ko style input:
+    font "fonts/NotoSansCJKkr-Regular.otf"
+
+translate ko style hyperlink_text:
+    font "fonts/NotoSansCJKkr-Regular.otf"
+
+translate ko style title_text:
+    font "fonts/NotoSansCJKkr-Regular.otf"
+
+translate ko style subtitle_text:
+    font "fonts/NotoSansCJKkr-Regular.otf"
+
+translate ko style say_dialogue:
+    font "fonts/NotoSansCJKkr-Regular.otf"
+
+translate ko style say_label:
+    font "fonts/NotoSansCJKkr-Regular.otf"
+
+translate ko style nvl_dialogue:
+    font "fonts/NotoSansCJKkr-Regular.otf"
+
+translate ko style nvl_label:
+    font "fonts/NotoSansCJKkr-Regular.otf"
+
+translate ko style interface_text:
+    font "fonts/NotoSansCJKkr-Regular.otf"
+
+translate ko style gui_text:
+    font "fonts/NotoSansCJKkr-Regular.otf"
+
+translate ko style history_text:
+    font "fonts/NotoSansCJKkr-Regular.otf"
+
+translate ko style history_name:
+    font "fonts/NotoSansCJKkr-Regular.otf"
+
+translate ko style pref_label_text:
+    font "fonts/NotoSansCJKkr-Regular.otf"
+
+translate ko style slot_time_text:
+    font "fonts/NotoSansCJKkr-Regular.otf"
+
+translate ko style slot_name_text:
+    font "fonts/NotoSansCJKkr-Regular.otf"
+
+translate ko style game_menu_label_text:
+    font "fonts/NotoSansCJKkr-Regular.otf"
+
+translate ko style quick_button_text:
+    font "fonts/NotoSansCJKkr-Regular.otf"
+
+translate ko style choice_button_text:
+    font "fonts/NotoSansCJKkr-Regular.otf"
+
+translate ko style navigation_button_text:
+    font "fonts/NotoSansCJKkr-Regular.otf"
+
+translate ko style button_text:
+    font "fonts/NotoSansCJKkr-Regular.otf"
+
+translate ko style label_text:
+    font "fonts/NotoSansCJKkr-Regular.otf"
+
+translate ko style prompt_text:
+    font "fonts/NotoSansCJKkr-Regular.otf"
+
+translate ko style main_menu_text:
+    font "fonts/NotoSansCJKkr-Regular.otf"
+
+translate ko style about_text:
+    font "fonts/NotoSansCJKkr-Regular.otf"
+
+translate ko style about_label_text:
+    font "fonts/NotoSansCJKkr-Regular.otf"
+
+translate ko style page_label_text:
+    font "fonts/NotoSansCJKkr-Regular.otf"
+
+translate ko style page_button_text:
+    font "fonts/NotoSansCJKkr-Regular.otf"
+
+translate ko style slot_button_text:
+    font "fonts/NotoSansCJKkr-Regular.otf"
+
+translate ko style radio_label_text:
+    font "fonts/NotoSansCJKkr-Regular.otf"
+
+translate ko style radio_button_text:
+    font "fonts/NotoSansCJKkr-Regular.otf"
+
+translate ko style check_label_text:
+    font "fonts/NotoSansCJKkr-Regular.otf"
+
+translate ko style check_button_text:
+    font "fonts/NotoSansCJKkr-Regular.otf"
+
+translate ko style slider_label_text:
+    font "fonts/NotoSansCJKkr-Regular.otf"
+
+translate ko style slider_button_text:
+    font "fonts/NotoSansCJKkr-Regular.otf"
+
+translate ko style mute_all_button_text:
+    font "fonts/NotoSansCJKkr-Regular.otf"
+
+translate ko style history_label_text:
+    font "fonts/NotoSansCJKkr-Regular.otf"
+
+translate ko style help_button_text:
+    font "fonts/NotoSansCJKkr-Regular.otf"
+
+translate ko style help_label_text:
+    font "fonts/NotoSansCJKkr-Regular.otf"
+
+translate ko style help_text:
+    font "fonts/NotoSansCJKkr-Regular.otf"
+
+translate ko style confirm_prompt_text:
+    font "fonts/NotoSansCJKkr-Regular.otf"
+
+translate ko style confirm_button_text:
+    font "fonts/NotoSansCJKkr-Regular.otf"
+
+translate ko style skip_text:
+    font "fonts/NotoSansCJKkr-Regular.otf"
+
+translate ko style notify_text:
+    font "fonts/NotoSansCJKkr-Regular.otf"
+
+translate ko style nvl_button_text:
+    font "fonts/NotoSansCJKkr-Regular.otf"
+
+translate ko style return_button_text:
+    font "fonts/NotoSansCJKkr-Regular.otf"
+
+translate zh style tssr_mod_hint:
+    font "fonts/NotoSansCJKsc-Regular.otf"
+
+translate zh style tssr_mod_row:
+    font "fonts/NotoSansCJKsc-Regular.otf"
+
+translate zh style tssr_mod_value:
+    font "fonts/NotoSansCJKsc-Regular.otf"
+
+translate zh style tssr_mod_preview:
+    font "fonts/NotoSansCJKsc-Regular.otf"
+
+translate zh style tssr_step_text:
+    font "fonts/NotoSansCJKsc-Regular.otf"
+
+translate zh style tssr_lang_text:
+    font "fonts/NotoSansCJKsc-Regular.otf"
+
+translate zh style tssr_choice_text:
+    font "fonts/NotoSansCJKsc-Regular.otf"
+
+translate zh style tssr_badge_text:
+    font "fonts/NotoSansCJKsc-Regular.otf"
+
+translate zh style tssr_primary_text:
+    font "fonts/NotoSansCJKsc-Regular.otf"
+
+translate zh style tssr_secondary_text:
+    font "fonts/NotoSansCJKsc-Regular.otf"
+
+translate zh style tssr_link_text:
+    font "fonts/NotoSansCJKsc-Regular.otf"
+
+translate zh style default:
+    font "fonts/NotoSansCJKsc-Regular.otf"
+
+translate zh style input:
+    font "fonts/NotoSansCJKsc-Regular.otf"
+
+translate zh style hyperlink_text:
+    font "fonts/NotoSansCJKsc-Regular.otf"
+
+translate zh style title_text:
+    font "fonts/NotoSansCJKsc-Regular.otf"
+
+translate zh style subtitle_text:
+    font "fonts/NotoSansCJKsc-Regular.otf"
+
+translate zh style say_dialogue:
+    font "fonts/NotoSansCJKsc-Regular.otf"
+
+translate zh style say_label:
+    font "fonts/NotoSansCJKsc-Regular.otf"
+
+translate zh style nvl_dialogue:
+    font "fonts/NotoSansCJKsc-Regular.otf"
+
+translate zh style nvl_label:
+    font "fonts/NotoSansCJKsc-Regular.otf"
+
+translate zh style interface_text:
+    font "fonts/NotoSansCJKsc-Regular.otf"
+
+translate zh style gui_text:
+    font "fonts/NotoSansCJKsc-Regular.otf"
+
+translate zh style history_text:
+    font "fonts/NotoSansCJKsc-Regular.otf"
+
+translate zh style history_name:
+    font "fonts/NotoSansCJKsc-Regular.otf"
+
+translate zh style pref_label_text:
+    font "fonts/NotoSansCJKsc-Regular.otf"
+
+translate zh style slot_time_text:
+    font "fonts/NotoSansCJKsc-Regular.otf"
+
+translate zh style slot_name_text:
+    font "fonts/NotoSansCJKsc-Regular.otf"
+
+translate zh style game_menu_label_text:
+    font "fonts/NotoSansCJKsc-Regular.otf"
+
+translate zh style quick_button_text:
+    font "fonts/NotoSansCJKsc-Regular.otf"
+
+translate zh style choice_button_text:
+    font "fonts/NotoSansCJKsc-Regular.otf"
+
+translate zh style navigation_button_text:
+    font "fonts/NotoSansCJKsc-Regular.otf"
+
+translate zh style button_text:
+    font "fonts/NotoSansCJKsc-Regular.otf"
+
+translate zh style label_text:
+    font "fonts/NotoSansCJKsc-Regular.otf"
+
+translate zh style prompt_text:
+    font "fonts/NotoSansCJKsc-Regular.otf"
+
+translate zh style main_menu_text:
+    font "fonts/NotoSansCJKsc-Regular.otf"
+
+translate zh style about_text:
+    font "fonts/NotoSansCJKsc-Regular.otf"
+
+translate zh style about_label_text:
+    font "fonts/NotoSansCJKsc-Regular.otf"
+
+translate zh style page_label_text:
+    font "fonts/NotoSansCJKsc-Regular.otf"
+
+translate zh style page_button_text:
+    font "fonts/NotoSansCJKsc-Regular.otf"
+
+translate zh style slot_button_text:
+    font "fonts/NotoSansCJKsc-Regular.otf"
+
+translate zh style radio_label_text:
+    font "fonts/NotoSansCJKsc-Regular.otf"
+
+translate zh style radio_button_text:
+    font "fonts/NotoSansCJKsc-Regular.otf"
+
+translate zh style check_label_text:
+    font "fonts/NotoSansCJKsc-Regular.otf"
+
+translate zh style check_button_text:
+    font "fonts/NotoSansCJKsc-Regular.otf"
+
+translate zh style slider_label_text:
+    font "fonts/NotoSansCJKsc-Regular.otf"
+
+translate zh style slider_button_text:
+    font "fonts/NotoSansCJKsc-Regular.otf"
+
+translate zh style mute_all_button_text:
+    font "fonts/NotoSansCJKsc-Regular.otf"
+
+translate zh style history_label_text:
+    font "fonts/NotoSansCJKsc-Regular.otf"
+
+translate zh style help_button_text:
+    font "fonts/NotoSansCJKsc-Regular.otf"
+
+translate zh style help_label_text:
+    font "fonts/NotoSansCJKsc-Regular.otf"
+
+translate zh style help_text:
+    font "fonts/NotoSansCJKsc-Regular.otf"
+
+translate zh style confirm_prompt_text:
+    font "fonts/NotoSansCJKsc-Regular.otf"
+
+translate zh style confirm_button_text:
+    font "fonts/NotoSansCJKsc-Regular.otf"
+
+translate zh style skip_text:
+    font "fonts/NotoSansCJKsc-Regular.otf"
+
+translate zh style notify_text:
+    font "fonts/NotoSansCJKsc-Regular.otf"
+
+translate zh style nvl_button_text:
+    font "fonts/NotoSansCJKsc-Regular.otf"
+
+translate zh style return_button_text:
+    font "fonts/NotoSansCJKsc-Regular.otf"
+
+
+################################################################################
+## 5.3 Донат-CTA верхней панели (маркетинг-формула: глагол -> польза -> тепло;
+##     [УТОЧНИТЬ] перепроверить формулировки веб-ресёрчем, когда канал оживёт).
+################################################################################
+translate ru strings:
+
+    old "Donations keep the patch alive: new languages, voices and AI costs. Thank you!"
+    new "Донаты развивают патч: новые языки, голоса и оплата нейронок. Спасибо!"
+
+    old "Support the patch"
+    new "Поддержать патч"
+
+translate de strings:
+
+    old "Donations keep the patch alive: new languages, voices and AI costs. Thank you!"
+    new "Spenden halten den Patch am Leben: neue Sprachen, Stimmen und KI-Kosten. Danke!"
+
+    old "Support the patch"
+    new "Patch unterstützen"
+
+translate es strings:
+
+    old "Donations keep the patch alive: new languages, voices and AI costs. Thank you!"
+    new "Los donativos mantienen vivo el parche: nuevos idiomas, voces y costes de IA. ¡Gracias!"
+
+    old "Support the patch"
+    new "Apoyar el parche"
+
+translate fr strings:
+
+    old "Donations keep the patch alive: new languages, voices and AI costs. Thank you!"
+    new "Les dons font vivre le patch : nouvelles langues, voix et coûts d’IA. Merci !"
+
+    old "Support the patch"
+    new "Soutenir le patch"
+
+translate it strings:
+
+    old "Donations keep the patch alive: new languages, voices and AI costs. Thank you!"
+    new "Le donazioni fanno vivere la patch: nuove lingue, voci e costi dell’IA. Grazie!"
+
+    old "Support the patch"
+    new "Sostenere la patch"
+
+translate ja strings:
+
+    old "Donations keep the patch alive: new languages, voices and AI costs. Thank you!"
+    new "寄付はパッチを支えます。新しい言語、音声、そしてAIの費用に。ありがとうございます！"
+
+    old "Support the patch"
+    new "パッチを支援する"
+
+translate ko strings:
+
+    old "Donations keep the patch alive: new languages, voices and AI costs. Thank you!"
+    new "후원은 패치를 지탱합니다: 새로운 언어, 음성, AI 비용. 감사합니다!"
+
+    old "Support the patch"
+    new "패치 후원하기"
+
+translate pl strings:
+
+    old "Donations keep the patch alive: new languages, voices and AI costs. Thank you!"
+    new "Datki podtrzymują życie łatki: nowe języki, głosy i koszty AI. Dziękujemy!"
+
+    old "Support the patch"
+    new "Wesprzyć łatkę"
+
+translate pt strings:
+
+    old "Donations keep the patch alive: new languages, voices and AI costs. Thank you!"
+    new "Doações mantêm o patch vivo: novos idiomas, vozes e custos de IA. Obrigado!"
+
+    old "Support the patch"
+    new "Apoiar o patch"
+
+translate zh strings:
+
+    old "Donations keep the patch alive: new languages, voices and AI costs. Thank you!"
+    new "捐赠让补丁持续生长：新语言、新语音和 AI 成本。谢谢！"
+
+    old "Support the patch"
+    new "支持补丁"
+
