@@ -9753,7 +9753,7 @@ msgstr ""
 
 msgctxt "speaker:Thomas"
 msgid "Sarah...I try to put on this front of the perfect king. Even on the battlefield, I cover up my fears."
-msgstr ""
+msgstr "Sarah... Próbuję utrzymać fasadę idealnego króla. Nawet na polu bitwy ukrywam swój strach."
 
 msgctxt "speaker:Thomas"
 msgid "But all around me, I saw the faces of soldiers, and you could see it in their eyes: they were hungry for the killing."
@@ -15321,7 +15321,7 @@ msgstr ""
 
 msgctxt "speaker:Sarah"
 msgid "It's always so quiet here. It feels wrong."
-msgstr ""
+msgstr "Tutaj zawsze jest tak cicho. Coś jest nie tak."
 
 msgctxt "speaker:Lily"
 msgid "How so?"
@@ -31861,7 +31861,7 @@ msgstr ""
 
 msgctxt "speaker:Sarah"
 msgid "Each night when I touch myself, my only fantasies are memories of our encounters."
-msgstr ""
+msgstr "Każdej nocy, gdy się dotykam, moje jedyne fantazje to wspomnienia naszych spotkań."
 
 msgctxt "speaker:Sarah"
 msgid "I sketch you from memory, your arms, your chest, your shoulders."
@@ -60713,7 +60713,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "When he would come to her, her heart ran fast in her chests. When he failed to show, she felt herself nearing to tears."
-msgstr ""
+msgstr "Gdy przychodził do niej, jej serce waliło w piersi. Gdy się nie pojawiała, czuła, że zbliża się do łez."
 
 msgctxt "speaker:Narrator"
 msgid "Her love for him had come to her in subtle ways, and she was surprised even when she finally dared to admit it to herself."
@@ -106253,7 +106253,7 @@ msgstr ""
 
 msgctxt "speaker:Sarah"
 msgid "You're not asking me, I'm asking you...stay with me...please. Nobody else in this world has ever been so true a friend to me...more than a friend."
-msgstr ""
+msgstr "To nie ty mnie prosisz, to ja proszę ciebie... zostań ze mną... proszę. Nikt inny na tym świecie nie był mi tak prawdziwym przyjacielem... kimś więcej niż przyjacielem."
 
 msgctxt "speaker:Narrator"
 msgid "Atilla did not dare to meet her gaze, but she thought she saw tears on his face."
@@ -129089,7 +129089,7 @@ msgstr ""
 
 msgctxt "speaker:Carolyn"
 msgid "Aah, should I give up my secrets so easily to you?"
-msgstr ""
+msgstr "Aah, czy mam tak łatwo wyznać ci moje sekrety?"
 
 msgctxt "menu"
 msgid "Assert yourself"
@@ -143913,7 +143913,7 @@ msgstr ""
 
 msgctxt "speaker:Garret"
 msgid "And as for the blood on your hands, what is a few drops more? Surely you don't mean to tell me that you have not killed others before?"
-msgstr ""
+msgstr "A co do krwi na twoich rękach, czym jest kilka kropel więcej? Chyba nie chcesz mi powiedzieć, że wcześniej nie zabijałaś innych?"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah felt an anger rise in her, but could not deny the charge."

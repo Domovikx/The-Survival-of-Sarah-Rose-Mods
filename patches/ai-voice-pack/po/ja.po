@@ -9753,7 +9753,7 @@ msgstr ""
 
 msgctxt "speaker:Thomas"
 msgid "Sarah...I try to put on this front of the perfect king. Even on the battlefield, I cover up my fears."
-msgstr ""
+msgstr "サラ……僕は完璧な王のふりをしようと努めている。戦場ですら、自分の恐れを隠すんだ。"
 
 msgctxt "speaker:Thomas"
 msgid "But all around me, I saw the faces of soldiers, and you could see it in their eyes: they were hungry for the killing."
@@ -15321,7 +15321,7 @@ msgstr ""
 
 msgctxt "speaker:Sarah"
 msgid "It's always so quiet here. It feels wrong."
-msgstr ""
+msgstr "ここはいつもこんなに静かだ。妙な感じがする。"
 
 msgctxt "speaker:Lily"
 msgid "How so?"
@@ -31861,7 +31861,7 @@ msgstr ""
 
 msgctxt "speaker:Sarah"
 msgid "Each night when I touch myself, my only fantasies are memories of our encounters."
-msgstr ""
+msgstr "夜、ひとりで体を撫でるとき、私の妄想はいつも、あの逢瀬の思い出だけよ。"
 
 msgctxt "speaker:Sarah"
 msgid "I sketch you from memory, your arms, your chest, your shoulders."
@@ -60713,7 +60713,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "When he would come to her, her heart ran fast in her chests. When he failed to show, she felt herself nearing to tears."
-msgstr ""
+msgstr "彼が訪れると、彼女の心臓は胸の中で激しく打った。彼が姿を見せないと、涙があふれそうになるのを感じた。"
 
 msgctxt "speaker:Narrator"
 msgid "Her love for him had come to her in subtle ways, and she was surprised even when she finally dared to admit it to herself."
@@ -106253,7 +106253,7 @@ msgstr ""
 
 msgctxt "speaker:Sarah"
 msgid "You're not asking me, I'm asking you...stay with me...please. Nobody else in this world has ever been so true a friend to me...more than a friend."
-msgstr ""
+msgstr "あなたが頼んだんじゃない、私が頼んでいるの……私と一緒にいて……お願い。この世界でこれほど真の友でいてくれた人は他にいない……友達以上に。"
 
 msgctxt "speaker:Narrator"
 msgid "Atilla did not dare to meet her gaze, but she thought she saw tears on his face."
@@ -129089,7 +129089,7 @@ msgstr ""
 
 msgctxt "speaker:Carolyn"
 msgid "Aah, should I give up my secrets so easily to you?"
-msgstr ""
+msgstr "ああ、私の秘密をあなたにそんなに簡単に明かすものかしら？"
 
 msgctxt "menu"
 msgid "Assert yourself"
@@ -143913,7 +143913,7 @@ msgstr ""
 
 msgctxt "speaker:Garret"
 msgid "And as for the blood on your hands, what is a few drops more? Surely you don't mean to tell me that you have not killed others before?"
-msgstr ""
+msgstr "それに、その手に付いた血はどうだ？　あと数滴がどうしたというんだ。これまでに他者を殺したことがないと言うつもりじゃないだろうな？"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah felt an anger rise in her, but could not deny the charge."

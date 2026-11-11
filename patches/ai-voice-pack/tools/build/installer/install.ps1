@@ -79,18 +79,27 @@ if (-not (Test-Path $modSrc)) {
     exit 1
 }
 $modDst = Join-Path $GameDir "mods\tssr-ai-voice-pack"
-Write-Host ""
-Write-Host "Ставлю ядро / Installing core ..."
-try {
-    if (Test-Path $modDst) { Remove-Item -Recurse -Force $modDst }
-    New-Item -ItemType Directory -Force -Path (Join-Path $GameDir "mods") | Out-Null
-    Copy-Item -Recurse $modSrc $modDst
-    Copy-Item (Join-Path $Src "environment.txt") (Join-Path $GameDir "environment.txt") -Force
-} catch {
-    Write-Host "ОШИБКА / ERROR: нет прав на запись в '$GameDir'."
-    Write-Host "Запусти install.cmd от имени администратора (ПКМ -> 'Run as administrator')"
-    Write-Host "или установи вручную, см. INSTALL.txt. / Or install manually, see INSTALL.txt."
-    exit 1
+$srcFull = [System.IO.Path]::GetFullPath($modSrc).TrimEnd('\')
+$dstFull = [System.IO.Path]::GetFullPath($modDst).TrimEnd('\')
+if ($srcFull -eq $dstFull) {
+    # main.zip распакован СРАЗУ в папку игры (частый юзерский сценарий):
+    # ядро уже на месте — копировать нечего, идём к голосам.
+    Write-Host "Ядро уже на месте (main.zip распакован в папку игры) / Core already in place"
+} else {
+    Write-Host ""
+    Write-Host "Ставлю ядро / Installing core ..."
+    try {
+        if (Test-Path $modDst) { Remove-Item -Recurse -Force $modDst }
+        New-Item -ItemType Directory -Force -Path (Join-Path $GameDir "mods") | Out-Null
+        Copy-Item -Recurse $modSrc $modDst
+        Copy-Item (Join-Path $Src "environment.txt") (Join-Path $GameDir "environment.txt") -Force
+    } catch {
+        Write-Host "ОШИБКА / ERROR: нет прав на запись в '$GameDir'."
+        Write-Host "Причина / Reason: $($_.Exception.Message)"
+        Write-Host "Запусти install.cmd от имени администратора (ПКМ -> 'Run as administrator')"
+        Write-Host "или установи вручную, см. INSTALL.txt. / Or install manually, see INSTALL.txt."
+        exit 1
+    }
 }
 
 # 4. Голоса языка (voice-zip рядом с установщиком или уровнем выше) / Voice pack

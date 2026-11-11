@@ -44,25 +44,29 @@ ROOT = _find_repo_root()
 SRC = os.path.join(ROOT, "tmp", "shots")
 DST = os.path.join(ROOT, "site", "public", "shots")
 
-# суффикс файла сайта -> префикс кадра в tmp/shots и набор отобранных снимков
+# суффикс файла сайта -> префикс кадра в tmp/shots и набор отобранных снимков.
+# Значение pick: короткое имя -> кадр {prefix}_{name}.png; имя с языковым
+# префиксом (de_/zh_/...) -> кадр берётся как есть (мастерскриншоты владельца
+# 2026-11-11: «нет переключателя языков, нет китайского и немецкого»).
 PLAN = {
     "russian": ("ru", {
         "main_menu": "menu",
-        "language_settings": "settings",
+        "language_settings": "ru_ls3_set_ru",
         "dialogue_1": "dialogue5",
-        "dialogue_2": "dialogue3",
-        "dialogue_3": "dialogue11",
+        "dialogue_2": "de_dialogue3",
+        "dialogue_3": "zh_dialogue11",
         "dialogue_4": "dialogue1",
     }),
     "english": ("en", {
         "main_menu": "menu",
-        "language_settings": "settings",
+        "language_settings": "en_ls2_set_en",
         "dialogue_1": "dialogue5",
-        "dialogue_2": "dialogue3",
-        "dialogue_3": "dialogue12",  # EN-текст длиннее — реплика позже в кадре
+        "dialogue_2": "de_dialogue3",
+        "dialogue_3": "zh_dialogue11",  # CJK без квадратов — крючок
         "dialogue_4": "dialogue1",
     }),
 }
+_LANG_PREFIXES = {"ru", "en", "de", "es", "fr", "it", "ja", "ko", "pl", "pt", "zh"}
 
 
 def main():
@@ -74,7 +78,8 @@ def main():
     failed = 0
     for suffix, (prefix, picks) in sorted(PLAN.items()):
         for name, stem in sorted(picks.items()):
-            src = os.path.join(SRC, "%s_%s.png" % (prefix, stem))
+            frame = stem if stem.split("_")[0] in _LANG_PREFIXES else "%s_%s" % (prefix, stem)
+            src = os.path.join(SRC, "%s.png" % frame)
             dst = os.path.join(DST, "%s_%s.jpg" % (name, suffix))
             if not os.path.isfile(src):
                 print("MISS %s" % os.path.relpath(src, ROOT))
