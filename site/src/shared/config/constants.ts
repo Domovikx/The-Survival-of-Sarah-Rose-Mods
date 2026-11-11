@@ -5,7 +5,7 @@ export const STORAGE_KEYS = {
 } as const
 
 export const LINKS = {
-  zip: 'https://github.com/Domovikx/The-Survival-of-Sarah-Rose-Mods/archive/refs/heads/main.zip',
+  zip: 'https://github.com/Domovikx/The-Survival-of-Sarah-Rose-Mods/releases/latest',
   github: 'https://github.com/Domovikx/The-Survival-of-Sarah-Rose-Mods',
   issues: 'https://github.com/Domovikx/The-Survival-of-Sarah-Rose-Mods/issues',
   steam: 'https://store.steampowered.com/app/2166470/The_Survival_of_Sarah_Rose/',

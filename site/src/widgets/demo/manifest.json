@@ -1,0 +1,47 @@
+{
+  "note": "uid = md5(en-текста реплики) = игровой uid; порядок = demo.phrases всех локалей",
+  "phrases": [
+    {
+      "uid": "3a192b42302d0aa088a23e7fab29983b",
+      "speaker": "Sarah",
+      "text": "It's always so quiet here. It feels wrong.",
+      "match": true
+    },
+    {
+      "uid": "f956b1ec4bd1df104cf2ffef7b74c2ac",
+      "speaker": "Thomas",
+      "text": "Sarah...I try to put on this front of the perfect king. Even on the battlefield, I cover up my fears.",
+      "match": true
+    },
+    {
+      "uid": "40e1ba10148e47ddb91fa28114270349",
+      "speaker": "Carolyn",
+      "text": "Aah, should I give up my secrets so easily to you?",
+      "match": true
+    },
+    {
+      "uid": "6424451692e133352a89e3703fd872c6",
+      "speaker": "Sarah",
+      "text": "You're not asking me, I'm asking you...stay with me...please. Nobody else in this world has ever been so true a friend to me...more than a friend.",
+      "match": true
+    },
+    {
+      "uid": "01f7f305172f580ac28500645a639854",
+      "speaker": "Garret",
+      "text": "And as for the blood on your hands, what is a few drops more? Surely you don't mean to tell me that you have not killed others before?",
+      "match": true
+    },
+    {
+      "uid": "fa03c1667916774e3eb9381ac88fba3f",
+      "speaker": "Sarah",
+      "text": "Each night when I touch myself, my only fantasies are memories of our encounters.",
+      "match": true
+    },
+    {
+      "uid": "8a58d3fa060638a81c3642a046e5d2b5",
+      "speaker": "Narrator",
+      "text": "When he would come to her, her heart ran fast in her chests. When he failed to show, she felt herself nearing to tears.",
+      "match": true
+    }
+  ]
+}
