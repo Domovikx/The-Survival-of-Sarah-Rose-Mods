@@ -32,10 +32,20 @@ PATCH = Path(__file__).resolve().parents[2]
 REPO = PATCH.parents[1]  # [0] = patches/, [1] = корень репы
 DIST = REPO / "dist"
 
-# Языки озвучки: каталог в репо -> каталог при установке
+# Языки озвучки: каталог в репо -> каталог при установке (все 11 языков
+# матрицы патча; пакет строится только если каталог непустой).
 VOICE_LANGS = {
     "ru": PATCH / "audio" / "ru",
     "en": PATCH / "audio" / "en",
+    "de": PATCH / "audio" / "de",
+    "es": PATCH / "audio" / "es",
+    "fr": PATCH / "audio" / "fr",
+    "it": PATCH / "audio" / "it",
+    "ja": PATCH / "audio" / "ja",
+    "ko": PATCH / "audio" / "ko",
+    "pl": PATCH / "audio" / "pl",
+    "pt": PATCH / "audio" / "pt",
+    "zh": PATCH / "audio" / "zh",
 }
 
 # Атомарная папка мода при установке (относительно корня игры)
@@ -200,6 +210,9 @@ def build_main(out_dir):
 def build_voice(lang, out_dir):
     """Озвучка одного языка: audio/<lang>/** -> mods/.../ai_voice/<lang>/**."""
     src = VOICE_LANGS[lang]
+    if not src.is_dir() or not any(src.rglob("*")):
+        print("  voice-%s: пропущен (каталог пуст — аудио ещё генерится)" % lang)
+        return None
     name = "TSSR-AI-Voice-Pack-voice-%s.zip" % lang
     target = out_dir / name
     with zipfile.ZipFile(target, "w", zipfile.ZIP_STORED) as zf:
@@ -218,7 +231,7 @@ def main():
             sys.exit("неизвестный язык %r (есть: %s)" % (lang, ", ".join(VOICE_LANGS)))
     DIST.mkdir(exist_ok=True)
     results = [build_main(DIST)]
-    results += [build_voice(lang, DIST) for lang in langs]
+    results += [r for r in (build_voice(lang, DIST) for lang in langs) if r]
     print("СОБРАНО:", DIST)
     for name, target, nfiles, nbytes in results:
         mib = nbytes / (1 << 20)
