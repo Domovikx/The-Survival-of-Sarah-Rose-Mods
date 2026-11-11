@@ -161,6 +161,11 @@ E2E патча в игре с логами и сейвами, схема дис�
 - Vortex-вердикт (2026-10-17, nexus-ops): менеджер-совместимость = чистый zip + optional-файлы;
   для Ren'Py-игры Vortex-расширения обычно нет — «Download with Vortex» может быть недоступен,
   Nexus всё равно работает как витрина + хостинг + DP;
+- факт-чек Vortex 2026-11-11 (README репо Nexus-Mods/Vortex): «the current mod manager from
+  Nexus Mods», 250+ игр, best practice Nexus = установка через менеджер; но для игр БЕЗ
+  game-extension менеджер только скачивает файл, не ставит. Наши пакеты (раскладка = корень
+  игры) менеджер-совместимы; install.cmd = «ленивость» на сегодня; FOMOD и Vortex-extension —
+  спящие опции после появления игры в каталоге (extension можем написать сами, open source);
 - схема файлов (12 zip: main + voice-{lang}×11) — живёт в
   `2026-11-10-nexus-distribution-packaging.md`, здесь не дублируется.
 
