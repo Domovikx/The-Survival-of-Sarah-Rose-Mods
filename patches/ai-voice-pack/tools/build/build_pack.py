@@ -74,17 +74,24 @@ RENPY_SEARCHPATH = "mods"
 """
 
 INSTALL_TXT = """\
-THE SURVIVAL OF SARAH ROSE — AI Voice Pack (RU+EN) / AI-озвучка и перевод
+THE SURVIVAL OF SARAH ROSE — AI Voice Pack + Localization (11 languages)
 =========================================================================
 
 СОСТАВ / FILES
-  TSSR-AI-Voice-Pack-main.zip      — ядро (обязательный) / core (required)
-  TSSR-AI-Voice-Pack-voice-ru.zip  — голоса русского перевода / Russian voice
-  TSSR-AI-Voice-Pack-voice-en.zip  — голоса английского текста / English voice
+  TSSR-AI-Voice-Pack-main.zip      — ядро + тексты 11 языков (обязательный) /
+                                     core + texts for 11 languages (required)
+  TSSR-AI-Voice-Pack-voice-<lang>.zip — голоса языка: ru, en, de, es, fr, it,
+                                     ja, ko, pl, pt, zh / voice pack per language
 
 УСТАНОВКА / INSTALL (папка игры = папка с TheSurvivalofSarahRose.exe):
-  1. Распакуй main.zip в корень папки игры.
-     Unpack main.zip into the game root folder.
+  0. ЛЕНИВЫЙ ПУТЬ / EASIEST: распакуй main.zip куда угодно и запусти
+     install.cmd — он сам найдёт игру, спросит язык и всё поставит
+     (voice-zip положи рядом с install.cmd).
+     Unpack main.zip anywhere and run install.cmd — it finds the game,
+     asks your language and installs everything (put the voice zip next
+     to install.cmd).
+  1. ИЛИ вручную: распакуй main.zip в корень папки игры.
+     OR manually: unpack main.zip into the game root folder.
   2. Распакуй нужные voice-zip'ы туда же.
      Unpack the voice zip(s) you need into the same folder.
   3. Запусти игру. Настройки: кнопка языка в меню / «Sarah Rose — AI Voice Pack».
@@ -190,6 +197,10 @@ def build_main(out_dir):
     nfiles, nbytes = 0, 0
     with zipfile.ZipFile(target, "w", zipfile.ZIP_DEFLATED, compresslevel=9) as zf:
         # Корень установки
+        # Установщик «для ленивых» — в КОРНЕ архива (рядом с mods/):
+        # двойной клик по install.cmd находит игру и ставит всё сам.
+        for fn in ("install.cmd", "install.ps1"):
+            _add(zf, PATCH / "tools" / "build" / "installer" / fn, fn)
         for arcname, content in (("INSTALL.txt", INSTALL_TXT),
                                  ("environment.txt", ENVIRONMENT_TXT)):
             zf.writestr(arcname, content)

@@ -101,3 +101,36 @@
 - `C:\Users\Domo\workspace\indie-ops\skills\nexus-ops\` (MAP.md) — политика, API, статус TSSR.
 - `tasks/2026-11-10-demo-voice-emotion-recheck.md` — источник демо-аудио.
 - `tasks/2026-10-15-github-releases-and-metadata.md` — параллельный канал.
+
+## Черновики Nexus (2026-11-11, офлайн — на заполнение в сессии)
+
+### Заявка ADD NEW GAME (форма mods/add → «ADD NEW GAME»)
+
+- Game name: **The Survival of Sarah Rose**
+- Developer: HappyDaedalus (happydaedalus.itch.io; на Steam — подтвердить точное
+  имя студии перед заполнением)
+- Жанр/теги: Adult, Visual Novel / Adventure; движок Ren'Py; платформа PC
+  (Steam app 2166470, itch.io); версия игры v0.79 (ранний доступ, развивается)
+- Note to staff: fan-made patch (localization + AI voice acting), uploader is the
+  patch author (not the game author), distribution is free (CC BY-NC 4.0).
+- [УТОЧНИТЬ в сессии]: критерий «аплоадер = автор (или письмо-подтверждение
+  стаффа)» из MAP — как Nexus трактует фан-патчи; если требуют подтверждение —
+  связь с автором игры (happydaedalus) или переписка со стаффом.
+
+### Страница мода (EN; донаты — внизу, anti-solicitation)
+
+- Title: **AI Voice Pack & Localization — 11 languages (RU complete)**
+- Summary: Unofficial fan patch: full AI voice acting with cloned, emotional
+  voices + translations into 11 languages (Russian complete; other languages
+  cover the intro up to the first choice). Free. Requires the purchased game.
+- Description (секции): What is this → Features (75+ voices, per-line emotions,
+  Opus 24k, missing voice = silence) → Installation (0. easiest: unpack main.zip
+  anywhere → run install.cmd; 1. manual: main.zip + voice-{lang}.zip into game
+  root) → Updating (rerun install.cmd / replace mod folder) → Uninstall →
+  Compatibility (game v0.79, Ren'Py 7.4.11) → **AI content disclosure** (voices
+  are AI-generated, translations machine-aided and human-reviewed) → FAQ (18+) →
+  Credits & license (CC BY-NC 4.0) → Support (низ: Boosty/Ko-fi — спокойно).
+- Files: main.zip (required) + voice-{lang}.zip ×11 (optional files).
+- Скриншоты: tmp/shots (меню, диалоги, патч-панель; adult-контент не показывать
+  явно — Nexus-правила).
+- Теги каталога уточнить в сессии (AI-Generated Content — раскрытие обязательно).
