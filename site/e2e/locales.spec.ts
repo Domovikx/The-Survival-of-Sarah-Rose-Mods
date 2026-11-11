@@ -38,6 +38,25 @@ test.describe("локали: механическая перепроверка �
     expect(files).toEqual([...LANGS].sort());
   });
 
+  test("нет мёртвых ключей: каждый ключ en упоминается в коде", () => {
+    // Единственное направление, которое TS не ловит (см. i18next.d.ts:
+    // разделение труда). Ключи используются и литералами t('...'), и через
+    // таблицы-конфиги (as const) — ищем просто цитируемое упоминание.
+    const srcDir = join(dirname(fileURLToPath(import.meta.url)), "..", "src");
+    const readAll = (d: string): string =>
+      readdirSync(d, { withFileTypes: true })
+        .map((e) => {
+          const p = join(d, e.name);
+          return e.isDirectory() ? readAll(p) : /\.(ts|tsx)$/.test(e.name) ? readFileSync(p, "utf8") : "";
+        })
+        .join("\n");
+    const src = readAll(srcDir);
+    for (const k of keys(load("en"))) {
+      const used = ["'", '"', "`"].some((q) => src.includes(q + k + q));
+      expect(used, `ключ не используется в коде: ${k}`).toBe(true);
+    }
+  });
+
   test("парити ключей: каждая локаль = набор ключей en", () => {
     const ref = keys(load("en")).sort();
     for (const lang of LANGS) {
