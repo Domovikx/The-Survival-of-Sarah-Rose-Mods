@@ -97,6 +97,13 @@ THE SURVIVAL OF SARAH ROSE — AI Voice Pack + Localization (11 languages)
   3. Запусти игру. Настройки: кнопка языка в меню / «Sarah Rose — AI Voice Pack».
      Launch the game. Settings: language button in the menu / settings page.
 
+ПРИМЕЧАНИЕ / NOTE: если Windows показала предупреждение при запуске install.cmd —
+файл скачан из интернета («Mark of the Web»). Скрипт открытый, исходники на
+GitHub; ручная установка (пункты 1–2) — равноценный путь.
+If Windows showed a warning running install.cmd — the file came from the
+internet (Mark of the Web). The script is open source on GitHub; manual
+install (steps 1-2) is an equal alternative.
+
 Всё лежит в одной папке mods/tssr-ai-voice-pack/ (плюс служебный
 environment.txt в корне игры). Другие моды можно класть в mods/ рядом.
 Everything lives in mods/tssr-ai-voice-pack/ (plus the service file
