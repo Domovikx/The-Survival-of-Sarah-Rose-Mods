@@ -1,0 +1,121 @@
+{
+  "meta": {
+    "title": "The Survival of Sarah Rose — KI-Sprachausgabe und Übersetzung",
+    "description": "Inoffizielles Fan-Mod: Der englische Originaltext — 100 % vertont, plus Demos auf 11 Sprachen. Kostenlos, 18+."
+  },
+  "header": {
+    "brand": "TSSR · KI-Sprachpaket",
+    "steam": "Steam-Seite",
+    "github": "GitHub",
+    "download": "ZIP herunterladen",
+    "langLabel": "Sprache",
+    "themeLabel": "Design umschalten"
+  },
+  "hero": {
+    "title": "The Survival of Sarah Rose — KI-Sprachausgabe",
+    "subtitle": "Inoffizielles Fan-Mod: Der Originaltext wird vollständig vertont — über 75 geklonte Stimmen mit gefühlvoller Darstellung. Plus Demos in 11 Sprachen.",
+    "badgeTranslate": "Übersetzungen: Demo bis zur ersten Wahl",
+    "badgeVoice": "Sprachausgabe: Demo 100 % (11 Sprachen)",
+    "badgeFormat": "Opus 24 kbps — Paket pro Sprache ~17 MB (Demo)",
+    "badgeEngine": "Ren'Py 7.4.11 · Steam",
+    "badgeAge": "18+ Inhalt",
+    "ctaSteam": "The Survival of Sarah Rose auf Steam",
+    "ctaDownload": "ZIP herunterladen (Mod + Stimmen)",
+    "ctaGithub": "Quellcode auf GitHub",
+    "installHint": "Erfordert ein gekauftes Spiel auf Steam. Kostenlos, CC BY-NC 4.0."
+  },
+  "features": {
+    "title": "Was du bekommst",
+    "translateTitle": "Übersetzungen auf 11 Sprachen",
+    "translateText": "Russisch komplett; weitere Sprachen als Demo bis zur ersten Wahl — perfekt zum Reinschnuppern.",
+    "voiceTitle": "KI-Sprachausgabe",
+    "voiceText": "Geklonte Stimmen für jede Figur (VoxCPM2) — mit Emotionen, passend zur Szene.",
+    "emotionTitle": "Gefühlvolle Darstellung",
+    "emotionText": "Jede Zeile trägt den Zustand des Erzählers: Wunsch, Flüstern, Sarkasmus — keine Monotonie.",
+    "voicesTitle": "75+ Stimmen",
+    "voicesText": "Sarah, Erzähler, König Orwell, Kate, Thomas, Varga und Dutzende weiterer Charaktere."
+  },
+  "demo": {
+    "title": "Hör es selbst",
+    "lead": "Echte Spielszenen mit KI-Stimmen: geklonte Stimmen, lebendige Emotionen. Zeile antippen — und hören.",
+    "play": "Abspielen: {{name}}",
+    "pause": "Pause: {{name}}",
+    "phrases": [
+      {
+        "speaker": "Sarah",
+        "text": "Hier ist es immer so still. Das fühlt sich falsch an."
+      },
+      {
+        "speaker": "Thomas",
+        "text": "Sarah... Ich versuche, die Fassade des perfekten Königs zu wahren. Selbst auf dem Schlachtfeld verberge ich meine Ängste."
+      },
+      {
+        "speaker": "Carolyn",
+        "text": "Aah, soll ich dir meine Geheimnisse so leicht offenbaren?"
+      },
+      {
+        "speaker": "Sarah",
+        "text": "Du fragst nicht mich, ich frage dich... bleib bei mir... bitte. Niemand anderer in dieser Welt war mir je ein so wahrer Freund... mehr als ein Freund."
+      },
+      {
+        "speaker": "Garret",
+        "text": "Und was das Blut auf deinen Händen betrifft — was sind schon ein paar Tropfen mehr? Du willst mir doch nicht erzählen, dass du nicht schon andere getötet hast?"
+      },
+      {
+        "speaker": "Sarah",
+        "text": "Jede Nacht, wenn ich mich selbst berühre, sind meine einzigen Fantasien Erinnerungen an unsere Begegnungen."
+      },
+      {
+        "speaker": "Narrator",
+        "text": "Wenn er zu ihr kam, schlug ihr Herz rasend in ihrer Brust. Wenn er nicht erschien, spürte sie, wie ihr die Tränen nahten."
+      }
+    ]
+  },
+  "voice": {
+    "title": "Sprachausgabe — Demo bereit",
+    "total": "Demo 100 % auf 11 Sprachen (1 188 Zeilen pro Sprache).",
+    "ru": "Russisch: Demo + kompletter Durchlauf geplant",
+    "en": "Englisch: Demo + kompletter Durchlauf geplant",
+    "missing": "Fehlt eine Stimme — das Spiel zeigt die Zeile still (keine Fehler)."
+  },
+  "install": {
+    "title": "Installation",
+    "step1": "ZIP herunterladen und in den Spielordner entpacken (Steam: …\\steamapps\\common\\The Survival of Sarah Rose)",
+    "step2": "Spiel starten und die Sprache im Mod-Einstellungen wählen (Badge oben rechts)",
+    "step3": "Fertig. Der erste Start dauert etwas länger — Ren'Py baut den Cache neu",
+    "note": "Erfordert das auf Steam gekaufte Spiel. Inoffizielles Fan-Projekt, nicht verbunden mit den Entwicklern."
+  },
+  "shots": {
+    "title": "Screenshots",
+    "cap1": "Hauptmenü",
+    "cap2": "Eröffnungsdialog",
+    "cap3": "Patch-Seite: Sprache, Stimme, Schrift",
+    "cap4": "Erzählung und Figurenrede",
+    "cap5": "Erzählung über die Hauptstadt",
+    "cap6": "Sarah rennt in die Arme ihres Vaters",
+    "prev": "Vorheriges Bild",
+    "next": "Nächstes Bild",
+    "close": "Schließen",
+    "open": "in voller Größe öffnen"
+  },
+  "faq": {
+    "title": "FAQ",
+    "q1": "Ist das ein offizielles Mod?",
+    "a1": "Nein — inoffizielles Fan-Projekt, nicht verbunden mit den Entwicklern oder Publishern.",
+    "q2": "Gibt es Inhalte für Erwachsene?",
+    "a2": "Ja — das Spiel ist 18+. Nur laden und spielen, wenn du 18 oder älter bist.",
+    "q3": "Lizenz?",
+    "a3": "Sprachpaket und Übersetzung: CC BY-NC 4.0 — kostenlos weitergeben und anpassen mit Namensnennung, nur nicht-kommerziell.",
+    "q4": "Wie kann ich helfen?",
+    "a4": "Stern auf GitHub geben, Pull Request senden oder ein Issue öffnen."
+  },
+  "footer": {
+    "disclaimer": "Inoffizielle Fan-Arbeit. Alle Rechte am Originalspiel liegen bei den Rechteinhabern.",
+    "linksLabel": "Links",
+    "linkGithub": "GitHub",
+    "linkSteam": "Steam",
+    "linkIssues": "Issues",
+    "linkLicense": "CC BY-NC 4.0",
+    "age": "18+"
+  }
+}

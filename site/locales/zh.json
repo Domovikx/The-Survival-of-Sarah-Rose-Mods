@@ -1,0 +1,121 @@
+{
+  "meta": {
+    "title": "The Survival of Sarah Rose — AI 语音与翻译",
+    "description": "非官方粉丝 MOD：英语原文 100% 配音，另附 11 种语言演示。免费，18+。"
+  },
+  "header": {
+    "brand": "TSSR · AI 语音包",
+    "steam": "Steam 页面",
+    "github": "GitHub",
+    "download": "下载 ZIP",
+    "langLabel": "语言",
+    "themeLabel": "切换主题"
+  },
+  "hero": {
+    "title": "The Survival of Sarah Rose — AI 语音",
+    "subtitle": "非官方粉丝 MOD：原文全程配音——75+ 克隆声线，情感演绎。另含 11 种语言演示。",
+    "badgeTranslate": "翻译：演示版至首次选择",
+    "badgeVoice": "配音：演示版 100%（11 种语言）",
+    "badgeFormat": "Opus 24 kbps — 每语言约 17 MB（演示）",
+    "badgeEngine": "Ren'Py 7.4.11 · Steam",
+    "badgeAge": "18+ 内容",
+    "ctaSteam": "在 Steam 上查看 The Survival of Sarah Rose",
+    "ctaDownload": "下载 ZIP（MOD + 语音）",
+    "ctaGithub": "在 GitHub 查看源码",
+    "installHint": "需要 Steam 购买的本体游戏。免费，CC BY-NC 4.0。"
+  },
+  "features": {
+    "title": "你将获得",
+    "translateTitle": "11 种语言翻译",
+    "translateText": "俄语完整版；其余语言为演示版（至首次选择）——非常适合试玩。",
+    "voiceTitle": "AI 配音",
+    "voiceText": "每个角色都有克隆声线（VoxCPM2），按场景演绎情绪。",
+    "emotionTitle": "情感演绎",
+    "emotionText": "每句台词都带着讲述者的状态：渴望、低语、讽刺——绝不单调。",
+    "voicesTitle": "75+ 声线",
+    "voicesText": "莎拉、旁白、奥威尔王、凯特、托马斯、瓦尔加——以及数十个其他角色。"
+  },
+  "demo": {
+    "title": "来听听",
+    "lead": "真实游戏台词的 AI 语音：克隆声线、鲜活情感。点击台词——听听效果。",
+    "play": "播放：{{name}}",
+    "pause": "暂停：{{name}}",
+    "phrases": [
+      {
+        "speaker": "Sarah",
+        "text": "这里总是这么安静。感觉不对劲。"
+      },
+      {
+        "speaker": "Thomas",
+        "text": "莎拉……我努力维持完美国王的形象。即使在战场上，我也掩饰自己的恐惧。"
+      },
+      {
+        "speaker": "Carolyn",
+        "text": "啊，我该把我的秘密这么轻易地交给你吗？"
+      },
+      {
+        "speaker": "Sarah",
+        "text": "不是你在求我，是我在求你……陪在我身边……求你了。这世上再没有人对我如此真诚……不止是朋友。"
+      },
+      {
+        "speaker": "Garret",
+        "text": "至于你手上的血，多几滴又如何？你该不会想说，你以前从没杀过人吧？"
+      },
+      {
+        "speaker": "Sarah",
+        "text": "每当我夜里抚摸自己，我唯一的幻想就是我们缠绵的回忆。"
+      },
+      {
+        "speaker": "Narrator",
+        "text": "每当他来到她身边，她的心便在胸腔里狂跳。当他没有出现，她觉得自己快要落泪了。"
+      }
+    ]
+  },
+  "voice": {
+    "title": "配音 — 演示就绪",
+    "total": "演示版 100%：11 种语言（每语言 1,188 句）。",
+    "ru": "俄语：演示 + 完整流程计划中",
+    "en": "英语：演示 + 完整流程计划中",
+    "missing": "缺少语音时游戏静音显示台词（无报错）。"
+  },
+  "install": {
+    "title": "安装",
+    "step1": "下载 ZIP 并解压到游戏目录（Steam：…\\\\steamapps\\\\common\\\\The Survival of Sarah Rose）",
+    "step2": "启动游戏，在 MOD 设置（右上角徽章）中选择语言",
+    "step3": "完成。首次启动较慢——Ren'Py 需重建缓存",
+    "note": "需要 Steam 购买的本体游戏。非官方粉丝作品，与开发者无关。"
+  },
+  "shots": {
+    "title": "截图",
+    "cap1": "主菜单",
+    "cap2": "开场对话",
+    "cap3": "补丁页面：语言、语音、字体",
+    "cap4": "旁白与对话",
+    "cap5": "关于王都的旁白",
+    "cap6": "莎拉奔向父亲的怀抱",
+    "prev": "上一张",
+    "next": "下一张",
+    "close": "关闭",
+    "open": "查看大图"
+  },
+  "faq": {
+    "title": "常见问题",
+    "q1": "这是官方 MOD 吗？",
+    "a1": "不是——非官方粉丝作品，与开发者或发行商无关。",
+    "q2": "有成人内容吗？",
+    "a2": "有——游戏为 18+。仅限 18 岁及以上下载游玩。",
+    "q3": "许可协议？",
+    "a3": "语音包与翻译：CC BY-NC 4.0——署名后可分享与改编，仅限非商业用途。",
+    "q4": "如何帮忙？",
+    "a4": "在 GitHub 点星、提交 Pull Request 或开 Issue。"
+  },
+  "footer": {
+    "disclaimer": "非官方粉丝作品。原作游戏版权归各自权利人所有。",
+    "linksLabel": "链接",
+    "linkGithub": "GitHub",
+    "linkSteam": "Steam",
+    "linkIssues": "Issues",
+    "linkLicense": "CC BY-NC 4.0",
+    "age": "18+"
+  }
+}

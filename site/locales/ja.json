@@ -1,0 +1,121 @@
+{
+  "meta": {
+    "title": "The Survival of Sarah Rose — AI音声＆翻訳",
+    "description": "非公式ファンMOD：英語オリジナルテキストを100%収録、11言語のデモも同梱。無料、18+。"
+  },
+  "header": {
+    "brand": "TSSR · AI音声パック",
+    "steam": "Steamページ",
+    "github": "GitHub",
+    "download": "ZIPをダウンロード",
+    "langLabel": "言語",
+    "themeLabel": "テーマ切替"
+  },
+  "hero": {
+    "title": "The Survival of Sarah Rose — AI音声",
+    "subtitle": "非公式ファンMOD：オリジナルテキストを全編収録——75以上のクローン声で、感情豊かに。11言語のデモも付き。",
+    "badgeTranslate": "翻訳：最初の分岐までのデモ",
+    "badgeVoice": "音声：デモ100%（11言語）",
+    "badgeFormat": "Opus 24 kbps — 言語ごとに約17 MB（デモ）",
+    "badgeEngine": "Ren'Py 7.4.11 · Steam",
+    "badgeAge": "18+ コンテンツ",
+    "ctaSteam": "Steamで The Survival of Sarah Rose",
+    "ctaDownload": "ZIPをダウンロード（MOD＋音声）",
+    "ctaGithub": "GitHubでソースを見る",
+    "installHint": "Steamで購入したゲームが必要。無料、CC BY-NC 4.0。"
+  },
+  "features": {
+    "title": "得られるもの",
+    "translateTitle": "11言語の翻訳",
+    "translateText": "ロシア語は全編完訳。他の言語は最初の分岐までのデモ——試すのに最適。",
+    "voiceTitle": "AI音声",
+    "voiceText": "キャラクターごとのクローン声（VoxCPM2）。シーンに合った感情で演じます。",
+    "emotionTitle": "感情こもった朗読",
+    "emotionText": "各セリフに語り手の心持ちを——欲望、ささやき、皮肉。単調にはなりません。",
+    "voicesTitle": "75以上の声",
+    "voicesText": "サラ、語り手、オーウェル王、ケイト、トマス、ヴァルガ——他にも多数のキャラクター。"
+  },
+  "demo": {
+    "title": "実際に聴いてみる",
+    "lead": "ゲームの実際のセリフをAI音声で。クローン声と生きた感情。セリフを押すと——結果が聞けます。",
+    "play": "再生：{{name}}",
+    "pause": "一時停止：{{name}}",
+    "phrases": [
+      {
+        "speaker": "Sarah",
+        "text": "ここはいつもこんなに静かだ。妙な感じがする。"
+      },
+      {
+        "speaker": "Thomas",
+        "text": "サラ……僕は完璧な王のふりをしようと努めている。戦場ですら、自分の恐れを隠すんだ。"
+      },
+      {
+        "speaker": "Carolyn",
+        "text": "ああ、私の秘密をあなたにそんなに簡単に明かすものかしら？"
+      },
+      {
+        "speaker": "Sarah",
+        "text": "あなたが頼んだんじゃない、私が頼んでいるの……私と一緒にいて……お願い。この世界でこれほど真の友でいてくれた人は他にいない……友達以上に。"
+      },
+      {
+        "speaker": "Garret",
+        "text": "それに、その手に付いた血はどうだ？　あと数滴がどうしたというんだ。これまでに他者を殺したことがないと言うつもりじゃないだろうな？"
+      },
+      {
+        "speaker": "Sarah",
+        "text": "夜、ひとりで体を撫でるとき、私の妄想はいつも、あの逢瀬の思い出だけよ。"
+      },
+      {
+        "speaker": "Narrator",
+        "text": "彼が訪れると、彼女の心臓は胸の中で激しく打った。彼が姿を見せないと、涙があふれそうになるのを感じた。"
+      }
+    ]
+  },
+  "voice": {
+    "title": "音声 — デモ完成",
+    "total": "デモ100%：11言語（各言語1,188行）。",
+    "ru": "ロシア語：デモ＋全編は今後予定",
+    "en": "英語：デモ＋全編は今後予定",
+    "missing": "音声がない行は無音で表示されます（エラーなし）。"
+  },
+  "install": {
+    "title": "インストール",
+    "step1": "ZIPをダウンロードしてゲームフォルダに展開（Steam：…\\\\steamapps\\\\common\\\\The Survival of Sarah Rose）",
+    "step2": "ゲームを起動し、MOD設定（右上のバッジ）で言語を選択",
+    "step3": "完了。初回起動は少し遅い——Ren'Pyがキャッシュを再構築します",
+    "note": "Steamで購入したゲームが必要。非公式ファンプロジェクト、開発元とは無関係です。"
+  },
+  "shots": {
+    "title": "スクリーンショット",
+    "cap1": "メインメニュー",
+    "cap2": "オープニングの会話",
+    "cap3": "パッチページ：言語・音声・フォント",
+    "cap4": "ナレーションとセリフ",
+    "cap5": "王都を見渡すナレーション",
+    "cap6": "父の腕に飛び込むサラ",
+    "prev": "前の画像",
+    "next": "次の画像",
+    "close": "閉じる",
+    "open": "フルサイズで開く"
+  },
+  "faq": {
+    "title": "よくある質問",
+    "q1": "公式MODですか？",
+    "a1": "いいえ——非公式ファンプロジェクトです。開発元・発売元とは無関係です。",
+    "q2": "成人向けコンテンツはありますか？",
+    "a2": "はい——ゲームは18歳以上向けです。18歳以上の方のみダウンロード・プレイしてください。",
+    "q3": "ライセンスは？",
+    "a3": "音声パックと翻訳はCC BY-NC 4.0：クレジット表記で共有・改変可、非営利のみ。",
+    "q4": "協力するには？",
+    "a4": "GitHubでスターを付ける、プルリクエストを送る、イシューを開く。"
+  },
+  "footer": {
+    "disclaimer": "非公式ファン作品です。オリジナルゲームの権利は各権利者に帰属します。",
+    "linksLabel": "リンク",
+    "linkGithub": "GitHub",
+    "linkSteam": "Steam",
+    "linkIssues": "Issues",
+    "linkLicense": "CC BY-NC 4.0",
+    "age": "18+"
+  }
+}

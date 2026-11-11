@@ -1,0 +1,121 @@
+{
+  "meta": {
+    "title": "The Survival of Sarah Rose — Głosy AI i tłumaczenie",
+    "description": "Nieoficjalny fanowski mod: oryginalny angielski tekst — 100 % udźwiękowiony, plus dema w 11 językach. Za darmo, 18+."
+  },
+  "header": {
+    "brand": "TSSR · Pakiet głosów AI",
+    "steam": "Strona Steam",
+    "github": "GitHub",
+    "download": "Pobierz ZIP",
+    "langLabel": "Język",
+    "themeLabel": "Zmień motyw"
+  },
+  "hero": {
+    "title": "The Survival of Sarah Rose — Głosy AI",
+    "subtitle": "Nieoficjalny fanowski mod: oryginalny tekst w całości udźwiękowiony — ponad 75 sklonowanych głosów z emocjonalną grą. Plus dema w 11 językach.",
+    "badgeTranslate": "Tłumaczenia: demo do pierwszego wyboru",
+    "badgeVoice": "Udźwiękowienie: demo 100 % (11 języków)",
+    "badgeFormat": "Opus 24 kbps — ok. 17 MB na język (demo)",
+    "badgeEngine": "Ren'Py 7.4.11 · Steam",
+    "badgeAge": "Treść 18+",
+    "ctaSteam": "The Survival of Sarah Rose na Steam",
+    "ctaDownload": "Pobierz ZIP (mod + głosy)",
+    "ctaGithub": "Kod na GitHub",
+    "installHint": "Wymaga kupionej gry na Steam. Za darmo, CC BY-NC 4.0."
+  },
+  "features": {
+    "title": "Co dostajesz",
+    "translateTitle": "Tłumaczenia na 11 języków",
+    "translateText": "Rosyjski w całości; pozostałe języki jako demo do pierwszego wyboru — idealne na próbę.",
+    "voiceTitle": "Udźwiękowienie AI",
+    "voiceText": "Sklonowane głosy dla każdej postaci (VoxCPM2), z emocją pasującą do sceny.",
+    "emotionTitle": "Emocjonalna gra",
+    "emotionText": "Każda linia niesie stan narratora: pożądanie, szept, sarkazm — nigdy monotonia.",
+    "voicesTitle": "Ponad 75 głosów",
+    "voicesText": "Sarah, narrator, król Orwell, Kate, Thomas, Varga i dziesiątki innych postaci."
+  },
+  "demo": {
+    "title": "Posłuchaj sam",
+    "lead": "Prawdziwe kwestie z gry z głosami AI: sklonowane głosy, żywe emocje. Dotknij linii — i posłuchaj efektu.",
+    "play": "Odtwórz: {{name}}",
+    "pause": "Pauza: {{name}}",
+    "phrases": [
+      {
+        "speaker": "Sarah",
+        "text": "Tutaj zawsze jest tak cicho. Coś jest nie tak."
+      },
+      {
+        "speaker": "Thomas",
+        "text": "Sarah... Próbuję utrzymać fasadę idealnego króla. Nawet na polu bitwy ukrywam swój strach."
+      },
+      {
+        "speaker": "Carolyn",
+        "text": "Aah, czy mam tak łatwo wyznać ci moje sekrety?"
+      },
+      {
+        "speaker": "Sarah",
+        "text": "To nie ty mnie prosisz, to ja proszę ciebie... zostań ze mną... proszę. Nikt inny na tym świecie nie był mi tak prawdziwym przyjacielem... kimś więcej niż przyjacielem."
+      },
+      {
+        "speaker": "Garret",
+        "text": "A co do krwi na twoich rękach, czym jest kilka kropel więcej? Chyba nie chcesz mi powiedzieć, że wcześniej nie zabijałaś innych?"
+      },
+      {
+        "speaker": "Sarah",
+        "text": "Każdej nocy, gdy się dotykam, moje jedyne fantazje to wspomnienia naszych spotkań."
+      },
+      {
+        "speaker": "Narrator",
+        "text": "Gdy przychodził do niej, jej serce waliło w piersi. Gdy się nie pojawiała, czuła, że zbliża się do łez."
+      }
+    ]
+  },
+  "voice": {
+    "title": "Udźwiękowienie — demo gotowe",
+    "total": "Demo 100 % w 11 językach (1 188 linii na język).",
+    "ru": "Rosyjski: demo + pełna wersja w planach",
+    "en": "Angielski: demo + pełna wersja w planach",
+    "missing": "Brak głosu? Gra wyświetli linię w ciszy (bez błędów)."
+  },
+  "install": {
+    "title": "Instalacja",
+    "step1": "Pobierz ZIP i rozpakuj do folderu gry (Steam: …\\\\steamapps\\\\common\\\\The Survival of Sarah Rose)",
+    "step2": "Uruchom grę i wybierz język w ustawieniach modu (badge w prawym górnym rogu)",
+    "step3": "Gotowe. Pierwsze uruchomienie może trwać dłużej — Ren'Py przebudowuje cache",
+    "note": "Wymaga kupionej gry na Steam. Nieoficjalny fanowski projekt, niepowiązany z twórcami."
+  },
+  "shots": {
+    "title": "Zrzuty ekranu",
+    "cap1": "Menu główne",
+    "cap2": "Dialog otwarcia",
+    "cap3": "Strona patcha: język, głos, czcionka",
+    "cap4": "Narracja i kwestie",
+    "cap5": "Narracja o stolicy",
+    "cap6": "Sarah biegnie w ramiona ojca",
+    "prev": "Poprzedni obraz",
+    "next": "Następny obraz",
+    "close": "Zamknij",
+    "open": "otwórz w pełnym rozmiarze"
+  },
+  "faq": {
+    "title": "FAQ",
+    "q1": "Czy to oficjalny mod?",
+    "a1": "Nie — nieoficjalny fanowski projekt, niepowiązany z twórcami ani wydawcami.",
+    "q2": "Czy są treści dla dorosłych?",
+    "a2": "Tak — gra jest 18+. Pobieraj i graj tylko, jeśli masz 18 lat lub więcej.",
+    "q3": "Licencja?",
+    "a3": "Pakiet głosów i tłumaczenie: CC BY-NC 4.0 — udostępniaj i modyfikuj z podaniem autorstwa, tylko niekomercyjnie.",
+    "q4": "Jak mogę pomóc?",
+    "a4": "Dodaj gwiazdkę na GitHub, wyślij pull request lub otwórz issue."
+  },
+  "footer": {
+    "disclaimer": "Nieoficjalna fanowska praca. Wszystkie prawa do oryginalnej gry należą do ich właścicieli.",
+    "linksLabel": "Linki",
+    "linkGithub": "GitHub",
+    "linkSteam": "Steam",
+    "linkIssues": "Issues",
+    "linkLicense": "CC BY-NC 4.0",
+    "age": "18+"
+  }
+}
