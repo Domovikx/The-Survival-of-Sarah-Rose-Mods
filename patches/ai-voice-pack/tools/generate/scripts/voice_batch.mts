@@ -58,20 +58,16 @@ const BATCH_LOG = join(OUTPUT_DIR, "voice", "batch.log");
 export const DEFAULT_PYTHON = "C:/tools/cosyvoice3/.venv/Scripts/python.exe";
 
 /**
- * Движки инференса: свой шим (python, протокол v2) + venv + МЕТКА variant.
+ * Движки инференса: свой шим (python, протокол v2) + venv.
  *
- * Метка подставляется вместо имени спикера в имени файла:
- * `cosyvoice3` -> `{uid}__Sarah.opus` (контракт рантайма, как раньше),
- * `voxcpm2` -> `{uid}__Vox__{Спикер}.opus` (миграция 2026-10-26, решение
- * владельца: «VoxCPM2 однозначно лучший» — новый слух лежит РЯДОМ со
- * старым, рантайм точным путём находит прежний, glob не путается).
+ * Имя файла = контракту {uid}__{Спикер}.opus для обоих движков
+ * (владелец 2026-11-11: «убираем лишний постфикс» — инфикс движка выпилен).
  */
 export const ENGINES = {
-  cosyvoice3: { shim: join(SCRIPTS_DIR, "cosyworker.py"), python: DEFAULT_PYTHON, tag: "" },
+  cosyvoice3: { shim: join(SCRIPTS_DIR, "cosyworker.py"), python: DEFAULT_PYTHON },
   voxcpm2: {
     shim: join(SCRIPTS_DIR, "voxcpmworker.py"),
     python: "C:/tools/voxcpm2/.venv/Scripts/python.exe",
-    tag: "Vox",
   },
 } as const;
 export type EngineName = keyof typeof ENGINES;
@@ -266,9 +262,8 @@ export function selectPhrases(entries: CatalogEntry[], args: Args): Phrase[] {
       variant = char;
     }
     if (!ref) return [];
-    // Метка движка СОХРАНЯЕТ спикера в имени (владелец 2026-11-10:
-    // «без спикера сложно ревьюить»): {uid}__Vox__{Спикер}.opus
-    if (ENGINES[args.engine ?? "cosyvoice3"].tag) variant = `${ENGINES[args.engine ?? "cosyvoice3"].tag}__${variant}`;
+    // Имя = контракт {uid}__{Спикер}.opus (владелец 2026-11-11: «убираем лишний
+    // постфикс» — инфикс движка Vox__ выпилен).
     if (args.emotion) variant += `_${args.emotionTag}`;
     const out = join(aiVoiceDir(args.lang), arc, `${uid}__${variant}.wav`);
     phrases.push({
@@ -308,9 +303,8 @@ export function selectPhrases(entries: CatalogEntry[], args: Args): Phrase[] {
       variant = voice;
     }
     if (!ref) continue; // не озвучен (нет активного рефа) — как в python
-    // Метка движка СОХРАНЯЕТ спикера в имени (владелец 2026-11-10:
-    // «без спикера сложно ревьюить»): {uid}__Vox__{Спикер}.opus
-    if (ENGINES[args.engine ?? "cosyvoice3"].tag) variant = `${ENGINES[args.engine ?? "cosyvoice3"].tag}__${variant}`;
+    // Имя = контракт {uid}__{Спикер}.opus (владелец 2026-11-11: «убираем лишний
+    // постфикс» — инфикс движка Vox__ выпилен).
     if (args.emotion) variant += `_${args.emotionTag}`;
     else if (args.noEmotion) variant += "_plain";
     const emo = args.noEmotion ? null : args.emotion || e.emotion || null;

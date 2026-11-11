@@ -302,34 +302,29 @@ describe("движок voxcpm2 (2026-10-26: вердикт владельца «
   });
 
   it("ENGINES: у каждого движка свой шим и метка variant", () => {
-    assert.equal(ENGINES.cosyvoice3.tag, "", "контракт рантайма: {uid}__{имя}.opus");
-    assert.equal(ENGINES.voxcpm2.tag, "Vox");
     assert.ok(ENGINES.cosyvoice3.shim.endsWith("cosyworker.py"));
     assert.ok(ENGINES.voxcpm2.shim.endsWith("voxcpmworker.py"));
     assert.notEqual(ENGINES.cosyvoice3.python, ENGINES.voxcpm2.python, "venv разные");
   });
 
-  it("selectPhrases: voxcpm2 -> {uid}__Vox__{Спикер}.opus РЯДОМ со старыми (не перезапись)", () => {
+  it("selectPhrases: voxcpm2 -> {uid}__{Спикер}.opus (контракт рантайма, без инфикса движка)", () => {
     const ph = selectPhrases(entries, { ...baseArgs, engine: "voxcpm2" }).slice(0, 30);
     assert.ok(ph.length > 0, "фразы отобрались");
     for (const p of ph) {
-      // спикер остаётся в имени (владелец 2026-11-10: ревью видит, кто говорит);
-      // инфикс Vox__ гарантирует, что контрактный {uid}__{Спикер}.opus не затёрт
-      assert.equal(p.variant, `Vox__${p.voice}`, `variant: ${p.variant}`);
-      assert.ok(p.out.endsWith(`__Vox__${p.voice}.wav`), `имя файла: ${p.out}`);
+      // владелец 2026-11-11: «убираем лишний постфикс» — имя строго контрактное
+      assert.equal(p.variant, p.voice, `variant: ${p.variant}`);
+      assert.ok(p.out.endsWith(`__${p.voice}.wav`), `имя файла: ${p.out}`);
     }
-    // а без движка — прежний контракт: {uid}__{variant}.variant = имя
-    // спикера/рефа (включая имена с пробелами вроде "Generic Male Mature")
+    // формат имён движков ЕДИНЫЙ: без --engine то же контрактное имя
     const plain = selectPhrases(entries, baseArgs).slice(0, 5);
     for (const p of plain) {
-      assert.ok(!p.variant.startsWith("Vox__"), "без --engine метки движка нет");
       assert.ok(p.out.endsWith(`__${p.variant}.wav`), `контрактное имя: ${p.out}`);
     }
   });
 
-  it("selectPhrases: --emotion сохраняет свой суффикс после метки движка", () => {
+  it("selectPhrases: --emotion сохраняет свой суффикс", () => {
     const ph = selectPhrases(entries, { ...baseArgs, engine: "voxcpm2", emotion: "Whispering" })[0];
-    assert.match(ph.variant, /^Vox__.+_em$/);
+    assert.match(ph.variant, /^.+_em$/);
   });
 
   it("--keep-wav: флаг парсится и доходит до генератора (диагностика wav→opus)", () => {

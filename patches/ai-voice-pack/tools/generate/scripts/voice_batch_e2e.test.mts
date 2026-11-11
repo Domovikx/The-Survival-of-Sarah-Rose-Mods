@@ -107,7 +107,7 @@ test("e2e en: второй язык — файл создаётся, длите�
 // --------------------------------------------- voxcpm2 (миграция 2026-10-26) ---
 
 test(
-  "e2e voxcpm2: свой шим/venv даёт {uid}__Vox__{Спикер}.opus, контрактный файл не тронут",
+  "e2e voxcpm2: свой шим/venv даёт {uid}__{Спикер}.opus (контракт рантайма)",
   {
     skip: SKIP_VOX,
   },
@@ -115,9 +115,8 @@ test(
     const text = "Привет! Это проверочный прогон VoxCPM2 — слушаем качество нового движка.";
     const uid = createHash("md5").update(text, "utf8").digest("hex");
     const demoDir = join(PKG_ROOT, "audio", "ru", "Demo");
-    const opus = join(demoDir, `${uid}__Vox__Sarah.opus`);
-    const wav = join(demoDir, `${uid}__Vox__Sarah.wav`);
-    const contract = join(demoDir, `${uid}__Sarah.opus`);
+    const opus = join(demoDir, `${uid}__Sarah.opus`);
+    const wav = join(demoDir, `${uid}__Sarah.wav`);
     try {
       // --keep-wav: исходный wav обязан лечь РЯДОМ с opus (диагностика конверта)
       const code = await main([
@@ -135,7 +134,6 @@ test(
       assert.equal(code, 0, `voice_batch --engine voxcpm2 вернул ${code} (шим упал? смотри batch.log)`);
       assert.ok(existsSync(opus), `файл не создан: ${opus}`);
       assert.ok(existsSync(wav), `исходный wav не оставлен рядом с opus (--keep-wav): ${wav}`);
-      assert.ok(!existsSync(contract), "контрактное имя {uid}__Sarah.opus НЕ создано — метка движка обязательна");
 
       // звук в норме (без echo-лога CV3: voxcpm-шим пишет свой лог)
       const { dur, meanVolume } = probe(opus);
@@ -152,7 +150,6 @@ test(
       rmSync(opus, { force: true });
       rmSync(wav, { force: true });
       rmSync(opus.replace(/\.opus$/, ".wav"), { force: true });
-      rmSync(contract, { force: true });
     }
   },
 );

@@ -45,8 +45,8 @@ function main(): number {
   const val = (n: string): string | undefined => (argv.indexOf(n) >= 0 ? argv[argv.indexOf(n) + 1] : undefined);
   const lang = val("--lang") ?? "ru";
   const loudness = Number(val("--loudness") ?? 5);
-  // движок обязан совпадать с генерацией: у voxcpm2 свой контракт имён
-  // ({uid}__Vox__{Спикер}) — без --engine набор «ожидался» будет чужим
+  // движок выбирает шим/venv; контракт имён ЕДИНЫЙ для обоих движков
+  // ({uid}__{Спикер}, владелец 2026-11-11: без лишнего постфикса)
   const engine = val("--engine") ?? "voxcpm2";
   const args = parseCli(["--lang", lang, "--engine", engine, ...(argv.includes("--demo") ? ["--demo"] : [])]);
   const phrases = selectPhrases(loadCatalog(lang), args);

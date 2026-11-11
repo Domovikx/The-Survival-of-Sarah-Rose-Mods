@@ -122,7 +122,20 @@ class Worker:
         # ДЕНОЙЗЕР ВКЛ ПО УМОЛЧАНИЮ (владелец 2026-10-28, прод-конфиг cfg2.0/ts30/dn;
         # VOXCPM_DENOISER=0 — отключить загрузку (отладка/память).
         self.denoiser_on = os.environ.get("VOXCPM_DENOISER", "1") != "0"
-        self.model = VoxCPM.from_pretrained(self.args.model_dir, load_denoiser=self.denoiser_on)
+        # Загрузка denoiser (zipenhancer) — ТОЛЬКО локально: сетевой листинг
+        # ModelScope (snapshot_download) падает на rate-limit 403 при частых
+        # стартах воркеров (2026-11-11), модель уже в кэше modelscope.
+        # Переопределение: env VOXCPM_ZIPENHANCER (путь или repo-id).
+        _zip_default = os.path.expanduser(
+            "~/.cache/modelscope/models/iic--speech_zipenhancer_ans_multiloss_16k_base/snapshots/master"
+        )
+        _zip = os.environ.get("VOXCPM_ZIPENHANCER", _zip_default)
+        self.model = VoxCPM.from_pretrained(
+            self.args.model_dir,
+            load_denoiser=self.denoiser_on,
+            zipenhancer_model_id=_zip if os.path.isdir(_zip) else "iic/speech_zipenhancer_ans_multiloss_16k_base",
+            local_files_only=os.path.isdir(_zip),
+        )
         self.sample_rate = int(self.model.tts_model.sample_rate)
         dev = "cpu"
         if torch.cuda.is_available():
