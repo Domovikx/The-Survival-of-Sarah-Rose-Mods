@@ -87,9 +87,48 @@ init python:
         else:
 
             _zz_steps = []
+            # Ранние кадры (2026-11-11, фитбэк владельца: «начинаем игру —
+            # квадратики» на стартовых экранах; старый график их пропускал):
+            _zz_steps.append((2.5, lambda: _zz_shot("start1")))
+            _zz_steps.append((4.0, lambda: _zz_shot("start2")))
+            _zz_steps.append((5.5, lambda: _zz_shot("start3")))
             for _i in range(1, 25):
-                _zz_steps.append((5.0 + _i * 2.5, lambda n=_i: _zz_shot("dialogue%d" % n)))
-            _zz_steps.append((64.0, renpy.quit))
+                _zz_steps.append((7.0 + _i * 2.5, lambda n=_i: _zz_shot("dialogue%d" % n)))
+            _zz_steps.append((66.0, renpy.quit))
+
+        if _zz_mode == "langswitch":
+
+            # K-E10: последовательность владельца «EN -> ru -> zh -> pl -> zh -> ОК»
+            # снимается на каждом шаге (живое переключение без рестарта).
+            def _zz_apply_lang(code):
+                Language(code)()
+                tssr_apply_language_font()
+
+            def _zz_show_main_menu():
+                # tag menu: панель вытеснила главное меню — прячем панель
+                # и ВОЗВРАЩАЕМ главное меню (снимаем титул выбранного языка).
+                renpy.hide_screen("tssr_mod_menu")
+                renpy.show_screen("main_menu")
+                renpy.restart_interaction()
+
+            _zz_steps = [
+                (3.0, lambda: _zz_shot("ls1_mainmenu")),
+                (4.5, _zz_open_settings),
+                (7.0, lambda: _zz_shot("ls2_set_en")),
+                (8.0, lambda: _zz_apply_lang("ru")),
+                (10.5, lambda: _zz_shot("ls3_set_ru")),
+                (11.5, lambda: _zz_apply_lang("zh")),
+                (14.0, lambda: _zz_shot("ls4_set_zh")),
+                (15.0, lambda: _zz_apply_lang("pl")),
+                (17.5, lambda: _zz_shot("ls5_set_pl")),
+                (18.5, lambda: _zz_apply_lang("zh")),
+                (21.0, lambda: _zz_shot("ls6_set_zh2")),
+                (22.0, _zz_show_main_menu),
+                (24.5, lambda: _zz_shot("ls7_menu_zh")),
+                (25.5, lambda: _zz_apply_lang("pl")),
+                (28.0, lambda: _zz_shot("ls8_menu_pl")),
+                (29.0, renpy.quit),
+            ]
 
         _zz_state = {"t0": None}
 

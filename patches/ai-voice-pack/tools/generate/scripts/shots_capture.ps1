@@ -23,7 +23,7 @@
 #            -> site/public/shots/*.jpg
 param(
     [Parameter(Mandatory = $true)][string]$GameDir,
-    [ValidateSet("menu", "game", "all")][string]$Mode = "all",
+    [ValidateSet("menu", "game", "langswitch", "all")][string]$Mode = "all",
     [ValidateSet("en", "ru", "de", "es", "fr", "it", "ja", "ko", "pl", "pt", "zh", "all")][string]$Lang = "all",
     [switch]$Save
 )
