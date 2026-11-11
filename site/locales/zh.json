@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "The Survival of Sarah Rose — AI 语音与翻译",
-    "description": "非官方粉丝 MOD：英语原文 100% 配音，另附 11 种语言演示。免费，18+。"
+    "title": "The Survival of Sarah Rose — AI 语音＋11 种语言",
+    "description": "非官方粉丝补丁：克隆情感声线的完整 AI 配音——外加 11 种语言翻译（俄语完整版；其余覆盖到首次选择的演示内容）。免费，18+。"
   },
   "header": {
     "brand": "TSSR · AI 语音包",
@@ -12,23 +12,23 @@
   },
   "hero": {
     "title": "The Survival of Sarah Rose — AI 语音",
-    "subtitle": "非官方粉丝 MOD：原文全程配音——75+ 克隆声线，情感演绎。另含 11 种语言演示。",
-    "badgeTranslate": "翻译：演示版至首次选择",
-    "badgeVoice": "配音：演示版 100%（11 种语言）",
+    "subtitle": "非官方粉丝补丁：游戏文本全程配音——75+ 克隆声线，每句台词都有情感演绎。11 种语言：俄语完整，其余到首次选择。",
+    "badgeTranslate": "11 种语言——RU 完整版，其余为首次选择前的演示",
+    "badgeVoice": "配音：演示版 100%（11 种语言，各 1,188 句）",
     "badgeFormat": "Opus 24 kbps — 每语言约 17 MB（演示）",
     "badgeEngine": "Ren'Py 7.4.11 · Steam",
     "badgeAge": "18+ 内容",
     "ctaSteam": "在 Steam 上查看 The Survival of Sarah Rose",
-    "ctaDownload": "下载 ZIP（MOD + 语音）",
+    "ctaDownload": "下载 ZIP（MOD＋语音包）",
     "ctaGithub": "在 GitHub 查看源码",
     "installHint": "需要 Steam 购买的本体游戏。免费，CC BY-NC 4.0。"
   },
   "features": {
     "title": "你将获得",
     "translateTitle": "11 种语言翻译",
-    "translateText": "俄语完整版；其余语言为演示版（至首次选择）——非常适合试玩。",
-    "voiceTitle": "AI 配音",
-    "voiceText": "每个角色都有克隆声线（VoxCPM2），按场景演绎情绪。",
+    "translateText": "俄语：整个故事的完整翻译。其余 10 种语言覆盖演示范围——到首次选择的开场。",
+    "voiceTitle": "AI 配音（11 种语言）",
+    "voiceText": "每个角色都有克隆声线（VoxCPM2），按场景演绎情绪。演示范围在 11 种语言中全部配音。",
     "emotionTitle": "情感演绎",
     "emotionText": "每句台词都带着讲述者的状态：渴望、低语、讽刺——绝不单调。",
     "voicesTitle": "75+ 声线",
@@ -72,17 +72,17 @@
   },
   "voice": {
     "title": "配音 — 演示就绪",
-    "total": "演示版 100%：11 种语言（每语言 1,188 句）。",
-    "ru": "俄语：演示 + 完整流程计划中",
-    "en": "英语：演示 + 完整流程计划中",
+    "total": "演示范围已在 11 种语言中配音——各 1,188 句（到首次选择）；完整流程已列入计划。",
+    "ru": "俄语（RU）：完整翻译，演示范围已配音",
+    "en": "英语（EN）：原文文本，演示范围已配音",
     "missing": "缺少语音时游戏静音显示台词（无报错）。"
   },
   "install": {
     "title": "安装",
-    "step1": "下载 ZIP 并解压到游戏目录（Steam：…\\\\steamapps\\\\common\\\\The Survival of Sarah Rose）",
-    "step2": "启动游戏，在 MOD 设置（右上角徽章）中选择语言",
+    "step1": "最简单：把 main.zip 解压到任意位置并运行 install.cmd——它会找到游戏目录（Steam），询问语言并安装一切（把所选语言的语音 zip 放在 install.cmd 旁边）。手动：把 main.zip 解压到游戏目录，再把语音 zip 解压到同一目录",
+    "step2": "启动游戏，在 MOD 设置（右上角徽章）中选择语言——支持 11 种语言",
     "step3": "完成。首次启动较慢——Ren'Py 需重建缓存",
-    "note": "需要 Steam 购买的本体游戏。非官方粉丝作品，与开发者无关。"
+    "note": "需要 Steam 购买的本体游戏。本补丁为非官方作品，与开发者或发行商无关。"
   },
   "shots": {
     "title": "截图",

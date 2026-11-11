@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "The Survival of Sarah Rose — Vozes IA e tradução",
-    "description": "Mod de fã não oficial: o texto original em inglês — 100 % dublado, mais demos em 11 idiomas. Grátis, 18+."
+    "title": "The Survival of Sarah Rose — Vozes IA + 11 idiomas",
+    "description": "Mod de fã não oficial: dublagem IA completa com vozes clonadas e expressivas — mais traduções para 11 idiomas (russo completo; os demais cobrem a intro até a primeira escolha). Grátis, 18+."
   },
   "header": {
     "brand": "TSSR · Vozes IA",
@@ -12,23 +12,23 @@
   },
   "hero": {
     "title": "The Survival of Sarah Rose — Vozes IA",
-    "subtitle": "Mod de fã não oficial: o texto original totalmente dublado — mais de 75 vozes clonadas com atuação cheia de emoção. Mais demos em 11 idiomas.",
-    "badgeTranslate": "Traduções: demo até a primeira escolha",
-    "badgeVoice": "Dublagem: demo 100 % (11 idiomas)",
-    "badgeFormat": "Opus 24 kbps — ~17 MB por idioma (demo)",
+    "subtitle": "Mod de fã não oficial: o texto do jogo totalmente dublado — mais de 75 vozes clonadas com atuação cheia de emoção em cada fala. 11 idiomas: russo completo, os demais até a primeira escolha.",
+    "badgeTranslate": "11 idiomas — RU completo, os demais demo até a primeira escolha",
+    "badgeVoice": "Dublagem: demo 100 % (11 idiomas, 1 188 falas cada)",
+    "badgeFormat": "Opus 24 kbps — cerca de 17 MB por idioma (demo)",
     "badgeEngine": "Ren'Py 7.4.11 · Steam",
     "badgeAge": "Conteúdo 18+",
     "ctaSteam": "The Survival of Sarah Rose na Steam",
-    "ctaDownload": "Baixar ZIP (mod + vozes)",
+    "ctaDownload": "Baixar ZIPs (mod + pacotes de voz)",
     "ctaGithub": "Código no GitHub",
     "installHint": "Requer o jogo comprado na Steam. Grátis, CC BY-NC 4.0."
   },
   "features": {
     "title": "O que você ganha",
     "translateTitle": "Traduções em 11 idiomas",
-    "translateText": "Russo completo; os demais idiomas como demo até a primeira escolha — perfeito para experimentar.",
-    "voiceTitle": "Dublagem IA",
-    "voiceText": "Vozes clonadas para cada personagem (VoxCPM2), com a emoção de cada cena.",
+    "translateText": "Russo: uma tradução completa de toda a história. Os outros 10 idiomas cobrem o escopo demo — a intro até a primeira escolha.",
+    "voiceTitle": "Dublagem IA (11 idiomas)",
+    "voiceText": "Vozes clonadas para cada personagem (VoxCPM2), com a emoção de cada cena. O escopo demo está totalmente dublado em 11 idiomas.",
     "emotionTitle": "Atuação com emoção",
     "emotionText": "Cada fala carrega o estado do narrador: desejo, sussurro, sarcasmo — nunca monótono.",
     "voicesTitle": "Mais de 75 vozes",
@@ -72,17 +72,17 @@
   },
   "voice": {
     "title": "Dublagem — demo pronto",
-    "total": "Demo 100 % em 11 idiomas (1 188 falas por idioma).",
-    "ru": "Russo: demo + partida completa prevista",
-    "en": "Inglês: demo + partida completa prevista",
+    "total": "Escopo demo dublado em 11 idiomas — 1 188 falas cada (até a primeira escolha); a partida completa está prevista.",
+    "ru": "Russo (RU): tradução completa, escopo demo dublado",
+    "en": "Inglês (EN): o texto original, escopo demo dublado",
     "missing": "Se faltar uma voz, o jogo mostra a fala em silêncio (sem erros)."
   },
   "install": {
     "title": "Instalação",
-    "step1": "Baixe o ZIP e extraia na pasta do jogo (Steam: …\\\\steamapps\\\\common\\\\The Survival of Sarah Rose)",
-    "step2": "Inicie o jogo e escolha o idioma nas configurações do mod (ícone no canto superior direito)",
+    "step1": "O mais fácil: extraia main.zip em qualquer lugar e execute install.cmd — ele encontra a pasta do jogo (Steam), pergunta o idioma e instala tudo (coloque o zip de voz do seu idioma ao lado do install.cmd). Manual: extraia main.zip na pasta do jogo e o zip de voz na mesma pasta",
+    "step2": "Inicie o jogo e escolha o idioma nas configurações do mod (ícone no canto superior direito) — 11 idiomas disponíveis",
     "step3": "Pronto. A primeira inicialização pode demorar — o Ren'Py reconstrói o cache",
-    "note": "Requer o jogo comprado na Steam. Projeto de fã não oficial, sem relação com os desenvolvedores."
+    "note": "Requer o jogo comprado na Steam. Este patch é não oficial e sem relação com os desenvolvedores ou distribuidores."
   },
   "shots": {
     "title": "Capturas de tela",
@@ -100,7 +100,7 @@
   "faq": {
     "title": "Perguntas frequentes",
     "q1": "É um mod oficial?",
-    "a1": "Não — projeto de fã não oficial, sem relação com desenvolvedores ou distribuidores.",
+    "a1": "Não — um patch de fã não oficial, sem relação com desenvolvedores ou distribuidores.",
     "q2": "Há conteúdo para adultos?",
     "a2": "Sim — o jogo é 18+. Baixe e jogue apenas se tiver 18 anos ou mais.",
     "q3": "Licença?",

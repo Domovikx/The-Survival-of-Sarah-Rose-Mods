@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "The Survival of Sarah Rose — Voci IA e traduzione",
-    "description": "Mod di fan non ufficiale: il testo originale inglese — 100 % doppiato, più demo in 11 lingue. Gratis, 18+."
+    "title": "The Survival of Sarah Rose — Voci IA + 11 lingue",
+    "description": "Mod di fan non ufficiale: doppiaggio IA completo con voci clonate ed espressive — più traduzioni in 11 lingue (russo completo; le altre coprono l’intro fino alla prima scelta). Gratis, 18+."
   },
   "header": {
     "brand": "TSSR · Voci IA",
@@ -12,23 +12,23 @@
   },
   "hero": {
     "title": "The Survival of Sarah Rose — Voci IA",
-    "subtitle": "Mod di fan non ufficiale: il testo originale interamente doppiato — oltre 75 voci clonate con interpretazione ricca di emozione. Più demo in 11 lingue.",
-    "badgeTranslate": "Traduzioni: demo fino alla prima scelta",
-    "badgeVoice": "Doppiaggio: demo 100 % (11 lingue)",
-    "badgeFormat": "Opus 24 kbps — ~17 MB per lingua (demo)",
+    "subtitle": "Mod di fan non ufficiale: il testo del gioco interamente doppiato — oltre 75 voci clonate con interpretazione ricca di emozione per ogni battuta. 11 lingue: russo completo, le altre fino alla prima scelta.",
+    "badgeTranslate": "11 lingue — RU completo, le altre demo fino alla prima scelta",
+    "badgeVoice": "Doppiaggio: demo 100 % (11 lingue, 1 188 battute ciascuna)",
+    "badgeFormat": "Opus 24 kbps — circa 17 MB per lingua (demo)",
     "badgeEngine": "Ren'Py 7.4.11 · Steam",
     "badgeAge": "Contenuti 18+",
     "ctaSteam": "The Survival of Sarah Rose su Steam",
-    "ctaDownload": "Scarica ZIP (mod + voci)",
+    "ctaDownload": "Scarica gli ZIP (mod + pacchetti voce)",
     "ctaGithub": "Codice su GitHub",
     "installHint": "Richiede il gioco acquistato su Steam. Gratis, CC BY-NC 4.0."
   },
   "features": {
     "title": "Cosa ottieni",
     "translateTitle": "Traduzioni in 11 lingue",
-    "translateText": "Russo completo; le altre lingue come demo fino alla prima scelta — perfette per provare.",
-    "voiceTitle": "Doppiaggio IA",
-    "voiceText": "Voci clonate per ogni personaggio (VoxCPM2), con l’emozione di ogni scena.",
+    "translateText": "Russo: una traduzione completa di tutta la storia. Le altre 10 lingue coprono l’ambito demo — l’intro fino alla prima scelta.",
+    "voiceTitle": "Doppiaggio IA (11 lingue)",
+    "voiceText": "Voci clonate per ogni personaggio (VoxCPM2), con l’emozione di ogni scena. L’ambito demo è interamente doppiato in 11 lingue.",
     "emotionTitle": "Interpretazione emotiva",
     "emotionText": "Ogni battuta porta lo stato del narratore: desiderio, sussurro, sarcasmo — mai monotono.",
     "voicesTitle": "Oltre 75 voci",
@@ -72,17 +72,17 @@
   },
   "voice": {
     "title": "Doppiaggio — demo pronta",
-    "total": "Demo 100 % in 11 lingue (1 188 battute per lingua).",
-    "ru": "Russo: demo + passata completa prevista",
-    "en": "Inglese: demo + passata completa prevista",
+    "total": "Ambito demo doppiato in 11 lingue — 1 188 battute ciascuna (fino alla prima scelta); la passata completa è prevista.",
+    "ru": "Russo (RU): traduzione completa, ambito demo doppiato",
+    "en": "Inglese (EN): il testo originale, ambito demo doppiato",
     "missing": "Se manca una voce, il gioco mostra la battuta in silenzio (senza errori)."
   },
   "install": {
     "title": "Installazione",
-    "step1": "Scarica lo ZIP ed estrailo nella cartella del gioco (Steam: …\\\\steamapps\\\\common\\\\The Survival of Sarah Rose)",
-    "step2": "Avvia il gioco e scegli la lingua nelle impostazioni della mod (icona in alto a destra)",
+    "step1": "Il più semplice: estrai main.zip ovunque e avvia install.cmd — trova la cartella del gioco (Steam), chiede la lingua e installa tutto (metti lo zip vocale della tua lingua accanto a install.cmd). Manuale: estrai main.zip nella cartella del gioco e lo zip vocale nella stessa cartella",
+    "step2": "Avvia il gioco e scegli la lingua nelle impostazioni della mod (icona in alto a destra) — 11 lingue disponibili",
     "step3": "Fatto. Il primo avvio può essere più lento — Ren’Py ricostruisce la cache",
-    "note": "Richiede il gioco acquistato su Steam. Progetto di fan non ufficiale, non affiliato agli sviluppatori."
+    "note": "Richiede il gioco acquistato su Steam. Questa patch è non ufficiale e non affiliata a sviluppatori o editori."
   },
   "shots": {
     "title": "Screenshot",
@@ -100,7 +100,7 @@
   "faq": {
     "title": "FAQ",
     "q1": "È una mod ufficiale?",
-    "a1": "No — progetto di fan non ufficiale, non affiliato a sviluppatori o editori.",
+    "a1": "No — una patch di fan non ufficiale, non affiliata a sviluppatori o editori.",
     "q2": "Ci sono contenuti per adulti?",
     "a2": "Sì — il gioco è 18+. Scarica e gioca solo se hai 18 anni o più.",
     "q3": "Licenza?",

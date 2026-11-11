@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "The Survival of Sarah Rose — AI 음성 & 자막",
-    "description": "비공식 팬 MOD: 영어 원문 100% 수록, 11개 언어 데모 동봉. 무료, 18+."
+    "title": "The Survival of Sarah Rose — AI 음성 & 자막 (11개 언어)",
+    "description": "비공식 팬 패치: 클론된 감정 풍부한 목소리의 AI 음성 전부 수록 — 11개 언어 자막 추가(러시아어는 전문 완역, 나머지는 첫 선택까지 데모). 무료, 18+."
   },
   "header": {
     "brand": "TSSR · AI 음성 팩",
@@ -12,23 +12,23 @@
   },
   "hero": {
     "title": "The Survival of Sarah Rose — AI 음성",
-    "subtitle": "비공식 팬 MOD: 원문 전부를 수록——75개 이상의 클론 보이스로 감정을 담아. 11개 언어 데모 포함.",
-    "badgeTranslate": "번역: 첫 선택까지 데모",
-    "badgeVoice": "음성: 데모 100% (11개 언어)",
+    "subtitle": "비공식 팬 패치: 게임 텍스트 전부 수록——75개 이상의 클론 보이스로 모든 대사를 감정 있게. 11개 언어: 러시아어는 완역, 나머지는 첫 선택까지.",
+    "badgeTranslate": "11개 언어 — RU 완역, 나머지는 첫 선택까지 데모",
+    "badgeVoice": "음성: 데모 100% (11개 언어, 각 1,188줄)",
     "badgeFormat": "Opus 24 kbps — 언어당 약 17MB (데모)",
     "badgeEngine": "Ren'Py 7.4.11 · Steam",
     "badgeAge": "18+ 콘텐츠",
     "ctaSteam": "Steam에서 The Survival of Sarah Rose",
-    "ctaDownload": "ZIP 다운로드 (MOD + 음성)",
+    "ctaDownload": "ZIP 다운로드 (MOD + 음성 팩)",
     "ctaGithub": "GitHub에서 소스 보기",
     "installHint": "Steam에서 구매한 게임 필요. 무료, CC BY-NC 4.0."
   },
   "features": {
     "title": "무엇을 받나요",
     "translateTitle": "11개 언어 번역",
-    "translateText": "러시아어는 전문 완역. 나머지 언어는 첫 선택까지 데모——맛보기에 좋습니다.",
-    "voiceTitle": "AI 음성",
-    "voiceText": "캐릭터마다 클론 보이스(VoxCPM2). 장면에 어울리는 감정으로 연기합니다.",
+    "translateText": "러시아어는 전체 스토리 완역. 나머지 10개 언어는 데모 범위——첫 선택까지의 도입부를 커버합니다.",
+    "voiceTitle": "AI 음성 (11개 언어)",
+    "voiceText": "캐릭터마다 클론 보이스(VoxCPM2). 장면에 어울리는 감정으로 연기합니다. 데모 범위는 11개 언어로 전부 수록.",
     "emotionTitle": "감정이 담긴 낭독",
     "emotionText": "모든 대사에 화자의 마음을——욕망, 속삭임, 빈정거림. 단조롭지 않게.",
     "voicesTitle": "75개 이상의 목소리",
@@ -72,17 +72,17 @@
   },
   "voice": {
     "title": "음성 — 데모 준비 완료",
-    "total": "데모 100%: 11개 언어 (언어당 1,188줄).",
-    "ru": "러시아어: 데모 + 전문 예정",
-    "en": "영어: 데모 + 전문 예정",
+    "total": "데모 범위를 11개 언어로 수록——각 1,188줄(첫 선택까지). 전문은 예정되어 있습니다.",
+    "ru": "러시아어 (RU): 전문 완역, 데모 범위 수록",
+    "en": "영어 (EN): 원문 텍스트, 데모 범위 수록",
     "missing": "음성이 없으면 무음으로 표시됩니다 (오류 없음)."
   },
   "install": {
     "title": "설치",
-    "step1": "ZIP을 다운로드해 게임 폴더에 압축 해제 (Steam: …\\\\steamapps\\\\common\\\\The Survival of Sarah Rose)",
-    "step2": "게임을 실행하고 MOD 설정(오른쪽 위 배지)에서 언어 선택",
+    "step1": "가장 간단하게: main.zip을 원하는 곳에 풀고 install.cmd를 실행——게임 폴더(Steam)를 찾아 언어를 묻고 전부 설치합니다(사용할 언어의 음성 zip을 install.cmd 옆에 두세요). 수동: main.zip을 게임 폴더에 풀고 음성 zip도 같은 곳에",
+    "step2": "게임을 실행하고 MOD 설정(오른쪽 위 배지)에서 언어 선택 — 11개 언어 지원",
     "step3": "완료. 첫 실행은 조금 느릴 수 있습니다 — Ren'Py가 캐시를 다시 만듭니다",
-    "note": "Steam에서 구매한 게임 필요. 비공식 팬 프로젝트, 개발사와 무관합니다."
+    "note": "Steam에서 구매한 게임 필요. 이 패치는 비공식이며 개발사/배급사와 무관합니다."
   },
   "shots": {
     "title": "스크린샷",
@@ -100,7 +100,7 @@
   "faq": {
     "title": "자주 묻는 질문",
     "q1": "공식 MOD인가요?",
-    "a1": "아니요 — 비공식 팬 프로젝트입니다. 개발사/배급사와 무관합니다.",
+    "a1": "아니요 — 비공식 팬 패치입니다. 개발사/배급사와 무관합니다.",
     "q2": "성인 콘텐츠가 있나요?",
     "a2": "네 — 게임은 18세 이상입니다. 18세 이상만 다운로드/플레이하세요.",
     "q3": "라이선스는?",

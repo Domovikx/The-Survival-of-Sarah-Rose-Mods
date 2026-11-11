@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "The Survival of Sarah Rose — KI-Sprachausgabe und Übersetzung",
-    "description": "Inoffizielles Fan-Mod: Der englische Originaltext — 100 % vertont, plus Demos auf 11 Sprachen. Kostenlos, 18+."
+    "title": "The Survival of Sarah Rose — KI-Sprachausgabe + 11 Sprachen",
+    "description": "Inoffizielles Fan-Patch: volle KI-Sprachausgabe mit geklonten, emotionalen Stimmen — plus Übersetzungen in 11 Sprachen (Russisch komplett; die übrigen decken das Intro bis zur ersten Wahl ab). Kostenlos, 18+."
   },
   "header": {
     "brand": "TSSR · KI-Sprachpaket",
@@ -12,23 +12,23 @@
   },
   "hero": {
     "title": "The Survival of Sarah Rose — KI-Sprachausgabe",
-    "subtitle": "Inoffizielles Fan-Mod: Der Originaltext wird vollständig vertont — über 75 geklonte Stimmen mit gefühlvoller Darstellung. Plus Demos in 11 Sprachen.",
-    "badgeTranslate": "Übersetzungen: Demo bis zur ersten Wahl",
-    "badgeVoice": "Sprachausgabe: Demo 100 % (11 Sprachen)",
-    "badgeFormat": "Opus 24 kbps — Paket pro Sprache ~17 MB (Demo)",
+    "subtitle": "Inoffizielles Fan-Patch: Der Spieltext wird vollständig vertont — über 75 geklonte Stimmen mit gefühlvoller Darstellung jeder Zeile. 11 Sprachen: Russisch komplett, die übrigen bis zur ersten Wahl.",
+    "badgeTranslate": "11 Sprachen — RU komplett, die übrigen Demo bis zur ersten Wahl",
+    "badgeVoice": "Sprachausgabe: Demo 100 % (11 Sprachen, je 1 188 Zeilen)",
+    "badgeFormat": "Opus 24 kbps — ca. 17 MB pro Sprache (Demo)",
     "badgeEngine": "Ren'Py 7.4.11 · Steam",
     "badgeAge": "18+ Inhalt",
     "ctaSteam": "The Survival of Sarah Rose auf Steam",
-    "ctaDownload": "ZIP herunterladen (Mod + Stimmen)",
+    "ctaDownload": "ZIPs herunterladen (Mod + Sprachpakete)",
     "ctaGithub": "Quellcode auf GitHub",
     "installHint": "Erfordert ein gekauftes Spiel auf Steam. Kostenlos, CC BY-NC 4.0."
   },
   "features": {
     "title": "Was du bekommst",
-    "translateTitle": "Übersetzungen auf 11 Sprachen",
-    "translateText": "Russisch komplett; weitere Sprachen als Demo bis zur ersten Wahl — perfekt zum Reinschnuppern.",
-    "voiceTitle": "KI-Sprachausgabe",
-    "voiceText": "Geklonte Stimmen für jede Figur (VoxCPM2) — mit Emotionen, passend zur Szene.",
+    "translateTitle": "Übersetzungen in 11 Sprachen",
+    "translateText": "Russisch: eine komplette Übersetzung der gesamten Geschichte. Die übrigen 10 Sprachen decken den Demo-Umfang ab — das Intro bis zur ersten Wahl.",
+    "voiceTitle": "KI-Sprachausgabe (11 Sprachen)",
+    "voiceText": "Geklonte Stimmen für jede Figur (VoxCPM2) — mit gefühlvoller Darstellung passend zur Szene. Der Demo-Umfang ist in 11 Sprachen vollständig vertont.",
     "emotionTitle": "Gefühlvolle Darstellung",
     "emotionText": "Jede Zeile trägt den Zustand des Erzählers: Wunsch, Flüstern, Sarkasmus — keine Monotonie.",
     "voicesTitle": "75+ Stimmen",
@@ -72,17 +72,17 @@
   },
   "voice": {
     "title": "Sprachausgabe — Demo bereit",
-    "total": "Demo 100 % auf 11 Sprachen (1 188 Zeilen pro Sprache).",
-    "ru": "Russisch: Demo + kompletter Durchlauf geplant",
-    "en": "Englisch: Demo + kompletter Durchlauf geplant",
+    "total": "Demo-Umfang in 11 Sprachen vertont — je 1 188 Zeilen (bis zur ersten Wahl); der volle Durchlauf ist geplant.",
+    "ru": "Russisch (RU): komplette Übersetzung, Demo-Umfang vertont",
+    "en": "Englisch (EN): der Originaltext, Demo-Umfang vertont",
     "missing": "Fehlt eine Stimme — das Spiel zeigt die Zeile still (keine Fehler)."
   },
   "install": {
     "title": "Installation",
-    "step1": "ZIP herunterladen und in den Spielordner entpacken (Steam: …\\steamapps\\common\\The Survival of Sarah Rose)",
-    "step2": "Spiel starten und die Sprache im Mod-Einstellungen wählen (Badge oben rechts)",
+    "step1": "Am einfachsten: Entpacke main.zip irgendwo und führe install.cmd aus — es findet den Spielordner (Steam), fragt die Sprache und installiert alles (lege das Sprachpaket deiner Sprache neben install.cmd). Manuell: main.zip in den Spielordner entpacken, dann das Sprachpaket in denselben Ordner",
+    "step2": "Spiel starten und die Sprache in den Mod-Einstellungen wählen (Badge oben rechts) — 11 Sprachen verfügbar",
     "step3": "Fertig. Der erste Start dauert etwas länger — Ren'Py baut den Cache neu",
-    "note": "Erfordert das auf Steam gekaufte Spiel. Inoffizielles Fan-Projekt, nicht verbunden mit den Entwicklern."
+    "note": "Erfordert das auf Steam gekaufte Spiel. Dieses Patch ist inoffiziell und nicht mit den Entwicklern oder Publishern verbunden."
   },
   "shots": {
     "title": "Screenshots",
@@ -100,7 +100,7 @@
   "faq": {
     "title": "FAQ",
     "q1": "Ist das ein offizielles Mod?",
-    "a1": "Nein — inoffizielles Fan-Projekt, nicht verbunden mit den Entwicklern oder Publishern.",
+    "a1": "Nein — ein inoffizielles Fan-Patch, nicht verbunden mit den Entwicklern oder Publishern.",
     "q2": "Gibt es Inhalte für Erwachsene?",
     "a2": "Ja — das Spiel ist 18+. Nur laden und spielen, wenn du 18 oder älter bist.",
     "q3": "Lizenz?",
