@@ -18,7 +18,7 @@ sys.path.insert(0, os.path.join(ROOT, 'tools', 'build'))
 
 import build_pack  # noqa: E402
 
-ROOT_FILES = {"INSTALL.txt", "environment.txt"}
+ROOT_FILES = {"INSTALL.txt", "environment.txt", "install.cmd", "install.ps1"}
 
 
 def _build_main(tmp_path):
@@ -68,6 +68,28 @@ def test_main_zip_key_files_in_mod_dir(tmp_path):
     assert p + "catalog/label_arc.json" in names
     assert p + "catalog/voice_list.json" in names
     assert any(n.startswith(p + "tl/ru/") for n in names)
+
+
+def test_main_zip_no_dev_only_trees(tmp_path):
+    """dev-only (casts/рефы, po/исходники, кэши) не уезжают в дистрибутив
+    (владелец 2026-11-11: «main — небольшой, без чего работать не будет»)."""
+    with _build_main(tmp_path) as zf:
+        names = zf.namelist()
+    p = build_pack.MOD_DIR + "/"
+    for dev in ("casts/", "po/", ".pytest_cache/"):
+        assert not [n for n in names if n.startswith(p + dev)], \
+            "dev-дерево в дистрибутиве: %s" % dev
+
+
+def test_main_zip_fonts_only_ui(tmp_path):
+    """В main — только UI-шрифты (Literata); CJK едет в пакетах ja/ko/zh."""
+    with _build_main(tmp_path) as zf:
+        fonts = [n for n in zf.namelist() if "/fonts/" in n]
+    assert any("Literata" in n for n in fonts), "базовые шрифты UI пропали"
+    assert not [n for n in fonts if "NotoSansCJK" in n], \
+        "CJK-шрифты должны ехать в voice-{ja,ko,zh}, а не в main"
+    assert "ja" in build_pack.VOICE_EXTRA_FONTS and "ko" in build_pack.VOICE_EXTRA_FONTS \
+        and "zh" in build_pack.VOICE_EXTRA_FONTS, "мапа шрифтов языков неполная"
 
 
 def test_main_zip_repo_diagnostics_not_shipped(tmp_path):
@@ -217,6 +239,9 @@ def test_main_zip_is_mirror_of_patch_tree(tmp_path):
         for f in build_pack._tree_files(build_pack.PATCH, build_pack.MOD_EXCLUDE)
     }
     runtime = {"catalog/label_arc.json", "catalog/voice_list.json"}
+    # CJK-шрифты уезжают из ядра в пакеты ja/ko/zh (VOICE_EXTRA_FONTS,
+    # владелец 2026-11-11: «main — небольшой»).
+    tree -= set(build_pack.VOICE_EXTRA_FONTS.values())
     assert shipped == tree | runtime
 
 

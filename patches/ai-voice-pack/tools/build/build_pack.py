@@ -54,10 +54,22 @@ MOD_DIR = "mods/tssr-ai-voice-pack"
 # Dev-only в КОРНЕ патча — НЕ в дистрибутив (корень патча = зеркало
 # установки 2026-10-19, поэтому исключения — имена ВЕРХНЕГО уровня):
 # dev-дерево, аудио (уезжает отдельным voice-zip), каталог целиком (в зип
-# идут только два runtime-JSON, см. CATALOG_RUNTIME) + defensive-имена
-# диагностик, которые мод пишет в свою папку в установке.
+# идут только два runtime-JSON, см. CATALOG_RUNTIME), рефы голосов (casts —
+# сырьё генерации), исходники переводов (po — рантайм читает их продукт tl/),
+# кэши тестов + defensive-имена диагностик, которые мод пишет в свою папку
+# в установке.
 MOD_EXCLUDE = {"audio", "tools", "tests", "catalog", "README.md", "MOD.md",
+               "casts", "po", ".pytest_cache",
                "update_check.txt", "last_menu_hook.txt", "voice_debug.log"}
+
+# CJK-шрифт едет в языковом пакете (владелец 2026-11-11: «main — небольшой,
+# ставится первым, без чего работать не будет»; шрифт нужен только своему
+# языку: zzz_ui.rpy 5.1 юзает его в translate-style блоках ja/ko/zh).
+VOICE_EXTRA_FONTS = {
+    "ja": "fonts/NotoSansCJKjp-Regular.otf",
+    "ko": "fonts/NotoSansCJKkr-Regular.otf",
+    "zh": "fonts/NotoSansCJKsc-Regular.otf",
+}
 
 # Рантайм-каталог: voice_config.rpy грузит ТОЛЬКО эти два JSON (label -> arc,
 # who -> variant); в zip идут как АРТЕФАКТЫ СБОРКИ — в репе каталог/ не живёт
@@ -78,10 +90,12 @@ THE SURVIVAL OF SARAH ROSE — AI Voice Pack + Localization (11 languages)
 =========================================================================
 
 СОСТАВ / FILES
-  TSSR-AI-Voice-Pack-main.zip      — ядро + тексты 11 языков (обязательный) /
-                                     core + texts for 11 languages (required)
+  TSSR-AI-Voice-Pack-main.zip      — ядро: тексты 11 языков, меню, установщик
+                                     (обязательный) / core: texts, menu, installer
   TSSR-AI-Voice-Pack-voice-<lang>.zip — голоса языка: ru, en, de, es, fr, it,
-                                     ja, ko, pl, pt, zh / voice pack per language
+                                     ja, ko, pl, pt, zh; для ja/ko/zh внутри
+                                     также их CJK-шрифт / voice pack per language
+                                     (with its CJK font for ja/ko/zh)
 
 УСТАНОВКА / INSTALL (папка игры = папка с TheSurvivalofSarahRose.exe):
   0. ЛЕНИВЫЙ ПУТЬ / EASIEST: распакуй main.zip куда угодно и запусти
@@ -211,9 +225,14 @@ def build_main(out_dir):
         for arcname, content in (("INSTALL.txt", INSTALL_TXT),
                                  ("environment.txt", ENVIRONMENT_TXT)):
             zf.writestr(arcname, content)
-        # Зеркало установки: всё дерево патча кроме dev-only (MOD_EXCLUDE)
+        # Зеркало установки: всё дерево патча кроме dev-only (MOD_EXCLUDE);
+        # CJK-шрифты в main НЕ кладутся — они едут в пакетах ja/ko/zh
+        # (VOICE_EXTRA_FONTS, владелец 2026-11-11: «main — небольшой»).
         for p in _tree_files(PATCH, MOD_EXCLUDE):
-            _add(zf, p, MOD_DIR + "/" + p.relative_to(PATCH).as_posix())
+            rel = p.relative_to(PATCH).as_posix()
+            if rel in set(VOICE_EXTRA_FONTS.values()):
+                continue
+            _add(zf, p, MOD_DIR + "/" + rel)
         # Рантайм-каталог — артефакт сборки (каталог/ в репе нет): генератор
         # валит сборку сам, если POT/войсы не дают полные мапы.
         for fn in CATALOG_RUNTIME:
@@ -226,7 +245,8 @@ def build_main(out_dir):
 
 
 def build_voice(lang, out_dir):
-    """Озвучка одного языка: audio/<lang>/** -> mods/.../ai_voice/<lang>/**."""
+    """Озвучка одного языка: audio/<lang>/** -> mods/.../ai_voice/<lang>/**.
+    Для ja/ko/zh — плюс свой CJK-шрифт (без него текст языка = квадраты)."""
     src = VOICE_LANGS[lang]
     if not src.is_dir() or not any(src.rglob("*")):
         print("  voice-%s: пропущен (каталог пуст — аудио ещё генерится)" % lang)
@@ -236,6 +256,9 @@ def build_voice(lang, out_dir):
     with zipfile.ZipFile(target, "w", zipfile.ZIP_STORED) as zf:
         for p in _tree_files(src):
             _add(zf, p, MOD_DIR + "/ai_voice/%s/%s" % (lang, p.relative_to(src).as_posix()))
+        font = VOICE_EXTRA_FONTS.get(lang)
+        if font and (PATCH / font).is_file():
+            _add(zf, PATCH / font, MOD_DIR + "/" + font)
     with zipfile.ZipFile(target) as zf:
         infos = zf.infolist()
         nfiles, nbytes = len(infos), sum(i.file_size for i in infos)
