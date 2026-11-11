@@ -210,9 +210,6 @@ translate ru strings:
     old "You did it for the country...to keep it together."
     new "Ты сделала это ради страны... чтобы сохранить её единой."
 
-    old "I did."
-    new "Да."
-
     old "And I don't regret doing it."
     new "И я не жалею об этом."
 
@@ -305,9 +302,6 @@ translate ru strings:
 
     old "She saw a moment of realization dawn on his face."
     new "Она увидела, как на его лице промелькнуло осознание."
-
-    old "I..."
-    new "Я..."
 
     old "We would orphan them...I could never live with myself."
     new "Они остались бы сиротами... Я никогда не смогла бы с этим смириться."
@@ -545,9 +539,6 @@ translate ru strings:
 
     old "Even went and bought a gift for you. You know how hard it is to buy something for someone that has everything?"
     new "Даже купила тебе подарок. Знаешь же, как сложно найти что-то для того, у кого уже всё есть?"
-
-    old "A gift?"
-    new "Подарок?"
 
     old "Yeah, but that was before I heard the news."
     new "Да, но это было до того, как я услышала новости."

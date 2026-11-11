@@ -273,9 +273,6 @@ translate ru strings:
     old "I am courier, send here on behalf of Master Gilead."
     new "Я курьер, присланный сюда от имени Мастера Гилеада."
 
-    old "Gilead..."
-    new "Гилеад..."
-
     old "Sarah slowly repeated the name. She recalled having vaguely heard it in the past, though she could not remember exactly when."
     new "Сара медленно повторила это имя. Она вспомнила, что смутно слышала его в прошлом, хотя и не могла точно припомнить, когда именно."
 
@@ -566,9 +563,6 @@ translate ru strings:
 
     old "You almost fainted!"
     new "Ты же чуть не обмочилась!"
-
-    old "Come here."
-    new "Иди сюда."
 
     old "Sarah leaned on Samayra as Samayra carried her to the bedroom."
     new "Сара оперлась на Самайру, пока та несла её в спальню."
@@ -861,9 +855,6 @@ translate ru strings:
     old "It is also true, that if all the people of all the world, shared their wealthy equally, this world would be a paradise."
     new "И ещё одна истина: если бы все люди во всём мире разделили свои богатства поровну, этот мир стал бы раем."
 
-    old "And yet..."
-    new "И всё же..."
-
     old "When have you ever known people to sacrifice their own interests for the greater good?"
     new "Когда вы когда-либо видели, чтобы люди жертвовали собственными интересами ради общего блага?"
 
@@ -1037,9 +1028,6 @@ translate ru strings:
 
     old "However, if we were to send one of our own agents, your Order would uncover them without any trouble."
     new "Однако, если бы мы отправили одного из своих собственных агентов, ваш Орден раскрыл бы его без малейших трудностей."
-
-    old "But you..."
-    new "Но ты..."
 
     old "Shark like, his teeth, Sarah thought."
     new "Похоже на акулу — вот её зубы, — подумала Сара."
@@ -1293,9 +1281,6 @@ translate ru strings:
     old "No, it's not-"
     new "Нет, это не так—"
 
-    old "Forget it."
-    new "Забудь об этом."
-
     old "You don't owe me anything."
     new "Ты мне ничего не должна."
 
@@ -1418,9 +1403,6 @@ translate ru strings:
 
     old "Tilting it over, he takes a large swig."
     new "Наклонив её, он делает большой глоток."
-
-    old "Not bad."
-    new "Неплохо."
 
     old "He holds the bottle out for Sarah to drink."
     new "Он протягивает бутылку Саре, чтобы она выпила."
@@ -1653,9 +1635,6 @@ translate ru strings:
     old "Sarah struggles to breathe, much less speak a word."
     new "Сара едва может дышать, не говоря уже о том, чтобы произнести хоть слово."
 
-    old "Fine."
-    new "Хорошо."
-
     old "Then I'll put you in yours."
     new "Тогда я поставлю тебя на твоё место."
 
@@ -1667,9 +1646,6 @@ translate ru strings:
 
     old "A rush of cold outside air."
     new "Взрыв холодного уличного воздуха."
-
-    old "Stupid bitch."
-    new "Глупая сучка."
 
     old "Alaric gets up behind her, his hands wrapping around her waist, cupping her ass."
     new "Аларик встает за ней, его руки обхватывают её талию и ласкают ягодицы."
@@ -1956,9 +1932,6 @@ translate ru strings:
     old "Sarah has always found her even more beautiful in the dark."
     new "Сара всегда находила её ещё более прекрасной в темноте."
 
-    old "Of course."
-    new "Конечно."
-
     old "We don't have to talk about it tonight."
     new "Нам не обязательно говорить об этом сегодня."
 
@@ -1977,9 +1950,6 @@ translate ru strings:
     old "She felt the girl stir, though she wasn't sure if it was her touch or her words."
     new "Она почувствовала, что девочка зашевелилась, хотя и не была уверена — от её прикосновений или слов."
 
-    old "What do you mean?"
-    new "Что вы имеете в виду?"
-
     old "I mean...just...your life, and how it all turned out..."
     new "Я имею в виду... просто... твою жизнь и то, как всё обернулось..."
 
@@ -1994,9 +1964,6 @@ translate ru strings:
 
     old "But somehow, it had always felt wrong to her."
     new "Но почему-то ей всегда казалось, что в этом есть что-то неправильное."
-
-    old "Then what?"
-    new "И что тогда?"
 
     old "Sarah felt Samayra's shoulders go rigid."
     new "Сара почувствовала, как плечи Самайры напряглись."
@@ -2021,9 +1988,6 @@ translate ru strings:
 
     old "I never..."
     new "Я никогда..."
-
-    old "You do."
-    new "Да, так и есть."
 
     old "Samayra's answer was resolute. Not even a hint of doubt."
     new "Ответ Самайры был твёрдым. В нём не было ни капли сомнения."
@@ -2091,9 +2055,6 @@ translate ru strings:
     old "But when I weigh them against each other, the time I've known you means more to me than all the rest."
     new "Но когда я сравниваю их друг с другом, время, что я была с тобой, значит для меня гораздо больше, чем всё остальное."
 
-    old "You..."
-    new "Ты..."
-
     old "And being with you..."
     new "И быть с тобой..."
 
@@ -2154,9 +2115,6 @@ translate ru strings:
     old "She felt herself lost to a delirious fog."
     new "Она почувствовала, что растворяется в бредовом тумане."
 
-    old "I love you."
-    new "Я люблю тебя."
-
     old "Has she said it? Or Samayra?"
     new "Это сказала она? Или Самайра?"
 
@@ -2205,9 +2163,6 @@ translate ru strings:
     old "Almost fearing she might break something."
     new "Почти боясь, что она может что-то сломать."
 
-    old "I love you too."
-    new "Я тоже тебя люблю."
-
     old "Her reply, equally soft and hesitant, as if each feared to speak the truth between them."
     new "Её ответ был таким же нежным и нерешительным, словно каждая из них боялась произнести правду, что была между ними."
 
@@ -2244,9 +2199,6 @@ translate ru strings:
     old "Grinding, ever faster, chasing and receiving the pulsing waves of pleasure."
     new "Терзая всё быстрее, они преследовали и принимали пульсирующие волны наслаждения."
 
-    old "Aah..."
-    new "Ах..."
-
     old "Her voice, still soft, growing more pitched."
     new "Её голос, всё ещё нежный, становился всё более пронзительным."
 
@@ -2255,9 +2207,6 @@ translate ru strings:
 
     old "She knew her body almost as she knew her own."
     new "Она знала своё тело почти так же хорошо, как и собственное."
-
-    old "Aaah!!!"
-    new "Ааах!!!"
 
     old "Samayra cried out as she came."
     new "Самайра закричала, достигая оргазма."
@@ -2295,9 +2244,6 @@ translate ru strings:
     old "For she knew the burden of love, and the fear of loss that it invited."
     new "Ибо она знала бремя любви и страх перед потерей, которую та несла с собой."
 
-    old "Are you okay?"
-    new "Ты в порядке?"
-
     old "Samayra still breathed heavily as she spoke, recovering."
     new "Самайра всё ещё тяжело дышала, говоря и пытаясь прийти в себя."
 
@@ -2325,14 +2271,8 @@ translate ru strings:
     old "Sarah felt Samayra's hands, entangled with her own, clasping."
     new "Сара почувствовала, как руки Самайры, сплетённые с её собственными, сжались."
 
-    old "Don't worry."
-    new "Не волнуйся."
-
     old "You have me."
     new "У тебя есть я."
-
-    old "Forever."
-    new "Навсегда."
 
     old "Sarah closed her eyes and made that same bargain that all lovers make."
     new "Сара закрыла глаза и заключила ту самую сделку, которую заключают все влюблённые."
@@ -2523,9 +2463,6 @@ translate ru strings:
     old "He reached over and took a quick sip himself."
     new "Он протянул руку и сделал быстрый глоток сам."
 
-    old "There."
-    new "Вот."
-
     old "If it's poisoned, at least we'll die together."
     new "Если он отравлен, то по крайней мере мы умрём вместе."
 
@@ -2544,9 +2481,6 @@ translate ru strings:
     old "The sweet hints of ripe fruit washed away the vile and bitter wine from before."
     new "Сладкие нотки спелых фруктов смывали с языка то отвратительное и горькое вино, что было до этого."
 
-    old "Gods."
-    new "Боги."
-
     old "She couldn't help but say it out loud."
     new "Она не могла удержаться и сказала это вслух."
 
@@ -2555,9 +2489,6 @@ translate ru strings:
 
     old "The man laughed again."
     new "Мужчина снова рассмеялся."
-
-    old "See, told you."
-    new "Видишь? Я же говорил."
 
     old "He reached over with this hand."
     new "Он протянул к нему эту руку."
@@ -2573,9 +2504,6 @@ translate ru strings:
 
     old "Sigmund smiled, reached over, and poured her another glass."
     new "Зигмунд улыбнулся, протянул руку и налил ей ещё один бокал вина."
-
-    old "On me."
-    new "На мне."
 
     old "Sarah eyed him with suspicion."
     new "Сара посмотрела на него с подозрением."
@@ -2727,9 +2655,6 @@ translate ru strings:
     old "All kinds of places got laws about what you can and can't trade in. Import taxes, bans, all that stuff."
     new "Во всех этих местах есть законы о том, чем можно и нельзя торговать. Импортные налоги, запреты — вся эта ерунда."
 
-    old "Me..."
-    new "Я..."
-
     old "Well, let's say I'm more of a believer in free trade."
     new "Ну, скажем так: я больше сторонник свободной торговли."
 
@@ -2766,9 +2691,6 @@ translate ru strings:
     old "Sarah already felt the comfortable glow of a few glasses, but the offer of more was enticing."
     new "Она уже чувствовала приятное опьянение от нескольких бокалов, но предложение выпить ещё больше казалось ей очень соблазнительным."
 
-    old "Yeah."
-    new "Да."
-
     old "I don't keep it on me, of course, but we could go get after we finish this one."
     new "Конечно, я его при себе не ношу, но мы могли бы пойти за ним, когда закончим с этим."
 
@@ -2789,9 +2711,6 @@ translate ru strings:
 
     old "Sigmund suddenly stared directly at her."
     new "Зигмунд вдруг пристально посмотрел на неё."
-
-    old "Listen to me."
-    new "Послушай меня."
 
     old "I won't lie to you, you're a beautiful woman and I'm sure you've heard that plenty in your life."
     new "Я не буду лгать тебе: ты прекрасная женщина, и я уверен, что за свою жизнь это слышал уже немало раз."
@@ -2997,9 +2916,6 @@ translate ru strings:
     old "She heard him groan, deep."
     new "Она услышала его глубокое стонание."
 
-    old "Gods..."
-    new "Боги..."
-
     old "And she wanted him only more."
     new "И она хотела его ещё сильнее."
 
@@ -3119,9 +3035,6 @@ translate ru strings:
 
     old "Deeper and deeper, until he let out one primal grunt, nearly a roar."
     new "Всё глубже и глубже, пока он не издал один первобытный стон, почти рев."
-
-    old "Fuck..."
-    new "Чёрт..."
 
     old "She felt him swelling inside of her, then the rush of his warm seed as it spilled into her womb."
     new "Она почувствовала, как он распухает внутри неё, а затем — прилив тёплого семени, когда оно хлынуло в её утробу."

@@ -108,9 +108,6 @@ translate ru strings:
     old "What do you mean? We have to leave tonight, right?"
     new "Что ты имеешь в виду? Нам же нужно уходить сегодня ночью, так?"
 
-    old "Yes."
-    new "Да."
-
     old "Then suddenly, it reached for the ragged loincloth that covered its lower body."
     new "Тут оно вдруг потянулось к рваному поясу, покрывавшему его нижнюю часть тела."
 
@@ -140,9 +137,6 @@ translate ru strings:
 
     old "Her situation might be dire, but she would not allow herself to be blackmailed by this thing."
     new "Её положение могло быть отчаянным, но она не позволит этому тварь шантажировать себя."
-
-    old "Get out!"
-    new "Уходи!"
 
     old "Sarah sat back down on the floor of her cell and lowered her head."
     new "Сара снова села на пол своей камеры и опустила голову."

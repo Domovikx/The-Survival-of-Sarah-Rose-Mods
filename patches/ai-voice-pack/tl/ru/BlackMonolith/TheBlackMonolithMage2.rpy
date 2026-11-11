@@ -66,9 +66,6 @@ translate ru strings:
     old "You're in my house, so I suggest you answer my questions!"
     new "Ты у меня дома, так что советую отвечать на мои вопросы!"
 
-    old "Your house?"
-    new "Твой дом?"
-
     old "Has Xan moved out?"
     new "Ксантиппа уже уехал?"
 
@@ -153,9 +150,6 @@ translate ru strings:
     old "I don't think it will be a matter of hours. More weeks or months."
     new "Не думаю, что дело ограничится несколькими часами. Скорее неделями или месяцами."
 
-    old "Aah, I see."
-    new "Ах, я вижу."
-
     old "Where did he go, exactly?"
     new "Куда он пошёл, точно?"
 
@@ -185,9 +179,6 @@ translate ru strings:
 
     old "Then he slowly nodded."
     new "Тогда он медленно кивнул."
-
-    old "True."
-    new "Верно."
 
     old "Forgive me if I come across rude, I had simply hoped to discuss a matter with him, but he can be hard to find."
     new "Простите, если я кажусь грубым — я просто надеялся обсудить с ним одно дело, но его бывает непросто найти."
@@ -357,9 +348,6 @@ translate ru strings:
     old "Sarah turned around to leave."
     new "Сара обернулась, чтобы уйти."
 
-    old "Hey."
-    new "Эй."
-
     old "Surprised, Sarah turned back to Samayra."
     new "Удивлённая, Сара обернулась к Самайре."
 
@@ -413,9 +401,6 @@ translate ru strings:
 
     old "I am very tired though."
     new "Хотя я очень устала."
-
-    old "Yeah, I know."
-    new "Да, я знаю."
 
     old "I'm just saying..."
     new "Я просто говорю..."

@@ -234,9 +234,6 @@ translate ru strings:
     old "What? No! I managed to ditch them."
     new "Что? Нет! Мне удалось от них избавиться."
 
-    old "Are you sure?"
-    new "Ты уверена?"
-
     old "Obviously! If they had followed me, I would have spotted them."
     new "Конечно! Если бы они преследовали меня, я бы их заметила."
 
@@ -318,9 +315,6 @@ translate ru strings:
     old "And if they start to put up posters..."
     new "И если они начнут вешать объявления..."
 
-    old "Fuck!"
-    new "Чёрт!"
-
     old "Alaric punched the wall."
     new "Аларик ударил кулаком по стене."
 
@@ -341,9 +335,6 @@ translate ru strings:
 
     old "Sarah just lowered her head."
     new "Сара просто опустила голову."
-
-    old "Whatever."
-    new "Да ладно."
 
     old "Alaric looked around."
     new "Аларик огляделся."
@@ -377,9 +368,6 @@ translate ru strings:
 
     old "And in the western rich part, I'm gonna stand out like a fuckin sore."
     new "А в западной богатой части я буду выделяться как чертово болячка."
-
-    old "So..."
-    new "Так..."
 
     old "We go East Lethram."
     new "Мы идём на Восточный Летрам."
@@ -831,9 +819,6 @@ translate ru strings:
     old "Suddenly, Alaric stopped."
     new "Внезапно Аларик остановился."
 
-    old "We're here."
-    new "Мы здесь."
-
     old "They were standing in front of a door. It didn't have any markings that made it stand out from any of the others."
     new "Они стояли перед дверью. На ней не было никаких отметок, которые выделяли бы её среди остальных."
 
@@ -842,12 +827,6 @@ translate ru strings:
 
     old "He repeated it a few times, until finally, they heard sounds on the other end of the door."
     new "Он повторил это несколько раз, пока наконец не услышали звуки с другой стороны двери."
-
-    old "What?"
-    new "Что?"
-
-    old "It's me."
-    new "Это я."
 
     old "Whose me?"
     new "Какой ещё я?"
@@ -956,9 +935,6 @@ translate ru strings:
 
     old "Let us in and I can explain."
     new "Пусть мы войдем, и я всё объясню."
-
-    old "Us?"
-    new "Мы?"
 
     old "Damian looked at Sarah."
     new "Дамиан посмотрел на Сару."
@@ -1233,9 +1209,6 @@ translate ru strings:
     old "Sarah could see Damian's eyes begin to wander over to her."
     new "Сара видела, как глаза Дамиана начали блуждать в её сторону."
 
-    old "Now..."
-    new "Ну..."
-
     old "Seein as you can't make the payment..."
     new "Раз уж ты не можешь внести платеж..."
 
@@ -1262,9 +1235,6 @@ translate ru strings:
 
     old "I...no, sir...I think that..."
     new "Я... нет, сэр... я думаю, что..."
-
-    old "What?"
-    new "Что?"
 
     old "I ain't that ugly, am I? You call me ugly in my own home?"
     new "Я же не такой уж уродливый, да? Ты называешь меня уродливым в моём собственном доме?"
@@ -1310,9 +1280,6 @@ translate ru strings:
 
     old "We don't...we don't have that kind of money..."
     new "У нас... у нас нет таких денег..."
-
-    old "Exactly."
-    new "Точно."
 
     old "You ain't got a dime, so I'm doin the honest and friendly thing. I'm lettin you pay the other way."
     new "У тебя и копейки нет, так что я поступаю честно и по-дружески: даю тебе заплатить другим способом."
@@ -1388,9 +1355,6 @@ translate ru strings:
 
     old "Damian stood up and slapped his thigs."
     new "Дамиан встал и хлопнул себя по бёдрам."
-
-    old "Okay then."
-    new "Ну ладно тогда."
 
     old "You, missy."
     new "Ты, красотка."

@@ -228,9 +228,6 @@ translate ru strings:
     old "Weaving her fingers, she gently produced and guided the magical energies into the seedling."
     new "Сплетая пальцы, она осторожно высвободила магическую энергию и направилась в росток."
 
-    old "Dead."
-    new "Мёртв."
-
     old "Way too much. You're drowning it. It needs to be more subtle."
     new "Слишком много. Ты его утопляешь. Нужно быть более тонкой."
 
@@ -398,9 +395,6 @@ translate ru strings:
 
     old "Property alterations are the most simply form of transmogrification. Basically, altering certain properties of your body."
     new "Изменение свойств — это самая простая форма трансмогрификации. По сути, это просто изменение определённых характеристик твоего тела."
-
-    old "Such as..."
-    new "Например..."
 
     old "Metis waved his hands across his body."
     new "Метис взмахнул руками перед своим телом."

@@ -33,9 +33,6 @@ translate ru strings:
     old "They ain't gonna let you die, but they won't lose a night sleep over you not eatin for a day either."
     new "Они не дадут тебе умереть, но и ночного сна не лишатся оттого, что ты денек не поешь."
 
-    old "Let's go."
-    new "Пойдём."
-
     old "Sarah followed Eula out of their cell."
     new "Сара последовала за Еулой из их камеры."
 

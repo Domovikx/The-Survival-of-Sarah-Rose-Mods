@@ -294,9 +294,6 @@ translate zh strings:
     old "Tailor"
     new "裁缝"
 
-    old "Girl"
-    new "女孩"
-
     old "Advisor"
     new "顾问"
 

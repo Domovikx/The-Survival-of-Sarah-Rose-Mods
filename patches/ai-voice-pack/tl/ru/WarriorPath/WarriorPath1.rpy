@@ -348,9 +348,6 @@ translate ru strings:
     old "Radiant, like a miniature sun, lashes of fire struck out and incinerated soldiers as though they were nothing."
     new "Яркое, словно миниатюрное солнце, сияние выпускало огненные языки, которые сжигали солдат так, будто они были ничем."
 
-    old "No."
-    new "Нет."
-
     old "Not an object, Sarah realized."
     new "Не объект, — поняла Сара."
 
@@ -654,9 +651,6 @@ translate ru strings:
     old "She could see the mage's eyes grow wide, stunned."
     new "Она видела, как глаза мага расширились от изумления."
 
-    old "I..."
-    new "Я..."
-
     old "He inspected the fatal wound, blood pouring out from it."
     new "Он осмотрел смертельную рану, из которой хлестала кровь."
 
@@ -713,9 +707,6 @@ translate ru strings:
 
     old "In unison, the soldiers stomped their feet and began to storm down the hallway, their rupturous screams filling the hall, striking fear into any possible enemy."
     new "В один голос солдаты топнули ногами и ринулись по коридору; их дикие крики заполнили зал, внушая страх любому потенциальному врагу."
-
-    old "Are you alright?"
-    new "Ты в порядке?"
 
     old "Sarah checked her body for injuries but found none."
     new "Сара осмотрела себя на предмет ран, но не нашла ни одной."

@@ -27,9 +27,6 @@ translate ru strings:
     old "Behind her, she feels the man fumbling at her dress."
     new "За спиной она чувствует, как мужчина возится с её платьем."
 
-    old "Please."
-    new "Пожалуйста."
-
     old "She prays in her mind."
     new "Она молится про себя."
 
@@ -89,9 +86,6 @@ translate ru strings:
 
     old "The source of light is now gone."
     new "Источник света исчез."
-
-    old "Are you alright?"
-    new "Ты в порядке?"
 
     old "Sarah tries to answer him, but as her heart still races, she can't produce the words."
     new "Сара пытается ответить ему, но её сердце всё ещё бешено колотится, и она не может вымолвить ни слова."

@@ -87,9 +87,6 @@ translate ru strings:
     old "Sarah could hear a deep rattle in the poor girl's lungs."
     new "Сара слышала глубокое хрипение в лёгких бедной девушки."
 
-    old "Come over here."
-    new "Подойди сюда."
-
     old "Sarah opened her arms."
     new "Сара раскинула руки."
 
@@ -543,9 +540,6 @@ translate ru strings:
     old "Suddenly, Sarah heard footsteps behind her. She turned around."
     new "Внезапно Сара услышала шаги за спиной. Она обернулась."
 
-    old "Hey."
-    new "Эй."
-
     old "Gideon was smiling."
     new "Гидеон улыбался."
 
@@ -629,9 +623,6 @@ translate ru strings:
 
     old "Gideon laughed."
     new "Гидеон рассмеялся."
-
-    old "Yeah, I guess that's true."
-    new "Да, полагаю, это так."
 
     old "He passed her a cup of beer and Sarah eagerly drank from it, passing the cup back and forth between them."
     new "Он передал ей кружку с пивом, и Сара с энтузиазмом выпила из неё, передавая кружку взад-вперёд между ними."
@@ -717,9 +708,6 @@ translate ru strings:
     old "The truth is you're a wanted man"
     new "Правда в том, что ты — разыскиваемый человек."
 
-    old "The truth is you're a wanted man"
-    new "Правда в том, что ты — разыскиваемый человек."
-
     old "Hah, sorry, everything I get up to is perfectly within the law."
     new "Ха, извини, но всё, чем я занимаюсь, абсолютно законно."
 
@@ -731,9 +719,6 @@ translate ru strings:
 
     old "The truth is you fucked more men than women"
     new "Правда в том, что ты переспал с большим количеством мужчин, чем женщин."
-
-    old "The truth is you fucked more men than women"
-    new "Правда в том, что ты переспала с большим числом мужчин, чем с женщинами."
 
     old "Gideon rolled his eyes at her."
     new "Гидеон закатил глаза."
@@ -756,14 +741,8 @@ translate ru strings:
     old "A smile crept across Gideon's face."
     new "На лице Гидеона появилась улыбка."
 
-    old "How did you know?"
-    new "Откуда вы знаете?"
-
     old "Well, this camp has more than its fair share of former criminals, and I learned to spot them...and you ain't one of em."
     new "Ну, в этом лагере бывших преступников больше, чем достаточно, и я научилась их узнавать... а ты к ним не принадлежишь."
-
-    old "Fair."
-    new "Справедливо."
 
     old "As for your adventures with men, I happen to know for a fact that you're as straight as an arrow."
     new "Что касается твоих приключений с мужчинами, то я точно знаю: ты гетеросексуал как стрела."
@@ -819,9 +798,6 @@ translate ru strings:
     old "I'm a princess of noble birth."
     new "Я принцесса знатного происхождения."
 
-    old "I'm a princess of noble birth."
-    new "Я принцесса знатного происхождения."
-
     old "Gideon leaned forward."
     new "Гидеон наклонился вперёд."
 
@@ -848,9 +824,6 @@ translate ru strings:
 
     old "Born to a royal family, dad was a king, all that."
     new "Я родилась в королевской семье: отец был королём — всё такое."
-
-    old "Wow..."
-    new "Ого..."
 
     old "Goes to show how well I know you..."
     new "Это показывает, насколько хорошо я тебя знаю..."
@@ -957,9 +930,6 @@ translate ru strings:
     old "Wrong."
     new "Неверно."
 
-    old "Huh..."
-    new "Хм..."
-
     old "So you can do magic?"
     new "Так ты умеешь колдовать?"
 
@@ -1010,9 +980,6 @@ translate ru strings:
 
     old "Sure, but this was just a warm-up round. Next time we wager on it."
     new "Конечно, но это была всего лишь разминка. В следующий раз мы поспорим на этом."
-
-    old "Deal."
-    new "Согласно."
 
     old "Sarah waved at Gideon and turned around to leave, stumbling back towards the camp."
     new "Сара помашала Гидеону и повернулась, чтобы уйти, спотыкаясь на обратном пути к лагерю."

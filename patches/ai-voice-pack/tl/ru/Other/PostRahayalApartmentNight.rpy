@@ -309,9 +309,6 @@ translate ru strings:
     old "Really, I'm doing quite well."
     new "Правда, у меня всё довольно хорошо."
 
-    old "Good, good."
-    new "Хорошо, хорошо."
-
     old "Hecate turned and looked across the room."
     new "Геката повернулась и посмотрела поперёк комнаты."
 
@@ -338,9 +335,6 @@ translate ru strings:
 
     old "Her finger slowly glided across the room."
     new "Её палец медленно скользил по комнате."
-
-    old "There."
-    new "Вот."
 
     old "She pointed out a man wearing a white robe with golden weavings."
     new "Она указала на мужчину в белом халате с золотыми узорами."
@@ -518,9 +512,6 @@ translate ru strings:
 
     old "What is he talking about?"
     new "О чём он говорит?"
-
-    old "Huh?"
-    new "А?"
 
     old "The void...I mean, that is the enemy, right? What is he talking about?"
     new "Пустота... я имею в виду, это ведь враг, да? О чём он вообще говорит?"
@@ -831,9 +822,6 @@ translate ru strings:
     old "She felt her breath quickening, realizing that she had set something in motion that could not be undone."
     new "Она почувствовала, как у неё участилось дыхание, осознавая, что она запустила механизм, который уже невозможно было остановить."
 
-    old "Are you okay?"
-    new "Ты в порядке?"
-
     old "Sarah snapped from her daze and saw him looking at her, a strange sense of concern on his face."
     new "Сара очнулась от оцепенения и увидела, что он смотрит на неё со странным беспокойством на лице."
 
@@ -1017,9 +1005,6 @@ translate ru strings:
     old "Sarah saw she was still covered in blood."
     new "Сара увидела, что всё ещё была вся в крови."
 
-    old "Don't worry."
-    new "Не волнуйся."
-
     old "You did well in choosing to side with us."
     new "Вы правильно сделали, решив встать на нашу сторону."
 
@@ -1049,9 +1034,6 @@ translate ru strings:
 
     old "Neither said a word until they arrived."
     new "Они не произнесли ни слова, пока не приехали."
-
-    old "We're here."
-    new "Мы здесь."
 
     old "Outside, the world had dissapeared into nothingness."
     new "Снаружи мир исчез в пустоте."
@@ -1115,9 +1097,6 @@ translate ru strings:
 
     old "You want me to believe you care for anyone other than yourself?"
     new "Вы хотите, чтобы я поверила, что вы заботитесь о ком-то, кроме себя?"
-
-    old "No."
-    new "Нет."
 
     old "But sometimes my own ends and those of the general population, are in aligment."
     new "Но иногда мои собственные цели и цели всего населения совпадают."
@@ -1236,9 +1215,6 @@ translate ru strings:
     old "Not in this life."
     new "Не в этой жизни."
 
-    old "Another."
-    new "Другой."
-
     old "Sarah felt the edges of the room fade away as she approached the edge of the fountain."
     new "Сара почувствовала, как края комнаты растворяются в тумане, когда она подошла к краю фонтана."
 
@@ -1284,9 +1260,6 @@ translate ru strings:
     old "Soft ripples disturbed the bloodied waters."
     new "Мягкие волны потревожили окровавленные воды."
 
-    old "What are you?"
-    new "Ты кто?"
-
     old "A God."
     new "Бог."
 
@@ -1298,9 +1271,6 @@ translate ru strings:
 
     old "I thought they all left..."
     new "Я думала, они все ушли..."
-
-    old "All did."
-    new "Все так и делали."
 
     old "But not me."
     new "Но не я."
@@ -1377,9 +1347,6 @@ translate ru strings:
     old "No...I'm just...a girl..."
     new "Нет... Я просто... девушка..."
 
-    old "No."
-    new "Нет."
-
     old "All souls are not made alike."
     new "Не все души созданы одинаковыми."
 
@@ -1397,9 +1364,6 @@ translate ru strings:
 
     old "Those who shape the world, rather than be shaped by it."
     new "Те, кто формируют мир, а не позволяют ему формировать себя."
-
-    old "You..."
-    new "Ты..."
 
     old "You can stop them all."
     new "Ты можешь остановить их всех."
@@ -1428,9 +1392,6 @@ translate ru strings:
     old "A childish hope, that she had long ago allowed to die, returned."
     new "Детская надежда, от которой она давно отказалась, вернулась."
 
-    old "Yes!"
-    new "Да!"
-
     old "The voice hissed, sharply."
     new "Голос прошипел резко."
 
@@ -1451,9 +1412,6 @@ translate ru strings:
 
     old "And we will be wed."
     new "И мы поженимся."
-
-    old "Forever."
-    new "Вечность."
 
     old "Sarah reached out with her hand, cupping the blood."
     new "Сара протянула руку и обхватила кровь ладонью."
@@ -1521,9 +1479,6 @@ translate ru strings:
     old "And its voice."
     new "И его голос."
 
-    old "It is done."
-    new "Это сделано."
-
     old "She wondered if she had heard the voice."
     new "Она задавалась вопросом, слышала ли она этот голос."
 
@@ -1541,9 +1496,6 @@ translate ru strings:
 
     old "Sarah rose back to her feet."
     new "Сара поднялась на ноги."
-
-    old "It is done."
-    new "Готово."
 
     old "Join forces with the mage Order"
     new "Объедините силы с орденом магов."
@@ -1631,9 +1583,6 @@ translate ru strings:
 
     old "Oryon nodded."
     new "Орион кивнул."
-
-    old "Very well."
-    new "Хорошо."
 
     old "Xan was old, much like myself and the other founders, he was alive during the First Empire."
     new "Ксантиппа был стар, почти как я и другие основатели; он жил во времена Первой Империи."
@@ -1779,9 +1728,6 @@ translate ru strings:
     old "But this place...this Empire, this city..."
     new "Но это место... эта Империя, этот город..."
 
-    old "Sarah..."
-    new "Сара..."
-
     old "Did you never wonder how or why the Mythran Empire stood so far above and beyond all other nations?"
     new "Разве ты никогда не задавалась вопросом, как или почему Мифранская Империя так сильно превосходила все остальные нации?"
 
@@ -1874,9 +1820,6 @@ translate ru strings:
 
     old "She didn't make it more than a few paces before Hecate grabbed her."
     new "Она не успела сделать и нескольких шагов, как Геката схватила её."
-
-    old "Hey, Sarah!"
-    new "Эй, Сара!"
 
     old "Wow...you look like you've seen a ghost! You're so pale!"
     new "Ого... Ты выглядишь так, будто видела призрака! У тебя же всё лицо белое!"
@@ -2037,9 +1980,6 @@ translate ru strings:
     old "Gabriel stood up and grabbed both their hands."
     new "Габриэль встал и схватил их обеих за руки."
 
-    old "Come on."
-    new "Давай же."
-
     old "Let's go before she wises up and changes her mind."
     new "Пойдём, пока она не опомнилась и не передумала."
 
@@ -2133,9 +2073,6 @@ translate ru strings:
     old "Sarah watched intently as the pleasure played out across Hecate's face."
     new "Сара пристально наблюдала, как удовольствие отразилось на лице Гекаты."
 
-    old "Aah!"
-    new "Ах!"
-
     old "Her usually so controlled expressions, giving way to maddening lust."
     new "Её обычно такие сдержанные выражения лица уступили место безумной страсти."
 
@@ -2207,9 +2144,6 @@ translate ru strings:
 
     old "Above her, she saw Hecate's face."
     new "Над ней она увидела лицо Гекаты."
-
-    old "You're so mean."
-    new "Ты такая жестокая."
 
     old "You're supposed to share, Sarah."
     new "Ты же должна была поделиться, Сара."

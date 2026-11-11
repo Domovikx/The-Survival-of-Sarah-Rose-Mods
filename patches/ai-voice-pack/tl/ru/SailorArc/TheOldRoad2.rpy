@@ -54,9 +54,6 @@ translate ru strings:
     old "Sigmund was looking at her, a small grin on his face."
     new "Зигмунд смотрел на неё с лёгкой усмешкой на лице."
 
-    old "Trouble?"
-    new "Проблемы?"
-
     old "No...none...at all..."
     new "Нет... совсем... нет..."
 
@@ -297,9 +294,6 @@ translate ru strings:
     old "But it was only Sakar and Krip."
     new "Но это были лишь Сакар и Крип."
 
-    old "What?"
-    new "Что?"
-
     old "You already took care of them?"
     new "Ты уже с ними разберёлся?"
 
@@ -486,9 +480,6 @@ translate ru strings:
     old "Yes, I'll join you."
     new "Да, я присоединюсь к тебе."
 
-    old "Where are we going?"
-    new "Куда мы идём?"
-
     old "Sakar gestured out towards the woods."
     new "Сакар указал рукой на лес."
 
@@ -654,9 +645,6 @@ translate ru strings:
     old "I mean complete privacy."
     new "Я имею в виду полное уединение."
 
-    old "To do what?"
-    new "Что сделать?"
-
     old "The kind's of things one prefers not to do in company."
     new "Вот те самые вещи, которые обычно предпочитают не делать при других."
 
@@ -750,9 +738,6 @@ translate ru strings:
     old "Sarah wanted to look away from him as much as she wanted to look at him."
     new "Сара хотела отвести от него взгляд так же сильно, как и хотела на него смотреть."
 
-    old "You know..."
-    new "Знаешь..."
-
     old "Sakar continued the same constant movements across his growing bulge as he spoke."
     new "Сакар продолжал совершать те же повторяющиеся движения по своему растущему выпуклому члену, пока говорил."
 
@@ -786,9 +771,6 @@ translate ru strings:
     old "Sakar laughed as he continued the same motion over and over again."
     new "Сакар рассмеялся, продолжая повторять одно и то же движение снова и снова."
 
-    old "We'll see about that."
-    new "Посмотрим."
-
     old "He gestured at her with his free hand."
     new "Он указал на неё свободной рукой."
 
@@ -797,9 +779,6 @@ translate ru strings:
 
     old "Sarah looked up at him, stunend by yet another bold proposal."
     new "Сара подняла на него глаза, ошеломлённая очередным смелым предложением."
-
-    old "Take your clothes off."
-    new "Сними с себя одежду."
 
     old "Strip your clothes"
     new "Сними одежду"
@@ -831,9 +810,6 @@ translate ru strings:
     old "Sarah looked away, to embarrassed to maintain eye contact with him."
     new "Сара отвела взгляд, слишком смущённая, чтобы поддерживать с ним зрительный контакт."
 
-    old "Turn around."
-    new "Повернись."
-
     old "Come on, spin."
     new "Давай, повернись."
 
@@ -851,9 +827,6 @@ translate ru strings:
 
     old "Turn back around."
     new "Обернись."
-
-    old "Look at me."
-    new "Посмотри на меня."
 
     old "Again, Sarah found herself obeying his instructions with surprisingly little resistance."
     new "Снова Сара обнаружила, что подчиняется его указаниям с удивительно малым сопротивлением."
@@ -897,9 +870,6 @@ translate ru strings:
     old "Still, she remained on her knees. Looking up at him, anticipating his next order."
     new "Тем не менее она оставалась на коленях. Подняв голову к нему, она ждала его следующего приказа."
 
-    old "Alright."
-    new "Хорошо."
-
     old "He grunted in between strokes."
     new "Он хрипел между ударами."
 
@@ -936,9 +906,6 @@ translate ru strings:
     old "Sarah simply did as he told her. It was easiest."
     new "Сара просто сделала то, что он ей сказал. Так было проще всего."
 
-    old "Aaah!"
-    new "Ааах!"
-
     old "He yelled out a primal grunt as he came."
     new "Он издал первобытный стон, когда кончил."
 
@@ -965,9 +932,6 @@ translate ru strings:
 
     old "She saw Sakar, looking down on her with a satisfied grin on his face."
     new "Она увидела Сакара, который смотрел на неё сверху вниз с довольной ухмылкой на лице."
-
-    old "Good girl."
-    new "Хорошая девочка."
 
     old "He patted her on the head."
     new "Он похлопал её по голове."
@@ -1173,9 +1137,6 @@ translate ru strings:
     old "Being alone with Sakar at the camp was one thing, but she didn't trust him enough to be out alone in the forest with him."
     new "Быть одной с Сакаром в лагере — это одно, но она не доверяла ему настолько, чтобы отправиться с ним вдвоём в лес."
 
-    old "Your loss."
-    new "Твоя потеря."
-
     old "He didn't wait for her to say much further, taking off towards the edge of the road and dissapearing into the forest."
     new "Он не стал ждать, пока она скажет что-то ещё, а сам помчался к краю дороги и скрылся в лесу."
 
@@ -1205,9 +1166,6 @@ translate ru strings:
 
     old "Sigmund looked out into the forest, nodding."
     new "Зигмунд посмотрел в сторону леса и кивнул."
-
-    old "Good."
-    new "Хорошо."
 
     old "Gods knows what he does out there in the forest by himself."
     new "Боже знает, чем он там занимается в лесу один."

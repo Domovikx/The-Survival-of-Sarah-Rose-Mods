@@ -117,9 +117,6 @@ translate ru strings:
     old "I actually really enjoyed that."
     new "Мне это на самом деле очень понравилось."
 
-    old "Good, good."
-    new "Хорошо, хорошо."
-
     old "Now don't forget to report to the Headmaster that you want to request a change in position."
     new "Теперь не забудь сообщить директору, что хочешь попросить об изменении должности."
 
@@ -134,9 +131,6 @@ translate ru strings:
 
     old "Sir."
     new "Сэр."
-
-    old "What is it?"
-    new "Что такое?"
 
     old "I have a request."
     new "У меня есть просьба."
@@ -221,9 +215,6 @@ translate ru strings:
 
     old "Albert..."
     new "Альберт..."
-
-    old "Yes?"
-    new "Да?"
 
     old "The Headmaster said that I had to report to the tailor quarters for sleeping."
     new "Глава школы сказал, что мне нужно явиться в покои портного за то, что я спала там."
@@ -369,9 +360,6 @@ translate ru strings:
     old "His sinewy arms wrapped around her waist, holding her in place."
     new "Его жилистые руки обвили её талию, удерживая на месте."
 
-    old "There you go."
-    new "Вот так-то."
-
     old "Don't go causin trouble on your first day, alright?"
     new "Не ищи неприятностей в свой первый день, ладно?"
 
@@ -401,9 +389,6 @@ translate ru strings:
 
     old "What other option did she really have?"
     new "Какой ещё выбор у неё на самом деле был?"
-
-    old "Good."
-    new "Хорошо."
 
     old "The old tailor pulled away the covers."
     new "Старый портной отодвинул одеяло."
@@ -482,9 +467,6 @@ translate ru strings:
 
     old "You didn't tell me when I signed up that I'd have to be your personal..."
     new "Ты же не говорил мне при подписании, что придётся стать твоей личной..."
-
-    old "What?"
-    new "Что?"
 
     old "You think you got the job because you have so much tailoring experience?"
     new "Думаешь, тебя наняли только потому, что у тебя так много опыта в пошиве?"
@@ -602,9 +584,6 @@ translate ru strings:
 
     old "Sarah did her best to mumble an affirmative response as he still filled up her mouth."
     new "Сара изо всех сил попыталась промычать утвердительный ответ, пока он всё ещё заполнял её рот."
-
-    old "That's right."
-    new "Именно так."
 
     old "Besides, some girls like old dick."
     new "К тому же, некоторым девушкам нравятся старые члены."
@@ -741,9 +720,6 @@ translate ru strings:
     old "Never gifted with a thread and needle, she did her best to learn."
     new "Никогда не одарённая ниткой и иглой, она делала всё возможное, чтобы научиться."
 
-    old "No!"
-    new "Нет!"
-
     old "Not like that!"
     new "Не так!"
 
@@ -794,9 +770,6 @@ translate ru strings:
 
     old "The old tailor groaned with pleasure."
     new "Старый портной с наслаждением вздохнул."
-
-    old "There you go..."
-    new "Ну вот..."
 
     old "He was never nice to her. But when she serviced him, it was as close as he'd get."
     new "Он никогда не был с ней добр. Но когда она обслуживала его, это было самое близкое, чего он мог достичь."
@@ -923,9 +896,6 @@ translate ru strings:
 
     old "I will marry you..."
     new "Я выйду за тебя замуж..."
-
-    old "Good girl."
-    new "Хорошая девочка."
 
     old "He brushed the side of her cheek."
     new "Он коснулся её щеки."

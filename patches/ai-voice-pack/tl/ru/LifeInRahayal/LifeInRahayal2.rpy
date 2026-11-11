@@ -219,9 +219,6 @@ translate ru strings:
     old "The official threw up hands hands."
     new "Официал развёл руками."
 
-    old "Fine!"
-    new "Хорошо!"
-
     old "The positions open are for servants at the Estate of the honourable Gilead."
     new "Вакантные должности — для слуг в поместье почтенного Гилеада."
 

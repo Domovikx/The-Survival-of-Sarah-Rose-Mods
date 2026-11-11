@@ -156,9 +156,6 @@ translate ru strings:
     old "Sarah watched as his right hand began to glow with magical energy."
     new "Сара смотрела, как его правая рука начала светиться магической энергией."
 
-    old "You fucking bitch!"
-    new "Ты, сука!"
-
     old "Xan raised his remaining hand, sending out a shockwave that slammed Sarah into the wall."
     new "Ксантиппа поднял оставшуюся руку, высвободив ударную волну, которая впечатала Сару в стену."
 

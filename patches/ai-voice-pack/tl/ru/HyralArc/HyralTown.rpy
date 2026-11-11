@@ -9,9 +9,6 @@ translate ru strings:
     old "She saw his angry expression."
     new "Она увидела его гневное выражение лица."
 
-    old "What?"
-    new "Что?"
-
     old "It will be night soon."
     new "Скоро наступит ночь."
 
@@ -167,9 +164,6 @@ translate ru strings:
 
     old "When they finally crossed the last stretch of frozen wasteland, they caught the attention of two guards near the gate."
     new "Когда они наконец пересекли последний участок замерзшей пустоши, они привлекли внимание двух стражников у ворот."
-
-    old "Hey!"
-    new "Эй!"
 
     old "He rang out a bell."
     new "Он ударил в колокол."
@@ -591,9 +585,6 @@ translate ru strings:
     old "He had all but torn the clothes from her body when he finally had her all to himself."
     new "Он почти сорвал с неё одежду, когда наконец оказался один с ней."
 
-    old "Aah!!"
-    new "А-а-а!!"
-
     old "He grunted a deep sound of relief as he took her."
     new "Он издал глубокий звук облегчения, когда наконец взял её."
 
@@ -729,9 +720,6 @@ translate ru strings:
     old "Nick frowned."
     new "Николас нахмурился."
 
-    old "Here?"
-    new "Здесь?"
-
     old "This place is at the edge of the world."
     new "Это место находится на краю света."
 
@@ -791,9 +779,6 @@ translate ru strings:
 
     old "She walked up to him and pressed her hands up against his chest."
     new "Она подошла к нему и прижала руки к его груди."
-
-    old "Don't worry about that."
-    new "Не переживай об этом."
 
     old "Belmont was cruel to you."
     new "Бельмонт был жесток с тобой."

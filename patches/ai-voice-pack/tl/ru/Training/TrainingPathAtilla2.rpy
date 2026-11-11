@@ -135,9 +135,6 @@ translate ru strings:
     old "Sarah could feel herself turn red and tried to look away."
     new "Сара почувствовала, как её лицо краснеет, и попыталась отвести взгляд."
 
-    old "Go ahead."
-    new "Давай."
-
     old "He motioned at the package."
     new "Он указал на посылку."
 

@@ -174,9 +174,6 @@ translate ru strings:
     old "Navigate the interface."
     new "Перемещайтесь по интерфейсу."
 
-    old "Escape"
-    new "Escape"
-
     old "Accesses the game menu."
     new "Открывает меню игры."
 

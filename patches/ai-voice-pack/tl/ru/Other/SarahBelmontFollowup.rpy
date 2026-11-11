@@ -144,9 +144,6 @@ translate ru strings:
     old "I was gonna be, how do you say, polite? And not mention that I could see how wet you would get."
     new "Я собирался быть, как бы это сказать… вежливым? И не упоминать, насколько мокрой ты бы стала."
 
-    old "Liar!"
-    new "Лжец!"
-
     old "Sarah yelled out."
     new "Сара закричала."
 

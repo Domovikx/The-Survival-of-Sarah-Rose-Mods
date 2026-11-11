@@ -75,9 +75,6 @@ translate ru strings:
     old "Cassius nodded again."
     new "Кассий снова кивнул."
 
-    old "Yeah."
-    new "Да."
-
     old "I've been out among the citizens for a bit. Heard some stories of what it was like."
     new "Я немного побывал среди горожан. Услышал несколько историй о том, как там всё было."
 

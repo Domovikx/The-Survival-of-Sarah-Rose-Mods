@@ -183,9 +183,6 @@ translate ru strings:
     old "She saw the frightened faces of scholars surrounding her."
     new "Она увидела испуганные лица учёных, окруживших её."
 
-    old "Are you alright?"
-    new "Ты была в порядке?"
-
     old "Did the scaffolding break? What happened?"
     new "Леса сломались? Что произошло?"
 
@@ -221,9 +218,6 @@ translate ru strings:
 
     old "Behind her, she could hear their voices. First calm, then swiftly rising."
     new "Позади неё она слышала их голоса: сначала спокойные, а потом стремительно повышающиеся."
-
-    old "Hey!"
-    new "Эй!"
 
     old "Stop her!"
     new "Остановите её!"
@@ -519,9 +513,6 @@ translate ru strings:
     old "Sarah began to move, but only one step outside of her hiding place, and a voice rang out."
     new "Сара начала двигаться, но едва она сделала один шаг из своего укрытия, как раздался голос."
 
-    old "Hey!"
-    new "Эй!"
-
     old "Sarah turned towards the voice."
     new "Сара повернулась к голосу."
 
@@ -677,9 +668,6 @@ translate ru strings:
 
     old "See if you're not smuggling anything out of our camp."
     new "Проверь, не выносишь ли ты что-нибудь из нашего лагеря."
-
-    old "I'm not!"
-    new "Я не такая!"
 
     old "Good, then if you ain't got nothing to hide, let's get this over with."
     new "Хорошо, тогда, если у тебя нет ничего такого, что стоило бы прятать, давай покончим с этим раз и навсегда."
@@ -911,9 +899,6 @@ translate ru strings:
 
     old "She could feel his erection pressing through his pants."
     new "Она чувствовала, как его эрекция давит на штаны."
-
-    old "That's your fault."
-    new "Это твоя вина."
 
     old "Least you can do is make up for it by havin a drink with me and my buddy."
     new "Хотя бы то, что ты можешь сделать, — это компенсировать это тем, что выпьешь со мной и моим приятелем."

@@ -408,9 +408,6 @@ translate ru strings:
     old "Ooh dear, I imagined you understood."
     new "Ох, боже, я-то думала, ты уже всё поняла."
 
-    old "Understood?"
-    new "Понятно?"
-
     old "I am the master of the camp."
     new "Я хозяйка этого лагеря."
 
@@ -518,9 +515,6 @@ translate ru strings:
 
     old "Sarah took a step foward, closing the distance between them."
     new "Сара сделала шаг вперёд, сокращая расстояние между ними."
-
-    old "Do not forget yourself."
-    new "Не забывай о себе."
 
     old "My father is dead. My brother is dead. But the crown still lives and it weighs on my head, even if you cannot bring yourself to see it."
     new "Мой отец мёртв. Мой брат мёртв. Но корона всё ещё жива и давит на мою голову, даже если ты сама не можешь этого увидеть."
@@ -1776,9 +1770,6 @@ translate ru strings:
     old "Then he slowly turned to face her."
     new "Затем он медленно повернулся к ней."
 
-    old "Sarah."
-    new "Сара."
-
     old "He stated her name and little else. There was rarely warmth in his voice, but he seemed particularly cold."
     new "Он назвал её имя и почти ничего больше. В его голосе редко слышалась теплота, но на этот раз он казался особенно холодным."
 
@@ -1845,9 +1836,6 @@ translate ru strings:
     old "Suddenly she saw Vaelen step forward, closing the distance between them."
     new "Внезапно она увидела, как Ваэлен шагнул вперёд, сокращая расстояние между ними."
 
-    old "Is that so?"
-    new "И это так?"
-
     old "And what then, huh?"
     new "И что тогда, а?"
 
@@ -1874,9 +1862,6 @@ translate ru strings:
 
     old "She saw his face fall back into its natural state. Cold and unmoving like stone."
     new "Она увидела, как его лицо снова приняло свой обычный облик — холодное и неподвижное, словно камень."
-
-    old "Nothing."
-    new "Ничего."
 
     old "None of this matters."
     new "Ничто из этого не имеет значения."

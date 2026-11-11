@@ -306,9 +306,6 @@ translate ru strings:
     old "So, what are we going to do?"
     new "Так что же нам делать?"
 
-    old "We?"
-    new "Мы?"
-
     old "Yeah. I need someone who can help me navigate these streets."
     new "Да. Мне нужен кто-то, кто поможет мне ориентироваться на этих улицах."
 
@@ -750,9 +747,6 @@ translate ru strings:
     old "With ease, he kept her head held back, forcing her to look up at him."
     new "С лёгкостью он продолжал держать её голову, заставляя смотреть на себя."
 
-    old "Show me."
-    new "Покажи мне."
-
     old "I wanna see if you got it all down."
     new "Хочу посмотреть, всё ли ты запомнила."
 
@@ -782,9 +776,6 @@ translate ru strings:
 
     old "What about me?"
     new "А что насчёт меня?"
-
-    old "What about you?"
-    new "А ты?"
 
     old "You're not gonna let me finish?"
     new "Ты не собираешься позволить мне договорить?"

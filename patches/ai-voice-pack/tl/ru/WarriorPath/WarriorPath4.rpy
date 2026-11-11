@@ -45,9 +45,6 @@ translate ru strings:
     old "Each campaign brought with it the risk of death. But despite everything, she had survived another."
     new "Каждая кампания таила в себе угрозу смерти. Но, несмотря ни на что, она пережила ещё одну."
 
-    old "Hey there."
-    new "Эй."
-
     old "Sarah turned her head slowly."
     new "Сара медленно повернула голову."
 
@@ -77,9 +74,6 @@ translate ru strings:
 
     old "You're vile Kate, you really are."
     new "Ты отвратительна, Кейт, и это правда."
-
-    old "Whatever."
-    new "Да ладно."
 
     old "I know you longer than just about anyone else here."
     new "Я знаю тебя дольше, чем почти кто-либо другой здесь."
@@ -188,9 +182,6 @@ translate ru strings:
 
     old "Sarah broke the silence."
     new "Сара нарушила молчание."
-
-    old "Yeah?"
-    new "Да?"
 
     old "Tonight, after the party. There's some things I might want to discuss with you."
     new "Сегодня вечером, после вечеринки... Есть кое-что, о чём я, возможно, захочу с тобой поговорить."
@@ -582,9 +573,6 @@ translate ru strings:
     old "You said I was a hero."
     new "Вы назвали меня героиней."
 
-    old "I did."
-    new "Да."
-
     old "Then I want to press my claim."
     new "Тогда я хочу предъявить своё требование."
 
@@ -611,9 +599,6 @@ translate ru strings:
 
     old "For a moment, she could see Vaelen somewhat surprised at her request."
     new "На мгновение она заметила, что Ваэлен был несколько удивлён её просьбой."
-
-    old "I..."
-    new "Я..."
 
     old "Well, I meant what I said. You can have anything you want, so I guess that includes this one."
     new "Ну, я имел в виду то, что сказал. Ты можешь получить всё, чего хочешь, так что, полагаю, это тоже входит в число твоих желаний."
@@ -684,17 +669,11 @@ translate ru strings:
     old "Sarah grabs the girl by the shoulders and pulls her away, forcing her to look into her eyes."
     new "Сара хватает девушку за плечи и оттягивает её, заставляя посмотреть ей в глаза."
 
-    old "I know."
-    new "Я знаю."
-
     old "They're bastards. You don't have to say it. You're safe now."
     new "Они ублюдки. Тебе не нужно это говорить. Теперь ты в безопасности."
 
     old "Sarah can see the girl is slowly calming down again."
     new "Сара видит, что девочка снова постепенно успокаивается."
-
-    old "Thank you."
-    new "Спасибо."
 
     old "This time, she spoke the words more softly."
     new "На этот раз она произнесла эти слова тише."
@@ -813,9 +792,6 @@ translate ru strings:
     old "If you need some time to process it, I'll-"
     new "Если тебе нужно время, чтобы всё осознать, я..."
 
-    old "No."
-    new "Нет."
-
     old "Samayra interupted Sarah."
     new "Самайра прервала Сару."
 
@@ -854,9 +830,6 @@ translate ru strings:
 
     old "But I'm more like you than you might think."
     new "Но я больше похожа на тебя, чем ты можешь подумать."
-
-    old "How so?"
-    new "Как так?"
 
     old "I'm a princess too. Or, I suppose, I was one once."
     new "Я тоже принцесса. Или, по крайней мере, когда-то такой была."
@@ -920,9 +893,6 @@ translate ru strings:
 
     old "How could she have forgotten that she had invited her to her room only earlier that evening."
     new "Как она могла забыть, что всего лишь вечером пригласила её в свою комнату?"
-
-    old "Hey Sarah!"
-    new "Эй, Сара!"
 
     old "Whose you're new friend?"
     new "Чья же твоя новая подруга?"
@@ -1032,9 +1002,6 @@ translate ru strings:
     old "Hey, don't let Kate get to you. She's a lot nicer than she pretends to be."
     new "Эй, не позволяй Кейт до тебя достучаться. Она гораздо добрее, чем притворяется."
 
-    old "Liar!"
-    new "Лгунья!"
-
     old "Don't listen to her Samayra. I'm a real mean bitch!"
     new "Не слушай её, Самайра. Я настоящая жестокая стерва!"
 
@@ -1125,9 +1092,6 @@ translate ru strings:
     old "Agreed!"
     new "Согласна!"
 
-    old "Agreed!"
-    new "Согласна!"
-
     old "Alright, move over then, cause my feet are killing me."
     new "Ну ладно, отодвинуся тогда, потому что ноги у меня просто убиваются."
 
@@ -1154,9 +1118,6 @@ translate ru strings:
 
     old "Stop bullying her, Kate."
     new "Прекрати её донимать, Кейт."
-
-    old "I'm not!"
-    new "Я не такая!"
 
     old "I just think Samayra over here sees you as her knight in shining armor, saving her from the evil horde that claimed her castle."
     new "Я просто думаю, что эта Самайра видит в тебе своего рыцаря в сияющих доспехах, спасающего её от злой орды, захватившей её замок."
@@ -1214,9 +1175,6 @@ translate ru strings:
 
     old "In return, she received only a brief yet softly whispered response."
     new "Взамен она получила лишь короткий, но тихий шёпот."
-
-    old "Yes."
-    new "Да."
 
     old "Sarah let her grip on Samayra's wrists slip, taking Samayra's face in her hands."
     new "Сара позволила своей хватке на запястьях Самайры ослабнуть и взяла её лицо в руки."
@@ -1346,9 +1304,6 @@ translate ru strings:
 
     old "I-I-I'm sorry!"
     new "Я-я-я прости!"
-
-    old "Kate!"
-    new "Кейт!"
 
     old "Samayra did her best to scream out Kate's name as she had done Sarah, but it proved a weak imitation."
     new "Самайра изо всех сил пыталась выкрикнуть имя Кейт, как она уже сделала с Сарой, но это оказалось лишь слабым подобием."
@@ -1604,9 +1559,6 @@ translate ru strings:
 
     old "Sarah broke the silence first."
     new "Сара первой нарушила молчание."
-
-    old "Did you like that?"
-    new "Тебе это понравилось?"
 
     old "Samayra only laughed."
     new "Самайра лишь рассмеялась."
@@ -2454,9 +2406,6 @@ translate ru strings:
     old "With her head snapped back like this, her throat wide open, she couldn't supress anything, and moaned increasingly loud each time he took her."
     new "С головой, так резко откинутой назад, и горлом, широко раскрытым, она не могла ничего сдержать, и с каждым его толчком её стоны становились всё громче."
 
-    old "There you go."
-    new "Вот так-то."
-
     old "I think you were just getting an attitude because you weren't getting enough dick."
     new "Думаю, ты просто начала вести себя дерзко, потому что тебе не хватало члена."
 
@@ -2739,35 +2688,17 @@ translate ru strings:
     old "The female soldier sighed."
     new "Женщина-солдат вздохнула."
 
-    old "Don't fucking get me started on that. Nothin but bleedin money since I started."
-    new "Даже не начинай со мной об этом, твою мать. С тех пор как я этим занялась, одни только чёртовы деньги."
-
     old "She saw her turn towards her, suddenly she appeared startled."
     new "Она увидела, что та повернулась к ней, и внезапно выглядела озадаченной."
 
-    old "I mean, commander, sorry, I didn't realize it was you! Pardon my, uhm, bluntness."
-    new "Я имею в виду... командир, простите, я не поняла, что это вы! Простите за мою, эм, прямоту."
-
     old "Sarah waved her hands, dismissing her concerns."
     new "Сара махнула руками, отмахиваясь от её опасений."
-
-    old "Uhm, yes, of course, sorry commander."
-    new "Эм... да, конечно, простите, командир."
-
-    old "Of course...Sarah."
-    new "Конечно... Сара."
 
     old "She smiled at her."
     new "Она улыбнулась ей."
 
     old "The female soldier laughed."
     new "Женщина-солдат рассмеялась."
-
-    old "Ooh yeah? You think you can play it better?"
-    new "Ох, да? Думаешь, сможешь сыграть лучше?"
-
-    old "Fair enough. So how would you play it?"
-    new "Справедливо. Так как бы ты это сыграла?"
 
     old "Sarah snatched the dice from the circle in the middle of the group and dropped them in the female soldier's hands."
     new "Сара схватила кости из центра круга и бросила их женщине-солдату."
@@ -2780,12 +2711,6 @@ translate ru strings:
 
     old "She looked at her in surprise."
     new "Она удивлённо посмотрела на неё."
-
-    old "Those? Do you even know how to play the game?"
-    new "Они? Ты вообще знаешь, как в эту игру играть?"
-
-    old "Are you gonna cover my loss if this ends up costing me the hand?"
-    new "Ты ведь покроешь мои убытки, если это обойдётся мне рукой?"
 
     old "Sarah leaned in close and whispered into the soldier's ear what she would do for her if she lost her hand."
     new "Сара наклонилась к ней и прошептала ей на ухо, что она сделает для неё, если та потеряет руку."
@@ -2805,20 +2730,11 @@ translate ru strings:
     old "The other soldiers cheered for her win, and the opponent only groaned, throwing the money he had lost towards the woman."
     new "Остальные солдаты поздравили её с победой, а противник лишь застонал, швырнув в женщину проигранные деньги."
 
-    old "Hah! My luck is turning around. Maybe I got you to thank for it after all."
-    new "Ха! Моя удача наконец-то меняется. Возможно, в итоге ты ещё и поблагодаришь меня за это."
-
     old "Suddenly she could see the female soldier remembered what she had whispered into her ear."
     new "Внезапно она увидела, что женщина-солдат вспомнила то, что шептала ей на ухо."
 
-    old "Ooh, fuck! I guess my luck's still bad."
-    new "Ох, чёрт! Похоже, моя удача всё ещё не на моей стороне."
-
     old "Eagerly the female soldier gathered up her pieces and winnings and left the game."
     new "Женщина-солдат с энтузиазмом собирала свои фишки и выигрыш и покинула игру."
-
-    old "You were saying something about..."
-    new "Ты что-то говорила про..."
 
     old "Sarah grabbed her by her jacket and pulled her along."
     new "Сара схватила её за куртку и потянула за собой."
@@ -2837,12 +2753,6 @@ translate ru strings:
 
     old "The only question was if they'd make it to the bed in time, or if she would simply take her right here on the floor."
     new "Единственный вопрос заключался в том, успеют ли они добраться до кровати или же она просто возьмёт её прямо здесь, на полу."
-
-    old "I'm part of the scavenge crew, we pick over the bodies after the battle, so I got some experience taking armor off bodies."
-    new "Я из команды сборщиков трофеев — мы обыскиваем тела после боя, так что у меня есть опыт снятия доспехов с трупов."
-
-    old "Usually dead ones though."
-    new "Обычно — мёртвых."
 
     old "Please don't talk to me about groping dead bodies when we're about to have sex."
     new "Пожалуйста, не говори мне про ощупывание мертвых тел, когда мы вот-вот займемся сексом."
@@ -2930,9 +2840,6 @@ translate ru strings:
 
     old "Sarah could feel her entire body move, trying to press her sex forward, but no matter what she did, the woman kept to her own pace."
     new "Сара чувствовала, как всё её тело напрягалось, пытаясь толкнуть свой половой орган вперёд, но что бы она ни делала, женщина продолжала двигаться в собственном темпе."
-
-    old "Fuck..."
-    new "Чёрт..."
 
     old "Please, don't be so cruel..."
     new "Пожалуйста, не будь такой жестокой..."
@@ -3225,29 +3132,17 @@ translate ru strings:
     old "If she couldn't feel close to a woman like this, would she ever be able to feel that closeness again?"
     new "Если она не могла почувствовать близость с женщиной в такой ситуации, то сможет ли она когда-нибудь снова испытать эту близость?"
 
-    old "Ooh...of course, I didn't realize I was overstaying my welcome."
-    new "Ох... Конечно, я и не поняла, что задержалась здесь дольше, чем следовало."
-
     old "She seemed genuinely hurt."
     new "Она выглядела по-настоящему обиженной."
 
     old "She felt the bed move as she crawled out of it and began to get dressed again."
     new "Она почувствовала, как кровать шевельнулась, когда она выбралась из неё и начала снова одеваться."
 
-    old "You know, you don't really owe me an explanation or anything else, Sarah."
-    new "Знаешь, ты и вправду не должна мне никаких объяснений или чего-либо ещё, Сара."
-
-    old "We can just say this was a fun night and leave it be."
-    new "Можно просто сказать, что это был весёлый вечер, и на этом всё закончить."
-
     old "Sarah turned around and looked at her."
     new "Сара обернулась и посмотрела на неё."
 
     old "She smiled at her, seemingly having recovered from being hurt."
     new "Она улыбнулась ей, казалось, оправившись от ранения."
-
-    old "Well, obviously, me and probably half the castle could hear you were having a good time."
-    new "Ну, очевидно же: я и, наверное, половина замка слышали, что у тебя было весело."
 
     old "Sarah threw a pillow at her."
     new "Сара швырнула в неё подушку."
@@ -3257,9 +3152,6 @@ translate ru strings:
 
     old "Then the woman turned away from her."
     new "Затем женщина отвернулась от неё."
-
-    old "Goodbye, commander! Maybe we'll see each other around."
-    new "Прощай, командир! Возможно, мы ещё встретимся."
 
     old "Sarah watched her cross the room and leave."
     new "Сара смотрела, как она пересекла комнату и ушла."
@@ -3743,9 +3635,6 @@ translate ru strings:
 
     old "Sarah had felt Kate's body many times before, but was still surprised she could feel her in ways she hadn't before."
     new "Сара и раньше часто ощущала тело Кейт, но всё равно была поражена тем, что теперь могла чувствовать её так, как никогда прежде."
-
-    old "Sarah..."
-    new "Сара..."
 
     old "I want you to know that you don't have to be alone. Not so long as you have me."
     new "Я хочу, чтобы ты знала: тебе не нужно быть одной. По крайней мере, пока у тебя есть я."

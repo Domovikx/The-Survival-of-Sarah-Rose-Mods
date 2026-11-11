@@ -72,9 +72,6 @@ translate ru strings:
     old "But Kate pulled back some brushes, revealing a hidden ladder. She dropped the ladder down and began to climb."
     new "Но Кейт отодвинула кисти, открыв скрытую лестницу. Она спустила её вниз и начала подниматься."
 
-    old "Keep up."
-    new "Держись."
-
     old "Together, using the ladder, they scaled the cliff, ending up behind one of the houses in the slum district."
     new "Вместе, воспользовавшись лестницей, они взобрались на утёс и оказались за одним из домов в трущобах."
 

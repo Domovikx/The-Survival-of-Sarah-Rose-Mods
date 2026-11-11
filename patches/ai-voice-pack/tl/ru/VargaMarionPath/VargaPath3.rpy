@@ -60,9 +60,6 @@ translate ru strings:
     old "Without turning away from her reflection, Sarah answered."
     new "Не отворачиваясь от своего отражения, Сара ответила."
 
-    old "Who is it?"
-    new "Кто там?"
-
     old "It's me, can I enter?"
     new "Это я, можно войти?"
 

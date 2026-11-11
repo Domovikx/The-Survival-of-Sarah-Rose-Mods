@@ -18,9 +18,6 @@ translate ru strings:
     old "Xan!"
     new "Ксантиппа!"
 
-    old "What?"
-    new "Что?"
-
     old "I'm...I'm not decent!"
     new "Я... я не прилична!"
 
@@ -213,9 +210,6 @@ translate ru strings:
     old "Raising her voice, she found his attention."
     new "Повысив голос, она привлекла его внимание."
 
-    old "Huh?"
-    new "А?"
-
     old "This...it's a lot for me..."
     new "Это... для меня слишком много..."
 
@@ -227,9 +221,6 @@ translate ru strings:
 
     old "Xan suddenly looked embarrassed for his enthusiasm."
     new "Ксантиппа внезапно смутился от своего собственного энтузиазма."
-
-    old "Sarah...I'm sorry."
-    new "Сара... Прости."
 
     old "I've been living alone for quite some time. It's been many years more since I last took an apprentice."
     new "Я довольно долго живу один. И с тех пор, как я в последний раз брал ученика, прошло уже много лет."
@@ -359,9 +350,6 @@ translate ru strings:
 
     old "I understand, Xan. Just promise me that you'll go fast."
     new "Я понимаю, Ксантиппа. Просто пообещай мне, что будешь действовать быстро."
-
-    old "I promise."
-    new "Я обещаю."
 
     old "And the mage kept his word."
     new "И маг сдержал своё слово."
@@ -654,9 +642,6 @@ translate ru strings:
     old "Sarah turned to leave the room, before the spirit halted her."
     new "Сара повернулась, чтобы выйти из комнаты, но дух остановил её."
 
-    old "Wait!"
-    new "Подожди!"
-
     old "Sarah turned back towards Razaphel."
     new "Сара повернулась к Разафелю."
 
@@ -780,14 +765,8 @@ translate ru strings:
     old "A pauze hung between them."
     new "Между ними повисла пауза."
 
-    old "Am I clear?"
-    new "Я ясна?"
-
     old "Reluctantly, the spirit finally answered."
     new "Неохотно дух наконец-то ответил."
-
-    old "Yes..."
-    new "Да..."
 
     old "Sarah gathered her clothes, not bothering to get dressed again, and returned to her room."
     new "Сара собрала одежду, даже не потрудившись снова одеться, и вернулась в свою комнату."

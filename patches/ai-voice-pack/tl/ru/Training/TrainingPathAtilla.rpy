@@ -96,9 +96,6 @@ translate ru strings:
     old "Atilla looked down at Sarah."
     new "Атилла посмотрел на Сару сверху вниз."
 
-    old "This is true."
-    new "Это правда."
-
     old "He flashed a grin, his razor teeth flashing."
     new "Он ухмыльнулся, и его острые как бритва зубы сверкнули."
 
@@ -128,9 +125,6 @@ translate ru strings:
 
     old "Atilla looked at her."
     new "Атилла посмотрел на неё."
-
-    old "Like what?"
-    new "Ну, например?"
 
     old "He was really going to make her say it, Sarah realized. She trembled as she forced the words out."
     new "Он и вправду собирался заставить её сказать это, поняла Сара. Она задрожала, выдавливая слова."
@@ -197,9 +191,6 @@ translate ru strings:
 
     old "Leaning against the wall of the stockroom, Atilla looked up and down Sarah's body. This time, making no attempt to hide it."
     new "Опираясь о стену склада, Атилла окинул взглядом тело Сары с головы до ног. На этот раз он и не пытался это скрыть."
-
-    old "Strip!"
-    new "Разденься!"
 
     old "He ordered."
     new "Он приказал."

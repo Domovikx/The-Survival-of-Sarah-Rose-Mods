@@ -75,17 +75,11 @@ translate ru strings:
     old "Samayra..."
     new "Самайра..."
 
-    old "What's that?"
-    new "Что это?"
-
     old "Ooh, I was just thinking out loud. Samayra could work as my secretary."
     new "О-о, я просто думала вслух. Самайра вполне могла бы стать моей секретаршей."
 
     old "Kate raised an eyebrow."
     new "Кейт приподняла бровь."
-
-    old "Sure."
-    new "Конечно."
 
     old "You mind if I fuck your secretary?"
     new "Ты не против, если я перепихнусь с твоей секретаршей?"

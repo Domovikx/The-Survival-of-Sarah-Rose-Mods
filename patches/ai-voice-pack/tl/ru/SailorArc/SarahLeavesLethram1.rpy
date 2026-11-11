@@ -204,17 +204,11 @@ translate ru strings:
     old "Worse than Lethram. Sarah struggled to believe that could be."
     new "Хуже, чем в Летраме. Саре было трудно поверить, что такое вообще возможно."
 
-    old "So what?"
-    new "Ну и что?"
-
     old "I go back into that city and sleep on the streets till that bastard, or someone like him, finds me?"
     new "Я вернусь в тот город и буду спать на улицах, пока этот ублюдок или кто-то вроде него не найдёт меня?"
 
     old "She watched as the man struggled to find an answer."
     new "Она смотрела на него, пока мужчина с трудом пытался найти ответ."
-
-    old "I..."
-    new "Я..."
 
     old "Look. You're still young."
     new "Слушай. Ты ведь ещё молодая."
@@ -245,9 +239,6 @@ translate ru strings:
 
     old "The man sighed again. He seemed equally frustrated but equally unable to walk away and let her be."
     new "Мужчина снова вздохнул. Он казался столь же расстроенным, но при этом был так же неспособен уйти и оставить её в покое."
-
-    old "Look..."
-    new "Слушай..."
 
     old "I'll tell you what."
     new "Я тебе что скажу."
@@ -915,9 +906,6 @@ translate ru strings:
     old "She watched as he fell backwards into the grass, laying in the heat of the fire."
     new "Она смотрела, как он упал назад на траву, лежа в жаре огня."
 
-    old "Sarah."
-    new "Сара."
-
     old "Sarah turned towards Sigmund."
     new "Сара повернулась к Зигмунду."
 
@@ -987,9 +975,6 @@ translate ru strings:
     old "She heard Sigmund grunt."
     new "Она услышала, как Зигмунд хмыкнул."
 
-    old "Whatever."
-    new "Да как хочешь."
-
     old "Sarah walked around to the back of the cart and gathered up the ingredients."
     new "Сара обошла телегу сзади и собрала ингредиенты."
 
@@ -1023,9 +1008,6 @@ translate ru strings:
     old "Eagerly taking the bowl from her hand, he looked at her."
     new "Жадно забрав миску из её рук, он посмотрел на неё."
 
-    old "Thank you."
-    new "Спасибо."
-
     old "He sounded genuine."
     new "Он говорил искренне."
 
@@ -1046,9 +1028,6 @@ translate ru strings:
 
     old "She watched him eagerly grab the plate from her hands."
     new "Она смотрела, как он с нетерпением схватил тарелку из её рук."
-
-    old "Thank you."
-    new "Спасибо."
 
     old "When Sarah handed the plate of eggs to Sakar, he snatched is as if she was handing him something vile."
     new "Когда Сара протянула Сакару тарелку с яичницей, он схватил её так, словно та передавала ему нечто мерзкое."
@@ -1311,9 +1290,6 @@ translate ru strings:
     old "Sakar!"
     new "Сакар!"
 
-    old "What are you doing?!"
-    new "Что ты делаешь?!"
-
     old "Sakar casually turned to Sigmund."
     new "Сакар небрежно обратился к Зигмунду."
 
@@ -1334,9 +1310,6 @@ translate ru strings:
 
     old "Sarah watched him slowly walk away, not sure what to make of him."
     new "Сара смотрела, как он медленно уходит, не понимая, что с ним делать."
-
-    old "Sarah!"
-    new "Сара!"
 
     old "I told you not to be alone with that man!"
     new "Я же говорил тебе не оставаться наедине с этим человеком!"

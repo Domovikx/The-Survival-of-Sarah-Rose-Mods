@@ -84,9 +84,6 @@ translate ru strings:
     old "There's something wrong."
     new "Что-то не так."
 
-    old "What do you mean?"
-    new "Что вы имеете в виду?"
-
     old "Why...why is he out here?"
     new "Почему... почему он здесь?"
 
@@ -332,9 +329,6 @@ translate ru strings:
 
     old "Seizing her blade with both hands, Sarah raised her sword up besides herself."
     new "Хватив клинок обеими руками, Сара подняла меч в сторону от себя."
-
-    old "Come!"
-    new "Приди!"
 
     old "She screamed the word, half to challenge, half to bolster her own confidence."
     new "Она выкрикнула это слово — наполовину как вызов, наполовину чтобы укрепить собственную уверенность."

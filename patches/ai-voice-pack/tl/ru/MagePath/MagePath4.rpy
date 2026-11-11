@@ -27,9 +27,6 @@ translate ru strings:
     old "The magical arts, outside of inherent ability, also demanded a studious and attentive mind."
     new "Магическое искусство, помимо врождённых способностей, также требовало усидчивости и внимательности."
 
-    old "Again!"
-    new "Ещё раз!"
-
     old "You need to move the hand diagonally, and stretch the palm backwards."
     new "Тебе нужно двигать руку по диагонали и вытянуть ладонь назад."
 
@@ -86,9 +83,6 @@ translate ru strings:
 
     old "Xan was busy sorting through the pile of books on his desk."
     new "Ксантиппа был занят тем, что перебирал стопку книг на своём столе."
-
-    old "Yes, Sarah?"
-    new "Да, Сара?"
 
     old "I've been wondering for a while now. This house...it's odd, isn't it?"
     new "Я вот уже некоторое время задумывалась над этим. Этот дом... он странный, не так ли?"
@@ -159,9 +153,6 @@ translate ru strings:
     old "Xan pauzed. He put down the books and tried to gather himself."
     new "Ксантиппа замолчал. Он отложил книги и попытался собраться с мыслями."
 
-    old "Sarah..."
-    new "Сара..."
-
     old "Whatever you're thinking, trust me, you don't want to do that."
     new "Что бы ты ни думала, поверь мне — тебе не стоит этого делать."
 
@@ -224,9 +215,6 @@ translate ru strings:
 
     old "Had she missed it? Or had it only just appeared?"
     new "Неужели она её упустила? Или же дверь только-только появилась?"
-
-    old "Follow me."
-    new "Следуй за мной."
 
     old "Xan grabbed her hand, opened the door, and together the two stepped through."
     new "Ксантиппа схватила её за руку, открыла дверь, и они вместе шагнули внутрь."
@@ -374,9 +362,6 @@ translate ru strings:
 
     old "Think, Sarah. Suppose I survive the square, then what? They sound the alarm and soon the entire city garrison will descend on me."
     new "Подумай, Сара. Предположим, я выживу на площади — и что тогда? Они набьют тревогу, и вскоре ко мне хлынет весь городской гарнизон."
-
-    old "And for what?"
-    new "И ради чего?"
 
     old "So I can save her?"
     new "Значит, я могу спасти её?"

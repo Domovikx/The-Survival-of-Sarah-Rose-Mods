@@ -135,9 +135,6 @@ translate ru strings:
     old "Slowly, she saw him begin to stir."
     new "Постепенно она увидела, как он начал приходить в себя."
 
-    old "Hey."
-    new "Эй."
-
     old "His voice was soft. Likely still weakened by the frigid water."
     new "Его голос был мягким. Вероятно, он всё ещё ослаблен ледяной водой."
 

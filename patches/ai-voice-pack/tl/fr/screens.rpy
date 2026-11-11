@@ -174,9 +174,6 @@ translate fr strings:
     old "Navigate the interface."
     new "Naviguez l'interface."
 
-    old "Escape"
-    new "Échapper"
-
     old "Accesses the game menu."
     new "Accéder au menu du jeu."
 

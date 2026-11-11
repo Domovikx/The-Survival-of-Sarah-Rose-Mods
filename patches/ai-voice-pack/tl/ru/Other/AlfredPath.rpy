@@ -132,9 +132,6 @@ translate ru strings:
     old "She felt his firm hand, wrapping around the back of her haid, grasping a fist full of her hair."
     new "Она почувствовала его твёрдую руку, обхватившую затылок её головы и сжавшую горсть её волос."
 
-    old "Aah..."
-    new "Ах..."
-
     old "Sarah began to slowly bob her head up and down."
     new "Сара начала медленно качать головой вверх и вниз."
 
@@ -294,9 +291,6 @@ translate ru strings:
     old "He smiled and ran his hands along the side of her face."
     new "Он улыбнулся и провёл руками по её щеке."
 
-    old "Good girl."
-    new "Хорошая девочка."
-
     old "Sarah felt her cunt drip at the mere sound of the words she had worshipped him for."
     new "Сара почувствовала, как из её киски потекла жидкость от одного лишь звука слов, за которые она так боготворила его."
 
@@ -416,9 +410,6 @@ translate ru strings:
 
     old "Look how eager you are, even when I'm not here."
     new "Посмотри, как ты ждёшь, даже когда меня здесь нет."
-
-    old "Slut."
-    new "Развратница."
 
     old "Shut...up..."
     new "Заткнись..."
@@ -1008,9 +999,6 @@ translate ru strings:
     old "He's a young buck, he'll shout and scream and thrash about. But he bark more than he bite, okay?"
     new "Он ещё молод — будет кричать, ругаться и дёргаться. Но больше лает, чем кусается, ясно?"
 
-    old "Come here."
-    new "Иди сюда."
-
     old "He pulled her by her waist closer to him."
     new "Он притянул её к себе за талию."
 
@@ -1037,9 +1025,6 @@ translate ru strings:
 
     old "Come on, be serious!"
     new "Да ладно, будь серьёзнее!"
-
-    old "I am."
-    new "Я — это я."
 
     old "Trust me. My boy will get over it. I'll sort him out."
     new "Поверь мне. Мой парень с этим справится. Я с ним разберусь."
@@ -1299,9 +1284,6 @@ translate ru strings:
     old "She could endure this shame in secret, but to have it made public like that..."
     new "Она могла бы вынести этот позор втайне, но чтобы его так обнародовали..."
 
-    old "Marriage?!"
-    new "Брак?!"
-
     old "Father! You know that I have been searching for someone to take as a wife for years!"
     new "Отец! Ты же знаешь, что я годами искал себе жену!"
 
@@ -1340,9 +1322,6 @@ translate ru strings:
 
     old "No! I would never..."
     new "Нет! Я бы никогда..."
-
-    old "What then?!"
-    new "Что же тогда?!"
 
     old "What obligation to you have I violated?"
     new "Какое же обязательство я нарушила перед тобой?"
@@ -1422,17 +1401,11 @@ translate ru strings:
     old "After all that I have done to keep this place running?!"
     new "После всего того, что я сделал, чтобы поддерживать это место в рабочем состоянии?!"
 
-    old "No."
-    new "Нет."
-
     old "You can stay. But you cannot poison our new marriage by walking about the house in constant resentment."
     new "Ты можешь остаться. Но ты не вправе отравлять наш новый брак, постоянно бродя по дому с обидой на душе."
 
     old "If you stay, you must learn to live with it."
     new "Если останешься, должен научиться с этим жить."
-
-    old "Understood?"
-    new "Поняла?"
 
     old "Alfred's voice was sharp."
     new "Голос Альфреда был резким."
@@ -1448,12 +1421,6 @@ translate ru strings:
 
     old "Slowly, Marius nodded his head."
     new "Мариус медленно кивнул головой."
-
-    old "Yes..."
-    new "Да..."
-
-    old "Yes, what?"
-    new "Да, что?"
 
     old "Yes...sir...I will...learn to live with it."
     new "Да... сэр... я... научусь с этим жить."
@@ -1478,9 +1445,6 @@ translate ru strings:
 
     old "The door fell shut and Sarah turned to Alfred."
     new "Дверь захлопнулась, и Сара повернулась к Альфреду."
-
-    old "He..."
-    new "Он..."
 
     old "He didn't get violent."
     new "Он... не стал применять силу."
@@ -1536,9 +1500,6 @@ translate ru strings:
     old "The thing about...marriage."
     new "Дело вот в чём... с браком."
 
-    old "Oh..."
-    new "Ох..."
-
     old "His voice softened."
     new "Его голос смягчился."
 
@@ -1550,9 +1511,6 @@ translate ru strings:
 
     old "I am not the man I used to be. And honestly, I had given up believing there was much more for me to do but wait and die."
     new "Я уже не тот человек, которым был раньше. И, честно говоря, я перестал верить, что у меня осталось ещё много дел — кроме как ждать и умирать."
-
-    old "But you..."
-    new "Но ты..."
 
     old "His eyes roamed her body."
     new "Его глаза скользили по её телу."
@@ -1716,9 +1674,6 @@ translate ru strings:
     old "What do you mean? He is..."
     new "Что ты имеешь в виду? Он ведь..."
 
-    old "I see."
-    new "Понятно."
-
     old "You're a very clever girl, Sarah."
     new "Ты очень умная девушка, Сара."
 
@@ -1857,9 +1812,6 @@ translate ru strings:
     old "Your wife."
     new "Твоя жена."
 
-    old "Come over here."
-    new "Подойди сюда."
-
     old "His voice was stern."
     new "Его голос был строгим."
 
@@ -1949,9 +1901,6 @@ translate ru strings:
 
     old "Gods, I will fuck you till the day I die."
     new "Боже, я буду трахаться с тобой до самого дня своей смерти."
-
-    old "Promise."
-    new "Обещай."
 
     old "Sarah whispered in his ear."
     new "Сара прошептала ему на ухо: «Обещаю»."

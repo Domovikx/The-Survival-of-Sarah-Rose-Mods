@@ -78,9 +78,6 @@ translate ru strings:
     old "Please Alaric!"
     new "Пожалуйста, Аларик!"
 
-    old "That's what I thought."
-    new "Я так и думал."
-
     old "Suddenly, Alaric's grip on Sarah's waist tightened."
     new "Внезапно Аларик крепче сжал талию Сары."
 
@@ -312,9 +309,6 @@ translate ru strings:
     old "We play it safe, don't stay too long, hit a few stalls hard and fast, get out before anyone knows anything."
     new "Мы действуем осторожно: не задерживаемся надолго, быстро осматриваем пару лавок и уходим, пока никто ничего не понял."
 
-    old "Easy for you to say."
-    new "Тебе-то легко это говорить."
-
     old "You don't got a face that screams criminal. Things go bad, I'm the first fucker they pull out of the crowd."
     new "У тебя нет лица, которое кричит о том, что ты преступник. Если всё пойдет наперекосяк, я буду первым ублюдком, которого вытащат из толпы."
 
@@ -341,9 +335,6 @@ translate ru strings:
 
     old "She made a few rounds before settling on a big crowd near one of the food stalls. Some wine, meat pies, a decent group of customers."
     new "Она сделала несколько кругов по рынку, прежде чем остановиться у большой толпы возле одного из прилавков с едой: там было вино, мясные пироги и неплохая группа покупателей."
-
-    old "Perfect."
-    new "Идеально."
 
     old "By now Sarah had mastered the art of making enough of a scene to attract people, without raising any alarms."
     new "К этому моменту Сара уже освоила искусство создавать достаточно много шума, чтобы привлечь внимание, но при этом не вызывать никаких подозрений."

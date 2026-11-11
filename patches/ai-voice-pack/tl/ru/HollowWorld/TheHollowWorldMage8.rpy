@@ -135,9 +135,6 @@ translate ru strings:
     old "The spirit paused. Lingered."
     new "Дух остановился. Задержался."
 
-    old "You."
-    new "Ты."
-
     old "You have nothing to fear from me, Razaphel. I hold no animus against you."
     new "Тебе нечего бояться меня, Разафель. Я не питаю к тебе никакой злобы."
 

@@ -87,9 +87,6 @@ translate ru strings:
     old "Suddenly, to her left, Sarah noticed a movement from the corner of her eyes."
     new "Внезапно краем глаза Сара заметила движение слева от себя."
 
-    old "Aah!!!"
-    new "А-а-а!!!"
-
     old "The girl's high-pitched voice and screaming made Sarah's ears ring."
     new "Пронзительный крик девочки заставил уши Сары загудеть."
 
@@ -170,9 +167,6 @@ translate ru strings:
 
     old "These are his private quarters?"
     new "Это его личные покои?"
-
-    old "Exactly!"
-    new "Точно!"
 
     old "But nobody is allowed in here."
     new "Но сюда никому не разрешено заходить."
@@ -483,9 +477,6 @@ translate ru strings:
     old "I was the princess of Rosanna..."
     new "Я была принцессой Розанны..."
 
-    old "I see..."
-    new "Понятно..."
-
     old "Your body. It's soft and unblemished. No commoner would have gotten to your age without some scars or muscle."
     new "Твоё тело. Оно мягкое и безупречное. Ни один простолюдин не дожил бы до твоего возраста, не имея ни шрамов, ни мышц."
 
@@ -536,9 +527,6 @@ translate ru strings:
 
     old "Naydeen laughed."
     new "Найдин рассмеялась."
-
-    old "It's alright."
-    new "Всё в порядке."
 
     old "Khan Hassar is gentle."
     new "Хан Хассар нежный."

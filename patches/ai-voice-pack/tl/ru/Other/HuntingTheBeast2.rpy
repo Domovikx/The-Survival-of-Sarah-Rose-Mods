@@ -12,9 +12,6 @@ translate ru strings:
     old "It's odd."
     new "Странно."
 
-    old "What is?"
-    new "Что такое?"
-
     old "I'm so...energetic today. Usually when I sleep outdoors it's a nightmare on my back."
     new "Я такая... энергичная сегодня. Обычно, когда я сплю на улице, это просто кошмар."
 
@@ -155,9 +152,6 @@ translate ru strings:
 
     old "She saw Garret's startled face."
     new "Она увидела ошеломлённое лицо Гаррета."
-
-    old "What are you doing?"
-    new "Что вы делаете?"
 
     old "This armor has been scraping and cutting against my skin since I stepped into this forest."
     new "Эти доспехи терлись и резали мою кожу с того самого момента, как я вошла в этот лес."
@@ -381,9 +375,6 @@ translate ru strings:
     old "She saw his face turn red and look away."
     new "Она увидела, как его лицо покраснело и он отвёл взгляд."
 
-    old "Of course!"
-    new "Конечно!"
-
     old "I am not dead below the waist, but such things..."
     new "Я не умер ниже пояса, но вот такие вещи..."
 
@@ -404,9 +395,6 @@ translate ru strings:
 
     old "She saw him look back at her, the light of the fire playing in his eyes."
     new "Она увидела, как он обернулся к ней, а свет костра заиграл в его глазах."
-
-    old "Sarah..."
-    new "Сара..."
 
     old "His voice was soft and delicate."
     new "Его голос был мягким и нежным."
@@ -563,9 +551,6 @@ translate ru strings:
 
     old "Her body rocked from the last of his thrust, drawing out what final pleasures there were to be had."
     new "Её тело содрогнулось от последнего его толчка, извлекая последние оставшиеся удовольствия."
-
-    old "I'm sorry..."
-    new "Прости..."
 
     old "His apology came quickly, as he was still inside of her."
     new "Его извинения последовали быстро — он всё ещё был внутри неё."

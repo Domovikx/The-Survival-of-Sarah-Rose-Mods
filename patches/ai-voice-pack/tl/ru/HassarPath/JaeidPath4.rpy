@@ -93,9 +93,6 @@ translate ru strings:
     old "Outside, the sun had set."
     new "Снаружи уже зашло солнце."
 
-    old "Wow..."
-    new "Ого..."
-
     old "Ooh, you're home already."
     new "Ох, ты уже дома."
 
@@ -258,9 +255,6 @@ translate ru strings:
     old "Nothing."
     new "Ничего."
 
-    old "You're staring at me."
-    new "Ты на меня уставился."
-
     old "I'm just happy to see you happy."
     new "Я просто рад видеть, что ты счастлива."
 
@@ -272,9 +266,6 @@ translate ru strings:
 
     old "You are being nice to me. You and Jasmine both. It is more than I deserve."
     new "Вы так добры ко мне. И ты, и Жасмин. Это больше, чем я заслуживаю."
-
-    old "Sarah..."
-    new "Сара..."
 
     old "His voice was soft and filled with a pained kindness."
     new "Его голос был мягким и наполненным болезненной добротой."
@@ -293,9 +284,6 @@ translate ru strings:
 
     old "As a slave."
     new "Как рабыня."
-
-    old "Yes."
-    new "Да."
 
     old "I know that you think your life is over, but the truth is that you have many decades more to live."
     new "Я знаю, ты думаешь, что твоя жизнь окончена, но на самом деле у тебя ещё много десятилетий впереди."
@@ -342,9 +330,6 @@ translate ru strings:
     old "What do you think became of them? Do you think the Gods reached down and pulled them out?"
     new "Как думаешь, что с ними стало? Неужели ты веришь, что боги спустились и вытащили их оттуда?"
 
-    old "That's right."
-    new "Верно."
-
     old "They failed to see the world for what it was, and so instead they fell into despair."
     new "Они не смогли увидеть мир таким, какой он был на самом деле, и потому вместо этого впали в отчаяние."
 
@@ -383,9 +368,6 @@ translate ru strings:
 
     old "And what of the others?"
     new "А как же остальные?"
-
-    old "The others?"
-    new "А остальные?"
 
     old "The people from my country."
     new "Люди из моей страны."

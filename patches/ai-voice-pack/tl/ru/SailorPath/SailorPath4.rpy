@@ -75,9 +75,6 @@ translate ru strings:
     old "That means I'll take you on as an apprentice."
     new "Это значит, что я возьму тебя в ученицы."
 
-    old "Of course!"
-    new "Конечно!"
-
     old "And that means you get the pay of an apprentice."
     new "И это значит, что ты будешь получать ученическую плату."
 
@@ -107,9 +104,6 @@ translate ru strings:
 
     old "Captain Belmont fell down in his chair and looked at her."
     new "Капитан Бельмонт рухнул на стул и посмотрел на неё."
-
-    old "Strip!"
-    new "Срихни!"
 
     old "He barked his command."
     new "Он отдал резкий приказ."
@@ -320,9 +314,6 @@ translate ru strings:
 
     old "Belmont walked over and grabbed one of the torn rages from her hand."
     new "Бельмонт подошёл и забрал у неё одну из порванных рэг."
-
-    old "Turn around."
-    new "Развернись."
 
     old "Sarah did."
     new "Да."

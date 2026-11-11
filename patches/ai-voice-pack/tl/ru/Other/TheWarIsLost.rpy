@@ -723,9 +723,6 @@ translate ru strings:
     old "Nothing can happen here, Sarah."
     new "Ничего здесь не случится, Сара."
 
-    old "Why not?"
-    new "Почему бы и нет?"
-
     old "You know why. I have my orders to bring you to Hassar...unviolated. I cannot go against his orders."
     new "Ты же знаешь почему. У меня есть приказы доставить тебя к Хассару... невредимой. Я не могу пойти против его указаний."
 

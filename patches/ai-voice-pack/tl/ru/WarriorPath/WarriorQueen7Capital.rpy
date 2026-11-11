@@ -171,9 +171,6 @@ translate ru strings:
     old "Kate wiped away the tears and nodded."
     new "Кейт вытерла слёзы и кивнула."
 
-    old "You're right."
-    new "Ты права."
-
     old "Sarah pointed towards the city in the near distance."
     new "Сара указала на город вдали."
 
@@ -224,9 +221,6 @@ translate ru strings:
 
     old "Felt her heart at peace."
     new "Почувствовала, как её сердце обрело покой."
-
-    old "Atilla."
-    new "Атилла."
 
     old "I'm happy you came."
     new "Я рада, что ты пришёл."
@@ -356,9 +350,6 @@ translate ru strings:
 
     old "And shouting at me doesn't scare me. It hasn't scared me for a while."
     new "И крики на меня меня не пугают. Они уже давно перестали меня пугать."
-
-    old "I..."
-    new "Я..."
 
     old "I wanted to ask you to meet with me."
     new "Я хотел попросить тебя встретиться со мной."
@@ -714,9 +705,6 @@ translate ru strings:
     old "Their advance had slowed, but they still moved through her army like a surgical knife, seeking out the only target they cared for."
     new "Их наступление замедлилось, но они по-прежнему пробирались сквозь её армию, как хирургический скальпель, отыскивая единственную цель, которая их волновала."
 
-    old "Her."
-    new "Она."
-
     old "Some were so near, she could see make out the features on their faces."
     new "Некоторые были так близко, что она могла разглядеть черты их лиц."
 
@@ -930,9 +918,6 @@ translate ru strings:
     old "Her heart was pounding in her chest, adrenaline pumping as she saw the first Tribesman swing."
     new "Её сердце бешено колотилось в груди, адреналин хлестал по жилам, когда она увидела, как первый соплеменник замахивается на неё."
 
-    old "Razaphel."
-    new "Разафель."
-
     old "Sarah called on the spirit."
     new "Сара призвала дух."
 
@@ -1085,9 +1070,6 @@ translate ru strings:
 
     old "Atilla turned to face her."
     new "Атилла повернулся к ней."
-
-    old "Are you alright?"
-    new "Ты в порядке?"
 
     old "Sarah, wordlessly, nodded."
     new "Сара молча кивнула."
@@ -1836,9 +1818,6 @@ translate ru strings:
     old "The fat man looked up, fear spread all across his face and deep in his eyes."
     new "Толстяк поднял голову; страх расползся по всему его лицу и глубоко застыл в глазах."
 
-    old "You..."
-    new "Ты..."
-
     old "Yes, me."
     new "Да, я."
 
@@ -2364,9 +2343,6 @@ translate ru strings:
     old "I know that it would be right...simpler...easier."
     new "Я знаю, что это было бы правильно... проще... легче."
 
-    old "But..."
-    new "Но..."
-
     old "No, I will not leave. Not again."
     new "Нет, я не уйду. Не снова."
 
@@ -2628,9 +2604,6 @@ translate ru strings:
     old "Even if we are...would you want to stop?"
     new "Даже если мы и ошибаемся... ты бы хотела остановиться?"
 
-    old "Never."
-    new "Никогда."
-
     old "Sarah walked up to him, so little space between them, she could feel his breath on her skin."
     new "Сара подошла к нему так близко, что между ними почти не осталось пространства — она чувствовала его дыхание на своей коже."
 
@@ -2642,9 +2615,6 @@ translate ru strings:
 
     old "You remember the first time?"
     new "Ты помнишь первый раз?"
-
-    old "Don't worry."
-    new "Не волнуйся."
 
     old "I was too scared of you tell you back then..."
     new "Тогда я слишком боялась тебя, чтобы сказать тебе..."
@@ -2877,9 +2847,6 @@ translate ru strings:
     old "Then she felt his powerful hand, stroking her hair."
     new "Затем она почувствовала его сильную руку, поглаживающую её волосы."
 
-    old "Don't worry."
-    new "Не волнуйся."
-
     old "We have a whole life ahead of us."
     new "У нас впереди целая жизнь."
 
@@ -3071,9 +3038,6 @@ translate ru strings:
 
     old "Who can be, of such an inhuman burden?"
     new "Кто же может вынести такое бесчеловечное бремя?"
-
-    old "You were..."
-    new "Ты была..."
 
     old "She felt him grip her shoulder."
     new "Она почувствовала, как он схватил её за плечо."

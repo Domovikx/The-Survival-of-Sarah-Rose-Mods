@@ -174,9 +174,6 @@ translate ko strings:
     old "Navigate the interface."
     new "인터페이스를 탐색하세요."
 
-    old "Escape"
-    new "탈출"
-
     old "Accesses the game menu."
     new "게임 메뉴를 엽니다."
 

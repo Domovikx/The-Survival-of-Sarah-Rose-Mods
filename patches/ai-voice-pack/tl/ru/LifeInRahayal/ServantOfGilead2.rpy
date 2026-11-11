@@ -21,9 +21,6 @@ translate ru strings:
     old "Still, she was happy to at least make some money."
     new "Тем не менее, она была рада хотя бы немного заработать."
 
-    old "Sarah..."
-    new "Сара..."
-
     old "He called her forward as he held up an envelope."
     new "Он позвал её подойти, поднимая конверт."
 
@@ -150,9 +147,6 @@ translate ru strings:
     old "We don't wear our uniforms? What do we wear then?"
     new "Мы не носим форму? А во что мы тогда одеваемся?"
 
-    old "Nothing."
-    new "Ничего."
-
     old "Well, you get mask, but that's about it really."
     new "Ну, тебе выдадут маску, но это, по сути, всё."
 
@@ -218,9 +212,6 @@ translate ru strings:
 
     old "But there are plenty of staff that do."
     new "Но ведь есть полно персонала, который это делает."
-
-    old "Why?"
-    new "Почему?"
 
     old "Because this job sucks. Who wants to be a cleaner or a cook for the rest of their life?"
     new "Потому что эта работа — просто ужас. Кто захочет до конца жизни быть уборщиком или поваром?"
@@ -549,9 +540,6 @@ translate ru strings:
     old "Suddenly, a man's voice called out to her."
     new "Внезапно к ней обратился мужской голос."
 
-    old "Hey!"
-    new "Эй!"
-
     old "A young man leaned back, casually on a sofa."
     new "Молодой человек откинулся на спинку дивана, небрежно."
 
@@ -671,9 +659,6 @@ translate ru strings:
 
     old "You're a slave."
     new "Ты раб."
-
-    old "Right you are."
-    new "Точно так."
 
     old "A prized one, to be sure, but a slave all the same."
     new "Ценимая, конечно, но всё же рабыня."
@@ -1260,9 +1245,6 @@ translate ru strings:
     old "From what I hear the governor that those barbarians have installed has quite an appetite for life as well."
     new "Судя по тому, что я слышала, у губернатора, которого установили эти варвары, тоже довольно большой аппетит к жизни."
 
-    old "Is that so?"
-    new "Разве так?"
-
     old "Perhaps he would make for a better ally."
     new "Возможно, он оказался бы лучшим союзником."
 
@@ -1274,9 +1256,6 @@ translate ru strings:
 
     old "But I think you won't find them very easy to convince."
     new "Но я думаю, тебе не так-то просто их убедить."
-
-    old "Why is that?"
-    new "Почему так?"
 
     old "Their Khan is ambitious. He dreams of conquest."
     new "Их хан амбициозен. Он мечтает о завоеваниях."
@@ -1394,9 +1373,6 @@ translate ru strings:
 
     old "If you want to move them, you will need to generate a cause."
     new "Если ты хочешь сдвинуть их с места, тебе нужно создать причину."
-
-    old "Go on."
-    new "Давай."
 
     old "The Royal Family of Rosanna is gone."
     new "Королевская семья Розанны исчезла."
@@ -1565,9 +1541,6 @@ translate ru strings:
 
     old "I dictate everything in this Estate. If I pay you to stand on your head all night, that is what you will do."
     new "Я диктую всё в этом поместье. Если я заплачу тебе за то, чтобы ты всю ночь стоял на голове, то именно это ты и будешь делать."
-
-    old "Understood?"
-    new "Понятно?"
 
     old "Sarah simply nodded."
     new "Сара просто кивнула."
@@ -1859,9 +1832,6 @@ translate ru strings:
 
     old "I accept. I will spy on him for you."
     new "Я согласна. Я буду шпионить за ним для вас."
-
-    old "Excellent."
-    new "Отлично."
 
     old "I shall send one of my assistants by to prepare you for the assignment."
     new "Я пошлю одного из своих помощников, чтобы он подготовил тебя к заданию."

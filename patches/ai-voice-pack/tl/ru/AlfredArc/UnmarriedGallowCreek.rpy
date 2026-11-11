@@ -6,9 +6,6 @@ translate ru strings:
     old "She hadn't yet spoken the words, but she could see the pain in his face."
     new "Она ещё не произнесла этих слов, но уже видела боль на его лице."
 
-    old "But..."
-    new "Но..."
-
     old "Why..."
     new "Почему..."
 
@@ -146,9 +143,6 @@ translate ru strings:
 
     old "By next morning, I will take leave of your house."
     new "К следующему утру я покину ваш дом."
-
-    old "Good."
-    new "Хорошо."
 
     old "He almost spat out the word."
     new "Он чуть не выплюнул это слово."

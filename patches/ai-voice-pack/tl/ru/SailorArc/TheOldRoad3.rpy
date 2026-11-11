@@ -390,9 +390,6 @@ translate ru strings:
     old "He looked at her, his eyes drifting from side to side."
     new "Он посмотрел на неё, его глаза метались из стороны в сторону."
 
-    old "What?"
-    new "Что?"
-
     old "On the the bridge today...what was that?"
     new "На мосту сегодня... что это было?"
 
@@ -530,9 +527,6 @@ translate ru strings:
 
     old "You gave me the idea...to get him drunk..."
     new "Ты ведь и придумал... чтобы я его опьянила..."
-
-    old "Maybe."
-    new "Возможно."
 
     old "I'll take a fraction of the blame for giving you the idea."
     new "Я возьму на себя малую часть вины за то, что дал тебе эту идею."
@@ -819,9 +813,6 @@ translate ru strings:
     old "She knew, same as he did, that he was right."
     new "Она знала — так же, как и он, — что он прав."
 
-    old "That's what I thought."
-    new "Я так и думал."
-
     old "Now stop pretending like you're anything other than what you are, and get down on your knees."
     new "Теперь перестань притворяться кем-то другим, а просто будь собой — и ложись на колени."
 
@@ -941,9 +932,6 @@ translate ru strings:
 
     old "Sarah swallowed her pride."
     new "Сара проглотила своё достоинство."
-
-    old "Yes what?"
-    new "Да, что?"
 
     old "She swallowed more of her pride."
     new "Она подавила ещё больше своей гордости."

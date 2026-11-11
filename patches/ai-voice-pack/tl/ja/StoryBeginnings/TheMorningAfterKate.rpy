@@ -570,9 +570,6 @@ translate ja strings:
     old "Lady Carolyn bowed her head."
     new "キャロリン様は頭を下げた。"
 
-    old "Of course, my liege."
-    new "もちろんです、我が主よ。"
-
     old "Keep things modest."
     new "控えめにしてください"
 

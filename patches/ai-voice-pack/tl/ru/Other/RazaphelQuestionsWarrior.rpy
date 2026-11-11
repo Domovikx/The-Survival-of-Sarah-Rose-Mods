@@ -276,9 +276,6 @@ translate ru strings:
     old "Those gifted with such divine purpose, find the world often bending to their own will. Their own purpose."
     new "Те, кому дарована такая божественная цель, часто обнаруживают, что мир подчиняется их собственной воле. Их собственному предназначению."
 
-    old "What are you suggesting?"
-    new "Что ты имеешь в виду?"
-
     old "Over centuries...millenia...I have worked to unravel their schemes and their plans."
     new "На протяжении веков... тысячелетий... я работал над тем, чтобы распутать их интриги и планы."
 
@@ -513,9 +510,6 @@ translate ru strings:
     old "I am here."
     new "Я здесь."
 
-    old "Where?"
-    new "Где?"
-
     old "Where you are."
     new "Ты там."
 
@@ -662,9 +656,6 @@ translate ru strings:
 
     old "All around her, Mythran soldiers and scholars stared at her with worried expressions."
     new "Вокруг неё воины и учёные Митрана смотрели на неё с обеспокоенными лицами."
-
-    old "Are you alright?"
-    new "Ты в порядке?"
 
     old "Can you say it?"
     new "Ты можешь это сказать?"

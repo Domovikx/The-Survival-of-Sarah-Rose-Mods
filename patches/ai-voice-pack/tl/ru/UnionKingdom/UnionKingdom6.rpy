@@ -582,9 +582,6 @@ translate ru strings:
     old "Sarah swiftly cut through the grass and made her way for it."
     new "Сара быстро прорезала траву и направилась к нему."
 
-    old "Hey!"
-    new "Эй!"
-
     old "Wait up, Sarah!"
     new "Подожди, Сара!"
 
@@ -719,9 +716,6 @@ translate ru strings:
 
     old "Sarah felt Lily brush her hair back, her eyes cutting deep into hers."
     new "Сара почувствовала, как Лили откинула ей волосы назад, а её взгляд глубоко вошёл в глаза Сары."
-
-    old "Yes?"
-    new "Да?"
 
     old "Sarah had spoken her name, but hardly knew what else to say."
     new "Сара произнесла своё имя, но едва ли знала, что ещё сказать."

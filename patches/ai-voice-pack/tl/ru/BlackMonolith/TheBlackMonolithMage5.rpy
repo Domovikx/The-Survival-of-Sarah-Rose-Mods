@@ -354,9 +354,6 @@ translate ru strings:
     old "She didn't wander the streets at random, and without an excuse, she'd never had a reason to come to this part of town before."
     new "Она не бродила по улицам без цели, а без всякого повода у неё никогда не было причин приходить в эту часть города."
 
-    old "Don't worry."
-    new "Не волнуйся."
-
     old "Who said I'm worried?"
     new "Кто сказал, что я волнуюсь?"
 
@@ -545,9 +542,6 @@ translate ru strings:
 
     old "Triumphantly, he pulled a deck of cards out."
     new "Торжествующе он достал колоду карт."
-
-    old "See, told you."
-    new "Видишь? Я же говорил."
 
     old "He scratched his chin, as if in deep thought."
     new "Он почесал подбородок, будто глубоко задумавшись."
@@ -798,9 +792,6 @@ translate ru strings:
     old "I might be a thief, but in Fasthand, I don't play dirty. I don't got much honour, but I got that much."
     new "Я, может, и вор, но в «Быстрой руке» я не играю грязно. Чести у меня немного, но ровно столько — и всё."
 
-    old "Whatever."
-    new "Да как хочешь."
-
     old "Sarah pouted."
     new "Сара надула губы."
 
@@ -923,9 +914,6 @@ translate ru strings:
 
     old "She saw a wide smiling Alaric."
     new "Она увидела широко улыбающегося Аларика."
-
-    old "You did it!"
-    new "Ты справилась!"
 
     old "He suddenly rushed her. His broad and strong arms wrapping around her."
     new "Он внезапно бросился к ней. Его широкие и сильные руки обняли её."
@@ -1149,9 +1137,6 @@ translate ru strings:
     old "Maybe, but I clocked you from a mile away."
     new "Возможно, но я раскусил тебя за милю."
 
-    old "And what's that?"
-    new "И что это такое?"
-
     old "Upper class girl, taught all her life to be proper and prim. But deep down you just want all the things you're not supposed to."
     new "Девушка из высшего общества, которую всю жизнь учили быть приличной и чопорной. Но в глубине души ты хочешь всего того, чего тебе нельзя."
 
@@ -1332,9 +1317,6 @@ translate ru strings:
     old "Sarah confessed her answer."
     new "Сара призналась в своём ответе."
 
-    old "What's that?"
-    new "Что это было?"
-
     old "When you fucked me in the alley!"
     new "Когда ты трахал меня в переулке!"
 
@@ -1352,9 +1334,6 @@ translate ru strings:
 
     old "Sarah was nearing hysterics. She needed him to take her."
     new "Сара была на грани истерики. Ей нужно было, чтобы он взял её в свои руки."
-
-    old "Yes what?"
-    new "Да, а что?"
 
     old "Your dick is big!"
     new "У тебя большой член!"
@@ -1730,9 +1709,6 @@ translate ru strings:
 
     old "Even standing there, she knew it was a sight that wouldn't soon be leaving her mind."
     new "Даже стоя там, она знала, что это зрелище не скоро покинет её мысли."
-
-    old "Yeah?"
-    new "Да?"
 
     old "If you're ever in trouble again..."
     new "Если ты когда-нибудь снова попадёшь в беду..."

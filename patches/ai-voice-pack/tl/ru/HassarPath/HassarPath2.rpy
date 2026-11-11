@@ -168,9 +168,6 @@ translate ru strings:
     old "As she followed Hassar deeper into the garden, she finally recovered enough to speak."
     new "Пока она следовала за Хассаром всё глубже в сад, она наконец-то пришла в себя достаточно, чтобы заговорить."
 
-    old "This is..."
-    new "Это..."
-
     old "It's incredible."
     new "Это невероятно."
 

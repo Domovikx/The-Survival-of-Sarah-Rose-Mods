@@ -105,9 +105,6 @@ translate ru strings:
     old "Xan turned to Sarah and spoke in whispers."
     new "Ксантиппа повернулась к Саре и зашептала."
 
-    old "Let's go."
-    new "Пойдём."
-
     old "We need to leave, while we still can..."
     new "Нам нужно уходить, пока ещё можем..."
 
@@ -345,9 +342,6 @@ translate ru strings:
     old "This seemed to bring Sarah back to herself."
     new "Это, казалось, привело Сару в себя."
 
-    old "Ok, I understand."
-    new "Хорошо, я поняла."
-
     old "Then, an ear shattering scream rang out over the room."
     new "Затем по всей комнате разнёсся оглушительный крик."
 
@@ -437,9 +431,6 @@ translate ru strings:
 
     old "How could you be that foolish? For what?"
     new "Как ты могла быть такой глупой? Ради чего?"
-
-    old "Shut up!"
-    new "Заткнись!"
 
     old "Sarah snaps at Xan, for the first time."
     new "— Заткнись! — резко бросила Сара Ксантиппе."
@@ -543,9 +534,6 @@ translate ru strings:
     old "Xan stopped pacing and looked at her."
     new "Ксантиппа перестал ходить взад-вперёд и посмотрел на неё."
 
-    old "Yes."
-    new "Да."
-
     old "It's just like Razaphel, a voidling."
     new "Это точно так же, как и Разафель — воидлинг."
 
@@ -591,9 +579,6 @@ translate ru strings:
     old "Samayra only looked up, a deep gratitude in her face."
     new "Самайра лишь подняла голову, и на её лице отразилась глубокая благодарность."
 
-    old "Thank you, Sarah."
-    new "Спасибо тебе, Сара."
-
     old "I just did what anyone would have done."
     new "Я просто сделала то, что сделал бы любой другой."
 
@@ -608,9 +593,6 @@ translate ru strings:
 
     old "After placing Samayra in the bed, Sarah crawled in next to her. Embracing her tightly."
     new "Уложив Самайру в постель, Сара залезла рядом с ней и крепко обняла её."
-
-    old "Sarah..."
-    new "Сара..."
 
     old "What do you think happened to my father?"
     new "Как ты думаешь, что случилось с моим отцом?"

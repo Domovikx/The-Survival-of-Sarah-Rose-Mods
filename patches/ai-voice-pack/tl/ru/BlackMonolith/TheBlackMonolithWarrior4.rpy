@@ -342,9 +342,6 @@ translate ru strings:
     old "For a moment, there is only silence."
     new "На мгновение воцаряется тишина."
 
-    old "Yes."
-    new "Да."
-
     old "I will speak only truth from now on, Sarah. I will admit to my deceit, and ask for your forgiveness."
     new "Отныне я буду говорить только правду, Сара. Я признаюсь во лжи и попрошу у тебя прощения."
 

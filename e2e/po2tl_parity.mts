@@ -37,7 +37,8 @@ for (const [o, w] of gen) {
   if (ship.get(o) === w) same++;
   else {
     diff++;
-    if (diffEx.length < 6) diffEx.push(`OLD: ${o.slice(0, 60)} | ship: ${(ship.get(o) ?? "").slice(0, 45)} | gen: ${w.slice(0, 45)}`);
+    if (diffEx.length < 6)
+      diffEx.push(`OLD: ${o.slice(0, 60)} | ship: ${(ship.get(o) ?? "").slice(0, 45)} | gen: ${w.slice(0, 45)}`);
   }
 }
 const onlyGen = [...gen.keys()].filter((k) => !ship.has(k)).length;

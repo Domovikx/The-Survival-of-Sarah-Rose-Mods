@@ -420,9 +420,6 @@ translate ru strings:
     old "Sarah linked her arm though Varga's arm. They kept walking down the hallway together."
     new "Сара взяла Варгу под руку, и они вместе продолжили идти по коридору."
 
-    old "I'd like to see that side one day."
-    new "Я бы хотела однажды увидеть эту сторону."
-
     old "Sarah joked."
     new "Сара пошутила."
 
@@ -756,9 +753,6 @@ translate ru strings:
     old "Don't get any ideas."
     new "Не строй никаких планов."
 
-    old "Sorry."
-    new "Прости."
-
     old "Varga smiled."
     new "Варга улыбнулся."
 
@@ -791,9 +785,6 @@ translate ru strings:
 
     old "Sarah let herself fall backwards into her bed."
     new "Сара позволила себе упасть назад на кровать."
-
-    old "You're right..."
-    new "Ты прав..."
 
     old "I hate you for it, but you're right."
     new "Я ненавижу тебя за это, но ты прав."
@@ -848,9 +839,6 @@ translate ru strings:
 
     old "Marion waved away the soldiers, urging them to leave him be and turned to Sarah."
     new "Марион отмахнулся от солдат, призывая их оставить его в покое, и повернулся к Саре."
-
-    old "Of course, Sarah."
-    new "Конечно, Сара."
 
     old "Marion walked up close to her, he was still balancing his helmet in one hand."
     new "Марион подошёл к ней вплотную; он всё ещё держал шлем в одной руке."
@@ -1058,9 +1046,6 @@ translate ru strings:
 
     old "Sarah felt herself taking a step back."
     new "Сара почувствовала, как отступила на шаг."
-
-    old "I'll take your proposal into consideration."
-    new "Я приму твоё предложение к сведению."
 
     old "I'll take your proposal into consideration."
     new "Я приму твоё предложение к сведению."
@@ -1745,9 +1730,6 @@ translate ru strings:
 
     old "Sarah nodded. She tried to keep her mind from running wild."
     new "Сара кивнула. Она пыталась не дать своим мыслям выйти из-под контроля."
-
-    old "I understand."
-    new "Я понимаю."
 
     old "Jaeid grabbed Sarah by her upper arm and dragged her into the cart, putting her down on the floor of the cart."
     new "Джаид схватил Сару за верхнюю часть руки и затащил её в повозку, усадив на пол."

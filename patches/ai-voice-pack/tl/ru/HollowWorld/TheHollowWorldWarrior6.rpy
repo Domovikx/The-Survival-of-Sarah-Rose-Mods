@@ -291,9 +291,6 @@ translate ru strings:
     old "She saluted."
     new "Она отдала честь."
 
-    old "Yes, commander."
-    new "Да, командир."
-
     old "Sarah turned and left the tent."
     new "Сара повернулась и вышла из палатки."
 
@@ -420,9 +417,6 @@ translate ru strings:
     old "Gideon laughed mirthlessly."
     new "Гидеон безрадостно рассмеялся."
 
-    old "Great."
-    new "Отлично."
-
     old "So that's what it's all come down to. Hope and a prayer."
     new "Так вот к чему всё это привело — к надежде и молитве."
 
@@ -524,9 +518,6 @@ translate ru strings:
 
     old "For a moment, the two stood in silence."
     new "На мгновение они оба замолчали."
-
-    old "So..."
-    new "Так..."
 
     old "We're really going to keep marching?"
     new "Мы и правда собираемся продолжать маршировать?"
@@ -1203,9 +1194,6 @@ translate ru strings:
     old "She saw a smile creep on Kate's face, only inches away from hers."
     new "Она увидела, как на лице Кейт появилась улыбка — всего в нескольких дюймах от её собственного лица."
 
-    old "Good."
-    new "Хорошо."
-
     old "Because I've been marching my sorry ass off, tired, exhausted and dirty for weeks now."
     new "Потому что я уже недели тащу свою жалкую задницу за собой — усталая, измученная и грязная."
 
@@ -1584,14 +1572,8 @@ translate ru strings:
     old "Sarah noticed her staring just a moment too long."
     new "Сара заметила, что она смотрит на неё слишком долго."
 
-    old "Like what you see?"
-    new "Тебе нравится то, что ты видишь?"
-
     old "Suddenly, Samayra's face shot up and met her eyes."
     new "Внезапно лицо Самайры резко поднялось и встретилось с её взглядом."
-
-    old "What? No!"
-    new "Что? Нет!"
 
     old "Sarah decided to keep bullying the girl."
     new "Сара решила продолжить издеваться над девушкой."
@@ -1625,9 +1607,6 @@ translate ru strings:
 
     old "Samayra pouted."
     new "Самайра надула губы."
-
-    old "So mean!"
-    new "Как жестоко!"
 
     old "You know, you remind me of Thomas when you pull a face like that."
     new "Знаешь, ты напоминаешь мне о Томасе, когда так корчишь рожицу."
@@ -1737,9 +1716,6 @@ translate ru strings:
     old "Ooh yeah. The two of you would have gotten along great."
     new "О-о да. Вы двое отлично бы поладили."
 
-    old "Really?"
-    new "Правда?"
-
     old "Yeah, two weirdos."
     new "Да, два чудака."
 
@@ -1766,12 +1742,6 @@ translate ru strings:
 
     old "Suddenly, Sarah found herself eying Samayra."
     new "Внезапно Сара поймала себя на том, что пристально смотрит на Самайру."
-
-    old "Huh."
-    new "Хм."
-
-    old "What is it?"
-    new "Что такое?"
 
     old "I just realized. Why are you still wearing your clothes?"
     new "Я только что поняла. Почему ты до сих пор в своей одежде?"
@@ -1806,9 +1776,6 @@ translate ru strings:
     old "Sarah watched the girl nearly choke on her own breath."
     new "Сара смотрела, как девушка едва не задохнулась от собственного дыхания."
 
-    old "I..."
-    new "Я..."
-
     old "She couldn't produce a single word."
     new "Она не могла вымолвить ни слова."
 
@@ -1820,9 +1787,6 @@ translate ru strings:
 
     old "And besides, if you know how to use them, you might find they can do some good too."
     new "И кроме того, если ты знаешь, как ими пользоваться, то можешь обнаружить, что они могут принести и пользу."
-
-    old "Stop!"
-    new "Остановись!"
 
     old "Sarah laughed. Part of her felt sorry for the taunts, another part felt like Samayra just made too perfect of a target."
     new "Сара рассмеялась. Часть её души сочувствовала этим насмешкам, а другая часть чувствовала, что Самайра была просто идеальной мишенью для них."
@@ -2076,17 +2040,11 @@ translate ru strings:
     old "Sarah stepped closer towards him, closing the distance."
     new "Сара подошла к нему ближе, сокращая расстояние."
 
-    old "And why is that?"
-    new "И почему так?"
-
     old "She casually reached out with her hand, seizing his shaft."
     new "Она небрежно протянула руку и схватила его член."
 
     old "She watched as Gideon's body seized up at the sudden touch."
     new "Она смотрела, как тело Гидеона напряглось от внезапного прикосновения."
-
-    old "I..."
-    new "Я..."
 
     old "His breathing growing heavier, he found it harder to speak as Sarah began to slowly stroke him."
     new "Его дыхание становилось всё тяжелее, и ему стало труднее говорить, когда Сара начала медленно ласкать его."
@@ -2145,9 +2103,6 @@ translate ru strings:
     old "Sarah leaned in close to his ears, still holding his erection firmly in her hand."
     new "Сара наклонилась ближе к его уху, всё ещё крепко сжимая его эрекцию в руке."
 
-    old "Get down on your knees."
-    new "Опустись на колени."
-
     old "Her words worked on him like a spell."
     new "Её слова подействовали на него как заклинание."
 
@@ -2201,9 +2156,6 @@ translate ru strings:
 
     old "Sarah whispered the words as she continued to slide her hand up and down his shaft."
     new "Сара прошептала эти слова, продолжая водить рукой вверх и вниз по его стволу."
-
-    old "Yes..."
-    new "Да..."
 
     old "His voice shook and trailed off. Some part was deeply afraid of crossing this threshold that he had so yearned to cross."
     new "Его голос задрожал и оборвался. Что-то в нём глубоко боялось переступить этот порог, к которому он так жаждал подойти."
@@ -2589,9 +2541,6 @@ translate ru strings:
     old "He shrugged."
     new "Он пожал плечами."
 
-    old "Sure."
-    new "Конечно."
-
     old "He paused, awkwardly fiddling as he made up his mind."
     new "Он замер, неловко возившись с чем-то в руках, пока принимал решение."
 
@@ -2639,9 +2588,6 @@ translate ru strings:
 
     old "Behind him she saw Ephraim wave at her."
     new "За его спиной она увидела, как Ефраим помахал ей рукой."
-
-    old "Hey."
-    new "Эй."
 
     old "He appeared slightly more at ease then when she had last seen him. His eyes less sad."
     new "Он выглядел несколько более расслабленным, чем в последний раз, когда она его видела. Его глаза были уже не такими печальными."
@@ -2753,9 +2699,6 @@ translate ru strings:
 
     old "No, Eph was talking about what I said when I saw you come up to us."
     new "Нет, Ефраим говорил о том, что я сказал, когда увидел, как ты подошла к нам."
-
-    old "What did you say?"
-    new "Что ты сказал?"
 
     old "That I thought we should invite you to join us."
     new "Я думал, нам стоит пригласить тебя присоединиться к нам."

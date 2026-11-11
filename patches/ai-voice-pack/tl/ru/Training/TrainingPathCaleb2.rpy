@@ -204,9 +204,6 @@ translate ru strings:
     old "Tell me."
     new "Расскажи."
 
-    old "Tell me."
-    new "Расскажи мне."
-
     old "Ephraim shrugs."
     new "Ефраим пожимает плечами."
 
@@ -509,9 +506,6 @@ translate ru strings:
 
     old "Fine, play your little games."
     new "Ладно, играйте в свои игры."
-
-    old "Fine, play your little games."
-    new "Ну ладно, играйте в свои детские игры."
 
     old "Sarah turns around, angry at suddenly being shut out of the conversation."
     new "Сара оборачивается, разозлённая тем, что её внезапно исключили из разговора."

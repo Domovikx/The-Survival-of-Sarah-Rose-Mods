@@ -69,9 +69,6 @@ translate ru strings:
     old "What will you do now?"
     new "Что ты будешь делать теперь?"
 
-    old "I don't know..."
-    new "Я не знаю..."
-
     old "We'll go back to the town and I..."
     new "Мы вернёмся в город, и я..."
 
@@ -95,9 +92,6 @@ translate ru strings:
 
     old "She saw Garret think."
     new "Она увидела, как Гаррет задумался."
-
-    old "You're right..."
-    new "Ты права..."
 
     old "There isn't much left for me in my village. And if I ever transformed again...I would be right back where I was before."
     new "В моей деревне для меня уже мало что осталось. А если я когда-нибудь снова превращусь... то окажусь точно там же, где был до этого."
@@ -180,9 +174,6 @@ translate ru strings:
     old "Maybe, but I'm still glad to have you with me. You'll see there are wonders in the world even you might enjoy."
     new "Возможно, но я всё равно рада, что ты со мной. Ты ещё увидишь: в мире есть чудеса, которые могут понравиться даже тебе."
 
-    old "Perhaps."
-    new "Возможно."
-
     old "Sarah saw the glimmer in his eyes."
     new "Сара увидела искорку в его глазах."
 
@@ -197,9 +188,6 @@ translate ru strings:
 
     old "These last few days out here have been nice, but my life is a lot busier than you might think. Usually."
     new "Эти последние дни здесь были приятными, но моя жизнь обычно куда более насыщенная, чем ты, наверное, думаешь."
-
-    old "I understand."
-    new "Я понимаю."
 
     old "Sarah leaned back and began to undo her armor."
     new "Сара откинулась назад и начала снимать доспехи."
@@ -242,9 +230,6 @@ translate ru strings:
 
     old "Happy then, I take it?"
     new "Значит, ты счастлив?"
-
-    old "Come here."
-    new "Иди сюда."
 
     old "His order came surprisingly swift and hard."
     new "Его приказ последовал удивительно быстро и жестко."

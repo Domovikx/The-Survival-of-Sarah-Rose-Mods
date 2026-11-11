@@ -105,9 +105,6 @@ translate ru strings:
     old "They...just dissapeared?"
     new "Они... просто исчезли?"
 
-    old "Don't worry about that."
-    new "Не парься об этом."
-
     old "Just bullshit that bored peasants tell each other."
     new "Просто чушь, которой скучающие крестьяне друг другу рассказывают."
 
@@ -261,9 +258,6 @@ translate ru strings:
     old "Sakar stood over her."
     new "Сакар стоял над ней."
 
-    old "Let's go."
-    new "Пойдём."
-
     old "Sarah got up and walked after him."
     new "Сара встала и пошла за ним."
 
@@ -305,9 +299,6 @@ translate ru strings:
 
     old "You...saved me."
     new "Ты... спас меня."
-
-    old "What's that?"
-    new "Что это?"
 
     old "Back at the crossing...you risked everything...just to keep me out of the hands of those soldiers..."
     new "На переправе... ты рискнул всем... лишь бы не дать тем солдатам схватить меня..."
@@ -1362,9 +1353,6 @@ translate ru strings:
     old "I wanted to thank you, before we got to Rahayal."
     new "Я хотела поблагодарить тебя до того, как мы отправились в Рахайал."
 
-    old "Is that so?"
-    new "Разве так?"
-
     old "If it hadn't been for you and the others...I don't wanna think about what would have happened."
     new "Если бы не ты и остальные... я даже не хочу думать о том, что могло бы случиться."
 
@@ -1565,9 +1553,6 @@ translate ru strings:
 
     old "Sarah leaned forward, suddenly intrigued."
     new "Сара наклонилась вперёд, внезапно заинтересованная."
-
-    old "Well..."
-    new "Ну..."
 
     old "The shipment of pyrrite we got with us is meant for the Rahayal market. It's in demand enough that it sells out quick."
     new "Груз пиррита, который мы привезли с собой, предназначен для рынка Рахайал. Он настолько востребован, что его быстро раскупают."

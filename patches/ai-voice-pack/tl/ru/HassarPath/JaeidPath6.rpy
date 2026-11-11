@@ -153,9 +153,6 @@ translate ru strings:
     old "She could see it in his face."
     new "Она видела это по его лицу."
 
-    old "I am."
-    new "Я — это."
-
     old "Because the Tribes...we are a people of conquest. Forged in the fires of war."
     new "Потому что племена... мы — народ завоевателей. Закалённые в огнях войны."
 
@@ -257,9 +254,6 @@ translate ru strings:
 
     old "Jaeid..."
     new "Джаид..."
-
-    old "Yes?"
-    new "Да?"
 
     old "Sarah felt her mouth go dry."
     new "У Сары пересохло во рту."
@@ -618,9 +612,6 @@ translate ru strings:
     old "Perhaps in this new world this was far from appropriate, but Sarah could not contain herself."
     new "Возможно, в этом новом мире это было далеко не уместно, но Сара не могла сдержаться."
 
-    old "Sarah...I..."
-    new "Сара... я..."
-
     old "You are a kind person, Jaeid."
     new "Ты добрый человек, Джаид."
 
@@ -762,9 +753,6 @@ translate ru strings:
     old "Even some others at the table turned their head to them."
     new "Даже некоторые другие люди за столом повернули к ним головы."
 
-    old "You..."
-    new "Ты..."
-
     old "You're torturing me again, Sarah Rose."
     new "Ты снова мучишь меня, Сара Роза."
 
@@ -833,9 +821,6 @@ translate ru strings:
 
     old "Sarah gestured towards one of the male slaves."
     new "Сара указала на одного из мужских рабов."
-
-    old "What do you mean?"
-    new "Что вы имеете в виду?"
 
     old "The thing...between their legs."
     new "Вещь... между их ногами."
@@ -1370,9 +1355,6 @@ translate ru strings:
 
     old "And for all her suffering and submissions...she would end up the same. A slave to be used by anyone who wished to."
     new "И после всех её страданий и подчинений... она всё равно осталась той же. Рабыней, которой мог воспользоваться любой желающий."
-
-    old "No."
-    new "Нет."
 
     old "She saw Jaeid's face, stern and strong, facing down his Khan."
     new "Она видела лицо Джаида — суровое и сильное, обращённое к его хану."
@@ -1910,9 +1892,6 @@ translate ru strings:
 
     old "She spook the words softly, as though they were an apology."
     new "Она тихо прошептала эти слова, будто это были извинения."
-
-    old "You're beautiful."
-    new "Ты прекрасна."
 
     old "Sarah kissed this man. The only man with whom she had ever felt quite this safe."
     new "Сара поцеловала этого мужчину — единственного, с которым она когда-либо чувствовала себя такой безопасной."

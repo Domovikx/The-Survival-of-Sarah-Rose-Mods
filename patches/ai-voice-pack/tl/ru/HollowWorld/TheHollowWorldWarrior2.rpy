@@ -498,9 +498,6 @@ translate ru strings:
     old "When we get back to Lethram, maybe you'll actually see some."
     new "Когда мы вернёмся в Летрам, может быть, ты и увидишь их."
 
-    old "Wow..."
-    new "Ого..."
-
     old "Samayra's eyes drifted away, seemingly lost in a fantasy."
     new "Глаза Самайры ушли вдаль — казалось, она потерялась в фантазии."
 
@@ -729,9 +726,6 @@ translate ru strings:
     old "She lowered her head, placing her forehead against the ground, extending her arms."
     new "Она опустила голову, прижав лоб к земле, и вытянула руки."
 
-    old "Thank you..."
-    new "Спасибо..."
-
     old "Her words were soft, muted."
     new "Её слова были нежными и приглушёнными."
 
@@ -839,9 +833,6 @@ translate ru strings:
 
     old "At least she was only a murderer."
     new "По крайней мере, она была всего лишь убийцей."
-
-    old "Forget it."
-    new "Забудь об этом."
 
     old "This wasn't her fight. That woman would have to make her own way through life, same as her."
     new "Это была не её битва. Той женщине придётся самой прокладывать себе дорогу в жизни — точно так же, как и ей."

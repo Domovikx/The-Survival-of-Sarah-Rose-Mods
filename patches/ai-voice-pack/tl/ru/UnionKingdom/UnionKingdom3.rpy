@@ -456,9 +456,6 @@ translate ru strings:
     old "A humble trait for a person. A poor one for a king."
     new "Скромное качество для человека. Но жалкое для короля."
 
-    old "I..."
-    new "Я..."
-
     old "I think given all that has been said, Lady Carolyn is most likely right."
     new "Я думаю, учитывая всё сказанное, леди Каролин, скорее всего, права."
 

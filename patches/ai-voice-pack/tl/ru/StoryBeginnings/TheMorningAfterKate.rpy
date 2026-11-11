@@ -570,9 +570,6 @@ translate ru strings:
     old "Lady Carolyn bowed her head."
     new "Леди Каролин поклонилась."
 
-    old "Of course, my liege."
-    new "Разумеется, мой государь."
-
     old "Keep things modest."
     new "Держись скромно."
 

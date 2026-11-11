@@ -132,9 +132,6 @@ translate ru strings:
     old "More prophecies?"
     new "Ещё пророчества?"
 
-    old "War."
-    new "Война."
-
     old "The word lingered for a moment."
     new "Слова на мгновение задержались в воздухе."
 

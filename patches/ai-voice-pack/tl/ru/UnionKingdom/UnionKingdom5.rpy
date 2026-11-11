@@ -216,9 +216,6 @@ translate ru strings:
     old "Trust that you are serving me best in your current station."
     new "Поверь, что ты служишь мне лучше всего на своей нынешней должности."
 
-    old "I understand."
-    new "Я понимаю."
-
     old "But if they so much as harm a hair on your head..."
     new "Но если они хотя бы тронут хоть один волос на твоей голове..."
 
@@ -227,9 +224,6 @@ translate ru strings:
 
     old "He paused for a moment, then nodded sternly."
     new "Он на мгновение замолчал, а затем строго кивнул."
-
-    old "Yes."
-    new "Да."
 
     old "A silence lingered a moment longer."
     new "Тишина задержалась на мгновение дольше."

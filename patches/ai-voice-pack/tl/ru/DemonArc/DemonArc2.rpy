@@ -81,9 +81,6 @@ translate ru strings:
     old "Right away, the burning of the mark began to softly fade. Cooling, almost."
     new "Сразу же жжение от знака начало мягко утихать — почти остывая."
 
-    old "Very good."
-    new "Отлично."
-
     old "Sarah felt the daemon's clawed hand wrap around the back of her head."
     new "Сара почувствовала, как когтистая лапа демона обхватила затылок её головы."
 
@@ -155,9 +152,6 @@ translate ru strings:
 
     old "Adapt...to what?"
     new "Адаптироваться... к чему?"
-
-    old "Master."
-    new "Мастер."
 
     old "Master."
     new "Мастер."
@@ -387,9 +381,6 @@ translate ru strings:
     old "We only care for a cow because it gives milk. Only care for a pig because it gives meat."
     new "Нас заботит корова лишь потому, что она даёт молоко. Свинья нас волнует только из-за того, что она даёт мясо."
 
-    old "And you..."
-    new "А ты..."
-
     old "He gestured with disregard."
     new "Он пренебрежительно махнул рукой."
 
@@ -414,17 +405,11 @@ translate ru strings:
     old "She felt the power of his iron grip. The stabbing, cutting feeling of his nails on her body."
     new "Она почувствовала силу его железной хватки. Пронзающее, режущее ощущение его ногтей на её теле."
 
-    old "Go ahead."
-    new "Давай."
-
     old "Her voice was soft as whimper."
     new "Её голос стал тихим, словно стон."
 
     old "I see your clenched fist. Your resistance."
     new "Я вижу твой сжатый кулак. Твоё сопротивление."
-
-    old "So go ahead."
-    new "Так давай."
 
     old "Strike me. Kick me. Try to cast your little magics."
     new "Убей меня. Пни меня. Попробуй применить свою мелкую магию."
@@ -443,9 +428,6 @@ translate ru strings:
 
     old "She could not summon as much as a spark."
     new "Она не могла вызвать даже самую малейшую искру."
-
-    old "What?"
-    new "Что?"
 
     old "Where have those defiant eyes gone now?"
     new "Куда же делись эти дерзкие глаза?"
@@ -491,9 +473,6 @@ translate ru strings:
 
     old "I...yes...I will..."
     new "Я... да... я так и сделаю..."
-
-    old "Good."
-    new "Хорошо."
 
     old "Tonight, before you go to sleep, come back here to the ramparts."
     new "Сегодня вечером, прежде чем ляжешь спать, вернись сюда, на стены."
@@ -599,9 +578,6 @@ translate ru strings:
 
     old "Dalia clapped her hands together."
     new "Далия хлопнула в ладоши."
-
-    old "Oh!"
-    new "Ох!"
 
     old "He wants me to help teach you, of course!"
     new "Он хочет, чтобы я помогла тебе учиться, конечно же!"
@@ -990,9 +966,6 @@ translate ru strings:
     old "It began to stroke itself faster and faster."
     new "Оно начало ласкаться всё быстрее и быстрее."
 
-    old "I understand..."
-    new "Я понимаю..."
-
     old "How quickly she had fallen to this state. Dressed like this, kneeling before this thing..."
     new "Как быстро она пришла к такому состоянию. Одетая вот так, на коленях перед этой тварью..."
 
@@ -1100,9 +1073,6 @@ translate ru strings:
 
     old "I...yes...Master..."
     new "Я... да... Мастер..."
-
-    old "Good girl."
-    new "Хорошая девочка."
 
     old "It ran on sharp claw along the side of her face."
     new "Он прошёл острым когтем вдоль стороны её лица."

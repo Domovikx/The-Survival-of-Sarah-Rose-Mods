@@ -114,9 +114,6 @@ translate ru strings:
     old "Samayra was safe."
     new "Самайра была в безопасности."
 
-    old "Thank the Gods..."
-    new "Слава богам..."
-
     old "It got pretty dangerous there towards the end."
     new "К концу там стало довольно опасно."
 
@@ -176,9 +173,6 @@ translate ru strings:
 
     old "She was safe."
     new "Она была в безопасности."
-
-    old "Thank the Gods."
-    new "Слава богам."
 
     old "Everywhere, burned flesh and ashes. Remnants of the orcs and goblins."
     new "Повсюду — обожжённая плоть и пепел. Останки орков и гоблинов."
@@ -996,9 +990,6 @@ translate ru strings:
     old "Running her lips along every inch of her."
     new "Проводя губами по каждой её части."
 
-    old "I love you!"
-    new "Я люблю тебя!"
-
     old "Samayra's confession was nearly lost to her among the loud moans, but Sarah had heard it."
     new "Признание Самайры едва не потерялось среди её громких стонов, но Сара всё же его услышала."
 
@@ -1311,9 +1302,6 @@ translate ru strings:
     old "Hecate's eyes went wide."
     new "Глаза Гекаты широко распахнулись."
 
-    old "Sarah!"
-    new "Сара!"
-
     old "But of course!"
     new "Но, конечно же!"
 
@@ -1434,9 +1422,6 @@ translate ru strings:
     old "We were stuck on the edges of the city for a while before we finally managed to get through to the interior."
     new "Мы какое-то время застревали на окраине города, пока наконец не смогли пробиться внутрь."
 
-    old "And then..."
-    new "И тут..."
-
     old "Well, luck would have it that my man-servant here spotted a peculiar magical fire, in the night."
     new "Ну вот так уж повезло: мой слуга тут ночью заметил странный магический огонь."
 
@@ -1451,9 +1436,6 @@ translate ru strings:
 
     old "Why did you track us down?"
     new "Почему вы нас отследили?"
-
-    old "Why?"
-    new "Почему?"
 
     old "Well, those of us in the Order need to stick together, obviously."
     new "Ну, нам из Ордена, очевидно, нужно держаться вместе."
@@ -1518,17 +1500,11 @@ translate ru strings:
     old "Will you mind that me and my man-servant tag along then?"
     new "Ты не против, если я и мой слуга-мужчина присоединимся к вам?"
 
-    old "Of course not."
-    new "Конечно нет."
-
     old "And your little friend over there? What was her name again?"
     new "А твоя маленькая подруга там? Как её там звали?"
 
     old "Samayra walked forward."
     new "Самайра пошла вперёд."
-
-    old "Samayra."
-    new "Самайра."
 
     old "Samayra? As in the Princess of Bagrad?"
     new "Самайра? То есть принцесса Баграда?"
@@ -1538,9 +1514,6 @@ translate ru strings:
 
     old "Hecate clasped her hands together."
     new "Геката сложила руки вместе."
-
-    old "Wow!"
-    new "Ого!"
 
     old "Xan sure keeps himself busy, always adding to his collection."
     new "Ксантиппа, конечно, не сидит без дела — он постоянно пополняет свою коллекцию."
@@ -2295,9 +2268,6 @@ translate ru strings:
     old "But what about Daemonology?"
     new "Но что насчёт даймологии?"
 
-    old "What about it?"
-    new "А как же оно?"
-
     old "That is the Art that caused the Ruin, no? Surely the Gods would have cared to prevent that."
     new "Это ведь то самое Искусство, что привело к Разрушению, не так ли? Боги наверняка позаботились бы о том, чтобы этого не произошло."
 
@@ -2400,9 +2370,6 @@ translate ru strings:
     old "Gabriel rushed ahead of them."
     new "Габриэль бросился вперёд, опередив их."
 
-    old "Wait!"
-    new "Подожди!"
-
     old "Please, Gabriel, no need to play the hero."
     new "Пожалуйста, Габриэль, не нужно играть в героя."
 
@@ -2426,9 +2393,6 @@ translate ru strings:
 
     old "Lastly, Samayra joined in."
     new "Наконец, присоединилась и Самайра."
-
-    old "Where?"
-    new "Где?"
 
     old "Where did you see it?"
     new "Где ты это видела?"
@@ -2537,9 +2501,6 @@ translate ru strings:
 
     old "Instead, the fire rushed around them, turning all the world into a blazing inferno, save for their bubble."
     new "Вместо этого огонь обогнул их, превратив весь мир в пылающий ад — за исключением их пузыря."
-
-    old "Dead."
-    new "Была бы мертва."
 
     old "She would have been dead, if not for the quick actions of Hecate, Sarah realized."
     new "Она была бы мертва, если бы не быстрые действия Гекаты, поняла Сара."

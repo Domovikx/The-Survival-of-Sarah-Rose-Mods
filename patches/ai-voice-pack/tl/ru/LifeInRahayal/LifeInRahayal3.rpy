@@ -48,9 +48,6 @@ translate ru strings:
     old "Ramsey tilted his head."
     new "Рамзи наклонил голову."
 
-    old "What?"
-    new "Что?"
-
     old "Nothing, I don't want to bother you with my troubles."
     new "Ничего, я не хочу беспокоить вас своими проблемами."
 
@@ -153,9 +150,6 @@ translate ru strings:
     old "Here?"
     new "Здесь?"
 
-    old "Sure."
-    new "Конечно."
-
     old "My kids are a great help, but as you can see, we got more customers than we can handle."
     new "Мои дети очень помогают, но, как видишь, у нас клиентов больше, чем мы можем обслужить."
 
@@ -194,9 +188,6 @@ translate ru strings:
 
     old "Ramsey smiled as he nodded."
     new "Рамзи улыбнулся и кивнул."
-
-    old "Of course."
-    new "Конечно."
 
     old "I got a good sense for people, and you strike me as an honest and hard worker."
     new "У меня хорошее чутьё на людей, и ты кажешься мне честным и трудолюбивым человеком."

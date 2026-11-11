@@ -128,6 +128,27 @@ test("детерминизм: повторный сбор даёт тот же �
   );
 });
 
+test("дубль old: схлопывается, первый по порядку выигрывает (Ren'Py «already exists»)", () => {
+  const mk = (msgctxt: string, msgid: string, msgstr: string) => ({
+    msgctxt,
+    msgid,
+    msgstr,
+    refs: [],
+    comments: [],
+    flags: [],
+    translator: [],
+  });
+  const dup = buildTlFiles(
+    [mk("speaker:Sarah", "Line twin.", "Первый."), mk("speaker:Kate", "Line twin.", "Второй.")],
+    "ru",
+    () => null,
+  );
+  const body = dup.map((f) => f.body).join("");
+  const olds = body.match(/old "Line twin\."/g) ?? [];
+  assert.equal(olds.length, 1, "ровно один old");
+  assert.match(body, /new "Первый\."/);
+});
+
 test("isDemoScope: menu/ui/имена + start + Prologue входят, прочее — нет", () => {
   assert.equal(isDemoScope("menu", null), true);
   assert.equal(isDemoScope("ui", null), true);

@@ -288,9 +288,6 @@ translate ru strings:
     old "And after?"
     new "И что потом?"
 
-    old "What do you mean?"
-    new "Что вы имеете в виду?"
-
     old "Well, I'll pass the exam, and then I'll join...but...what then?"
     new "Ну, я сдам экзамен, а потом присоединюсь... но... а что потом?"
 

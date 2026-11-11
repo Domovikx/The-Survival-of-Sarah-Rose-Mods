@@ -174,9 +174,6 @@ translate ru strings:
     old "The increased elevation, combined with new innovations for our siege weapons, will allow them to just barely reach the walls of the fortress."
     new "Повышенная высота в сочетании с новыми усовершенствованиями наших осадных орудий позволит им едва-едва достичь стен крепости."
 
-    old "Then what?"
-    new "И что дальше?"
-
     old "Then we hammer them. Day and night, all shots landing on the western walls."
     new "Тогда мы разгромим их. Днём и ночью — все выстрелы должны попасть в западные стены."
 
@@ -554,9 +551,6 @@ translate ru strings:
 
     old "That's right. So you think making me queen is your final punishment?"
     new "Верно. Значит, ты думаешь, что сделать меня королевой — это твое последнее наказание?"
-
-    old "I..."
-    new "Я..."
 
     old "Doubt suddenly ran across Marion's face. He was not so sure anymore."
     new "Сомнение внезапно пронзило лицо Мариона. Он уже не был так уверен."

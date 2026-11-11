@@ -24,9 +24,6 @@ translate ru strings:
     old "Sarah slammed the palms of her hands on the table and asserted herself."
     new "Сара ударила ладонями по столу и заявила о себе."
 
-    old "Enough!"
-    new "Достаточно!"
-
     old "The room was quiet."
     new "В комнате было тихо."
 
@@ -156,9 +153,6 @@ translate ru strings:
     old "Be quiet."
     new "Замолчи."
 
-    old "But I-"
-    new "Но я..."
-
     old "Be quiet you fat slob!"
     new "Замолчи, ты, жирный негодяй!"
 
@@ -188,9 +182,6 @@ translate ru strings:
 
     old "Antonio bashed the table."
     new "Антонио ударил по столу."
-
-    old "No!"
-    new "Нет!"
 
     old "I won't accept serving under this man."
     new "Я не соглашусь служить под началом этого человека."
@@ -227,9 +218,6 @@ translate ru strings:
 
     old "Sarah saw Antonio's face drop."
     new "Сара увидела, как лицо Антонио поникло."
-
-    old "No..."
-    new "Нет..."
 
     old "Yes. I will let the Mythrans know exactly where the weak point in our continent's defense is."
     new "Да. Я сообщу Митранам точно, где находится слабое место в обороне нашего континента."
@@ -317,9 +305,6 @@ translate ru strings:
 
     old "Edmond shook his head."
     new "Эдмонд покачал головой."
-
-    old "Never."
-    new "Никогда."
 
     old "I can tolerate a lot, but not this fat ghoul. I will never tolerate it."
     new "Я могу многое стерпеть, но не этого жирного гуюла. Я никогда этого не потерплю."

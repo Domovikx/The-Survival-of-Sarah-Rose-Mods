@@ -45,9 +45,6 @@ translate ru strings:
     old "There will never be another attack, and in a few years, this will all just be an aweful story people tell."
     new "Больше атак никогда не будет, а через несколько лет всё это станет просто ужасной историей, которую будут рассказывать."
 
-    old "You think so?"
-    new "Ты так думаешь?"
-
     old "It's you I'm more worried about."
     new "Это за тебя я больше беспокоюсь."
 
@@ -59,9 +56,6 @@ translate ru strings:
 
     old "Forgive yourself? I told you, it wasn't your fault, the curse-"
     new "Прости себя? Я же говорила тебе: это было не твоя вина — проклятие..."
-
-    old "Sure."
-    new "Конечно."
 
     old "But there is a difference between knowing something and believing it."
     new "Но есть разница между тем, чтобы что-то знать, и тем, чтобы в это поверить."
@@ -459,9 +453,6 @@ translate ru strings:
     old "The servant girl nodded."
     new "Служанка кивнула."
 
-    old "Of course, my Lady."
-    new "Конечно, моя леди."
-
     old "The servant girl rushed over and began to help Sarah undo her armor."
     new "Служанка подбежала и начала помогать Саре снимать доспехи."
 
@@ -516,9 +507,6 @@ translate ru strings:
     old "Please, take me to the dining room."
     new "Пожалуйста, отведите меня в столовую."
 
-    old "Of course."
-    new "Конечно."
-
     old "Keep on your armor"
     new "Оставайся в доспехах"
 
@@ -561,9 +549,6 @@ translate ru strings:
     old "Was there something wrong with the dress?"
     new "С платьем что-то не так?"
 
-    old "Not at all."
-    new "Вовсе нет."
-
     old "I just don't think those types of clothes really fit me anymore."
     new "Я просто не думаю, что такая одежда мне сейчас действительно идёт."
 
@@ -572,9 +557,6 @@ translate ru strings:
 
     old "My mistake then."
     new "Ну тогда моя ошибка."
-
-    old "Please."
-    new "Пожалуйста."
 
     old "Lady Carolyn gestured at the chair opposite of her."
     new "Леди Каролин указала на стул напротив себя."
@@ -626,9 +608,6 @@ translate ru strings:
 
     old "I have the ear of all the most important people in Rosannan society, living in exile here in Rahayal."
     new "У меня есть доступ ко всем самым важным людям в розаннском обществе, и я живу здесь, в Рахайале, в изгнании."
-
-    old "And you..."
-    new "И ты..."
 
     old "You, my dear, are the final piece to the puzzle."
     new "Ты, мой дорогой, — последняя недостающая часть пазла."
@@ -806,9 +785,6 @@ translate ru strings:
 
     old "And once his Legions are on my homeland, I will be a ruler in name only."
     new "И как только его легионы ступят на мою родину, я стану правительницей лишь по названию."
-
-    old "No!"
-    new "Нет!"
 
     old "The people love you, Sarah."
     new "Народ любит тебя, Сара."
@@ -1035,9 +1011,6 @@ translate ru strings:
     old "Yeah, she always liked small things."
     new "Да, ей всегда нравились мелочи."
 
-    old "Hey!"
-    new "Эй!"
-
     old "Samayra quickly got over the insult."
     new "Самайра быстро оправилась от обиды."
 
@@ -1058,9 +1031,6 @@ translate ru strings:
 
     old "He looks small...even for a baby."
     new "Он кажется таким маленьким... даже для младенца."
-
-    old "Yeah."
-    new "Да."
 
     old "He was tiny when he was born...Gods, he was so small."
     new "Он был крошечным, когда родился... Боже, он был таким маленьким."
@@ -1094,9 +1064,6 @@ translate ru strings:
 
     old "But instead...her death was quick and sudden."
     new "Но вместо этого... её смерть была быстрой и внезапной."
-
-    old "I'm sorry..."
-    new "Прости..."
 
     old "Sarah smiled at Samayra, her tears stained with tears."
     new "Сара улыбнулась Самайре, её слёзы были пропитаны слезами."
@@ -1275,9 +1242,6 @@ translate ru strings:
     old "You're afraid?"
     new "Ты боишься?"
 
-    old "Nah."
-    new "Нет."
-
     old "She paused for a while."
     new "Она на мгновение замолчала."
 
@@ -1319,9 +1283,6 @@ translate ru strings:
 
     old "But it will. Things are already changing, after you took over from Vaelen."
     new "Но это случится. Всё уже меняется с тех пор, как ты взяла на себя роль Ваэлена."
-
-    old "Yeah, but-"
-    new "Да, но..."
 
     old "But what? You think when you take back Rosanna, things will be less busy?"
     new "Но что? Ты думаешь, когда заберёшь Розанну обратно, всё станет менее суматошным?"
@@ -1425,9 +1386,6 @@ translate ru strings:
     old "Not like what?"
     new "Не такая как что?"
 
-    old "Here."
-    new "Вот."
-
     old "When I take my throne, Rosanna will be whatever I say it is."
     new "Когда я займу свой трон, Розанна будет именно той, кем я её объявлю."
 
@@ -1464,9 +1422,6 @@ translate ru strings:
     old "But who is to say they will change for the worse?"
     new "Но кто может сказать, что они изменятся к худшему?"
 
-    old "Maybe..."
-    new "Может быть..."
-
     old "Sorry if I sound too...I don't know."
     new "Прости, если я звучу слишком... я не знаю."
 
@@ -1490,9 +1445,6 @@ translate ru strings:
 
     old "Still processing. It's a lot."
     new "Всё ещё пытаюсь это осмыслить. Слишком много всего."
-
-    old "What do you think?"
-    new "Как думаешь?"
 
     old "Kate stared back into the fire."
     new "Кейт пристально посмотрела на огонь."
@@ -1620,9 +1572,6 @@ translate ru strings:
     old "It's just...a decision I have to make."
     new "Это просто... решение, которое мне нужно принять."
 
-    old "Yes."
-    new "Да."
-
     old "I'm afraid I can't be of too much help for you there."
     new "Боюсь, я не смогу тебе здесь сильно помочь."
 
@@ -1718,9 +1667,6 @@ translate ru strings:
 
     old "Garret's face shot up, startled, he fumbled and nearly dropped everything he was holding."
     new "Лицо Гаррета резко поднялось от испуга; он суетился и чуть не уронил всё, что держал в руках."
-
-    old "Gods!"
-    new "Боги!"
 
     old "Sorry, I didn't mean to scare you."
     new "Прости, я не хотела тебя пугать."
@@ -1844,9 +1790,6 @@ translate ru strings:
 
     old "Do you regret coming with me?"
     new "Ты жалеешь, что пошёл со мной?"
-
-    old "No."
-    new "Нет."
 
     old "That place had nothing left for me."
     new "В том месте для меня уже ничего не осталось."
@@ -2085,9 +2028,6 @@ translate ru strings:
     old "Cryptic as ever."
     new "Как всегда — загадочно."
 
-    old "No."
-    new "Нет."
-
     old "My answers have been clear."
     new "Мои ответы были ясны."
 
@@ -2228,9 +2168,6 @@ translate ru strings:
 
     old "I'll trust your decision..."
     new "Я доверюсь твоему решению..."
-
-    old "Tell me..."
-    new "Скажи мне..."
 
     old "You think she'd miss this?"
     new "Ты думаешь, она это пропустит?"
@@ -2418,9 +2355,6 @@ translate ru strings:
     old "Sarah feigned her voice, still playing her role."
     new "Сара притворно изменила тон голоса, всё ещё играя свою роль."
 
-    old "Maybe."
-    new "Возможно."
-
     old "Sarah saw Kate's eyes roam across her body."
     new "Сара видела, как глаза Кейт скользили по её телу."
 
@@ -2471,9 +2405,6 @@ translate ru strings:
 
     old "Sarah gasped."
     new "Сара ахнула."
-
-    old "Go on."
-    new "Давай."
 
     old "Kate gestured at Sarah."
     new "Кейт указала на Сару."
@@ -2582,9 +2513,6 @@ translate ru strings:
 
     old "Kate softly nodded."
     new "Кейт мягко кивнула."
-
-    old "I do."
-    new "Да."
 
     old "But do you know what I really want to see?"
     new "Но знаешь ли ты, что я на самом деле хочу увидеть?"
@@ -2751,9 +2679,6 @@ translate ru strings:
     old "She patted on the spot next to her."
     new "Она похлопала по месту рядом с собой."
 
-    old "Come, join me."
-    new "Иди, присоединяйся ко мне."
-
     old "Samayra crossed the room and joined Sarah."
     new "Самайра пересекла комнату и присоединилась к Саре."
 
@@ -2768,9 +2693,6 @@ translate ru strings:
 
     old "Samayra smiled softly, looking at the floor."
     new "Самайра мягко улыбнулась, глядя в пол."
-
-    old "I see..."
-    new "Понятно..."
 
     old "Sarah reached out and ran her hand down along the back of Samayra."
     new "Сара протянула руку и провела ладонью по спине Самайры."
@@ -2790,9 +2712,6 @@ translate ru strings:
     old "There have been rumors. In the camp."
     new "Ходили слухи. В лагере."
 
-    old "Rumors?"
-    new "Слухи?"
-
     old "They've been saying you might sail back to Rosanna...take back your home."
     new "Говорили, что ты можешь вернуться на Розанну... забрать свой дом."
 
@@ -2801,9 +2720,6 @@ translate ru strings:
 
     old "You're afraid that I might go?"
     new "Ты боишься, что я могу уйти?"
-
-    old "No..."
-    new "Нет..."
 
     old "Wherever you will go, I'll follow."
     new "Куда бы ты ни пошла, я последую за тобой."
@@ -2910,9 +2826,6 @@ translate ru strings:
     old "On her face, the eager anticipation of Sarah's advances."
     new "На её лице читалось нетерпеливое предвкушение от ухаживаний Сары."
 
-    old "I love you."
-    new "Я люблю тебя."
-
     old "Sarah smiled and began to pull away at her clothes."
     new "Сара улыбнулась и начала снимать с себя одежду."
 
@@ -2931,14 +2844,8 @@ translate ru strings:
     old "She saw Samayra smiled at her, awkwardly."
     new "Она увидела, как Самайра неловко улыбнулась ей."
 
-    old "You're staring."
-    new "Ты уставилась."
-
     old "Sarah awkwardly smiled in turn."
     new "Сара неловко улыбнулась в ответ."
-
-    old "Sorry."
-    new "Прости."
 
     old "Samayra flashed an impish smile."
     new "Самайра лукаво улыбнулась."
@@ -3008,9 +2915,6 @@ translate ru strings:
 
     old "Reaching down, she pressed her hand between Samayra's legs."
     new "Опустив руку, она прижала ладонь к промежности Самайры."
-
-    old "Aaaah!"
-    new "А-а-а!"
 
     old "Samayra cried out at the sudden touch."
     new "Самайра вскрикнула от внезапного прикосновения."
@@ -3141,9 +3045,6 @@ translate ru strings:
     old "When she opened her eyes again, she saw the creature floating in the room."
     new "Когда она снова открыла глаза, то увидела существо, парящее в комнате."
 
-    old "Sarah..."
-    new "Сара..."
-
     old "He spoke her name with hissing breath, slowly."
     new "Он произнёс её имя, шипя сквозь зубы, медленно."
 
@@ -3161,9 +3062,6 @@ translate ru strings:
 
     old "It was as close a thing as the creature had to a face."
     new "Это было самое близкое к лицу, что существовало у этого существа."
-
-    old "Why?"
-    new "Почему?"
 
     old "The rhythm of it's voice was strangely melodic."
     new "Ритм его голоса был странно мелодичным."

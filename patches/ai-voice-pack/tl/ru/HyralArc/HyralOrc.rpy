@@ -546,9 +546,6 @@ translate ru strings:
     old "Sarah punched the ground with her tied up hands."
     new "Сара ударила кулаком по земле своими связанными руками."
 
-    old "Fuck!"
-    new "Чёрт!"
-
     old "For a moment, anger and rage overtook her, but Sarah closed her eyes and forced herself to be calm."
     new "На мгновение её охватили гнев и ярость, но Сара закрыла глаза и заставила себя сохранять спокойствие."
 
@@ -714,9 +711,6 @@ translate ru strings:
     old "He stomped his feet."
     new "Он топнул ногой."
 
-    old "Enough!"
-    new "Достаточно!"
-
     old "You invade! My hunters found you on our land, stealing flint! Stealing wood!"
     new "Ты вторгаться! Мои охотники нашли тебя на нашей земле, воровать кремень! Воровать дерево!"
 
@@ -815,9 +809,6 @@ translate ru strings:
 
     old "The orc chieftain just laughed, clearly enjoying her panic."
     new "Оркский вождь лишь рассмеялся, явно наслаждаясь её паникой."
-
-    old "Good."
-    new "Хорошо."
 
     old "You promise to serve?"
     new "Ты обещаешь служить?"

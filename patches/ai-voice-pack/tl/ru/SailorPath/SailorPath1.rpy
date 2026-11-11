@@ -120,23 +120,8 @@ translate ru strings:
     old "The only word he had for her before he turned away."
     new "Единственное слово, которое он смог сказать ей перед тем, как отвернуться."
 
-    old "No, not like that. Are you even watching me?"
-    new "Нет, не так. Ты вообще смотришь на меня?"
-
-    old "I don't think this is working..."
-    new "Я не думаю, что это работает..."
-
     old "Sarah felt horrible wasting Kate's time like this."
     new "Сара чувствовала себя ужасно из-за того, что так тратит время Кейт."
-
-    old "Sarah...you're not going to pass the exam like this. Not even close."
-    new "Сара... так ты и не сдашь экзамен. Даже близко нет."
-
-    old "At this rate, you'd be lucky to pass the next exam, one year from now."
-    new "При таком раскладе тебе повезёт сдать следующий экзамен только через год."
-
-    old "We've barely been training for an hour..."
-    new "Мы тренируемся едва ли час..."
 
     old "Sarah began to walk away. Behind her, she could hear the frustrated sounds of the training supplies being cleaned up."
     new "Она пошла прочь. За её спиной раздавались раздражённые звуки уборки тренировочного оборудования."
@@ -326,9 +311,6 @@ translate ru strings:
 
     old "Sarah felt herself shrink with every word."
     new "Сара почувствовала, как с каждым словом она становилась всё меньше."
-
-    old "No..."
-    new "Нет..."
 
     old "She was so many things...she was...she tried to remember all the things that she was...but her mind failed her."
     new "Она была так многими вещами... она была... она пыталась вспомнить всё то, кем она была... но разум её подвел."
@@ -702,9 +684,6 @@ translate ru strings:
     old "I...I don't want to go back..."
     new "Я... я не хочу возвращаться..."
 
-    old "Huh?"
-    new "А?"
-
     old "Sarah struggled to push herself back up, sitting upright on the floor, the cum sliding further down her chest."
     new "Сара с трудом заставила себя подняться, садясь прямо на пол, в то время как сперма продолжала стекать по её груди."
 
@@ -857,9 +836,6 @@ translate ru strings:
 
     old "Yes, thank you for the water and soap to. The bed is...well it's what it is, but I'll manage."
     new "Да, спасибо вам за воду и мыло тоже. Кровать... ну, она такая, какая есть, но я справлюсь."
-
-    old "Good, good."
-    new "Хорошо, хорошо."
 
     old "Belmont lingered at the door."
     new "Бельмонт задержался у двери."

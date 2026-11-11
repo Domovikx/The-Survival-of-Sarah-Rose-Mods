@@ -135,9 +135,6 @@ translate ru strings:
     old "Or perhaps peace was a prelude for peace, and she tortured herself because she couldn't stand being content."
     new "Или, может быть, мир и был преддверием мира, а она мучила себя лишь потому, что не могла вынести состояние удовлетворения."
 
-    old "Are you alright?"
-    new "Ты в порядке?"
-
     old "Sarah looked at Varga, suddenly snapped from her thoughts."
     new "Сара посмотрела на Варгу, внезапно очнувшись от своих мыслей."
 
@@ -461,12 +458,6 @@ translate ru strings:
 
     old "Was she being silly?"
     new "Она что, дурачится?"
-
-    old "What?"
-    new "Чего?"
-
-    old "Huh?"
-    new "А?"
 
     old "You're staring at me."
     new "Ты на меня смотришь."
@@ -1791,9 +1782,6 @@ translate ru strings:
     old "Sarah watched as both her son and daughter jumped onto their father and began to punch him with what little strength they had."
     new "Сара смотрела, как их сын и дочь запрыгнули на отца и начали бить его со всей той небольшой силой, что у них была."
 
-    old "The basilisk is dead!"
-    new "Базилиск мёртв!"
-
     old "Each cheered as they pretended to overpower their father."
     new "Каждая из них радовалась, притворяясь, что одолела своего отца."
 
@@ -1892,9 +1880,6 @@ translate ru strings:
 
     old "Well even I'm afraid of a basilisk, so you're crazy if you're not."
     new "Ну, даже я боюсь василиска, так что ты сумасшедший, если нет."
-
-    old "Really?"
-    new "Правда?"
 
     old "Being a good fighter is only half the battle. You also have to know your limits."
     new "Быть хорошим бойцом — это лишь половина дела. Нужно ещё и знать свои границы."

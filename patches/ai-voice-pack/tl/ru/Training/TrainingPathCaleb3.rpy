@@ -249,9 +249,6 @@ translate ru strings:
     old "Somewhat entertained by this new version of Sarah, Ephraim joined her chant."
     new "Ефраим, несколько развлечённый этой новой версией Сары, присоединился к её призыву."
 
-    old "Strip! Strip! Strip!"
-    new "Стрип! Стрип! Стрип!"
-
     old "Ok, ok, you win."
     new "Ладно, ладно, ты победила."
 

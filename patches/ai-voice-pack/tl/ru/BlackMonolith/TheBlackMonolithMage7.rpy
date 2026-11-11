@@ -111,9 +111,6 @@ translate ru strings:
     old "Samayra jumped up into the air, punching with one fist."
     new "Самайра подпрыгнула в воздух и ударила одним кулаком."
 
-    old "Wooo!"
-    new "У-у-у!"
-
     old "Hey, calm down now. You're gonna need that energy if you wanna keep up with me."
     new "Эй, успокойся сейчас. Тебе понадобится вся эта энергия, если хочешь за мной угнаться."
 
@@ -555,9 +552,6 @@ translate ru strings:
     old "I think this is a partner dance."
     new "Я думаю, это парный танец."
 
-    old "Yeah."
-    new "Да."
-
     old "You can be my partner, right?"
     new "Ты можешь быть моим партнёром, да?"
 
@@ -737,9 +731,6 @@ translate ru strings:
 
     old "I promise, we can go another time maybe."
     new "Обещаю, может быть, в другой раз мы сможем пойти вместе."
-
-    old "Whatever."
-    new "Да как хочешь."
 
     old "Samayra turned and left without saying much more."
     new "Самайра развернулась и ушла, не сказав почти ничего больше."

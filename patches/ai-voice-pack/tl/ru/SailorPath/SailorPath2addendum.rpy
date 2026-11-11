@@ -51,9 +51,6 @@ translate ru strings:
     old "With the best of her strength, she carried the crate to the other side, dropping it down hard on top of the others."
     new "Из последних сил она донесла ящик до другой стороны и с силой бросила его на остальные."
 
-    old "Hey!"
-    new "Эй!"
-
     old "His voice was loud and booming."
     new "Его голос был громким и громоподобным."
 

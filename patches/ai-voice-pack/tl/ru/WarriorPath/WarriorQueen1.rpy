@@ -78,9 +78,6 @@ translate ru strings:
     old "Sarah motioned at Samayra."
     new "Сара жестом указала на Самайру."
 
-    old "Go ahead."
-    new "Давай."
-
     old "Final army count, complete. Quartermasters report full inventory. Last of the shipping contracts...signed."
     new "Окончательный учёт войск завершен. Интенданты представили полный список запасов. Последние контракты на поставки...подписаны."
 
@@ -159,35 +156,17 @@ translate ru strings:
     old "Turning away from the war map, she saw Kate standing in the entrance to her room."
     new "Отвернувшись от карты войны, она увидела Кейт, стоящую у входа в её комнату."
 
-    old "Commander."
-    new "Командир."
-
     old "Kate saluted."
     new "Кейт отдала честь."
 
     old "Sarah had told her many times over she didn't need to be so formal, but in these last few days she couldn't help herself."
     new "Сара говорила ей много раз, что не нужно быть такой формальной, но в последние несколько дней она никак не могла сдержаться."
 
-    old "I came to deliver the final report."
-    new "Я пришла, чтобы представить окончательный отчёт."
-
     old "Sarah motioned at Kate."
     new "Сара указала на Кейт."
 
-    old "Final army count, complete. Quartermasters report full inventory. Last of the shipping contracts...signed."
-    new "Итоговый отчёт по армии готов. Квартермайстеры подтвердили полную инвентаризацию. Последние контракты на поставку... подписаны."
-
-    old "Completed as well, Commander."
-    new "Завершено также, командир."
-
-    old "The men...they're standing in formation. In the harbor."
-    new "Мужчины... они стоят в строю. В гавани."
-
     old "Kate gestured towards the window."
     new "Кейт указала на окно."
-
-    old "They're waiting for you to give them the sign."
-    new "Они ждут, когда вы подадите им знак."
 
     old "Thank you, Kate..."
     new "Спасибо тебе, Кейт..."

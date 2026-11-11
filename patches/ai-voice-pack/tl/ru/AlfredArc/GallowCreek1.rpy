@@ -537,9 +537,6 @@ translate ru strings:
     old "Marius frowned, not understanding."
     new "Мариус нахмурился, не понимая."
 
-    old "I mean..."
-    new "Я имею в виду..."
-
     old "A longer pause."
     new "Ещё более долгая пауза."
 
@@ -629,9 +626,6 @@ translate ru strings:
 
     old "The first thing she saw was Marius' expression of awe."
     new "Первое, что она увидела, — это выражение изумления на лице Мариуса."
-
-    old "It's..."
-    new "Это..."
 
     old "He was looking for words he couldn't find."
     new "Он искал слова, которые не мог найти."
@@ -861,9 +855,6 @@ translate ru strings:
     old "Marius smiled awkwardly, a young man unfamiliar with praise, much less coming from someone like herself."
     new "Мариус неловко улыбнулся — молодой человек, не привыкший к похвале, тем более когда она исходила от такой женщины, как она."
 
-    old "Don't worry about it."
-    new "Не беспокойся об этом."
-
     old "We look out for one another in this place. I promise."
     new "Мы здесь заботимся друг о друге. Обещаю."
 
@@ -987,17 +978,11 @@ translate ru strings:
     old "I suggest you leave before you say or do anything that you'll come to regret, dearly."
     new "Я предлагаю тебе уходить, прежде чем ты скажешь или сделаешь что-то, о чём потом будешь горько жалеть."
 
-    old "I..."
-    new "Я..."
-
     old "Leave! Or I'll scream so loud your son will be here, and you can explain yourself to him!"
     new "Уходи! Или я закричу так громко, что твой сын тут же прибежит, и тебе придётся ему всё объяснить!"
 
     old "She saw Alfred begin to tremble as he got up."
     new "Она увидела, как Альфред начал дрожать, когда он встал."
-
-    old "This..."
-    new "Это..."
 
     old "This was just a mistake...a...misunderstanding...I'm...I'm sorry..."
     new "Это была просто ошибка... н-недоразумение... Я... я прошу прощения..."
@@ -1217,9 +1202,6 @@ translate ru strings:
 
     old "Sarah trembled as he pressed apart her legs."
     new "Сара дрожала, когда он развёл её ноги."
-
-    old "What?"
-    new "Что?"
 
     old "He looked impatiently at her."
     new "Он нетерпеливо посмотрел на неё."
@@ -1494,9 +1476,6 @@ translate ru strings:
     old "Serving out the breakfast to the two men, she eagerly watched their faces for their reaction."
     new "Раздавая завтрак двум мужчинам, она с нетерпением следила за их реакцией."
 
-    old "Wow!"
-    new "Ого!"
-
     old "She watched as Marius all but shoved the food into his mouth."
     new "Она наблюдала, как Мариус практически заталкивал еду себе в рот."
 
@@ -1737,9 +1716,6 @@ translate ru strings:
     old "Fine. So long as you promise that this sort of thing never happens again, I can forgive you."
     new "Хорошо. Лишь бы ты пообещал, что такого больше никогда не случится — тогда я смогу тебя простить."
 
-    old "Thank you!"
-    new "Спасибо!"
-
     old "Alfred took a step closer."
     new "Альфред сделал шаг ближе."
 
@@ -1971,9 +1947,6 @@ translate ru strings:
     old "Sarah froze. Telling the truth was as dangerous as anything else."
     new "Сара застыла. Говорить правду было так же опасно, как и всё остальное."
 
-    old "That's what I thought."
-    new "Я так и думал."
-
     old "My boy might be a good person, but he ain't seen much of the real world."
     new "Мой парень, возможно, и хороший человек, но он мало что видел из настоящего мира."
 
@@ -2003,9 +1976,6 @@ translate ru strings:
 
     old "No, I didn't give you any indication that-"
     new "Нет, я не давала тебе никаких признаков того, что..."
-
-    old "No?"
-    new "Нет?"
 
     old "He interrupted her."
     new "Он прервал её."
@@ -2324,9 +2294,6 @@ translate ru strings:
 
     old "Regardless of what came before, or what would come after, in this moment, she was his, eager and willing."
     new "Несмотря ни на то, что было до этого или будет после, в этот миг она принадлежала ему — полная желания и готовности."
-
-    old "Turn around."
-    new "Обернись."
 
     old "His word was a command, but it sounded soft and kind to her."
     new "Его слово было приказом, но прозвучало для неё мягко и нежно."
@@ -2796,9 +2763,6 @@ translate ru strings:
     old "Marius smiled awkwardly, clearly unused to compliments or praise."
     new "Мариус неловко улыбнулся, явно не привыкший ни к комплиментам, ни к похвале."
 
-    old "Thanks."
-    new "Спасибо."
-
     old "I have to be. I gotta provide for my dad as well."
     new "Я должен быть таким. Мне ведь нужно обеспечивать и отца."
 
@@ -2838,17 +2802,11 @@ translate ru strings:
     old "Gosh, I'm just taking over the entire conversation."
     new "Боже, я просто перехватываю всю беседу."
 
-    old "What about you?"
-    new "А ты как?"
-
     old "Sarah looked up, startled at being called out so directly."
     new "Сара подняла голову, вздрогнув от того, что её назвали так прямо и неожиданно."
 
     old "I...me?"
     new "Я... я?"
-
-    old "Yeah."
-    new "Да."
 
     old "You and my dad getting along alright? I know he can be a bit demanding."
     new "Вы с моим отцом хорошо ладите? Я знаю, он бывает требовательным."
@@ -2883,9 +2841,6 @@ translate ru strings:
     old "The truth is that your father has not been very kind to me."
     new "Правда в том, что твой отец не был ко мне особенно добрым."
 
-    old "What do you mean?"
-    new "Что вы имеете в виду?"
-
     old "Alfred leaned forward."
     new "Альфред наклонился вперёд."
 
@@ -2916,14 +2871,8 @@ translate ru strings:
     old "She saw rage flash across Marius' face."
     new "Она увидела, как на лице Мариуса вспыхнула ярость."
 
-    old "What?!"
-    new "Что?!"
-
     old "He slammed his fist on the table."
     new "Он с силой ударил кулаком по столу."
-
-    old "Is this true?"
-    new "Правда ли это?"
 
     old "Son! Don't listen to this harlot! You don't know her at all! She just came here to drive a rift between us!"
     new "Сын! Не слушай эту распутницу! Ты её совсем не знаешь! Она пришла сюда только для того, чтобы посеять между нами разлад!"
@@ -2946,9 +2895,6 @@ translate ru strings:
     old "Marius shook his head."
     new "Мариус покачал головой."
 
-    old "No!"
-    new "Нет!"
-
     old "His voice boomed in the small hovel."
     new "Его голос раздался в маленькой хижине."
 
@@ -2958,14 +2904,8 @@ translate ru strings:
     old "But son, I-"
     new "Но, сын мой, я..."
 
-    old "Enough!"
-    new "Хватит!"
-
     old "You treat our guest like this?"
     new "Ты так обращаешься с нашим гостем?"
-
-    old "Well..."
-    new "Ну..."
 
     old "Alfred was quickly searching for something to say that would allow him to assert control again."
     new "Альфред быстро искал слова, которые позволили бы ему вновь утвердить свой авторитет."
@@ -3008,9 +2948,6 @@ translate ru strings:
 
     old "Alfred lowered his head. He had lost control, fully."
     new "Альфред опустил голову. Он полностью потерял контроль."
-
-    old "It's..."
-    new "Это..."
 
     old "What Sarah said is true, I know that much."
     new "То, что сказала Сара, — правда, я это знаю."
@@ -3068,9 +3005,6 @@ translate ru strings:
 
     old "Sarah smiled at Marius, who looked proud at her."
     new "Сара улыбнулась Мариусу, который гордо на неё посмотрел."
-
-    old "Sarah..."
-    new "Сара..."
 
     old "I am so sorry for my father's actions."
     new "Мне так жаль за поступки моего отца."
@@ -3381,9 +3315,6 @@ translate ru strings:
     old "Even if his hands would soon be on hers."
     new "Даже если его руки скоро окажутся на её теле."
 
-    old "Take your clothes off."
-    new "Сними с себя одежду."
-
     old "His words cracked like a whip."
     new "Его слова треснули, словно хлыст."
 
@@ -3401,9 +3332,6 @@ translate ru strings:
 
     old "Let it be over with, she thought to herself."
     new "Пусть всё это уже закончится, — подумала она про себя."
-
-    old "Get on all fours, now."
-    new "Теперь на четвереньки."
 
     old "And again, Sarah found herself obeying the man as if he were already her husband."
     new "И снова Сара обнаружила, что подчиняется этому мужчине так, словно он уже стал её мужем."
@@ -3446,9 +3374,6 @@ translate ru strings:
 
     old "Turning around, she saw him slather the spit in his palm on the shaft of his cock."
     new "Обернувшись, она увидела, как он размазал слюну в ладони по стволу своего члена."
-
-    old "Aaaah!!!"
-    new "Аааах!!!"
 
     old "Sarah cried out as she felt a sharp pain in her lower back."
     new "Сара закричала, почувствовав острую боль в пояснице."
@@ -3818,9 +3743,6 @@ translate ru strings:
 
     old "It feels good to have someone like her bring some life back to this house."
     new "Приятно ощущать, когда кто-то вроде неё возвращает этому дому немного жизни."
-
-    old "I agree."
-    new "Я согласен."
 
     old "You can stay for as long as you want."
     new "Ты можешь остаться здесь столько, сколько захочешь."

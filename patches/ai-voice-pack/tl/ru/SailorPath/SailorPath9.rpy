@@ -510,9 +510,6 @@ translate ru strings:
     old "I'm sorry, I didn't mean to suggest you were."
     new "Простите, я не хотела сказать, что вы такой."
 
-    old "Good."
-    new "Хорошо."
-
     old "Come next morning, I'll go have a chat with the priest in town and see about whether the chapel is available."
     new "На следующее утро я пойду и поговорю со священником в городе, чтобы узнать, доступна ли часовня."
 

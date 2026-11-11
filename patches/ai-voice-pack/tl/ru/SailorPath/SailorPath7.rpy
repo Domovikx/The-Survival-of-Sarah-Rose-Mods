@@ -342,9 +342,6 @@ translate ru strings:
     old "I mean...you...shouldn't..."
     new "Я имею в виду... ты... не должен был..."
 
-    old "Why not?"
-    new "Почему бы и нет?"
-
     old "Sarah tried to look for the words."
     new "Сара попыталась подобрать слова."
 
@@ -471,9 +468,6 @@ translate ru strings:
     old "All I'm sayin is you can have the bitch. Sorry though if I broke her in a bit hard, she might struggle to get used to your little pecker after she had mine."
     new "Всё, что я хочу сказать — можешь забрать эту суку. Прости, если я немного слишком жестко её «обучил» — ей, возможно, будет трудно привыкнуть к твоему маленькому члену после того, как она перенесла мой."
 
-    old "Shut up!"
-    new "Заткнись!"
-
     old "I'll say this though, the mouth on her...any lass can suck a dick, but it takes special kind to do it like she fucking loves it."
     new "Однако скажу я вот что: рты у неё... любая девчонка может сосать член, но чтобы делать это так, будто она его просто обожает — тут нужны особые таланты."
 
@@ -509,9 +503,6 @@ translate ru strings:
 
     old "Sarah looked at Nick, but she could see that he understood their situation just as she did. They'd lost."
     new "Сара посмотрела на Ника, но видела, что он понимал их положение так же хорошо, как и она. Они проиграли."
-
-    old "That's what I thought."
-    new "Я так и думал."
 
     old "I was kind for takin the both of you on my ship, and for my kindness I get you sneakin about tryin to steal from me."
     new "Я был добр, приняв вас обоих на свой корабль, а за эту доброту вы решили прокрасться и попытаться меня обокрасть."
@@ -1023,9 +1014,6 @@ translate ru strings:
     old "Belmont was quiet for a moment, then spoke."
     new "Бельмонт на мгновение замолчал, а затем заговорил."
 
-    old "I know."
-    new "Я знаю."
-
     old "You...knew?"
     new "Ты... знал?"
 
@@ -1070,9 +1058,6 @@ translate ru strings:
 
     old "Enough out of you, boy. Go waste your excuses on someone who gives a damn."
     new "Хватит уже, парень. Иди трать свои оправдания на того, кому до них есть дело."
-
-    old "No...I..."
-    new "Нет... я..."
 
     old "You're here to steal from me. To go back on your contract, ya signed word. Treason. Mutiny."
     new "Ты здесь, чтобы украсть у меня. Чтобы нарушить контракт, на который ты положил свою подпись. Предательство. Мятеж."
@@ -1488,9 +1473,6 @@ translate ru strings:
     old "I only want you, captain Belmont."
     new "Я хочу только тебя, капитан Бельмонт."
 
-    old "Why?"
-    new "Почему?"
-
     old "Nick here is nice, a good lookin fella, sure you two could have some fun?"
     new "Ник здесь хороший парень, симпатичный, уверен, вы двое могли бы неплохо повеселиться?"
 
@@ -1796,9 +1778,6 @@ translate ru strings:
 
     old "Well, guess the boy got half-a-brain on him. I'll let him live."
     new "Ну, похоже, у парня всё-таки есть хотя бы половина мозга. Я оставлю его в живых."
-
-    old "Thank you!"
-    new "Спасибо!"
 
     old "Sarah's words were genuine. She was truly happy that it wouldn't come to any bloodshed."
     new "Слова Сары были искренними. Она была по-настоящему счастлива, что не дошло до кровопролития."

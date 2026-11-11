@@ -534,9 +534,6 @@ translate ru strings:
     old "Sarah saw Kate slightly turn her head to acknowledge her, but she seemed dulled."
     new "Сара увидела, как Кейт слегка повернула голову, чтобы ответить на её появление, но та казалась оцепенелой."
 
-    old "Hey."
-    new "Эй."
-
     old "Looking down, Sarah saw a bottle lingering in Kate's hand."
     new "Опустив взгляд, Сара увидела бутылку, висевшую в руке Кейт."
 
@@ -551,9 +548,6 @@ translate ru strings:
 
     old "She looked down at her own hands and gave a joyless laugh."
     new "Она посмотрела на свои руки и безрадостно рассмеялась."
-
-    old "What, this?"
-    new "Что, это?"
 
     old "She held up the bottle."
     new "Она подняла бутылку."
@@ -900,9 +894,6 @@ translate ru strings:
     old "Brother, what else would we do?"
     new "Брат, что ещё нам остаётся делать?"
 
-    old "What do you mean?"
-    new "Что вы имеете в виду?"
-
     old "We are...what we are. We have been trained all our life for battle. What do you imagine we would do now?"
     new "Мы... таковы, какие есть. Всю нашу жизнь нас готовили к бою. Что ты думаешь, что мы могли бы делать сейчас?"
 
@@ -920,9 +911,6 @@ translate ru strings:
 
     old "Cassius seemed embarassed."
     new "Кассий, казалось, смутился."
-
-    old "I could..."
-    new "Я мог бы..."
 
     old "Again, he seemed lacking any answer."
     new "Снова казалось, что у него нет ответа."
@@ -953,9 +941,6 @@ translate ru strings:
 
     old "Cassius only warmly smiled at her."
     new "Кассий лишь тепло улыбнулся ей."
-
-    old "Very well, Sarah."
-    new "Хорошо, Сара."
 
     old "Me and Dio will pledge ourselves to your cause, freely, on one condition."
     new "Мы с Дио присягнем на верность твоему делу, добровольно, но при одном условии."
@@ -1110,9 +1095,6 @@ translate ru strings:
     old "Sarah saw that Samayra spotted her among the ranks, and eagerly rushed over."
     new "Сара увидела, что Самайра заметила её в толпе, и с энтузиазмом подбежала к ней."
 
-    old "Sarah!"
-    new "Сара!"
-
     old "Wow, Samayra...that was something else!"
     new "Ого, Самайра... это было нечто!"
 
@@ -1151,9 +1133,6 @@ translate ru strings:
 
     old "Well...I don't know about that."
     new "Ну... я не знаю насчёт этого."
-
-    old "Please!"
-    new "Пожалуйста!"
 
     old "Samayra sounded almost close to begging."
     new "Самайра звучала почти как молящаяся."

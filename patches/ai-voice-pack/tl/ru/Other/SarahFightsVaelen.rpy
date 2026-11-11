@@ -378,9 +378,6 @@ translate ru strings:
     old "Is this what you saw in your dreams?"
     new "Это то, что ты видел во сне?"
 
-    old "Shut up!"
-    new "Заткнись!"
-
     old "She took a small step back as he swiped the blade, aimlessly at the sound of her voice."
     new "Она сделала небольшой шаг назад, когда он без цели взмахнул клинком в сторону звука её голоса."
 
@@ -657,9 +654,6 @@ translate ru strings:
     old "She almost screamed the words. They echoed across the silence."
     new "Она едва не закричала эти слова. Они эхом отразились в тишине."
 
-    old "No..."
-    new "Нет..."
-
     old "His answer came like a whisper, but all had heard it."
     new "Его ответ прозвучал как шёпот, но все его услышали."
 
@@ -719,9 +713,6 @@ translate ru strings:
 
     old "With the last of her remaining strength, she pulled herself up the ledge, looking out across the crowd."
     new "С последними оставшимися силами она взобралась на уступ и оглядела толпу."
-
-    old "Soldiers!"
-    new "Солдаты!"
 
     old "The crowd answered her with one voice."
     new "Толпа ответила ей одним голосом."

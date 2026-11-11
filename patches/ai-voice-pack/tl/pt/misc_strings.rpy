@@ -294,9 +294,6 @@ translate pt strings:
     old "Tailor"
     new "Costureiro"
 
-    old "Girl"
-    new "Menina"
-
     old "Advisor"
     new "Avisador"
 

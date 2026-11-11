@@ -750,12 +750,6 @@ translate ru strings:
     old "Thank you captain Belmont!"
     new "Спасибо вам, капитан Бельмонт!"
 
-    old "Thank you captain Belmont!"
-    new "Спасибо вам, капитан Бельмонт!"
-
-    old "That's right."
-    new "Верно."
-
     old "Captain Belmont lets go of the rope, and the plank falls onto the dock."
     new "Капитан Бельмонт отпускает верёвку, и доска падает на причал."
 

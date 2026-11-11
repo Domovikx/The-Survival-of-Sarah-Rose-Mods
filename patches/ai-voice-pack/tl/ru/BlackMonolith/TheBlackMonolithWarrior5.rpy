@@ -201,9 +201,6 @@ translate ru strings:
     old "Her hair fell down past her shoulders, its deep black standing in sharp contrast with her skin."
     new "Её волосы спадали ниже плеч, а их глубокий чёрный цвет резко контрастировал с кожей."
 
-    old "Dear, you're staring."
-    new "Дорогая, ты уставилась."
-
     old "Sarah watched as Lady Carolyn only smiled at her."
     new "Сара наблюдала за тем, как леди Каролин лишь улыбалась ей."
 
@@ -941,9 +938,6 @@ translate ru strings:
 
     old "We can speak-"
     new "Мы можем поговорить—"
-
-    old "No!"
-    new "Нет!"
 
     old "His voice rang out across the square which had now gone silent."
     new "Его голос разнёсся по всей площади, которая к этому моменту полностью затихла."

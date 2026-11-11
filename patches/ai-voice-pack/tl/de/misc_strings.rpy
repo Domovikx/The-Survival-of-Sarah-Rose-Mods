@@ -294,9 +294,6 @@ translate de strings:
     old "Tailor"
     new "Schneider"
 
-    old "Girl"
-    new "Mädchen"
-
     old "Advisor"
     new "Berater"
 

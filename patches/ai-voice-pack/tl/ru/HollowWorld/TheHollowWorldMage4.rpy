@@ -747,14 +747,8 @@ translate ru strings:
     old "Perhaps it was unfamiliar to her, Sarah realized, but she did not pull away."
     new "Возможно, для неё это было непривычно, — поняла Сара, — но она не отстранилась."
 
-    old "You're very pretty."
-    new "Ты очень красивая."
-
     old "Sarah saw Samayra turn her face away, blushing."
     new "Сара увидела, что Самайра отвернулась, покраснев."
-
-    old "Thank you..."
-    new "Спасибо..."
 
     old "These were the only words she managed to produce, quiet as a mouse."
     new "Это были единственные слова, которые она смогла вымолвить — тихие, как у мыши."
@@ -881,9 +875,6 @@ translate ru strings:
 
     old "Fucking her up against the edge of the bath, Sarah felt an overpowering control over the girl's body that she found nearly as intoxicating as her body itself."
     new "Трахая её у края бани, Сара почувствовала всепоглощающий контроль над телом девушки — ощущение, которое для неё было почти таким же опьяняющим, как и само это тело."
-
-    old "Aaah!!"
-    new "Ааах!!"
 
     old "Suddenly, Sarah felt Samayra's body tense up, her legs tightening together, even her insides contorting around her finger."
     new "Внезапно Сара почувствовала, как тело Самайры напряглось: её ноги сжались, а внутренние мышцы исказились вокруг её пальца."

@@ -180,9 +180,6 @@ translate ru strings:
     old "Xan just told me he was going to take me to the citadel..."
     new "Ксантиппа только что сказал мне, что собирается отвезти меня в цитадель..."
 
-    old "I see."
-    new "Понятно."
-
     old "You would be wise not to go. Whatever he told you, it was most certainly a lie. The citadel is a bleak place."
     new "Тебе стоило бы не идти. Что бы он тебе ни говорил — это определённо была ложь. Цитадель — унылое место."
 
@@ -201,9 +198,6 @@ translate ru strings:
     old "Back in Bagrad...we spoke..."
     new "В Баграде... мы говорили..."
 
-    old "I remember."
-    new "Я помню."
-
     old "You said...that I could not trust him...and the gods...you told me so much..."
     new "Ты говорила... что я не могу ему доверять... а ещё боги... ты так много мне рассказала..."
 
@@ -218,9 +212,6 @@ translate ru strings:
 
     old "A hiss emerged from the creature."
     new "Из существа вырвалось шипение."
-
-    old "Help you?"
-    new "Помочь вам?"
 
     old "Yes. Help me keep my freedom. Keep me from being send to the citadel."
     new "Да. Помогите мне сохранить свободу. Не дайте отправить меня в цитадель."

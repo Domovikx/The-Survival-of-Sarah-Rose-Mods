@@ -789,9 +789,6 @@ translate ru strings:
     old "Mary reached over, her hand stroking Sarah's skin where the old soldier's grip had some early bruises."
     new "Мэри протянула руку и погладила Сару по коже там, где хватка старого солдата оставила несколько старых синяков."
 
-    old "Are you alright?"
-    new "Ты в порядке?"
-
     old "I'll be ok."
     new "Я буду в порядке."
 

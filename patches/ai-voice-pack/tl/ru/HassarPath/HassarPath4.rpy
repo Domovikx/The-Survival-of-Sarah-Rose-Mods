@@ -447,9 +447,6 @@ translate ru strings:
     old "My warriors will fill a thousand libraries should I command them."
     new "Мои воины заполнят тысячу библиотек, если я им прикажу."
 
-    old "Do you understand?"
-    new "Ты понимаешь?"
-
     old "His tone was firm and strict."
     new "Его тон был твердым и строгим."
 
@@ -528,9 +525,6 @@ translate ru strings:
     old "It was easy to look at him like that, for his eyes were often harsh and every part of him dominant."
     new "На него было легко смотреть так, ведь его глаза часто были суровыми, и каждая часть его существа была полна доминирования."
 
-    old "Turn around."
-    new "Развернись."
-
     old "Again, Sarah found herself obeying him before she even really questioned it."
     new "Снова Сара обнаружила, что подчиняется ему, даже не успев по-настоящему задуматься об этом."
 
@@ -579,9 +573,6 @@ translate ru strings:
     old "Yes...sometimes..."
     new "Да... иногда..."
 
-    old "Good."
-    new "Отлично."
-
     old "She cried out again as she felt him slightly push inside of her, spreading her apart even with only so little."
     new "Она снова вскрикнула, почувствовав, как он слегка проник в неё, раздвигая её стени, даже несмотря на то, насколько незначительными были его движения."
 
@@ -608,9 +599,6 @@ translate ru strings:
 
     old "Sarah felt her ass burn as he roughly spanked her. Her answer had taken too long."
     new "Сара почувствовала, как её задница горит от того, как он грубо шлёпнул её. Её ответ занял слишком много времени."
-
-    old "Answer me, girl."
-    new "Отвечай мне, девочка."
 
     old "I...I don't know."
     new "Я... я не знаю."

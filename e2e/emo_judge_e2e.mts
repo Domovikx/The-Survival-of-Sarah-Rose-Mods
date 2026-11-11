@@ -7,7 +7,11 @@
  * Запуск: node tmp/emo_judge_e2e.mts [n]
  *   n — число демо-строк в замере (по умолчанию 12, 4 инъекции на строку).
  */
-import { JUDGE_SYSTEM, parseToneVerdict, toneJudgeUser } from "../patches/ai-voice-pack/tools/generate/scripts/emotion_judge.mts";
+import {
+  JUDGE_SYSTEM,
+  parseToneVerdict,
+  toneJudgeUser,
+} from "../patches/ai-voice-pack/tools/generate/scripts/emotion_judge.mts";
 import { voicedEntries } from "../patches/ai-voice-pack/tools/generate/scripts/emotion_tag.mts";
 import type { CatalogEntry } from "../patches/ai-voice-pack/tools/generate/scripts/voice_batch.mts";
 import { DEMO_SCENES } from "../.opencode/skills/renpy-po/po2tl.mts";
@@ -70,7 +74,7 @@ for (let i = 0; i < sample.length; i++) {
   // 1) базовый тон (не обязан проходить — это предмет волны 1; меряем «стабильность»)
   const v1 = await ask(JUDGE_SYSTEM, user(good));
   const v2 = await ask(JUDGE_SYSTEM, user(good));
-  if ((v1.score >= 8) !== (v2.score >= 8)) unstable.push(e.uid);
+  if (v1.score >= 8 !== v2.score >= 8) unstable.push(e.uid);
 
   // 2) инъекции: считаем пойманными при score < 8
   for (const { cls, ton } of inj(e, i)) {

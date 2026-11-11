@@ -360,9 +360,6 @@ translate ru strings:
     old "I will support your proposal in rejecting a unified army."
     new "Я поддержу твоё предложение об отказе от единой армии."
 
-    old "Thank you."
-    new "Спасибо."
-
     old "Sarah stood up and gave a quick curtsy."
     new "Сара встала и быстро поклонилась."
 
@@ -383,9 +380,6 @@ translate ru strings:
 
     old "Very well, Sarah. Then you know my answer."
     new "Хорошо, Сара. Тогда ты знаешь мой ответ."
-
-    old "I do."
-    new "Да."
 
     old "She stood up and left the room."
     new "Она встала и вышла из комнаты."
@@ -483,9 +477,6 @@ translate ru strings:
     old "He raised on eyebrow."
     new "Он приподнял бровь."
 
-    old "Why is that?"
-    new "Почему так?"
-
     old "I didn't take you for one who appreciated gardens and flowers."
     new "Я не думала, что ты из тех, кто ценит сады и цветы."
 
@@ -539,9 +530,6 @@ translate ru strings:
 
     old "A well considered proposal by Queen Maeiv."
     new "Хорошо обдуманное предложение королевы Маив."
-
-    old "Quite so."
-    new "Именно так."
 
     old "I happen to agree with her position."
     new "Я как раз согласна с её позицией."
@@ -612,9 +600,6 @@ translate ru strings:
     old "For all of them, this was little problem. For Medini, it meant drafting their citizens, something they had never done before."
     new "Для всех них это была небольшая проблема. Для Медини это означало призыв граждан, чего они никогда раньше не делали."
 
-    old "I see..."
-    new "Понятно..."
-
     old "So you understand, I am hesitant to sign away the lives of our young for such a project."
     new "Так что ты понимаешь, я не решаюсь подписываться под жизнями нашей молодёжи ради такого проекта."
 
@@ -663,9 +648,6 @@ translate ru strings:
     old "You are a sick pervert if these were your designs."
     new "Ты — больной извращенец, если таковы были твои замыслы."
 
-    old "I..."
-    new "Я..."
-
     old "I am a married woman."
     new "Я замужняя женщина."
 
@@ -698,9 +680,6 @@ translate ru strings:
 
     old "Yes, for if I were to write my husband of what you have done today, your life would be all but forfeit!"
     new "Да, ведь если я расскажу моему мужу о том, что ты сегодня сделал, твоя жизнь будет практически кончена!"
-
-    old "Lord Varga..."
-    new "Господин Варга..."
 
     old "Yes, you know his name."
     new "Да, ты знаешь его имя."
@@ -812,9 +791,6 @@ translate ru strings:
 
     old "She couldn't believe that she was entertaining the idea."
     new "Она не могла поверить, что рассматривает эту идею."
-
-    old "You..."
-    new "Ты..."
 
     old "He grinned at her."
     new "Он ухмыльнулся ей."
@@ -1116,14 +1092,8 @@ translate ru strings:
     old "She saw the growing doubt on his face."
     new "Она увидела растущее сомнение на его лице."
 
-    old "Forget it."
-    new "Забудьте об этом."
-
     old "Consider it a poor joke then."
     new "Считайте это тогда плохой шуткой."
-
-    old "No."
-    new "Нет."
 
     old "What then?!"
     new "Ну что же тогда?!"
@@ -1182,17 +1152,11 @@ translate ru strings:
     old "She saw the expression of doubt on his face."
     new "Она увидела сомнение на его лице."
 
-    old "What do you mean?"
-    new "Что вы имеете в виду?"
-
     old "Of all the nations in the Union, Medini is the most prosperous, yes."
     new "Из всех наций Союза Медины — самая процветающая, да."
 
     old "But it also holds the smallest army and the smallest population from which to draft an army."
     new "Но там же самая маленькая армия и самое малочисленное население, из которого можно набрать солдат."
-
-    old "Of course!"
-    new "Конечно!"
 
     old "We make trade, and bring prosperity. War is nothing but a drain on a nation's resources, an inefficiency we cannot stomach."
     new "Мы занимаемся торговлей и приносим процветание. Война — это лишь истощение ресурсов страны, неэффективность, которую мы не можем переварить."
@@ -1298,9 +1262,6 @@ translate ru strings:
 
     old "But not wrong."
     new "Но не неправа."
-
-    old "Very well."
-    new "Хорошо."
 
     old "I will support the proposal to unify the armies."
     new "Я поддержу предложение об объединении армий."
@@ -1496,9 +1457,6 @@ translate ru strings:
 
     old "Hoping to change the topic of conversation, she gestured at the map on the table."
     new "Надеясь сменить тему разговора, она указала на карту на столе."
-
-    old "What is this?"
-    new "Что это такое?"
 
     old "It was a map of the Union, that much was obvious. But it was covered in markings. Small figurines placed atop it."
     new "Это была карта Союза — это было очевидно. Но она была вся покрыта пометками. Сверху на ней стояли маленькие фигурки."
@@ -1743,9 +1701,6 @@ translate ru strings:
     old "Well, I fear we have already spoken for so long. The hour draws late and I should really retire."
     new "Ну, боюсь, мы уже слишком долго говорили. Становится поздно, и мне действительно пора отойти."
 
-    old "Of course."
-    new "Конечно."
-
     old "Though I must say I enjoyed our conversation."
     new "Хотя должен признать, наш разговор мне очень понравился."
 
@@ -1776,9 +1731,6 @@ translate ru strings:
     old "I fear I do not share that position."
     new "Боюсь, я не разделяю эту позицию."
 
-    old "Ooh?"
-    new "О-о?"
-
     old "We cannot afford to let such vanities or personal interests guide us."
     new "Мы не можем позволить таким тщеславиям или личным интересам руководить нами."
 
@@ -1805,9 +1757,6 @@ translate ru strings:
 
     old "There is truly nothing that I can do to convince you?"
     new "Неужели я ничего не могу сделать, чтобы убедить тебя?"
-
-    old "Well..."
-    new "Ну..."
 
     old "He went quiet for a moment."
     new "Он на мгновение замолчал."

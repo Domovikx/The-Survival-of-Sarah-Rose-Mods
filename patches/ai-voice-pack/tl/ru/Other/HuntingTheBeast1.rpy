@@ -78,9 +78,6 @@ translate ru strings:
     old "Before she could announce herself, he spoke."
     new "Прежде чем она успела представиться, он заговорил."
 
-    old "What?"
-    new "Что?"
-
     old "His voice boomed loud and deep, fitting for a man like himself."
     new "Его голос звучал громко и низко — как и следовало ожидать от такого человека."
 
@@ -228,9 +225,6 @@ translate ru strings:
     old "I ain't that old, young sprout."
     new "Я не такой уж и старый, юный росток."
 
-    old "Follow me."
-    new "Пойдём за мной."
-
     old "Sarah followed Garret into his home."
     new "Сара последовала за Гарретом в его дом."
 
@@ -302,9 +296,6 @@ translate ru strings:
 
     old "Garret frowned."
     new "Гаррет нахмурился."
-
-    old "What do you mean?"
-    new "Что вы имеете в виду?"
 
     old "Well, it doesn't do it for food, clearly."
     new "Ну, очевидно же, что оно делает это не ради еды."
@@ -422,9 +413,6 @@ translate ru strings:
 
     old "Fine. Let's set out for the forest."
     new "Хорошо. Пойдём в лес."
-
-    old "When?"
-    new "Когда?"
 
     old "Tomorrow night."
     new "Завтра ночью."

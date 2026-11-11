@@ -129,9 +129,6 @@ translate ru strings:
     old "Because I am his..."
     new "Потому что я его..."
 
-    old "Exactly."
-    new "Точно."
-
     old "Your his slave. Your no different in their eyes than the shoes he wears."
     new "Ты — его рабыня. В их глазах ты ничем не отличаешься от обуви, которую он носит."
 
@@ -179,9 +176,6 @@ translate ru strings:
 
     old "Sarah could feel the tears near to her eyes."
     new "Сара чувствовала, что слёзы вот-вот потечут по её щекам."
-
-    old "What?"
-    new "Что?"
 
     old "Look at her! You're scaring the poor girl."
     new "Посмотри на неё! Ты пугаешь бедную девочку."
@@ -233,9 +227,6 @@ translate ru strings:
 
     old "They know what she is, and you know the laws."
     new "Они знают, кем она является, а ты знаешь законы."
-
-    old "So what then?"
-    new "И что тогда?"
 
     old "Jasmine looked about the room."
     new "Джазмин огляделась по комнате."
@@ -471,9 +462,6 @@ translate ru strings:
     old "Sarah nodded as she tried to keep up with Jasmine."
     new "Сара кивнула, пытаясь угнаться за Джазмин."
 
-    old "I see."
-    new "Понятно."
-
     old "What are we looking for, exactly?"
     new "Что мы вообще ищем?"
 
@@ -516,9 +504,6 @@ translate ru strings:
     old "You're looking for Pale Eclipse Ink"
     new "Ищешь «Бледные тёмные чернила»?"
 
-    old "You're looking for Pale Eclipse Ink"
-    new "Ты ищешь чернила «Бледное затмение»."
-
     old "That's right. You're a quick study, Sarah. I like that."
     new "Верно. Ты быстро учишься, Сара. Мне это нравится."
 
@@ -552,17 +537,11 @@ translate ru strings:
     old "You're looking for White Moonfall Ink"
     new "Ты ищешь White Moonfall Ink"
 
-    old "You're looking for White Moonfall Ink"
-    new "Ты ищешь «White Moonfall Ink»?"
-
     old "What are you talking about? Do you even listen when I talk?"
     new "О чём ты говоришь? Ты вообще слушаешь, когда я говорю?"
 
     old "You're looking for Faded Stars Ink"
     new "Ты ищешь чернила «Угасшие Звёзды»"
-
-    old "You're looking for Faded Stars Ink"
-    new "Ты ищешь тушь «Блёклые звёзды»."
 
     old "Together, they walked to the ink merchant."
     new "Вместе они направились к торговцу тушью."
@@ -636,12 +615,6 @@ translate ru strings:
     old "Jasmine was quiet for a brief moment."
     new "Джазмин на мгновение замолчала."
 
-    old "I..."
-    new "Я..."
-
-    old "Sorry."
-    new "Прости."
-
     old "Out of all the words Sarah had expected, she didn't expect that one."
     new "Из всех слов, которых Сара могла ожидать, этого она точно не ждала."
 
@@ -705,9 +678,6 @@ translate ru strings:
     old "What is that?"
     new "Что это такое?"
 
-    old "Huh?"
-    new "А?"
-
     old "Sarah gestured at a small box, containing a deep black ink with a sharp pen, almost like a knife."
     new "Сара указала на небольшую коробочку с тёмно-чёрными чернилами и острым стилем, похожим на нож."
 
@@ -752,9 +722,6 @@ translate ru strings:
 
     old "Just like that, the woman passed her."
     new "И вот так женщина прошла мимо неё."
-
-    old "Hey!"
-    new "Эй!"
 
     old "Sarah snapped out of her trance."
     new "Сара очнулась от транса."

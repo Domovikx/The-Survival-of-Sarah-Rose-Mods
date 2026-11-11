@@ -504,9 +504,6 @@ translate ru strings:
     old "He already..."
     new "Он уже..."
 
-    old "I see..."
-    new "Понятно..."
-
     old "The two went silent for a while."
     new "Они на некоторое время замолчали."
 
@@ -600,9 +597,6 @@ translate ru strings:
     old "What about the others?"
     new "А остальные?"
 
-    old "Huh?"
-    new "А?"
-
     old "You said there are others like him? Other Daemons?"
     new "Ты говорила, что есть другие, похожие на него? Другие демоны?"
 
@@ -665,9 +659,6 @@ translate ru strings:
 
     old "Sarah saw the creature step into the cell."
     new "Сара увидела, как существо вошло в камеру."
-
-    old "Master!"
-    new "Мастер!"
 
     old "Sarah watched as Dalia eagerly lunged towards the thing."
     new "Сара смотрела, как Далия с нетерпением бросилась к этому существу."
@@ -873,9 +864,6 @@ translate ru strings:
     old "Dalia's face lighted up."
     new "Лицо Далии озарилось светом."
 
-    old "Thank you!"
-    new "Спасибо!"
-
     old "She swiftly gathered some tattered belongings."
     new "Она быстро собрала несколько поношенных вещей."
 
@@ -890,9 +878,6 @@ translate ru strings:
 
     old "Master..."
     new "Мастер..."
-
-    old "Yes?"
-    new "Да?"
 
     old "What about...her?"
     new "А как же... она?"

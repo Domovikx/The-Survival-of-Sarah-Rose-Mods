@@ -126,9 +126,6 @@ translate ru strings:
     old "No sooner had Sarah thought the thought, than she heard the creaking of the floorboards."
     new "Не успела Сара подумать об этом, как услышала скрип половиц."
 
-    old "Sarah!!!"
-    new "Сара!!!"
-
     old "Samayra's animated voice seemed to lighten up the room."
     new "Оживлённый голос Самайры, казалось, озарил комнату светом."
 
@@ -591,9 +588,6 @@ translate ru strings:
     old "Don't think, don't talk, don't do shit to cause trouble, do you understand?"
     new "Не думай, не говори и не делай ни хрена такого, что создаст проблемы, понял?"
 
-    old "Or what?"
-    new "Или что?"
-
     old "You know or what!"
     new "Знаешь, а то как же!"
 
@@ -633,9 +627,6 @@ translate ru strings:
     old "Just stay away!"
     new "Просто держись подальше!"
 
-    old "No."
-    new "Нет."
-
     old "His answer was swift and definitive."
     new "Его ответ был быстрым и категоричным."
 
@@ -653,9 +644,6 @@ translate ru strings:
 
     old "I'm warning you. Don't even think about it."
     new "Я тебя предупреждаю. Даже не думай об этом."
-
-    old "What are you going to do about it?"
-    new "И что ты собираешься с этим делать?"
 
     old "Sarah stumbled over the words."
     new "Сара запнулась на словах."
@@ -735,14 +723,8 @@ translate ru strings:
     old "Resigning herself to the situation, Sarah began to slowly jerk her hand up and down."
     new "Смирившись с ситуацией, Сара начала медленно двигать рукой вверх и вниз."
 
-    old "There you go..."
-    new "Вот так..."
-
     old "She heard him softly groan."
     new "Она услышала его тихий стон."
-
-    old "Shut the fuck up."
-    new "Заткнись, чёрт возьми."
 
     old "Lot of attitude for a girl with my dick in her hands."
     new "Немало дерзости для девушки, у которой мой член в руках."
@@ -852,9 +834,6 @@ translate ru strings:
     old "Edging over, ever so slightly, she positioned her face closer in front of his member as she continued to work him with her hand."
     new "Она лишь слегка приподнялась и приблизила своё лицо к его члену, продолжая работать рукой."
 
-    old "There you go."
-    new "Вот так."
-
     old "Suddenly, Sarah heard his loud grunt and felt his already massive member swell further in her hand."
     new "Внезапно Сара услышала его громкий стон и почувствовала, как его уже огромный член ещё больше раздулся в её руке."
 
@@ -951,9 +930,6 @@ translate ru strings:
     old "Well, he had other things to do."
     new "Ну, у него были другие дела."
 
-    old "Ooh."
-    new "Ох."
-
     old "Samayra seemed dissapointed."
     new "Самайра выглядела разочарованной."
 
@@ -971,9 +947,6 @@ translate ru strings:
 
     old "Sarah saw Samayra's face turn angry."
     new "Сара увидела, как лицо Самайры стало сердитым."
-
-    old "You're so mean!"
-    new "Ты такая жестокая!"
 
     old "Sorry, I was just joking. But I really don't think you should meet him. He can be dangerous."
     new "Прости, я просто пошутила. Но я правда не думаю, что тебе стоит с ним встречаться. Он может быть опасным."
@@ -1245,9 +1218,6 @@ translate ru strings:
     old "Alaric reached over and took some more food from her plate."
     new "Аларик потянулся и взял ещё еды с её тарелки."
 
-    old "Why?"
-    new "Почему?"
-
     old "Sarah seemed stunned by the simplicity of the question."
     new "Сара, казалось, была ошеломлена простотой этого вопроса."
 
@@ -1340,9 +1310,6 @@ translate ru strings:
 
     old "Alaric stood up and motioned for the door."
     new "Аларик встал и указал на дверь."
-
-    old "Follow me."
-    new "Следуй за мной."
 
     old "Intrigued, Sarah followed him."
     new "Заинтригованная Сара последовала за ним."

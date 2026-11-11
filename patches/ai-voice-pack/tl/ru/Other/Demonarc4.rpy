@@ -90,17 +90,11 @@ translate ru strings:
     old "Sleep with Dalia"
     new "Поспать с Далией"
 
-    old "Dalia..."
-    new "Далия..."
-
     old "Would you mind if I...slept in your bed with you?"
     new "Ты не против, если я... посплю с тобой в твоей постели?"
 
     old "Sarah watched the girl sit upright."
     new "Сара смотрела, как девушка села прямо."
-
-    old "Of course!"
-    new "Конечно!"
 
     old "No reason for you to sleep on that hay. There is plenty of space in the bed for both of us."
     new "Тебе нет нужды спать на этой соломе. В кровати хватит места для нас обеих."
@@ -132,9 +126,6 @@ translate ru strings:
     old "Perhaps they were."
     new "Возможно, так и было."
 
-    old "Don't worry."
-    new "Не волнуйся."
-
     old "When I first got here, the thing I wanted most of all was someone else here..."
     new "Когда я только сюда попала, больше всего на свете я хотела, чтобы здесь был кто-то ещё..."
 
@@ -155,9 +146,6 @@ translate ru strings:
 
     old "Thank you, by the way."
     new "Спасибо, кстати."
-
-    old "For what?"
-    new "За что?"
 
     old "For not fighting the Master."
     new "За то, что ты не стала сражаться с Мастером."

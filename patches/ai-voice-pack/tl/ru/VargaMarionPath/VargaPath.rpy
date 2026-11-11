@@ -30,9 +30,6 @@ translate ru strings:
     old "When the door did not open, a voice rang out from the other side."
     new "Когда дверь так и не открылась, с той стороны донёсся голос."
 
-    old "Sarah, it's me."
-    new "Сара, это я."
-
     old "Varga. Sarah mentally corrected herself, there was perhaps one person in the world she wanted to see."
     new "Варга. Сара мысленно поправила себя: возможно, в мире был всего один человек, которого она хотела увидеть."
 
@@ -312,9 +309,6 @@ translate ru strings:
     old "You should know it is though...for me."
     new "Ты должен понимать, что так оно и было... по крайней мере, для меня."
 
-    old "What do you mean?"
-    new "Что вы имеете в виду?"
-
     old "She looked deep into Varga's eyes, those deep dark brown eyes. She imagined herself falling into them."
     new "Она пристально посмотрела Варге в глаза — эти глубокие тёмно-карие глаза. Она представила, как падает в них."
 
@@ -392,9 +386,6 @@ translate ru strings:
 
     old "Forget about them, Varga. Ask me and you will know my answer."
     new "Забудь о них, Варга. Спроси меня — и ты узнаешь мой ответ."
-
-    old "Sarah..."
-    new "Сара..."
 
     old "Ask me and I'm yours forever."
     new "Спроси меня — и я буду твоей навсегда."

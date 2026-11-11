@@ -156,9 +156,6 @@ translate ru strings:
     old "It would be better to make camp and set out early next morning."
     new "Лучше бы разбить лагерь и отправиться в путь ранним утром следующего дня."
 
-    old "Samayra."
-    new "Самайра."
-
     old "The girl turned about, busy exploring."
     new "Девушка обернулась, продолжая осматривать окрестности."
 

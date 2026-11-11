@@ -72,9 +72,6 @@ translate ru strings:
     old "Sarah leaned over the desk and sighed."
     new "Сара наклонилась над столом и вздохнула."
 
-    old "Maybe..."
-    new "Может быть..."
-
     old "Maybe he was in danger, she thought."
     new "Может, он был в опасности, подумала она."
 
@@ -735,9 +732,6 @@ translate ru strings:
     old "I'm not gonna touch you after. I'm not gonna get you off. You don't deserve any of that."
     new "Я больше не трону тебя. Я не помогу тебе достичь оргазма. Ты не заслуживаешь ни капли такого."
 
-    old "Got that?"
-    new "Поняла?"
-
     old "Sarah mumbled her answer again, as close as she could sound to an answer in the affirmative."
     new "Сара снова пробормотала свой ответ, стараясь сделать его как можно более утвердительным."
 
@@ -1007,9 +1001,6 @@ translate ru strings:
 
     old "His arms suddenly parted."
     new "Его руки внезапно раздвинулись."
-
-    old "Get over here."
-    new "Подойди сюда."
 
     old "Eagerly, Sarah crawled across the bed and allowed herself to fall into his arms."
     new "Сара с энтузиазмом переползла по кровати и позволила себе упасть в его объятия."

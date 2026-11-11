@@ -90,9 +90,6 @@ translate ru strings:
     old "The jungle Tribes have shown no aptitude or interest in it."
     new "Племена джунглей не проявили ни способностей, ни интереса к ней."
 
-    old "So what then?"
-    new "И что тогда?"
-
     old "I fear I have no more of an answer to that question than you likely do."
     new "Боюсь, у меня нет ответа на этот вопрос больше, чем, вероятно, есть у тебя."
 
@@ -173,9 +170,6 @@ translate ru strings:
 
     old "Well...I don't know when you'll be back."
     new "Ну... я не знаю, когда ты вернёшься."
-
-    old "So?"
-    new "Ну?"
 
     old "You're coming with me, aren't you?"
     new "Ты ведь идёшь со мной?"
@@ -263,9 +257,6 @@ translate ru strings:
 
     old "She looked into the smiling face of the girl, and her heart steadied."
     new "Она посмотрела на улыбающееся лицо девушки, и её сердце успокоилось."
-
-    old "Together."
-    new "Вместе."
 
     old "Together."
     new "Вместе."

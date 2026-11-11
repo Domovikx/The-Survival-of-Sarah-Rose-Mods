@@ -33,9 +33,6 @@ translate ru strings:
     old "Suddenly, she saw a figure rush up towards her."
     new "Внезапно она увидела, как к ней подбежала некая фигура."
 
-    old "Hey!"
-    new "Эй!"
-
     old "Sarah waved at Kate as she came closer."
     new "Сара помахала Кейт, когда та подошла ближе."
 
@@ -345,9 +342,6 @@ translate ru strings:
     old "Well, the alternative is that I blame it on myself, and that ain't happening."
     new "Ну, альтернатива — обвинять во всём себя, а это точно не случится."
 
-    old "Yeah, I guess that's true."
-    new "Да, полагаю, это правда."
-
     old "Try to outmanoeuvre her"
     new "Попробуй обмануть её"
 
@@ -401,9 +395,6 @@ translate ru strings:
 
     old "She didn't need to, it was obvious that she had won."
     new "Ей и не нужно было этого делать: было очевидно, что она победила."
-
-    old "I give up. You win."
-    new "Я сдаюсь. Ты победила."
 
     old "Kate just smiled at her."
     new "Кейт просто улыбнулась ей."
@@ -590,9 +581,6 @@ translate ru strings:
 
     old "Cassius' steel gaze broke into a wide smile."
     new "Стальной взгляд Кассия сменился широкой улыбкой."
-
-    old "Excellent!"
-    new "Отлично!"
 
     old "My sister will be delighted to hear!"
     new "Моя сестра будет в восторге, когда услышит об этом!"
@@ -794,9 +782,6 @@ translate ru strings:
 
     old "After the torment of the desert, Sarah had wondered if she'd ever feel clean again."
     new "После мучений в пустыне Сара задавалась вопросом, сможет ли она когда-нибудь снова почувствовать себя чистой."
-
-    old "Fuck me..."
-    new "Чёрт возьми..."
 
     old "This ain't as good as that lake in the desert, but it's pretty close."
     new "Это не так хорошо, как то озеро в пустыне, но довольно близко."
@@ -1206,9 +1191,6 @@ translate ru strings:
     old "Sarah could see Kate's expression grow dark."
     new "Сара видела, как лицо Кейт потемнело."
 
-    old "That's horrible."
-    new "Это ужасно."
-
     old "Is it?"
     new "Разве?"
 
@@ -1389,9 +1371,6 @@ translate ru strings:
     old "None could keep up with you, Cassius."
     new "Никто не мог угнаться за тобой, Кассий."
 
-    old "True."
-    new "Верно."
-
     old "Then again, I suppose were it not for you, I would have been thrown out on account of my poor studies alone."
     new "С другой стороны, полагаю, если бы не ты, меня бы выгнали лишь за мои паршивые успехи в учёбе."
 
@@ -1421,9 +1400,6 @@ translate ru strings:
 
     old "Cassius nodded, pretending to be wise."
     new "Кассий кивнул, притворяясь мудрым."
-
-    old "Quite so."
-    new "Вполне так."
 
     old "As the night went on, Sarah listened to Cassius and Dio speak of their lives."
     new "По мере того как ночь продвигалась, Сара слушала Кассия и Дио, когда они рассказывали о своей жизни."
@@ -1767,9 +1743,6 @@ translate ru strings:
     old "Cassius suddenly leaned forward."
     new "Кассий внезапно наклонился вперёд."
 
-    old "No!"
-    new "Нет!"
-
     old "Sarah, I urge you, please! When Carolyn offers you our contract, you must take it!"
     new "Сара, умоляю тебя, прошу! Когда Каролин предложит тебе наш контракт, ты должна его принять!"
 
@@ -1778,9 +1751,6 @@ translate ru strings:
 
     old "But...I don't want you as slaves."
     new "Но... я не хочу, чтобы вы стали рабами."
-
-    old "Exactly!"
-    new "Точно!"
 
     old "Sarah was confused for a moment."
     new "Сара на мгновение растерялась."
@@ -1811,9 +1781,6 @@ translate ru strings:
 
     old "Stand up!"
     new "Встань!"
-
-    old "I..."
-    new "Я..."
 
     old "Stand up, I order you!"
     new "Встань! Я приказываю тебе!"

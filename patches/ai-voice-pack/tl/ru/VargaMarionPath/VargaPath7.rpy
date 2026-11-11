@@ -87,9 +87,6 @@ translate ru strings:
     old "They've been spared the worst of it."
     new "Им удалось избежать худшего."
 
-    old "That's good."
-    new "Это хорошо."
-
     old "Don't expect too friendly a welcome though."
     new "Однако не жди слишком дружелюбного приёма."
 

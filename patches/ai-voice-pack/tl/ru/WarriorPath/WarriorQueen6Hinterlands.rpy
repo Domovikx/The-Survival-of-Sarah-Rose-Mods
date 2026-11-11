@@ -303,9 +303,6 @@ translate ru strings:
     old "She saw a smile creeping over the man's face."
     new "Она увидела, как на лице мужчины появилась улыбка."
 
-    old "Yes?"
-    new "Да?"
-
     old "Yes, my country will be one of justice."
     new "Да, моя страна будет страной справедливости."
 
@@ -518,9 +515,6 @@ translate ru strings:
 
     old "Take the innkeeper, question him. If these claims of treason to the Crown are found to be true, hang him by dawn."
     new "Возьмите трактирщика, допросите его. Если эти обвинения в предательстве Короны окажутся правдой, повесть его до рассвета."
-
-    old "Yes, Princess!"
-    new "Да, принцесса!"
 
     old "The guards grabbed the innkeeper and dragged him away."
     new "Гвардейцы схватили трактирщика и утащили его прочь."
@@ -996,9 +990,6 @@ translate ru strings:
     old "Atilla grinned."
     new "Атилла ухмыльнулся."
 
-    old "No."
-    new "Нет."
-
     old "Catch up for lost time."
     new "Наверстай упущенное время."
 
@@ -1179,9 +1170,6 @@ translate ru strings:
     old "They felt like treason to her own ears."
     new "Они звучали для неё как предательство."
 
-    old "Yes..."
-    new "Да..."
-
     old "That was why I could never bring myself to ask you."
     new "Вот почему я так и не смог заставить себя спросить тебя."
 
@@ -1227,9 +1215,6 @@ translate ru strings:
     old "She added the last word with dread and anxiety in her throat."
     new "Она добавила последнее слово с ужасом и тревогой в горле."
 
-    old "Perhaps..."
-    new "Возможно..."
-
     old "I would have. I mean...back then, if you had asked."
     new "Я бы дала тебе детей. Я имею в виду... тогда, если бы ты попросил."
 
@@ -1238,9 +1223,6 @@ translate ru strings:
 
     old "She saw his golden eyes, trembling at her wounding words."
     new "Она увидела его золотые глаза, дрожащие от её ранящих слов."
-
-    old "I know..."
-    new "Я знаю всё это, девочка..."
 
     old "I know all of this, girl..."
     new "Я всё это знаю, девочка..."
@@ -1611,17 +1593,11 @@ translate ru strings:
     old "Hey, it's just you and me. And it's my desk, and I'm telling you it's fine, okay?"
     new "Эй, здесь же только мы с тобой. К тому же, это мой стол, и я тебе говорю — всё нормально, ладно?"
 
-    old "Okay..."
-    new "Хорошо..."
-
     old "Still somewhat hesitant, the girl took her seat behind the desk."
     new "Всё ещё несколько нерешительно, девушка заняла место за столом."
 
     old "Whatever restraint she had quickly faded as she got into the work, her hands and the quill flowing like water."
     new "Какая-то сдержанность быстро исчезла, когда она погрузилась в работу: её руки и перо двигались плавно, словно вода."
-
-    old "What?"
-    new "Чего?"
 
     old "Samayra didn't even look up as she kept working."
     new "Самайра даже не подняла головы, продолжая работать."
@@ -1698,9 +1674,6 @@ translate ru strings:
     old "Samayra looked up from the desk."
     new "Самайра подняла голову от стола."
 
-    old "Don't say that."
-    new "Не говори так."
-
     old "But it's true."
     new "Но это правда."
 
@@ -1761,9 +1734,6 @@ translate ru strings:
     old "Thank you, Samayra, for saying that."
     new "Спасибо тебе, Самайра, за эти слова."
 
-    old "Yeah..."
-    new "Да..."
-
     old "Well, I don't like to yell, but I'll keep yelling at you until one day you might actually believe me."
     new "Ну, я не люблю кричать, но буду продолжать кричать на тебя, пока однажды ты, может быть, наконец не поверишь мне."
 
@@ -1787,9 +1757,6 @@ translate ru strings:
 
     old "I see I get here just in time."
     new "Я вижу, я пришла как раз вовремя."
-
-    old "Funny."
-    new "Забавно."
 
     old "Hey, I won't pass up on a show."
     new "Эй, я же не откажусь от такого представления."
@@ -1920,9 +1887,6 @@ translate ru strings:
     old "Sarah saw on Kate's face that she had never given the option any consideration."
     new "Сара видела по лицу Кейт, что та никогда не рассматривала этот вариант."
 
-    old "I..."
-    new "Я..."
-
     old "I'll have to think about that."
     new "Мне нужно об этом подумать."
 
@@ -1931,9 +1895,6 @@ translate ru strings:
 
     old "Kate looked around the tent for a while, pausing as she considered her thoughts."
     new "Кейт некоторое время оглядывала палатку, останавливаясь, чтобы обдумать свои мысли."
-
-    old "It's..."
-    new "Это..."
 
     old "I don't know. It feels weird to be back here."
     new "Я не знаю. Странно возвращаться сюда."
@@ -2007,12 +1968,6 @@ translate ru strings:
     old "Tease? Me? I'd never."
     new "Дразнилка? Я? Никогда бы не стала."
 
-    old "Tell me."
-    new "Скажи мне."
-
-    old "Did you know?"
-    new "Ты знала?"
-
     old "Know what?"
     new "Знаешь что?"
 
@@ -2064,17 +2019,11 @@ translate ru strings:
     old "Or you'd be afraid that I might actually keep it."
     new "Или ты бы испугалась, что я и вправду сдержу его."
 
-    old "Never..."
-    new "Никогда..."
-
     old "Look at you, you're so eager for it."
     new "Посмотри на себя: ты же так этого ждёшь."
 
     old "Sarah wasn't beyond begging when Kate got her worked up like this."
     new "Сара не отказывалась и от мольб, когда Кейт так разгорячалась."
-
-    old "Fine."
-    new "Хорошо."
 
     old "If I'm going to be a knight, I'll have to practice slaying Wyrms and saving maidens."
     new "Если я собираюсь стать рыцарем, то мне придётся потренироваться убивать драконов и спасать девиц."

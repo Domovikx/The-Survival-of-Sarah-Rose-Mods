@@ -27,9 +27,6 @@ translate ru strings:
     old "The official snatched the contract away, rolled it up and quickly secured it in a protective binder."
     new "Чиновник схватил контракт, свернул его и быстро зафиксировал в защитном папке."
 
-    old "Excellent."
-    new "Отлично."
-
     old "Now, all of you lot, follow me and I will take you to the master's Estate."
     new "Теперь все вы, следуйте за мной — я отведу вас в поместье господина."
 
@@ -257,9 +254,6 @@ translate ru strings:
 
     old "Don't thank me yet. It's hard work. And you either pick it up quick, or you're out for another."
     new "Не спешите благодарить меня. Это тяжёлая работа. Либо вы быстро всему научитесь, либо вас заменят на другого."
-
-    old "Good."
-    new "Хорошо."
 
     old "You'll need to get tailored for a uniform, after that, you can report for your first shift."
     new "Тебе придётся сшить форму по меркам, а после этого сможешь явиться на свою первую смену."
@@ -605,9 +599,6 @@ translate ru strings:
 
     old "It...fits. Perfectly."
     new "Оно... подходит. Идеально."
-
-    old "Of course."
-    new "Конечно."
 
     old "I am good at my job, despite what you might suspect."
     new "Я хорошо делаю свою работу, несмотря на то, что ты могла подумать."
@@ -1029,9 +1020,6 @@ translate ru strings:
     old "She waved her arms around wildly, catching the attention of a young man from the other side of the room."
     new "Она яростно замахала руками, привлекая внимание молодого человека с другого конца комнаты."
 
-    old "What?"
-    new "Что?"
-
     old "You know that last girl that was in the bunk next to me?"
     new "Ты помнишь ту последнюю девушку, которая сидела в койке рядом со мной?"
 
@@ -1209,9 +1197,6 @@ translate ru strings:
     old "Behind her, Nathan, holding onto her waist, thrusting back and forth."
     new "За её спиной Натан, обхватив её за талию, толкался взад-вперёд."
 
-    old "Ooh Gods!"
-    new "Ох, боги!"
-
     old "Hey, keep it down, remember?"
     new "Эй, будь потише, помнишь?"
 
@@ -1229,9 +1214,6 @@ translate ru strings:
 
     old "Sarah saw him thrust into Kim from a slightly different angle."
     new "Сара увидела, как он врезался в Ким под немного другим углом."
-
-    old "Gods!"
-    new "Боже!"
 
     old "You're so mean!"
     new "Ты такой жестокий!"
@@ -1403,9 +1385,6 @@ translate ru strings:
 
     old "Sarah had only just gotten started when she heard a voice."
     new "Сара только начала уборку, когда услышала чей-то голос."
-
-    old "Hey!"
-    new "Эй!"
 
     old "Sarah turned around."
     new "Сара обернулась."
@@ -1698,9 +1677,6 @@ translate ru strings:
     old "I like to hide out here when I have my work done."
     new "Мне нравится прятаться здесь, когда я заканчиваю работу."
 
-    old "Come, sit."
-    new "Иди, садись."
-
     old "Kim sat down on a bench and motioned for Sarah to join her."
     new "Ким села на скамью и жестом пригласила Сару присесть рядом."
 
@@ -1731,9 +1707,6 @@ translate ru strings:
     old "What's your story, anyway?"
     new "А вообще, какая у тебя история?"
 
-    old "Me?"
-    new "Я?"
-
     old "Yeah...we get a lot of girls coming through this place. Not a whole lot that look like...well you."
     new "Да... к нам сюда заходит немало девушек. Но мало кто выглядит как... ну, как ты."
 
@@ -1751,9 +1724,6 @@ translate ru strings:
 
     old "Sarah saw Kim's eyes go wide."
     new "Сара увидела, как глаза Ким широко распахнулись."
-
-    old "Sarah..."
-    new "Сара..."
 
     old "She suddenly grabbed her hands."
     new "Она внезапно схватила себя за руки."
@@ -1790,9 +1760,6 @@ translate ru strings:
 
     old "Promise me! I don't want you to end up getting hurt."
     new "Обещай мне! Я не хочу, чтобы тебе в итоге причинили боль."
-
-    old "Good."
-    new "Хорошо."
 
     old "Just...tell people you were poor or something, or that you ran away from a dad that kept hitting you."
     new "Просто... скажи людям, что ты была бедной или что-то в этом роде, либо что сбежала от отца, который постоянно тебя бил."
@@ -1835,9 +1802,6 @@ translate ru strings:
 
     old "No...well..."
     new "Нет... ну..."
-
-    old "Don't worry."
-    new "Не волнуйся."
 
     old "I don't care if you lie. We all do, down here."
     new "Мне всё равно, врёшь ты или нет. Мы все здесь врём."
@@ -2028,9 +1992,6 @@ translate ru strings:
     old "A masquerade?"
     new "Маскарад?"
 
-    old "Yes."
-    new "Да."
-
     old "If I am correct, and this has been that worm Caliban's doing, then we must delay my proposal for now."
     new "Если я прав и всё это дело рук того червя Калибана, то нам пока придётся отложить моё предложение."
 
@@ -2162,9 +2123,6 @@ translate ru strings:
 
     old "There are other ways to make you speak the truth."
     new "Есть и другие способы заставить тебя говорить правду."
-
-    old "Tell me..."
-    new "Скажи мне..."
 
     old "Suddenly, Sarah felt a sharp pain on the top of her head."
     new "Внезапно она почувствовала острую боль на макушке."
@@ -2430,9 +2388,6 @@ translate ru strings:
     old "I can't just...I need the job! I need the money! I can't not work for three weeks."
     new "Я не могу просто так... Мне нужна эта работа! Нужны деньги! Я не могу три недели не работать."
 
-    old "So what then?"
-    new "И что тогда?"
-
     old "You going to fix it yourself?"
     new "Ты собираешься починить это сама?"
 
@@ -2522,9 +2477,6 @@ translate ru strings:
 
     old "You're like..."
     new "Ты же вроде..."
-
-    old "What?"
-    new "Что?"
 
     old "Old..."
     new "Старое..."
@@ -2703,9 +2655,6 @@ translate ru strings:
     old "Above her, she heard him groan in approval."
     new "Сверху она услышала его довольный стон."
 
-    old "There you go."
-    new "Вот так."
-
     old "She felt him patting her head."
     new "Она почувствовала, как он похлопывает её по голове."
 
@@ -2874,9 +2823,6 @@ translate ru strings:
     old "All of her morning was spend in a blissful blur of busy work, until the Headmaster arrived."
     new "Всё её утро прошло в блаженном тумане суетливой работы, пока не приехал директор."
 
-    old "Sarah."
-    new "Сара."
-
     old "Sarah stood up right away."
     new "Сара тут же встала."
 
@@ -2979,9 +2925,6 @@ translate ru strings:
     old "Regardless, Sarah took his hand and shook it."
     new "Тем не менее Сара взяла его за руку и пожала ей."
 
-    old "Sarah..."
-    new "Сара..."
-
     old "Well, nice to formerly meet you, Sarah. My name is Albert."
     new "Ну, приятно познакомиться с вами, Сара. Меня зовут Альберт."
 
@@ -3071,9 +3014,6 @@ translate ru strings:
 
     old "The man must be nearing eighty. He'd be protecting nobody from any danger."
     new "Этому мужчине, должно быть, уже под восемьдесят. Он бы никого ни от чего не защитил."
-
-    old "Yes."
-    new "Да."
 
     old "The girls that vanish, without exception, have all been cleaning staff. Girls like yourself."
     new "Девочки, которые исчезают, без исключения — все они были уборщицами. Девочками, такими, как ты."

@@ -738,9 +738,6 @@ translate ru strings:
     old "Sarah turned to look at Naydeen."
     new "Сара повернулась, чтобы посмотреть на Найдин."
 
-    old "What if you desire no man?"
-    new "А что, если ты не желаешь ни одного мужчину?"
-
     old "Aah, I see. Is that how you have always felt?"
     new "Ах, я понимаю. Так вот как ты всегда себя чувствовала?"
 
@@ -1140,14 +1137,8 @@ translate ru strings:
     old "Sarah could feel Naydeen trace a finger past he spine. She twitched under her touch."
     new "Сара почувствовала, как Найдин провела пальцем вдоль её позвоночника. Она дёрнулась от этого прикосновения."
 
-    old "Did you like that?"
-    new "Тебе это понравилось?"
-
     old "Sarah could only nod her head in response."
     new "Сара могла лишь кивнуть головой в ответ."
-
-    old "Good."
-    new "Хорошо."
 
     old "She felt Naydeen press her lips against her neck, kissing her gently, biting her softly."
     new "Она почувствовала, как Найдин прижала свои губы к её шее, нежно целуя и мягко кусая."

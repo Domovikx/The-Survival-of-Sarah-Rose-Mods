@@ -222,9 +222,6 @@ translate ru strings:
     old "What do we do about it?"
     new "Что нам с этим делать?"
 
-    old "Nothing."
-    new "Ничего."
-
     old "The veil between our world and theirs is far beyond our power to affect."
     new "Барьер между нашим миром и их миром находится далеко за пределами наших сил."
 
@@ -459,9 +456,6 @@ translate ru strings:
     old "As they stepped through the hidden doorway, they arrived back home."
     new "Как только они прошли через тайный проход, то оказались снова дома."
 
-    old "Thank you, Sarah."
-    new "Спасибо тебе, Сара."
-
     old "If you see Xan again, tell him of what we saw."
     new "Если снова увидишь Зана, скажи ему о том, что мы видели."
 
@@ -492,9 +486,6 @@ translate ru strings:
     old "Samayra stood on the other side of the desk."
     new "Самайра стояла по другую сторону стола."
 
-    old "Did I do good?"
-    new "Я хорошо справилась?"
-
     old "I mean...helping out. I hope I wasn't too much of a burden."
     new "Я имею в виду... помощь. Надеюсь, я не была слишком большой обузой."
 
@@ -503,9 +494,6 @@ translate ru strings:
 
     old "It's just...we finally have a moment of peace and I'm trying to process it all."
     new "Просто... у нас наконец-то появился момент спокойствия, и я пытаюсь всё это осмыслить."
-
-    old "That's your problem."
-    new "Вот в чём твоя проблема."
 
     old "My problem?"
     new "Моя проблема?"
@@ -930,9 +918,6 @@ translate ru strings:
     old "A lie."
     new "Ложь."
 
-    old "Oh..."
-    new "Ох..."
-
     old "Sarah could see Samayra did not expect that."
     new "Сара видела, что Самайра этого не ожидала."
 
@@ -1137,14 +1122,8 @@ translate ru strings:
     old "She knew him better than that."
     new "Она знала его лучше этого."
 
-    old "Still..."
-    new "Всё же..."
-
     old "She was here."
     new "Она была здесь."
-
-    old "Huh..."
-    new "Хм..."
 
     old "Sarah watched as Alaric slowly stirred to life."
     new "Сара смотрела, как Аларик медленно оживал."
@@ -1248,9 +1227,6 @@ translate ru strings:
     old "Late night, huh?"
     new "Поздно уже, да?"
 
-    old "Yeah."
-    new "Да."
-
     old "She felt his teeth playfully sink into her neck."
     new "Она почувствовала, как его зубы игриво ушли ей в шею."
 
@@ -1262,9 +1238,6 @@ translate ru strings:
 
     old "Did you really?"
     new "Ты правда?"
-
-    old "Do what?"
-    new "Что сделать?"
 
     old "Something illegal?"
     new "Что-то незаконное?"
@@ -1683,9 +1656,6 @@ translate ru strings:
     old "A long pause lingered before Alaric finally spoke."
     new "Долгая пауза затянулась, прежде чем Аларик наконец заговорил."
 
-    old "You're..."
-    new "Ты..."
-
     old "Look, I'm not good with this stuf..."
     new "Слушай, я не очень-то силен в таких вещах..."
 
@@ -1700,9 +1670,6 @@ translate ru strings:
 
     old "I like spending time with you too."
     new "Я тоже люблю проводить с тобой время."
-
-    old "It's just..."
-    new "Просто..."
 
     old "He paused again."
     new "Он снова замолчал."
@@ -1736,9 +1703,6 @@ translate ru strings:
 
     old "Wanting something...that's a fool's game."
     new "Желание чего-то добиться... это игра для дураков."
-
-    old "You do?"
-    new "Ты тоже так думаешь?"
 
     old "When I first came to Lethram I...I had lost so much."
     new "Когда я впервые приехала в Летрам, я... я потеряла так много."
@@ -2085,9 +2049,6 @@ translate ru strings:
     old "They sure seem to like you."
     new "Они определённо тебя любят."
 
-    old "Like me?"
-    new "Как я?"
-
     old "Belmont let out a loud booming laugh."
     new "Бельмонт громко расхохотался."
 
@@ -2222,9 +2183,6 @@ translate ru strings:
 
     old "It had been years ago. She had moved past it."
     new "Это было много лет назад. Она уже отошла от этого."
-
-    old "Me?"
-    new "Я?"
 
     old "Yeah, what have you been up to? Surely you got a good story or two?"
     new "Да, а чем ты тут занимался? У тебя же наверняка есть пара хороших историй?"
@@ -2697,9 +2655,6 @@ translate ru strings:
     old "Sarah crossed her arms across her chest, hoping to cover herself."
     new "Сара скрестила руки на груди, надеясь прикрыться."
 
-    old "No!"
-    new "Нет!"
-
     old "A rush of panic."
     new "Волна паники."
 
@@ -2909,9 +2864,6 @@ translate ru strings:
 
     old "Fine...you hustled me, again!"
     new "Ладно... ты меня снова обманул!"
-
-    old "How much?"
-    new "Сколько же?"
 
     old "Yeah, how much for the clothes?! I can't be expected to walk back to my house naked, right?"
     new "Да, сколько за одежду?! Неужели я должна идти обратно до дома голышом, да?"
@@ -3404,9 +3356,6 @@ translate ru strings:
 
     old "Yet now, bend over, she knew she could."
     new "И всё же сейчас, согнувшись над ним, она знала — могла."
-
-    old "You like that?"
-    new "Тебе это нравится?"
 
     old "Sarah just moaned."
     new "Сара лишь застонала."

@@ -132,9 +132,6 @@ translate ru strings:
     old "One of the scouts that had been send ahead to investigate the city, rode to meet her."
     new "Один из разведчиков, которых отправили вперёд для изучения города, пришёл к ней на коне."
 
-    old "Commander!"
-    new "Командир!"
-
     old "Sarah turned to face the scout."
     new "Сара повернулась к разведчику."
 
@@ -191,9 +188,6 @@ translate ru strings:
 
     old "It was a Tribesman soldier. He identified himself as the leader of the regiment."
     new "Это был солдат из племени. Он представился как командир полка."
-
-    old "What did he say?"
-    new "Что он сказал?"
 
     old "He...requested a meeting with you."
     new "Он...попросил встречи с тобой."
@@ -294,9 +288,6 @@ translate ru strings:
     old "As he neared closer to her, she was surprised at his age. Older than she had expected."
     new "По мере того как он приближался к ней, она была удивлена его возрастом. Он был старше, чем она ожидала."
 
-    old "Hail, Sarah Rose."
-    new "Приветствую тебя, Сара Роуз."
-
     old "Brave of you to come here alone."
     new "Смело с твоей стороны прийти сюда одной."
 
@@ -311,9 +302,6 @@ translate ru strings:
 
     old "Those speaking of your beauty, of course."
     new "Те, кто говорил о твоей красоте, конечно."
-
-    old "Ah, I see."
-    new "Ах, понятно."
 
     old "Perhaps you've not yet heard the stories of killing demons and mages yet."
     new "Возможно, ты ещё не слышал историй об убийстве демонов и магов."
@@ -423,9 +411,6 @@ translate ru strings:
     old "The Tribesman shook his head."
     new "Соплеменник покачал головой."
 
-    old "No..."
-    new "Нет..."
-
     old "What I say now is almost treason among my people."
     new "То, что я сейчас скажу, — это почти предательство для моего народа."
 
@@ -446,9 +431,6 @@ translate ru strings:
 
     old "I cannot be allowed to be seen as weak. If I am...I might as well risk the fight here and now."
     new "Я не могу допустить, чтобы меня сочли слабым. Если так... то уж лучше рискнуть и сразиться прямо здесь и сейчас."
-
-    old "Fine."
-    new "Хорошо."
 
     old "Wealth then. I will pay you and your men a price for a peaceful withdrawal. You can take your spoils and ride back to the desert."
     new "Тогда богатство. Я заплачу тебе и твоим людям за мирный уход. Вы можете взять свою добычу и вернуться в пустыню."
@@ -494,9 +476,6 @@ translate ru strings:
 
     old "And all I will have is your word?"
     new "И всё, что у меня останется, — это твое слово?"
-
-    old "Yes."
-    new "Да."
 
     old "But you ask me to withdraw, leave the city, and trust that you don't attack me as I leave. All on your word as well."
     new "Но ты просишь меня отступить, покинуть город и верить, что я не нападу на тебя, пока ухожу. И всё это — только на твоё слово."
@@ -825,9 +804,6 @@ translate ru strings:
     old "The old Tribesman frowned as he looked at her."
     new "Старый соплеменник нахмурился, глядя на неё."
 
-    old "What do you mean?"
-    new "Что вы имеете в виду?"
-
     old "Are the...Tribes open to a negotiation? To return them to Rosanna?"
     new "Племена... готовы к переговорам? Вернуть их Розанне?"
 
@@ -1007,9 +983,6 @@ translate ru strings:
 
     old "You will have to give yourself to me."
     new "Тебе придется отдать себя мне."
-
-    old "You can't be serious!"
-    new "Ты не можешь говорить серьёзно!"
 
     old "He shushed her."
     new "Он заставил её замолчать."
@@ -1758,9 +1731,6 @@ translate ru strings:
     old "Don't take me for a fool. I will not risk my life on your word alone, Tribesman."
     new "Не принимай меня за дурака. Я не стану рисковать своей жизнью, полагаясь лишь на твои слова, соплеменник."
 
-    old "Very well."
-    new "Хорошо."
-
     old "If we are to die, let us make it a memorable death."
     new "Если нам и умирать, то пусть это будет незабываемая смерть."
 
@@ -2459,9 +2429,6 @@ translate ru strings:
 
     old "Engineers, hold the siege weapons!"
     new "Инженеры, удерживайте осадное оружие!"
-
-    old "Yes, commander."
-    new "Да, командир."
 
     old "Sarah laughed as she rode towards the city on her horse."
     new "Сара рассмеялась, когда ехала на лошади к городу."

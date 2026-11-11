@@ -240,9 +240,6 @@ translate ru strings:
     old "Kate looked away in shame."
     new "Кейт в стыде отвела взгляд."
 
-    old "I know..."
-    new "Я знаю..."
-
     old "Usually, Kate's voice was strong, but now, it was soft and weak."
     new "Обычно голос Кейт был сильным, но сейчас он звучал мягко и слабо."
 

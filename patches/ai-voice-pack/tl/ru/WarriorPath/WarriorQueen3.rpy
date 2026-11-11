@@ -336,9 +336,6 @@ translate ru strings:
     old "We don't know."
     new "Мы не знаем."
 
-    old "You don't know?"
-    new "Ты не знаешь?"
-
     old "No. So far, we've held back. Our main priority has been to avoid detection, so we held back. Even the scouts were told to stay near camp."
     new "Нет. Пока что мы сдерживались. Нашей главной задачей было избежать обнаружения, поэтому мы действовали осторожно. Даже разведчикам велели держаться поближе к лагерю."
 
@@ -537,9 +534,6 @@ translate ru strings:
     old "What if we don't?"
     new "А что, если мы этого не сделаем?"
 
-    old "What do you mean?"
-    new "Что вы имеете в виду?"
-
     old "Sarah drew her finger around the city of Calshure."
     new "Сара провела пальцем вокруг города Калшура."
 
@@ -635,9 +629,6 @@ translate ru strings:
 
     old "I don't think it's that bad. I have plenty of allies."
     new "Не думаю, что всё так уж плохо. У меня полно союзников."
-
-    old "For now."
-    new "Пока что."
 
     old "Only cause we got a common enemy."
     new "Только потому, что у нас общий враг."
@@ -804,9 +795,6 @@ translate ru strings:
     old "But it wasn't right, that man was-"
     new "Но это было неправильно — тот человек был..."
 
-    old "I know."
-    new "Я знаю."
-
     old "But I just want you to know that I don't blame you, or your dad."
     new "Но я просто хочу, чтобы ты знала: я не виню ни тебя, ни твоего отца."
 
@@ -839,9 +827,6 @@ translate ru strings:
 
     old "She saw a frown on Kate's face."
     new "Она заметила на лице Кейт хмурое выражение."
-
-    old "I did?"
-    new "Я? Правда?"
 
     old "Yeah, you don't remember? You used to get so passionate about the smallest stuff. You cared too much almost."
     new "Да, ты же не забыла? Раньше ты так сильно переживала из-за самых пустяков. Ты была слишком уж заботливой."
@@ -963,9 +948,6 @@ translate ru strings:
     old "Hey, easy."
     new "Эй, спокойно."
 
-    old "Huh..."
-    new "Хм..."
-
     old "Samayra still looked around, dazed, confused as to where she had woken up."
     new "Самайра всё ещё оглядывалась, ошеломлённая и растерянная — не понимая, где она очнулась."
 
@@ -983,9 +965,6 @@ translate ru strings:
 
     old "I...I did..."
     new "Я... я сделала это..."
-
-    old "I'm sorry."
-    new "Прости."
 
     old "You should just take better care of yourself."
     new "Тебе просто следовало бы лучше заботиться о себе."
@@ -1197,17 +1176,11 @@ translate ru strings:
     old "Then, suddenly, a snowball rushed past Sarah's face."
     new "И тут внезапно снежный ком пронёсся прямо перед лицом Сары."
 
-    old "Wow!"
-    new "Ого!"
-
     old "She saw that Samayra had sneakily managed to produce some of her own snowballs."
     new "Она увидела, что Самайре хитро удалось сделать несколько собственных снежков."
 
     old "Quick student, huh?"
     new "Быстрый ученик, да?"
-
-    old "You'll see."
-    new "Посмотришь."
 
     old "Samayra launched a flurry of snowballs, one after the other."
     new "Самайра запустила шквал снежков, один за другим."
@@ -1265,9 +1238,6 @@ translate ru strings:
 
     old "The girl's voice still trembled."
     new "Голос девушки всё ещё дрожал."
-
-    old "Are you alright?"
-    new "Ты в порядке?"
 
     old "Samayra looked at her, a wide smile on her face."
     new "Самайра посмотрела на неё с широкой улыбкой на лице."

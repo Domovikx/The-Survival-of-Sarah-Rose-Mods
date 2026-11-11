@@ -168,9 +168,6 @@ translate ru strings:
     old "Do you you take Sarah Rose as your wife before all the Gods?"
     new "Берёшь ли ты Сару Роуз в жёны перед всеми Богами?"
 
-    old "I do."
-    new "Да, делаю."
-
     old "Then the High Priest turned to her."
     new "Тогда Верховный жрец обратился к ней."
 
@@ -480,9 +477,6 @@ translate ru strings:
     old "He was slowly dropping his performance."
     new "Он медленно прекращал своё выступление."
 
-    old "So..."
-    new "Так..."
-
     old "I imagine that you know the basics of this?"
     new "Я полагаю, ты знаешь основы этого?"
 
@@ -585,9 +579,6 @@ translate ru strings:
     old "She could barely hear herself."
     new "Она едва слышала себя."
 
-    old "Go on."
-    new "Давай."
-
     old "Take the rest off."
     new "Сними остальное."
 
@@ -617,9 +608,6 @@ translate ru strings:
 
     old "Still, he leaned up against the wall."
     new "Тем не менее он прислонился к стене."
-
-    old "Gods..."
-    new "Боги..."
 
     old "Sarah tried her best to keep looking at him. Her husband."
     new "Сара изо всех сил старалась не отводить от него взгляд. От своего мужа."
@@ -693,9 +681,6 @@ translate ru strings:
     old "Sarah stared at his muscled abdomen."
     new "Сара уставилась на его мускулистый живот."
 
-    old "You're staring."
-    new "Ты уставилась."
-
     old "Sarah went red in the face, realizing she had been caught."
     new "Сара покраснела, поняв, что её поймали."
 
@@ -752,9 +737,6 @@ translate ru strings:
 
     old "He forced her to look up at him as he looked down at her."
     new "Он заставил её поднять голову, глядя на неё сверху вниз."
-
-    old "Sarah..."
-    new "Сара..."
 
     old "For a moment, she forgot how to speak."
     new "На мгновение она забыла, как говорить."
@@ -1028,9 +1010,6 @@ translate ru strings:
 
     old "Sarah, still waking, slightly nodded."
     new "Сара, всё ещё не до конца очнувшись от сна, слегка кивнула."
-
-    old "Good."
-    new "Хорошо."
 
     old "We should prepare."
     new "Нам нужно подготовиться."
@@ -1359,9 +1338,6 @@ translate ru strings:
     old "Thomas nodded again."
     new "Томас снова кивнул."
 
-    old "I see..."
-    new "Понятно..."
-
     old "So...do we believe the merchant?"
     new "Так... мы верим торговцу?"
 
@@ -1376,9 +1352,6 @@ translate ru strings:
 
     old "Thomas gestured."
     new "Томас жестом подал знак."
-
-    old "Please."
-    new "Пожалуйста."
 
     old "As Master of the Accounts, I must plead that we act."
     new "Как Мастер по учёту, я должна настоять на том, чтобы мы действовали."
@@ -2297,9 +2270,6 @@ translate ru strings:
 
     old "She lowered her gaze, instinctively aware of the difference in power between them."
     new "Она опустила взгляд, инстинктивно ощущая разницу во власти между ними."
-
-    old "What?"
-    new "Что?"
 
     old "His words sounded harsh. Had he been drinking?"
     new "Его слова прозвучали грубо. Неужели он пил?"

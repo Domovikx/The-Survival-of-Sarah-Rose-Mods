@@ -378,9 +378,6 @@ translate ru strings:
     old "Her voice echoed out across the void."
     new "Её голос эхом разнёсся по пустоте."
 
-    old "Sarah..."
-    new "Сара..."
-
     old "A voice called out to her from where the docks were."
     new "С голоса донеслось до неё с той стороны, где были доки."
 
@@ -560,9 +557,6 @@ translate ru strings:
 
     old "She also loved how he never held back. He grabbed at her because he could barely control himself."
     new "Ей также нравилось, что он никогда не сдерживался. Он хватал её, потому что едва мог себя контролировать."
-
-    old "Yeah?"
-    new "Да?"
 
     old "I thought it would be our stimulating conversation."
     new "Я думала, это будет наш возбуждающий разговор."

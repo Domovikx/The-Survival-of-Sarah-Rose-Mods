@@ -72,9 +72,6 @@ translate ru strings:
     old "And you know, a king doesn't have to ask if he can enter a room."
     new "И знаешь ли, королю не нужно спрашивать, можно ли ему войти в комнату."
 
-    old "Maybe..."
-    new "Возможно..."
-
     old "He adjusted the crown on his head."
     new "Он поправил корону на голове."
 
@@ -150,9 +147,6 @@ translate ru strings:
     old "Except, they don't fear starvation."
     new "Однако они не боятся голода."
 
-    old "What then?"
-    new "Ну и что?"
-
     old "Insult. Loss of status. Fearing the loss of their privileges."
     new "Оскорбление. Потеря статуса. Страх потерять свои привилегии."
 
@@ -170,9 +164,6 @@ translate ru strings:
 
     old "And as well, they see you and me for what we are."
     new "И к тому же, они видят в нас и в тебе то, кто мы есть на самом деле."
-
-    old "What's that?"
-    new "Что это?"
 
     old "Young. Inexperienced."
     new "Молоды. Неопытны."
@@ -227,9 +218,6 @@ translate ru strings:
 
     old "Thomas looked up, a pained expression in his eyes."
     new "Томас поднял голову, и в его глазах отразилась боль."
-
-    old "Yes..."
-    new "Да..."
 
     old "But we will do it together."
     new "Но мы сделаем это вместе."

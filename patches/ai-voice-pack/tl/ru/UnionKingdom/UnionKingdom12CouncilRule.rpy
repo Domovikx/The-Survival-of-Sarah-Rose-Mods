@@ -135,9 +135,6 @@ translate ru strings:
     old "Sarah looked at Queen Maeiv. She could see that she had lost."
     new "Сара посмотрела на королеву Маив. Она видела, что та проиграла."
 
-    old "I..."
-    new "Я..."
-
     old "Think that is a wonderful idea, Sarah."
     new "Думаешь, это замечательная идея, Сара."
 

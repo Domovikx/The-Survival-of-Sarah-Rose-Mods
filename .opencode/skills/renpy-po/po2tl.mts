@@ -65,6 +65,12 @@ export function buildTlFiles(
   resolve: (msgctxt: string, msgid: string) => PotMeta | null,
 ): TlFile[] {
   const groups = new Map<string, PoEntry[]>();
+  // Ren'Py: одинаковый old в одном переводе = Exception «A translation for X
+  // already exists», файл tl отваливается целиком (E2E в игре 2026-11-11,
+  // tl/de/TheMorningAfterKate.rpy). Одинаковый английский текст у разных
+  // спикеров движок не различает — ПЕРВЫЙ по порядку исходников выигрывает
+  // (паритет renpy-dedup).
+  const seenOld = new Set<string>();
   const push = (rel: string, e: PoEntry): void => {
     const arr = groups.get(rel);
     if (arr) arr.push(e);
@@ -73,6 +79,8 @@ export function buildTlFiles(
 
   for (const e of entries) {
     if (!e.msgid || !e.msgstr.trim()) continue; // пустые — не переводились
+    if (seenOld.has(e.msgid)) continue; // дубль old — Ren'Py не принимает
+    seenOld.add(e.msgid);
     if (e.msgctxt === "ui") {
       push("screens.rpy", e);
     } else if (e.msgctxt === "speaker-name") {

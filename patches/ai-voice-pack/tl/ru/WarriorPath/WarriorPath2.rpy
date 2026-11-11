@@ -27,9 +27,6 @@ translate ru strings:
     old "They threw their lives away, three of them trying hold off five-hundred of us. They didn't even hold us off for more than a second."
     new "Они зря пожертвовали своими жизнями — трое из них пытались сдержать пятьсот человек из нас. Но даже секунду не продержались."
 
-    old "And for what?"
-    new "И ради чего?"
-
     old "You think the asshole that owns this palace will even remember their names?"
     new "Думаешь, этот ублюдок, которому принадлежит дворец, вообще вспомнит их имена?"
 
@@ -386,9 +383,6 @@ translate ru strings:
 
     old "He's not a lord."
     new "Он не лорд."
-
-    old "Excuse me?"
-    new "Извините?"
 
     old "Sarah waved her hand, dismissing the matter."
     new "Сара махнула рукой, отмахиваясь от этого вопроса."

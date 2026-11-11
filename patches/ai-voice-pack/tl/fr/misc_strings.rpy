@@ -294,9 +294,6 @@ translate fr strings:
     old "Tailor"
     new "Tailleur"
 
-    old "Girl"
-    new "Fille"
-
     old "Advisor"
     new "Conseiller"
 

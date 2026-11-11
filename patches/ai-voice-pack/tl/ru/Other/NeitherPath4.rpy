@@ -447,9 +447,6 @@ translate ru strings:
     old "Guard, let her get back to work."
     new "Стражник, пусть она вернётся к работе."
 
-    old "Of course, my lady."
-    new "Конечно, моя леди."
-
     old "The guard seemed dissapointed that this was all that the matter would come to."
     new "Охранник, казалось, был разочарован тем, что на этом всё и закончилось."
 
@@ -909,9 +906,6 @@ translate ru strings:
     old "That's right. You had that poor girl whipped, nobody else did. Don't forget that."
     new "Верно. Это ты велела избить ту бедную девушку — никто другой этого не делал. Не забывай об этом."
 
-    old "I'm sorry..."
-    new "Прости..."
-
     old "You're apologizing to me?"
     new "Ты что, извиняешься передо мной?"
 
@@ -1073,9 +1067,6 @@ translate ru strings:
 
     old "Ooh, had enough have you?"
     new "Ох, тебе что, уже достаточно?"
-
-    old "Yes!"
-    new "Да!"
 
     old "I've given you two lashes, and you ordered that girl to suffer five."
     new "Я дала тебе два удара, а ты приговорила ту девушку к пяти."
@@ -1292,9 +1283,6 @@ translate ru strings:
 
     old "Your weakness, Sarah, it's not a curse. You can train yourself, to grow stronger."
     new "Твоя слабость, Сара, — это не проклятие. Ты можешь тренироваться и становиться сильнее."
-
-    old "How?"
-    new "Как?"
 
     old "Sarah begged her for an answer."
     new "Сара умоляла её дать ответ."
@@ -1619,9 +1607,6 @@ translate ru strings:
 
     old "It's always so quiet here. It feels wrong."
     new "Здесь всегда так тихо. Это кажется неправильным."
-
-    old "How so?"
-    new "Почему же?"
 
     old "Sarah looked down the hallway. Empty."
     new "Сара посмотрела в конец коридора. Пусто."
@@ -1979,9 +1964,6 @@ translate ru strings:
 
     old "Sarah could see Lily smile at her."
     new "Сара видела, как Лили улыбнулась ей."
-
-    old "I..."
-    new "Я..."
 
     old "Sarah struggled to find the words."
     new "Сара с трудом находила слова."

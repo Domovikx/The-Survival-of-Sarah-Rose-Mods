@@ -339,9 +339,6 @@ translate ru strings:
     old "Still, if this was what being a deck hand did to your body, perhaps all men ought to be deck hands, she concluded."
     new "Тем не менее, если именно так выглядело тело палубного матроса, то, возможно, всем мужчинам следовало бы стать такими, — заключила она."
 
-    old "You're staring."
-    new "Ты уставилась."
-
     old "Suddenly, Sarah snapped back to the present."
     new "Внезапно Сара вернулась в реальность."
 
@@ -462,9 +459,6 @@ translate ru strings:
     old "Sorry captain!"
     new "Простите, капитан!"
 
-    old "Sorry captain!"
-    new "Простите, капитан!"
-
     old "Belmont waved his hands."
     new "Бельмонт махнул руками."
 
@@ -494,9 +488,6 @@ translate ru strings:
 
     old "Sarah turned to Nick."
     new "Сара повернулась к Николасу."
-
-    old "Follow me."
-    new "Иди за мной."
 
     old "Together, they dissapeared below deck."
     new "Вместе они исчезли на нижней палубе."
@@ -690,9 +681,6 @@ translate ru strings:
     old "Sarah could feel herself turn red. Was she this transparent? Why was he able to see through her?"
     new "Сара почувствовала, как её лицо загорелось румянцем. Неужели она была настолько очевидна? Почему он умудрялся видеть её насквозь?"
 
-    old "It's alright."
-    new "Всё в порядке."
-
     old "You're a slut, you can't help yourself."
     new "Ты же шлюха — ничего не можешь с собой поделать."
 
@@ -761,9 +749,6 @@ translate ru strings:
 
     old "Down between her legs, she could see his fat hands, groping her."
     new "Между её ног она видела его жирные руки, которые ощупывали её."
-
-    old "Look at me!"
-    new "Посмотри на меня!"
 
     old "His orders were strict, his voice tolerated no dissent."
     new "Его приказы были строгими, а голос не терпел никакого несогласия."

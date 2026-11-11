@@ -750,9 +750,6 @@ translate ru strings:
     old "For a moment, the woman looked confused."
     new "На мгновение женщина выглядела сбитой с толку."
 
-    old "Ooh..."
-    new "Ох..."
-
     old "I thought Matt had been fuckin with me, but I really was gettin a new cellmate."
     new "Я думала, что Мэтт со мной перепихивается, а на самом деле я и правда получила новую соседку по камере."
 
@@ -776,9 +773,6 @@ translate ru strings:
 
     old "Eula smiled."
     new "Еула улыбнулась."
-
-    old "Good."
-    new "Отлично."
 
     old "Sorry about that whole fuck you routine from before."
     new "Прости за всю ту твою херню раньше."
@@ -810,9 +804,6 @@ translate ru strings:
     old "Well...I guess I'm not...but I was guilty of a crime, so it's all the same I guess."
     new "Ну... я полагаю, что нет... но я была виновна в преступлении, так что, думаю, это всё равно одно и то же."
 
-    old "What happened?"
-    new "Что случилось?"
-
     old "I helped a guy pickpocket in a market...and then I stood up for him, but he gave me up to the guards."
     new "Я помогла одному парню в карманной краже на рынке... а потом заступилась за него, но он выдал меня стражникам."
 
@@ -824,9 +815,6 @@ translate ru strings:
 
     old "Sarah smiled and nodded along. She was mostly just happy to meet a friendly face."
     new "Сара улыбнулась и закивала. Она в основном была просто рада увидеть знакомое лицо."
-
-    old "Me?"
-    new "Я?"
 
     old "What are you in for."
     new "За что тебя посадили?"
@@ -1160,9 +1148,6 @@ translate ru strings:
 
     old "Opening her mouth wider, and closing it again, she slid her lips all across Eula's outer sex."
     new "Открыв рот шире, а затем снова сомкнув его, она провела губами по всем внешним половым органам Еулы."
-
-    old "Aah!"
-    new "Ах!"
 
     old "Another moan, signalling she was doing better."
     new "Ещё один стон показал, что у неё получается всё лучше."

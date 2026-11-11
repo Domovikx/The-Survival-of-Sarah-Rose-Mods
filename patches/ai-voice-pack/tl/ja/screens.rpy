@@ -174,9 +174,6 @@ translate ja strings:
     old "Navigate the interface."
     new "インターフェースを操作する"
 
-    old "Escape"
-    new "脱出"
-
     old "Accesses the game menu."
     new "ゲームメニューを開く。"
 

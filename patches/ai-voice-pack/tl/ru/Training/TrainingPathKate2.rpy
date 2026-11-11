@@ -138,9 +138,6 @@ translate ru strings:
     old "This part of Lethram was a bit more calm. A few merchants were pulling carts along, some wandering sailors, but compared to the hustle and bustle of the port, it was almost pleasant."
     new "Эта часть Летрама была немного спокойнее. Несколько торговцев тащили телеги, некоторые бродящие моряки, но по сравнению с суетой порта здесь было почти приятно."
 
-    old "Kate..."
-    new "Кейт..."
-
     old "Kate cocked her head towards Sarah, giving her a vacant glare."
     new "Кейт наклонила голову в сторону Сары, бросив на неё пустой взгляд."
 

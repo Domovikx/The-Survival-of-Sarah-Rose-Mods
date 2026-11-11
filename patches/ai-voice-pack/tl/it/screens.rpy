@@ -174,9 +174,6 @@ translate it strings:
     old "Navigate the interface."
     new "Naviga nell'interfaccia."
 
-    old "Escape"
-    new "Fuggi"
-
     old "Accesses the game menu."
     new "Accede al menu di gioco."
 

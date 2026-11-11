@@ -309,9 +309,6 @@ translate ru strings:
     old "And each time, a part of her had rebelled. Whatever it was, it must have meant something."
     new "И каждый раз какая-то её часть восставала против этого. Чем бы это ни было, оно определённо должно было что-то значить."
 
-    old "But what?"
-    new "Но что же?"
-
     old "Sarah thought about the strange stone that the spirit had urged her to take, but which she had allowed Vaelen to take."
     new "Сара думала о странном камне, который дух заставил её взять, но который она позволила забрать Ваэлену."
 
@@ -396,9 +393,6 @@ translate ru strings:
     old "She watched Samayra do the math in her head."
     new "Она смотрела, как Самайра делает расчёты в уме."
 
-    old "Ooh..."
-    new "О-о..."
-
     old "Sarah laughed and gently pushed Samayra. Even the light nudge was enough to cause the girl to nearly tumble."
     new "Сара рассмеялась и нежно подтолкнула Самайру. Даже этот лёгкий толчок был достаточен, чтобы девушка чуть не упала."
 
@@ -449,9 +443,6 @@ translate ru strings:
 
     old "Sarah heard Samayra sigh, frustrated."
     new "Сара услышала, как Самайра раздосадованно вздохнула."
-
-    old "Fine."
-    new "Хорошо."
 
     old "She watched as the girl stumbled away to her tent, nearly half collapsing inside."
     new "Она смотрела, как девушка, едва не рухнув, добирается до своей палатки и почти полностью в неё падает."

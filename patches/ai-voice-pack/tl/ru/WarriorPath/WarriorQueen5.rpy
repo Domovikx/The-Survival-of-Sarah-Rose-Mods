@@ -996,14 +996,8 @@ translate ru strings:
     old "His powerful hand wrapped around her hair again, snapping her head back."
     new "Его мощная рука снова обхватила её за волосы, резко откинув голову назад."
 
-    old "Answer me!"
-    new "Отвечай мне!"
-
     old "His voice boomed, powerful, deep."
     new "Его голос раздался громко, мощно и низко."
-
-    old "Yes what?"
-    new "Да, что?"
 
     old "Yes, I'll marry you! I'll be your wife!"
     new "Да, я выйду за тебя замуж! Я стану твоей женой!"
@@ -1200,9 +1194,6 @@ translate ru strings:
     old "You said you'd marry me."
     new "Ты же говорил, что женишься на мне."
 
-    old "Yes."
-    new "Да."
-
     old "His voice was solemn. He had meant every word of it."
     new "Его голос звучал торжественно. Он имел в виду каждое произнесённое слово."
 
@@ -1211,9 +1202,6 @@ translate ru strings:
 
     old "Of course. A wife has a right."
     new "Конечно. Жена имеет на это право."
-
-    old "What do you want?"
-    new "Чего ты хочешь?"
 
     old "Sarah looked at his mighty frame. His warrior's build."
     new "Сара посмотрела на его могучее тело. На воинскую фигуру."

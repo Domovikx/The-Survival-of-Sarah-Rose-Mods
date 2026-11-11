@@ -252,9 +252,6 @@ translate ru strings:
     old "Every night, the dreams of what I had done, returned. Reminding me. Haunting me."
     new "Каждую ночь сны о том, что я совершил, возвращались. Напоминали мне. Преследовали меня."
 
-    old "How..."
-    new "Как..."
-
     old "How can a man become a beast?"
     new "Как мужчина может стать зверем?"
 
@@ -441,9 +438,6 @@ translate ru strings:
     old "We can go back to town! We can see if we might figure something, to help lift the curse, we can-"
     new "Мы можем вернуться в город! Мы можем попытаться что-нибудь придумать, чтобы помочь снять проклятие, мы можем..."
 
-    old "No!"
-    new "Нет!"
-
     old "Garret shouted out."
     new "Гаррет крикнул."
 
@@ -452,9 +446,6 @@ translate ru strings:
 
     old "Or worse, draw out the Beast from my soul and make me hurt you. Hurt...countless more."
     new "Или, что ещё хуже, высвободить Зверя из моей души и заставить меня причинить тебе боль. Боль... бесчисленным другим."
-
-    old "Please!"
-    new "Пожалуйста!"
 
     old "He formed his hands to beg."
     new "Он сложил руки в мольбе."
@@ -528,9 +519,6 @@ translate ru strings:
     old "If you have come looking for an executionor, I am not that person."
     new "Если ты пришёл искать палача, я не тот человек."
 
-    old "But Sarah-"
-    new "Но Сара..."
-
     old "I have tried nothing else, and yet you would ask me to kill you?"
     new "Я не делала ничего другого, и всё же ты просишь меня убить тебя?"
 
@@ -564,9 +552,6 @@ translate ru strings:
     old "She saw confusion dawn on his face."
     new "Она увидела, как на его лице промелькнуло недоумение."
 
-    old "What are you saying?"
-    new "Что ты имеешь в виду?"
-
     old "I am saying that this world bends to me in ways unnatural."
     new "Я говорю, что этот мир подчиняется мне так, как это не естественно."
 
@@ -578,9 +563,6 @@ translate ru strings:
 
     old "Garret suddenly flinched."
     new "Гаррет внезапно вздрогнул."
-
-    old "Sarah!"
-    new "Сара!"
 
     old "The totems, they are-"
     new "Тотемы — они же..."
@@ -798,9 +780,6 @@ translate ru strings:
     old "The creature, still half-drunk, stumbled around as she placed her hands on its nose."
     new "Существо, всё ещё напившееся до полупьяного состояния, шаталось, пока она клала руки ему на нос."
 
-    old "Be still."
-    new "Будь спокоен."
-
     old "Instead, the Beast lunged forward, throwing her over."
     new "Вместо этого Зверь бросился вперёд, отбросив её."
 
@@ -836,9 +815,6 @@ translate ru strings:
 
     old "He seemed stunned. Dazed."
     new "Он выглядел ошеломлённым. Озадаченным."
-
-    old "I..."
-    new "Я..."
 
     old "Sarah placed a hand on his cheek."
     new "Сара положила руку ему на щеку."
@@ -1082,9 +1058,6 @@ translate ru strings:
 
     old "Sarah walked up and sat down next to him."
     new "Сара подошла и села рядом с ним."
-
-    old "How did you do that?"
-    new "Как тебе это удалось?"
 
     old "Before meeting you...nothing helped. If I transformed, I lost all control, but with you..."
     new "До встречи с тобой... ничто не помогало. Если я превращался, то полностью терял контроль, а с тобой..."

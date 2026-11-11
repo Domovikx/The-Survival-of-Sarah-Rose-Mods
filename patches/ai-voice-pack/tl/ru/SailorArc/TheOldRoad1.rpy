@@ -6,14 +6,8 @@ translate ru strings:
     old "Sarah turned back around to face Sigmund."
     new "Сара обернулась к Зигмунду."
 
-    old "What is it?"
-    new "Что такое?"
-
     old "I can't go here."
     new "Я не могу пойти сюда."
-
-    old "What do you mean?"
-    new "Что вы имеете в виду?"
 
     old "I can't go to Gallow's creek...I need to go to Rahayal."
     new "Я не могу идти к ручью Гэллоу... Мне нужно отправиться в Рахайал."
@@ -44,9 +38,6 @@ translate ru strings:
 
     old "Sigmund sighed, frustrated."
     new "Зигмунд вздохнул с досадой."
-
-    old "Why?"
-    new "Почему?"
 
     old "Tell me why you would need to go there?"
     new "Скажи мне, зачем тебе вообще нужно туда идти?"
@@ -104,9 +95,6 @@ translate ru strings:
 
     old "Suddenly Sigmund turned around and violently kicked the earth, sending dust clouds up, trailing across the road."
     new "Внезапно Зигмунд обернулся и яростно пнул землю, подняв облака пыли, которые потянулись по дороге."
-
-    old "Fuck!"
-    new "Чёрт!"
 
     old "Laughter suddenly erupted from the cart."
     new "Из повозки внезапно раздался смех."
@@ -276,9 +264,6 @@ translate ru strings:
     old "Sakar leaned back, away from the fire."
     new "Сакар откинулся назад, подальше от огня."
 
-    old "Sure."
-    new "Конечно."
-
     old "By the time I'm done with you, you'll be able to do it better than old Sigmund."
     new "К тому времени, как я с тобой закончу, ты будешь делать это лучше, чем старый Зигмунд."
 
@@ -320,9 +305,6 @@ translate ru strings:
 
     old "She watched as Sakar looked up."
     new "Она наблюдала, как Сакар поднял голову."
-
-    old "What do you mean?"
-    new "Что вы имеете в виду?"
 
     old "I mean...no trouble so far yet."
     new "Я имею в виду... пока что никаких проблем."
@@ -612,9 +594,6 @@ translate ru strings:
     old "He casually waved at her, as though she hadn't just caught him sneaking up on her."
     new "Он небрежно помахал ей рукой, будто она только что не поймала его на том, как он подкрался к ней."
 
-    old "Hey there."
-    new "Эй."
-
     old "So casual."
     new "Так небрежно."
 
@@ -680,9 +659,6 @@ translate ru strings:
 
     old "I couldn't sleep."
     new "Я не могла уснуть."
-
-    old "Aah."
-    new "Ах."
 
     old "That sounds familiar."
     new "Это звучит знакомо."
@@ -768,9 +744,6 @@ translate ru strings:
     old "Sakar frowned."
     new "Сакар нахмурился."
 
-    old "And why would that be?"
-    new "И с чего бы это?"
-
     old "Because Sigmund warned me about you."
     new "Потому что Зигмунд предостерёг меня от тебя."
 
@@ -842,9 +815,6 @@ translate ru strings:
 
     old "She found Sakar grinning in response."
     new "Она увидела, что Сакар отвечает ей широкой улыбкой."
-
-    old "Ooh."
-    new "О-о."
 
     old "What do you propose we do?"
     new "Что ты предлагаешь нам делать?"
@@ -927,14 +897,8 @@ translate ru strings:
     old "Sakar burst out laughing."
     new "Сакар расхохотался."
 
-    old "There you go."
-    new "Ну вот."
-
     old "They walked in silence for a moment."
     new "Они некоторое время шли в молчании."
-
-    old "Me?"
-    new "Я?"
 
     old "Yeah. Where are you from?"
     new "Да. А ты откуда?"
@@ -959,9 +923,6 @@ translate ru strings:
 
     old "She saw a flash of understanding pass over his face."
     new "Она увидела, как по его лицу промелькнуло понимание."
-
-    old "Ooh..."
-    new "Ох..."
 
     old "That makes sense. I really should have figured that out myself."
     new "Это имеет смысл. Мне действительно следовало бы догадаться об этом самому."

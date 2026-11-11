@@ -381,9 +381,6 @@ translate ru strings:
     old "Sarah felt the room spin about her."
     new "Сара почувствовала, как комната закружилась вокруг неё."
 
-    old "So..."
-    new "Так..."
-
     old "Your fellow, what's his name again?"
     new "Товарищ мой, как его там ещё раз звали?"
 
@@ -392,9 +389,6 @@ translate ru strings:
 
     old "Varga..."
     new "Варга..."
-
-    old "Varga."
-    new "Варга."
 
     old "Maeiv repeated the name a few times."
     new "Маив повторила имя несколько раз."
@@ -489,9 +483,6 @@ translate ru strings:
     old "Some, yeah. Others...handsome, I suppose."
     new "Да. А другие... красивые, полагаю."
 
-    old "So what then?"
-    new "И что тогда?"
-
     old "I just...I don't know, it all feels so transactional."
     new "Я просто... я не знаю, всё это кажется так меркантильно."
 
@@ -531,9 +522,6 @@ translate ru strings:
     old "Never...they'd never allow it."
     new "Никогда... они бы никогда не позволили."
 
-    old "Who?"
-    new "Кто?"
-
     old "Sarah waved her hands about."
     new "Сара размахивала руками."
 
@@ -557,9 +545,6 @@ translate ru strings:
 
     old "Common folk. Toiling away at the earth, too stupid to do anything else, and then they imagine it makes them pure."
     new "Простые люди. Трудятся на земле до изнеможения, слишком тупы, чтобы заниматься чем-то ещё, а потом воображают, что это делает их чистыми."
-
-    old "Please."
-    new "Пожалуйста."
 
     old "They're just so bored out of their minds they start meddling with other people's business."
     new "Они просто так скучают, что начинают лезть в чужие дела."
@@ -587,9 +572,6 @@ translate ru strings:
 
     old "Perfect. You always have to be perfect."
     new "Идеально. Ты всегда должна быть идеальной."
-
-    old "Exactly!"
-    new "Точно!"
 
     old "Like...they forget I'm even human sometimes."
     new "Типа... они иногда даже забывают, что я человек."
@@ -623,9 +605,6 @@ translate ru strings:
 
     old "The room still turned about, the buzzing feeling in her head, but some feint clarity was cutting through."
     new "Комната всё ещё вертелась вокруг неё, голова гудела, но сквозь это начало проникать какая-то смутная ясность."
-
-    old "What?"
-    new "Что?"
 
     old "Your hand."
     new "Твоя рука."
@@ -975,9 +954,6 @@ translate ru strings:
     old "You call them a strength, but they are a weakness to you."
     new "Ты называешь их силой, но для тебя они — слабость."
 
-    old "Go on."
-    new "Продолжай."
-
     old "Whenever you seek to make a decision, you have to consider them. Especially here in Normandi, where they are so powerful."
     new "Всякий раз, когда ты хочешь принять решение, ты должна учитывать их. Особенно здесь, в Норманди, где они так сильны."
 
@@ -998,9 +974,6 @@ translate ru strings:
 
     old "My seat."
     new "Моё место."
-
-    old "Exactly."
-    new "Точно."
 
     old "So what then? I anger them instead and invite their anger now instead of tomorrow?"
     new "И что тогда? Я лучше разозлю их сейчас и привлеку их гнев немедленно, чем завтра?"
@@ -1281,9 +1254,6 @@ translate ru strings:
     old "But I fear I cannot bring myself to agree."
     new "Но боюсь, я не могу согласиться."
 
-    old "Why?"
-    new "Почему?"
-
     old "Because you have not yet earned my vote."
     new "Потому что ты ещё не заслужила мой голос."
 
@@ -1521,17 +1491,11 @@ translate ru strings:
     old "Don't talk about him!"
     new "Не говори о нём!"
 
-    old "Why?"
-    new "Почему?"
-
     old "What are you going to do about it?"
     new "Что ты собираешься с этим делать?"
 
     old "Sarah tried to search for a reply, but she had none."
     new "Сара попыталась найти ответ, но у неё его не было."
-
-    old "That's what I thought."
-    new "Я так и думал."
 
     old "How about you use that mouth for something useful, huh?"
     new "А как насчёт того, чтобы использовать этот рот для чего-то полезного, а?"
@@ -2204,9 +2168,6 @@ translate ru strings:
 
     old "Let them have their idle chatter."
     new "Пусть занимаются своими праздными болтовнями."
-
-    old "Quite so."
-    new "Именно так."
 
     old "Regardless, you can leave here tonight knowing that we are in agreement, and you shall have my support."
     new "Как бы то ни было, ты можешь уйти сегодня вечером, зная, что мы согласны, и ты получишь мою поддержку."

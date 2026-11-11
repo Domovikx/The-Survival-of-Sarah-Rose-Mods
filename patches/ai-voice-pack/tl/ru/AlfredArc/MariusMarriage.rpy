@@ -183,9 +183,6 @@ translate ru strings:
     old "The priest turned to her."
     new "Священник повернулся к ней."
 
-    old "Sarah..."
-    new "Сара..."
-
     old "Do you take Marius as your husband, and promise to be faithful and obey his every word?"
     new "Принимаешь ли ты Мариуса в качестве своего мужа и обещаете ли быть верной и повиноваться каждому его слову?"
 
@@ -224,9 +221,6 @@ translate ru strings:
 
     old "It was only near the end of the night, when the celebrations had finally begun to slow down, that Sarah found her husband again."
     new "Только под конец вечера, когда празднества наконец-то начали утихать, Сара снова отыскала своего мужа."
-
-    old "Marius."
-    new "Мариус."
 
     old "I'm glad to see you're still alive."
     new "Я рада видеть, что ты всё ещё жив."
@@ -279,9 +273,6 @@ translate ru strings:
     old "As she pulled back, she smiled."
     new "Отстранившись, она улыбнулась."
 
-    old "Nervous?"
-    new "Нервный?"
-
     old "No...I just...I..."
     new "Нет... я просто... я..."
 
@@ -324,17 +315,11 @@ translate ru strings:
     old "He had a right to all of her, and she wanted to deny him nothing."
     new "Он имел право на всё, что было в ней, и она не хотела ничего от него отказывать."
 
-    old "Do you..."
-    new "Ты..."
-
     old "Think I'm pretty."
     new "Думаешь, я красивая?"
 
     old "Sarah...you're..."
     new "Сара... ты же..."
-
-    old "Gods..."
-    new "Боги..."
 
     old "I'll take it as a yes, then."
     new "Тогда я буду считать это согласием."
@@ -422,9 +407,6 @@ translate ru strings:
 
     old "And with each motion, his deepening breath."
     new "И с каждым движением его дыхание становилось всё глубже."
-
-    old "Aaah!!"
-    new "Ааах!!"
 
     old "Then, the sudden quick groan, the swelling pressure in her hands."
     new "Затем — внезапный резкий стон, и растущее давление в её ладонях."
@@ -522,9 +504,6 @@ translate ru strings:
     old "Hestitantly and slowly, he pressed the tip of his hard-again cock, up against her sex."
     new "Он нерешительно и медленно прижал кончик своего вновь ставшего твёрдым члена к её половым органам."
 
-    old "Aah..."
-    new "Ах..."
-
     old "Sarah softly moaned at the sudden sensation."
     new "Сара тихо застонала от внезапного ощущения."
 
@@ -567,17 +546,11 @@ translate ru strings:
     old "Thrust by thrust, he began to build momentum. Pace."
     new "Удар за ударом он начал набирать темп."
 
-    old "Aah..."
-    new "Ах..."
-
     old "He groaned softly with each thrust, still new to the overwhelming sensation and pleasure of it."
     new "Он тихо стонал при каждом толчке, всё ещё не привыкший к этому ошеломляющему ощущению и наслаждению."
 
     old "A minute, then two, then-"
     new "Минута, потом две, а затем—"
-
-    old "Aaah!!!"
-    new "Аааа!!!"
 
     old "Marius groaned against, and Sarah could feel him swelling up inside her, pressing her insides apart."
     new "Он простонал в ответ, и Сара почувствовала, как он раздувается внутри неё, распирая её изнутри."
@@ -590,9 +563,6 @@ translate ru strings:
 
     old "Then she finally released him, and let him roll off her."
     new "Затем она наконец отпустила его и позволила ему скатиться с себя."
-
-    old "I'm..."
-    new "Я..."
 
     old "She motioned with her hands."
     new "Она помахала руками."
@@ -678,9 +648,6 @@ translate ru strings:
     old "He kissed her back."
     new "Он ответил ей поцелуем."
 
-    old "I will."
-    new "Да."
-
     old "The troubles of their marital bed proved to be their first challenge, but one to which Sarah took eagerly."
     new "Проблемы в их брачном ложе оказались первым испытанием, но Сара с энтузиазмом взялась за него."
 
@@ -717,9 +684,6 @@ translate ru strings:
     old "Nearly at the same time, she heard him groan."
     new "Почти одновременно она услышала его стон."
 
-    old "Aah!"
-    new "Ах!"
-
     old "And then swell, expending more of his seed inside of her."
     new "И тут он вздымается, извергая ещё больше своего семени в неё."
 
@@ -731,9 +695,6 @@ translate ru strings:
 
     old "She could hear him breathe heavily next to her."
     new "Она слышала, как тяжело он дышит рядом с ней."
-
-    old "You liked it?"
-    new "Тебе понравилось?"
 
     old "Don't play a fool, Marius."
     new "Не дури, Мариус."
@@ -792,9 +753,6 @@ translate ru strings:
     old "The question seemed to come out of nowhere."
     new "Вопрос, казалось, возник из ниоткуда."
 
-    old "Why do you ask?"
-    new "Почему ты спрашиваешь?"
-
     old "I've never been as happy as I've been since I met you."
     new "Я никогда не был так счастлив, как с тех пор, как встретил тебя."
 
@@ -803,9 +761,6 @@ translate ru strings:
 
     old "Sarah rolled over, resting her head on top of his chest and began to kiss his body."
     new "Сара перевернулась, положила голову ему на грудь и начала целовать его тело."
-
-    old "Very happy."
-    new "Очень счастлива."
 
     old "Kissing his chest, she slowly trailed down, inch by inch with each kiss, until she reached lower still."
     new "Целуя его грудь, она медленно спускалась вниз, дюйм за дюймом с каждым поцелуем, пока не достигла ещё более низкого места."

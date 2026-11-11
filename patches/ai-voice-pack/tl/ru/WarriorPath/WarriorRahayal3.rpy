@@ -60,9 +60,6 @@ translate ru strings:
     old "Yes...but this is different."
     new "Да... но это другое."
 
-    old "How so?"
-    new "И как же?"
-
     old "Because this isn't about me surviving."
     new "Потому что дело уже не в том, чтобы мне самой выжить."
 
@@ -321,9 +318,6 @@ translate ru strings:
     old "Sarah eyed the man named Gilead, waiting his next move."
     new "Сара пристально смотрела на мужчину по имени Гилеад, ожидая его следующего шага."
 
-    old "Princess Sarah..."
-    new "Принцесса Сара..."
-
     old "Please, stand up any friend of Carolyn is a friend of mine."
     new "Пожалуйста, встаньте: любой друг Каролин — это и мой друг."
 
@@ -474,9 +468,6 @@ translate ru strings:
     old "Gilead raised one eyebrow."
     new "Гилеад приподнял бровь."
 
-    old "Me?"
-    new "Я?"
-
     old "Carolyn has brought us together, praying we make good friends."
     new "Каролин свела нас вместе, молясь, чтобы мы стали хорошими друзьями."
 
@@ -581,12 +572,6 @@ translate ru strings:
 
     old "Their armies broke through nearly every defensive line we had...except for one."
     new "Их армии прорвали почти каждую нашу оборонительную линию... кроме одной."
-
-    old "Yours..."
-    new "Твоя..."
-
-    old "Exactly."
-    new "Именно так."
 
     old "The Orcs went on a rampage. Looting, murdering, making slaves."
     new "Орки устроили настоящую бойню — грабили, убивали и делали рабов."
@@ -815,9 +800,6 @@ translate ru strings:
 
     old "Gilead clasped his hands together."
     new "Гилеад сложил руки вместе."
-
-    old "Excellent!"
-    new "Отлично!"
 
     old "I promise you will not regret this."
     new "Обещаю, вы не пожалеете об этом."

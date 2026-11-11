@@ -342,9 +342,6 @@ translate ru strings:
     old "Despite everything, she couldn't do it."
     new "Несмотря ни на что, она не могла этого сделать."
 
-    old "Leave."
-    new "Уходите."
-
     old "Take the rest of your soldiers and leave, before I change my mind."
     new "Возьми оставшихся солдат и уходи, пока я не передумала."
 

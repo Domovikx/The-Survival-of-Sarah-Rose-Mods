@@ -570,9 +570,6 @@ translate zh strings:
     old "Lady Carolyn bowed her head."
     new "卡罗琳女士低下了头。"
 
-    old "Of course, my liege."
-    new "当然，我的君主。"
-
     old "Keep things modest."
     new "保持体面。"
 

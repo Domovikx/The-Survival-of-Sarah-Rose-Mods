@@ -372,9 +372,6 @@ translate ru strings:
     old "When she turned her head, she suddenly found the goblin standing close to her again."
     new "Когда она повернула голову, то вдруг обнаружила, что гоблин снова стоит совсем рядом с ней."
 
-    old "Hey..."
-    new "Эй..."
-
     old "He pressed another cup up to her lips again."
     new "Он снова прижал чашку к её губам."
 

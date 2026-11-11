@@ -294,9 +294,6 @@ translate ko strings:
     old "Tailor"
     new "수선사"
 
-    old "Girl"
-    new "소녀"
-
     old "Advisor"
     new "자문관"
 

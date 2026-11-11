@@ -513,14 +513,8 @@ translate ru strings:
     old "The pale mask turned, as if observing her."
     new "Бледная маска повернулась, словно наблюдая за ней."
 
-    old "You..."
-    new "Ты..."
-
     old "It uttered out a word in broken speech."
     new "Оно произнесло слово на ломаном языке."
-
-    old "Why..."
-    new "Почему..."
 
     old "It seemed to require all its power just to utter these few words."
     new "Казалось, чтобы произнести эти несколько слов, ему потребовались все силы."

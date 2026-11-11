@@ -246,9 +246,6 @@ translate ru strings:
     old "She began to sob."
     new "Она начала рыдать."
 
-    old "Sarah...I..."
-    new "Сара... я..."
-
     old "Sarah stormed up to Kate, grabbing her by the shoulders."
     new "Сара подбежала к Кейт и схватила её за плечи."
 

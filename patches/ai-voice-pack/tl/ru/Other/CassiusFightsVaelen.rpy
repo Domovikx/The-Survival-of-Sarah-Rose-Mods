@@ -96,9 +96,6 @@ translate ru strings:
     old "Vaelen spat on the ground near Cassius."
     new "Ваэлен сплюнул на землю рядом с Кассием."
 
-    old "Lies."
-    new "Ложь."
-
     old "She's a coward. And as for you...I'll call you whatever I want, slave."
     new "Она — трусиха. А что до тебя... я буду называть тебя как захочу, раб."
 

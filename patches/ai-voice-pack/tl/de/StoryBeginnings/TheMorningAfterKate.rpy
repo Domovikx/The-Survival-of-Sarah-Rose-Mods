@@ -570,9 +570,6 @@ translate de strings:
     old "Lady Carolyn bowed her head."
     new "Lady Carolyn neigte den Kopf."
 
-    old "Of course, my liege."
-    new "Natürlich, mein Herr."
-
     old "Keep things modest."
     new "Halte es bescheiden."
 

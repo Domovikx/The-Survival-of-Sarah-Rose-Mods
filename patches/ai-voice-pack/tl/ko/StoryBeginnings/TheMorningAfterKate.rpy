@@ -570,9 +570,6 @@ translate ko strings:
     old "Lady Carolyn bowed her head."
     new "카롤린은 고개를 숙였다."
 
-    old "Of course, my liege."
-    new "물론입니다, 나의 군주님."
-
     old "Keep things modest."
     new "조금 더 단정하게 하라."
 

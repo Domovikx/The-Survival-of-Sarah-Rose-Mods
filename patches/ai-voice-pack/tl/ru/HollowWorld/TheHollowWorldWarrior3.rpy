@@ -117,9 +117,6 @@ translate ru strings:
     old "Otherwise, we'll have to ration beyond that point, I think the nearest city we can expect to restock is-"
     new "Иначе нам придётся экономить припасы и дальше; думаю, ближайший город, где мы сможем пополнить запасы, это..."
 
-    old "NO!"
-    new "Нет!"
-
     old "His voice thundered and carried across the air."
     new "Его голос грохнул и разнесся по воздуху."
 
@@ -324,9 +321,6 @@ translate ru strings:
     old "We give him an option, but it's so fucked he'll draw his own conclusions."
     new "Мы дадим ему выбор, но он будет настолько паршивым, что он сам всё поймёт."
 
-    old "Exactly."
-    new "Точно."
-
     old "He's happy we actually did our jobs, we're happy we won't be marching to death in a desert."
     new "Он рад, что мы действительно выполнили свою работу, а мы рады, что нам не придётся идти на верную смерть в пустыне."
 
@@ -395,9 +389,6 @@ translate ru strings:
 
     old "The burden that a march on foot through the desert imposed, combined with asking the soldiers to abandon their stolen goods, it would be too much to ask of them."
     new "Бремя, которое налагал поход пешком через пустыню, вкупе с требованием отказаться от награбленного, было бы для них слишком велико."
-
-    old "Very well."
-    new "Хорошо."
 
     old "I'll draft the orders right away. We need to be moving before nightfall, I want us to make up for lost time."
     new "Я немедленно составлю приказы. Нам нужно отправиться в путь до наступления ночи — я хочу, чтобы мы наверстали упущенное время."

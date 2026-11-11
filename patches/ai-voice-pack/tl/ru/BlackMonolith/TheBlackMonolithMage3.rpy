@@ -42,9 +42,6 @@ translate ru strings:
     old "She had barely gathered a few items from the pantry when she heard a voice."
     new "Она едва успела взять несколько вещей из кладовой, как услышала чей-то голос."
 
-    old "Morning."
-    new "Утро."
-
     old "Sarah spun around, caught by surprise."
     new "Сара резко обернулась, застигнутая врасплох."
 
@@ -56,9 +53,6 @@ translate ru strings:
 
     old "I...you startled me."
     new "Я... ты меня напугал."
-
-    old "Sorry about that."
-    new "Прости за это."
 
     old "It's alright, we just...we don't have a lot of visitors."
     new "Ничего страшного, мы просто... у нас не так уж много посетителей."
@@ -452,9 +446,6 @@ translate ru strings:
 
     old "Still, she didn't want to press her too much. Samayra would talk to her if she was ready."
     new "Тем не менее, она не хотела слишком сильно её давить. Самайра заговорила бы с ней, когда сама была бы готова."
-
-    old "No!"
-    new "Нет!"
 
     old "I was rolling around in my own bed all night."
     new "Я всю ночь ворочалась в своей постели."

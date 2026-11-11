@@ -72,9 +72,6 @@ translate ru strings:
     old "Now?"
     new "Сейчас?"
 
-    old "Yes."
-    new "Да."
-
     old "You mean break open the royal vault?"
     new "Ты имеешь в виду, что нужно взломать королевскую сокровищницу?"
 
@@ -726,9 +723,6 @@ translate ru strings:
     old "Sarah held up the stone for him to see."
     new "Сара подняла камень, чтобы он его увидел."
 
-    old "There you go."
-    new "Вот и всё."
-
     old "She casually tossed it through the air towards him."
     new "Она небрежно подбросила его в воздух и бросила ему."
 
@@ -776,9 +770,6 @@ translate ru strings:
 
     old "Sure, I won't tell anyone."
     new "Конечно, я никому не скажу."
-
-    old "Excellent."
-    new "Отлично."
 
     old "She could see Vaelen still kept the stone tightly gripped in his fist, as if afraid it would otherwise slip from his hand."
     new "Она видела, как Ваэлен всё ещё крепко сжимал камень в кулаке, словно боясь, что тот иначе выскользнет из его руки."
@@ -858,14 +849,8 @@ translate ru strings:
     old "Next to the tree, she could see the man she had come to see."
     new "Рядом с деревом она увидела мужчину, которого пришла увидеть."
 
-    old "Ephraim."
-    new "Ефраим."
-
     old "She saw him turn at the sound of her voice."
     new "Она увидела, как он обернулся на звук её голоса."
-
-    old "Sarah..."
-    new "Сара..."
 
     old "His voice was soft. Sorrowful."
     new "Его голос был нежным. Печальным."
@@ -935,9 +920,6 @@ translate ru strings:
 
     old "Ephraim laughed mirthlessly."
     new "Ефраим безрадостно усмехнулся."
-
-    old "Maybe."
-    new "Возможно."
 
     old "What about Vaelen, he showing up?"
     new "А что насчёт Ваэлена — он вообще появится?"

@@ -111,9 +111,6 @@ translate ru strings:
     old "Indeed."
     new "Именно."
 
-    old "Strip!"
-    new "Разденься!"
-
     old "The Creature barked its instruction at her, as if she were a misbehaving dog."
     new "Существо рявкнуло ей приказ, словно она была непослушной собакой."
 

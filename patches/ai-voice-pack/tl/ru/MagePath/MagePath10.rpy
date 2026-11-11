@@ -87,9 +87,6 @@ translate ru strings:
     old "The vault, I can take us there."
     new "Хранилище... Я могу привести нас туда."
 
-    old "How?"
-    new "Как?"
-
     old "Samayra showed me. She guided me through the secret tunnels, I can find our way back. I left a magical trace."
     new "Самайра показала мне. Она провела меня через тайные туннели — я могу найти дорогу обратно. Я оставила магический след."
 
@@ -603,9 +600,6 @@ translate ru strings:
     old "I'll need to talk to Xan about this."
     new "Мне нужно будет поговорить об этом с Ксаном."
 
-    old "NO!"
-    new "НЕТ!"
-
     old "The creature's voice boomed as it rushed forward."
     new "Голос существа раздался громоподобно, когда оно бросилось вперёд."
 
@@ -644,9 +638,6 @@ translate ru strings:
 
     old "No matter what, you cannot tell him you know this."
     new "Во что бы то ни стало, ты не можешь сказать ему, что знаешь об этом."
-
-    old "Or what?"
-    new "Или что?"
 
     old "Or he will kill you."
     new "Иначе он убьёт тебя."
@@ -705,9 +696,6 @@ translate ru strings:
     old "Xan came rushing up from a distance."
     new "Ксантиппа подбежал к Саре с большого расстояния."
 
-    old "Sarah!"
-    new "Сара!"
-
     old "I told you to warn me when you found the stone. Did you touch it?"
     new "Я же говорил тебе предупреждать меня, когда найдёшь камень. Ты его тронула?"
 
@@ -756,9 +744,6 @@ translate ru strings:
     old "Sarah stepped foward."
     new "Сара шагнула вперёд."
 
-    old "NO!"
-    new "Нет!"
-
     old "Xan seemed shocked by her outburst."
     new "Ксантиппа, казалось, был потрясён её вспышкой."
 
@@ -773,9 +758,6 @@ translate ru strings:
 
     old "Ooh, that's great. We need to risk our lives because you have some obsession with that girl?"
     new "Ох, как здорово! Нам нужно рисковать жизнью только потому, что ты так одержима этой девчонкой?"
-
-    old "Forget it."
-    new "Забудь об этом."
 
     old "Sarah stepped foward again, blocking Xan's path."
     new "Сара снова шагнула вперёд, преграждая путь Ксанте."

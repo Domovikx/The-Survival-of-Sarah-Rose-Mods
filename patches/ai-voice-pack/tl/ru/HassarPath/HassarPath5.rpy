@@ -102,9 +102,6 @@ translate ru strings:
     old "Hey, you scared me."
     new "Эй, ты меня напугала."
 
-    old "Sorry about that."
-    new "Прости за это."
-
     old "Sarah approached her."
     new "Сара подошла к ней."
 
@@ -113,9 +110,6 @@ translate ru strings:
 
     old "But here in the inner sanctum of the Khan, there was a sort of casual nakedness that seemed entirely natural."
     new "Но здесь, во внутреннем святилище хана, существовала своего рода непринуждённая нагота, которая казалась совершенно естественной."
-
-    old "Don't be."
-    new "Не будь такой."
 
     old "I scare easy."
     new "Я легко пугаюсь."
@@ -192,9 +186,6 @@ translate ru strings:
     old "A boy."
     new "Мальчика."
 
-    old "Why?"
-    new "Почему?"
-
     old "Sarah frowned, it was as good a guess as any."
     new "Сара нахмурилась — это была лучшая догадка из всех возможных."
 
@@ -212,9 +203,6 @@ translate ru strings:
 
     old "They say all Tribesmen are good at making boys."
     new "Говорят, все племенитые люди умеют рожать мальчиков."
-
-    old "Really?"
-    new "Правда?"
 
     old "Who knows if it's true."
     new "Кто знает, правда ли это."
@@ -375,9 +363,6 @@ translate ru strings:
     old "Sarah was in no mood for riddles."
     new "Сара не была настроена на загадки."
 
-    old "What are you talking about?"
-    new "О чём ты говоришь?"
-
     old "Naydeen is the Khan's first wife. You a princess. Ayaka used to be a noble's daughter."
     new "Найдин — первая жена хана. Ты же принцесса. А Аяка раньше была дочерью знатного человека."
 
@@ -482,9 +467,6 @@ translate ru strings:
 
     old "And you?"
     new "А ты?"
-
-    old "Me?"
-    new "А я?"
 
     old "Well, me and the rest of my folk all ended here in Al Gahaem."
     new "Ну, я и остальные мои люди — все оказались здесь, в Аль-Гахаэме."
@@ -632,9 +614,6 @@ translate ru strings:
 
     old "Sophia looked back at her, matching her gaze. Trying to figure Sarah out as much as Sarah was figuring her out."
     new "Софья посмотрела на неё, встречая её взгляд. Пытаясь разгадать Сару так же, как и сама Сара — её."
-
-    old "I do."
-    new "Да."
 
     old "You think less of me for it?"
     new "Ты считаешь меня хуже из-за этого?"
@@ -848,9 +827,6 @@ translate ru strings:
 
     old "She could see Sophia was dissapointed."
     new "Она видела, что Софья была разочарована."
-
-    old "Ugh, you're no fun."
-    new "Тьфу, ты совсем не весёлая."
 
     old "Sophia disappeared beneath the water again."
     new "Софья снова исчезла под водой."

@@ -729,9 +729,6 @@ translate ru strings:
     old "She nearly whispered the words."
     new "Она едва шептала эти слова."
 
-    old "What?"
-    new "Что?"
-
     old "I'm not special!"
     new "Я же не особенная!"
 

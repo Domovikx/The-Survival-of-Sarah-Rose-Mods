@@ -294,9 +294,6 @@ translate ja strings:
     old "Tailor"
     new "裁縫師"
 
-    old "Girl"
-    new "少女"
-
     old "Advisor"
     new "顧問官"
 

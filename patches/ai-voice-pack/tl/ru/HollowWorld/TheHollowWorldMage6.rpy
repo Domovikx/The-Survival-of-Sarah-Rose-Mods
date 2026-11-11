@@ -96,9 +96,6 @@ translate ru strings:
     old "I'm willing to consider your approach."
     new "Я готова рассмотреть твой подход."
 
-    old "Excellent."
-    new "Отлично."
-
     old "But where can I find a copy of the book you mentioned?"
     new "Но где же мне найти экземпляр той книги, о которой ты говорил?"
 
@@ -429,9 +426,6 @@ translate ru strings:
     old "The novel floated softly in the air until Samayra grabbed it."
     new "Роман плавно парил в воздухе, пока Самайра не схватила его."
 
-    old "Thank you!"
-    new "Спасибо!"
-
     old "As always, genuine excitement came easy to the girl."
     new "Как всегда, искренний восторг давался этой девушке с лёгкостью."
 
@@ -711,9 +705,6 @@ translate ru strings:
     old "The spirit slowly drifted back a little, creating more space between itself and Samayra."
     new "Дух медленно отступил немного назад, создавая больше пространства между собой и Самайрой."
 
-    old "Never."
-    new "Никогда."
-
     old "I was merely seeking to meet your new friend."
     new "Я всего лишь хотел познакомиться с твоим новым другом."
 
@@ -872,9 +863,6 @@ translate ru strings:
 
     old "She hated the weakness of her body, but in a cold and lonely place like this, the spirit had been a rare companion."
     new "Она ненавидела слабость своего тела, но в таком холодном и пустынном месте, как это, дух был для неё редким спутником."
-
-    old "It's true."
-    new "Это правда."
 
     old "Me and Razaphel have had sex."
     new "У нас с Разафелем был секс."
@@ -1097,9 +1085,6 @@ translate ru strings:
 
     old "Sarah felt her head snap back as the spirit pulled on her hair."
     new "Сара почувствовала, как её голову резко отбросило назад — дух потянул её за волосы."
-
-    old "There you go."
-    new "Вот так-то."
 
     old "Sarah felt relief run through her body as she was thrown forward, her breast up against the cold stone floor."
     new "Сара почувствовала, как облегчение пронзило всё её тело, когда её бросило вперёд, и грудь прижалась к холодному каменному полу."
@@ -1328,9 +1313,6 @@ translate ru strings:
 
     old "Sarah could feel the mist, condensed into mass, lifting the edges of her hair."
     new "Сара чувствовала, как туман, сгустившийся в плотную массу, приподнимал кончики её волос."
-
-    old "How grateful would you say you are?"
-    new "Насколько же благодарной ты была?"
 
     old "Sarah looked at Razaphel as the spirit played with her hair."
     new "Сара посмотрела на Разафела, пока дух играл с её волосами."

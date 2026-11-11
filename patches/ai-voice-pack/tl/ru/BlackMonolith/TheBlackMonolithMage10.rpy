@@ -15,9 +15,6 @@ translate ru strings:
     old "As per usual, he was buried in some obscure text."
     new "Как и всегда, он был поглощён каким-то малоизвестным текстом."
 
-    old "Good morning."
-    new "Доброе утро."
-
     old "He barely lifted his head from the page as he acknowledged her."
     new "Он едва поднял голову от страницы, когда признал её присутствие."
 
@@ -164,9 +161,6 @@ translate ru strings:
 
     old "Hey, hold up."
     new "Эй, погоди."
-
-    old "What?"
-    new "Что?"
 
     old "You're missing one."
     new "Ты кое-что упускаешь."
@@ -774,9 +768,6 @@ translate ru strings:
     old "The floating technique. Sarah knew she had. In fact, by now she felt as if she had almost mastered it."
     new "Техника парения. Сара знала, что она у неё есть. На самом деле, к этому моменту ей казалось, будто она почти овладела ею."
 
-    old "Easy."
-    new "Легко."
-
     old "Sarah closed her eyes and repeated the steps as she had many times now."
     new "Сара закрыла глаза и повторила шаги, которые она уже много раз выполняла ранее."
 
@@ -1071,9 +1062,6 @@ translate ru strings:
     old "She could see every edge of her body twist and vibrate under the pressure she imposed on it."
     new "Она видела, как каждый контур её тела изгибался и вибрировал под давлением, которое она на него оказывала."
 
-    old "Sarah..."
-    new "Сара..."
-
     old "She ignored him. Tried to."
     new "Она проигнорировала его. Пыталась."
 
@@ -1160,9 +1148,6 @@ translate ru strings:
 
     old "Her hand gripped at herself in disbelief."
     new "Её рука в недоумении схватилась за неё саму."
-
-    old "Are you alright?"
-    new "Ты в порядке?"
 
     old "You look pale?"
     new "Ты выглядишь бледной?"
@@ -1431,9 +1416,6 @@ translate ru strings:
     old "Sarah could see Samayra struggle to process what she was seeing."
     new "Сара видела, как Самайра с трудом осмысливала увиденное."
 
-    old "Sarah...I..."
-    new "Сара... я..."
-
     old "Her face turned a deep red."
     new "Её лицо стало багрово-красным."
 
@@ -1644,9 +1626,6 @@ translate ru strings:
     old "I was shocked too when you walked in, but I think I'm happy you're here."
     new "Я тоже была шокирована, когда ты вошла, но, думаю, я рада, что ты здесь."
 
-    old "Happy?"
-    new "Счастлива?"
-
     old "Yeah...I was freaking out when it happened and I was so stressed and worried and just...my mind was racing."
     new "Да... Когда это случилось, я просто вышла из себя — была так напряжена, полна тревоги, и у меня... мысли неслись со скоростью света."
 
@@ -1664,9 +1643,6 @@ translate ru strings:
 
     old "Sarah felt a twitch between her legs. If the girl wanted to help, she appeared to be doing the opposite."
     new "Сара почувствовала, как между её ногами возникло лёгкое покалывание. Если девушка и хотела помочь, то, похоже, делала всё наоборот."
-
-    old "Yeah?"
-    new "Да?"
 
     old "Samayra never broke her hug."
     new "Самайра так и не разжала объятий."
@@ -1688,9 +1664,6 @@ translate ru strings:
 
     old "She'd always found the girl pretty, and despite her current state, that affection had not changed."
     new "Ей всегда казалось, что эта девушка красива, и, несмотря на её нынешнее состояние, эти тёплые чувства ничуть не изменились."
-
-    old "What can I do?"
-    new "Что я могу сделать?"
 
     old "Sarah suddenly leaned forward and kissed Samayra."
     new "Сара внезапно наклонилась вперёд и поцеловала Самайру."
@@ -2124,9 +2097,6 @@ translate ru strings:
     old "She opened her mouth to sing her magics, draw forth the pale flame."
     new "Она открыла рот, чтобы воспеть свою магию и призвать бледное пламя."
 
-    old "Nothing."
-    new "Ничего."
-
     old "The creature came nearer to her."
     new "Существо подошло ближе к ней."
 
@@ -2198,9 +2168,6 @@ translate ru strings:
 
     old "My name is alien to your tongue, but you need not bother with it. You may simply call me Master."
     new "Моё имя чуждо твоему языку, но тебе не стоит с ним заморачиваться. Можешь просто называть меня Мастером."
-
-    old "Do you understand?"
-    new "Ты поняла?"
 
     old "The grip on her body faded."
     new "Хватка на её теле ослабла."
@@ -2508,9 +2475,6 @@ translate ru strings:
     old "The voice went silent, and a moment later, she saw Metis emerge."
     new "Голос затих, и через мгновение она увидела, как появился Метис."
 
-    old "Sarah!!!"
-    new "Сара!!!"
-
     old "A panicked expression on his face."
     new "На его лице отразилась паника."
 
@@ -2556,9 +2520,6 @@ translate ru strings:
     old "She suddenly felt Metis' hand on her shoulder."
     new "Она внезапно почувствовала руку Метиса на своём плече."
 
-    old "Don't worry, Sarah."
-    new "Не волнуйся, Сара."
-
     old "This Art is dangerous, but you are gifted. The rewards will be worth it in the end."
     new "Это искусство опасно, но ты одарена. В конце концов награда будет стоить того."
 
@@ -2588,9 +2549,6 @@ translate ru strings:
 
     old "I can see it...the world..."
     new "Я вижу его... этот мир..."
-
-    old "Good."
-    new "Хорошо."
 
     old "Now we will need to see if you can pull something into our world."
     new "Теперь нам нужно будет посмотреть, сможешь ли ты перетащить что-нибудь в наш мир."

@@ -90,9 +90,6 @@ translate ru strings:
     old "Sarah locked eyes with Lily."
     new "Сара встретилась взглядом с Лили."
 
-    old "Well..."
-    new "Ну..."
-
     old "The room is empty. No threat to be found."
     new "Комната пуста. Угрозы не обнаружено."
 
@@ -446,9 +443,6 @@ translate ru strings:
 
     old "Lily leaned forward and placed a soft kiss on Sarah's lips."
     new "Лили наклонилась вперёд и нежно поцеловала Сару в губы."
-
-    old "Very well."
-    new "Хорошо."
 
     old "If I cannot have you forever, then let's not waste tonight."
     new "Если я не могу иметь тебя навсегда, давай не будем тратить эту ночь зря."

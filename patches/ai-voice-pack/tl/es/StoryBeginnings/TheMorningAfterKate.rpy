@@ -570,9 +570,6 @@ translate es strings:
     old "Lady Carolyn bowed her head."
     new "Lady Carolyn inclinó la cabeza."
 
-    old "Of course, my liege."
-    new "Por supuesto, mi señor."
-
     old "Keep things modest."
     new "Mantén las cosas modestas."
 

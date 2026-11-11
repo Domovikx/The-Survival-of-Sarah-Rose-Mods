@@ -48,14 +48,8 @@ translate ru strings:
     old "Is there anything I should know about him?"
     new "Есть ли что-то, что мне стоит о нём знать?"
 
-    old "Why do you ask?"
-    new "Почему ты спрашиваешь?"
-
     old "He's here. In the house."
     new "Он здесь. В доме."
-
-    old "I see..."
-    new "Понятно..."
 
     old "The spirit's voice drifted, then went silent for a moment."
     new "Голос духа доносился, а затем на мгновение затих."

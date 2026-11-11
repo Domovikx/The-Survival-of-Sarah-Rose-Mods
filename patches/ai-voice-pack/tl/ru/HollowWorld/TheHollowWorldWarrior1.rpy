@@ -153,9 +153,6 @@ translate ru strings:
     old "Just about, I recon."
     new "Примерно так, думаю."
 
-    old "Good."
-    new "Хорошо."
-
     old "I want us to set out tomorrow."
     new "Я хочу, чтобы мы отправились завтра."
 

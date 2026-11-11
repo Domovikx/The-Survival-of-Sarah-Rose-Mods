@@ -264,9 +264,6 @@ translate ru strings:
     old "Also, give me a list of all the assets of the old houses that are in the capital."
     new "К тому же, дай мне список всех активов старых домов, что находятся в столице."
 
-    old "Of course, Princess Sarah."
-    new "Конечно, принцесса Сара."
-
     old "Lady Carolyn bowed and took her leave in turn."
     new "Леди Каролин поклонилась и тоже удалилась."
 

@@ -168,9 +168,6 @@ translate ru strings:
     old "Your alley? Maybe I was naive enough to think that all those years ago. Now I know what you really are."
     new "Твой переулок? Возможно, столько лет назад я была достаточно наивна, чтобы так думать. Теперь я знаю, кто ты на самом деле."
 
-    old "And what's that?"
-    new "И что это такое?"
-
     old "A lowlife. A criminal that feeds on those too vulnerable to defend themselves."
     new "Низкий тип. Преступник, который питается теми, кто слишком слаб, чтобы защитить себя."
 
@@ -372,9 +369,6 @@ translate ru strings:
     old "With the flick of her finger, the lid of the crate fell off, revealing the bottles full of booze."
     new "Щелчком пальца она сняла крышку с ящика, и на свет показались бутылки, полные алкоголя."
 
-    old "Wow!"
-    new "Ого!"
-
     old "Alaric reached in and pulled a few out."
     new "Аларик сунул руку внутрь и вытащил несколько бутылок."
 
@@ -398,9 +392,6 @@ translate ru strings:
 
     old "Suddenly, Sarah found him extending two to her."
     new "Внезапно Сара обнаружила, что он протягивает ей две бутылки."
-
-    old "What's this?"
-    new "Что это?"
 
     old "Your cut."
     new "Твоя доля."
@@ -1136,9 +1127,6 @@ translate ru strings:
 
     old "And if I let you slip away...you'll find some other girl to victimize."
     new "И если я позволю тебе уйти... ты найдёшь другую девушку, чтобы сделать с ней то же самое."
-
-    old "No!"
-    new "Нет!"
 
     old "I promise, I won't hurt a fly!"
     new "Обещаю — я и мухе не наврежу!"

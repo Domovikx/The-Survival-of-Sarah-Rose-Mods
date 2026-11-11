@@ -294,9 +294,6 @@ translate es strings:
     old "Tailor"
     new "Sastre"
 
-    old "Girl"
-    new "Chica"
-
     old "Advisor"
     new "Asesor"
 

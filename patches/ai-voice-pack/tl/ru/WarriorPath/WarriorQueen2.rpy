@@ -1017,9 +1017,6 @@ translate ru strings:
     old "Is that all then? The guard said you wanted to ask me something."
     new "Это всё? Стражник сказал, вы хотели меня о чём-то спросить."
 
-    old "Well..."
-    new "Ну..."
-
     old "Belmont suddenly looked rather nervously about the cabin."
     new "Бельмонт вдруг выглядел довольно нервно, оглядываясь по сторонам в каюте."
 
@@ -1110,17 +1107,11 @@ translate ru strings:
     old "Sure, there's just one condition."
     new "Конечно, есть лишь одно условие."
 
-    old "Yeah?"
-    new "А?"
-
     old "You ever call me Blondie again, I'll set that ship of yours on fire with you in it."
     new "Если ты ещё раз назовёшь меня Блондинкой, я сожгу твой корабль вместе с тобой."
 
     old "She saw his grin fade."
     new "Она увидела, как его улыбка исчезла."
-
-    old "I..."
-    new "Я..."
 
     old "Yes, of course...Princess Rose."
     new "Да, конечно... Принцесса Роуз."
@@ -1142,9 +1133,6 @@ translate ru strings:
 
     old "She saw Belmont's eyes go wide."
     new "Она увидела, как глаза Бельмонта широко распахнулись."
-
-    old "No?"
-    new "Нет?"
 
     old "You heard me. I don't owe you anything, you lech."
     new "Ты меня слышал? Я тебе ничего не должна, развратник."

@@ -144,9 +144,6 @@ translate ru strings:
     old "Sarah spent some time in her tent, studying the map, before she went out and joined the rest of her unit."
     new "Сара провела некоторое время в своей палатке, изучая карту, прежде чем вышла и присоединилась к остальной части своего подразделения."
 
-    old "Sarah!"
-    new "Сара!"
-
     old "Kate came running up to Sarah, throwing one arm around her."
     new "Кейт подбежала к Саре и обняла её одной рукой."
 
@@ -170,9 +167,6 @@ translate ru strings:
 
     old "The words hung between them for a moment. Kate was the first to break the silence."
     new "Слова на мгновение повисли между ними. Кейт первой нарушила молчание."
-
-    old "Fuck."
-    new "Чёрт."
 
     old "I mean...if it's the plan, it's the plan, but that's going to put us right in the middle of the fight..."
     new "Я имею в виду... если это план, то это и есть план, но тогда мы окажемся прямо в центре сражения..."

@@ -210,9 +210,6 @@ translate ru strings:
     old "She whispered to the orc."
     new "Она прошептала орку."
 
-    old "I love you too, Sarah."
-    new "Я тоже люблю тебя, Сара."
-
     old "The two lovers remained in this embrace for a long time, both sinking into a soft early morning rest."
     new "Два влюблённых человека долго оставались в этом объятии, оба погрузившись в мягкий ранний утренний отдых."
 
@@ -296,9 +293,6 @@ translate ru strings:
 
     old "She felt Atilla's muscles tighten. He must have also been thinking it, fearing to say anything."
     new "Она почувствовала, как напряглись мышцы Атиллы. Должно быть, он тоже об этом думал, боясь что-то сказать."
-
-    old "Sarah..."
-    new "Сара..."
 
     old "He rubbed his massive hand across his face."
     new "Он провёл своей огромной ладонью по лицу."
@@ -390,9 +384,6 @@ translate ru strings:
     old "And you...will you forget me?"
     new "А ты... забудешь меня?"
 
-    old "Never."
-    new "Никогда."
-
     old "Sarah begins to cry."
     new "Сара начинает плакать."
 
@@ -428,9 +419,6 @@ translate ru strings:
 
     old "A moment of silence."
     new "Минутная тишина."
-
-    old "Sarah...I..."
-    new "Сара... Я..."
 
     old "She shakes her head again."
     new "Она снова качает головой."

@@ -570,9 +570,6 @@ translate fr strings:
     old "Lady Carolyn bowed her head."
     new "Lady Carolyn inclina la tête."
 
-    old "Of course, my liege."
-    new "Bien sûr, mon souverain."
-
     old "Keep things modest."
     new "Gardez les choses modestes."
 

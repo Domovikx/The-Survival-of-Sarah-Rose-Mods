@@ -102,9 +102,6 @@ translate ru strings:
     old "Already, soldiers and locals had begun to mingle."
     new "Уже солдаты и местные жители начали смешиваться."
 
-    old "Commander!"
-    new "Командир!"
-
     old "Samayra came running up to her. A large pile of scrolls under her arm."
     new "Самайра подбежала к ней, прижимая к боку большую стопку свитков."
 
@@ -273,9 +270,6 @@ translate ru strings:
     old "What about you?"
     new "А ты?"
 
-    old "Me?"
-    new "Я?"
-
     old "You up to any trouble?"
     new "Ты не против немного пошалить?"
 
@@ -344,9 +338,6 @@ translate ru strings:
 
     old "Sarah rushed forward, seizing control of the situation."
     new "Сара бросилась вперёд, взяв ситуацию под свой контроль."
-
-    old "Calm down!"
-    new "Успокойся!"
 
     old "Tell me what is going on here."
     new "Скажи мне, что здесь происходит."
@@ -495,9 +486,6 @@ translate ru strings:
     old "He looked at her, stunned."
     new "Он посмотрел на неё, ошеломлённый."
 
-    old "Who are you?"
-    new "Кто ты?"
-
     old "Sarah. I'm the head of the mercenary company."
     new "Сара. Я глава наёмнической компании."
 
@@ -605,9 +593,6 @@ translate ru strings:
 
     old "I said to myself, whatever happens, it ends that night."
     new "Я сказал себе: что бы ни случилось, всё закончится той ночью."
-
-    old "Nothing."
-    new "Ничего."
 
     old "The Beast has no lair to be found. It leaves tracks, but follow them for a while and they vanish."
     new "У Зверя нет логова, которое можно было бы найти. Он оставляет следы, но если идти по ним какое-то время, то они внезапно исчезают."

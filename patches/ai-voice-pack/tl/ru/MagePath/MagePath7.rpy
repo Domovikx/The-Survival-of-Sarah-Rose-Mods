@@ -27,9 +27,6 @@ translate ru strings:
     old "You're Samayra, right?"
     new "Ты же Самайра, да?"
 
-    old "How did you know?"
-    new "Откуда вы знаете?"
-
     old "I was just here, with the mage, I heard your father mention your name."
     new "Я просто была здесь, с магом — я слышала, как твой отец упомянул твоё имя."
 
@@ -366,9 +363,6 @@ translate ru strings:
     old "I'm sorry about that, I don't know what happened."
     new "Прости за это... Я не знаю, что произошло."
 
-    old "It's ok."
-    new "Всё в порядке."
-
     old "I cry too, sometimes."
     new "Я тоже иногда плачу."
 
@@ -524,9 +518,6 @@ translate ru strings:
 
     old "Their eyes meet again, and for a moment, neither speaks."
     new "Их взгляды снова встречаются, и на мгновение никто из них не произносит ни слова."
-
-    old "Why did you do that?"
-    new "Почему ты так сделала?"
 
     old "The question seems genuine."
     new "Вопрос кажется искренним."

@@ -441,9 +441,6 @@ translate ru strings:
     old "Samayra smiled at her. Her piercing eyes cutting into Sarah's."
     new "Самайра улыбнулась ей. Её пронзительные глаза впивались в глаза Сары."
 
-    old "So..."
-    new "Так..."
-
     old "If Metis left...I guess I don't have a teacher anymore."
     new "Если Метис уйдёт... полагаю, у меня больше не будет учителя."
 

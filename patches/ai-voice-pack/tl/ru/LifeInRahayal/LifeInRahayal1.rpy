@@ -312,9 +312,6 @@ translate ru strings:
     old "But if I'm askin too many questions, just tell me to get lost. I sometimes forget myself and ramble on."
     new "Но если я задаю слишком много вопросов, просто скажи мне, чтобы я ушёл. Я иногда забываю о себе и начинаю болтать без умолку."
 
-    old "It's fine."
-    new "Всё в порядке."
-
     old "The truth was, she was somewhat happy to actually meet a friendly person for once."
     new "На самом деле, она была даже немного рада тому, что наконец-то встретила дружелюбного человека."
 
@@ -398,9 +395,6 @@ translate ru strings:
 
     old "Ramsey raised one eyebrow."
     new "Рамзи приподнял бровь."
-
-    old "Yes?"
-    new "Да?"
 
     old "Might I ask for a bowl of that stew?"
     new "Можно я попрошу миску этого рагу?"

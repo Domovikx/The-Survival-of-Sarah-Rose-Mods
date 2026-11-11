@@ -93,26 +93,17 @@ translate ru strings:
     old "She did the same back."
     new "Она ответила ему тем же."
 
-    old "Hey!"
-    new "Эй!"
-
     old "Sarah noticed the heavy stains of sweat on his clothes. He had worked himself to the bone again."
     new "Сара заметила на его одежде тяжёлые пятна пота. Он опять довел себя до изнеможения работой."
 
     old "Marius!"
     new "Мариус!"
 
-    old "What?"
-    new "Что?"
-
     old "You work too hard!"
     new "Ты слишком много работаешь!"
 
     old "He laughed as he stopped walking."
     new "Он рассмеялся, когда остановился."
-
-    old "This?"
-    new "Это?"
 
     old "He padded his clothes."
     new "Он поправил одежду."
@@ -128,9 +119,6 @@ translate ru strings:
 
     old "Marius nodded and smiled."
     new "Он кивнул и улыбнулся."
-
-    old "You're right."
-    new "Ты права."
 
     old "But once the harvest season is over, things will get easier."
     new "Но как только закончится сезон сбора урожая, всё станет легче."
@@ -168,9 +156,6 @@ translate ru strings:
     old "Sarah sat down besides Marius on one of the particularly large roots."
     new "Сара села рядом с Мариусом на один из особенно больших корней."
 
-    old "Here."
-    new "Вот."
-
     old "She handed him the bowl of stew."
     new "Она протянула ему миску с рагу."
 
@@ -194,9 +179,6 @@ translate ru strings:
 
     old "I'll make you a lunch you can take out to the field when you go to work."
     new "Я приготовлю тебе такой обед, что ты сможешь взять его с собой на поле, когда пойдёшь на работу."
-
-    old "Really?"
-    new "Правда?"
 
     old "She saw a strange flicker in his eyes."
     new "Она увидела в его глазах странное мерцание."
@@ -396,9 +378,6 @@ translate ru strings:
     old "When he saw her, his jaw dropped."
     new "Когда он увидел её, у него отвисла челюсть."
 
-    old "You..."
-    new "Ты выглядишь невероятно..."
-
     old "You look incredible..."
     new "Ты выглядишь потрясающе..."
 
@@ -410,9 +389,6 @@ translate ru strings:
 
     old "I thought I'd put in a little extra effort for the festival."
     new "Я подумала, что для фестиваля стоит приложить немного больше усилий."
-
-    old "Are you ready?"
-    new "Ты готов?"
 
     old "But now I feel bad. I'm underdress."
     new "Но теперь мне не по себе. Я плохо одет."
@@ -504,17 +480,11 @@ translate ru strings:
     old "She decided to be honest with him, or at least as much as she could be."
     new "Она решила быть с ним честной — или, по крайней мере, настолько честной, насколько это было возможно."
 
-    old "Jealous?"
-    new "Завидуешь?"
-
     old "You seem so...at home."
     new "Ты кажешься таким... на своём месте."
 
     old "Like you're exactly where you're supposed to be."
     new "Как будто ты точно там, где тебе и положено быть."
-
-    old "I suppose."
-    new "Полагаю."
 
     old "I mean, I love every part of this land. I've worked it summer after summer."
     new "Я имею в виду, я люблю каждую часть этой земли. Я работал на ней лето за летом."
@@ -527,9 +497,6 @@ translate ru strings:
 
     old "Sarah frowned as they walked further through the festival."
     new "Сара нахмурилась, пока они шли дальше сквозь фестиваль."
-
-    old "Forget it."
-    new "Забудь об этом."
 
     old "His voice was suddenly brisk."
     new "Его голос внезапно стал резким."
@@ -599,9 +566,6 @@ translate ru strings:
 
     old "I guess...if you keep that up for too long...you're always so focussed on the day to day, you forget to think about the bigger picture."
     new "Полагаю... если ты будешь так долго это продолжать... ты всегда настолько зацикливаешься на повседневных делах, что забываешь подумать о более широкой картине."
-
-    old "Exactly!"
-    new "Точно!"
 
     old "Gods, I was so afraid of telling you this."
     new "Боже, я так боялся сказать тебе об этом."
@@ -753,9 +717,6 @@ translate ru strings:
     old "Marius looked at the festival. Right on the edge here, it felt like they were a part of it, and apart from it, at the same time."
     new "Мариус посмотрел на фестиваль. Прямо здесь, на самом краю, казалось, что они одновременно и его часть, и в то же время отделены от него."
 
-    old "It's fine."
-    new "Всё нормально."
-
     old "I mean, it is, really."
     new "Я имею в виду, что так оно и есть, на самом деле."
 
@@ -773,9 +734,6 @@ translate ru strings:
 
     old "I understand, Marius. I really do."
     new "Я понимаю, Мариус. Правда понимаю."
-
-    old "You do?"
-    new "Ты правда так думаешь?"
 
     old "You're a good son. You took care for your dad after your mother passed."
     new "Ты хороший сын. Ты заботился об отце после того, как твоя мать ушла из жизни."
@@ -846,9 +804,6 @@ translate ru strings:
     old "A bit of the good of both."
     new "Немного хорошего от обоих вариантов."
 
-    old "I'd like that."
-    new "Я бы хотел."
-
     old "Sarah turned her face up and looked at him."
     new "Сара подняла лицо и посмотрела на него."
 
@@ -879,9 +834,6 @@ translate ru strings:
     old "To know that a man as pure as him could exist."
     new "Понимать, что такой чистый человек, как он, может существовать."
 
-    old "It's okay."
-    new "Всё в порядке."
-
     old "She whispered in between their franctic kissing."
     new "Она прошептала это между их яростными поцелуями."
 
@@ -903,14 +855,8 @@ translate ru strings:
     old "Then, as suddenly as it had begun, it ended when Marius pulled away from her."
     new "Затем, так же внезапно, как всё началось, это закончилось — Мариус отстранился от неё."
 
-    old "No..."
-    new "Нет..."
-
     old "Did...I do something wrong?"
     new "Я... я сделала что-то не так?"
-
-    old "No, it's just..."
-    new "Нет... Просто..."
 
     old "I like you Sarah."
     new "Я тоже тебя люблю, Сара."
@@ -923,9 +869,6 @@ translate ru strings:
 
     old "An anxious paused lingered before he continued."
     new "Напряжённая пауза затянулась, прежде чем он продолжил."
-
-    old "I..."
-    new "Я..."
 
     old "We can't do this...not before we're..."
     new "Мы не можем этого делать... не раньше, чем станем..."
@@ -1266,9 +1209,6 @@ translate ru strings:
     old "Marriage. A life here."
     new "Брак. Жизнь здесь."
 
-    old "Hey there."
-    new "Привет."
-
     old "Not working too hard, I hope."
     new "Надеюсь, ты не слишком усердно работаешь."
 
@@ -1277,12 +1217,6 @@ translate ru strings:
 
     old "Sarah laughed and gestured back at him."
     new "Сара рассмеялась и указала на него в ответ."
-
-    old "You're one to talk."
-    new "А ты-то кто такой, чтобы меня упрекать?"
-
-    old "What, this?"
-    new "Что, вот это?"
 
     old "He padded his own stained clothes."
     new "Он поправил свою собственную испачканную одежду."
@@ -1301,9 +1235,6 @@ translate ru strings:
 
     old "He frowned for a moment, confused."
     new "Он на мгновение нахмурился, сбитый с толку."
-
-    old "What's that?"
-    new "Что это?"
 
     old "Oh, that's a surprise."
     new "О, вот это сюрприз."

@@ -294,9 +294,6 @@ translate pl strings:
     old "Tailor"
     new "Krawiec"
 
-    old "Girl"
-    new "Dziewczyna"
-
     old "Advisor"
     new "Rada"
 

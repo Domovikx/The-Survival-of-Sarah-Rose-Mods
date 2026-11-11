@@ -570,9 +570,6 @@ translate pl strings:
     old "Lady Carolyn bowed her head."
     new "Lady Carolyn ukłoniła głowę."
 
-    old "Of course, my liege."
-    new "Oczywiście, mój panie."
-
     old "Keep things modest."
     new "Zachowaj się skromnie."
 

@@ -120,9 +120,6 @@ translate ru strings:
     old "Should I be elected...I think someone like you would be of great value as my counsel."
     new "Если меня изберут... думаю, такой человек, как ты, будет большой ценностью как мой советник."
 
-    old "I see..."
-    new "Понятно..."
-
     old "Think of what we could do together."
     new "Подумай о том, что мы могли бы сделать вместе."
 
@@ -384,9 +381,6 @@ translate ru strings:
     old "Gods no..."
     new "Боги, нет..."
 
-    old "What's that?"
-    new "Что это?"
-
     old "Here I was thinking we were just doing this for me."
     new "А я-то думал, мы делаем это только ради меня."
 
@@ -624,9 +618,6 @@ translate ru strings:
     old "The Duke chuckled."
     new "Дук Антонио усмехнулся."
 
-    old "I did."
-    new "Да."
-
     old "But you mistake me. I did not say that I did not make money. I said that I was destitute."
     new "Но ты меня неправильно понял. Я не сказал, что не заработал денег. Я сказал, что я нищий."
 
@@ -852,9 +843,6 @@ translate ru strings:
     old "Gods, don't tell me you're above paying someone off."
     new "Боги, не говори мне, что ты выше того, чтобы заплатить кому-то."
 
-    old "I am."
-    new "Я такова."
-
     old "Antonio sighed."
     new "Антонио вздохнул."
 
@@ -920,9 +908,6 @@ translate ru strings:
 
     old "But also consider your own interests."
     new "Но также учти и свои собственные интересы."
-
-    old "How so?"
-    new "И как это?"
 
     old "When the Mythrans attack, they will likely try to weaken our Union by blockading the seas."
     new "Когда мифраны нападут, они, скорее всего, попытаются ослабить наш Союз, заблокировав моря."
@@ -1106,9 +1091,6 @@ translate ru strings:
 
     old "Because I understand my role."
     new "Потому что я понимаю свою роль."
-
-    old "I..."
-    new "Я..."
 
     old "She saw that Edmond had not fully realized this fact yet."
     new "Она увидела, что Эдмонд ещё не полностью осознал этот факт."
@@ -1373,9 +1355,6 @@ translate ru strings:
 
     old "Edmond stood up."
     new "Эдмонд встал."
-
-    old "Very well."
-    new "Хорошо."
 
     old "I cast my vote for Sarah Rose."
     new "Я отдаю свой голос за Сару Роуз."

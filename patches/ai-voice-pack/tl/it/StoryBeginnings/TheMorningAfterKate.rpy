@@ -570,9 +570,6 @@ translate it strings:
     old "Lady Carolyn bowed her head."
     new "Lady Carolyn chinò il capo."
 
-    old "Of course, my liege."
-    new "Certamente, mio signore."
-
     old "Keep things modest."
     new "Mantieni le cose sobrie."
 

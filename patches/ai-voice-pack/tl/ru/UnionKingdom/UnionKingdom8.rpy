@@ -78,9 +78,6 @@ translate ru strings:
     old "But if you had seen this girl's ass, I swear you would have-"
     new "Но если бы ты видел задницу этой девушки, клянусь, ты бы-"
 
-    old "Enough!"
-    new "Хватит!"
-
     old "Edmond bashed the table with his fist."
     new "Эдмонд с силой ударил кулаком по столу."
 
@@ -299,9 +296,6 @@ translate ru strings:
 
     old "And he has gained the authorization to deploy two legions."
     new "И он получил разрешение на развертывание двух легионов."
-
-    old "Who?"
-    new "Кто?"
 
     old "He is a Noctori, by the name of Gilead."
     new "Он — ноктори по имени Гилеад."

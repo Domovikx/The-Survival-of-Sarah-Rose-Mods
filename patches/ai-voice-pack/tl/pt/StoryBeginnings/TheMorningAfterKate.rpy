@@ -570,9 +570,6 @@ translate pt strings:
     old "Lady Carolyn bowed her head."
     new "Lady Carolyn inclinou a cabeça."
 
-    old "Of course, my liege."
-    new "Claro, meu senhor."
-
     old "Keep things modest."
     new "Mantenha as coisas modestas."
 

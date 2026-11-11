@@ -294,9 +294,6 @@ translate ru strings:
     old "Tailor"
     new "Портной"
 
-    old "Girl"
-    new "Девочка"
-
     old "Advisor"
     new "Советник"
 

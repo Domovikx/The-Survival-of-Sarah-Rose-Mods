@@ -105,9 +105,6 @@ translate ru strings:
     old "Xan stood off to the side, his neck craned, seemingly trying to find someone or something."
     new "Ксантиппа стоял в стороне, вытянув шею и словно пытаясь кого-то или что-то найти."
 
-    old "Maybe."
-    new "Возможно."
-
     old "He seemed distracted."
     new "Он казался рассеянным."
 
@@ -200,9 +197,6 @@ translate ru strings:
 
     old "Also...more importantly...there is the matter of the vault's location."
     new "К тому же... что ещё важнее... есть вопрос с местоположением хранилища."
-
-    old "What about it?"
-    new "Ну... а что насчёт этого?"
 
     old "Well...I don't actually know where it is."
     new "Ну... на самом деле я даже не знаю, где оно находится."

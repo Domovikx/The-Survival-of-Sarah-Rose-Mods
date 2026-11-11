@@ -96,9 +96,6 @@ translate ru strings:
     old "Ephraim moved to answer, but Caleb was faster."
     new "Ефраим уже собирался ответить, но Калеб оказался быстрее."
 
-    old "Of course!"
-    new "Конечно!"
-
     old "He seemed genuinely excited."
     new "Он выглядел по-настоящему воодушевлённым."
 

@@ -93,9 +93,6 @@ translate ru strings:
     old "Sarah spoke quietly, yet firmly."
     new "Сара заговорила тихо, но твёрдо."
 
-    old "Nothing."
-    new "Ничего."
-
     old "Just some ungrateful fuck that can't respect rank."
     new "Просто какой-то неблагодарный ублюдок, который не умеет уважать ранг."
 
@@ -122,9 +119,6 @@ translate ru strings:
 
     old "Sarah saw Kate's face flushed with rage, briefly, then she yielded."
     new "Сара увидела, что лицо Кейт на мгновение вспыхнуло от ярости, но затем она уступила."
-
-    old "Yes, commander."
-    new "Да, командир."
 
     old "The two of them walked back to the command tent."
     new "Они вдвоём вернулись к командной палатке."
@@ -203,9 +197,6 @@ translate ru strings:
 
     old "We set up in a corner, get some drinks-"
     new "Мы устроились в углу, взяли по напитку..."
-
-    old "Did you?"
-    new "Ты это сделала?"
 
     old "Kate frowned, annoyed at the interruption."
     new "Кейт нахмурилась, раздражённая прерыванием."
@@ -287,9 +278,6 @@ translate ru strings:
 
     old "Explain."
     new "Объясни."
-
-    old "Well..."
-    new "Ну..."
 
     old "Kate sighed deeply."
     new "Кейт глубоко вздохнула."
@@ -407,9 +395,6 @@ translate ru strings:
 
     old "Tells me, we're gonna make a family, and he'll buy me my own big house on the countryside."
     new "Он говорит мне, что мы создадим семью, и купит мне собственный большой дом в сельской местности."
-
-    old "Great."
-    new "Отлично."
 
     old "All he gotta do is make some preparations, move some money around, and I can meet up with him at the end of the week to go there."
     new "Ему всего лишь нужно сделать кое-какие приготовления, переместить немного денег, и тогда в конце недели мы сможем встретиться и поехать туда."

@@ -180,9 +180,6 @@ translate ru strings:
     old "Maybe she could play to their base nature."
     new "Возможно, она могла бы сыграть на их первобытной натуре."
 
-    old "Look..."
-    new "Слушай..."
-
     old "I'm sure there has been some misunderstanding here."
     new "Я уверена, что здесь возникло какое-то недопонимание."
 
@@ -447,9 +444,6 @@ translate ru strings:
     old "Until finally, the last release."
     new "И наконец — последнее освобождение."
 
-    old "Aaah!!"
-    new "Ааах!!"
-
     old "She felt him grip her head, keeping it in place, as his cock swelled up in her mouth."
     new "Она почувствовала, как он схватил её за голову, удерживая на месте, пока его член раздувался в её рту."
 
@@ -617,9 +611,6 @@ translate ru strings:
 
     old "Then, slowly, the judge looked up from his book."
     new "Тогда судья медленно поднял глаза от своей книги."
-
-    old "This is..."
-    new "Это..."
 
     old "His eyes roamed over her body, only barely covered by the blanket."
     new "Его глаза скользили по её телу, едва прикрытому одеялом."
@@ -978,9 +969,6 @@ translate ru strings:
     old "Her first objective had been to get away from the guards...but she had no idea what to do next."
     new "Её первой целью было убежать от стражников... но она и понятия не имела, что делать дальше."
 
-    old "Alaric."
-    new "Аларик."
-
     old "Alaric had been as much as a mentor as she could hope to find in these streets."
     new "Аларик был для неё таким же наставником, какого она только могла найти на этих улицах."
 
@@ -1052,9 +1040,6 @@ translate ru strings:
 
     old "Hang on a minute."
     new "Погоди минутку."
-
-    old "What?"
-    new "Чего?"
 
     old "I gots to take a piss."
     new "Мне надо пописать."
@@ -1257,9 +1242,6 @@ translate ru strings:
     old "Simply lowered her head, and continued to go along with everything."
     new "Просто опустила голову и продолжала подыгрывать им во всём."
 
-    old "Come over here."
-    new "Подойди сюда."
-
     old "Sarah trembled, unable to move."
     new "Сара дрожала, не в силах пошевелиться."
 
@@ -1397,9 +1379,6 @@ translate ru strings:
 
     old "The man grinned."
     new "Мужчина усмехнулся."
-
-    old "Don't worry."
-    new "Не волнуйся."
 
     old "Just breakin the bitch in for a bit."
     new "Просто немного разминаю эту суку."
@@ -1640,9 +1619,6 @@ translate ru strings:
 
     old "Her cunt, drenched, dripping, eagerly accepting the man's violation of her."
     new "Её киска, мокрая и обильно сочащаяся жидкостью, с нетерпением принимала вторжение мужчины."
-
-    old "Fuck..."
-    new "Чёрт..."
 
     old "He groaned as he fucked her mouth, his hands gripping her head like a vise."
     new "Он застонал, трахая её рот, и схватил её голову руками, как в тисках."
@@ -2004,9 +1980,6 @@ translate ru strings:
     old "This...was this really how it would end..."
     new "Это... неужели так всё и закончится..."
 
-    old "Gods..."
-    new "Боги..."
-
     old "Don't make a sound."
     new "Не издай ни звука."
 
@@ -2025,9 +1998,6 @@ translate ru strings:
     old "Before she even realized it, she leapt into his arms."
     new "Прежде чем она успела это осознать, она бросилась ему в объятия."
 
-    old "There, there..."
-    new "Ну-ну..."
-
     old "She could hear the smile in his voice, as if nothing bad had happened at all."
     new "Она слышала улыбку в его голосе, как будто ничего плохого и не случилось."
 
@@ -2036,9 +2006,6 @@ translate ru strings:
 
     old "Instantly, she felt safe."
     new "Она тут же почувствовала себя в безопасности."
-
-    old "Here."
-    new "Вот."
 
     old "He handed her a blanket and she eagerly wrapped it around herself."
     new "Он протянул ей одеяло, и она с энтузиазмом обернулась им."
@@ -2066,9 +2033,6 @@ translate ru strings:
 
     old "When she looked up she just saw his wide grin."
     new "Когда она подняла голову, то увидела лишь его широкую улыбку."
-
-    old "Me?"
-    new "Я?"
 
     old "You think that's my first run in with the law?"
     new "Думаешь, это моё первое столкновение с законом?"
@@ -2268,9 +2232,6 @@ translate ru strings:
     old "Come in and be quick then. I take it nobody followed you?"
     new "Заходи, да побыстрее. Полагаю, за тобой никто не шёл?"
 
-    old "Of course not."
-    new "Конечно же нет."
-
     old "Alaric stepped inside and Sarah quickly followed."
     new "Аларик вошёл внутрь, а Сара быстро последовала за ним."
 
@@ -2306,9 +2267,6 @@ translate ru strings:
 
     old "Half the guards are imbeciles, the other half are more corrupt than you."
     new "Половина стражи — идиоты, другая половина — продажнее тебя."
-
-    old "Don't worry about it."
-    new "Не беспокойся об этом."
 
     old "So long as you can pay, you're in no trouble at all."
     new "Пока ты можешь платить, у тебя вообще нет никаких проблем."
@@ -2505,9 +2463,6 @@ translate ru strings:
     old "Above her, she heard a loud and approving groan coming from Alaric."
     new "Над ней раздался громкий и одобрительный стон Аларика..."
 
-    old "Fuck..."
-    new "Чёрт..."
-
     old "I was startin to forget why I bothered to save you...now I remember."
     new "Я уже начал забывать, зачем вообще утруждал себя тем, чтобы спасти тебя... но теперь вспомнил."
 
@@ -2622,9 +2577,6 @@ translate ru strings:
     old "And when she felt his hands on her shoulder, tugging at her, she knew he wanted more than her mouth."
     new "И когда она почувствовала его руки на своих плечах, тянувшие её к себе, она поняла: ему нужно было нечто большее, чем просто её губы."
 
-    old "Get up."
-    new "Вставай."
-
     old "Am I doing it wrong? I can do it different."
     new "Я делаю это неправильно? Я могу сделать по-другому."
 
@@ -2663,9 +2615,6 @@ translate ru strings:
 
     old "Aaah...fuck...Alaric."
     new "Аах... чёрт... Аларик."
-
-    old "That's right."
-    new "Точно так."
 
     old "Still pinning her down, he began to fuck her like a bull in heat."
     new "Всё ещё прижимая её к себе, он начал трахать её, словно бык в течке."
@@ -2868,9 +2817,6 @@ translate ru strings:
     old "Sarah tried to think of what it could be, but it wasn't long before she was distracted by Alaric's waking."
     new "Сара попыталась понять, что это могло быть, но её быстро отвлёк проснувшийся Аларик."
 
-    old "Hey."
-    new "Эй."
-
     old "She turned over and smiled at him."
     new "Она перевернулась и улыбнулась ему."
 
@@ -2907,9 +2853,6 @@ translate ru strings:
     old "What a compliment."
     new "Ну и комплимент."
 
-    old "Hey!"
-    new "Эй!"
-
     old "He gave her a firm and quick spank on the ass."
     new "Он твёрдо и быстро шлёпнул её по заднице."
 
@@ -2939,9 +2882,6 @@ translate ru strings:
 
     old "She felt Alaric's body tense us."
     new "Она почувствовала, как тело Аларика напряглось."
-
-    old "What about him?"
-    new "А что насчёт него?"
 
     old "Aren't you friendly with him?"
     new "Разве ты с ним дружен?"
@@ -3026,9 +2966,6 @@ translate ru strings:
 
     old "She made sure the hallway was empty before grabbing the tray and bringing it back inside."
     new "Она убедилась, что в коридоре никого нет, прежде чем схватить поднос и занести его обратно."
-
-    old "Food."
-    new "Еда."
 
     old "Yeah, so long as we can pay, they take care of everything we need to survive."
     new "Да, пока мы можем платить, они позаботятся обо всём, что нам нужно для выживания."
@@ -3153,9 +3090,6 @@ translate ru strings:
     old "Whatever else, that made him valuable to her."
     new "Как бы то ни было, это делало его ценным для неё."
 
-    old "Go on."
-    new "Давай."
-
     old "Sarah watched as Alaric unbuckled his pants and pulled out his cock."
     new "Сара смотрела, как Аларик расстёгивает штаны и вынимает свой член."
 
@@ -3279,9 +3213,6 @@ translate ru strings:
     old "Sarah looked at Alaric's stern face, worried."
     new "Сара посмотрела на суровое лицо Аларика, обеспокоенная."
 
-    old "Spit it out."
-    new "Скажи уже."
-
     old "Well, there is a rumor about a guard that you knocked over the head..."
     new "Ну, ходят слухи о стражнике, которому вы настучали по голове..."
 
@@ -3291,17 +3222,11 @@ translate ru strings:
     old "The guard that had almost caught her. The one Alaric had smashed in the face with a rock."
     new "Охранник, который чуть не поймал её. Тот самого, которому Аларик разбил лицо камнем."
 
-    old "What about it?"
-    new "А что?"
-
     old "Well, word on the street is he was recovering for a few days, but then took a turn for the worse."
     new "Ну, по слухам, он несколько дней приходил в себя, но потом ему стало только хуже."
 
     old "They're sayin that he died from it."
     new "Говорят, он от этого и умер."
-
-    old "Are you serious?"
-    new "Ты серьёзно?"
 
     old "I didn't even hit that fucker that hard."
     new "Я даже не бил этого ублюдка так сильно."
@@ -3414,9 +3339,6 @@ translate ru strings:
     old "Alaric almost spat out the words."
     new "Аларик чуть не выплюнул эти слова."
 
-    old "Good."
-    new "Хорошо."
-
     old "Then buckle down, because you two lovebirds are gonna be here for a while."
     new "Тогда готовьтесь к долгому пребыванию здесь, вы двое влюблённых."
 
@@ -3425,9 +3347,6 @@ translate ru strings:
 
     old "Though, if you're bored..."
     new "Хотя, если вам скучно..."
-
-    old "What?"
-    new "Что?"
 
     old "Well, I've got some things that can make time go by a whole lot more pleasant."
     new "Ну, у меня есть кое-что, что может сделать время гораздо более приятным."
@@ -3497,9 +3416,6 @@ translate ru strings:
 
     old "Together, the two of them sat for a brief moment in silence."
     new "Они вдвоём ненадолго затихли в тишине."
-
-    old "Well..."
-    new "Ну..."
 
     old "He too sounded hesitant."
     new "Он тоже звучал нерешительно."
@@ -3732,9 +3648,6 @@ translate ru strings:
     old "Next to her, she could hear Alaric waking."
     new "Рядом с ней она слышала, как Аларик просыпался."
 
-    old "Gods..."
-    new "Боги..."
-
     old "From the sound of his voice, he seemed in equally poor shape."
     new "Судя по его голосу, он выглядел не лучше."
 
@@ -3794,9 +3707,6 @@ translate ru strings:
 
     old "She tried to find the words."
     new "Она пыталась найти слова."
-
-    old "Yeah..."
-    new "Да..."
 
     old "Sarah understood enough of what he meant."
     new "Сара поняла достаточно, чтобы уловить смысл его слов."
@@ -3926,9 +3836,6 @@ translate ru strings:
 
     old "Hugh flashed a grin."
     new "Хью широко улыбнулся."
-
-    old "Great."
-    new "Отлично."
 
     old "I'll be by in a minute."
     new "Я сейчас подойду."
@@ -4080,9 +3987,6 @@ translate ru strings:
     old "Sarah felt her eyes widen."
     new "Сара почувствовала, как её глаза расширились."
 
-    old "What...what do you mean?"
-    new "Что... что ты имеешь в виду?"
-
     old "Well I told you the price had gone up, and you kept agreeing and wanted it added to your tab."
     new "Ну, я же говорил вам, что цена выросла, а вы всё равно продолжали соглашаться и хотели, чтобы это добавили к вашему счёту."
 
@@ -4227,9 +4131,6 @@ translate ru strings:
     old "Hugh smiled again."
     new "Хью снова улыбнулся."
 
-    old "Of course."
-    new "Конечно."
-
     old "Like I said, I'm a fair man. You work, you get paid."
     new "Как я уже говорил, я честный человек. Работаете — получаете плату."
 
@@ -4356,9 +4257,6 @@ translate ru strings:
     old "Sarah saw him grin."
     new "Сара увидела, как он ухмыляется."
 
-    old "Yeah?"
-    new "А?"
-
     old "He forced her hand down between his legs."
     new "Он заставил её опустить руку между своих ног."
 
@@ -4385,9 +4283,6 @@ translate ru strings:
 
     old "Sarah forced herself to look away, not eager to give Hugh the satisfaction."
     new "Сара заставила себя отвести взгляд, не желая доставлять Хью такое удовольствие."
-
-    old "Good girl."
-    new "Хорошая девочка."
 
     old "His was was softer now, but still firm."
     new "Теперь его прикосновение было нежнее, но по-прежнему твёрдым."
@@ -4527,9 +4422,6 @@ translate ru strings:
     old "And Hugh, the man that had given it to her, became the most beautiful creature she had ever seen."
     new "И Хью — тот самый человек, что дарил ей это наслаждение, стал самым прекрасным существом, которое она когда-либо видела."
 
-    old "You like that?"
-    new "Тебе это нравится?"
-
     old "Sarah turned to him, but this time, there was not even a hint of hate in her eyes."
     new "Сара повернулась к нему, но на этот раз в её глазах не было и тени ненависти."
 
@@ -4638,17 +4530,11 @@ translate ru strings:
     old "She heard, faintly, Alaric's grunting reply."
     new "Она смутно услышала хриплый ответ Аларика."
 
-    old "Yes..."
-    new "Да..."
-
     old "I...fucking understand..."
     new "Я... чертовски понимаю..."
 
     old "Sarah threw back her head and looked at Hugh in mad worship."
     new "Сара откинула голову назад и посмотрела на Хью с безумным обожанием."
-
-    old "See!"
-    new "Смотри!"
 
     old "We'll behave! We'll be good!!!"
     new "Мы будем вести себя прилично! Мы будем хорошими!!!"
@@ -4667,9 +4553,6 @@ translate ru strings:
 
     old "Again, Sarah could only hear the deep love in each word he spoke."
     new "Снова Сара слышала лишь глубокую любовь в каждом его слове."
-
-    old "Yes! Yes! Yes!"
-    new "Да! Да! Да!"
 
     old "She replied in the same voice of madness."
     new "Она ответила тем же голосом безумия."
@@ -5022,9 +4905,6 @@ translate ru strings:
     old "You're in a lot of trouble."
     new "У тебя большие неприятности."
 
-    old "Sir!"
-    new "Сэр!"
-
     old "I...I don't know what this is about, but I promise you, this is a mistake!"
     new "Я... я не понимаю, из-за чего всё это, но обещаю вам: это ошибка!"
 
@@ -5069,9 +4949,6 @@ translate ru strings:
 
     old "Yes...sir..."
     new "Да... сэр..."
-
-    old "Good."
-    new "Хорошо."
 
     old "Now, as I was saying, when I vow to do everything to protect the order in this city, I mean that."
     new "Ну, как я уже говорил: когда я клянусь сделать всё возможное, чтобы защитить порядок в этом городе, я имею это в виду."

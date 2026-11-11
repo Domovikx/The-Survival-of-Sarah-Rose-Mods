@@ -126,9 +126,6 @@ translate ru strings:
     old "You know, Thomas, maybe the problem is that you're trying to do everything all at once. You're not giving yourself the time to learn how to be king."
     new "Знаешь, Томас, возможно, проблема в том, что ты пытаешься сделать всё сразу. Ты просто не даёшь себе время научиться тому, как быть королём."
 
-    old "What do you mean?"
-    new "Что вы имеете в виду?"
-
     old "Well, you're comparing yourself to father, but he was king for more than thirty years. Of course you can't be as good as him overnight."
     new "Ну, ты сравниваешь себя с отцом, но он был королем больше тридцати лет. Конечно, ты не можешь стать таким же хорошим, как он, за одну ночь."
 

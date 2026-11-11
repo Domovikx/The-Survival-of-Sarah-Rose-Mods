@@ -162,9 +162,6 @@ translate ru strings:
     old "Now that he is dead?"
     new "Теперь, когда он мёртв?"
 
-    old "Exactly."
-    new "Именно так."
-
     old "Sarah sighed and leaned back over the desk."
     new "Сара вздохнула и откинулась на спинку стула за столом."
 

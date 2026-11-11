@@ -204,9 +204,6 @@ translate ru strings:
     old "She might once have picked her words more carefully. By now, she simply said it like it was."
     new "Она, может быть, и раньше подбирала слова осторожнее. А сейчас просто говорила всё как было."
 
-    old "Sorry..."
-    new "Прости..."
-
     old "An apology? Sarah hadn't expected that."
     new "Извинения? Сара такого не ожидала."
 

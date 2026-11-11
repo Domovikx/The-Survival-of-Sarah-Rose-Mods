@@ -174,9 +174,6 @@ translate zh strings:
     old "Navigate the interface."
     new "导航界面"
 
-    old "Escape"
-    new "逃脱"
-
     old "Accesses the game menu."
     new "打开游戏菜单。"
 

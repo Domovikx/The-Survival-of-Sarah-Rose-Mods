@@ -27,9 +27,6 @@ translate ru strings:
     old "Nick's sudden comment startled Sarah."
     new "Внезапное замечание Ника вывело Сару из задумчивости."
 
-    old "Sorry, sorry."
-    new "Прости, прости."
-
     old "Did you get that copper gear wire from the dock smithy?"
     new "Ты достала ту медную проволоку у докового кузнеца?"
 
@@ -318,9 +315,6 @@ translate ru strings:
     old "Nick gestured towards a fountain nearby."
     new "Ник указал на фонтан неподалеку."
 
-    old "Sure."
-    new "Конечно."
-
     old "Together, they sat down on the edge of the fountain. Behind them, statues had been carved out, displaying some historical moment that Sarah couldn't identify."
     new "Вместе они сели на край фонтана. За их спинами были высечены статуи, изображавшие какой-то исторический момент, который Сара не смогла опознать."
 
@@ -576,9 +570,6 @@ translate ru strings:
     old "You're very funny."
     new "Ты очень смешной."
 
-    old "Really?"
-    new "Правда?"
-
     old "Slowly, the two made their way down the winding roads, back to the docks."
     new "Медленно они вдвоём двинулись вниз по извилистым дорогам, возвращаясь к докам."
 
@@ -690,9 +681,6 @@ translate ru strings:
     old "He told me you've been practicing the early stages of rigging."
     new "Он сказал мне, что ты практиковалась на ранних этапах работы с такелажом."
 
-    old "Show me."
-    new "Покажи мне."
-
     old "Drawing on all her practice, Sarah did her best to rig the sails, just as she had been shown by Nick."
     new "Опираясь на всю свою практику, Сара сделала всё возможное, чтобы натянуть паруса точно так, как её научил Никк."
 
@@ -725,9 +713,6 @@ translate ru strings:
 
     old "Do it again."
     new "Сделай это ещё раз."
-
-    old "Yes, captain."
-    new "Да, капитан."
 
     old "Sarah untied the knot and started over, this time reminding herself to correct her mistake."
     new "Сара развязала узел и начала всё сначала, на этот раз напоминая себе исправить ошибку."
@@ -860,9 +845,6 @@ translate ru strings:
 
     old "Did you do that to him?"
     new "Ты это сделал с ним?"
-
-    old "Do what?"
-    new "Что сделать?"
 
     old "You know what I'm talking about! The thing...around his...thing."
     new "Ты же знаешь, о чём я! Эта штука... вокруг его... члена."
@@ -1374,9 +1356,6 @@ translate ru strings:
     old "But captain, just think about-"
     new "Но, капитан, вы только подумайте..."
 
-    old "Enough!"
-    new "Хватит!"
-
     old "Who are you here for, blondie? Me or that fucking nobody?"
     new "Кто ты здесь для кого, блондинка? Для меня или для этого гребаного ничтожества?"
 
@@ -1791,14 +1770,8 @@ translate ru strings:
     old "Nick turned around at the sound of her voice. His eyes went wide when he saw her."
     new "Ник обернулся при звуке её голоса. Его глаза широко распахнулись, когда он увидел её."
 
-    old "Sarah...I..."
-    new "Сара... я..."
-
     old "I'm just here to get something for the captain."
     new "Я здесь только для того, чтобы взять кое-что для капитана."
-
-    old "Ooh..."
-    new "Ох..."
 
     old "I'm sorry about this...he told me I had to go like this."
     new "Прости за это... Он сказал мне, что я должна была прийти именно так."
@@ -1883,9 +1856,6 @@ translate ru strings:
 
     old "What's got you all worked up, blondie?"
     new "Что тебя так взбесило, блондинка?"
-
-    old "Nothing."
-    new "Ничего."
 
     old "Belmont only chuckled, asking no further questions."
     new "Бельмонт лишь усмехнулся и не стал задавать дальнейших вопросов."
@@ -2087,9 +2057,6 @@ translate ru strings:
 
     old "Sarah was confused, because with his cock deep inside of her, it sure felt to her like that."
     new "Сара была в замешательстве: с членом капитана Бельмонта глубоко внутри неё, ей это определённо казалось именно так."
-
-    old "You don't?"
-    new "Разве нет?"
 
     old "He shook his head, continuing to slowly thrust in and out of her."
     new "Он покачал головой, продолжая медленно входить и выходить из неё."

@@ -294,9 +294,6 @@ translate it strings:
     old "Tailor"
     new "Sartore"
 
-    old "Girl"
-    new "Ragazza"
-
     old "Advisor"
     new "Consigliere"
 

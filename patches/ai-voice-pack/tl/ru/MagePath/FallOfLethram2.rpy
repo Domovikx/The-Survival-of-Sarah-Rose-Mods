@@ -852,9 +852,6 @@ translate ru strings:
     old "But now she saw a what a properly trained Witch could do."
     new "Но теперь она увидела, на что способна по-настоящему обученная ведьма."
 
-    old "Run!"
-    new "Беги!"
-
     old "Hecate screamed the word and Sarah felt her body spring to motion."
     new "Геката выкрикнула это слово, и Сара почувствовала, как её тело мгновенно пришло в движение."
 
@@ -1065,9 +1062,6 @@ translate ru strings:
     old "We need to get on this ship, now!"
     new "Нам нужно садиться на этот корабль — прямо сейчас!"
 
-    old "But what about-"
-    new "Но а как же..."
-
     old "Now!"
     new "Теперь!"
 
@@ -1260,9 +1254,6 @@ translate ru strings:
     old "All around him, the sailors ran around, executing his commands."
     new "Вокруг него суетились моряки, выполняя его приказы."
 
-    old "What?!"
-    new "Что?!"
-
     old "The man looked at her with an angry frown."
     new "Мужчина посмотрел на неё с гневной нахмуренностью."
 
@@ -1416,17 +1407,11 @@ translate ru strings:
     old "Alaric looked at her when he heard Sarah's voice."
     new "Аларик посмотрел на неё, когда услышал голос Сары."
 
-    old "Sarah!"
-    new "Сара!"
-
     old "He pressed past the woman and walked up to Sarah."
     new "Он протиснулся мимо женщины и подошёл к Саре."
 
     old "Before she knew it, he had grabbed her hands."
     new "Прежде чем она успела это осознать, он уже схватил её за руки."
-
-    old "You're safe!"
-    new "Ты в безопасности!"
 
     old "Sarah still saw the other woman, looking at Alaric with grateful eyes."
     new "Сара всё ещё видела ту другую женщину, которая смотрела на Аларика с благодарностью в глазах."
@@ -1529,9 +1514,6 @@ translate ru strings:
 
     old "Alaric, the hero."
     new "Аларик, герой."
-
-    old "Don't start with me."
-    new "Не начинай со мной."
 
     old "So brave!"
     new "Какая храбрая!"
@@ -1698,9 +1680,6 @@ translate ru strings:
     old "With a huff, Sarah continued to strip, throwing the last of her clothes aside."
     new "Тяжело вздохнув, Сара продолжила раздеваться, отбрасывая последнюю одежду в сторону."
 
-    old "Better."
-    new "Лучше."
-
     old "Alaric stepped into the room and let the door fall close."
     new "Аларик вошёл в комнату и позволил двери закрыться."
 
@@ -1851,9 +1830,6 @@ translate ru strings:
     old "Sarah softly moaned, her cries of excitement silenced on his cock."
     new "Сара тихо простонала, и её вздохи от возбуждения заглушились на его члене."
 
-    old "Good."
-    new "Хорошо."
-
     old "He suddenly stepped back, his cock slipping from her mouth."
     new "Он внезапно отступил назад, и его член выскользнул из её рта."
 
@@ -1931,9 +1907,6 @@ translate ru strings:
 
     old "In front of her, his arrogant, grinning face, knowing how right he was about her."
     new "Перед ней было его высокомерное, ухмыляющееся лицо — он знал, насколько прав был насчёт неё."
-
-    old "There we go."
-    new "Вот так-то."
 
     old "He lifted her up again, only to drop her down even harder."
     new "Он снова поднял её, лишь чтобы обрушить на неё ещё с большей силой."
@@ -2046,12 +2019,6 @@ translate ru strings:
     old "She felt his powerful hands slide across her waist, up her back."
     new "Она почувствовала, как его мощные руки скользнули по её талии и вверх по спине."
 
-    old "You're a mess."
-    new "Ты вся в беспорядке."
-
-    old "Sorry about that."
-    new "Прости за это."
-
     old "Sarah just smiled."
     new "Сара лишь улыбнулась."
 
@@ -2075,9 +2042,6 @@ translate ru strings:
 
     old "Obviously. You thought I'd be out so quick?"
     new "Конечно же. Ты думала, я так быстро закончу?"
-
-    old "No, I guess not."
-    new "Нет, думаю, нет."
 
     old "You know, I got pretty close to dying today. If I had been just a little slow, I'd have been done for."
     new "Знаешь, сегодня я был очень близок к смерти. Если бы я оказался хотя бы чуточку медленнее — мне бы пришёл конец."
@@ -2310,9 +2274,6 @@ translate ru strings:
     old "I was tired, sorry if I left you alone up there."
     new "Я была уставшей, прости, если оставила тебя одну там наверху."
 
-    old "It's okay."
-    new "Ничего страшного."
-
     old "I understand using all that magic took a lot out of you."
     new "Я понимаю, что использование всей этой магии отняло у тебя много сил."
 
@@ -2439,9 +2400,6 @@ translate ru strings:
     old "In the dark of the room, lit only by moonlight and stars, was nearly like snow."
     new "В темноте комнаты, освещаемой лишь лунным светом и звёздами, она была почти как снег."
 
-    old "You're beautiful."
-    new "Ты прекрасна."
-
     old "Samayra returned the compliment."
     new "Самайра ответила на комплимент."
 
@@ -2459,9 +2417,6 @@ translate ru strings:
 
     old "Sarah smiled, playfully."
     new "Сара игриво улыбнулась."
-
-    old "Love."
-    new "Любовь."
 
     old "Her words echoed a sadness."
     new "Её слова отозвались печалью."
@@ -2847,9 +2802,6 @@ translate ru strings:
     old "Sarah was surprised at the offer, but it felt impolite to refuse."
     new "Сара была удивлена предложением, но ей показалось невежливым отказать."
 
-    old "I...of course."
-    new "Я... конечно."
-
     old "She walked over and set down on the opposite end of the large desk."
     new "Она подошла и села на противоположный конец большого стола."
 
@@ -2861,9 +2813,6 @@ translate ru strings:
 
     old "I haven't even had a meal yet."
     new "Я даже ещё не поел."
-
-    old "How about you?"
-    new "А ты как?"
 
     old "Sarah suddenly realized sheh hadn't eaten all day either."
     new "Сара вдруг поняла, что и сама за весь день так и не поела."
@@ -3081,17 +3030,11 @@ translate ru strings:
     old "He smiled some more."
     new "Он улыбнулся ещё сильнее."
 
-    old "What is it?"
-    new "Что такое?"
-
     old "I just thought we were...having fun..."
     new "Я просто думала, что мы... просто развлекаемся..."
 
     old "I didn't know that you..."
     new "Я не знала, что вы..."
-
-    old "What?"
-    new "Что?"
 
     old "That I was attracted to you?"
     new "Что я был к тебе привлечён?"
@@ -3272,9 +3215,6 @@ translate ru strings:
 
     old "Every inch of him slid into her without any resistance, realizing she was drenched for him."
     new "Каждый дюйм его тела скользил в неё без малейшего сопротивления, и он понял, что она была готова принять его."
-
-    old "You're soaking wet."
-    new "Ты вся мокрая."
 
     old "His hoarse voice still pressed on her ears."
     new "Его хриплый голос всё ещё давил ей в уши."
@@ -3464,9 +3404,6 @@ translate ru strings:
 
     old "In her chest, a surging desire to make him cum."
     new "В груди у неё бурлило непреодолимое желание довести его до оргазма."
-
-    old "Good girl."
-    new "Хорошая девочка."
 
     old "The words of praise struck her like a hammer."
     new "Слова похвалы ударили по ней, словно молот."

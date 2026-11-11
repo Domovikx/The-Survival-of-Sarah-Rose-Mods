@@ -51,9 +51,6 @@ translate ru strings:
     old "Sarah woke the next day to Dalia softly jolting her."
     new "Сара проснулась на следующий день от того, что Далия мягко встряхнула её."
 
-    old "Hey..."
-    new "Эй..."
-
     old "Sarah slowly got up."
     new "Сара медленно встала."
 
@@ -185,9 +182,6 @@ translate ru strings:
 
     old "So all I can really say is what the Master told me."
     new "Так что всё, что я могу сказать — это то, что мне рассказал Мастер."
-
-    old "What did he tell you?"
-    new "Что он тебе сказал?"
 
     old "Dalia looked at Sarah."
     new "Далия посмотрела на Сару."
@@ -321,9 +315,6 @@ translate ru strings:
     old "But...if there were mages...why did they stay?"
     new "Но... если маги и были... почему они остались?"
 
-    old "Stay?"
-    new "Остаться?"
-
     old "Yes. Why did they not use their magic to dissapear into other worlds? Escape this dying sphere?"
     new "Да. Почему же они не воспользовались своей магией, чтобы исчезнуть в других мирах? Сбежать из этой умирающей сферы?"
 
@@ -338,9 +329,6 @@ translate ru strings:
 
     old "My magic...it was gone."
     new "Моя магия... она исчезла."
-
-    old "Exactly."
-    new "Точно."
 
     old "A person's connection to magic is tied to the world itself."
     new "Связь человека с магией тесно переплетена с самим миром."
@@ -380,9 +368,6 @@ translate ru strings:
 
     old "Dalia looked at her, surprised."
     new "Далия удивлённо посмотрела на неё."
-
-    old "I...me?"
-    new "Я... я?"
 
     old "Yeah, what's your story? How did you end up here?"
     new "Да, так что у тебя за история? Как ты здесь оказалась?"
@@ -594,9 +579,6 @@ translate ru strings:
     old "The daemon tapped its sharp claws on the surface of the table."
     new "Демон постучал острыми когтями по поверхности стола."
 
-    old "Very well."
-    new "Очень хорошо."
-
     old "And how is that going?"
     new "И как там дела?"
 
@@ -623,9 +605,6 @@ translate ru strings:
 
     old "I...of course, Master. If you grant her your indulgence, she will-"
     new "Я... конечно, Мастер. Если вы проявите к ней снисхождение, она..."
-
-    old "No."
-    new "Нет."
 
     old "I do not mean to tolerate her failures."
     new "Я не собираюсь терпеть её провалы."
@@ -786,9 +765,6 @@ translate ru strings:
     old "What? You mean to object too?"
     new "Что? То есть ты тоже собираешься возражать?"
 
-    old "I..."
-    new "Я..."
-
     old "Her voice was soft, distant."
     new "Её голос был тихим, далёким."
 
@@ -827,9 +803,6 @@ translate ru strings:
 
     old "Her blank face nodding."
     new "Её безжизненное лицо кивало."
-
-    old "Yes...Master..."
-    new "Да... Мастер..."
 
     old "At those words, the beast thrust forward, penetrating Dalia nearly all the way."
     new "При этих словах зверь рванулся вперёд, проникая в Далию почти до самого конца."
@@ -965,9 +938,6 @@ translate ru strings:
 
     old "The creature grinned, flashing its sharp teeth."
     new "Существо ухмыльнулось, обнажив острые зубы."
-
-    old "You are right."
-    new "Ты права."
 
     old "I am stronger than you by far."
     new "Я намного сильнее тебя."
@@ -1293,9 +1263,6 @@ translate ru strings:
     old "Slowly, her senses returned to her. How much time had passed, she could not tell."
     new "Постепенно её чувства возвращались. Сколько времени прошло — она не могла сказать."
 
-    old "Sarah..."
-    new "Сара..."
-
     old "She heard Dalia's soft and distant voice."
     new "Она услышала тихий и далёкий голос Далии."
 
@@ -1322,9 +1289,6 @@ translate ru strings:
 
     old "What...what did I..."
     new "Что... что я..."
-
-    old "It's okay."
-    new "Всё в порядке."
 
     old "Come with me. I'll get you cleaned up."
     new "Пойдём со мной. Я помогу тебе умыться."
@@ -1367,9 +1331,6 @@ translate ru strings:
 
     old "But you were a mess. You need to get cleaned up."
     new "Но ты была в полном беспорядке. Тебе нужно умыться."
-
-    old "Here."
-    new "Вот."
 
     old "Dalia handed Sarah a sponge."
     new "Далия протянула Саре губку."

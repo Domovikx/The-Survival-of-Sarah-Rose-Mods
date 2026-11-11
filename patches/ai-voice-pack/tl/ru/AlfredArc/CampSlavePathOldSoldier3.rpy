@@ -90,9 +90,6 @@ translate ru strings:
     old "And you're new, and young, so I think he's a bit obsessed with you."
     new "И ты у нас новая да ещё и молодая, так что, думаю, он тобой немного одержим."
 
-    old "Yeah, I guess."
-    new "Да, наверное."
-
     old "Part of her still wanted to play coy, but in truth, this place was empty."
     new "Часть неё всё ещё хотела притворяться недоступной, но на самом деле здесь было пусто."
 
@@ -134,9 +131,6 @@ translate ru strings:
 
     old "Mary..."
     new "Мэри..."
-
-    old "Yes?"
-    new "Да?"
 
     old "Did you ever try to escape?"
     new "Ты когда-нибудь пыталась сбежать?"

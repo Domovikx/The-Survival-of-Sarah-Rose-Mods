@@ -3,9 +3,6 @@
 
 translate ru strings:
 
-    old "I will join the Brothers of Providence and reclaim Rosanna."
-    new "Я присоединюсь к Братьям Провидения и верну Розанну."
-
     old "Vaelen embraces Sarah."
     new "Ваэлен обнимает Сару."
 

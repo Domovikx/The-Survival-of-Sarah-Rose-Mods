@@ -9,9 +9,6 @@ translate ru strings:
     old "Not long after she left, Sarah spotted Xan walking back across the hall towards her."
     new "Вскоре после её ухода Сара увидела Ксантиппу, идущую по другому концу зала к ней."
 
-    old "We need to talk."
-    new "Нам нужно поговорить."
-
     old "Nice to see you again as well."
     new "Приятно снова тебя видеть."
 
@@ -137,9 +134,6 @@ translate ru strings:
 
     old "A handful of guards...and me."
     new "Горстка стражников... и я."
-
-    old "That's right."
-    new "Верно."
 
     old "We don't expect the Mythran army to reach the palace, but we can't be sure there won't be smaller vanguard units sneaking behind the main front."
     new "Мы не ожидаем, что армия Митрана дойдёт до дворца, но нельзя быть уверенными, что за основной линией фронта не проскользнут небольшие отряды авангарда."
@@ -530,9 +524,6 @@ translate ru strings:
 
     old "Samayra turned back to Sarah."
     new "Самайра обернулась к Саре."
-
-    old "There it is."
-    new "Вот она."
 
     old "She waved her hand towards a massive, solid metal door, as if to introduce it."
     new "Она махнула рукой к массивной двери из цельного металла, словно представляя её."
@@ -996,9 +987,6 @@ translate ru strings:
     old "Samayra kept her eyes fixed to the floor."
     new "Самайра продолжала смотреть на пол."
 
-    old "Maybe."
-    new "Возможно."
-
     old "She suddenly looked up at Sarah. Her eyes were watery."
     new "Она вдруг посмотрела на Сару. Глаза её были влажными."
 
@@ -1046,9 +1034,6 @@ translate ru strings:
 
     old "You just said I made you feel happy, like you haven't been happy in a long time."
     new "Ты только что сказала, что я заставила тебя почувствовать себя счастливой — так, как ты не чувствовала себя счастливой уже очень долго."
-
-    old "Right."
-    new "Верно."
 
     old "I guess, I think that's how you made me feel."
     new "Наверное, я думаю, что именно так ты и заставила меня почувствовать себя."
@@ -1196,9 +1181,6 @@ translate ru strings:
 
     old "What was she like?"
     new "Какой же она была?"
-
-    old "Huh?"
-    new "А?"
 
     old "Your mother. What kind of person was she?"
     new "Твоя мать. Что это был за человек?"

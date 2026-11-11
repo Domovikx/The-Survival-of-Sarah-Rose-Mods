@@ -324,9 +324,6 @@ translate ru strings:
     old "The goblin took another step forward, it's vile face still warped in a manic grin."
     new "Гоблин сделал ещё один шаг вперёд — его отвратительное лицо по-прежнему было искажено маниакальной ухмылкой."
 
-    old "Get back!"
-    new "Отступай!"
-
     old "Sarah swatted at the creature with her hand."
     new "Сара взмахнула рукой в сторону существа."
 

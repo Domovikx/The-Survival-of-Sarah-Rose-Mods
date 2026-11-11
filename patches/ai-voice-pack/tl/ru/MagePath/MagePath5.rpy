@@ -261,9 +261,6 @@ translate ru strings:
     old "Sarah listened as Xan painted a picture of her life."
     new "Сара слушала, как Ксантипа рисовала картину её жизни."
 
-    old "That sounds nice."
-    new "Звучит неплохо."
-
     old "Exactly. This life of ours, studying magic, it can be very orderly. Very measured."
     new "Точно. Эта наша жизнь, изучение магии, может быть очень упорядоченной. Очень размеренной."
 
@@ -276,12 +273,6 @@ translate ru strings:
     old "That sounds horrible."
     new "Это звучит ужасно."
 
-    old "That sounds horrible."
-    new "Это звучит ужасно."
-
-    old "What do you mean?"
-    new "Что вы имеете в виду?"
-
     old "To be locked away in some citadel? Studying for centuries, all to what end? So I can watch the world turn by?"
     new "Быть запертой в какой-то цитадели? Учиться веками — и ради чего? Чтобы я могла просто смотреть, как мир вращается мимо?"
 
@@ -293,9 +284,6 @@ translate ru strings:
 
     old "Yeah, by standing outside of it, detached."
     new "Да — именно так: стоя вне его, отстранённо."
-
-    old "Exactly."
-    new "Именно так."
 
     old "It's horrid. That's no way to live."
     new "Это ужасно. Так жить невозможно."
@@ -314,9 +302,6 @@ translate ru strings:
 
     old "Xan looked up surprised."
     new "Ксантиппа удивлённо подняла голову."
-
-    old "What about me?"
-    new "А как же я?"
 
     old "You're in here, out in the real world. You're not in the citadel, you're not studying in any tower."
     new "Ты же здесь, в реальном мире. Ты не в цитадели и не учишься ни в какой башне."
@@ -368,9 +353,6 @@ translate ru strings:
 
     old "Xan rapped his knuckles across the desk."
     new "Ксантиппа стукнул костяшками пальцев по столу."
-
-    old "You're right, it's not."
-    new "Ты права, это не так."
 
     old "We spoke of it, months ago when I took you to visit Rosanna."
     new "Мы говорили об этом ещё несколько месяцев назад, когда я вёл тебя на встречу с Розанной."

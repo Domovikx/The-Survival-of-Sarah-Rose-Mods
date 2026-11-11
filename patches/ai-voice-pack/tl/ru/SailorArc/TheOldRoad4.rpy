@@ -252,9 +252,6 @@ translate ru strings:
     old "Sarah could see Sigmund shift in his seat. His blade was not far from his side."
     new "Сара видела, как Зигмунд суетливо двигался на сиденье. Его клинок находился недалеко от бока."
 
-    old "Fine."
-    new "Хорошо."
-
     old "How much do you want?"
     new "Сколько вы хотите?"
 
@@ -272,9 +269,6 @@ translate ru strings:
 
     old "I wouldn't do that."
     new "Я бы так не поступил."
-
-    old "Why not?"
-    new "Почему бы и нет?"
 
     old "Because this wagon is loaded up with pyrrite. Enough of it to take out just about everyone and that bridge too."
     new "Потому что эта повозка загружена пирритом. Достаточно, чтобы уничтожить почти всех и тот мост тоже."
@@ -429,9 +423,6 @@ translate ru strings:
     old "She saw the man roll his eyes."
     new "Она увидела, как мужчина закатил глаза."
 
-    old "It will be night soon."
-    new "Скоро уже будет ночь."
-
     old "She faced him down."
     new "Она бросила на него вызывающий взгляд."
 
@@ -527,9 +518,6 @@ translate ru strings:
 
     old "She barely had time to consider any of it, Sakar kept pulling her along, not giving her a moment to pause."
     new "Она едва успела это осознать, как Сакар продолжил тащить её за собой, не давая и секунды на передышку."
-
-    old "Keep going!"
-    new "Не останавливайся!"
 
     old "Don't linger!"
     new "Не задерживайся!"
@@ -690,9 +678,6 @@ translate ru strings:
     old "Another crack rang out and Sarah winced as she felt her ass begin to burn from the spanking."
     new "Раздался ещё один треск, и Сара вздрогнула, ощущая, как её задница начинает гореть от порки."
 
-    old "Yes what?"
-    new "Да, что?"
-
     old "Yes, I think it's fair that you take me first...sir."
     new "Да, думаю, это справедливо, что ты выберешь меня первым... сэр."
 
@@ -701,9 +686,6 @@ translate ru strings:
 
     old "She felt a softer slap on her ass."
     new "Она почувствовала более нежный шлепок по своей заднице."
-
-    old "That's my girl."
-    new "Вот это моя девочка."
 
     old "With a single, powerful thrust, Sarah felt him bury his cock into her."
     new "Одним мощным толчком он заставил её почувствовать, как его член вошёл в неё до самого конца."
@@ -774,9 +756,6 @@ translate ru strings:
     old "How about you tell me you love my cock?"
     new "А может, скажешь мне, что любишь мой член?"
 
-    old "Never."
-    new "Никогда."
-
     old "Sarah knew she was never going to say something like that to the man."
     new "Сара знала, что никогда не скажет этому мужчине ничего подобного."
 
@@ -794,9 +773,6 @@ translate ru strings:
 
     old "With each slap, the pain on her ass burned deeper and deeper, echoing out across the rest of her body."
     new "С каждым шлепком боль в её заднице становилась всё сильнее и сильнее, отдаваясь по всему остальному телу."
-
-    old "Say it!"
-    new "Скажи же!"
 
     old "For a moment more, Sarah tolerated the spankings and the building pain, but each slap grew and grew in intensity."
     new "Ещё на мгновение Сара терпела шлепки и нарастающую боль, но каждый удар становился всё сильнее и интенсивнее."
@@ -816,14 +792,8 @@ translate ru strings:
     old "Reactively, Sarah thanked the man in her mind, only to hate herself for ever thinking it."
     new "Реактивно Сара мысленно поблагодарила мужчину, но тут же возненавидела себя за то, что вообще позволила себе такую мысль."
 
-    old "There we go."
-    new "Вот так-то."
-
     old "The night's gonna go a lot easier if you stop with the attitude."
     new "Ночь пройдёт гораздо легче, если ты откажешься от этого наглого тона."
-
-    old "Got that?"
-    new "Поняла?"
 
     old "Sarah offered up the words as meekly as she could. Submission, that was what he wanted, and that was what she had to give him."
     new "Сара произнесла эти слова так смиренно, как только могла. Подчинение — вот чего он хотел, и именно это она была обязана ему предоставить."
@@ -1187,9 +1157,6 @@ translate ru strings:
 
     old "The captain began to stroke his chin."
     new "Капитан начал поглаживать подбородок."
-
-    old "Huh..."
-    new "Хм..."
 
     old "You know, that might actually work..."
     new "Знаешь, это, возможно, действительно сработает..."

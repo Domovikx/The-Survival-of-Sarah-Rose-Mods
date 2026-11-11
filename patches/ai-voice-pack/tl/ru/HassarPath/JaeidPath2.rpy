@@ -165,9 +165,6 @@ translate ru strings:
     old "Her eyes went from Jaeid, to Sarah, and back again."
     new "Её глаза перешли от Джаида к Саре и снова обратно."
 
-    old "What is this?"
-    new "Что это?"
-
     old "Sarah saw Jaied step forward."
     new "Сара увидела, как Джейд шагнул вперёд."
 
@@ -176,9 +173,6 @@ translate ru strings:
 
     old "Ooh Jaied..."
     new "Ох, Яэид..."
-
-    old "What?"
-    new "Что?"
 
     old "I mean, the brothels I can understand, but do you really have to bring them home?"
     new "Я имею в виду, бордели я ещё могу понять, но тебе правда нужно было тащить их домой?"

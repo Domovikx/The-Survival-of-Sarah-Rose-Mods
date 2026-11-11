@@ -96,9 +96,6 @@ translate ru strings:
     old "At the base, Sarah could see it emerged from a glass flask. It seemed attached to it in some way."
     new "У подножия Сара видела, как оно появилось из стеклянной колбы. Казалось, что оно было к ней как-то прикреплено."
 
-    old "Who are you?"
-    new "Кто ты?"
-
     old "In all her life, she had never heard of such a creature, not even in books or stories."
     new "За всю свою жизнь она ни разу не слышала о таком существе — даже в книгах или историях."
 
@@ -107,9 +104,6 @@ translate ru strings:
 
     old "The thing paused."
     new "Существо замерло."
-
-    old "I can see why he likes you."
-    new "Я понимаю, почему ты ему нравишься."
 
     old "It's been a long time since he's let anyone into his house."
     new "Прошло много времени с тех пор, как он позволял кому-либо войти в свой дом."
@@ -137,9 +131,6 @@ translate ru strings:
 
     old "Sarah swallowed, but her mouth was still dry."
     new "Сара сглотнула, но рот у неё всё ещё был сухой."
-
-    old "What are you?"
-    new "Ты что такое?"
 
     old "Sarah racked her brain, trying to find an answer to that question that didn't sound absurd."
     new "Сара напрягла все силы, пытаясь найти на этот вопрос ответ, который не звучал бы абсурдно."
@@ -206,9 +197,6 @@ translate ru strings:
 
     old "The creature seemed to cower under its mere radiance."
     new "Существо, казалось, съежилось под одним лишь его сиянием."
-
-    old "Enough!"
-    new "Достаточно!"
 
     old "Go back, Razaphel, go back into your flask or I swear I'll give you a thrasing that you will remember for a thousand years."
     new "Отступай, Разафель, возвращайся в свою флягу, иначе клянусь, я устрою тебе такую взбучку, что будешь помнить её тысячу лет."
@@ -351,14 +339,8 @@ translate ru strings:
     old "After months of preparation, the ritual was carried out and another world was summoned into ours."
     new "После месяцев подготовки ритуал был проведён, и в наш мир был призван ещё один."
 
-    old "But the spell did not stay true."
-    new "Но заклинание не оказалось верным."
-
     old "This new world was summoned into ours, but all of existence covers all of existence."
     new "Этот новый мир был призван в наш, но всё сущее охватывает само себя."
-
-    old "There is no space for two worlds, in one world."
-    new "В одном мире нет места для двух миров."
 
     old "And so, our plane of existence collapsed onto this new world which had been summoned, trapping their existence underneath ours."
     new "И вот наш план существования рухнул на этот новый мир, который был призван, заточив их реальность под нашей."
@@ -527,9 +509,6 @@ translate ru strings:
 
     old "I've been on this plane a long time, but you're the first to ask me that."
     new "Я уже давно здесь, но ты — первая, кто задал мне такой вопрос."
-
-    old "You didn't answer my question."
-    new "Ты не ответил на мой вопрос."
 
     old "Is that what brought you here? To discuss this old spirit's feelings?"
     new "Так вот что привело тебя сюда? Чтобы обсудить чувства этого старого духа?"
