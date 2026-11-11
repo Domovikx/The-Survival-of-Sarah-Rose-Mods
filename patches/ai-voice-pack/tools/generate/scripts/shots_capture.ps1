@@ -24,7 +24,7 @@
 param(
     [Parameter(Mandatory = $true)][string]$GameDir,
     [ValidateSet("menu", "game", "all")][string]$Mode = "all",
-    [ValidateSet("ru", "en", "all")][string]$Lang = "all",
+    [ValidateSet("en", "ru", "de", "es", "fr", "it", "ja", "ko", "pl", "pt", "zh", "all")][string]$Lang = "all",
     [switch]$Save
 )
 
@@ -44,7 +44,7 @@ if (-not (Test-Path $harnessSrc)) { throw "не найден $harnessSrc" }
 $harnessDir = Join-Path $GameDir "mods\_tssr-test"
 
 $modes = if ($Mode -eq "all") { @("menu", "game") } else { @($Mode) }
-$langs = if ($Lang -eq "all") { @("ru", "en") } else { @($Lang) }
+$langs = if ($Lang -eq "all") { @("en", "ru", "de", "es", "fr", "it", "ja", "ko", "pl", "pt", "zh") } else { @($Lang) }
 
 try {
     New-Item -ItemType Directory -Force -Path $harnessDir | Out-Null

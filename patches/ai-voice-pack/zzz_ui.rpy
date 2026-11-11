@@ -39,8 +39,14 @@
 ##    fonts/ и резолвится тем же "fonts/..."-путём через RENPY_SEARCHPATH)
 ################################################################################
 
-## The font used for in-game text.
+## Шрифты: цепочка фолбэка (рецепт NeonTranslator 2026-11-11: по-языковые
+## Noto для CJK) — Literata рисует латиницу/кириллицу, CJK-глифы подхватывает
+## Noto по недостающим глифам (ja/ko/zh без «□□»).
 define gui.text_font = "fonts/Literata-Regular.ttf"
+
+## Настоящий Bold (instance из Literata-VF, fonts/Literata-Bold.ttf):
+## заголовки/секции — уровень иерархии (ревью R6 2026-11-11).
+define tssr_font_bold = "fonts/Literata-Bold.ttf"
 
 ## The font that is used for the names of characters.
 define gui.name_text_font = "fonts/Literata-Regular.ttf"
@@ -86,48 +92,87 @@ init python:
         except:
             pass
 
+    def set_style_font(style_name, font):
+        try:
+            getattr(style, style_name).font = font
+        except:
+            pass
+
+    # Шрифт по активному языку (рецепт NeonTranslator 2026-11-11: по-языковые
+    # Noto для CJK; точка подключения — update_font_styles, тот же механизм,
+    # что и размеры шрифтов).
+    TSSR_LANG_FONT = {
+        "ja": "fonts/NotoSansCJKjp-Regular.otf",
+        "ko": "fonts/NotoSansCJKkr-Regular.otf",
+        "zh": "fonts/NotoSansCJKsc-Regular.otf",
+    }
+
+    def tssr_current_font():
+        return TSSR_LANG_FONT.get(preferences.language, "fonts/Literata-Regular.ttf")
+
+    def tssr_lang_font(code):
+        # Шрифт МЕТКИ языка = шрифт её языка (ревью R4 2026-11-11):
+        # «日本語/한국어/中文» читаемы при любом активном языке UI.
+        return TSSR_LANG_FONT.get(code, "fonts/Literata-Bold.ttf")
+
+    def tssr_shots_vy():
+        # Позиция скролла панели для QA-съёмки (харнесс zz_capture: верх=0,
+        # низ=999999 зажимается максимумом); в игре без env всегда 0.
+        import os
+        return int(os.environ.get("TSSR_SHOTS_VY", "0"))
+
+    def tssr_apply_language_font():
+        # ЖИВОЕ переключение языка (баг 2026-11-11: EN->RU->zh->OK = квадратики
+        # в главном меню): Language() меняет переводы, но НЕ шрифт — шрифт
+        # применялся только при старте/«Применить и перезапустить». Тут
+        # обновляем gui.*/стили и пересобираем без рестарта.
+        update_font_styles()
+        gui.rebuild()
+        renpy.restart_interaction()
+
+    # (стиль -> persistent-ключ размера); шрифт применяется ко всем этим же стилям
+    TSSR_TEXT_STYLES = [
+        ('say_dialogue', 'font_text_size'), ('say_label', 'font_name_size'),
+        ('nvl_dialogue', 'font_text_size'), ('nvl_label', 'font_name_size'),
+        ('interface_text', 'font_interface_size'), ('gui_text', 'font_interface_size'),
+        ('history_text', 'font_text_size'), ('history_name', 'font_name_size'),
+        ('pref_label_text', 'font_label_size'), ('slot_time_text', 'font_interface_size'),
+        ('slot_name_text', 'font_interface_size'), ('game_menu_label_text', 'font_label_size'),
+        ('quick_button_text', 'font_interface_size'), ('choice_button_text', 'font_text_size'),
+        ('navigation_button_text', 'font_interface_size'), ('button_text', 'font_interface_size'),
+        ('label_text', 'font_interface_size'), ('prompt_text', 'font_interface_size'),
+        ('main_menu_text', 'font_interface_size'), ('about_text', 'font_interface_size'),
+        ('about_label_text', 'font_label_size'), ('page_label_text', 'font_label_size'),
+        ('page_button_text', 'font_interface_size'), ('slot_button_text', 'font_interface_size'),
+        ('radio_label_text', 'font_label_size'), ('radio_button_text', 'font_interface_size'),
+        ('check_label_text', 'font_label_size'), ('check_button_text', 'font_interface_size'),
+        ('slider_label_text', 'font_label_size'), ('slider_button_text', 'font_interface_size'),
+        ('mute_all_button_text', 'font_interface_size'), ('history_label_text', 'font_label_size'),
+        ('help_button_text', 'font_interface_size'), ('help_label_text', 'font_label_size'),
+        ('help_text', 'font_interface_size'), ('confirm_prompt_text', 'font_interface_size'),
+        ('confirm_button_text', 'font_interface_size'), ('skip_text', 'font_interface_size'),
+        ('notify_text', 'font_interface_size'), ('nvl_button_text', 'font_text_size'),
+        ('return_button_text', 'font_interface_size'),
+    ]
+
     def update_font_styles():
-        set_style_size('say_dialogue', persistent.font_text_size)
-        set_style_size('say_label', persistent.font_name_size)
-        set_style_size('nvl_dialogue', persistent.font_text_size)
-        set_style_size('nvl_label', persistent.font_name_size)
-        set_style_size('interface_text', persistent.font_interface_size)
-        set_style_size('gui_text', persistent.font_interface_size)
-        set_style_size('history_text', persistent.font_text_size)
-        set_style_size('history_name', persistent.font_name_size)
-        set_style_size('pref_label_text', persistent.font_label_size)
-        set_style_size('slot_time_text', persistent.font_interface_size)
-        set_style_size('slot_name_text', persistent.font_interface_size)
-        set_style_size('game_menu_label_text', persistent.font_label_size)
-        set_style_size('quick_button_text', persistent.font_interface_size)
-        set_style_size('choice_button_text', persistent.font_text_size)
-        set_style_size('navigation_button_text', persistent.font_interface_size)
-        set_style_size('button_text', persistent.font_interface_size)
-        set_style_size('label_text', persistent.font_interface_size)
-        set_style_size('prompt_text', persistent.font_interface_size)
-        set_style_size('main_menu_text', persistent.font_interface_size)
-        set_style_size('about_text', persistent.font_interface_size)
-        set_style_size('about_label_text', persistent.font_label_size)
-        set_style_size('page_label_text', persistent.font_label_size)
-        set_style_size('page_button_text', persistent.font_interface_size)
-        set_style_size('slot_button_text', persistent.font_interface_size)
-        set_style_size('radio_label_text', persistent.font_label_size)
-        set_style_size('radio_button_text', persistent.font_interface_size)
-        set_style_size('check_label_text', persistent.font_label_size)
-        set_style_size('check_button_text', persistent.font_interface_size)
-        set_style_size('slider_label_text', persistent.font_label_size)
-        set_style_size('slider_button_text', persistent.font_interface_size)
-        set_style_size('mute_all_button_text', persistent.font_interface_size)
-        set_style_size('history_label_text', persistent.font_label_size)
-        set_style_size('help_button_text', persistent.font_interface_size)
-        set_style_size('help_label_text', persistent.font_label_size)
-        set_style_size('help_text', persistent.font_interface_size)
-        set_style_size('confirm_prompt_text', persistent.font_interface_size)
-        set_style_size('confirm_button_text', persistent.font_interface_size)
-        set_style_size('skip_text', persistent.font_interface_size)
-        set_style_size('notify_text', persistent.font_interface_size)
-        set_style_size('nvl_button_text', persistent.font_text_size)
-        set_style_size('return_button_text', persistent.font_interface_size)
+        for _name, _key in TSSR_TEXT_STYLES:
+            set_style_size(_name, getattr(persistent, _key))
+        _f = tssr_current_font()
+        for _name, _key in TSSR_TEXT_STYLES:
+            set_style_font(_name, _f)
+        # ЖИРНЫЕ стили (заголовок/секции): в Literata-Bold нет CJK-глифов —
+        # для CJK-языков берём свой Noto (охота за квадратами 2026-11-11:
+        # «Sarah Rose — AI □□□□□□» в zh-панели). Для латиницы — Bold как был.
+        _fb = TSSR_LANG_FONT.get(preferences.language, "fonts/Literata-Bold.ttf")
+        for _s in ("tssr_mod_title", "tssr_mod_section"):
+            set_style_font(_s, _fb)
+        # gui.* — источник стилей игры (gui.text_properties) при пересборке
+        gui.text_font = _f
+        gui.name_text_font = _f
+        gui.interface_text_font = _f
+        gui.button_text_font = _f
+        gui.choice_button_text_font = _f
 
     def update_all():
         gui.text_size = persistent.font_text_size
@@ -170,9 +215,20 @@ init python:
     # Добавление языка: строка сюда + translate <код> strings: (или
     # tl/<код>/*.rpy) + при необходимости ai_voice/<код>/ с озвучкой.
     # Официальные файлы игры не трогаются.
+    # Полная матрица языков патча (владелец 2026-11-11: en — нативный язык,
+    # наравне с остальными): None = English (оригинал игры).
     TSSR_LANGUAGES = [
         (None, "English"),
         ("ru", "Русский"),
+        ("de", "Deutsch"),
+        ("es", "Español"),
+        ("fr", "Français"),
+        ("it", "Italiano"),
+        ("ja", "日本語"),
+        ("ko", "한국어"),
+        ("pl", "Polski"),
+        ("pt", "Português"),
+        ("zh", "中文"),
     ]
 
     # Короткие коды для КНОПКИ (подпись = текущий язык; ENG/RUS — привычные
@@ -181,6 +237,15 @@ init python:
     TSSR_LANG_SHORT = {
         None: "ENG",
         "ru": "RUS",
+        "de": "DEU",
+        "es": "ESP",
+        "fr": "FRA",
+        "it": "ITA",
+        "ja": "JPN",
+        "ko": "KOR",
+        "pl": "POL",
+        "pt": "POR",
+        "zh": "ZHO",
     }
 
     def tssr_current_short():
@@ -394,136 +459,160 @@ screen tssr_mod_menu():
     frame:
         style "tssr_mod_page"
 
-        vbox:
-            style "tssr_mod_column"
+        # Скролл-контейнер: панель обязана помещаться ЛЮБЫМ составом секций
+        # (ревью R7 2026-11-11: контент выше канвы 1080 — без прокрутки
+        # нижние секции уезжали). TSSR_SHOTS_VY — позиция скролла для QA-съёмки
+        # (харнесс zz_capture снимает верх+низ: полное ревью «сверху до низу»).
+        viewport:
+            mousewheel True
+            draggable True
+            scrollbars "vertical"
+            yinitial tssr_shots_vy()
 
-            ## Шапка — имя патча, продающее суть (2026-10-16, выбор владельца):
-            ## «Sarah Rose» вместо непонятного TSSR; EN «AI Voice Pack»,
-            ## RU «AI-озвучка и перевод».
-            text _("Sarah Rose — AI Voice Pack"):
-                style "tssr_mod_title"
+            vbox:
+                style "tssr_mod_column"
 
-            text _("Settings: language, voice, fonts, links."):
-                style "tssr_mod_hint"
+                ## ── Шапка ───────────────────────────────────────────────
+                text _("Sarah Rose — AI Voice Pack"):
+                    style "tssr_mod_title"
 
-            ## Язык + Озвучка — применяются МГНОВЕННО (без кнопки сохранения)
-            hbox:
-                spacing 40
+                text _("Settings: language, voice, fonts, links."):
+                    style "tssr_mod_hint"
 
-                vbox:
-                    xsize 530
-                    spacing 10
+                frame:
+                    style "tssr_divider"
 
-                    text _("Interface language"):
-                        style "tssr_mod_section"
+                ## ── Язык интерфейса: сетка 4×3, кнопки фикс-ширины ─────
+                ## (ревью R1/R3: не переносящийся hbox рвал слова и экран)
+                text _("Interface language"):
+                    style "tssr_mod_section"
 
-                    hbox:
-                        spacing 15
+                grid 4 3:
+                    xsize 1400
+                    spacing 16
 
-                        for code, title in TSSR_LANGUAGES:
-                            textbutton title:
-                                action Language(code)
-                                selected Language(code).get_selected()
-                                style "radio_button"
+                    for code, title in TSSR_LANGUAGES:
+                        textbutton title:
+                            # Language() переводит строки; tssr_apply_language_font —
+                            # живая смена шрифта (баг 2026-11-11: без неё CJK
+                            # после переключения рисовался квадратиками).
+                            action [Language(code), Function(tssr_apply_language_font)]
+                            selected Language(code).get_selected()
+                            style "tssr_lang"
+                            # Шрифт МЕТКИ = шрифт её языка (ревью R4):
+                            # «日本語/한국어/中文» читаемы при любом UI-языке.
+                            text_font tssr_lang_font(code)
+                    null
 
-                vbox:
-                    xsize 530
-                    spacing 10
+                ## ── Озвучка ─────────────────────────────────────────────
+                text _("Voice acting"):
+                    style "tssr_mod_section"
 
-                    text _("Voice acting"):
-                        style "tssr_mod_section"
-
-                    hbox:
-                        spacing 15
-
-                        textbutton _("Enabled"):
-                            action SetMute("voice", False)
-                            selected (not ToggleMute("voice").get_selected())
-                            style "radio_button"
-
-                        textbutton _("Disabled"):
-                            action SetMute("voice", True)
-                            selected ToggleMute("voice").get_selected()
-                            style "radio_button"
-
-            ## Размеры шрифтов — целые числа; стейджинг -> Apply (секция 2.1)
-            text _("Font sizes"):
-                style "tssr_mod_section"
-
-            text _("Whole numbers 10-160, applied on game restart."):
-                style "tssr_mod_hint"
-
-            for attr, var, title in TSSR_FS_ROWS:
                 hbox:
-                    spacing 15
+                    spacing 16
 
-                    text _(title):
-                        style "tssr_mod_row"
+                    textbutton _("Enabled"):
+                        action SetMute("voice", False)
+                        selected (not ToggleMute("voice").get_selected())
+                        style "tssr_choice"
 
-                    textbutton "-":
-                        action [Function(tssr_fs_bump, var, -1), Function(renpy.restart_interaction)]
-                        style "tssr_step"
-                        yalign 0.5
+                    textbutton _("Disabled"):
+                        action SetMute("voice", True)
+                        selected ToggleMute("voice").get_selected()
+                        style "tssr_choice"
 
-                    frame:
-                        style "tssr_mod_input_box"
+                frame:
+                    style "tssr_divider"
 
-                        text tssr_fs_display(var):
-                            style "tssr_mod_value"
+                ## ── Размеры шрифтов ────────────────────────────────────
+                text _("Font sizes"):
+                    style "tssr_mod_section"
 
-                    textbutton "+":
-                        action [Function(tssr_fs_bump, var, 1), Function(renpy.restart_interaction)]
-                        style "tssr_step"
-                        yalign 0.5
+                text _("Whole numbers 10-160, applied on game restart."):
+                    style "tssr_mod_hint"
 
-                    text _("Preview text"):
-                        style "tssr_mod_preview"
-                        size tssr_fs_preview_size(var)
+                for attr, var, title in TSSR_FS_ROWS:
+                    hbox:
+                        spacing 20
+                        ysize 56
 
-            textbutton _("Reset to defaults"):
-                action [Function(tssr_fs_reset_draft), Function(renpy.restart_interaction)]
-                style "tssr_secondary"
+                        text _(title):
+                            style "tssr_mod_row"
 
-            ## Ссылки: ОДНА — лендинг (GitHub Pages). Разбор СЕО/маркетинга
-            ## (владелец): «проект» шире «патча» (hub локализации+озвучки,
-            ## статус, скачивание; «патч» = узкий технический фикс), а репа —
-            ## не витрина. ★ убрана: глифа U+2605 нет в Literata.
-            ## Boosty — когда будет постоянная ссылка.
-            text _("Links"):
-                style "tssr_mod_section"
+                        textbutton "-":
+                            action [Function(tssr_fs_bump, var, -1), Function(renpy.restart_interaction)]
+                            style "tssr_step"
+                            yalign 0.5
 
-            textbutton _("Site"):
-                action OpenURL("https://domovikx.github.io/The-Survival-of-Sarah-Rose-Mods/")
-                style "tssr_link"
+                        frame:
+                            style "tssr_mod_input_box"
+                            yalign 0.5
 
-            # TODO(Boosty): раскомментировать, когда будет постоянный адрес:
-            # textbutton _("TSSR Boosty"):
-            #     action OpenURL("https://boosty.to/<slug>")
+                            text tssr_fs_display(var):
+                                style "tssr_mod_value"
 
-            ## Подвал — динамический (UX-формулировка владельца: «назад, если
-            ## ничего не менял, иначе — сохранить/применить»; 2026-10-16:
-            ## «Close» -> «ОК» — после смены языка кнопка читается как
-            ## подтверждение, а не как побег):
-            ##   чисто   -> [ОК];
-            ##   «грязно» -> [Отменить правки] + [Применить и перезапустить]
-            ##             (безмолвного закрытия с изменениями НЕТ: паттерн
-            ##             unsaved-changes из ресёрча; отмена = явная кнопка).
-            hbox:
-                spacing 15
-                xalign 1.0
+                        textbutton "+":
+                            action [Function(tssr_fs_bump, var, 1), Function(renpy.restart_interaction)]
+                            style "tssr_step"
+                            yalign 0.5
 
-                if tssr_fs_dirty():
-                    textbutton _("Revert changes"):
-                        action [Function(tssr_fs_snapshot), Function(renpy.restart_interaction)]
+                        text _("Preview text"):
+                            style "tssr_mod_preview"
+                            size tssr_fs_preview_size(var)
+
+                hbox:
+                    spacing 16
+
+                    textbutton _("Reset to defaults"):
+                        action [Function(tssr_fs_reset_draft), Function(renpy.restart_interaction)]
                         style "tssr_secondary"
 
-                    textbutton _("Apply and restart"):
-                        action Function(tssr_fs_apply)
-                        style "tssr_primary"
-                else:
-                    textbutton _("OK"):
-                        action Return()
-                        style "tssr_secondary"
+                frame:
+                    style "tssr_divider"
+
+                ## ── Ссылки ──────────────────────────────────────────────
+                ## Ссылки: ОДНА — лендинг (GitHub Pages). Разбор СЕО/маркетинга
+                ## (владелец): «проект» шире «патча» (hub локализации+озвучки,
+                ## статус, скачивание; «патч» = узкий технический фикс), а репа —
+                ## не витрина. ★ убрана: глифа U+2605 нет в Literata.
+                ## Boosty — когда будет постоянная ссылка.
+                text _("Links"):
+                    style "tssr_mod_section"
+
+                hbox:
+                    spacing 16
+
+                    textbutton _("Site"):
+                        action OpenURL("https://domovikx.github.io/The-Survival-of-Sarah-Rose-Mods/")
+                        style "tssr_link"
+
+                    # TODO(Boosty): раскомментировать, когда будет постоянный адрес:
+                    # textbutton _("TSSR Boosty"):
+                    #     action OpenURL("https://boosty.to/<slug>")
+
+                frame:
+                    style "tssr_divider"
+
+                ## ── Подвал: динамический (UX-формулировка владельца:
+                ## «назад, если ничего не менял, иначе — сохранить/применить»;
+                ## 2026-10-16: «Close» -> «ОК» — после смены языка кнопка
+                ## читается как подтверждение, а не как побег) ────────────
+                hbox:
+                    spacing 16
+                    xalign 1.0
+
+                    if tssr_fs_dirty():
+                        textbutton _("Revert changes"):
+                            action [Function(tssr_fs_snapshot), Function(renpy.restart_interaction)]
+                            style "tssr_secondary"
+
+                        textbutton _("Apply and restart"):
+                            action Function(tssr_fs_apply)
+                            style "tssr_primary"
+                    else:
+                        textbutton _("OK"):
+                            action Return()
+                            style "tssr_primary"
 
     # Esc = зеркало подвала: при изменениях — Применить, иначе — ОК.
     key "game_menu" action (Function(tssr_fs_apply) if tssr_fs_dirty() else Return())
@@ -536,17 +625,19 @@ style tssr_mod_page is frame:
     xfill True
     yfill True
     background Solid("#0b0e14e6")
-    padding (60, 40, 60, 40)
+    padding (80, 48, 80, 48)
 
 ## Колонка контента: ФИКСИРОВАННАЯ ширина — контент не меняет геометрию.
+## 1400 при канве 1920 = по 260 воздуха по краям (ревью R1/R2 2026-11-11:
+## при 1100 контент вылезал и обрезался по краям экрана).
 style tssr_mod_column is vbox:
     xalign 0.5
-    yalign 0.5
-    xsize 1100
-    spacing 10
+    xsize 1400
+    spacing 24
 
 style tssr_mod_title is gui_text:
-    size 44
+    font tssr_font_bold
+    size 46
     color "#ffffff"
 
 style tssr_mod_hint is gui_text:
@@ -554,14 +645,22 @@ style tssr_mod_hint is gui_text:
     color "#9aa4b2"
 
 style tssr_mod_section is gui_text:
+    font tssr_font_bold
     size 30
     color gui.accent_color
 
 style tssr_mod_row is gui_text:
     size 26
     color "#e6e6e6"
-    xsize 300
+    xsize 430
     yalign 0.5
+
+## Разделитель секций — тонкая линия во всю ширину колонки.
+style tssr_divider is frame:
+    background Solid("#ffffff1f")
+    ysize 2
+    xfill True
+    padding (0, 0, 0, 0)
 
 ## Material-стиль (правка владельца 2026-10-16: «строгие прямоугольники» ->
 ## скруглённые пилюли): в Ren'Py 7.4 нет нативного border-radius — скругление
@@ -581,8 +680,8 @@ define tssr_ui_hover_sky = Transform(tssr_ui_pill_ghost, matrixcolor=TintMatrix(
 style tssr_mod_input_box is frame:
     background tssr_ui_pill_soft
     padding (14, 9, 14, 9)
-    xsize 130
-    yalign 0.5
+    xsize 120
+    ysize 56
 
 ## Значение в рамке +/- степпера (инпуты убраны: клик по ним в 7.4.11 не
 ## активирует редактирование — см. tssr_fs_bump).
@@ -594,12 +693,51 @@ style tssr_mod_value is gui_text:
 style tssr_step is button:
     background tssr_ui_pill_soft
     hover_background tssr_ui_pill_ghost
-    padding (16, 5, 16, 5)
+    xsize 56
+    ysize 56
+    padding (0, 0, 0, 0)
 
 style tssr_step_text is gui_text:
     size 30
     color "#e6e6e6"
     hover_color gui.accent_color
+    xalign 0.5
+    yalign 0.5
+
+## Кнопка языка: фикс-ширина в сетке 4×3 (ревью R3: без неё длинные названия
+## рвались посреди слова). selected = акцентная пилюля.
+style tssr_lang is button:
+    background tssr_ui_pill_soft
+    hover_background tssr_ui_pill_ghost
+    selected_background tssr_ui_accent
+    xsize 338
+    ysize 58
+    padding (12, 8, 12, 8)
+
+style tssr_lang_text is gui_text:
+    size 28
+    color "#e6e6e6"
+    hover_color "#ffffff"
+    selected_color "#0b0e14"
+    xalign 0.5
+    yalign 0.5
+
+## Выбор (вкл/выкл): широкая пилюля, selected — акцент.
+style tssr_choice is button:
+    background tssr_ui_pill_soft
+    hover_background tssr_ui_pill_ghost
+    selected_background tssr_ui_accent
+    xsize 240
+    ysize 58
+    padding (12, 8, 12, 8)
+
+style tssr_choice_text is gui_text:
+    size 28
+    color "#e6e6e6"
+    hover_color "#ffffff"
+    selected_color "#0b0e14"
+    xalign 0.5
+    yalign 0.5
 
 style tssr_mod_preview is gui_text:
     color "#9aa4b2"
@@ -733,3 +871,613 @@ translate ru strings:
 
     old "OK"
     new "ОК"
+
+translate de strings:
+
+    old "Sarah Rose — AI Voice Pack"
+    new "Sarah Rose — KI-Sprachausgabe und Übersetzung"
+
+    old "Settings: language, voice, fonts, links."
+    new "Einstellungen: Sprache, Stimme, Schrift, Links."
+
+    old "Interface language"
+    new "Oberflächensprache"
+
+    old "Voice acting"
+    new "Sprachausgabe"
+
+    old "Enabled"
+    new "An"
+
+    old "Disabled"
+    new "Aus"
+
+    old "Font sizes"
+    new "Schriftgrößen"
+
+    old "Whole numbers 10-160, applied on game restart."
+    new "Ganze Zahlen 10–160, gelten nach dem Neustart des Spiels."
+
+    old "Dialogue text"
+    new "Dialogtext"
+
+    old "Names"
+    new "Namen"
+
+    old "UI text"
+    new "Oberflächentext"
+
+    old "Header text"
+    new "Überschriften"
+
+    old "Notification text"
+    new "Benachrichtigungen"
+
+    old "Game title"
+    new "Spieltitel"
+
+    old "Preview text"
+    new "Beispieltext"
+
+    old "Reset to defaults"
+    new "Standard wiederherstellen"
+
+    old "Links"
+    new "Links und Unterstützung"
+
+    old "Site"
+    new "Projektseite"
+
+    old "Revert changes"
+    new "Änderungen verwerfen"
+
+    old "Apply and restart"
+    new "Übernehmen und neu starten"
+
+    old "OK"
+    new "OK"
+
+translate es strings:
+
+    old "Sarah Rose — AI Voice Pack"
+    new "Sarah Rose — Voces con IA y traducción"
+
+    old "Settings: language, voice, fonts, links."
+    new "Ajustes: idioma, voz, fuentes, enlaces."
+
+    old "Interface language"
+    new "Idioma de la interfaz"
+
+    old "Voice acting"
+    new "Voz"
+
+    old "Enabled"
+    new "Activado"
+
+    old "Disabled"
+    new "Desactivado"
+
+    old "Font sizes"
+    new "Tamaños de fuente"
+
+    old "Whole numbers 10-160, applied on game restart."
+    new "Números enteros de 10 a 160; se aplican al reiniciar el juego."
+
+    old "Dialogue text"
+    new "Texto de diálogo"
+
+    old "Names"
+    new "Nombres"
+
+    old "UI text"
+    new "Texto de la interfaz"
+
+    old "Header text"
+    new "Encabezados"
+
+    old "Notification text"
+    new "Notificaciones"
+
+    old "Game title"
+    new "Título del juego"
+
+    old "Preview text"
+    new "Texto de ejemplo"
+
+    old "Reset to defaults"
+    new "Restaurar valores"
+
+    old "Links"
+    new "Enlaces y apoyo"
+
+    old "Site"
+    new "Sitio del proyecto"
+
+    old "Revert changes"
+    new "Descartar cambios"
+
+    old "Apply and restart"
+    new "Aplicar y reiniciar"
+
+    old "OK"
+    new "Aceptar"
+
+translate fr strings:
+
+    old "Sarah Rose — AI Voice Pack"
+    new "Sarah Rose — Voix IA et traduction"
+
+    old "Settings: language, voice, fonts, links."
+    new "Réglages : langue, voix, polices, liens."
+
+    old "Interface language"
+    new "Langue de l’interface"
+
+    old "Voice acting"
+    new "Voix"
+
+    old "Enabled"
+    new "Activé"
+
+    old "Disabled"
+    new "Désactivé"
+
+    old "Font sizes"
+    new "Tailles des polices"
+
+    old "Whole numbers 10-160, applied on game restart."
+    new "Nombres entiers de 10 à 160 ; appliqués au redémarrage du jeu."
+
+    old "Dialogue text"
+    new "Texte des dialogues"
+
+    old "Names"
+    new "Noms"
+
+    old "UI text"
+    new "Texte de l’interface"
+
+    old "Header text"
+    new "Titres"
+
+    old "Notification text"
+    new "Notifications"
+
+    old "Game title"
+    new "Titre du jeu"
+
+    old "Preview text"
+    new "Texte d’exemple"
+
+    old "Reset to defaults"
+    new "Rétablir les valeurs"
+
+    old "Links"
+    new "Liens et soutien"
+
+    old "Site"
+    new "Site du projet"
+
+    old "Revert changes"
+    new "Annuler les modifications"
+
+    old "Apply and restart"
+    new "Appliquer et redémarrer"
+
+    old "OK"
+    new "OK"
+
+translate it strings:
+
+    old "Sarah Rose — AI Voice Pack"
+    new "Sarah Rose — Voci IA e traduzione"
+
+    old "Settings: language, voice, fonts, links."
+    new "Impostazioni: lingua, voci, caratteri, link."
+
+    old "Interface language"
+    new "Lingua dell’interfaccia"
+
+    old "Voice acting"
+    new "Voci"
+
+    old "Enabled"
+    new "Attivato"
+
+    old "Disabled"
+    new "Disattivato"
+
+    old "Font sizes"
+    new "Dimensioni dei caratteri"
+
+    old "Whole numbers 10-160, applied on game restart."
+    new "Numeri interi da 10 a 160; applicati al riavvio del gioco."
+
+    old "Dialogue text"
+    new "Testo dei dialoghi"
+
+    old "Names"
+    new "Nomi"
+
+    old "UI text"
+    new "Testo dell’interfaccia"
+
+    old "Header text"
+    new "Intestazioni"
+
+    old "Notification text"
+    new "Notifiche"
+
+    old "Game title"
+    new "Titolo del gioco"
+
+    old "Preview text"
+    new "Testo di esempio"
+
+    old "Reset to defaults"
+    new "Ripristina predefiniti"
+
+    old "Links"
+    new "Link e supporto"
+
+    old "Site"
+    new "Sito del progetto"
+
+    old "Revert changes"
+    new "Annulla modifiche"
+
+    old "Apply and restart"
+    new "Applica e riavvia"
+
+    old "OK"
+    new "OK"
+
+translate ja strings:
+
+    old "Sarah Rose — AI Voice Pack"
+    new "Sarah Rose — AI音声と翻訳"
+
+    old "Settings: language, voice, fonts, links."
+    new "設定：言語、音声、フォント、リンク。"
+
+    old "Interface language"
+    new "表示言語"
+
+    old "Voice acting"
+    new "音声"
+
+    old "Enabled"
+    new "オン"
+
+    old "Disabled"
+    new "オフ"
+
+    old "Font sizes"
+    new "フォントサイズ"
+
+    old "Whole numbers 10-160, applied on game restart."
+    new "10〜160の整数。ゲームの再起動時に適用されます。"
+
+    old "Dialogue text"
+    new "会話テキスト"
+
+    old "Names"
+    new "名前"
+
+    old "UI text"
+    new "UIテキスト"
+
+    old "Header text"
+    new "見出し"
+
+    old "Notification text"
+    new "通知"
+
+    old "Game title"
+    new "ゲームタイトル"
+
+    old "Preview text"
+    new "プレビューテキスト"
+
+    old "Reset to defaults"
+    new "初期値に戻す"
+
+    old "Links"
+    new "リンクとサポート"
+
+    old "Site"
+    new "プロジェクトサイト"
+
+    old "Revert changes"
+    new "変更を破棄"
+
+    old "Apply and restart"
+    new "適用して再起動"
+
+    old "OK"
+    new "OK"
+
+translate ko strings:
+
+    old "Sarah Rose — AI Voice Pack"
+    new "Sarah Rose — AI 음성 및 번역"
+
+    old "Settings: language, voice, fonts, links."
+    new "설정: 언어, 음성, 글꼴, 링크."
+
+    old "Interface language"
+    new "인터페이스 언어"
+
+    old "Voice acting"
+    new "음성"
+
+    old "Enabled"
+    new "켬"
+
+    old "Disabled"
+    new "끔"
+
+    old "Font sizes"
+    new "글꼴 크기"
+
+    old "Whole numbers 10-160, applied on game restart."
+    new "10–160 사이의 정수. 게임을 다시 시작하면 적용됩니다."
+
+    old "Dialogue text"
+    new "대화 텍스트"
+
+    old "Names"
+    new "이름"
+
+    old "UI text"
+    new "UI 텍스트"
+
+    old "Header text"
+    new "제목"
+
+    old "Notification text"
+    new "알림"
+
+    old "Game title"
+    new "게임 제목"
+
+    old "Preview text"
+    new "미리보기 텍스트"
+
+    old "Reset to defaults"
+    new "기본값 복원"
+
+    old "Links"
+    new "링크 및 지원"
+
+    old "Site"
+    new "프로젝트 사이트"
+
+    old "Revert changes"
+    new "변경 취소"
+
+    old "Apply and restart"
+    new "적용 후 재시작"
+
+    old "OK"
+    new "확인"
+
+translate pl strings:
+
+    old "Sarah Rose — AI Voice Pack"
+    new "Sarah Rose — Głos AI i tłumaczenie"
+
+    old "Settings: language, voice, fonts, links."
+    new "Ustawienia: język, głos, czcionki, linki."
+
+    old "Interface language"
+    new "Język interfejsu"
+
+    old "Voice acting"
+    new "Głos"
+
+    old "Enabled"
+    new "Włączone"
+
+    old "Disabled"
+    new "Wyłączone"
+
+    old "Font sizes"
+    new "Rozmiary czcionek"
+
+    old "Whole numbers 10-160, applied on game restart."
+    new "Liczby całkowite 10–160, stosowane po restarcie gry."
+
+    old "Dialogue text"
+    new "Tekst dialogów"
+
+    old "Names"
+    new "Imiona"
+
+    old "UI text"
+    new "Tekst interfejsu"
+
+    old "Header text"
+    new "Nagłówki"
+
+    old "Notification text"
+    new "Powiadomienia"
+
+    old "Game title"
+    new "Tytuł gry"
+
+    old "Preview text"
+    new "Tekst przykładowy"
+
+    old "Reset to defaults"
+    new "Przywróć domyślne"
+
+    old "Links"
+    new "Linki i wsparcie"
+
+    old "Site"
+    new "Strona projektu"
+
+    old "Revert changes"
+    new "Odrzuć zmiany"
+
+    old "Apply and restart"
+    new "Zastosuj i uruchom ponownie"
+
+    old "OK"
+    new "OK"
+
+translate pt strings:
+
+    old "Sarah Rose — AI Voice Pack"
+    new "Sarah Rose — Voz IA e tradução"
+
+    old "Settings: language, voice, fonts, links."
+    new "Configurações: idioma, voz, fontes, links."
+
+    old "Interface language"
+    new "Idioma da interface"
+
+    old "Voice acting"
+    new "Voz"
+
+    old "Enabled"
+    new "Ativado"
+
+    old "Disabled"
+    new "Desativado"
+
+    old "Font sizes"
+    new "Tamanhos da fonte"
+
+    old "Whole numbers 10-160, applied on game restart."
+    new "Números inteiros de 10 a 160; aplicados ao reiniciar o jogo."
+
+    old "Dialogue text"
+    new "Texto do diálogo"
+
+    old "Names"
+    new "Nomes"
+
+    old "UI text"
+    new "Texto da interface"
+
+    old "Header text"
+    new "Cabeçalhos"
+
+    old "Notification text"
+    new "Notificações"
+
+    old "Game title"
+    new "Título do jogo"
+
+    old "Preview text"
+    new "Texto de exemplo"
+
+    old "Reset to defaults"
+    new "Restaurar padrões"
+
+    old "Links"
+    new "Links e apoio"
+
+    old "Site"
+    new "Site do projeto"
+
+    old "Revert changes"
+    new "Descartar alterações"
+
+    old "Apply and restart"
+    new "Aplicar e reiniciar"
+
+    old "OK"
+    new "OK"
+
+translate zh strings:
+
+    old "Sarah Rose — AI Voice Pack"
+    new "Sarah Rose — AI 配音与翻译"
+
+    old "Settings: language, voice, fonts, links."
+    new "设置：语言、语音、字体、链接。"
+
+    old "Interface language"
+    new "界面语言"
+
+    old "Voice acting"
+    new "语音"
+
+    old "Enabled"
+    new "开启"
+
+    old "Disabled"
+    new "关闭"
+
+    old "Font sizes"
+    new "字体大小"
+
+    old "Whole numbers 10-160, applied on game restart."
+    new "10–160 的整数，重启游戏后生效。"
+
+    old "Dialogue text"
+    new "对话文本"
+
+    old "Names"
+    new "人名"
+
+    old "UI text"
+    new "界面文本"
+
+    old "Header text"
+    new "标题"
+
+    old "Notification text"
+    new "通知"
+
+    old "Game title"
+    new "游戏标题"
+
+    old "Preview text"
+    new "预览文本"
+
+    old "Reset to defaults"
+    new "恢复默认"
+
+    old "Links"
+    new "链接与支持"
+
+    old "Site"
+    new "项目网站"
+
+    old "Revert changes"
+    new "放弃更改"
+
+    old "Apply and restart"
+    new "应用并重启"
+
+    old "OK"
+    new "确定"
+
+################################################################################
+## 5.1 Шрифты bold-стилей для CJK (охота за квадратами 2026-11-11):
+##     в Literata-Bold нет CJK-глифов -> «Sarah Rose — AI □□□□□□» в заголовке.
+##     Пер-языковой style-блок — штатный механизм Ren'Py: переживает rebuild
+##     стилей и живое переключение языка (мутации стиля откатывались).
+################################################################################
+
+translate ja style tssr_mod_title:
+    font "fonts/NotoSansCJKjp-Regular.otf"
+
+translate ja style tssr_mod_section:
+    font "fonts/NotoSansCJKjp-Regular.otf"
+
+translate ko style tssr_mod_title:
+    font "fonts/NotoSansCJKkr-Regular.otf"
+
+translate ko style tssr_mod_section:
+    font "fonts/NotoSansCJKkr-Regular.otf"
+
+translate zh style tssr_mod_title:
+    font "fonts/NotoSansCJKsc-Regular.otf"
+
+translate zh style tssr_mod_section:
+    font "fonts/NotoSansCJKsc-Regular.otf"

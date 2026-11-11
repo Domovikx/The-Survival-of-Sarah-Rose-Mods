@@ -30,7 +30,7 @@ init python:
         if os.environ.get("TSSR_SHOTS_SAVE") != "1":
             renpy.persistent.should_save_persistent = False
 
-        preferences.language = None if _zz_lang == "en" else "ru"
+        preferences.language = None if _zz_lang == "en" else _zz_lang
 
         if _zz_mode == "game":
 
@@ -57,6 +57,18 @@ init python:
 
         def _zz_open_settings():
 
+            import os
+            os.environ["TSSR_SHOTS_VY"] = "0"  # съёмка начинается с верха панели
+            renpy.show_screen("tssr_mod_menu")
+            renpy.restart_interaction()
+
+        def _zz_settings_bottom():
+
+            # Полное ревью «сверху до низу»: пересоздаём экран со скроллом
+            # в низ (огромный yinitial зажимается максимумом) и снимаем низ.
+            import os
+            os.environ["TSSR_SHOTS_VY"] = "999999"
+            renpy.hide_screen("tssr_mod_menu")
             renpy.show_screen("tssr_mod_menu")
             renpy.restart_interaction()
 
@@ -68,7 +80,9 @@ init python:
                     (3.0, lambda: _zz_shot("menu")),
                     (4.0, _zz_open_settings),
                     (6.5, lambda: _zz_shot("settings")),
-                    (7.0, renpy.quit),
+                    (7.5, _zz_settings_bottom),
+                    (10.0, lambda: _zz_shot("settings_bottom")),
+                    (10.5, renpy.quit),
                 ]
         else:
 
