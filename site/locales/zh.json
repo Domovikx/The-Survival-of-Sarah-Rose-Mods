@@ -79,7 +79,7 @@
   },
   "install": {
     "title": "安装",
-    "step1": "最简单：把 main.zip 解压到任意位置并运行 install.cmd——它会找到游戏目录（Steam），询问语言并安装一切（把所选语言的语音 zip 放在 install.cmd 旁边）。手动：把 main.zip 解压到游戏目录，再把语音 zip 解压到同一目录",
+    "step1": "最简单：把 main.zip 解压到任意位置并运行 install.cmd——它会找到游戏目录（Steam）并安装一切；把所需的语音包放在 install.cmd 旁边，找到的包都会安装。手动：把 main.zip 解压到游戏目录，再把语音 zip 解压到同一目录",
     "step2": "启动游戏，在 MOD 设置（右上角徽章）中选择语言——支持 11 种语言",
     "step3": "完成。首次启动较慢——Ren'Py 需重建缓存",
     "note": "需要 Steam 购买的本体游戏。本补丁为非官方作品，与开发者或发行商无关。"

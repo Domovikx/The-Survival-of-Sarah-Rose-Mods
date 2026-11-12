@@ -79,7 +79,7 @@
   },
   "install": {
     "title": "Instalação",
-    "step1": "O mais fácil: extraia main.zip em qualquer lugar e execute install.cmd — ele encontra a pasta do jogo (Steam), pergunta o idioma e instala tudo (coloque o zip de voz do seu idioma ao lado do install.cmd). Manual: extraia main.zip na pasta do jogo e o zip de voz na mesma pasta",
+    "step1": "O mais fácil: extraia main.zip em qualquer lugar e execute install.cmd — ele encontra a pasta do jogo (Steam) e instala tudo; coloque os pacotes de voz que quiser ao lado do install.cmd — todos os encontrados são instalados. Manual: extraia main.zip na pasta do jogo e os zip de voz na mesma pasta",
     "step2": "Inicie o jogo e escolha o idioma nas configurações do mod (ícone no canto superior direito) — 11 idiomas disponíveis",
     "step3": "Pronto. A primeira inicialização pode demorar — o Ren'Py reconstrói o cache",
     "note": "Requer o jogo comprado na Steam. Este patch é não oficial e sem relação com os desenvolvedores ou distribuidores."

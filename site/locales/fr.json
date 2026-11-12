@@ -79,7 +79,7 @@
   },
   "install": {
     "title": "Installation",
-    "step1": "Le plus simple : décompressez main.zip où vous voulez et lancez install.cmd — il trouve le dossier du jeu (Steam), demande la langue et installe tout (placez le zip vocal de votre langue à côté de install.cmd). Manuel : décompressez main.zip dans le dossier du jeu, puis le zip vocal dans le même dossier",
+    "step1": "Le plus simple : décompressez main.zip où vous voulez et lancez install.cmd — il trouve le dossier du jeu (Steam) et installe tout ; placez les packs de voix voulus à côté de install.cmd — tous les packs trouvés sont installés. Manuel : décompressez main.zip dans le dossier du jeu, puis les zip vocaux dans le même dossier",
     "step2": "Lancez le jeu et choisissez la langue dans les réglages du mod (badge en haut à droite) — 11 langues disponibles",
     "step3": "Terminé. Le premier lancement peut être plus lent — Ren’Py reconstruit son cache",
     "note": "Nécessite le jeu acheté sur Steam. Ce patch est non officiel et sans lien avec les développeurs ou éditeurs."

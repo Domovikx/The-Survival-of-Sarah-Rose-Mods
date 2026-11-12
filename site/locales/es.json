@@ -79,7 +79,7 @@
   },
   "install": {
     "title": "Instalación",
-    "step1": "Lo más fácil: descomprime main.zip en cualquier lugar y ejecuta install.cmd — encuentra la carpeta del juego (Steam), pregunta el idioma y lo instala todo (pon el zip de voz de tu idioma junto a install.cmd). Manual: descomprime main.zip en la carpeta del juego y el zip de voz en la misma carpeta",
+    "step1": "Lo más fácil: descomprime main.zip en cualquier lugar y ejecuta install.cmd — encuentra la carpeta del juego (Steam) e instala todo; pon los paquetes de voz que quieras junto a install.cmd — se instalan todos los encontrados. Manual: descomprime main.zip en la carpeta del juego y los zip de voz en la misma carpeta",
     "step2": "Inicia el juego y elige el idioma en los ajustes del mod (ícono arriba a la derecha) — hay 11 idiomas disponibles",
     "step3": "Listo. El primer arranque puede tardar: Ren'Py reconstruye la caché",
     "note": "Requiere el juego comprado en Steam. Este parche es no oficial y no está relacionado con los desarrolladores o distribuidores."

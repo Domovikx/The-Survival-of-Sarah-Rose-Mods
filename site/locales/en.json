@@ -58,7 +58,7 @@
   },
   "install": {
     "title": "Installation",
-    "step1": "Easiest: unpack the main.zip anywhere and run install.cmd — it finds the game folder (Steam), asks your language and installs everything (put the voice zip of your language next to install.cmd). Manual: unpack main.zip into the game folder, then the voice zip into the same folder",
+    "step1": "Easiest: unpack main.zip anywhere and run install.cmd — it finds the game folder (Steam) and installs everything; drop the voice packs you want next to install.cmd — all found packs are installed. Manual: unpack main.zip into the game folder, then the voice zips into the same folder",
     "step2": "Launch the game and choose the language in the mod settings (the badge in the top-right corner) — 11 languages available",
     "step3": "Done. The first launch may be slightly slower — Ren'Py rebuilds its cache",
     "note": "Requires the game bought on Steam. This patch is unofficial and not affiliated with the developers or publishers."

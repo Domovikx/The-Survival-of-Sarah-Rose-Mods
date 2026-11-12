@@ -79,7 +79,7 @@
   },
   "install": {
     "title": "Instalacja",
-    "step1": "Najprościej: rozpakuj main.zip gdziekolwiek i uruchom install.cmd — znajdzie folder gry (Steam), zapyta o język i zainstaluje wszystko (połóż zip głosu swojego języka obok install.cmd). Ręcznie: rozpakuj main.zip do folderu gry, potem zip głosu do tego samego folderu",
+    "step1": "Najprościej: rozpakuj main.zip gdziekolwiek i uruchom install.cmd — znajdzie folder gry (Steam) i zainstaluje wszystko; połóż wybrane pakiety głosów obok install.cmd — zainstalują się wszystkie znalezione. Ręcznie: rozpakuj main.zip do folderu gry, potem zip głosów do tego samego folderu",
     "step2": "Uruchom grę i wybierz język w ustawieniach modu (badge w prawym górnym rogu) — dostępne 11 języków",
     "step3": "Gotowe. Pierwsze uruchomienie może trwać dłużej — Ren'Py przebudowuje cache",
     "note": "Wymaga kupionej gry na Steam. Ten patch jest nieoficjalny i niepowiązany z twórcami ani wydawcami."

@@ -79,7 +79,7 @@
   },
   "install": {
     "title": "Installation",
-    "step1": "Am einfachsten: Entpacke main.zip irgendwo und führe install.cmd aus — es findet den Spielordner (Steam), fragt die Sprache und installiert alles (lege das Sprachpaket deiner Sprache neben install.cmd). Manuell: main.zip in den Spielordner entpacken, dann das Sprachpaket in denselben Ordner",
+    "step1": "Am einfachsten: Entpacke main.zip irgendwo und führe install.cmd aus — es findet den Spielordner (Steam) und installiert alles; lege die gewünschten Sprachpakete neben install.cmd — alle gefundenen Pakete werden installiert. Manuell: main.zip in den Spielordner entpacken, dann die Sprachpakete in denselben Ordner",
     "step2": "Spiel starten und die Sprache in den Mod-Einstellungen wählen (Badge oben rechts) — 11 Sprachen verfügbar",
     "step3": "Fertig. Der erste Start dauert etwas länger — Ren'Py baut den Cache neu",
     "note": "Erfordert das auf Steam gekaufte Spiel. Dieses Patch ist inoffiziell und nicht mit den Entwicklern oder Publishern verbunden."
