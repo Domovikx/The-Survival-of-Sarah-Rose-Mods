@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "The Survival of Sarah Rose — Głosy AI + 11 języków",
-    "description": "Nieoficjalny fanowski patch: pełne udźwiękowienie AI sklonowanymi, emocjonalnymi głosami — plus tłumaczenia na 11 języków (rosyjski kompletny; pozostałe obejmują intro do pierwszego wyboru). Za darmo, 18+."
+    "description": "Nieoficjalny fanowski patch: demo udźwiękowienia AI w 7 językach plus tłumaczenia na 11 (rosyjski kompletny; pozostałe obejmują intro do pierwszego wyboru). Za darmo, 18+."
   },
   "header": {
     "brand": "TSSR · Pakiet głosów AI",
@@ -12,9 +12,9 @@
   },
   "hero": {
     "title": "The Survival of Sarah Rose — Głosy AI",
-    "subtitle": "Nieoficjalny fanowski patch: tekst gry w całości udźwiękowiony — ponad 75 sklonowanych głosów z emocjonalną grą każdej linii. 11 języków: rosyjski kompletny, pozostałe do pierwszego wyboru.",
+    "subtitle": "Nieoficjalny fanowski patch: tekst gry w 11 językach, a zakres demo (intro do pierwszego wyboru) w pełni udźwiękowiony w 7 językach — ponad 75 sklonowanych głosów z emocjonalną grą.",
     "badgeTranslate": "11 języków — RU kompletny, pozostałe demo do pierwszego wyboru",
-    "badgeVoice": "Udźwiękowienie: demo 100 % (11 języków, po 1 188 linii)",
+    "badgeVoice": "Udźwiękowienie: demo 100 % w 7 językach — po 1 195 linii",
     "badgeFormat": "Opus 24 kbps — ok. 17 MB na język (demo)",
     "badgeEngine": "Ren'Py 7.4.11 · Steam",
     "badgeAge": "Treść 18+",
@@ -27,8 +27,8 @@
     "title": "Co dostajesz",
     "translateTitle": "Tłumaczenia na 11 języków",
     "translateText": "Rosyjski: kompletne tłumaczenie całej historii. Pozostałe 10 języków obejmuje zakres demo — intro do pierwszego wyboru.",
-    "voiceTitle": "Udźwiękowienie AI (11 języków)",
-    "voiceText": "Sklonowane głosy dla każdej postaci (VoxCPM2) z emocją pasującą do sceny. Zakres demo jest w pełni udźwiękowiony w 11 językach.",
+    "voiceTitle": "Udźwiękowienie AI (demo, 7 języków)",
+    "voiceText": "Sklonowane głosy każdej postaci przez VoxCPM2 — emocjonalna gra dopasowana do sceny. Zakres demo (do pierwszego wyboru) jest w pełni udźwiękowiony w 7 językach; koreański jest w toku.",
     "emotionTitle": "Emocjonalna gra",
     "emotionText": "Każda linia niesie stan narratora: pożądanie, szept, sarkazm — nigdy monotonia.",
     "voicesTitle": "Ponad 75 głosów",
@@ -72,15 +72,15 @@
   },
   "voice": {
     "title": "Udźwiękowienie — demo gotowe",
-    "total": "Zakres demo udźwiękowiony w 11 językach — po 1 188 linii (do pierwszego wyboru); pełna wersja w planach.",
+    "total": "Zakres demo (do pierwszego wyboru) udźwiękowiony w 7 językach — po 1 195 linii. Koreański jest w toku; polski, portugalski i chiński są pokazane na tej stronie jako próbki. Pełny przebieg jest w planach.",
     "ru": "Rosyjski (RU): kompletne tłumaczenie, zakres demo udźwiękowiony",
     "en": "Angielski (EN): oryginalny tekst, zakres demo udźwiękowiony",
     "missing": "Brak głosu? Gra wyświetli linię w ciszy (bez błędów)."
   },
   "install": {
     "title": "Instalacja",
-    "step1": "Najprościej: rozpakuj main.zip gdziekolwiek i uruchom install.cmd — znajdzie folder gry (Steam) i zainstaluje wszystko; połóż wybrane pakiety głosów obok install.cmd — zainstalują się wszystkie znalezione. Ręcznie: rozpakuj main.zip do folderu gry, potem zip głosów do tego samego folderu",
-    "step2": "Uruchom grę i wybierz język w ustawieniach modu (badge w prawym górnym rogu) — dostępne 11 języków",
+    "step1": "Najprościej: rozpakuj main.zip gdziekolwiek i uruchom jego install.cmd — znajdzie folder gry (Steam) i zainstaluje rdzeń: teksty, czcionki, menu. Potem rozpakuj każdy wybrany pakiet głosów i uruchom jego własny install.cmd — jeden język na pakiet, instalacja atomowa. Ręcznie: rozpakuj zipy do folderu gry",
+    "step2": "Uruchom grę i otwórz ustawienia modu (badge w prawym górnym rogu) — 11 języków tekstu; głos podąża za wybranym językiem",
     "step3": "Gotowe. Pierwsze uruchomienie może trwać dłużej — Ren'Py przebudowuje cache",
     "note": "Wymaga kupionej gry na Steam. Ten patch jest nieoficjalny i niepowiązany z twórcami ani wydawcami."
   },

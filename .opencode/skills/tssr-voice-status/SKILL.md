@@ -7,6 +7,12 @@ description: Статус и прогноз генерации озвучки TS
 
 ЕДИНЫЙ тул для статуса/прогноза — не считай вручную (find/wc/grep по ai_voice — нет, это дублирование и ошибки).
 
+> **Движок генерации с 2026-11 — VoxCPM2 (полная миграция с CosyVoice3).**
+> Текущие прогоны идут через `voice_batch.mts --engine voxcpm2` с общим логом
+> `batch.log` — статус/прогноз смотри ПУЛЬТОМ (`voice_ctl.mts status`, раздел
+> «Контур VoxCPM2» внизу). Тул `voice_status.mts` ниже — CosyVoice3-контур
+> (легаси: им озвучен старый полный прогон RU/EN), новые прогоны он не видит.
+
 ## Когда вызывать
 
 Пользователь спрашивает:
@@ -52,3 +58,23 @@ node tools/generate/scripts/voice_status.mts --detail           # подробн
 
 Очереди: `tools/voice_queue.sh {ru|en}` (bash, resumable, низкий приоритет, переживают ребуты).
 Логи: `output/voice/gen_all_{ru,en}.log`. Рестарт после ребута — см. AGENTS.md.
+
+## Контур VoxCPM2 (ОСНОВНОЙ, все языки, 2026-11)
+
+**Генерация полностью на VoxCPM2** (миграция с CosyVoice3 завершена —
+`cosyworker.py`/CosyVoice3-секции ниже и в AGENTS = легаси старого прогона
+RU/EN, нового на них НЕ гоняем).
+
+- Запуск: `node tools/generate/scripts/voice_batch.mts --engine voxcpm2 --lang <l> --demo`
+  (демо-скоуп = 1188 игровых фраз + 7 витринных = 1195 файлов на язык; без
+  `--demo` — полный проход; классические очереди `vox_queue.mts`/
+  `voxcpm_bench.mts` — тоже легаси-путь).
+- Лог ОБЩИЙ на все языки: `output/voice/batch.log` (не `vox_gen_*.log`!).
+  Прогресс — строки `HH:MM:SS [n/m] uid Arc Who: ...`, свой прогноз — в строках
+  `saved ... eta ~N мин`. Замер скорости: ~215–250 фраз/час.
+- Статус/пауза/стоп — пульт `node tools/generate/scripts/voice_ctl.mts status`
+  (видит ОБА контура: подхватывает `voice_batch.mts --engine voxcpm2 --lang <l>`,
+  показывает арку/прогресс/ETA из batch.log; пауза/стоп — `voice_ctl.mts
+vox-pause|vox-stop <lang>`). Ручной подсчёт файлов — не нужен.
+- `voice_status.mts` (тул выше) — легаси-инструмент CosyVoice3-контура; для
+  текущих прогонов источник истины — пульт + batch.log.

@@ -66,9 +66,12 @@ export function pauseTmpl(kind: Kind = "cosy"): string {
   return join(ROOT, "output", "voice", kind === "vox" ? "ctl_paused_vox_{}.json" : "ctl_paused_{}.json");
 }
 
-const PROGRESS_RE = /^\[(\d+)\/(\d+)\]\s+(\S+)\s+(\S+)\s*(.*)$/;
+/** batch.log пишет строки с таймкодом 'HH:MM:SS [n/m] ...' — префикс опционален. */
+const PROGRESS_RE = /^(?:\d{1,2}:\d{2}:\d{2}\s+)?\[(\d+)\/(\d+)\]\s+(\S+)\s+(\S+)\s*(.*)$/;
 const START_RE = /=== START (\w+) (\w+)/g;
 const DONE_RE = /=== DONE (\w+) (\w+)/;
+/** 'eta ~100 мин' — свой прогноз voice_batch.mts (последняя строка saved). */
+const ETA_RE = /eta ~(\d+)\s*мин/g;
 
 // ---------- чистые хелперы (покрыты тестами) ----------
 
@@ -93,6 +96,8 @@ export function parseProgressLine(line: string): [number, number] | null {
 /**
  * Текст лога -> (activeArc|null, (done,total)|null).
  * activeArc: последний START без DONE после него; прогресс: последний [n/m].
+ * Фолбэк: если меток START в логе нет (batch.log нового демо-контура
+ * voice_batch --engine voxcpm2), арка берётся из последней строки прогресса.
  */
 export function parseLogState(text: string): [string | null, [number, number] | null] {
   let arc: string | null = null;
@@ -103,11 +108,21 @@ export function parseLogState(text: string): [string | null, [number, number] | 
     arc = DONE_RE.test(text.slice(pos)) ? null : a;
   }
   let prog: [number, number] | null = null;
+  let progArc: string | null = null;
   for (const line of text.split(/\r?\n/)) {
-    const p = parseProgressLine(line);
-    if (p) prog = p;
+    const m = PROGRESS_RE.exec(line.trim());
+    if (!m) continue;
+    prog = [Number(m[1]), Number(m[2])];
+    progArc = m[4];
   }
-  return [arc, prog];
+  return [arc ?? (lastStart ? null : progArc), prog];
+}
+
+/** Последний 'eta ~N мин' из лога voice_batch (минуты) | null. */
+export function parseEta(text: string): number | null {
+  let eta: number | null = null;
+  for (const m of text.matchAll(ETA_RE)) eta = Number(m[1]);
+  return eta;
 }
 
 /** Секунды -> '12 сек' / '5 мин' / '2 ч' / '3 дн'. */
@@ -136,13 +151,20 @@ export function isQueueProc(name: string, cmd: string, lang: string, kind: Kind 
 /**
  * Оркестратор генерации языка: node voice_batch.mts --lang | node voxcpm_bench.mts --lang.
  *
+ * Контур определяется движком: voice_batch.mts несёт --engine (voxcpm2|cosyvoice3),
+ * легаси-бенч voxcpm_bench.mts — всегда vox. Без маркера движка voice_batch — cosy
+ * (старый контур). Поймано 2026-11-12: пульт показывал STOPPED при живом
+ * `voice_batch.mts --engine voxcpm2 --lang ko --demo`.
+ *
  * Пауза морозит ОРКЕСТРАТОР (ноду), а не python-шим: шим доделывает текущую
  * фразу (файл цел) и замирает в ожидании. Шим (cosyworker.py / voxcpmworker.py)
  * в cmdline не несёт ни маркера, ни --lang — матчить его отдельно нельзя.
  */
 export function isWorkerProc(cmd: string, lang: string, kind: Kind = "cosy"): boolean {
-  const mark = kind === "vox" ? VOX_WORKER_MARK : WORKER_MARK;
-  return cmd.includes(mark) && cmd.includes(`--lang ${lang}`);
+  if (!cmd.includes(`--lang ${lang}`)) return false;
+  const engineVox = /--engine\s+voxcpm/.test(cmd) || cmd.includes(VOX_WORKER_MARK);
+  const engineCosy = /--engine\s+cosyvoice/.test(cmd) || (cmd.includes(WORKER_MARK) && !engineVox);
+  return kind === "vox" ? engineVox : engineCosy;
 }
 
 // ---------- процессы Windows ----------
@@ -420,6 +442,8 @@ export interface LangStatus {
   doneArc: number;
   total: number;
   logAge: number | null;
+  /** Прогноз voice_batch из лога ('eta ~N мин') — только если там есть. */
+  etaMin?: number | null;
 }
 
 export function langStatus(lang: string, kind: Kind = "cosy"): LangStatus {
@@ -443,7 +467,7 @@ export function langStatus(lang: string, kind: Kind = "cosy"): LangStatus {
         ? "RUNNING"
         : "STALLED"
       : "STOPPED";
-  return { lang, state, workers, queues, paused, arc, prog, doneArc, total, logAge };
+  return { lang, state, workers, queues, paused, arc, prog, doneArc, total, logAge, etaMin: null };
 }
 
 export function printStatus(langs: string[], kind: Kind = "cosy"): number {
@@ -478,8 +502,19 @@ export function voxStatusLine(lang: string): LangStatus | null {
   const workers = findWorkers(lang, "vox");
   const queues = findQueues(lang, "vox");
   const paused = pauseState(lang, "vox");
-  const text = readLog(lang, "vox");
-  const logPath = fmt(logTmpl("vox"), lang);
+  // Новый демо-контур (2026-11-12): voice_batch.mts --engine voxcpm2 --lang <l>
+  // пишет общий batch.log, а не vox_gen_{lang}.log — пока его воркер жив,
+  // читаем batch.log (прогресс/ETA там же, где их видит оператор).
+  const ownPath = fmt(logTmpl("vox"), lang);
+  const batchPath = join(ROOT, "output", "voice", "batch.log");
+  const useBatch = workers.length > 0 && existsSync(batchPath);
+  const logPath = useBatch ? batchPath : ownPath;
+  let text = "";
+  try {
+    text = readFileSync(logPath, "utf-8");
+  } catch {
+    text = "";
+  }
   const hasLog = existsSync(logPath);
   if (!(workers.length || queues.length || paused || text || hasLog)) return null;
   const [arc, prog] = text ? parseLogState(text) : [null, null];
@@ -496,7 +531,19 @@ export function voxStatusLine(lang: string): LangStatus | null {
         ? "RUNNING"
         : "STALLED"
       : "STOPPED";
-  return { lang, state, workers, queues, paused, arc, prog, doneArc: -1, total: -1, logAge };
+  return {
+    lang,
+    state,
+    workers,
+    queues,
+    paused,
+    arc,
+    prog,
+    doneArc: -1,
+    total: -1,
+    logAge,
+    etaMin: parseEta(text),
+  };
 }
 
 export function printVoxStatus(langs: readonly string[] = VOX_LANGS): number {
@@ -514,9 +561,12 @@ export function printVoxStatus(langs: readonly string[] = VOX_LANGS): number {
     if (s.arc) {
       line += ` арка: ${s.arc}`;
       if (s.prog) line += ` [${s.prog[0]}/${s.prog[1]}]`;
+    } else if (s.prog) {
+      line += ` прогресс: [${s.prog[0]}/${s.prog[1]}]`;
     }
     if (s.logAge !== null) line += `, лог: ${formatAge(s.logAge)} назад`;
     if (s.paused) line += `, ПАУЗА с ${s.paused.at}`;
+    if (s.etaMin !== null && s.etaMin !== undefined) line += `, eta ~${s.etaMin} мин`;
     console.log(line);
   }
   return 0;

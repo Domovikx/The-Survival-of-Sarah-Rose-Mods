@@ -99,6 +99,12 @@
 
 ## Архитектура озвучки
 
+> **Движок генерации — VoxCPM2** (полная миграция с CosyVoice3, 2026-11):
+> запуск `voice_batch.mts --engine voxcpm2 --lang <l> [--demo]`, общий лог
+> `output/voice/batch.log`, статус/ETA — пульт `voice_ctl.mts status`.
+> Всё ниже про `cosyworker.py`/CosyVoice3/очереди `voice_queue.sh` — легаси
+> старого прогона RU/EN (код жив, новых прогонов на нём нет).
+
 ### Ключ: uid = md5(old)
 
 `uid = md5(old-текст реплики в UTF-8)` — полный 32-hex, язык-независимый.

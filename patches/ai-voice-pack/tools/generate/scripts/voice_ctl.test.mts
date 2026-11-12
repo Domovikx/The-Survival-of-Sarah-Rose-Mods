@@ -12,6 +12,7 @@ import {
   main,
   normLangs,
   parseCtlCli,
+  parseEta,
   parseLogState,
   parseProgressLine,
   pauseTmpl,
@@ -61,6 +62,36 @@ test("isWorkerProc: пауза морозит оркестратор (voice_batc
   assert.ok(!isWorkerProc(vox, "es")); // vox-бенч в cosy не считается
   // шим (python cosyworker/voxcpmworker) — не оркестратор, без --lang
   assert.ok(!isWorkerProc("python cosyworker.py --device cuda", "ru"));
+});
+
+test("isWorkerProc: новый демо-контур voice_batch --engine voxcpm2 — vox, не cosy", () => {
+  // поймано 2026-11-12: пульт показывал STOPPED при живом ko-прогоне
+  const demo = "node voice_batch.mts --engine voxcpm2 --lang ko --demo";
+  assert.ok(isWorkerProc(demo, "ko", "vox"));
+  assert.ok(!isWorkerProc(demo, "ko")); // vox в cosy не считается
+  assert.ok(!isWorkerProc(demo, "ru", "vox")); // язык другой
+  // легаси-запуск voice_batch без движка — по-прежнему cosy
+  assert.ok(isWorkerProc("node voice_batch.mts --lang ru", "ru"));
+  assert.ok(!isWorkerProc("node voice_batch.mts --lang ru", "ru", "vox"));
+});
+
+test("parseProgressLine: таймкод batch.log 'HH:MM:SS [n/m] ...' разбирается", () => {
+  assert.deepEqual(parseProgressLine("08:09:34 [752/1188] 8d843fa0 StoryBeginnings Narrator: т"), [752, 1188]);
+  assert.deepEqual(parseProgressLine("[5139/5207] 1633b069 UnionKingdom Sarah: текст"), [5139, 5207]);
+});
+
+test("parseEta: 'eta ~N мин' из строки saved", () => {
+  assert.equal(parseEta(""), null);
+  assert.equal(parseEta("  saved ...opus (11.04s), eta ~100 мин"), 100);
+  // берётся ПОСЛЕДНИЙ прогноз
+  assert.equal(parseEta("  saved ... eta ~102 мин\n  saved ... eta ~100 мин"), 100);
+});
+
+test("parseLogState: без меток START арка берётся из строки прогресса (batch.log)", () => {
+  const text =
+    "08:08:23 [750/1188] 8aa3a377 StoryBeginnings Narrator: ...\n" +
+    "08:09:34 [751/1188] 70e21ef7 StoryBeginnings Narrator: ...\n";
+  assert.deepEqual(parseLogState(text), ["StoryBeginnings", [751, 1188]]);
 });
 
 test("logTmpl/pauseTmpl: у контуров разные шаблоны (пауза не путается)", () => {
