@@ -45,6 +45,7 @@ $harnessDir = Join-Path $GameDir "mods\_tssr-test"
 
 $modes = if ($Mode -eq "all") { @("menu", "game") } else { @($Mode) }
 $langs = if ($Lang -eq "all") { @("en", "ru", "de", "es", "fr", "it", "ja", "ko", "pl", "pt", "zh") } else { @($Lang) }
+$script:startedProcs = @()
 
 try {
     New-Item -ItemType Directory -Force -Path $harnessDir | Out-Null
@@ -65,12 +66,34 @@ try {
             # -WorkingDirectory ОБЯЗАТЕЛЕН: движок (Python 2 listdir) резолвит
             # относительный RENPY_SEARCHPATH="mods" от рабочей директории
             # процесса — без неё падает "path not found: mods\*.*".
-            Start-Process -FilePath $exe -WorkingDirectory $GameDir
-            if ($m -eq "game") { Start-Sleep -Seconds 66 } else { Start-Sleep -Seconds 13 }
+            $proc = Start-Process -FilePath $exe -WorkingDirectory $GameDir -PassThru
+            if ($proc) { $script:startedProcs += $proc }
+            # Ждём, пока харнесс закроется САМ: zz_capture.rpy вызывает
+            # renpy.quit (menu ~11с, game ~66с). Фиксированный Sleep резал
+            # съёмку на середине; лимит — страховка от зависания.
+            $limitSec = if ($m -eq "game") { 240 } else { 120 }
+            if ($proc) {
+                try { [void]$proc.WaitForExit($limitSec * 1000) } catch {}
+            }
+            # Не закрылся — гасим принудительно (держит локи на файлах мода).
+            if ($proc -and -not $proc.HasExited) {
+                try { Stop-Process -Id $proc.Id -Force -ErrorAction SilentlyContinue } catch {}
+                try { [void]$proc.WaitForExit(15000) } catch {}
+            }
         }
     }
 }
 finally {
+    # Закрыть ВСЕ процессы игры, которые запустил этот прогон (на случай
+    # исключения посреди итерации) — иначе они держат локи на файлах мода.
+    foreach ($p in $script:startedProcs) {
+        try {
+            if ($p -and -not $p.HasExited) {
+                Stop-Process -Id $p.Id -Force -ErrorAction SilentlyContinue
+                $p.WaitForExit(15000) | Out-Null
+            }
+        } catch {}
+    }
     # Убрать харнесс (включая скомпилированный .rpyc) — установка остаётся чистой
     if (Test-Path $harnessDir) { Remove-Item -Recurse -Force $harnessDir }
     Remove-Item Env:TSSR_SHOTS_DIR, Env:TSSR_SHOTS, Env:TSSR_SHOTS_MODE,
