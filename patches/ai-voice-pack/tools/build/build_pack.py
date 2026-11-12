@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# LEGACY: порт на .mts — tools/build/build_pack.mts; правки только в .mts.
 # -*- coding: utf-8 -*-
 """build_pack.py — сборка дистрибутивных zip'ов AI Voice Pack (патч TSSR).
 
@@ -18,8 +19,6 @@ ZIP_STORED = заметно быстрее, размер тот же).
 Запуск (из anywhere):  python patches/ai-voice-pack/tools/build/build_pack.py
 Артефакты: <repo>/dist/*.zip  (dist/ в .gitignore — зипы не коммитим).
 """
-
-# LEGACY: порт на .mts — tools/build/build_pack.mts; правки только в .mts.
 
 import json
 import shutil
