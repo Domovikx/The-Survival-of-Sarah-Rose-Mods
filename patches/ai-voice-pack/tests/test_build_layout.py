@@ -210,6 +210,18 @@ def test_installers_wait_for_game_to_close():
         assert "exit 4" in src, "%s: защита не возвращает код 4" % name
 
 
+def test_install_cmd_console_is_utf8():
+    """install.cmd переключает консоль в UTF-8: сообщения установщика
+    русские, а CP866/CP437 на другой локали дают кракозябры — включая
+    предохранитель «сначала поставьте main» (поймано 2026-11-12 на прогоне
+    пользовательского сценария: вывод в лог был нечитаемым)."""
+    with open(os.path.join(INSTALLER_DIR, "install.cmd"), "rb") as f:
+        src = f.read().decode("utf-8-sig")
+    assert "chcp 65001" in src, "install.cmd: консоль не переключена в UTF-8"
+    assert src.index("chcp 65001") < src.index("powershell"), \
+        "chcp должен стоять ДО запуска powershell"
+
+
 def test_core_installer_never_touches_ai_voice():
     """main.zip — БЕЗ аудио: установщик ядра пропускает ai_voice (голоса
     живут в своих пакетах — решение владельца 2026-11-12)."""
