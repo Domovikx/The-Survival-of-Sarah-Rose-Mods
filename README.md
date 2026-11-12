@@ -29,26 +29,25 @@ Full Russian fan translation + AI voice acting for the visual novel **The Surviv
 
 ## Features
 
-- 🌐 **Full Russian translation** — 68 254 lines: dialogues, narration, UI, character names
-- 🎙 **AI voice acting (RU + EN)** — cloned voices for every main character, the game becomes fully voiced
+- 🌐 **11 languages** — full localization: English, Russian, German, Spanish, French, Italian, Japanese, Korean, Polish, Portuguese, Chinese
+- 🎙 **AI voice acting** — cloned voices for every main character; **demo scope: the opening arcs**, in RU, EN, DE, ES, FR, IT, JA
 - 🎭 **Emotion-aware delivery** — every line carries the speaker's emotional state (anger, desire, whisper, sarcasm, ...)
-- 🗣 **75+ voices** — Sarah, Narrator, King Orwell, Kate, Thomas and dozens more
-- 🔊 **Two languages** — switch language in-game, the voice pack follows automatically
+- 🗣 **77 voices** — Sarah, Narrator, King Orwell, Kate, Thomas and dozens more
+- 🔊 **Voice follows the language** — switch language in-game, the matching voice pack plays
 - ⚙️ **Ren'Py 7.4.11** — works with the Steam version of the game
 
 ## Download
 
-[**⬇ Releases**](https://github.com/Domovikx/The-Survival-of-Sarah-Rose-Mods/releases) — ready-to-install zips (main + per-language voice packs).
+[**⬇ Releases**](https://github.com/Domovikx/The-Survival-of-Sarah-Rose-Mods/releases) — ready-to-install zips: `main.zip` (core) + per-language voice packs.
 
-> **Files:** `TSSR-AI-Voice-Pack-main.zip` (core: mod + translation, ~16 MB) and optional `voice-ru` / `voice-en` packs (~0.8 GB each). Without a voice pack the game runs fully translated, just unvoiced.
+> **Files:** `TSSR-AI-Voice-Pack-main.zip` — core **without audio**: texts of 11 languages + all fonts (Literata + Noto CJK), ~47 MB. Voice packs `voice-{ru,en,de,es,fr,it,ja}.zip` are **separate downloads** (~17–23 MB each, demo scope). Without a voice pack the game is fully translated, just unvoiced.
 
 ## Installation
 
-1. Unpack `main.zip` into the game folder
-   (Steam default: `C:\Program Files (x86)\Steam\steamapps\common\The Survival of Sarah Rose\`)
-2. Unpack the voice pack zip(s) you want into the same folder (creates `ai_voice/`)
-3. If the game is **not** in the default Steam path — edit `environment.txt` (text editor) and fix the path to the `mod` folder
-4. Launch the game, in settings select **Language → Russian** (or English — voices follow the language)
+1. **Close the game.** Unpack `main.zip` anywhere and run **its** `install.cmd` — it finds the Steam game folder and installs the core (texts, fonts, menu).
+2. **Voices — only the languages you want.** Unpack a voice zip anywhere and run **its own** `install.cmd` — it installs that one language; repeat for each pack. Without the core the voice installer asks you to install main first.
+3. Manual alternative: unpack the zips into the game root (the folder with `TheSurvivalofSarahRose.exe`).
+4. Launch the game → **Sarah Rose — AI voice & localization** button in the main menu → pick the language, toggle voice, adjust font sizes.
 
 > First launch after installation may be slower (Ren'Py cache rebuild).
 
@@ -58,21 +57,17 @@ The voice pack is generated with **CosyVoice3** (voice cloning) and covers both 
 Lines are stored as **Opus 24 kbps mono** — ~16× smaller than the intermediate WAV
 (24 kHz/16-bit mono, 384 kbps; measured: 20 914 MB of WAV → 1 307 MB of Opus):
 
-- **Russian (RU)** — `ai_voice/ru/...` — **100%** ✓ (67 267 / 67 267)
-- **English (EN)** — `ai_voice/en/...` — **100%** ✓ (67 267 / 67 267)
+- **7 languages voiced (demo scope)** — opening arcs, 1 195 lines each:
+  RU, EN, DE, ES, FR, IT, JA — `ai_voice/<lang>/...`
+- **Korean** in progress; **Polish / Portuguese / Chinese** — only the site demo phrases for now
 
-Overall: **100% voiced** (134 534 / 134 534 lines), pack size ≈ 1.6 GB.
-
-**Completed 2026-10-18:** every line of the game is voiced in both languages —
-all 19 arcs × RU + EN.
-
-- Voice lookup is automatic: `uid = md5(text)` → `ai_voice/{lang}/{arc}/{uid}__{voice}.opus`
-  (`.wav` remains a code-level fallback, but since 2026-10-14 the pack is
-  Opus-only — no `.wav` files ship in `ai_voice/`)
+- Voice lookup is automatic: `uid = md5(text)` → `ai_voice/{lang}/{arc}/{uid}__{speaker}.opus`
+  (`.wav` remains a code-level fallback, but since 2026-10-14 `ai_voice/` is
+  Opus-only — no `.wav` files ship)
 - Every line has an emotion instruction (state of the narrator/speaker)
 - Fallback: if a file is missing, the game plays silently (no crashes)
 
-> ⚠ The voice pack is ~1.6 GB (Opus 24 kbps). Check disk space.
+> ⚠ Voice packs are small (~17–23 MB each) — the demo scope, not the whole game yet.
 
 ## Contents
 
@@ -80,9 +75,9 @@ all 19 arcs × RU + EN.
 
 Prologue, StoryBeginnings, WarriorPath, MagePath, UnionKingdom, HollowWorld, BlackMonolith, HassarPath, SailorPath, SailorArc, LifeInRahayal, VargaMarionPath, Training, PrisonArc, AlfredArc, DemonArc, WarArc, HyralArc, Other — **68 254 lines total**.
 
-### Voiced characters (75+)
+### Voiced characters (77)
 
-Sarah, Narrator, King Orwell Rose, Kate, Thomas, Varga, Captain Belmont, Alaric, Carolyn, Marion, Kravel, Barion, Basilisk and many more — every character has a unique cloned voice with emotional delivery.
+Sarah, Narrator, King Orwell Rose, Kate, Thomas, Varga, Captain Belmont, Alaric, Carolyn, Marion, Kravel, Barion, Basilisk and many more — every character has a unique cloned voice with emotional delivery (demo arcs).
 
 ## Screenshots
 
@@ -129,26 +124,25 @@ Open an issue or submit a pull request on GitHub.
 
 ## Возможности
 
-- 🌐 **Полный русский перевод** — 68 254 строки: диалоги, нарратив, интерфейс, имена персонажей
-- 🎙 **AI-озвучка (RU + EN)** — клонированные голоса всех главных героев, игра становится полностью озвученной
+- 🌐 **11 языков** — полная локализация: английский, русский, немецкий, испанский, французский, итальянский, японский, корейский, польский, португальский, китайский
+- 🎙 **AI-озвучка** — клонированные голоса всех главных героев; **демо-скоуп: стартовые арки**, на RU, EN, DE, ES, FR, IT, JA
 - 🎭 **Эмоциональная подача** — каждая реплика несёт состояние диктора (гнев, страсть, шёпот, сарказм...)
-- 🗣 **75+ голосов** — Сара, Рассказчик, Король Орвелл, Кейт, Томас и десятки других
-- 🔊 **Два языка** — переключай язык в игре, озвучка подстраивается автоматически
+- 🗣 **77 голосов** — Сара, Рассказчик, Король Орвелл, Кейт, Томас и десятки других
+- 🔊 **Озвучка следует за языком** — переключай язык в игре, играет пак этого языка
 - ⚙️ **Ren'Py 7.4.11** — работает со Steam-версией игры
 
 ## Скачать
 
-[**⬇ Релизы**](https://github.com/Domovikx/The-Survival-of-Sarah-Rose-Mods/releases) — готовые zip'ы к установке (ядро + озвучка по языкам).
+[**⬇ Релизы**](https://github.com/Domovikx/The-Survival-of-Sarah-Rose-Mods/releases) — готовые zip'ы: `main.zip` (ядро) + пакеты озвучки по языкам.
 
-> **Файлы:** `TSSR-AI-Voice-Pack-main.zip` (ядро: мод + перевод, ~16 МБ) и опциональные паки `voice-ru` / `voice-en` (~0.8 ГБ каждый). Без voice-пака игра работает полностью переведённой, просто без озвучки.
+> **Файлы:** `TSSR-AI-Voice-Pack-main.zip` — ядро **без аудио**: тексты 11 языков + все шрифты (Literata + Noto CJK), ~47 МБ. Паки `voice-{ru,en,de,es,fr,it,ja}.zip` — **отдельные скачивания** (~17–23 МБ каждый, демо-скоуп). Без voice-пака игра работает полностью переведённой, просто без озвучки.
 
 ## Установка
 
-1. Распакуйте `main.zip` в папку с игрой
-   (Steam: `C:\Program Files (x86)\Steam\steamapps\common\The Survival of Sarah Rose\`)
-2. Распакуйте нужные voice-зипы туда же (появится папка `ai_voice/`)
-3. Если игра стоит не в стандартном Steam-пути — откройте `environment.txt` текстовым редактором и поправьте путь к папке `mod`
-4. Запустите игру, в настройках выберите **Language → Russian** (или English — озвучка подстроится)
+1. **Закрой игру.** Распакуй `main.zip` куда угодно и запусти **его** `install.cmd` — он найдёт папку игры (Steam) и поставит ядро (тексты, шрифты, меню).
+2. **Голоса — только нужных языков.** Распакуй voice-zip куда угодно и запусти **его собственный** `install.cmd` — поставится один этот язык; повтори для каждого пака. Если ядра нет, установщик голосов попросит поставить main первым.
+3. Вручную: распакуй zip'ы в корень игры (папка с `TheSurvivalofSarahRose.exe`).
+4. Запусти игру → кнопка **«Sarah Rose — AI-озвучка и перевод»** в главном меню → выбери язык, включи озвучку, настрой размеры шрифтов.
 
 > Первый запуск после установки может быть медленнее (пересборка кэша Ren'Py).
 
@@ -159,21 +153,16 @@ Open an issue or submit a pull request on GitHub.
 промежуточного WAV (24 кГц/16 бит моно, 384 кбит/с; замер: 20 914 МБ WAV →
 1 307 МБ Opus):
 
-- **Русский (RU)** — `ai_voice/ru/...` — **100%** ✓ (67 267 / 67 267)
-- **Английский (EN)** — `ai_voice/en/...` — **100%** ✓ (67 267 / 67 267)
+- **Озвучено 7 языков (демо-скоуп)** — стартовые арки, по 1 195 реплик:
+  RU, EN, DE, ES, FR, IT, JA — `ai_voice/<lang>/...`
+- **Корейский** — в процессе; **польский / португальский / китайский** — пока только витринные фразы на сайте
 
-Итого: **озвучено 100%** (134 534 / 134 534 реплик), размер пака ≈ 1.6 ГБ.
-
-**Завершено 18.10.2026:** озвучена каждая реплика игры на обоих языках —
-все 19 арок × RU + EN.
-
-- Поиск голоса автоматический: `uid = md5(текста)` → `ai_voice/{lang}/{arc}/{uid}__{voice}.opus`
-  (`.wav` играет как фолбэк в коде, но с 2026-10-14 пак только Opus —
-  `.wav`-файлов в `ai_voice/` больше нет)
+- Поиск голоса автоматический: `uid = md5(текста)` → `ai_voice/{lang}/{arc}/{uid}__{speaker}.opus`
+  (`.wav` играет как фолбэк в коде, но с 2026-10-14 `ai_voice/` — только Opus)
 - У каждой реплики есть эмоция — состояние диктора/рассказчика
 - Если файла нет — игра просто играет без звука (без ошибок)
 
-> ⚠ Озвучка — ~1.6 ГБ (Opus 24 кбит/с). Следи за местом на диске.
+> ⚠ Паки озвучки небольшие (~17–23 МБ каждый) — это демо-скоуп, пока не вся игра.
 
 ## Содержание
 

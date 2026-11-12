@@ -15,11 +15,19 @@
   `tl/` → такие же пути в папке мода (`.rpyc` не шиппится — см. ниже);
 - `catalog/` → `catalog/` (в дистрибутив уезжают ТОЛЬКО runtime-мапы
   `voice_list.json`, `label_arc.json` — allowlist в build_pack);
-- `audio/<lang>/` → `ai_voice/<lang>/` (массив озвучки, отдельный voice-zip).
+- `audio/<lang>/` → `ai_voice/<lang>/` (массив озвучки — отдельный пак
+  `voice-<lang>.zip` со СВОИМ установщиком).
 
 Сборка: `python patches/ai-voice-pack/tools/build/build_pack.py` →
-`dist/*.zip` (main + voice-ru + voice-en). Раскладка zip = раскладка
-установки: распаковка в корень игры, удаление мода = удалить одну папку.
+`dist/*.zip`. Раскладка zip = раскладка установки: распаковка в корень игры,
+удаление мода = удалить одну папку.
+
+**Установщики — по одному на пакет, каждый атомарный** (2026-11-12):
+`tools/build/installer/install.ps1` уезжает в `main.zip` (ставит ТОЛЬКО ядро,
+`ai_voice/` не трогает), `voice_install.ps1` — в каждый `voice-<lang>.zip`
+(ставит только свой язык; без ядра просит сначала поставить main; при
+запущенной игре ждёт её закрытия — она держит локи на шрифтах). Замена =
+staging → swap с ретраями и откатом.
 
 ## Что dev-only (в зип не уезжает)
 
@@ -32,8 +40,10 @@
     приоритет, старт только через пульт);
   - `voice_status/sync/manage/...` — статус, каталог, отчёты;
   - `shots_capture.ps1` + `zz_capture.rpy` — съёмка UI для лендинга;
-- `registry/` — ЕДИНАЯ БД мода (реестр спикеров who_map.jsonl, uid-исключения
-  overrides.jsonl, голоса кастов casts/; карта — registry/README.md);
+- `casts/` — голоса: `voices/<Имя>/` (контракт `{Имя}.mts`, рефы,
+  `generated/` кандидаты, `gen_selected/` отбор) + `casts.mts` (типизированный
+  модуль: `CAST_NAMES`, `SPEAKERS`, `LINE_OVERRIDES` — заменил jsonl-реестры
+  2026-10-21);
 - `tools/generate/output/` — логи и стейты пайплайна (не коммитятся);
 - `tests/` — pytest: `python -m pytest patches/ai-voice-pack/tests/ -q`.
 

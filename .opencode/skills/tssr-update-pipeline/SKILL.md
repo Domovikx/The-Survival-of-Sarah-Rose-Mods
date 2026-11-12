@@ -128,11 +128,19 @@ node tools/generate/scripts/voice_batch.mts \
 npm run build:pack
 ```
 
-→ `dist/TSSR-AI-Voice-Pack-{main,voice-ru,voice-en}.zip` (dist gitignored,
-НЕ коммитится). Тест-гарды: pytest tests/test_build_layout.py проходит.
+→ `dist/TSSR-AI-Voice-Pack-main.zip` (ядро без аудио) +
+`dist/TSSR-AI-Voice-Pack-voice-<lang>.zip` (только непустые языки; dist
+gitignored, НЕ коммитится). Тест-гарды: pytest tests/test_build_layout.py
+проходит.
 
-⚠ Установка в реальную игру для приёмки = распаковка zip в корень игры
-(внутри main.zip лежат INSTALL/UNINSTALL). Перед тестом: `npm run clearcache`.
+⚠ Установка в реальную игру для приёмки = как у пользователя, по шагам:
+
+1. `main.zip` → ЕГО `install.cmd` (ядро: тексты/шрифты/меню, аудио не трогает);
+2. каждый нужный `voice-<lang>.zip` → ЕГО `install.cmd` (атомарно, один язык).
+   Игра должна быть закрыта — установщик ждёт её закрытия до 3 минут. Полный
+   пользовательский сценарий на чистой Steam-установке: `bash tmp/user_e2e.sh`
+   (предохранители: голоса без ядра → exit 3, игра открыта → exit 4).
+   Перед тестом: `npm run clearcache`.
 
 ## Ступень 5 — Приёмка владельцем ⚠
 
