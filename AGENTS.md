@@ -207,11 +207,10 @@ casts/voices/
     {Имя}.wav                 # АКТИВНЫЙ реф в корне каста (озвучен = есть реф);
                               #   варианты A/B рядом: {Имя}_{v}.wav
 tools/generate/scripts/
-  voicekit/                    # ЯДРО: python-шимы (paths, contract, fs, tts_env,
-                               #   model_dir) + TS-контур генерации:
+  voicekit/                    # ЯДРО: python-шимы (config, cv3, model_dir, paths,
+                               #   tts_env) + TS-контур генерации:
                                #   worker.mts     # клиент шима: протокол v2 (PCM),
-                               #                 #   ретрай TextEncodeInput, trim, кодирование
-                               #   trim.mts       # паттерн-трим хвостовых артефактов
+                               #                 #   ретрай TextEncodeInput, кодирование
                                #   audio.mts      # f32le pipe -> loudnorm -> libopus -ar sr
                                #                 #   -> .part -> rename; wav-фолбэк (saveWavChain)
                                #   fake_worker.mts # фейковый шим для тестов worker'а
@@ -242,13 +241,13 @@ tools/generate/scripts/
   voice_batch.mts              # БАТЧ-ОРКЕСТРАТОР: каталог POT -> audio/{lang}/{arc}/
                                #   {uid}__{variant}.opus (эмоция из `#. emotion:` POT;
                                #   --ref/--uid/--force/--emotion/--device cuda; wav НЕ
-                               #   пишется: PCM из шима -> trim -> pipe f32le -> ffmpeg
+                               #   пишется: PCM из шима -> pipe f32le -> ffmpeg
                                #   loudnorm+libopus (TS, voicekit/audio.mts);
                                #   ИНФЕРЕНС шеллит в python cosyworker.py)
   cosyworker.py                # ИНФЕРЕНС CosyVoice — ЕДИНСТВЕННЫЙ python генерации
                                #   (венв C:/tools/cosyvoice3): модель один раз на
                                #   процесс; протокол v2 — отдаёт СЫРОЙ PCM
-                               #   (pcm_b64 + sr), НЕ пишет файлов (trim/opus/wav
+                               #   (pcm_b64 + sr), НЕ пишет файлов (opus/wav
                                #   на TS); torch в node невозможен
   beastify.py                  # нелюдские голоса: пресеты orc/demon/monster
                                #   (pitch+formant вниз, тёмный EQ, acrusher, гроул-субтон,
@@ -323,7 +322,7 @@ tools/generate/scripts/
 | Слой                                                   | Язык   | Файлы                                                                                                                                                                                        |
 | ------------------------------------------------------ | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Оркестрация батча: каталог, фильтры, эмоции, логи, ETA | TS     | `voice_batch.mts`                                                                                                                                                                            |
-| Клиент шима: протокол v2, trim, ffmpeg-цепочка         | TS     | `voicekit/worker.mts`, `voicekit/trim.mts`, `voicekit/audio.mts`                                                                                                                             |
+| Клиент шима: протокол v2, ffmpeg-цепочка               | TS     | `voicekit/worker.mts`, `voicekit/audio.mts`                                                                                                                                                  |
 | Инференс (torch/ASR/pickle — физически python)         | python | `voxcpmworker.py` (ОСНОВНОЙ, VoxCPM2), `voice_design.py` (Qwen3-TTS), `asr_refs.py` (faster-whisper), `read_persistent.py` (pickle Ren'Py)                                                   |
 | Рефы/голоса/статус/разметка/скрины/нелюдские голоса    | TS     | `add_candidate`, `voice_manage`, `voice_status`, `emotion_tag`, `shots_for_site.mts`, `beastify.mts` и пр.                                                                                   |
 | Сборка дистрибутива                                    | TS     | `tools/build/build_pack.mts` (порт 2026-11-12; `.py` = легаси)                                                                                                                               |
@@ -331,8 +330,9 @@ tools/generate/scripts/
 
 Протокол v2 (2026-10-23): шим отдаёт СЫРОЙ PCM (`pcm_b64` = float32 LE mono,
 плюс поле `sr`), файлов не пишет. Дальше всё на TS: ретрай холодного фронтенда
-(TextEncodeInput, «повтор через 3с») — `worker.mts`; паттерн-трим
-«пауза+всплеск» — `voicekit/trim.mts`; кодирование — `voicekit/audio.mts`
+(TextEncodeInput, «повтор через 3с») — `worker.mts`; кодирование —
+`voicekit/audio.mts` (трим-паттерн выпилен 2026-11 вместе с миграцией на
+VoxCPM2: движок не даёт хвостовых артефактов — см. `6ba0bbcc4`)
 (pipe f32le → loudnorm -16 LUFS/TP -1.5 →
 libopus 24k с ОБЯЗАТЕЛЬНЫМ выходным `-ar sr` → `.part` → rename; wav-фолбэк
 `saveWavChain` там же).
@@ -342,7 +342,8 @@ libopus 24k с ОБЯЗАТЕЛЬНЫМ выходным `-ar sr` → `.part` �
 - **Новый код — только `.mts`.** python-файлы не растут: правки = багфиксы
   по необходимости; новые фичи — на TS.
 - Оставшиеся python-утилиты — легаси: при равной цене делать на TS;
-  перенос алгоритма = порт + тест-паритет (пример: `trim.test.mts`).
+  перенос алгоритма = порт + тест-паритет (пример: `beastify.test.mts`,
+  `build_pack.test.mts`).
 - Внешний код не импортируется (см. «Инкапсуляция тулов»).
 - Гарды: `voice_batch.test.mts` (блок «миграция python → TS», UTF-8,
   OpusHead-текстовый) и `voicekit/audio.test.mts` (behavioral: OpusHead
@@ -501,10 +502,12 @@ texts — рус. фразы с ЯВНЫМ признаком пола; файл
 Заглушки без texts (созданы voice_sync update) видны в --list с WARN — заполни
 контракт перед генерацией.
 
-## Тримминг хвостов (паттерн)
+## Тримминг хвостов — УДАЛЁН (2026-11)
 
-`voicekit/trim.mts`: тишина ≥80мс → короткий звук ≤500мс, упирающийся в конец
-файла = артефакт → режем. В батче применяется автоматически (`worker.mts`).
+Паттерн-трим («тишина ≥80мс → короткий звук в конце файла») жил в
+`voicekit/trim.mts` для CosyVoice3 и вместе с миграцией на VoxCPM2 выпилен
+(`6ba0bbcc4`): движок не даёт хвостовых артефактов. Упоминания trim в доках —
+исторические.
 
 ## A/B-тестирование голосов
 
