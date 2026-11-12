@@ -62,15 +62,6 @@ MOD_EXCLUDE = {"audio", "tools", "tests", "catalog", "README.md", "MOD.md",
                "casts", "po", ".pytest_cache",
                "update_check.txt", "last_menu_hook.txt", "voice_debug.log"}
 
-# CJK-шрифт едет в языковом пакете (владелец 2026-11-11: «main — небольшой,
-# ставится первым, без чего работать не будет»; шрифт нужен только своему
-# языку: zzz_ui.rpy 5.1 юзает его в translate-style блоках ja/ko/zh).
-VOICE_EXTRA_FONTS = {
-    "ja": "fonts/NotoSansCJKjp-Regular.otf",
-    "ko": "fonts/NotoSansCJKkr-Regular.otf",
-    "zh": "fonts/NotoSansCJKsc-Regular.otf",
-}
-
 # Рантайм-каталог: voice_config.rpy грузит ТОЛЬКО эти два JSON (label -> arc,
 # who -> variant); в zip идут как АРТЕФАКТЫ СБОРКИ — в репе каталог/ не живёт
 # (легаси выпищен 2026-10-22), генерит catalog_gen.mts из POT + casts.
@@ -90,26 +81,42 @@ THE SURVIVAL OF SARAH ROSE — AI Voice Pack + Localization (11 languages)
 =========================================================================
 
 СОСТАВ / FILES
-  TSSR-AI-Voice-Pack-main.zip      — ядро: тексты 11 языков, меню, установщик
-                                     (обязательный) / core: texts, menu, installer
-  TSSR-AI-Voice-Pack-voice-<lang>.zip — голоса языка: ru, en, de, es, fr, it,
-                                     ja, ko, pl, pt, zh; для ja/ko/zh внутри
-                                     также их CJK-шрифт / voice pack per language
-                                     (with its CJK font for ja/ko/zh)
+  TSSR-AI-Voice-Pack-main.zip      — ядро БЕЗ АУДИО: тексты 11 языков, все
+                                     шрифты, меню, установщик (обязательный) /
+                                     core, NO audio: texts, fonts, menu
+  TSSR-AI-Voice-Pack-voice-<lang>.zip — голоса языка (СКАЧИВАЕТСЯ ОТДЕЛЬНО,
+                                     сколько хочешь: ru, en, de, es, fr, it,
+                                     ja, ko, pl, pt, zh) / voice packs are
+                                     SEPARATE downloads, pick 1..N
+
+ПОРЯДОК / ORDER:
+  1. СНАЧАЛА main (обязательно) — его установщик ставит ядро: тексты 11
+     языков, все шрифты, меню. Аудио в main НЕТ.
+  2. ПОТОМ голоса — захочешь: скачай voice-пакеты нужных языков (1..N) и
+     у КАЖДОГО запусти ЕГО install.cmd — пакет ставится атомарно, один за
+     другим. Установщик пакета проверит, что main стоит (без ядра попросит
+     поставить его первым).
+     FIRST main (required) — core only: texts, fonts, menu. NO audio.
+     THEN voices: download the packs you want (1..N), run EACH pack's own
+     install.cmd — each installs atomically. The pack installer checks the
+     core is present (asks for main first otherwise).
 
 УСТАНОВКА / INSTALL (папка игры = папка с TheSurvivalofSarahRose.exe):
-  0. ЛЕНИВЫЙ ПУТЬ / EASIEST: распакуй main.zip куда угодно и запусти
-     install.cmd — он сам найдёт игру, спросит язык и всё поставит
-     (voice-zip положи рядом с install.cmd).
-     Unpack main.zip anywhere and run install.cmd — it finds the game,
-     asks your language and installs everything (put the voice zip next
-     to install.cmd).
-  1. ИЛИ вручную: распакуй main.zip в корень папки игры.
-     OR manually: unpack main.zip into the game root folder.
-  2. Распакуй нужные voice-zip'ы туда же.
-     Unpack the voice zip(s) you need into the same folder.
-  3. Запусти игру. Настройки: кнопка языка в меню / «Sarah Rose — AI Voice Pack».
-     Launch the game. Settings: language button in the menu / settings page.
+  А. main.zip: распакуй куда угодно и запусти install.cmd — он сам найдёт
+     игру и поставит ядро. ИЛИ вручную: распакуй main.zip в корень игры.
+     Unpack main.zip anywhere and run its install.cmd (finds the game), or
+     manually unpack into the game root.
+  Б. каждый voice-<lang>.zip: распакуй куда угодно и запусти ЕГО install.cmd
+     — поставит только свой язык, атомарно. ИЛИ вручную: распакуй в корень
+     игры. Unpack each voice zip anywhere and run its own install.cmd, or
+     manually unpack into the game root.
+  В. Запусти игру. Настройки: кнопка языка в меню — 11 языков.
+     Launch the game. Settings: language button in the menu — 11 languages.
+
+ВАЖНО / IMPORTANT: перед установкой ЗАКРОЙ игру (игра держит шрифты и файлы
+мода; установщик ждёт закрытия до 3 минут, потом попросит). / Close the game
+before installing (it locks fonts and mod files; the installer waits up to
+3 minutes, then asks you to close it).
 
 ПРИМЕЧАНИЕ / NOTE: если Windows показала предупреждение при запуске install.cmd —
 файл скачан из интернета («Mark of the Web»). Скрипт открытый, исходники на
@@ -225,14 +232,11 @@ def build_main(out_dir):
         for arcname, content in (("INSTALL.txt", INSTALL_TXT),
                                  ("environment.txt", ENVIRONMENT_TXT)):
             zf.writestr(arcname, content)
-        # Зеркало установки: всё дерево патча кроме dev-only (MOD_EXCLUDE);
-        # CJK-шрифты в main НЕ кладутся — они едут в пакетах ja/ko/zh
-        # (VOICE_EXTRA_FONTS, владелец 2026-11-11: «main — небольшой»).
+        # Зеркало установки: всё дерево патча кроме dev-only (MOD_EXCLUDE).
+        # Шрифты ВСЕ едут в main (владелец 2026-11-12: шрифт = часть текста,
+        # текст живёт в main; без шрифта иероглифы — квадраты).
         for p in _tree_files(PATCH, MOD_EXCLUDE):
-            rel = p.relative_to(PATCH).as_posix()
-            if rel in set(VOICE_EXTRA_FONTS.values()):
-                continue
-            _add(zf, p, MOD_DIR + "/" + rel)
+            _add(zf, p, MOD_DIR + "/" + p.relative_to(PATCH).as_posix())
         # Рантайм-каталог — артефакт сборки (каталог/ в репе нет): генератор
         # валит сборку сам, если POT/войсы не дают полные мапы.
         for fn in CATALOG_RUNTIME:
@@ -246,7 +250,8 @@ def build_main(out_dir):
 
 def build_voice(lang, out_dir):
     """Озвучка одного языка: audio/<lang>/** -> mods/.../ai_voice/<lang>/**.
-    Для ja/ko/zh — плюс свой CJK-шрифт (без него текст языка = квадраты)."""
+    Плюс СВОЙ атомарный установщик в корне зипа (владелец 2026-11-12:
+    «отдельные аудио-установщики, атомарно»; предохранитель на ядро main)."""
     src = VOICE_LANGS[lang]
     if not src.is_dir() or not any(src.rglob("*")):
         print("  voice-%s: пропущен (каталог пуст — аудио ещё генерится)" % lang)
@@ -256,9 +261,8 @@ def build_voice(lang, out_dir):
     with zipfile.ZipFile(target, "w", zipfile.ZIP_STORED) as zf:
         for p in _tree_files(src):
             _add(zf, p, MOD_DIR + "/ai_voice/%s/%s" % (lang, p.relative_to(src).as_posix()))
-        font = VOICE_EXTRA_FONTS.get(lang)
-        if font and (PATCH / font).is_file():
-            _add(zf, PATCH / font, MOD_DIR + "/" + font)
+        _add(zf, PATCH / "tools" / "build" / "installer" / "install.cmd", "install.cmd")
+        _add(zf, PATCH / "tools" / "build" / "installer" / "voice_install.ps1", "install.ps1")
     with zipfile.ZipFile(target) as zf:
         infos = zf.infolist()
         nfiles, nbytes = len(infos), sum(i.file_size for i in infos)

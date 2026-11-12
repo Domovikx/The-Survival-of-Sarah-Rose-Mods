@@ -19,6 +19,7 @@ sys.path.insert(0, os.path.join(ROOT, 'tools', 'build'))
 import build_pack  # noqa: E402
 
 ROOT_FILES = {"INSTALL.txt", "environment.txt", "install.cmd", "install.ps1"}
+INSTALLER_DIR = os.path.join(ROOT, "tools", "build", "installer")
 
 
 def _build_main(tmp_path):
@@ -81,15 +82,28 @@ def test_main_zip_no_dev_only_trees(tmp_path):
             "dev-дерево в дистрибутиве: %s" % dev
 
 
-def test_main_zip_fonts_only_ui(tmp_path):
-    """В main — только UI-шрифты (Literata); CJK едет в пакетах ja/ko/zh."""
+def test_main_zip_fonts_complete(tmp_path):
+    """В main — ВСЕ шрифты (владелец 2026-11-12: шрифт = часть текста,
+    текст живёт в main; без CJK-шрифта иероглифы = квадраты)."""
     with _build_main(tmp_path) as zf:
-        fonts = [n for n in zf.namelist() if "/fonts/" in n]
-    assert any("Literata" in n for n in fonts), "базовые шрифты UI пропали"
-    assert not [n for n in fonts if "NotoSansCJK" in n], \
-        "CJK-шрифты должны ехать в voice-{ja,ko,zh}, а не в main"
-    assert "ja" in build_pack.VOICE_EXTRA_FONTS and "ko" in build_pack.VOICE_EXTRA_FONTS \
-        and "zh" in build_pack.VOICE_EXTRA_FONTS, "мапа шрифтов языков неполная"
+        fonts = {n.split("/")[-1] for n in zf.namelist() if "/fonts/" in n}
+    assert "Literata-Regular.ttf" in fonts and "Literata-Bold.ttf" in fonts, "UI-шрифты пропали"
+    for cjk in ("NotoSansCJKjp-Regular.otf", "NotoSansCJKkr-Regular.otf", "NotoSansCJKsc-Regular.otf"):
+        assert cjk in fonts, f"CJK-шрифт в main: {cjk}"
+
+
+def test_voice_zip_has_own_installer(tmp_path):
+    """Каждый voice-пакет несёт СВОЙ атомарный установщик в корне (владелец
+    2026-11-12: «отдельные аудио-установщики» + предохранитель на ядро main)."""
+    res = build_pack.build_voice("ru", tmp_path)
+    if res is None:
+        import pytest
+        pytest.skip("audio/ru пуст")
+    _, target, _, _ = res
+    with zipfile.ZipFile(target) as zf:
+        top = {n.split("/")[0] for n in zf.namelist()}
+    assert "install.cmd" in top, f"нет install.cmd в корне voice-пакета: {sorted(top)}"
+    assert "install.ps1" in top, f"нет install.ps1 в корне voice-пакета: {sorted(top)}"
 
 
 def test_main_zip_repo_diagnostics_not_shipped(tmp_path):
@@ -166,11 +180,40 @@ def test_voice_zip_files_in_mod_dir(tmp_path, monkeypatch):
     with zipfile.ZipFile(target) as zf:
         names = zf.namelist()
     assert names == [
-        build_pack.MOD_DIR + "/ai_voice/ru/OpeningScene/deadbeef__Sarah_3.opus"
+        build_pack.MOD_DIR + "/ai_voice/ru/OpeningScene/deadbeef__Sarah_3.opus",
+        # свой атомарный установщик в корне пакета (владелец 2026-11-12)
+        "install.cmd",
+        "install.ps1",
     ]
 
 
 # --- Статические проверки rpy-исходников (раскладка репы -> раскладка мода) ---
+
+
+def _installer(name):
+    """Исходник установщика: ОБЯЗАТЕЛЬНО UTF-8 BOM (PowerShell 5 иначе
+    коверкает кириллицу в консоли)."""
+    with open(os.path.join(INSTALLER_DIR, name), "rb") as f:
+        raw = f.read()
+    assert raw[:3] == b"\xef\xbb\xbf", "%s: нет UTF-8 BOM" % name
+    return raw.decode("utf-8-sig")
+
+
+def test_installers_wait_for_game_to_close():
+    """Установщики не воюют с запущенной игрой: игра держит локи на шрифтах
+    и файлах мода, поэтому ждём закрытия, затем ставим (поймано на чистой
+    установке 2026-11-12 — «папка занята другим процессом»)."""
+    for name in ("install.ps1", "voice_install.ps1"):
+        src = _installer(name)
+        assert "Get-GameProcess" in src, "%s: нет проверки запущенной игры" % name
+        assert "the game is still running" in src, "%s: нет понятной ошибки" % name
+        assert "exit 4" in src, "%s: защита не возвращает код 4" % name
+
+
+def test_core_installer_never_touches_ai_voice():
+    """main.zip — БЕЗ аудио: установщик ядра пропускает ai_voice (голоса
+    живут в своих пакетах — решение владельца 2026-11-12)."""
+    assert 'if ($entry.Name -eq "ai_voice") { continue }' in _installer("install.ps1")
 
 
 def _read(rel):
@@ -239,9 +282,6 @@ def test_main_zip_is_mirror_of_patch_tree(tmp_path):
         for f in build_pack._tree_files(build_pack.PATCH, build_pack.MOD_EXCLUDE)
     }
     runtime = {"catalog/label_arc.json", "catalog/voice_list.json"}
-    # CJK-шрифты уезжают из ядра в пакеты ja/ko/zh (VOICE_EXTRA_FONTS,
-    # владелец 2026-11-11: «main — небольшой»).
-    tree -= set(build_pack.VOICE_EXTRA_FONTS.values())
     assert shipped == tree | runtime
 
 
