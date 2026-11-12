@@ -19,6 +19,8 @@ ZIP_STORED = заметно быстрее, размер тот же).
 Артефакты: <repo>/dist/*.zip  (dist/ в .gitignore — зипы не коммитим).
 """
 
+# LEGACY: порт на .mts — tools/build/build_pack.mts; правки только в .mts.
+
 import json
 import shutil
 import subprocess

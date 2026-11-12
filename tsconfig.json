@@ -14,6 +14,7 @@
     ".opencode/skills/**/*.mts",
     "e2e/**/*.mts",
     "patches/ai-voice-pack/tools/generate/scripts/**/*.mts",
+    "patches/ai-voice-pack/tools/build/**/*.mts",
     "patches/ai-voice-pack/casts/**/*.mts",
     "patches/ai-voice-pack/po/**/*.mts",
     "scripts/**/*.mts",
