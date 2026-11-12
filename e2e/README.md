@@ -8,9 +8,14 @@
 
 1. Сборка и установка (как пользователь):
    - `npm run build:pack` → `dist/*.zip`;
-   - распаковать main + нужные voice-зипы в корень игры
-     (`C:\Program Files (x86)\Steam\steamapps\common\The Survival of Sarah Rose`);
-   - в корне игры должны быть `environment.txt` (searchpath = mods) и `INSTALL.txt`.
+   - **`TSSR-AI-Voice-Pack-main.zip` → его `install.cmd`** (ядро: тексты 11
+     языков, шрифты, меню; `ai_voice/` не трогает);
+   - **каждый нужный `voice-<lang>.zip` → ЕГО `install.cmd`** (один язык,
+     атомарно; без ядра установщик попросит сначала поставить main);
+   - игра должна быть закрыта — установщик ждёт её закрытия до 3 минут;
+   - проверить весь этот путь целиком, с нуля, можно одним скриптом:
+     `bash e2e/user_flow.sh` (скачивает ассеты из релиза, сверяет sha256 с
+     описанием релиза, кликает install.cmd'ы, запускает игру).
 2. Скриншоты/запуск: `patches/ai-voice-pack/tools/generate/scripts/shots_capture.ps1`
    - `-Mode menu|game|all`, `-Lang <код|all>` (en ru de es fr it ja ko pl pt zh);
    - харнесс `zz_capture.rpy` живёт в `<игра>/mods/_tssr-test/` на время съёмки;
@@ -43,6 +48,10 @@
 
 ## Скрипты
 
+- `e2e/user_flow.sh` — путь ПОЛЬЗОВАТЕЛЯ с нуля на чистой Steam-установке:
+  скачивание main+voice из Releases, сверка sha256 с описанием релиза, двойной
+  клик `install.cmd` ядра и voice-пакета, предохранители, повторная установка
+  поверх, запуск игры + `voice_debug.log` ([init], `catalog_loadable`).
 - `e2e/saves_map.mts` — карта сейвов: какой сейв = какие сцены (для быстрых прогонов).
 - `e2e/tl_dup_scan.mts` — дубли `old` в tl по языкам (Ren'Py падает на дублях:
   «A translation for X already exists»; инцидент 2026-11-11).

@@ -67,7 +67,7 @@ Write-Host "Игра / Game: $GameDir"
 
 # 2. Предохранитель: игра должна быть закрыта. Живой процесс держит локи на
 #    шрифтах и файлах мода — атомарная замена падает «папка занята»
-#    (поймано user_e2e 2026-11-12). Ждём до 3 минут: юзер закрывает игру.
+#    (поймано e2e/user_flow.sh 2026-11-12). Ждём до 3 минут: юзер закрывает игру.
 $exeFile = Get-ChildItem -Path $GameDir -Filter "*.exe" -File -ErrorAction SilentlyContinue |
     Where-Object { $_.Name -match "SarahRose" } | Select-Object -First 1
 if (-not $exeFile) {
@@ -125,7 +125,7 @@ try {
     New-Item -ItemType Directory -Force -Path $modDst | Out-Null
     # swap по блокам: старое -> trash (восстановимо до конца), новое -> место.
     # Ретраи до 30с: процесс игры закрывается асинхронно и кратко держит
-    # локи на файлах мода (поймано user_e2e 2026-11-12).
+    # локи на файлах мода (поймано e2e/user_flow.sh 2026-11-12).
     function Move-WithRetry([string]$from, [string]$to) {
         for ($i = 1; $i -le 15; $i++) {
             try { Move-Item -Force $from $to; return }
