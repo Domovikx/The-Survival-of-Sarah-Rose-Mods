@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# LEGACY: порт на .mts — shots_for_site.mts (миграция python -> TS); правки только в .mts.
 # -*- coding: utf-8 -*-
 """Скриншоты игры -> лендинг: tmp/shots/*.png -> site/public/shots/*.jpg.
 

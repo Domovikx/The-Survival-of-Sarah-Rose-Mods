@@ -163,7 +163,7 @@ npm run spell, npm run lint:md, npm run format:check.
 
 1. Цифры в site/src (i18n-локали: voice.total и соседние ключи) — по
    verify / tlstat / voice_status.
-2. Визуальные правки UI игры → скриншоты: shots_capture.ps1 → shots_for_site.py.
+2. Визуальные правки UI игры → скриншоты: shots_capture.ps1 → shots_for_site.mts.
 3. `cd site && npm run build` (tsc + vite); e2e — если менялось поведение.
 4. ⚠ Деплой `npm run deploy` (gh-pages) — публикация только по явному «да».
 

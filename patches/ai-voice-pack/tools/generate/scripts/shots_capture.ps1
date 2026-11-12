@@ -19,7 +19,7 @@
 #           (should_save_persistent=False внутри zz_capture.rpy).
 #
 # Результат: <репа>/tmp/shots/{ru|en}_{menu,settings}.png + dialogue1..24 (game)
-# Дальше:    python <репа>/patches/ai-voice-pack/tools/generate/scripts/shots_for_site.py
+# Дальше:    node <репа>/patches/ai-voice-pack/tools/generate/scripts/shots_for_site.mts
 #            -> site/public/shots/*.jpg
 param(
     [Parameter(Mandatory = $true)][string]$GameDir,

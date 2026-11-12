@@ -320,13 +320,14 @@ tools/generate/scripts/
 
 ### Граница (шаг «cosyworker → TS», 2026-10-23)
 
-| Слой                                                                   | Язык   | Файлы                                                                |
-| ---------------------------------------------------------------------- | ------ | -------------------------------------------------------------------- |
-| Оркестрация батча: каталог, фильтры, эмоции, логи, ETA                 | TS     | `voice_batch.mts`                                                    |
-| Клиент шима: протокол v2, ретрай TextEncodeInput, trim, ffmpeg-цепочка | TS     | `voicekit/worker.mts`, `voicekit/trim.mts`, `voicekit/audio.mts`     |
-| Инференс (модель CV3, torch)                                           | python | `cosyworker.py` — ЕДИНСТВЕННЫЙ python контура генерации              |
-| Рефы/голоса/статус/разметка                                            | TS     | `add_candidate`, `voice_manage`, `voice_status`, `emotion_tag` и пр. |
-| CLI-легаси (на вымирание)                                              | python | `beastify.py`, `voice_design.py`, `voicekit/*` (шимы инференса)      |
+| Слой                                                   | Язык   | Файлы                                                                                                                                                                                        |
+| ------------------------------------------------------ | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Оркестрация батча: каталог, фильтры, эмоции, логи, ETA | TS     | `voice_batch.mts`                                                                                                                                                                            |
+| Клиент шима: протокол v2, trim, ffmpeg-цепочка         | TS     | `voicekit/worker.mts`, `voicekit/trim.mts`, `voicekit/audio.mts`                                                                                                                             |
+| Инференс (torch/ASR/pickle — физически python)         | python | `voxcpmworker.py` (ОСНОВНОЙ, VoxCPM2), `voice_design.py` (Qwen3-TTS), `asr_refs.py` (faster-whisper), `read_persistent.py` (pickle Ren'Py)                                                   |
+| Рефы/голоса/статус/разметка/скрины/нелюдские голоса    | TS     | `add_candidate`, `voice_manage`, `voice_status`, `emotion_tag`, `shots_for_site.mts`, `beastify.mts` и пр.                                                                                   |
+| Сборка дистрибутива                                    | TS     | `tools/build/build_pack.mts` (порт 2026-11-12; `.py` = легаси)                                                                                                                               |
+| CLI-легаси (на вымирание)                              | python | `cosyworker.py` (CosyVoice3 — легаси после миграции на VoxCPM2), `beastify.py`/`shots_for_site.py` (портированы), `thermal_guard.py`, `voice_push_chunked.py`, `voicekit/*` (шимы инференса) |
 
 Протокол v2 (2026-10-23): шим отдаёт СЫРОЙ PCM (`pcm_b64` = float32 LE mono,
 плюс поле `sr`), файлов не пишет. Дальше всё на TS: ретрай холодного фронтенда

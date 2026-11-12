@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# LEGACY: порт на .mts — beastify.mts (миграция python -> TS); правки только в .mts.
 """Нелюдские голоса: пресеты orc / demon / monster из человеческого рефа.
 
 ПРИНЦИП (классика VO-озвучки монстров):
