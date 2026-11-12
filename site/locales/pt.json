@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "The Survival of Sarah Rose — Vozes IA + 11 idiomas",
-    "description": "Mod de fã não oficial: dublagem IA completa com vozes clonadas e expressivas — mais traduções para 11 idiomas (russo completo; os demais cobrem a intro até a primeira escolha). Grátis, 18+."
+    "description": "Mod de fã não oficial: dublagem IA de demonstração em 7 idiomas e traduções para 11 (russo completo; os demais cobrem a intro até a primeira escolha). Grátis, 18+."
   },
   "header": {
     "brand": "TSSR · Vozes IA",
@@ -12,9 +12,9 @@
   },
   "hero": {
     "title": "The Survival of Sarah Rose — Vozes IA",
-    "subtitle": "Mod de fã não oficial: o texto do jogo totalmente dublado — mais de 75 vozes clonadas com atuação cheia de emoção em cada fala. 11 idiomas: russo completo, os demais até a primeira escolha.",
+    "subtitle": "Mod de fã não oficial: texto do jogo em 11 idiomas e o escopo demo (a intro até a primeira escolha) totalmente dublado em 7 idiomas — mais de 75 vozes clonadas com atuação emotiva.",
     "badgeTranslate": "11 idiomas — RU completo, os demais demo até a primeira escolha",
-    "badgeVoice": "Dublagem: demo 100 % (11 idiomas, 1 188 falas cada)",
+    "badgeVoice": "Dublagem: demo 100 % em 7 idiomas — 1 195 falas cada",
     "badgeFormat": "Opus 24 kbps — cerca de 17 MB por idioma (demo)",
     "badgeEngine": "Ren'Py 7.4.11 · Steam",
     "badgeAge": "Conteúdo 18+",
@@ -27,8 +27,8 @@
     "title": "O que você ganha",
     "translateTitle": "Traduções em 11 idiomas",
     "translateText": "Russo: uma tradução completa de toda a história. Os outros 10 idiomas cobrem o escopo demo — a intro até a primeira escolha.",
-    "voiceTitle": "Dublagem IA (11 idiomas)",
-    "voiceText": "Vozes clonadas para cada personagem (VoxCPM2), com a emoção de cada cena. O escopo demo está totalmente dublado em 11 idiomas.",
+    "voiceTitle": "Dublagem IA (demo, 7 idiomas)",
+    "voiceText": "Vozes clonadas para cada personagem via VoxCPM2 — atuação emotiva de acordo com cada cena. O escopo demo (até a primeira escolha) está totalmente dublado em 7 idiomas; o coreano está em andamento.",
     "emotionTitle": "Atuação com emoção",
     "emotionText": "Cada fala carrega o estado do narrador: desejo, sussurro, sarcasmo — nunca monótono.",
     "voicesTitle": "Mais de 75 vozes",
@@ -72,15 +72,15 @@
   },
   "voice": {
     "title": "Dublagem — demo pronto",
-    "total": "Escopo demo dublado em 11 idiomas — 1 188 falas cada (até a primeira escolha); a partida completa está prevista.",
+    "total": "Escopo demo (até a primeira escolha) dublado em 7 idiomas — 1 195 falas cada. O coreano está em andamento; polonês, português e chinês aparecem neste site como amostras. A dublagem completa do jogo está prevista.",
     "ru": "Russo (RU): tradução completa, escopo demo dublado",
     "en": "Inglês (EN): o texto original, escopo demo dublado",
     "missing": "Se faltar uma voz, o jogo mostra a fala em silêncio (sem erros)."
   },
   "install": {
     "title": "Instalação",
-    "step1": "O mais fácil: extraia main.zip em qualquer lugar e execute install.cmd — ele encontra a pasta do jogo (Steam) e instala tudo; coloque os pacotes de voz que quiser ao lado do install.cmd — todos os encontrados são instalados. Manual: extraia main.zip na pasta do jogo e os zip de voz na mesma pasta",
-    "step2": "Inicie o jogo e escolha o idioma nas configurações do mod (ícone no canto superior direito) — 11 idiomas disponíveis",
+    "step1": "O mais fácil: extraia main.zip em qualquer lugar e execute o install.cmd dele — ele encontra a pasta do jogo (Steam) e instala o núcleo: textos, fontes, menu. Depois extraia cada pacote de voz que quiser e execute o install.cmd próprio dele — um idioma por pacote, instalação atômica. Alternativa manual: extraia os zip na pasta do jogo",
+    "step2": "Inicie o jogo e abra as configurações do mod (o ícone no canto superior direito) — 11 idiomas de texto; a voz segue o idioma escolhido",
     "step3": "Pronto. A primeira inicialização pode demorar — o Ren'Py reconstrói o cache",
     "note": "Requer o jogo comprado na Steam. Este patch é não oficial e sem relação com os desenvolvedores ou distribuidores."
   },

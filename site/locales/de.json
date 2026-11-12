@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "The Survival of Sarah Rose — KI-Sprachausgabe + 11 Sprachen",
-    "description": "Inoffizielles Fan-Patch: volle KI-Sprachausgabe mit geklonten, emotionalen Stimmen — plus Übersetzungen in 11 Sprachen (Russisch komplett; die übrigen decken das Intro bis zur ersten Wahl ab). Kostenlos, 18+."
+    "description": "Inoffizielles Fan-Patch: Demo-KI-Sprachausgabe in 7 Sprachen plus Übersetzungen in 11 (Russisch komplett; die übrigen decken das Intro bis zur ersten Wahl ab). Kostenlos, 18+."
   },
   "header": {
     "brand": "TSSR · KI-Sprachpaket",
@@ -12,9 +12,9 @@
   },
   "hero": {
     "title": "The Survival of Sarah Rose — KI-Sprachausgabe",
-    "subtitle": "Inoffizielles Fan-Patch: Der Spieltext wird vollständig vertont — über 75 geklonte Stimmen mit gefühlvoller Darstellung jeder Zeile. 11 Sprachen: Russisch komplett, die übrigen bis zur ersten Wahl.",
+    "subtitle": "Inoffizielles Fan-Patch: Spieltext in 11 Sprachen, und der Demo-Umfang (das Intro bis zur ersten Wahl) vollständig vertont in 7 Sprachen — über 75 geklonte Stimmen mit gefühlvoller Darstellung.",
     "badgeTranslate": "11 Sprachen — RU komplett, die übrigen Demo bis zur ersten Wahl",
-    "badgeVoice": "Sprachausgabe: Demo 100 % (11 Sprachen, je 1 188 Zeilen)",
+    "badgeVoice": "Sprachausgabe: Demo 100 % in 7 Sprachen — je 1 195 Zeilen",
     "badgeFormat": "Opus 24 kbps — ca. 17 MB pro Sprache (Demo)",
     "badgeEngine": "Ren'Py 7.4.11 · Steam",
     "badgeAge": "18+ Inhalt",
@@ -27,8 +27,8 @@
     "title": "Was du bekommst",
     "translateTitle": "Übersetzungen in 11 Sprachen",
     "translateText": "Russisch: eine komplette Übersetzung der gesamten Geschichte. Die übrigen 10 Sprachen decken den Demo-Umfang ab — das Intro bis zur ersten Wahl.",
-    "voiceTitle": "KI-Sprachausgabe (11 Sprachen)",
-    "voiceText": "Geklonte Stimmen für jede Figur (VoxCPM2) — mit gefühlvoller Darstellung passend zur Szene. Der Demo-Umfang ist in 11 Sprachen vollständig vertont.",
+    "voiceTitle": "KI-Sprachausgabe (Demo, 7 Sprachen)",
+    "voiceText": "Geklonte Stimmen für jede Figur via VoxCPM2 — gefühlvolle Darstellung passend zu jeder Szene. Der Demo-Umfang (bis zur ersten Wahl) ist in 7 Sprachen vollständig vertont; Koreanisch ist in Arbeit.",
     "emotionTitle": "Gefühlvolle Darstellung",
     "emotionText": "Jede Zeile trägt den Zustand des Erzählers: Wunsch, Flüstern, Sarkasmus — keine Monotonie.",
     "voicesTitle": "75+ Stimmen",
@@ -72,15 +72,15 @@
   },
   "voice": {
     "title": "Sprachausgabe — Demo bereit",
-    "total": "Demo-Umfang in 11 Sprachen vertont — je 1 188 Zeilen (bis zur ersten Wahl); der volle Durchlauf ist geplant.",
+    "total": "Demo-Umfang (bis zur ersten Wahl) in 7 Sprachen vertont — je 1 195 Zeilen. Koreanisch ist in Arbeit; Polnisch, Portugiesisch und Chinesisch sind auf dieser Seite als Hörproben zu hören. Der volle Durchlauf ist geplant.",
     "ru": "Russisch (RU): komplette Übersetzung, Demo-Umfang vertont",
     "en": "Englisch (EN): der Originaltext, Demo-Umfang vertont",
     "missing": "Fehlt eine Stimme — das Spiel zeigt die Zeile still (keine Fehler)."
   },
   "install": {
     "title": "Installation",
-    "step1": "Am einfachsten: Entpacke main.zip irgendwo und führe install.cmd aus — es findet den Spielordner (Steam) und installiert alles; lege die gewünschten Sprachpakete neben install.cmd — alle gefundenen Pakete werden installiert. Manuell: main.zip in den Spielordner entpacken, dann die Sprachpakete in denselben Ordner",
-    "step2": "Spiel starten und die Sprache in den Mod-Einstellungen wählen (Badge oben rechts) — 11 Sprachen verfügbar",
+    "step1": "Am einfachsten: Entpacke main.zip irgendwo und führe das zugehörige install.cmd aus — es findet den Spielordner (Steam) und installiert das Kernpaket: Texte, Schriften, Menü. Entpacke dann jedes gewünschte Sprachpaket und führe dessen eigenes install.cmd aus — ein Sprachpaket pro Sprache, atomar installiert. Manuell: entpacke die ZIPs in den Spielordner",
+    "step2": "Starte das Spiel und öffne die Mod-Einstellungen (das Badge oben rechts) — 11 Sprachen Text; die Sprachausgabe folgt der gewählten Sprache",
     "step3": "Fertig. Der erste Start dauert etwas länger — Ren'Py baut den Cache neu",
     "note": "Erfordert das auf Steam gekaufte Spiel. Dieses Patch ist inoffiziell und nicht mit den Entwicklern oder Publishern verbunden."
   },

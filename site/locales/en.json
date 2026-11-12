@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "The Survival of Sarah Rose — AI Voice Pack + 11 Languages",
-    "description": "Unofficial fan patch: full AI voice acting with cloned, emotional voices — plus translations into 11 languages (Russian complete; others cover the intro up to the first choice). Free, 18+."
+    "description": "Unofficial fan patch: demo AI voice acting in 7 languages plus translations into 11 (Russian complete; the others cover the intro up to the first choice). Free, 18+."
   },
   "header": {
     "brand": "TSSR · AI voice pack",
@@ -12,9 +12,9 @@
   },
   "hero": {
     "title": "The Survival of Sarah Rose — AI voice pack",
-    "subtitle": "Unofficial fan patch: the game text fully voiced — 75+ cloned voices with emotion-aware delivery for every line. Play in 11 languages: Russian complete, the others cover the intro up to the first choice.",
+    "subtitle": "Unofficial fan patch: 11 languages of game text, and the demo scope (the intro up to the first choice) fully voiced in 7 languages — 75+ cloned voices with emotion-aware delivery.",
     "badgeTranslate": "11 languages — RU complete, others demo up to the first choice",
-    "badgeVoice": "Voice acting: demo 100% (11 languages, 1 188 lines each)",
+    "badgeVoice": "Voice acting: demo 100% in 7 languages — 1 195 lines each",
     "badgeFormat": "Opus 24 kbps — about 17 MB per language (demo)",
     "badgeEngine": "Ren'Py 7.4.11 · Steam",
     "badgeAge": "18+ adult content",
@@ -27,8 +27,8 @@
     "title": "What you get",
     "translateTitle": "Translations into 11 languages",
     "translateText": "Russian: a complete translation of the whole story. The other 10 languages cover the demo scope — the intro up to the first choice.",
-    "voiceTitle": "AI voice acting (11 languages)",
-    "voiceText": "Cloned voices for every character via VoxCPM2 — with emotion-aware delivery matching each scene. The demo scope is fully voiced in 11 languages.",
+    "voiceTitle": "AI voice acting (demo, 7 languages)",
+    "voiceText": "Cloned voices for every character via VoxCPM2 — emotion-aware delivery matching each scene. The demo scope (up to the first choice) is fully voiced in 7 languages; Korean is in progress.",
     "emotionTitle": "Emotion-aware delivery",
     "emotionText": "Every line carries the narrator's state: anger, desire, whisper, sarcasm — not a monotone reading.",
     "voicesTitle": "75+ unique voices",
@@ -51,15 +51,15 @@
   },
   "voice": {
     "title": "Voice acting — demo ready",
-    "total": "Demo scope voiced in 11 languages — 1 188 lines each (up to the first choice); the full run is planned.",
+    "total": "Demo scope (up to the first choice) voiced in 7 languages — 1 195 lines each. Korean is in progress; Polish, Portuguese and Chinese are shown on this site as samples. The full run is planned.",
     "ru": "Russian (RU): complete translation, demo scope voiced",
     "en": "English (EN): the original text, demo scope voiced",
     "missing": "If a line has no voice file yet — the game just plays it silently (no errors, no crashes)."
   },
   "install": {
     "title": "Installation",
-    "step1": "Easiest: unpack main.zip anywhere and run install.cmd — it finds the game folder (Steam) and installs everything; drop the voice packs you want next to install.cmd — all found packs are installed. Manual: unpack main.zip into the game folder, then the voice zips into the same folder",
-    "step2": "Launch the game and choose the language in the mod settings (the badge in the top-right corner) — 11 languages available",
+    "step1": "Easiest: unpack main.zip anywhere and run its install.cmd — it finds the game folder (Steam) and installs the core: texts, fonts, menu. Then unpack each voice pack you want and run its own install.cmd — one language per pack, installed atomically. Manual alternative: unpack the zips into the game folder",
+    "step2": "Launch the game and open the mod settings (the badge in the top-right corner) — 11 languages of text; the voice follows the language you pick",
     "step3": "Done. The first launch may be slightly slower — Ren'Py rebuilds its cache",
     "note": "Requires the game bought on Steam. This patch is unofficial and not affiliated with the developers or publishers."
   },

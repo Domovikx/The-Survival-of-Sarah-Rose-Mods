@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "The Survival of Sarah Rose — Voix IA + 11 langues",
-    "description": "Mod de fans non officiel : doublage IA complet avec des voix clonées et expressives — plus des traductions en 11 langues (russe complet ; les autres couvrent l’intro jusqu’au premier choix). Gratuit, 18+."
+    "description": "Mod de fans non officiel : doublage IA de démo en 7 langues et traductions en 11 (russe complet ; les autres couvrent l’intro jusqu’au premier choix). Gratuit, 18+."
   },
   "header": {
     "brand": "TSSR · Voix IA",
@@ -12,9 +12,9 @@
   },
   "hero": {
     "title": "The Survival of Sarah Rose — Voix IA",
-    "subtitle": "Mod de fans non officiel : le texte du jeu entièrement doublé — plus de 75 voix clonées, jouées avec émotion pour chaque réplique. 11 langues : russe complet, les autres jusqu’au premier choix.",
+    "subtitle": "Mod de fans non officiel : texte du jeu en 11 langues, et le périmètre démo (l’intro jusqu’au premier choix) entièrement doublé en 7 langues — plus de 75 voix clonées, jouées avec émotion.",
     "badgeTranslate": "11 langues — RU complet, les autres en démo jusqu’au premier choix",
-    "badgeVoice": "Doublage : démo 100 % (11 langues, 1 188 répliques chacune)",
+    "badgeVoice": "Doublage : démo 100 % en 7 langues — 1 195 répliques chacune",
     "badgeFormat": "Opus 24 kbps — environ 17 Mo par langue (démo)",
     "badgeEngine": "Ren'Py 7.4.11 · Steam",
     "badgeAge": "Contenu 18+",
@@ -27,8 +27,8 @@
     "title": "Ce que vous obtenez",
     "translateTitle": "Traductions en 11 langues",
     "translateText": "Russe : une traduction complète de toute l’histoire. Les 10 autres langues couvrent le périmètre démo — l’intro jusqu’au premier choix.",
-    "voiceTitle": "Doublage IA (11 langues)",
-    "voiceText": "Des voix clonées pour chaque personnage (VoxCPM2), avec l’émotion de chaque scène. Le périmètre démo est entièrement doublé en 11 langues.",
+    "voiceTitle": "Doublage IA (démo, 7 langues)",
+    "voiceText": "Des voix clonées pour chaque personnage via VoxCPM2, avec l’émotion de chaque scène. Le périmètre démo (jusqu’au premier choix) est entièrement doublé en 7 langues ; le coréen est en cours.",
     "emotionTitle": "Jeu plein d’émotion",
     "emotionText": "Chaque ligne porte l’état du narrateur : désir, murmure, sarcasme — jamais monotone.",
     "voicesTitle": "Plus de 75 voix",
@@ -72,15 +72,15 @@
   },
   "voice": {
     "title": "Doublage — démo prête",
-    "total": "Périmètre démo doublé en 11 langues — 1 188 répliques chacune (jusqu’au premier choix) ; la partie complète est prévue.",
+    "total": "Périmètre démo (jusqu’au premier choix) doublé en 7 langues — 1 195 répliques chacune. Le coréen est en cours ; le polonais, le portugais et le chinois sont présentés sur ce site comme échantillons. Le doublage complet du jeu est prévu.",
     "ru": "Russe (RU) : traduction complète, périmètre démo doublé",
     "en": "Anglais (EN) : le texte original, périmètre démo doublé",
     "missing": "S’il manque une voix, le jeu affiche la réplique en silence (sans erreur)."
   },
   "install": {
     "title": "Installation",
-    "step1": "Le plus simple : décompressez main.zip où vous voulez et lancez install.cmd — il trouve le dossier du jeu (Steam) et installe tout ; placez les packs de voix voulus à côté de install.cmd — tous les packs trouvés sont installés. Manuel : décompressez main.zip dans le dossier du jeu, puis les zip vocaux dans le même dossier",
-    "step2": "Lancez le jeu et choisissez la langue dans les réglages du mod (badge en haut à droite) — 11 langues disponibles",
+    "step1": "Le plus simple : décompressez main.zip où vous voulez et lancez son install.cmd — il trouve le dossier du jeu (Steam) et installe le cœur : textes, polices, menu. Décompressez ensuite chaque pack de voix souhaité et lancez son propre install.cmd — une langue par pack, installation atomique. Alternative manuelle : décompressez les zip dans le dossier du jeu",
+    "step2": "Lancez le jeu et ouvrez les réglages du mod (le badge en haut à droite) — 11 langues de texte ; la voix suit la langue choisie",
     "step3": "Terminé. Le premier lancement peut être plus lent — Ren’Py reconstruit son cache",
     "note": "Nécessite le jeu acheté sur Steam. Ce patch est non officiel et sans lien avec les développeurs ou éditeurs."
   },

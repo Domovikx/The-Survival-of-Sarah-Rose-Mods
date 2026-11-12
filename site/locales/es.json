@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "The Survival of Sarah Rose — Voces IA + 11 idiomas",
-    "description": "Mod de fan no oficial: doblaje IA completo con voces clonadas y emotivas — más traducciones a 11 idiomas (ruso completo; el resto cubre la intro hasta la primera elección). Gratis, 18+."
+    "description": "Mod de fan no oficial: doblaje IA de demostración en 7 idiomas y traducciones a 11 (ruso completo; el resto cubre la intro hasta la primera elección). Gratis, 18+."
   },
   "header": {
     "brand": "TSSR · Voces IA",
@@ -12,9 +12,9 @@
   },
   "hero": {
     "title": "The Survival of Sarah Rose — Voces IA",
-    "subtitle": "Mod de fan no oficial: el texto del juego completamente doblado — más de 75 voces clonadas con interpretación emotiva en cada línea. 11 idiomas: ruso completo, el resto hasta la primera elección.",
+    "subtitle": "Mod de fan no oficial: texto del juego en 11 idiomas y el ámbito demo (la intro hasta la primera elección) totalmente doblado en 7 idiomas — más de 75 voces clonadas con interpretación emotiva.",
     "badgeTranslate": "11 idiomas — RU completo, el resto demo hasta la primera elección",
-    "badgeVoice": "Doblaje: demo 100 % (11 idiomas, 1 188 líneas cada uno)",
+    "badgeVoice": "Doblaje: demo 100 % en 7 idiomas — 1 195 líneas cada uno",
     "badgeFormat": "Opus 24 kbps — unos 17 MB por idioma (demo)",
     "badgeEngine": "Ren'Py 7.4.11 · Steam",
     "badgeAge": "Contenido 18+",
@@ -27,8 +27,8 @@
     "title": "Qué obtienes",
     "translateTitle": "Traducciones a 11 idiomas",
     "translateText": "Ruso: traducción completa de toda la historia. Los otros 10 idiomas cubren el ámbito demo — la intro hasta la primera elección.",
-    "voiceTitle": "Doblaje IA (11 idiomas)",
-    "voiceText": "Voces clonadas para cada personaje (VoxCPM2), con interpretación emotiva acorde a cada escena. El ámbito demo está completamente doblado en 11 idiomas.",
+    "voiceTitle": "Doblaje IA (demo, 7 idiomas)",
+    "voiceText": "Voces clonadas para cada personaje con VoxCPM2, con interpretación emotiva acorde a cada escena. El ámbito demo (hasta la primera elección) está totalmente doblado en 7 idiomas; el coreano está en proceso.",
     "emotionTitle": "Interpretación con emoción",
     "emotionText": "Cada línea lleva el estado del narrador: deseo, susurro, sarcasmo — nunca monótono.",
     "voicesTitle": "Más de 75 voces",
@@ -72,15 +72,15 @@
   },
   "voice": {
     "title": "Doblaje — demo listo",
-    "total": "Ámbito demo doblado en 11 idiomas — 1 188 líneas cada uno (hasta la primera elección); la partida completa está planeada.",
+    "total": "Ámbito demo (hasta la primera elección) doblado en 7 idiomas — 1 195 líneas cada uno. El coreano está en proceso; el polaco, el portugués y el chino se muestran en este sitio como muestras. El doblaje completo del juego está planeado.",
     "ru": "Ruso (RU): traducción completa, ámbito demo doblado",
     "en": "Inglés (EN): el texto original, ámbito demo doblado",
     "missing": "Si falta una voz, el juego muestra la línea en silencio (sin errores)."
   },
   "install": {
     "title": "Instalación",
-    "step1": "Lo más fácil: descomprime main.zip en cualquier lugar y ejecuta install.cmd — encuentra la carpeta del juego (Steam) e instala todo; pon los paquetes de voz que quieras junto a install.cmd — se instalan todos los encontrados. Manual: descomprime main.zip en la carpeta del juego y los zip de voz en la misma carpeta",
-    "step2": "Inicia el juego y elige el idioma en los ajustes del mod (ícono arriba a la derecha) — hay 11 idiomas disponibles",
+    "step1": "Lo más fácil: descomprime main.zip en cualquier lugar y ejecuta su install.cmd — encuentra la carpeta del juego (Steam) e instala el núcleo: textos, fuentes, menú. Luego descomprime cada paquete de voz que quieras y ejecuta su propio install.cmd — un idioma por paquete, instalación atómica. Alternativa manual: descomprime los zip en la carpeta del juego",
+    "step2": "Inicia el juego y abre los ajustes del mod (el ícono arriba a la derecha) — 11 idiomas de texto; la voz sigue al idioma que elijas",
     "step3": "Listo. El primer arranque puede tardar: Ren'Py reconstruye la caché",
     "note": "Requiere el juego comprado en Steam. Este parche es no oficial y no está relacionado con los desarrolladores o distribuidores."
   },
