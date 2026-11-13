@@ -52,8 +52,12 @@
   одна на выпуск (`PACK_VERSION` в `build_pack.mts`).
   Установка: Vortex «Install from file» (FOMOD раскладывает в корень игры),
   либо распаковать `mods/` + `environment.txt` в папку игры. Проверено E2E в
-  Vortex 2.10.1 (hardlink): main → `mods/tssr-ai-voice-pack` + `environment.txt`,
+  Vortex 2.4.2 (hardlink): main → `mods/tssr-ai-voice-pack` + `environment.txt`,
   voice-ru → 1397 opus; удаление + «Purge Mods» вычищает папку.
+  Чтобы Vortex узнал игру (её нет в каталоге Nexus), нужна game-extension:
+  исходники — `patches/ai-voice-pack/vortex-extension/game-thesurvivalofsarahrose/`
+  (автодетект по Steam App ID `2166470`, без хардкода пути); ставится копией в
+  `%APPDATA%\Vortex\plugins\`.
   Исполняемые установщики (`tools/build/installer/*.ps1`) остались для
   отдельного `install.exe` на GitHub/Boosty — на Nexus их не кладём
   (`tasks/2026-11-13-single-file-installer.md`).
