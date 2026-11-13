@@ -16,22 +16,25 @@
 - `catalog/` → `catalog/` (в дистрибутив уезжают ТОЛЬКО runtime-мапы
   `voice_list.json`, `label_arc.json` — allowlist в build_pack);
 - `audio/<lang>/` → `ai_voice/<lang>/` (массив озвучки — отдельный пак
-  `voice-<lang>.zip` со СВОИМ установщиком).
+  `voice-<lang>.7z` со СВОИМ установщиком).
 
-Сборка: `python patches/ai-voice-pack/tools/build/build_pack.py` →
-`dist/*.zip`. Раскладка zip = раскладка установки: распаковка в корень игры,
-удаление мода = удалить одну папку.
+Сборка: `npm run build:pack` (TS: `tools/build/build_pack.mts`) →
+`dist/*.7z`. Раскладка архива = раскладка установки: распаковка в корень игры,
+удаление мода = удалить одну папку. Сжатие — `7z -mx=9` (solid), каждый архив
+после сборки проверяется `7z t` (CRC всех файлов). CJK-шрифты лежат в пакете
+сабсетами (`tools/build/subset_fonts.mts`, набор символов — из PO, tl/ и
+инлайн-переводов zzz_ui.rpy; покрытие стережёт `tools/build/font_guard.test.mts`).
 
 **Установщики — по одному на пакет, каждый атомарный** (2026-11-12):
-`tools/build/installer/install.ps1` уезжает в `main.zip` (ставит ТОЛЬКО ядро,
-`ai_voice/` не трогает), `voice_install.ps1` — в каждый `voice-<lang>.zip`
+`tools/build/installer/install.ps1` уезжает в `main.7z` (ставит ТОЛЬКО ядро,
+`ai_voice/` не трогает), `voice_install.ps1` — в каждый `voice-<lang>.7z`
 (ставит только свой язык; без ядра просит сначала поставить main; при
 запущенной игре ждёт её закрытия — она держит локи на шрифтах). Замена =
 staging → swap с ретраями и откатом.
 
 ## Что dev-only (в зип не уезжает)
 
-- `tools/build/` — сборка дистрибутива (`build_pack.py`);
+- `tools/build/` — сборка дистрибутива (`build_pack.mts` + `archive.mts`/`7z`);
 - `tools/generate/scripts/` — весь пайплайн:
   - `voicekit/` — ядро: `paths.py` (ЕДИНСТВЕННОЕ место с путями),
     `config.py`, `tts_env.py`, `model_dir.py`, `cv3.py`;

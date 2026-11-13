@@ -128,15 +128,16 @@ node tools/generate/scripts/voice_batch.mts \
 npm run build:pack
 ```
 
-→ `dist/TSSR-AI-Voice-Pack-main.zip` (ядро без аудио) +
-`dist/TSSR-AI-Voice-Pack-voice-<lang>.zip` (только непустые языки; dist
-gitignored, НЕ коммитится). Тест-гарды: pytest tests/test_build_layout.py
-проходит.
+→ `dist/TSSR-AI-Voice-Pack-main.7z` (ядро без аудио) +
+`dist/TSSR-AI-Voice-Pack-voice-<lang>.7z` (только непустые языки; dist
+gitignored, НЕ коммитится). Формат — 7z `-mx=9` (solid), каждый архив сборка
+сама проверяет `7z t` (полная распаковка + CRC). Тест-гарды: TS-матрица
+(`build_pack.test.mts`, `archive.test.mts`, `font_guard.test.mts`) зелёная.
 
 ⚠ Установка в реальную игру для приёмки = как у пользователя, по шагам:
 
-1. `main.zip` → ЕГО `install.cmd` (ядро: тексты/шрифты/меню, аудио не трогает);
-2. каждый нужный `voice-<lang>.zip` → ЕГО `install.cmd` (атомарно, один язык).
+1. `main.7z` → ЕГО `install.cmd` (ядро: тексты/шрифты/меню, аудио не трогает);
+2. каждый нужный `voice-<lang>.7z` → ЕГО `install.cmd` (атомарно, один язык).
    Игра должна быть закрыта — установщик ждёт её закрытия до 3 минут. Полный
    пользовательский сценарий на чистой Steam-установке — один скрипт:
    `bash e2e/user_flow.sh` (качает ассеты из релиза, сверяет sha256 с описанием

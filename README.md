@@ -8,7 +8,7 @@ Unofficial fan-made localization (11 languages) and AI voice-over packs for
 **Downloads:** [GitHub Releases](https://github.com/Domovikx/The-Survival-of-Sarah-Rose-Mods/releases)
 
 Installation, file list, language matrix, FAQ and screenshots live on the site
-and the Nexus page (each archive also carries `INSTALL.txt` with the same
+and the Nexus page (each archive also carries `README.txt` with the same
 steps). This file intentionally keeps only what is needed to stay safe and
 legally clear.
 
@@ -64,7 +64,7 @@ The authoritative license for this work is **CC BY-NC 4.0** — see
 **Скачать:** [GitHub Releases](https://github.com/Domovikx/The-Survival-of-Sarah-Rose-Mods/releases)
 
 Установка, состав файлов, языки, FAQ и скриншоты — на сайте и на Nexus (в каждом
-архиве также есть `INSTALL.txt`). Здесь — только необходимое юридически.
+архиве также есть `README.txt`). Здесь — только необходимое юридически.
 
 - **Нужна купленная копия игры.** Патч не содержит файлов игры: добавляет только
   свою папку `mods/tssr-ai-voice-pack/` и служебный `environment.txt`.

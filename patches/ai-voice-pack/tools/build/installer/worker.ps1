@@ -1,4 +1,4 @@
-﻿# TSSR AI Voice Pack — установщик ЯДРА (main.zip). БЕЗ АУДИО.
+﻿# TSSR AI Voice Pack — установщик ЯДРА (main.7z). БЕЗ АУДИО.
 # Владелец 2026-11-12: «мэйн установщик, потом отдельные аудио-установщики,
 # атомарно» — этот ставит только ядро (тексты, шрифты, меню, скрипты);
 # папка ai_voice/ НЕ трогается (голоса живут в своих пакетах).
@@ -95,12 +95,12 @@ if ($exeFile) {
 $modSrc = Join-Path $Src "mods\tssr-ai-voice-pack"
 if (-not (Test-Path $modSrc)) {
     Write-Host "ERROR: the folder 'mods/tssr-ai-voice-pack' is missing next to install.cmd."
-    Write-Host "Please unpack the whole main.zip and run install.cmd from inside it."
+    Write-Host "Please unpack the whole main.7z and run install.cmd from inside it."
     exit 1
 }
 $modDst = Join-Path $GameDir "mods\tssr-ai-voice-pack"
 if ((Normalize-Path $modSrc) -eq (Normalize-Path $modDst)) {
-    # main.zip распакован прямо в папку игры: ядро уже на месте
+    # main.7z распакован прямо в папку игры: ядро уже на месте
     Write-Host "The core is already installed — nothing to do."
     Write-Host "Voice packs are installed separately: download the ones you want and run each pack's install.cmd."
     exit 0
@@ -150,7 +150,7 @@ try {
     Write-Host "Reason: $($_.Exception.Message)"
     Write-Host "Your previous files are safe. Just run install.cmd again."
     Write-Host "If Windows blocked the install, right-click install.cmd →"
-    Write-Host "Run as administrator. Details: see INSTALL.txt."
+    Write-Host "Run as administrator. Details: see README.txt."
     exit 1
 }
 

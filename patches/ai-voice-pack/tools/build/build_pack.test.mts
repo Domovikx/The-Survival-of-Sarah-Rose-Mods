@@ -1,10 +1,11 @@
 /**
- * build_pack.test.mts — порт pytest tests/test_build_layout.py (24 теста).
+ * build_pack.test.mts — тесты раскладки дистрибутива (порт pytest-набора,
+ * python-сборщик удалён 2026-11-13 вместе с миграцией дистрибутива на 7z).
  *
  * Тесты раскладки дистрибутива: инвариант атомарной папки мода.
  *
- * Установка = распаковка zip в корень игры; ВСЁ содержимое мода обязано лежать
- * в mods/tssr-ai-voice-pack/, кроме служебных INSTALL.txt и environment.txt
+ * Установка = распаковка архива в корень игры; ВСЁ содержимое мода обязано лежать
+ * в mods/tssr-ai-voice-pack/, кроме служебных README.txt и environment.txt
  * в корне. Ни один файл не имеет права «свешиваться» в game/ или корень —
  * только так uninstall = «удалить одну папку», а чужие моды не конфликтуют.
  */
@@ -29,11 +30,11 @@ import {
   treeFiles,
   VOICE_LANGS,
 } from "./build_pack.mts";
-import { readZip, type ZipRead } from "./zip.mts";
+import { readArchive, type ArchiveRead } from "./archive.mts";
 
 // tools/build/build_pack.test.mts -> ../.. = patches/ai-voice-pack
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..", "..");
-const ROOT_FILES = new Set(["INSTALL.txt", "environment.txt", "install.cmd", "worker.ps1"]);
+const ROOT_FILES = new Set(["README.txt", "environment.txt", "install.cmd", "worker.ps1"]);
 const INSTALLER_DIR = join(ROOT, "tools", "build", "installer");
 
 /** tmp_path в pytest: создаём временный каталог, чистим за собой. */
@@ -46,9 +47,11 @@ function withTmp(fn: (dir: string) => void): void {
   }
 }
 
-/** Собрать main.zip во временный каталог (дерево репы реальное, быстро). */
-function buildMainZip(dir: string): ZipRead {
-  return readZip(buildMain(dir).target);
+/** Собрать main.7z во временный каталог (дерево репы реальное, быстро).
+ * level 0 — тесты проверяют РАСКЛАДКУ, а не степень сжатия: -mx=9 на 63 MiB
+ * шрифтов добавлял бы к каждому вызову ~8 с. */
+function buildMainPack(dir: string): ArchiveRead {
+  return readArchive(buildMain(dir, { level: 0 }).target);
 }
 
 function test_mod_dir_is_atomic(): void {
@@ -56,18 +59,18 @@ function test_mod_dir_is_atomic(): void {
   assert.equal(MOD_DIR, "mods/tssr-ai-voice-pack");
 }
 
-function test_main_zip_root_has_only_service_files(): void {
-  /* В корне zip — только INSTALL.txt и environment.txt; всё остальное в mods/. */
+function test_main_pack_root_has_only_service_files(): void {
+  /* В корне архива — только README.txt и environment.txt; всё остальное в mods/. */
   withTmp((tmp) => {
-    const top = new Set(buildMainZip(tmp).names.map((n) => n.split("/")[0]));
+    const top = new Set(buildMainPack(tmp).names.map((n) => n.split("/")[0]));
     assert.deepEqual([...top].toSorted(), [...ROOT_FILES, "mods"].toSorted());
   });
 }
 
-function test_main_zip_nothing_outside_mod_dir(): void {
+function test_main_pack_nothing_outside_mod_dir(): void {
   /* Ни один файл лежит вне атомарной папки мода (кроме служебных в корне). */
   withTmp((tmp) => {
-    const names = buildMainZip(tmp).names;
+    const names = buildMainPack(tmp).names;
     const prefix = MOD_DIR + "/";
     for (const n of names) {
       assert.ok(ROOT_FILES.has(n) || n.startsWith(prefix), `файл свесился из папки мода: ${n}`);
@@ -75,18 +78,18 @@ function test_main_zip_nothing_outside_mod_dir(): void {
   });
 }
 
-function test_main_zip_no_game_injection(): void {
-  /* В зипе нет game/ — мод не трогает официальные файлы игры. */
+function test_main_pack_no_game_injection(): void {
+  /* В архиве нет game/ — мод не трогает официальные файлы игры. */
   withTmp((tmp) => {
-    const names = buildMainZip(tmp).names;
+    const names = buildMainPack(tmp).names;
     assert.ok(!names.some((n) => n.startsWith("game/")));
   });
 }
 
-function test_main_zip_key_files_in_mod_dir(): void {
+function test_main_pack_key_files_in_mod_dir(): void {
   /* Ключевые файлы мода на месте — внутри атомарной папки. */
   withTmp((tmp) => {
-    const names = new Set(buildMainZip(tmp).names);
+    const names = new Set(buildMainPack(tmp).names);
     const p = MOD_DIR + "/";
     assert.ok(names.has(p + "voice_config.rpy"));
     assert.ok(names.has(p + "zzz_ui.rpy"));
@@ -97,11 +100,11 @@ function test_main_zip_key_files_in_mod_dir(): void {
   });
 }
 
-function test_main_zip_no_dev_only_trees(): void {
+function test_main_pack_no_dev_only_trees(): void {
   /* dev-only (casts/рефы, po/исходники, кэши) не уезжают в дистрибутив
    * (владелец 2026-11-11: «main — небольшой, без чего работать не будет»). */
   withTmp((tmp) => {
-    const names = buildMainZip(tmp).names;
+    const names = buildMainPack(tmp).names;
     const p = MOD_DIR + "/";
     for (const dev of ["casts/", "po/", ".pytest_cache/"]) {
       assert.ok(!names.some((n) => n.startsWith(p + dev)), `dev-дерево в дистрибутиве: ${dev}`);
@@ -109,12 +112,12 @@ function test_main_zip_no_dev_only_trees(): void {
   });
 }
 
-function test_main_zip_fonts_complete(): void {
+function test_main_pack_fonts_complete(): void {
   /* В main — ВСЕ шрифты (владелец 2026-11-12: шрифт = часть текста,
    * текст живёт в main; без CJK-шрифта иероглифы = квадраты). */
   withTmp((tmp) => {
     const fonts = new Set(
-      buildMainZip(tmp)
+      buildMainPack(tmp)
         .names.filter((n) => n.includes("/fonts/"))
         .map((n) => n.split("/").pop()),
     );
@@ -125,7 +128,7 @@ function test_main_zip_fonts_complete(): void {
   });
 }
 
-function test_voice_zip_has_own_installer(t: TestContext): void {
+function test_voice_pack_has_own_installer(t: TestContext): void {
   /* Каждый voice-пакет несёт СВОЙ атомарный установщик в корне (владелец
    * 2026-11-12: «отдельные аудио-установщики» + предохранитель на ядро main). */
   withTmp((tmp) => {
@@ -134,17 +137,17 @@ function test_voice_zip_has_own_installer(t: TestContext): void {
       t.skip("audio/ru пуст");
       return;
     }
-    const top = new Set(readZip(res.target).names.map((n) => n.split("/")[0]));
+    const top = new Set(readArchive(res.target).names.map((n) => n.split("/")[0]));
     assert.ok(top.has("install.cmd"), `нет install.cmd в корне voice-пакета: ${[...top]}`);
     assert.ok(top.has("worker.ps1"), `нет worker.ps1 в корне voice-пакета: ${[...top]}`);
   });
 }
 
-function test_main_zip_repo_diagnostics_not_shipped(): void {
+function test_main_pack_repo_diagnostics_not_shipped(): void {
   /* Dev-only файлы репы (README/MOD.md, tools/, tests/, audio/) в
    * дистрибутив не идут; каталог шиппится только allowlist'ом (2 JSON). */
   withTmp((tmp) => {
-    const names = buildMainZip(tmp).names;
+    const names = buildMainPack(tmp).names;
     const p = MOD_DIR + "/";
     const rels = names.filter((n) => n.startsWith(p)).map((n) => n.slice(p.length));
     const tops = new Set(rels.map((r) => r.split("/")[0]));
@@ -156,13 +159,13 @@ function test_main_zip_repo_diagnostics_not_shipped(): void {
   });
 }
 
-function test_zip_catalog_is_build_artifact_with_valid_content(): void {
-  /* Сборочный каталог в зипе: label_arc из POT-инвентаря (документированные
+function test_pack_catalog_is_build_artifact_with_valid_content(): void {
+  /* Сборочный каталог в архиве: label_arc из POT-инвентаря (документированные
    * фиксы артефактов на месте), voice_list из casts (names+narrator).
    * В репе catalog/ не живёт — легаси выпищен 2026-10-22. */
   assert.ok(!existsSync(join(ROOT, "catalog")), "catalog/ должен отсутствовать в репе (артефакты сборки)");
   withTmp((tmp) => {
-    const zf = buildMainZip(tmp);
+    const zf = buildMainPack(tmp);
     const arc = JSON.parse(zf.read(MOD_DIR + "/catalog/label_arc.json").toString("utf-8")) as Record<string, string>;
     const vl = JSON.parse(zf.read(MOD_DIR + "/catalog/voice_list.json").toString("utf-8")) as {
       narrator: string;
@@ -211,14 +214,14 @@ function test_environment_txt_is_relative(): void {
   assert.ok(!ENVIRONMENT_TXT.includes("\\\\"));
 }
 
-function test_environment_txt_in_zip(): void {
+function test_environment_txt_in_pack(): void {
   withTmp((tmp) => {
-    const env = buildMainZip(tmp).read("environment.txt").toString("utf-8");
+    const env = buildMainPack(tmp).read("environment.txt").toString("utf-8");
     assert.ok(env.includes('RENPY_SEARCHPATH = "mods"'));
   });
 }
 
-function test_voice_zip_files_in_mod_dir(): void {
+function test_voice_pack_files_in_mod_dir(): void {
   /* Озвучка кладётся в mods/<папка>/ai_voice/<lang>/ (дерево фейковое). */
   withTmp((tmp) => {
     const src = join(tmp, "ru", "OpeningScene");
@@ -233,12 +236,16 @@ function test_voice_zip_files_in_mod_dir(): void {
       mkdirSync(out);
       const res = buildVoice("ru", out);
       assert.ok(res, "voice-пакет не собран");
-      assert.deepEqual(readZip(res.target).names, [
-        MOD_DIR + "/ai_voice/ru/OpeningScene/deadbeef__Sarah_3.opus",
-        // свой атомарный установщик в корне пакета (владелец 2026-11-12)
-        "install.cmd",
-        "worker.ps1",
-      ]);
+      // 7z не гарантирует порядок файлов в листинге — сравниваем состав.
+      assert.deepEqual(
+        readArchive(res.target).names.toSorted(),
+        [
+          MOD_DIR + "/ai_voice/ru/OpeningScene/deadbeef__Sarah_3.opus",
+          // свой атомарный установщик в корне пакета (владелец 2026-11-12)
+          "install.cmd",
+          "worker.ps1",
+        ].toSorted(),
+      );
     } finally {
       for (const k of Object.keys(VOICE_LANGS)) delete VOICE_LANGS[k];
       Object.assign(VOICE_LANGS, orig);
@@ -281,7 +288,7 @@ function test_install_cmd_console_is_utf8(): void {
 }
 
 function test_core_installer_never_touches_ai_voice(): void {
-  /* main.zip — БЕЗ аудио: установщик ядра пропускает ai_voice (голоса
+  /* main.7z — БЕЗ аудио: установщик ядра пропускает ai_voice (голоса
    * живут в своих пакетах — решение владельца 2026-11-12). */
   assert.ok(installerSrc("worker.ps1").includes('if ($entry.Name -eq "ai_voice") { continue }'));
 }
@@ -351,22 +358,22 @@ function test_mod_root_canonical_fallback_is_mod_dir(): void {
   assert.equal(MOD_DIR, "mods/tssr-ai-voice-pack");
 }
 
-function test_main_zip_ships_no_rpyc(): void {
+function test_main_pack_ships_no_rpyc(): void {
   /* Скомпилированный байткод не шиппим: движок скомпилирует .rpy при
-   * первом запуске; пара rpy+rpyc в зипе = тихая рассинхронизация
+   * первом запуске; пара rpy+rpyc в архиве = тихая рассинхронизация
    * (решение 2026-10-19; из git .rpyc тоже вычищены). */
   withTmp((tmp) => {
-    const names = buildMainZip(tmp).names;
+    const names = buildMainPack(tmp).names;
     assert.ok(!names.some((n) => n.endsWith(".rpyc")), names.join(", "));
   });
 }
 
-function test_main_zip_is_mirror_of_patch_tree(): void {
-  /* Зеркало установки: состав зипа == дерево патча — «карта путей»
+function test_main_pack_is_mirror_of_patch_tree(): void {
+  /* Зеркало установки: состав архива == дерево патча — «карта путей»
    * физически невозможна: файл едет по своему относительному пути, новый
    * файл попадает в дистрибутив сам (решение 2026-10-19). */
   withTmp((tmp) => {
-    const names = buildMainZip(tmp).names;
+    const names = buildMainPack(tmp).names;
     const p = MOD_DIR + "/";
     const shipped = new Set(names.filter((n) => n.startsWith(p)).map((n) => n.slice(p.length)));
     const tree = new Set(treeFiles(PATCH, MOD_EXCLUDE).map((f) => relative(PATCH, f).split(sep).join("/")));
@@ -392,22 +399,22 @@ function test_patch_root_is_install_mirror(): void {
 
 // Регистрация в порядке pytest-файла (node:test гоняет их последовательно).
 test("test_mod_dir_is_atomic", test_mod_dir_is_atomic);
-test("test_main_zip_root_has_only_service_files", test_main_zip_root_has_only_service_files);
-test("test_main_zip_nothing_outside_mod_dir", test_main_zip_nothing_outside_mod_dir);
-test("test_main_zip_no_game_injection", test_main_zip_no_game_injection);
-test("test_main_zip_key_files_in_mod_dir", test_main_zip_key_files_in_mod_dir);
-test("test_main_zip_no_dev_only_trees", test_main_zip_no_dev_only_trees);
-test("test_main_zip_fonts_complete", test_main_zip_fonts_complete);
-test("test_voice_zip_has_own_installer", test_voice_zip_has_own_installer);
-test("test_main_zip_repo_diagnostics_not_shipped", test_main_zip_repo_diagnostics_not_shipped);
-test("test_zip_catalog_is_build_artifact_with_valid_content", test_zip_catalog_is_build_artifact_with_valid_content);
+test("test_main_pack_root_has_only_service_files", test_main_pack_root_has_only_service_files);
+test("test_main_pack_nothing_outside_mod_dir", test_main_pack_nothing_outside_mod_dir);
+test("test_main_pack_no_game_injection", test_main_pack_no_game_injection);
+test("test_main_pack_key_files_in_mod_dir", test_main_pack_key_files_in_mod_dir);
+test("test_main_pack_no_dev_only_trees", test_main_pack_no_dev_only_trees);
+test("test_main_pack_fonts_complete", test_main_pack_fonts_complete);
+test("test_voice_pack_has_own_installer", test_voice_pack_has_own_installer);
+test("test_main_pack_repo_diagnostics_not_shipped", test_main_pack_repo_diagnostics_not_shipped);
+test("test_pack_catalog_is_build_artifact_with_valid_content", test_pack_catalog_is_build_artifact_with_valid_content);
 test(
   "test_build_stops_with_clear_error_when_catalog_gen_fails",
   test_build_stops_with_clear_error_when_catalog_gen_fails,
 );
 test("test_environment_txt_is_relative", test_environment_txt_is_relative);
-test("test_environment_txt_in_zip", test_environment_txt_in_zip);
-test("test_voice_zip_files_in_mod_dir", test_voice_zip_files_in_mod_dir);
+test("test_environment_txt_in_pack", test_environment_txt_in_pack);
+test("test_voice_pack_files_in_mod_dir", test_voice_pack_files_in_mod_dir);
 test("test_installers_wait_for_game_to_close", test_installers_wait_for_game_to_close);
 test("test_install_cmd_console_is_utf8", test_install_cmd_console_is_utf8);
 test("test_core_installer_never_touches_ai_voice", test_core_installer_never_touches_ai_voice);
@@ -416,6 +423,6 @@ test("test_voice_config_wires_catalog_and_auto_voice", test_voice_config_wires_c
 test("test_no_basedir_mod_writes", test_no_basedir_mod_writes);
 test("test_rpy_sources_never_use_dunder_file", test_rpy_sources_never_use_dunder_file);
 test("test_mod_root_canonical_fallback_is_mod_dir", test_mod_root_canonical_fallback_is_mod_dir);
-test("test_main_zip_ships_no_rpyc", test_main_zip_ships_no_rpyc);
-test("test_main_zip_is_mirror_of_patch_tree", test_main_zip_is_mirror_of_patch_tree);
+test("test_main_pack_ships_no_rpyc", test_main_pack_ships_no_rpyc);
+test("test_main_pack_is_mirror_of_patch_tree", test_main_pack_is_mirror_of_patch_tree);
 test("test_patch_root_is_install_mirror", test_patch_root_is_install_mirror);

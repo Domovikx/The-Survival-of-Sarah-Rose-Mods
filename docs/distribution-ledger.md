@@ -38,6 +38,31 @@
 Подозрение: install.cmd/ps1 (ExecutionPolicy Bypass + chcp) + старый Main 206MB
 с лишним содержимым.
 
+## Локальная сборка 2026-11-13 — .7z (НЕ залита, ждёт команды владельца)
+
+Переход zip → 7z (`-mx=9`, solid) + сабсет CJK-шрифтов по набору символов из
+`tl/`, `po/` и инлайн-переводов `zzz_ui.rpy`: main **45.1 → 4.3 MiB** (−90%),
+голосовые паки −1.3%. Каждый архив проверен `7z t` (полная распаковка + CRC),
+проверка встроена в сборку.
+
+| Файл                           | Байт     | sha256                                                             |
+| ------------------------------ | -------- | ------------------------------------------------------------------ |
+| TSSR-AI-Voice-Pack-main.7z     | 4547450  | `5fc29a86e81445010ced14e2ee8fabe4a2d6dc05e2ad0a9352b06e132f01165d` |
+| TSSR-AI-Voice-Pack-voice-de.7z | 18225563 | `c273280f74f3ee73ff69e4d79d22139702cbdc6d7e6eb8dfae58a9ba13fb2e3e` |
+| TSSR-AI-Voice-Pack-voice-en.7z | 16129211 | `b8888037b0210bb355e82e3c38fbb3eacb0d1149b7232d90758db9c999659988` |
+| TSSR-AI-Voice-Pack-voice-es.7z | 16987675 | `03a7ab3bb83e5799aa2a62933766c30105ec9f9214b6b13bdb5af7e56e5257a7` |
+| TSSR-AI-Voice-Pack-voice-fr.7z | 16473417 | `18c7a8c916a2b79a294d324e315651ef1c3294818da24402a2a10090637e7402` |
+| TSSR-AI-Voice-Pack-voice-it.7z | 18439329 | `d3143536c5e7149edfd57f928dfdbb0495c523e445e00ae84ad91ee026087f3e` |
+| TSSR-AI-Voice-Pack-voice-ja.7z | 22397070 | `1f901b01b189fa0546d4f049e781f27a8767d7a51f7a60844f32238b07c3b7f2` |
+| TSSR-AI-Voice-Pack-voice-ko.7z | 19088697 | `2ef99ffd87d8dfc62f80cd8543fd40c4b48e92cf3b7cea71d709143e100c4914` |
+| TSSR-AI-Voice-Pack-voice-pl.7z | 18086761 | `aec6e7eebbcaeaf2f7075d543b7f8d079efb1f4ee7168e639fa1c0837772d01b` |
+| TSSR-AI-Voice-Pack-voice-pt.7z | 18398870 | `ebe0f11f8b6df2e793d0e174385236f12a5c7aa578aab67fffd8c2991c43f8c7` |
+| TSSR-AI-Voice-Pack-voice-ru.7z | 17658092 | `a842b9023eefdf030908adec0ab5145d289fade8ab7a2a85339def6228c0ce5c` |
+| TSSR-AI-Voice-Pack-voice-zh.7z | 17365396 | `15b7848900ed2a85a2d8c994e9c71d2bdd993e842e22f30d2367fb0fcf4aeacc` |
+
+Визуальная приёмка 2026-11-13: ja/ko/zh — меню, панель настроек и диалоги
+сняты на установке из `main.7z`, «тофу» нет.
+
 ## GitHub Release v1.0.0 — 11 ассетов (sha256 в описании релиза)
 
 - main.zip (47.0 MB) + voice-{ru,en,de,es,fr,it,ja,ko,pl,pt}.zip

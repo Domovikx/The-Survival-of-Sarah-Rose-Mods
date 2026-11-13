@@ -19,7 +19,7 @@
 - `catalog/` (в установке: `mods/tssr-ai-voice-pack/catalog/`) — АРТЕФАКТ СБОРКИ
   (2026-10-22: в репе каталог/ не живёт): `label_arc.json` + `voice_list.json`
   генерит `tools/generate/scripts/catalog_gen.mts` из POT-инвентаря и
-  casts/voices.mts, в zip кладёт build_pack.py
+  casts/voices.mts, в архив .7z кладёт build_pack.mts
 - `environment.txt` (корень игры, служебный) → `RENPY_SEARCHPATH = "mods"` —
   относительный путь, работает при любой локации установки; другие моды
   кладутся в `mods/<своя-папка>/` и подхватываются автоматически
@@ -33,13 +33,20 @@
   (статистика Steam, окт 2026; источник истины для приоритетов языков, владелец
   2026-11-13): порядок не переставлять руками, новый язык — туда, затем
   синхронизировать `zzz_ui.rpy` (TSSR_LANGUAGES) и `site/src/shared/config/i18n.ts` (LANGS).
-- Сборка дистрибутива: `npm run build:pack` → `dist/*.zip` (раскладка zip = раскладка
-  установки; zip'ы в git не коммитятся)
+- Сборка дистрибутива: `npm run build:pack` → `dist/*.7z` (раскладка архива =
+  раскладка установки; архивы в git не коммитятся). **Формат — .7z** (решение
+  владельца 2026-11-13: «максимально снизить размер», `-mx=9` + solid);
+  каждый архив прогоняется через `7z t` (полная распаковка + CRC) прямо в
+  `writeArchive`, поэтому битый архив не может попасть в `dist/`.
+  CJK-шрифты в пакете — САБСЕТЫ по набору символов из `tl/`, `po/` и инлайн-
+  переводов `zzz_ui.rpy` (`tools/build/subset_fonts.mts`): 47.05 → 4.32 MiB,
+  main 45 → 4.3 MiB. Целостность покрытия глифов стережёт
+  `tools/build/font_guard.test.mts`.
 - **Установщики — по одному на пакет, каждый атомарный** (решение владельца
   2026-11-12: «вызвать мэйн установщик, потом отдельные аудио установщики, но
-  атомарно»). `main.zip` несёт `install.cmd`/`install.ps1`, который ставит
+  атомарно»). `main.7z` несёт `install.cmd`/`install.ps1`, который ставит
   ТОЛЬКО ядро (тексты, шрифты, меню; `ai_voice/` не трогает). Каждый
-  `voice-<lang>.zip` несёт свой `install.cmd`/`install.ps1`
+  `voice-<lang>.7z` несёт свой `install.cmd`/`install.ps1`
   (`tools/build/installer/voice_install.ps1`), который ставит только свой язык.
   Предохранители: аудио без ядра → «сначала main» (exit 3); запущенная игра →
   ждать закрытия до 3 мин (держит локи на шрифтах/файлах мода, exit 4). Замена
@@ -133,8 +140,8 @@ mods/tssr-ai-voice-pack/          # АТОМАРНАЯ папка мода (ко
                                   #   только opus; wav в ai_voice НЕТ (см. ниже)
   catalog/
     label_arc.json              # label -> Arc (артефакт СБОРКИ: генерит
-                                #   catalog_gen.mts из POT label-map, в zip
-                                #   кладёт build_pack.py; в репе не живёт)
+                                #   catalog_gen.mts из POT label-map, в .7z
+                                #   кладёт build_pack.mts; в репе не живёт)
     voice_list.json             # КТО озвучен: {имя: имя} — мапа ТОЖДЕСТВЕННАЯ
                                 #   (вариант рефа там НЕ хранится), + narrator.
                                 #   АРТЕФАКТ СБОРКИ: генерит catalog_gen.mts из
@@ -173,7 +180,7 @@ mods/tssr-ai-voice-pack/          # АТОМАРНАЯ папка мода (ко
 Страж: `tests/test_build_layout.py::test_rpy_sources_never_use_dunder_file`.
 
 **Границы приёмочной установки** (правило владельца, 2026-10-19): в папку
-игры не пишется НИЧЕГО вне `mods/` (плюс служебные `INSTALL.txt` и
+игры не пишется НИЧЕГО вне `mods/` (плюс служебные `README.txt` и
 `environment.txt` в корне — контракт движка для searchpath). Любые
 артефакты тестов и съёмок — только в репу (`tmp/shots/`, в .gitignore).
 Съёмка UI: драйвер `patches/ai-voice-pack/tools/generate/scripts/shots_capture.ps1 -GameDir <игра>`
@@ -197,8 +204,8 @@ mods/tssr-ai-voice-pack/          # АТОМАРНАЯ папка мода (ко
 ```text
 catalog/   (УДАЛЁН из репы 2026-10-22: каталог-легаси выпищен. Источник фраз —
             po/template.pot + po/ru.po; рантайм-мапы дистрибутива — АРТЕФАКТЫ
-            СБОРКИ, генерит tools/generate/scripts/catalog_gen.mts, в zip кладёт
-            build_pack.py; тон — метаданные `#. emotion:` шаблона)
+            СБОРКИ, генерит tools/generate/scripts/catalog_gen.mts, в .7z
+            кладёт build_pack.mts; тон — метаданные `#. emotion:` шаблона)
   label_arc.json               # label -> Arc ИЗ POT label-map (инвентарь
                                #   сюжетных лейблов, 247 шт.; правила — potgen.mts)
   voice_list.json              # имена озвученных -> variant ИЗ casts/voices.mts
@@ -664,7 +671,7 @@ Unicode-ударение **U+0301** после ударной гласной Р�
 ```bash
 # Вся TS-матрица (из корня репы; скиллы + пайплайн + scripts/):
 node --test $(find .opencode/skills patches/ai-voice-pack/tools patches/ai-voice-pack/casts scripts -name "*.test.mts" -not -path "*/node_modules/*")
-# Гарды остатка python (voicekit/voice_design) + паритет build_pack.py↔.mts:
+# Гарды остатка python (voicekit/voice_design) — python-сборщик удалён:
 cd patches/ai-voice-pack && python -m pytest tests/ -v
 ```
 

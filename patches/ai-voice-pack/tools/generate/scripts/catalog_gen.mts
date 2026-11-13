@@ -11,11 +11,11 @@
  *                  by_who в рантайм не читается (voice_config.rpy берёт
  *                  только names+narrator) — выпищен вместе с каталогом.
  *
- * Оба файла — АРТЕФАКТЫ СБОРКИ: кладёт в zip build_pack.py, в репе не живут.
+ * Оба файла — АРТЕФАКТЫ СБОРКИ: кладёт в .7z build_pack.mts, в репе не живут.
  *
  * Запуск: node catalog_gen.mts --out-dir <каталог>
  * Падает с ненулевым кодом и понятной ошибкой: нет POT / пуст инвентарь /
- * битая строка label-map / пустые войсы (build_pack.py не даёт собрать zip
+ * битая строка label-map / пустые войсы (build_pack.mts не даёт собрать архив
  * с отсутствующим/неполным каталогом — контракт приёмки edge-кейса).
  */
 
@@ -75,7 +75,7 @@ export function buildVoiceList(): Record<string, unknown> {
   };
 }
 
-/** Пишет оба JSON в out-dir; любая ошибка -> throw (build_pack.py ловит и валит сборку). */
+/** Пишет оба JSON в out-dir; любая ошибка -> throw (build_pack.mts ловит и валит сборку). */
 export function generate(outDir: string): { labelArc: string; voiceList: string; labels: number; voices: number } {
   const labelArc = buildLabelArc();
   const voiceList = buildVoiceList();

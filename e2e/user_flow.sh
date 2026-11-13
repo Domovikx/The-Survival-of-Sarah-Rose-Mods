@@ -6,7 +6,7 @@
 # Требование: игра чистая (нет mods/ и environment.txt) — иначе скрипт
 # останавливается: он проверяет именно установку с нуля. После прогона в игре
 # останется установленный мод (это ожидаемо); для повторного прогона удали
-# mods/ + environment.txt (+ install.*, INSTALL.txt, log/errors/traceback).
+# mods/ + environment.txt (+ install.*, README.txt, log/errors/traceback).
 #
 # Запуск: bash e2e/user_flow.sh
 set -u
@@ -17,6 +17,9 @@ W="tmp/user_flow"
 LOGDIR="$PWD/$W"
 REL="v1.0.0"
 FAIL=0
+# 7z — тот же архиватор, что у пользователя (Win11 умеет .7z из коробки; Win10 = 7-Zip).
+Z="${TSSR_7Z:-/c/Program Files/7-Zip/7z.exe}"
+[ -x "$Z" ] || { echo "нет 7z ($Z): поставь 7-Zip или задай TSSR_7Z"; exit 1; }
 ok()   { echo "  ✓ $1"; }
 bad()  { echo "  ✗ $1"; FAIL=1; }
 
@@ -28,21 +31,21 @@ ok "игра чистая: $(du -sm "$G" | cut -f1) MB, mods/ и environment.txt
 
 echo "== 1. СКАЧИВАНИЕ ИЗ РЕЛИЗА (как пользователь: main + voice-ru)"
 rm -rf "$W" && mkdir -p "$W/dl" "$W/main" "$W/voice"
-gh release download "$REL" --pattern "TSSR-AI-Voice-Pack-main.zip" -D "$W/dl" >/dev/null 2>&1 \
-  && gh release download "$REL" --pattern "TSSR-AI-Voice-Pack-voice-ru.zip" -D "$W/dl" >/dev/null 2>&1
+gh release download "$REL" --pattern "TSSR-AI-Voice-Pack-main.7z" -D "$W/dl" >/dev/null 2>&1 \
+  && gh release download "$REL" --pattern "TSSR-AI-Voice-Pack-voice-ru.7z" -D "$W/dl" >/dev/null 2>&1
 ls -la "$W/dl" | tail -3
-[ -f "$W/dl/TSSR-AI-Voice-Pack-main.zip" ] && ok "main.zip скачан" || bad "main.zip не скачался"
-[ -f "$W/dl/TSSR-AI-Voice-Pack-voice-ru.zip" ] && ok "voice-ru.zip скачан" || bad "voice-ru.zip не скачался"
+[ -f "$W/dl/TSSR-AI-Voice-Pack-main.7z" ] && ok "main.7z скачан" || bad "main.7z не скачался"
+[ -f "$W/dl/TSSR-AI-Voice-Pack-voice-ru.7z" ] && ok "voice-ru.7z скачан" || bad "voice-ru.7z не скачался"
 
 echo "== 2. СВЕРКА КОНТРОЛЬНЫХ СУММ (с тем, что видит пользователь в описании релиза)"
 BODY=$(gh release view "$REL" --json body --jq .body)
-SUM=$(sha256sum "$W/dl/TSSR-AI-Voice-Pack-main.zip" | cut -d' ' -f1)
-echo "$BODY" | grep -q "$SUM" && ok "main.zip: sha256 совпал с описанием релиза" || bad "main.zip: sha256 НЕ совпал"
-SUM=$(sha256sum "$W/dl/TSSR-AI-Voice-Pack-voice-ru.zip" | cut -d' ' -f1)
-echo "$BODY" | grep -q "$SUM" && ok "voice-ru.zip: sha256 совпал" || bad "voice-ru.zip: sha256 НЕ совпал"
+SUM=$(sha256sum "$W/dl/TSSR-AI-Voice-Pack-main.7z" | cut -d' ' -f1)
+echo "$BODY" | grep -q "$SUM" && ok "main.7z: sha256 совпал с описанием релиза" || bad "main.7z: sha256 НЕ совпал"
+SUM=$(sha256sum "$W/dl/TSSR-AI-Voice-Pack-voice-ru.7z" | cut -d' ' -f1)
+echo "$BODY" | grep -q "$SUM" && ok "voice-ru.7z: sha256 совпал" || bad "voice-ru.7z: sha256 НЕ совпал"
 
-echo "== 3. РАСПАКОВКА main.zip И ДВОЙНОЙ КЛИК install.cmd"
-unzip -oq "$W/dl/TSSR-AI-Voice-Pack-main.zip" -d "$W/main"
+echo "== 3. РАСПАКОВКА main.7z И ДВОЙНОЙ КЛИК install.cmd"
+"$Z" x -bd -y -o"$(cygpath -w "$W/main")" "$W/dl/TSSR-AI-Voice-Pack-main.7z" > /dev/null
 ls "$W/main" | head -5
 ( cd "$W/main" && cmd //c install.cmd < /dev/null > "$LOGDIR/install_main.log" 2>&1 )
 E=$?
@@ -58,8 +61,8 @@ for f in environment.txt mods/tssr-ai-voice-pack/voice_config.rpy mods/tssr-ai-v
 done
 [ -e "$G/mods/tssr-ai-voice-pack/ai_voice" ] && bad "main залез в ai_voice" || ok "аудио в ядре нет (как заявлено)"
 
-echo "== 5. РАСПАКОВКА voice-ru.zip И ДВОЙНОЙ КЛИК ЕГО install.cmd"
-unzip -oq "$W/dl/TSSR-AI-Voice-Pack-voice-ru.zip" -d "$W/voice"
+echo "== 5. РАСПАКОВКА voice-ru.7z И ДВОЙНОЙ КЛИК ЕГО install.cmd"
+"$Z" x -bd -y -o"$(cygpath -w "$W/voice")" "$W/dl/TSSR-AI-Voice-Pack-voice-ru.7z" > /dev/null
 ls "$W/voice" | head -5
 ( cd "$W/voice" && cmd //c install.cmd < /dev/null > "$LOGDIR/install_voice.log" 2>&1 )
 E=$?

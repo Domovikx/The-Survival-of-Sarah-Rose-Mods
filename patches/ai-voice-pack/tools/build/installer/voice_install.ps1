@@ -1,4 +1,4 @@
-﻿# TSSR AI Voice Pack — установщик ГОЛОСОВОГО ПАКЕТА (voice-{lang}.zip).
+﻿# TSSR AI Voice Pack — установщик ГОЛОСОВОГО ПАКЕТА (voice-{lang}.7z).
 # Владелец 2026-11-12: «мэйн установщик, потом отдельные аудио-установщики,
 # атомарно» + предохранитель: аудио ставится ТОЛЬКО поверх ядра (main);
 # без ядра — попросить поставить main первым.
@@ -100,7 +100,7 @@ if (-not $coreOk) {
     Write-Host "Please install the core pack first"
     Write-Host "Voice packs install on top of the core pack (texts and menu):"
     Write-Host ""
-    Write-Host "1) download and install TSSR-AI-Voice-Pack-main.zip (run its install.cmd);"
+    Write-Host "1) download and install TSSR-AI-Voice-Pack-main.7z (run its install.cmd);"
     Write-Host "2) then run this installer again."
     exit 3
 }
@@ -109,7 +109,7 @@ if (-not $coreOk) {
 $aiSrc = Join-Path $Src "mods\tssr-ai-voice-pack\ai_voice"
 if (-not (Test-Path $aiSrc)) {
     Write-Host "ERROR: no audio folder found next to install.cmd."
-    Write-Host "Please unpack the whole voice zip and run install.cmd from inside it."
+    Write-Host "Please unpack the whole voice .7z and run install.cmd from inside it."
     exit 1
 }
 $langs = @(Get-ChildItem -Path $aiSrc -Directory | ForEach-Object { $_.Name })
