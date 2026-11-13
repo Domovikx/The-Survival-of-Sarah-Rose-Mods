@@ -322,7 +322,7 @@ translate ru strings:
     new "Она схватила Кейт за затылок — отчасти для опоры, отчасти чтобы прижать её голову ещё глубже."
 
     old "She could feel Kate's tongue sliding into her sex, Kate's lips gently gliding across her clit."
-    new "Она чувствовала, как язык Кейт проникает в её половые органы, а губы Кейт нежно скользят по клитору."
+    new "Она чувствовала, как язык Кейт проникает между ног, а губы Кейт нежно скользят по клитору."
 
     old "Sarah spreads her own legs further apart, giving Kate more space to work."
     new "Сара разводит ноги ещё шире, давая Кейт больше пространства для действий."
@@ -340,7 +340,7 @@ translate ru strings:
     new "Прежние ощущения — ничто по сравнению с тем, что Сара чувствует сейчас."
 
     old "Waves of pleasure roll through her, pulsing out from between her legs and hitting every part of her."
-    new "Волны наслаждения прокатываются по всему её телу, пульсируя от промежности и достигая каждой её части."
+    new "Волны наслаждения прокатываются по всему её телу, пульсируя между ног и достигая каждой её части."
 
     old "Kate, knowing Sarah is close, keeps up."
     new "Кейт, зная, что Сара уже близка, не замедляется."

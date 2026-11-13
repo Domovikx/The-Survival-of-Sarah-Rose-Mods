@@ -19,6 +19,46 @@ const TARGET: Record<string, string> = {
   zh: "Chinese",
 };
 
+/** Минимальная запись po, нужная для канона имён. */
+interface PoLike {
+  msgctxt: string;
+  msgid: string;
+  msgstr: string;
+}
+
+/**
+ * Канон написания имён: строки `msgctxt=speaker-name` — принятые в переводе
+ * написания. ЕДИНСТВЕННОЕ место, где он строится (раньше дублировался в
+ * translate_run, translate_review и tone_native — и Belmont в двух из трёх
+ * мест забыли, модель писала «Белмонт», 2026-11-13).
+ */
+export function buildNameCanon(entries: PoLike[]): Map<string, string> {
+  const canon = new Map<string, string>();
+  for (const e of entries) {
+    if (e.msgctxt === "speaker-name" && e.msgid && e.msgstr.trim() && !canon.has(e.msgid))
+      canon.set(e.msgid, e.msgstr.trim());
+  }
+  // Строки speaker-name есть, но под неочевидными ключами: канон лежит в
+  // "Captain Belmont", а в наррации — просто Belmont (аудит 2026-11-04).
+  canon.set("Belmont", "Бельмонт");
+  return canon;
+}
+
+/**
+ * Жёсткий глоссарий «EN → как писать в переводе» для имён, которые реально
+ * есть в строке. Это ограничение ПРОМПТА, а не гейт: модель получает готовое
+ * написание и не перетранслитерирует имя.
+ */
+export function nameGlossary(msgid: string, canon: Map<string, string>): string[] {
+  const out: string[] = [];
+  for (const [en, tr] of canon) {
+    const base = en.split(" ").at(-1)!;
+    if (new RegExp(`(?<![\\p{L}])${base.replace(/[.*+?^${}()|[\]\\]/gu, "\\$&")}(?![\\p{L}])`, "iu").test(msgid))
+      out.push(`${base}→${tr.split(" ").at(-1)}`);
+  }
+  return out;
+}
+
 const makeSystem = (target: string, variant: string): string => {
   const base = `You are a strict translation QA checker for a game. You get an English SOURCE line, its ${target} TRANSLATION, and CHARACTERS with their genders (game data).
 Flag "bad" ONLY for GROSS errors:
@@ -88,6 +128,16 @@ Answer ONLY JSON {"content":"ok|bad","grammar":"ok|bad","gender":"ok|bad","verdi
 Judge three dimensions separately, then set verdict:
 - content: "bad" if the translation is about DIFFERENT content than the source (wrong line, or text from a neighbouring line glued in), inverted meaning, or missing/invented key information. Idioms count with their contextual meaning (in erotic scenes "come" = orgasm); a plausible reading of an odd/ambiguous SOURCE is correct.
 - grammar: "bad" only if grammar is broken so it distorts the text. Russian has NO articles — article differences are never an error. Never style, word choice, register, literalness, tone, punctuation, minor awkwardness.
+- gender: "bad" only if forms contradict CHARACTERS or the person ADDRESSED (2nd-person past follows the addressee, not the speaker).
+verdict = "bad" if ANY dimension is "bad", else "ok".
+Answer ONLY JSON {"content":"ok|bad","grammar":"ok|bad","gender":"ok|bad","verdict":"ok|bad","reason":"max8 words"}.`,
+    // v13: v10 + словарь регистра книги. Аудит ПОСЛЕ правки регистра (2026-11-13):
+    // v10 считал «киска»/«плоть» выдумкой — то есть защищал ту самую клинику,
+    // которую правка и убирает. Для свежих переводов прод остаётся v10.
+    v13: `You are a strict translation QA checker for a game. You get an English SOURCE line, its ${target} TRANSLATION, and CHARACTERS with their genders (game data).
+Judge three dimensions separately, then set verdict:
+- content: "bad" if the translation is about DIFFERENT content than the source (wrong line, or text from a neighbouring line glued in), inverted meaning, or missing/invented key information. Idioms count with their contextual meaning (in erotic scenes "come" = orgasm); a plausible reading of an odd/ambiguous SOURCE is correct. Everyday and blunt words for the body are this book's correct register and are NOT invented content: "киска" for pussy, "член" for cock, "задница" for ass, "плоть" or "между ног" for sex.
+- grammar: "bad" only if grammar is broken so it distorts the text. Never style, word choice, register, literalness, tone, punctuation, minor awkwardness.
 - gender: "bad" only if forms contradict CHARACTERS or the person ADDRESSED (2nd-person past follows the addressee, not the speaker).
 verdict = "bad" if ANY dimension is "bad", else "ok".
 Answer ONLY JSON {"content":"ok|bad","grammar":"ok|bad","gender":"ok|bad","verdict":"ok|bad","reason":"max8 words"}.`,
@@ -162,7 +212,9 @@ export const judgeLine = async (
 ): Promise<JudgeResult | null> => {
   const { url, model } = resolveBackend();
   const target = TARGET[lang] ?? lang;
-  const user = `SOURCE (en): ${en}\nTRANSLATION (ru): ${tr}`;
+  // Метка языка — фактическая: до 2026-11-13 здесь было жёстко «ru», и судья
+  // на 9 других языках получал перевод, подписанный как русский.
+  const user = `SOURCE (en): ${en}\nTRANSLATION (${lang}): ${tr}`;
   // при голосовании нужны НЕДЕТЕРМИНИРОВАННЫЕ семплы: temp0 дал бы k копий.
   const effTemp = VOTES > 1 && temp === 0 ? 0.7 : temp;
   const call = async (system: string): Promise<string | null> => {

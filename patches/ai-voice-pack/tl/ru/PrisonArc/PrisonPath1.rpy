@@ -409,7 +409,7 @@ translate ru strings:
     new "Стоя в комнате такой голой, Сара чувствовала себя крайне уязвимой."
 
     old "She covered up her breasts with one arm, covering up her sex with the other hand."
-    new "Она прикрыла грудь одной рукой, а другой закрыла свои половые органы."
+    new "Она прикрыла грудь одной рукой, а другой прикрыла её киску."
 
     old "She could see Matthew's eyes gliding up and down her body."
     new "Она видела, как глаза Мэтью скользят вверх-вниз по её телу."
@@ -523,13 +523,13 @@ translate ru strings:
     new "Она чувствовала, как одна из рук Мэтта лежит у неё на тыльной стороне ладони, удерживая её на месте."
 
     old "The other hand was near her ass, one finger plunged deeply into her asshole."
-    new "Другая рука была рядом с её задницей, а один палец вошёл глубоко в её анус."
+    new "Другая рука была рядом с её задницей, а один палец вошёл глубоко в её жопу."
 
     old "The pain roared from her lower body, and in its wake, a deep burning sensation was left behind."
     new "Боль взревела в нижней части её тела, оставив после себя глубокое ощущение жжения."
 
     old "Sarah could feel her whole body move as Matthew drove his finger deeper into her asshole, curling it up, twisting it."
-    new "Сара чувствовала, как всё её тело двигается, пока Мэтью загонял палец глубже в её анус, изгибая и поворачивая его."
+    new "Сара чувствовала, как всё её тело двигается, пока Мэтью загонял палец глубже в её задницу, изгибая и поворачивая его."
 
     old "Tears sprung from her face."
     new "Слёзы хлынули из её глаз."
@@ -538,7 +538,7 @@ translate ru strings:
     new "Она стиснула зубы, чтобы не закричать."
 
     old "She heard him spit, then felt the spit hit between the cheeks of her ass."
-    new "Она услышала, как он сплюнул, а затем почувствовала, как слюна ударила её в промежность."
+    new "Она услышала, как он сплюнул, а затем почувствовала, как слюна ударила её в задницу."
 
     old "Suddenly, he plunged in another finger."
     new "Внезапно он вставил ещё один палец."
@@ -1108,7 +1108,7 @@ translate ru strings:
     new "Сара не оказала никакого сопротивления — в конце концов, она сама этого хотела."
 
     old "Pressing her lips up against Eula's sex, she felt Eula's body jolt at the contact."
-    new "Прижав губы к половым органам Еулы, она почувствовала, как её тело содрогнулось от прикосновения."
+    new "Прижавшись губами к киске Еулы, она почувствовала, как тело той вздрогнуло от прикосновения."
 
     old "Sarah spread her lips across Eula's mound and slid out her tongue."
     new "Сара раздвинула губы над горбом Еулы и высунула язык."
@@ -1147,7 +1147,7 @@ translate ru strings:
     new "Языком она начала ласкать её — всё быстрее и глубже, описывая всё большие круги."
 
     old "Opening her mouth wider, and closing it again, she slid her lips all across Eula's outer sex."
-    new "Открыв рот шире, а затем снова сомкнув его, она провела губами по всем внешним половым органам Еулы."
+    new "Растянув рот пошире и снова сомкнув его, она провела губами по всей киске Еулы."
 
     old "Another moan, signalling she was doing better."
     new "Ещё один стон показал, что у неё получается всё лучше."

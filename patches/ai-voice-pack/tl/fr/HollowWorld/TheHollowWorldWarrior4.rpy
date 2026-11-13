@@ -22,7 +22,7 @@ translate fr strings:
     new "J'ai tué un jeune homme."
 
     old "I once blew an old sailor"
-    new "J'ai déjà couché avec un vieux marin"
+    new "J'ai déjà fait une pipe à un vieux marin"
 
     old "I once had sex with an orc"
     new "J'ai déjà couché avec un orc."

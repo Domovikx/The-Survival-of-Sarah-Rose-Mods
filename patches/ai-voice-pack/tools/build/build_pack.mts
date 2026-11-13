@@ -1,22 +1,23 @@
 /**
- * build_pack.mts — сборка дистрибутивных zip'ов AI Voice Pack (патч TSSR).
- * Порт build_pack.py (миграция python → TS, приказ владельца 2026-10-23).
+ * build_pack.mts — сборка дистрибутивных .7z AI Voice Pack (патч TSSR).
  *
- * Схема zip'ов (решение 2026-10-18, одна Nexus-страница = хаб патчей):
+ * Схема архивов (решение 2026-10-18, одна Nexus-страница = хаб патчей;
+ * формат 7z — решение владельца 2026-11-13, целевая ОС Windows 11):
  *   main      — ядро: mods/tssr-ai-voice-pack/ (scripts, catalog, tl/),
- *               environment.txt, INSTALL.txt
+ *               environment.txt, README.txt
  *   voice-<l> — озвучка языка: mods/tssr-ai-voice-pack/ai_voice/<l>/
  *
- * Раскладка ВНУТРИ zip = РАСКЛАДКА УСТАНОВКИ: распаковка в корень папки игры
- * (там, где TheSurvivalofSarahRose.exe). ВСЁ живёт в атомарной папке
+ * Раскладка ВНУТРИ архива = РАСКЛАДКА УСТАНОВКИ: распаковка в корень папки
+ * игры (там, где TheSurvivalofSarahRose.exe). ВСЁ живёт в атомарной папке
  * mods/tssr-ai-voice-pack/ — установка мода = распаковка, удаление = удалить
  * эту папку (+ environment.txt, если других модов нет). Другие моды кладутся
  * в mods/<своя-папка>/ — движок подхватывает их автоматически (RENPY_SEARCHPATH
- * = "mods", обход рекурсивный). Аудио кладём без сжатия (opus и так сжат;
- * ZIP_STORED = заметно быстрее, размер тот же).
+ * = "mods", обход рекурсивный). Уровни сжатия: main -mx=9 (solid находит
+ * общее между CJK-шрифтами: 63.6 MiB -> 13.5 вместо 45.1 в zip), голосовые
+ * паки -mx=9 (замер: -1.3% к размеру за ~1 с — берём, цель = размер).
  *
  * Запуск (из anywhere):  node patches/ai-voice-pack/tools/build/build_pack.mts
- * Артефакты: <repo>/dist/*.zip  (dist/ в .gitignore — зипы не коммитим).
+ * Артефакты: <repo>/dist/*.7z  (dist/ в .gitignore — архивы не коммитим).
  */
 
 import { spawnSync } from "node:child_process";
@@ -25,7 +26,7 @@ import { tmpdir } from "node:os";
 import { basename, join, relative, resolve, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 
-import { writeZip, type ZipEntry } from "./zip.mts";
+import { ArchiveAbort, writeArchive, type ArchiveEntry } from "./archive.mts";
 
 // ai-voice-pack/tools/build/build_pack.mts -> ../../.. = patches/ai-voice-pack
 export const PATCH = resolve(fileURLToPath(import.meta.url), "..", "..", "..");
@@ -53,7 +54,7 @@ export const MOD_DIR = "mods/tssr-ai-voice-pack";
 
 // Dev-only в КОРНЕ патча — НЕ в дистрибутив (корень патча = зеркало
 // установки 2026-10-19, поэтому исключения — имена ВЕРХНЕГО уровня):
-// dev-дерево, аудио (уезжает отдельным voice-zip), каталог целиком (в зип
+// dev-дерево, аудио (уезжает отдельным voice-пакетом), каталог целиком (в архив
 // идут только два runtime-JSON, см. CATALOG_RUNTIME), рефы голосов (casts —
 // сырьё генерации), исходники переводов (po — рантайм читает их продукт tl/),
 // кэши тестов + defensive-имена диагностик, которые мод пишет в свою папку
@@ -74,77 +75,76 @@ export const MOD_EXCLUDE: ReadonlySet<string> = new Set([
 ]);
 
 // Рантайм-каталог: voice_config.rpy грузит ТОЛЬКО эти два JSON (label -> arc,
-// who -> variant); в zip идут как АРТЕФАКТЫ СБОРКИ — в репе каталог/ не живёт
+// who -> variant); в архив идут как АРТЕФАКТЫ СБОРКИ — в репе каталог/ не живёт
 // (легаси выпищен 2026-10-22), генерит catalog_gen.mts из POT + casts.
 export const CATALOG_RUNTIME = ["label_arc.json", "voice_list.json"] as const;
 export const CATALOG_GEN = join(PATCH, "tools", "generate", "scripts", "catalog_gen.mts");
 
-export const ENVIRONMENT_TXT = `# TSSR mod: внешний search path (Ren'Py читает этот файл в корне игры при старте).
-# Путь ОТНОСИТЕЛЬНЫЙ корню игры — работает при любой локации установки.
-# В папку mods/ можно класть и другие моды (папка на мод) — движок подхватит.
-# Multiple mods: add more paths separated by ::  (example: "mods::mods_other")
+export const ENVIRONMENT_TXT = `# Ren'Py executes this file at startup and applies the variables below.
+# RENPY_SEARCHPATH adds "mods" (relative to the game folder) to the engine's
+# search path - that is where this mod lives: mods/tssr-ai-voice-pack/.
+# The path is RELATIVE, so the game can be installed anywhere.
+# Other mods: drop them into mods/ as well, or list more paths separated by ::
+# (example: RENPY_SEARCHPATH = "mods::mods_other").
 RENPY_SEARCHPATH = "mods"
 `;
 
-export const INSTALL_TXT = `THE SURVIVAL OF SARAH ROSE — AI Voice Pack + Localization (11 languages)
-=========================================================================
+export const README_TXT = `THE SURVIVAL OF SARAH ROSE - AI Voice Pack + Localization (11 languages)
+========================================================================
 
-СОСТАВ / FILES
-  TSSR-AI-Voice-Pack-main.zip      — ядро БЕЗ АУДИО: тексты 11 языков, все
-                                     шрифты, меню, установщик (обязательный) /
-                                     core, NO audio: texts, fonts, menu
-  TSSR-AI-Voice-Pack-voice-<lang>.zip — голоса языка (СКАЧИВАЕТСЯ ОТДЕЛЬНО,
-                                     сколько хочешь: ru, en, de, es, fr, it,
-                                     ja, ko, pl, pt, zh) / voice packs are
-                                     SEPARATE downloads, pick 1..N
+WHAT IS IN THE DOWNLOADS
 
-ПОРЯДОК / ORDER:
-  1. СНАЧАЛА main (обязательно) — его установщик ставит ядро: тексты 11
-     языков, все шрифты, меню. Аудио в main НЕТ.
-  2. ПОТОМ голоса — захочешь: скачай voice-пакеты нужных языков (1..N) и
-     у КАЖДОГО запусти ЕГО install.cmd — пакет ставится атомарно, один за
-     другим. Установщик пакета проверит, что main стоит (без ядра попросит
-     поставить его первым).
-     FIRST main (required) — core only: texts, fonts, menu. NO audio.
-     THEN voices: download the packs you want (1..N), run EACH pack's own
-     install.cmd — each installs atomically. The pack installer checks the
-     core is present (asks for main first otherwise).
+  TSSR-AI-Voice-Pack-main.7z
+      REQUIRED. The core, with NO audio: texts for 11 languages, all the
+      fonts, the game menu changes, and this installer.
 
-УСТАНОВКА / INSTALL (папка игры = папка с TheSurvivalofSarahRose.exe):
-  А. main.zip: распакуй куда угодно и запусти install.cmd — он сам найдёт
-     игру и поставит ядро. ИЛИ вручную: распакуй main.zip в корень игры.
-     Unpack main.zip anywhere and run its install.cmd (finds the game), or
-     manually unpack into the game root.
-  Б. каждый voice-<lang>.zip: распакуй куда угодно и запусти ЕГО install.cmd
-     — поставит только свой язык, атомарно. ИЛИ вручную: распакуй в корень
-     игры. Unpack each voice zip anywhere and run its own install.cmd, or
-     manually unpack into the game root.
-  В. Запусти игру. Настройки: кнопка языка в меню — 11 языков.
-     Launch the game. Settings: language button in the menu — 11 languages.
+  TSSR-AI-Voice-Pack-voice-<lang>.7z
+      OPTIONAL. Voice acting for ONE language: ru, en, de, es, fr, it,
+      ja, ko, pl, pt, zh. Download as many packs as you like.
 
-ВАЖНО / IMPORTANT: перед установкой ЗАКРОЙ игру (игра держит шрифты и файлы
-мода; установщик ждёт закрытия до 3 минут, потом попросит). / Close the game
-before installing (it locks fonts and mod files; the installer waits up to
-3 minutes, then asks you to close it).
+ORDER MATTERS: install the core (main) FIRST, then any voice packs.
+Every voice pack needs the core and tells you to install main first
+if it is missing.
 
-ПРИМЕЧАНИЕ / NOTE: если Windows показала предупреждение при запуске install.cmd —
-файл скачан из интернета («Mark of the Web»). Скрипт открытый, исходники на
-GitHub; ручная установка (пункты 1–2) — равноценный путь.
-If Windows showed a warning running install.cmd — the file came from the
-internet (Mark of the Web). The script is open source on GitHub; manual
-install (steps 1-2) is an equal alternative.
+INSTALL (game folder = the folder with TheSurvivalofSarahRose.exe)
 
-Всё лежит в одной папке mods/tssr-ai-voice-pack/ (плюс служебный
-environment.txt в корне игры). Другие моды можно класть в mods/ рядом.
-Everything lives in mods/tssr-ai-voice-pack/ (plus the service file
-environment.txt in the game root). Other mods can go into mods/ next to it.
+  1. Unpack TSSR-AI-Voice-Pack-main.7z anywhere and run install.cmd.
+     It finds the game and installs the core.
+     Manual alternative: unpack the archive into the game folder.
 
-УДАЛЕНИЕ / UNINSTALL:
-  Удали папку mods/tssr-ai-voice-pack и файл environment.txt.
-  Delete the mods/tssr-ai-voice-pack folder and the environment.txt file.
+  2. For each voice pack you want: unpack it anywhere and run ITS OWN
+     install.cmd. A pack installs only its own language, atomically, one
+     after another. Manual alternative: unpack into the game folder.
 
-Совместимость / Requires: официальная игра v0.79 (The Survival of Sarah Rose).
-Проверено / Verified: 2026-10-19.
+  3. Launch the game and pick the language with the language button in
+     the menu (11 languages available).
+
+OPENING THE .7z ARCHIVES
+Windows 11 opens .7z by double click out of the box. On Windows 10 you
+need a free archiver: 7-Zip (https://7-zip.org) or WinRAR.
+
+CLOSE THE GAME BEFORE INSTALLING
+The game keeps its fonts and mod files locked. The installer waits up to
+3 minutes for it to close, then asks you to close it.
+
+WINDOWS WARNING WHEN RUNNING install.cmd
+The archive came from the internet, so Windows may show "Windows
+protected your PC" (Mark of the Web). The scripts are open source on
+GitHub, and unpacking by hand (steps 1-2 above) is an equal alternative.
+To unblock: right-click the archive or install.cmd -> Properties -> Unblock.
+
+WHERE THINGS GO
+Everything lives in one folder, mods/tssr-ai-voice-pack/, plus the
+service file environment.txt in the game folder. Other mods can sit in
+mods/ next to it.
+
+UNINSTALL
+Delete the folder mods/tssr-ai-voice-pack/ and the file environment.txt.
+Save games are not touched.
+
+REQUIRES
+The Survival of Sarah Rose v0.79 (official game).
+Verified: 2026-10-19.
 `;
 
 /** sys.exit(...) в питоне: сообщение в stderr + exit 1 (ловится тестами). */
@@ -168,9 +168,9 @@ function comparePaths(a: string, b: string): number {
   return pa.length - pb.length;
 }
 
-/** Файл в zip: opus — store (уже сжат), остальное — deflate. */
-function zipEntry(name: string, src: string): ZipEntry {
-  return { name, path: src, store: suffixOf(basename(src)).toLowerCase() === ".opus" };
+/** Запись архива: файл-источник кладётся под своим путём внутри архива. */
+function archiveEntry(name: string, src: string): ArchiveEntry {
+  return { name, path: src };
 }
 
 function suffixOf(name: string): string {
@@ -317,34 +317,34 @@ export interface BuildResult {
  * относительный путь файла — «карта путей» отсутствует, новый файл в репе
  * попадает в дистрибутив сам.
  */
-export function buildMain(outDir: string): BuildResult {
-  const name = "TSSR-AI-Voice-Pack-main.zip";
+export function buildMain(outDir: string, opts: { level?: number } = {}): BuildResult {
+  const name = "TSSR-AI-Voice-Pack-main.7z";
   const target = join(outDir, name);
-  const entries: ZipEntry[] = [];
+  const entries: ArchiveEntry[] = [];
   // Установщик «для ленивых» — в КОРНЕ архива (рядом с mods/):
   // двойной клик по install.cmd находит игру и ставит всё сам.
   for (const fn of ["install.cmd", "worker.ps1"]) {
-    entries.push(zipEntry(fn, join(PATCH, "tools", "build", "installer", fn)));
+    entries.push(archiveEntry(fn, join(PATCH, "tools", "build", "installer", fn)));
   }
   for (const [arcname, content] of [
-    ["INSTALL.txt", INSTALL_TXT],
+    ["README.txt", README_TXT],
     ["environment.txt", ENVIRONMENT_TXT],
   ] as const) {
-    entries.push({ name: arcname, data: Buffer.from(content, "utf-8"), store: false });
+    entries.push({ name: arcname, data: Buffer.from(content, "utf-8") });
   }
   // Зеркало установки: всё дерево патча кроме dev-only (MOD_EXCLUDE).
   // Шрифты ВСЕ едут в main (владелец 2026-11-12: шрифт = часть текста,
   // текст живёт в main; без шрифта иероглифы — квадраты).
   for (const p of treeFiles(PATCH, MOD_EXCLUDE)) {
-    entries.push(zipEntry(`${MOD_DIR}/${relative(PATCH, p).split(sep).join("/")}`, p));
+    entries.push(archiveEntry(`${MOD_DIR}/${relative(PATCH, p).split(sep).join("/")}`, p));
   }
   // Рантайм-каталог — артефакт сборки (каталог/ в репе нет): генератор
   // валит сборку сам, если POT/войсы не дают полные мапы.
   const payload = catalogPayload();
   for (const fn of CATALOG_RUNTIME) {
-    entries.push({ name: `${MOD_DIR}/catalog/${fn}`, data: payload[fn], store: false });
+    entries.push({ name: `${MOD_DIR}/catalog/${fn}`, data: payload[fn] });
   }
-  const { nfiles, nbytes } = writeZip(target, entries, { level: 9 });
+  const { nfiles, nbytes } = writeArchive(target, entries, { level: opts.level ?? 9 });
   return { name, target, nfiles, nbytes };
 }
 
@@ -364,15 +364,17 @@ export function buildVoice(lang: string, outDir: string): BuildResult | null {
     console.log(`  voice-${lang}: пропущен (каталог пуст — аудио ещё генерится)`);
     return null;
   }
-  const name = `TSSR-AI-Voice-Pack-voice-${lang}.zip`;
+  const name = `TSSR-AI-Voice-Pack-voice-${lang}.7z`;
   const target = join(outDir, name);
-  const entries: ZipEntry[] = [];
+  const entries: ArchiveEntry[] = [];
   for (const p of treeFiles(src)) {
-    entries.push(zipEntry(`${MOD_DIR}/ai_voice/${lang}/${relative(src, p).split(sep).join("/")}`, p));
+    entries.push(archiveEntry(`${MOD_DIR}/ai_voice/${lang}/${relative(src, p).split(sep).join("/")}`, p));
   }
-  entries.push(zipEntry("install.cmd", join(PATCH, "tools", "build", "installer", "install.cmd")));
-  entries.push(zipEntry("worker.ps1", join(PATCH, "tools", "build", "installer", "voice_install.ps1")));
-  const { nfiles, nbytes } = writeZip(target, entries);
+  entries.push(archiveEntry("install.cmd", join(PATCH, "tools", "build", "installer", "install.cmd")));
+  entries.push(archiveEntry("worker.ps1", join(PATCH, "tools", "build", "installer", "voice_install.ps1")));
+  // -mx=9: замер 2026-11-13 на реальном пакете — 17 883 317 (store) ->
+  // 17 658 043 байт (-1.3%), цена ~1 с на пакет. Жадничаем: цель — размер.
+  const { nfiles, nbytes } = writeArchive(target, entries, { level: 9 });
   return { name, target, nfiles, nbytes };
 }
 
@@ -393,10 +395,10 @@ function main(): void {
   console.log(`СОБРАНО: ${DIST}`);
   for (const { name, target, nfiles, nbytes } of results) {
     const mib = nbytes / (1 << 20);
-    const zipMib = statSync(target).size / (1 << 20);
+    const packMib = statSync(target).size / (1 << 20);
     console.log(
       `  ${name.padEnd(34)} файлов: ${String(nfiles).padStart(6)}  ` +
-        `несжатое: ${mib.toFixed(1).padStart(8)} MiB  zip: ${zipMib.toFixed(1).padStart(7)} MiB`,
+        `несжатое: ${mib.toFixed(1).padStart(8)} MiB  7z: ${packMib.toFixed(1).padStart(7)} MiB`,
     );
   }
 }
@@ -406,7 +408,7 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
   try {
     main();
   } catch (e) {
-    if (e instanceof BuildAbort) {
+    if (e instanceof BuildAbort || e instanceof ArchiveAbort) {
       console.error(e.message);
       process.exit(1);
     }

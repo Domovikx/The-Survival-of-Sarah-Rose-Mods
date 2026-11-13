@@ -1333,7 +1333,7 @@ translate ru strings:
     new "За её спиной он отклонился назад, его член скользил вдоль её ягодиц, а затем кончик опустился ниже."
 
     old "It slid down, his head pressing up against her sex."
-    new "Он соскользнул вниз, его головка прижалась к её половым органам."
+    new "Он соскользнул вниз, его головка прижалась к её киске."
 
     old "To her own burning shame, Sarah felt she was wet for him. Betrayed by her body."
     new "К своему всепоглощающему стыду Сара поняла: она влажно отреагировала на него. Её тело предало её."

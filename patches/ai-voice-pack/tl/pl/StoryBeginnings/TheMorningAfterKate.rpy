@@ -847,7 +847,7 @@ translate pl strings:
     new "Kate, widząc, że jej przyjaciółka zaczyna się uczyć, postanowiła ją nagrodzić, przyspieszając tempo."
 
     old "Sarah still felt every part of her being controlled, her hair still pulled tight, her pussy exposed and being penetrated. Holding onto the wall was the only thing she could manage."
-    new "Sarah wciąż czuła, jak każda część jej istoty pozostaje pod kontrolą; włosy nadal były mocno pociągane, a pochwa odsłonięta i penetrowana. Trzymanie się ściany było jedynym, co była w stanie zrobić."
+    new "Sarah wciąż czuła, jak każda część jej istoty jest kontrolowana; włosy miała nadal mocno pociągnięte, a cipka odsłonięta i penetrowana. Jedyną rzeczą, jaką była w stanie zrobić, było trzymanie się ściany."
 
     old "She felt Kate increase her speed, pistoning her fingers faster and deeper into Sarah."
     new "Poczuła, jak Kate przyspieszyła, wsuwając palce coraz szybciej i głębiej w nią."

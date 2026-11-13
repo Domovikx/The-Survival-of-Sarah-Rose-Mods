@@ -1783,7 +1783,7 @@ translate ru strings:
     new "Сара почувствовала, как его мощные руки обхватили её талию и слегка приподняли."
 
     old "Then he balanced her atop his cock, the tip of it pressing slightly up against her wet and eager sex."
-    new "Затем он устроил её на своём члене так, чтобы кончик его пениса слегка давил на её влажные и возбуждённые половые органы."
+    new "Затем он усадил её на кончик своего члена, который слегка прижался к её влажной и жадной киске."
 
     old "Sarah gripped his massive shoulders for balance."
     new "Сара схватилась за его огромные плечи, чтобы удержаться в равновесии."
@@ -1864,7 +1864,7 @@ translate ru strings:
     new "Постепенно их тела подстроились под ритм друг друга."
 
     old "Sarah spread her legs further, grinding her sex up against his mound."
-    new "Сара развела ноги шире, прижимаясь своим половым органом к его члену."
+    new "Сара развела ноги ещё шире и начала тереться киской о его лобок."
 
     old "Jaeid took her deeper and faster, matching the pace of her fevered cries."
     new "Джаид проникал в неё глубже и быстрее, подстраиваясь под темп её лихорадочных криков."

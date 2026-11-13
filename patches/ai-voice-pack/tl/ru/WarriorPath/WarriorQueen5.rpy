@@ -895,7 +895,7 @@ translate ru strings:
     new "Я был дураком, думая, что смогу уйти отсюда..."
 
     old "Sarah began to thrust her hips, sliding her wet sex across the length of his shaft."
-    new "Сара начала толкать бёдрами, скользя своим влажным половым органом по всей длине его члена."
+    new "Сара начала толкать бёдрами, скользя своей мокрой киской по всей длине его члена."
 
     old "She begged him with her body to take her."
     new "Она умоляла его своим телом взять её."
@@ -916,7 +916,7 @@ translate ru strings:
     new "Сара не гнушалась молить — уж если это был он."
 
     old "She felt his fingers digging into her skin, the tip of his cock pressing up against her sex."
-    new "Она почувствовала, как его пальцы впились в её кожу, а кончик члена прижался к её половым органам."
+    new "Она почувствовала, как его пальцы впились в её кожу, а кончик члена прижался к её киске."
 
     old "Ever so slightly, he slid inside of her, still denying her the length of him."
     new "Он едва заметно скользнул в неё, и всё так же не давая ей всей своей длины."

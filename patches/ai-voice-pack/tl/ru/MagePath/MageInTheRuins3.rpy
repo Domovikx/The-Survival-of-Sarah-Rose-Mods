@@ -1543,7 +1543,7 @@ translate ru strings:
     new "И тут же Аларик ускорил темп, беря её сильнее и быстрее."
 
     old "The sudden rush pushed over the edge, the orgasm surged up from between her legs, rushing out across every limb."
-    new "Внезапный напор вывел её за пределы — оргазм взметнулся от промежности и разлился по всем конечностям."
+    new "Внезапный напор вывел её за пределы — оргазм взметнулся между ног и разлился по всем конечностям."
 
     old "Sarah felt her entire being, burned in maddening bright light."
     new "Сара почувствовала, как всё её существо сгорает в безумно ярком свете."
@@ -2971,7 +2971,7 @@ translate ru strings:
     new "Пока её глаза скользили вниз, она увидела ту часть его тела, которую не могла отрицать как впечатляющую."
 
     old "Belmont's cock stood erect."
-    new "Член Бельмонта стоял в полной эрекции."
+    new "Член Бельмонта стоял напряжённо."
 
     old "Impossibly large, it put most men to shame, a fact he probably quite enjoyed."
     new "Невероятно огромный — он заставлял стыдиться большинство мужчин, и этот факт ему, вероятно, вполне нравился."

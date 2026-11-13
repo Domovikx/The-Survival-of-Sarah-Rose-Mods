@@ -118,7 +118,7 @@ translate ru strings:
     new "Вскоре Кейт прибежала обратно."
 
     old "Come, let's go. The ship is waiting for us."
-    new "Пойдём, уходи. Корабль ждёт нас."
+    new "Давай, пойдём. Корабль ждёт нас."
 
     old "Kate reached out her hand, and instinctively, Sarah grabbed it."
     new "Кейт протянула руку, и Сара инстинктивно схватила её."

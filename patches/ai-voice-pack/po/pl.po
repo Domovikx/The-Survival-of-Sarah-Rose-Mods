@@ -10,11 +10,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-# TSSR PL translation — скелет из po/template.pot (Polski).
-# msgstr "" = не переведено; заполняется построчно переводчиком.
-msgid ""
-msgstr "Project-Id-Version: TSSR-Mods 1.0\nPO-Revision-Date: 2026-10-23 00:00+0000\nLanguage: pl\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-
 msgctxt "speaker:Narrator"
 msgid "The Survival of Sarah Rose is an epic fantasy game. Production on TSSR is still ongoing."
 msgstr "Gra The Survival of Sarah Rose to epicka fantasy. Produkcja TSSR wciąż trwa."
@@ -4107,9 +4102,10 @@ msgctxt "speaker:Narrator"
 msgid "Kate, seeing that her friend was starting to learn, decided to reward her by picking up the pace."
 msgstr "Kate, widząc, że jej przyjaciółka zaczyna się uczyć, postanowiła ją nagrodzić, przyspieszając tempo."
 
+# changed
 msgctxt "speaker:Narrator"
 msgid "Sarah still felt every part of her being controlled, her hair still pulled tight, her pussy exposed and being penetrated. Holding onto the wall was the only thing she could manage."
-msgstr "Sarah wciąż czuła, jak każda część jej istoty pozostaje pod kontrolą; włosy nadal były mocno pociągane, a pochwa odsłonięta i penetrowana. Trzymanie się ściany było jedynym, co była w stanie zrobić."
+msgstr "Sarah wciąż czuła, jak każda część jej istoty jest kontrolowana; włosy miała nadal mocno pociągnięte, a cipka odsłonięta i penetrowana. Jedyną rzeczą, jaką była w stanie zrobić, było trzymanie się ściany."
 
 msgctxt "speaker:Narrator"
 msgid "She felt Kate increase her speed, pistoning her fingers faster and deeper into Sarah."
@@ -60711,9 +60707,10 @@ msgctxt "speaker:Narrator"
 msgid "Now, her mind had become present again, and she found it often wandering towards the tribesman soldier."
 msgstr ""
 
+# changed
 msgctxt "speaker:Narrator"
 msgid "When he would come to her, her heart ran fast in her chests. When he failed to show, she felt herself nearing to tears."
-msgstr "Gdy przychodził do niej, jej serce waliło w piersi. Gdy się nie pojawiała, czuła, że zbliża się do łez."
+msgstr "Kiedy do niej przychodził, jej serce zaczynało szybko bić w piersi. Kiedy się nie pojawiał, czuła, jak zbliża ją to do łez."
 
 msgctxt "speaker:Narrator"
 msgid "Her love for him had come to her in subtle ways, and she was surprised even when she finally dared to admit it to herself."
@@ -121199,9 +121196,10 @@ msgctxt "speaker:Sarah"
 msgid "Not much glory to be had here."
 msgstr ""
 
+# changed
 msgctxt "menu"
 msgid "I once blew an old sailor"
-msgstr "Kiedyś uprawiałem seks z starym żeglarzem"
+msgstr "Kiedyś dałam mineta staremu żeglarzowi"
 
 msgctxt "speaker:Sarah"
 msgid "I once blew an old sailor."

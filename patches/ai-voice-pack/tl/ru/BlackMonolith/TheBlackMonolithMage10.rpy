@@ -502,13 +502,13 @@ translate ru strings:
     new "Они обвивали и сплетались вокруг каждой части её тела."
 
     old "Her ankles. Legs. Her sex. Around her waist. Up her stomach. Coiling round her neck. Her arms. Wrists."
-    new "Её лодыжки. Ноги. Половые органы. Вокруг талии. Вверх по животу. Обвивая шею. Руки. Запястья."
+    new "Её лодыжки. Ноги. Киска. Вокруг талии. Вверх по животу. Обвивая шею. Руки. Запястья."
 
     old "No part of her was spared, and no part of herself she ever tried to hide."
     new "Ни одна часть её тела не осталась в покое, и ни одной части самой себя она так и не попыталась скрыть."
 
     old "Slowly, the coils tightened around her body, as the flower pressed harsher upon her sex."
-    new "Постепенно кольца стали сжиматься вокруг её тела, а цветок давил всё сильнее на её половые органы."
+    new "Постепенно кольца стали сжиматься вокруг её тела, а цветок давил всё сильнее на её киску."
 
     old "The tightening sensation softly choked out the air from her lungs."
     new "Усиливающееся сжатие мягко вытесняло воздух из её лёгких."
@@ -568,7 +568,7 @@ translate ru strings:
     new "Приподнятая немного вверх, её ягодицы были широкими и открытыми — точно так же, как и остальная часть её тела."
 
     old "When the tip of the tendril found its way to the entrance of her ass, Sarah only winced."
-    new "Когда кончик щупальца добрался до входа в её анус, Сара лишь поморщилась."
+    new "Когда кончик щупальца добрался до входа в её задницу, Сара лишь поморщилась."
 
     old "The root around her neck tightened further, and her cry of pain or moan of pleasure was choked out in her throat."
     new "Корень вокруг её шеи сжался ещё сильнее, и крик боли или стон наслаждения застрял у неё в горле."
@@ -595,7 +595,7 @@ translate ru strings:
     new "Снаружи — на её коже. Внутри — во всех входах."
 
     old "More of the liquid spilled. Some of it down her throat. Inside of her ass. Into her womb."
-    new "Ещё больше жидкости вылилось наружу. Часть из неё стекала по её горлу. Другая часть заполнила её задний проход. И ещё одна — вошла в её матку."
+    new "Ещё больше жидкости вылилось наружу. Часть из неё стекала по её горлу. Другая часть заполнила её задницу. И ещё одна — вошла в её матку."
 
     old "So much of it that some of it began to spill out, painting her skin in its white substance."
     new "Такого много, что часть жидкости начала вытекать наружу, окрашивая её кожу в белый цвет."
@@ -925,7 +925,7 @@ translate ru strings:
     new "Некоторое время ничего не происходило."
 
     old "Round and round she went, but the edge of her being would not budge."
-    new "Онаวนилась по кругу, но граница её существа не двигалась."
+    new "Она кружилась по кругу, но граница её существа не двигалась."
 
     old "But with each cycle of her mind, the world outside of herself seemed to fade."
     new "Но с каждым новым циклом мыслей казалось, что мир за пределами её самого себя постепенно исчезает."
@@ -1657,7 +1657,7 @@ translate ru strings:
     new "Ох, боги, прости."
 
     old "Sarah saw her looking directly at her erection."
-    new "Сара увидела, как она смотрит прямо на её эрекцию."
+    new "Сара увидела, что та смотрит прямо на её член."
 
     old "Looking at Samayra and her beautiful frame, Sarah found herself distracted."
     new "Глядя на Самайру и её прекрасное тело, Сара обнаружила, что её внимание рассеялось."
@@ -1723,7 +1723,7 @@ translate ru strings:
     new "Сара почувствовала, как Самайра разводит ноги в стороны, позволяя ей подобраться ближе."
 
     old "If before her member had been hard, the erection now seemed almost painful to her."
-    new "Если раньше её член был твёрдым, то теперь эрекция казалась ей почти мучительной."
+    new "Если до этого её член был твёрдым, то теперь эрекция казалась ей почти болезненной."
 
     old "Every part of her, including the new, was drawn to Samayra."
     new "Каждая её часть, включая новую, была притянута к Самайре."
@@ -2245,7 +2245,7 @@ translate ru strings:
     new "Несмотря на то что оно отступило от неё, Сара почувствовала жжение."
 
     old "Looking down her body, she suddenly saw something forming, right above the mound of her sex."
-    new "Оглядев своё тело, она вдруг увидела, как что-то начало формироваться прямо над её половыми органами."
+    new "Оглядев своё тело, она вдруг увидела, как что-то начало формироваться прямо над её киской."
 
     old "As the lines took form on her body, they burned with a sharp intensity, like a knife cutting into her."
     new "По мере того как линии обретали форму на её теле, они горели с острым напряжением, словно нож, вонзающийся в неё."
@@ -2326,13 +2326,13 @@ translate ru strings:
     new "Хватая её сзади, оно развело её ноги и заняло позицию под ней."
 
     old "Sarah could see down past her breast and stomach, something approaching a male's member, rising up."
-    new "Сара видела вниз, мимо своей груди и живота — что-то, похожее на мужской половой орган, поднималось к ней."
+    new "Сара видела вниз, мимо своей груди и живота — что-то, похожее на член, поднималось к ней."
 
     old "The pain still rocked her."
     new "Боль всё ещё сотрясала её."
 
     old "Then, as the creature lowered her onto its erection, pressing up against her sex, Sarah felt another sensation."
-    new "Затем, когда существо уложило её на свою эрекцию и прижалось к её половым органам, Сара ощутила нечто ещё."
+    new "Затем, когда существо уложило её на свой член и прижалось к её киске, Сара ощутила ещё одно чувство."
 
     old "It was like soothing salve spread across a burn. The pain swiftly fading."
     new "Это было похоже на успокаивающий бальзам, нанесённый на ожог. Боль быстро утихала."

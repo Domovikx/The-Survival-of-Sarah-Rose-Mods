@@ -784,10 +784,10 @@ translate ru strings:
     new "Я не хочу обижать твои навыки минета — они ведь довольно неплохие. Но сегодня твой рот меня не интересует."
 
     old "Sarah could feel her own sex burn, eager for the same thing he was after."
-    new "Сара чувствовала, как её собственная промежность горит от желания получить то же, чего хотел он."
+    new "Сара чувствовала, как её плоть между ног горит от желания получить то же, чего хотел он."
 
     old "She watched as he leaned over, laying down on his back on the ground, his erection stabbing upright in to the air."
-    new "Она смотрела, как он наклонился и лёг на спину на пол, а его эрекция выпрямилась в воздух."
+    new "Она смотрела, как он наклонился и лёг на спину на землю, а его член торчал прямо вверх."
 
     old "He grabbed one of her legs, lifting her over him and bringing her down on his legs."
     new "Он схватил одну из её ног, поднял её над собой и опустил на свои ноги."

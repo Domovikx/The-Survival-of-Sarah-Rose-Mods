@@ -343,7 +343,7 @@ translate ru strings:
     new "Сара стиснула зубы, почувствовав, как он нажимает кончиком своего члена между её ног."
 
     old "To her own surprise, she felt the tip of him slide up and down her sex with ease."
-    new "К своему удивлению, она почувствовала, как его кончик легко скользит вверх-вниз по её половым органам."
+    new "К своему удивлению, она почувствовала, как его кончик легко скользит вверх-вниз между ног."
 
     old "Wet, she realized."
     new "Она поняла: влажно."
@@ -427,7 +427,7 @@ translate ru strings:
     new "Над ней она видела его блестящий член, всё ещё опухший."
 
     old "Between her legs she could feel her sex pulse and his seed sliding down her upper thighs."
-    new "Между ног она чувствовала пульсацию своего полового органа и сперму мужчины, стекающую по её бедрам."
+    new "Между ног она чувствовала пульсацию киски и сперму мужчины, стекающую по её бедрам."
 
     old "Her fingers seized on some of the strings and Sarah pulled out the slave gear from the sand."
     new "Её пальцы нащупали верёвочки, и Сара вытащила из песка рабское снаряжение."

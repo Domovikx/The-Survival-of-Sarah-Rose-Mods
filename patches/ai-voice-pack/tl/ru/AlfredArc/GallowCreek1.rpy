@@ -1228,7 +1228,7 @@ translate ru strings:
     new "И с этими словами он наклонился вперёд."
 
     old "Sarah felt the tip of his cock press up against her sex."
-    new "Сара почувствовала, как кончик его члена прижался к её половым органам."
+    new "Сара почувствовала, как кончик его члена прижался к её киске."
 
     old "She moaned softly at the suddenly erotic jolts."
     new "Она тихо застонала от внезапно возникших эротических волнений."
@@ -3352,7 +3352,7 @@ translate ru strings:
     new "Сара почувствовала, как кровать задрожала, когда её будущий муж занял позицию позади неё."
 
     old "From the edges of her sight, she could see his swaying erection."
-    new "Из краев поля зрения она видела его раскачивающуюся эрекцию."
+    new "Из краев поля зрения она видела его качающийся член."
 
     old "You know, I actually liked you."
     new "Знаешь, а ты мне на самом деле нравилась."
@@ -3475,7 +3475,7 @@ translate ru strings:
     new "Пронзающая боль, которая никогда не утихала, лишь углубляясь до непостижимых пределов."
 
     old "It was a long time and much more spit before he had even managed to fit all of himself inside of her ass."
-    new "Прошло много времени, и потребовалось гораздо больше слюны, прежде чем он вообще смог полностью проникнуть в её задний проход."
+    new "Прошло много времени, и потребовалось гораздо больше слюны, прежде чем он вообще смог полностью проникнуть в её задницу."
 
     old "She could never have imagined him fitting."
     new "Она и представить не могла, что он сможет войти."
@@ -3565,7 +3565,7 @@ translate ru strings:
     new "И она отдавала ему это каждую ночь."
 
     old "For more than a week he had ridden her ass when she finally broke."
-    new "Больше недели он трахал её в задний проход, пока она наконец не сломалась."
+    new "Больше недели он трахал её в жопу, пока она наконец не сломалась."
 
     old "Sarah had exhausted the last of her tricks to get him to change how he took her."
     new "Сара исчерпала все свои уловки, чтобы заставить его измениться в том, как он брал её."

@@ -12,6 +12,7 @@ import { readFileSync } from "node:fs";
 import { parsePo } from "../../../.opencode/skills/renpy-po/po_core.mts";
 import { SPEAKER_GENDER } from "../../../patches/ai-voice-pack/casts/gender.mts";
 
+import { buildNameCanon } from "./judge_client.mts";
 import { commonRun, contentWords, sharePhrase } from "./review_common_run.mts";
 
 const LANG = process.argv[2] ?? "ru"; // языковой аргумент: node translate_review.mts [lang]
@@ -52,16 +53,8 @@ try {
   /* не git */
 }
 
-// Канон имён из строк speaker-name.
-const NAME_CANON = new Map<string, string>();
-for (const e of entries) {
-  if (e.msgctxt === "speaker-name" && e.msgid && e.msgstr.trim() && !NAME_CANON.has(e.msgid)) {
-    NAME_CANON.set(e.msgid, e.msgstr.trim());
-  }
-}
-// Как в раннере: канон Belmont — под неочевидным ключом "Captain Belmont"
-// (аудит 2026-11-04); Sigmund->Зигмунд уже в NAME_CANON.
-NAME_CANON.set("Belmont", "Бельмонт");
+// Канон имён — общий построитель (judge_client): один источник для всех скриптов.
+const NAME_CANON = buildNameCanon(entries);
 const CANON_WORDS = new Set<string>();
 for (const v of NAME_CANON.values()) for (const part of v.split(" ")) CANON_WORDS.add(part);
 const NAME_STOP = new Set([

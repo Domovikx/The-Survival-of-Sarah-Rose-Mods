@@ -778,7 +778,7 @@ translate ru strings:
     new "Я... я выполню свою часть..."
 
     old "Sarah watched as Dalia raised her behind, exposing her sex to the demanding creature."
-    new "Сара смотрела, как Далия приподняла зад, обнажив свои половые органы перед требовательным существом."
+    new "Сара смотрела, как Далия приподняла зад, обнажив свою плоть перед требовательным существом."
 
     old "Its wicked grin appeared again."
     new "Его дьявольская ухмылка снова появилась."

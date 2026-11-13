@@ -955,7 +955,7 @@ translate ru strings:
     new "Что бы это ни было, он хотя бы на это дал ей разрешение. Она не собиралась упускать такую доброту."
 
     old "Sarah reached down with one hand, tracing two fingers down her body as she made her way towards her sex."
-    new "Сара потянулась вниз одной рукой, проводя двумя пальцами по своему телу в направлении своих половых органов."
+    new "Сара потянулась вниз одной рукой, проводя двумя пальцами по своему телу к своей киске."
 
     old "When she pressed her two fingers inside of herself, they slid in without so much as a hint of resistance."
     new "Когда она ввела два пальца внутрь себя, они скользнули без малейшего сопротивления."

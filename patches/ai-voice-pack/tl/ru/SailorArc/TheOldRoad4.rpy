@@ -847,7 +847,7 @@ translate ru strings:
     new "В таком случае, я позабочусь о том, чтобы воспользоваться каждой из твоих дыр, прежде чем мы расстанемся."
 
     old "Sarah cried out as she felt his thumb dig into her asshole."
-    new "Сара вскрикнула, когда почувствовала, как его большой палец вошёл ей в задний проход."
+    new "Сара вскрикнула, когда почувствовала, как его большой палец вошёл ей в жопу."
 
     old "She felt him twist and bend his finger, Sarah's body twisting in response to his every motion."
     new "Она почувствовала, как он скручивает и изгибает палец, а тело Сары откликалось на каждое его движение."

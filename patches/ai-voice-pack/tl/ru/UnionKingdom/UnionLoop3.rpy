@@ -304,7 +304,7 @@ translate ru strings:
     new "Опустив взгляд ниже груди, она увидела его огромный эрект, раскачивающийся между её ног."
 
     old "His shaft grazed up against the outside of her sex."
-    new "Его ствол коснулся внешней стороны её влагалища."
+    new "Его ствол коснулся её киски."
 
     old "How...how long?"
     new "Как... как долго?"

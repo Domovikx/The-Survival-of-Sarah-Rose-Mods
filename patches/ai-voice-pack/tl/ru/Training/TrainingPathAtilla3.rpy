@@ -511,7 +511,7 @@ translate ru strings:
     new "Сара чувствовала, как тело предает само себя: она высунула язык, чтобы встретиться с языком Атиллы."
 
     old "Between her legs, she could feel Atilla's rod. She began to buck, pushing her wet sex across his shaft."
-    new "Между ног она чувствовала член Атиллы. Она начала дёргаться, толкая свой влажный половой орган по его стволу."
+    new "Между ног она чувствовала член Атиллы. Она начала дёргаться, толкая свою мокрую киску по его стволу."
 
     old "She moaned into Atilla's ear, urging him to take."
     new "Она застонала в ухо Атилле, призывая его взять её."

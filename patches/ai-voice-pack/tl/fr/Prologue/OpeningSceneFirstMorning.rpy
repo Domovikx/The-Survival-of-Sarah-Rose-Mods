@@ -46,7 +46,7 @@ translate fr strings:
     new "Elle s'observe dans le miroir en essayant une série de robes différentes."
 
     old "Sarah feels the spectre of her mother, advising her with every choice."
-    new "Sarah sent le spectre de sa mère, lui donnant des conseils à chaque choix."
+    new "Sarah ressent l’ombre de sa mère, qui la conseille à chaque décision."
 
     old "\"Ooh no, not this one. Try that one\", she would say when Sarah was still young."
     new "\"Oh non, pas celle-ci, essaie celle-là\", dirait-elle lorsque Sarah était encore jeune."

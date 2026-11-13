@@ -10,11 +10,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-# TSSR JA translation — скелет из po/template.pot (日本語).
-# msgstr "" = не переведено; заполняется построчно переводчиком.
-msgid ""
-msgstr "Project-Id-Version: TSSR-Mods 1.0\nPO-Revision-Date: 2026-10-23 00:00+0000\nLanguage: ja\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\n"
-
 msgctxt "speaker:Narrator"
 msgid "The Survival of Sarah Rose is an epic fantasy game. Production on TSSR is still ongoing."
 msgstr "『The Survival of Sarah Rose』は壮大なファンタジーゲームです。TSSRの制作はまだ進行中です。"
@@ -2815,9 +2810,10 @@ msgctxt "speaker:Narrator"
 msgid "Sarah's back arched back, and forth, begging with her body for Kate to keep going, and Kate obliged."
 msgstr "サラの背中は前後に反り、体でケイトに続けるよう懇願していた。そしてケイトはそれに応えた。"
 
+# changed
 msgctxt "speaker:Narrator"
 msgid "Having her hands between the princess' legs, making her moan and writhe around, feeling her grind into her, begging for more..."
-msgstr "彼女の両手を姫の脚の間に入れ、彼女を喘がせ、身をよじらせさせながら、自分の方へと押し付けられる感覚を楽しんでいる…"
+msgstr "姫の両脚の間に手を差し込み、彼女を喘がせ、身をよじらせるようにして、彼女が自分に擦り寄ってくるのを感じながら、もっとと懇願するのを聞く……"
 
 msgctxt "speaker:Narrator"
 msgid "For Kate this was a pleasure far deeper than Sarah's inexperienced attempts to please her."
@@ -3591,9 +3587,10 @@ msgctxt "speaker:Kravel"
 msgid "Those are the rumors, my lord. We do not yet have enough evidence to suggest that he has truly united them."
 msgstr "それが噂というものですよ、我が主よ。彼が本当に彼らを統一したと示唆する十分な証拠はまだ我々にはありません。"
 
+# changed
 msgctxt "speaker:Kravel"
 msgid "High General Barion is an army man, so he loves to imagine every enemy an existential threat to our nation. It makes him feel needed."
-msgstr "バルيون将軍は軍人ですからね。だから敵の一人一人を国家にとっての存亡の危機だと想像するのが好きなんです。そうすれば自分が必要とされていると感じられるから。"
+msgstr "バリオン将軍は軍人ですからね。だから敵の一人一人を国家にとっての存亡の危機だと想像するのが好きなんです。そうすれば自分が必要とされていると感じられるから。"
 
 msgctxt "speaker:Narrator"
 msgid "Thomas considered what he was hearing."
@@ -4075,9 +4072,10 @@ msgctxt "speaker:Narrator"
 msgid "Sarah kept her hands planted on the wall, and tried to bend deeper, bending her body to Kate's intentions."
 msgstr "サラは壁に両手を押し付けたまま、さらに深く身をかがめようとした。ケイトの意図に合わせて体を曲げているのだ。"
 
+# changed
 msgctxt "speaker:Narrator"
 msgid "Kate began to slowly push two fingers into Sarah's sex."
-msgstr "ケイトはゆっくりと二本の指をサラの性器へと押し込み始めた。"
+msgstr "ケイトはゆっくりと二本の指をサラの秘部へと押し込み始めた。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah tried to lean back into Kate, begging her to go faster."
@@ -4107,9 +4105,10 @@ msgctxt "speaker:Narrator"
 msgid "Kate, seeing that her friend was starting to learn, decided to reward her by picking up the pace."
 msgstr "ケイトは、友人であるサラが学び始めているのを見て、ペースを上げて彼女に報いることにした。"
 
+# changed
 msgctxt "speaker:Narrator"
 msgid "Sarah still felt every part of her being controlled, her hair still pulled tight, her pussy exposed and being penetrated. Holding onto the wall was the only thing she could manage."
-msgstr "サラはなおも自身の存在のすべてが支配されているのを感じていた。髪はまだ固く引きつられ、性器はむき出しのまま貫かれていた。壁にしがみつけることだけが、彼女にできた唯一のことだった。"
+msgstr "サラは依然として体の隅々まで支配されているのを感じていた。髪はまだきつく引かれ、秘部は露わになったまま貫かれていた。壁にしがみつけることだけが、彼女にできる唯一のことだった。"
 
 msgctxt "speaker:Narrator"
 msgid "She felt Kate increase her speed, pistoning her fingers faster and deeper into Sarah."
@@ -121199,9 +121198,10 @@ msgctxt "speaker:Sarah"
 msgid "Not much glory to be had here."
 msgstr ""
 
+# changed
 msgctxt "menu"
 msgid "I once blew an old sailor"
-msgstr "かつて、老いた水兵とセックスした"
+msgstr "昔、ある老いた船員にフェラをしてやったことがあるんだ。"
 
 msgctxt "speaker:Sarah"
 msgid "I once blew an old sailor."

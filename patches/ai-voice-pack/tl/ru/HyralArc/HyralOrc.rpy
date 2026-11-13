@@ -916,7 +916,7 @@ translate ru strings:
     new "Какой жестокий мир, в котором боги сочли нужным так благословить орков."
 
     old "As the sex endured, Sarah felt the sweat pour down her body from all her efforts."
-    new "Пока продолжался половой акт, Сара чувствовала, как пот обильно течёт по её телу от огромных усилий."
+    new "Пока продолжался секс, Сара чувствовала, как пот обильно течёт по её телу от огромных усилий."
 
     old "A strange sensation after days in the frigid cold."
     new "Странное ощущение после дней в ледяном холоде."

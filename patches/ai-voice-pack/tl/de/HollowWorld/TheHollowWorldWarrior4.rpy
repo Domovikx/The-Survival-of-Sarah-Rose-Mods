@@ -22,7 +22,7 @@ translate de strings:
     new "Ich tötete einen jungen Mann"
 
     old "I once blew an old sailor"
-    new "Ich habe schon mal mit einem alten Seemann geschlafen."
+    new "Ich hab mal einem alten Seemann einen geblasen."
 
     old "I once had sex with an orc"
     new "Ich habe mal mit einem Orc geschlafen."

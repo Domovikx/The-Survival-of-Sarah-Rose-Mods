@@ -781,7 +781,7 @@ translate ru strings:
     new "В Далии не было ни малейшего колебания — скорее, наоборот. Казалось, она была почти в делирии от предвкушения."
 
     old "The daemon roared as it came, it's voice crashing against the stone walls."
-    new "Демон взревел во время эякуляции, его голос обрушился на каменные стены."
+    new "Демон взревел в момент оргазма, его голос обрушился на каменные стены."
 
     old "Ropes of semen shot out from the head of its cock, spraying against Dalia's face."
     new "Пучки спермы вырвались из головки его члена, брызгая на лицо Далии."

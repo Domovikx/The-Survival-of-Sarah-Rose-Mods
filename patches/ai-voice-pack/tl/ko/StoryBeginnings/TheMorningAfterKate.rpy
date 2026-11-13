@@ -823,7 +823,7 @@ translate ko strings:
     new "사라는 양손을 벽에 단단히 짚은 채, 케이트의 의도에 맞춰 몸을 더 깊이 구부리려 애썼다."
 
     old "Kate began to slowly push two fingers into Sarah's sex."
-    new "케이트는 두 손가락을 천천히 사라의 성기 속으로 밀어 넣기 시작했다."
+    new "케이트는 두 손가락을 천천히 사라의 보지 안으로 밀어 넣기 시작했다."
 
     old "Sarah tried to lean back into Kate, begging her to go faster."
     new "사라는 케이트에게 더 깊이 기대며 그녀가 더 빨리 해달라고 애원했다."
@@ -847,7 +847,7 @@ translate ko strings:
     new "케이트는 친구가 점차 상황을 받아들이기 시작하는 것을 보고 보상으로 속도를 높여보기로 결심했다."
 
     old "Sarah still felt every part of her being controlled, her hair still pulled tight, her pussy exposed and being penetrated. Holding onto the wall was the only thing she could manage."
-    new "사라는 여전히 자신의 모든 존재가 통제당하는 것을 느꼈다. 머리카락은 여전히 단단히 당겨져 있었고, 그녀의 성기는 드러난 채 삽입당하고 있었다. 벽을 붙잡는 것만이 그녀가 해낼 수 있는 유일한 일이었다."
+    new "사라는 여전히 온몸이 제압당한 채, 머리카락은 꽉 묶인 상태였고 보지는 드러난 채 삽입당하고 있었다. 벽을 붙잡는 것만이 그녀가 할 수 있는 유일한 행동이었다."
 
     old "She felt Kate increase her speed, pistoning her fingers faster and deeper into Sarah."
     new "그녀는 케이트가 속도를 높이며 손가락을 더 빠르고 깊게 사라 안으로 밀어 넣는 것을 느꼈다."
@@ -889,7 +889,7 @@ translate ko strings:
     new "사라는 입안에서 부드럽고 레이스 같은 질감을 느끼며 그것이 혀를 압박하는 것을 느꼈다."
 
     old "Kate had shoved Sarah's underwear into her mouth as an improvised gag."
-    new "케이트는 사라의 속옷을 즉석에서 구슬로 삼아 그녀의 입에 억지로 밀어 넣었다."
+    new "케이트는 사라의 속옷을 즉석에서 만든 재갈로 그녀의 입에 쑤셔 넣었다."
 
     old "The realization drove Sarah mad. Combined with Kate's continued fingering, and being free to moan wildly; Sarah lost herself completely."
     new "이 깨달음은 사라를 미치게 만들었다. 케이트가 계속해서 손가락으로 자극하는 것과 함께, 거침없이 신음할 수 있게 되자 사라는 완전히 자신을 잃어버렸다."

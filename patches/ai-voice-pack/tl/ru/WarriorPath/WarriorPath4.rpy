@@ -1537,7 +1537,7 @@ translate ru strings:
     new "Вскоре она почувствовала знакомую судорогу собственного тела, повторённую в теле Самайры."
 
     old "Samayra's legs tightened around hers, she drove her sex forward, her nails cutting deep into Sarah's back so nearly drawing blood."
-    new "Ноги Самайры обхватили ноги Сары; она толкнула свой половой орган вперёд, а её ногти глубоко врезались в спину Сары, почти до крови."
+    new "Ноги Самайры обхватили ноги Сары; она толкнула киску вперёд, а её ногти глубоко врезались в спину Сары, почти до крови."
 
     old "And she came."
     new "И она кончила."
@@ -1654,13 +1654,13 @@ translate ru strings:
     new "Она почувствовала, как её дыхание стало тяжёлым от собственных усилий."
 
     old "Her sex was not yet fully wet, but she could feel herself grow more willing with each motion."
-    new "Её половые органы ещё не были полностью влажными, но с каждым движением она чувствовала, как становится всё более готовой."
+    new "Её киска ещё не была до конца влажной, но она чувствовала, как с каждым движением становилась всё более готовой."
 
     old "Pressing another finger inside herself, increasing the pressure, Sarah could suddenly feel her insides more intimately."
     new "Вставив ещё один палец внутрь себя и усилив давление, Сара вдруг смогла гораздо острее прочувствовать всё внутри."
 
     old "Her fingers pressing up against the edges of her sex, and her pussy pressing back up against her fingers, almost eager to draw herself further in."
-    new "Её пальцы давили на края её половых органов, а влагалище отвечало этим давлением, почти жадно стремясь быть втянутым ещё глубже."
+    new "Её пальцы давили на края киски, а сама киска отвечала на это давлением пальцев, словно с нетерпением желая затянуть их ещё глубже."
 
     old "Cupping her hand, Sarah droved her fingers further inside herself and pressed her palm up against her clit."
     new "Обхватив себя рукой, Сара ввела пальцы ещё глубже и прижала ладонь к своему клитору."
@@ -2365,7 +2365,7 @@ translate ru strings:
     new "Она с нетерпением ждала, когда он даст ей дальнейшие указания."
 
     old "With her ass up and sex now exposed to him, she waited for him to press his cock into her."
-    new "С попой поднятой и половыми органами теперь открытыми для него, она ждала, когда он введёт свой член в неё."
+    new "С поднятой задницей и уже открытой киской она ждала, когда он введёт свой член в неё."
 
     old "She could feel it. His closeness. The tip of his cock, pressed just gently up against her opening."
     new "Она чувствовала это. Его близость. Кончик его члена, лишь слегка прижатый к её отверстию."
@@ -2812,7 +2812,7 @@ translate ru strings:
     new "Сара чувствовала, как женщина схватила её за ноги и развела их в стороны."
 
     old "As the woman leaned in, she softly kissed Sarah on her mound, inches above her sex."
-    new "Пока женщина наклонялась, она мягко поцеловала Сару в лон, всего в нескольких дюймах от её половых органов."
+    new "Когда женщина наклонилась, она мягко поцеловала Сару в лобок — всего в нескольких дюймах от её киски."
 
     old "Sarah threw her head back, letting out a heavy breath."
     new "Сара откинула голову назад и тяжело выдохнула."
@@ -2839,7 +2839,7 @@ translate ru strings:
     new "Как бы сильно Сара ни тянула её к себе, она чувствовала, что женщина сдерживается, отказывая ей в том, чего та так жаждала."
 
     old "Sarah could feel her entire body move, trying to press her sex forward, but no matter what she did, the woman kept to her own pace."
-    new "Сара чувствовала, как всё её тело напрягалось, пытаясь толкнуть свой половой орган вперёд, но что бы она ни делала, женщина продолжала двигаться в собственном темпе."
+    new "Сара чувствовала, как всё её тело напрягалось, пытаясь толкнуть киску вперёд, но что бы она ни делала, женщина продолжала двигаться в собственном темпе."
 
     old "Please, don't be so cruel..."
     new "Пожалуйста, не будь такой жестокой..."
@@ -2854,7 +2854,7 @@ translate ru strings:
     new "Это произвело нужный эффект."
 
     old "Sarah could feel the woman lean forward, pressing her lips firmly on her vagina."
-    new "Сара чувствовала, как женщина наклонилась вперёд, твёрдо прижимаясь губами к её влагалищу."
+    new "Сара чувствовала, как женщина наклонилась вперёд, твёрдо прижимаясь губами к её киске."
 
     old "Another, louder moan slipped past Sarah's lips, unable to be surpressed. Finally she was getting what she wanted."
     new "Ещё один, более громкий стон сорвался с губ Сары — его было невозможно подавить. Наконец-то она получала то, чего так хотела."
@@ -2866,7 +2866,7 @@ translate ru strings:
     new "Женщина с жадностью исследовала её тело."
 
     old "Sarah could feel the woman's tongue enter deep inside of her, only to pull back and slide across her sex."
-    new "Сара чувствовала, как язык женщины проник глубоко внутрь неё, лишь чтобы затем отстраниться и скользнуть по её половым органам."
+    new "Сара чувствовала, как язык женщины проник глубоко внутрь неё, лишь чтобы затем отстраниться и скользнуть по её киске."
 
     old "When she neared the top, Sarah could feel her press her tongue firmly, yet with a gentleness, against her clit."
     new "Когда она приблизилась к верхушке, Сара почувствовала, как та твёрдо, но нежно прижала язык к её клитору."
@@ -2884,7 +2884,7 @@ translate ru strings:
     new "Сидя на краю кровати и глядя, как женщина опускается между её ног, Сара почувствовала, как внутри неё разгорается жар."
 
     old "She began grinding her sex back and forth, pressing it deeper into the woman's mouth, urging her to take her further."
-    new "Она начала тереться своим половым органом взад-вперёд, вталкивая его всё глубже во рот женщины и побуждая её взять ещё больше."
+    new "Она начала тереться киской взад-вперёд, вталкивая её всё глубже в рот женщины и побуждая её взять ещё больше."
 
     old "The waves of pleasure roiling through her body began to grow, each wave building on the next, until Sarah could feel the waves crash over her."
     new "Волны удовольствия, пронизывавшие её тело, начали нарастать: каждая волна поднимала следующую, пока Сара не почувствовала, как они обрушиваются на неё."
@@ -3478,7 +3478,7 @@ translate ru strings:
     new "Сара провела пальцами по уголкам глаз, утирая слёзы, которые там могли оказаться."
 
     old "I know my vagina is pretty incredible but I've never seen it bring anyone to tears before."
-    new "Я знаю, что моя вагина довольно невероятна, но я никогда не видела, чтобы она доводила кого-то до слёз."
+    new "Я знаю, что моя киска довольно невероятна, но я никогда не видела, чтобы она доводила кого-то до слёз."
 
     old "Sarah threw a pillow at Kate."
     new "Сара бросила в Кейт подушку."

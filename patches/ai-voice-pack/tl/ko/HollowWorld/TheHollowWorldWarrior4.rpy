@@ -22,7 +22,7 @@ translate ko strings:
     new "젊은 남자를 죽였어"
 
     old "I once blew an old sailor"
-    new "어느 날 노수저를 불어본 적이 있습니다"
+    new "예전에 늙은 선원한테 입으로 해준 적이 있었어"
 
     old "I once had sex with an orc"
     new "한때 오그랑과 성관계를 한 적이 있다."

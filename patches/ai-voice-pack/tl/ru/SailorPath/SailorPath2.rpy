@@ -106,7 +106,7 @@ translate ru strings:
     new "Она беззаботно загорала обнажённой на носу корабля, и Бельмонту не потребовалось много времени, чтобы понять намёк."
 
     old "Fuck, your pussy is so tight."
-    new "Чёрт, у тебя такое тесное влагалище."
+    new "Чёрт, твоя киска такая тесная."
 
     old "Sarah had never thought the captain handsome, but she had come around on some of his odd features."
     new "Сара никогда не считала капитана красивым, но со временем ей начали нравиться некоторые его странные черты."
@@ -595,10 +595,10 @@ translate ru strings:
     new "Кусок мыла."
 
     old "Her arms tied around the mast, her hips kept in place by Belmont with one hand, she experienced the new sensation of something pressing so deep into her ass."
-    new "Её руки были связаны вокруг мачты, а бёдра Бельмонт удерживала одной рукой, и в этот момент она ощутила новое чувство: что-то так глубоко давит на её задний проход."
+    new "Её руки были обвязаны вокруг мачты, а бёдра Бельмонт удерживал одной рукой — и тут она ощутила новое чувство: что-то так глубоко надавило на её задницу."
 
     old "With a circling motion, Belmont reamed the edge of her asshole with the bar of soap."
-    new "Кругообразными движениями Бельмонт интенсивно протирал мылом край её ануса."
+    new "Описывая круги, Бельмонт тёрла куском мыла край задницы Сары."
 
     old "Then, he slid a corner into her."
     new "Затем он ввёл уголок мыла ей внутрь."
@@ -706,7 +706,7 @@ translate ru strings:
     new "Точно так. Ты всего лишь похотливая маленькая шлюха, притворяющаяся матроской."
 
     old "Belmont got up behind her, she felt his finger slide out of her ass, and the tip of his cock pressing into her opening."
-    new "Бельмонт встал за её спиной; она почувствовала, как его палец скользнул из её ануса, а кончик члена прижался к её отверстию."
+    new "Бельмонт встал за её спиной; она почувствовала, как его палец скользнул из её задницы, а кончик члена прижался к её отверстию."
 
     old "So tell you what, blondie. You tell me you special, I cut down the rope, fetch your dress, and get you all pampered and proper down below deck."
     new "Ну что ж, блондинка. Скажи мне, что ты особенная — и я перережу веревку, принесу твое платье и позабочусь о том, чтобы внизу на палубе тебя как следует устроили."
@@ -748,7 +748,7 @@ translate ru strings:
     new "Похотливая шлюха... притворяющаяся палубным рабочим."
 
     old "And with that confession, Sarah felt captain Belmont lean in, pressing his cock into her asshole."
-    new "И с этим признанием Сара почувствовала, как капитан Бельмонт наклонился к ней, прижимая свой член к её анусу."
+    new "И с этим признанием Сара почувствовала, как капитан Бельмонт наклонился к ней, прижимая свой член к её заднице."
 
     old "She screamed out, the pain from before was nothing like this."
     new "Она закричала — боль до этого была ничем по сравнению с этой."
@@ -844,10 +844,10 @@ translate ru strings:
     new "В конце концов, единственное, что могло развеять её мимолётное безумие, было тем самым, что и вызвало его."
 
     old "Belmont's cock exploded inside of her, lining the insides of her ass with his cum."
-    new "Член Бельмонта взорвался внутри неё, обильно наполнив её задний проход его спермой."
+    new "Член Бельмонта взорвался внутри неё, обильно наполнив её жопу его спермой."
 
     old "His cock sliding from her ass was the first sensation she consciously registered."
-    new "Высвобождение его члена из её ануса было первым ощущением, которое она сознательно зарегистрировала."
+    new "Высвобождение его члена из её задницы было первым ощущением, которое она сознательно зарегистрировала."
 
     old "She collapsed unto her knees, her body only kept up by the rope tied around the mast."
     new "Она рухнула на колени, и лишь верёвка, обвитая вокруг мачты, удерживала её тело."

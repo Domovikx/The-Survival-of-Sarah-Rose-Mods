@@ -349,7 +349,7 @@ translate zh strings:
     new "莎拉的身体来回拱动，用她的身体恳求凯特继续下去，而凯特也顺从了她的请求。"
 
     old "Having her hands between the princess' legs, making her moan and writhe around, feeling her grind into her, begging for more..."
-    new "将手伸进公主的双腿之间，让她呻吟、扭动身体，感受到她不断向自己靠近并渴望更多……"
+    new "她把手伸进公主两腿之间，让她呻吟着扭动身体，感觉她在自己身上摩擦，不断央求更多……"
 
     old "For Kate this was a pleasure far deeper than Sarah's inexperienced attempts to please her."
     new "对凯特来说，这是一种比莎拉那些缺乏经验的取悦尝试更为深刻的愉悦。"

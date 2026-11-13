@@ -847,7 +847,7 @@ translate ru strings:
     new "Кейт, видя, что её подруга начинает понимать, решила наградить её, ускорив темп."
 
     old "Sarah still felt every part of her being controlled, her hair still pulled tight, her pussy exposed and being penetrated. Holding onto the wall was the only thing she could manage."
-    new "Сара всё ещё чувствовала, что каждая часть её существа находится под контролем: волосы по-прежнему были туго стянуты, а влагалище — обнажено и пронизывалось. Держаться за стену было единственным, на что она была способна."
+    new "Сара всё ещё чувствовала, что каждая часть её существа находится под контролем: волосы по-прежнему были туго стянуты, а киска открыта и в неё входят. Держаться за стену было единственным, на что она была способна."
 
     old "She felt Kate increase her speed, pistoning her fingers faster and deeper into Sarah."
     new "Она почувствовала, как Кейт увеличила скорость, двигая пальцами всё быстрее и глубже внутри неё."

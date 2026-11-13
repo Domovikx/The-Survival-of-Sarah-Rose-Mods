@@ -412,7 +412,7 @@ translate ru strings:
     new "Протянув руку, она пошарила по его брюкам, заставляя себя действовать из-за страха, что могла бы утратить всю решимость."
 
     old "As she pulled on his belt, it came undone and his erection emerged from underneath his clothes."
-    new "Когда она потянула за его пояс, тот расстегнулся, и из-под одежды показалась его эрекция."
+    new "Когда она потянула за его пояс, тот расстегнулся, и из-под одежды выпятился его член."
 
     old "Fear came over her as she held the thing in her hand."
     new "Страх охватил её, когда она взяла это в руку."
@@ -661,7 +661,7 @@ translate ru strings:
     new "Сара подняла руки и коснулась своего горла."
 
     old "She could feel the sticky remnants of his release."
-    new "Она чувствовала липкие остатки его эякуляции."
+    new "Она чувствовала липкие остатки его спермы."
 
     old "I am sorry if I surprised you."
     new "Прости, если я тебя удивил."

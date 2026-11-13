@@ -898,7 +898,7 @@ translate ru strings:
     new "Она почувствовала, как он схватил её за руку и заставил опустить между своих ног."
 
     old "She could feel his erection pressing through his pants."
-    new "Она чувствовала, как его эрекция давит на штаны."
+    new "Она чувствовала, как его член давит на штаны."
 
     old "Least you can do is make up for it by havin a drink with me and my buddy."
     new "Хотя бы то, что ты можешь сделать, — это компенсировать это тем, что выпьешь со мной и моим приятелем."
@@ -1027,7 +1027,7 @@ translate ru strings:
     new "Тот, что был раньше, занял своё место за её спиной. Другой встал перед ней."
 
     old "Sarah leaned back and pressed her sex up against the soldier's shaft."
-    new "Сара откинулась назад и прижала свои половые органы к стволу солдата."
+    new "Сара откинулась назад и прижала киску к стволу солдата."
 
     old "She didn't know why, but felt oddly preferential to the one who had done most of the harassing."
     new "Она не знала почему, но чувствовала странное предпочтение к тому, кто больше всего её преследовал."

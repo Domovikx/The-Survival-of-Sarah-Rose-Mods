@@ -346,7 +346,7 @@ translate ru strings:
     new "Если кто-то попытается меня остановить, я зарублю его..."
 
     old "Sarah felt Lily's fingers slide down her stomach, past her legs, then pressing upon her wet sex."
-    new "Сара почувствовала, как пальцы Лили скользнули вниз по её животу, прошли мимо ног, а затем коснулись её влажных половых органов."
+    new "Сара почувствовала, как пальцы Лили скользнули вниз по её животу, прошли мимо ног, а затем коснулись её мокрой киски."
 
     old "Sarah spread her legs, giving Lily easier access to her."
     new "Сара развела ноги, облегчая Лили доступ к себе."

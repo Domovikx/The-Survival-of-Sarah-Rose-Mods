@@ -1684,7 +1684,7 @@ translate ru strings:
     new "Другие мальчики всегда играли в солдатиков и хотели сражаться, а Томас с мечом всегда выглядел как-то странно."
 
     old "The only time he really looked comfortable was when he was reading a book."
-    new "Единственный раз, когда он действительно выгляделสบายно, — это когда читал книгу."
+    new "Единственный раз, когда он действительно выглядел непринуждённо, — это когда читал книгу."
 
     old "Sarah threw back her head and sighed as she looked up to the darkening sky."
     new "Сара откинула голову назад и вздохнула, подняв глаза к темнеющему небу."
@@ -1795,7 +1795,7 @@ translate ru strings:
     new "Если я пойду плавать, ты обещаешь перестать говорить обо всём этом?"
 
     old "Samayra flopped her hand limpy around in the air, her best imitation of an flaccid penis."
-    new "Самайра безжизненно помахала рукой в воздухе — это была её лучшая имитация вялого пениса."
+    new "Самайра безжизненно помахала рукой в воздухе — это была её лучшая имитация мягкого члена."
 
     old "Sarah nearly fell over from the laughter."
     new "Сара чуть не упала от смеха."
@@ -2101,7 +2101,7 @@ translate ru strings:
     new "Она могла бы сыграть эту роль, подумала она."
 
     old "Sarah leaned in close to his ears, still holding his erection firmly in her hand."
-    new "Сара наклонилась ближе к его уху, всё ещё крепко сжимая его эрекцию в руке."
+    new "Сара наклонилась ближе к его уху, всё ещё крепко сжимая его член в руке."
 
     old "Her words worked on him like a spell."
     new "Её слова подействовали на него как заклинание."
@@ -2473,7 +2473,7 @@ translate ru strings:
     new "Глубокий рык, а затем его и без того внушительный член стал ещё больше."
 
     old "As his semen spilled into her, Sarah could feel it coat the insides of her sex."
-    new "Когда его сперма хлынула в неё, Сара чувствовала, как она обволакивает стенки её влагалища."
+    new "Когда его сперма хлынула в неё, Сара чувствовала, как она обволакивает её плоть внутри."
 
     old "Slowly, his manic thrusts began to build back down."
     new "Постепенно его одержимые толчки начали замедляться."

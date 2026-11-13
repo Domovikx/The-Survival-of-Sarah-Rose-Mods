@@ -451,7 +451,7 @@ translate zh strings:
     new "他不过是个野蛮人，仅此而已——实际上就是个冒失鬼。他来自东方的沙漠。"
 
     old "Barion interupted."
-    new "巴里翁打断了他的话：‘他可不仅仅是个野蛮人，托马斯王子——他征服了沙漠诸部族，将他们锻造成一支统一的军队！’"
+    new "巴里翁打断了他的话。"
 
     old "He is more than that, Prince Thomas, he has conquered the desert tribes and forged them into a single force."
     new "他可不仅仅是这样，托马斯王子——他已经征服了沙漠的各个部落，并将他们锻造成一支不可分割的力量。"
@@ -823,7 +823,7 @@ translate zh strings:
     new "莎拉将双手牢牢按在墙上，努力进一步俯身，让自己的身体完全顺应凯特的意图。"
 
     old "Kate began to slowly push two fingers into Sarah's sex."
-    new "凯特开始将两根手指缓缓插入莎拉的私处。"
+    new "凯特开始用两根手指缓缓探入莎拉的小穴里。"
 
     old "Sarah tried to lean back into Kate, begging her to go faster."
     new "莎拉试图向后靠在凯特身上，乞求她加快节奏。"
@@ -847,7 +847,7 @@ translate zh strings:
     new "凯特看到朋友开始明白状况，便决定加快节奏来奖励她。"
 
     old "Sarah still felt every part of her being controlled, her hair still pulled tight, her pussy exposed and being penetrated. Holding onto the wall was the only thing she could manage."
-    new "莎拉仍能感受到自己的每一寸存在都被牢牢掌控——头发依旧被紧紧拉扯，私处暴露在外，正不断受到侵入。此刻她能做的唯一一件事，就是抓住墙壁支撑自己。"
+    new "莎拉仍然感到自己的每一寸存在都被掌控着——头发依旧被紧紧扯住，小穴暴露在外，正遭受着侵入。她能做的唯一一件事，就是死死抓住墙壁。"
 
     old "She felt Kate increase her speed, pistoning her fingers faster and deeper into Sarah."
     new "她感觉到凯特加快了节奏，手指以更快的速度和更深的力度在莎拉体内抽送。"

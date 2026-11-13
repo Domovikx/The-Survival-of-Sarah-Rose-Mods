@@ -10,11 +10,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-# TSSR DE translation — скелет из po/template.pot (Deutsch).
-# msgstr "" = не переведено; заполняется построчно переводчиком.
-msgid ""
-msgstr "Project-Id-Version: TSSR-Mods 1.0\nPO-Revision-Date: 2026-10-23 00:00+0000\nLanguage: de\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\n"
-
 msgctxt "speaker:Narrator"
 msgid "The Survival of Sarah Rose is an epic fantasy game. Production on TSSR is still ongoing."
 msgstr "The Survival of Sarah Rose ist ein episches Fantasy-Spiel. Die Entwicklung von TSSR dauert noch an."
@@ -121199,9 +121194,10 @@ msgctxt "speaker:Sarah"
 msgid "Not much glory to be had here."
 msgstr ""
 
+# changed
 msgctxt "menu"
 msgid "I once blew an old sailor"
-msgstr "Ich habe schon mal mit einem alten Seemann geschlafen."
+msgstr "Ich hab mal einem alten Seemann einen geblasen."
 
 msgctxt "speaker:Sarah"
 msgid "I once blew an old sailor."

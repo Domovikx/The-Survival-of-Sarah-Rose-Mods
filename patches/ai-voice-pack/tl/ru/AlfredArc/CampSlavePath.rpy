@@ -37,7 +37,7 @@ translate ru strings:
     new "Она знает, что площадь полна. Она знает это по оглушительному реву и крикам, которые сейчас накрывают её."
 
     old "With her hands bound together by the manacles, she can neither cover her breasts nor her sex. She wriggles her hands in a vain attempt, but as a result pushes her breasts together."
-    new "С руками, скованными наручниками, она не может прикрыть ни грудь, ни половые органы. Она тщетно пытается пошевелить руками, но от этого лишь сильнее прижимает грудь друг к другу."
+    new "Руки её скованы кандалами, так что она не может прикрыть ни грудь, ни киску. Она тщетно пытается пошевелить руками, но в итоге лишь прижимает груди друг к другу."
 
     old "The crowd only begins howling louder."
     new "Толпа лишь начинает реветь ещё громче."
@@ -358,7 +358,7 @@ translate ru strings:
     new "Его язык с энтузиазмом исследовал её рот, и Сара инстинктивно ответила на него своим. На этот раз поцелуй продолжался дольше, чем она ожидала — они целовались с лихорадочной страстью."
 
     old "Behind her ass, she felt the man’s cock grow again, pushing up to between her cheeks."
-    new "За её спиной она почувствовала, как член мужчины снова вырос и прижался к промежности между ягодицами."
+    new "Позади её задницы она почувствовала, как член мужчины снова вырос и прижался к промежутку между ягодицами."
 
     old "Fuck, how could this old man already be hard again, she thought. He easily had fifty years on her, and instead she was the one who struggled to keep up."
     new "Чёрт, как этот старый мужик мог уже снова возбудиться? — подумала она. Ему было на пятьдесят лет больше, чем ей, а ведь это она с трудом за ним поспевала."

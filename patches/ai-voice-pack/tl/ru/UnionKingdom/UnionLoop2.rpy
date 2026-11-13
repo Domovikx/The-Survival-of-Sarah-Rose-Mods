@@ -646,7 +646,7 @@ translate ru strings:
     new "Почему нет?"
 
     old "Maeiv pressed her hands between Sarah's legs, pressing up against her sex through her clothes."
-    new "Маив вставила руки между ног Сары и прижалась к её половым органам сквозь одежду."
+    new "Маив вставила руки между ног Сары и прижалась к её киске сквозь одежду."
 
     old "Sarah threw her head back and let out a soft cry at the sudden sensation."
     new "Сара откинула голову назад и издала тихий стон от внезапного ощущения."
@@ -1399,7 +1399,7 @@ translate ru strings:
     new "Если хочешь моё голосование, придётся приложить немного усилий."
 
     old "He waved his erection from side to side."
-    new "Он размахивал своей эрекцией из стороны в сторону."
+    new "Он размахивал членом из стороны в сторону."
 
     old "You want me to..."
     new "Ты хочешь, чтобы я..."
@@ -1585,7 +1585,7 @@ translate ru strings:
     new "Сначала она его обслуживала."
 
     old "By now, it was more as if he used her head to jerk himself off."
-    new "К этому моменту это уже больше походило на то, как будто он использовал её голову для мастурбации."
+    new "К этому моменту было уже больше похоже на то, что он использовал её голову, чтобы кончить."
 
     old "Above her, she could hear him groaning louder and louder."
     new "Над ней она слышала, как он стонал всё громче и громче."

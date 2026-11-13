@@ -889,13 +889,13 @@ translate ru strings:
     new "Она чувствовала, как его глаза скользят по её телу."
 
     old "She clapsed her hands in front of her naked sex."
-    new "Она сложила ладони перед своим обнажённым половым органом."
+    new "Она сложила ладони перед своей голой киской."
 
     old "Why bother? I have seen all of it already. Remember the agreement."
     new "Зачем вообще утруждаться? Я ведь уже всё это видел. Помнишь о договорённости?"
 
     old "Sarah unclapsed her hands and exposed her sex again. Her face red, a mix of embarassement and rage."
-    new "Сара раскрыв руки, снова обнажила свои половые органы. Её лицо покраснело — это была смесь смущения и гнева."
+    new "Сара разжала руки и снова обнажила свою киску. Лицо её покраснело — смесь смущения и ярости."
 
     old "Are we done?!"
     new "Мы закончили?! "

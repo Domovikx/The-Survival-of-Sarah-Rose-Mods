@@ -160,7 +160,7 @@ translate ru strings:
     new "Спина Сары выгнулась дугой, а рот широко раскрылся. Ей требовалось всё её мужество, чтобы не закричать по всему кораблю."
 
     old "Sarah felt Kate's tongue exploring her sex, unleashing feelings of pleasure she'd never felt before."
-    new "Сара почувствовала, как язык Кейт исследует её половые органы, вызывая чувства наслаждения, которых она никогда прежде не испытывала."
+    new "Сара почувствовала, как язык Кейт исследует её плоть, вызывая чувства наслаждения, которых она никогда прежде не испытывала."
 
     old "Sarah grabbed fists full of her sheets and writhed around, doing everything she could not to moan loud enough for everyone to hear. Despite her efforts, some moans escaped from her."
     new "Сара схватила простыню в кулаки и заерзала, делая всё возможное, чтобы не застонать достаточно громко, чтобы это услышали все. Но несмотря на её старания, некоторые стоны всё же вырвались у неё."
@@ -181,7 +181,7 @@ translate ru strings:
     new "Кейт, слишком погрузившись в работу, перестает исправлять Сару."
 
     old "Arching back, thrusting her sex deeper into Kate's mouth, Sarah begins breathing heavier and heavier. She feels the orgasm build between her legs."
-    new "Изгибаясь назад и загоняя свой половой орган глубже в рот Кейт, Сара начинает дышать всё тяжелее и тяжелее. Она чувствует, как оргазм нарастает между её ногами."
+    new "Изогнувшись назад и засунув свою киску ещё глубже в рот Кейт, Сара начинает дышать всё тяжелее и тяжелее. Она чувствует, как между её ног нарастает оргазм."
 
     old "Suddenly, looking over Kate, Sarah sees a movement."
     new "Внезапно, взглянув на Кейт, Сара замечает движение."
@@ -544,7 +544,7 @@ translate ru strings:
     new "Кейт берёт свой черёд, обслуживая член капитана."
 
     old "The room below deck begins to fill with the slopping sound of the two women, performing oral sex on the captain, whilst the captain's grunts grow louder."
-    new "Комната под палубой начинает наполняться плескучими звуками: две женщины занимаются с капитаном оральным сексом, а его стоны становятся всё громче."
+    new "Комната под палубой начинает наполняться плескучими звуками: две женщины сосут капитана, а его стоны становятся всё громче."
 
     old "Suddenly, Captain Belmont pushes the women's heads together and with one hand, grabs a fistful of both their hair."
     new "Внезапно капитан Бельмонт толкает головы женщин друг к другу и одной рукой хватает их обеих за волосы."
@@ -664,7 +664,7 @@ translate ru strings:
     new "Иногда Кейт. Иногда Сара. Иногда обе сразу. Как капитану вздумается."
 
     old "On the fifth day, even the last kindness of privacy is forgotten. Captain Belmont now let's the women perform oral sex on him above deck."
-    new "На пятый день даже последняя крупица приватности забыта. Капитан Бельмонт теперь позволяет женщинам делать ему оральный секс прямо на палубе."
+    new "На пятый день даже последняя крупица приватности забыта. Капитан Бельмонт теперь позволяет женщинам сосать его член прямо на палубе."
 
     old "To the women, it no longer matters. There isn't anyone else out on sea, why bother with modesty. On this ship, they exist in the captain's world."
     new "Для женщин это уже давно перестало иметь значение. В море нет никого другого, так зачем заботиться о скромности? На этом корабле они существуют в мире капитана."
@@ -718,7 +718,7 @@ translate ru strings:
     new "Извергнув последнюю порцию спермы, капитан отбрасывает Сару в сторону и снова берёт штурвал под свой контроль."
 
     old "Laying on the upper deck, she feels his cum slide out of her rear, but with the sight of land, the only feeling she has is pure hapiness."
-    new "Лежа на верхней палубе, она чувствует, как его сперма вытекает из её ануса, но при виде суши единственным чувством, которое её охватывает, становится чистое счастье."
+    new "Лежа на верхней палубе, она чувствует, как его сперма вытекает из её задницы, но при виде суши единственным чувством, которое её охватывает, становится чистое счастье."
 
     old "The captain returns their clothes to them and the women slowly feel little bits their real selves return."
     new "Капитан возвращает им их одежду, и женщины медленно ощущают, как к ним постепенно возвращается частичка их истинного «я»."
@@ -817,7 +817,7 @@ translate ru strings:
     new "Твой друг милый и всё такое, но, о боже... посмотри на себя."
 
     old "His eyes explored every party of Sarah's body. She tried to hide her breasts and sex in a vain attempt at modesty."
-    new "Его взгляд скользил по каждой части тела Сары. Она пыталась спрятать грудь и половые органы, тщетно стремясь к скромности."
+    new "Его взгляд скользил по каждой части тела Сары. Она пыталась спрятать грудь и киску, тщетно стремясь к скромности."
 
     old "Belmont laughs."
     new "Бельмонт смеётся."

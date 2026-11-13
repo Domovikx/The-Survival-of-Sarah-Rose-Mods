@@ -1150,7 +1150,7 @@ translate ru strings:
     new "Их острые, пронзительные крики от удовольствия, пока они брали её с обеих сторон."
 
     old "The slicking sounds of their cocks, plunging deep into her drenched cunt, her eager mouth."
-    new "Скользкие звуки их членов, глубоко входящих в её промокшее влагалище и жадный рот."
+    new "Скользкие звуки их членов, глубоко входящих в её мокрую киску и жадный рот."
 
     old "Sarah felt her body rock as the orgasm rolled over her."
     new "Сара почувствовала, как её тело задрожало, когда оргазм охватил её."

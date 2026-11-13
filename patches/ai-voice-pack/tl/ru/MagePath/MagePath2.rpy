@@ -694,7 +694,7 @@ translate ru strings:
     new "Скользнув вниз между её ног и проникнув всё глубже, она почувствовала, как дух исследует даже те части её тела, о которых она до сих пор не смела и представить."
 
     old "She felt him slide into her ass, firmly mounting her from every orifice."
-    new "Она почувствовала, как он проник ей в задний проход, твёрдо занимая её с каждой стороны."
+    new "Она почувствовала, как он скользнул ей в задницу, твёрдо входя в неё через каждое отверстие."
 
     old "Sarah tried to reach out to stop the spirit. Not out of a genuine desire to stop, but one of modesty."
     new "Сара попыталась дотянуться до духа, чтобы остановить его — не из искреннего желания остановиться, а из скромности."
@@ -718,7 +718,7 @@ translate ru strings:
     new "Она начала стонать — так отчаянно она жаждала, чтобы дух продолжал давить на неё, а дух, ради собственного удовольствия, позволил её приглушённым стонам заполнить комнату."
 
     old "Sarah could feel the wetness of her own sex seep past her legs. By now, the pleasure roared through her body, erupting from every orifice."
-    new "Сара чувствовала, как влажность её собственных половых органов просачивается мимо ног. К этому моменту наслаждение уже ревет по всему её телу, вырываясь из каждого отверстия."
+    new "Сара чувствовала, как влага из её собственной киски просачивается между ног. К этому моменту наслаждение уже ревет по всему её телу, вырываясь из каждой щели."
 
     old "As if she weighed nothing, she felt herself lifted off the ground and spun around, pressed down unto all fours."
     new "Словно она ничего не весила: её подняли с пола, завертели и заставили опуститься на все четыре конечности."
@@ -730,10 +730,10 @@ translate ru strings:
     new "Сара чувствовала, как он разорвал её с каждой стороны. Он вошёл в неё так глубоко, что ей казалось, будто она вот-вот расколется надвое."
 
     old "One grip was tightly on her ass, pushing deeper into her asshole, letting the spirit ravage her in ways that felt so wrong."
-    new "Одна рука крепко сжимала её задницу, проникая всё глубже в анус и позволяя духу развращать её так, как это казалось совершенно неправильным."
+    new "Одна рука крепко сжимала её задницу, проникая всё глубже в жопу и позволяя духу развращать её так, как это казалось совершенно неправильным."
 
     old "The spirit violently penetrated her pussy, so rough that Sarah had never dared to admit. But to the spirit, she didn't need to admit anything, only submit."
-    new "Дух яростно проник в её влагалище так грубо, что Сара никогда бы не осмелилась это признать. Но духу не нужно было от неё никаких признаний — ей оставалось лишь подчиниться."
+    new "Дух яростно проник в её киску так грубо, что Сара никогда бы не осмелилась это признать. Но духу не нужно было от неё никаких признаний — ей оставалось лишь подчиниться."
 
     old "It held up her mouth and fucked it, pressing deep into her mouth and her throat. She imagined she could feel him on her tongue, sliding in and out, pumping her."
     new "Он приподнял её голову и трахнул её рот, проникая глубоко в рот и горло. Ей казалось, будто она чувствует его на языке: он входил и выходил, наполняя её."
@@ -763,7 +763,7 @@ translate ru strings:
     new "Удовольствие в её теле достигло пика и обрушилось на неё."
 
     old "The feelings of her orgasm roared up from between her legs. Then rose up from her ass, and even surging from deep down her throat."
-    new "Ощущения от оргазма взорвались между её ног, затем поднялись от ануса и даже хлынули из глубины её горла."
+    new "Ощущения от оргазма взорвались между её ног, затем поднялись от задницы и даже хлынули из глубины её горла."
 
     old "Every part of her turned electric, Sarah could feel every other sense being driven out."
     new "Каждая часть её тела загорелась электричеством — Сара чувствовала, как все остальные чувства покидают её."

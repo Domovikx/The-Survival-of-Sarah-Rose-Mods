@@ -217,7 +217,7 @@ translate ru strings:
     new "Сара поняла, что её хозяин, кажется, весьма доволен тем, что она проявила инициативу."
 
     old "Between her legs, Sarah felt her sex burn and her wetness run past her own legs."
-    new "Между ног Сара почувствовала, как её половые органы горят, а влага стекала по собственным ногам."
+    new "Между ног Сара почувствовала, как её киска горит, а влага стекает по бёдрам."
 
     old "Why deny it, she thought. She wanted him. She wanted him to use and abuse her body for his own pleasure, and in turn she would take hers from his."
     new "Почему бы и нет, — подумала она. Она хотела его. Хотела, чтобы он использовал и унижал её тело ради своего удовольствия, а в ответ она получила бы своё удовольствие от него."
@@ -346,7 +346,7 @@ translate ru strings:
     new "Пока она стонала и продолжала получать удовольствие, она почувствовала, как его хват на её талии усилился, а его натиск на тело становился всё более яростным."
 
     old "Harder and faster, he continued to pump his cock into her pussy, continued to pull her up and down his member."
-    new "Сильнее и быстрее он продолжал вводить свой член во влагалище, продолжая тянуть её вверх-вниз по своему стволу."
+    new "Сильнее и быстрее он продолжал вводить свой член в её киску, продолжая тянуть её вверх-вниз по своему стволу."
 
     old "The feeling of his shaft, sliding past her inner walls, spreading her apart further."
     new "Ощущение его члена, скользящего по внутренним стенкам и раздвигающего их ещё сильнее."

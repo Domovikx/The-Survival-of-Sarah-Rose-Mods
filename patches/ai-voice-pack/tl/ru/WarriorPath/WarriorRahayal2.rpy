@@ -2914,7 +2914,7 @@ translate ru strings:
     new "Сара же была готова исполнить её желание."
 
     old "Reaching down, she pressed her hand between Samayra's legs."
-    new "Опустив руку, она прижала ладонь к промежности Самайры."
+    new "Опустив руку, она прижала ладонь между ног Самайры."
 
     old "Samayra cried out at the sudden touch."
     new "Самайра вскрикнула от внезапного прикосновения."
@@ -2971,13 +2971,13 @@ translate ru strings:
     new "Её губы и язык медленно спускались вниз: от груди девушки, через живот и дальше."
 
     old "Finally, when she had made her way down between Samayra's legs, her fingers slipped free."
-    new "Наконец, когда она добралась до промежности Самайры, её пальцы освободились."
+    new "Наконец, когда она добралась между ног Самайры, её пальцы освободились."
 
     old "A moan, mixed with desperate frustration sounded out from Samayra, fearing that Sarah had denied her."
     new "От Самайры донёсся стон, смешанный с отчаянным разочарованием: она боялась, что Сара отказала ей в удовольствии."
 
     old "Yet, without missing a beat, Sarah pressed her mouth down on Samayra's sex."
-    new "Однако, не медля ни секунды, Сара прижалась ртом к половым органам Самайры."
+    new "Однако, не медля ни секунды, Сара прижалась ртом к киске Самайры."
 
     old "Instantly, the girl let out another loud moan, this time free from any frustration, now understanding what Sarah had intended to do."
     new "Тут же девушка снова громко застонала — на этот раз уже без всякого разочарования, наконец поняв, что именно собиралась сделать Сара."
@@ -3430,7 +3430,7 @@ translate ru strings:
     new "Сара почувствовала пятно пота, которое она оставила на постели."
 
     old "Between her legs, in her throat and in her ass, a softly pulsing pain."
-    new "Между её ног, в горле и в заднем проходе пульсировала лёгкая боль."
+    new "Между её ног, в горле и в жопе пульсировала лёгкая боль."
 
     old "A vague reminder that the night's events had actually happened."
     new "Смутное напоминание о том, что события ночи действительно имели место."
@@ -3832,7 +3832,7 @@ translate ru strings:
     new "Схватившись за его широкие плечи, словно он был быком."
 
     old "Looking down, she saw his member already close to erect."
-    new "Опустив взгляд, она увидела, что его член уже был почти в эрекции."
+    new "Опустив взгляд, она увидела, что его член уже был почти твердым."
 
     old "She reached down, gripping him with one hand."
     new "Она протянула руку вниз и одной рукой схватила его за плечо."

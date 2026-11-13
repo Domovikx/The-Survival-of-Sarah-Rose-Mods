@@ -2023,7 +2023,7 @@ translate ru strings:
     new "Сара лишь улыбнулась."
 
     old "She felt a buzzing pain between her legs, her pussy sensitive to even the smallest motion."
-    new "Она почувствовала жгучую боль между ног: её влагалище было чувствительно даже к малейшему движению."
+    new "Она почувствовала жгучую боль между ног — её киска была чувствительна к малейшему движению."
 
     old "As she looked at him, she felt herself drowning in his eyes."
     new "Когда она посмотрела на него, то почувствовала, как тонет в его глазах."
@@ -2530,7 +2530,7 @@ translate ru strings:
     new "Она услышала тихий приглушённый стон, нарушивший тишину комнаты."
 
     old "On her leg, Sarah felt Samayra's damp sex, and the eager movement of her body."
-    new "На своей ноге Сара почувствовала влажную промежность Самайры и нетерпеливые движения её тела."
+    new "На своей ноге Сара почувствовала влажную киску Самайры и нетерпеливые движения её тела."
 
     old "Matching her, Sarah began to grind her thigh, up and down."
     new "Подражая ей, Сара начала двигать бедром вверх и вниз."
@@ -2611,7 +2611,7 @@ translate ru strings:
     new "Сара смотрела, как голова принцессы Баграда исчезла между её ног."
 
     old "Sarah let out a loud cry of pleasure as Samayra's lips and tongue found her sex."
-    new "Сара громко закричала от удовольствия, когда губы и язык Самайры нашли её половые органы."
+    new "Сара громко закричала от удовольствия, когда губы и язык Самайры нашли её плоть."
 
     old "Reaching up with her hands, Sarah gripped the sheets, digging her nails into them for release."
     new "Протянув руки вверх, Сара схватила простыню и вонзила в неё ногти, чтобы обрести облегчение."
@@ -2677,7 +2677,7 @@ translate ru strings:
     new "Каждая мышца её тела была чувствительна к прикосновению."
 
     old "She felt Samayra crawl up from between her legs."
-    new "Она почувствовала, как Самайра заползает к ней от промежности."
+    new "Она почувствовала, как Самайра заползает к ней между ног."
 
     old "Like that?"
     new "Вот так?"
@@ -3061,10 +3061,10 @@ translate ru strings:
     new "Потому что могу заверить тебя: всё до сих пор работает."
 
     old "He grabbed her wrist and forced it down between his legs."
-    new "Он схватил её за запястье и с силой прижал к своей промежности, протиснув между ног."
+    new "Он схватил её за запястье и прижал руку между своих ног."
 
     old "Sarah felt the tip of her fingers felt his erection through his pants."
-    new "Сара почувствовала кончиками пальцев его эрекцию сквозь брюки."
+    new "Сара почувствовала кончиками пальцев его член сквозь брюки."
 
     old "He wasn't lying."
     new "Он не лгал."
@@ -3424,7 +3424,7 @@ translate ru strings:
     new "Медленно наклонившись над столом, Сара почувствовала, как её грудь прижалась к твёрдому дубу."
 
     old "Behind her, her ass and sex, entirely exposed."
-    new "За её спиной — ягодицы и половые органы, совершенно открытые."
+    new "За её спиной — задница и киска, совершенно открытые."
 
     old "He wasted no time and came up behind her, his hands groping her ass."
     new "Он не стал медлить и подошёл к ней сзади, его руки начали ощупывать её задницу."

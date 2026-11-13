@@ -484,7 +484,7 @@ translate ru strings:
     new "Пока он это говорил, он переставил свой член, прижимая кончик к влажным губам Сары."
 
     old "She felt her back arch as the sensation shot up through her body, rising from between her legs up to her crown."
-    new "Она почувствовала, как её спина выгнулась дугой: острое ощущение пронзило всё тело, поднимаясь от промежности к макушке."
+    new "Она почувствовала, как её спина выгнулась дугой: острое ощущение пронзило всё тело, поднимаясь между ног к макушке."
 
     old "For their entire engagement, Sarah had surpressed all her desires for his body, but now she couldn't deny it anymore, nor did she want to."
     new "Всю свою помолвку Сара подавляла все желания к его телу, но теперь уже не могла им пренебрегать — да и не хотела."
@@ -508,7 +508,7 @@ translate ru strings:
     new "Удовольствие было настолько сильным, что казалось, будто все остальные чувства — зрение, слух — вытесняются, уступая место этому единственному ощущению."
 
     old "With a great thrust, she felt Varga take her completely, his mound pressing up against her outer sex."
-    new "С мощным толчком она почувствовала, как Варга полностью заполнил её, а его бугор прижался к наружным половым органам."
+    new "С мощным толчком она почувствовала, как Варга полностью заполнил её, а его бугор прижался к её киске."
 
     old "Sarah had always considered herself tempered and reasoned, but now found herself moaning for him as though her mind was gone."
     new "Сара всегда считала себя сдержанной и рациональной, но теперь она стонала от удовольствия так, будто разум покинул её."

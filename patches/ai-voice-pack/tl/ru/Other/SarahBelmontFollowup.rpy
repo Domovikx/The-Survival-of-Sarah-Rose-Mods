@@ -199,7 +199,7 @@ translate ru strings:
     new "Если бы это было всё, — подумала Сара, — ей оставалось лишь выиграть."
 
     old "She walked up to the edge of his desk and got down on her knees. She placed a hand on his shaft. Her hand barely covered even half of his cock."
-    new "Она подошла к краю его стола и опустилась на колени. Она положила руку на его член. Её рука едва могла покрыть хотя бы половину его пениса."
+    new "Она подошла к краю его стола и опустилась на колени. Она положила руку на его член. Её рука едва могла покрыть хотя бы половину его члена."
 
     old "Just as she began to lean in, captain Belmont pushed her head back."
     new "Только она начала наклоняться к нему, как капитан Бельмонт оттолкнул её голову назад."
@@ -250,7 +250,7 @@ translate ru strings:
     new "Каждый раз, когда она опускала голову на его член, она слышала отголосок себя… и это начало сводить её с ума."
 
     old "Sarah could feel her sex grow warmer…and…to her horror…wet…"
-    new "Сара чувствовала, как её половые органы становятся всё горячее… и… к своему ужасу… влажными…"
+    new "Сара почувствовала, как её киска становится всё горячее… и… к её ужасу… влажной…"
 
     old "She had lost the bet. All this had been for nothing…you’re an idiot, she thought to herself. The captain disgusted her, and yet, she had still found herself right back here."
     new "Она проиграла пари. Всё это было зря… «Ты идиотка», — подумала она. Капитан вызывал у неё отвращение, но всё равно она снова оказалась здесь."
@@ -337,7 +337,7 @@ translate ru strings:
     new "Я уже нахватался твоего рта. Эта ставка была лишь способом доказать свою правоту."
 
     old "Sarah felt her own engorged sex, fluid leaking past her legs, burning. He couldn’t do this…leave her like this…"
-    new "Сара почувствовала, как её распухшие половые органы наполнились жидкостью, которая текла по ногам и вызывала жжение. Он не мог так поступить… оставить её в таком состоянии…"
+    new "Сара почувствовала, как набухшая киска наполнялась жидкостью, которая текла по ногам и вызывала жжение. Он не мог так поступить… оставить её в таком состоянии…"
 
     old "But…no…you have to finish…"
     new "Но… нет… ты должен закончить…"
@@ -361,7 +361,7 @@ translate ru strings:
     new "Она встала на ноги и наклонилась над столом, выставив зад в воздух."
 
     old "Belmont, once again interested, began to walk back to the desk, disrobing as he did. He got up behind her, his massive member still fully hard."
-    new "Бельмонт, снова заинтересовавшись, пошёл обратно к столу, при этом раздеваясь. Он встал за её спиной, и его огромное достоинство всё ещё оставалось в полной эрекции."
+    new "Бельмонт, снова заинтересовавшись, пошёл обратно к столу, при этом раздеваясь. Он встал за её спиной, и его огромное достоинство всё ещё оставалось твёрдым как камень."
 
     old "Sarah felt the tip of the old captain's massive rod, press against her opening."
     new "Сара почувствовала, как кончик огромного члена старого капитана прижался к её отверстию."

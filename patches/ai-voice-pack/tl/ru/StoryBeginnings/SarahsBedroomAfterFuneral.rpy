@@ -277,7 +277,7 @@ translate ru strings:
     new "Сара не могла не испытать любопытства к телу Кейт: она никогда прежде не видела тела другой женщины таким, как своё, и уж тем более не в подобной ситуации."
 
     old "Her eyes drifted down to between Kate's legs."
-    new "Её глаза соскользнули ниже — к промежности Кейт."
+    new "Её глаза соскользнули ниже — между ног Кейт."
 
     old "Kate caught Sarah's eyes, caught her inspecting her."
     new "Кейт поймала взгляд Сары, заметив, что та внимательно её осматривает."
@@ -328,7 +328,7 @@ translate ru strings:
     new "Словно чтобы помочь Саре забыть об этом, Кейт протолкнула свои пальцы между её ног."
 
     old "Sarah felt another shock run through her body, rising up from between her legs, as Kate pushed her fingers deeper inside her."
-    new "Сара почувствовала, как по её телу прокатилась ещё одна волна возбуждения, поднимающаяся от промежности, пока Кейт вводила пальцы всё глубже в неё."
+    new "Сара почувствовала, как по её телу прокатилась ещё одна волна возбуждения, поднимающаяся между ног, пока Кейт вводила пальцы всё глубже в неё."
 
     old "Where Sarah had fumbled between Kate's legs, Kate clearly knew her way around Sarah's lower parts."
     new "Там, где Сара лишь неловко возилась между ног Кейт, та явно знала, как обращаться с нижними частями тела Сары."

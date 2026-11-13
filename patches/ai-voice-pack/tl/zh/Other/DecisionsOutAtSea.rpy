@@ -10,7 +10,7 @@ translate zh strings:
     new "萨拉失去了控制。"
 
     old "Sarah is so close, she doesn't stop Kate"
-    new "莎拉还差一点，她没停下凯特"
+    new "莎拉已经近在咫尺了，她可没打算阻止凯特。"
 
     old "Sarah puts a stop to it."
     new "莎拉叫停了这一切。"

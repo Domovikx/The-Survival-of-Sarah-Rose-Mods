@@ -181,7 +181,7 @@ translate ru strings:
     new "Толкая лишь чуть больше своего кончика в неё, Аларик вскоре застонал и кончил прямо в задницу Сары."
 
     old "Sarah felt his semen spray into her ass and around her cheeks."
-    new "Сара почувствовала, как его сперма хлынула ей в задний проход и разливается по ягодицам."
+    new "Сара почувствовала, как его сперма хлынула ей в жопу и разливается по ягодицам."
 
     old "She could feel her entire rear end drenched in his cum."
     new "Она чувствовала, как вся её задняя часть была залита его спермой."
@@ -667,7 +667,7 @@ translate ru strings:
     new "Она предложила лучшее, что было под рукой, продолжая сосать его, издав приглушённый звук, похожий на «да»."
 
     old "Between her legs, her sex began to burn at the sensation of being talked down to by him."
-    new "Между ног у неё половые органы начали гореть от ощущения того, как он обращается с ней свысока."
+    new "Между ног внутри у неё начало жечь от ощущения того, как он обращается с ней свысока."
 
     old "Why did it turn her on to be humiliated by this man? Her body did not tell her why, only that it did."
     new "Почему же её возбуждало быть унизенной этим мужчиной? Тело не давало ответа на этот вопрос — оно лишь знало, что так и есть."
@@ -859,7 +859,7 @@ translate ru strings:
     new "Ты устроила себе неплохое представление. Чёрт, глядя на это, я уже почти снова встаю."
 
     old "Sarah felt his erection prodding her side."
-    new "Сара почувствовала, как его эрекция давит на её бок."
+    new "Сара почувствовала, как его член давит на её бок."
 
     old "I...I just...I can't..."
     new "Я... я просто... не могу..."

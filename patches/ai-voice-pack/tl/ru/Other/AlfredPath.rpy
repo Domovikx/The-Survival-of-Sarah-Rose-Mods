@@ -148,7 +148,7 @@ translate ru strings:
     new "И во всех остальных частях её тела."
 
     old "Sarah felt her own sex grow instantly wet at his compliment."
-    new "Сара почувствовала, как её половые органы мгновенно увлажнились от его комплимента."
+    new "Сара почувствовала, как киска мгновенно увлажнилась от его комплимента."
 
     old "And what little resistance she had felt, yielded like snow before summer."
     new "И то слабое сопротивление, что она ощущала, уступило место безропотности, словно снег перед летом."
@@ -211,7 +211,7 @@ translate ru strings:
     new "Кончик его члена медленно входил в её покорное горло."
 
     old "Sarah gagged on it, eagerly."
-    new "Сара с энтузиазмом задыхалась от него."
+    new "Сара с жадностью подавилась им."
 
     old "Anything. Anything that he might want from her, she would give him."
     new "Всё. Всё, чего бы он от неё ни захотел, она была готова дать ему."

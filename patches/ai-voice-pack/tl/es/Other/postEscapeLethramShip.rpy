@@ -13,7 +13,7 @@ translate es strings:
     new "Recházalo"
 
     old "Go out and try to forget"
-    new "Ságate y trata de olvidar"
+    new "Sal y trata de olvidarlo"
 
     old "Go home alone"
     new "Vete sola a casa"

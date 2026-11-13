@@ -796,7 +796,7 @@ translate ru strings:
     new "Разводя ноги ещё шире, она почувствовала, как он расположился между ними."
 
     old "She could feel the tip of him, grazing up against her sex."
-    new "Она чувствовала, как его кончик скользит по её половым органам."
+    new "Она чувствовала, как его кончик скользит к её киске."
 
     old "She let out a soft moan the surprise of the sensation."
     new "Она тихо застонала от удивления, вызванного этим ощущением."
@@ -2062,7 +2062,7 @@ translate ru strings:
     new "Но руки Мариона, обхватившие её ноги, держали их раздвинутыми."
 
     old "Sarah cried out as she felt his lips press upon the outside of her sex."
-    new "Сара закричала, когда почувствовала, как его губы прижались к внешней стороне её половых органов."
+    new "Сара закричала, когда почувствовала, как его губы прижались к её киске."
 
     old "His tongue, pressed up against her mound."
     new "Его язык прижался к её клитору."
@@ -2146,7 +2146,7 @@ translate ru strings:
     new "Всё ещё тяжело дыша и стоня, Сара медленно спускалась с кайфа."
 
     old "By now, her sex was so sensitive it neared on painful."
-    new "К этому моменту её половые органы были настолько чувствительны, что это уже граничило с болью."
+    new "К этому моменту между ног было настолько чувствительно, что это уже граничило с болью."
 
     old "But Marion, seemingly aware of such things, had slowed down considerably."
     new "Но Марион, казалось, понимала такие вещи и заметно замедлилась."

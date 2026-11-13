@@ -238,7 +238,7 @@ translate ru strings:
     new "Я — мужчина, и у меня тоже есть пределы!"
 
     old "I gotta listen to him fucking you every night, meanwhile if I even so much as get a hard on the cage cuts into my dick!"
-    new "Я должен слушать, как он, чёрт возьми, трахает тебя каждую ночь, в то время как если у меня даже просто возникает эрекция, клетка режет мой член!"
+    new "Я должен слушать, как он, чёрт возьми, трахает тебя каждую ночь, в то время как если у меня даже просто встает член, клетка режет мой член!"
 
     old "So what, you're gonna risk your life so you can jerk off?"
     new "Ну и что, ты собираешься рисковать жизнью только ради того, чтобы дрочить?"
@@ -1228,7 +1228,7 @@ translate ru strings:
     new "Реагируя на инстинкт, она начала тереться задом о него."
 
     old "See, boy. Don't take much to get this bitch in heat and she'll do just about anything."
-    new "Вот видишь, парень. Не нужно многого, чтобы эта сучка вошла в течку — и она сделает практически всё."
+    new "Вот видишь, парень. Не нужно многого, чтобы эта шлюха вошла в течку — и она сделает практически всё."
 
     old "You're a fucking monster!"
     new "Ты, чертово чудовище!"
@@ -1369,7 +1369,7 @@ translate ru strings:
     new "Сара сделала, как ей сказали, и последовала за его руками, позволяя ему направлять её движения."
 
     old "He guided her near Nick's head, forcing her down onto her knee, bend over, Sarah could see down between her legs that her sex lingered slightly above Nick's face."
-    new "Он направил её к голове Ника, заставив опуститься на колени и согнуться вперёд; Сара увидела между своих ног, что её половые органы слегка возвышались над лицом Ника."
+    new "Он направил её к голове Ника, заставив опуститься на колени и согнуться вперёд; Сара увидела между своих ног, что её киска слегка торчала над лицом Ника."
 
     old "For a moment, Sarah was confused, until suddenly she saw the captain position himself behind her."
     new "На мгновение Сара растерялась, но тут же увидела, как капитан занял позицию позади неё."
@@ -1525,7 +1525,7 @@ translate ru strings:
     new "Это было уже не то, что раньше. Ник был не в соседней комнате — он был прямо здесь. Ей больше не нужно было сдерживать свои желания, чтобы не ранить его чувства."
 
     old "Sarah felt drips of her own wetness fall from her sex, down onto Nick's face."
-    new "Сара почувствовала, как капли её собственной влаги стекают из её половых органов на лицо Ника."
+    new "Сара почувствовала, как капли её собственной влаги стекают между ног на лицо Ника."
 
     old "Behind her, the captain was plowing into her with all his might."
     new "Позади неё капитан входил в неё со всей своей мощью."
@@ -1549,7 +1549,7 @@ translate ru strings:
     new "Толчки замедлились, когда Сара почувствовала, как из неё вытекают последние капли спермы."
 
     old "Suddenly, she felt Belmont pull out of her. She moaned in surprise at the sudden dissapearance of his cock, losing that feeling of being filled up."
-    new "Внезапно она почувствовала, как Бельмонт вытащил из неё свой член. Она удивлённо застонала от внезапного исчезновения его пениса, потеряв то чувство, что была полностью наполнена."
+    new "Внезапно она почувствовала, как Бельмонт вытащил из неё свой член. Она удивлённо застонала от внезапного исчезновения его члена, потеряв то чувство, что была полностью наполнена."
 
     old "Captain...so mean..."
     new "Капитан... какой же ты жестокий..."
@@ -1564,7 +1564,7 @@ translate ru strings:
     new "Оглянувшись вниз с недоумением, она вдруг всё поняла."
 
     old "Dripping out from her pussy were remnant sof the captain's load. Drop after drop of cum, usually sliding out of her onto her legs, now dripped down."
-    new "Из её влагалища сочилась оставшаяся часть нагрузки капитана. Капля за каплей сперма — то, что обычно стекало по ногам, — теперь капала вниз."
+    new "Из её киски сочилась оставшаяся сперма капитана. Капля за каплей — сперма, которая обычно просто сползала бы по её ногам, теперь стекала вниз."
 
     old "Down onto Nick."
     new "На Ника."

@@ -502,7 +502,7 @@ translate ru strings:
     new "Сара продолжала наблюдать, как он берёт Мэри — жёстко и без остановки, точно так же, как делал это с ней ранее."
 
     old "Sarah felt her sex begin to grow warm."
-    new "Сара почувствовала, как её половые органы начали греться."
+    new "Сара почувствовала, как между ног у неё начало греться."
 
     old "She let her fingers slide past her body as she observed them."
     new "Она позволила пальцам скользнуть по своему телу, не отрывая взгляда от происходящего."
@@ -676,7 +676,7 @@ translate ru strings:
     new "Сара почувствовала, как его пальцы начали впиваться в её кожу — точно так же, как он поступал с Мэри."
 
     old "She moved her body, her whole body, along with the motions of her hips. She could feel the lips of her sex slide across his cock, back and forth."
-    new "Она двигала своим телом, всем телом, в такт движениям бёдер. Она чувствовала, как губы её влагалища скользят по его члену — туда и обратно."
+    new "Она двигала своим телом, всем телом, в такт движениям бёдер. Она чувствовала, как плоть между ног скользила по его члену — туда и обратно."
 
     old "She began to ride him, taking him deeper until she fitted him up to his hilt."
     new "Она начала «ездить» на нём, принимая его всё глубже, пока он не вошёл ей до самого основания."
@@ -703,7 +703,7 @@ translate ru strings:
     new "Она схватила его за плечи и начала двигать своим телом всё быстрее."
 
     old "The sounds of his cock plunging faster and faster into her pussy, filled the room."
-    new "Звуки его члена, всё быстрее и быстрее входящего в её влагалище, наполнили комнату."
+    new "Звуки его члена, всё быстрее и быстрее входящего в её киску, наполнили комнату."
 
     old "But Sarah did not let up. Keeping hold of him, leaning forward, pressing her breasts into his chest, she rode him faster still, as fast as he body could manage."
     new "Но Сара не отступала. Держа его, наклонившись вперед и прижав грудь к его груди, она ехала на нём всё быстрее — так быстро, как только позволяло ей тело."

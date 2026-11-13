@@ -574,7 +574,7 @@ translate ru strings:
     new "В Саре зародилось новое ощущение."
 
     old "Down from her cunt, she felt something new building, a deeper pleasure still."
-    new "От своего влагалища она почувствовала, как рождается что-то новое — ещё более глубокое удовольствие."
+    new "От киски она почувствовала, как рождается что-то новое — ещё более глубокое удовольствие."
 
     old "It grew and grew, louder and louder. It drove out every other sensation, it build to a peak and then, crossing some unknown threshold, the feeling exploded."
     new "Оно росло и росло, становясь всё громче и громче. Оно вытеснило все остальные ощущения, достигло пика, а затем, перешагнув некий неизвестный порог, взорвалось."
@@ -595,7 +595,7 @@ translate ru strings:
     new "Сара пришла в себя лишь через несколько мгновений: взрыв ощущений постепенно сменился обычным наслаждением от того, что Атилла сидел на ней верхом."
 
     old "By now, Atilla had picked up his pace, driving his cock up to the hilt into Sarah’s pussy."
-    new "К этому моменту Атилла уже ускорил темп, полностью входя своим членом во влагалище Сары."
+    new "К этому моменту Атилла уже ускорил темп, полностью входя своим членом в киску Сары."
 
     old "Sarah could do little more than lay down as she was driven, face first into the mat, and Atilla continued to take her deeper."
     new "Сара едва могла пошевелиться, пока её толкали вниз лицом к мату, а Атилла продолжал проникать в неё всё глубже."

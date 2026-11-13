@@ -463,7 +463,7 @@ translate ja strings:
     new "それが噂というものですよ、我が主よ。彼が本当に彼らを統一したと示唆する十分な証拠はまだ我々にはありません。"
 
     old "High General Barion is an army man, so he loves to imagine every enemy an existential threat to our nation. It makes him feel needed."
-    new "バルيون将軍は軍人ですからね。だから敵の一人一人を国家にとっての存亡の危機だと想像するのが好きなんです。そうすれば自分が必要とされていると感じられるから。"
+    new "バリオン将軍は軍人ですからね。だから敵の一人一人を国家にとっての存亡の危機だと想像するのが好きなんです。そうすれば自分が必要とされていると感じられるから。"
 
     old "Thomas considered what he was hearing."
     new "トマスは聞こえてくる言葉を考えた。"
@@ -823,7 +823,7 @@ translate ja strings:
     new "サラは壁に両手を押し付けたまま、さらに深く身をかがめようとした。ケイトの意図に合わせて体を曲げているのだ。"
 
     old "Kate began to slowly push two fingers into Sarah's sex."
-    new "ケイトはゆっくりと二本の指をサラの性器へと押し込み始めた。"
+    new "ケイトはゆっくりと二本の指をサラの秘部へと押し込み始めた。"
 
     old "Sarah tried to lean back into Kate, begging her to go faster."
     new "サラはケイトの方へ体を押し付けながら、もっと速くしてほしいと懇願した。"
@@ -847,7 +847,7 @@ translate ja strings:
     new "ケイトは、友人であるサラが学び始めているのを見て、ペースを上げて彼女に報いることにした。"
 
     old "Sarah still felt every part of her being controlled, her hair still pulled tight, her pussy exposed and being penetrated. Holding onto the wall was the only thing she could manage."
-    new "サラはなおも自身の存在のすべてが支配されているのを感じていた。髪はまだ固く引きつられ、性器はむき出しのまま貫かれていた。壁にしがみつけることだけが、彼女にできた唯一のことだった。"
+    new "サラは依然として体の隅々まで支配されているのを感じていた。髪はまだきつく引かれ、秘部は露わになったまま貫かれていた。壁にしがみつけることだけが、彼女にできる唯一のことだった。"
 
     old "She felt Kate increase her speed, pistoning her fingers faster and deeper into Sarah."
     new "彼女はケイトがスピードを上げ、指をさらに速く、深く突き入れてくるのを感じた。"

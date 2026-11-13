@@ -214,7 +214,7 @@ translate ru strings:
     new "Какая мне разница? Делай, как хочешь — я уже сказал!"
 
     old "And that letter will be informing the Mythrans that Elarand, Normandi and Rosanna have formed into a single, strong, unified block."
-    new "И это письмо будет информировать Митранов о том, что Элараンド, Норманди и Розанна объединились в единый, сильный и сплочённый блок."
+    new "И это письмо будет информировать Митранов о том, что Эларанд, Норманди и Розанна объединились в единый, сильный и сплочённый блок."
 
     old "Sarah saw Antonio's face drop."
     new "Сара увидела, как лицо Антонио поникло."

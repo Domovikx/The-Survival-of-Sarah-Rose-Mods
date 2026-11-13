@@ -23,7 +23,7 @@ import { readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
-import { ALL_LANGS, parsePo, renderPo, writePoAtomic } from "./po_core.mts";
+import { ALL_LANGS, clearChanged, markChanged, parsePo, renderPo, writePoAtomic } from "./po_core.mts";
 import { poHeaderLines } from "./po_update.mts";
 
 const SKILL_DIR = dirname(fileURLToPath(import.meta.url));
@@ -69,6 +69,8 @@ export function applyFixes(
         continue;
       }
       e.msgstr = "";
+      // Строка ушла на повторный перевод — якорь ревью больше не нужен.
+      clearChanged(e);
       changed++;
     } else {
       const t = op.text ?? "";
@@ -77,6 +79,7 @@ export function applyFixes(
         continue;
       }
       e.msgstr = t;
+      markChanged(e);
       changed++;
     }
   }

@@ -160,7 +160,7 @@ translate ru strings:
     new "Сара медленно продвинулась дальше, опустив колени рядом с головой Кейт и зажав её голову между своими ногами."
 
     old "Sarah slowly pushed her sex forward, down towards Kate's mouth."
-    new "Сара медленно подвела свой половой орган к рту Кейт."
+    new "Сара медленно подвела киску к рту Кейт."
 
     old "Kate, again, seemed eager to please, her tongue reaching out in between Sarah's legs."
     new "Кейт, снова проявив готовность угодить, протянула язык между ног Сары."
@@ -205,7 +205,7 @@ translate ru strings:
     new "Сара хотела ответить тем же."
 
     old "Bending deep and low, whilst keeping her sex pressed against Kate's lips, Sarah brought her mouth down on Kate's sex."
-    new "Наклонившись низко и глубоко, при этом продолжая прижимать свои половые органы к губам Кейт, Сара припала ртом к половым органам Кейт."
+    new "Глубоко и низко наклонившись, но при этом не отрывая свою киску от губ Кейт, Сара прижалась ртом к киске Кейт."
 
     old "She felt a surprised spasm from Kate's body, and a muffled moan expressed from between her own legs by Kate."
     new "Она ощутила неожиданный спазм в теле Кейт, а из-между её собственных ног донёсся приглушённый стон Кейт."
@@ -214,7 +214,7 @@ translate ru strings:
     new "Сара высунула язык, подражая искусному исполнению Кейт, и медленно провела им от вершины её лона до самой щели."
 
     old "Tasting Kate's sex on her lips for the first time, whilst Kate continued her work on Sarah's, began to drive Sarah wild."
-    new "Впервые ощутив вкус половых органов Кейт на своих губах, пока та продолжала работать со своими, Сара начала выходить из себя."
+    new "Впервые ощутив на своих губах вкус киски Кейт, в то время как та продолжала ласкать киску Сары, Сара начала сходить с ума от страсти."
 
     old "She wanted to make Kate feel the way Kate made her feel."
     new "Она хотела, чтобы Кейт почувствовала то же, что и она от Кейт."

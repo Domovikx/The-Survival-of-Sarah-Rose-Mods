@@ -1288,7 +1288,7 @@ translate ru strings:
     new "Боги! Посмотри на себя — ты вся промокла!"
 
     old "Sarah could feel him press the tip of his cock up against her cunt."
-    new "Сара чувствовала, как он прижимал кончик своего члена к её влагалищу."
+    new "Сара чувствовала, как он прижимал кончик своего члена к её киске."
 
     old "It pressed up against her, but he didn't enter her."
     new "Оно прижалось к ней, но он не вошёл."
@@ -1309,7 +1309,7 @@ translate ru strings:
     new "Скажи мне, когда ты в последний раз действительно занималась нормальным сексом?"
 
     old "She continued to feel him press up against her sex. Enough to drive her wild. Not enough to satisfy."
-    new "Она продолжала чувствовать, как он давит на её половые органы. Достаточно, чтобы свести её с ума, но недостаточно, чтобы удовлетворить."
+    new "Она продолжала чувствовать, как он давит на её киску. Достаточно, чтобы свести её с ума, но недостаточно, чтобы удовлетворить."
 
     old "In...in the alley."
     new "В... в переулке."

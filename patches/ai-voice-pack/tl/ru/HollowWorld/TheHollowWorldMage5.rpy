@@ -1018,7 +1018,7 @@ translate ru strings:
     new "Бешено толкаясь, она почувствовала, как он кончил внутри неё."
 
     old "The feeling of his seed, spilling into her body, lining the walls of her vaginal canal, Sarah had never felt anything to intensely."
-    new "Ощущение его спермы, излившейся в её тело и выстлавшей стенки влагалища, — такого интенсивного опыта у Сары никогда не было."
+    new "Ощущение его спермы, излившейся в её тело и выстлавшей стенки киски, — такого интенсивного опыта у Сары никогда не было."
 
     old "As the brightness faded from her body, receding back to reality, Sarah could feel the world intrude on her again."
     new "По мере того как сияние покидало её тело, возвращая её к реальности, Сара почувствовала, что мир снова вторгается в неё."

@@ -550,7 +550,7 @@ translate ru strings:
     new "Его руки соскользнули с её плеч и обхватили талию."
 
     old "Sarah let slip a startled cry as she felt the tip of his cock press up against her pussy."
-    new "Сара издала испуганный крик, почувствовав, как кончик его члена прижался к её влагалищу."
+    new "Сара издала испуганный крик, почувствовав, как кончик его члена прижался к её киске."
 
     old "I had heard rumors of your beauty, and I will not deny that I had hoped they would prove true."
     new "Я слышал слухи о твоей красоте и не стану отрицать, что надеялся — они окажутся правдой."

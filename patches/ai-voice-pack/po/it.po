@@ -10,11 +10,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-# TSSR IT translation — скелет из po/template.pot (Italiano).
-# msgstr "" = не переведено; заполняется построчно переводчиком.
-msgid ""
-msgstr "Project-Id-Version: TSSR-Mods 1.0\nPO-Revision-Date: 2026-10-23 00:00+0000\nLanguage: it\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\n"
-
 msgctxt "speaker:Narrator"
 msgid "The Survival of Sarah Rose is an epic fantasy game. Production on TSSR is still ongoing."
 msgstr "The Survival of Sarah Rose è un gioco fantasy epico. La produzione di TSSR è ancora in corso."
@@ -4075,9 +4070,10 @@ msgctxt "speaker:Narrator"
 msgid "Sarah kept her hands planted on the wall, and tried to bend deeper, bending her body to Kate's intentions."
 msgstr "Sarah teneva le mani piantate sul muro e cercava di piegarsi più in profondità, adattando il suo corpo alle intenzioni di Kate."
 
+# changed
 msgctxt "speaker:Narrator"
 msgid "Kate began to slowly push two fingers into Sarah's sex."
-msgstr "Kate iniziò a spingere lentamente due dita nella vagina di Sarah."
+msgstr "Kate iniziò a spingere lentamente due dita nella fica di Sarah."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah tried to lean back into Kate, begging her to go faster."
@@ -4107,9 +4103,10 @@ msgctxt "speaker:Narrator"
 msgid "Kate, seeing that her friend was starting to learn, decided to reward her by picking up the pace."
 msgstr "Kate, vedendo che la sua amica stava iniziando a capire, decise di ricompensarla accelerando il ritmo."
 
+# changed
 msgctxt "speaker:Narrator"
 msgid "Sarah still felt every part of her being controlled, her hair still pulled tight, her pussy exposed and being penetrated. Holding onto the wall was the only thing she could manage."
-msgstr "Sarah sentiva ancora ogni parte del suo essere sotto controllo: i capelli le erano ancora tirati con forza, la vagina esposta e penetrata. Aggrapparsi al muro era l'unica cosa che riusciva a fare."
+msgstr "Sarah sentiva ancora ogni parte del suo essere sotto controllo, i capelli ancora tirati stretti, la sua fica esposta e penetrata. Aggrapparsi al muro era l'unica cosa che riusciva a fare."
 
 msgctxt "speaker:Narrator"
 msgid "She felt Kate increase her speed, pistoning her fingers faster and deeper into Sarah."
@@ -121199,9 +121196,10 @@ msgctxt "speaker:Sarah"
 msgid "Not much glory to be had here."
 msgstr ""
 
+# changed
 msgctxt "menu"
 msgid "I once blew an old sailor"
-msgstr "Ho fatto sesso orale con un vecchio marinaio."
+msgstr "Una volta feci un pompino a un vecchio marinaio."
 
 msgctxt "speaker:Sarah"
 msgid "I once blew an old sailor."
@@ -276327,9 +276325,10 @@ msgctxt "ui"
 msgid "Test"
 msgstr "Test"
 
+# changed
 msgctxt "ui"
 msgid "Voice Volume"
-msgstr "Volume"
+msgstr "Volume voce"
 
 msgctxt "ui"
 msgid "Mute All"

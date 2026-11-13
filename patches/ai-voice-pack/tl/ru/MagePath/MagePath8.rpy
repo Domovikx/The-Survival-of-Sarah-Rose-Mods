@@ -715,7 +715,7 @@ translate ru strings:
     new "Сара провела рукой вокруг и прижала ладонь к пояснице Самайры. С лёгкостью она притянула её ближе."
 
     old "Instinctively, Samayra began to grind her sex against Sarah's legs."
-    new "Инстинктивно Самайра начала тереться своим половым органом о ноги Сары."
+    new "Инстинктивно Самайра начала тереться киской о ноги Сары."
 
     old "Sarah controlled, guided, the tempo of Samayra's movements, as she felt the princess began to ride her leg."
     new "Сара контролировала и направляла темп движений Самайры, чувствуя, как принцесса начала «ездить» по её ноге."

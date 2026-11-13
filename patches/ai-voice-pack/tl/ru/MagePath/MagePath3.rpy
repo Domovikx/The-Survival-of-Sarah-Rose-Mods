@@ -694,7 +694,7 @@ translate ru strings:
     new "Нет. Ты не выполнил свою часть сделки, так что и я не выполню свою."
 
     old "Sarah fell down unto her knees and pressed her sex forward, right unto the edge of the circle."
-    new "Сара опустилась на колени и прижала свои половые органы вперёд, прямо к краю круга."
+    new "Сара опустилась на колени и прижала киску вперёд, прямо к краю круга."
 
     old "She slid one hand up her body, grasping at her own breast, and another past her stomach, down to between her legs."
     new "Она провела одной рукой вверх по телу, схватив собственную грудь, а другой — ниже живота, между ног."
@@ -742,7 +742,7 @@ translate ru strings:
     new "Её собственное прикосновение послало электрические разряды вверх по позвоночнику."
 
     old "She began to drive her fingers in and out of herself faster, pressing harder against her sex, throwing back her head, filling the room with her moans."
-    new "Она начала быстрее вводить и выводить пальцы из себя, сильнее надавливая на свой половой орган, откидывая голову назад и наполняя комнату своими стонами."
+    new "Она начала быстрее вводить и выводить пальцы из себя, сильнее надавливая внутрь себя, откидывая голову назад и наполняя комнату своими стонами."
 
     old "The pleasure exploded from between her legs, roiling through every part of her."
     new "Удовольствие взорвалось между её ног, пронизывая каждую часть её тела."

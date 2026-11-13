@@ -178,7 +178,7 @@ translate ru strings:
     new "Её тело дрожало, и Сара медленно кивнула головой."
 
     old "She felt the tip of its cock, pressing up against her sex."
-    new "Она почувствовала, как кончик его члена прижался к её половым органам."
+    new "Она почувствовала, как кончик его члена прижался к её плоти."
 
     old "She was drenched."
     new "Она была вся мокрая."

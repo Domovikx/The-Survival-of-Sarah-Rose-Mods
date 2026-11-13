@@ -481,7 +481,7 @@ translate ru strings:
     new "Только к концу удовольствие отступает, и чувства возвращаются к Саре."
 
     old "For nearly five minutes more, Sarah bucks and grinds her sex up and down, letting Lady Carolyn slowly finger her till every last moment of her climax is finished."
-    new "Ещё почти пять минут Сара дёргается и терёт своим половым органом вверх-вниз, позволяя Каролин медленно ласкать её пальцами, пока не закончится последний миг её оргазма."
+    new "Ещё почти пять минут Сара дёргается и трёт свою киску вверх-вниз, позволяя леди Каролин медленно ласкать её пальцами, пока не пройдёт последний миг её оргазма."
 
     old "She abandons all vanity. She only desperately wants to ride this orgasm to its utter completion."
     new "Она отбрасывает всю тщетность. Ей лишь отчаянно хочется довести этот оргазм до самого конца."

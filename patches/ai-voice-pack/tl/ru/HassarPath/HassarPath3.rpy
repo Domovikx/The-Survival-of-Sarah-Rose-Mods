@@ -877,7 +877,7 @@ translate ru strings:
     new "Так удивлённая внезапным ощущением, Сара почувствовала, как её тело скрутило, и она невольно закричала от наслаждения."
 
     old "The sensation of Naydeen's fingers, now pressed between her legs, was too much."
-    new "Ощущение от пальцев Найдин, теперь прижатых к её половым органам, было слишком сильным."
+    new "Ощущение от пальцев Найдин, теперь прижатых между ног, было слишком сильным."
 
     old "It was overpowering, so much of it she could hardly stand it, and yet in equal measure Sarah wanted more of it."
     new "Это было слишком сильно — настолько, что она едва могла это вынести, и всё же в равной мере Сара хотела ещё большего."
@@ -1054,7 +1054,7 @@ translate ru strings:
     new "Не прошло и доли секунды, как она снова почувствовала, как член вошёл в неё — теперь сзади."
 
     old "She could feel Naydeen settling between her legs, spreading them apart and pulling up Sarah's rear so that she could still reach her sex."
-    new "Она чувствовала, как Найдин занимает место между её ногами, разводит их и приподнимает таз Сары так, чтобы всё ещё иметь доступ к её половым органам."
+    new "Она чувствовала, как Найдин занимает место между её ногами, разводит их и приподнимает таз Сары так, чтобы всё ещё иметь доступ к её киске."
 
     old "For Sarah it was new and difficult to keep up, but in Naydeen's hands, it felt natural and easy."
     new "Для Сары это было ново и трудно давалось, но в руках Найдин всё ощущалось естественно и легко."
@@ -1126,7 +1126,7 @@ translate ru strings:
     new "Наконец, когда последнее покинуло её тело, Сара ощутила, как Найдин вышла из неё."
 
     old "Her sex sensitive, Sarah could feel that same sensitivity all across her body, as though her skin was new and freshly exposed to the sultry air."
-    new "Её половые органы были чувствительны, и Сара ощущала ту же чувствительность по всему телу — словно кожа стала новой, только что обнажённой для влажного, дурманящего воздуха."
+    new "Её киска была чувствительна, и Сара ощущала ту же чувствительность по всему телу — словно кожа стала новой, только что обнажённой для влажного, дурманящего воздуха."
 
     old "Each limb in her body felt racked from the excercise."
     new "Каждая конечность в её теле ощущалась измученной от этой нагрузки."

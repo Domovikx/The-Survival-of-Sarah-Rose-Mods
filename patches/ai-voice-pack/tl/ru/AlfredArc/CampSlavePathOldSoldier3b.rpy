@@ -538,7 +538,7 @@ translate ru strings:
     new "Не потребовалось и нескольких движений губкой, чтобы Сара поняла: он уже почти стоял."
 
     old "With each motion, he grew and grew, until he was entirely erect."
-    new "С каждым движением он становился всё больше и больше, пока не достиг полной эрекции."
+    new "С каждым движением он становился всё больше и больше, пока не достиг твердости."
 
     old "Sarah had no illusions that this wasn't how this was going to end. Better to lean into it, she concluded."
     new "У Сары не было иллюзий насчёт того, как всё должно было закончиться. Лучше просто поддаться этому, решила она."
@@ -712,7 +712,7 @@ translate ru strings:
     new "Согнившись у стены, она почувствовала, как он схватил её за талию, потянул назад и удержал на месте."
 
     old "Like this, her sex was exposed to him, not that there was much vanity left to save."
-    new "Вот так её половые органы оказались открыты ему, хотя и без того оставалось мало гордости, которую стоило бы спасать."
+    new "Таким образом, её киска была открыта ему — хотя и не оставалось уже много тщеславия, которое стоило бы спасать."
 
     old "She heard the shuffling sound of her master positioning himself behind her properly. And then..."
     new "Она услышала шуршащий звук: её господин правильно занимал позицию позади неё. А затем..."

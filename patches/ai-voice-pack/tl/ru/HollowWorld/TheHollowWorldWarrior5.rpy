@@ -520,7 +520,7 @@ translate ru strings:
     new "Время..."
 
     old "Samayra was running out of time."
-    new "У Самайры (женский род) заканчивалось время."
+    new "У Самайры заканчивалось время."
 
     old "I have to go!"
     new "Мне нужно идти!"

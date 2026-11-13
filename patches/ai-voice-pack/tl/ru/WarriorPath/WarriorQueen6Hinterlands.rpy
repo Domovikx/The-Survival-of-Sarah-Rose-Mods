@@ -1102,7 +1102,7 @@ translate ru strings:
     new "Она прошептала эти слова ему на ухо."
 
     old "She felt his powerful upper leg, press firmly between her legs, up against her sex."
-    new "Она почувствовала, как его мощное бедро твёрдо прижалось к её ногам, прямо к половым органам."
+    new "Она почувствовала, как его мощное бедро твёрдо прижалось между её ног, прямо к киске."
 
     old "She began to grind herself against him, pulling him in more with her body."
     new "Она начала тереться о него, притягивая его к себе своим телом."
@@ -1294,7 +1294,7 @@ translate ru strings:
     new "Сара поцеловала его, введя язык глубоко ему в рот, а он ответил ей своим."
 
     old "She grinded her wet and eager sex against his broad upper leg."
-    new "Она терла свои влажные и нетерпеливые гениталии о его широкую верхнюю часть ноги."
+    new "Она терла мокрую и жадную киску о его широкую верхнюю часть ноги."
 
     old "Moaning softly, she begged him for the real thing."
     new "Тихо стона, она умоляла его о настоящем."
@@ -2053,7 +2053,7 @@ translate ru strings:
     new "Сара почувствовала, как её грудь прижалась к твёрдой деревянной поверхности стола."
 
     old "Behind her, she felt her ass raised up, her sex exposed."
-    new "За спиной она почувствовала, как её зад поднялся вверх, а половые органы оказались открыты."
+    new "За спиной она почувствовала, как её зад поднялся вверх, а её плоть оказалась открыта."
 
     old "Kate's strong hand on her back kept her in place."
     new "Сильная рука Кейт на её спине удерживала её на месте."
@@ -2068,7 +2068,7 @@ translate ru strings:
     new "Сара тяжело дышала, чувствуя, как рука Кейт скользит между её ног."
 
     old "Her entire body twisted as Kate pressed two fingers on her sex."
-    new "Всё её тело изогнулось, когда Кейт прижала два пальца к её половым органам."
+    new "Всё её тело изогнулось, когда Кейт прижала два пальца ей в киску."
 
     old "Sarah could feel how wet she already was. Kate just had a way of pulling out this side of her."
     new "Сара чувствовала, насколько влажной она уже стала. У Кейт был особый дар — заставлять это проявляться в ней."
@@ -2155,7 +2155,7 @@ translate ru strings:
     new "Сара взмолилась."
 
     old "You promise after the ceremony, when you make a Knight, you'll go down on me?"
-    new "Ты обещаешь, что после церемонии, когда станешь рыцарем, займёшься со мной оральным сексом?"
+    new "Ты обещаешь, что после церемонии, когда тебя сделают рыцарем, сделаешь мне кунилингус?"
 
     old "Anything!"
     new "Что угодно!"

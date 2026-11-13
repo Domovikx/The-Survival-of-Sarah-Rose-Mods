@@ -10,7 +10,7 @@ translate es strings:
     new "Quédate y observa"
 
     old "Strip your clothes"
-    new "Desnuda tu ropa"
+    new "Quítate la ropa"
 
     old "Obey Sakar"
     new "Obedece a Sakar"

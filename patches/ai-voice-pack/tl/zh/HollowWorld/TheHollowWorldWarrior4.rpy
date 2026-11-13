@@ -22,7 +22,7 @@ translate zh strings:
     new "我杀了一个年轻人"
 
     old "I once blew an old sailor"
-    new "我曾和一位老水手做过"
+    new "我从前给一个老水手吸过肉棒。"
 
     old "I once had sex with an orc"
     new "曾与兽人发生过关系"

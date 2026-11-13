@@ -22,7 +22,7 @@ translate pl strings:
     new "Zabiłem chłopaka"
 
     old "I once blew an old sailor"
-    new "Kiedyś uprawiałem seks z starym żeglarzem"
+    new "Kiedyś dałam mineta staremu żeglarzowi"
 
     old "I once had sex with an orc"
     new "Miałem seks z orkiem."

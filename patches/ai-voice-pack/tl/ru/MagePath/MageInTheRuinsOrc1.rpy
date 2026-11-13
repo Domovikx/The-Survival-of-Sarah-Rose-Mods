@@ -757,7 +757,7 @@ translate ru strings:
     new "Она вновь увидела, как его член раздулся до почти невероятных размеров — таких, что большинство мужчин и рядом не стояли."
 
     old "The goblin stood up, it's erection stabbing up into the air."
-    new "Гоблин встал, и его эрекция устремилась вверх, словно нож."
+    new "Гоблин встал, и член встал торчком, словно нож."
 
     old "He quickly walked up to her and grabbed her wrist."
     new "Он быстро подошёл к ней и схватил её за запястье."
@@ -871,7 +871,7 @@ translate ru strings:
     new "Она становилась влажной."
 
     old "The goblin's cock, sliding ever deeper, now met with less and less resistance."
-    new "Пенис гоблина, проникая всё глубже, теперь встречал всё меньше сопротивления."
+    new "Член гоблина, проникая всё глубже и глубже, теперь встречал всё меньшее и меньшее сопротивление."
 
     old "She heard its cruel laughter filled with wicked glee."
     new "Она услышала его жестокий смех, полный злорадства."

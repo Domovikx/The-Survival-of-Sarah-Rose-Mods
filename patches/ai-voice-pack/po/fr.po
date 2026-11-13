@@ -10,11 +10,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-# TSSR FR translation — скелет из po/template.pot (Français).
-# msgstr "" = не переведено; заполняется построчно переводчиком.
-msgid ""
-msgstr "Project-Id-Version: TSSR-Mods 1.0\nPO-Revision-Date: 2026-10-23 00:00+0000\nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n > 1);\n"
-
 msgctxt "speaker:Narrator"
 msgid "The Survival of Sarah Rose is an epic fantasy game. Production on TSSR is still ongoing."
 msgstr "The Survival of Sarah Rose est un jeu de fantasy épique. La production de TSSR est toujours en cours."
@@ -963,9 +958,10 @@ msgctxt "speaker:Narrator"
 msgid "She watches herself in the mirror as she tries out a series of different dresses."
 msgstr "Elle s'observe dans le miroir en essayant une série de robes différentes."
 
+# changed
 msgctxt "speaker:Narrator"
 msgid "Sarah feels the spectre of her mother, advising her with every choice."
-msgstr "Sarah sent le spectre de sa mère, lui donnant des conseils à chaque choix."
+msgstr "Sarah ressent l’ombre de sa mère, qui la conseille à chaque décision."
 
 msgctxt "speaker:Narrator"
 msgid "\"Ooh no, not this one. Try that one\", she would say when Sarah was still young."
@@ -121199,9 +121195,10 @@ msgctxt "speaker:Sarah"
 msgid "Not much glory to be had here."
 msgstr ""
 
+# changed
 msgctxt "menu"
 msgid "I once blew an old sailor"
-msgstr "J'ai déjà couché avec un vieux marin"
+msgstr "J'ai déjà fait une pipe à un vieux marin"
 
 msgctxt "speaker:Sarah"
 msgid "I once blew an old sailor."

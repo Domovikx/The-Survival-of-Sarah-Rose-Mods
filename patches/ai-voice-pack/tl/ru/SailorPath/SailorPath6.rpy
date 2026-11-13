@@ -1546,7 +1546,7 @@ translate ru strings:
     new "Только достаточно, чтобы её клитор коснулся его верхнего бедра."
 
     old "As the blows continued to land on her lower body, she thrusted her sex into his legs as much as she could."
-    new "Пока удары продолжались по нижней части её тела, она изо всех сил толкала свой половой орган в его ноги."
+    new "Пока удары продолжались по нижней части её тела, она изо всех сил толкала киску в его ноги."
 
     old "Grinding, enduring each slap, she felt the orgasm rise up out of nowhere, exploding across her body."
     new "Извиваясь и вынося каждый шлепок, она почувствовала, как оргазм внезапно взорвался в её теле."
@@ -1585,7 +1585,7 @@ translate ru strings:
     new "Сара почувствовала, как её оттолкнули от его колен, и она упала на землю перед ним."
 
     old "Looking up from the ground, she could see his massive erection looming over her."
-    new "Подняв голову с земли, она увидела его огромную эрекцию, нависшую над ней."
+    new "Подняв голову с земли, она увидела его огромный член, нависший над ней."
 
     old "There was no resistance left in her."
     new "В ней не осталось ни капли сил."
@@ -1978,7 +1978,7 @@ translate ru strings:
     new "Её лицо было всего в нескольких дюймах от его."
 
     old "She felt him slowly lower her, her exposed sex gently pierced by the tip of his cock."
-    new "Она почувствовала, как он медленно опускает её, и обнажённые половые органы были нежно пронзены кончиком его члена."
+    new "Она почувствовала, как он медленно опускает её, и её плоть была нежно пронизана кончиком его члена."
 
     old "She moaned as he penetrated her. This close to him, she felt it somehow more intimate, more exposed."
     new "Она застонала, когда он вошёл в неё. Так близко к нему ей казалось, что это стало ещё более личным и уязвимым."
@@ -2296,13 +2296,13 @@ translate ru strings:
     new "Её заплаканное лицо. Подбородок, покрытый собственной слюной."
 
     old "Flexing her pussy, she drew out the last embers of the orgasm."
-    new "Напрягая мышцы влагалища, она выжимала последние искры оргазма."
+    new "Напрягая стенки киски, она выжимала последние искры оргазма."
 
     old "She felt her body rock as the captain was still thrusting into her."
     new "Она почувствовала, как её тело качается, пока капитан продолжал толкаться в неё."
 
     old "In response to her flexing her sex, she could feel his own expand, pressing hard up against her insides."
-    new "В ответ на её сокращение мышц влагалища она почувствовала, как его собственный член расширился и твёрдо надавил на её внутренние стенки."
+    new "В ответ на её сокращение киски она почувствовала, как его собственный член расширился и твёрдо надавил на её внутренние стенки."
 
     old "She heard the man who had made her go blind grunting like an animal as he finished inside of her."
     new "Она услышала, как мужчина, от которого она ослепла, мычал, словно животное, доводя себя до оргазма внутри неё."

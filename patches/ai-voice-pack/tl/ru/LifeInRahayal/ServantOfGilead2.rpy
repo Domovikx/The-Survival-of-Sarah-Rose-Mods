@@ -805,7 +805,7 @@ translate ru strings:
     new "Прежде чем она успела хоть что-то сказать, его голова оказалась между её ног."
 
     old "Her first attempt to say anything was quickly undone when she felt his tongue slip along the outside of her sex."
-    new "Её первая попытка что-то сказать быстро оборвалась, когда она почувствовала, как его язык скользнул по внешней стороне её половых органов."
+    new "Её первая попытка что-то сказать быстро оборвалась, когда она почувствовала, как его язык скользнул между её ног."
 
     old "His fingers dug deep into her thighs."
     new "Его пальцы глубоко впились ей в бёдра."

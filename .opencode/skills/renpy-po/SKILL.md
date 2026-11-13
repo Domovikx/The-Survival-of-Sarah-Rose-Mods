@@ -196,6 +196,36 @@ fuzzy-догадок (эвристики миграции больше не де
 тестах po_update.test.mts и e2e «новая версия» (копия игры, мутация,
 регенерация, merge).
 
+## Якоря правок `# changed` (ревью + адресная переозвучка)
+
+Когда msgstr меняется (руками через `po_fix`, или `tone_native --apply`),
+перед записью ставится translator-комментарий `# changed`:
+
+```po
+# changed
+msgctxt "speaker:Narrator"
+msgid "Her eyes drifted down to between Kate's legs."
+msgstr "Её глаза соскользнули ниже — между ног Кейт."
+```
+
+Это не «навсегда»: якорь живёт от правки до переозвучки.
+
+```bash
+# ревью: только изменённые строки, с аркой (по ней удобно идти по сценам)
+node .opencode/skills/renpy-po/po_list.mts --lang ru --changed
+node .opencode/skills/renpy-po/po_list.mts --lang ru --changed --arc Prologue --limit 20
+
+# uid для переозвучки (uid = md5 EN-текста — то, что ждёт voice_batch)
+node .opencode/skills/renpy-po/po_changed.mts --lang ru --uids
+
+# после озвучки — снять якоря
+node .opencode/skills/renpy-po/po_changed.mts --lang ru --clear
+```
+
+Важно: `po_update` переносит `# changed` на тот же `msgid` (retarget/keep), так
+что апдейт игры якоря не теряет; для исчезнувшей строки якорь уходит вместе с
+ней. `po2tl` комментарии игнорирует — на рантайм не влияет.
+
 ## Тесты
 
 ```bash

@@ -22,7 +22,7 @@ translate it strings:
     new "Ho ucciso un giovane"
 
     old "I once blew an old sailor"
-    new "Ho fatto sesso orale con un vecchio marinaio."
+    new "Una volta feci un pompino a un vecchio marinaio."
 
     old "I once had sex with an orc"
     new "Ho fatto sesso con un orco."

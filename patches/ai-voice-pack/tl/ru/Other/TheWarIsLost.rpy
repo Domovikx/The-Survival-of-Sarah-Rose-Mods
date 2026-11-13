@@ -352,7 +352,7 @@ translate ru strings:
     new "Сара видела, что офицер наблюдал за происходящим — отчасти озадаченный, отчасти забавленный этим зрелищем. Но Сара знала, что у всего есть пределы."
 
     old "She pushed the old soldier's hand away from her sex and shook her head."
-    new "Она оттолкнула руку старого солдата от своей промежности и покачала головой."
+    new "Она оттолкнула руку старого солдата от её плоти и покачала головой."
 
     old "The old soldier seemed to understand, and did not try again to reach between her legs."
     new "Старый солдат, казалось, понял и больше не пытался дотянуться до её промежности."

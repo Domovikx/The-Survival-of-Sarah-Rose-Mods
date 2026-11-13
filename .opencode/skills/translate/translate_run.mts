@@ -9,7 +9,7 @@ import { isDemoScope } from "../../../.opencode/skills/renpy-po/po2tl.mts";
 import { resolveBackend } from "../../../scripts/llm_backend.mts";
 import { SPEAKER_GENDER } from "../../../patches/ai-voice-pack/casts/gender.mts";
 
-import { charsOf, judgeLine } from "./judge_client.mts";
+import { buildNameCanon, charsOf, judgeLine } from "./judge_client.mts";
 import { commonRun, contentWords } from "./review_common_run.mts";
 
 // Позиционные: <lang> [limit] [arc]; флаги и их значения (--retrans <файл>)
@@ -78,16 +78,7 @@ const header = text.split("\n\n")[0].split("\n");
 // Канон имён: строки msgctxt=speaker-name в po — принятые написания имён.
 // Перевод СЛЕДУЕТ им для однообразия (решение владельца 2026-11-03): имя в
 // наррации/реплике пишется так же, как в своей словарной строке.
-const NAME_CANON = new Map<string, string>();
-for (const e of entries) {
-  if (e.msgctxt === "speaker-name" && e.msgid && e.msgstr.trim() && !NAME_CANON.has(e.msgid)) {
-    NAME_CANON.set(e.msgid, e.msgstr.trim());
-  }
-}
-// Аудит 2026-11-04: строки speaker-name есть, но под неочевидными ключами —
-// "Sigmund"->Зигмунд и "Captain Belmont"->Капитан Бельмонт уже в NAME_CANON.
-// Для строк с одним словом Belmont — тот же канон.
-NAME_CANON.set("Belmont", "Бельмонт");
+const NAME_CANON = buildNameCanon(entries);
 // Кросс-имена и стоп-лист: «Сара» в строке с Varga — не искажение Варги.
 const CANON_WORDS = new Set<string>();
 for (const v of NAME_CANON.values()) for (const part of v.split(" ")) CANON_WORDS.add(part);

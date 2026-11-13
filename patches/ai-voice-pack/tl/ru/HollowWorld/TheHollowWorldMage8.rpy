@@ -172,7 +172,7 @@ translate ru strings:
     new "Сара изучала дух. Наконец-то ответы."
 
     old "Out in the desert, far in the east beyond the great city of Bagrad, lies a city by the name of Nauyziri."
-    new "В пустыне, далеко на востоке, за великим городом Баград, находится город под названием Науизيري."
+    new "В пустыне, далеко на востоке, за великим городом Баград, находится город под названием Науизир."
 
     old "Travel there, and we shall do away with this secrecy."
     new "Отправляйся туда, и мы покончим с этой тайной."

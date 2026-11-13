@@ -22,7 +22,7 @@ translate ja strings:
     new "若い男を殺した"
 
     old "I once blew an old sailor"
-    new "かつて、老いた水兵とセックスした"
+    new "昔、ある老いた船員にフェラをしてやったことがあるんだ。"
 
     old "I once had sex with an orc"
     new "かつてオグロとセックスしたことがある"

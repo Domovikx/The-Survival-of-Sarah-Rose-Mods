@@ -775,7 +775,7 @@ translate ru strings:
     new "Вместо этого Сара нежно потянула за неё, словно умоляя Кейт прекратить эти игры."
 
     old "Sarah felt her back arch as Kate's tongue pressed up against the outside of her sex."
-    new "Сара почувствовала, как её спина выгнулась дугой, когда язык Кейт прижался к внешней стороне её половых органов."
+    new "Сара почувствовала, как её спина выгнулась дугой, когда язык Кейт прижался к внешней стороне её киски."
 
     old "A moan slipped from her mouth and filled the tent, cutting through the silence."
     new "Из её уст вырвался стон, заполнивший палатку и нарушивший тишину."
@@ -835,7 +835,7 @@ translate ru strings:
     new "Сара уже слышала, как её стоны становились всё громче, но у неё не осталось ни сил, ни желания сдерживаться."
 
     old "Suddenly, she felt Kate's hands on her body tighten, and Kate pressing her mouth firmly against Sarah's sex."
-    new "Внезапно она почувствовала, как руки Кейт на её теле сжались сильнее, а Кейт твёрдо прижала рот к половым органам Сары."
+    new "Внезапно она почувствовала, как руки Кейт на её теле сжались сильнее, а сама Кейт твёрдо прижалась ртом к киске Сары."
 
     old "She felt herself topple over the edge as the pleasure from before paled at the explosion she now felt."
     new "Она почувствовала, как сама переступила через край, когда удовольствие от прежних ласк побледнело перед взрывом ощущений, который она ощущала сейчас."

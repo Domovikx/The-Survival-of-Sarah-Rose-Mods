@@ -868,7 +868,7 @@ translate ru strings:
     new "Она развела для него ноги."
 
     old "She watched as Belmont grabbed his shaft, guiding the tip of his cock to the entrance of her pussy."
-    new "Она смотрела, как Бельмонт схватил свой член и направил кончик к входу во влагалище."
+    new "Она смотрела, как Бельмонт схватил свой член и направил кончик к входу её киски."
 
     old "Her back arched and she let out a voiceless moan as his tip entered her."
     new "Её спина выгнулась, и она издала беззвучный стон, когда его кончик вошёл в неё."

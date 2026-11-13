@@ -2608,7 +2608,7 @@ translate ru strings:
     new "Она закричала — скорее от удовольствия, чем от боли."
 
     old "Her drenched cunt by now offered not a slick of resistance."
-    new "Её промокшее влагалище к этому моменту уже не оказывало ни малейшего скользкого сопротивления."
+    new "Её мокрая киска к этому моменту уже не давала ни малейшего скользкого сопротивления."
 
     old "Say my name, bitch."
     new "Назови моё имя, сука."
@@ -4459,7 +4459,7 @@ translate ru strings:
     new "Она услышала смех Хью."
 
     old "Stupid bitch."
-    new "Глупая сучка."
+    new "Глупая сука."
 
     old "But the insult rang hollow in her mind."
     new "Но оскорбление прозвучало для неё пустым звуком."
@@ -4483,7 +4483,7 @@ translate ru strings:
     new "Она поняла, что это была она сама, лишь мгновение спустя."
 
     old "You owe me, and this bitch owes me!"
-    new "Ты мне должен, и эта сучка тоже мне должна!"
+    new "Ты мне должен, и эта шлюха тоже мне должна!"
 
     old "And till you square up, both your asses belong to me, got that?!"
     new "И пока ты не рассчитаешься, обе твои задницы принадлежат мне — поняла?!"
@@ -4549,7 +4549,7 @@ translate ru strings:
     new "Боже, как же вы двое легко сломаетесь."
 
     old "Ya love me, you stupid cunt?"
-    new "Я люблю тебя, тупая сучка?"
+    new "Ты же меня любишь, тупая шлюха?"
 
     old "Again, Sarah could only hear the deep love in each word he spoke."
     new "Снова Сара слышала лишь глубокую любовь в каждом его слове."

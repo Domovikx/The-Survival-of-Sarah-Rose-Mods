@@ -493,7 +493,7 @@ translate ru strings:
     new "Она почувствовала, как её нога задрожала от ощущений."
 
     old "When she looked down, she saw the old man, only inches away from her exposed sex."
-    new "Когда она посмотрела вниз, то увидела старика — он был всего в нескольких дюймах от её обнажённых половых органов."
+    new "Когда она посмотрела вниз, то увидела старика — он был всего в нескольких дюймах от её открытой киски."
 
     old "Endure it, she whispered to herself."
     new "Стерпись, — прошептала она себе."
@@ -502,7 +502,7 @@ translate ru strings:
     new "Внезапно её тело содрогнулось — резкое ощущение пробежало между ног."
 
     old "The old tailor had ran the measuring tape so far up along the insides of her legs, that his hand had grazed her pussy."
-    new "Старый портной провёл измерительную ленту так высоко по внутренней стороне её ног, что его рука коснулась её влагалища."
+    new "Старый портной провёл измерительную ленту так высоко по внутренней стороне её ног, что его рука коснулась её киски."
 
     old "Just taking measurements."
     new "Просто делаю замеры."
@@ -529,7 +529,7 @@ translate ru strings:
     new "Снова и снова он проводил руками по её телу."
 
     old "More than once he grazed her sex, her ass, her breasts, her waist."
-    new "Не раз он задевал её половые органы, ягодицы, грудь и талию."
+    new "Не раз он задевал её киску, ягодицы, грудь и талию."
 
     old "Every part of her, and always the same excuse."
     new "Каждая её часть — и всегда одно и то же оправдание."
@@ -2695,7 +2695,7 @@ translate ru strings:
     new "Конечно же, он собирался выместить это на ней. Доказать какую-то мысль."
 
     old "As she felt his erection press up near the back of her throat, she knew he had made his point."
-    new "Когда она почувствовала, как его эрекция прижалась к задней части горла, она поняла: он доказал свою правоту."
+    new "Когда она почувствовала, как его член уперся в заднюю стенку горла, она поняла: он доказал свою правоту."
 
     old "Above her, the old tailor simply groaned, enjoying every minute of her performance."
     new "Над ней старый портной лишь стонал, наслаждаясь каждой минутой её выступления."

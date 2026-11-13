@@ -820,7 +820,7 @@ translate ru strings:
     new "Пусть он кончит внутрь неё."
 
     old "Some nights, he even took her ass, and she'd let him."
-    new "В некоторые ночи он даже занимался с ней анальным сексом, и она позволяла ему."
+    new "В некоторые ночи он даже занимался с ней в задницу, и она позволяла ему."
 
     old "It had been another one of those things that she had once imagined unthinkable."
     new "Это было ещё одно из тех событий, которые она когда-то считала немыслимыми."

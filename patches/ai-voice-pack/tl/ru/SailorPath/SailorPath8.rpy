@@ -367,7 +367,7 @@ translate ru strings:
     new "Она останется с капитаном. Навсегда."
 
     old "Bend over, down on her knees, riding him, in her mouth, her pussy, her ass, anywhere he wanted her."
-    new "Наклонись, опусти на колени, езди на нём, делай это ртом, влагалищем, задом — где бы он ни захотел."
+    new "Наклонись, опусти на колени, езди на нём, делай это ртом, киской, задом — где бы он ни захотел."
 
     old "And in time, if only by the fact of how often he took her, sooner or later, his seed would take root in her womb."
     new "И со временем — хотя бы из-за того, как часто он брал её — рано или поздно его семя пустит корни в её лоне."

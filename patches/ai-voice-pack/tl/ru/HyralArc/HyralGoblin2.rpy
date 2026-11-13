@@ -469,7 +469,7 @@ translate ru strings:
     new "Ах... ах..."
 
     old "The sound of her moans and their fucking filled up the cave, echoing off the walls."
-    new "Звуки её стонов и их совокупления заполнили пещеру, отдаваясь эхом от стен."
+    new "Звуки её стонов и их траха заполнили пещеру, отдаваясь эхом от стен."
 
     old "Sarah wondered who that mad woman was, as she distantly heard her own cries."
     new "Сара задумалась, кто же эта сумасшедшая женщина, пока она смутно слышала собственные крики."
@@ -829,7 +829,7 @@ translate ru strings:
     new "Вчера ты сосала член! А теперь ещё и проблемы создаёшь?!"
 
     old "Sarah felt the head of the goblin's cock press up against her sex."
-    new "Сара почувствовала, как головка члена гоблина прижалась к её половым органам."
+    new "Сара почувствовала, как головка члена гоблина прижалась к её киске."
 
     old "Then, just as before, he took her violently."
     new "Затем, точно так же, как и раньше, он яростно овладел ею."
@@ -898,7 +898,7 @@ translate ru strings:
     new "Отлично! Отлично!"
 
     old "And Sarah felt its cock sliding deeper into her as her sex grew wetter with each thrust."
-    new "И Сара почувствовала, как его член проникает всё глубже в неё, а её влагалище с каждым толчком становилось всё более влажным."
+    new "И Сара почувствовала, как его член проникает всё глубже в неё, а между ног у неё с каждым толчком становилось всё более влажным."
 
     old "She had been a fool to trust this creature, and now she'd pay the price."
     new "Она была дурицей, доверившись этому созданию, и теперь ей придётся заплатить за это."

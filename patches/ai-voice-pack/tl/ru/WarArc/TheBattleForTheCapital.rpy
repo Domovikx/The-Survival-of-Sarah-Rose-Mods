@@ -613,7 +613,7 @@ translate ru strings:
     new "Прими меня, пожалуйста."
 
     old "Varga put one hand on his own cock, and slowly guided it into Sarah's pussy, gently pushing into her."
-    new "Варга положил одну руку на свой член и медленно ввёл его во влагалище Сары, нежно проникая внутрь."
+    new "Варга положил одну руку на свой член и медленно ввёл его в киску Сары, нежно проникая внутрь."
 
     old "Sarah let out a muffled cry at the mixing sensations of pleasure and the feeling of being expanded by his cock."
     new "Сара издала приглушённый крик от смешения ощущений — наслаждения и чувства, как его член расширяет её."
@@ -1600,7 +1600,7 @@ translate ru strings:
     new "Когда он отошёл от неё, она увидела себя в зеркале."
 
     old "With her arms now tied behind her back, she almost seemed to be presenting herself, her breasts sticking out, her sex uncovered."
-    new "Теперь, когда её руки были связаны за спиной, казалось, будто она сама себя представляет: грудь выпирала вперёд, а половые органы оставались открытыми."
+    new "Теперь, когда её руки были связаны за спиной, казалось, будто она сама себя представляет: грудь выпирала вперёд, а киска оставалась открытой."
 
     old "She noticed what Jaeid had put around her neck, a black strip of leather, something akin to a collar. Strung through a metal ring attached to the collar, was a rope."
     new "Она заметила, что Джаид надел ей на шею: это была чёрная кожаная полоска, чем-то похожая на ошейник. Через металлическое кольцо, прикреплённое к нему, была пропущена верёвка."
@@ -1696,7 +1696,7 @@ translate ru strings:
     new "Дальше она увидела солдата, который прижимал к выступу красивого мужчину и яростно трахал его сзади."
 
     old "Another soldier was leaning back against a wall, with a man and a woman on their knees, taking turns sucking him off."
-    new "Другой солдат прислонился спиной к стене, а мужчина и женщина стояли на коленях, поочерёдно занимаясь с ним оральным сексом."
+    new "Другой солдат откинулся на стену, а перед ним на коленях сидели мужчина и женщина, поочерёдно облизывая его член."
 
     old "Sarah turned her head away from the scenes, fixing her eyes on Jaeid again."
     new "Сара отвернула голову от этих сцен и снова устремила взгляд на Джаида."

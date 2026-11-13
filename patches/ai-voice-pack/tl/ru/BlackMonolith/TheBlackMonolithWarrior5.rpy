@@ -601,7 +601,7 @@ translate ru strings:
     new "Жаждущая большего, Сара схватила Каролин за затылок и притянула её ближе к себе."
 
     old "Lost in their frenzies kissing, Sarah suddenly felt the tip of Carolyn's fingers pressing between her legs."
-    new "Поглощённая безумным поцелуем, Сара вдруг почувствовала, как кончик пальца Каролин прижался к её половым органам."
+    new "Поглощённая безумным поцелуем, Сара вдруг почувствовала, как кончик пальца Каролин прижался между ног."
 
     old "Sarah felt her mind growing hazy from arousal."
     new "Сара почувствовала, как от возбуждения её сознание начало затуманиваться."
@@ -712,7 +712,7 @@ translate ru strings:
     new "Подняв голову, Сара не увидела на небе ни единого облачка. Только солнце."
 
     old "As she lowered her head, she looked out across the city of Nauyziri."
-    new "Опустив голову, она посмотрела на город Науизيري."
+    new "Опустив голову, она посмотрела на город Науизир."
 
     old "Carolyn's tent was set atop a small hill, giving it a great vantage point across the city."
     new "Палатка Каролин была установлена на вершине небольшого холма, что давало ей превосходный обзор всего города."

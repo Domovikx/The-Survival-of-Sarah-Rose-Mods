@@ -13,14 +13,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-# TSSR ES translation — файл забронирован (язык выбран владельцем 2026-10-20).
-# Español sirve para España y LatAm (inteligibilidad completa).
-# Наполнение: перевод через po/template.pot (кандидат №1 после ru;
-# технический гейт — мультиязычность TTS-голосов кастов).
-# msgstr "" = не переведено.
-msgid ""
-msgstr "Project-Id-Version: TSSR-Mods 1.0\nPO-Revision-Date: 2026-10-20 00:00+0000\nLanguage: es\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\n"
-
 msgctxt "speaker:Narrator"
 msgid "The Survival of Sarah Rose is an epic fantasy game. Production on TSSR is still ongoing."
 msgstr "The Survival of Sarah Rose es un juego de fantasía épica. La producción de TSSR todavía está en curso."
@@ -4113,9 +4105,10 @@ msgctxt "speaker:Narrator"
 msgid "Kate, seeing that her friend was starting to learn, decided to reward her by picking up the pace."
 msgstr "Kate, al ver que su amiga empezaba a aprender, decidió premiarla acelerando el ritmo."
 
+# changed
 msgctxt "speaker:Narrator"
 msgid "Sarah still felt every part of her being controlled, her hair still pulled tight, her pussy exposed and being penetrated. Holding onto the wall was the only thing she could manage."
-msgstr "Sarah todavía sentía que cada parte de su ser estaba controlada; su cabello seguía siendo tirado con fuerza, y su vagina permanecía expuesta mientras era penetrada. Aferrarse a la pared era lo único que lograba hacer."
+msgstr "Sarah todavía sentía que cada parte de su ser estaba bajo control; seguía con el pelo tirado con fuerza, y su coño expuesto mientras era penetrada. Lo único que lograba hacer era agarrarse a la pared."
 
 msgctxt "speaker:Narrator"
 msgid "She felt Kate increase her speed, pistoning her fingers faster and deeper into Sarah."
@@ -188085,9 +188078,10 @@ msgctxt "speaker:Sakar"
 msgid "Take your clothes off."
 msgstr ""
 
+# changed
 msgctxt "menu"
 msgid "Strip your clothes"
-msgstr "Desnuda tu ropa"
+msgstr "Quítate la ropa"
 
 msgctxt "speaker:Narrator"
 msgid "The proposal had surprised her, much as the one before, and yet she found herself again unable to resist the appeal."
@@ -263209,9 +263203,10 @@ msgctxt "speaker:Narrator"
 msgid "And how had she repaid him?"
 msgstr ""
 
+# changed
 msgctxt "menu"
 msgid "Go out and try to forget"
-msgstr "Ságate y trata de olvidar"
+msgstr "Sal y trata de olvidarlo"
 
 msgctxt "speaker:Narrator"
 msgid "The last thing she needed right now was to torture herself by being alone with her thoughts."

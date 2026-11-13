@@ -349,7 +349,7 @@ translate ja strings:
     new "サラの背中は前後に反り、体でケイトに続けるよう懇願していた。そしてケイトはそれに応えた。"
 
     old "Having her hands between the princess' legs, making her moan and writhe around, feeling her grind into her, begging for more..."
-    new "彼女の両手を姫の脚の間に入れ、彼女を喘がせ、身をよじらせさせながら、自分の方へと押し付けられる感覚を楽しんでいる…"
+    new "姫の両脚の間に手を差し込み、彼女を喘がせ、身をよじらせるようにして、彼女が自分に擦り寄ってくるのを感じながら、もっとと懇願するのを聞く……"
 
     old "For Kate this was a pleasure far deeper than Sarah's inexperienced attempts to please her."
     new "ケイトにとってこれは、サラの未熟な悦ばせようとは比べ物にならないほどの、はるかに深い喜びだった。"

@@ -823,7 +823,7 @@ translate pt strings:
     new "Sarah manteve as mãos firmemente apoiadas na parede e tentou se curvar ainda mais, moldando o corpo às intenções de Kate."
 
     old "Kate began to slowly push two fingers into Sarah's sex."
-    new "Kate começou a introduzir lentamente dois dedos na vagina de Sarah."
+    new "Kate começou a enfiar lentamente dois dedos na buceta de Sarah."
 
     old "Sarah tried to lean back into Kate, begging her to go faster."
     new "Sarah tentou se inclinar para trás contra Kate, implorando para que ela fosse mais rápido."
@@ -847,7 +847,7 @@ translate pt strings:
     new "Kate, vendo que sua amiga estava começando a aprender, decidiu recompensá-la acelerando o ritmo."
 
     old "Sarah still felt every part of her being controlled, her hair still pulled tight, her pussy exposed and being penetrated. Holding onto the wall was the only thing she could manage."
-    new "Sarah ainda sentia cada parte de seu ser sob controle; seus cabelos continuavam sendo puxados com força, sua vagina exposta e penetrada. Segurar-se na parede era a única coisa que conseguia fazer."
+    new "Sarah ainda sentia cada parte do seu ser controlada, com os cabelos ainda bem apertados e a sua buceta exposta e sendo penetrada. Agarrar-se à parede era a única coisa que conseguia fazer."
 
     old "She felt Kate increase her speed, pistoning her fingers faster and deeper into Sarah."
     new "Ela sentiu Kate aumentar a velocidade, movendo os dedos com mais rapidez e profundidade dentro dela."

@@ -37,7 +37,7 @@ translate ru strings:
     new "Его клинок отходит от её горла и скользит к застёжкам на платье."
 
     old "With a swift motion, he cut through the straps, causing Sarah's dress to fall down."
-    new "Быстрым движением он перерезал лямки, и платье Сара́ (женский род) спало вниз."
+    new "Быстрым движением он перерезал лямки, и платье Сары спало вниз."
 
     old "She's left with only her underwear."
     new "Осталось лишь её нижнее бельё."
@@ -55,7 +55,7 @@ translate ru strings:
     new "Бриз пронёсся по переулку и прошёл мимо обнажённого тела Сары. Она задрожала."
 
     old "She tries to cover up her breasts and her sex. An attempt at modesty in a city back alley."
-    new "Она пытается прикрыть грудь и половые органы — тщетная попытка сохранить приличия в тёмном переулке города."
+    new "Она пытается прикрыть грудь и киску. Попытка сохранить приличия в заднем переулке города."
 
     old "Don't bother covering up. I've seen all of it and before long I'll be up inside of you."
     new "Не утруждайся прикрываться. Я уже всё видел, и скоро буду внутри тебя."
@@ -106,7 +106,7 @@ translate ru strings:
     new "Она видит, как его член висит там. Мужчина ласкает себя в предвкушении."
 
     old "She sees his hand slide up to between her legs, grabbing at her sex."
-    new "Она видит, как его рука скользит вверх между её ног и хватает за её половые органы."
+    new "Она видит, как его рука скользит к ней между ног и хватает её киску."
 
     old "The shock makes her cry out, but she muffles her own voice, part afraid of what the man would do and part afraid of being caught."
     new "Шок заставил её вскрикнуть, но она приглушила свой голос — отчасти из страха перед тем, что сделает мужчина, а отчасти из боязни быть пойманной."

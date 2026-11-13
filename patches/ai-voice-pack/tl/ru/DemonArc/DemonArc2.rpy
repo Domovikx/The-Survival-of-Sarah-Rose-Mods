@@ -262,7 +262,7 @@ translate ru strings:
     new "Да, Мастер..."
 
     old "With an embarrassing gulp, she downed the last of his release."
-    new "С неловким глотком она проглотила остатки его эякулята."
+    new "С неловким глотком она проглотила сперму."
 
     old "Good. Now follow me, I will take you to your chambers."
     new "Хорошо. Теперь следуй за мной: я отведу тебя в твои покои."

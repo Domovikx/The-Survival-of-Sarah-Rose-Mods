@@ -22,6 +22,10 @@ const PHASE = Number(process.env.JUDGE_PHASE ?? 0);
 // список УТЕЧКА из translate_review --all.
 const fileArg = process.argv.indexOf("--file");
 const FILE = fileArg >= 0 ? process.argv[fileArg + 1] : null;
+// --variant <v10|v11|...>: промпт судьи. Для аудита правок регистра — v13
+// (v10 без оговорки про словарь книги считает «киску» выдумкой).
+const variantArg = process.argv.indexOf("--variant");
+const VARIANT = variantArg >= 0 ? (process.argv[variantArg + 1] ?? "v10") : "v10";
 const PO = `patches/ai-voice-pack/po/${LANG}.po`;
 const LIVE = `tmp/translate_${LANG}.live.log`;
 
@@ -67,7 +71,7 @@ let bad = 0,
 for (const i of tail) {
   const e = entries[i];
   if (!e || !e.msgstr) continue;
-  const j = await judgeLine(e.msgid, e.msgstr, LANG, charsOfEntry(e));
+  const j = await judgeLine(e.msgid, e.msgstr, LANG, charsOfEntry(e), 0, VARIANT);
   processed++;
   if (!j) {
     fail++;

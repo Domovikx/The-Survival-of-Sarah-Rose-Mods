@@ -26,6 +26,27 @@ export interface PoEntry {
   translator: string[];
 }
 
+/**
+ * Временный якорь правки: `# changed` перед записью. Владелец ревьюит по нему,
+ * после переозвучки — снимает (`po_changed --clear`). Обычный translator-
+ * комментарий: gettext-тулы его не трогают, `po_update` переносит на тот же
+ * msgid, `po2tl` игнорирует (решение владельца 2026-11-13).
+ */
+export const CHANGED_TAG = "changed";
+
+export function isChanged(e: PoEntry): boolean {
+  return e.translator.some((t) => t.trim() === CHANGED_TAG);
+}
+
+/** Помечает запись якорем (идемпотентно, без дублей). */
+export function markChanged(e: PoEntry): void {
+  if (!isChanged(e)) e.translator.push(CHANGED_TAG);
+}
+
+export function clearChanged(e: PoEntry): void {
+  e.translator = e.translator.filter((t) => t.trim() !== CHANGED_TAG);
+}
+
 /** Декодирует PO-экранирование (\n \r \t \" \\). */
 export function poUnescape(s: string): string {
   let out = "";

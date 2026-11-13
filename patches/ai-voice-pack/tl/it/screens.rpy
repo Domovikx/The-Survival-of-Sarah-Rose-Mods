@@ -136,7 +136,7 @@ translate it strings:
     new "Test"
 
     old "Voice Volume"
-    new "Volume"
+    new "Volume voce"
 
     old "Mute All"
     new "Muta tutto"

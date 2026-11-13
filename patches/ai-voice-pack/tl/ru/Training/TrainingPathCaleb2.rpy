@@ -436,7 +436,7 @@ translate ru strings:
     new "Это был Ефраим, который кончил первым: он вытащил свой член изо рта Сары и наклонился над её телом."
 
     old "He masturbated himself to completion."
-    new "Он дошёл до оргазма от мастурбации."
+    new "Он довёл себя до оргазма рукой."
 
     old "Sarah felt his seeds landing on her breasts and ribs."
     new "Сара почувствовала, как его семя упало ей на грудь и рёбра."

@@ -6,7 +6,18 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
 
-import { normalizeText, parsePo, poEscape, poUnescape, renderPo, writePoAtomic } from "./po_core.mts";
+import {
+  CHANGED_TAG,
+  clearChanged,
+  isChanged,
+  markChanged,
+  normalizeText,
+  parsePo,
+  poEscape,
+  poUnescape,
+  renderPo,
+  writePoAtomic,
+} from "./po_core.mts";
 import { existsSync, mkdtempSync, readFileSync, rmSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
@@ -91,4 +102,22 @@ test("writePoAtomic: целевой файл всегда целый, .part не
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }
+});
+
+test("якорь # changed: парсится, ставится без дублей, снимается, переживает round-trip", () => {
+  const text = 'msgid "a"\nmsgstr "б"\n\n# changed\nmsgid "c"\nmsgstr "г"\n';
+  const entries = parsePo(text);
+  assert.equal(isChanged(entries[0]!), false);
+  assert.equal(isChanged(entries[1]!), true);
+
+  markChanged(entries[1]!);
+  markChanged(entries[1]!); // идемпотентно
+  assert.equal(entries[1]!.translator.filter((t) => t === CHANGED_TAG).length, 1);
+
+  const rendered = renderPo(entries, ['msgid ""', 'msgstr ""']);
+  assert.match(rendered, /^# changed\nmsgid "c"$/mu);
+
+  clearChanged(entries[1]!);
+  assert.equal(isChanged(entries[1]!), false);
+  assert.doesNotMatch(renderPo(entries, ['msgid ""', 'msgstr ""']), /# changed/u);
 });

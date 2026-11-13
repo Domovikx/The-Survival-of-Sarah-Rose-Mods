@@ -370,7 +370,7 @@ translate ru strings:
     new "Каждый раз, когда её обнажённое тело прижималось к его одежде, она ощущала контуры его тела."
 
     old "Pressing her leg between his, she could feel his growing erection between his legs."
-    new "Прижав ногу к его ноге, она почувствовала его растущую эрекцию между ног."
+    new "Прижав ногу к его ноге, она почувствовала как у него набухает член между ног."
 
     old "With the passion of a newly wed, she reached down and began to fumble at his belt."
     new "С пылом новобрачной она потянулась вниз и начала нерешительно возиться с его ремнём."
@@ -502,7 +502,7 @@ translate ru strings:
     new "Решив не рисковать повторением прежней неудачи, она вместо этого схватила его и притянула к себе сверху."
 
     old "Hestitantly and slowly, he pressed the tip of his hard-again cock, up against her sex."
-    new "Он нерешительно и медленно прижал кончик своего вновь ставшего твёрдым члена к её половым органам."
+    new "Он нерешительно и медленно прижал кончик своего вновь ставшего твёрдым члена к её плоти."
 
     old "Sarah softly moaned at the sudden sensation."
     new "Сара тихо застонала от внезапного ощущения."

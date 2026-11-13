@@ -18,7 +18,7 @@ import { existsSync, readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
-import { ALL_LANGS, parsePo } from "./po_core.mts";
+import { ALL_LANGS, isChanged, parsePo } from "./po_core.mts";
 import type { PoEntry } from "./po_core.mts";
 import { loadPotIndex } from "./pot_resolve.mts";
 
@@ -32,11 +32,12 @@ interface O {
   ctxt: string;
   limit: number;
   empty: boolean;
+  changed: boolean;
   json: boolean;
 }
 
 function parseCli(argv: string[]): O {
-  const o: O = { lang: "", arc: "", ctxt: "", limit: 0, empty: false, json: false };
+  const o: O = { lang: "", arc: "", ctxt: "", limit: 0, empty: false, changed: false, json: false };
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i];
     if (a === "--lang") o.lang = argv[++i] || "";
@@ -44,10 +45,12 @@ function parseCli(argv: string[]): O {
     else if (a === "--ctxt") o.ctxt = argv[++i] || "";
     else if (a === "--limit") o.limit = Number(argv[++i]) || 0;
     else if (a === "--empty") o.empty = true;
+    else if (a === "--changed") o.changed = true;
     else if (a === "--json") o.json = true;
     else if (a === "--help" || a === "-h") {
       console.log(
-        "Usage: node po_list.mts --lang <code> [--arc <Arc>] [--ctxt a,b] [--limit N] [--empty] [--json]\n" +
+        "Usage: node po_list.mts --lang <code> [--arc <Arc>] [--ctxt a,b] [--limit N] " +
+          "[--empty] [--changed] [--json]\n" +
           `Языки: ${ALL_LANGS.join(", ")}`,
       );
       process.exit(0);
@@ -68,7 +71,9 @@ function main(): void {
     process.exit(1);
   }
   const entries = parsePo(readFileSync(poPath, "utf-8").replace(/\r\n/g, "\n")).filter((e) => e.msgid);
-  const pot = o.arc ? loadPotIndex() : null;
+  // --changed: только записи с якорем `# changed` (ревью правок владельцем).
+  // Арки в этом режиме нужны сразу — по ним удобнее идти по файлам/сценам.
+  const pot = o.arc || o.changed ? loadPotIndex() : null;
   const ctxtList = o.ctxt
     .split(",")
     .map((s) => s.trim())
@@ -79,6 +84,7 @@ function main(): void {
   for (let i = 0; i < entries.length; i++) {
     const e: PoEntry = entries[i];
     if (ctxtList.length && !ctxtList.includes(e.msgctxt)) continue;
+    if (o.changed && !isChanged(e)) continue;
     const arc = pot ? (pot.resolve(e.msgctxt, e.msgid)?.arc ?? "_unknown") : "";
     if (o.arc && arc !== o.arc) continue;
     if (o.empty && e.msgstr.trim()) continue;

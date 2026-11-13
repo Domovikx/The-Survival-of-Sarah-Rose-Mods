@@ -904,7 +904,7 @@ translate ru strings:
     new "Сара почувствовала, как жар поднимается у неё в груди и распространяется по всему телу."
 
     old "The pleasure in turn rising up from between her legs."
-    new "Удовольствие, в свою очередь, поднималось от промежности."
+    new "Удовольствие, в свою очередь, поднималось между ног."
 
     old "There was more to it than just his appearance, or even the size of his member."
     new "В этом было нечто большее, чем просто его внешность или даже размер его члена."
