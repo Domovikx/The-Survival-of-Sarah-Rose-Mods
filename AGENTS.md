@@ -29,6 +29,10 @@
 - `site/` — лендинг (GitHub Pages, vite), `tasks/` — журналы задач, `docs/` — доки,
   `patches/ai-voice-pack/tools/generate/scripts/voice_presets.mts` — единая карта
   конфигов озвучки (бывший `config/voice_presets.yaml`; yaml удалён 2026-10-21)
+- **Порядок языков в любом UI-списке (меню патча, сайт) = `config/language-priority.json`**
+  (статистика Steam, окт 2026; источник истины для приоритетов языков, владелец
+  2026-11-13): порядок не переставлять руками, новый язык — туда, затем
+  синхронизировать `zzz_ui.rpy` (TSSR_LANGUAGES) и `site/src/shared/config/i18n.ts` (LANGS).
 - Сборка дистрибутива: `npm run build:pack` → `dist/*.zip` (раскладка zip = раскладка
   установки; zip'ы в git не коммитятся)
 - **Установщики — по одному на пакет, каждый атомарный** (решение владельца

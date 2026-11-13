@@ -12,7 +12,9 @@ import pt from '../../../locales/pt.json'
 import ru from '../../../locales/ru.json'
 import zh from '../../../locales/zh.json'
 
-export const LANGS = ['en', 'ru', 'de', 'es', 'fr', 'it', 'ja', 'ko', 'pl', 'pt', 'zh'] as const
+/** Порядок = приоритет языков (config/language-priority.json, статистика Steam
+ * окт 2026; владелец 2026-11-13) — не переставлять руками. */
+export const LANGS = ['en', 'zh', 'ru', 'es', 'pt', 'de', 'ja', 'fr', 'pl', 'ko', 'it'] as const
 export type Lang = (typeof LANGS)[number]
 
 /** Дефолт — английский (международная аудитория); остальное — авто по языку браузера. */
