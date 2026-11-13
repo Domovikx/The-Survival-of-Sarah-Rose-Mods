@@ -213,3 +213,77 @@ approved».
   обфускации, без `ExecutionPolicy Bypass` в SFX; рядом — ссылка на исходники и шаги сборки.
 - Никаких вложенных архивов (zip в zip) — отдельная причина карантина.
 - Проверять сборку VirusTotal перед публикацией; хранить отчёт в журнале дистрибуции.
+
+## Ресёрч: как это делают (первоисточники, 2026-11-13)
+
+**Nexus, «Why has my mod been quarantined?» (help/117):**
+
+- «Potentially malicious file types … Generally, any kind of self-extracting file that has
+  the potential to cause damage … will be marked for review.» → наш `install.cmd/ps1`
+  и любой SFX попадают сюда.
+- «Nested archives» — архив в архиве запрещён.
+- «Unrecognised archive format» — рекомендуют ZIP или 7z, `.rar` даёт ложные срабатывания.
+- «Password protected archive» — запрещено.
+- «Too many virus scan hits» — смотреть VirusTotal, писать вендорам.
+- Разблокировка: письмо `support@nexusmods.com` со ссылкой на страницу мода; файл не удалять.
+
+**File Submission Guidelines (help/28):** исполняемые файлы, которые лезут в интернет,
+запрещены; авто-обновление «не является критичным». Значит наш установщик не должен ничего
+скачивать.
+
+**FOMOD (fomod-docs, wrye-bash wiki):**
+
+- Структура: в корне архива папка `fomod/` с `info.xml` и `ModuleConfig.xml`; всё
+  остальное — где угодно.
+- `info.xml`: Name / Author / Version / Description / Website.
+- `ModuleConfig.xml`: `<config>` → `moduleName`, `moduleDependencies`,
+  `requiredInstallFiles`, `installSteps`, `conditionalFileInstalls`.
+- `file`/`folder`: `source` (от корня пакета), `destination` (от корня установки),
+  `alwaysInstall`, `priority`.
+- `installStep` → `optionalFileGroups` → `group type="SelectExactlyOne|SelectAny|..."` →
+  `plugin` (name, description, image, files, typeDescriptor).
+- **Кода нет** — только XML; Vortex/MO2 показывают меню и раскладывают файлы. Vortex
+  запоминает выбор и при повторной установке не спрашивает.
+- FOMOD применим к играм с папкой модов (`/mods/` — Stardew, Witcher 3, Kenshi и др.);
+  у нас как раз `mods/`.
+
+**Вывод по каналам:**
+
+- Nexus: чистый архив (только `.rpy`/`.opus`/шрифты/`README.txt`), установка вручную или
+  Vortex. Никаких exe/cmd/ps1 и вложенных архивов.
+- FOMOD — если хотим «одно-кликово» и выбор языка: тогда **один** архив со всеми
+  голосами (~250 МБ) + XML. Отдельные voice-архивы и FOMOD плохо совместимы: Vortex
+  ставит каждый как отдельный мод, пути пересекаются.
+- Off-Nexus: `install.exe` + архивы рядом.
+
+### Минимальный FOMOD для нашего мода
+
+```xml
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://qconsulting.ca/fo3/ModConfig5.0.xsd">
+  <moduleName>AI Voice Pack</moduleName>
+  <requiredInstallFiles>
+    <folder source="core" destination="mods/tssr-ai-voice-pack"/>
+    <file source="environment.txt" destination="environment.txt"/>
+  </requiredInstallFiles>
+  <installSteps order="Explicit">
+    <installStep name="Voice language">
+      <optionalFileGroups order="Explicit">
+        <group name="Language" type="SelectAny">
+          <plugins order="Explicit">
+            <plugin name="Russian">
+              <description>Russian voice (full text)</description>
+              <files><folder source="voice/ru" destination="mods/tssr-ai-voice-pack/ai_voice/ru"/></files>
+              <typeDescriptor><type name="Recommended"/></typeDescriptor>
+            </plugin>
+            <!-- de, es, fr, it, ja, ko, pl, pt, zh -->
+          </plugins>
+        </group>
+      </optionalFileGroups>
+    </installStep>
+  </installSteps>
+</config>
+```
+
+Проверка: поставить в Vortex, выбрать языки, убедиться, что файлы легли в
+`mods/tssr-ai-voice-pack/` и `environment.txt` в корень.
