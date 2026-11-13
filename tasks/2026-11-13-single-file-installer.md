@@ -157,6 +157,8 @@
 - [ ] Игра запущена → ждёт/отказывает, мод не ломается.
 - [ ] Искусственная ошибка после rename backup → старая установка восстановлена.
 - [ ] Defender не блокирует (проверено вручную); подпись — если появится сертификат.
+- [ ] Nexus-вариант архивов: внутри только контент, без `.exe`/`.cmd`/`.ps1` и без вложенных архивов.
+- [ ] `install.exe` не загружается на Nexus (только GitHub/Boosty).
 - [ ] `zip`/`7z` тесты сборки и TS-тесты остаются зелёными.
 
 ## Вне рамок (out of scope)
@@ -178,3 +180,36 @@
 - `AGENTS.md` — атомарная установка, предохранители, `environment.txt`.
 - `tasks/2026-11-11-patch-spec-distribution-e2e.md` — пользовательский флоу.
 - `patches/ai-voice-pack/tools/build/installer/` — текущие установщики.
+
+## Ограничение Nexus (проверено 2026-11-13 на странице мода)
+
+Страница мода (`/mods/1?game_id=11043&tab=files`, читано через Chrome владельца):
+все 12 файлов в карантине, «Virus scan: Some suspicious files». Текст Nexus:
+
+- «This file has been quarantined by our automated safety checks. This could be due to:
+  **Executables and similar file types**; Flagging by our internal file scanners or
+  VirusTotal; **Nested archives** (e.g. a zip containing another zip).»
+- «If your mod contains compiled code, include a link to the source code (on GitHub or a
+  similar platform) and the steps to build it.»
+
+Наши архивы содержат `install.cmd` + `install.ps1` → это и есть «executables and similar
+file types». Плюс мод ещё не опубликован: «This file will be published when the game is
+approved».
+
+**Следствие: на Nexus нельзя класть exe/скрипты.** Поэтому каналы разделяем:
+
+- **Nexus**: чистые архивы только с контентом (`.rpy`, `.opus`, шрифты, каталог, README).
+  Установка — вручную по README или через Vortex/FOMOD. Никаких `.exe`, `.cmd`, `.ps1`.
+- **Off-Nexus** (GitHub Releases / Boosty): `install.exe` + архивы рядом — как задумано
+  в этой задаче.
+- **FOMOD** (`fomod/ModuleConfig.xml` + `info.xml`) — родной установщик Nexus/Vortex:
+  это XML-метаданные, не код; даёт выбор языков без N отдельных файлов. Рассмотреть как
+  «одно-кликовый» вариант для Nexus вместо exe.
+
+## AV-практики (свести в README/релиз)
+
+- Не класть исполняемое в Nexus-архивы (их сканер это ловит).
+- Для off-Nexus exe: Authenticode-подпись (когда будет сертификат), без упаковщиков и
+  обфускации, без `ExecutionPolicy Bypass` в SFX; рядом — ссылка на исходники и шаги сборки.
+- Никаких вложенных архивов (zip в zip) — отдельная причина карантина.
+- Проверять сборку VirusTotal перед публикацией; хранить отчёт в журнале дистрибуции.
