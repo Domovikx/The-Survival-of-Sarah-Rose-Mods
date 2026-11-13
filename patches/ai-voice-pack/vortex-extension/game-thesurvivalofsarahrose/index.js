@@ -41,7 +41,7 @@ function main(context) {
     queryPath: findGame,
     supportedTools: [],
     queryModPath: () => "",
-    logo: "gameart.jpg",
+    logo: "gameart.png",
     executable: () => "TheSurvivalofSarahRose.exe",
     requiredFiles: ["TheSurvivalofSarahRose.exe"],
     setup: () => Promise.resolve(),

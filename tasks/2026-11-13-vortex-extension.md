@@ -67,3 +67,16 @@
   в `settings.gameMode.discovered`, `queryPath` повторно не вызывается. Тест —
   копия extension с другим `id`, у неё discovery идёт с нуля.
 - `gameart.jpg` — 640×360 (рекомендация Vortex), 42 КБ.
+
+## Канал публикации — решено 2026-11-13
+
+- PR в `Nexus-Mods/vortex-games` **отменён**: репозиторий заархивирован 20.05.2026,
+  «no longer accepting pull requests»; GitHub-ревью расширений тоже retired.
+- Рабочий канал: страница мода на Nexus, Game = **Modding Tools**,
+  Category = **Vortex Extensions**, один файл в Main Files. Vortex подхватывает
+  за ~2 часа при валидном `gameId`.
+- Пакет приведён к требованиям: `gameId: 11043`, `gameart.png` (640×360, PNG,
+  без текста), `info.json` version 1.0.0 = версия файла на Nexus.
+- Черновик страницы создан: `https://www.nexusmods.com/games/site/mods/2600`
+  (General + Media + Files заполнены). Публикация ждёт окончания вирус-скана
+  файла (кнопка Publish задизейблена).

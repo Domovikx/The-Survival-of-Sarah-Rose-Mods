@@ -5,7 +5,7 @@ Unofficial fan-made localization (11 languages) and AI voice-over packs for
 
 **Project page (source of truth for users):** <https://domovikx.github.io/>
 **Nexus Mods:** <https://www.nexusmods.com/games/11043/mods/1>
-**Downloads:** [GitHub Releases](https://github.com/Domovikx/The-Survival-of-Sarah-Rose-Mods/releases)
+**Downloads:** [https://www.nexusmods.com/mods/1?game_id=11043](https://www.nexusmods.com/mods/1?game_id=11043)
 
 Installation, file list, language matrix, FAQ and screenshots live on the site
 and the Nexus page (each archive also carries `README.txt` with the same
@@ -61,7 +61,7 @@ The authoritative license for this work is **CC BY-NC 4.0** — see
 
 **Сайт (основная информация):** <https://domovikx.github.io/> •
 **Nexus Mods:** <https://www.nexusmods.com/games/11043/mods/1> •
-**Скачать:** [GitHub Releases](https://github.com/Domovikx/The-Survival-of-Sarah-Rose-Mods/releases)
+**Скачать:** [https://www.nexusmods.com/mods/1?game_id=11043](https://www.nexusmods.com/mods/1?game_id=11043)
 
 Установка, состав файлов, языки, FAQ и скриншоты — на сайте и на Nexus (в каждом
 архиве также есть `README.txt`). Здесь — только необходимое юридически.

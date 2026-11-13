@@ -1,120 +1,120 @@
 {
-  "meta": {
-    "title": "The Survival of Sarah Rose — Voix IA + 11 langues",
-    "description": "Mod de fans non officiel : doublage IA de démo en 7 langues et traductions en 11 (russe complet ; les autres couvrent l’intro jusqu’au premier choix). Gratuit, 18+."
-  },
-  "header": {
-    "brand": "TSSR · Voix IA",
-    "steam": "Page Steam",
-    "github": "GitHub",
-    "langLabel": "Langue",
-    "themeLabel": "Changer de thème"
-  },
-  "hero": {
-    "title": "The Survival of Sarah Rose — Voix IA",
-    "subtitle": "Mod de fans non officiel : texte du jeu en 11 langues, et le périmètre démo (l’intro jusqu’au premier choix) entièrement doublé en 7 langues — plus de 75 voix clonées, jouées avec émotion.",
-    "badgeTranslate": "11 langues — RU complet, les autres en démo jusqu’au premier choix",
-    "badgeVoice": "Doublage : démo 100 % en 7 langues — 1 195 répliques chacune",
-    "badgeFormat": "Opus 24 kbps — environ 17 Mo par langue (démo)",
-    "badgeEngine": "Ren'Py 7.4.11 · Steam",
-    "badgeAge": "Contenu 18+",
-    "ctaSteam": "The Survival of Sarah Rose sur Steam",
-    "ctaDownload": "Télécharger les ZIP (mod + packs de voix)",
-    "ctaGithub": "Code source sur GitHub",
-    "installHint": "Nécessite le jeu acheté sur Steam. Gratuit, CC BY-NC 4.0."
-  },
-  "features": {
-    "title": "Ce que vous obtenez",
-    "translateTitle": "Traductions en 11 langues",
-    "translateText": "Russe : une traduction complète de toute l’histoire. Les 10 autres langues couvrent le périmètre démo — l’intro jusqu’au premier choix.",
-    "voiceTitle": "Doublage IA (démo, 7 langues)",
-    "voiceText": "Des voix clonées pour chaque personnage via VoxCPM2, avec l’émotion de chaque scène. Le périmètre démo (jusqu’au premier choix) est entièrement doublé en 7 langues ; le coréen est en cours.",
-    "emotionTitle": "Jeu plein d’émotion",
-    "emotionText": "Chaque ligne porte l’état du narrateur : désir, murmure, sarcasme — jamais monotone.",
-    "voicesTitle": "Plus de 75 voix",
-    "voicesText": "Sarah, le narrateur, le roi Orwell, Kate, Thomas, Varga et des dizaines d’autres."
-  },
-  "demo": {
-    "title": "Écoutez par vous-même",
-    "lead": "De vraies répliques du jeu en voix IA : voix clonées, émotions vivantes. Touchez une réplique — et écoutez.",
-    "play": "Lire : {{name}}",
-    "pause": "Pause : {{name}}",
-    "phrases": [
-      {
-        "speaker": "Sarah",
-        "text": "Ici, c'est toujours si calme. J'ai l'impression que c'est mal."
-      },
-      {
-        "speaker": "Thomas",
-        "text": "Sarah... J'essaie de garder la façade du roi parfait. Même sur le champ de bataille, je dissimule mes peurs."
-      },
-      {
-        "speaker": "Carolyn",
-        "text": "Aah, dois-je te livrer mes secrets si facilement ?"
-      },
-      {
-        "speaker": "Sarah",
-        "text": "Ce n'est pas toi qui me le demandes, c'est moi qui te le demande... reste avec moi... je t'en prie. Personne d'autre en ce monde ne m'a jamais été un ami si vrai... plus qu'un ami."
-      },
-      {
-        "speaker": "Garret",
-        "text": "Et quant au sang sur tes mains, que sont quelques gouttes de plus ? Tu ne vas tout de même pas me dire que tu n'as pas déjà tué d'autres avant ?"
-      },
-      {
-        "speaker": "Sarah",
-        "text": "Chaque nuit, quand je me touche, mes seuls fantasmes sont des souvenirs de nos rencontres."
-      },
-      {
-        "speaker": "Narrator",
-        "text": "Quand il venait à elle, son cœur battait la chamade dans sa poitrine. Quand il ne se présentait pas, elle sentait les larmes monter."
-      }
-    ]
-  },
-  "voice": {
-    "title": "Doublage — démo prête",
-    "total": "Périmètre démo (jusqu’au premier choix) doublé en 7 langues — 1 195 répliques chacune. Le coréen est en cours ; le polonais, le portugais et le chinois sont présentés sur ce site comme échantillons. Le doublage complet du jeu est prévu.",
-    "ru": "Russe (RU) : traduction complète, périmètre démo doublé",
-    "en": "Anglais (EN) : le texte original, périmètre démo doublé",
-    "missing": "S’il manque une voix, le jeu affiche la réplique en silence (sans erreur)."
-  },
-  "install": {
-    "title": "Installation",
-    "step1": "Le plus simple : décompressez main.zip où vous voulez et lancez son install.cmd — il trouve le dossier du jeu (Steam) et installe le cœur : textes, polices, menu. Décompressez ensuite chaque pack de voix souhaité et lancez son propre install.cmd — une langue par pack, installation atomique. Alternative manuelle : décompressez les zip dans le dossier du jeu",
-    "step2": "Lancez le jeu et ouvrez les réglages du mod (le badge en haut à droite) — 11 langues de texte ; la voix suit la langue choisie",
-    "step3": "Terminé. Le premier lancement peut être plus lent — Ren’Py reconstruit son cache",
-    "note": "Nécessite le jeu acheté sur Steam. Ce patch est non officiel et sans lien avec les développeurs ou éditeurs."
-  },
-  "shots": {
-    "title": "Captures d’écran",
-    "cap1": "Menu principal",
-    "cap2": "Chinois : texte CJK sans carrés",
-    "cap3": "Page du patch : langue, voix, police",
-    "cap4": "Localisation allemande",
-    "cap5": "Narration sur la capitale",
-    "cap6": "Sarah se jette dans les bras de son père",
-    "prev": "Image précédente",
-    "next": "Image suivante",
-    "close": "Fermer",
-    "open": "ouvrir en taille réelle"
-  },
-  "faq": {
-    "title": "FAQ",
-    "q1": "Est-ce un mod officiel ?",
-    "a1": "Non — un patch de fans non officiel, sans lien avec les développeurs ou éditeurs.",
-    "q2": "Y a-t-il du contenu pour adultes ?",
-    "a2": "Oui — le jeu est 18+. À télécharger et jouer uniquement si vous avez 18 ans ou plus.",
-    "q3": "Licence ?",
-    "a3": "Pack de voix et traduction : CC BY-NC 4.0 — partage et adaptation avec attribution, usage non commercial uniquement.",
-    "q4": "Comment aider ?",
-    "a4": "Mettez une étoile sur GitHub, envoyez un pull request ou ouvrez une issue."
-  },
-  "footer": {
-    "disclaimer": "Travail de fans non officiel. Tous droits du jeu original appartiennent à leurs détenteurs.",
-    "linksLabel": "Liens",
-    "linkGithub": "GitHub",
-    "linkSteam": "Steam",
-    "linkIssues": "Issues",
-    "linkLicense": "CC BY-NC 4.0",
-    "age": "18+"
-  }
+   "meta": {
+      "title": "The Survival of Sarah Rose — Voix IA + 11 langues",
+      "description": "Mod de fans non officiel : doublage IA de démo en 7 langues et traductions en 11 (russe complet ; les autres couvrent l’intro jusqu’au premier choix). Gratuit, 18+."
+   },
+   "header": {
+      "brand": "TSSR · Voix IA",
+      "steam": "Page Steam",
+      "github": "GitHub",
+      "langLabel": "Langue",
+      "themeLabel": "Changer de thème"
+   },
+   "hero": {
+      "title": "The Survival of Sarah Rose — Voix IA",
+      "subtitle": "Mod de fans non officiel : texte du jeu en 11 langues, et le périmètre démo (l’intro jusqu’au premier choix) entièrement doublé en 7 langues — plus de 75 voix clonées, jouées avec émotion.",
+      "badgeTranslate": "11 langues — RU complet, les autres en démo jusqu’au premier choix",
+      "badgeVoice": "Doublage : démo 100 % en 7 langues — 1 195 répliques chacune",
+      "badgeFormat": "Opus 24 kbps — environ 17 Mo par langue (démo)",
+      "badgeEngine": "Ren'Py 7.4.11 · Steam",
+      "badgeAge": "Contenu 18+",
+      "ctaSteam": "The Survival of Sarah Rose sur Steam",
+      "ctaDownload": "Télécharger sur Nexus Mods",
+      "ctaGithub": "Code source sur GitHub",
+      "installHint": "Nécessite le jeu acheté sur Steam. Gratuit, CC BY-NC 4.0."
+   },
+   "features": {
+      "title": "Ce que vous obtenez",
+      "translateTitle": "Traductions en 11 langues",
+      "translateText": "Russe : une traduction complète de toute l’histoire. Les 10 autres langues couvrent le périmètre démo — l’intro jusqu’au premier choix.",
+      "voiceTitle": "Doublage IA (démo, 7 langues)",
+      "voiceText": "Des voix clonées pour chaque personnage via VoxCPM2, avec l’émotion de chaque scène. Le périmètre démo (jusqu’au premier choix) est entièrement doublé en 7 langues ; le coréen est en cours.",
+      "emotionTitle": "Jeu plein d’émotion",
+      "emotionText": "Chaque ligne porte l’état du narrateur : désir, murmure, sarcasme — jamais monotone.",
+      "voicesTitle": "Plus de 75 voix",
+      "voicesText": "Sarah, le narrateur, le roi Orwell, Kate, Thomas, Varga et des dizaines d’autres."
+   },
+   "demo": {
+      "title": "Écoutez par vous-même",
+      "lead": "De vraies répliques du jeu en voix IA : voix clonées, émotions vivantes. Touchez une réplique — et écoutez.",
+      "play": "Lire : {{name}}",
+      "pause": "Pause : {{name}}",
+      "phrases": [
+         {
+            "speaker": "Sarah",
+            "text": "Ici, c'est toujours si calme. J'ai l'impression que c'est mal."
+         },
+         {
+            "speaker": "Thomas",
+            "text": "Sarah... J'essaie de garder la façade du roi parfait. Même sur le champ de bataille, je dissimule mes peurs."
+         },
+         {
+            "speaker": "Carolyn",
+            "text": "Aah, dois-je te livrer mes secrets si facilement ?"
+         },
+         {
+            "speaker": "Sarah",
+            "text": "Ce n'est pas toi qui me le demandes, c'est moi qui te le demande... reste avec moi... je t'en prie. Personne d'autre en ce monde ne m'a jamais été un ami si vrai... plus qu'un ami."
+         },
+         {
+            "speaker": "Garret",
+            "text": "Et quant au sang sur tes mains, que sont quelques gouttes de plus ? Tu ne vas tout de même pas me dire que tu n'as pas déjà tué d'autres avant ?"
+         },
+         {
+            "speaker": "Sarah",
+            "text": "Chaque nuit, quand je me touche, mes seuls fantasmes sont des souvenirs de nos rencontres."
+         },
+         {
+            "speaker": "Narrator",
+            "text": "Quand il venait à elle, son cœur battait la chamade dans sa poitrine. Quand il ne se présentait pas, elle sentait les larmes monter."
+         }
+      ]
+   },
+   "voice": {
+      "title": "Doublage — démo prête",
+      "total": "Périmètre démo (jusqu’au premier choix) doublé en 7 langues — 1 195 répliques chacune. Le coréen est en cours ; le polonais, le portugais et le chinois sont présentés sur ce site comme échantillons. Le doublage complet du jeu est prévu.",
+      "ru": "Russe (RU) : traduction complète, périmètre démo doublé",
+      "en": "Anglais (EN) : le texte original, périmètre démo doublé",
+      "missing": "S’il manque une voix, le jeu affiche la réplique en silence (sans erreur)."
+   },
+   "install": {
+      "title": "Installation",
+      "step1": "Télécharger le pack sur Nexus Mods : main (cœur, obligatoire) et les packs de voix souhaités. Décompresser main.7z dans le dossier du jeu (là où se trouve TheSurvivalofSarahRose.exe) pour obtenir mods/tssr-ai-voice-pack et environment.txt, puis décompresser les archives de voix de la même façon. Pour Vortex : installer une fois l'extension du jeu, puis utiliser « Install from file ».",
+      "step2": "Lancez le jeu et ouvrez les réglages du mod (le badge en haut à droite) — 11 langues de texte ; la voix suit la langue choisie",
+      "step3": "Terminé. Le premier lancement peut être plus lent — Ren’Py reconstruit son cache",
+      "note": "Nécessite le jeu acheté sur Steam. Ce patch est non officiel et sans lien avec les développeurs ou éditeurs."
+   },
+   "shots": {
+      "title": "Captures d’écran",
+      "cap1": "Menu principal",
+      "cap2": "Chinois : texte CJK sans carrés",
+      "cap3": "Page du patch : langue, voix, police",
+      "cap4": "Localisation allemande",
+      "cap5": "Narration sur la capitale",
+      "cap6": "Sarah se jette dans les bras de son père",
+      "prev": "Image précédente",
+      "next": "Image suivante",
+      "close": "Fermer",
+      "open": "ouvrir en taille réelle"
+   },
+   "faq": {
+      "title": "FAQ",
+      "q1": "Est-ce un mod officiel ?",
+      "a1": "Non — un patch de fans non officiel, sans lien avec les développeurs ou éditeurs.",
+      "q2": "Y a-t-il du contenu pour adultes ?",
+      "a2": "Oui — le jeu est 18+. À télécharger et jouer uniquement si vous avez 18 ans ou plus.",
+      "q3": "Licence ?",
+      "a3": "Pack de voix et traduction : CC BY-NC 4.0 — partage et adaptation avec attribution, usage non commercial uniquement.",
+      "q4": "Comment aider ?",
+      "a4": "Mettez une étoile sur GitHub, envoyez un pull request ou ouvrez une issue."
+   },
+   "footer": {
+      "disclaimer": "Travail de fans non officiel. Tous droits du jeu original appartiennent à leurs détenteurs.",
+      "linksLabel": "Liens",
+      "linkGithub": "GitHub",
+      "linkSteam": "Steam",
+      "linkIssues": "Issues",
+      "linkLicense": "CC BY-NC 4.0",
+      "age": "18+"
+   }
 }

@@ -188,7 +188,7 @@ export const Hero = () => {
           </a>
           <a
             className={stylex.props(styles.mainBtn).className}
-            href={LINKS.zip}
+            href={LINKS.nexus}
             data-testid="hero-download"
           >
             {t('hero.ctaDownload')}
