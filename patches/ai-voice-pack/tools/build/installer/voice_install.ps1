@@ -51,21 +51,21 @@ function Normalize-Path([string]$p) {
     return [System.IO.Path]::GetFullPath($p).TrimEnd('\')
 }
 
-Write-Host "TSSR AI Voice Pack - voice pack installer / Установщик голосов"
+Write-Host "TSSR AI Voice Pack — Voice Pack Installer"
 Write-Host "==============================================================="
 
 # 1. Папка игры / Game folder
 if (-not $GameDir) { $GameDir = Find-GameDir }
 if (-not $GameDir) {
-    Write-Host "Папка игры не найдена автоматически / Game folder not found."
-    $GameDir = Read-Host "Введи путь к папке игры / Enter the game folder path"
+    Write-Host "We couldn't find your game folder automatically."
+    $GameDir = Read-Host "Please enter the path to your game folder"
 }
 $GameDir = Normalize-Path $GameDir
 if (-not (Test-Path (Join-Path $GameDir "game"))) {
-    Write-Host "ОШИБКА / ERROR: '$GameDir' не содержит папку game/ — это не папка игры."
+    Write-Host "ERROR: '$GameDir' doesn't look like the game folder (no game/ subfolder inside)."
     exit 1
 }
-Write-Host "Игра / Game: $GameDir"
+Write-Host "Game folder: $GameDir"
 
 # 2. Игра должна быть закрыта (держит локи на файлах мода) / game closed
 $exeFile = Get-ChildItem -Path $GameDir -Filter "*.exe" -File -ErrorAction SilentlyContinue |
@@ -79,15 +79,15 @@ if ($exeFile) {
     function Get-GameProcess { Get-Process -Name $exeName -ErrorAction SilentlyContinue }
     if (Get-GameProcess) {
         Write-Host ""
-        Write-Host "Игра запущена. Закрой её — установка начнётся автоматически (до 3 мин)."
-        Write-Host "The game is running. Close it — install starts by itself (3 min max)."
+        Write-Host "The game is running. Please close it — installation will start automatically (up to 3 minutes)."
+        Write-Host ""
         for ($i = 0; $i -lt 36 -and (Get-GameProcess); $i++) { Start-Sleep -Seconds 5 }
         if (Get-GameProcess) {
-            Write-Host "ОШИБКА / ERROR: игра всё ещё запущена / the game is still running."
-            Write-Host "Закрой игру и запусти установщик снова / close it and rerun install.cmd."
+            Write-Host "ERROR: the game is still running."
+            Write-Host "Please close the game and run install.cmd again."
             exit 4
         }
-        Write-Host "Игра закрыта, продолжаю / game closed, continuing."
+        Write-Host "Game closed — continuing."
     }
 }
 
@@ -97,24 +97,24 @@ $coreOk = (Test-Path (Join-Path $modDst "voice_config.rpy")) -and
           (Test-Path (Join-Path $modDst "zzz_ui.rpy"))
 if (-not $coreOk) {
     Write-Host ""
-    Write-Host "СНАЧАЛА УСТАНОВИ MAIN / INSTALL MAIN FIRST"
-    Write-Host "Голоса ставятся только поверх ядра (тексты и меню из main.zip)."
-    Write-Host "Voices install only on top of the core (texts and menu from main.zip)."
-    Write-Host "1) скачай и установи TSSR-AI-Voice-Pack-main.zip / install main.zip;"
-    Write-Host "2) затем запусти этот установщик снова / then run this installer again."
+    Write-Host "Please install the core pack first"
+    Write-Host "Voice packs install on top of the core pack (texts and menu):"
+    Write-Host ""
+    Write-Host "1) download and install TSSR-AI-Voice-Pack-main.zip (run its install.cmd);"
+    Write-Host "2) then run this installer again."
     exit 3
 }
 
 # 4. Payload: ai_voice/<lang>/ рядом с install.ps1
 $aiSrc = Join-Path $Src "mods\tssr-ai-voice-pack\ai_voice"
 if (-not (Test-Path $aiSrc)) {
-    Write-Host "ОШИБКА / ERROR: рядом с install.ps1 нет mods/tssr-ai-voice-pack/ai_voice."
-    Write-Host "Распакуй voice-zip целиком и запусти установщик из него. / Unpack the voice zip fully first."
+    Write-Host "ERROR: no audio folder found next to install.cmd."
+    Write-Host "Please unpack the whole voice zip and run install.cmd from inside it."
     exit 1
 }
 $langs = @(Get-ChildItem -Path $aiSrc -Directory | ForEach-Object { $_.Name })
 if (-not $langs) {
-    Write-Host "ОШИБКА / ERROR: пакет не содержит аудио / no audio in this pack."
+    Write-Host "ERROR: this pack contains no audio files."
     exit 1
 }
 
@@ -125,14 +125,14 @@ function Move-WithRetry([string]$from, [string]$to) {
         try { Move-Item -Force $from $to; return }
         catch {
             if ($i -eq 15) { throw }
-            if ($i -eq 2) { Write-Host "файлы заняты, жду (игра закрывается?) / files busy, waiting ..." }
+            if ($i -eq 2) { Write-Host "Files are busy, waiting... (is the game still closing?)" }
             Start-Sleep -Seconds 2
         }
     }
 }
 $installed = @()
 foreach ($lang in $langs) {
-    Write-Host "Ставлю голоса '$lang' / Installing voice '$lang' (atomic) ..."
+    Write-Host "Installing voice pack: $lang ..."
     $stage = Join-Path $aiSrc ".installing-$lang"
     $old = Join-Path $aiSrc ".old-$lang"
     $target = Join-Path $modDst "ai_voice\$lang"
@@ -148,13 +148,13 @@ foreach ($lang in $langs) {
     } catch {
         # возврат старого на место, если новый не встал / rollback
         if ((Test-Path $old) -and -not (Test-Path $target)) { Move-Item -Force $old $target }
-        Write-Host "ОШИБКА / ERROR: пакет '$lang' не установился / pack install failed."
-        Write-Host "Причина / Reason: $($_.Exception.Message)"
-        Write-Host "Предыдущая версия пакета цела; запусти установщик повторно. / Rerun this installer."
+        Write-Host "ERROR: voice pack '$lang' failed to install."
+        Write-Host "Reason: $($_.Exception.Message)"
+        Write-Host "Your previous files are safe. Just run install.cmd again."
         exit 1
     }
 }
 
-Write-Host "ГОТОВО / DONE. Установлено / installed: $($installed -join ', ')"
-Write-Host "Запусти игру, язык — в меню мода. / Launch the game and pick the language in the mod menu."
+Write-Host "Done! Voice pack installed: $($installed -join ', ')"
+Write-Host "Launch the game and pick the language from the mod menu (badge at the top right)."
 exit 0

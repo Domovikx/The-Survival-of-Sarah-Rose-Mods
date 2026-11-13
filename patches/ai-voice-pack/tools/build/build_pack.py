@@ -228,7 +228,7 @@ def build_main(out_dir):
         # Корень установки
         # Установщик «для ленивых» — в КОРНЕ архива (рядом с mods/):
         # двойной клик по install.cmd находит игру и ставит всё сам.
-        for fn in ("install.cmd", "install.ps1"):
+        for fn in ("install.cmd", "worker.ps1"):
             _add(zf, PATCH / "tools" / "build" / "installer" / fn, fn)
         for arcname, content in (("INSTALL.txt", INSTALL_TXT),
                                  ("environment.txt", ENVIRONMENT_TXT)):
@@ -263,7 +263,7 @@ def build_voice(lang, out_dir):
         for p in _tree_files(src):
             _add(zf, p, MOD_DIR + "/ai_voice/%s/%s" % (lang, p.relative_to(src).as_posix()))
         _add(zf, PATCH / "tools" / "build" / "installer" / "install.cmd", "install.cmd")
-        _add(zf, PATCH / "tools" / "build" / "installer" / "voice_install.ps1", "install.ps1")
+        _add(zf, PATCH / "tools" / "build" / "installer" / "voice_install.ps1", "worker.ps1")
     with zipfile.ZipFile(target) as zf:
         infos = zf.infolist()
         nfiles, nbytes = len(infos), sum(i.file_size for i in infos)

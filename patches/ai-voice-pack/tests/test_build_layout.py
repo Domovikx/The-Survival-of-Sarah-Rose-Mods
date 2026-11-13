@@ -18,7 +18,7 @@ sys.path.insert(0, os.path.join(ROOT, 'tools', 'build'))
 
 import build_pack  # noqa: E402
 
-ROOT_FILES = {"INSTALL.txt", "environment.txt", "install.cmd", "install.ps1"}
+ROOT_FILES = {"INSTALL.txt", "environment.txt", "install.cmd", "worker.ps1"}
 INSTALLER_DIR = os.path.join(ROOT, "tools", "build", "installer")
 
 
@@ -103,7 +103,7 @@ def test_voice_zip_has_own_installer(tmp_path):
     with zipfile.ZipFile(target) as zf:
         top = {n.split("/")[0] for n in zf.namelist()}
     assert "install.cmd" in top, f"нет install.cmd в корне voice-пакета: {sorted(top)}"
-    assert "install.ps1" in top, f"нет install.ps1 в корне voice-пакета: {sorted(top)}"
+    assert "worker.ps1" in top, f"нет worker.ps1 в корне voice-пакета: {sorted(top)}"
 
 
 def test_main_zip_repo_diagnostics_not_shipped(tmp_path):
@@ -183,7 +183,7 @@ def test_voice_zip_files_in_mod_dir(tmp_path, monkeypatch):
         build_pack.MOD_DIR + "/ai_voice/ru/OpeningScene/deadbeef__Sarah_3.opus",
         # свой атомарный установщик в корне пакета (владелец 2026-11-12)
         "install.cmd",
-        "install.ps1",
+        "worker.ps1",
     ]
 
 
@@ -203,7 +203,7 @@ def test_installers_wait_for_game_to_close():
     """Установщики не воюют с запущенной игрой: игра держит локи на шрифтах
     и файлах мода, поэтому ждём закрытия, затем ставим (поймано на чистой
     установке 2026-11-12 — «папка занята другим процессом»)."""
-    for name in ("install.ps1", "voice_install.ps1"):
+    for name in ("worker.ps1", "voice_install.ps1"):
         src = _installer(name)
         assert "Get-GameProcess" in src, "%s: нет проверки запущенной игры" % name
         assert "the game is still running" in src, "%s: нет понятной ошибки" % name
@@ -225,12 +225,22 @@ def test_install_cmd_console_is_utf8():
 def test_core_installer_never_touches_ai_voice():
     """main.zip — БЕЗ аудио: установщик ядра пропускает ai_voice (голоса
     живут в своих пакетах — решение владельца 2026-11-12)."""
-    assert 'if ($entry.Name -eq "ai_voice") { continue }' in _installer("install.ps1")
+    assert 'if ($entry.Name -eq "ai_voice") { continue }' in _installer("worker.ps1")
 
 
 def _read(rel):
     with open(os.path.join(ROOT, rel), encoding="utf-8") as f:
         return f.read()
+
+
+def test_voice_config_wires_catalog_and_auto_voice():
+    """Рантайм-связка (гард от регресса, владелец 2026-11-13): voice_config
+    читает ОБА catalog-JSON и вешает auto_voice-хук движка. Вырезать любую
+    строку = игра молчит (голоса не находятся) — тест обязан сработать."""
+    src = _read("voice_config.rpy")
+    assert 'renpy.loader.load("catalog/label_arc.json")' in src,         "label_arc.json больше не читается — папки ai_voice/<Арка>/ не найдутся"
+    assert 'renpy.loader.load("catalog/voice_list.json")' in src,         "voice_list.json больше не читается — неизвестно, кто озвучен"
+    assert "define config.auto_voice = static_auto_voice" in src,         "auto_voice-хук не подключён — движок не будет искать голоса"
 
 
 def test_voice_config_registers_own_mod_dir():

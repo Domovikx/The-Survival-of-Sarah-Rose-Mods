@@ -49,21 +49,21 @@ function Normalize-Path([string]$p) {
     return [System.IO.Path]::GetFullPath($p).TrimEnd('\')
 }
 
-Write-Host "TSSR AI Voice Pack - core installer / Установщик ядра"
+Write-Host "TSSR AI Voice Pack — Installer"
 Write-Host "======================================================="
 
 # 1. Папка игры / Game folder
 if (-not $GameDir) { $GameDir = Find-GameDir }
 if (-not $GameDir) {
-    Write-Host "Папка игры не найдена автоматически / Game folder not found."
-    $GameDir = Read-Host "Введи путь к папке игры / Enter the game folder path"
+    Write-Host "We couldn't find your game folder automatically."
+    $GameDir = Read-Host "Please enter the path to your game folder"
 }
 $GameDir = Normalize-Path $GameDir
 if (-not (Test-Path (Join-Path $GameDir "game"))) {
-    Write-Host "ОШИБКА / ERROR: '$GameDir' не содержит папку game/ — это не папка игры."
+    Write-Host "ERROR: '$GameDir' doesn't look like the game folder (no game/ subfolder inside)."
     exit 1
 }
-Write-Host "Игра / Game: $GameDir"
+Write-Host "Game folder: $GameDir"
 
 # 2. Предохранитель: игра должна быть закрыта. Живой процесс держит локи на
 #    шрифтах и файлах мода — атомарная замена падает «папка занята»
@@ -79,37 +79,37 @@ if ($exeFile) {
     function Get-GameProcess { Get-Process -Name $exeName -ErrorAction SilentlyContinue }
     if (Get-GameProcess) {
         Write-Host ""
-        Write-Host "Игра запущена. Закрой её — установка начнётся автоматически (до 3 мин)."
-        Write-Host "The game is running. Close it — install starts by itself (3 min max)."
+        Write-Host "The game is running. Please close it — installation will start automatically (up to 3 minutes)."
+        Write-Host ""
         for ($i = 0; $i -lt 36 -and (Get-GameProcess); $i++) { Start-Sleep -Seconds 5 }
         if (Get-GameProcess) {
-            Write-Host "ОШИБКА / ERROR: игра всё ещё запущена / the game is still running."
-            Write-Host "Закрой игру и запусти установщик снова / close it and rerun install.cmd."
+            Write-Host "ERROR: the game is still running."
+            Write-Host "Please close the game and run install.cmd again."
             exit 4
         }
-        Write-Host "Игра закрыта, продолжаю / game closed, continuing."
+        Write-Host "Game closed — continuing."
     }
 }
 
 # 3. Источник ядра (рядом с install.ps1) / Core payload
 $modSrc = Join-Path $Src "mods\tssr-ai-voice-pack"
 if (-not (Test-Path $modSrc)) {
-    Write-Host "ОШИБКА / ERROR: рядом с install.ps1 нет mods/tssr-ai-voice-pack."
-    Write-Host "Распакуй main.zip целиком и запусти установщик из него. / Unpack main.zip fully first."
+    Write-Host "ERROR: the folder 'mods/tssr-ai-voice-pack' is missing next to install.cmd."
+    Write-Host "Please unpack the whole main.zip and run install.cmd from inside it."
     exit 1
 }
 $modDst = Join-Path $GameDir "mods\tssr-ai-voice-pack"
 if ((Normalize-Path $modSrc) -eq (Normalize-Path $modDst)) {
     # main.zip распакован прямо в папку игры: ядро уже на месте
-    Write-Host "Ядро уже на месте (main.zip распакован в папку игры) / Core already in place"
-    Write-Host "ГОТОВО / DONE. Голоса ставятся СВОИМИ установщиками из voice-пакетов."
+    Write-Host "The core is already installed — nothing to do."
+    Write-Host "Voice packs are installed separately: download the ones you want and run each pack's install.cmd."
     exit 0
 }
 
 # 4. Атомарная установка ядра: staging -> замена блоками.
 #    ai_voice/ НЕ трогаем (голоса ставит свой установщик пакета).
 Write-Host ""
-Write-Host "Ставлю ядро / Installing core (atomic) ..."
+Write-Host "Installing... (your current files stay safe until the new ones are ready)"
 $stage = Join-Path $GameDir "mods\.tssr-core-staging"
 $trash = Join-Path $GameDir "mods\.tssr-core-trash"
 try {
@@ -131,7 +131,7 @@ try {
             try { Move-Item -Force $from $to; return }
             catch {
                 if ($i -eq 15) { throw }
-                if ($i -eq 2) { Write-Host "файлы заняты, жду (игра закрывается?) / files busy, waiting ..." }
+                if ($i -eq 2) { Write-Host "Files are busy, waiting... (is the game still closing?)" }
                 Start-Sleep -Seconds 2
             }
         }
@@ -146,16 +146,16 @@ try {
     Remove-Item -Recurse -Force $stage, $trash -ErrorAction SilentlyContinue
     Copy-Item (Join-Path $Src "environment.txt") (Join-Path $GameDir "environment.txt") -Force
 } catch {
-    Write-Host "ОШИБКА / ERROR: установка ядра не удалась / core install failed."
-    Write-Host "Причина / Reason: $($_.Exception.Message)"
-    Write-Host "Старые файлы (кроме уже заменённых блоков) целы; запусти установщик"
-    Write-Host "повторно / rerun install.cmd. При отказе в правах — от имени"
-    Write-Host "администратора / run as administrator, или вручную, см. INSTALL.txt."
+    Write-Host "ERROR: installation failed."
+    Write-Host "Reason: $($_.Exception.Message)"
+    Write-Host "Your previous files are safe. Just run install.cmd again."
+    Write-Host "If Windows blocked the install, right-click install.cmd →"
+    Write-Host "Run as administrator. Details: see INSTALL.txt."
     exit 1
 }
 
-Write-Host "ГОТОВО / DONE. Ядро установлено (тексты 11 языков, шрифты, меню)."
-Write-Host "Голоса: скачай voice-пакеты нужных языков и запусти их install.cmd"
-Write-Host "по одному — каждый ставится атомарно. / Voices: run each voice pack's"
-Write-Host "install.cmd — each installs atomically."
+Write-Host "Done! Core installed: 11 languages, fonts and the mod menu."
+Write-Host "Next step (optional): want voices? Download the voice packs you like,"
+Write-Host "unpack them, and run each pack's install.cmd — one language per pack."
+Write-Host "Enjoy the game!"
 exit 0

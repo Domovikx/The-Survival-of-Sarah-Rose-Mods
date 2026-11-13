@@ -323,7 +323,7 @@ export function buildMain(outDir: string): BuildResult {
   const entries: ZipEntry[] = [];
   // Установщик «для ленивых» — в КОРНЕ архива (рядом с mods/):
   // двойной клик по install.cmd находит игру и ставит всё сам.
-  for (const fn of ["install.cmd", "install.ps1"]) {
+  for (const fn of ["install.cmd", "worker.ps1"]) {
     entries.push(zipEntry(fn, join(PATCH, "tools", "build", "installer", fn)));
   }
   for (const [arcname, content] of [
@@ -371,7 +371,7 @@ export function buildVoice(lang: string, outDir: string): BuildResult | null {
     entries.push(zipEntry(`${MOD_DIR}/ai_voice/${lang}/${relative(src, p).split(sep).join("/")}`, p));
   }
   entries.push(zipEntry("install.cmd", join(PATCH, "tools", "build", "installer", "install.cmd")));
-  entries.push(zipEntry("install.ps1", join(PATCH, "tools", "build", "installer", "voice_install.ps1")));
+  entries.push(zipEntry("worker.ps1", join(PATCH, "tools", "build", "installer", "voice_install.ps1")));
   const { nfiles, nbytes } = writeZip(target, entries);
   return { name, target, nfiles, nbytes };
 }

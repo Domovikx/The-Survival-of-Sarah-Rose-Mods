@@ -33,7 +33,7 @@ import { readZip, type ZipRead } from "./zip.mts";
 
 // tools/build/build_pack.test.mts -> ../.. = patches/ai-voice-pack
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..", "..");
-const ROOT_FILES = new Set(["INSTALL.txt", "environment.txt", "install.cmd", "install.ps1"]);
+const ROOT_FILES = new Set(["INSTALL.txt", "environment.txt", "install.cmd", "worker.ps1"]);
 const INSTALLER_DIR = join(ROOT, "tools", "build", "installer");
 
 /** tmp_path в pytest: создаём временный каталог, чистим за собой. */
@@ -136,7 +136,7 @@ function test_voice_zip_has_own_installer(t: TestContext): void {
     }
     const top = new Set(readZip(res.target).names.map((n) => n.split("/")[0]));
     assert.ok(top.has("install.cmd"), `нет install.cmd в корне voice-пакета: ${[...top]}`);
-    assert.ok(top.has("install.ps1"), `нет install.ps1 в корне voice-пакета: ${[...top]}`);
+    assert.ok(top.has("worker.ps1"), `нет worker.ps1 в корне voice-пакета: ${[...top]}`);
   });
 }
 
@@ -237,7 +237,7 @@ function test_voice_zip_files_in_mod_dir(): void {
         MOD_DIR + "/ai_voice/ru/OpeningScene/deadbeef__Sarah_3.opus",
         // свой атомарный установщик в корне пакета (владелец 2026-11-12)
         "install.cmd",
-        "install.ps1",
+        "worker.ps1",
       ]);
     } finally {
       for (const k of Object.keys(VOICE_LANGS)) delete VOICE_LANGS[k];
@@ -260,7 +260,7 @@ function test_installers_wait_for_game_to_close(): void {
   /* Установщики не воюют с запущенной игрой: игра держит локи на шрифтах
    * и файлах мода, поэтому ждём закрытия, затем ставим (поймано на чистой
    * установке 2026-11-12 — «папка занята другим процессом»). */
-  for (const name of ["install.ps1", "voice_install.ps1"]) {
+  for (const name of ["worker.ps1", "voice_install.ps1"]) {
     const src = installerSrc(name);
     assert.ok(src.includes("Get-GameProcess"), `${name}: нет проверки запущенной игры`);
     assert.ok(src.includes("the game is still running"), `${name}: нет понятной ошибки`);
@@ -283,11 +283,29 @@ function test_install_cmd_console_is_utf8(): void {
 function test_core_installer_never_touches_ai_voice(): void {
   /* main.zip — БЕЗ аудио: установщик ядра пропускает ai_voice (голоса
    * живут в своих пакетах — решение владельца 2026-11-12). */
-  assert.ok(installerSrc("install.ps1").includes('if ($entry.Name -eq "ai_voice") { continue }'));
+  assert.ok(installerSrc("worker.ps1").includes('if ($entry.Name -eq "ai_voice") { continue }'));
 }
 
 function readSrc(rel: string): string {
   return readFileSync(join(ROOT, rel), "utf-8");
+}
+
+/** Гард регресса (владелец 2026-11-13): рантайм-связка voice_config — без
+ * чтения catalog-JSON и auto_voice-хука игра молчит (голоса не находятся). */
+function test_voice_config_wires_catalog_and_auto_voice() {
+  const src = readFileSync(join(PATCH, "voice_config.rpy"), "utf-8");
+  assert.ok(
+    src.includes('renpy.loader.load("catalog/label_arc.json")'),
+    "label_arc.json не читается — папки ai_voice/<Арка>/ не найдутся",
+  );
+  assert.ok(
+    src.includes('renpy.loader.load("catalog/voice_list.json")'),
+    "voice_list.json не читается — неизвестно, кто озвучен",
+  );
+  assert.ok(
+    src.includes("define config.auto_voice = static_auto_voice"),
+    "auto_voice-хук не подключён — движок не ищет голоса",
+  );
 }
 
 function test_voice_config_registers_own_mod_dir(): void {
@@ -394,6 +412,7 @@ test("test_installers_wait_for_game_to_close", test_installers_wait_for_game_to_
 test("test_install_cmd_console_is_utf8", test_install_cmd_console_is_utf8);
 test("test_core_installer_never_touches_ai_voice", test_core_installer_never_touches_ai_voice);
 test("test_voice_config_registers_own_mod_dir", test_voice_config_registers_own_mod_dir);
+test("test_voice_config_wires_catalog_and_auto_voice", test_voice_config_wires_catalog_and_auto_voice);
 test("test_no_basedir_mod_writes", test_no_basedir_mod_writes);
 test("test_rpy_sources_never_use_dunder_file", test_rpy_sources_never_use_dunder_file);
 test("test_mod_root_canonical_fallback_is_mod_dir", test_mod_root_canonical_fallback_is_mod_dir);
