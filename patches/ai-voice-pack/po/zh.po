@@ -6280,171 +6280,171 @@ msgstr "大家都到了吗？"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah waved her hand as if to dismiss the question."
-msgstr ""
+msgstr "莎拉挥了挥手，仿佛要 dismiss 这个问题。"
 
 msgctxt "speaker:Sarah"
 msgid "Anyone who isn't here yet is probably not important enough to wait on."
-msgstr ""
+msgstr "还没到的人大概也没重要到值得等他们。"
 
 msgctxt "speaker:Thomas"
 msgid "Alright, shall I begin then?"
-msgstr ""
+msgstr "好吧，那我开始了？"
 
 msgctxt "speaker:Narrator"
 msgid "She wondered why she felt so distant today. She always loved the winter grace festival."
-msgstr ""
+msgstr "她不禁在想，为什么今天自己会感到如此疏离。她向来喜爱冬之恩典节。"
 
 msgctxt "speaker:Narrator"
 msgid "Perhaps, she thought, it's because this was the first major festival without her father. The day felt tainted, somehow."
-msgstr ""
+msgstr "或许，她心想，这是因为这是父亲缺席后的第一个大型节日。这一天不知为何，感觉有些晦暗。"
 
 msgctxt "speaker:Narrator"
 msgid "Thomas rose up from his seat, and an attendant stomped hard on the floor three times, bringing the room to a silence."
-msgstr ""
+msgstr "托马斯从座位上站起身，一名侍从用力跺了三次地板，使整个房间陷入寂静。"
 
 msgctxt "speaker:Thomas"
 msgid "Let me begin by welcoming all of you to this year's winter grace festival."
-msgstr ""
+msgstr "请允许我首先欢迎大家来到今年的冬恩节。"
 
 msgctxt "speaker:Thomas"
 msgid "I stand here, happy to see so many friendly faces, and to see this great hall sing with a joy that can only come from good friends and good food."
-msgstr ""
+msgstr "我站在这里，很高兴看到这么多熟悉的面孔，也看到这大厅因挚友与美食而充满喜悦。"
 
 msgctxt "speaker:Thomas"
 msgid "But there is also a pain in my heart. An absence that I feel, as surely as all of you."
-msgstr ""
+msgstr "但我的心中也有一份痛楚。一种我感同身受的缺失，正如你们所有人一样。"
 
 msgctxt "speaker:Thomas"
 msgid "My father presided over countless of these gatherings, but for me, this is a first."
-msgstr ""
+msgstr "我的父亲主持过无数次这样的聚会，但对我来说，这是第一次。"
 
 msgctxt "speaker:Thomas"
 msgid "Even now, I find myself instinctively looking at the door, waiting for him to walk through. A winter festival without him, almost seems, wrong."
-msgstr ""
+msgstr "即便到现在，我仍会下意识地望向门口，等着他走进来。没有他的冬日庆典，几乎显得格格不入。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah found herself surprised to see her brother echo her own feelings so closely."
-msgstr ""
+msgstr "莎拉惊讶地发现，哥哥竟与她有着如此相近的感受。"
 
 msgctxt "speaker:Thomas"
 msgid "The winter grace festival is about togetherness, so how do we celebrate that, when we are still mourning a loss that has separated us?"
-msgstr ""
+msgstr "冬日恩典节本是为了团聚，可当我们仍因失去至亲而悲痛、彼此疏离时，又该如何庆祝这份团圆呢？"
 
 msgctxt "speaker:Thomas"
 msgid "We used to celebrate it with my father, but I propose, that this year, we instead celebrate in honour of him."
-msgstr ""
+msgstr "我们以前是和父亲一起庆祝的，但我提议，今年我们改为以纪念他的方式来庆祝。"
 
 msgctxt "speaker:Thomas"
 msgid "Those of you who had the privilege of truly knowing my father, knew how much he enjoyed the winter grace festival."
-msgstr ""
+msgstr "那些有幸真正了解我父亲的人，都知道他有多喜爱冬恩节。"
 
 msgctxt "speaker:Thomas"
 msgid "The company, the decorations, the food...the beer."
-msgstr ""
+msgstr "众人，装饰，食物……还有啤酒。"
 
 msgctxt "speaker:Narrator"
 msgid "A roaring laugh erupted from the room."
-msgstr ""
+msgstr "房间里爆发出一阵哄堂大笑。"
 
 msgctxt "speaker:Thomas"
 msgid "So let us honour my father, by keeping his memory alive and celebrating this year's winter grace festival in the way that he would have wanted us to."
-msgstr ""
+msgstr "所以，让我们通过铭记他的记忆，并以他希望我们庆祝今年冬季恩典节的方式来纪念他。"
 
 msgctxt "speaker:Narrator"
 msgid "Thomas raised a chalice."
-msgstr ""
+msgstr "托马斯举起酒杯。"
 
 msgctxt "speaker:Thomas"
 msgid "To my father, a king without equal."
-msgstr ""
+msgstr "敬我父亲，一位无与伦比的国王。"
 
 msgctxt "speaker:Narrator"
 msgid "All across the hall, others raised their cups and yelled out their toasts."
-msgstr ""
+msgstr "大厅里，其他人纷纷举起酒杯，高声喊出他们的祝词。"
 
 msgctxt "speaker:Narrator"
 msgid "As Thomas fell back into his seat, the party truly took off."
-msgstr ""
+msgstr "随着托马斯坐回座位，派对的气氛真正热烈起来。"
 
 msgctxt "speaker:Narrator"
 msgid "Thomas looked at Sarah, he seemed utterly wracked and exhausted."
-msgstr ""
+msgstr "托马斯看向莎拉，他看起来心力交瘁，疲惫不堪。"
 
 msgctxt "speaker:Thomas"
 msgid "How did I do?"
-msgstr ""
+msgstr "我表现得怎么样？"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah looked at Thomas, stunned."
-msgstr ""
+msgstr "莎拉看着托马斯，震惊不已。"
 
 msgctxt "speaker:Sarah"
 msgid "You were incredible, Thomas."
-msgstr ""
+msgstr "你太棒了，托马斯。"
 
 msgctxt "speaker:Thomas"
 msgid "You think so? I spend all night writing and memorizing it."
-msgstr ""
+msgstr "你真这么认为？我花了一整晚的时间来写和背诵它。"
 
 msgctxt "speaker:Narrator"
 msgid "She watched as her brother slouched back into his seat. He had been somewhat of a true king for a moment, but Sarah slowly realized it didn't come easy to him."
-msgstr ""
+msgstr "她看着哥哥瘫回座位。他刚才有那么一瞬间像个真正的国王，但莎拉渐渐意识到这对他来说并不容易。"
 
 msgctxt "speaker:Narrator"
 msgid "The night carried on, and Sarah and Thomas spend it eating, receiving gifts from the nobles and listening to their troubles."
-msgstr ""
+msgstr "夜晚继续着，莎拉和托马斯一边享用美食，一边接受贵族们的礼物，并倾听他们的烦恼。"
 
 msgctxt "speaker:Narrator"
 msgid "It was only towards the end of the night, when the mood suddenly shifted."
-msgstr ""
+msgstr "直到深夜将尽，气氛才骤然转变。"
 
 msgctxt "speaker:Narrator"
 msgid "The door to the main hall burst open, each frame slamming into the walls. The sound echoed through the hall and a gust of wind was carried in."
-msgstr ""
+msgstr "主厅的门猛然被撞开，每一扇门框都重重地砸在墙壁上。声音在大厅中回荡，一股风随之卷入。"
 
 msgctxt "speaker:Narrator"
 msgid "A dreadful silence came over the room as a everyone turned their heads to see the source of the disturbance."
-msgstr ""
+msgstr "随着众人转头看向骚乱的源头，房间里陷入了一片死寂。"
 
 msgctxt "speaker:Narrator"
 msgid "Marching through the center of the hall, in great strides, was a man."
-msgstr ""
+msgstr "一个男人迈着大步，从大厅中央阔步走来。"
 
 msgctxt "speaker:Narrator"
 msgid "His skin was a soft oaken brown, darker than any other in the room by far. His dark hair was swept back, cut in a practical fashion. A military fashion."
-msgstr ""
+msgstr "他的皮肤是柔和的橡木棕色，比房间里其他任何人都深得多。他深色的头发向后梳着，剪裁得十分利落，带着几分军装的风格。"
 
 msgctxt "speaker:Narrator"
 msgid "His young face was contrasted by his old eyes."
-msgstr ""
+msgstr "他年轻的面庞与他苍老的眼神形成了鲜明的对比。"
 
 msgctxt "speaker:Narrator"
 msgid "Just as his appearance and his style, the clothes he wore were foreign as well. A soft swirling white, mixed with a deep purple and the occasional leather patches of armor."
-msgstr ""
+msgstr "正如他的外貌和风格一样，他穿着的衣服也是异域风情。柔和的旋涡状白色，混合着深紫色，偶尔点缀着皮革护甲补丁。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah had never seen a man dressed like this, but she didn't need to in order to know that this man hailed from the eastern desert."
-msgstr ""
+msgstr "莎拉从未见过穿着如此装束的男人，但她无需亲眼所见便知此人来自东部沙漠。"
 
 msgctxt "speaker:Narrator"
 msgid "He was too alien to belong to her world."
-msgstr ""
+msgstr "他太过异类，不属于她的世界。"
 
 msgctxt "speaker:Narrator"
 msgid "The man strode across the hall, ending up at the feet of the stairs that led up to the dais."
-msgstr ""
+msgstr "男子大步穿过大厅，最终停在通往高台的台阶脚下。"
 
 msgctxt "speaker:Narrator"
 msgid "Off to the sides, the guards had drawn in closer, but Thomas had waved to hold them off, seemingly more intrigued than afraid."
-msgstr ""
+msgstr "两侧的卫兵靠得更近了，但托马斯挥手示意他们退下，他似乎更多的是好奇而非恐惧。"
 
 msgctxt "speaker:Narrator"
 msgid "The foreign man fell to one knee."
-msgstr ""
+msgstr "那名异邦男子单膝跪地。"
 
 msgctxt "speaker:Emissary"
 msgid "King Thomas, I humbly greet you."
-msgstr ""
+msgstr "Король Томас, смиренно приветствую вас."
 
 msgctxt "speaker-name"
 msgid "Emissary"
@@ -6452,155 +6452,155 @@ msgstr "信使"
 
 msgctxt "speaker:Narrator"
 msgid "Thomas motioned for the man to stand up."
-msgstr ""
+msgstr "托马斯示意那人起身。"
 
 msgctxt "speaker:Thomas"
 msgid "Please rise, visitor."
-msgstr ""
+msgstr "请起，访客。"
 
 msgctxt "speaker:Narrator"
 msgid "The man did as instructed. His eyes fell directly on Thomas, before switching towards Sarah."
-msgstr ""
+msgstr "那人依言照做。他的目光先是落在托马斯身上，随即转向莎拉。"
 
 msgctxt "speaker:Narrator"
 msgid "He only stared at her for a moment, before returning to Thomas, but to Sarah it felt like an eternity."
-msgstr ""
+msgstr "他只盯着她看了一会儿，便转回看向托马斯，但对莎拉来说，那感觉却像过了一个世纪。"
 
 msgctxt "speaker:Narrator"
 msgid "There was something in this man's eyes. A purpose. All the others in the castle looked at her for who she was, a princess, but this man had the eyes of a predator."
-msgstr ""
+msgstr "这男人的眼中藏着某种东西。一种目的性。城堡里的其他人看她是出于她是公主的身份，但这男人的眼神却像掠食者一样。"
 
 msgctxt "speaker:Emissary"
 msgid "I have travelled far, hailing from deep within what you call the eastern desert, and I have come to deliver a gift, from my Master to you, king Thomas."
-msgstr ""
+msgstr "我跋涉千里，来自你们所称的东部沙漠深处。我此行是为向陛下——托马斯国王，转交主人的一份厚礼。"
 
 msgctxt "speaker:Narrator"
 msgid "The man's accent was faint, he was clearly well educated to speak the language of Rosanna so effortlessly."
-msgstr ""
+msgstr "那个男人的口音很淡，显然受过良好的教育，才能如此毫不费力地用罗珊娜的语言交谈。"
 
 msgctxt "speaker:Narrator"
 msgid "Thomas was now leaning in, wanting to know more."
-msgstr ""
+msgstr "托马斯此刻正倾身向前，想要了解更多。"
 
 msgctxt "speaker:Thomas"
 msgid "A gift?"
-msgstr ""
+msgstr "礼物？"
 
 msgctxt "speaker:Narrator"
 msgid "The emissary nodded."
-msgstr ""
+msgstr "使者点了点头。"
 
 msgctxt "speaker:Emissary"
 msgid "My master, the great Khan Hassar, has tasked me to bring you a gift of peace."
-msgstr ""
+msgstr "我的主人，伟大的可汗哈萨尔，派我来为您带来一份和平的礼物。"
 
 msgctxt "speaker:Narrator"
 msgid "The room was still silent as a crypt."
-msgstr ""
+msgstr "房间里静得如同墓穴一般。"
 
 msgctxt "speaker:Emissary"
 msgid "Khan Hassar bears a great burden, placed upon him by the stars in heaven. He is to bring unity to this world, and bind all peoples together into a single tribe."
-msgstr ""
+msgstr "可汗哈萨尔背负着上天赋予的重任。他旨在统一这个世界，将万民凝聚为一个部落。"
 
 msgctxt "speaker:Emissary"
 msgid "In service of this great task, he has brought together the tribes of the desert, and brought low the far-eastern nations from beyond the desert."
-msgstr ""
+msgstr "为了完成这项伟大的使命，他已联合了沙漠各部族，并征服了沙漠以东的远东诸国。"
 
 msgctxt "speaker:Emissary"
 msgid "Great Emperors of dynasties that have endured for millenia, have bowed their heads low to Khan Hassar."
-msgstr ""
+msgstr "历经千年的伟大王朝帝王，皆向哈萨尔汗俯首称臣。"
 
 msgctxt "speaker:Emissary"
 msgid "But others, sought to impede his great task. It is because of them that I must sadly bear an offer of peace in one hand, and a warning in the other."
-msgstr ""
+msgstr "但仍有其他人试图阻挠他的伟业。正因如此，我不得不遗憾地一手捧着和平的提议，另一手握着警告。"
 
 msgctxt "speaker:Narrator"
 msgid "The emissary reached into a bag and pulled something out."
-msgstr ""
+msgstr "Эмиссар полез в сумку и что-то достал."
 
 msgctxt "speaker:Narrator"
 msgid "A woman shrieked loudly, breaking through the silence. The room began to grow rowdy. Men began to shout obscenities."
-msgstr ""
+msgstr "一名女子大声尖叫，打破了寂静。房间开始变得喧闹起来。男人们开始叫骂着下流话。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah felt herself grow weak, but forced herself to look on. Look at the decapitated head that the emissary was now holding up for all to see."
-msgstr ""
+msgstr "莎拉感到自己双腿发软，但还是强迫自己看下去。看着那个被使节高高举起、供所有人观看的无头尸体。"
 
 msgctxt "speaker:Emissary"
 msgid "This king was proud. Too proud to bend his head for Khan Hassar, and for this, he lost it."
-msgstr ""
+msgstr "这位国王十分傲慢。他骄傲到不肯向哈萨尔可汗低头，为此，他丢了脑袋。"
 
 msgctxt "speaker:Emissary"
 msgid "But, along with him, more than a hundred thousand of his countrymen perished with him, dying to defend this fool's honour."
-msgstr ""
+msgstr "然而，与他一同赴死的还有十万多他的子民，他们为捍卫这位蠢货的荣誉而牺牲。"
 
 msgctxt "speaker:Emissary"
 msgid "And despite his arrogance, his sons and daughters were still made slaves to the Tribe."
-msgstr ""
+msgstr "尽管他傲慢无礼，他的儿女们仍沦为部落的奴隶。"
 
 msgctxt "speaker:Emissary"
 msgid "Khan Hassar wept for the senselessness of this carnage, and he vowed that before delivering war, he would always offer peace, so that this tragedy might never repeat itself."
-msgstr ""
+msgstr "可汗哈萨尔为这场屠杀的无意义而落泪，他发誓在发动战争之前，永远先提供和平，以免此类悲剧重演。"
 
 msgctxt "speaker:Narrator"
 msgid "The emissary threw the head halfway up the stairs, where it remained, delicately balanced."
-msgstr ""
+msgstr "使者将那颗头颅抛上楼梯中段，它便那样悬停在那里，姿态微妙地保持着平衡。"
 
 msgctxt "speaker:Emissary"
 msgid "And so, I was sent here. Sent to deliver this great offer of peace."
-msgstr ""
+msgstr "于是，我被派往此地。前来传达这份宏大的和平提议。"
 
 msgctxt "speaker:Emissary"
 msgid "King Thomas, on behalf of Khan Hassar, I command you to prostrate yourself before me as if I were him."
-msgstr ""
+msgstr "托马斯国王，我奉哈萨尔汗之命，命令你像面对他一样向我俯首称臣。"
 
 msgctxt "speaker:Emissary"
 msgid "Do this, and Khan Hassar will spare you and the entire nation of Rosanna a bloodshed you cannot begin to imagine."
-msgstr ""
+msgstr "照做，哈萨尔可汗将饶恕你，并让整个罗珊娜王国免于你们无法想象的流血屠杀。"
 
 msgctxt "speaker:Emissary"
 msgid "Open your gates, lay down your weapons and disband your armies, and the great horde will sweep through this nation without breaking so much as a blade of grass."
-msgstr ""
+msgstr "打开城门，放下武器，解散军队，大军将如履平地般穿过这片国土，连一根草都不会折断。"
 
 msgctxt "speaker:Emissary"
 msgid "But reject this offer, and we will turn your nation to ashes. Bind your nation's sons and daughters into slavery. Run the great rivers red with blood."
-msgstr ""
+msgstr "但若拒绝此提议，我们将把你们的国家化为灰烬。将你们的子民沦为奴隶。让大河染红鲜血。"
 
 msgctxt "speaker:Narrator"
 msgid "By now, the gathering of nobles was screaming and had begun throwing things at the emissary, so outraged were they at his demands."
-msgstr ""
+msgstr "到此时，聚集的贵族们已经尖叫起来，并开始向使者投掷物品，他们对使者的要求感到极度愤怒。"
 
 msgctxt "speaker:Narrator"
 msgid "The Emissary remained perfectly still, unbothered with the screams of the crowd."
-msgstr ""
+msgstr "信使纹丝不动，对人群的叫骂毫不在意。"
 
 msgctxt "speaker:Narrator"
 msgid "His iron gaze remained fixed on Thomas and Sarah."
-msgstr ""
+msgstr "他那铁一般的目光始终锁定在托马斯和莎拉身上。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah had listened intently, and felt like a fist was closing around her throat."
-msgstr ""
+msgstr "莎拉听得入神，感觉有一只拳头正扼住她的喉咙。"
 
 msgctxt "speaker:Narrator"
 msgid "She looked at Thomas, who had turned white as marble."
-msgstr ""
+msgstr "她看向托马斯，他已面色如大理石般惨白。"
 
 msgctxt "speaker:Narrator"
 msgid "She understood that just as she looked to Thomas, many of the nobles now did too."
-msgstr ""
+msgstr "她明白，正如她看向托马斯一样，如今许多贵族也是如此。"
 
 msgctxt "speaker:Narrator"
 msgid "They had to be decisive."
-msgstr ""
+msgstr "他们必须当机立断。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah stood up and walked next to Thomas. She grabbed him by the shoulder and woke him from his stupor."
-msgstr ""
+msgstr "莎拉站起身，走到托马斯身边。她抓住他的肩膀，将他从恍惚中唤醒。"
 
 msgctxt "speaker:Narrator"
 msgid "Looking down at him, she whispered her instruction."
-msgstr ""
+msgstr "她低头看着他，低声下达了指令。"
 
 msgctxt "menu"
 msgid "None may threaten Rosanna; make an example of him!"
@@ -6608,71 +6608,71 @@ msgstr "绝不允许有人威胁罗莎娜！将他处死，以儆效尤！"
 
 msgctxt "speaker:Narrator"
 msgid "Thomas rose up from his throne."
-msgstr ""
+msgstr "托马斯从王座上站了起来。"
 
 msgctxt "speaker:Thomas"
 msgid "It is not up for barbarians from the desert to come to the land of civilized men and utter threats."
-msgstr ""
+msgstr "野蛮人从沙漠来到文明人的土地并大放厥词，这可不是他们该做的事。"
 
 msgctxt "speaker:Thomas"
 msgid "Perhaps, your lack of education is to be blamed. If so, allow me to educate you now."
-msgstr ""
+msgstr "或许，该怪的是你缺乏教养。既然如此，那就让我现在来教育教育你吧。"
 
 msgctxt "speaker:Narrator"
 msgid "Thomas motioned for the guards to move forward. They seized the man, who offered up no struggle, even as they forced him to his knees."
-msgstr ""
+msgstr "托马斯示意卫兵上前。他们抓住那名男子，尽管被按跪在地，他却未作任何反抗。"
 
 msgctxt "speaker:Narrator"
 msgid "The crowd began to roar as if they had never seen a greater spectacle."
-msgstr ""
+msgstr "人群开始欢呼，仿佛他们从未见过如此壮观的景象。"
 
 msgctxt "speaker:Thomas"
 msgid "Guards! Bring me this creature's head!"
-msgstr ""
+msgstr "卫兵！把他的脑袋给我拿来！"
 
 msgctxt "speaker:Narrator"
 msgid "The largest of the guards began to unsheath his blade, a great two-handed weapon. He balanced the blade over the emissary's neck, then pulled it back, holding it overhead."
-msgstr ""
+msgstr "最魁梧的一名卫兵开始拔出他的武器，那是一把巨大的双手剑。他将剑刃悬在使者的脖颈上方，随后向后拉回，将剑高高举过头顶。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah, closer than anyone else, noticed a single tear crawling down the emissary's cheek."
-msgstr ""
+msgstr "离得最近的莎拉注意到一滴泪水顺着使者的脸颊滑落。"
 
 msgctxt "speaker:Narrator"
 msgid "He looked up, staring directly at Sarah."
-msgstr ""
+msgstr "他抬起头，直勾勾地盯着莎拉。"
 
 msgctxt "speaker:Narrator"
 msgid "His mouth moved, but nobody could hear anything over the frenzied crowd."
-msgstr ""
+msgstr "他的嘴唇在动，但嘈杂的人群中无人能听见。"
 
 msgctxt "speaker:Narrator"
 msgid "I weep for you, Sarah saw him mouthing."
-msgstr ""
+msgstr "\"我为你哭泣，\"莎拉看见他口型说道。"
 
 msgctxt "speaker:Narrator"
 msgid "The guard swung the blade down as though it were a plow. The blade easily cut through the emissary's neck."
-msgstr ""
+msgstr "守卫挥刀斩下，动作宛如犁地。刀刃轻易切断了使者的脖颈。"
 
 msgctxt "speaker:Narrator"
 msgid "His head rolled forward, ending up at the feet of the stairs."
-msgstr ""
+msgstr "他的头颅向前滚去，最终停在了楼梯脚下。"
 
 msgctxt "speaker:Narrator"
 msgid "The guard walked over and handed the bloodied head over to Thomas."
-msgstr ""
+msgstr "卫兵走上前，将那颗沾满鲜血的头颅递给了托马斯。"
 
 msgctxt "speaker:Narrator"
 msgid "Grabbing the head by the hair near the scalp, Thomas raised it up over his head, the blood still leaking."
-msgstr ""
+msgstr "托马斯抓住靠近头皮处的头发，将那颗仍在滴血的头颅高高举过头顶。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah thought she would go deaf, so loudly did the nobles scream and cheer king Thomas."
-msgstr ""
+msgstr "莎拉觉得自己快要聋了，贵族们为托马斯国王发出的尖叫和欢呼声实在太响亮了。"
 
 msgctxt "speaker:Narrator"
 msgid "The festivities carried on deep into the night, as if the attendants were possessed by an otherwordly zeal."
-msgstr ""
+msgstr "庆祝活动一直持续到深夜，宾客们仿佛被某种超自然的狂热所附体。"
 
 msgctxt "menu"
 msgid "Send him back to the deserts he crawled out of."
@@ -6680,339 +6680,339 @@ msgstr "将他遣返那片他爬出的荒漠。"
 
 msgctxt "speaker:Narrator"
 msgid "He rose up his hands to silence the crowd. Only when everyone was silent, did he speak."
-msgstr ""
+msgstr "他举起双手示意人群安静。直到所有人都沉默下来，他才开口说话。"
 
 msgctxt "speaker:Thomas"
 msgid "You have travelled far to utter your threats, but they do not frighten us."
-msgstr ""
+msgstr "你远道而来，只为吐出这些威胁之语，但它们并未让我们感到恐惧。"
 
 msgctxt "speaker:Thomas"
 msgid "Go back to your master and tell him that Rosanna seeks peace with all, but we bend for none."
-msgstr ""
+msgstr "回去告诉你的主人，罗桑娜愿与所有人和平共处，但我们绝不屈服。"
 
 msgctxt "speaker:Thomas"
 msgid "Should his barbarian horde come to our land, we will do as we have done for centuries, and drive you back into the desert where you belong."
-msgstr ""
+msgstr "若那群野蛮人的大军入侵我们的土地，我们将如过去几个世纪所做的那样，将你们赶回你们该待的沙漠中去。"
 
 msgctxt "speaker:Narrator"
 msgid "The emissary bowed low one last time."
-msgstr ""
+msgstr "使者最后一次深深地鞠了一躬。"
 
 msgctxt "speaker:Emissary"
 msgid "King Thomas, with great sadness, I receive your message and will carry it back to my Khan."
-msgstr ""
+msgstr "托马斯陛下，我怀着极大的悲痛收下您的口信，并将把它带回给我的可汗。"
 
 msgctxt "speaker:Emissary"
 msgid "One day, very soon, you will come to regret this decision. For all my life, I will bear the guilt of not having been able to save you and your people from your own pride."
-msgstr ""
+msgstr "总有一天，你会为这个决定后悔。在我余生的岁月里，我将背负着未能将你与你的子民从傲慢中拯救出来的愧疚。"
 
 msgctxt "speaker:Narrator"
 msgid "As the emissary left, the room fell silent again."
-msgstr ""
+msgstr "随着使节离去，房间再次陷入寂静。"
 
 msgctxt "speaker:Narrator"
 msgid "The people had solemnly begun to realize there would be war."
-msgstr ""
+msgstr "人们开始严肃地意识到，战争即将来临。"
 
 msgctxt "speaker:Narrator"
 msgid "The festivities carried on for a short time after, but with the mood having soured, many soon began to take their leave."
-msgstr ""
+msgstr "庆祝活动又持续了短暂的一段时间，但随着气氛变得恶劣，许多人很快便开始告辞离去。"
 
 msgctxt "speaker:Narrator"
 msgid "It wasn't long before the castle, once filled with sounds and warmth, grew silent and cold."
-msgstr ""
+msgstr "没过多久，这座曾经充满欢声笑语与温暖的城堡便陷入了死寂与清冷。"
 
 msgctxt "speaker:Narrator"
 msgid "The court began its preparations as soon as the winter grace festival had ended. Only a week later, the council met."
-msgstr ""
+msgstr "宫廷在冬恩节结束后立即开始筹备。仅仅一周后，议会便召开了会议。"
 
 msgctxt "speaker:Narrator"
 msgid "But a lot had changed in those few days."
-msgstr ""
+msgstr "但在这短短几天里，一切都已大不相同。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah watched Thomas."
-msgstr ""
+msgstr "莎拉注视着托马斯。"
 
 msgctxt "speaker:Narrator"
 msgid "He sat upright, appeared more attentive, but his face had turned even more gaunt, as if he never slept at all."
-msgstr ""
+msgstr "他坐得笔直，显得更为专注，但面容却更加消瘦，仿佛从未睡过觉一般。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah had not spoken to Thomas about what had happened with the emissary."
-msgstr ""
+msgstr "莎拉没有跟托马斯谈起与那位特使之间发生的事。"
 
 msgctxt "speaker:Narrator"
 msgid "She feared that it might trouble her brother, and feared even more that it might not trouble him at all."
-msgstr ""
+msgstr "Она боялась, что это может тревожить её брата, и ещё больше боялась, что он вовсе не будет обеспокоен."
 
 msgctxt "speaker:Narrator"
 msgid "The emissary had been sent on his way, but every member of the council knew that his threat had not been empty."
-msgstr ""
+msgstr "特使已被遣返，但议会每一位成员都清楚，他的威胁并非虚张声势。"
 
 msgctxt "speaker:Narrator"
 msgid "General Barion had finished discussing the preparations that had been made towards further mobilizing the army."
-msgstr ""
+msgstr "巴里翁将军已经结束了关于进一步动员军队的准备工作讨论。"
 
 msgctxt "speaker:Narrator"
 msgid "Kravel instantly followed up by reading out the most recent reports."
-msgstr ""
+msgstr "克拉维尔立刻跟进，宣读了最新的报告。"
 
 msgctxt "speaker:Narrator"
 msgid "Every day was like this now, an endless deluge of reports from Kravel's spy network, and each seemed to paint a more disturbing picture than the last."
-msgstr ""
+msgstr "如今每一天都是如此，克拉维尔的情报网源源不断地送来报告，而每一份似乎都比前一份描绘出更加令人不安的画面。"
 
 msgctxt "speaker:Kravel"
 msgid "The earliest reports showed Hassar's armies moving into the eastern districts. We've still not received any confirmation on whether they actually did, nor the size of his army."
-msgstr ""
+msgstr "最早的报告表明哈萨尔的军队正在向东部地区移动。我们尚未收到任何确认，不知道他们是否真的去了，也不知道他军队的规模。"
 
 msgctxt "speaker:Narrator"
 msgid "Marion slammed the table."
-msgstr ""
+msgstr "马里恩猛拍桌子。"
 
 msgctxt "speaker:Marion"
 msgid "We're being taken for fools here. Yes, there is no definitive report, but that's because nobody is coming back from the eastern districts."
-msgstr ""
+msgstr "他们把我们当傻子耍。没错，确实没有确凿的报告，但这只是因为没人从东部地区活着回来。"
 
 msgctxt "speaker:Marion"
 msgid "The Deepstill family are close friends of mine. They made their money out of mines that they own there."
-msgstr ""
+msgstr "迪普斯蒂尔一家是我的挚友。他们靠拥有那里的矿山发了财。"
 
 msgctxt "speaker:Marion"
 msgid "They haven't received a shipment since these reports started. They tell me that this has never happened before."
-msgstr ""
+msgstr "自从这些报告开始流传，他们就没再收到过一批货物。他们告诉我，这种事以前从未发生过。"
 
 msgctxt "speaker:Marion"
 msgid "Every man they send to investigate, never reports back. The only one that did, only came back because he turned around when he saw the smoke stacks, rising over the east."
-msgstr ""
+msgstr "他们派去调查的每一个人都没有回来。唯一回来的那个，也是因为看到东方升起的烟囱才掉头回去的。"
 
 msgctxt "speaker:Marion"
 msgid "Enough to block out the sun, he said."
-msgstr ""
+msgstr "他说，浓得连太阳都遮住了。"
 
 msgctxt "speaker:Narrator"
 msgid "Marion fell back into his chair."
-msgstr ""
+msgstr "马里恩向后靠回椅子上。"
 
 msgctxt "speaker:Marion"
 msgid "Look, I know there is no definitive report, but everything is telling us that the attack is real. That Hassar's army is already in the eastern district."
-msgstr ""
+msgstr "听着，我知道没有确凿的报告，但所有迹象都表明袭击是真实的。哈萨尔的军队已经进入了东部地区。"
 
 msgctxt "speaker:Narrator"
 msgid "Varga spoke up this time."
-msgstr ""
+msgstr "这次瓦尔加开口了。"
 
 msgctxt "speaker:Varga"
 msgid "I agree with Marion. The signs are clear."
-msgstr ""
+msgstr "我同意马里恩的看法。迹象很明显。"
 
 msgctxt "speaker:Varga"
 msgid "Also, if it is true, we need to be aware that our position is vulnerable."
-msgstr ""
+msgstr "此外，如果情况属实，我们必须意识到我们的位置十分脆弱。"
 
 msgctxt "speaker:Varga"
 msgid "The eastern districts are far, but that's for a regular army."
-msgstr ""
+msgstr "东部地区路途遥远，但这对于正规军来说并非不可逾越。"
 
 msgctxt "speaker:Varga"
 msgid "The eastern tribes are famous for their horses. In their army, every man has a horse, most have multiple."
-msgstr ""
+msgstr "东部部落以其马匹闻名。在他们的军队中，每个男人都有马，大多数人拥有多匹。"
 
 msgctxt "speaker:Varga"
 msgid "They can cross the distance between the eastern district and the capital much faster than a regular army could. They could cut off the capital in a matter of days."
-msgstr ""
+msgstr "他们穿越东部地区与首都之间距离的速度，远快于正规军。他们只需几天时间就能切断对首都的补给线。"
 
 msgctxt "speaker:Narrator"
 msgid "Marion nodded excessively."
-msgstr ""
+msgstr "马里恩过度地连连点头。"
 
 msgctxt "speaker:Narrator"
 msgid "Thomas rubbed his temples."
-msgstr ""
+msgstr "托马斯揉了揉太阳穴。"
 
 msgctxt "speaker:Thomas"
 msgid "How could this have happened? An army, right on our doorstep, and nobody saw it coming?"
-msgstr ""
+msgstr "这怎么可能发生？一支军队就驻扎在我们的家门口，竟然没人察觉到？"
 
 msgctxt "speaker:Narrator"
 msgid "When nobody had an answer, Kravel spoke up."
-msgstr ""
+msgstr "见无人应答，克拉维尔开口了。"
 
 msgctxt "speaker:Kravel"
 msgid "My lord, the eastern desert has always been difficult to spy on. The territory is enormous, and the people there, they aren't as easily convinced by a bribe."
-msgstr ""
+msgstr "大人，东部沙漠向来难以监视。那片领土广袤无垠，那里的人也不像其他人那样容易被贿赂收买。"
 
 msgctxt "speaker:Kravel"
 msgid "We never had to worry as much, because at most it was the occasional raid from a single tribe desperate enough to risk an attack."
-msgstr ""
+msgstr "我们以前倒没怎么担心过，因为顶多也就是某个走投无路的部落偶尔搞几次袭击。"
 
 msgctxt "speaker:Kravel"
 msgid "This...we've never had to deal with something like this before. I can predict what is predictable, but this is outside of anything we've ever seen."
-msgstr ""
+msgstr "这……我们以前从未遇到过这样的情况。我能预判那些可以预测的事，但这完全超出了我们以往所见的一切范畴。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah watched as Thomas slammed his fist on the table this time."
-msgstr ""
+msgstr "莎拉看着托马斯这次将拳头重重地砸在桌上。"
 
 msgctxt "speaker:Thomas"
 msgid "I don't need a spy master who can tell me all the things he doesn't know. I need you to tell me what I need to know. We don't even know for certain where this army is."
-msgstr ""
+msgstr "我不需要一个只会告诉我他不知道什么的间谍总管。我需要你告诉我我所需要知道的信息。我们甚至都不确定这支军队到底在哪里。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah decided to interject."
-msgstr ""
+msgstr "莎拉决定插话。"
 
 msgctxt "speaker:Sarah"
 msgid "Do we have an estimate of the size of Hassar's army?"
-msgstr ""
+msgstr "我们有哈萨尔军队规模的估算吗？"
 
 msgctxt "speaker:Kravel"
 msgid "We have no report that even guesses at his army, but we know that it has to be quite large."
-msgstr ""
+msgstr "我们没有关于他军队规模的具体情报，但知道那支军队一定非常庞大。"
 
 msgctxt "speaker:Kravel"
 msgid "Well, the defense of the eastern district falls on fort Fallowhill. It's a large fortress, with a sizeable army. Large enough to defeat anything we've seen before."
-msgstr ""
+msgstr "嗯，东部地区的防御主要依靠法洛希尔堡垒。这是一座大型要塞，驻有规模可观的军队。其兵力足以击败我们此前见过的任何敌人。"
 
 msgctxt "speaker:Kravel"
 msgid "To be entirely accurate, it's primary purpose is to maintain order over the people of the eastern district, keep them from revolting."
-msgstr ""
+msgstr "为了完全准确起见，它的主要目的是维持对东部地区民众的秩序，防止他们发动叛乱。"
 
 msgctxt "speaker:Kravel"
 msgid "To that end, they're well provisioned and larger than otherwise necessary. And yet..."
-msgstr ""
+msgstr "为此，他们的补给十分充足，兵力也远超实际需要。然而……"
 
 msgctxt "speaker:Sarah"
 msgid "Yes?"
-msgstr ""
+msgstr "嗯？"
 
 msgctxt "speaker:Kravel"
 msgid "We heard nothing from them. The reports from the fort dried up a week ago."
-msgstr ""
+msgstr "我们没收到他们的任何消息。来自堡垒的报告一周前就断了。"
 
 msgctxt "speaker:Kravel"
 msgid "We have to assume that they have been routed, or have been forced to withdraw within the fortress walls."
-msgstr ""
+msgstr "我们必须假设他们已被击溃，或者被迫退守至堡垒城墙之内。"
 
 msgctxt "speaker:Kravel"
 msgid "Either way, that means Hassar's army is either large enough to route our forces in the eastern district, or large enough that our forces won't even engage."
-msgstr ""
+msgstr "无论如何，这意味着哈萨尔的军队要么兵力雄厚到足以击溃我们在东区的部队，要么强大到让我们的部队根本不敢交战。"
 
 msgctxt "speaker:Kravel"
 msgid "One way or the other, it hints at a large army."
-msgstr ""
+msgstr "无论如何，这都暗示着对方拥有一支庞大的军队。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah followed Kravel's logic, and considered it sound."
-msgstr ""
+msgstr "莎拉认同克拉维尔的逻辑，认为其分析无误。"
 
 msgctxt "speaker:Narrator"
 msgid "She stared off into the distance."
-msgstr ""
+msgstr "她凝视着远方。"
 
 msgctxt "speaker:Narrator"
 msgid "How did everything turn around against them, so fast..."
-msgstr ""
+msgstr "一切怎么会突然对他们不利……"
 
 msgctxt "speaker:Thomas"
 msgid "So, what can we do then? Sit here and wait for Hassar to trap us in the capital? What options do we have?"
-msgstr ""
+msgstr "那我们能做什么呢？就坐在这里等哈萨尔把我们在首都一网打尽吗？我们还有什么选择？"
 
 msgctxt "speaker:Narrator"
 msgid "Varga cleared his throat."
-msgstr ""
+msgstr "瓦尔加清了清嗓子。"
 
 msgctxt "speaker:Varga"
 msgid "There isn't much time, and so our options are limited, having said that, there is a choice that is left to us..."
-msgstr ""
+msgstr "时间不多了，所以我们的选择有限，尽管如此，还有一个选择留给我们……"
 
 msgctxt "speaker:Thomas"
 msgid "Say it."
-msgstr ""
+msgstr "说。"
 
 msgctxt "speaker:Narrator"
 msgid "Varga seemed wounded by Thomas' sharp tone, but Sarah nodded at him, urging Varga to go on."
-msgstr ""
+msgstr "瓦尔加似乎被托马斯尖锐的语气刺伤了，但莎拉向他点了点头，催促瓦尔加继续说下去。"
 
 msgctxt "speaker:Varga"
 msgid "The outer districts have regional troops and militia reserves. If we call on them now, they might reach the capital in time to aid in the defense. Consolidate our forces."
-msgstr ""
+msgstr "外围地区有区域驻军和民兵预备役。如果我们现在向他们求援，他们或许能赶在防线崩溃前抵达首都提供援助。集结我们的兵力。"
 
 msgctxt "speaker:Narrator"
 msgid "Marion sat up as if struck by lightning."
-msgstr ""
+msgstr "马里恩猛地坐起身，仿佛被闪电击中一般。"
 
 msgctxt "speaker:Marion"
 msgid "You're talking about the forces that guard the noble families of every district in the country."
-msgstr ""
+msgstr "你说的是要征调守卫全国各郡贵族家族的军队。"
 
 msgctxt "speaker:Marion"
 msgid "You're talking about drafting every man that can hold a sword and dragging them here."
-msgstr ""
+msgstr "你这是在说要把所有能拿得起剑的男人都征召起来，然后拖到这儿来。"
 
 msgctxt "speaker:Narrator"
 msgid "Varga nodded."
-msgstr ""
+msgstr "瓦尔加点了点头。"
 
 msgctxt "speaker:Marion"
 msgid "That means leaving everyone except the capital, defenseless. If Hassar avoids the capital, and attacks another district, they'll only have women and children to defend themselves."
-msgstr ""
+msgstr "这意味着除了首都之外，其他地方都将毫无防备。如果哈萨尔避开首都，转而攻击其他行政区，那里就只剩下妇女和儿童来保卫自己了。"
 
 msgctxt "speaker:Marion"
 msgid "They'll be left to the slaughter!"
-msgstr ""
+msgstr "他们会任人宰割的！"
 
 msgctxt "speaker:Varga"
 msgid "Perhaps, but I believe that Hassar will move on the capital. He's a tribesman, he doesn't want to fight the kinds of wars that we fight."
-msgstr ""
+msgstr "或许吧，但我认为哈萨尔会直扑首都。他是个部落人，不想打我们这种样式的战争。"
 
 msgctxt "speaker:Varga"
 msgid "He is moving so fast, his logistics are probably weak. He will want to finish this war as fast as he can, which means going for the capital, decapitating the country."
-msgstr ""
+msgstr "他行动如此迅速，后勤补给恐怕薄弱。他会想尽快结束这场战争，这意味着直取首都，斩首这个国家。"
 
 msgctxt "speaker:Narrator"
 msgid "Marion turned to Thomas now, pleading for his support instead of convincing Varga."
-msgstr ""
+msgstr "马里恩此刻转向托马斯，不再试图说服瓦尔加，而是恳求他的支持。"
 
 msgctxt "speaker:Marion"
 msgid "A lot has been asked of the nobility, and a lot we have given, but Thomas...my king...you will be asking them to leave their homes unguarded."
-msgstr ""
+msgstr "贵族们已被索取良多，我们也已奉献良多，但托马斯……我的王……你即将要求他们放弃家园，任其空虚。"
 
 msgctxt "speaker:Marion"
 msgid "They will forever remember that you sacrificed their safety, to guarantee your own."
-msgstr ""
+msgstr "他们将永远记得，你牺牲了他们的安全，以保障你自己的。"
 
 msgctxt "speaker:Narrator"
 msgid "Varga also turned himself to Thomas."
-msgstr ""
+msgstr "瓦尔加也将目光转向托马斯。"
 
 msgctxt "speaker:Varga"
 msgid "There will be no country left to defend in the capital falls. Making our stand here, means pushing Hassar's forces back into the desert. That will help everyone."
-msgstr ""
+msgstr "如果首都陷落，将无国可守。在此坚守，意味着将哈萨尔的军队逼退至沙漠之中。这对所有人都有利。"
 
 msgctxt "speaker:Narrator"
 msgid "Marion turned himself to Varga."
-msgstr ""
+msgstr "马里恩转向瓦尔加。"
 
 msgctxt "speaker:Marion"
 msgid "Absurd! You're just a nobody from some backwater, who is now trying to lure the enemy army into our capital, because you despise us."
-msgstr ""
+msgstr "荒谬！你不过是个不知从哪个穷乡僻壤来的无名小卒，现在却想把敌军诱入我们的首都，只因你鄙视我们。"
 
 msgctxt "speaker:Narrator"
 msgid "Marion spat in Varga's direction."
-msgstr ""
+msgstr "马里恩朝瓦尔加的方向啐了一口。"
 
 msgctxt "speaker:Narrator"
 msgid "Varga's face was full of rage, but he contained himself, bearing the insult."
-msgstr ""
+msgstr "瓦尔加的脸上满是愤怒，但他克制住了自己，忍受着这份侮辱。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah grabbed Thomas' arm, and whispered to him."
-msgstr ""
+msgstr "莎拉抓住托马斯的手臂，低声对他说道。"
 
 msgctxt "speaker:Sarah"
 msgid "We need to make a decision, and fast, before these two start fighting."
-msgstr ""
+msgstr "我们必须尽快做出决定，否则这两人就要打起来了。"
 
 msgctxt "menu"
 msgid "The capital must not fall; call in the troops."
@@ -7020,31 +7020,31 @@ msgstr "首都绝不能陷落，召集军队。"
 
 msgctxt "speaker:Narrator"
 msgid "Thomas slammed the table."
-msgstr ""
+msgstr "托马斯猛拍桌子。"
 
 msgctxt "speaker:Thomas"
 msgid "Enough, I've made up my mind."
-msgstr ""
+msgstr "够了，我已经决定了。"
 
 msgctxt "speaker:Thomas"
 msgid "If the capital falls, the war is lost. We cannot allow this to happen."
-msgstr ""
+msgstr "如果首都陷落，战争就输了。我们不能让这种事发生。"
 
 msgctxt "speaker:Thomas"
 msgid "Call in all possible district troops and militia reserves, and gather everyone to the capital."
-msgstr ""
+msgstr "召集所有可用的区队兵力和民兵预备役，将所有人集结到首都。"
 
 msgctxt "speaker:Thomas"
 msgid "We will break Hassar's army on our mighty walls."
-msgstr ""
+msgstr "我们将在我们坚固的城墙上击溃哈萨尔的军队。"
 
 msgctxt "speaker:Narrator"
 msgid "Marion's eyes spat fire, but he said nothing."
-msgstr ""
+msgstr "马里恩眼中喷火，却一言不发。"
 
 msgctxt "speaker:Narrator"
 msgid "His quiet rage almost seemed to worry Sarah more than his overt anger."
-msgstr ""
+msgstr "他压抑的怒火似乎比他的暴怒更让莎拉感到担忧。"
 
 msgctxt "menu"
 msgid "We cannot put ourselves above the rest of the country; let the troops stay in the districts."
@@ -7052,507 +7052,507 @@ msgstr "不能再凌驾于全国之上，让军队留在各郡。"
 
 msgctxt "speaker:Thomas"
 msgid "We cannot afford to weaken our defenses in the other districts, let the troops remain where they are."
-msgstr ""
+msgstr "我们不能削弱在其他地区的防御，让军队留在原地。"
 
 msgctxt "speaker:Thomas"
 msgid "We will make do with the forces we have."
-msgstr ""
+msgstr "我们就用现有的兵力吧。"
 
 msgctxt "speaker:Narrator"
 msgid "Marion sighed a sigh of relief."
-msgstr ""
+msgstr "马里恩如释重负地叹了口气。"
 
 msgctxt "speaker:Narrator"
 msgid "Thomas waived his hands."
-msgstr ""
+msgstr "托马斯挥了挥手。"
 
 msgctxt "speaker:Thomas"
 msgid "Each of you has your orders, you know what to do. We've spend enough time discussing these matters."
-msgstr ""
+msgstr "你们每个人都领到了命令，知道该做什么。关于这些事，我们已经讨论得够久了。"
 
 msgctxt "speaker:Thomas"
 msgid "You're all dismissed."
-msgstr ""
+msgstr "你们都可以退下了。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah watched as one by one, each of the advisors left. She caught Varga waving at her as he left."
-msgstr ""
+msgstr "莎拉看着顾问们一个个离开。她注意到瓦尔加在离开时向她挥手。"
 
 msgctxt "speaker:Narrator"
 msgid "Then, Sarah and Thomas found themselves alone in the council room."
-msgstr ""
+msgstr "随后，莎拉和托马斯发现自己独自留在了议事厅里。"
 
 msgctxt "speaker:Narrator"
 msgid "Thomas seemed to sink back into his seat, his shoulders sagging."
-msgstr ""
+msgstr "托马斯似乎瘫软回座位上，双肩耷拉下来。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah put her arms around him, and she began to feel his body shake, as he cried without making a sound."
-msgstr ""
+msgstr "莎拉双臂环住他，感觉到他的身体在颤抖，无声地哭泣着。"
 
 msgctxt "speaker:Narrator"
 msgid "Even now, he puts on a front for me, she thought."
-msgstr ""
+msgstr "即便到了现在，他还在对我强装镇定，她想。"
 
 msgctxt "speaker:Thomas"
 msgid "Sarah...if I mess this up..."
-msgstr ""
+msgstr "莎拉……如果我搞砸了……"
 
 msgctxt "speaker:Sarah"
 msgid "Don't talk like that, Thomas. You're a great king, and we will overcome this."
-msgstr ""
+msgstr "别这么说，托马斯。你是个伟大的国王，我们会克服这一切的。"
 
 msgctxt "speaker:Thomas"
 msgid "But what if we don't? If Hassar's army is large, larger than any seen, and they take the capital..."
-msgstr ""
+msgstr "但如果我们做不到呢？如果哈萨尔的军队规模庞大，远超以往所见，并且他们攻占了首都……"
 
 msgctxt "speaker:Thomas"
 msgid "Gods, can you imagine what those barbarians would do to this city?"
-msgstr ""
+msgstr "天哪，你能想象那些野蛮人会如何蹂躏这座城市吗？"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah didn't need to imagine."
-msgstr ""
+msgstr "莎拉根本不需要想象。"
 
 msgctxt "speaker:Narrator"
 msgid "She had read enough history, and been lectured enough by her father on what happened to cities that were looted. And to the women in them."
-msgstr ""
+msgstr "她读过的历史足够多，父亲也对她讲过太多关于被洗劫的城市以及城中女性遭遇的故事。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah didn't want to think about that."
-msgstr ""
+msgstr "莎拉不想去想那些事。"
 
 msgctxt "speaker:Sarah"
 msgid "Thomas, now more than ever, you need to be strong. Imagining the worst will do nobody any good."
-msgstr ""
+msgstr "托马斯，现在比以往任何时候都更需要坚强。想象最坏的情况对任何人都没有好处。"
 
 msgctxt "speaker:Sarah"
 msgid "You made your decisions, now stand by them, have faith in your own rule."
-msgstr ""
+msgstr "你已经做出了决定，现在就要坚持到底，相信你自己的统治。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah wished that she was as confident as she sounded to Thomas."
-msgstr ""
+msgstr "莎拉希望自己在托马斯听来，能像她表现出的那样自信。"
 
 msgctxt "speaker:Narrator"
 msgid "Thomas nodded, hugging her back."
-msgstr ""
+msgstr "托马斯点了点头，回抱住她。"
 
 msgctxt "speaker:Thomas"
 msgid "Sarah...please never leave me. I'd be lost without you."
-msgstr ""
+msgstr "莎拉……求你，永远别离开我。没有你我不知该如何是好。"
 
 msgctxt "speaker:Sarah"
 msgid "Never, Thomas, I'll never leave you."
-msgstr ""
+msgstr "绝不会，托马斯，我永远不会离开你。"
 
 msgctxt "speaker:Narrator"
 msgid "The two siblings continued to hug each other, as disaster drew nearer."
-msgstr ""
+msgstr "这对兄妹继续紧紧相拥，而灾难正步步逼近。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah stood outside on the balcony of her room. From here, the view stretched across the castle, the city and even far out to the fields beyond."
-msgstr ""
+msgstr "莎拉站在她房间外的阳台上。从这里望去，视野延伸至城堡、城市，甚至远方更远处的田野。"
 
 msgctxt "speaker:Narrator"
 msgid "She had always loved this view, but now, it made her feel like ice ran through her chest."
-msgstr ""
+msgstr "她一直喜爱这景色，但此刻，却让她觉得仿佛有冰流穿过胸膛。"
 
 msgctxt "speaker:Narrator"
 msgid "Several days had passed, and Varga's prediction had come true."
-msgstr ""
+msgstr "几天过去了，瓦尔加的预言成真了。"
 
 msgctxt "speaker:Narrator"
 msgid "Hassar's army had moved fast, faster than anyone could have imagined, and they had arrived at the capital to finish a war that only just begun."
-msgstr ""
+msgstr "哈萨尔的军队行动迅速，快得超乎任何人想象，他们已抵达首都，准备结束这场才刚刚开始的战争。"
 
 msgctxt "speaker:Narrator"
 msgid "Camped outside on the hills, Sarah saw an army larger than any she had ever seen in her life."
-msgstr ""
+msgstr "扎营在山丘外的莎拉看到了一支比她一生中见过的任何军队都要庞大的部队。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah's crossed her arms around her chest. She tried to exude a confidence she knew she didn't have."
-msgstr ""
+msgstr "莎拉双臂环抱在胸前。她试图展现出一种她知道自己并不具备的自信。"
 
 msgctxt "speaker:Narrator"
 msgid "They had prepared, but would it be enough?"
-msgstr ""
+msgstr "他们做好了准备，但这真的足够吗？"
 
 msgctxt "speaker:Narrator"
 msgid "She didn't like the idea that her fate was now outside of her hands, and she was forced to wait like a lamb to the slaughter."
-msgstr ""
+msgstr "她不喜欢自己的命运如今已不在自己掌控之中，却只能像待宰的羔羊一样被迫等待。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah looked out over the battlefield below."
-msgstr ""
+msgstr "莎拉望向下方的战场。"
 
 msgctxt "speaker:Narrator"
 msgid "Atop the hillside, Hassar's army had almost finished moblizing. Their front rank extended across the entire hillside, with every man sitting atop a horse."
-msgstr ""
+msgstr "在山坡顶上，哈萨尔的军队几乎完成了集结。他们的第一排战线横跨整个山坡，每个士兵都骑在马上。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah had never seen anything like this."
-msgstr ""
+msgstr "莎拉从未见过这样的景象。"
 
 msgctxt "speaker:Narrator"
 msgid "On their side, the walls were well fortified and rows of soldiers covered nearly every part of it."
-msgstr ""
+msgstr "在他们这一侧，城墙防御坚固，士兵们列队覆盖了城墙的几乎每一个角落。"
 
 msgctxt "speaker:Narrator"
 msgid "The archers were in position, but without the signal to fire, had kept their bows loose."
-msgstr ""
+msgstr "弓手们已就位，但因未收到开火信号，仍保持着松弦的状态。"
 
 msgctxt "speaker:Narrator"
 msgid "Out further in the field, Rosanna's army had taken to the center of the battlefield. Each regiment stood in perfect formation."
-msgstr ""
+msgstr "在更远处的战场上，罗桑娜的军队已占据中央位置。每个军团都保持着完美的队形。"
 
 msgctxt "speaker:Narrator"
 msgid "The flanks were covered by the heavy cavalry, most provided by Marion's family, Achillea. Their soldiers wore full-plated armor, shined so bright that the sun reflected off them."
-msgstr ""
+msgstr "两翼由重骑兵掩护，其中大部分来自马里恩的家族阿奇莉娅。他们的士兵身穿全身板甲，铠甲光亮得能反射出阳光。"
 
 msgctxt "speaker:Narrator"
 msgid "There was no single battalion in all of Rosanna that was more well equipped. She knew Marion was somewhere among them."
-msgstr ""
+msgstr "在罗赞娜的所有部队中，没有哪个营比这装备更精良。她知道马里恩就在他们之中。"
 
 msgctxt "speaker:Narrator"
 msgid "Near the center, off to the back, the banner of house Rose waved. The gold and red banner, adorned with a black rose, stood defiant."
-msgstr ""
+msgstr "靠近中心偏后的位置，罗斯家族的旗帜在飘扬。那面饰有黑玫瑰的金红旗帜，显得傲然不屈。"
 
 msgctxt "speaker:Narrator"
 msgid "Somewhere near that banner was Thomas."
-msgstr ""
+msgstr "托马斯就在那面旗帜附近。"
 
 msgctxt "speaker:Narrator"
 msgid "The idea alone made Sarah's heart feel like stopping."
-msgstr ""
+msgstr "光是这个念头，就让莎拉的心仿佛停止了跳动。"
 
 msgctxt "speaker:Narrator"
 msgid "She had seen her brother shortly before he left for the battlefield. He had looked more like a child playing at being a soldier than a real soldier. Then again, perhaps that was what he was."
-msgstr ""
+msgstr "她曾在弟弟奔赴战场前短暂见过他。那时的他看起来更像是在扮演士兵的孩子，而非真正的战士。不过话说回来，也许他确实就是这样的人。"
 
 msgctxt "speaker:Narrator"
 msgid "Underneath all the regalia and protocol, her brother was still a child, who had never seen a real battlefield in his life."
-msgstr ""
+msgstr "剥去那些华服与繁文缛节，她的哥哥托马斯不过是个从未在真正的战场上见过血的孩子。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah brought her hands together and offered up a soft prayer for the gods to hear."
-msgstr ""
+msgstr "莎拉双手合十，向众神低声祈祷。"
 
 msgctxt "speaker:Narrator"
 msgid "Above all, even above victory, she prayed for Thomas to be safe."
-msgstr ""
+msgstr "最重要的是，甚至比胜利更重要的，她祈祷托马斯能够平安。"
 
 msgctxt "speaker:Narrator"
 msgid "Suddenly, Sarah began to see stacks of smoke rise from Hassar's army."
-msgstr ""
+msgstr "突然，莎拉看到哈萨尔的军队中升起阵阵浓烟。"
 
 msgctxt "speaker:Narrator"
 msgid "The ranks in his army began to shift and move, confusion spread through them."
-msgstr ""
+msgstr "他军队中的阵型开始变动，混乱在队伍中蔓延开来。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah tried to make sense of it, but only after some time did she understand. The large trebuchets that had been built days before, were on fire."
-msgstr ""
+msgstr "莎拉试图理清头绪，但直到过了好一会儿她才明白。那些几天前建好的大型投石机正在燃烧。"
 
 msgctxt "speaker:Narrator"
 msgid "Perhaps the gods did listen to her, she wondered."
-msgstr ""
+msgstr "也许神明真的听到了她的祈祷，她暗自思忖。"
 
 msgctxt "speaker:Narrator"
 msgid "She watched as Hassar's army tried to put out the flames, but most burned down entirely. Those saved, were in no working order."
-msgstr ""
+msgstr "她看着哈萨尔的军队试图扑灭大火，但大多数战具已完全烧毁。幸存下来的那些也失去了作战能力。"
 
 msgctxt "speaker:Narrator"
 msgid "The two armies faced off for nearly an hour, neither willing to move first."
-msgstr ""
+msgstr "两军对峙了近一个小时，谁也不愿率先行动。"
 
 msgctxt "speaker:Narrator"
 msgid "Hassar's army, now without any artillery, was trying to adapt their strategy."
-msgstr ""
+msgstr "哈萨尔的军队如今已无火炮支援，正试图调整战略。"
 
 msgctxt "speaker:Narrator"
 msgid "Suddenly, movements on the battlements drew Sarah's attention."
-msgstr ""
+msgstr "突然，城垛上的动静引起了莎拉的注意。"
 
 msgctxt "speaker:Narrator"
 msgid "Varga had issued the order to fire a first volley of arrows. In unison, all of the archers atop the wall drew back their bows and released a wave of arrows."
-msgstr ""
+msgstr "瓦尔加下令发射第一波箭矢。城墙上的所有弓箭手整齐划一地拉开弓弦，射出了一波箭雨。"
 
 msgctxt "speaker:Narrator"
 msgid "From so far away, the arrows seemed to fly slowly, but when they rained down on Hassar's army, Sarah could see the destruction they caused."
-msgstr ""
+msgstr "从这么远的地方看，箭矢似乎飞得很慢，但当它们如雨点般落在哈萨尔的军队上时，莎拉能看到它们造成的破坏。"
 
 msgctxt "speaker:Narrator"
 msgid "Soldiers collapsed, some from the arrows, others because the line began to break as soldiers tried to dodge the rain of arrows."
-msgstr ""
+msgstr "士兵们纷纷倒下，有的被箭射中，有的则因阵型在躲避箭雨时开始崩溃。"
 
 msgctxt "speaker:Narrator"
 msgid "Not soon had the first wave landed, when a second one quickly followed."
-msgstr ""
+msgstr "第一波箭矢尚未落地，第二波便紧随而至。"
 
 msgctxt "speaker:Narrator"
 msgid "The damage seemed only amplified. The chaos now spread further, deeper into Hassar's army, as discipline began to fracture."
-msgstr ""
+msgstr "伤亡似乎进一步加剧。随着纪律开始瓦解，混乱如今在哈萨尔的军队中蔓延得更深、更广。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah understood what Hassar did, they could not remain in their current position."
-msgstr ""
+msgstr "莎拉明白了哈萨尔的意图，他们无法继续留在原地。"
 
 msgctxt "speaker:Narrator"
 msgid "A loud battle horn rang out over the battlefield, and as if suddenly recovering all their training, Hassar's army began to move forward as one."
-msgstr ""
+msgstr "一声嘹亮的战斗号角在战场上空响起，仿佛瞬间唤回了所有的训练本能，哈萨尔的军队开始如整体般向前推进。"
 
 msgctxt "speaker:Narrator"
 msgid "His army charged down the hill, the momentum causing the soldiers and their horses to move at an incredible speed."
-msgstr ""
+msgstr "他的军队从山坡上冲锋而下，巨大的惯性驱使着士兵与战马以惊人的速度前进。"
 
 msgctxt "speaker:Narrator"
 msgid "So massive was the charge, that Sarah saw a cloud of dust thrown up so large it blocked part of the battle."
-msgstr ""
+msgstr "冲锋如此猛烈，以至于莎拉看到扬起的尘土形成了一大片云团，遮蔽了战场的一部分。"
 
 msgctxt "speaker:Narrator"
 msgid "But she could still see the moment Hassar's vanguard clashed against Rosanna's frontline."
-msgstr ""
+msgstr "但她仍能看清哈萨尔的先锋部队与罗赞娜的前线发生碰撞的那一刻。"
 
 msgctxt "speaker:Narrator"
 msgid "It was what Hassar had wanted to avoid, and exactly what Thomas had hoped for. Hassar's cavalry drove straight into a fortified front line, lined with pikes designed to counter the cavalry charge."
-msgstr ""
+msgstr "这正是哈萨尔想要避免的，也完全符合托马斯的期望。哈萨尔的骑兵径直冲入一道由长矛组成的坚固防线，这些长矛专为克制骑兵冲锋而设。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah watched as countless soldiers and their horses had their momentum crushed to a halt, the row of pikes being raised up to stab upwards, knocking soldiers off their mounts, or stabbing the horses in the neck."
-msgstr ""
+msgstr "莎拉目睹了无数士兵与战马的冲锋势头被彻底粉碎，长矛阵列高高扬起向上刺去，将士兵从马背上掀落，或是直接刺入马匹的脖颈。"
 
 msgctxt "speaker:Narrator"
 msgid "In mere moments, the entire charge had been brought to a halt, crushed on the iron frontline."
-msgstr ""
+msgstr " всего за мгновения вся атака была остановлена и раздавлена на железном передовом рубеже."
 
 msgctxt "speaker:Narrator"
 msgid "Now, in front of the Rosannan army, the battlefield turned into a slaughter house."
-msgstr ""
+msgstr "此刻，在罗斯安娜大军面前，战场变成了一座屠宰场。"
 
 msgctxt "speaker:Narrator"
 msgid "Unable to break their charge, the following waves of cavalry crashed atop the first wave, with one wave burrying the next."
-msgstr ""
+msgstr "无法突破冲锋，后续的马队浪潮撞上了第一波，一波又一波地将其掩埋。"
 
 msgctxt "speaker:Narrator"
 msgid "Out ahead of the front line, the field turned into a nightmarish mix of body parts of horses and men, crawling through one another, crushing, drowning, breaking."
-msgstr ""
+msgstr "在战线前方，战场变成了一团噩梦般的景象：马匹与人类的肢体纠缠在一起，互相踩踏、淹没、碾碎。"
 
 msgctxt "speaker:Narrator"
 msgid "As another horn roared out, Rosanna's battle horn, the front line began to move forward."
-msgstr ""
+msgstr "随着另一声号角响起——那是罗珊娜的军号，前线开始向前推进。"
 
 msgctxt "speaker:Narrator"
 msgid "Spears were switched for short blades, as the soldiers began to move forward, into the collapsing army of Hassar."
-msgstr ""
+msgstr "长矛被换成了短刃，士兵们开始向前推进，冲向哈萨尔那支正在崩溃的军队。"
 
 msgctxt "speaker:Narrator"
 msgid "It was not so much a battle as it was a slaughter. Soldiers found the enemy trapped under their horses, and jabbed their blades into their necks, killing the enemy with ease."
-msgstr ""
+msgstr "与其说是一场战斗，不如说是一场屠杀。士兵们发现敌人被压在战马脚下，便用短刀刺入他们的脖颈，轻易地杀死了敌人。"
 
 msgctxt "speaker:Narrator"
 msgid "They died without in great numbers and with little glory."
-msgstr ""
+msgstr "他们大批死去，却毫无荣耀可言。"
 
 msgctxt "speaker:Narrator"
 msgid "Rosanna's army swarmed forward, each soldier hungrily looking for an easy kill to boast about."
-msgstr ""
+msgstr "Армия Розанны устремилась вперед, каждый солдат жадно искал легкую добычу, о которой можно было бы похвастаться."
 
 msgctxt "speaker:Narrator"
 msgid "Further in the back, Sarah saw Hassar's army beginning to regroup."
-msgstr ""
+msgstr "在更后方，莎拉看到哈萨尔的军队开始重新集结。"
 
 msgctxt "speaker:Narrator"
 msgid "The vanguard had been wiped out, but the later waves, having seen the strategic disaster, were able to abort their attack."
-msgstr ""
+msgstr "先锋部队已被全歼，但后续梯队目睹了这一战略灾难，得以中止进攻。"
 
 msgctxt "speaker:Narrator"
 msgid "As they tried to regroup, Varga and his archers kept up the pressure, releasing wave after wave of arrows with deadly accuracy."
-msgstr ""
+msgstr "当他们试图重整旗鼓时，瓦尔加和他的弓箭手们持续施加压力，以致命的精准度释放着一波又一波的箭矢。"
 
 msgctxt "speaker:Narrator"
 msgid "Hassar's army split in two, each half rushing around the front line, hoping to circle around the pike wall."
-msgstr ""
+msgstr "哈萨尔的军队一分为二，各自绕到前线前方，企图包抄长矛墙。"
 
 msgctxt "speaker:Narrator"
 msgid "Hassar's cavalry was fast, and easily outran the infantry, but on the flanks they discovered Rosanna's heavy cavalry."
-msgstr ""
+msgstr "哈萨尔的骑兵速度很快，轻易甩开了步兵，但在侧翼他们发现了罗莎娜的重骑兵。"
 
 msgctxt "speaker:Narrator"
 msgid "Unable to outrun those, Hassar's troops found themselves quickly bogged down in a frenzied melee as the heavy cavalry closed the distance."
-msgstr ""
+msgstr "无法摆脱那些骑兵的追击，哈萨尔的部队很快便在激烈的混战中陷入泥沼，随着重骑兵逼近，他们被死死缠住。"
 
 msgctxt "speaker:Narrator"
 msgid "With the advantage of their speed lost, they now suffered the disadvantage of their light armor. Their weapons found no purchase against the plate armor of the heavy cavalry units."
-msgstr ""
+msgstr "失去了速度优势，他们现在又承受了轻甲带来的劣势。他们的武器无法对重骑兵单位的板甲造成有效伤害。"
 
 msgctxt "speaker:Narrator"
 msgid "Trapped in a slog of a fight, Rosanna's infantry began to close in on Hassar's troops. On the outer edges, some horsemen were already beginning to be dragged down from their horses."
-msgstr ""
+msgstr "陷入苦战的罗桑娜的步兵开始向哈萨尔的部队逼近。在战场的边缘，一些骑兵已经开始被从马背上拖拽下来。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah could only just make out men being thrown into the mud and stabbed to death."
-msgstr ""
+msgstr "莎拉勉强看清，那些男人被扔进泥潭，被刺死。"
 
 msgctxt "speaker:Narrator"
 msgid "Then, as if a lighting bolt shot through Hassar's army..."
-msgstr ""
+msgstr "然后，仿佛一道闪电击中了哈萨尔的军队……"
 
 msgctxt "speaker:Narrator"
 msgid "It broke."
-msgstr ""
+msgstr "防线崩溃了。"
 
 msgctxt "speaker:Narrator"
 msgid "On all sides, men began to ride off, wildly, in all directions."
-msgstr ""
+msgstr "四面八方，人们开始疯狂地向各个方向骑马逃离。"
 
 msgctxt "speaker:Narrator"
 msgid "Even Sarah, with her little experience of war, could see that this was no strategy."
-msgstr ""
+msgstr "即便是战争经验尚浅的莎拉，也能看出这绝非什么策略。"
 
 msgctxt "speaker:Narrator"
 msgid "Hassar's army was routing."
-msgstr ""
+msgstr "哈萨尔的军队溃散了。"
 
 msgctxt "speaker:Narrator"
 msgid "Trapped down hill, the speed of their escape was limited. Many men died from an arrow to the back."
-msgstr ""
+msgstr "被困在坡下，他们逃跑的速度受到了限制。许多男人因背部中箭而丧命。"
 
 msgctxt "speaker:Narrator"
 msgid "Many others, too deep into the battle, only realized that their comrades had left them to die, when the Rosannan army encircled them."
-msgstr ""
+msgstr "许多其他人，由于战况过于深入，直到被罗斯安娜的军队包围时，才意识到他们的战友已弃他们于死地。"
 
 msgctxt "speaker:Narrator"
 msgid "Some fought on like lions, hoping to win some glory in their final moment, and yet others, seeing no purpose, simply dropped their weapons and waited for the end."
-msgstr ""
+msgstr "一部分人如狮子般死战，妄图在最后一刻博取荣耀；而另一些人见大势已去，索性丢下武器，静候终局。"
 
 msgctxt "speaker:Narrator"
 msgid "It was a massacre."
-msgstr ""
+msgstr "这是一场屠杀。"
 
 msgctxt "speaker:Narrator"
 msgid "By the time the dust had cleared completely, Sarah could see that one regiment of the army had rushed up the hill and was now burning the entire tribal camp to the ground."
-msgstr ""
+msgstr "待尘埃落定，莎拉看到己方一个团已冲上山丘，正将整座部落营地付之一炬。"
 
 msgctxt "speaker:Narrator"
 msgid "All over, men were running away, only to find themselves ran down or caught by an arrow."
-msgstr ""
+msgstr "到处都有男人四处逃窜，却最终被马蹄践踏或被箭矢射中。"
 
 msgctxt "speaker:Narrator"
 msgid "Off in the far distance, near the horizon, scattered war groups were seen still riding as fast as they could."
-msgstr ""
+msgstr "在遥远的天际线附近，分散的敌军小队仍在拼命策马狂奔。"
 
 msgctxt "speaker:Narrator"
 msgid "As the sun began to set, the land turned an odd mix of gold and blood red."
-msgstr ""
+msgstr "随着太阳开始西沉，大地呈现出一种奇异的金色与血红交织的景象。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah had imagined both victory and defeat, but she still found herself surprised by how this moment made her feel."
-msgstr ""
+msgstr "莎拉曾设想过胜利，也预演过失败，但此刻涌上心头的感受仍令她感到意外。"
 
 msgctxt "speaker:Narrator"
 msgid "A rush of excitement ran through her body, a heat, eminating from her chest, drowned out all other sensations."
-msgstr ""
+msgstr "一阵兴奋感涌遍全身，一股从胸口散发出的热浪淹没了其他所有感官。"
 
 msgctxt "speaker:Narrator"
 msgid "Down below, a bloodbath, but in her heart, ecstasy."
-msgstr ""
+msgstr "脚下是血流成河的战场，心中却是极致的欢愉。"
 
 msgctxt "speaker:Narrator"
 msgid "She had never dared to dream that delivering this carnage to her enemies, could feel so good."
-msgstr ""
+msgstr "她从未敢梦想，将如此惨烈的屠杀施加于敌人身上，竟会令人感到如此畅快。"
 
 msgctxt "speaker:Narrator"
 msgid "As word of the victory spread through the capital, Sarah saw the citizens run out onto the street, celebrating and hailing the returning army as champions."
-msgstr ""
+msgstr "随着胜利的消息传遍京城，莎拉看到市民们涌上街头，庆祝并欢呼这支凯旋的军队是英雄。"
 
 msgctxt "speaker:Narrator"
 msgid "Loud, above all others, she heard them sing Thomas' name."
-msgstr ""
+msgstr "震耳欲聋地，在所有声音之上，她听到了人们高唱托马斯的名字。"
 
 msgctxt "speaker:Narrator"
 msgid "She could finally make out a man, dressed in full kingly regalia, leading the front of the returning army."
-msgstr ""
+msgstr "她终于看清了一个身穿全套王权礼服的男人，正率领着凯旋大军走在最前列。"
 
 msgctxt "speaker:Narrator"
 msgid "Thomas. He lived."
-msgstr ""
+msgstr "托马斯。他还活着。"
 
 msgctxt "speaker:Narrator"
 msgid "Less primal than the earlier emotion, but closer to her heart, she felt a deep joy, knowing that her brother had survived."
-msgstr ""
+msgstr "虽不及先前的情绪那般原始，却更贴近内心，她感到一阵深沉的喜悦，因为她的哥哥幸存了下来。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah left her room to go to the great hall and greet her brother."
-msgstr ""
+msgstr "莎拉离开房间，前往大厅去迎接她的哥哥。"
 
 msgctxt "speaker:Narrator"
 msgid "She arrived just as the men threw open the great doors of the castle and marched in, loudly screaming."
-msgstr ""
+msgstr "她赶到时，那些男人正猛地推开城堡的大门，大声叫嚷着冲了进来。"
 
 msgctxt "speaker:Thomas"
 msgid "My sister!"
-msgstr ""
+msgstr "我的姐姐！"
 
 msgctxt "speaker:Narrator"
 msgid "Thomas' voiced boomed out over everyone else."
-msgstr ""
+msgstr "托马斯的声音盖过了其他人的喧哗。"
 
 msgctxt "speaker:Narrator"
 msgid "He ran up towards Sarah and grabbed her, lifting her off her feet and spinning her around before putting her back down."
-msgstr ""
+msgstr "他朝莎拉跑去，一把抱住她，将她双脚离地抱起并转了一圈，随后又把她放了下来。"
 
 msgctxt "speaker:Thomas"
 msgid "You should have seen me Sarah!"
-msgstr ""
+msgstr "莎拉，你本该看到我的！"
 
 msgctxt "speaker:Narrator"
 msgid "Varga and Marion came up as well. All around them, soldiers were spilling into the castle."
-msgstr ""
+msgstr "瓦尔加和马里恩也赶到了。他们周围，士兵们正涌入城堡。"
 
 msgctxt "speaker:Marion"
 msgid "The king, he fought as if posessed by the heroes of old."
-msgstr ""
+msgstr "国王他战斗得仿佛被古代英雄附身一般。"
 
 msgctxt "speaker:Narrator"
 msgid "Thomas, acting as if drunk, threw his arms around both Marion and Varga, pulling them closer."
-msgstr ""
+msgstr "托马斯装作喝醉的样子，张开双臂搂住马里恩和瓦尔加，将他们拉得更近。"
 
 msgctxt "speaker:Thomas"
 msgid "Marion, Varga, you call me Thomas from now on. Enough with this king shit. We fought side by side, that makes you my equal in my book."
-msgstr ""
+msgstr "马里恩，瓦尔加，从现在开始叫我托马斯。别再搞什么国王那一套了。我们并肩作战过，在我心里，你们就是我的平辈。"
 
 msgctxt "speaker:Narrator"
 msgid "Varga laughed."
-msgstr ""
+msgstr "瓦尔加笑了。"
 
 msgctxt "speaker:Varga"
 msgid "Very well, Thomas."
-msgstr ""
+msgstr "好吧，托马斯。"
 
 msgctxt "speaker:Narrator"
 msgid "Marion joined in, but seemed pained by the lack of protocol."
-msgstr ""
+msgstr "马里恩附和着，但似乎对这种缺乏礼节的做法感到不适。"
 
 msgctxt "speaker:Marion"
 msgid "Absolutely...Thomas."
-msgstr ""
+msgstr "当然……托马斯。"
 
 msgctxt "speaker:Narrator"
 msgid "Others came up behind Thomas, vying for his attention. Thomas threw up his hands and made a face at Sarah, as if to suggest he was powerless, and let himself be dragged into the celebratory mob."
-msgstr ""
+msgstr "其他人涌到托马斯身后，争相引起他的注意。托马斯举起双手，朝莎拉做了个鬼脸，仿佛在暗示自己无能为力，随后任由自己被卷入这庆祝的人群中。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah saw an entirely new side of her brother."
-msgstr ""
+msgstr "莎拉看到了哥哥截然不同的一面。"
 
 msgctxt "speaker:Narrator"
 msgid "All around her, she saw soldiers dragging one another in every direction. She knew tonight the castle wouldn't sleep."
-msgstr ""
+msgstr "在她周围，她看到士兵们互相拉扯着，朝各个方向涌去。她知道今晚城堡不会安宁。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah watched as people began to pull Varga and Marion away."
-msgstr ""
+msgstr "莎拉看着人们开始把瓦尔加和马里恩拉开。"
 
 msgctxt "menu"
 msgid "Speak privately with Varga."
@@ -7560,99 +7560,99 @@ msgstr "与瓦加私下交谈"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah walked up to Varga before he could be dragged away."
-msgstr ""
+msgstr "莎拉走到瓦尔加身边，在他被拖走之前。"
 
 msgctxt "speaker:Sarah"
 msgid "Varga, could we speak?"
-msgstr ""
+msgstr "瓦尔加，我们能私下谈谈吗？"
 
 msgctxt "speaker:Narrator"
 msgid "Varga waved away the soldiers, urging them to leave him be and turned to Sarah."
-msgstr ""
+msgstr "瓦尔加挥手让士兵们退下，示意他们不要打扰自己，然后转向莎拉。"
 
 msgctxt "speaker:Varga"
 msgid "Of course, Sarah."
-msgstr ""
+msgstr "当然可以，莎拉。"
 
 msgctxt "speaker:Narrator"
 msgid "Varga came up close to Sarah. She saw he was already holding a flagon of beer."
-msgstr ""
+msgstr "瓦尔加走到莎拉跟前。她看见他手里已经拿着一大杯啤酒。"
 
 msgctxt "speaker:Sarah"
 msgid "Good that I got to you while you can still speak and stand up straight."
-msgstr ""
+msgstr "幸好我找到你的时候，你还能说话，也能站直。"
 
 msgctxt "speaker:Varga"
 msgid "I can hold my drink, trust me on that, Princess."
-msgstr ""
+msgstr "我能喝，相信我吧，公主。"
 
 msgctxt "speaker:Narrator"
 msgid "He extended the flagon to Sarah."
-msgstr ""
+msgstr "他把酒壶递给了莎拉。"
 
 msgctxt "speaker:Sarah"
 msgid "A lady favors wine..."
-msgstr ""
+msgstr "淑女偏爱葡萄酒……"
 
 msgctxt "speaker:Varga"
 msgid "But all I have is beer, and I've been told it's impolite to let someone drink alone."
-msgstr ""
+msgstr "但我这儿只有啤酒，而且听说让客人独自饮酒是不礼貌的。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah smiled at Varga, took the flagon from his hands, and put it to her lips."
-msgstr ""
+msgstr "莎拉对瓦尔加笑了笑，从他手中接过酒壶，放到唇边。"
 
 msgctxt "speaker:Narrator"
 msgid "Having been too worried to eat or drink much of anything before the battle, the beer quenched Sarah's thirst."
-msgstr ""
+msgstr "由于战前过于焦虑，莎拉几乎没吃什么或喝什么，这啤酒解了她的渴。"
 
 msgctxt "speaker:Narrator"
 msgid "She handed the flagon back to Varga."
-msgstr ""
+msgstr "她把酒罐还给了瓦尔加。"
 
 msgctxt "speaker:Sarah"
 msgid "I could get used to it."
-msgstr ""
+msgstr "我都能习惯这种日子了。"
 
 msgctxt "speaker:Varga"
 msgid "And here I thought you were having a civilizing effect on me, maybe I'm uncivilizing you?"
-msgstr ""
+msgstr "我还以为你在对我产生文明的影响呢，也许是我在让你变得不文明？"
 
 msgctxt "speaker:Sarah"
 msgid "It will take a lot more than a sip of your beer to undo the decades of protocol training."
-msgstr ""
+msgstr "想让我忘掉几十年来的礼仪训练，光喝一口你的啤酒可远远不够。"
 
 msgctxt "speaker:Varga"
 msgid "I'd like to see that side one day."
-msgstr ""
+msgstr "我倒想看看你那一面。"
 
 msgctxt "speaker:Narrator"
 msgid "They began to walk together, down one of the hallways, away from the celebrating masses."
-msgstr ""
+msgstr "他们并肩走着，沿着一条走廊，远离了欢庆的人群。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah considered her words for a while, before deciding to speak."
-msgstr ""
+msgstr "莎拉斟酌了片刻，才决定开口。"
 
 msgctxt "speaker:Sarah"
 msgid "Varga...you were out there today, on the battle. Tell me, honestly, how did Thomas do?"
-msgstr ""
+msgstr "瓦尔加……你今天也在战场上。老实告诉我，托马斯表现得怎么样？"
 
 msgctxt "speaker:Varga"
 msgid "I was commanding the battlements, but you're right, I did get a good overview of the battlefield."
-msgstr ""
+msgstr "我当时负责指挥城防，但你说得对，我确实对整个战场有了全面的了解。"
 
 msgctxt "speaker:Varga"
 msgid "Honestly, from what I saw, Thomas fought valiantly."
-msgstr ""
+msgstr "老实说，从我看到的情况来看，托马斯英勇作战。"
 
 msgctxt "speaker:Varga"
 msgid "He kept his calm, he didn't lose sight of the larger strategy, and when the time came, he drove as far into the melee as a king responsibly should."
-msgstr ""
+msgstr "他始终保持着冷静，没有忽视大局战略，而当时机到来时，他尽可能深入混战中心，做到了一个国王在责任范围内所能达到的极限。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah nodded along as she listened."
-msgstr ""
+msgstr "莎拉一边听着，一边点头表示赞同。"
 
 msgctxt "speaker:Varga"
 msgid "If I can be so bold...I think I understand your worry, and perhaps, I even shared it. That perhaps Thomas' nature made him unsuited for war, but he was everything one could hope."
@@ -7664,11 +7664,11 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Sarah had taken a few more swigs of Varga's beer, and to her surprise, felt her face glowing."
-msgstr ""
+msgstr "莎拉又喝了几口瓦尔加的啤酒，令她惊讶的是，她感到自己的脸颊泛起了红晕。"
 
 msgctxt "speaker:Sarah"
 msgid "This beer...where did it come from?"
-msgstr ""
+msgstr "这啤酒……是从哪儿来的？"
 
 msgctxt "speaker:Narrator"
 msgid "Suddenly, Varga looked shocked."
