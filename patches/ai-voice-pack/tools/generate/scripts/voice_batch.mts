@@ -18,7 +18,9 @@
  *   - heal (wav есть, opus нет) — свой ffmpeg в TS, шим не нужен.
  *
  * Запуск:
- *   node voice_batch.mts [--arc A] [--scene S] [--char C] [--uid u1 u2]
+ *   node voice_batch.mts [--arc A] [--scene S] [--char C] [--uid u1 --uid u2]
+ *       [--uid-file f]   uid'ы из файла (по одному на строку) — например,
+ *                        `po_changed --uids` для переозвучки по якорям
  *       [--limit N] [--force] [--lang ru|en|<po-код>] [--seed N] [--dry-run]
  *       [--demo]                        только демо-скоуп поставки (патч1)
  *       [--ref path] [--emotion E] [--emotion-tag T] [--emotion-ru R]
@@ -385,6 +387,7 @@ const CLI_OPTIONS = {
   "scene": { type: "string" },
   "char": { type: "string" },
   "uid": { type: "string", multiple: true },
+  "uid-file": { type: "string" },
   "limit": { type: "string" },
   "force": { type: "boolean", default: false },
   "lang": { type: "string", default: "ru" },
@@ -419,7 +422,10 @@ export function parseCli(argv: string[]): Args {
     arc: values.arc,
     scene: values.scene,
     char: values.char,
-    uid: values.uid,
+    uid: [
+      ...(values.uid ?? []),
+      ...(values["uid-file"] ? readFileSync(values["uid-file"], "utf-8").split(/\s+/u).filter(Boolean) : []),
+    ],
     limit: values.limit ? parseInt(values.limit, 10) : undefined,
     force: values.force ?? false,
     lang: values.lang ?? "ru",

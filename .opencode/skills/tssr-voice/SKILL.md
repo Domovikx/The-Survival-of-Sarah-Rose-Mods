@@ -74,8 +74,9 @@ casts/voices/{Имя}/
 
 ```bash
 node tools/generate/scripts/voice_batch.mts \
-  [--arc Prologue] [--char Sarah] [--uid uid1 uid2 ...] [--limit N]
-  [--force] [--lang ru|en] [--dry-run] [--ref casts/voices/{Имя}/{Имя}_{variant}.wav]
+  [--arc Prologue] [--char Sarah] [--uid u1 --uid u2] [--uid-file f] [--limit N]
+  [--force] [--lang ru|en|<po-код>] [--dry-run] [--engine voxcpm2]
+  [--ref casts/voices/{Имя}/{Имя}_{variant}.wav]
 ```
 
 - Модель грузится 1 раз; resumable (существующие скипаются по stem
@@ -91,6 +92,23 @@ node tools/generate/scripts/voice_batch.mts \
   -16 LUFS/TP -1.5) — CV3 гуляет на ±2-4 dB
 - Манифест `{wav}.txt` (uid/arc/ref/emotion/конфиг) — мёртвый код в
   voice_batch.mts (не вызывается с some рефактора), фактически не пишется
+
+## Переозвучка по якорям `# changed`
+
+Правка текста в `po` ставит `# changed`; переозвучиваются только эти строки
+(uid = md5 EN-текста, поэтому совпадает с существующим файлом — `--force`
+нужен, иначе он будет пропущен как готовый):
+
+```bash
+node .opencode/skills/renpy-po/po_changed.mts --lang ru --uids > tmp/uids_ru.txt
+node tools/generate/scripts/voice_batch.mts \
+  --engine voxcpm2 --lang ru --force --uid-file tmp/uids_ru.txt
+# после прослушивания — снять якоря
+node .opencode/skills/renpy-po/po_changed.mts --lang ru --clear
+```
+
+`--uid` принимает только ПОВТОР флага (`--uid a --uid b`); список из файла —
+`--uid-file` (одна строка = один uid).
 
 ## Эмоции в генерации (рецепт 2026-09-02, проверено)
 
