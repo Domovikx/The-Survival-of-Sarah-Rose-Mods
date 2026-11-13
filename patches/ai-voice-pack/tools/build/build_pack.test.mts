@@ -34,7 +34,9 @@ import { readArchive, type ArchiveRead } from "./archive.mts";
 
 // tools/build/build_pack.test.mts -> ../.. = patches/ai-voice-pack
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..", "..");
-const ROOT_FILES = new Set(["README.txt", "environment.txt", "install.cmd", "worker.ps1"]);
+// Корень архива: сервисные файлы + fomod/ (Vortex). Исполняемых НЕТ — их
+// сканер Nexus отправляет в карантин (2026-11-13).
+const ROOT_FILES = new Set(["README.txt", "environment.txt", "fomod"]);
 const INSTALLER_DIR = join(ROOT, "tools", "build", "installer");
 
 /** tmp_path в pytest: создаём временный каталог, чистим за собой. */
@@ -67,13 +69,33 @@ function test_main_pack_root_has_only_service_files(): void {
   });
 }
 
+function test_main_pack_fomod_and_no_executables(): void {
+  /* main = Nexus-чистый Vortex-пакет: FOMOD с ядром и environment.txt,
+   * ни одного exe/cmd/ps1 (карантин Nexus за исполняемые, 2026-11-13). */
+  withTmp((tmp) => {
+    const pack = buildMainPack(tmp);
+    const names = pack.names;
+    assert.ok(names.includes("fomod/info.xml"), "нет fomod/info.xml");
+    assert.ok(names.includes("fomod/ModuleConfig.xml"), "нет fomod/ModuleConfig.xml");
+    assert.ok(!names.some((n) => /\.(exe|cmd|ps1)$/iu.test(n)), `исполняемый файл в архиве: ${names}`);
+    const cfg = pack.read("fomod/ModuleConfig.xml").toString("utf-8");
+    assert.ok(cfg.includes('source="mods/tssr-ai-voice-pack"'), "FOMOD не ставит ядро");
+    assert.ok(cfg.includes('source="environment.txt"'), "FOMOD не ставит environment.txt");
+    const info = pack.read("fomod/info.xml").toString("utf-8");
+    assert.match(info, /<Version MachineVersion="\d{4}\.\d{2}\.\d{2}-\d{4}">/u, "версия не YYYY.MM.DD-HHMM");
+  });
+}
+
 function test_main_pack_nothing_outside_mod_dir(): void {
   /* Ни один файл лежит вне атомарной папки мода (кроме служебных в корне). */
   withTmp((tmp) => {
     const names = buildMainPack(tmp).names;
     const prefix = MOD_DIR + "/";
     for (const n of names) {
-      assert.ok(ROOT_FILES.has(n) || n.startsWith(prefix), `файл свесился из папки мода: ${n}`);
+      assert.ok(
+        ROOT_FILES.has(n) || n.startsWith("fomod/") || n.startsWith(prefix),
+        `файл свесился из папки мода: ${n}`,
+      );
     }
   });
 }
@@ -128,18 +150,21 @@ function test_main_pack_fonts_complete(): void {
   });
 }
 
-function test_voice_pack_has_own_installer(t: TestContext): void {
-  /* Каждый voice-пакет несёт СВОЙ атомарный установщик в корне (владелец
-   * 2026-11-12: «отдельные аудио-установщики» + предохранитель на ядро main). */
+function test_voice_pack_has_fomod_no_executables(t: TestContext): void {
+  /* Nexus-чистый voice-пакет: FOMOD для Vortex и НИ ОДНОГО исполняемого
+   * файла (их сканер отправляет архив в карантин, 2026-11-13). */
   withTmp((tmp) => {
     const res = buildVoice("ru", tmp);
     if (res === null) {
       t.skip("audio/ru пуст");
       return;
     }
-    const top = new Set(readArchive(res.target).names.map((n) => n.split("/")[0]));
-    assert.ok(top.has("install.cmd"), `нет install.cmd в корне voice-пакета: ${[...top]}`);
-    assert.ok(top.has("worker.ps1"), `нет worker.ps1 в корне voice-пакета: ${[...top]}`);
+    const names = readArchive(res.target).names;
+    const top = new Set(names.map((n) => n.split("/")[0]));
+    assert.ok(top.has("fomod"), `нет fomod в корне voice-пакета: ${[...top]}`);
+    assert.ok(names.includes("fomod/info.xml"), "нет fomod/info.xml");
+    assert.ok(names.includes("fomod/ModuleConfig.xml"), "нет fomod/ModuleConfig.xml");
+    assert.ok(!names.some((n) => /\.(exe|cmd|ps1)$/iu.test(n)), `исполняемый файл в архиве: ${names}`);
   });
 }
 
@@ -241,9 +266,9 @@ function test_voice_pack_files_in_mod_dir(): void {
         readArchive(res.target).names.toSorted(),
         [
           MOD_DIR + "/ai_voice/ru/OpeningScene/deadbeef__Sarah_3.opus",
-          // свой атомарный установщик в корне пакета (владелец 2026-11-12)
-          "install.cmd",
-          "worker.ps1",
+          // FOMOD для Vortex (без кода — Nexus не карантинит)
+          "fomod/info.xml",
+          "fomod/ModuleConfig.xml",
         ].toSorted(),
       );
     } finally {
@@ -400,12 +425,13 @@ function test_patch_root_is_install_mirror(): void {
 // Регистрация в порядке pytest-файла (node:test гоняет их последовательно).
 test("test_mod_dir_is_atomic", test_mod_dir_is_atomic);
 test("test_main_pack_root_has_only_service_files", test_main_pack_root_has_only_service_files);
+test("test_main_pack_fomod_and_no_executables", test_main_pack_fomod_and_no_executables);
 test("test_main_pack_nothing_outside_mod_dir", test_main_pack_nothing_outside_mod_dir);
 test("test_main_pack_no_game_injection", test_main_pack_no_game_injection);
 test("test_main_pack_key_files_in_mod_dir", test_main_pack_key_files_in_mod_dir);
 test("test_main_pack_no_dev_only_trees", test_main_pack_no_dev_only_trees);
 test("test_main_pack_fonts_complete", test_main_pack_fonts_complete);
-test("test_voice_pack_has_own_installer", test_voice_pack_has_own_installer);
+test("test_voice_pack_has_fomod_no_executables", test_voice_pack_has_fomod_no_executables);
 test("test_main_pack_repo_diagnostics_not_shipped", test_main_pack_repo_diagnostics_not_shipped);
 test("test_pack_catalog_is_build_artifact_with_valid_content", test_pack_catalog_is_build_artifact_with_valid_content);
 test(

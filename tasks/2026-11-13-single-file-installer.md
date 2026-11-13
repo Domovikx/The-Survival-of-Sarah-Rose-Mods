@@ -287,3 +287,16 @@ approved».
 
 Проверка: поставить в Vortex, выбрать языки, убедиться, что файлы легли в
 `mods/tssr-ai-voice-pack/` и `environment.txt` в корень.
+
+## Vortex E2E (2026-11-13)
+
+- Собран game-extension `game-thesurvivalofsarahrose` (`%APPDATA%\Vortex\plugins`):
+  `info.json`, `index.js`, `gameart.jpg`. `queryModPath: ""` (корень игры),
+  `mergeMods: true` — тогда FOMOD-пути `mods/...` и `environment.txt` ложатся как надо.
+- Vortex 2.10.1, hardlink deployment. Игра найдена (`found game: The Survival of Sarah Rose`).
+- Установка main: FOMOD → `mods/tssr-ai-voice-pack/` + `environment.txt` в корне.
+- Установка voice-ru: FOMOD → `mods/tssr-ai-voice-pack/ai_voice/ru/` (1397 opus).
+- Удаление: «Remove» обоих модов + «Purge Mods» → папка мода и `environment.txt`
+  удалены, игра чистая. E2E пройден.
+- Готча: drag&drop архива в окно Vortex через CDP не срабатывает (Electron);
+  рабочий путь — «Install From File» + нативный диалог (SendKeys пути).

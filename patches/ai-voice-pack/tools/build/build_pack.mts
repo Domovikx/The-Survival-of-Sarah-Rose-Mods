@@ -89,64 +89,120 @@ export const ENVIRONMENT_TXT = `# Ren'Py executes this file at startup and appli
 RENPY_SEARCHPATH = "mods"
 `;
 
+/**
+ * Версия пакета: `YYYY.MM.DD-HHMM` (решение владельца 2026-11-13: дата + время).
+ * Одна на весь выпуск: main и все voice одного прогона получают одно значение,
+ * поэтому FOMOD/установщик видят согласованный набор. Переопределяется
+ * `TSSR_PACK_VERSION` (CI/повторная сборка того же релиза).
+ */
+const pad2 = (n: number): string => String(n).padStart(2, "0");
+function packVersion(d = new Date()): string {
+  return `${d.getFullYear()}.${pad2(d.getMonth() + 1)}.${pad2(d.getDate())}-${pad2(d.getHours())}${pad2(d.getMinutes())}`;
+}
+export const PACK_VERSION = process.env.TSSR_PACK_VERSION ?? packVersion();
+
+const FOMOD_NS =
+  'xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ' +
+  'xsi:noNamespaceSchemaLocation="http://qconsulting.ca/fo3/ModConfig5.0.xsd"';
+
+/** info.xml — метаданные пакета (FOMOD, без кода). */
+function fomodInfo(name: string, description: string): string {
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<fomod>
+  <Name>${name}</Name>
+  <Author>DomovikXus</Author>
+  <Version MachineVersion="${PACK_VERSION}">${PACK_VERSION}</Version>
+  <Description>${description}</Description>
+  <Website>https://www.nexusmods.com/mods/1?game_id=11043</Website>
+</fomod>
+`;
+}
+
+/**
+ * ModuleConfig.xml для ядра: ставит папку мода и environment.txt в корень игры.
+ * Источник/назначение — пути ОТ КОРНЯ ПАКЕТА и ОТ КОРНЯ УСТАНОВКИ (FOMOD).
+ */
+function fomodMain(): string {
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<config ${FOMOD_NS}>
+  <moduleName>TSSR AI Voice Pack - core</moduleName>
+  <requiredInstallFiles>
+    <folder source="mods/tssr-ai-voice-pack" destination="mods/tssr-ai-voice-pack"/>
+    <file source="environment.txt"/>
+  </requiredInstallFiles>
+</config>
+`;
+}
+
+/** ModuleConfig.xml для голоса: только файлы своего языка. */
+function fomodVoice(lang: string): string {
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<config ${FOMOD_NS}>
+  <moduleName>TSSR AI Voice Pack - voice ${lang}</moduleName>
+  <requiredInstallFiles>
+    <folder source="mods/tssr-ai-voice-pack/ai_voice/${lang}" destination="mods/tssr-ai-voice-pack/ai_voice/${lang}"/>
+  </requiredInstallFiles>
+</config>
+`;
+}
+
 export const README_TXT = `THE SURVIVAL OF SARAH ROSE - AI Voice Pack + Localization (11 languages)
 ========================================================================
 
 WHAT IS IN THE DOWNLOADS
 
   TSSR-AI-Voice-Pack-main.7z
-      REQUIRED. The core, with NO audio: texts for 11 languages, all the
-      fonts, the game menu changes, and this installer.
+      REQUIRED. Core: texts for 11 languages, all fonts, the game menu
+      changes. No audio.
 
   TSSR-AI-Voice-Pack-voice-<lang>.7z
       OPTIONAL. Voice acting for ONE language: ru, en, de, es, fr, it,
-      ja, ko, pl, pt, zh. Download as many packs as you like.
+      ja, ko, pl, pt, zh. Download any number of them.
 
-ORDER MATTERS: install the core (main) FIRST, then any voice packs.
-Every voice pack needs the core and tells you to install main first
-if it is missing.
+The packs are kept separate on purpose: all voice packs together would be
+over a gigabyte. Install the core first, then any voices.
 
-INSTALL (game folder = the folder with TheSurvivalofSarahRose.exe)
+INSTALL WITH VORTEX (recommended)
 
-  1. Unpack TSSR-AI-Voice-Pack-main.7z anywhere and run install.cmd.
-     It finds the game and installs the core.
-     Manual alternative: unpack the archive into the game folder.
+  1. Download the core and the voice packs you want.
+  2. In Vortex: Mods -> Install from file, pick the .7z archive.
+  3. Install the core first, then the voice packs.
+  4. Enable the mods and start the game.
 
-  2. For each voice pack you want: unpack it anywhere and run ITS OWN
-     install.cmd. A pack installs only its own language, atomically, one
-     after another. Manual alternative: unpack into the game folder.
+INSTALL MANUALLY (no mod manager)
 
-  3. Launch the game and pick the language with the language button in
-     the menu (11 languages available).
+  Game folder = the folder with TheSurvivalofSarahRose.exe.
 
-OPENING THE .7z ARCHIVES
-Windows 11 opens .7z by double click out of the box. On Windows 10 you
-need a free archiver: 7-Zip (https://7-zip.org) or WinRAR.
+  1. Extract TSSR-AI-Voice-Pack-main.7z into the game folder.
+     You should get:
+       mods/tssr-ai-voice-pack/
+       environment.txt
+  2. Extract each voice pack into the game folder the same way. It adds
+     files under mods/tssr-ai-voice-pack/ai_voice/<lang>/.
+  3. Start the game and choose the language in the menu.
+
+  You do not need to copy the fomod/ folder or README.txt: they are for
+  mod managers.
+
+OPENING .7z ARCHIVES
+Windows 11 opens .7z by double click. On Windows 10 install a free
+archiver: 7-Zip (https://7-zip.org) or WinRAR.
 
 CLOSE THE GAME BEFORE INSTALLING
-The game keeps its fonts and mod files locked. The installer waits up to
-3 minutes for it to close, then asks you to close it.
-
-WINDOWS WARNING WHEN RUNNING install.cmd
-The archive came from the internet, so Windows may show "Windows
-protected your PC" (Mark of the Web). The scripts are open source on
-GitHub, and unpacking by hand (steps 1-2 above) is an equal alternative.
-To unblock: right-click the archive or install.cmd -> Properties -> Unblock.
+The game locks its fonts and mod files while running.
 
 WHERE THINGS GO
-Everything lives in one folder, mods/tssr-ai-voice-pack/, plus the
-service file environment.txt in the game folder. Other mods can sit in
-mods/ next to it.
+Everything lives in mods/tssr-ai-voice-pack/, plus the service file
+environment.txt in the game folder. Other mods can sit in mods/ next to it.
 
 UNINSTALL
-Delete the folder mods/tssr-ai-voice-pack/ and the file environment.txt.
-Save games are not touched.
+Delete mods/tssr-ai-voice-pack/ and environment.txt. Save games are not
+touched.
 
 REQUIRES
-The Survival of Sarah Rose v0.79 (official game).
-Verified: 2026-10-19.
+The Survival of Sarah Rose (official game).
+Pack version: see fomod/info.xml (date-based, e.g. 2026.11.13-1930).
 `;
-
 /** sys.exit(...) в питоне: сообщение в stderr + exit 1 (ловится тестами). */
 export class BuildAbort extends Error {}
 
@@ -321,11 +377,13 @@ export function buildMain(outDir: string, opts: { level?: number } = {}): BuildR
   const name = "TSSR-AI-Voice-Pack-main.7z";
   const target = join(outDir, name);
   const entries: ArchiveEntry[] = [];
-  // Установщик «для ленивых» — в КОРНЕ архива (рядом с mods/):
-  // двойной клик по install.cmd находит игру и ставит всё сам.
-  for (const fn of ["install.cmd", "worker.ps1"]) {
-    entries.push(archiveEntry(fn, join(PATCH, "tools", "build", "installer", fn)));
-  }
+  // Nexus-чистый пакет (2026-11-13): НИКАКИХ exe/cmd/ps1 — их сканер
+  // отправляет архив в карантин. Установка — Vortex (FOMOD) или вручную.
+  entries.push({
+    name: "fomod/info.xml",
+    data: Buffer.from(fomodInfo("TSSR AI Voice Pack - core", "Core texts, fonts and menu for 11 languages."), "utf-8"),
+  });
+  entries.push({ name: "fomod/ModuleConfig.xml", data: Buffer.from(fomodMain(), "utf-8") });
   for (const [arcname, content] of [
     ["README.txt", README_TXT],
     ["environment.txt", ENVIRONMENT_TXT],
@@ -370,8 +428,12 @@ export function buildVoice(lang: string, outDir: string): BuildResult | null {
   for (const p of treeFiles(src)) {
     entries.push(archiveEntry(`${MOD_DIR}/ai_voice/${lang}/${relative(src, p).split(sep).join("/")}`, p));
   }
-  entries.push(archiveEntry("install.cmd", join(PATCH, "tools", "build", "installer", "install.cmd")));
-  entries.push(archiveEntry("worker.ps1", join(PATCH, "tools", "build", "installer", "voice_install.ps1")));
+  // Только FOMOD, без установщиков (Nexus-карантин за executables).
+  entries.push({
+    name: "fomod/info.xml",
+    data: Buffer.from(fomodInfo(`TSSR AI Voice Pack - voice ${lang}`, `Voice acting for ${lang}.`), "utf-8"),
+  });
+  entries.push({ name: "fomod/ModuleConfig.xml", data: Buffer.from(fomodVoice(lang), "utf-8") });
   // -mx=9: замер 2026-11-13 на реальном пакете — 17 883 317 (store) ->
   // 17 658 043 байт (-1.3%), цена ~1 с на пакет. Жадничаем: цель — размер.
   const { nfiles, nbytes } = writeArchive(target, entries, { level: 9 });

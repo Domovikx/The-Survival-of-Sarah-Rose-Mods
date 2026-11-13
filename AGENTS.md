@@ -42,18 +42,21 @@
   переводов `zzz_ui.rpy` (`tools/build/subset_fonts.mts`): 47.05 → 4.32 MiB,
   main 45 → 4.3 MiB. Целостность покрытия глифов стережёт
   `tools/build/font_guard.test.mts`.
-- **Установщики — по одному на пакет, каждый атомарный** (решение владельца
-  2026-11-12: «вызвать мэйн установщик, потом отдельные аудио установщики, но
-  атомарно»). `main.7z` несёт `install.cmd`/`install.ps1`, который ставит
-  ТОЛЬКО ядро (тексты, шрифты, меню; `ai_voice/` не трогает). Каждый
-  `voice-<lang>.7z` несёт свой `install.cmd`/`install.ps1`
-  (`tools/build/installer/voice_install.ps1`), который ставит только свой язык.
-  Предохранители: аудио без ядра → «сначала main» (exit 3); запущенная игра →
-  ждать закрытия до 3 мин (держит локи на шрифтах/файлах мода, exit 4). Замена
-  = staging → swap с ретраями и откатом. Съёмка (`shots_capture.ps1`) обязана
-  закрывать игру за собой — иначе следующая переустановка падает «папка занята».
-  Путь пользователя целиком проверяется одним скриптом `bash e2e/user_flow.sh`
-  (релиз → sha256 → install.cmd ядра и пакета → повторная установка → запуск игры).
+- **Архивы — Nexus-чистые: Vortex (FOMOD) или ручная распаковка** (решение
+  владельца 2026-11-13). Внутри `.7z` НЕТ `.exe/.cmd/.ps1`: сканер Nexus
+  отправляет такие архивы в карантин («Executables and similar file types»,
+  проверено на своей странице мода 2026-11-13). `main.7z` несёт
+  `mods/tssr-ai-voice-pack/`, `environment.txt`, `README.txt` (English) и
+  `fomod/info.xml` + `fomod/ModuleConfig.xml`; каждый `voice-<lang>.7z` — свой
+  `fomod/` и `mods/.../ai_voice/<lang>/`. Версия пакета — `YYYY.MM.DD-HHMM`,
+  одна на выпуск (`PACK_VERSION` в `build_pack.mts`).
+  Установка: Vortex «Install from file» (FOMOD раскладывает в корень игры),
+  либо распаковать `mods/` + `environment.txt` в папку игры. Проверено E2E в
+  Vortex 2.10.1 (hardlink): main → `mods/tssr-ai-voice-pack` + `environment.txt`,
+  voice-ru → 1397 opus; удаление + «Purge Mods» вычищает папку.
+  Исполняемые установщики (`tools/build/installer/*.ps1`) остались для
+  отдельного `install.exe` на GitHub/Boosty — на Nexus их не кладём
+  (`tasks/2026-11-13-single-file-installer.md`).
 - Рабочая установка игры для пайплайна: Steam-папка (см. «Ребут ПК» ниже); путь зашит
   в скрипты/доки этого файла как исторический.
 
