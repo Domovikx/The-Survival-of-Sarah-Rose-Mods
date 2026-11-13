@@ -165,9 +165,12 @@ over a gigabyte. Install the core first, then any voices.
 INSTALL WITH VORTEX (recommended)
 
   1. Download the core and the voice packs you want.
-  2. In Vortex: Mods -> Install from file, pick the .7z archive.
-  3. Install the core first, then the voice packs.
-  4. Enable the mods and start the game.
+  2. If this game is not in Vortex's list yet, install the game extension
+     once: https://www.nexusmods.com/games/site/mods/2600 (it finds the game
+     automatically through Steam).
+  3. In Vortex: Mods -> Install from file, pick the .7z archive.
+  4. Install the core first, then the voice packs.
+  5. Enable the mods and start the game.
 
 INSTALL MANUALLY (no mod manager)
 
