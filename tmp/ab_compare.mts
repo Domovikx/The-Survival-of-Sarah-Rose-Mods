@@ -17,7 +17,7 @@ function parseLog(path: string): Map<number, Row> {
   const out = new Map<number, Row>();
   const blocks = text.split(/^### /gmu).slice(1);
   for (const b of blocks) {
-    const head = /^\[(\d+)\/(\d+)\] idx (\d+) (ок|✗)(?: f1=([\d.]+))?/u.exec(b);
+    const head = /^\[(\d+)\/(\d+)\] idx (\d+) (ок|гейт|✗)(?: f1=([\d.]+))?/u.exec(b);
     if (!head) continue;
     const idx = Number(head[3]);
     const neu = /^  стало: (.*)$/mu.exec(b)?.[1] ?? "";
