@@ -1,98 +1,99 @@
 {
-    "meta": {
-        "title": "The Survival of Sarah Rose — Vozes IA + 11 idiomas",
-        "description": "Mod de fã não oficial: dublagem IA de demonstração em 11 idiomas e traduções para 11 (russo completo; os demais cobrem a intro até a primeira escolha). Grátis, 18+."
-    },
-    "header": {
-        "brand": "TSSR · Vozes IA",
-        "steam": "Página na Steam",
-        "langLabel": "Idioma",
-        "themeLabel": "Alternar tema"
-    },
-    "hero": {
-        "title": "The Survival of Sarah Rose — Vozes IA",
-        "subtitle": "Patch de fãs não oficial: tradução completa e dublagem com IA para The Survival of Sarah Rose.",
-        "badgeTranslate": "11 idiomas — RU completo, os demais demo até a primeira escolha",
-        "badgeVoice": "Dublagem: demo 100% em 11 idiomas — 1 195 linhas cada (RU: 1 397)",
-        "badgeFormat": "Opus 24 kbps — 15–21 MB por idioma (demo)",
-        "badgeEngine": "Ren'Py 7.4.11 · Steam",
-        "badgeAge": "Conteúdo 18+",
-        "ctaSteam": "The Survival of Sarah Rose na Steam",
-        "ctaDownload": "Baixar no Nexus Mods",
-        "installHint": "Requer o jogo comprado na Steam. Grátis, CC BY-NC 4.0."
-    },
-    "features": {
-        "title": "O que você ganha",
-        "translateTitle": "Tradução",
-        "translateText": "Russo — a história inteira. Outros idiomas — o início (escopo demo).",
-        "voiceTitle": "Dublagem com IA",
-        "voiceText": "Vozes clonadas, uma por personagem, com a emoção ajustada a cada cena.",
-        "voicesTitle": "Personagens vivos",
-        "voicesText": "Sarah, Kate, o rei Orwell, Thomas, Varga e dezenas de outros."
-    },
-    "demo": {
-        "title": "Ouça em ação",
-        "lead": "Falas reais do jogo com vozes IA: clonadas e vivas. Toque numa fala — e ouça o resultado.",
-        "play": "Reproduzir: {{name}}",
-        "pause": "Pausar: {{name}}",
-        "phrases": [
-            {
-                "speaker": "Sarah",
-                "text": "Mas sério, Thomas, você deveria ouvir o papai pelo menos às vezes. Ele só está tentando fazer o que é melhor para nós."
-            },
-            {
-                "speaker": "Kate",
-                "text": "Já está um pouco tarde para começar a fingir que é modesta agora, Sarah."
-            },
-            {
-                "speaker": "Rei Orwell Rose",
-                "text": "Qualquer um pode ser rei nos tempos fáceis. É nos tempos ruins que um rei precisa estar pronto. E seu irmão não está pronto."
-            }
-        ]
-    },
-    "voice": {
-        "title": "Dublagem — demo pronto",
-        "ru": "Russo (RU): tradução completa, escopo demo dublado",
-        "en": "Inglês (EN): o texto original, escopo demo dublado",
-        "missing": "Se faltar uma voz, o jogo mostra a fala em silêncio (sem erros)."
-    },
-    "install": {
-        "title": "Instalação",
-        "step1": "Baixe o pacote no Nexus Mods — primeiro o main (obrigatório), depois os pacotes de voz que quiser.",
-        "step2": "Extraia main.7z na pasta do jogo (onde está TheSurvivalofSarahRose.exe): você terá mods/tssr-ai-voice-pack e environment.txt. Os pacotes de voz, do mesmo jeito.",
-        "step3": "Abra o jogo, abra o menu do mod (selo no canto superior direito) e escolha o idioma.",
-        "note": "Requer o jogo comprado na Steam. Patch de fãs não oficial, sem vínculo com os desenvolvedores.",
-        "cta": "Abrir no Nexus Mods",
-        "vortexHint": "Usa Vortex? Instale uma vez a extensão do jogo e use «Install from file».",
-        "whereTitle": "Onde fica a pasta do jogo?",
-        "whereText": "Na Steam: Biblioteca → clique com o botão direito no jogo → Gerenciar → Explorar arquivos locais. Ou o caminho padrão:",
-        "whereCopy": "Copiar caminho"
-    },
-    "shots": {
-        "title": "Capturas de tela",
-        "prev": "Imagem anterior",
-        "next": "Próxima imagem",
-        "close": "Fechar",
-        "open": "abrir em tamanho real",
-        "capGeneric": "Captura de tela do jogo"
-    },
-    "faq": {
-        "title": "Perguntas frequentes",
-        "q1": "É um mod oficial?",
-        "a1": "Não — um patch de fã não oficial, sem relação com desenvolvedores ou distribuidores.",
-        "q2": "Há conteúdo para adultos?",
-        "a2": "Sim — o jogo é 18+. Baixe e jogue apenas se tiver 18 anos ou mais.",
-        "q3": "Licença?",
-        "a3": "Pacote de vozes e tradução: CC BY-NC 4.0 — compartilhe e adapte com atribuição, apenas uso não comercial.",
-        "q4": "Como posso ajudar?",
-        "a4": "Dê um endorsement ao mod no Nexus Mods — assim outros jogadores o encontram. Bugs e sugestões: a página do mod no Nexus."
-    },
-    "footer": {
-        "disclaimer": "Trabalho de fã não oficial. Todos os direitos do jogo original pertencem aos seus detentores.",
-        "linksLabel": "Links",
-        "linkSteam": "Steam",
-        "linkLicense": "CC BY-NC 4.0",
-        "age": "18+",
-        "linkNexus": "Nexus Mods"
-    }
+     "meta": {
+          "title": "The Survival of Sarah Rose — Vozes IA + 11 idiomas",
+          "description": "Mod de fã não oficial: dublagem IA de demonstração em 11 idiomas e traduções para 11 (russo completo; os demais cobrem a intro até a primeira escolha). Grátis, 18+."
+     },
+     "header": {
+          "brand": "TSSR · Vozes IA",
+          "steam": "Página na Steam",
+          "langLabel": "Idioma",
+          "themeLabel": "Alternar tema"
+     },
+     "hero": {
+          "title": "The Survival of Sarah Rose — Vozes IA",
+          "subtitle": "Patch de fãs não oficial: tradução completa e dublagem com IA para The Survival of Sarah Rose.",
+          "badgeTranslate": "11 idiomas — RU completo, os demais demo até a primeira escolha",
+          "badgeVoice": "Dublagem: demo 100% em 11 idiomas — 1 195 linhas cada (RU: 1 397)",
+          "badgeFormat": "Opus 24 kbps — 15–21 MB por idioma (demo)",
+          "badgeEngine": "Ren'Py 7.4.11 · Steam",
+          "badgeAge": "Conteúdo 18+",
+          "ctaSteam": "The Survival of Sarah Rose na Steam",
+          "ctaDownload": "Baixar no Nexus Mods",
+          "installHint": "Requer o jogo comprado na Steam. Grátis, CC BY-NC 4.0."
+     },
+     "features": {
+          "title": "O que você ganha",
+          "translateTitle": "Tradução",
+          "translateText": "Russo — a história inteira. Outros idiomas — o início (escopo demo).",
+          "voiceTitle": "Dublagem com IA",
+          "voiceText": "Vozes clonadas, uma por personagem, com a emoção ajustada a cada cena.",
+          "voicesTitle": "Personagens vivos",
+          "voicesText": "Sarah, Kate, o rei Orwell, Thomas, Varga e dezenas de outros."
+     },
+     "demo": {
+          "title": "Ouça em ação",
+          "lead": "Falas reais do jogo com vozes IA: clonadas e vivas. Toque numa fala — e ouça o resultado.",
+          "play": "Reproduzir: {{name}}",
+          "pause": "Pausar: {{name}}",
+          "phrases": [
+               {
+                    "speaker": "Sarah",
+                    "text": "Mas sério, Thomas, você deveria ouvir o papai pelo menos às vezes. Ele só está tentando fazer o que é melhor para nós."
+               },
+               {
+                    "speaker": "Kate",
+                    "text": "Já está um pouco tarde para começar a fingir que é modesta agora, Sarah."
+               },
+               {
+                    "speaker": "Rei Orwell Rose",
+                    "text": "Qualquer um pode ser rei nos tempos fáceis. É nos tempos ruins que um rei precisa estar pronto. E seu irmão não está pronto."
+               }
+          ]
+     },
+     "voice": {
+          "title": "Dublagem — demo pronto",
+          "ru": "Russo (RU): tradução completa, escopo demo dublado",
+          "en": "Inglês (EN): o texto original, escopo demo dublado",
+          "missing": "Se faltar uma voz, o jogo mostra a fala em silêncio (sem erros)."
+     },
+     "install": {
+          "title": "Instalação",
+          "step1": "Baixe o pacote no Nexus Mods — primeiro o main (obrigatório), depois os pacotes de voz que quiser.",
+          "step2": "Extraia main.7z na pasta do jogo (onde está TheSurvivalofSarahRose.exe): você terá mods/tssr-ai-voice-pack e environment.txt. Os pacotes de voz, do mesmo jeito.",
+          "step3": "Abra o jogo, abra o menu do mod (selo no canto superior direito) e escolha o idioma.",
+          "note": "Requer o jogo comprado na Steam. Patch de fãs não oficial, sem vínculo com os desenvolvedores.",
+          "cta": "Abrir no Nexus Mods",
+          "vortexHint": "Usa Vortex? Instale uma vez a extensão do jogo e use «Install from file».",
+          "whereTitle": "Onde fica a pasta do jogo?",
+          "whereText": "Na Steam: Biblioteca → clique com o botão direito no jogo → Gerenciar → Explorar arquivos locais. Ou o caminho padrão:",
+          "whereCopy": "Copiar caminho",
+          "badgeHint": "O selo no canto superior direito abre o menu do mod"
+     },
+     "shots": {
+          "title": "Capturas de tela",
+          "prev": "Imagem anterior",
+          "next": "Próxima imagem",
+          "close": "Fechar",
+          "open": "abrir em tamanho real",
+          "capGeneric": "Captura de tela do jogo"
+     },
+     "faq": {
+          "title": "Perguntas frequentes",
+          "q1": "É um mod oficial?",
+          "a1": "Não — um patch de fã não oficial, sem relação com desenvolvedores ou distribuidores.",
+          "q2": "Há conteúdo para adultos?",
+          "a2": "Sim — o jogo é 18+. Baixe e jogue apenas se tiver 18 anos ou mais.",
+          "q3": "Licença?",
+          "a3": "Pacote de vozes e tradução: CC BY-NC 4.0 — compartilhe e adapte com atribuição, apenas uso não comercial.",
+          "q4": "Como posso ajudar?",
+          "a4": "Dê um endorsement ao mod no Nexus Mods — assim outros jogadores o encontram. Bugs e sugestões: a página do mod no Nexus."
+     },
+     "footer": {
+          "disclaimer": "Trabalho de fã não oficial. Todos os direitos do jogo original pertencem aos seus detentores.",
+          "linksLabel": "Links",
+          "linkSteam": "Steam",
+          "linkLicense": "CC BY-NC 4.0",
+          "age": "18+",
+          "linkNexus": "Nexus Mods"
+     }
 }

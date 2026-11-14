@@ -12,6 +12,7 @@
  *   node cdp.mts nav <url> [--tab ...]
  *   node cdp.mts type "<текст>" [--tab ...]
  *   node cdp.mts click "<css-селектор>" [--tab ...]
+ *   node cdp.mts upload "<css-селектор input[type=file]>" <путь> [<путь2> ...] [--tab ...]
  *   node cdp.mts dialog [--dismiss]          # закрыть JS-диалог (beforeunload и пр.)
  *
  * Общее: --port 9333
@@ -186,6 +187,21 @@ async function main(): Promise<void> {
       await session.send("Page.handleJavaScriptDialog", { accept });
       await sleep(500);
       console.log(accept ? "диалог принят" : "диалог отклонён");
+      break;
+    }
+    case "upload": {
+      const sel = pos[1];
+      const files = pos.slice(2);
+      if (!sel || files.length === 0) throw new Error("нужен селектор и хотя бы один путь");
+      await session.send("DOM.enable");
+      const doc = await session.send<{ root: { nodeId: number } }>("DOM.getDocument", { depth: -1 });
+      const found = await session.send<{ nodeId: number }>("DOM.querySelector", {
+        nodeId: doc.root.nodeId,
+        selector: sel,
+      });
+      if (!found.nodeId) throw new Error(`не найден элемент: ${sel}`);
+      await session.send("DOM.setFileInputFiles", { nodeId: found.nodeId, files });
+      console.log(`в файловый input загружено: ${files.length} (${sel})`);
       break;
     }
     case "click": {

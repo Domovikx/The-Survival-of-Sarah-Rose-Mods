@@ -84,6 +84,28 @@ const styles = stylex.create({
     borderColor: 'var(--border)',
     wordBreak: 'break-all',
   },
+  badgeWrap: {
+    margin: '10px 0 0',
+    display: 'flex',
+    alignItems: 'center',
+    gap: 12,
+    flexWrap: 'wrap',
+  },
+  badgeImg: {
+    width: '100%',
+    maxWidth: 380,
+    borderRadius: 10,
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: 'var(--accent)',
+    display: 'block',
+  },
+  badgeCaption: {
+    margin: 0,
+    fontSize: 13,
+    color: 'var(--muted)',
+    maxWidth: 260,
+  },
   copy: {
     appearance: 'none',
     cursor: 'pointer',
@@ -105,8 +127,9 @@ const styles = stylex.create({
 const DEFAULT_GAME_PATH = String.raw`C:\Program Files (x86)\Steam\steamapps\common\The Survival of Sarah Rose`
 
 export const Install = () => {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const [copied, setCopied] = useState(false)
+  const shotLang = i18n.language?.startsWith('ru') ? 'russian' : 'english'
 
   return (
     <Section title={t('install.title')} testId="install">
@@ -120,6 +143,17 @@ export const Install = () => {
           </li>
           <li className={stylex.props(styles.item).className} data-testid="install-step-3">
             {t('install.step3')}
+            <figure className={stylex.props(styles.badgeWrap).className} data-testid="install-badge">
+              <img
+                className={stylex.props(styles.badgeImg).className}
+                src={`${import.meta.env.BASE_URL}shots/badge_${shotLang}.jpg`}
+                alt={t('install.badgeHint')}
+                loading="lazy"
+              />
+              <figcaption className={stylex.props(styles.badgeCaption).className}>
+                {t('install.badgeHint')}
+              </figcaption>
+            </figure>
           </li>
         </ol>
         <details className={stylex.props(styles.where).className} data-testid="install-where">
