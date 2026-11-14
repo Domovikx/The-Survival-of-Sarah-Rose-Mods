@@ -35,13 +35,13 @@
 
 1. **Дождаться, пока с гайда спадёт баннер** «ещё не проанализирована системой
    автоматической проверки контента» — до этого правки невозможны.
-2. Обновить основную информацию: заголовок
-   «Русская локализация и AI-озвучка The Survival of Sarah Rose (0.79)» и краткое
-   описание (готовый текст — в разделе «Готовый текст» ниже).
-3. Заменить содержимое раздела (`sectionid=8970476`) на готовый текст, заголовок
-   раздела — «Что это, статус и установка».
-4. Загрузить **9 свежих скриншотов** из `site/public/shots/` (`nexus_01..10`, без
-   `nexus_04`), удалить 4 старых превью, поправить `[previewimg=…]` в тексте.
+2. Обновить основную информацию: английский заголовок и краткое описание
+   (в разделе «Готовый текст»), поле `language` → `english`.
+3. Заменить содержимое раздела (`sectionid=8970476`) на английский текст, заголовок
+   раздела — «What this is, demo status and installation».
+4. Скриншоты — опционально (решение владельца: минорно, не блокирует). Если
+   меняем — 9 кадров из `site/public/shots/` вместо 4 старых превью
+   (`46015222`, `46015225`, `46015228`, `46015230`).
 5. Пересобрать `.7z` после завершения zh (`npm run build:pack`, `7z t`, одна версия
    на выпуск), залить и записать в `docs/distribution-ledger.md`.
 6. Если Nexus не откроют за разумный срок — временный канал: ветка/релиз GitHub с
@@ -87,87 +87,90 @@
 ValidateEditSubSectionForm()">`; синтетический `.click()` не срабатывает,
    вызывать функцию напрямую.
 
-## Готовый текст (проверен по формату, ждёт только снятия скана)
+## Готовый текст (английский — решение владельца 2026-11-14)
 
-Заголовок: **Русская локализация и AI-озвучка The Survival of Sarah Rose (0.79)**
+Решение: гайд делаем **на английском**, язык гайда в поле `language` ставим
+`english`, а все остальные ссылки (Nexus, Vortex-расширение, языки) уводим на
+лендинг — дальше лендинг сам перенаправляет куда надо. В гайде остаётся ОДНА
+ссылка — наш лендинг. Это снимает и вопрос «какой язык у мультиязычного
+руководства», и риск долгого скана из-за внешних ссылок.
 
-Краткое описание:
-
-> Неофициальный фанатский патч: AI-озвучка (демо, 11 языков) и текстовые переводы.
-> Русский текст — полный (69 120 строк); остальные 10 языков — демо до первого
-> выбора. Установка: main.7z + голосовые паки (Vortex или вручную). Бесплатно, 18+.
-
-Раздел гайда (`sectionid=8970476`, заголовок «Что это, статус и установка»):
+- **Title:** The Survival of Sarah Rose — AI Voice Pack + 11 Languages (Install)
+- **Краткое описание:** короткая версия + голый URL лендинга (Steam показывает
+  его ссылкой).
+- **Раздел** (`sectionid=8970476`), заголовок «What this is, demo status and
+  installation»:
 
 ```bbcode
-[h1]Что это[/h1]
+[h1]What this is[/h1]
 
-Неофициальный фанатский патч для The Survival of Sarah Rose: AI-озвучка (клонирование голосов) и текстовые переводы. Игра должна быть куплена в Steam. Патч бесплатный, лицензия CC BY-NC 4.0.
+Unofficial fan patch for The Survival of Sarah Rose: AI voice acting (voice cloning) plus text translations. The game must be purchased on Steam. The patch is free under CC BY-NC 4.0 and is for adults only (18+).
 
-[h1]Что готово, а что в демо[/h1]
-
-[list]
-[*][b]Текст:[/b] русский — полный перевод всей игры (69 120 строк). Остальные 10 языков — демо: вступление до первого выбора.
-[*][b]Озвучка:[/b] демо во всех 11 языках — по 1 195 реплик на язык (русский — 1 397). Полный прогон озвучки впереди, будет приходить обновлениями.
-[*]Статус виден прямо в игре: в меню мода для выбранного языка показано, сколько переведено и озвучено, а на кнопке языка стоит нота, если голосовой пак установлен.
-[/list]
-
-[h1]Установка[/h1]
-
-[b]Через Vortex (рекомендуется)[/b]
+[h1]What is complete and what is demo[/h1]
 
 [list]
-[*]Один раз поставьте расширение игры: [url=https://www.nexusmods.com/site/mods/2600]Vortex extension для The Survival of Sarah Rose[/url]
-[*]В Vortex: Mods → «Install from file» → выберите [b]main.7z[/b], затем нужные [b]voice-язык.7z[/b]
-[*]Deploy: файлы лягут в mods/tssr-ai-voice-pack/, файлы игры не меняются
+[*][b]Text:[/b] Russian — complete translation of the whole game (69,120 lines). The other 10 languages are a demo: the intro up to the first choice.
+[*][b]Voice:[/b] demo in all 11 languages — 1,195 voiced lines per language (Russian: 1,397). A full voice run is planned and will arrive as updates.
+[*]The in-game mod menu shows the status per language (text and voice separately) and marks every language button with a note sign when its voice pack is installed.
 [/list]
 
-[b]Вручную[/b]
+[h1]Installation[/h1]
+
+[b]With Vortex (recommended)[/b]
 
 [list]
-[*]Распакуйте [b]main.7z[/b] в папку игры (где TheSurvivalofSarahRose.exe): появятся mods/tssr-ai-voice-pack/ и environment.txt
-[*]Распакуйте в ту же папку голосовые паки [b]voice-язык.7z[/b]
-[*]Запустите игру, откройте меню мода (бейдж справа сверху) и выберите язык
+[*]Install the game extension once — the link is on the patch website
+[*]In Vortex: Mods → "Install from file" → pick [b]main.7z[/b], then the [b]voice-language.7z[/b] packs you want
+[*]Deploy: files go to mods/tssr-ai-voice-pack/, no game files are modified
 [/list]
 
-[b]Обновление[/b] — поставьте новые архивы поверх старых. [b]Удаление[/b] — удалите mods/tssr-ai-voice-pack и environment.txt. В архивах нет исполняемых файлов, только .7z — мод-менеджеры их понимают.
-
-[h1]Скриншоты[/h1]
-
-[previewimg=НОВЫЙ_ID_1;sizeFull,inline;файл.jpg][/previewimg]
-...
-
-[h1]Содержание перевода[/h1]
-
-Все 19 арок переведены полностью: WarriorPath, MagePath, UnionKingdom, BlackMonolith, HollowWorld, SailorPath + SailorArc, HassarPath, LifeInRahayal, VargaMarionPath, Other, Prologue, StoryBeginnings, Training, PrisonArc, AlfredArc, DemonArc, WarArc, HyralArc — плюс интерфейс игры.
-
-[h1]Ссылки[/h1]
+[b]Manual[/b]
 
 [list]
-[*][url=https://domovikx.github.io/The-Survival-of-Sarah-Rose-Mods/]Лендинг: демо-плеер на 11 языках, скриншоты, FAQ[/url]
-[*][url=https://www.nexusmods.com/games/11043/mods/1]Страница мода в Nexus Mods[/url] — main и голосовые паки (страница ждёт одобрения, ссылка заработает сразу после открытия)
-[*][url=https://www.nexusmods.com/site/mods/2600]Расширение Vortex для игры[/url]
+[*]Unpack [b]main.7z[/b] into the game folder (the one with TheSurvivalofSarahRose.exe): you get mods/tssr-ai-voice-pack/ and environment.txt
+[*]Unpack any [b]voice-language.7z[/b] packs into the same folder
+[*]Launch the game, open the mod menu (badge in the top-right) and pick your language
 [/list]
+
+[b]Update[/b] — install the new archives over the old ones. [b]Uninstall[/b] — delete mods/tssr-ai-voice-pack and environment.txt. The archives contain no executables, only .7z.
+
+[h1]Features[/h1]
+
+[list]
+[*]75+ cloned voices: characters and narration
+[*]Per-line emotions matched to the scene
+[*]Opus 24 kbps — about 17 MB per language pack
+[*]Language switcher inside the game menu (11 languages)
+[*]Demo/completeness status and voice-pack indicator in the menu
+[*]A line without a voice file plays silently — no crashes
+[*]Atomic mod folder: no original game files are touched
+[/list]
+
+[h1]Links[/h1]
+
+Patch website — demo player in 11 languages, screenshots, FAQ, downloads:
+[url=https://domovikx.github.io/The-Survival-of-Sarah-Rose-Mods/]https://domovikx.github.io/The-Survival-of-Sarah-Rose-Mods/[/url]
 
 [h1]FAQ[/h1]
 
-[b]Это официальный перевод?[/b]
-Нет, это неофициальная фанатская работа, не связана с разработчиками и издателями.
+[b]Is this an official translation?[/b]
+No, it is an unofficial fan work, not affiliated with the developers or publishers.
 
-[b]Почему озвучка называется демо?[/b]
-Озвучено вступление до первого выбора — по 1 195 реплик на язык. Полный прогон впереди; статус виден в меню мода.
+[b]Why is the voice called a demo?[/b]
+The intro up to the first choice is voiced — 1,195 lines per language. A full run is planned; the status is visible in the mod menu.
 
-[b]Голоса настоящие?[/b]
-Все голоса сгенерированы ИИ (клонирование голоса), переводы машинные с вычиткой.
+[b]Are the voices real?[/b]
+All voices are AI-generated (voice cloning); translations are machine-aided and human-reviewed.
 
-[b]Перевод бесплатный?[/b]
-Да, CC BY-NC 4.0: свободно распространять и адаптировать с указанием авторства, только некоммерчески.
+[b]Is it free?[/b]
+Yes, CC BY-NC 4.0: free to share and adapt with attribution, non-commercial only.
 
-[b]Как помочь проекту?[/b]
-Скачивание и эндорс на Nexus помогают другим игрокам найти мод. Ошибки и пожелания — на странице мода в Nexus.
+[b]How can I help?[/b]
+Downloads and endorsements help other players find the patch; bugs and suggestions — via the patch website.
 ```
 
-Файл с этим текстом (для копипаста): `tmp/steam_section_new.txt`.
+Файл для вставки: `tmp/steam_guide_paste_en.txt` (4 блока: заголовок, краткое
+описание, заголовок раздела, текст раздела).
 
 ## Скриншоты
 
