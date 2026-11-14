@@ -200,26 +200,30 @@ const styles = stylex.create({
   },
 })
 
+// Файлы: {stem}_{russian|english}.jpg. lang задан — кадр всегда в этом языке
+// (показываем перевод в обе стороны); lang нет — версия под язык лендинга.
+// 9 кадров: 5 «под язык» + 4 фиксированных (EN/RU вперемешку = доказательство
+// перевода). Дубли (dialogue_2/3 в EN и RU совпадают байт-в-байт) не дублируем.
+// Кадры, снятые с игры и лежащие на Nexus (10 штук, разные языки интерфейса).
+// Файлы: site/public/shots/nexus_NN.jpg. Порядок = порядок галереи.
 const SHOTS = [
-  // Файлы: {stem}_{russian|english}.jpg — суффикс = версия игры под язык
-  // лендинга (снимаются отдельно: tools/shots_capture.ps1 -> shots_for_site.py).
-  // Страница патча ПЕРВОЙ — главный продукт (требование владельца 2026-10-16),
-  // затем бренд-меню и сцены с видимым диалоговым окном (маркетинг: текст =
-  // доказательство перевода, эмоции = цепляют).
-  { stem: 'language_settings', capKey: 'shots.cap3', altKey: 'shots.cap3' },
-  { stem: 'main_menu', capKey: 'shots.cap1', altKey: 'shots.cap1' },
-  { stem: 'dialogue_1', capKey: 'shots.cap6', altKey: 'shots.cap6' },
-  { stem: 'dialogue_2', capKey: 'shots.cap4', altKey: 'shots.cap4' },
-  { stem: 'dialogue_3', capKey: 'shots.cap2', altKey: 'shots.cap2' },
-  { stem: 'dialogue_4', capKey: 'shots.cap5', altKey: 'shots.cap5' },
+  'nexus_01',
+  'nexus_02',
+  'nexus_03',
+  'nexus_04',
+  'nexus_05',
+  'nexus_06',
+  'nexus_07',
+  'nexus_08',
+  'nexus_09',
+  'nexus_10',
 ] as const
 
-const shotSrc = (stem: string, lang: string) => `${SHOTS_BASE}${stem}_${lang}.jpg`
+const shotSrc = (file: string) => `${SHOTS_BASE}${file}.jpg`
 
 export const Screenshots = () => {
-  const { t, i18n } = useTranslation()
-  const lang = i18n.language?.startsWith('ru') ? 'russian' : 'english'
-  const [openIndex, setOpenIndex] = useState<number | null>(null)
+  const { t } = useTranslation()
+    const [openIndex, setOpenIndex] = useState<number | null>(null)
   const [shown, setShown] = useState(false) // fade-in после монтирования
 
   const overlayRef = useRef<HTMLDivElement | null>(null)
@@ -291,7 +295,7 @@ export const Screenshots = () => {
 
     const preload = (i: number) => {
       const im = new Image()
-      im.src = shotSrc(SHOTS[i].stem, lang)
+      im.src = shotSrc(SHOTS[i])
     }
     preload((openIndex + 1) % count)
     preload((openIndex - 1 + count) % count)
@@ -301,7 +305,7 @@ export const Screenshots = () => {
       document.body.style.overflow = prevOverflow
       cancelAnimationFrame(raf)
     }
-  }, [openIndex, close, next, prev, lang, count])
+  }, [openIndex, close, next, prev, count])
 
   // Свайп влево/вправо (50px порог) + защита от «клика после свайпа».
   const onTouchStart = (e: ReactTouchEvent<HTMLDivElement>) => {
@@ -338,7 +342,7 @@ export const Screenshots = () => {
       <div className={stylex.props(styles.grid).className} data-testid="screenshots-grid">
         {SHOTS.map((s, i) => (
           <figure
-            key={s.stem}
+            key={s}
             className={stylex.props(styles.figure).className}
             data-testid={`screenshot-${i}`}
           >
@@ -349,13 +353,13 @@ export const Screenshots = () => {
               }}
               className={stylex.props(styles.imgButton).className}
               onClick={() => open(i)}
-              aria-label={`${t(s.altKey)} — ${t('shots.open')}`}
+              aria-label={`${t('shots.capGeneric')} — ${t('shots.open')}`}
               data-testid={`screenshot-img-${i}`}
             >
               <img
                 className={stylex.props(styles.img).className}
-                src={shotSrc(s.stem, lang)}
-                alt={t(s.altKey)}
+                src={shotSrc(s)}
+                alt={t('shots.capGeneric')}
                 loading="lazy"
               />
             </button>
@@ -363,7 +367,7 @@ export const Screenshots = () => {
               className={stylex.props(styles.caption).className}
               data-testid={`screenshot-caption-${i}`}
             >
-              {t(s.capKey)}
+              {t('shots.capGeneric')}
             </figcaption>
           </figure>
         ))}
@@ -415,8 +419,8 @@ export const Screenshots = () => {
 
             <img
               className={stylex.props(styles.overlayImg).className}
-              src={shotSrc(shot.stem, lang)}
-              alt={t(shot.altKey)}
+              src={shotSrc(shot)}
+              alt={t('shots.capGeneric')}
               draggable={false}
               data-testid="lightbox-img"
             />
@@ -440,7 +444,7 @@ export const Screenshots = () => {
               <span className={stylex.props(styles.counter).className} data-testid="lightbox-counter">
                 {openIndex + 1} / {count}
               </span>
-              <span className={stylex.props(styles.overlayCaption).className}>{t(shot.capKey)}</span>
+              <span className={stylex.props(styles.overlayCaption).className}>{t('shots.capGeneric')}</span>
             </div>
           </div>
         </div>

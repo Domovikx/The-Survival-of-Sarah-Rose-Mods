@@ -47,18 +47,13 @@ const swipe = async (page: Page, fromX: number, toX: number) => {
 }
 
 test.describe('скриншоты: сетка', () => {
-  test('шесть тюмбов с подписями (EN-локаль по умолчанию)', async ({ page }) => {
+  test('десять тюмбов с подписями (EN-локаль по умолчанию)', async ({ page }) => {
     await page.goto(BASE)
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < 10; i++) {
       await expect(page.getByTestId(`screenshot-img-${i}`)).toBeVisible()
     }
-    await expect(page.getByTestId('screenshot-caption-0')).toHaveText(
-      'Patch page: language, voice, fonts',
-    )
-    await expect(page.getByTestId('screenshot-caption-1')).toHaveText('Main menu')
-    await expect(page.getByTestId('screenshot-caption-5')).toHaveText(
-      'Narration over the royal capital',
-    )
+    await expect(page.getByTestId('screenshot-caption-0')).toHaveText('Screenshot from the game')
+    await expect(page.getByTestId('screenshot-caption-9')).toHaveText('Screenshot from the game')
   })
 })
 
@@ -71,14 +66,12 @@ test.describe('скриншоты: лайтбокс', () => {
     const role = dialog(page)
     await expect(role).toHaveAttribute('role', 'dialog')
     await expect(role).toHaveAttribute('aria-modal', 'true')
-    await expect(counter(page)).toHaveText('1 / 6')
+    await expect(counter(page)).toHaveText('1 / 10')
     await expect(page.getByTestId('lightbox-img')).toHaveAttribute(
       'src',
-      /language_settings_english\.jpg$/,
+      /nexus_01\.jpg$/,
     )
-    await expect(page.getByTestId('lightbox')).toContainText(
-      'Patch page: language, voice, fonts',
-    )
+    await expect(page.getByTestId('lightbox')).toContainText('Screenshot from the game')
     // Прокрутка фона заблокирована (APG: под контентом диалога inert).
     await expect
       .poll(() => page.evaluate(() => document.body.style.overflow))
@@ -92,29 +85,29 @@ test.describe('скриншоты: лайтбокс', () => {
     await openLightbox(page, 0)
 
     await page.getByTestId('lightbox-next').click()
-    await expect(counter(page)).toHaveText('2 / 6')
+    await expect(counter(page)).toHaveText('2 / 10')
     await expect(page.getByTestId('lightbox-img')).toHaveAttribute(
       'src',
-      /main_menu_english\.jpg$/,
+      /nexus_02\.jpg$/,
     )
     await expect(dialog(page)).toBeVisible()
 
     await page.getByTestId('lightbox-next').click()
     await page.getByTestId('lightbox-next').click()
-    await expect(counter(page)).toHaveText('4 / 6')
+    await expect(counter(page)).toHaveText('4 / 10')
 
     // Обычный шаг назад.
     await page.getByTestId('lightbox-prev').click()
-    await expect(counter(page)).toHaveText('3 / 6')
+    await expect(counter(page)).toHaveText('3 / 10')
     await page.getByTestId('lightbox-prev').click()
     await page.getByTestId('lightbox-prev').click()
-    await expect(counter(page)).toHaveText('1 / 6')
+    await expect(counter(page)).toHaveText('1 / 10')
 
     // Заворот: с первой по prev → последняя; с последней по next → первая.
     await page.getByTestId('lightbox-prev').click()
-    await expect(counter(page)).toHaveText('6 / 6')
+    await expect(counter(page)).toHaveText('10 / 10')
     await page.getByTestId('lightbox-next').click()
-    await expect(counter(page)).toHaveText('1 / 6')
+    await expect(counter(page)).toHaveText('1 / 10')
     await expect(dialog(page)).toBeVisible()
   })
 
@@ -167,9 +160,9 @@ test.describe('скриншоты: лайтбокс', () => {
     await openLightbox(page, 0)
 
     await page.keyboard.press('ArrowRight')
-    await expect(counter(page)).toHaveText('2 / 6')
+    await expect(counter(page)).toHaveText('2 / 10')
     await page.keyboard.press('ArrowLeft')
-    await expect(counter(page)).toHaveText('1 / 6')
+    await expect(counter(page)).toHaveText('1 / 10')
 
     // Фокус-ловушка (APG): close → prev → next → wrap на close.
     await page.keyboard.press('Tab')
@@ -192,7 +185,7 @@ test.describe('скриншоты: лайтбокс', () => {
 
     // Свайп влево (dx < -50) → вперёд.
     await swipe(page, 400, 200)
-    await expect(counter(page)).toHaveText('2 / 6')
+    await expect(counter(page)).toHaveText('2 / 10')
     // Синтетический click после свайпа погашен — диалог жив.
     await expect(dialog(page)).toBeVisible()
 
@@ -204,10 +197,10 @@ test.describe('скриншоты: лайтбокс', () => {
 
   test('открытие с середины галереи — свой кадр', async ({ page }) => {
     await openLightbox(page, 4)
-    await expect(counter(page)).toHaveText('5 / 6')
+    await expect(counter(page)).toHaveText('5 / 10')
     await expect(page.getByTestId('lightbox-img')).toHaveAttribute(
       'src',
-      /dialogue_3_english\.jpg$/,
+      /nexus_05\.jpg$/,
     )
   })
 })

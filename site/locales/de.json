@@ -1,100 +1,95 @@
 {
-    "meta": {
-        "title": "The Survival of Sarah Rose — KI-Sprachausgabe + 11 Sprachen",
-        "description": "Inoffizielles Fan-Patch: Demo-KI-Sprachausgabe in 11 Sprachen plus Übersetzungen in 11 (Russisch komplett; die übrigen decken das Intro bis zur ersten Wahl ab). Kostenlos, 18+."
-    },
-    "header": {
-        "brand": "TSSR · KI-Sprachpaket",
-        "steam": "Steam-Seite",
-        "langLabel": "Sprache",
-        "themeLabel": "Design umschalten"
-    },
-    "hero": {
-        "title": "The Survival of Sarah Rose — KI-Sprachausgabe",
-        "subtitle": "Inoffizieller Fan-Patch: vollständige Übersetzung und KI-Vertonung für The Survival of Sarah Rose.",
-        "badgeTranslate": "11 Sprachen — RU komplett, die übrigen Demo bis zur ersten Wahl",
-        "badgeVoice": "Vertonung: Demo zu 100 % in 11 Sprachen — je 1 195 Zeilen (RU: 1 397)",
-        "badgeFormat": "Opus 24 kbps — 15–21 MB pro Sprache (Demo)",
-        "badgeEngine": "Ren'Py 7.4.11 · Steam",
-        "badgeAge": "18+ Inhalt",
-        "ctaSteam": "The Survival of Sarah Rose auf Steam",
-        "ctaDownload": "Auf Nexus Mods herunterladen",
-        "installHint": "Erfordert ein gekauftes Spiel auf Steam. Kostenlos, CC BY-NC 4.0."
-    },
-    "features": {
-        "title": "Was du bekommst",
-        "translateTitle": "Übersetzung",
-        "translateText": "Russisch — die ganze Geschichte. Andere Sprachen — der Anfang (Demo-Umfang).",
-        "voiceTitle": "KI-Vertonung",
-        "voiceText": "Geklonte Stimmen, eine pro Figur, mit zur Szene passender Emotion.",
-        "voicesTitle": "Lebendige Figuren",
-        "voicesText": "Sarah, Kate, König Orwell, Thomas, Varga und Dutzende mehr."
-    },
-    "demo": {
-        "title": "Hör es selbst",
-        "lead": "Echte Spielszenen mit KI-Stimmen: geklonte Stimmen, lebendige Emotionen. Zeile antippen — und hören.",
-        "play": "Abspielen: {{name}}",
-        "pause": "Pause: {{name}}",
-        "phrases": [
-            {
-                "speaker": "Sarah",
-                "text": "Aber im Ernst, Thomas, du solltest wenigstens manchmal auf Papa hören. Er will doch nur das Beste für uns tun."
-            },
-            {
-                "speaker": "Kate",
-                "text": "Es ist jetzt ein wenig zu spät, um anzufangen, so zu tun, als wärst du bescheiden, Sarah."
-            },
-            {
-                "speaker": "König Orwell Rose",
-                "text": "Jeder kann König sein, wenn es leicht ist. Aber in schlechten Zeiten braucht man einen König, der bereit ist. Und dein Bruder ist nicht bereit."
-            }
-        ]
-    },
-    "voice": {
-        "title": "Sprachausgabe — Demo bereit",
-        "ru": "Russisch (RU): komplette Übersetzung, Demo-Umfang vertont",
-        "en": "Englisch (EN): der Originaltext, Demo-Umfang vertont",
-        "missing": "Fehlt eine Stimme — das Spiel zeigt die Zeile still (keine Fehler)."
-    },
-    "install": {
-        "title": "Installation",
-        "step1": "Lade das Paket auf Nexus Mods herunter — zuerst main (erforderlich), dann die gewünschten Sprachpakete.",
-        "step2": "Entpacke main.7z in den Spielordner (dort, wo TheSurvivalofSarahRose.exe liegt): du bekommst mods/tssr-ai-voice-pack und environment.txt. Sprachpakete genauso.",
-        "step3": "Starte das Spiel, öffne das Mod-Menü (Badge oben rechts) und wähle die Sprache.",
-        "note": "Erfordert das gekaufte Spiel auf Steam. Inoffizieller Fan-Patch, nicht mit den Entwicklern verbunden.",
-        "cta": "Auf Nexus Mods öffnen",
-        "vortexHint": "Mit Vortex? Einmal die Spielerweiterung installieren, dann „Install from file“."
-    },
-    "shots": {
-        "title": "Screenshots",
-        "cap1": "Hauptmenü",
-        "cap2": "Chinesisch: CJK-Text ohne Kästchen",
-        "cap3": "Patch-Seite: Sprache, Stimme, Schrift",
-        "cap4": "Deutsche Lokalisierung",
-        "cap5": "Erzählung über die Hauptstadt",
-        "cap6": "Sarah rennt in die Arme ihres Vaters",
-        "prev": "Vorheriges Bild",
-        "next": "Nächstes Bild",
-        "close": "Schließen",
-        "open": "in voller Größe öffnen"
-    },
-    "faq": {
-        "title": "FAQ",
-        "q1": "Ist das ein offizielles Mod?",
-        "a1": "Nein — ein inoffizielles Fan-Patch, nicht verbunden mit den Entwicklern oder Publishern.",
-        "q2": "Gibt es Inhalte für Erwachsene?",
-        "a2": "Ja — das Spiel ist 18+. Nur laden und spielen, wenn du 18 oder älter bist.",
-        "q3": "Lizenz?",
-        "a3": "Sprachpaket und Übersetzung: CC BY-NC 4.0 — kostenlos weitergeben und anpassen mit Namensnennung, nur nicht-kommerziell.",
-        "q4": "Wie kann ich helfen?",
-        "a4": "Gib dem Mod auf Nexus Mods ein Endorsement — so finden ihn andere Spieler. Fehler und Wünsche: die Mod-Seite auf Nexus."
-    },
-    "footer": {
-        "disclaimer": "Inoffizielle Fan-Arbeit. Alle Rechte am Originalspiel liegen bei den Rechteinhabern.",
-        "linksLabel": "Links",
-        "linkSteam": "Steam",
-        "linkLicense": "CC BY-NC 4.0",
-        "age": "18+",
-        "linkNexus": "GitHub"
-    }
+  "meta": {
+    "title": "The Survival of Sarah Rose — KI-Sprachausgabe + 11 Sprachen",
+    "description": "Inoffizielles Fan-Patch: Demo-KI-Sprachausgabe in 11 Sprachen plus Übersetzungen in 11 (Russisch komplett; die übrigen decken das Intro bis zur ersten Wahl ab). Kostenlos, 18+."
+  },
+  "header": {
+    "brand": "TSSR · KI-Sprachpaket",
+    "steam": "Steam-Seite",
+    "langLabel": "Sprache",
+    "themeLabel": "Design umschalten"
+  },
+  "hero": {
+    "title": "The Survival of Sarah Rose — KI-Sprachausgabe",
+    "subtitle": "Inoffizieller Fan-Patch: vollständige Übersetzung und KI-Vertonung für The Survival of Sarah Rose.",
+    "badgeTranslate": "11 Sprachen — RU komplett, die übrigen Demo bis zur ersten Wahl",
+    "badgeVoice": "Vertonung: Demo zu 100 % in 11 Sprachen — je 1 195 Zeilen (RU: 1 397)",
+    "badgeFormat": "Opus 24 kbps — 15–21 MB pro Sprache (Demo)",
+    "badgeEngine": "Ren'Py 7.4.11 · Steam",
+    "badgeAge": "18+ Inhalt",
+    "ctaSteam": "The Survival of Sarah Rose auf Steam",
+    "ctaDownload": "Auf Nexus Mods herunterladen",
+    "installHint": "Erfordert ein gekauftes Spiel auf Steam. Kostenlos, CC BY-NC 4.0."
+  },
+  "features": {
+    "title": "Was du bekommst",
+    "translateTitle": "Übersetzung",
+    "translateText": "Russisch — die ganze Geschichte. Andere Sprachen — der Anfang (Demo-Umfang).",
+    "voiceTitle": "KI-Vertonung",
+    "voiceText": "Geklonte Stimmen, eine pro Figur, mit zur Szene passender Emotion.",
+    "voicesTitle": "Lebendige Figuren",
+    "voicesText": "Sarah, Kate, König Orwell, Thomas, Varga und Dutzende mehr."
+  },
+  "demo": {
+    "title": "Hör es selbst",
+    "lead": "Echte Spielszenen mit KI-Stimmen: geklonte Stimmen, lebendige Emotionen. Zeile antippen — und hören.",
+    "play": "Abspielen: {{name}}",
+    "pause": "Pause: {{name}}",
+    "phrases": [
+      {
+        "speaker": "Sarah",
+        "text": "Aber im Ernst, Thomas, du solltest wenigstens manchmal auf Papa hören. Er will doch nur das Beste für uns tun."
+      },
+      {
+        "speaker": "Kate",
+        "text": "Es ist jetzt ein wenig zu spät, um anzufangen, so zu tun, als wärst du bescheiden, Sarah."
+      },
+      {
+        "speaker": "König Orwell Rose",
+        "text": "Jeder kann König sein, wenn es leicht ist. Aber in schlechten Zeiten braucht man einen König, der bereit ist. Und dein Bruder ist nicht bereit."
+      }
+    ]
+  },
+  "voice": {
+    "title": "Sprachausgabe — Demo bereit",
+    "ru": "Russisch (RU): komplette Übersetzung, Demo-Umfang vertont",
+    "en": "Englisch (EN): der Originaltext, Demo-Umfang vertont",
+    "missing": "Fehlt eine Stimme — das Spiel zeigt die Zeile still (keine Fehler)."
+  },
+  "install": {
+    "title": "Installation",
+    "step1": "Lade das Paket auf Nexus Mods herunter — zuerst main (erforderlich), dann die gewünschten Sprachpakete.",
+    "step2": "Entpacke main.7z in den Spielordner (dort, wo TheSurvivalofSarahRose.exe liegt): du bekommst mods/tssr-ai-voice-pack und environment.txt. Sprachpakete genauso.",
+    "step3": "Starte das Spiel, öffne das Mod-Menü (Badge oben rechts) und wähle die Sprache.",
+    "note": "Erfordert das gekaufte Spiel auf Steam. Inoffizieller Fan-Patch, nicht mit den Entwicklern verbunden.",
+    "cta": "Auf Nexus Mods öffnen",
+    "vortexHint": "Mit Vortex? Einmal die Spielerweiterung installieren, dann „Install from file“."
+  },
+  "shots": {
+    "title": "Screenshots",
+    "prev": "Vorheriges Bild",
+    "next": "Nächstes Bild",
+    "close": "Schließen",
+    "open": "in voller Größe öffnen",
+    "capGeneric": "Screenshot aus dem Spiel"
+  },
+  "faq": {
+    "title": "FAQ",
+    "q1": "Ist das ein offizielles Mod?",
+    "a1": "Nein — ein inoffizielles Fan-Patch, nicht verbunden mit den Entwicklern oder Publishern.",
+    "q2": "Gibt es Inhalte für Erwachsene?",
+    "a2": "Ja — das Spiel ist 18+. Nur laden und spielen, wenn du 18 oder älter bist.",
+    "q3": "Lizenz?",
+    "a3": "Sprachpaket und Übersetzung: CC BY-NC 4.0 — kostenlos weitergeben und anpassen mit Namensnennung, nur nicht-kommerziell.",
+    "q4": "Wie kann ich helfen?",
+    "a4": "Gib dem Mod auf Nexus Mods ein Endorsement — so finden ihn andere Spieler. Fehler und Wünsche: die Mod-Seite auf Nexus."
+  },
+  "footer": {
+    "disclaimer": "Inoffizielle Fan-Arbeit. Alle Rechte am Originalspiel liegen bei den Rechteinhabern.",
+    "linksLabel": "Links",
+    "linkSteam": "Steam",
+    "linkLicense": "CC BY-NC 4.0",
+    "age": "18+",
+    "linkNexus": "GitHub"
+  }
 }

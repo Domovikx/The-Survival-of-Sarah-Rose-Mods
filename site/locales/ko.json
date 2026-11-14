@@ -1,100 +1,95 @@
 {
-    "meta": {
-        "title": "The Survival of Sarah Rose — AI 음성 & 자막 (11개 언어)",
-        "description": "비공식 팬 패치: 7개 언어 데모 AI 음성과 11개 언어 번역(러시아어는 전문 완역, 나머지는 첫 선택까지 데모). 무료, 18+."
-    },
-    "header": {
-        "brand": "TSSR · AI 음성 팩",
-        "steam": "Steam 페이지",
-        "langLabel": "언어",
-        "themeLabel": "테마 전환"
-    },
-    "hero": {
-        "title": "The Survival of Sarah Rose — AI 음성",
-        "subtitle": "비공식 팬 패치: The Survival of Sarah Rose의 완전 번역과 AI 음성.",
-        "badgeTranslate": "11개 언어 — RU 완역, 나머지는 첫 선택까지 데모",
-        "badgeVoice": "음성: 데모 11개 언어 100% — 각 1,195줄 (RU: 1,397)",
-        "badgeFormat": "Opus 24 kbps — 언어당 15–21MB (데모)",
-        "badgeEngine": "Ren'Py 7.4.11 · Steam",
-        "badgeAge": "18+ 콘텐츠",
-        "ctaSteam": "Steam에서 The Survival of Sarah Rose",
-        "ctaDownload": "Nexus Mods에서 다운로드",
-        "installHint": "Steam에서 구매한 게임 필요. 무료, CC BY-NC 4.0."
-    },
-    "features": {
-        "title": "무엇을 받나요",
-        "translateTitle": "번역",
-        "translateText": "러시아어는 전체. 다른 언어는 도입부(데모 범위).",
-        "voiceTitle": "AI 음성",
-        "voiceText": "캐릭터마다 클론 음성, 장면에 맞춘 감정 표현.",
-        "voicesTitle": "살아 있는 인물들",
-        "voicesText": "사라, 케이트, 오웰 왕, 토마스, 바르가 등 수십 명."
-    },
-    "demo": {
-        "title": "직접 들어보세요",
-        "lead": "게임의 실제 대사를 AI 음성으로. 클론 보이스와 살아있는 감정. 대사를 누르면——결과를 들을 수 있습니다.",
-        "play": "재생: {{name}}",
-        "pause": "일시정지: {{name}}",
-        "phrases": [
-            {
-                "speaker": "사라",
-                "text": "하지만 진지하게 말해, 토머스야. 아빠의 말을 적어도 일부는 들어야 해. 그는 우리 모두에게 가장 좋은 일을 하려는 거니까."
-            },
-            {
-                "speaker": "케이트",
-                "text": "이제 와서 겸손한 척하기엔 좀 늦지 않았니, 사라?"
-            },
-            {
-                "speaker": "오웰 왕",
-                "text": "어떤 사람이라도 왕이 될 수 있습니다. 평온할 때요. 하지만 어려운 시기를 대비하지 못한 당신의 형제는 그렇지 않습니다."
-            }
-        ]
-    },
-    "voice": {
-        "title": "음성 — 데모 준비 완료",
-        "ru": "러시아어 (RU): 전문 완역, 데모 범위 수록",
-        "en": "영어 (EN): 원문 텍스트, 데모 범위 수록",
-        "missing": "음성이 없으면 무음으로 표시됩니다 (오류 없음)."
-    },
-    "install": {
-        "title": "설치",
-        "step1": "Nexus Mods에서 팩을 다운로드하세요 — 먼저 main(필수), 그다음 원하는 음성 팩.",
-        "step2": "main.7z를 게임 폴더(TheSurvivalofSarahRose.exe가 있는 곳)에 풀면 mods/tssr-ai-voice-pack와 environment.txt가 생깁니다. 음성 팩도 같은 방식.",
-        "step3": "게임을 실행하고 MOD 메뉴(오른쪽 위 배지)에서 언어를 고르세요.",
-        "note": "Steam에서 구매한 게임이 필요합니다. 비공식 팬 패치이며 개발사와 무관합니다.",
-        "cta": "Nexus Mods에서 열기",
-        "vortexHint": "Vortex 사용자: 게임 확장을 한 번 설치한 뒤 «Install from file»을 사용하세요."
-    },
-    "shots": {
-        "title": "스크린샷",
-        "cap1": "메인 메뉴",
-        "cap2": "중국어: 깨진 글자 없는 CJK 텍스트",
-        "cap3": "패치 페이지: 언어, 음성, 글꼴",
-        "cap4": "독일어 번역",
-        "cap5": "수도를 바라보는 내레이션",
-        "cap6": "아버지 품으로 뛰어가는 사라",
-        "prev": "이전 이미지",
-        "next": "다음 이미지",
-        "close": "닫기",
-        "open": "전체 크기로 열기"
-    },
-    "faq": {
-        "title": "자주 묻는 질문",
-        "q1": "공식 MOD인가요?",
-        "a1": "아니요 — 비공식 팬 패치입니다. 개발사/배급사와 무관합니다.",
-        "q2": "성인 콘텐츠가 있나요?",
-        "a2": "네 — 게임은 18세 이상입니다. 18세 이상만 다운로드/플레이하세요.",
-        "q3": "라이선스는?",
-        "a3": "음성 팩과 번역: CC BY-NC 4.0 — 출처 표시 후 공유·변경 가능, 비상업적 용도만.",
-        "q4": "어떻게 도울 수 있나요?",
-        "a4": "Nexus Mods에서 endorse를 눌러 주세요 — 다른 플레이어가 찾기 쉬워집니다. 버그와 제안은 Nexus 모드 페이지에 남겨 주세요."
-    },
-    "footer": {
-        "disclaimer": "비공식 팬 작품입니다. 원작 게임의 모든 권리는 권리자에게 있습니다.",
-        "linksLabel": "링크",
-        "linkSteam": "Steam",
-        "linkLicense": "CC BY-NC 4.0",
-        "age": "18+",
-        "linkNexus": "GitHub"
-    }
+  "meta": {
+    "title": "The Survival of Sarah Rose — AI 음성 & 자막 (11개 언어)",
+    "description": "비공식 팬 패치: 7개 언어 데모 AI 음성과 11개 언어 번역(러시아어는 전문 완역, 나머지는 첫 선택까지 데모). 무료, 18+."
+  },
+  "header": {
+    "brand": "TSSR · AI 음성 팩",
+    "steam": "Steam 페이지",
+    "langLabel": "언어",
+    "themeLabel": "테마 전환"
+  },
+  "hero": {
+    "title": "The Survival of Sarah Rose — AI 음성",
+    "subtitle": "비공식 팬 패치: The Survival of Sarah Rose의 완전 번역과 AI 음성.",
+    "badgeTranslate": "11개 언어 — RU 완역, 나머지는 첫 선택까지 데모",
+    "badgeVoice": "음성: 데모 11개 언어 100% — 각 1,195줄 (RU: 1,397)",
+    "badgeFormat": "Opus 24 kbps — 언어당 15–21MB (데모)",
+    "badgeEngine": "Ren'Py 7.4.11 · Steam",
+    "badgeAge": "18+ 콘텐츠",
+    "ctaSteam": "Steam에서 The Survival of Sarah Rose",
+    "ctaDownload": "Nexus Mods에서 다운로드",
+    "installHint": "Steam에서 구매한 게임 필요. 무료, CC BY-NC 4.0."
+  },
+  "features": {
+    "title": "무엇을 받나요",
+    "translateTitle": "번역",
+    "translateText": "러시아어는 전체. 다른 언어는 도입부(데모 범위).",
+    "voiceTitle": "AI 음성",
+    "voiceText": "캐릭터마다 클론 음성, 장면에 맞춘 감정 표현.",
+    "voicesTitle": "살아 있는 인물들",
+    "voicesText": "사라, 케이트, 오웰 왕, 토마스, 바르가 등 수십 명."
+  },
+  "demo": {
+    "title": "직접 들어보세요",
+    "lead": "게임의 실제 대사를 AI 음성으로. 클론 보이스와 살아있는 감정. 대사를 누르면——결과를 들을 수 있습니다.",
+    "play": "재생: {{name}}",
+    "pause": "일시정지: {{name}}",
+    "phrases": [
+      {
+        "speaker": "사라",
+        "text": "하지만 진지하게 말해, 토머스야. 아빠의 말을 적어도 일부는 들어야 해. 그는 우리 모두에게 가장 좋은 일을 하려는 거니까."
+      },
+      {
+        "speaker": "케이트",
+        "text": "이제 와서 겸손한 척하기엔 좀 늦지 않았니, 사라?"
+      },
+      {
+        "speaker": "오웰 왕",
+        "text": "어떤 사람이라도 왕이 될 수 있습니다. 평온할 때요. 하지만 어려운 시기를 대비하지 못한 당신의 형제는 그렇지 않습니다."
+      }
+    ]
+  },
+  "voice": {
+    "title": "음성 — 데모 준비 완료",
+    "ru": "러시아어 (RU): 전문 완역, 데모 범위 수록",
+    "en": "영어 (EN): 원문 텍스트, 데모 범위 수록",
+    "missing": "음성이 없으면 무음으로 표시됩니다 (오류 없음)."
+  },
+  "install": {
+    "title": "설치",
+    "step1": "Nexus Mods에서 팩을 다운로드하세요 — 먼저 main(필수), 그다음 원하는 음성 팩.",
+    "step2": "main.7z를 게임 폴더(TheSurvivalofSarahRose.exe가 있는 곳)에 풀면 mods/tssr-ai-voice-pack와 environment.txt가 생깁니다. 음성 팩도 같은 방식.",
+    "step3": "게임을 실행하고 MOD 메뉴(오른쪽 위 배지)에서 언어를 고르세요.",
+    "note": "Steam에서 구매한 게임이 필요합니다. 비공식 팬 패치이며 개발사와 무관합니다.",
+    "cta": "Nexus Mods에서 열기",
+    "vortexHint": "Vortex 사용자: 게임 확장을 한 번 설치한 뒤 «Install from file»을 사용하세요."
+  },
+  "shots": {
+    "title": "스크린샷",
+    "prev": "이전 이미지",
+    "next": "다음 이미지",
+    "close": "닫기",
+    "open": "전체 크기로 열기",
+    "capGeneric": "게임 화면"
+  },
+  "faq": {
+    "title": "자주 묻는 질문",
+    "q1": "공식 MOD인가요?",
+    "a1": "아니요 — 비공식 팬 패치입니다. 개발사/배급사와 무관합니다.",
+    "q2": "성인 콘텐츠가 있나요?",
+    "a2": "네 — 게임은 18세 이상입니다. 18세 이상만 다운로드/플레이하세요.",
+    "q3": "라이선스는?",
+    "a3": "음성 팩과 번역: CC BY-NC 4.0 — 출처 표시 후 공유·변경 가능, 비상업적 용도만.",
+    "q4": "어떻게 도울 수 있나요?",
+    "a4": "Nexus Mods에서 endorse를 눌러 주세요 — 다른 플레이어가 찾기 쉬워집니다. 버그와 제안은 Nexus 모드 페이지에 남겨 주세요."
+  },
+  "footer": {
+    "disclaimer": "비공식 팬 작품입니다. 원작 게임의 모든 권리는 권리자에게 있습니다.",
+    "linksLabel": "링크",
+    "linkSteam": "Steam",
+    "linkLicense": "CC BY-NC 4.0",
+    "age": "18+",
+    "linkNexus": "GitHub"
+  }
 }
