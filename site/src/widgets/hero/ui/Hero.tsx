@@ -193,13 +193,6 @@ export const Hero = () => {
           >
             {t('hero.ctaDownload')}
           </a>
-          <a
-            className={stylex.props(styles.ghostBtn).className}
-            href={LINKS.github}
-            data-testid="hero-github"
-          >
-            {t('hero.ctaGithub')}
-          </a>
         </div>
         <p className={stylex.props(styles.hint).className} data-testid="hero-hint">
           {t('hero.installHint')}

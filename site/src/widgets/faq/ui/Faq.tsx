@@ -65,8 +65,8 @@ export const Faq = () => {
           </h3>
           <p className={stylex.props(styles.a).className} data-testid="faq-a-4">
             {t('faq.a4')}{' '}
-            <a href={LINKS.github} data-testid="faq-github-link">
-              {t('footer.linkGithub')}
+            <a href={LINKS.nexus} data-testid="faq-nexus-link">
+              {t('footer.linkNexus')}
             </a>
           </p>
         </div>

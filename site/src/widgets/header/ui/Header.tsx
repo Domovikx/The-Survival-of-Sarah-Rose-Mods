@@ -84,7 +84,7 @@ export const Header = () => {
         <div className={stylex.props(styles.inner).className} data-testid="header-inner">
           <a
             className={stylex.props(styles.brand).className}
-            href={LINKS.github}
+            href="/"
             data-testid="header-brand"
           >
             {t('header.brand')}
@@ -96,13 +96,6 @@ export const Header = () => {
           >
             <SteamIcon />
             {t('header.steam')}
-          </a>
-          <a
-            className={stylex.props(styles.ghostLink).className}
-            href={LINKS.github}
-            data-testid="header-github"
-          >
-            {t('header.github')}
           </a>
           <LanguageSwitcher />
           <ThemeToggle />

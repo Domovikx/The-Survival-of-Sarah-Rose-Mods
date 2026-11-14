@@ -35,18 +35,13 @@ export const Footer = () => {
           data-testid="footer-links"
         >
           <li>
-            <a href={LINKS.github} data-testid="footer-link-github">
-              {t('footer.linkGithub')}
+            <a href={LINKS.nexus} data-testid="footer-link-nexus">
+              {t('footer.linkNexus')}
             </a>
           </li>
           <li>
             <a href={LINKS.steam} data-testid="footer-link-steam">
               {t('footer.linkSteam')}
-            </a>
-          </li>
-          <li>
-            <a href={LINKS.issues} data-testid="footer-link-issues">
-              {t('footer.linkIssues')}
             </a>
           </li>
           <li>

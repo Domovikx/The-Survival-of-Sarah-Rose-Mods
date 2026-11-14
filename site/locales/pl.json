@@ -6,13 +6,12 @@
     "header": {
         "brand": "TSSR · Pakiet głosów AI",
         "steam": "Strona Steam",
-        "github": "GitHub",
         "langLabel": "Język",
         "themeLabel": "Zmień motyw"
     },
     "hero": {
         "title": "The Survival of Sarah Rose — Głosy AI",
-        "subtitle": "Nieoficjalna łatka fanowska: 11 języków tekstu i zakres demo (intro do pierwszego wyboru) w pełni udźwiękowiony we wszystkich 11 językach — 77 sklonowanych głosów z emocjonalnym podaniem.",
+        "subtitle": "Nieoficjalna łatka fanowska: pełne tłumaczenie i udźwiękowienie AI do The Survival of Sarah Rose.",
         "badgeTranslate": "11 języków — RU kompletny, pozostałe demo do pierwszego wyboru",
         "badgeVoice": "Udźwiękowienie: demo 100% w 11 językach — po 1 195 linii (RU: 1 397)",
         "badgeFormat": "Opus 24 kbps — 15–21 MB na język (demo)",
@@ -20,19 +19,16 @@
         "badgeAge": "Treść 18+",
         "ctaSteam": "The Survival of Sarah Rose na Steam",
         "ctaDownload": "Pobierz z Nexus Mods",
-        "ctaGithub": "Kod na GitHub",
         "installHint": "Wymaga kupionej gry na Steam. Za darmo, CC BY-NC 4.0."
     },
     "features": {
         "title": "Co dostajesz",
-        "translateTitle": "Tłumaczenia na 11 języków",
-        "translateText": "Rosyjski: kompletne tłumaczenie całej historii. Pozostałe 10 języków obejmuje zakres demo — intro do pierwszego wyboru.",
-        "voiceTitle": "Udźwiękowienie AI (demo, 11 języków)",
-        "voiceText": "Sklonowane głosy dla każdej postaci przez VoxCPM2 — emocjonalne podanie dopasowane do sceny. Zakres demo (do pierwszego wyboru) jest w pełni udźwiękowiony we wszystkich 11 językach.",
-        "emotionTitle": "Emocjonalna gra",
-        "emotionText": "Każda linia niesie stan narratora: pożądanie, szept, sarkazm — nigdy monotonia.",
-        "voicesTitle": "Ponad 75 głosów",
-        "voicesText": "Sarah, narrator, król Orwell, Kate, Thomas, Varga i dziesiątki innych postaci."
+        "translateTitle": "Tłumaczenie",
+        "translateText": "Rosyjski — cała historia. Inne języki — początek (zakres demo).",
+        "voiceTitle": "Udźwiękowienie AI",
+        "voiceText": "Sklonowane głosy, po jednym na postać, z emocją dopasowaną do sceny.",
+        "voicesTitle": "Żywe postacie",
+        "voicesText": "Sarah, Kate, król Orwell, Thomas, Varga i dziesiątki innych."
     },
     "demo": {
         "title": "Posłuchaj sam",
@@ -42,47 +38,32 @@
         "phrases": [
             {
                 "speaker": "Sarah",
-                "text": "Tutaj zawsze jest tak cicho. Coś jest nie tak."
+                "text": "Prawda? Thomas, powinieneś słuchać Taty przynajmniej w pewnym stopniu. On próbuje po prostu zrobić to, co dla nas najlepsze."
             },
             {
-                "speaker": "Thomas",
-                "text": "Sarah... Próbuję utrzymać fasadę idealnego króla. Nawet na polu bitwy ukrywam swój strach."
+                "speaker": "Kate",
+                "text": "Trochę późno, żeby teraz zacząć udawać skromność, Sarah."
             },
             {
-                "speaker": "Carolyn",
-                "text": "Aah, czy mam tak łatwo wyznać ci moje sekrety?"
-            },
-            {
-                "speaker": "Sarah",
-                "text": "To nie ty mnie prosisz, to ja proszę ciebie... zostań ze mną... proszę. Nikt inny na tym świecie nie był mi tak prawdziwym przyjacielem... kimś więcej niż przyjacielem."
-            },
-            {
-                "speaker": "Garret",
-                "text": "A co do krwi na twoich rękach, czym jest kilka kropel więcej? Chyba nie chcesz mi powiedzieć, że wcześniej nie zabijałaś innych?"
-            },
-            {
-                "speaker": "Sarah",
-                "text": "Każdej nocy, gdy się dotykam, moje jedyne fantazje to wspomnienia naszych spotkań."
-            },
-            {
-                "speaker": "Narrator",
-                "text": "Gdy przychodził do niej, jej serce waliło w piersi. Gdy się nie pojawiała, czuła, że zbliża się do łez."
+                "speaker": "Król Orwell Rose",
+                "text": "Ktoś może zostać królem w dobre czasy, ale to złe czasy wymagają od króla gotowości. A Twój brat nie jest gotowy."
             }
         ]
     },
     "voice": {
         "title": "Udźwiękowienie — demo gotowe",
-        "total": "Zakres demo (do pierwszego wyboru) jest udźwiękowiony w 11 językach: po 1 195 linii, rosyjski 1 397.",
         "ru": "Rosyjski (RU): kompletne tłumaczenie, zakres demo udźwiękowiony",
         "en": "Angielski (EN): oryginalny tekst, zakres demo udźwiękowiony",
         "missing": "Brak głosu? Gra wyświetli linię w ciszy (bez błędów)."
     },
     "install": {
         "title": "Instalacja",
-        "step1": "Pobierz paczkę z Nexus Mods: main (rdzeń, wymagany) oraz wybrane pakiety głosów. Rozpakuj main.7z do folderu gry (tam, gdzie jest TheSurvivalofSarahRose.exe), aby pojawiły się mods/tssr-ai-voice-pack i environment.txt, a następnie w ten sam sposób rozpakuj archiwa głosów. Vortex: zainstaluj raz rozszerzenie gry (nexusmods.com/site/mods/2600) i użyj „Install from file”.",
-        "step2": "Uruchom grę i otwórz ustawienia modu (badge w prawym górnym rogu) — 11 języków tekstu; głos podąża za wybranym językiem",
-        "step3": "Gotowe. Pierwsze uruchomienie może trwać dłużej — Ren'Py przebudowuje cache",
-        "note": "Wymaga kupionej gry na Steam. Ten patch jest nieoficjalny i niepowiązany z twórcami ani wydawcami."
+        "step1": "Pobierz paczkę z Nexus Mods — najpierw main (wymagany), potem wybrane pakiety głosów.",
+        "step2": "Rozpakuj main.7z do folderu gry (tam, gdzie TheSurvivalofSarahRose.exe) — pojawią się mods/tssr-ai-voice-pack i environment.txt. Pakiety głosów tak samo.",
+        "step3": "Uruchom grę, otwórz menu moda (plakietka w prawym górnym rogu) i wybierz język.",
+        "note": "Wymaga kupionej gry na Steam. Nieoficjalna łatka fanowska, niezwiązana z twórcami.",
+        "cta": "Otwórz na Nexus Mods",
+        "vortexHint": "Używasz Vortex? Zainstaluj raz rozszerzenie gry, potem „Install from file”."
     },
     "shots": {
         "title": "Zrzuty ekranu",
@@ -106,15 +87,14 @@
         "q3": "Licencja?",
         "a3": "Pakiet głosów i tłumaczenie: CC BY-NC 4.0 — udostępniaj i modyfikuj z podaniem autorstwa, tylko niekomercyjnie.",
         "q4": "Jak mogę pomóc?",
-        "a4": "Dodaj gwiazdkę na GitHub, wyślij pull request lub otwórz issue."
+        "a4": "Daj modowi endorsement na Nexus Mods — dzięki temu znajdą go inni gracze. Błędy i sugestie: strona moda na Nexus."
     },
     "footer": {
         "disclaimer": "Nieoficjalna fanowska praca. Wszystkie prawa do oryginalnej gry należą do ich właścicieli.",
         "linksLabel": "Linki",
-        "linkGithub": "GitHub",
         "linkSteam": "Steam",
-        "linkIssues": "Issues",
         "linkLicense": "CC BY-NC 4.0",
-        "age": "18+"
+        "age": "18+",
+        "linkNexus": "GitHub"
     }
 }

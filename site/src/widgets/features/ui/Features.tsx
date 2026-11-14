@@ -30,7 +30,6 @@ const styles = stylex.create({
 const CARDS = [
   { icon: '🌐', titleKey: 'features.translateTitle', textKey: 'features.translateText', testId: 'features-card-translate' },
   { icon: '🎙', titleKey: 'features.voiceTitle', textKey: 'features.voiceText', testId: 'features-card-voice' },
-  { icon: '🎭', titleKey: 'features.emotionTitle', textKey: 'features.emotionText', testId: 'features-card-emotion' },
   { icon: '🗣', titleKey: 'features.voicesTitle', textKey: 'features.voicesText', testId: 'features-card-voices' },
 ] as const
 

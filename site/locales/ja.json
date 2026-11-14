@@ -6,13 +6,12 @@
     "header": {
         "brand": "TSSR · AI音声パック",
         "steam": "Steamページ",
-        "github": "GitHub",
         "langLabel": "言語",
         "themeLabel": "テーマ切替"
     },
     "hero": {
         "title": "The Survival of Sarah Rose — AI音声",
-        "subtitle": "非公式ファンパッチ：ゲームテキスト11言語、デモ範囲（最初の選択まで）を11言語すべてで完全音声化——感情表現付きのクローン音声77種。",
+        "subtitle": "非公式ファンパッチ：The Survival of Sarah Rose の完全翻訳と AI 音声。",
         "badgeTranslate": "11言語——RU完訳、他は最初の分岐までのデモ",
         "badgeVoice": "音声：デモは11言語で100%——各1,195行（RU: 1,397）",
         "badgeFormat": "Opus 24 kbps——1言語あたり15〜21MB（デモ）",
@@ -20,19 +19,16 @@
         "badgeAge": "18+ コンテンツ",
         "ctaSteam": "Steamで The Survival of Sarah Rose",
         "ctaDownload": "Nexus Mods でダウンロード",
-        "ctaGithub": "GitHubでソースを見る",
         "installHint": "Steamで購入したゲームが必要。無料、CC BY-NC 4.0。"
     },
     "features": {
         "title": "得られるもの",
-        "translateTitle": "11言語の翻訳",
-        "translateText": "ロシア語は物語全体の完訳。他の10言語はデモ範囲——最初の分岐までの導入をカバー。",
-        "voiceTitle": "AI音声（デモ、11言語）",
-        "voiceText": "VoxCPM2によるキャラクターごとのクローン音声——シーンに合わせた感情表現。デモ範囲（最初の選択まで）は11言語すべてで完全に音声化されています。",
-        "emotionTitle": "感情こもった朗読",
-        "emotionText": "各セリフに語り手の心持ちを——欲望、ささやき、皮肉。単調にはなりません。",
-        "voicesTitle": "75以上の声",
-        "voicesText": "サラ、語り手、オーウェル王、ケイト、トマス、ヴァルガ——他にも多数のキャラクター。"
+        "translateTitle": "翻訳",
+        "translateText": "ロシア語は全編。他の言語は冒頭（デモ範囲）。",
+        "voiceTitle": "AI 音声",
+        "voiceText": "キャラクターごとにクローン音声、シーンに合わせた感情表現。",
+        "voicesTitle": "生きている登場人物",
+        "voicesText": "サラ、ケイト、オーウェル王、トーマス、ヴァルガなど多数。"
     },
     "demo": {
         "title": "実際に聴いてみる",
@@ -41,48 +37,33 @@
         "pause": "一時停止：{{name}}",
         "phrases": [
             {
-                "speaker": "Sarah",
-                "text": "ここはいつもこんなに静かだ。妙な感じがする。"
+                "speaker": "サラ",
+                "text": "でも、マジでトーマス。パパの言うこと、少なくとも半分くらいは聞いてくれない？ただ我々のためを考えてるだけだよ"
             },
             {
-                "speaker": "Thomas",
-                "text": "サラ……僕は完璧な王のふりをしようと努めている。戦場ですら、自分の恐れを隠すんだ。"
+                "speaker": "ケイト",
+                "text": "今さら慎ましさを装い始めるのは、ちょっと遅いわね、サラ。"
             },
             {
-                "speaker": "Carolyn",
-                "text": "ああ、私の秘密をあなたにそんなに簡単に明かすものかしら？"
-            },
-            {
-                "speaker": "Sarah",
-                "text": "あなたが頼んだんじゃない、私が頼んでいるの……私と一緒にいて……お願い。この世界でこれほど真の友でいてくれた人は他にいない……友達以上に。"
-            },
-            {
-                "speaker": "Garret",
-                "text": "それに、その手に付いた血はどうだ？　あと数滴がどうしたというんだ。これまでに他者を殺したことがないと言うつもりじゃないだろうな？"
-            },
-            {
-                "speaker": "Sarah",
-                "text": "夜、ひとりで体を撫でるとき、私の妄想はいつも、あの逢瀬の思い出だけよ。"
-            },
-            {
-                "speaker": "Narrator",
-                "text": "彼が訪れると、彼女の心臓は胸の中で激しく打った。彼が姿を見せないと、涙があふれそうになるのを感じた。"
+                "speaker": "オーウェル王",
+                "text": "誰でも王になれる時代もある。だが、試練の時代こそが真の王を問う。そして君の兄は未だその準備ができていない。"
             }
         ]
     },
     "voice": {
         "title": "音声 — デモ完成",
-        "total": "デモ範囲（最初の選択まで）は11言語すべてで音声化済み：各1,195行、ロシア語は1,397行。",
         "ru": "ロシア語（RU）：完訳、デモ範囲を収録",
         "en": "英語（EN）：オリジナルテキスト、デモ範囲を収録",
         "missing": "音声がない行は無音で表示されます（エラーなし）。"
     },
     "install": {
         "title": "インストール",
-        "step1": "Nexus Mods からパックをダウンロードします：main（コア、必須）と必要な音声パック。main.7z をゲームフォルダ（TheSurvivalofSarahRose.exe がある場所）に展開し、mods/tssr-ai-voice-pack と environment.txt を作成します。音声パックも同じように展開します。Vortex の場合：ゲーム拡張を一度インストールし（nexusmods.com/site/mods/2600）、「Install from file」を使用します。",
-        "step2": "ゲームを起動してMOD設定（右上のバッジ）を開く——テキストは11言語、音声は選んだ言語に追従します",
-        "step3": "完了。初回起動は少し遅い——Ren'Pyがキャッシュを再構築します",
-        "note": "Steamで購入したゲームが必要。本パッチは非公式であり、開発元・発売元とは無関係です。"
+        "step1": "Nexus Mods でパックをダウンロード——まず main（必須）、次に必要な音声パック。",
+        "step2": "main.7z をゲームフォルダ（TheSurvivalofSarahRose.exe がある場所）に展開すると、mods/tssr-ai-voice-pack と environment.txt ができます。音声パックも同じ手順。",
+        "step3": "ゲームを起動し、MOD メニュー（右上のバッジ）で言語を選びます。",
+        "note": "Steam で購入したゲームが必要です。非公式ファンパッチで、開発元とは無関係です。",
+        "cta": "Nexus Mods で開く",
+        "vortexHint": "Vortex を使う場合：ゲーム拡張を一度入れ、「Install from file」を使用。"
     },
     "shots": {
         "title": "スクリーンショット",
@@ -106,15 +87,14 @@
         "q3": "ライセンスは？",
         "a3": "音声パックと翻訳はCC BY-NC 4.0：クレジット表記で共有・改変可、非営利のみ。",
         "q4": "協力するには？",
-        "a4": "GitHubでスターを付ける、プルリクエストを送る、イシューを開く。"
+        "a4": "Nexus Mods で endorse をお願いします——他のプレイヤーが見つけやすくなります。不具合や要望は Nexus の Mod ページへ。"
     },
     "footer": {
         "disclaimer": "非公式ファン作品です。オリジナルゲームの権利は各権利者に帰属します。",
         "linksLabel": "リンク",
-        "linkGithub": "GitHub",
         "linkSteam": "Steam",
-        "linkIssues": "Issues",
         "linkLicense": "CC BY-NC 4.0",
-        "age": "18+"
+        "age": "18+",
+        "linkNexus": "GitHub"
     }
 }

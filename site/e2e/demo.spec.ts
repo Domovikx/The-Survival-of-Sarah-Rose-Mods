@@ -66,11 +66,24 @@ test.describe("демо: связка текст + опус", () => {
 const row = (page: Page, i: number) => page.getByTestId(`demo-row-${i}`);
 
 test.describe("демо: плеер на странице", () => {
-  test("7 строк с текстами текущей локали (EN)", async ({ page }) => {
+  test("все фразы манифеста отрисованы с текстами текущей локали (EN)", async ({ page }) => {
     await page.goto(BASE);
     const en = loadLocale("en");
-    for (let i = 0; i < en.demo.phrases.length; i++) {
+    expect(manifest.phrases.length).toBeGreaterThan(0);
+    for (let i = 0; i < manifest.phrases.length; i++) {
       await expect(page.getByTestId(`demo-text-${i}`)).toHaveText(en.demo.phrases[i]!.text);
+    }
+  });
+
+  test("у каждой фразы чипы всех 11 языков озвучки", async ({ page }) => {
+    await page.goto(BASE);
+    const langs = JSON.parse(readFileSync(join(ROOT, "..", "config", "language-priority.json"), "utf8")).languages.map(
+        (l: { code: string }) => l.code,
+      ) as string[];
+    for (let i = 0; i < manifest.phrases.length; i++) {
+      for (const lang of langs) {
+        await expect(page.getByTestId(`demo-chip-${i}-${lang}`)).toBeVisible();
+      }
     }
   });
 
@@ -86,16 +99,29 @@ test.describe("демо: плеер на странице", () => {
     await expect(page.getByTestId("demo-play-0")).toHaveAttribute("data-playing", "true");
   });
 
-  test("язык без аудио-папки получает en-опус (фолбэк, не молчание)", async ({ page }) => {
-    // zh не в AUDIO_LANGS -> плеер обязан обратиться к demo/en/{uid}.opus
+  test("чип языка проигрывает ту же фразу на выбранном языке", async ({ page }) => {
     await page.goto(BASE);
-    await page.getByTestId("lang-switcher").click();
-    await page.getByTestId("lang-zh").click();
-    await expect(page.locator("html")).toHaveAttribute("lang", "zh");
     const uid = manifest.phrases[0]!.uid;
-    const req = page.waitForRequest(new RegExp(`demo/en/${uid}\\.opus`));
-    await page.getByTestId("demo-play-0").click();
-    await req;
+    const req = page.waitForRequest(new RegExp(`demo/ru/${uid}\\.opus`));
+    await page.getByTestId("demo-chip-0-ru").click();
+    const audioReq = await req;
+    const resp = await audioReq.response();
+    expect([200, 206], `аудио не отдалось: ${audioReq.url()}`).toContain(resp?.status());
+    await expect(page.getByTestId("demo-chip-0-ru")).toHaveAttribute("aria-pressed", "true");
     await expect(row(page, 0)).toBeVisible();
+  });
+
+  test("переключение чипа меняет язык той же фразы", async ({ page }) => {
+    await page.goto(BASE);
+    const uid = manifest.phrases[1]!.uid;
+    const enReq = page.waitForRequest(new RegExp(`demo/en/${uid}\\.opus`));
+    await page.getByTestId("demo-chip-1-en").click();
+    await enReq;
+    const deReq = page.waitForRequest(new RegExp(`demo/de/${uid}\\.opus`));
+    await page.getByTestId("demo-chip-1-de").click();
+    await deReq;
+    // В headless-браузере без аудиоустройства play() может отклониться и сбросить
+    // подсветку — проверяем сам факт запроса нужного языка (это и есть контракт чипа).
+    await expect(row(page, 1)).toBeVisible();
   });
 });
