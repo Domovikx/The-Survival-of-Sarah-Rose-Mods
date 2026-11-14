@@ -117173,7 +117173,7 @@ msgstr "这感觉很不公平，然而，大多数死去的年轻男子——其
 
 msgctxt "speaker:Narrator"
 msgid "The outcasts. The bastards. The beggars. All the refuse that the world had no use for."
-msgstr ""
+msgstr "被放逐者。私生子。乞丐。所有这个世界弃如敝履的渣滓。"
 
 msgctxt "speaker:Narrator"
 msgid "Just as women could sell their bodies, so did men sell theirs. Different ways, often towards the same end."
@@ -117213,7 +117213,7 @@ msgstr "莎拉听着朋友的话。"
 
 msgctxt "speaker:Ephraim"
 msgid "I guess its as good a place as any."
-msgstr ""
+msgstr "我想，这里跟别处也没什么两样。"
 
 msgctxt "speaker:Sarah"
 msgid "It's a lovely place."
@@ -117225,159 +117225,159 @@ msgstr "以法莲发出一声毫无喜悦的笑声。"
 
 msgctxt "speaker:Ephraim"
 msgid "Maybe."
-msgstr ""
+msgstr "也许吧。"
 
 msgctxt "speaker:Ephraim"
 msgid "What about Vaelen, he showing up?"
-msgstr ""
+msgstr "瓦伦呢，他露面了吗？"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah looked at the ground. Ephraim often asked, even though the answer was always the same. Vaelen did not attend these things anymore."
-msgstr ""
+msgstr "莎拉看着地面。以法莲经常问起，尽管答案始终如一：瓦伦不再参加这类场合了。"
 
 msgctxt "speaker:Narrator"
 msgid "Perhaps when the mercenary company had been smaller. Now, even the deaths of these young men were beneath his consideration."
-msgstr ""
+msgstr "或许在佣兵团规模尚小的时候是这样。如今，就连这些年轻男子的死亡也入不了他的眼。"
 
 msgctxt "speaker:Sarah"
 msgid "No, Ephraim. He's currently busy with-"
-msgstr ""
+msgstr "不，以法莲。他现在正忙着——"
 
 msgctxt "speaker:Narrator"
 msgid "Ephraim waved her hand, cutting her off."
-msgstr ""
+msgstr "以法莲挥了挥手，打断了她。"
 
 msgctxt "speaker:Ephraim"
 msgid "It's fine, Sarah. It's fine."
-msgstr ""
+msgstr "没事的，莎拉。没事的。"
 
 msgctxt "speaker:Narrator"
 msgid "She could see in his face that it was not."
-msgstr ""
+msgstr "从他的脸上她看得出来，情况并非如此。"
 
 msgctxt "speaker:Sarah"
 msgid "You're doing the best you can, Ephraim. Don't feel guilty."
-msgstr ""
+msgstr "你已经尽力了，以法莲。别感到内疚。"
 
 msgctxt "speaker:Narrator"
 msgid "She could feel his shoulders sagging."
-msgstr ""
+msgstr "她能感觉到他的肩膀耷拉下来。"
 
 msgctxt "speaker:Ephraim"
 msgid "I don't know what to do, Sarah. About any of this."
-msgstr ""
+msgstr "我不知道该怎么做，莎拉。关于这一切。"
 
 msgctxt "speaker:Ephraim"
 msgid "I throw out their ashes and then...that's it?"
-msgstr ""
+msgstr "我把骨灰撒了，然后……就完了？"
 
 msgctxt "speaker:Sarah"
 msgid "You throw them to the wind, same as any would have done for you if you'd been the one to die."
-msgstr ""
+msgstr "你把它们撒向风中，就像如果死的是你，任何人都会为你做的那样。"
 
 msgctxt "speaker:Sarah"
 msgid "That's all we can do really, Ephraim. Promise to do for each other what we wish we could do for ourselves."
-msgstr ""
+msgstr "这确实是我们唯一能做的，以法莲。承诺为彼此做那些我们希望能为自己做的事。"
 
 msgctxt "speaker:Sarah"
 msgid "And see through on that promise."
-msgstr ""
+msgstr "并且信守这个承诺。"
 
 msgctxt "speaker:Narrator"
 msgid "She watched as he wiped away a tear."
-msgstr ""
+msgstr "她看着他拭去泪水。"
 
 msgctxt "speaker:Ephraim"
 msgid "It should have been me."
-msgstr ""
+msgstr "本该是我。"
 
 msgctxt "speaker:Sarah"
 msgid "Don't say that."
-msgstr ""
+msgstr "别这么说。"
 
 msgctxt "speaker:Narrator"
 msgid "Ephraim suddenly spun around, his face angry."
-msgstr ""
+msgstr "以法莲突然转过身来，满脸怒容。"
 
 msgctxt "speaker:Ephraim"
 msgid "Why not? It's true!"
-msgstr ""
+msgstr "为什么不是？这是事实！"
 
 msgctxt "speaker:Ephraim"
 msgid "I never wanted any of this."
-msgstr ""
+msgstr "我从来就没想要过这一切。"
 
 msgctxt "speaker:Ephraim"
 msgid "Life's been pretty miserable for as long as I can remember. Just an endless grind, hoping to stay alive...for what?"
-msgstr ""
+msgstr "从我有记忆以来，生活就一直很悲惨。只是一场无尽的苦役，为了活下去……然后呢？"
 
 msgctxt "speaker:Ephraim"
 msgid "So what sense does it make that they die and I live on?"
-msgstr ""
+msgstr "那他们死了而我却活着，这有什么意义呢？"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah steeled herself."
-msgstr ""
+msgstr "莎拉下定了决心。"
 
 msgctxt "speaker:Sarah"
 msgid "Maybe it doesn't make any sense, Ephraim."
-msgstr ""
+msgstr "也许确实没什么道理，以法莲。"
 
 msgctxt "speaker:Narrator"
 msgid "She saw the tears begin to stream past his face."
-msgstr ""
+msgstr "她看见泪水开始顺着他的脸颊滑落。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah looked deep into his eyes and could see hints of the pain that Ephraim carried with him."
-msgstr ""
+msgstr "莎拉凝视着他的双眼，看到了以法莲内心深处那份痛苦的痕迹。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah watched as Ephraim turned his face away from her."
-msgstr ""
+msgstr "莎拉看着以法莲将脸转向一旁，避开了她的目光。"
 
 msgctxt "speaker:Sarah"
 msgid "I'm not saying you have to stay with the mercenary company."
-msgstr ""
+msgstr "我不是说你必须留在佣兵团里。"
 
 msgctxt "speaker:Sarah"
 msgid "But Ephraim, think about the life you still have left. The things you could do in their honour."
-msgstr ""
+msgstr "但以法莲，想想你还拥有的生命。想想你能为他们做些什么来纪念他们。"
 
 msgctxt "speaker:Sarah"
 msgid "To throw that all away, because of this...don't be so foolish, Ephraim."
-msgstr ""
+msgstr "为了这个就把一切都抛弃……别这么愚蠢，以法莲。"
 
 msgctxt "speaker:Narrator"
 msgid "Suddenly, she watched Ephraim run away from her."
-msgstr ""
+msgstr "突然，她看着以法莲从她身边跑开。"
 
 msgctxt "speaker:Narrator"
 msgid "Only a few steps, and then he threw out the ashes of the soldiers."
-msgstr ""
+msgstr "仅仅几步之遥，他便将士兵们的骨灰扬了出去。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah heard him scream as he threw the ashes, and slowly the scream faded as his tears broke through."
-msgstr ""
+msgstr "莎拉听见他抛洒骨灰时的嘶吼，那声音随着泪水决堤而渐渐消散。"
 
 msgctxt "speaker:Narrator"
 msgid "Fist after fist full of ashes, thrown to the wind."
-msgstr ""
+msgstr "一把又一把的骨灰，被抛向风中。"
 
 msgctxt "speaker:Narrator"
 msgid "She could see the ashes, lingering in the air for a moment, spreading."
-msgstr ""
+msgstr "她看见那些灰烬在空中短暂地停留，然后缓缓散开。"
 
 msgctxt "speaker:Narrator"
 msgid "Then, a gust of wind came on them and carried them away."
-msgstr ""
+msgstr "随后，一阵狂风袭来，将灰烬卷走。"
 
 msgctxt "speaker:Narrator"
 msgid "This desert was filled with the remains of the fallen. One more to the pile."
-msgstr ""
+msgstr "这片荒漠中堆满了陨落者的遗骸，如今又添了一具。"
 
 msgctxt "speaker:Ephraim"
 msgid "What do I do now, Sarah?"
-msgstr ""
+msgstr "莎拉，我现在该怎么办？"
 
 msgctxt "menu"
 msgid "Stay with the mercenary company"
@@ -117385,31 +117385,31 @@ msgstr "与雇佣兵公司同行"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah doubted if Ephraim could ever be a good soldier again, but she also knew he was valuable to her."
-msgstr ""
+msgstr "莎拉怀疑以法莲是否还能成为一名优秀的士兵，但她同时也知道他对她来说很有价值。"
 
 msgctxt "speaker:Sarah"
 msgid "Stay with us, Ephraim."
-msgstr ""
+msgstr "留下来陪我们吧，以法莲。"
 
 msgctxt "speaker:Sarah"
 msgid "We are your family, as good a family as any you're gonna find in this world."
-msgstr ""
+msgstr "我们就是你的家人，是你在世上能找到的最好的家人。"
 
 msgctxt "speaker:Sarah"
 msgid "Caleb needs you, most of all."
-msgstr ""
+msgstr "凯尔最需要你。"
 
 msgctxt "speaker:Narrator"
 msgid "She could see Ephraim slowly calm down."
-msgstr ""
+msgstr "她看到以法莲慢慢平静下来。"
 
 msgctxt "speaker:Ephraim"
 msgid "Yes...I think you're right."
-msgstr ""
+msgstr "是的……我想你是对的。"
 
 msgctxt "speaker:Narrator"
 msgid "Ephraim sat down on the edge of the hill, and Sarah joined him."
-msgstr ""
+msgstr "以法莲在山顶坐下，莎拉也在他身边坐了下来。"
 
 msgctxt "menu"
 msgid "Live your own life"
@@ -117417,1311 +117417,1311 @@ msgstr "过自己的生活"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah could see in Ephraim's eyes that he could never be a soldier again."
-msgstr ""
+msgstr "莎拉能从以法莲的眼中看出，他再也无法成为一名士兵了。"
 
 msgctxt "speaker:Sarah"
 msgid "Leave, Ephraim."
-msgstr ""
+msgstr "走吧，以法莲。"
 
 msgctxt "speaker:Sarah"
 msgid "Take what money you have and go away from here."
-msgstr ""
+msgstr "拿着你所有的钱，离开这里。"
 
 msgctxt "speaker:Sarah"
 msgid "Settle down in some small town or city and start over. Start a new life."
-msgstr ""
+msgstr "去某个小镇或城市安顿下来，重新开始。开启新生活。"
 
 msgctxt "speaker:Sarah"
 msgid "Maybe ask Caleb to come with you. I'm sure he'd give it all up in a heartbeat for you."
-msgstr ""
+msgstr "或许你可以问问凯尔要不要跟你一起走。我敢打赌，为了你，他肯定会毫不犹豫地放弃一切。"
 
 msgctxt "speaker:Sarah"
 msgid "Away from all this violence and killing."
-msgstr ""
+msgstr "远离这一切暴力和杀戮。"
 
 msgctxt "speaker:Ephraim"
 msgid "I think it's about time for me to leave."
-msgstr ""
+msgstr "我想，是时候该我离开了。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah stood up as well, standing next to him."
-msgstr ""
+msgstr "莎拉也站了起来，站在他身旁。"
 
 msgctxt "speaker:Sarah"
 msgid "So, will you stay?"
-msgstr ""
+msgstr "所以，你会留下来吗？"
 
 msgctxt "speaker:Ephraim"
 msgid "Yeah."
-msgstr ""
+msgstr "嗯。"
 
 msgctxt "speaker:Ephraim"
 msgid "This is the only life I've ever known."
-msgstr ""
+msgstr "这是我唯一熟悉的生活。"
 
 msgctxt "speaker:Ephraim"
 msgid "What else am I gonna do, be a farmer?"
-msgstr ""
+msgstr "我还能做什么呢，去当个农夫？"
 
 msgctxt "speaker:Narrator"
 msgid "He seemed to laugh at his own comment, though seemed equally sad that such a life was impossible to him."
-msgstr ""
+msgstr "他似乎为自己的评论苦笑了一下，但同样流露出一种悲伤——因为这样的生活对他而言遥不可及。"
 
 msgctxt "speaker:Sarah"
 msgid "No matter what, Ephraim, I want you to know that I'm happy you're going to stay."
-msgstr ""
+msgstr "无论如何，以法莲，我希望你知道，我很高兴你会留下来。"
 
 msgctxt "speaker:Sarah"
 msgid "You and Caleb were one of the first people to really welcome me when I was all alone in this world."
-msgstr ""
+msgstr "你和凯尔是当初我孤身一人时，真正接纳我的第一批人。"
 
 msgctxt "speaker:Sarah"
 msgid "I'll never forget that."
-msgstr ""
+msgstr "我永远不会忘记。"
 
 msgctxt "speaker:Ephraim"
 msgid "Thank you Sarah. It means a lot to hear you say that."
-msgstr ""
+msgstr "谢谢你，莎拉。听到你这么说，我很感动。"
 
 msgctxt "speaker:Ephraim"
 msgid "But I think it's time for me to go."
-msgstr ""
+msgstr "但我觉得，是时候该走了。"
 
 msgctxt "speaker:Sarah"
 msgid "What are you gonna do?"
-msgstr ""
+msgstr "你打算怎么办？"
 
 msgctxt "speaker:Ephraim"
 msgid "Drink till I can't walk anymore. I'm not getting through this day sober."
-msgstr ""
+msgstr "喝到走不动路为止。我没法清醒地熬过这一天。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah watched as Ephraim slowly made his way down the hill, heading back towards Bagrad."
-msgstr ""
+msgstr "莎拉看着以法莲缓缓走下山坡，朝巴格拉德的方向走去。"
 
 msgctxt "speaker:Narrator"
 msgid "Now alone, Sarah sat down against the husk of the dead tree."
-msgstr ""
+msgstr "如今孤身一人，莎拉靠在那棵枯死的树干上坐了下来。"
 
 msgctxt "speaker:Narrator"
 msgid "From atop the hill, looking out, the city seemed even more tragic than before."
-msgstr ""
+msgstr "从山顶俯瞰，这座城市看起来比之前更加凄凉。"
 
 msgctxt "speaker:Narrator"
 msgid "Then Sarah realized."
-msgstr ""
+msgstr "莎拉这才意识到。"
 
 msgctxt "speaker:Narrator"
 msgid "It was the silence. The city had gone silent."
-msgstr ""
+msgstr "是寂静。城市陷入了死寂。"
 
 msgctxt "speaker:Narrator"
 msgid "All the citizens were hiding in their homes. No workers. No markets. No life at all."
-msgstr ""
+msgstr "所有市民都躲在家里。没有工人，没有市场，毫无生气。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah began to wonder what all these soldiers had really died for."
-msgstr ""
+msgstr "莎拉开始怀疑，这些士兵究竟是为了什么而死的。"
 
 msgctxt "speaker:Narrator"
 msgid "It wasn't glory, that much she knew."
-msgstr ""
+msgstr "至于荣耀，她很清楚那并不是。"
 
 msgctxt "speaker:Narrator"
 msgid "By herself, she waited for tears that wouldn't come."
-msgstr ""
+msgstr "Она ждала слез, но они так и не пришли."
 
 msgctxt "speaker:Sarah"
 msgid "So, have you decided what you will do?"
-msgstr ""
+msgstr "那么，你决定好接下来要做什么了吗？"
 
 msgctxt "speaker:Ephraim"
 msgid "Yeah. I think you were right."
-msgstr ""
+msgstr "嗯，我想你是对的。"
 
 msgctxt "speaker:Ephraim"
 msgid "I'm going to have to find a way to live without all this...violence."
-msgstr ""
+msgstr "我得想办法，在没有这些暴力的情况下活下去。"
 
 msgctxt "speaker:Sarah"
 msgid "Whatever you decide to do, I know you'll make a success of it."
-msgstr ""
+msgstr "无论你决定做什么，我知道你一定会成功的。"
 
 msgctxt "speaker:Narrator"
 msgid "Ephraim shrugged his shoulders, as if he couldn't care what came of him next."
-msgstr ""
+msgstr "以法莲耸了耸肩，仿佛对他接下来的命运毫不在意。"
 
 msgctxt "speaker:Ephraim"
 msgid "If I ever get my own farm I'll be sure to send you a letter."
-msgstr ""
+msgstr "要是我将来有了自己的农场，我一定会写信给你。"
 
 msgctxt "speaker:Sarah"
 msgid "You, working a farm?"
-msgstr ""
+msgstr "你？去种地？"
 
 msgctxt "speaker:Ephraim"
 msgid "Hey, you never know. Who knows how the world works out."
-msgstr ""
+msgstr "嘿，世事难料。谁知道最后会怎样呢。"
 
 msgctxt "speaker:Ephraim"
 msgid "Maybe I'll go and ask Caleb if he feels like joining me, I'm sure he can work a plough."
-msgstr ""
+msgstr "也许我会去问问凯尔，看他有没有兴趣加入我，我相信他肯定会使唤犁。"
 
 msgctxt "speaker:Narrator"
 msgid "The next few days had passed in a blur."
-msgstr ""
+msgstr "接下来的几天在恍惚中过去了。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah passed her days working, her evenings drinking."
-msgstr ""
+msgstr "莎拉白天忙于劳作，夜晚则借酒消愁。"
 
 msgctxt "speaker:Narrator"
 msgid "She didn't want to stand still for too long, fearing her thoughts would catch up to her."
-msgstr ""
+msgstr "她不想长时间停滞不前，生怕思绪会追上她。"
 
 msgctxt "speaker:Narrator"
 msgid "Just as had been predicted, the loss of the Mythran prince had thrown the Mythran camp into disarray."
-msgstr ""
+msgstr "正如所预料的那样，米斯拉王子的损失使米斯拉营地陷入了一片混乱。"
 
 msgctxt "speaker:Narrator"
 msgid "With the officers more occupied with playing politics, the ordinary Mythran soldiers soon grew disorganized and bored."
-msgstr ""
+msgstr "军官们忙于政治斗争，普通的米瑟兰士兵很快变得杂乱无章且百无聊赖。"
 
 msgctxt "speaker:Narrator"
 msgid "Bored soldiers."
-msgstr ""
+msgstr "无聊的士兵。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah had been soldiering for long enough to know that there were few things more dangerous than that."
-msgstr ""
+msgstr "莎拉当兵这么久，早就知道没有什么比这更危险的了。"
 
 msgctxt "speaker:Narrator"
 msgid "Some soldiers were kind and drew no pleasure from looting or raping. Some soldiers were wicked and seemed to love nothing else."
-msgstr ""
+msgstr "有些士兵心地善良，从掠夺或强奸中得不到任何乐趣；而有些士兵则邪恶透顶，似乎除了这些恶行外别无所爱。"
 
 msgctxt "speaker:Narrator"
 msgid "But bored soldiers, Sarah had learned, were the worst of all."
-msgstr ""
+msgstr "但莎拉明白，无聊的士兵才是所有士兵中最糟糕的。"
 
 msgctxt "speaker:Narrator"
 msgid "They tortured the people they dominated, not for any strategy, or even for any depraved joy, but only to pass the time."
-msgstr ""
+msgstr "他们折磨被征服者，并非出于任何战略考量，甚至也不是为了某种堕落的快感，而仅仅是为了打发时间。"
 
 msgctxt "speaker:Narrator"
 msgid "Passing through the main square, Sarah had found a young boy, face down in a pool of his own blood."
-msgstr ""
+msgstr "穿过主广场时，莎拉发现了一个小男孩，脸朝下趴在一滩自己的血泊中。"
 
 msgctxt "speaker:Narrator"
 msgid "A crossbow bolt pierced through his back."
-msgstr ""
+msgstr "弩箭穿透了他的后背。"
 
 msgctxt "speaker:Narrator"
 msgid "The blood under him had already turned dark red. He'd been here for a while."
-msgstr ""
+msgstr "他身下的血已经变成了暗红色。他已经躺在这里有一会儿了。"
 
 msgctxt "speaker:Narrator"
 msgid "She knew nobody would pay a price for this."
-msgstr ""
+msgstr "她知道没人会为此付出代价。"
 
 msgctxt "speaker:Narrator"
 msgid "Life could turn so very cheap."
-msgstr ""
+msgstr "生命竟可以如此廉价。"
 
 msgctxt "speaker:Narrator"
 msgid "Kate came running up to her."
-msgstr ""
+msgstr "凯特跑了过来。"
 
 msgctxt "speaker:Kate"
 msgid "Poor kid. You think it was one of ours that did it?"
-msgstr ""
+msgstr "可怜的孩子。你觉得是我们当中谁干的？"
 
 msgctxt "speaker:Sarah"
 msgid "Would it make a difference?"
-msgstr ""
+msgstr "这会有区别吗？"
 
 msgctxt "speaker:Narrator"
 msgid "Kate didn't answer her question."
-msgstr ""
+msgstr "凯特没有回答她的问题。"
 
 msgctxt "speaker:Kate"
 msgid "Well, I have some good news in case you need cheering up."
-msgstr ""
+msgstr "好吧，我有个好消息，也许能让你振作起来。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah turned to face Kate."
-msgstr ""
+msgstr "莎拉转过身来面对凯特。"
 
 msgctxt "speaker:Kate"
 msgid "Well, those supplies you asked for, I managed to find a guy that actually had most of what we needed."
-msgstr ""
+msgstr "好吧，你之前要的那些物资，我好不容易找到个人，他手里正好有我们大部分需要的东西。"
 
 msgctxt "speaker:Sarah"
 msgid "All of it?"
-msgstr ""
+msgstr "全部？"
 
 msgctxt "speaker:Kate"
 msgid "No, not all of it, but more than I think we really had any hope of finding."
-msgstr ""
+msgstr "不，不是全部，但比我原本以为能找到的要多得多。"
 
 msgctxt "speaker:Sarah"
 msgid "Who was it?"
-msgstr ""
+msgstr "是谁？"
 
 msgctxt "speaker:Kate"
 msgid "A merchant, if you'd believe it. I thought they'd killed the last of 'em by now."
-msgstr ""
+msgstr "商人，你信吗？我还以为他们早就把最后一个也杀了呢。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah understood what Kate meant."
-msgstr ""
+msgstr "莎拉明白了凯特的意思。"
 
 msgctxt "speaker:Narrator"
 msgid "Being rich meant good living most of the time, but when a city was being sacked, it was the last thing in the world you wanted to be."
-msgstr ""
+msgstr "富有通常意味着优渥的生活，但在城市被洗劫时，这却是你最不想拥有的处境。"
 
 msgctxt "speaker:Narrator"
 msgid "Nobles were the first to go, but merchants were soon to follow."
-msgstr ""
+msgstr "贵族们最先遭殃，但商人们也紧随其后。"
 
 msgctxt "speaker:Kate"
 msgid "He had a basement full of foodstuffs, water, wine, just about the whole list."
-msgstr ""
+msgstr "他地下室里堆满了食品、水和葡萄酒，清单上的东西几乎全有。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah nodded as Kate continued to list all the items they needed to set out."
-msgstr ""
+msgstr "莎拉点点头，凯特继续列出他们出发所需的所有物品。"
 
 msgctxt "speaker:Sarah"
 msgid "Right, and what did he want for it?"
-msgstr ""
+msgstr "好吧，他想要多少报酬？"
 
 msgctxt "speaker:Kate"
 msgid "Well, he asked for about one-tenth of the value."
-msgstr ""
+msgstr "嗯，他要的价钱大约是总价值的十分之一。"
 
 msgctxt "speaker:Sarah"
 msgid "That little?"
-msgstr ""
+msgstr "这么少？"
 
 msgctxt "speaker:Kate"
 msgid "Honestly, I think he's just happy to get rid of it. And even more honestly, we really don't need to pay him."
-msgstr ""
+msgstr "老实说，我觉得他只是高兴能甩掉这东西。更坦白点讲，我们真的没必要付钱给他。"
 
 msgctxt "speaker:Kate"
 msgid "Well...we can just take the stuff."
-msgstr ""
+msgstr "那……我们直接把东西拿走就行了。"
 
 msgctxt "speaker:Sarah"
 msgid "Do you know where it is?"
-msgstr ""
+msgstr "你知道它在哪里吗？"
 
 msgctxt "speaker:Kate"
 msgid "No, but he doesn't look too tough. Get a few boys to pull out his nails, I doubt it will be long before he's begging us to show where he keeps the stuff."
-msgstr ""
+msgstr "不知道，但他看起来也不是什么硬茬。找几个小子去拔他的指甲，我敢打赌用不了多久他就会求着我们告诉他东西藏哪儿了。"
 
 msgctxt "speaker:Narrator"
 msgid "Despite everything she'd seen, she could never get used to the casual violence that Kate so easily embraced."
-msgstr ""
+msgstr "尽管目睹了一切，她依然无法习惯凯特如此轻易地拥抱那种随意的暴力。"
 
 msgctxt "speaker:Narrator"
 msgid "What had happened to the kind girl that she played in the forest with? Had this always been there, or had the world carved it into her?"
-msgstr ""
+msgstr "那个曾在森林里与她一起玩耍的善良女孩去哪儿了？这种冷酷一直存在于她心中，还是世界将她雕琢成了如今这副模样？"
 
 msgctxt "speaker:Sarah"
 msgid "Pay the man his price. It saves us the effort to go look for it."
-msgstr ""
+msgstr "付给他约定的价钱吧。这样我们就不用费心去找了。"
 
 msgctxt "speaker:Sarah"
 msgid "Besides, they're lucky to find anything at all left in this city. Soon, even the crumbs will be gone."
-msgstr ""
+msgstr "再说，他们能在这座城市里找到任何残留的东西都算是运气了。很快，连面包屑都会消失殆尽。"
 
 msgctxt "speaker:Kate"
 msgid "Sure, on your orders."
-msgstr ""
+msgstr "好的，听您的吩咐。"
 
 msgctxt "speaker:Kate"
 msgid "Best I go pay the fella then, before he pawns it off to someone else."
-msgstr ""
+msgstr "那我最好赶紧去付钱给那家伙，免得他转手卖给别人。"
 
 msgctxt "speaker:Narrator"
 msgid "Kate saluted and took off."
-msgstr ""
+msgstr "凯特敬礼后便离开了。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah continued working, instructing her own officers on the work that still needed to be done."
-msgstr ""
+msgstr "莎拉继续工作着，指导她手下的军官们完成尚未处理的事务。"
 
 msgctxt "speaker:Narrator"
 msgid "It was only later in the day when Vaelen finally found her."
-msgstr ""
+msgstr "直到当天晚些时候，瓦伦才终于找到了她。"
 
 msgctxt "speaker:Vaelen"
 msgid "Are we ready?"
-msgstr ""
+msgstr "准备好了吗？"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah tried to do the calculus in her mind."
-msgstr ""
+msgstr "莎拉试图在脑海中计算。"
 
 msgctxt "speaker:Sarah"
 msgid "Just about, I recon."
-msgstr ""
+msgstr "差不多吧，我想。"
 
 msgctxt "speaker:Vaelen"
 msgid "Good."
-msgstr ""
+msgstr "很好。"
 
 msgctxt "speaker:Vaelen"
 msgid "I want us to set out tomorrow."
-msgstr ""
+msgstr "我希望我们明天出发。"
 
 msgctxt "speaker:Sarah"
 msgid "We've got almost of the supplies, but we're still incomplete."
-msgstr ""
+msgstr "物资几乎都备齐了，但还差一点。"
 
 msgctxt "speaker:Vaelen"
 msgid "The city is bone dry. I doubt we'll get much more out of it."
-msgstr ""
+msgstr "城里已经滴水不剩了。我怀疑我们还能从这儿得到更多补给。"
 
 msgctxt "speaker:Vaelen"
 msgid "No, we need to leave tomorrow."
-msgstr ""
+msgstr "不，我们明天必须出发。"
 
 msgctxt "speaker:Sarah"
 msgid "Sure, we might need to ration a little bit, but we should easily make it back to Lethram. Once we get there, we can stock back up properly."
-msgstr ""
+msgstr "当然，我们可能需要稍微节约一点，但我们应该能轻松回到莱瑟拉姆。一旦到了那里，我们就可以好好补充物资了。"
 
 msgctxt "speaker:Vaelen"
 msgid "No, not Lethram."
-msgstr ""
+msgstr "不，不是去莱瑟拉姆。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah looked at him in confusion."
-msgstr ""
+msgstr "莎拉困惑地看着他。"
 
 msgctxt "speaker:Sarah"
 msgid "If not Lethram, then where?"
-msgstr ""
+msgstr "如果不是莱瑟拉姆，那该去哪里？"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah had studied the maps of the world well enough. This was the furthest campaign she'd ever undertaken this far east."
-msgstr ""
+msgstr "莎拉对世界地图的研究已经相当深入。这是她向东推进得最远的一次战役。"
 
 msgctxt "speaker:Narrator"
 msgid "It was also the end of the world, or as close as one could get."
-msgstr ""
+msgstr "这里也是世界的尽头，或者说是最接近世界尽头之处。"
 
 msgctxt "speaker:Narrator"
 msgid "Back west were the hinterlands and Lethram, the civilized world. It was the only direction they could go."
-msgstr ""
+msgstr "往西是内陆地区和莱瑟拉姆，也就是文明世界。那是他们唯一能去的方向。"
 
 msgctxt "speaker:Vaelen"
 msgid "We go to Nauyziri."
-msgstr ""
+msgstr "我们去瑙伊齐里。"
 
 msgctxt "speaker:Narrator"
 msgid "Vaelen was quiet, as if this was supposed to mean something to Sarah."
-msgstr ""
+msgstr "瓦伦沉默不语，仿佛这名字对莎拉来说本该意味着什么。"
 
 msgctxt "speaker:Sarah"
 msgid "I...Nauyziri? What are you talking about?"
-msgstr ""
+msgstr "我……瑙伊齐里？你在说什么？"
 
 msgctxt "speaker:Narrator"
 msgid "Vaelen leaned forward and sprawled out a map in front of Sarah."
-msgstr ""
+msgstr "瓦伦俯身向前，在莎拉面前铺开一张地图。"
 
 msgctxt "speaker:Narrator"
 msgid "It was an older map, not the one they had used before in planning the campaign."
-msgstr ""
+msgstr "这是一张旧地图，并非他们此前在策划战役时所用的那张。"
 
 msgctxt "speaker:Narrator"
 msgid "Located in the center was Bagrad. All around it, cities and towns, too many to count."
-msgstr ""
+msgstr "位于中心的是巴格拉德。其周围遍布城市与城镇，多得数不清。"
 
 msgctxt "speaker:Vaelen"
 msgid "An old map of Bagrad, from back when it was still an empire."
-msgstr ""
+msgstr "一张巴格拉德的老地图，来自它仍是一个帝国时的年代。"
 
 msgctxt "speaker:Narrator"
 msgid "Vaelen placed his finger on a small dot on the map, further east than even Bagrad."
-msgstr ""
+msgstr "瓦伦将手指按在地图上一个比巴格拉德还要偏东的小点上。"
 
 msgctxt "speaker:Narrator"
 msgid "Under the dot, it read Nauyziri."
-msgstr ""
+msgstr "小点下方标注着瑙伊齐里。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah looked up from the map, back at Vaelen."
-msgstr ""
+msgstr "莎拉从地图上抬起头，看向瓦伦。"
 
 msgctxt "speaker:Sarah"
 msgid "This map has to be centuries old, at the least."
-msgstr ""
+msgstr "这张地图至少有几百年历史了。"
 
 msgctxt "speaker:Sarah"
 msgid "Most every town or city on this map is either abandoned or swallowed up by the desert."
-msgstr ""
+msgstr "这地图上的城镇或城市，绝大多数要么已被废弃，要么被沙漠吞噬。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah tapped the dot that indicated Nauyziri."
-msgstr ""
+msgstr "莎拉用手指点了点标注着瑙伊齐里的位置。"
 
 msgctxt "speaker:Sarah"
 msgid "This, it's further out even than those places."
-msgstr ""
+msgstr "这里比那些地方还要偏远。"
 
 msgctxt "speaker:Sarah"
 msgid "Bagrad is the end of the line. There is nothing beyond this point."
-msgstr ""
+msgstr "巴格拉德就是尽头，过了这儿就什么都没有了。"
 
 msgctxt "speaker:Vaelen"
 msgid "See, that's where you're wrong, Sarah."
-msgstr ""
+msgstr "看，莎拉，你这就错了。"
 
 msgctxt "speaker:Narrator"
 msgid "He tapped the map again."
-msgstr ""
+msgstr "他又敲了敲地图。"
 
 msgctxt "speaker:Vaelen"
 msgid "The town of Nauyziri is out there."
-msgstr ""
+msgstr "诺伊齐里镇就在那边。"
 
 msgctxt "speaker:Sarah"
 msgid "Yes, dead and forgotten, what does that have to do with us?"
-msgstr ""
+msgstr "是啊，早已死绝并被遗忘，这跟我们有什么关系？"
 
 msgctxt "speaker:Narrator"
 msgid "Vaelen rolled the map up again."
-msgstr ""
+msgstr "瓦伦再次将地图卷了起来。"
 
 msgctxt "speaker:Vaelen"
 msgid "We need to go there. A secret mission."
-msgstr ""
+msgstr "我们必须去那里。这是一次秘密任务。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah eyed him, wondering if there was any hint at what he was playing at on his face."
-msgstr ""
+msgstr "莎拉打量着他，想从他的脸上看出他到底在打什么算盘。"
 
 msgctxt "speaker:Narrator"
 msgid "His face was as stoic as it always was."
-msgstr ""
+msgstr "他的脸一如既往地冷峻。"
 
 msgctxt "speaker:Sarah"
 msgid "A secret mission?"
-msgstr ""
+msgstr "秘密任务？"
 
 msgctxt "speaker:Vaelen"
 msgid "On behalf of the Mythran empire."
-msgstr ""
+msgstr "代表米斯拉帝国。"
 
 msgctxt "speaker:Vaelen"
 msgid "They used this campaign on Bagrad as a cover for their mission, but the real goal was to reach the city of Nauyziri."
-msgstr ""
+msgstr "他们利用对巴格拉德的这场战役作为掩护，但真正的目标是抵达瑙伊齐里城。"
 
 msgctxt "speaker:Vaelen"
 msgid "A smaller Mythran unit had gone ahead, evading Bagrad, and moving towards Nauyziri."
-msgstr ""
+msgstr "一支规模较小的米瑟兰部队已经先行出发，避开了巴格拉德，正向瑙齐里进发。"
 
 msgctxt "speaker:Vaelen"
 msgid "We are to link up with them there, provide support."
-msgstr ""
+msgstr "我们要在那里与他们汇合，提供支援。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah listened as he explained, as if all of this was obvious, rather than madness."
-msgstr ""
+msgstr "莎拉听着他的解释，仿佛这一切都是显而易见的常识，而非疯狂之举。"
 
 msgctxt "speaker:Sarah"
 msgid "Vaelen..."
-msgstr ""
+msgstr "瓦伦……"
 
 msgctxt "speaker:Sarah"
 msgid "Why is this the first I'm hearing of this?"
-msgstr ""
+msgstr "为什么这是第一次听你说起这事？"
 
 msgctxt "speaker:Narrator"
 msgid "Vaelen scratched his neck, trying to ward off the unrelenting heat of the desert."
-msgstr ""
+msgstr "瓦伦挠了挠脖子，试图驱散沙漠中挥之不去的酷热。"
 
 msgctxt "speaker:Vaelen"
 msgid "I was sworn to maintain complete secrecy, even from my own commanders. I'm telling you, first chance I had."
-msgstr ""
+msgstr "我立誓要严守秘密，连我的指挥官们也不能透露。我是说，一旦有机会我就告诉你。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah leaned back, trying to process it."
-msgstr ""
+msgstr "莎拉向后靠去，试图消化这些信息。"
 
 msgctxt "speaker:Sarah"
 msgid "I don't think this is wise."
-msgstr ""
+msgstr "我觉得这不太明智。"
 
 msgctxt "speaker:Sarah"
 msgid "We're low on supplies as it is."
-msgstr ""
+msgstr "我们的补给本来就所剩无几。"
 
 msgctxt "speaker:Sarah"
 msgid "Getting back to Lethram, we can manage, but heading deeper into the desert..."
-msgstr ""
+msgstr "回到莱瑟拉姆，我们还能应付，但要是深入沙漠腹地……"
 
 msgctxt "speaker:Sarah"
 msgid "Vaelen, if we get off course, we could die out there."
-msgstr ""
+msgstr "瓦伦，如果我们偏离航线，我们可能会死在那里。"
 
 msgctxt "speaker:Vaelen"
 msgid "No, the Mythran advance unit is well supplied. We link up with them and resupply, after that we are in fact more prepared to leave the desert."
-msgstr ""
+msgstr "不，米斯拉的先遣部队补给充足。我们与他们汇合并补充物资后，实际上会更有准备离开沙漠。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah remembered the map from her mind."
-msgstr ""
+msgstr "莎拉在脑海中回想起了那张地图。"
 
 msgctxt "speaker:Narrator"
 msgid "The town was east. Far east."
-msgstr ""
+msgstr "城镇在东边。很远的东边。"
 
 msgctxt "speaker:Narrator"
 msgid "She wasn't even sure if they could make it there with what they had."
-msgstr ""
+msgstr "她甚至不确定凭现有的物资能否抵达那里。"
 
 msgctxt "speaker:Narrator"
 msgid "If they fell short, or the Mythran's didn't have extra supplies..."
-msgstr ""
+msgstr "如果他们没能到达，或者米斯拉人没有多余的补给……"
 
 msgctxt "speaker:Sarah"
 msgid "This is dangerous."
-msgstr ""
+msgstr "这很危险。"
 
 msgctxt "speaker:Vaelen"
 msgid "Think of it what you will, Sarah, but I am still the leader of this company."
-msgstr ""
+msgstr "你怎么想都行，莎拉，但我仍然是这支队伍的领导。"
 
 msgctxt "speaker:Vaelen"
 msgid "And I wasn't asking your advice. I was giving you an order."
-msgstr ""
+msgstr "我也没在征求你的建议。我是在给你下达命令。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah frowned. He was right that it was ultimately he who made the decisions."
-msgstr ""
+msgstr "莎拉皱起了眉头。他确实有权做出最终决定。"
 
 msgctxt "speaker:Sarah"
 msgid "Well, you're still gonna get it."
-msgstr ""
+msgstr "哼，你照样得受着。"
 
 msgctxt "speaker:Vaelen"
 msgid "And that's why you're valuable, Sarah, you don't kiss my ass like most."
-msgstr ""
+msgstr "这就是你珍贵的原因，莎拉，你不会像大多数人那样舔我的屁股。"
 
 msgctxt "speaker:Vaelen"
 msgid "But on this issue, I won't budge. We set out for Nauyziri."
-msgstr ""
+msgstr "但在这件事上，我不会让步。我们出发去瑙伊齐里。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah nodded, still hestitant."
-msgstr ""
+msgstr "莎拉点了点头，但仍有些犹豫。"
 
 msgctxt "speaker:Sarah"
 msgid "Well, like you said, on your command these men will march into hell, so what is a little detour into the desert?"
-msgstr ""
+msgstr "好吧，就像你说的，在你的命令下，这些人将踏入地狱，那么去沙漠绕个小弯又算得了什么呢？"
 
 msgctxt "speaker:Vaelen"
 msgid "Excellent. I knew you'd understand."
-msgstr ""
+msgstr "很好。我就知道你会明白的。"
 
 msgctxt "speaker:Vaelen"
 msgid "Go and make the final preparations, we leave early at dawn next day."
-msgstr ""
+msgstr "去做好最后的准备，我们明天黎明出发。"
 
 msgctxt "speaker:Narrator"
 msgid "And with that, the matter had been settled."
-msgstr ""
+msgstr "至此，此事已定。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah looked at the men carrying out the work, filling up the carts with supplies."
-msgstr ""
+msgstr "莎拉看着那些忙着干活、往车上装载补给品的男人们。"
 
 msgctxt "speaker:Narrator"
 msgid "She would have a long day ahead of her."
-msgstr ""
+msgstr "接下来她将面临漫长的一天。"
 
 msgctxt "speaker:Narrator"
 msgid "Just as they had been instructed, they set out early the next day."
-msgstr ""
+msgstr "正如他们被指示的那样，他们在第二天一早便出发了。"
 
 msgctxt "speaker:Narrator"
 msgid "The Mythran soldiers had looked on with surprise as the mercenary company had rallied the wagons and set out past the great city gates of Bagrad."
-msgstr ""
+msgstr "米斯拉士兵们惊讶地看着佣兵公司集结马车，从巴格拉德巨大的城门出发。"
 
 msgctxt "speaker:Narrator"
 msgid "They had looked on with even greater surprise when they saw the mercenaries leave, not through the western gates for Lethram, but the long abandoned eastern gates to nowhere."
-msgstr ""
+msgstr "当他们看到佣兵们没有走通往莱瑟拉姆的西城门，而是走向早已荒废、通向虚无的东城门时，他们更是惊讶不已。"
 
 msgctxt "speaker:Narrator"
 msgid "Some warnings, some jeers, some taunts. Sarah heard them hurl it all at them."
-msgstr ""
+msgstr "有警告，有嘲弄，还有讥讽。莎拉听到他们把这些都扔给了他们。"
 
 msgctxt "speaker:Narrator"
 msgid "Mad, that's what they called them above all."
-msgstr ""
+msgstr "发疯，这才是他们最主要的称呼。"
 
 msgctxt "speaker:Narrator"
 msgid "But Vaelen's men were above all loyal to their leader."
-msgstr ""
+msgstr "但瓦伦的部下首要的是忠于他们的领袖。"
 
 msgctxt "speaker:Narrator"
 msgid "He had seen them through more than a few encounters that at first had appeared mad, and he had always guided them to victory."
-msgstr ""
+msgstr "他见过他们经历不止一次起初看似疯狂的遭遇，而他总是引导他们走向胜利。"
 
 msgctxt "speaker:Narrator"
 msgid "So, they thought, what of it then? One more mad gamble to add to the others."
-msgstr ""
+msgstr "于是他们心想，那又怎样呢？不过是众多疯狂赌注中的又一个罢了。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah rode one of the many wagons, near the front but now with Vaelen."
-msgstr ""
+msgstr "莎拉坐在众多马车中的一辆里，位置靠前，如今瓦伦也在其中。"
 
 msgctxt "speaker:Narrator"
 msgid "He had offered her, but Sarah had politely refused."
-msgstr ""
+msgstr "他向她提出过，但莎拉礼貌地拒绝了。"
 
 msgctxt "speaker:Narrator"
 msgid "She preferred to ride with the other soldiers, her own officers."
-msgstr ""
+msgstr "她更愿意和其他士兵以及自己的军官们一起乘车。"
 
 msgctxt "speaker:Narrator"
 msgid "Some commanders had a habit of isolating themselves, existing only in a reality made up out of papers and reports drafted by their underlings."
-msgstr ""
+msgstr "有些指挥官有把自己孤立起来的习惯，只活在下属起草的文件和报告所构建的现实里。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah was eager to avoid such a fate."
-msgstr ""
+msgstr "莎拉急切地想要避免这样的命运。"
 
 msgctxt "speaker:Narrator"
 msgid "She had already fooled herself once, believing that being born to a safe life meant she would remain safe."
-msgstr ""
+msgstr "她曾自欺欺人过一次，以为生来就拥有安稳的人生，就意味着自己将永远安全。"
 
 msgctxt "speaker:Narrator"
 msgid "But deep down, Sarah also knew there was more to it."
-msgstr ""
+msgstr "但内心深处，莎拉也明白事情没那么简单。"
 
 msgctxt "speaker:Narrator"
 msgid "Vaelen's behavior ever since Bagrad had troubled her."
-msgstr ""
+msgstr "瓦伦自巴格拉德出现以来的行为一直让她困扰。"
 
 msgctxt "speaker:Narrator"
 msgid "He had always been a man who walked his own path and made the world bend to it, but he seemed even more eccentric than usual."
-msgstr ""
+msgstr "他向来是个走自己路、让世界为他弯曲的人，但此刻的他似乎比平时更加古怪。"
 
 msgctxt "speaker:Narrator"
 msgid "Then there was also the matter of the stone."
-msgstr ""
+msgstr "此外，还有那块石头的事。"
 
 msgctxt "speaker:Narrator"
 msgid "A fate stone, the spirit had called it."
-msgstr ""
+msgstr "«камень судьбы», — назвала его дух."
 
 msgctxt "speaker:Narrator"
 msgid "She didn't see much of it, but she could see how Vaelen clutched the stone, underneath his clothing."
-msgstr ""
+msgstr "这东西她没怎么看清，但她能看出瓦伦在衣服底下紧紧攥着那块石头。"
 
 msgctxt "speaker:Narrator"
 msgid "Having obtained the thing, the thing now seemed to have obtained him."
-msgstr ""
+msgstr "获得那东西之后，那东西反倒似乎掌控了他。"
 
 msgctxt "speaker:Narrator"
 msgid "And finally, there was the matter of the spirit's prophecy..."
-msgstr ""
+msgstr "最后，还有那个精灵的预言……"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah was not one who gave much value to witchcraft of any kind, but the creature seemed too serious in how it had spoken."
-msgstr ""
+msgstr "莎拉向来不看重任何形式的巫术，但这生物说话时的神情太过严肃。"
 
 msgctxt "speaker:Narrator"
 msgid "Warnings of the future."
-msgstr ""
+msgstr "对未来的警告。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah shook her head, clearing her mind from the nonesense."
-msgstr ""
+msgstr "莎拉摇了摇头，将那些无稽之谈从脑海中驱散。"
 
 msgctxt "speaker:Narrator"
 msgid "She had enough troubles in her life as it was, she didn't need to spend more worrying about magics and spirits."
-msgstr ""
+msgstr "她生活中的麻烦已经够多了，实在没必要再为那些魔法和鬼怪之事忧心忡忡。"
 
 msgctxt "speaker:Narrator"
 msgid "Suddenly, the covering from the wagon parted and a figure emerged."
-msgstr ""
+msgstr "突然，篷车的遮盖物被掀开，一个身影从中显现出来。"
 
 msgctxt "speaker:Kate"
 msgid "You hanging in there?"
-msgstr ""
+msgstr "你还撑得住吗？"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah looked out ahead over the road."
-msgstr ""
+msgstr "莎拉望向前方的道路。"
 
 msgctxt "speaker:Narrator"
 msgid "She could trace the curves and bends by following how the carts and wagons ahead of her twisted and turned."
-msgstr ""
+msgstr "她可以通过观察前方马车和货车的蜿蜒曲折，来辨认道路的轮廓与弯道。"
 
 msgctxt "speaker:Sarah"
 msgid "It's only been a few hours since we've left."
-msgstr ""
+msgstr "我们离开才几个小时而已。"
 
 msgctxt "speaker:Kate"
 msgid "Yeah, but still."
-msgstr ""
+msgstr "是啊，不过还是……"
 
 msgctxt "speaker:Narrator"
 msgid "Kate gestured towards the sky."
-msgstr ""
+msgstr "凯特向天空指了指。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah didn't need to look where she was pointing to know that she was pointing at the sun."
-msgstr ""
+msgstr "莎拉甚至不需要顺着凯特手指的方向看去，就知道她指的是太阳。"
 
 msgctxt "speaker:Narrator"
 msgid "The sun."
-msgstr ""
+msgstr "太阳。"
 
 msgctxt "speaker:Narrator"
 msgid "It was an odd thing, Sarah had come to realize."
-msgstr ""
+msgstr "莎拉后来意识到，这真是一件怪事。"
 
 msgctxt "speaker:Narrator"
 msgid "All her life she'd known the sun was there, but only since coming to Bagrad had she become so intently aware of its existence."
-msgstr ""
+msgstr "她的一生中都知道太阳在那里，但直到来到巴格拉德，她才如此专注地意识到它的存在。"
 
 msgctxt "speaker:Narrator"
 msgid "Here, in the great deserts of Bagrad, the sun existed in its most intense state."
-msgstr ""
+msgstr "在这里，在巴格拉德广袤的沙漠中，太阳以其最炽烈的形态存在着。"
 
 msgctxt "speaker:Narrator"
 msgid "It dominated the sky, punished anyone who so much as glanced at it, and weighed them down with a constant oppressive heat."
-msgstr ""
+msgstr "它主宰着天空，惩罚任何敢于瞥视它的人，并用持续不断的压抑热量将他们压得喘不过气来。"
 
 msgctxt "speaker:Narrator"
 msgid "When it fell beyond the horizon, it cast rays of light so violent to the eyes that one had to be careful not to be struck blind."
-msgstr ""
+msgstr "当它沉入地平线之下，消失不见时，它射出的光线强烈得刺眼，让人不得不小心，以免被晃瞎。"
 
 msgctxt "speaker:Narrator"
 msgid "And even when it fell over the horizon, dissapearing, it reminded everyone of its absence by withdrawing its heat altogether."
-msgstr ""
+msgstr "即使它沉入地平线之下，消失不见，它也会通过完全撤去热量来提醒所有人它的缺席。"
 
 msgctxt "speaker:Narrator"
 msgid "Crushing heat. Freezing cold."
-msgstr ""
+msgstr "令人窒息的酷热。刺骨的严寒。"
 
 msgctxt "speaker:Narrator"
 msgid "Oceans of sand. Rotted out trees."
-msgstr ""
+msgstr "无尽的沙海。枯死的树木。"
 
 msgctxt "speaker:Narrator"
 msgid "Everything about this place, up from the sky, down to the land, seemed to tell the same story."
-msgstr ""
+msgstr "这里的一切，从天空到大地，似乎都在诉说着同一个故事。"
 
 msgctxt "speaker:Narrator"
 msgid "This land is not made for humans."
-msgstr ""
+msgstr "这片土地并非为人类所造。"
 
 msgctxt "speaker:Sarah"
 msgid "My armor is fucking boiling me alive, I can tell you that much."
-msgstr ""
+msgstr "我的盔甲简直快把我烤熟了，这话我可没跟你开玩笑。"
 
 msgctxt "speaker:Narrator"
 msgid "Kate leaned in closer."
-msgstr ""
+msgstr "凯特凑得更近了。"
 
 msgctxt "speaker:Kate"
 msgid "I can help you take it off if you want."
-msgstr ""
+msgstr "如果你想的话，我可以帮你脱下来。"
 
 msgctxt "speaker:Sarah"
 msgid "You can't be serious."
-msgstr ""
+msgstr "你不是认真的吧。"
 
 msgctxt "speaker:Sarah"
 msgid "You're thinking about that in this heat?"
-msgstr ""
+msgstr "在这种天气里，你居然在想这个？"
 
 msgctxt "speaker:Kate"
 msgid "What can I say, the idea of you undressed and covered in sweat isn't entirely unappealing."
-msgstr ""
+msgstr "我能说什么呢，想象你衣衫不整、浑身是汗的样子，我并不觉得毫无吸引力。"
 
 msgctxt "speaker:Kate"
 msgid "Wouldn't be the first time."
-msgstr ""
+msgstr "又不是第一次了。"
 
 msgctxt "speaker:Narrator"
 msgid "Kate poked Sarah in her ribs."
-msgstr ""
+msgstr "凯特戳了戳莎拉的肋骨。"
 
 msgctxt "speaker:Sarah"
 msgid "You know, most of the men in the company think with their dicks, but you might be the only woman that does."
-msgstr ""
+msgstr "你知道，公司里大多数男人脑子里想的都是下半身，但你可能是唯一有这种想法的女人。"
 
 msgctxt "speaker:Narrator"
 msgid "Kate fell back into her seat."
-msgstr ""
+msgstr "凯特坐回了她的座位。"
 
 msgctxt "speaker:Kate"
 msgid "Maybe. Or the only one whose honest about that."
-msgstr ""
+msgstr "也许吧。或者是唯一一个对此坦承的人。"
 
 msgctxt "speaker:Narrator"
 msgid "In silence, the two rode next to each other for a while, suffering the torture of the sun together somehow seemed to make it more bearable."
-msgstr ""
+msgstr "两人沉默地并辔而行，片刻之后，共同忍受着烈日的煎熬，这似乎让这一切变得稍微容易承受了一些。"
 
 msgctxt "speaker:Narrator"
 msgid "The creaking of the wagon wheels droned as the convoy slowly crawled along the road."
-msgstr ""
+msgstr "车轮的吱呀声单调地响着，车队沿着道路缓慢爬行。"
 
 msgctxt "speaker:Narrator"
 msgid "Beyond each hill and each dune, the world offered up only a new horizon, appearing identical to the one before."
-msgstr ""
+msgstr "每座山丘和沙丘的背后，世界只展现出新的地平线，看起来与之前的一模一样。"
 
 msgctxt "speaker:Narrator"
 msgid "The distance they were covering was about as much as Sarah could have hoped for, but she had already begun to worry."
-msgstr ""
+msgstr "他们正在行进的距离正是莎拉所期望的，但她已经开始感到担忧。"
 
 msgctxt "speaker:Narrator"
 msgid "The road out here was closest to Bagrad, closest to the center of what had once been the sprawling empire."
-msgstr ""
+msgstr "这里的道路离巴格拉德最近，离那个曾经 sprawling 帝国的中心也最近。"
 
 msgctxt "speaker:Narrator"
 msgid "Even these roads showed signs of decay from a lack of maintenance and being subjected to the elements of the desert."
-msgstr ""
+msgstr "即便是这些道路，也因缺乏维护和经受沙漠恶劣环境的侵蚀而显露出衰败的迹象。"
 
 msgctxt "speaker:Narrator"
 msgid "The truth was that the fact that these roads remained after centuries was a testament to their stunning quality, but this was little comfort to those who lived in the present."
-msgstr ""
+msgstr "事实上，这些道路在几个世纪后依然留存，恰恰证明了其令人惊叹的质量，但这对于当下生活在此的人们来说，不过是微不足道的安慰。"
 
 msgctxt "speaker:Narrator"
 msgid "One missing stone, causing a chip in the wheel, snapping an axle, it was all that it would take to bring a cart to a halt."
-msgstr ""
+msgstr "只要缺了一块石头，导致车轮崩裂、车轴折断，就足以让一辆马车彻底停摆。"
 
 msgctxt "speaker:Narrator"
 msgid "Then they'd have to decide."
-msgstr ""
+msgstr "于是他们必须做出决定。"
 
 msgctxt "speaker:Narrator"
 msgid "Leave the cart be and waste time transfering the cargo from one to the other, or try to repair it, and risk bringing the whole convoy to a halt."
-msgstr ""
+msgstr "是弃车不顾，浪费时间将货物从一辆转移到另一辆，还是尝试修理它，却冒着让整支商队停滞不前的风险。"
 
 msgctxt "speaker:Narrator"
 msgid "Usually, out on the road, such repairs were a small matter."
-msgstr ""
+msgstr "通常来说，在路上的时候，这种修理只是小事一桩。"
 
 msgctxt "speaker:Narrator"
 msgid "Any broken cart could simply work to fix itself and catch up later, but out here, this wasn't an option."
-msgstr ""
+msgstr "任何一辆坏掉的车本来都可以自己修好，然后稍后再追上来，但在这里，这已不再是一个可行的选项。"
 
 msgctxt "speaker:Narrator"
 msgid "Everybody in the mercenary company had to move as one, united into a single unit."
-msgstr ""
+msgstr "雇佣兵公司的每个人都必须作为一个整体行动，团结成一个单位。"
 
 msgctxt "speaker:Narrator"
 msgid "They simply had no choice. Alone, nobody could hope to survive the desert."
-msgstr ""
+msgstr "他们别无选择。独自一人，谁也无法指望在沙漠中幸存。"
 
 msgctxt "speaker:Narrator"
 msgid "And so the convoy crawled forward with care, seeking to avoid any disaster, while knowing that it would be impossible to stave off disaster forever in a place like this."
-msgstr ""
+msgstr "于是，车队小心翼翼地缓缓前行，竭力避开任何灾祸，同时也深知，身处此地，永远无法彻底将灾难拒之门外。"
 
 msgctxt "speaker:Kate"
 msgid "So, Vaelen tell you what's what?"
-msgstr ""
+msgstr "所以，瓦伦，你得到的消息和大家一样吗？"
 
 msgctxt "speaker:Sarah"
 msgid "He tells me about the same as any other."
-msgstr ""
+msgstr "他告诉我的跟告诉别人的一样。"
 
 msgctxt "speaker:Kate"
 msgid "Bullshit."
-msgstr ""
+msgstr "胡扯。"
 
 msgctxt "speaker:Narrator"
 msgid "Kate spoke the word like a whip."
-msgstr ""
+msgstr "凯特吐出这个词，像鞭子一样锋利。"
 
 msgctxt "speaker:Kate"
 msgid "Everybody knows you're his golden girl. If he'd tell anybody, it's you."
-msgstr ""
+msgstr "谁都知道你是他的红人。要是他告诉谁，那肯定是你。"
 
 msgctxt "speaker:Sarah"
 msgid "He told me it's about going to a town called Nauyziri, but you know that too."
-msgstr ""
+msgstr "他告诉我是要去一个叫瑙伊齐里的镇子，不过你也知道。"
 
 msgctxt "speaker:Kate"
 msgid "But he didn't tell you why? I mean...fuck...there ain't nothing out there."
-msgstr ""
+msgstr "但他没告诉你为什么？我是说……该死……那儿什么都没有。"
 
 msgctxt "speaker:Sarah"
 msgid "You're free to turn around."
-msgstr ""
+msgstr "你可以转身离开。"
 
 msgctxt "speaker:Kate"
 msgid "I'd rather die out there with you than die by myself trying to get back."
-msgstr ""
+msgstr "我宁愿和你死在外面，也不愿独自尝试回去而丧命。"
 
 msgctxt "speaker:Kate"
 msgid "Not to mention, I don't wanna see what Bagrad is going to turn into over the next few days."
-msgstr ""
+msgstr "更别提了，我可不想看到巴格拉德在接下来的几天里变成什么鬼样子。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah knew what Kate meant."
-msgstr ""
+msgstr "莎拉明白凯特的意思。"
 
 msgctxt "speaker:Narrator"
 msgid "Preparing for their expedition, the mercenary company had squeezed the very last of the resources from the city."
-msgstr ""
+msgstr "为准备远征，佣兵团榨干了这座城市仅剩的最后一点资源。"
 
 msgctxt "speaker:Narrator"
 msgid "Where before they had been undersupplied, now the city bordered on starvation."
-msgstr ""
+msgstr "此前物资匮乏，如今城市已濒临饥荒。"
 
 msgctxt "speaker:Narrator"
 msgid "Soon the people would begin to starve."
-msgstr ""
+msgstr "不久，人们就会开始挨饿。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah hated that she'd seen that too over the years. A city under siege, its people so starved you could count their ribs."
-msgstr ""
+msgstr "莎拉讨厌的是，这些年她也见识到了这一点：一座被围困的城市，城中百姓饿得连肋骨都能数清。"
 
 msgctxt "speaker:Narrator"
 msgid "She'd surprised herself over the years, learning just how much she could take."
-msgstr ""
+msgstr "这些年她让自己都感到惊讶，发现自己能忍受的远比想象中要多。"
 
 msgctxt "speaker:Narrator"
 msgid "She'd also scared herself, realizing there might not be a limit to what she could endure."
-msgstr ""
+msgstr "她也吓到了自己，意识到她所能承受的或许没有极限。"
 
 msgctxt "speaker:Sarah"
 msgid "Well, like I said, I don't know a damn thing more than you do."
-msgstr ""
+msgstr "好吧，就像我说的，我跟你一样，对此一无所知。"
 
 msgctxt "speaker:Kate"
 msgid "And that's fine with you?"
-msgstr ""
+msgstr "这样你也能接受？"
 
 msgctxt "speaker:Kate"
 msgid "You don't mind riding further out than any soul should, all because Vaelen ordered us too?"
-msgstr ""
+msgstr "你就不介意骑得比任何人都远，就只是因为瓦伦也下令了吗？"
 
 msgctxt "speaker:Sarah"
 msgid "What do you want me to do about it? You know how he gets when he has these ideas..."
-msgstr ""
+msgstr "那你想让我怎么办？你知道他一旦有了这种念头……就会变成什么样。"
 
 msgctxt "speaker:Sarah"
 msgid "Besides, if you don't trust him, go take it up with him."
-msgstr ""
+msgstr "再说，你要是信不过他，就去找他对质。"
 
 msgctxt "speaker:Kate"
 msgid "Nah, I trust him. And fuck it, even if I didn't trust him, I'd throw my life away for him too if he asked."
-msgstr ""
+msgstr "不，我信他。而且就算我不信他，只要他开口，我也愿意为他把命搭上。"
 
 msgctxt "speaker:Sarah"
 msgid "You don't mean that."
-msgstr ""
+msgstr "你不是认真的吧。"
 
 msgctxt "speaker:Kate"
 msgid "Yeah, I do. Never met any person in the world that I can say that about."
-msgstr ""
+msgstr "我是认真的。这世上我从未遇到过能让我说出这种话的人。"
 
 msgctxt "speaker:Narrator"
 msgid "Kate paused for a brief moment."
-msgstr ""
+msgstr "凯特短暂地停顿了一下。"
 
 msgctxt "speaker:Kate"
 msgid "And maybe you too."
-msgstr ""
+msgstr "也许还有你。"
 
 msgctxt "speaker:Kate"
 msgid "This world is filled to the brim with worthless people. Best we can do is try and look out for the handful of people that matter."
-msgstr ""
+msgstr "这世界充满了毫无价值的人。我们能做的最好的事，就是尽力去保护那些真正重要的人。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah looked out towards the horizon, the sun had begun its descent. A few hours and the scorching heat would turn to biting cold."
-msgstr ""
+msgstr "莎拉望向地平线，太阳已开始西沉。再过几个小时，灼人的酷热就会转为刺骨的寒冷。"
 
 msgctxt "speaker:Sarah"
 msgid "Do you really think that?"
-msgstr ""
+msgstr "你真的这么认为吗？"
 
 msgctxt "speaker:Narrator"
 msgid "Kate nodded while looking away from her."
-msgstr ""
+msgstr "凯特点了点头，目光移向别处。"
 
 msgctxt "speaker:Kate"
 msgid "Yeah, I don't like most people."
-msgstr ""
+msgstr "是啊，我不喜欢大多数人。"
 
 msgctxt "speaker:Sarah"
 msgid "Maybe you should give them a chance, not everybody is that bad."
-msgstr ""
+msgstr "也许你应该给他们一个机会，并不是每个人都很糟糕。"
 
 msgctxt "speaker:Kate"
 msgid "Easy for you to say, you grew up in a castle. People are nice to you if you live in a castle."
-msgstr ""
+msgstr "你说得轻巧，你可是住在城堡里长大的。住在城堡里的人，自然都对你和颜悦色。"
 
 msgctxt "speaker:Kate"
 msgid "People smile, and say please, and do whatever you ask them."
-msgstr ""
+msgstr "人们会对你微笑，说请，并且你让他们做什么他们就做什么。"
 
 msgctxt "speaker:Kate"
 msgid "I remember almost starving, sitting in an alley, and still nobody would offer me a fucking piece of bread for free."
-msgstr ""
+msgstr "我记得差点饿死，坐在巷子里，居然没人肯白给我一块该死的面包。"
 
 msgctxt "speaker:Narrator"
 msgid "Kate leaned forward, brushing away the sweat laced hair from her face."
-msgstr ""
+msgstr "凯特身子前倾，将沾满汗水的头发从脸上拨开。"
 
 msgctxt "speaker:Kate"
 msgid "You think the real world is people being nice and smiling."
-msgstr ""
+msgstr "你以为现实世界就是人们友善待人、面带微笑。"
 
 msgctxt "speaker:Kate"
 msgid "Well I've seen men trying to buy me for a night in exchange for some food and something to drink."
-msgstr ""
+msgstr "我见过那些男人，想用一顿饭和一杯酒换我一整晚的陪伴。"
 
 msgctxt "speaker:Kate"
 msgid "Then the next day, I see them walking down the streets with their families, wife and kids and everything, going to pray."
-msgstr ""
+msgstr "第二天，我看到他们带着家人——妻子和孩子，还有所有的一切——走在街上，去做礼拜。"
 
 msgctxt "speaker:Narrator"
 msgid "Kate spat besides the wagon as it rolled on."
-msgstr ""
+msgstr "随着马车继续前行，凯特朝车旁吐了口唾沫。"
 
 msgctxt "speaker:Kate"
 msgid "Most of the world is just people putting up fronts."
-msgstr ""
+msgstr "世界上大多数人不过是在伪装罢了。"
 
 msgctxt "speaker:Sarah"
 msgid "You're a cynic."
-msgstr ""
+msgstr "你是个愤世嫉俗的人。"
 
 msgctxt "speaker:Kate"
 msgid "Well, if I am, the fucking world made me one."
-msgstr ""
+msgstr "好吧，如果我是愤世嫉俗的人，那该死的世界把我变成了这样。"
 
 msgctxt "speaker:Kate"
 msgid "If I'm going to give up my life for anyone, it's going to be for the handful of people that are worth it. Maybe they can make this world a slightly better place."
-msgstr ""
+msgstr "如果我要为任何人放弃生命，那也只会是为那些值得的人。也许他们能让这个世界变得稍微好一点点。"
 
 msgctxt "speaker:Kate"
 msgid "The rest of it? Let it crumble like the monuments they build out here."
-msgstr ""
+msgstr "剩下的那些？就让它们像这里建起的纪念碑一样崩塌吧。"
 
 msgctxt "speaker:Narrator"
 msgid "Kate looked out across the horizon."
-msgstr ""
+msgstr "凯特望向地平线。"
 
 msgctxt "speaker:Kate"
 msgid "You ever wonder how many slaves they worked to death, just to build these things?"
-msgstr ""
+msgstr "你有没有想过，为了建起这些东西，他们逼死了多少奴隶？"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah didn't want to think about it, nor could she answer Kate, so instead she simply said nothing."
-msgstr ""
+msgstr "莎拉不想去想这些，也无法回答凯特，于是她只是沉默不语。"
 
 msgctxt "speaker:Narrator"
 msgid "As the sun slowly descended from the sky, falling past and over the horizon, the world turned dark in what seemed like only minutes."
-msgstr ""
+msgstr "随着太阳缓缓从天空中落下，越过地平线，世界在仿佛只有几分钟的时间里陷入了黑暗。"
 
 msgctxt "speaker:Narrator"
 msgid "The heat withdrew rapidly, replaced only be a cold that seemed equally discomforting."
-msgstr ""
+msgstr "炎热迅速退去，取而代之的是一种同样令人不适的寒冷。"
 
 msgctxt "speaker:Narrator"
 msgid "Ahead, Sarah watched as the wagons began to pull away from the road, starting the formation of a camp."
-msgstr ""
+msgstr "前方，莎拉看着马车开始驶离道路，开始搭建营地。"
 
 msgctxt "speaker:Kate"
 msgid "I have to go help my men a few carts up ahead, but I'll see about finding you later."
-msgstr ""
+msgstr "我得去前面几辆马车那儿帮帮我的人，不过我晚点再去找你。"
 
 msgctxt "speaker:Narrator"
 msgid "Kate leapt from the cart and walked out into the growing cluster and chaos of people now setting up camp."
-msgstr ""
+msgstr "凯特从马车上跳下来，走进正在搭建营地的人群和混乱之中。"
 
 msgctxt "speaker:Narrator"
 msgid "Above her, Sarah could see the stars growing brighter with each passing moment."
-msgstr ""
+msgstr "在她头顶上方，莎拉看到星星随着每一刻的流逝而愈发明亮。"
 
 msgctxt "speaker:Narrator"
 msgid "She found herself wondering if they had ever looked so bright before in her life."
-msgstr ""
+msgstr "她不禁在想，在自己的一生中，它们是否曾如此明亮过。"
 
 msgctxt "speaker:Narrator"
 msgid "It wasn't long before the first glowing embers of newly lit campfires could be seen."
-msgstr ""
+msgstr "没过多久，新点燃的营火发出的第一缕微光便清晰可见。"
 
 msgctxt "speaker:Narrator"
 msgid "All across the quickly growing camp, the small pockets of fire drew in soldiers, gathered together for comfort and safety."
-msgstr ""
+msgstr "在整个迅速扩大的营地中，星星点点的火堆吸引着士兵们聚集在一起，寻求慰藉与安全。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah left the cart and joined one of the fires nearby."
-msgstr ""
+msgstr "莎拉离开手推车，加入了附近的一堆篝火。"
 
 msgctxt "speaker:Narrator"
 msgid "Before walking towards the campfire, Sarah turned around to the cart."
-msgstr ""
+msgstr "在走向篝火之前，莎拉转身看向那辆马车。"
 
 msgctxt "speaker:Sarah"
 msgid "You can come out if you want, stretch your legs."
-msgstr ""
+msgstr "如果你想出来，就出来吧，活动活动腿脚。"
 
 msgctxt "speaker:Narrator"
 msgid "Slowly, like a rabbit emerging from its hiding place, Samayra emerged."
-msgstr ""
+msgstr "萨玛拉小心翼翼地探出头来，就像一只从藏身处钻出的兔子。"
 
 msgctxt "speaker:Narrator"
 msgid "At first only her head stuck out from the wagon, but once confident it was safe, she leapt down into the sand with a dancer's grace."
-msgstr ""
+msgstr "起初只有她的脑袋从马车里探出来，但确认安全后，她便像舞者般轻盈地跳到了沙地上。"
 
 msgctxt "speaker:Samayra"
 msgid "Are you sure it's alright?"
-msgstr ""
+msgstr "你确定这样没问题吗？"
 
 msgctxt "speaker:Sarah"
 msgid "Don't worry, you're here under my protection. Nobody will bother you."
-msgstr ""
+msgstr "别担心，有我在保护你。没人会来打扰你。"
 
 msgctxt "speaker:Narrator"
 msgid "Samayra quickly crossed the distance between them, following closely behind Sarah."
-msgstr ""
+msgstr "萨玛拉迅速缩短了两人之间的距离，紧紧跟在莎拉身后。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah sat down by the campfire."
-msgstr ""
+msgstr "莎拉在篝火旁坐了下来。"
 
 msgctxt "speaker:Narrator"
 msgid "Samayra joined her."
-msgstr ""
+msgstr "萨玛拉走到她身边坐下。"
 
 msgctxt "speaker:Narrator"
 msgid "She put her sword down besides her."
-msgstr ""
+msgstr "她把剑放在身旁。"
 
 msgctxt "speaker:Narrator"
 msgid "Across the campfire, she could see the faces of the other soldiers."
-msgstr ""
+msgstr "隔着营火，她能看到其他士兵的面孔。"
 
 msgctxt "speaker:Narrator"
 msgid "Some she knew, some she didn't."
-msgstr ""
+msgstr "有些人她认识，有些人她不认识。"
 
 msgctxt "speaker:Narrator"
 msgid "Each gave a small nod of acknowledgement, a recognition of her rank in the mercenary company, but not much more than that."
-msgstr ""
+msgstr "每个人都微微点头致意，承认她在佣兵团中的身份，但除此之外便再无其他。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah found that as a commander, most were either too scared to interact with her or too eager, each could be off putting in its own way."
-msgstr ""
+msgstr "莎拉发现，身为指挥官，大多数人要么因恐惧而不敢与她接触，要么又过于急切，每种情况都自有其令人却步之处。"
 
 msgctxt "speaker:Narrator"
 msgid "Samayra sat next to her, nearly close enough to sit shoulder to shoulder."
-msgstr ""
+msgstr "萨玛拉坐在她旁边，近得几乎可以肩并肩坐着。"
 
 msgctxt "speaker:Sarah"
 msgid "How did you manage with the heat? I hope it wasn't too bad."
-msgstr ""
+msgstr "你是怎么忍受这热度的？希望情况没那么糟糕。"
 
 msgctxt "speaker:Narrator"
 msgid "Samayra shrugged."
-msgstr ""
+msgstr "萨玛拉耸了耸肩。"
 
 msgctxt "speaker:Samayra"
 msgid "I don't really think this is too bad."
-msgstr ""
+msgstr "我觉得这还不算太糟。"
 
 msgctxt "speaker:Sarah"
 msgid "Really? I'm almost boiling in this armor, yet without it, it almost feels worse."
-msgstr ""
+msgstr "真的吗？我在这身盔甲里快被烤熟了，可要是没穿它，感觉反而更难受。"
 
 msgctxt "speaker:Narrator"
 msgid "Samayra laughed."
-msgstr ""
+msgstr "萨玛拉笑了。"
 
 msgctxt "speaker:Samayra"
 msgid "Maybe you're the one who's out of place here."
-msgstr ""
+msgstr "也许你才是那个格格不入的人。"
 
 msgctxt "speaker:Samayra"
 msgid "I've never known a different climate than this."
-msgstr ""
+msgstr "我从未见识过其他的气候。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah hadn't realized that yet."
-msgstr ""
+msgstr "莎拉还没意识到这一点。"
 
 msgctxt "speaker:Narrator"
 msgid "She knew the palace had been all that Samayra had ever known, but she hadn't yet concluded that this meant the desert and its violent elements appeared natural to her."
-msgstr ""
+msgstr "她知道宫殿就是萨玛拉所熟知的一切，但她尚未意识到，这意味着沙漠及其狂暴的元素对她而言已显得自然而然。"
 
 msgctxt "speaker:Sarah"
 msgid "Huh, I hadn't thought about that."
-msgstr ""
+msgstr "嗯，我还没想过这个问题。"
 
 msgctxt "speaker:Samayra"
 msgid "It's different, isn't it? The weather, I mean, in places like Rosanna?"
-msgstr ""
+msgstr "不一样，对吧？我是说天气，在像罗桑娜那样的地方？"
 
 msgctxt "speaker:Sarah"
 msgid "You get all sorts. Warm days, cold days, rainy days. Snow even, in the winter months."
-msgstr ""
+msgstr "这里什么天气都有。暖和的日子，寒冷的日子，下雨的日子。甚至在冬天还有雪。"
 
 msgctxt "speaker:Narrator"
 msgid "Samayra's face suddenly lighted up."
-msgstr ""
+msgstr "萨玛拉的脸突然亮了起来。"
 
 msgctxt "speaker:Samayra"
 msgid "Snow?! Really?!"
-msgstr ""
+msgstr "雪？！真的吗？！"
 
 msgctxt "speaker:Samayra"
 msgid "Wow, I only ever read about that in books. Does it really just...cover up the whole land?"
-msgstr ""
+msgstr "哇，我只有在书里读到过。它真的能把整片土地都……覆盖住吗？"
 
 msgctxt "speaker:Sarah"
 msgid "Yeah, on a good day it's no different than all the sand you can see here, just a whole world covered in white."
-msgstr ""
+msgstr "是啊，好天气的时候，它跟你能看到的这些沙子没什么两样，只不过整个世界都变成了白色。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah could see Samayra's eyes grow wider."
-msgstr ""
+msgstr "莎拉看到萨玛拉的眼睛睁得更大了。"
 
 msgctxt "speaker:Samayra"
 msgid "You're lying! There can't possibly be that much!"
-msgstr ""
+msgstr "你在撒谎！不可能有那么多！"
 
 msgctxt "speaker:Sarah"
 msgid "I swear."
-msgstr ""
+msgstr "我发誓。"
 
 msgctxt "speaker:Sarah"
 msgid "When we get back to Lethram, maybe you'll actually see some."
-msgstr ""
+msgstr "等我们回到莱瑟拉姆，你或许就能亲眼看到了。"
 
 msgctxt "speaker:Samayra"
 msgid "Wow..."
-msgstr ""
+msgstr "哇……"
 
 msgctxt "speaker:Narrator"
 msgid "Samayra's eyes drifted away, seemingly lost in a fantasy."
-msgstr ""
+msgstr "萨玛拉的目光移开了，似乎沉浸在自己的幻想中。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah sat alone with her thoughts as the other soldiers around her began to eat and drink, the mood slowly growing more festive with each round."
-msgstr ""
+msgstr "莎拉独自沉思，周围的士兵们开始吃喝，随着一轮又一轮的欢饮，气氛逐渐变得愈发喜庆。"
 
 msgctxt "speaker:Narrator"
 msgid "They had conquered a great city, were rich on loot. They had a reason for being in good spirits."
-msgstr ""
+msgstr "他们攻克了一座大城市，获得了丰厚的战利品。他们有理由保持高昂的情绪。"
 
 msgctxt "speaker:Narrator"
 msgid "One of the soldiers raised up a glass and a woman emerged from the shadows."
-msgstr ""
+msgstr "一名士兵举起酒杯，一名女子从阴影中走出。"
 
 msgctxt "speaker:Narrator"
 msgid "Clothed in little if anything at all, she carried a pitcher and poured beer into the man's cup."
@@ -118729,15 +118729,15 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "For her efforts, she received some jeers and groping of her body as she went around the campfire, refilling the cups."
-msgstr ""
+msgstr "作为回报，她在篝火旁穿梭为大家添酒时，换来的是阵阵起哄和对她身体的肆意抚摸。"
 
 msgctxt "speaker:Narrator"
 msgid "When she passed by Sarah, she offered to refill her cup as well."
-msgstr ""
+msgstr "当她经过莎拉身边时，她提出也要为莎拉添满酒杯。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah looked into the woman's eyes."
-msgstr ""
+msgstr "莎拉凝视着那个女人的双眼。"
 
 msgctxt "speaker:Narrator"
 msgid "Hollowed out."
@@ -118745,7 +118745,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Whatever spark resided in a person's eyes, hers had been snuffed out."
-msgstr ""
+msgstr "无论一个人的眼中曾闪烁着怎样的光芒，她的光芒都已熄灭。"
 
 msgctxt "speaker:Narrator"
 msgid "The woman continued and passed by her."

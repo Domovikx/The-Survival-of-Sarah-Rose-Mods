@@ -14,6 +14,9 @@
  *   dialogue_2         <- {ru|en}_dialogue3.png      король в дверях + наррация
  *   dialogue_3         <- ru: dialogue11, en: 12     у окна, длинные реплики
  *   dialogue_4         <- {ru|en}_dialogue1.png      панорама столицы + наррация
+ *   badge_{russian|chinese} <- BADGES ниже: правый верх ГЛАВНОГО МЕНЮ + красная
+ *                        рамка вокруг пилюли языка (оба кадра — один замер,
+ *                        меняется только подпись ENG/RUS/ZHO).
  * Имена файлов сайта: {name}_{russian|english}.jpg (суффикс = версия игры,
  * её выбирает Screenshots.tsx по i18n-языку).
  *
@@ -73,6 +76,44 @@ const PLAN: Record<string, [string, Record<string, string>]> = {
 };
 const LANG_PREFIXES = new Set(["ru", "en", "de", "es", "fr", "it", "ja", "ko", "pl", "pt", "zh"]);
 
+/** Бейдж языка для шага «Установка»: правый верхний угол ГЛАВНОГО МЕНЮ +
+ * красная рамка вокруг пилюли. Кадр один и тот же по геометрии для всех
+ * языков (меняется только подпись ENG/RUS/ZHO), поэтому рамка — константы:
+ * пилюля в кадре 1920x1080 при xalign 0.995/yalign 0.012.
+ * suffix -> кадр из tmp/shots без префикса языка. */
+const BADGES: Record<string, string> = {
+  russian: "ru_menu",
+  chinese: "zh_menu",
+};
+const BADGE_VER = { w: 640, h: 280, x: 1280, outW: 960, outH: 420, box: "x=833:y=12:w=124:h=76" };
+
+function badges(): number {
+  let failed = 0;
+  for (const [suffix, frame] of Object.entries(BADGES)) {
+    const src = join(SRC, `${frame}.png`);
+    const dst = join(DST, `badge_${suffix}.jpg`);
+    if (!existsSync(src)) {
+      console.log(`MISS ${relative(ROOT, src).replace(/\\/g, "/")}`);
+      failed++;
+      continue;
+    }
+    const vf = [
+      `crop=${BADGE_VER.w}:${BADGE_VER.h}:${BADGE_VER.x}:0`,
+      `scale=${BADGE_VER.outW}:${BADGE_VER.outH}:flags=lanczos`,
+      `drawbox=${BADGE_VER.box}:color=0xFF0000@1:t=4`,
+    ].join(",");
+    const r = spawnSync("ffmpeg", ["-y", "-v", "error", "-i", src, "-vf", vf, "-q:v", "3", dst], { stdio: "inherit" });
+    if (r.status !== 0) {
+      console.log(`MISS ${relative(ROOT, dst).replace(/\\/g, "/")} (ffmpeg exit=${r.status})`);
+      failed++;
+      continue;
+    }
+    const kb = Math.round(statSync(dst).size / 1024);
+    console.log(`OK   ${relative(ROOT, dst).replace(/\\/g, "/").padEnd(44)} ${String(kb).padStart(6)} KB`);
+  }
+  return failed;
+}
+
 function main(): number {
   if (!existsSync(SRC)) {
     console.error(`нет каталога ${SRC} (сначала съёмка: scripts/shots_capture.ps1)`);
@@ -107,6 +148,7 @@ function main(): number {
       console.log(`OK   ${relative(ROOT, dst).replace(/\\/g, "/").padEnd(44)} ${String(kb).padStart(6)} KB`);
     }
   }
+  failed += badges();
   return failed ? 1 : 0;
 }
 
