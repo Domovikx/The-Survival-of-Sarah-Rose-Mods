@@ -110929,7 +110929,7 @@ msgstr "随便吧。我觉得最好别为那些超出自己理解能力的事情
 
 msgctxt "speaker:Kate"
 msgid "As for the Shah, he got what he deserved for playing with dark magic."
-msgstr ""
+msgstr "至于沙阿，他玩弄黑暗魔法，得到了应有的下场。"
 
 msgctxt "speaker:Narrator"
 msgid "In the moment after Sarah had killed the beast, the mob of soldiers had rushed towards her in celebration, but more accurately, there had been two mobs."
@@ -110937,7 +110937,7 @@ msgstr "莎拉杀死那头野兽后的那一刻，士兵们曾涌向她以示庆
 
 msgctxt "speaker:Narrator"
 msgid "The one that raised up Sarah and sung her praises, and the other, smaller group of soldiers, that had rushed the dais and seized the Shah."
-msgstr ""
+msgstr "一个是将莎拉高高捧起、歌颂她功绩的那群，另一个则是冲上高台、擒住沙赫的那一小队士兵。"
 
 msgctxt "speaker:Narrator"
 msgid "His laughing never stopped."
@@ -110949,7 +110949,7 @@ msgstr "甚至在她杀死那头野兽的时候，笑声也未曾停歇。"
 
 msgctxt "speaker:Narrator"
 msgid "Not even when the soldiers had grabbed him and begun to stomp him to death."
-msgstr ""
+msgstr "甚至当士兵们抓住他并开始把他踩死时，笑声也未曾停止。"
 
 msgctxt "speaker:Narrator"
 msgid "She could still hear his cheerful madness, turning towards a gurgle as he choked on his own blood and bones."
@@ -110957,39 +110957,39 @@ msgstr "她仍能听见他那欢快的疯狂，随着他因自己的血和骨头
 
 msgctxt "speaker:Narrator"
 msgid "Still, Sarah could hardly feel sorry for the man."
-msgstr ""
+msgstr "尽管如此，莎拉几乎无法对这个男人产生同情。"
 
 msgctxt "speaker:Narrator"
 msgid "He had lost, but rather than accept defeat, played around with powers beyond his understanding."
-msgstr ""
+msgstr "他输了，但他没有接受失败，反而摆弄着那些超出他理解范围的力量。"
 
 msgctxt "speaker:Narrator"
 msgid "Good men had died for no reason, other than an arrogant man's vanity."
-msgstr ""
+msgstr "许多好人毫无意义地死去，仅仅因为一个傲慢之人的虚荣。"
 
 msgctxt "speaker:Sarah"
 msgid "Yeah, he got what he deserved."
-msgstr ""
+msgstr "是啊，他得到了应有的报应。"
 
 msgctxt "speaker:Kate"
 msgid "Wish I'd been there to see it though. The stories people are telling, sounds like you were incredible."
-msgstr ""
+msgstr "真希望我当时在场能亲眼看看。人们传的那些故事，听起来你简直太了不起了。"
 
 msgctxt "speaker:Sarah"
 msgid "Don't believe everything they tell you. Soldier's can be worse than midwives when it comes to telling tall tales."
-msgstr ""
+msgstr "别全信他们说的话。士兵们讲起瞎编的故事来，比接生婆还厉害。"
 
 msgctxt "speaker:Kate"
 msgid "Ain't that the truth."
-msgstr ""
+msgstr "可不是嘛。"
 
 msgctxt "speaker:Narrator"
 msgid "For a moment, the two sat in silence."
-msgstr ""
+msgstr "片刻间，两人陷入了沉默。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah could feel there was more that Kate wanted to say."
-msgstr ""
+msgstr "莎拉感觉到凯特还有话想说。"
 
 msgctxt "menu"
 msgid "Ask Kate to come to your room tonight"
@@ -110997,35 +110997,35 @@ msgstr "今晚让凯特来你的房间"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah broke the silence."
-msgstr ""
+msgstr "莎拉打破了沉默。"
 
 msgctxt "speaker:Kate"
 msgid "Yeah?"
-msgstr ""
+msgstr "嗯？"
 
 msgctxt "speaker:Sarah"
 msgid "Tonight, after the party. There's some things I might want to discuss with you."
-msgstr ""
+msgstr "今晚，派对结束后。有些事我想和你谈谈。"
 
 msgctxt "speaker:Sarah"
 msgid "So if you could...wait for me in my room?"
-msgstr ""
+msgstr "所以，你能……在我房间里等我吗？"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah could see a smile on Kate's face."
-msgstr ""
+msgstr "莎拉能看到凯特脸上露出一丝微笑。"
 
 msgctxt "speaker:Kate"
 msgid "Of course, commander. I'd never disobey an order like that."
-msgstr ""
+msgstr "当然，指挥官。我绝不会违抗这样的命令。"
 
 msgctxt "speaker:Narrator"
 msgid "Kate made an unserious attempt at a salute and turned to walk away."
-msgstr ""
+msgstr "凯特故作轻松地行了个礼，转身离去。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah waved her off as she stayed behind, seated against the pillar."
-msgstr ""
+msgstr "莎拉留在原地，倚着柱子坐下，挥手示意她先走。"
 
 msgctxt "menu"
 msgid "Don't say anything to Kate"
@@ -111033,223 +111033,223 @@ msgstr "别对凯特说任何事"
 
 msgctxt "speaker:Narrator"
 msgid "The silence lingered."
-msgstr ""
+msgstr "沉默持续着。"
 
 msgctxt "speaker:Narrator"
 msgid "After a while, Kate was the first to move."
-msgstr ""
+msgstr "过了一会儿，凯特第一个动了。"
 
 msgctxt "speaker:Kate"
 msgid "Well, Sarah, I need to go meet up with some of my men, I promised I'd play bone-dice with them."
-msgstr ""
+msgstr "好吧，莎拉，我得去见见我的一些手下，我答应过要跟他们玩骨牌。"
 
 msgctxt "speaker:Sarah"
 msgid "Don't let them rob you like they always do."
-msgstr ""
+msgstr "别让他们像往常一样骗你。"
 
 msgctxt "speaker:Kate"
 msgid "Hey! I win...sometimes."
-msgstr ""
+msgstr "嘿！我赢了……偶尔而已。"
 
 msgctxt "speaker:Kate"
 msgid "Anyway, I'll see you around. And try to enjoy the party a bit."
-msgstr ""
+msgstr "总之，回头见。你也尽量放松点，好好享受派对吧。"
 
 msgctxt "speaker:Narrator"
 msgid "Kate waved as she walked away, and Sarah waved back at her."
-msgstr ""
+msgstr "凯特一边离开一边挥手，莎拉也向她挥了挥手。"
 
 msgctxt "speaker:Narrator"
 msgid "Alone again, Sarah continued to look out over the party."
-msgstr ""
+msgstr "莎拉再次独自一人，继续注视着派对。"
 
 msgctxt "speaker:Narrator"
 msgid "Half a bottle of wine sat idle besides her."
-msgstr ""
+msgstr "半瓶酒就那样搁在她身旁。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah could already feel her eyes floating across the room, hard to focus because of the alcohol."
-msgstr ""
+msgstr "莎拉已经能感觉到自己的视线在房间里游移，酒精让她难以集中注意力。"
 
 msgctxt "speaker:Narrator"
 msgid "Everybody looked so happy."
-msgstr ""
+msgstr "每个人都看起来那么快乐。"
 
 msgctxt "speaker:Narrator"
 msgid "But beneath their feet, a mountain of misery."
-msgstr ""
+msgstr "但在他们脚下，却是一座由苦难堆砌而成的高山。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah knew that beyond the palace, gangs of soldiers, some Mythran, some from her own mercenary company, would be stalking the streets."
-msgstr ""
+msgstr "莎拉知道，在宫殿之外，由一些米瑟兰人和她自己的雇佣兵公司成员组成的帮派正在街头游荡。"
 
 msgctxt "speaker:Narrator"
 msgid "Looking for women, those willing and unwilling."
-msgstr ""
+msgstr "寻找女性，无论是自愿的还是被迫的。"
 
 msgctxt "speaker:Narrator"
 msgid "Homes would be looted. Those who resisted, killed, and sometimes even those who didn't resist."
-msgstr ""
+msgstr "家园将被洗劫，反抗者会被杀死，有时甚至那些没有反抗的人也会遭殃。"
 
 msgctxt "speaker:Narrator"
 msgid "A great city was being put to the sword, and she had played a part in it."
-msgstr ""
+msgstr "一座宏伟的城市正惨遭屠戮，而她对此也负有责任。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah did what she always did when it felt as though the burdens of her life were becoming too much."
-msgstr ""
+msgstr "莎拉做了她每当感到生活重担难以承受时总会做的事。"
 
 msgctxt "speaker:Narrator"
 msgid "She closed her eyes and dreamed of Rosanna."
-msgstr ""
+msgstr "她闭上眼睛，梦见了罗珊娜。"
 
 msgctxt "speaker:Narrator"
 msgid "Her nation, far across the sea."
-msgstr ""
+msgstr "她的祖国，远在重洋彼岸。"
 
 msgctxt "speaker:Narrator"
 msgid "Home."
-msgstr ""
+msgstr "家。"
 
 msgctxt "speaker:Narrator"
 msgid "A place to which she would return."
-msgstr ""
+msgstr "一个她终将重返的地方。"
 
 msgctxt "speaker:Narrator"
 msgid "Bring justice to those that had ruined her family, her ancestral homeland."
-msgstr ""
+msgstr "为那些毁了她家族、毁了她祖传家园的人伸张正义。"
 
 msgctxt "speaker:Narrator"
 msgid "And she, she would be the one to deliver that justice."
-msgstr ""
+msgstr "而她，将是那个执行正义的人。"
 
 msgctxt "speaker:Narrator"
 msgid "But in her dreams, she never thought of the violence."
-msgstr ""
+msgstr "但在她的梦境中，她从未想过暴力。"
 
 msgctxt "speaker:Narrator"
 msgid "Instead, she dreamed of herself standing on the fields, just outside of the capital."
-msgstr ""
+msgstr "相反，她梦见自己站在首都郊外的田野上。"
 
 msgctxt "speaker:Narrator"
 msgid "Behind her, Castle Reinmeer, standing out above the city."
-msgstr ""
+msgstr "在她身后，是城堡雷因米尔，矗立在城市之上。"
 
 msgctxt "speaker:Narrator"
 msgid "In front of her, the endless fields of grass that danced in the motions of the wind."
-msgstr ""
+msgstr "在她面前，是无边无际的草地，在风的吹拂下翩翩起舞。"
 
 msgctxt "speaker:Narrator"
 msgid "If you watched for long enough, it could begin to feel like an ocean of green."
-msgstr ""
+msgstr "如果你看得足够久，它可能会让你感觉像是一片绿色的海洋。"
 
 msgctxt "speaker:Narrator"
 msgid "As though you were all alone in the world. And nothing could go wrong."
-msgstr ""
+msgstr "仿佛你独自置身于世间，一切都不会出错。"
 
 msgctxt "speaker:Narrator"
 msgid "It was worth it."
-msgstr ""
+msgstr "一切都值得。"
 
 msgctxt "speaker:Narrator"
 msgid "Everything she was doing was worth it. Sarah repeated her dream again and again, as if to convince herself."
-msgstr ""
+msgstr "她所做的一切都是值得的。莎拉一遍又一遍地重复着她的梦想，仿佛要说服自己。"
 
 msgctxt "speaker:Narrator"
 msgid "It was another familiar voice that woke her up."
-msgstr ""
+msgstr "唤醒她的是另一个熟悉的声音。"
 
 msgctxt "speaker:Vaelen"
 msgid "Ladies and gentlemen!"
-msgstr ""
+msgstr "女士们，先生们！"
 
 msgctxt "speaker:Narrator"
 msgid "His voice boomed out across the vast throne room."
-msgstr ""
+msgstr "他的声音在大殿中回荡。"
 
 msgctxt "speaker:Narrator"
 msgid "Vaelen's voice was the kind that could bring a room to silence, a natural easy authority that seemed obvious to both the speaker and the listener."
-msgstr ""
+msgstr "瓦伦的声音有一种能让全场瞬间安静的力量，那是一种自然且从容的权威感，对说话者和倾听者而言都显而易见。"
 
 msgctxt "speaker:Vaelen"
 msgid "I promise I won't hold up the celebrations for long!"
-msgstr ""
+msgstr "我保证不会让大家久等，耽误了庆祝的时间！"
 
 msgctxt "speaker:Narrator"
 msgid "Slowly, under some protest, the room grew quiet, until only Vaelen still spoke."
-msgstr ""
+msgstr "尽管带着些许抗议，大厅里还是渐渐安静下来，直到只剩下瓦伦的声音。"
 
 msgctxt "speaker:Vaelen"
 msgid "Today, the Mythran army has succeeded in doing what no other empire or nation ever could, bring down the dynasty of Bagrad!"
-msgstr ""
+msgstr "今天，米斯兰军队成功做到了其他任何帝国或国家都未能做到的事——推翻了巴格拉德王朝！"
 
 msgctxt "speaker:Narrator"
 msgid "Some cheers rang out."
-msgstr ""
+msgstr "几声欢呼响起。"
 
 msgctxt "speaker:Vaelen"
 msgid "For me and my company, it was an honour simply to fight besides you!"
-msgstr ""
+msgstr "对我来说，我的公司而言，能与您并肩作战已是莫大的荣幸！"
 
 msgctxt "speaker:Soldier"
 msgid "We did most of the real fighting!"
-msgstr ""
+msgstr "真正打硬仗的可是我们！"
 
 msgctxt "speaker:Narrator"
 msgid "Some laughter broke out, but Vaelen didn't let the interruption break his flow."
-msgstr ""
+msgstr "一阵笑声响起，但瓦伦并未让这插曲打断他的思路。"
 
 msgctxt "speaker:Vaelen"
 msgid "But the reason I'm up here now is to ask you all to take a moment."
-msgstr ""
+msgstr "但我现在站在这里，是为了请大家稍作停顿。"
 
 msgctxt "speaker:Vaelen"
 msgid "Take a moment and join me in honouring a very special person."
-msgstr ""
+msgstr "请花一点时间，与我一同向一位非常重要的人致敬。"
 
 msgctxt "speaker:Vaelen"
 msgid "One of my commanders, known to some of you as the Rose knight, but perhaps more recently as voidslayer!"
-msgstr ""
+msgstr "我的一位指挥官，你们中有些人可能知道他是玫瑰骑士，但最近或许更熟悉他“虚空杀手”的名号！"
 
 msgctxt "speaker:Vaelen"
 msgid "She's got so many titles and names, it's hard to keep track!"
-msgstr ""
+msgstr "她的头衔和名字多得数不清，根本记不过来！"
 
 msgctxt "speaker:Vaelen"
 msgid "The one and only, Sarah Rose!"
-msgstr ""
+msgstr "独一无二的，莎拉·罗斯！"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah grunted to herself as she heard the entire room explode into applause."
-msgstr ""
+msgstr "莎拉听到整个房间爆发出掌声，不禁低声哼唧了一下。"
 
 msgctxt "speaker:Narrator"
 msgid "She forced herself to her feet and akwardly waved around, receiving their praise all over again."
-msgstr ""
+msgstr "她强迫自己站起身来，笨拙地向四周挥手，再次接受众人的赞誉。"
 
 msgctxt "speaker:Narrator"
 msgid "Looking up, she could see Vaelen smiling at her."
-msgstr ""
+msgstr "她抬起头，看见瓦伦正对她微笑。"
 
 msgctxt "speaker:Narrator"
 msgid "That was their biggest difference, Sarah knew."
-msgstr ""
+msgstr "这是他们之间最大的不同，莎拉很清楚。"
 
 msgctxt "speaker:Narrator"
 msgid "Vaelen loved being up on the stage, to hear himself talk. Sarah hated almost every moment of it."
-msgstr ""
+msgstr "瓦伦喜欢站在舞台上，听自己讲话。莎拉几乎讨厌其中的每一刻。"
 
 msgctxt "speaker:Vaelen"
 msgid "I won't ask her to come up here and give a speech, I know she's not much for that, but I just wanted everyone to remember our hero!"
-msgstr ""
+msgstr "我不会请她上台发表演讲，我知道她不太喜欢那样，但我只是想让大家都记住我们的英雄！"
 
 msgctxt "speaker:Vaelen"
 msgid "The one who killed a monster, a demon!"
-msgstr ""
+msgstr "那个杀死了怪物和恶魔的人！"
 
 msgctxt "speaker:Narrator"
 msgid "More cheers rose up, echoing in the vast throne room, until applause and cheers seemed to be all there was."
-msgstr ""
+msgstr "更多的欢呼声响起，在大殿中回荡，直到掌声和欢呼声似乎成了唯一的存在。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah continued to smile and wave, praying that it would soon be over."
@@ -111257,23 +111257,23 @@ msgstr ""
 
 msgctxt "speaker:Vaelen"
 msgid "Well, that's enough everyone, let's not embarrass her any further."
-msgstr ""
+msgstr "好了，大家到此为止吧，别再让她更尴尬了。"
 
 msgctxt "speaker:Narrator"
 msgid "The room grew silent again."
-msgstr ""
+msgstr "大厅里再次恢复了寂静。"
 
 msgctxt "speaker:Vaelen"
 msgid "Now, before we resume the party, I also wanted to leave you all with a gift!"
-msgstr ""
+msgstr "现在，在继续派对之前，我还想送给大家一份礼物！"
 
 msgctxt "speaker:Vaelen"
 msgid "A token of my generosity! A token of my gratitude! This is from me, Vaelen, to all of you!"
-msgstr ""
+msgstr "一点心意，表达我的慷慨！一份谢意，表达我的感激！这是来自我瓦伦的礼物，送给在座的每一位！"
 
 msgctxt "speaker:Vaelen"
 msgid "Tonight it doesn't matter if you're one of my men or a loyal Mythran soldier, tonight we all share in the spoils!"
-msgstr ""
+msgstr "今晚，无论你是我的部下还是忠诚的米斯拉士兵，都不重要了！今晚我们共享战利品！"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah watched as Vaelen clapped in his hand, signalling something to someone."

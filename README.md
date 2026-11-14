@@ -13,12 +13,10 @@ the game — no game files are touched or redistributed.
 
 ## What you get
 
-| Part       | Details                                                                                                                                                                   |
-| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Text**   | 11 languages: `en zh ru es pt de ja fr pl ko it`. Russian — the whole story; the other 10 — the demo scope (intro up to the first choice).                                |
-| **Voice**  | AI voice acting (synthetic, cloned voices) for the demo scope — **all 11 languages**, 1 195 lines each (Russian 1 397). 77 distinct voices, emotion matched to the scene. |
-| **Fonts**  | Literata + Noto CJK subsets (SIL OFL), shipped with the core pack so the translated text renders correctly.                                                               |
-| **Format** | Opus 24 kbps mono — a voice pack is 15–21 MB per language.                                                                                                                |
+- **Text** — 11 languages: `en zh ru es pt de ja fr pl ko it`. Russian — the whole story; the other 10 — the demo scope (intro up to the first choice).
+- **Voice** — AI voice acting (synthetic, cloned voices) for the demo scope — **all 11 languages**, 1 195 lines each (Russian 1 397). 77 distinct voices, emotion matched to the scene.
+- **Fonts** — Literata + Noto CJK subsets (SIL OFL), shipped with the core pack so the translated text renders correctly.
+- **Format** — Opus 24 kbps mono — a voice pack is 15–21 MB per language.
 
 Everything lives in `mods/tssr-ai-voice-pack/` plus one service file
 `environment.txt` in the game root (the engine's search-path contract), so other
@@ -72,17 +70,15 @@ Full text, the 18+ notice and disclaimers (English + Русский) — in [`LI
 This repository is the source of truth for the patch (the site is a landing, the
 downloads live on Nexus).
 
-| Path                                      | What is inside                                                                          |
-| ----------------------------------------- | --------------------------------------------------------------------------------------- |
-| `patches/ai-voice-pack/`                  | The patch itself (mirror of the installed folder): mod menu, fonts, translations.       |
-| `patches/ai-voice-pack/po/`               | Translation sources: `template.pot` (extracted from the game) + one `.po` per language. |
-| `patches/ai-voice-pack/audio/`            | Generated voice lines per language (`<uid>__<voice>.opus`).                             |
-| `patches/ai-voice-pack/casts/`            | Voice contracts (character descriptions) and reference clips.                           |
-| `patches/ai-voice-pack/tools/`            | Pipeline: extract → generate → build → deploy (TypeScript).                             |
-| `patches/ai-voice-pack/vortex-extension/` | Vortex game extension sources (game detection, FOMOD deployment).                       |
-| `site/`                                   | Landing (Vite + React), deployed to GitHub Pages.                                       |
-| `.opencode/skills/`                       | Project tooling: translation, CDP browser automation, Nexus publishing.                 |
-| `docs/`                                   | Vortex/Nexus model, distribution ledger, decisions.                                     |
+- **patches/ai-voice-pack/** — The patch itself (mirror of the installed folder): mod menu, fonts, translations.
+- **patches/ai-voice-pack/po/** — Translation sources: `template.pot` (extracted from the game) + one `.po` per language.
+- **patches/ai-voice-pack/audio/** — Generated voice lines per language (`<uid>__<voice>.opus`).
+- **patches/ai-voice-pack/casts/** — Voice contracts (character descriptions) and reference clips.
+- **patches/ai-voice-pack/tools/** — Pipeline: extract → generate → build → deploy (TypeScript).
+- **patches/ai-voice-pack/vortex-extension/** — Vortex game extension sources (game detection, FOMOD deployment).
+- **site/** — Landing (Vite + React), deployed to GitHub Pages.
+- **.opencode/skills/** — Project tooling: translation, CDP browser automation, Nexus publishing.
+- **docs/** — Vortex/Nexus model, distribution ledger, decisions.
 
 Pipeline in short: text is extracted from the game into `template.pot`, translated
 into `po/<lang>.po`, voiced per line (uid = md5 of the English line) by VoxCPM2, then
