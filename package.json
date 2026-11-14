@@ -35,7 +35,8 @@
     "format:check": "prettier --check .",
     "po:check": "node scripts/po_check.mts",
     "emotion:audit": "node patches/ai-voice-pack/tools/generate/scripts/emotion_audit.mts",
-    "emotion:judge": "node patches/ai-voice-pack/tools/generate/scripts/emotion_judge.mts"
+    "emotion:judge": "node patches/ai-voice-pack/tools/generate/scripts/emotion_judge.mts",
+    "format:md": "prettier --write \"**/*.md\""
   },
   "lint-staged": {
     "*.{js,mjs,cjs,ts,tsx,mts,cts}": [

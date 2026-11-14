@@ -109985,7 +109985,7 @@ msgstr "要不是因为你，我恐怕会是‘天意兄弟会’里唯一在场
 
 msgctxt "speaker:Sarah"
 msgid "Sure, I'll come along. I'll bring a handful of soldiers too, just in case."
-msgstr ""
+msgstr "没问题，我会一起去。我也会带几个士兵来，以防万一。"
 
 msgctxt "speaker:Vaelen"
 msgid "Excellent. We'll need to move soon, their army is going to be entering the throne room any moment."
@@ -110013,7 +110013,7 @@ msgstr "带着自己的私人随从，莎拉与瓦伦汇合，随后一同前往
 
 msgctxt "speaker:Narrator"
 msgid "Arriving in the throne room, Sarah could see that there was already a significant presence of Mythran soldiers."
-msgstr ""
+msgstr "抵达王座大厅时，莎拉看到那里已经驻扎着相当数量的米瑟兰士兵。"
 
 msgctxt "speaker:Narrator"
 msgid "Their army was larger than their mercenary company by many times, and still, it represented only a small part of the total Mythran army."
@@ -110049,499 +110049,499 @@ msgstr "既然你无法有尊严地活着，至少可以死得有尊严些。"
 
 msgctxt "speaker:Mythran Prince"
 msgid "Whatever, I don't have the patience for this. Men! Tear down the barricade and drag these rats out, alive!"
-msgstr ""
+msgstr "随便吧，我没耐心陪你们玩。来人！拆掉路障，把这些老鼠给我活捉！"
 
 msgctxt "speaker:Narrator"
 msgid "A sound cut through all the others, as the room went silent."
-msgstr ""
+msgstr "一个声音穿透了所有的嘈杂，房间瞬间安静下来。"
 
 msgctxt "speaker:Narrator"
 msgid "The clattering of wood, then steel."
-msgstr ""
+msgstr "木头碎裂的声音，接着是钢铁的撞击声。"
 
 msgctxt "speaker:Narrator"
 msgid "Piece by piece, the fragments that made up the barricade to the royal quarters came down, being taken apart from the inside."
-msgstr ""
+msgstr " barricade 的碎片被逐一拆解，从内部瓦解了通往皇家寝宫的屏障。"
 
 msgctxt "speaker:Narrator"
 msgid "Climbing out through the small passage, was the Shah."
-msgstr ""
+msgstr "从小通道里爬出来的，是沙阿。"
 
 msgctxt "speaker:Mythran Prince"
 msgid "Aah, finally. I was afraid my men would have to break a sweat getting you out of there."
-msgstr ""
+msgstr "啊，终于出来了。我还担心我的人得费点力气才能把你从那儿弄出来呢。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah watched the Shah walk up towards them."
-msgstr ""
+msgstr "莎拉看着沙阿朝他们走来。"
 
 msgctxt "speaker:Narrator"
 msgid "Despite having lost, he seemed entirely unaffected. He still walked with the confidence of kings, the kind that reminded her of her own father."
-msgstr ""
+msgstr "尽管已经战败，他看起来却毫不在意。他依然迈着王者般的自信步伐走来，那种气质让她想起了自己的父亲。"
 
 msgctxt "speaker:Narrator"
 msgid "His imperial gaze slowly drifted across the room."
-msgstr ""
+msgstr "他那威严的目光缓缓扫过整个房间。"
 
 msgctxt "speaker:Narrator"
 msgid "For a moment, his eyes settled on Sarah. She could feel herself pinned to the ground."
-msgstr ""
+msgstr "有那么一瞬间，他的目光落在了莎拉身上。她感觉自己仿佛被钉在了地上。"
 
 msgctxt "speaker:Shah Mahda"
 msgid "I see your mercenary lapdogs are here."
-msgstr ""
+msgstr "看来你的雇佣走狗也到了。"
 
 msgctxt "speaker:Narrator"
 msgid "The Mythran prince laughed."
-msgstr ""
+msgstr "Мифранский принц рассмеялся."
 
 msgctxt "speaker:Mythran Prince"
 msgid "Aah, it speaks. I was beginning to think you'd be too scared to even come out."
-msgstr ""
+msgstr "啊，还会说话。我还以为你吓得连头都不敢伸出来呢。"
 
 msgctxt "speaker:Shah Mahda"
 msgid "A worm like you won't make me cower."
-msgstr ""
+msgstr "像你这样的虫子，休想让我退缩。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah could see rage flash across the face of the Mythran prince."
-msgstr ""
+msgstr "莎拉能看到愤怒在米斯拉王子的脸上闪过。"
 
 msgctxt "speaker:Mythran Prince"
 msgid "You killed my nephew. You brought all this upon yourself, remember that while you hear your family get tortured to death."
-msgstr ""
+msgstr "你杀了我的侄子。这一切都是你自找的，记住这一点，在你听着你的家人被折磨致死的时候。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah could see the Shah's face. It didn't move at all."
-msgstr ""
+msgstr "莎拉能看到沙阿的脸。它完全没有动。"
 
 msgctxt "speaker:Narrator"
 msgid "She leaned in to Vaelen and whispered to him."
-msgstr ""
+msgstr "她凑近瓦伦，低声对他说道。"
 
 msgctxt "speaker:Sarah"
 msgid "There's something wrong."
-msgstr ""
+msgstr "有什么不对劲。"
 
 msgctxt "speaker:Vaelen"
 msgid "What do you mean?"
-msgstr ""
+msgstr "你什么意思？"
 
 msgctxt "speaker:Sarah"
 msgid "Why...why is he out here?"
-msgstr ""
+msgstr "为什么……他怎么跑到外面来了？"
 
 msgctxt "speaker:Vaelen"
 msgid "To surrender, what else?"
-msgstr ""
+msgstr "投降？不然呢？"
 
 msgctxt "speaker:Sarah"
 msgid "Does he look like someone that is about to surrender?"
-msgstr ""
+msgstr "他看起来像是个要投降的人吗？"
 
 msgctxt "speaker:Narrator"
 msgid "Vaelen didn't answer her."
-msgstr ""
+msgstr "瓦伦没有回答她。"
 
 msgctxt "speaker:Narrator"
 msgid "The Mythran prince moved closer towards the Shah."
-msgstr ""
+msgstr "米斯拉王子向沙阿走近。"
 
 msgctxt "speaker:Mythran Prince"
 msgid "Enough! You and the rest of your debased dynasty have been tolerated long enough."
-msgstr ""
+msgstr "够了！你和你的堕落王朝其余成员被容忍得已经够久了。"
 
 msgctxt "speaker:Mythran Prince"
 msgid "Your allies have abandoned you. Your armies are shattered. Your city will soon be put to the sword. You've lost!"
-msgstr ""
+msgstr "你的盟友已经抛弃了你。你的军队支离破碎。你的城市即将沦为屠场。你输了！"
 
 msgctxt "speaker:Shah Mahda"
 msgid "Not all my allies have abandoned my house."
-msgstr ""
+msgstr "并非所有盟友都抛弃了我的家族。"
 
 msgctxt "speaker:Narrator"
 msgid "A pause lingered in the room."
-msgstr ""
+msgstr "房间里陷入了一阵沉默。"
 
 msgctxt "speaker:Mythran Prince"
 msgid "Soldiers! Seize him, strip him and whip him till he begs for mercy! Maybe that will bring some sense back to him."
-msgstr ""
+msgstr "士兵们！抓住他，剥光他的衣服，鞭打他直到他求饶为止！也许这样能让他清醒一点。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah watched as a small cadre of soldiers began to move forward."
-msgstr ""
+msgstr "莎拉看着一小队士兵开始向前移动。"
 
 msgctxt "speaker:Narrator"
 msgid "Suddenly, they stopped."
-msgstr ""
+msgstr "突然，他们停下了。"
 
 msgctxt "speaker:Narrator"
 msgid "Turning her eyes back towards the Shah, she saw an object emerge from his robes."
-msgstr ""
+msgstr "她将目光重新投向沙阿，只见一件物品从他的长袍中显露出来。"
 
 msgctxt "speaker:Narrator"
 msgid "A dagger. A handle as black as obsidian, a blade glowing in deep crimson red."
-msgstr ""
+msgstr "一把匕首。刀柄黑如黑曜石，刀刃泛着深红色的光泽。"
 
 msgctxt "speaker:Narrator"
 msgid "She watched as the Shah raised his arm high above his head."
-msgstr ""
+msgstr "她看着沙阿将手臂高高举过头顶。"
 
 msgctxt "speaker:Narrator"
 msgid "The room had gone silent."
-msgstr ""
+msgstr "房间里一片死寂。"
 
 msgctxt "speaker:Narrator"
 msgid "Though none could say why, everyone could feel the item reverberate. A thing that commanded respect, awe."
-msgstr ""
+msgstr "尽管无人知晓缘由，但所有人都能感受到那件物品散发出的共鸣。它是一件令人敬畏、肃然起重的宝物。"
 
 msgctxt "speaker:Shah Mahda"
 msgid "My family hails back centuries. Millenia."
-msgstr ""
+msgstr "我的家族源远流长，历经数百年，乃至数千年。"
 
 msgctxt "speaker:Shah Mahda"
 msgid "My allies on this side have failed me, but my allies on the other side won't!"
-msgstr ""
+msgstr "我这一侧的盟友辜负了我，但我另一侧的盟友绝不会！"
 
 msgctxt "speaker:Narrator"
 msgid "With a single slash, Sarah watched the dagger cut through the air."
-msgstr ""
+msgstr "随着刀锋一闪，莎拉注视着匕首划破空气。"
 
 msgctxt "speaker:Narrator"
 msgid "At first, she believed it had been nothing. Perhaps a final gesture from a man truly gone insane."
-msgstr ""
+msgstr "起初，她以为那不过是一场空。或许只是某个彻底疯了的男人临终前的最后举动。"
 
 msgctxt "speaker:Narrator"
 msgid "But then she could see."
-msgstr ""
+msgstr "但随后，她看清了。"
 
 msgctxt "speaker:Narrator"
 msgid "Tracing the movement of the blade, Sarah could see the glimmer of a cut. A wound across the face of creation."
-msgstr ""
+msgstr "莎拉追踪着刀刃的轨迹，看见了一道切口的微光。那是横亘在创世面容上的一道伤口。"
 
 msgctxt "speaker:Narrator"
 msgid "Rapidly expanding, the wound grew and grew, and Sarah could now see into it. A void, deeper more devoid of light than any she had ever known."
-msgstr ""
+msgstr "伤口迅速扩大，越变越大，莎拉现在能看清里面的景象。那是一个虚空，比她所知的任何地方都更深邃、更 devoid 光明。"
 
 msgctxt "speaker:Narrator"
 msgid "Then two sets of claws emerged, seizing upon the wound and tearing it open entirely."
-msgstr ""
+msgstr "接着，两对利爪探出，抓住伤口并将其彻底撕开。"
 
 msgctxt "speaker:Narrator"
 msgid "Birthed from this violation of reality, a creature slithered out."
-msgstr ""
+msgstr "从这现实被撕裂的伤口中，爬出了一只生物。"
 
 msgctxt "speaker:Narrator"
 msgid "It's body black as ink, it slithered and moved like a snake."
-msgstr ""
+msgstr "它的身体黑如墨汁，像蛇一样蜿蜒蠕动。"
 
 msgctxt "speaker:Narrator"
 msgid "It's brute claws pierced the stone of the old palace, and with great effort it pulled itself out from whatever dimension it called home, into Sarah's world."
-msgstr ""
+msgstr "它那粗野的利爪刺穿了古老宫殿的石壁，费了极大的劲，才从它称之为家的某个维度爬出来，进入了莎拉的世界。"
 
 msgctxt "speaker:Narrator"
 msgid "The thing's face, as white as a mask made out of porcelain, its only feature its pitless eyes and razor teeth like those of a shark."
-msgstr ""
+msgstr "那张脸白如瓷制面具，唯一的特征便是那无瞳的双眸与鲨鱼般的利齿。"
 
 msgctxt "speaker:Narrator"
 msgid "Having looked on, first in stunned silence, a single soldier was the first to break their collective trauma."
-msgstr ""
+msgstr "在最初的震惊与死寂中凝视良久后，一名士兵率先打破了这集体的创伤。"
 
 msgctxt "speaker:Narrator"
 msgid "A scream rang out. Then, a chorus of countless soldiers, screaming."
-msgstr ""
+msgstr "一声尖叫响起。紧接着，是无数士兵齐声发出的嘶吼。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah watched as the beast suddenly leapt forward with a speed that belied its enormous size."
-msgstr ""
+msgstr "莎拉目睹那野兽突然跃起，其速度之大与其庞大的身躯极不相称。"
 
 msgctxt "speaker:Narrator"
 msgid "The thing stood before the Mythran prince, who looked up at it."
-msgstr ""
+msgstr "那怪物站在米特兰王子面前，王子仰头望着它。"
 
 msgctxt "speaker:Narrator"
 msgid "So great was his fear of the thing, that even the idea of resisting his own death filled him with dread."
-msgstr ""
+msgstr "他对这怪物的恐惧如此深重，以至于连抵抗自己死亡的想法都让他感到战栗。"
 
 msgctxt "speaker:Narrator"
 msgid "The creature's snakelike body sat half upright. Even so, it towered over the Mythran prince by at least three times."
-msgstr ""
+msgstr "那生物蛇一般的身躯半挺着，即便如此，它也比那位米瑟兰王子高出至少三倍。"
 
 msgctxt "speaker:Narrator"
 msgid "Then it snapped."
-msgstr ""
+msgstr "随即，它猛地合上了嘴。"
 
 msgctxt "speaker:Narrator"
 msgid "The creature's mouth snapped around the Mythran prince's head, catching him across his shoulder and upper chest with its teeth."
-msgstr ""
+msgstr "怪物的嘴猛地咬住米斯拉王子的头部，牙齿深深嵌入他的肩膀和上胸部。"
 
 msgctxt "speaker:Narrator"
 msgid "In one fell gulp, Sarah watched the Mythran prince being swallowed, dissapearing into the creature's stomach."
-msgstr ""
+msgstr "莎拉眼睁睁看着那位米特兰王子被一口吞下，消失在怪物的胃里。"
 
 msgctxt "speaker:Narrator"
 msgid "If the prince had screamed, Sarah didn't hear it."
-msgstr ""
+msgstr "如果王子尖叫了，莎拉也没有听到。"
 
 msgctxt "speaker:Narrator"
 msgid "The only sound she could hear for certain among the chaos and screams, was the laughing."
-msgstr ""
+msgstr "在混乱与尖叫声中，她唯一能确切听到的声音，便是那笑声。"
 
 msgctxt "speaker:Narrator"
 msgid "The Shah, beyond himself, laughing hysterically at the carnage."
-msgstr ""
+msgstr "沙阿已经失去了理智，对着这场屠杀疯狂地大笑。"
 
 msgctxt "speaker:Sarah"
 msgid "We need to leave!"
-msgstr ""
+msgstr "我们得离开！"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah gripped Vaelen by the shoulder."
-msgstr ""
+msgstr "莎拉抓住瓦伦的肩膀。"
 
 msgctxt "speaker:Narrator"
 msgid "She felt his body flinch, as if she had pulled him from somewhere very far away."
-msgstr ""
+msgstr "她感觉到他的身体猛地一颤，仿佛她将他从极遥远的地方拉了回来。"
 
 msgctxt "speaker:Sarah"
 msgid "Now! Or that thing is gonna kill us all!"
-msgstr ""
+msgstr "现在！不然那东西会把我们都杀了！"
 
 msgctxt "speaker:Vaelen"
 msgid "Yes...yes! Run!"
-msgstr ""
+msgstr "对……对！快跑！"
 
 msgctxt "speaker:Narrator"
 msgid "Together, they began to run towards the only exit that the throne room had."
-msgstr ""
+msgstr "他们一起开始朝王座厅唯一的出口跑去。"
 
 msgctxt "speaker:Narrator"
 msgid "As they ran, Sarah could feel the chaos in the room growing as soldiers all around them were wildly running, many dropping their weapons, falling, tumbling over one another."
-msgstr ""
+msgstr "他们奔跑时，莎拉感到房间内的混乱愈发加剧，周围的士兵们疯狂逃窜，许多人丢下武器，跌倒在地，互相绊倒。"
 
 msgctxt "speaker:Narrator"
 msgid "A shade rushed by her."
-msgstr ""
+msgstr "一道黑影从她身边掠过。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah saw the creature, it's limbs wildly flailing as it dragged its own snake body across the throne room."
-msgstr ""
+msgstr "莎拉看到那只生物，它挥舞着四肢，拖着蛇一样的身体在王座大厅里横冲直撞。"
 
 msgctxt "speaker:Narrator"
 msgid "It was fast. So fast."
-msgstr ""
+msgstr "它很快。快得惊人。"
 
 msgctxt "speaker:Narrator"
 msgid "Before she realized, the thing had placed itself between the door and the soldiers."
-msgstr ""
+msgstr "在她意识到之前，那东西已经挡在了门和士兵之间。"
 
 msgctxt "speaker:Narrator"
 msgid "An entire army trembled."
-msgstr ""
+msgstr "整支军队都在颤抖。"
 
 msgctxt "speaker:Narrator"
 msgid "Whatever the thing was, it possessed enough intelligence to block their escape."
-msgstr ""
+msgstr "无论那是什么东西，它都拥有足够的智慧来阻断他们的退路。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah watched the thing coil its body and snap foward."
-msgstr ""
+msgstr "莎拉看着那东西蜷起身体，猛地向前扑去。"
 
 msgctxt "speaker:Narrator"
 msgid "A soldier, too far out from the others, caught in the things teeth."
-msgstr ""
+msgstr "一名士兵离其他人太远，被那东西的牙齿咬住了。"
 
 msgctxt "speaker:Narrator"
 msgid "He screamed as the creature ripped off and swallowed his arm, the blood pooling from his wound."
-msgstr ""
+msgstr "怪物撕下并吞下了他的手臂，鲜血从伤口处涌出汇聚。他发出凄厉的惨叫。"
 
 msgctxt "speaker:Narrator"
 msgid "The soldier had worn armor, perhaps even better than the kind anyone in her mercenary company had, and the creature had sliced through it like it was nothing."
-msgstr ""
+msgstr "那士兵穿着盔甲，或许比她佣兵团里任何人的都要精良，但怪物却像切豆腐一样轻易将其撕碎。"
 
 msgctxt "speaker:Narrator"
 msgid "Suddenly it rushed forward."
-msgstr ""
+msgstr "突然，它猛冲向前。"
 
 msgctxt "speaker:Narrator"
 msgid "As it reached the center of the soldiers, it turned around on itself, its tail striking out like a whip."
-msgstr ""
+msgstr "当它冲到士兵群中央时，猛地转过身来，尾巴如鞭子般横扫而出。"
 
 msgctxt "speaker:Narrator"
 msgid "A group of soldiers, too slow to run away, exploded into red mist as the thing's tail slashed through them."
-msgstr ""
+msgstr "一群士兵因逃跑太慢，被那怪物的尾巴一扫，瞬间化作一团血雾。"
 
 msgctxt "speaker:Narrator"
 msgid "There was no time to process."
-msgstr ""
+msgstr "根本来不及反应。"
 
 msgctxt "speaker:Narrator"
 msgid "As it spun and whipped its tail, its claws reached out, gripping, crushing anyone it caught in its range."
-msgstr ""
+msgstr "它一边旋转甩动尾巴，利爪便探出抓握，将触及范围内的任何人碾碎。"
 
 msgctxt "speaker:Narrator"
 msgid "It moved with such speed that no sooner had the soldiers turned to it, that it had already positioned itself anew."
-msgstr ""
+msgstr "它移动得如此迅速，士兵们刚一转身面向它，它就已经重新占据了位置。"
 
 msgctxt "speaker:Narrator"
 msgid "Each time a group of soldiers tried to rush for the door, the creature would snap back, catching them."
-msgstr ""
+msgstr "每当一群士兵试图冲向门口时，那怪物便会猛地回身，将他们擒住。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah felt the screams grow louder."
-msgstr ""
+msgstr "莎拉感到尖叫声越来越响。"
 
 msgctxt "speaker:Narrator"
 msgid "Soldiers were running off into every direction, but the army was trapped in the room with no escape."
-msgstr ""
+msgstr "士兵们向四面八方逃窜，但军队被困在房间里，无路可逃。"
 
 msgctxt "speaker:Narrator"
 msgid "And yet they still ran, if only so they could hope to die last."
-msgstr ""
+msgstr "然而他们仍在奔跑，哪怕只是为了争取最后死去的机会。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah watched Vaelen, knelt down, hoping to hide himself from the creature's sight."
-msgstr ""
+msgstr "莎拉注视着瓦伦，他跪下身去，希望能躲过那怪物的视线。"
 
 msgctxt "speaker:Narrator"
 msgid "Even he didn't have a plan for them to escape."
-msgstr ""
+msgstr "就连他也没有让他们逃脱的计划。"
 
 msgctxt "speaker:Narrator"
 msgid "They were all going to die."
-msgstr ""
+msgstr "他们都要死了。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah knew it as surely as she had ever known anything in her life. In her mind's eye, she could see it play out again and again."
-msgstr ""
+msgstr "莎拉比生命中任何时刻都更笃定地知道这一点。在脑海中，她一遍又一遍地目睹着那幕重演。"
 
 msgctxt "speaker:Narrator"
 msgid "Then, her heart soared."
-msgstr ""
+msgstr "紧接着，她的心头涌起一阵狂喜。"
 
 msgctxt "speaker:Narrator"
 msgid "The screams slowly faded around her. A different voice spoke. It too spoke to her with her own voice, yet she knew it to be different."
-msgstr ""
+msgstr "尖叫声在她周围渐渐消散。另一个声音响起了。那声音也用她自己的语调对她说话，但她知道那声音是不同的。"
 
 msgctxt "speaker:Sarah"
 msgid "Stay here!"
-msgstr ""
+msgstr "待在这儿！"
 
 msgctxt "speaker:Vaelen"
 msgid "What are you going to do?"
-msgstr ""
+msgstr "你打算怎么做？"
 
 msgctxt "speaker:Sarah"
 msgid "Just stay here and no matter what, don't try to make a run for the door."
-msgstr ""
+msgstr "就待在这儿，不管发生什么，都别想着往门口跑。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah strode out onto the center of the throne room, drawing out her blade from its sheath."
-msgstr ""
+msgstr "莎拉大步走向王座厅中央，从鞘中抽出她的剑。"
 
 msgctxt "speaker:Narrator"
 msgid "Each step measured. Each step exactly as she knew it."
-msgstr ""
+msgstr "每一步都经过精确计算。每一步都完全符合她的预期。"
 
 msgctxt "speaker:Narrator"
 msgid "All around her, a vast space. Most soldiers had ran for the edges of the room, hiding behind pillars or any other object that might give them shelter."
-msgstr ""
+msgstr "在她周围是一片广阔的空间。大多数士兵都跑到了房间的边缘，躲在柱子或其他可能提供掩护的物体后面。"
 
 msgctxt "speaker:Narrator"
 msgid "The center was open."
-msgstr ""
+msgstr "中央是一片开阔地。"
 
 msgctxt "speaker:Narrator"
 msgid "Seizing her blade with both hands, Sarah raised her sword up besides herself."
-msgstr ""
+msgstr "莎拉双手紧握剑柄，将长剑举至身侧。"
 
 msgctxt "speaker:Sarah"
 msgid "Come!"
-msgstr ""
+msgstr "来！"
 
 msgctxt "speaker:Narrator"
 msgid "She screamed the word, half to challenge, half to bolster her own confidence."
-msgstr ""
+msgstr "她尖叫着说出这个词，一半是为了挑战，一半是为了增强自己的信心。"
 
 msgctxt "speaker:Narrator"
 msgid "The creature turned towards her, as if obeying her command."
-msgstr ""
+msgstr "那生物转向了她，仿佛听从了她的命令。"
 
 msgctxt "speaker:Narrator"
 msgid "She stared into its face and she could see, despite the lack of its eyes, that the thing looked back into her."
-msgstr ""
+msgstr "她凝视着那张脸，尽管它没有眼睛，但她能感觉到那东西正回望着她。"
 
 msgctxt "speaker:Narrator"
 msgid "The only thought that Sarah could ask herself, again and again."
-msgstr ""
+msgstr "这是莎拉能问自己的唯一一个问题，一遍又一遍。"
 
 msgctxt "speaker:Narrator"
 msgid "And yet, as though her body moved to a different beat, she had ventured out to face the creature."
-msgstr ""
+msgstr "然而，尽管她的身体仿佛随着另一种节奏律动，她还是鼓起勇气走向前去，直面这头怪物。"
 
 msgctxt "speaker:Narrator"
 msgid "For a moment, the thing lingered."
-msgstr ""
+msgstr "有那么一瞬间，那东西停住了。"
 
 msgctxt "speaker:Narrator"
 msgid "Then, the thing's tail sprung like a coil, launching itself towards her."
-msgstr ""
+msgstr "紧接着，那怪物的尾巴像弹簧般弹起，朝她扑去。"
 
 msgctxt "speaker:Narrator"
 msgid "By less than a heartbeat, Sarah stepped aside and felt the creature rush past her."
-msgstr ""
+msgstr "不到一眨眼的功夫，莎拉侧身一闪，感觉到那生物从她身边呼啸而过。"
 
 msgctxt "speaker:Narrator"
 msgid "She felt the tremors and heard the creature's claws digging into the earth, halting its rush and allowing it to turn back to her."
-msgstr ""
+msgstr "她感受到地面的震颤，听到怪物的利爪深深抠进泥土里，止住了它的冲势，让它得以转身面向她。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah spun and thrusted out her blade, catching the creature in its face."
-msgstr ""
+msgstr "莎拉转身挥剑，刺中了怪物的脸。"
 
 msgctxt "speaker:Narrator"
 msgid "Suddenly, the beast lunged back, surprised that anything might have hurt it."
-msgstr ""
+msgstr "突然，野兽猛地扑了回来，惊讶于竟然有什么东西伤到了它。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah could see something in the beast's movements. An uncertainty."
-msgstr ""
+msgstr "莎拉能看出这野兽的动作中有一丝异样。那是一种犹豫。"
 
 msgctxt "speaker:Narrator"
 msgid "The moment passed as the thing launched itself upwards, descending upon her again, now from above."
-msgstr ""
+msgstr "那怪物腾空跃起，再次向她扑来，这次是从上方。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah rolled and swung her blade up in an arc, catching the creature by the joint of its leg."
-msgstr ""
+msgstr "莎拉翻滚起身，挥剑划出一道弧线，斩中了那怪物的腿部关节。"
 
 msgctxt "speaker:Narrator"
 msgid "A deafening scream erupted from the creature as it crashed into the stone floor, its limb smashing against the ground with a loud thud."
-msgstr ""
+msgstr "一声震耳欲聋的尖叫从怪物口中爆发，它重重地摔在石质地面上，那条肢体伴随着沉闷的巨响砸在地上。"
 
 msgctxt "speaker:Narrator"
 msgid "But her body moved quicker still."
-msgstr ""
+msgstr "但她的身体动作更快。"
 
 msgctxt "speaker:Narrator"
 msgid "Spinning around again, Sarah brought her blade down with a plowman's strength, hewing her sword deep into its back."
-msgstr ""
+msgstr "莎拉再次转身，以农夫般的蛮力挥下利刃，将剑深深砍入怪物的背部。"
 
 msgctxt "speaker:Narrator"
 msgid "A black liquid spewed out, covering part of her face and armor, and the beast roared again."
-msgstr ""
+msgstr "黑色的液体喷涌而出，溅了她一脸，也弄脏了她的盔甲，那野兽再次发出咆哮。"
 
 msgctxt "speaker:Narrator"
 msgid "As she pulled her blade back, she could feel the thing's flesh rip and tear."
-msgstr ""
+msgstr "当她将剑抽回时，她能感觉到那怪物的血肉被撕裂、扯开。"
 
 msgctxt "speaker:Narrator"
 msgid "Raising her sword high above her head, she brought it down again with both hands."
-msgstr ""
+msgstr "她将剑高高举过头顶，双手再次挥下。"
 
 msgctxt "speaker:Narrator"
 msgid "Again, she could feel the beast thrash. Its scream drowned out all other senses. More blood spewed forth, pooling on the floor."
-msgstr ""
+msgstr "再次，她能感觉到那头野兽在剧烈挣扎。它的嘶吼声淹没了其他所有感官。更多的鲜血喷涌而出，在地面上汇聚成一滩。"
 
 msgctxt "speaker:Narrator"
 msgid "Rip."
@@ -110549,383 +110549,383 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Tear."
-msgstr ""
+msgstr "撕裂。"
 
 msgctxt "speaker:Narrator"
 msgid "Raising her sword above her head for yet another blow, Sarah caught a shade moving in the corner of her eyes."
-msgstr ""
+msgstr "莎拉将剑高高举过头顶，准备再次挥下，却瞥见眼角处有一道黑影闪过。"
 
 msgctxt "speaker:Narrator"
 msgid "Too late, Sarah only realized it was the creature's tail when it struck her across the head."
-msgstr ""
+msgstr "太迟了，莎拉直到被那怪物的尾巴击中头部时，才意识到那是它的尾巴。"
 
 msgctxt "speaker:Narrator"
 msgid "So great was the impact of the force that Sarah felt herself topple over, her entire body spinning, rolling across the floor, the clattering of metal as her armor broke her fall."
-msgstr ""
+msgstr "冲击力之大，令莎拉感到自己摔倒在地，整个身体翻滚着在地板上滑动，金属碰撞的铿锵声伴随着她的盔甲缓冲了坠落的冲击。"
 
 msgctxt "speaker:Narrator"
 msgid "Hold on, she screamed in her mind, hold onto your sword."
-msgstr ""
+msgstr "坚持住，她在心中尖叫，抓紧你的剑。"
 
 msgctxt "speaker:Narrator"
 msgid "When she finally stopped rolling, Sarah tried to push herself back up."
-msgstr ""
+msgstr "当她终于停止翻滚时，莎拉试图重新撑起身体。"
 
 msgctxt "speaker:Narrator"
 msgid "No sooner did she try when she saw the creature lunge for her."
-msgstr ""
+msgstr "她刚一起身，就看见那怪物向她扑来。"
 
 msgctxt "speaker:Narrator"
 msgid "She rolled to the side, again the creature missed her."
-msgstr ""
+msgstr "她向侧面翻滚，怪物再次扑空。"
 
 msgctxt "speaker:Narrator"
 msgid "She felt it reach for her with the stump of its limb."
-msgstr ""
+msgstr "她感觉到它用肢体的残端向她伸来。"
 
 msgctxt "speaker:Narrator"
 msgid "Continuing the motion of her roll, Sarah positioned herself back onto her feet."
-msgstr ""
+msgstr "借着翻滚的惯性，莎拉重新站稳了脚跟。"
 
 msgctxt "speaker:Narrator"
 msgid "This time, she caught the thing's tail in time."
-msgstr ""
+msgstr "这一次，她及时抓住了那东西的尾巴。"
 
 msgctxt "speaker:Narrator"
 msgid "Ducking low and raising her blade up, she felt it cut through the thing's tail as the beast swiped it into her blade. A loud thud of something falling behind her."
-msgstr ""
+msgstr "她压低身子，举起利刃，感觉到那野兽挥击的尾巴被她的刀锋切断。身后传来一声重物落地的闷响。"
 
 msgctxt "speaker:Narrator"
 msgid "Its face rushed towards her."
-msgstr ""
+msgstr "它的脸猛地扑向她。"
 
 msgctxt "speaker:Narrator"
 msgid "The thing's razor sharp teeth, a mouth opening and shutting with a sickening chomp."
-msgstr ""
+msgstr "那怪物的牙齿如剃刀般锋利，嘴巴开合间发出令人作呕的咀嚼声。"
 
 msgctxt "speaker:Narrator"
 msgid "She stepped back, sweeping her blade across as she kept stepping backwards, she caught the creature across its face, holding it off, injuring it each time it tried to snap her in its jaws."
-msgstr ""
+msgstr "她向后退去，一边退一边挥剑横扫，剑锋划过了怪物的面部，将其逼退，每当它试图咬住她时，都让她在格挡中对其造成损伤。"
 
 msgctxt "speaker:Narrator"
 msgid "A fury was building in the thing, she could hear its screams mix with an animalistic fury, something close to a hiss."
-msgstr ""
+msgstr "那东西体内涌起一股狂怒，她能听到它的尖叫声中夹杂着野兽般的暴怒，近乎嘶吼。"
 
 msgctxt "speaker:Narrator"
 msgid "As it began to wildly swipe its claws at her, Sarah dove in under it, thrusting her blade up, she caught another of the creature's limbs."
-msgstr ""
+msgstr "当它开始疯狂地用爪子向她挥击时，莎拉闪身躲入其下方，将刀刃向上猛刺，再次砍中了怪物的另一条肢体。"
 
 msgctxt "speaker:Narrator"
 msgid "For a moment, her blade remained buried in the beast's flesh, but with a titan's effort, Sarah pulled out the blade, cutting away what little remained of the creature's limb."
-msgstr ""
+msgstr "片刻间，她的剑仍深深插在野兽的皮肉中，但莎拉使出泰坦般的力气拔出利刃，切掉了那生物肢体上仅存的部分。"
 
 msgctxt "speaker:Narrator"
 msgid "Leaping back, Sarah looked upon the thing."
-msgstr ""
+msgstr "莎拉向后跃开，审视着那怪物。"
 
 msgctxt "speaker:Narrator"
 msgid "Deprived of two of its limbs, the thing stumbled upon itself, its inky belly slithering across the floor, leaving a pool of black blood as it tried to approach her."
-msgstr ""
+msgstr " deprived of two limbs, the thing stumbled over itself, its inky belly slithering across the floor, leaving a pool of black blood as it tried to approach her."
 
 msgctxt "speaker:Narrator"
 msgid "It's hissing had grown deeper, more exhausted, its attacks slower."
-msgstr ""
+msgstr "它的嘶吼声变得愈发低沉，透着疲惫，攻击也迟缓了下来。"
 
 msgctxt "speaker:Narrator"
 msgid "As it lunged for her again, Sarah was ready, bringing her blade down across its face, splitting the thing's mask apart."
-msgstr ""
+msgstr "当它再次向她扑来时，莎拉早已做好准备，挥刀斩向它的脸，将那张面具劈得粉碎。"
 
 msgctxt "speaker:Narrator"
 msgid "It screamed more loudly than it ever had before."
-msgstr ""
+msgstr "它发出比以往任何时候都更响亮的尖叫。"
 
 msgctxt "speaker:Narrator"
 msgid "All of its body flinched and writhed around the room, thrasing violently as it sought to deal with the pain."
-msgstr ""
+msgstr "它的整个身体都在颤抖、扭动，在房间里剧烈挣扎，试图应对那痛苦。"
 
 msgctxt "speaker:Narrator"
 msgid "But with each wild movement, its body slowed."
-msgstr ""
+msgstr "但每一次狂乱的挣扎，它的身体都变得迟缓一分。"
 
 msgctxt "speaker:Narrator"
 msgid "With each scream, its voice dimmed."
-msgstr ""
+msgstr "随着每一次尖叫，它的声音逐渐微弱。"
 
 msgctxt "speaker:Narrator"
 msgid "Slowly, the thing began to drag, and eventually, ceased to move altogther."
-msgstr ""
+msgstr "渐渐地，那东西开始拖曳着身体，最终完全停止了动弹。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah walked around the thing, carefuly."
-msgstr ""
+msgstr "莎拉小心翼翼地绕着那东西走了一圈。"
 
 msgctxt "speaker:Narrator"
 msgid "She saw the thing's body rise and fall, its breathing laboured."
-msgstr ""
+msgstr "她看见那东西的身体起伏着，呼吸沉重。"
 
 msgctxt "speaker:Narrator"
 msgid "As she moved in closer, the creature swiped for her with its claws, but by now it was so slow that it had no chance to catch her."
-msgstr ""
+msgstr "随着她靠得更近，那生物挥舞着利爪向她扑来，但此时它已慢得毫无机会抓住她。"
 
 msgctxt "speaker:Narrator"
 msgid "Stepping back, Sarah dodged the beast's hopeless attack, and again moved in closer."
-msgstr ""
+msgstr "莎拉后退一步，躲过了野兽那无望的攻击，再次靠近。"
 
 msgctxt "speaker:Narrator"
 msgid "Leaping forward, Sarah drove her blade deep into the creature's belly."
-msgstr ""
+msgstr "莎拉向前一跃，将刀刃深深刺入怪物的腹部。"
 
 msgctxt "speaker:Narrator"
 msgid "More of its black innards and blood spewed out across the floor, but now the creature was too weak to even cry out. It only grunted in deep pain."
-msgstr ""
+msgstr "更多的黑色内脏和血液喷溅到地板上，但此时怪物已虚弱得连叫喊的力气都没有了。它只是在痛苦地低吼。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah pulled her blade out, raised it over her head, and with the force of both hands hewed it into the creature."
-msgstr ""
+msgstr "莎拉拔出剑，举过头顶，双手用力劈向那怪物。"
 
 msgctxt "speaker:Narrator"
 msgid "Rip. Tear. Pull."
-msgstr ""
+msgstr "撕裂。扯开。拽出。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah felt her face, her hair, her armor, covered in the creature's ichor."
-msgstr ""
+msgstr "莎拉感到自己的脸、头发和盔甲上都沾满了怪物的体液。"
 
 msgctxt "speaker:Narrator"
 msgid "So drenched in the thing's blood, Sarah could feel even her grip on her sword's handle slip."
-msgstr ""
+msgstr "莎拉浑身浸透了怪物的鲜血，甚至能感觉到自己握剑的手柄都在打滑。"
 
 msgctxt "speaker:Narrator"
 msgid "But she committed herself to her butcher's work with a zeal, strengthened her grip, and hewed the blade down again."
-msgstr ""
+msgstr "但她以狂热的 zeal 投入屠戮，重新握紧剑柄，再次挥刀斩下。"
 
 msgctxt "speaker:Narrator"
 msgid "She had ceased to count, but somewhere in the slaughter, she finally regained her senses."
-msgstr ""
+msgstr "她已不再计数，但在杀戮的某个时刻，她终于恢复了神智。"
 
 msgctxt "speaker:Narrator"
 msgid "Her blade remained buried in the body of the beast, but it no longer moved. It no longer made a sound."
-msgstr ""
+msgstr "她的剑仍插在野兽的尸体里，但不再动弹，也不再发出声响。"
 
 msgctxt "speaker:Narrator"
 msgid "Staring down at her hands, Sarah could hardly make out her once shining armor, now stained black."
-msgstr ""
+msgstr "低头看着自己的双手，莎拉几乎认不出那身曾经闪闪发光的铠甲，如今已染得漆黑。"
 
 msgctxt "speaker:Narrator"
 msgid "She felt her hair, sticking to her neck as she turned to look up."
-msgstr ""
+msgstr "她感觉到头发粘在脖子上，当她转过头向上看时。"
 
 msgctxt "speaker:Narrator"
 msgid "All around her, she saw the hestitant faces of the soldiers, emerging from behind their hiding places."
-msgstr ""
+msgstr "在她周围，她看到了士兵们从藏身之处探出的迟疑面孔。"
 
 msgctxt "speaker:Narrator"
 msgid "Even they could barely believe she had ended the thing."
-msgstr ""
+msgstr "就连他们自己也几乎不敢相信，她竟然杀死了那个怪物。"
 
 msgctxt "speaker:Narrator"
 msgid "Pulling out the blade and rending the thing's flesh one final time, Sarah raised up her sword and screamed."
-msgstr ""
+msgstr "莎拉拔出利刃，最后一次撕裂怪物的血肉，高举长剑，放声尖叫。"
 
 msgctxt "speaker:Narrator"
 msgid "As one, a chorus of cheers and screams emerged from the soldiers."
-msgstr ""
+msgstr "士兵们齐声爆发出一阵欢呼与尖叫。"
 
 msgctxt "speaker:Narrator"
 msgid "Rushing her, even the Mythran soldiers, raised her up atop their shoulders and began to parade her around."
-msgstr ""
+msgstr "Мифранские солдаты, даже те, кто спешил к ней, подняли её на плечи и начали водить вокруг."
 
 msgctxt "speaker:Narrator"
 msgid "She could hear their praises. Their chants. The new titles they would bestow on her."
-msgstr ""
+msgstr "她听见了他们的赞美。他们的呼喊。他们将赋予她的新称号。"
 
 msgctxt "speaker:Narrator"
 msgid "Out across the room, she could hear an entire host, their chants of her name pounding like thunder."
-msgstr ""
+msgstr "在房间的另一头，她能听到整个军队齐声呼喊她的名字，那声音如雷鸣般震撼。"
 
 msgctxt "speaker:Narrator"
 msgid "Standing in the distance, only a single man stood apart from the crowd."
-msgstr ""
+msgstr "远处，只有一个人独自站在人群之外。"
 
 msgctxt "speaker:Narrator"
 msgid "Vaelen."
-msgstr ""
+msgstr "瓦伦。"
 
 msgctxt "speaker:Narrator"
 msgid "Hours had passed since she slayed the beast."
-msgstr ""
+msgstr "距离她斩杀那头野兽，已经过去了好几个小时。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah sat slumped against one of the great pillars that kept up the roof of the throne room of Bagrad palace."
-msgstr ""
+msgstr "莎拉瘫坐在巴格拉德宫殿王座厅的一根巨大立柱旁。"
 
 msgctxt "speaker:Narrator"
 msgid "The room had felt vast, empty and cold, but it was now filled with the conquerors of Bagrad."
-msgstr ""
+msgstr "大厅曾显得空旷、寒冷而寂寥，如今却挤满了巴格德的征服者们。"
 
 msgctxt "speaker:Narrator"
 msgid "Mythran soldiers, her own fellow mercenaries, everyone who had participated in the battle was here."
-msgstr ""
+msgstr "米斯拉士兵，她自己的同伴雇佣兵们，所有参与了这场战斗的人都在这里。"
 
 msgctxt "speaker:Narrator"
 msgid "With any threat of resistance now crushed, the soldier's on all sides had puEt down their swords and picked up their wine bottles."
-msgstr ""
+msgstr "随着任何抵抗威胁如今已被粉碎，四面八方的士兵们都放下了手中的剑，拿起了酒瓶。"
 
 msgctxt "speaker:Narrator"
 msgid "Most everyone she saw was either drunk or blacked out."
-msgstr ""
+msgstr "她看到的绝大多数人都不是喝醉了就是烂醉如泥。"
 
 msgctxt "speaker:Narrator"
 msgid "All across the room, random groups of soldiers mingled around campfires, as the host of soldiers feasted upon what had once been the contents of the royal kitchen."
-msgstr ""
+msgstr "整个房间里，零散的士兵们围在篝火旁互相交谈，尽情享用着曾经属于皇家厨房的盛宴。"
 
 msgctxt "speaker:Narrator"
 msgid "Entire hogs, glistened and crackled as the flames of campfires licked at the meat and gristle, turning it a shiny deep brown."
-msgstr ""
+msgstr "整只烤猪在篝火舔舐肉与软骨的火焰中油光发亮、滋滋作响，被烤成了油亮的深褐色。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah had her fill, both of wine and food."
-msgstr ""
+msgstr "莎拉也尽情享用美酒佳肴。"
 
 msgctxt "speaker:Narrator"
 msgid "So too did she have her fill of praise. There must have barely been a single soldier who hadn't stopped her and asked her about killing the beast."
-msgstr ""
+msgstr "她也同样收获了满满的赞誉。恐怕几乎没有哪个士兵没有停下来向她打听击杀那头巨兽的事。"
 
 msgctxt "speaker:Narrator"
 msgid "Those who had been present in the throne room had managed to turn the story of her killing the beast into a tale larger than life."
-msgstr ""
+msgstr "那些曾在王殿中目睹此事的人，已将她屠兽的故事渲染得神乎其神。"
 
 msgctxt "speaker:Narrator"
 msgid "Perhaps it was."
-msgstr ""
+msgstr "也许确实如此。"
 
 msgctxt "speaker:Narrator"
 msgid "Staring out across the room, Sarah felt oddly content."
-msgstr ""
+msgstr "莎拉环顾四周，心中感到一种奇异的满足。"
 
 msgctxt "speaker:Narrator"
 msgid "Each campaign brought with it the risk of death. But despite everything, she had survived another."
-msgstr ""
+msgstr "每一次征战都伴随着死亡的风险，但尽管如此，她又一次幸存了下来。"
 
 msgctxt "speaker:Kate"
 msgid "Hey there."
-msgstr ""
+msgstr "嗨。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah turned her head slowly."
-msgstr ""
+msgstr "莎拉缓缓转过头。"
 
 msgctxt "speaker:Sarah"
 msgid "Hey. Thought I missed you out here."
-msgstr ""
+msgstr "嗨。我还以为你错过了在这儿的机会呢。"
 
 msgctxt "speaker:Kate"
 msgid "Miss a chance to see the great hero that killed a demon? I'd never."
-msgstr ""
+msgstr "错过亲眼目睹大英雄斩杀恶魔的机会？我可舍不得。"
 
 msgctxt "speaker:Sarah"
 msgid "I didn't kill a demon."
-msgstr ""
+msgstr "我没杀恶魔。"
 
 msgctxt "speaker:Kate"
 msgid "Maybe. Whose to say it wasn't. You know what a demon looks like?"
-msgstr ""
+msgstr "也许吧。谁又能说它不是呢？你知道恶魔长什么样吗？"
 
 msgctxt "speaker:Narrator"
 msgid "It was hard to argue for Sarah. Maybe the thing had been a demon, what did she really know about such things?"
-msgstr ""
+msgstr "莎拉很难为自己辩解。也许那东西确实是个恶魔，但她对这种事究竟了解多少呢？"
 
 msgctxt "speaker:Sarah"
 msgid "Whatever. If you're here to shove another compliment up my ass, know that I've had my fill."
-msgstr ""
+msgstr "随便。如果你是想再往我屁股里塞一句恭维话，那我可受够了。"
 
 msgctxt "speaker:Narrator"
 msgid "She saw Kate grin in that mischievous way of hers."
-msgstr ""
+msgstr "她看到凯特露出了她那副调皮的笑容。"
 
 msgctxt "speaker:Kate"
 msgid "Ooh, your ass is stuffed huh?"
-msgstr ""
+msgstr "哦，你的屁股被塞满了是吧？"
 
 msgctxt "speaker:Sarah"
 msgid "You're vile Kate, you really are."
-msgstr ""
+msgstr "你真下流，凯特，真的。"
 
 msgctxt "speaker:Kate"
 msgid "Whatever."
-msgstr ""
+msgstr "随便吧。"
 
 msgctxt "speaker:Kate"
 msgid "I know you longer than just about anyone else here."
-msgstr ""
+msgstr "我认识你比这里其他任何人都久。"
 
 msgctxt "speaker:Kate"
 msgid "I remember the girl that started crying because she got her head stuck in a rabbit's burrow and couldn't get it out."
-msgstr ""
+msgstr "我记得那个因为头卡在兔子洞里拔不出来而哭鼻子的女孩。"
 
 msgctxt "speaker:Sarah"
 msgid "That wasn't funny!"
-msgstr ""
+msgstr "这不好笑！"
 
 msgctxt "speaker:Kate"
 msgid "I think it was."
-msgstr ""
+msgstr "我觉得挺逗的。"
 
 msgctxt "speaker:Sarah"
 msgid "You've always been the one to get me into trouble."
-msgstr ""
+msgstr "你总是那个把我惹上麻烦的人。"
 
 msgctxt "speaker:Kate"
 msgid "Maybe. But I was also the one to pull you out of that burrow, remember? So I guess it even out."
-msgstr ""
+msgstr "也许吧。但我也曾把你从那地洞里拉出来，记得吗？所以我想我们扯平了。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah couldn't help but laugh."
-msgstr ""
+msgstr "莎拉忍不住笑了起来。"
 
 msgctxt "speaker:Sarah"
 msgid "Well, I managed to get myself into plenty of trouble lately. But the thing from today that was..."
-msgstr ""
+msgstr "好吧，最近我自己倒是惹了不少麻烦。但今天那件事……"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah could see Kate grew more somber."
-msgstr ""
+msgstr "莎拉看出凯特的神色变得愈发凝重。"
 
 msgctxt "speaker:Kate"
 msgid "Sarah, I...when I heard the screams coming from the throne room, I thought I'd lose you..."
-msgstr ""
+msgstr "莎拉，我……当我听到王座厅传来的尖叫声时，我以为我会失去你……"
 
 msgctxt "speaker:Sarah"
 msgid "Everything has just been a blur since then...I've barely had time to process it."
-msgstr ""
+msgstr "从那以后，一切就像一场模糊的噩梦……我几乎没有时间去消化这一切。"
 
 msgctxt "speaker:Sarah"
 msgid "Hell, that thing still doesn't seem real..."
-msgstr ""
+msgstr "天哪，那件事到现在感觉还是不真实……"
 
 msgctxt "speaker:Kate"
 msgid "You have any idea what it was?"
-msgstr ""
+msgstr "你知道那到底是什么东西吗？"
 
 msgctxt "speaker:Sarah"
 msgid "Never seen anything like it. Never even read about anything like it. All I know is that the Shah summoned it, somehow."
-msgstr ""
+msgstr "我从未见过这种东西，甚至没在书上读到过。我只知道是沙赫不知用什么方法召唤了它。"
 
 msgctxt "speaker:Kate"
 msgid "He summoned it?"
-msgstr ""
+msgstr "他召唤了它？"
 
 msgctxt "speaker:Sarah"
 msgid "He was using some kind of...dagger. I don't know. It all happened so fast."
-msgstr ""
+msgstr "他当时用了某种……匕首。我也不清楚。一切发生得太快了。"
 
 msgctxt "speaker:Narrator"
 msgid "Kate patted Sarah on the shoulders."
-msgstr ""
+msgstr "凯特拍了拍莎拉的肩膀。"
 
 msgctxt "speaker:Kate"
 msgid "Whatever. I find it best not to worry too long about shit that's way beyond my ability to understand, and you shouldn't either."
-msgstr ""
+msgstr "随便吧。我觉得最好别为那些超出自己理解能力的事情纠结太久，你也不该这样。"
 
 msgctxt "speaker:Kate"
 msgid "As for the Shah, he got what he deserved for playing with dark magic."
@@ -110933,7 +110933,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "In the moment after Sarah had killed the beast, the mob of soldiers had rushed towards her in celebration, but more accurately, there had been two mobs."
-msgstr ""
+msgstr "莎拉杀死那头野兽后的那一刻，士兵们曾涌向她以示庆祝，但更准确地说，当时有两拨人。"
 
 msgctxt "speaker:Narrator"
 msgid "The one that raised up Sarah and sung her praises, and the other, smaller group of soldiers, that had rushed the dais and seized the Shah."
@@ -110941,11 +110941,11 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "His laughing never stopped."
-msgstr ""
+msgstr "他的笑声从未停止。"
 
 msgctxt "speaker:Narrator"
 msgid "Not even when she had killed the beast."
-msgstr ""
+msgstr "甚至在她杀死那头野兽的时候，笑声也未曾停歇。"
 
 msgctxt "speaker:Narrator"
 msgid "Not even when the soldiers had grabbed him and begun to stomp him to death."
@@ -110953,7 +110953,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "She could still hear his cheerful madness, turning towards a gurgle as he choked on his own blood and bones."
-msgstr ""
+msgstr "她仍能听见他那欢快的疯狂，随着他因自己的血和骨头而窒息，那声音变成了咕噜声。"
 
 msgctxt "speaker:Narrator"
 msgid "Still, Sarah could hardly feel sorry for the man."
