@@ -109981,7 +109981,7 @@ msgstr "只是……气氛有点紧张。"
 
 msgctxt "speaker:Vaelen"
 msgid "If not for you, I would be the only one from the Brothers of Providence. I'd like to have more friendly faces in the room. Just in case."
-msgstr ""
+msgstr "要不是因为你，我恐怕会是‘天意兄弟会’里唯一在场的人了。我希望房间里能有更多熟悉的面孔，以防万一。"
 
 msgctxt "speaker:Sarah"
 msgid "Sure, I'll come along. I'll bring a handful of soldiers too, just in case."
@@ -109997,7 +109997,7 @@ msgstr "莎拉挑选了一小队士兵。"
 
 msgctxt "speaker:Narrator"
 msgid "It wasn't much, especially not if the Mythrans would decide to cross them, but it would be enough to put up a short fight. Perhaps enough to run away."
-msgstr ""
+msgstr "人数并不多，尤其是如果米斯兰人决定正面迎击的话，但这足以让他们进行一场短暂的抵抗。或许也足够用来逃跑。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah had come to learn that a lot could go wrong near the end of a contract."
@@ -110017,27 +110017,27 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Their army was larger than their mercenary company by many times, and still, it represented only a small part of the total Mythran army."
-msgstr ""
+msgstr "他们的军队人数是佣兵团的许多倍，然而这仅仅是米斯拉总兵力的一小部分。"
 
 msgctxt "speaker:Narrator"
 msgid "Mythra truly was a superpower without equals."
-msgstr ""
+msgstr "米特拉确实是一个无与伦比的超级大国。"
 
 msgctxt "speaker:Narrator"
 msgid "It was fortunate then for the rest of the world that Mythra was so prone to infighting, or else every living soul would have to answer to them."
-msgstr ""
+msgstr "因此，对于世界的其余部分而言，幸好事态如此：米特拉人如此热衷于内斗，否则每一个生灵都得向它们负责。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah marched slightly behind Vaelen, past the host of Mythran soldiers."
-msgstr ""
+msgstr "莎拉跟在瓦伦身后，从米特拉士兵的队伍旁走过。"
 
 msgctxt "speaker:Narrator"
 msgid "Near the front, she saw that the Mythran prince was already waiting."
-msgstr ""
+msgstr "在队伍前方，她看到米斯拉王子已经在等候了。"
 
 msgctxt "speaker:Mythran Prince"
 msgid "Shah Mahda! Come out of your little rat hiding hole before I send in my men to drag you out like the vermin you are."
-msgstr ""
+msgstr "沙·马哈达！从你那老鼠洞似的小藏身处滚出来，否则我就派兵把你像害虫一样拖出去。"
 
 msgctxt "speaker-name"
 msgid "Mythran Prince"
@@ -110045,7 +110045,7 @@ msgstr "米特拉王子"
 
 msgctxt "speaker:Mythran Prince"
 msgid "If you're not going to live honorably, at least you can die honorably."
-msgstr ""
+msgstr "既然你无法有尊严地活着，至少可以死得有尊严些。"
 
 msgctxt "speaker:Mythran Prince"
 msgid "Whatever, I don't have the patience for this. Men! Tear down the barricade and drag these rats out, alive!"

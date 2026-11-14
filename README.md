@@ -3,7 +3,7 @@
 Unofficial fan-made localization (11 languages) and AI voice-over packs for
 **The Survival of Sarah Rose** (Ren'Py, Steam).
 
-**Project page (source of truth for users):** <https://domovikx.github.io/>
+**Project page (source of truth for users):** <https://domovikx.github.io/The-Survival-of-Sarah-Rose-Mods/>
 **Nexus Mods:** <https://www.nexusmods.com/games/11043/mods/1>
 **Downloads:** [https://www.nexusmods.com/mods/1?game_id=11043](https://www.nexusmods.com/mods/1?game_id=11043)
 
@@ -59,7 +59,7 @@ The authoritative license for this work is **CC BY-NC 4.0** — see
 Неофициальный фанатский патч: перевод (11 языков) и **AI-озвучка** (синтетические
 голоса, демо-скоуп — стартовые арки) для **The Survival of Sarah Rose**.
 
-**Сайт (основная информация):** <https://domovikx.github.io/> •
+**Сайт (основная информация):** <https://domovikx.github.io/The-Survival-of-Sarah-Rose-Mods/> •
 **Nexus Mods:** <https://www.nexusmods.com/games/11043/mods/1> •
 **Скачать:** [https://www.nexusmods.com/mods/1?game_id=11043](https://www.nexusmods.com/mods/1?game_id=11043)
 
