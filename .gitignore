@@ -47,3 +47,7 @@ vox_auto.pid
 # пост-конвейера (wav -> opus) или сирота от обрыва/остановки — не коммитится
 patches/ai-voice-pack/audio/**/*.wav
 nul
+# локальные секреты
+.env
+.env.local
+!.env.example
