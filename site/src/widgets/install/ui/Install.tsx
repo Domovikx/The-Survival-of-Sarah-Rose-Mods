@@ -102,7 +102,7 @@ const styles = stylex.create({
   },
 })
 
-const DEFAULT_GAME_PATH = 'C:Program Files (x86)SteamsteamappscommonThe Survival of Sarah Rose'
+const DEFAULT_GAME_PATH = String.raw`C:\Program Files (x86)\Steam\steamapps\common\The Survival of Sarah Rose`
 
 export const Install = () => {
   const { t } = useTranslation()

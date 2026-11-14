@@ -92017,11 +92017,11 @@ msgstr "莎拉将手臂向后缩回，现在它已不再被束缚。"
 
 msgctxt "speaker:Narrator"
 msgid "She couldn't feel any pain on her wrist, but perhaps it was because everything was already in pain."
-msgstr ""
+msgstr "她手腕上感觉不到疼痛，但也许是因为全身都已经痛得不行了。"
 
 msgctxt "speaker:Sarah"
 msgid "Stay here, Nick, I'm gonna be right back!"
-msgstr ""
+msgstr "留在这儿，尼克，我马上回来！"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah leapt up, storming back onto the shoreline."
@@ -92029,7 +92029,7 @@ msgstr "莎拉猛地跳起身，怒气冲冲地冲回海岸线。"
 
 msgctxt "speaker:Narrator"
 msgid "Her mind raced as she tried to spot and gather each fragment of driftwoord that she could."
-msgstr ""
+msgstr "她的大脑飞速运转，竭力搜寻并收集每一块能找到的漂流木碎片。"
 
 msgctxt "speaker:Narrator"
 msgid "Before long, she was back in the cave with two arms full of dry wood."
@@ -92045,7 +92045,7 @@ msgstr "赶紧生火！"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah didn't wait for a response, running back out to the shore to gather more wood."
-msgstr ""
+msgstr "莎拉没有等待回应，便跑回岸边去收集更多的木材。"
 
 msgctxt "speaker:Narrator"
 msgid "All in all, she managed four trips before collapsing onto the ground of the cave."
@@ -92053,79 +92053,79 @@ msgstr "总而言之，她往返跑了四趟，最后瘫倒在洞穴的地面上
 
 msgctxt "speaker:Narrator"
 msgid "She could see small sparks had begun to form on the campfire that Nick had managed to start."
-msgstr ""
+msgstr "她能看到尼克生起的篝火上已开始冒出细小的火星。"
 
 msgctxt "speaker:Narrator"
 msgid "Together, they cherised the small embers, softly adding tinder and blowing as much as they dared, to help grow the flame."
-msgstr ""
+msgstr "他们共同呵护着那些微弱的余烬，小心翼翼地添加引火物，并尽力吹气助燃。"
 
 msgctxt "speaker:Narrator"
 msgid "The dry wood from the shore proved easy fuel, and before long, the campfire blazed."
-msgstr ""
+msgstr "岸边的干柴成了极佳的燃料，没过多久，篝火便熊熊燃烧起来。"
 
 msgctxt "speaker:Narrator"
 msgid "The light from the campfire illuminated deep into the cave, but revealed nothing of importance. Just more cave."
-msgstr ""
+msgstr "营火的光芒照亮了洞穴深处，却并未显露出任何重要的东西。只是更多的洞穴罢了。"
 
 msgctxt "speaker:Narrator"
 msgid "Outside the cave, the light from the campfire didn't reach far, drowned out by the fog and pine trees that sat nearby."
-msgstr ""
+msgstr "洞穴外，营火的光芒无法照得很远，被附近的雾气和松树所遮蔽。"
 
 msgctxt "speaker:Narrator"
 msgid "When the heat of the campfire slowly pushed away the numbness and brought back the pain in her body, Sarah had never felt happier at sensation of pain."
-msgstr ""
+msgstr "当篝火的热量慢慢驱散了麻木，让身体的疼痛重新回归时，莎拉从未觉得这种痛感如此令人欣喜。"
 
 msgctxt "speaker:Narrator"
 msgid "Her fingers, rigid like stone from the cold, slowly began to regain their flexibility."
-msgstr ""
+msgstr "她那因寒冷而僵硬如石的手指，正慢慢恢复知觉。"
 
 msgctxt "speaker:Sarah"
 msgid "We're alive..."
-msgstr ""
+msgstr "我们还活着……"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah spoke the words as though she herself could hardly believe it."
-msgstr ""
+msgstr "莎拉说出这些话时，仿佛连她自己都难以相信。"
 
 msgctxt "speaker:Nickolas"
 msgid "I thought we were gonna die out in the water..."
-msgstr ""
+msgstr "我还以为我们会死在水里呢……"
 
 msgctxt "speaker:Narrator"
 msgid "Each of them still too stunned from everything that had happened, decided to say nothing. They could speak in the morning."
-msgstr ""
+msgstr "两人都因刚刚发生的一切而震惊不已，决定一言不发。他们打算等到早上再开口。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah kept watch on Nick as she slowly faded into sleep."
-msgstr ""
+msgstr "莎拉守望着尼克，随着困意慢慢袭来，她逐渐陷入了睡眠。"
 
 msgctxt "speaker:Narrator"
 msgid "Then she was alone again."
-msgstr ""
+msgstr "随后，她又独自一人了。"
 
 msgctxt "speaker:Narrator"
 msgid "Staring out of the cave entrance, Sarah saw the wind pick up, but their shelter kept the worst of it out."
-msgstr ""
+msgstr "莎拉望着洞穴入口，看见风势渐起，但他们的庇护所挡住了最猛烈的部分。"
 
 msgctxt "speaker:Narrator"
 msgid "The heat from the campfire dried her body and clothes."
-msgstr ""
+msgstr "篝火的热量烘干了她的身体和衣物。"
 
 msgctxt "speaker:Narrator"
 msgid "They were out on the edge of the world, with little more than a campfire for heat, and yet, Sarah couldn't help but feel grateful."
-msgstr ""
+msgstr "他们身处世界边缘，仅靠一堆篝火取暖，然而莎拉却不禁心生感激。"
 
 msgctxt "speaker:Narrator"
 msgid "She was alive."
-msgstr ""
+msgstr "她还活着。"
 
 msgctxt "speaker:Narrator"
 msgid "Despite everything else, she still survived."
-msgstr ""
+msgstr "尽管历经一切，她依然幸存。"
 
 msgctxt "speaker:Narrator"
 msgid "Whatever challenges would come, she knew she could face them."
-msgstr ""
+msgstr "无论未来会有怎样的挑战，她都知道自己能够直面它们。"
 
 msgctxt "menu"
 msgid "Betray Nick"
@@ -92133,83 +92133,83 @@ msgstr "背叛尼克"
 
 msgctxt "speaker:Narrator"
 msgid "His plan was stupid, and the reason for it even worse."
-msgstr ""
+msgstr "他的计划很愚蠢，而背后的原因更是糟糕透顶。"
 
 msgctxt "speaker:Narrator"
 msgid "Risking his life, perhaps even her life, because he wanted to feel like a man."
-msgstr ""
+msgstr "拿自己的性命，甚至她的性命去冒险，只为了让自己感觉像个男人。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah knew she had fought hard and long to get to where she was. Sacrificed everything, given up her dignity."
-msgstr ""
+msgstr "莎拉知道自己为了走到今天这一步，已经奋斗了许久。她牺牲了一切，甚至放弃了尊严。"
 
 msgctxt "speaker:Narrator"
 msgid "Had she complained? No! But this little weakling was ready to throw it all away because he couldn't take for a few days what she had endured for months."
-msgstr ""
+msgstr "她抱怨过吗？没有！但这个弱不禁风的家伙却准备把这一切都毁掉，仅仅因为他无法忍受几天她所承受了数月的痛苦。"
 
 msgctxt "speaker:Narrator"
 msgid "Rely on the only person that had ever looked out for her."
-msgstr ""
+msgstr "依靠那个唯一一直护着她的人。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah had made up her mind and the night had set in fast."
-msgstr ""
+msgstr "莎拉已下定决心，夜色迅速降临。"
 
 msgctxt "speaker:Narrator"
 msgid "She was hestitant."
-msgstr ""
+msgstr "她有些犹豫。"
 
 msgctxt "speaker:Narrator"
 msgid "She knew Nick was a fool for doing what he was doing, and yet, part of her felt bad for him."
-msgstr ""
+msgstr "她知道尼克做这些事很傻，但不知为何，她心里还是对他有些不忍。"
 
 msgctxt "speaker:Narrator"
 msgid "But it was her or him, and Sarah knew that in this world, she'd choose herself."
-msgstr ""
+msgstr "但非他即她，而莎拉深知，在这个世界里，她会选择保全自己。"
 
 msgctxt "speaker:Sarah"
 msgid "Captain, may I tell you something?"
-msgstr ""
+msgstr "上尉，我能跟您说句话吗？"
 
 msgctxt "speaker:Captain Belmont"
 msgid "What is it, blondie?"
-msgstr ""
+msgstr "什么事，金发妞？"
 
 msgctxt "speaker:Sarah"
 msgid "I...I don't know how to say this, but..."
-msgstr ""
+msgstr "我……我不知道该怎么说，但是……"
 
 msgctxt "speaker:Captain Belmont"
 msgid "Spit it out."
-msgstr ""
+msgstr "说。"
 
 msgctxt "speaker:Sarah"
 msgid "Nick is planning to steal from you."
-msgstr ""
+msgstr "尼克打算偷你的东西。"
 
 msgctxt "speaker:Narrator"
 msgid "She saw him turn his face towards her, his eyes investigating her."
-msgstr ""
+msgstr "她看见他转过头来面对她，目光审视着她。"
 
 msgctxt "speaker:Sarah"
 msgid "He...he's planning to steal the key from your vault...I felt I had to report him to you."
-msgstr ""
+msgstr "他……他打算从你的金库里偷走钥匙……我觉得必须向你报告。"
 
 msgctxt "speaker:Narrator"
 msgid "Belmont was quiet for a moment, then spoke."
-msgstr ""
+msgstr "Бельмонт на мгновение замолчал, а затем заговорил."
 
 msgctxt "speaker:Captain Belmont"
 msgid "I know."
-msgstr ""
+msgstr "我知道。"
 
 msgctxt "speaker:Sarah"
 msgid "You...knew?"
-msgstr ""
+msgstr "你……早就知道了？"
 
 msgctxt "speaker:Captain Belmont"
 msgid "Yeah, blondie. I'd caught him spying on me a few times. He's not as clever as he thinks he is."
-msgstr ""
+msgstr "是啊，金发妞。我抓到他偷窥我好几次了。他可没自己想的那么聪明。"
 
 msgctxt "speaker:Captain Belmont"
 msgid "I knew that rat was planning something."
@@ -92217,19 +92217,19 @@ msgstr ""
 
 msgctxt "speaker:Sarah"
 msgid "Why...didn't you tell me?"
-msgstr ""
+msgstr "为什么……你不告诉我？"
 
 msgctxt "speaker:Captain Belmont"
 msgid "Cause old Belmont didn't know if he could trust you. But now I know where you stand."
-msgstr ""
+msgstr "因为老贝尔蒙特当时不确定能不能信任你。但现在我知道你的立场了。"
 
 msgctxt "speaker:Narrator"
 msgid "He grabbed the back of her head and pulled her in for a kiss."
-msgstr ""
+msgstr "他抓住她的后脑勺，将她拉近吻了下去。"
 
 msgctxt "speaker:Captain Belmont"
 msgid "Blondie, I hate havin to show you my ugly side, but can I trust you?"
-msgstr ""
+msgstr "金发丫头，我不愿让你看到我丑陋的一面，但我能信任你吗？"
 
 msgctxt "speaker:Sarah"
 msgid "I'm...I'm on your side, captain!"
@@ -92241,19 +92241,19 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Sarah watched as captain Belmont took off and she huriedly followed him."
-msgstr ""
+msgstr "莎拉看着船长贝尔蒙特离开，急忙跟了上去。"
 
 msgctxt "speaker:Narrator"
 msgid "Walking down the stairs and through the hall, they both arrived at the captain's cabin."
-msgstr ""
+msgstr "走下楼梯穿过大厅，两人一同抵达了船长的舱室。"
 
 msgctxt "speaker:Narrator"
 msgid "Standing behind Belmont, Sarah followed him into the room."
-msgstr ""
+msgstr "站在贝尔蒙特的背后，莎拉跟着他走进了房间。"
 
 msgctxt "speaker:Narrator"
 msgid "She saw Nick near the vault, suddenly spin around. She could see the shock on his face."
-msgstr ""
+msgstr "她看见尼克拉斯在保险库附近，突然转过身来。她能看清他脸上的震惊神情。"
 
 msgctxt "speaker:Nickolas"
 msgid "I...I....captain..."
