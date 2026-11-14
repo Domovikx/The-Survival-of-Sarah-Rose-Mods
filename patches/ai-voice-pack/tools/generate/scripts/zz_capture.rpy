@@ -24,6 +24,19 @@ init python:
 
     if os.environ.get("TSSR_SHOTS") == "1":
 
+        # НАТИВНЫЙ РАЗМЕР СНИМКОВ (2026-11-14): renpy.screenshot пишет в
+        # физическом размере окна, а игра по умолчанию открывается 1600x900 —
+        # из-за этого кадры приходилось апскейлить. Ставим окно 1920x1080 на
+        # время съёмки; persistent не пишется (should_save_persistent=False),
+        # так что размер окна игрока не меняется.
+        try:
+            # Окно задаётся в DIP, а скриншот пишется в ФИЗИЧЕСКИХ пикселях:
+            # при DPI-факторе 1.25 окно 1536x864 даёт ровно 1920x1080 на выходе.
+            _scale = float(getattr(renpy.game.interface, "dpi_scale", 1.0) or 1.0)
+            renpy.set_physical_size((int(round(1920 / _scale)), int(round(1080 / _scale))))
+        except Exception:
+            pass
+
         _zz_lang = os.environ.get("TSSR_SHOTS_LANG", "ru")
         _zz_mode = os.environ.get("TSSR_SHOTS_MODE", "menu")
 

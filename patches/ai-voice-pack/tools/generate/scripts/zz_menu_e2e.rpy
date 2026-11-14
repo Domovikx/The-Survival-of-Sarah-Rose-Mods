@@ -38,6 +38,17 @@ init python:
 
         if _e2e_lang != "en":
             preferences.language = _e2e_lang
+        # Кадры для ревью — нативно 1920x1080 (окно игры по умолчанию 1600x900;
+        # persistent не сохраняется, размер окна игрока не меняется).
+        try:
+            # Окно задаётся в DIP, а скриншот пишется в ФИЗИЧЕСКИХ пикселях:
+            # при DPI-факторе 1.25 окно 1536x864 даёт ровно 1920x1080 на выходе.
+            _scale = float(getattr(renpy.game.interface, "dpi_scale", 1.0) or 1.0)
+            renpy.set_physical_size((int(round(1920 / _scale)), int(round(1080 / _scale))))
+        except Exception:
+            pass
+
+
 
         _e2e_fails = []
         _e2e_passes = 0
