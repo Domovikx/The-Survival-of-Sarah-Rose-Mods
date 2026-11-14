@@ -169678,7 +169678,7 @@ msgstr "偶尔，父亲甚至会向她征求建议。"
 
 msgctxt "speaker:Narrator"
 msgid "Looking back, Sarah now realized he probably already knew the answers to the questions he had posed her."
-msgstr ""
+msgstr "回首往事，莎拉现在意识到，他很可能早已知道那些他曾向她提出的问题答案。"
 
 msgctxt "speaker:Narrator"
 msgid "He had simply been preparing her. Preparing her to help Thomas."
@@ -169742,11 +169742,11 @@ msgstr "莎拉清空了思绪，凝聚起心神。"
 
 msgctxt "speaker:Narrator"
 msgid "Step by step, she began to ascend towards the Throne."
-msgstr ""
+msgstr "她一步步开始向王座走去。"
 
 msgctxt "speaker:Narrator"
 msgid "With each step, she neared closer, and the Throne seemed to loom ever larger."
-msgstr ""
+msgstr "每迈一步，她便离得更近，王座在她眼中似乎愈发巍峨。"
 
 msgctxt "speaker:Narrator"
 msgid "When she reached the final step, the Throne was all she could hold in her mind's eye."
@@ -169758,7 +169758,7 @@ msgstr "她要将其据为己有。"
 
 msgctxt "speaker:Narrator"
 msgid "Not for herself. But for her Father. Her Mother. And Thomas."
-msgstr ""
+msgstr "不是为了她自己。而是为了她的父亲，她的母亲，还有托马斯。"
 
 msgctxt "speaker:Narrator"
 msgid "She would rule and make them proud."
@@ -169766,387 +169766,387 @@ msgstr "她将统治这片土地，让他们感到骄傲。"
 
 msgctxt "speaker:Narrator"
 msgid "She would rule and make sense of all the carnage and ruin that had come before."
-msgstr ""
+msgstr "她将统治这片土地，并为眼前这堆因过往而留下的残骸与废墟赋予意义。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah turned around, looking out across the Grand Hall."
-msgstr ""
+msgstr "莎拉转过身，望向大厅的远方。"
 
 msgctxt "speaker:Narrator"
 msgid "In heavy silene, the gathered soldiers looked on."
-msgstr ""
+msgstr "在沉重的寂静中，聚集的士兵们注视着这一切。"
 
 msgctxt "speaker:Narrator"
 msgid "Then, she sat down."
-msgstr ""
+msgstr "随后，她坐了下来。"
 
 msgctxt "speaker:Narrator"
 msgid "A simple motion, yet nothing had ever felt more heavy to her in all her life."
-msgstr ""
+msgstr "一个简单的动作，却让她觉得此生从未有过的沉重。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah felt herself sinking into the crimson velvet of the Throne, her arms leaning on the armrests, her back pressing up against the hard oak."
-msgstr ""
+msgstr "莎拉感到自己沉入王座那深红色的天鹅绒中，双臂倚在扶手上，背部紧抵着坚硬的橡木。"
 
 msgctxt "speaker:Narrator"
 msgid "And before her, the soldiers fell to their knees."
-msgstr ""
+msgstr "而在她面前，士兵们跪倒在地。"
 
 msgctxt "speaker:Narrator"
 msgid "Something sacred had transpired, and all had become possessed by it."
-msgstr ""
+msgstr "某种神圣之事已然发生，众人皆为之所迷。"
 
 msgctxt "speaker:Soldiers"
 msgid "Hail, Sarah Rose!"
-msgstr ""
+msgstr "万岁，莎拉·罗斯！"
 
 msgctxt "speaker:Narrator"
 msgid "They cried out their loyalty all at once."
-msgstr ""
+msgstr "他们齐声高呼效忠。"
 
 msgctxt "speaker:Narrator"
 msgid "Then again, and again, and again."
-msgstr ""
+msgstr "然后又是，一遍又一遍。"
 
 msgctxt "speaker:Narrator"
 msgid "The chant, grew, like the beating of a drum."
-msgstr ""
+msgstr "这呼喊声愈发响亮，如同战鼓擂动。"
 
 msgctxt "speaker:Narrator"
 msgid "And from her seat, Sarah saw the world change and unfold before her."
-msgstr ""
+msgstr "莎拉坐在座位上，看着世界在她面前改变并展开。"
 
 msgctxt "speaker:Narrator"
 msgid "The ritual was complete."
-msgstr ""
+msgstr "仪式已完成。"
 
 msgctxt "speaker:Narrator"
 msgid "The proper rituals would be followed at a later time, but she knew as well as they did, that in this moment she had seized the throne."
-msgstr ""
+msgstr "正式的仪式将在稍后举行，但她和众人一样清楚，在这一刻，她已夺取了王位。"
 
 msgctxt "speaker:Narrator"
 msgid "She had become Queen."
-msgstr ""
+msgstr "她已加冕为王。"
 
 msgctxt "speaker:Narrator"
 msgid "As they looked up from bended knee, Sarah saw their eager faces, drawn with deep joy."
-msgstr ""
+msgstr "当他们从跪拜中抬起头来，莎拉看到了他们渴望的面容，那上面洋溢着深深的喜悦。"
 
 msgctxt "speaker:Narrator"
 msgid "Warriors, all of them. Stained with blood or marked by injury."
-msgstr ""
+msgstr "Воины, все как один. Пятна крови на них или шрамы от ранений."
 
 msgctxt "speaker:Narrator"
 msgid "And yet, on their faces, pure bliss."
-msgstr ""
+msgstr "然而，在他们脸上，是纯粹的极乐。"
 
 msgctxt "speaker:Narrator"
 msgid "The pain and exhaustion had been lifted from their bodies and their hearts."
-msgstr ""
+msgstr "痛苦与疲惫已从他们的身心之中消散。"
 
 msgctxt "speaker:Narrator"
 msgid "Every tragedy, sacrifice and brutality, worth this moment."
-msgstr ""
+msgstr "所有的悲剧、牺牲与暴行，都值这一刻。"
 
 msgctxt "speaker:Narrator"
 msgid "And every face was directed at her."
-msgstr ""
+msgstr "每一张面孔都朝向她。"
 
 msgctxt "speaker:Narrator"
 msgid "The Nexus of their faith."
-msgstr ""
+msgstr "他们信仰的交汇点。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah was marching through the heavy snow."
-msgstr ""
+msgstr "莎拉正行走在厚重的积雪中。"
 
 msgctxt "speaker:Narrator"
 msgid "With each step, she felt her boots sinking deeper."
-msgstr ""
+msgstr "每走一步，她都感觉靴子陷得更深了。"
 
 msgctxt "speaker:Narrator"
 msgid "Despite that, she pressed on. She had a promise to keep."
-msgstr ""
+msgstr "尽管如此，她仍继续前行。她有一个承诺要履行。"
 
 msgctxt "speaker:Narrator"
 msgid "Behind her, she could still hear the celebrations going on."
-msgstr ""
+msgstr "在她身后，她仍能听到庆祝活动的喧闹声。"
 
 msgctxt "speaker:Narrator"
 msgid "The entire city was celebrating, her soldiers and her people alike."
-msgstr ""
+msgstr "整个城市都在庆祝，她的士兵和她的人民无一例外。"
 
 msgctxt "speaker:Narrator"
 msgid "She smiled as she looked back at it."
-msgstr ""
+msgstr "她回头望去，嘴角扬起一抹微笑。"
 
 msgctxt "speaker:Narrator"
 msgid "This was probably the first time in many years since there had been a proper reason to celebrate."
-msgstr ""
+msgstr "这恐怕是多年来头一回有了正经庆祝的理由。"
 
 msgctxt "speaker:Narrator"
 msgid "Her people deserved it."
-msgstr ""
+msgstr "她的子民值得这一切。"
 
 msgctxt "speaker:Narrator"
 msgid "And a part of her felt guilty when she turned away from it and continued to walk."
-msgstr ""
+msgstr "而有一部分她，在转身离去继续前行时，感到了一丝愧疚。"
 
 msgctxt "speaker:Narrator"
 msgid "Walk towards the royal forest."
-msgstr ""
+msgstr "朝皇家森林走去。"
 
 msgctxt "speaker:Narrator"
 msgid "She should have been with her people...but the truth was that she felt a great obligation still."
-msgstr ""
+msgstr "她本该与她的人民在一起……但事实是，她仍感到一种沉重的责任。"
 
 msgctxt "speaker:Narrator"
 msgid "She had promised to meet with him in the royal forest after the battle."
-msgstr ""
+msgstr "她曾许诺在战斗结束后于皇家森林与他相见。"
 
 msgctxt "speaker:Narrator"
 msgid "If he was still alive, though she doubted anything could kill him."
-msgstr ""
+msgstr "不过，如果他还活着的话——尽管她怀疑有什么能杀死他。"
 
 msgctxt "speaker:Narrator"
 msgid "As she neared the tree line, the sky above grew darker."
-msgstr ""
+msgstr "当她靠近树林边缘时，头顶的天空变得更加昏暗。"
 
 msgctxt "speaker:Narrator"
 msgid "Heavy clouds darkened stars and moon, cloaking the world in shaded black."
-msgstr ""
+msgstr "厚重的云层遮蔽了星辰与月光，将世界笼罩在一片昏暗的漆黑之中。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah heard an owl. Otherwise, the forest was quiet."
-msgstr ""
+msgstr "莎拉听到一声猫头鹰叫。除此之外，森林一片寂静。"
 
 msgctxt "speaker:Narrator"
 msgid "She kept walking."
-msgstr ""
+msgstr "她继续走着。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah had told everyone she was tired and wanted to retreat to her room for the night and not be disturbed."
-msgstr ""
+msgstr "莎拉告诉所有人她累了，想回房间休息一晚，不要被打扰。"
 
 msgctxt "speaker:Narrator"
 msgid "She felt bad for lying about that too."
-msgstr ""
+msgstr "她也为那个谎言感到愧疚。"
 
 msgctxt "speaker:Narrator"
 msgid "Passing an old tree, Sarah smiled as she remembered it."
-msgstr ""
+msgstr "路过一棵老树时，莎拉微笑着想起了它。"
 
 msgctxt "speaker:Narrator"
 msgid "Its large roots had made it the perfect hiding spot when she played hide-and-seek here."
-msgstr ""
+msgstr "它粗大的树根曾让它成为她在这里玩捉迷藏时完美的藏身之处。"
 
 msgctxt "speaker:Narrator"
 msgid "That was a lifetime ago."
-msgstr ""
+msgstr "那是很久以前的事了。"
 
 msgctxt "speaker:Narrator"
 msgid "Looking around, Sarah saw nobody. Heard nothing."
-msgstr ""
+msgstr "莎拉环顾四周，不见人影，也听不到任何声音。"
 
 msgctxt "speaker:Narrator"
 msgid "For a brief moment, she felt her heart quicken."
-msgstr ""
+msgstr "有那么一瞬间，她感到心跳加速。"
 
 msgctxt "speaker:Narrator"
 msgid "He couldn't have been..."
-msgstr ""
+msgstr "他不可能……"
 
 msgctxt "speaker:Narrator"
 msgid "Then, the sound of heavy footsteps, stepping on snow."
-msgstr ""
+msgstr "接着，传来沉重的脚步声，踩在雪地上。"
 
 msgctxt "speaker:Atilla"
 msgid "You look relieved."
-msgstr ""
+msgstr "你看起来松了一口气。"
 
 msgctxt "speaker:Atilla"
 msgid "Surely you didn't think I had died in battle."
-msgstr ""
+msgstr "你总不会真以为我战死沙场了吧。"
 
 msgctxt "speaker:Atilla"
 msgid "These Tribesmen are good warriors, but they're not that good."
-msgstr ""
+msgstr "这些部落战士是优秀的勇士，但也没那么厉害。"
 
 msgctxt "speaker:Narrator"
 msgid "He walked closer to her, crossing the distance between them."
-msgstr ""
+msgstr "他走近她，缩短了两人之间的距离。"
 
 msgctxt "speaker:Narrator"
 msgid "Suddenly, he reached out with one hand."
-msgstr ""
+msgstr "突然，他伸出一只手。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah felt it brush up against her face."
-msgstr ""
+msgstr "莎拉感觉到他的皮肤擦过她的脸庞。"
 
 msgctxt "speaker:Narrator"
 msgid "His skin was like coarse leather, yet despite all his strength, his touch was tender."
-msgstr ""
+msgstr "他的皮肤像粗糙的皮革，但尽管力量强大，他的触碰却十分温柔。"
 
 msgctxt "speaker:Narrator"
 msgid "He brushed back some of her hair."
-msgstr ""
+msgstr "他拨开她的一缕头发。"
 
 msgctxt "speaker:Atilla"
 msgid "You're injured."
-msgstr ""
+msgstr "你受伤了。"
 
 msgctxt "speaker:Sarah"
 msgid "A few scratches. Nothing I can't survive."
-msgstr ""
+msgstr "几道擦伤而已，死不了。"
 
 msgctxt "speaker:Sarah"
 msgid "How about you? Any injuries?"
-msgstr ""
+msgstr "你呢？有受伤吗？"
 
 msgctxt "speaker:Atilla"
 msgid "A few, but I heal quick."
-msgstr ""
+msgstr "有几处，但我愈合得快。"
 
 msgctxt "speaker:Sarah"
 msgid "Well, what's a few more scars for you?"
-msgstr ""
+msgstr "对你来说，再多几道疤又算得了什么？"
 
 msgctxt "speaker:Atilla"
 msgid "Most I earned fighting for fools or for gold."
-msgstr ""
+msgstr "大部分是我为了傻瓜或者金子挣来的。"
 
 msgctxt "speaker:Atilla"
 msgid "These scars I'll bear gladly."
-msgstr ""
+msgstr "这些伤疤，我会欣然承受。"
 
 msgctxt "speaker:Sarah"
 msgid "Charmer."
-msgstr ""
+msgstr "真会哄人。"
 
 msgctxt "speaker:Narrator"
 msgid "She looked around the clearing in the forest."
-msgstr ""
+msgstr "她环顾四周，看着森林中的这片空地。"
 
 msgctxt "speaker:Sarah"
 msgid "It's peaceful."
-msgstr ""
+msgstr "这里很宁静。"
 
 msgctxt "speaker:Atilla"
 msgid "I thought it best if we meet here."
-msgstr ""
+msgstr "我觉得在这里见面最好。"
 
 msgctxt "speaker:Atilla"
 msgid "Away from...judging eyes."
-msgstr ""
+msgstr "远离……那些审视的目光。"
 
 msgctxt "speaker:Sarah"
 msgid "I took the Throne today...I sat on it and..."
-msgstr ""
+msgstr "今天我登上了王位……我坐在了上面，然后……"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah didn't have the heart to say."
-msgstr ""
+msgstr "莎拉说不出口。"
 
 msgctxt "speaker:Atilla"
 msgid "Yes, I heard."
-msgstr ""
+msgstr "是的，我听到了。"
 
 msgctxt "speaker:Atilla"
 msgid "Things will be different."
-msgstr ""
+msgstr "一切都会不一样了。"
 
 msgctxt "speaker:Narrator"
 msgid "For a while, the two lovers stood in silence."
-msgstr ""
+msgstr "片刻间，这对恋人默默伫立。"
 
 msgctxt "speaker:Narrator"
 msgid "Then, Sarah looked up and gathered all the courage she could."
-msgstr ""
+msgstr "随后，莎拉抬起头，鼓起所有的勇气。"
 
 msgctxt "speaker:Sarah"
 msgid "Don't tell me that you came here to say you're leaving..."
-msgstr ""
+msgstr "别告诉我，你跑来就是为了说你要走了……"
 
 msgctxt "speaker:Sarah"
 msgid "Not again..."
-msgstr ""
+msgstr "别再来了……"
 
 msgctxt "speaker:Narrator"
 msgid "Atilla looked at her with a stoic expression."
-msgstr ""
+msgstr "阿提拉面无表情地看着她。"
 
 msgctxt "speaker:Atilla"
 msgid "I know that it would be right...simpler...easier."
-msgstr ""
+msgstr "我知道那样做是对的……更简单……更轻松。"
 
 msgctxt "speaker:Atilla"
 msgid "But..."
-msgstr ""
+msgstr "但是……"
 
 msgctxt "speaker:Atilla"
 msgid "No, I will not leave. Not again."
-msgstr ""
+msgstr "不，我不会离开。不会再有第二次。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah felt her heart pounding in her chest."
-msgstr ""
+msgstr "莎拉感到心脏在胸腔里剧烈跳动。"
 
 msgctxt "speaker:Atilla"
 msgid "Maybe I am being selfish-"
-msgstr ""
+msgstr "也许我太自私了——"
 
 msgctxt "speaker:Sarah"
 msgid "No...I don't want you to leave either."
-msgstr ""
+msgstr "不……我也不想让你离开。"
 
 msgctxt "speaker:Sarah"
 msgid "No matter what they say...no matter the risks..."
-msgstr ""
+msgstr "不管别人怎么说……不管风险多大……"
 
 msgctxt "speaker:Sarah"
 msgid "I'll give up a lot for my country...but I won't give up you."
-msgstr ""
+msgstr "为了国家，我可以放弃很多……但我绝不会放弃你。"
 
 msgctxt "speaker:Atilla"
 msgid "What fools we are..."
-msgstr ""
+msgstr "我们真是傻瓜……"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah saw him reaching into his pocket."
-msgstr ""
+msgstr "莎拉看见他把手伸进口袋。"
 
 msgctxt "speaker:Atilla"
 msgid "Then it is settled. I will stay."
-msgstr ""
+msgstr "那就这么定了。我会留下。"
 
 msgctxt "speaker:Narrator"
 msgid "He looked directly at her with his piercing golden eyes."
-msgstr ""
+msgstr "他用锐利的金色双眼直视着她。"
 
 msgctxt "speaker:Narrator"
 msgid "Those impossibly beautiful eyes."
-msgstr ""
+msgstr "那双美得不可思议的眼睛。"
 
 msgctxt "speaker:Atilla"
 msgid "Sarah...I didn't only ask you to come here to tell you I'm staying..."
-msgstr ""
+msgstr "莎拉……我让你来这里，不只是为了告诉你我要留下……"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah watched as he pulled the object from his pocket."
-msgstr ""
+msgstr "莎拉看着他把手伸进口袋，掏出那件东西。"
 
 msgctxt "speaker:Narrator"
 msgid "She felt herself stumble, her vision going faint."
-msgstr ""
+msgstr "她感到一阵踉跄，视线变得模糊。"
 
 msgctxt "speaker:Narrator"
 msgid "No, no, no."
-msgstr ""
+msgstr "不，不，不。"
 
 msgctxt "speaker:Narrator"
 msgid "Panic, racing thoughts, her heart, pounding."
-msgstr ""
+msgstr "恐慌，思绪纷乱，心脏狂跳。"
 
 msgctxt "speaker:Narrator"
 msgid "Atilla held up a necklace of translucent silver, incased within it, a blue flower."
@@ -170154,59 +170154,59 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "She could feel own pulse, racing."
-msgstr ""
+msgstr "她能感觉到自己的脉搏在狂跳。"
 
 msgctxt "speaker:Atilla"
 msgid "I have told you of this necklace, long ago."
-msgstr ""
+msgstr "我早就跟你提过这条项链。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah remembered."
-msgstr ""
+msgstr "莎拉记得。"
 
 msgctxt "speaker:Narrator"
 msgid "One night, while he had still been training her, she had slept in his tent."
-msgstr ""
+msgstr "一天夜里，他还在训练她的时候，她曾睡在他的帐篷里。"
 
 msgctxt "speaker:Narrator"
 msgid "Laying on his chest, her eyes had roamed his belongings, and among the many things, she had spotted the necklace."
-msgstr ""
+msgstr "趴在他的胸口，她的目光扫过他的物品，在众多物件中，她发现了那条项链。"
 
 msgctxt "speaker:Narrator"
 msgid "Atilla was a warrior, and he possessed mostly practical objects. Weapons, armor."
-msgstr ""
+msgstr "阿提拉是个战士，他拥有的大多是实用物品。武器、盔甲。"
 
 msgctxt "speaker:Narrator"
 msgid "The necklace had stood out to her."
-msgstr ""
+msgstr "那条项链格外引人注目。"
 
 msgctxt "speaker:Narrator"
 msgid "She asked him what it was, and he had spoken softly, telling her."
-msgstr ""
+msgstr "她问他那是什么，他轻声告诉她。"
 
 msgctxt "speaker:Atilla"
 msgid "In Orc tradition, a man must perform an act of bravery to demonstrate his seriousness when asking for a mate."
-msgstr ""
+msgstr "在兽人的传统中，男子必须展现英勇之举，以证明自己在求偶时的诚意。"
 
 msgctxt "speaker:Atilla"
 msgid "A gift must show to the partner, that they have wagered their life. To show how serious they are in their ask."
-msgstr ""
+msgstr "礼物必须向伴侣展示，表明他已押上性命。以此证明他在求偶时的诚意。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah felt her chest glow as she looked at the necklace."
-msgstr ""
+msgstr "莎拉看着那条项链，胸口泛起暖意。"
 
 msgctxt "speaker:Atilla"
 msgid "This flower, I plucked from the only place where it grows."
-msgstr ""
+msgstr "这朵花，我仅从它唯一生长的地方采摘而来。"
 
 msgctxt "speaker:Atilla"
 msgid "The peak of the tallest mountain in the Hyral Mountains."
-msgstr ""
+msgstr "这是希拉尔山脉最高山峰的峰顶。"
 
 msgctxt "speaker:Atilla"
 msgid "This flower I had forged by a blacksmith into this necklace of Ghost Silver, one of the rarest metals, claimed from slain Mythran soldiers."
-msgstr ""
+msgstr "这朵花，我请铁匠将其打造成了这条幽灵银项链。幽灵银是极为稀有的金属，取自阵亡的米斯拉士兵身上。"
 
 msgctxt "speaker:Atilla"
 msgid "And this necklace..."
@@ -170214,11 +170214,11 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "His voice went soft."
-msgstr ""
+msgstr "他的声音变得柔和起来。"
 
 msgctxt "speaker:Atilla"
 msgid "This necklace, I gave to my first wife, whom I had promised my heart."
-msgstr ""
+msgstr "这条项链，我送给了我曾许下心诺的第一任妻子。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah felt the tears stream down her face."
