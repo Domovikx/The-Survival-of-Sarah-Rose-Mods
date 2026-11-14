@@ -89,6 +89,15 @@ init python:
     # Шрифт по активному языку (рецепт NeonTranslator 2026-11-11: по-языковые
     # Noto для CJK; точка подключения — update_font_styles, тот же механизм,
     # что и размеры шрифтов).
+    # CJK-типографика: иероглифы плотнее латиницы, при том же кегле текст
+    # читается мельче (14–15 px по-китайски «мелко»). Даём +2 к кеглю для
+    # zh/ja/ko — пользователь всё равно может крутить размеры в меню.
+    # Плотность глифов разная: ханьцзы плотнее каны, хангыль — самый открытый.
+    TSSR_LANG_SIZE_BUMP = {"zh": 2, "ja": 2, "ko": 1}
+
+    def tssr_size_bump():
+        return TSSR_LANG_SIZE_BUMP.get(preferences.language, 0)
+
     TSSR_LANG_FONT = {
         "ja": "fonts/NotoSansCJKjp-Regular.otf",
         "ko": "fonts/NotoSansCJKkr-Regular.otf",
@@ -125,12 +134,15 @@ init python:
         # translate-style блоками (5.2). ВАЖНО: gui.rebuild() НЕЛЬЗЯ звать при
         # init (clean_store_backup ещё None -> AttributeError, падение старта) —
         # rebuild живёт только в tssr_apply_language_font (рантайм).
-        gui.text_size = persistent.font_text_size
-        gui.name_text_size = persistent.font_name_size
-        gui.interface_text_size = persistent.font_interface_size
-        gui.label_text_size = persistent.font_label_size
-        gui.notify_text_size = persistent.font_notify_size
-        gui.title_text_size = persistent.font_title_size
+        _bump = tssr_size_bump()
+        gui.text_size = persistent.font_text_size + _bump
+        gui.name_text_size = persistent.font_name_size + _bump
+        gui.interface_text_size = persistent.font_interface_size + _bump
+        gui.label_text_size = persistent.font_label_size + _bump
+        gui.notify_text_size = persistent.font_notify_size + _bump
+        gui.title_text_size = persistent.font_title_size + _bump
+        gui.button_text_size = gui.interface_text_size
+        gui.choice_button_text_size = gui.text_size
         _f = tssr_current_font()
         gui.text_font = _f
         gui.name_text_font = _f
@@ -153,13 +165,7 @@ init python:
         persistent.font_title_size = FONT_DEFAULTS['font_title_size']
         update_all()
 
-    ## Первичный прогон: применяем persistent-размеры к стилям.
-    gui.text_size = persistent.font_text_size
-    gui.name_text_size = persistent.font_name_size
-    gui.interface_text_size = persistent.font_interface_size
-    gui.label_text_size = persistent.font_label_size
-    gui.notify_text_size = persistent.font_notify_size
-    gui.title_text_size = persistent.font_title_size
+    ## Первичный прогон: применяем persistent-размеры (и CJK-надбавку) к стилям.
     update_font_styles()
 
 
