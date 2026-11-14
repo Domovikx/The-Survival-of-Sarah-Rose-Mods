@@ -95,5 +95,14 @@
           "linkLicense": "CC BY-NC 4.0",
           "age": "18+",
           "linkNexus": "Nexus Mods"
+     },
+     "temp": {
+          "title": "直接下载（临时）",
+          "lead": "Nexus Mods 上的模组页面正在等待审核。在它开放之前，可以从这里下载压缩包——其他一切不变。",
+          "main": "下载主体（main.7z）",
+          "mainHint": "必需 —— 11 种语言文本、字体、模组菜单",
+          "voiceLabel": "语音包 —— 每种语言一个（可选）：",
+          "install": "将 main.7z 解压到游戏目录（TheSurvivalofSarahRose.exe 所在位置），然后解压所需的语音包。右上角徽标打开模组菜单。",
+          "note": "临时链接：模组页面开放后即移除。"
      }
 }

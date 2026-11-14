@@ -95,5 +95,14 @@
           "linkLicense": "CC BY-NC 4.0",
           "age": "18+",
           "linkNexus": "Nexus Mods"
+     },
+     "temp": {
+          "title": "直接ダウンロード（一時的）",
+          "lead": "Nexus Mods の MOD ページは承認待ちです。公開されるまで、アーカイブはこちらから取得できます。それ以外は変わりません。",
+          "main": "本体をダウンロード（main.7z）",
+          "mainHint": "必須 — 11 言語のテキスト、フォント、MOD メニュー",
+          "voiceLabel": "音声パック — 言語ごとに 1 つ（任意）：",
+          "install": "main.7z をゲームフォルダ（TheSurvivalofSarahRose.exe と同じ場所）に展開し、必要な音声パックも展開します。右上のバッジで MOD メニューが開きます。",
+          "note": "一時的なリンクです。MOD ページが公開され次第、削除します。"
      }
 }

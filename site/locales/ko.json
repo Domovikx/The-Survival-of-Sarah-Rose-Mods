@@ -95,5 +95,14 @@
           "linkLicense": "CC BY-NC 4.0",
           "age": "18+",
           "linkNexus": "Nexus Mods"
+     },
+     "temp": {
+          "title": "직접 다운로드(임시)",
+          "lead": "Nexus Mods의 모드 페이지가 승인 대기 중입니다. 열릴 때까지 여기서 압축 파일을 받을 수 있습니다. 그 외에는 달라지는 것이 없습니다.",
+          "main": "본체 내려받기(main.7z)",
+          "mainHint": "필수 — 11개 언어 텍스트, 글꼴, 모드 메뉴",
+          "voiceLabel": "음성 팩 — 언어별 1개(선택):",
+          "install": "main.7z를 게임 폴더(TheSurvivalofSarahRose.exe가 있는 곳)에 풀고, 필요한 음성 팩도 같은 폴더에 풉니다. 오른쪽 위 배지로 모드 메뉴를 엽니다.",
+          "note": "임시 링크입니다. 모드 페이지가 열리면 제거합니다."
      }
 }

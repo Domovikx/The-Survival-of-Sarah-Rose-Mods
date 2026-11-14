@@ -95,5 +95,14 @@
           "linkLicense": "CC BY-NC 4.0",
           "age": "18+",
           "linkNexus": "Nexus Mods"
+     },
+     "temp": {
+          "title": "Download diretto (temporaneo)",
+          "lead": "La pagina del mod su Nexus Mods è in attesa di approvazione. Finché è chiusa, gli archivi sono qui - il resto non cambia.",
+          "main": "Scarica la base (main.7z)",
+          "mainHint": "obbligatorio - testi di 11 lingue, font, menu del mod",
+          "voiceLabel": "Pacchetti voce - uno per lingua (facoltativo):",
+          "install": "Estrai main.7z nella cartella del gioco (accanto a TheSurvivalofSarahRose.exe), poi i pacchetti voce. Il badge in alto a destra apre il menu del mod.",
+          "note": "Link temporanei: rimossi appena la pagina del mod sarà aperta."
      }
 }
