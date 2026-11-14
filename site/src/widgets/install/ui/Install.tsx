@@ -1,4 +1,5 @@
 import * as stylex from '@stylexjs/stylex'
+import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
 import { LINKS } from '@/shared/config'
@@ -51,10 +52,61 @@ const styles = stylex.create({
     fontSize: 13,
     margin: 0,
   },
+  where: {
+    margin: '0 0 12px',
+    fontSize: 14,
+  },
+  whereTitle: {
+    cursor: 'pointer',
+    color: 'var(--link)',
+    fontWeight: 600,
+  },
+  whereBody: {
+    margin: '8px 0 0',
+    color: 'var(--muted)',
+    lineHeight: 1.5,
+  },
+  pathRow: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    alignItems: 'center',
+    gap: 8,
+    marginTop: 8,
+  },
+  path: {
+    fontFamily: 'ui-monospace, SFMono-Regular, Consolas, monospace',
+    fontSize: 12,
+    padding: '4px 8px',
+    borderRadius: 6,
+    backgroundColor: 'var(--panel-2)',
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: 'var(--border)',
+    wordBreak: 'break-all',
+  },
+  copy: {
+    appearance: 'none',
+    cursor: 'pointer',
+    fontSize: 12,
+    fontWeight: 600,
+    padding: '5px 10px',
+    borderRadius: 6,
+    backgroundColor: 'transparent',
+    color: 'var(--text)',
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: 'var(--border)',
+    transition: 'border-color 150ms ease, color 150ms ease',
+    ':hover': { borderColor: 'var(--link)', color: 'var(--link)' },
+    ':focus-visible': { outline: '2px solid var(--link)', outlineOffset: 2 },
+  },
 })
+
+const DEFAULT_GAME_PATH = 'C:Program Files (x86)SteamsteamappscommonThe Survival of Sarah Rose'
 
 export const Install = () => {
   const { t } = useTranslation()
+  const [copied, setCopied] = useState(false)
 
   return (
     <Section title={t('install.title')} testId="install">
@@ -70,6 +122,33 @@ export const Install = () => {
             {t('install.step3')}
           </li>
         </ol>
+        <details className={stylex.props(styles.where).className} data-testid="install-where">
+          <summary className={stylex.props(styles.whereTitle).className}>
+            {t('install.whereTitle')}
+          </summary>
+          <p className={stylex.props(styles.whereBody).className}>{t('install.whereText')}</p>
+          <div className={stylex.props(styles.pathRow).className}>
+            <code className={stylex.props(styles.path).className} data-testid="install-path">
+              {DEFAULT_GAME_PATH}
+            </code>
+            <button
+              type="button"
+              className={stylex.props(styles.copy).className}
+              data-testid="install-copy-path"
+              onClick={() => {
+                void navigator.clipboard?.writeText(DEFAULT_GAME_PATH).then(
+                  () => {
+                    setCopied(true)
+                    window.setTimeout(() => setCopied(false), 1500)
+                  },
+                  () => setCopied(false),
+                )
+              }}
+            >
+              {copied ? '✓' : t('install.whereCopy')}
+            </button>
+          </div>
+        </details>
         <div className={stylex.props(styles.ctaRow).className}>
           <a className={stylex.props(styles.cta).className} href={LINKS.nexus} data-testid="install-cta">
             {t('install.cta')}

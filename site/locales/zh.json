@@ -1,95 +1,98 @@
 {
-  "meta": {
-    "title": "The Survival of Sarah Rose — AI 语音＋11 种语言",
-    "description": "非官方粉丝补丁：7 种语言的演示版 AI 配音，外加 11 种语言翻译（俄语完整版；其余覆盖到首次选择的演示内容）。免费，18+。"
-  },
-  "header": {
-    "brand": "TSSR · AI 语音包",
-    "steam": "Steam 页面",
-    "langLabel": "语言",
-    "themeLabel": "切换主题"
-  },
-  "hero": {
-    "title": "The Survival of Sarah Rose — AI 语音",
-    "subtitle": "非官方粉丝补丁：The Survival of Sarah Rose 的完整翻译与 AI 配音。",
-    "badgeTranslate": "11 种语言——RU 完整版，其余为首次选择前的演示",
-    "badgeVoice": "配音：演示在 11 种语言中 100% — 每种 1,195 行（RU：1,397）",
-    "badgeFormat": "Opus 24 kbps — 每种语言 15–21 MB（演示）",
-    "badgeEngine": "Ren'Py 7.4.11 · Steam",
-    "badgeAge": "18+ 内容",
-    "ctaSteam": "在 Steam 上查看 The Survival of Sarah Rose",
-    "ctaDownload": "在 Nexus Mods 下载",
-    "installHint": "需要 Steam 购买的本体游戏。免费，CC BY-NC 4.0。"
-  },
-  "features": {
-    "title": "你将获得",
-    "translateTitle": "翻译",
-    "translateText": "俄语为全篇。其他语言为开头（演示范围）。",
-    "voiceTitle": "AI 配音",
-    "voiceText": "每个角色一个克隆语音，情绪贴合场景。",
-    "voicesTitle": "鲜活的人物",
-    "voicesText": "莎拉、凯特、奥威尔国王、托马斯、瓦尔加等数十人。"
-  },
-  "demo": {
-    "title": "来听听",
-    "lead": "真实游戏台词的 AI 语音：克隆声线、鲜活情感。点击台词——听听效果。",
-    "play": "播放：{{name}}",
-    "pause": "暂停：{{name}}",
-    "phrases": [
-      {
-        "speaker": "莎拉",
-        "text": "但说真的，托马斯，你至少该听爸爸的话。他只是在为我们好。"
-      },
-      {
-        "speaker": "凯特",
-        "text": "现在才开始装模作样地谦虚，是不是有点太晚了，莎拉？"
-      },
-      {
-        "speaker": "奥威尔国王",
-        "text": "和平年代谁都能当国王，可乱世才见真章。你弟弟还没准备好。"
-      }
-    ]
-  },
-  "voice": {
-    "title": "配音 — 演示就绪",
-    "ru": "俄语（RU）：完整翻译，演示范围已配音",
-    "en": "英语（EN）：原文文本，演示范围已配音",
-    "missing": "缺少语音时游戏静音显示台词（无报错）。"
-  },
-  "install": {
-    "title": "安装",
-    "step1": "在 Nexus Mods 下载整合包——先下 main（必需），再选需要的语音包。",
-    "step2": "把 main.7z 解压到游戏目录（TheSurvivalofSarahRose.exe 所在位置），会得到 mods/tssr-ai-voice-pack 和 environment.txt。语音包同样操作。",
-    "step3": "启动游戏，打开 MOD 菜单（右上角徽标），选择语言。",
-    "note": "需要 Steam 购买的游戏。非官方粉丝补丁，与开发方无关。",
-    "cta": "在 Nexus Mods 打开",
-    "vortexHint": "使用 Vortex？先安装一次游戏扩展，再用「Install from file」。"
-  },
-  "shots": {
-    "title": "截图",
-    "prev": "上一张",
-    "next": "下一张",
-    "close": "关闭",
-    "open": "查看大图",
-    "capGeneric": "游戏截图"
-  },
-  "faq": {
-    "title": "常见问题",
-    "q1": "这是官方 MOD 吗？",
-    "a1": "不是——非官方粉丝作品，与开发者或发行商无关。",
-    "q2": "有成人内容吗？",
-    "a2": "有——游戏为 18+。仅限 18 岁及以上下载游玩。",
-    "q3": "许可协议？",
-    "a3": "语音包与翻译：CC BY-NC 4.0——署名后可分享与改编，仅限非商业用途。",
-    "q4": "如何帮忙？",
-    "a4": "在 Nexus Mods 给模组点个 endorse——能让更多玩家找到它。问题与建议请发到 Nexus 模组页面。"
-  },
-  "footer": {
-    "disclaimer": "非官方粉丝作品。原作游戏版权归各自权利人所有。",
-    "linksLabel": "链接",
-    "linkSteam": "Steam",
-    "linkLicense": "CC BY-NC 4.0",
-    "age": "18+",
-    "linkNexus": "GitHub"
-  }
+   "meta": {
+      "title": "The Survival of Sarah Rose — AI 语音＋11 种语言",
+      "description": "非官方粉丝补丁：7 种语言的演示版 AI 配音，外加 11 种语言翻译（俄语完整版；其余覆盖到首次选择的演示内容）。免费，18+。"
+   },
+   "header": {
+      "brand": "TSSR · AI 语音包",
+      "steam": "Steam 页面",
+      "langLabel": "语言",
+      "themeLabel": "切换主题"
+   },
+   "hero": {
+      "title": "The Survival of Sarah Rose — AI 语音",
+      "subtitle": "非官方粉丝补丁：The Survival of Sarah Rose 的完整翻译与 AI 配音。",
+      "badgeTranslate": "11 种语言——RU 完整版，其余为首次选择前的演示",
+      "badgeVoice": "配音：演示在 11 种语言中 100% — 每种 1,195 行（RU：1,397）",
+      "badgeFormat": "Opus 24 kbps — 每种语言 15–21 MB（演示）",
+      "badgeEngine": "Ren'Py 7.4.11 · Steam",
+      "badgeAge": "18+ 内容",
+      "ctaSteam": "在 Steam 上查看 The Survival of Sarah Rose",
+      "ctaDownload": "在 Nexus Mods 下载",
+      "installHint": "需要 Steam 购买的本体游戏。免费，CC BY-NC 4.0。"
+   },
+   "features": {
+      "title": "你将获得",
+      "translateTitle": "翻译",
+      "translateText": "俄语为全篇。其他语言为开头（演示范围）。",
+      "voiceTitle": "AI 配音",
+      "voiceText": "每个角色一个克隆语音，情绪贴合场景。",
+      "voicesTitle": "鲜活的人物",
+      "voicesText": "莎拉、凯特、奥威尔国王、托马斯、瓦尔加等数十人。"
+   },
+   "demo": {
+      "title": "来听听",
+      "lead": "真实游戏台词的 AI 语音：克隆声线、鲜活情感。点击台词——听听效果。",
+      "play": "播放：{{name}}",
+      "pause": "暂停：{{name}}",
+      "phrases": [
+         {
+            "speaker": "莎拉",
+            "text": "但说真的，托马斯，你至少该听爸爸的话。他只是在为我们好。"
+         },
+         {
+            "speaker": "凯特",
+            "text": "现在才开始装模作样地谦虚，是不是有点太晚了，莎拉？"
+         },
+         {
+            "speaker": "奥威尔国王",
+            "text": "和平年代谁都能当国王，可乱世才见真章。你弟弟还没准备好。"
+         }
+      ]
+   },
+   "voice": {
+      "title": "配音 — 演示就绪",
+      "ru": "俄语（RU）：完整翻译，演示范围已配音",
+      "en": "英语（EN）：原文文本，演示范围已配音",
+      "missing": "缺少语音时游戏静音显示台词（无报错）。"
+   },
+   "install": {
+      "title": "安装",
+      "step1": "在 Nexus Mods 下载整合包——先下 main（必需），再选需要的语音包。",
+      "step2": "把 main.7z 解压到游戏目录（TheSurvivalofSarahRose.exe 所在位置），会得到 mods/tssr-ai-voice-pack 和 environment.txt。语音包同样操作。",
+      "step3": "启动游戏，打开 MOD 菜单（右上角徽标），选择语言。",
+      "note": "需要 Steam 购买的游戏。非官方粉丝补丁，与开发方无关。",
+      "cta": "在 Nexus Mods 打开",
+      "vortexHint": "使用 Vortex？先安装一次游戏扩展，再用「Install from file」。",
+      "whereTitle": "游戏文件夹在哪？",
+      "whereText": "Steam：库 → 右键游戏 → 管理 → 浏览本地文件。或默认路径：",
+      "whereCopy": "复制路径"
+   },
+   "shots": {
+      "title": "截图",
+      "prev": "上一张",
+      "next": "下一张",
+      "close": "关闭",
+      "open": "查看大图",
+      "capGeneric": "游戏截图"
+   },
+   "faq": {
+      "title": "常见问题",
+      "q1": "这是官方 MOD 吗？",
+      "a1": "不是——非官方粉丝作品，与开发者或发行商无关。",
+      "q2": "有成人内容吗？",
+      "a2": "有——游戏为 18+。仅限 18 岁及以上下载游玩。",
+      "q3": "许可协议？",
+      "a3": "语音包与翻译：CC BY-NC 4.0——署名后可分享与改编，仅限非商业用途。",
+      "q4": "如何帮忙？",
+      "a4": "在 Nexus Mods 给模组点个 endorse——能让更多玩家找到它。问题与建议请发到 Nexus 模组页面。"
+   },
+   "footer": {
+      "disclaimer": "非官方粉丝作品。原作游戏版权归各自权利人所有。",
+      "linksLabel": "链接",
+      "linkSteam": "Steam",
+      "linkLicense": "CC BY-NC 4.0",
+      "age": "18+",
+      "linkNexus": "GitHub"
+   }
 }
