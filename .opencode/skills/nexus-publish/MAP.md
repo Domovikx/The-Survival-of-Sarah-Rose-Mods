@@ -57,3 +57,31 @@ node .opencode/skills/nexus-publish/verify_dist.mts    # архивы: 7z t, в�
 
 - «Игра одобрена» ⇔ в `data.nexusmods.com/file/nexus-data/games.json` есть
   `"The Survival of Sarah Rose"`. Это самый быстрый детерминированный признак.
+
+## Картинки мода: заголовки и порядок (проверено 2026-11-14)
+
+Страница: `https://www.nexusmods.com/games/<gameId>/mods/<modId>/edit/media`.
+
+- Каждая картинка — это `<li>` (в нём `<img src="...staticdelivery...">`), у карточки
+  есть кнопка-меню **⋯**: `button[id^="headlessui-menu-button"]`.
+- Пункты меню: **Edit title**, Set as thumbnail, Hide from gallery, Open in new tab.
+- «Edit title» открывает диалог `Edit image title` с одним `input[type=text]` и
+  кнопками Cancel / Save.
+- ⚠️ **Значение надо вводить по-настоящему** (Playwright `locator.fill()`):
+  программная установка через `HTMLInputElement.prototype.value` + событие `input`
+  **не доходит** до React — по Save картинка остаётся «No title».
+- ✅ Проверять только после перезагрузки страницы: заголовок должен остаться.
+- Стиль подписей в проекте: `Scene - Language UI` (например,
+  «Mod menu badge - Russian UI», «In-game choice - Russian UI»).
+- Удаление: там же, кнопка `aria-label="Delete image"` + подтверждение `Delete`.
+
+## Если Playwright MCP «пропал» из тулов (2026-11-14)
+
+Симптом: в каталоге инструментов нет namespace `playwright`, хотя Chrome с CDP жив.
+Причина: MCP-сервер не запущен (упал/перезапускался).
+
+Починка: тронуть конфиг `~/.config/opencode/opencode.json` (например, добавить
+безобидный env в `mcp.servers.playwright.environment`) — opencode перечитывает
+конфиг и **перезапускает MCP без рестарта приложения**; через ~10 с тулы
+возвращаются. Проверка живости пакета отдельно:
+`npx -y @playwright/mcp@latest --version`.
