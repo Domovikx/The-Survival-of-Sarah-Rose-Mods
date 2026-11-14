@@ -154274,7 +154274,7 @@ msgstr "老贝尔蒙特什么女人没见过，但你是唯一一个吞下我精
 
 msgctxt "speaker:Narrator"
 msgid "Sarah looked up at him, fire in her eyes."
-msgstr ""
+msgstr "莎拉抬头看着他，眼中燃起怒火。"
 
 msgctxt "speaker:Captain Belmont"
 msgid "Oh please, save that anger for someone else, Blondie."
@@ -154306,7 +154306,7 @@ msgstr "莎拉感到一阵恐慌袭来，双眼圆睁。"
 
 msgctxt "speaker:Narrator"
 msgid "He yanked back her head, his cock falling from her mouth with a plopping sound."
-msgstr ""
+msgstr "他猛地拽回她的头，他的鸡巴从她嘴里滑出，发出啪嗒一声。"
 
 msgctxt "speaker:Narrator"
 msgid "He pulled her onto her feet by her arm with ease. Stronger than he appeared in his old age."
