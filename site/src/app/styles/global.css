@@ -113,15 +113,27 @@ body {
 * ja +7%  -> 16.05 px: кандзи те же, но кана «легче» — чуть меньше;
 * ko +4%  -> 15.6 px: хангыль из простых штрихов и с открытыми формами,
 *            крупнее латиницы по восприятию не требует.
-* CLReq также требует line gap >= 0.5 кегля (line-height >= 1.5) — в наших
-* компонентах 1.45–1.6, для zh поднимаем до нормы ниже.
+* CLReq (6.4) задаёт связь line height = font size + line gap и требует запас
+* под межстрочное, а не «впритык»; конкретный gap для body не нормирует.
+* Поэтому интерлиньяж ниже — по плотности глифов: zh > ja > ko.
 * Масштабируем контейнер: кегли в компонентах в px, :root не поможет. */
 html:lang(zh) #root { zoom: 1.08; }
 html:lang(ja) #root { zoom: 1.07; }
 html:lang(ko) #root { zoom: 1.04; }
 
-/*CLReq 6.4: межстрочный зазор не меньше половины кегля.*/
+/*Интерлиньяж по плотности глифов: чем плотнее, тем больше воздуха строке.*/
 html:lang(zh) p,
-html:lang(zh) li {
-  line-height: 1.6 !important;
+html:lang(zh) li,
+html:lang(zh) figcaption {
+  line-height: 1.75 !important;
+}
+html:lang(ja) p,
+html:lang(ja) li,
+html:lang(ja) figcaption {
+  line-height: 1.7 !important;
+}
+html:lang(ko) p,
+html:lang(ko) li,
+html:lang(ko) figcaption {
+  line-height: 1.65 !important;
 }
