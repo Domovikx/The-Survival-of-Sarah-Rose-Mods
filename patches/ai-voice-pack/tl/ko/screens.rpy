@@ -31,10 +31,10 @@ translate ko strings:
     new "저장"
 
     old "Q.Save"
-    new "저장"
+    new "빠른저장"
 
     old "Q.Load"
-    new "Q.로드"
+    new "빠른불러오기"
 
     old "Prefs"
     new "설정"
@@ -257,3 +257,32 @@ translate ko strings:
 
     old "Menu"
     new "메뉴"
+
+    ## ── Кнопки меню и сохранений (добавлено 2026-11-14) ───────────────
+    ## Базовые экраны игры запрашивают эти подписи, но в таблице перевода
+    ## их не было: главное меню показывало Start / Settings / Exit
+    ## по-английски (проверено пробой в игре, а не на глаз).
+    old "Start"
+    new "시작"
+
+    old "Settings"
+    new "설정"
+
+    old "Quit"
+    new "종료"
+
+    old "Continue"
+    new "계속하기"
+
+    old "Main Menu"
+    new "메인 메뉴"
+
+    old "Quick Save"
+    new "빠른 저장"
+
+    old "Quick Load"
+    new "빠른 불러오기"
+
+    old "Delete"
+    new "삭제"
+

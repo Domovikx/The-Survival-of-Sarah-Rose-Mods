@@ -10,6 +10,10 @@
  *                  озвучен = активный реф {Имя}.wav; narrator = реф Narrator).
  *                  by_who в рантайм не читается (voice_config.rpy берёт
  *                  только names+narrator) — выпищен вместе с каталогом.
+ * progress.json    СКОЛЬКО ПЕРЕВЕДЕНО И ОЗВУЧЕНО по языкам (2026-11-14):
+ *                  игрок должен видеть, что это ДЕМО, а не полная локализация.
+ *                  Считается здесь, а не в игре: рантайм не должен читать
+ *                  po/ и обходить тысячи файлов ради двух чисел в меню.
  *
  * Оба файла — АРТЕФАКТЫ СБОРКИ: кладёт в .7z build_pack.mts, в репе не живут.
  *
@@ -19,7 +23,7 @@
  * с отсутствующим/неполным каталогом — контракт приёмки edge-кейса).
  */
 
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
@@ -75,18 +79,85 @@ export function buildVoiceList(): Record<string, unknown> {
   };
 }
 
-/** Пишет оба JSON в out-dir; любая ошибка -> throw (build_pack.mts ловит и валит сборку). */
-export function generate(outDir: string): { labelArc: string; voiceList: string; labels: number; voices: number } {
+/**
+ * Языки для progress.json — из КАНОНА порядка (config/language-priority.json),
+ * а не списком в коде: правило проекта — любой список языков идёт в этом
+ * порядке. Берём только те, у кого есть po (en считается отдельно как источник).
+ */
+function progressLangs(): string[] {
+  const canonPath = join(PKG_ROOT, "..", "..", "config", "language-priority.json");
+  const canon = JSON.parse(readFileSync(canonPath, "utf-8")) as { languages: { code: string }[] };
+  return canon.languages
+    .map((l) => l.code)
+    .filter((code) => code !== "en" && existsSync(join(PKG_ROOT, "po", `${code}.po`)));
+}
+
+/** Рекурсивный счёт .opus/.wav (без внешних зависимостей). */
+function countAudio(dir: string): number {
+  if (!existsSync(dir)) return 0;
+  let n = 0;
+  for (const entry of readdirSync(dir, { withFileTypes: true })) {
+    const full = join(dir, entry.name);
+    if (entry.isDirectory()) n += countAudio(full);
+    else if (entry.name.endsWith(".opus") || entry.name.endsWith(".wav")) n += 1;
+  }
+  return n;
+}
+
+/**
+ * Сколько переведено и озвучено по языкам — для честного предупреждения «демо».
+ * Считаем ЗДЕСЬ, на сборке: рантайму нельзя читать po/ и обходить тысячи файлов
+ * ради двух чисел в меню (и в паке po/ всё равно нет).
+ */
+export function buildProgress(pkgRoot: string = PKG_ROOT): {
+  generated: string;
+  total: number;
+  langs: Record<string, { translated: number; voiced: number }>;
+} {
+  const pot = readFileSync(join(pkgRoot, "po", "template.pot"), "utf-8");
+  // total = все msgid шаблона (тот же счёт, что показывает po:check)
+  const total = (pot.match(/^msgid "(?!")/gm) ?? []).length;
+  if (!total) throw new Error("progress: пустой template.pot — запусти npm run potgen");
+
+  const langs: Record<string, { translated: number; voiced: number }> = {};
+  for (const lang of progressLangs()) {
+    const poPath = join(pkgRoot, "po", `${lang}.po`);
+    let translated = 0;
+    if (existsSync(poPath)) {
+      const po = readFileSync(poPath, "utf-8");
+      // перевод = непустой msgstr (пустая строка = ещё не переведено)
+      translated = (po.match(/^msgstr "(?!")/gm) ?? []).length;
+    }
+    langs[lang] = { translated, voiced: countAudio(join(pkgRoot, "audio", lang)) };
+  }
+  // en — источник: текст полный по определению
+  langs.en = { translated: total, voiced: countAudio(join(pkgRoot, "audio", "en")) };
+
+  return { generated: new Date().toISOString().slice(0, 10), total, langs };
+}
+
+/** Пишет JSON в out-dir; любая ошибка -> throw (build_pack.mts ловит и валит сборку). */
+export function generate(outDir: string): {
+  labelArc: string;
+  voiceList: string;
+  progress: string;
+  labels: number;
+  voices: number;
+} {
   const labelArc = buildLabelArc();
   const voiceList = buildVoiceList();
+  const progress = buildProgress();
   mkdirSync(outDir, { recursive: true });
   const arcPath = join(outDir, "label_arc.json");
   const vlPath = join(outDir, "voice_list.json");
+  const pgPath = join(outDir, "progress.json");
   writeFileSync(arcPath, JSON.stringify(labelArc, null, 1) + "\n", "utf-8");
   writeFileSync(vlPath, JSON.stringify(voiceList, null, 1) + "\n", "utf-8");
+  writeFileSync(pgPath, JSON.stringify(progress, null, 1) + "\n", "utf-8");
   return {
     labelArc: arcPath,
     voiceList: vlPath,
+    progress: pgPath,
     labels: Object.keys(labelArc).length,
     voices: Object.keys((voiceList as { names: object }).names).length,
   };
@@ -101,7 +172,9 @@ function main(argv: string[]): void {
   }
   try {
     const r = generate(outDir);
-    console.log(`catalog: label_arc.json — ${r.labels} лейблов; voice_list.json — ${r.voices} голосов -> ${outDir}`);
+    console.log(
+      `catalog: label_arc.json — ${r.labels} лейблов; voice_list.json — ${r.voices} голосов; progress.json -> ${outDir}`,
+    );
   } catch (e) {
     console.error(`CATALOG_GEN ERROR: ${e instanceof Error ? e.message : String(e)}`);
     process.exit(1);

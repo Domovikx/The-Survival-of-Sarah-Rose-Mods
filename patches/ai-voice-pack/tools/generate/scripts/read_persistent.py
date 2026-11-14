@@ -71,3 +71,10 @@ else:
     for k in ("language", "afm_enable", "afm_time", "afm_after_click",
               "text_cps", "using_afm_enable", "muted"):
         print("%-20s = %r" % (k, pd.get(k, "<absent>")))
+
+# Кегли мода (persistent.font_*) — что игрок реально накрутил в меню.
+# Без них нельзя проверить, применяется ли CJK-надбавка: эффективный кегль
+# складывается из этих значений и пресета языка (TSSR_FONT_GROUPS).
+fonts = {k: d.get(k) for k in sorted(d) if k.startswith("font_")}
+if fonts:
+    print("font_* (persistent мода):", fonts)

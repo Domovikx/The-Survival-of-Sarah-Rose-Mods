@@ -257,3 +257,32 @@ translate ja strings:
 
     old "Menu"
     new "メニュー"
+
+    ## ── Кнопки меню и сохранений (добавлено 2026-11-14) ───────────────
+    ## Базовые экраны игры запрашивают эти подписи, но в таблице перевода
+    ## их не было: главное меню показывало Start / Settings / Exit
+    ## по-английски (проверено пробой в игре, а не на глаз).
+    old "Start"
+    new "はじめから"
+
+    old "Settings"
+    new "設定"
+
+    old "Quit"
+    new "終了"
+
+    old "Continue"
+    new "続きから"
+
+    old "Main Menu"
+    new "メインメニュー"
+
+    old "Quick Save"
+    new "クイックセーブ"
+
+    old "Quick Load"
+    new "クイックロード"
+
+    old "Delete"
+    new "削除"
+

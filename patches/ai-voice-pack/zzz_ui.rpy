@@ -77,26 +77,50 @@ define gui.choice_button_text_font = gui.text_font
 define gui.choice_button_text_size = gui.text_size
 
 init python:
+    # КЕГЛИ: ЧЕТЫРЕ НАБОРА — база для всех языков + три иероглифических
+    # (zh / ja / ko). Причина: иероглифы плотнее латиницы, при том же кегле
+    # текст читается мельче (обоснование, источники и методика проверки —
+    # docs/cjk-typography.md).
+    #
+    # ЭТОТ ФАЙЛ — ЕДИНСТВЕННЫЙ ИСТОЧНИК этих чисел: он же и конфиг, и
+    # потребитель (init python -> gui.* -> стили). Второй копии нет намеренно:
+    # внешний JSON пришлось бы держать в синхроне тестом, то есть дублировать
+    # знание ради самого дублирования. Тест ui_font_presets.test.mts читает
+    # таблицу прямо отсюда и проверяет инварианты (4 набора, 6 кеглей,
+    # дельты +2/+2/+1, применение на старте).
+    #
+    # Набор — это ДЕЛЬТА к базе, а не абсолют: игрок крутит свои размеры в
+    # меню мода (persistent.font_*), набор языка приподнимает их на ту же
+    # величину. Так правило работает и для дефолтов, и для ручных настроек.
+    TSSR_FONT_GROUPS = {
+        "base": {"text": 32, "name": 38, "iface": 28, "label": 36, "notify": 24, "title": 75},
+        "zh": {"text": 34, "name": 40, "iface": 30, "label": 38, "notify": 26, "title": 77},
+        "ja": {"text": 34, "name": 40, "iface": 30, "label": 38, "notify": 26, "title": 77},
+        "ko": {"text": 33, "name": 39, "iface": 29, "label": 37, "notify": 25, "title": 76},
+    }
+
     FONT_DEFAULTS = {
-        'font_text_size': 32,
-        'font_name_size': 38,
-        'font_interface_size': 28,
-        'font_label_size': 36,
-        'font_notify_size': 24,
-        'font_title_size': 75
+        'font_text_size': TSSR_FONT_GROUPS['base']['text'],
+        'font_name_size': TSSR_FONT_GROUPS['base']['name'],
+        'font_interface_size': TSSR_FONT_GROUPS['base']['iface'],
+        'font_label_size': TSSR_FONT_GROUPS['base']['label'],
+        'font_notify_size': TSSR_FONT_GROUPS['base']['notify'],
+        'font_title_size': TSSR_FONT_GROUPS['base']['title'],
     }
 
     # Шрифт по активному языку (рецепт NeonTranslator 2026-11-11: по-языковые
     # Noto для CJK; точка подключения — update_font_styles, тот же механизм,
     # что и размеры шрифтов).
-    # CJK-типографика: иероглифы плотнее латиницы, при том же кегле текст
-    # читается мельче (14–15 px по-китайски «мелко»). Даём +2 к кеглю для
-    # zh/ja/ko — пользователь всё равно может крутить размеры в меню.
-    # Плотность глифов разная: ханьцзы плотнее каны, хангыль — самый открытый.
-    TSSR_LANG_SIZE_BUMP = {"zh": 2, "ja": 2, "ko": 1}
+    def tssr_font_group(code=None):
+        # Язык -> набор кеглей. Всё, чего нет в карте (включая None = EN),
+        # читается базовым набором.
+        code = preferences.language if code is None else code
+        return code if code in TSSR_FONT_GROUPS else "base"
 
-    def tssr_size_bump():
-        return TSSR_LANG_SIZE_BUMP.get(preferences.language, 0)
+    def tssr_size_delta(key, code=None):
+        # Насколько набор языка выше базового: 0 для латиницы/кириллицы,
+        # +2 для zh/ja, +1 для ko. Единственный источник — TSSR_FONT_GROUPS.
+        return TSSR_FONT_GROUPS[tssr_font_group(code)][key] - TSSR_FONT_GROUPS["base"][key]
 
     TSSR_LANG_FONT = {
         "ja": "fonts/NotoSansCJKjp-Regular.otf",
@@ -104,13 +128,154 @@ init python:
         "zh": "fonts/NotoSansCJKsc-Regular.otf",
     }
 
+
+    # ── ОЗВУЧКА: что реально установлено ───────────────────────────────────
+    # Зачем: main-архив несёт ТЕКСТОВЫЕ переводы, а голоса лежат отдельными
+    # паками voice-<lang>. Игрок ставит main и не понимает, почему молчит —
+    # в меню должно быть видно, какой язык озвучен, а какой нет.
+    # Считаем один раз за запуск (скан ~200 папок на язык — это дёшево, но в
+    # каждом кадре меню повторять нельзя), кеш живёт до перезапуска игры.
+    TSSR_VOICE_COUNTS = {}
+
+    def tssr_voice_root():
+        # Корень мода уже вычислен в voice_config.rpy (init -999), поэтому
+        # переиспользуем его; фолбэк — каноническая папка установки.
+        import os as _os
+
+        root = globals().get("_MOD_ROOT") or _os.path.join(config.basedir, "mods", "tssr-ai-voice-pack")
+        return _os.path.join(root, "ai_voice")
+
+    def tssr_voice_count(code):
+        # Сколько файлов озвучки стоит для языка (0 = пак не установлен).
+        import os as _os
+
+        if code in TSSR_VOICE_COUNTS:
+            return TSSR_VOICE_COUNTS[code]
+        total = 0
+        base = _os.path.join(tssr_voice_root(), code or "en")
+        try:
+            for _dirpath, _dirnames, _files in _os.walk(base):
+                for _f in _files:
+                    if _f.endswith(".opus") or _f.endswith(".wav"):
+                        total += 1
+        except Exception:
+            total = 0
+        TSSR_VOICE_COUNTS[code] = total
+        return total
+
+    def tssr_voice_codes():
+        # Коды языков меню: английский хранится как None, но папка у него "en".
+        return [("en" if c is None else c) for c, _title in TSSR_LANGUAGES]
+
+    def tssr_voice_langs_installed():
+        # Языки, у которых есть хоть один файл: [(code, count), ...]
+        return [(c, tssr_voice_count(c)) for c in tssr_voice_codes() if tssr_voice_count(c)]
+
+    def tssr_voice_langs_missing():
+        # Языки без единого файла: [code, ...]
+        return [c for c in tssr_voice_codes() if not tssr_voice_count(c)]
+
+    def tssr_symbol_font():
+        # СИМВОЛ, А НЕ ЦВЕТ (запрос владельца 2026-11-14: «дальтоники ругаются»).
+        # Нота ♪ есть в Noto, но НЕТ в Literata — без фолбэка вышло бы «тофу».
+        # FontGroup отдаёт Literata для латиницы/кириллицы и Noto для символов.
+        if not globals().get("_TSSR_SYMBOL_FONT"):
+            try:
+                _fg = FontGroup()
+                _fg.add("fonts/Literata-Bold.ttf", 0x0000, 0x24FF)
+                _fg.add("fonts/NotoSansCJKsc-Regular.otf", 0x24FF, 0xFFFF)
+                globals()["_TSSR_SYMBOL_FONT"] = _fg
+            except Exception:
+                globals()["_TSSR_SYMBOL_FONT"] = "fonts/Literata-Bold.ttf"
+        return globals()["_TSSR_SYMBOL_FONT"]
+
+
+    # ── ДЕМО или полная локализация (честное предупреждение) ────────────────
+    # Цифры считает СБОРКА (catalog_gen.mts -> catalog/progress.json): рантайм
+    # не должен читать po/ и обходить тысячи файлов. Показываем по ВЫБРАННОМУ
+    # языку: текст и озвучка отдельно, плюс маркер «демо», если что-то неполное.
+    TSSR_PROGRESS = {}
+
+    def tssr_progress():
+        if not TSSR_PROGRESS:
+            try:
+                import json as _json
+
+                _f = renpy.file("catalog/progress.json")
+                TSSR_PROGRESS.update(_json.loads(_f.read().decode("utf-8")))
+                _f.close()
+            except Exception:
+                pass
+        return TSSR_PROGRESS
+
+    def tssr_progress_lines(code):
+        _d = tssr_progress()
+        _total = int(_d.get("total") or 0)
+        _row = (_d.get("langs") or {}).get(code) or {}
+        if not _total or not _row:
+            return []
+        _tr = int(_row.get("translated") or 0)
+        _vo = int(_row.get("voiced") or 0)
+        # Числа — с разделителем разрядов (69 120 читаемо, 69120 — нет).
+        _fmt = lambda v: "{:,}".format(int(v)).replace(",", " ")
+        if _tr >= _total:
+            _text = tssr_tr("Text: full ({n} of {total} lines)").format(n=_fmt(_tr), total=_fmt(_total))
+        else:
+            _text = tssr_tr("Text: demo - {p}% ({n} of {total} lines)").format(
+                p=int(round(100.0 * _tr / _total)), n=_fmt(_tr), total=_fmt(_total))
+        if _vo >= _total:
+            _voice = tssr_tr("Voice: full ({n} of {total} lines)").format(n=_fmt(_vo), total=_fmt(_total))
+        else:
+            _voice = tssr_tr("Voice: demo - {n} of {total} lines").format(n=_fmt(_vo), total=_fmt(_total))
+        return [_text, _voice]
+
+    def tssr_is_demo(code=None):
+        # Демо = текст ИЛИ озвучка неполные (страховка от «купил полный, а там демо»).
+        _code = code or ("en" if preferences.language is None else preferences.language)
+        _d = tssr_progress()
+        _total = int(_d.get("total") or 0)
+        if not _total:
+            return False
+        _row = (_d.get("langs") or {}).get(_code) or {}
+        _tr = int(_row.get("translated") or 0)
+        _vo = int(_row.get("voiced") or 0)
+        return not (_tr >= _total and _vo >= _total)
+
+    def tssr_lang_label(code, title):
+        # Индикатор озвучки прямо на кнопке языка, СИМВОЛОМ:
+        #   ♪        — пак установлен (звук есть)
+        #   ♪ зачёркнутая ({s}) — только текст, звука нет
+        # Смысл несёт форма, а не цвет: работает и без различения цветов.
+        _slot = "en" if code is None else code
+        _on = tssr_voice_count(_slot) > 0
+        return ("♪ %s" if _on else "{s}♪{/s} %s") % title
+
+    def tssr_tr(text):
+        # ВАЖНО: `_()` — маркер для .rpy-кода; внутри python-функций он НЕ
+        # переводит (проверено E2E: строка статуса оставалась английской).
+        # Для строк, собранных в коде, переводим явно.
+        try:
+            return renpy.translation.translate_string(text)
+        except Exception:
+            return text
+
+    def tssr_voice_status_line():
+        # Строка для активного языка: сколько реплик ИЛИ что пака нет.
+        _code = preferences.language or "en"
+        _n = tssr_voice_count(_code)
+        if _n:
+            return tssr_tr("Voice files: {n} lines").format(n=_n)
+        return tssr_tr("No voice files for this language - download voice-{lang} on Nexus Mods.").format(lang=_code)
+
     def tssr_current_font():
         return TSSR_LANG_FONT.get(preferences.language, "fonts/Literata-Regular.ttf")
 
     def tssr_lang_font(code):
         # Шрифт МЕТКИ языка = шрифт её языка (ревью R4 2026-11-11):
         # «日本語/한국어/中文» читаемы при любом активном языке UI.
-        return TSSR_LANG_FONT.get(code, "fonts/Literata-Bold.ttf")
+        # Для латиницы — FontGroup с фолбэком, иначе символ ♪ в подписи
+        # превращается в пустой квадрат (в Literata его нет).
+        return TSSR_LANG_FONT.get(code, tssr_symbol_font())
 
     def tssr_shots_vy():
         # Позиция скролла панели для QA-съёмки (харнесс zz_capture: верх=0,
@@ -122,25 +287,28 @@ init python:
         # K-E10: смена языка на лету. Шрифты — через translate-style блоки
         # (5.2); здесь gui.* + rebuild (только в рантайме!) + пересоздание
         # экрана (отрисовка кэшируется виджетами).
-        update_font_styles()
+        # ПОРЯДОК ВАЖЕН (проба 2026-11-14): gui.rebuild() ОТКАТЫВАЕТ gui.* к
+        # значениям `define` (32/38/28/24/75), поэтому сначала rebuild, и
+        # только потом применяем свои размеры — иначе после смены языка
+        # пользовательские размеры и CJK-надбавка терялись до перезапуска.
         gui.rebuild()
+        update_font_styles(rebuild=True)
         if renpy.get_screen("tssr_mod_menu"):
             renpy.hide_screen("tssr_mod_menu")
             renpy.show_screen("tssr_mod_menu")
         renpy.restart_interaction()
 
-    def update_font_styles():
+    def update_font_styles(rebuild=False):
         # МЕХАНИЗМ (вскрыто 2026-11-11): gui.* — источник; стили пер-языковыми
         # translate-style блоками (5.2). ВАЖНО: gui.rebuild() НЕЛЬЗЯ звать при
         # init (clean_store_backup ещё None -> AttributeError, падение старта) —
-        # rebuild живёт только в tssr_apply_language_font (рантайм).
-        _bump = tssr_size_bump()
-        gui.text_size = persistent.font_text_size + _bump
-        gui.name_text_size = persistent.font_name_size + _bump
-        gui.interface_text_size = persistent.font_interface_size + _bump
-        gui.label_text_size = persistent.font_label_size + _bump
-        gui.notify_text_size = persistent.font_notify_size + _bump
-        gui.title_text_size = persistent.font_title_size + _bump
+        # rebuild живёт в стартовом колбэке и в tssr_apply_language_font.
+        gui.text_size = persistent.font_text_size + tssr_size_delta('text')
+        gui.name_text_size = persistent.font_name_size + tssr_size_delta('name')
+        gui.interface_text_size = persistent.font_interface_size + tssr_size_delta('iface')
+        gui.label_text_size = persistent.font_label_size + tssr_size_delta('label')
+        gui.notify_text_size = persistent.font_notify_size + tssr_size_delta('notify')
+        gui.title_text_size = persistent.font_title_size + tssr_size_delta('title')
         gui.button_text_size = gui.interface_text_size
         gui.choice_button_text_size = gui.text_size
         _f = tssr_current_font()
@@ -149,6 +317,47 @@ init python:
         gui.interface_text_font = _f
         gui.button_text_font = _f
         gui.choice_button_text_font = _f
+        tssr_apply_text_styles(rebuild)
+
+    def tssr_apply_text_styles(rebuild=False):
+        # ЗАЧЕМ ЭТО: в стандартном шаблоне Ren'Py размеры стилей берутся из
+        # gui.*, но ЭТА игра рисует текст собственными стилями с жёсткими
+        # кеглями — gui.text_size = 40 не менял ничего (стиль оставался 32).
+        # Проверено E2E в живой игре 2026-11-14: gui.* не доходит до стилей,
+        # а прямое назначение (style.say_dialogue.size) работает.
+        # Трогаем ТОЛЬКО читаемый текст: реплики, имя говорящего, выбор.
+        # Меню/галерею/титул не переопределяем — там своя вёрстка.
+        _map = (
+            ("say_dialogue", "text_size"),
+            ("say_label", "name_text_size"),
+            ("choice_button_text", "text_size"),
+        )
+        for _style_name, _gui_attr in _map:
+            try:
+                getattr(style, _style_name).size = getattr(gui, _gui_attr)
+            except Exception:
+                pass
+        # Стилям, созданным игрой, назначение «вступает в силу» только после
+        # пересборки стилей (проверено: say_label 38 -> 39 без rebuild не
+        # менялся). На init rebuild запрещён, поэтому флаг передают рантайм-
+        # пути: стартовый колбэк и смена языка.
+        if rebuild:
+            try:
+                renpy.style.rebuild()
+            except Exception:
+                pass
+
+    def tssr_apply_fonts_at_start():
+        # СТАРТОВЫЙ КОЛБЭК — обязателен, а не «на всякий случай» (проба
+        # 2026-11-14): базовая игра и движковые preference-слои переприменяют
+        # gui.* ПОСЛЕ наших init-блоков, и без этого хука иероглифические
+        # языки стартовали с базовым кеглем (zh 30 px вместо 32 запрошенных).
+        # Колбэк идёт после init и до первого кадра, поэтому его значения
+        # последние; rebuild нужен, чтобы стили пересобрались из новых gui.*.
+        gui.rebuild()
+        update_font_styles(rebuild=True)
+
+    config.start_callbacks.append(tssr_apply_fonts_at_start)
 
     def update_all():
         # gui.* + пересборка — внутри update_font_styles (единый механизм)
@@ -240,21 +449,20 @@ init python:
 default tssr_fs_text = 32
 default tssr_fs_name = 38
 default tssr_fs_interface = 28
-default tssr_fs_label = 36
-default tssr_fs_notify = 24
-default tssr_fs_title = 75
 
 init python:
 
-    # (persistent-поле, store-черновик, original-заголовок строки) —
-    # ЕДИНСТВЕННОЕ место правки при добавлении нового размера шрифта.
+    # (persistent-поле, store-черновик, original-заголовок строки).
+    # ЕДИНСТВЕННОЕ место правки. В МЕНЮ — только то, что даёт игроку ценность:
+    # читаемость реплик, имён говорящих и интерфейса. Служебные кегли
+    # (Header/Notification/Game title) остаются ВНУТРЕННИМИ: их масштабирует
+    # пресет языка (TSSR_FONT_GROUPS), а ручка в меню — инфошум, который
+    # ничего не решает у игрока (титул главного меню читается всегда, а
+    # уведомление живёт секунду).
     TSSR_FS_ROWS = [
         ("font_text_size", "tssr_fs_text", "Dialogue text"),
         ("font_name_size", "tssr_fs_name", "Names"),
         ("font_interface_size", "tssr_fs_interface", "UI text"),
-        ("font_label_size", "tssr_fs_label", "Header text"),
-        ("font_notify_size", "tssr_fs_notify", "Notification text"),
-        ("font_title_size", "tssr_fs_title", "Game title"),
     ]
 
     def tssr_fs_bump(var, delta):
@@ -501,7 +709,7 @@ screen tssr_mod_menu():
                     spacing 16
 
                     for code, title in TSSR_LANGUAGES:
-                        textbutton title:
+                        textbutton tssr_lang_label(code, title):
                             # Language() переводит строки; tssr_apply_language_font —
                             # живая смена шрифта (баг 2026-11-11: без неё CJK
                             # после переключения рисовался квадратиками).
@@ -512,6 +720,26 @@ screen tssr_mod_menu():
                             # «日本語/한국어/中文» читаемы при любом UI-языке.
                             text_font tssr_lang_font(code)
                     null
+
+                ## Легенда: символы с подписями (без цвета — для дальтоников).
+                hbox:
+                    spacing 28
+                    text ("♪  " + tssr_tr("voice pack installed")):
+                        style "tssr_mod_hint"
+                        font tssr_symbol_font()
+                    text ("{s}♪{/s}  " + tssr_tr("no voice pack - text only")):
+                        style "tssr_mod_hint"
+                        font tssr_symbol_font()
+
+                ## Статус выбранного языка: текст и озвучка отдельно + «демо».
+                $ _tssr_plines = tssr_progress_lines("en" if preferences.language is None else preferences.language)
+                if _tssr_plines:
+                    vbox:
+                        spacing 2
+                        text _tssr_plines[0]:
+                            style "tssr_mod_hint"
+                        text _tssr_plines[1]:
+                            style "tssr_mod_hint"
 
                 ## ── Озвучка ─────────────────────────────────────────────
                 text _("Voice acting"):
@@ -529,6 +757,15 @@ screen tssr_mod_menu():
                         action SetMute("voice", True)
                         selected ToggleMute("voice").get_selected()
                         style "tssr_choice"
+
+                ## Что реально установлено: main несёт только текст, голоса —
+                ## отдельными паками voice-<lang> (см. tssr_voice_status_line).
+                ## Предупреждение ONLY когда активный язык без файлов: игрок
+                ## иначе не поймёт, почему озвучка молчит (main = только текст).
+                if not tssr_voice_count(preferences.language or "en"):
+                    text tssr_voice_status_line():
+                        style "tssr_mod_hint"
+                        color "#ff9b9b"
 
                 frame:
                     style "tssr_divider"
@@ -2068,3 +2305,322 @@ translate zh strings:
     old "Support the patch"
     new "支持补丁"
 
+
+################################################################################
+## 5.4 Статус аудио-паков в меню (main несёт только текст; голоса —
+##     отдельными паками voice-<lang>, поэтому нужен явный статус).
+################################################################################
+
+translate ru strings:
+
+    old "Voice files: {n} lines"
+    new "Голосовых файлов: {n} реплик"
+
+    old "No voice files for this language - download voice-{lang} on Nexus Mods."
+    new "Озвучки для этого языка нет — скачайте voice-{lang} на Nexus Mods."
+
+translate de strings:
+
+    old "Voice files: {n} lines"
+    new "Sprachdateien: {n}"
+
+    old "No voice files for this language - download voice-{lang} on Nexus Mods."
+    new "Keine Sprachdateien für diese Sprache — voice-{lang} auf Nexus Mods herunterladen."
+
+translate es strings:
+
+    old "Voice files: {n} lines"
+    new "Archivos de voz: {n}"
+
+    old "No voice files for this language - download voice-{lang} on Nexus Mods."
+    new "No hay archivos de voz para este idioma: descarga voice-{lang} en Nexus Mods."
+
+translate pt strings:
+
+    old "Voice files: {n} lines"
+    new "Arquivos de voz: {n}"
+
+    old "No voice files for this language - download voice-{lang} on Nexus Mods."
+    new "Não há arquivos de voz para este idioma — baixe voice-{lang} no Nexus Mods."
+
+translate fr strings:
+
+    old "Voice files: {n} lines"
+    new "Fichiers voix : {n}"
+
+    old "No voice files for this language - download voice-{lang} on Nexus Mods."
+    new "Aucun fichier voix pour cette langue — téléchargez voice-{lang} sur Nexus Mods."
+
+translate it strings:
+
+    old "Voice files: {n} lines"
+    new "File vocali: {n}"
+
+    old "No voice files for this language - download voice-{lang} on Nexus Mods."
+    new "Nessun file vocale per questa lingua: scarica voice-{lang} su Nexus Mods."
+
+translate ja strings:
+
+    old "Voice files: {n} lines"
+    new "音声ファイル：{n} 件"
+
+    old "No voice files for this language - download voice-{lang} on Nexus Mods."
+    new "この言語の音声ファイルがありません。Nexus Mods から voice-{lang} を導入してください。"
+
+translate ko strings:
+
+    old "Voice files: {n} lines"
+    new "음성 파일: {n}개"
+
+    old "No voice files for this language - download voice-{lang} on Nexus Mods."
+    new "이 언어의 음성 파일이 없습니다. Nexus Mods에서 voice-{lang}을(를) 내려받으세요."
+
+translate pl strings:
+
+    old "Voice files: {n} lines"
+    new "Pliki głosowe: {n}"
+
+    old "No voice files for this language - download voice-{lang} on Nexus Mods."
+    new "Brak plików głosowych dla tego języka — pobierz voice-{lang} z Nexus Mods."
+
+translate zh strings:
+
+    old "Voice files: {n} lines"
+    new "语音文件：{n} 条"
+
+    old "No voice files for this language - download voice-{lang} on Nexus Mods."
+    new "此语言没有语音文件——请到 Nexus Mods 下载 voice-{lang}。"
+
+
+################################################################################
+## 5.6 Легенда индикаторов озвучки на кнопках языков.
+#############################################################################
+
+translate ru strings:
+
+    old "voice pack installed"
+    new "озвучка установлена"
+
+    old "no voice pack - text only"
+    new "без озвучки — только текст"
+
+translate de strings:
+
+    old "voice pack installed"
+    new "Sprachpaket installiert"
+
+    old "no voice pack - text only"
+    new "kein Sprachpaket — nur Text"
+
+translate es strings:
+
+    old "voice pack installed"
+    new "paquete de voz instalado"
+
+    old "no voice pack - text only"
+    new "sin voz — solo texto"
+
+translate pt strings:
+
+    old "voice pack installed"
+    new "pacote de voz instalado"
+
+    old "no voice pack - text only"
+    new "sem voz — apenas texto"
+
+translate fr strings:
+
+    old "voice pack installed"
+    new "pack voix installé"
+
+    old "no voice pack - text only"
+    new "sans voix — texte seul"
+
+translate it strings:
+
+    old "voice pack installed"
+    new "pacchetto vocale installato"
+
+    old "no voice pack - text only"
+    new "senza voce — solo testo"
+
+translate ja strings:
+
+    old "voice pack installed"
+    new "音声あり"
+
+    old "no voice pack - text only"
+    new "音声なし — テキストのみ"
+
+translate ko strings:
+
+    old "voice pack installed"
+    new "음성 있음"
+
+    old "no voice pack - text only"
+    new "음성 없음 — 텍스트만"
+
+translate pl strings:
+
+    old "voice pack installed"
+    new "pakiet głosowy zainstalowany"
+
+    old "no voice pack - text only"
+    new "bez głosu — tylko tekst"
+
+translate zh strings:
+
+    old "voice pack installed"
+    new "已安装语音包"
+
+    old "no voice pack - text only"
+    new "无语音——仅文本"
+
+
+
+#########################################################################
+
+
+################################################################################
+## 5.7 Статус выбранного языка: текст и озвучка отдельно (честное «демо»).
+################################################################################
+
+translate ru strings:
+
+    old "Text: full ({n} of {total} lines)"
+    new "Текст: полный ({n} из {total} строк)"
+
+    old "Text: demo - {p}% ({n} of {total} lines)"
+    new "Текст: демо — {p}% ({n} из {total} строк)"
+
+    old "Voice: full ({n} of {total} lines)"
+    new "Озвучка: полная ({n} из {total} реплик)"
+
+    old "Voice: demo - {n} of {total} lines"
+    new "Озвучка: демо — {n} из {total} реплик"
+
+translate de strings:
+
+    old "Text: full ({n} of {total} lines)"
+    new "Text: vollständig ({n} von {total} Zeilen)"
+
+    old "Text: demo - {p}% ({n} of {total} lines)"
+    new "Text: Demo — {p}% ({n} von {total} Zeilen)"
+
+    old "Voice: full ({n} of {total} lines)"
+    new "Sprache: vollständig ({n} von {total} Zeilen)"
+
+    old "Voice: demo - {n} of {total} lines"
+    new "Sprache: Demo — {n} von {total} Zeilen"
+
+translate es strings:
+
+    old "Text: full ({n} of {total} lines)"
+    new "Texto: completo ({n} de {total} líneas)"
+
+    old "Text: demo - {p}% ({n} of {total} lines)"
+    new "Texto: demo — {p}% ({n} de {total} líneas)"
+
+    old "Voice: full ({n} of {total} lines)"
+    new "Voz: completa ({n} de {total} líneas)"
+
+    old "Voice: demo - {n} of {total} lines"
+    new "Voz: demo — {n} de {total} líneas"
+
+translate pt strings:
+
+    old "Text: full ({n} of {total} lines)"
+    new "Texto: completo ({n} de {total} linhas)"
+
+    old "Text: demo - {p}% ({n} of {total} lines)"
+    new "Texto: demo — {p}% ({n} de {total} linhas)"
+
+    old "Voice: full ({n} of {total} lines)"
+    new "Voz: completa ({n} de {total} falas)"
+
+    old "Voice: demo - {n} of {total} lines"
+    new "Voz: demo — {n} de {total} falas"
+
+translate fr strings:
+
+    old "Text: full ({n} of {total} lines)"
+    new "Texte : complet ({n} sur {total} lignes)"
+
+    old "Text: demo - {p}% ({n} of {total} lines)"
+    new "Texte : démo — {p} % ({n} sur {total} lignes)"
+
+    old "Voice: full ({n} of {total} lines)"
+    new "Voix : complète ({n} sur {total} répliques)"
+
+    old "Voice: demo - {n} of {total} lines"
+    new "Voix : démo — {n} sur {total} répliques"
+
+translate it strings:
+
+    old "Text: full ({n} of {total} lines)"
+    new "Testo: completo ({n} di {total} righe)"
+
+    old "Text: demo - {p}% ({n} of {total} lines)"
+    new "Testo: demo — {p}% ({n} di {total} righe)"
+
+    old "Voice: full ({n} of {total} lines)"
+    new "Voci: complete ({n} di {total} righe)"
+
+    old "Voice: demo - {n} of {total} lines"
+    new "Voci: demo — {n} di {total} righe"
+
+translate ja strings:
+
+    old "Text: full ({n} of {total} lines)"
+    new "テキスト：完訳（{n}/{total} 行）"
+
+    old "Text: demo - {p}% ({n} of {total} lines)"
+    new "テキスト：デモ — {p}%（{n}/{total} 行）"
+
+    old "Voice: full ({n} of {total} lines)"
+    new "音声：完備（{n}/{total} 行）"
+
+    old "Voice: demo - {n} of {total} lines"
+    new "音声：デモ — {n}/{total} 行"
+
+translate ko strings:
+
+    old "Text: full ({n} of {total} lines)"
+    new "텍스트: 완역({n}/{total}줄)"
+
+    old "Text: demo - {p}% ({n} of {total} lines)"
+    new "텍스트: 데모 — {p}%({n}/{total}줄)"
+
+    old "Voice: full ({n} of {total} lines)"
+    new "음성: 전체({n}/{total}줄)"
+
+    old "Voice: demo - {n} of {total} lines"
+    new "음성: 데모 — {n}/{total}줄"
+
+translate pl strings:
+
+    old "Text: full ({n} of {total} lines)"
+    new "Tekst: pełny ({n} z {total} linii)"
+
+    old "Text: demo - {p}% ({n} of {total} lines)"
+    new "Tekst: demo — {p}% ({n} z {total} linii)"
+
+    old "Voice: full ({n} of {total} lines)"
+    new "Głos: pełny ({n} z {total} linii)"
+
+    old "Voice: demo - {n} of {total} lines"
+    new "Głos: demo — {n} z {total} linii"
+
+translate zh strings:
+
+    old "Text: full ({n} of {total} lines)"
+    new "文本：完整（{n}/{total} 行）"
+
+    old "Text: demo - {p}% ({n} of {total} lines)"
+    new "文本：演示 — {p}%（{n}/{total} 行）"
+
+    old "Voice: full ({n} of {total} lines)"
+    new "语音：完整（{n}/{total} 行）"
+
+    old "Voice: demo - {n} of {total} lines"
+    new "语音：演示 — {n}/{total} 行"

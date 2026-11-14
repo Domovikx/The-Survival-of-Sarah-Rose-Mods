@@ -257,3 +257,32 @@ translate de strings:
 
     old "Menu"
     new "Menü"
+
+    ## ── Кнопки меню и сохранений (добавлено 2026-11-14) ───────────────
+    ## Базовые экраны игры запрашивают эти подписи, но в таблице перевода
+    ## их не было: главное меню показывало Start / Settings / Exit
+    ## по-английски (проверено пробой в игре, а не на глаз).
+    old "Start"
+    new "Start"
+
+    old "Settings"
+    new "Einstellungen"
+
+    old "Quit"
+    new "Beenden"
+
+    old "Continue"
+    new "Fortsetzen"
+
+    old "Main Menu"
+    new "Hauptmenü"
+
+    old "Quick Save"
+    new "Schnellspeichern"
+
+    old "Quick Load"
+    new "Schnellladen"
+
+    old "Delete"
+    new "Löschen"
+

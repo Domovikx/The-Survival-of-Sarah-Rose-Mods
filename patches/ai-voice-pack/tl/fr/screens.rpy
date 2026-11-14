@@ -31,10 +31,10 @@ translate fr strings:
     new "Sauvegarder"
 
     old "Q.Save"
-    new "Sauvegarder"
+    new "Sauv.rap."
 
     old "Q.Load"
-    new "Chargement"
+    new "Charg.rap."
 
     old "Prefs"
     new "Préférences"
@@ -257,3 +257,32 @@ translate fr strings:
 
     old "Menu"
     new "Menu"
+
+    ## ── Кнопки меню и сохранений (добавлено 2026-11-14) ───────────────
+    ## Базовые экраны игры запрашивают эти подписи, но в таблице перевода
+    ## их не было: главное меню показывало Start / Settings / Exit
+    ## по-английски (проверено пробой в игре, а не на глаз).
+    old "Start"
+    new "Commencer"
+
+    old "Settings"
+    new "Paramètres"
+
+    old "Quit"
+    new "Quitter"
+
+    old "Continue"
+    new "Continuer"
+
+    old "Main Menu"
+    new "Menu principal"
+
+    old "Quick Save"
+    new "Sauvegarde rapide"
+
+    old "Quick Load"
+    new "Chargement rapide"
+
+    old "Delete"
+    new "Supprimer"
+

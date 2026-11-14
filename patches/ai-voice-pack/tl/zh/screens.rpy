@@ -257,3 +257,32 @@ translate zh strings:
 
     old "Menu"
     new "菜单"
+
+    ## ── Кнопки меню и сохранений (добавлено 2026-11-14) ───────────────
+    ## Базовые экраны игры запрашивают эти подписи, но в таблице перевода
+    ## их не было: главное меню показывало Start / Settings / Exit
+    ## по-английски (проверено пробой в игре, а не на глаз).
+    old "Start"
+    new "开始"
+
+    old "Settings"
+    new "设置"
+
+    old "Quit"
+    new "退出"
+
+    old "Continue"
+    new "继续"
+
+    old "Main Menu"
+    new "主菜单"
+
+    old "Quick Save"
+    new "快速保存"
+
+    old "Quick Load"
+    new "快速读取"
+
+    old "Delete"
+    new "删除"
+
