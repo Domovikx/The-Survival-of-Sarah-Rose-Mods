@@ -93,7 +93,8 @@ const styles = stylex.create({
   },
   badgeImg: {
     width: '100%',
-    maxWidth: 380,
+    maxWidth: 440,
+    filter: 'contrast(1.12) brightness(1.08)',
     borderRadius: 10,
     borderWidth: 1,
     borderStyle: 'solid',

@@ -115001,7 +115001,7 @@ msgstr "莎拉仍凑得很近，嘴唇距对方仅有几英寸，她不知该吻
 
 msgctxt "speaker:Narrator"
 msgid "The woman decided for Sarah, lunging forward and planting a quick kiss on her lips."
-msgstr ""
+msgstr "女人替莎拉做了决定，向前一扑，在她唇上印下一个急促的吻。"
 
 msgctxt "speaker:Female Soldier"
 msgid "You're...that was incredible."
@@ -115013,11 +115013,11 @@ msgstr "你惊讶吗？"
 
 msgctxt "speaker:Narrator"
 msgid "The woman shrugged, still sweaty."
-msgstr ""
+msgstr "女人耸了耸肩，身上还满是汗水。"
 
 msgctxt "speaker:Female Soldier"
 msgid "Nah, but sometimes you know, you commanders can feel a little...distant? Like you're too good for the rest of us."
-msgstr ""
+msgstr "不，只是有时候你会觉得，你们这些指挥官总有点……高高在上？好像你们觉得自己比我们要强得多似的。"
 
 msgctxt "speaker:Female Soldier"
 msgid "It's nice to see that once you strip away all the titles, you're pretty much the same as the rest of us."
@@ -115037,87 +115037,87 @@ msgstr "莎拉让自己从女人身上翻下来，侧身倒在旁边的床上。
 
 msgctxt "speaker:Narrator"
 msgid "For a moment, each laid in a comfortable silence, feeling the cold palace air sliding across their sweat covered bodies."
-msgstr ""
+msgstr "片刻间，两人沉浸在舒适的静谧中，感受着冰冷的宫殿空气拂过满是汗水的肌肤。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah could feel her skin tingle at the sensation of her hot body against the cool air."
-msgstr ""
+msgstr "莎拉能感觉到，滚烫的身体贴着凉爽的空气，皮肤泛起一阵细微的颤栗。"
 
 msgctxt "speaker:Narrator"
 msgid "Feeling the woman laying next to her felt strangely comforting."
-msgstr ""
+msgstr "感受着身旁躺着的女人，竟有一种奇异的安心感。"
 
 msgctxt "speaker:Narrator"
 msgid "For a moment, it seemed nice."
-msgstr ""
+msgstr "有那么一瞬间，感觉还不错。"
 
 msgctxt "speaker:Narrator"
 msgid "Despite everything, she felt a distance to the woman. A distance she felt existing between herself and most people she knew."
-msgstr ""
+msgstr "尽管如此，她仍感到与那位女人之间存在隔阂。这种隔阂正是她与所认识的多数人之间普遍存在的距离感。"
 
 msgctxt "speaker:Narrator"
 msgid "It wasn't her fault, quite the opposite. Sarah blamed herself more than anything."
-msgstr ""
+msgstr "这并不是她的错，恰恰相反。莎拉比任何人都更责怪自己。"
 
 msgctxt "speaker:Narrator"
 msgid "If she couldn't feel close to a woman like this, would she ever be able to feel that closeness again?"
-msgstr ""
+msgstr "如果她连对这样的女人都无法产生亲近感，那她还能再次感受到那种亲密吗？"
 
 msgctxt "speaker:Female Soldier"
 msgid "Ooh...of course, I didn't realize I was overstaying my welcome."
-msgstr ""
+msgstr "哦……当然，我没意识到自己待得太久了。"
 
 msgctxt "speaker:Narrator"
 msgid "She seemed genuinely hurt."
-msgstr ""
+msgstr "她看起来真的很受伤。"
 
 msgctxt "speaker:Narrator"
 msgid "She felt the bed move as she crawled out of it and began to get dressed again."
-msgstr ""
+msgstr "她爬出床铺，开始重新穿衣时，感觉到床身随之晃动。"
 
 msgctxt "speaker:Female Soldier"
 msgid "You know, you don't really owe me an explanation or anything else, Sarah."
-msgstr ""
+msgstr "你知道的，你其实没必要向我解释什么，莎拉。"
 
 msgctxt "speaker:Female Soldier"
 msgid "We can just say this was a fun night and leave it be."
-msgstr ""
+msgstr "我们就当这是个愉快的夜晚，到此为止吧。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah turned around and looked at her."
-msgstr ""
+msgstr "莎拉转过身，看着她。"
 
 msgctxt "speaker:Narrator"
 msgid "She smiled at her, seemingly having recovered from being hurt."
-msgstr ""
+msgstr "她对她笑了笑，似乎已经从受伤的情绪中恢复过来。"
 
 msgctxt "speaker:Female Soldier"
 msgid "Well, obviously, me and probably half the castle could hear you were having a good time."
-msgstr ""
+msgstr "好吧，很明显，我和城堡里大概一半的人都能听到你刚才有多爽。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah threw a pillow at her."
-msgstr ""
+msgstr "莎拉朝她扔了一个枕头。"
 
 msgctxt "speaker:Narrator"
 msgid "She only found the woman smiling at her as he took her body in with her eyes."
-msgstr ""
+msgstr "她只看到那个女人正用目光贪婪地打量着她的身体，脸上还挂着笑意。"
 
 msgctxt "speaker:Narrator"
 msgid "Then the woman turned away from her."
-msgstr ""
+msgstr "随后，那名女子转过身去。"
 
 msgctxt "speaker:Female Soldier"
 msgid "Goodbye, commander! Maybe we'll see each other around."
-msgstr ""
+msgstr "再见，指挥官！也许我们还会再见的。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah watched her cross the room and leave."
-msgstr ""
+msgstr "莎拉看着她穿过房间离开。"
 
 msgctxt "speaker:Narrator"
 msgid "As the door fell shut behind her, the room had suddenly grown very quiet."
-msgstr ""
+msgstr "随着门在身后关上，房间里突然变得异常安静。"
 
 msgctxt "menu"
 msgid "Go back to your room"
@@ -115125,667 +115125,667 @@ msgstr "回你的房间去"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah observed the soldier's playing their game for a while longer, then continued her walk."
-msgstr ""
+msgstr "莎拉在一旁观察那名士兵玩了一会儿游戏，随后继续她的散步。"
 
 msgctxt "speaker:Narrator"
 msgid "She wasn't in any mood to socialize today."
-msgstr ""
+msgstr "今天她完全没有社交的心情。"
 
 msgctxt "speaker:Narrator"
 msgid "It wasn't long before she finally made her way to the western wing and entered her bedroom."
-msgstr ""
+msgstr "没过多久，她便来到了西翼，走进了自己的卧室。"
 
 msgctxt "speaker:Narrator"
 msgid "Judging by the grand size and decorations, Sarah assumed it must have belong to a noble lady of some kind."
-msgstr ""
+msgstr "从房间宏大的规模和装饰来看，莎拉推测这曾属于某位贵族女士。"
 
 msgctxt "speaker:Narrator"
 msgid "Now it belonged to her, if only for the time being."
-msgstr ""
+msgstr "如今它属于她了，尽管只是暂时。"
 
 msgctxt "speaker:Narrator"
 msgid "Closing the door behind her, Sarah walked across her room towards her bed."
-msgstr ""
+msgstr "莎拉关上身后的门，穿过房间走向她的床。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah could already see Kate waiting for her. Sitting on the edge of the bed."
-msgstr ""
+msgstr "莎拉已经能看到凯特在等她。她坐在床沿上。"
 
 msgctxt "speaker:Kate"
 msgid "I was starting to get worried you had gotten lost in the hay somewhere with a stranger."
-msgstr ""
+msgstr "我都开始担心你是不是在哪个草堆里跟陌生人迷路了。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah kept walking, with each step she undied one of the leather bands that kept her armor together."
-msgstr ""
+msgstr "莎拉继续走着，每走一步就解开一根固定铠甲的皮带。"
 
 msgctxt "speaker:Sarah"
 msgid "Yeah? Didn't know you were the jealous type."
-msgstr ""
+msgstr "是吗？我还不知道你是这种爱吃醋的类型呢。"
 
 msgctxt "speaker:Narrator"
 msgid "After all these years, there were still few sensations that Sarah loved more than the feeling of her armor falling off after a long day of hauling it around."
-msgstr ""
+msgstr "这么多年过去了，莎拉依然很少有什么感觉能比卸下这身背了一整天、沉甸甸的铠甲时更让她喜爱的了。"
 
 msgctxt "speaker:Narrator"
 msgid "The pieces of armor clattered hard against the stone floor, filling the room up with noise."
-msgstr ""
+msgstr "铠甲部件重重地砸在石地板上，发出巨大的声响，填满了整个房间。"
 
 msgctxt "speaker:Narrator"
 msgid "She saw Kate shrug."
-msgstr ""
+msgstr "她看见凯特耸了耸肩。"
 
 msgctxt "speaker:Kate"
 msgid "Maybe I don't like to share. Is that a crime?"
-msgstr ""
+msgstr "也许我就是不喜欢分享。这算犯罪吗？"
 
 msgctxt "speaker:Sarah"
 msgid "So tell me."
-msgstr ""
+msgstr "所以告诉我。"
 
 msgctxt "speaker:Sarah"
 msgid "In your...nightmare of me off with some handsome stranger, what did they look like?"
-msgstr ""
+msgstr "在你……那个我跟着某个英俊陌生人跑的噩梦裡，他们长什么样？"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah could see Kate turn away, her face turning red. It was rare for her to be able to tease Kate like this, and Sarah enjoyed when the opportunity presented itself."
-msgstr ""
+msgstr "莎拉看到凯特转过身去，脸颊泛红。能像这样调侃凯特实属罕见，而每当机会出现时，莎拉都乐在其中。"
 
 msgctxt "speaker:Kate"
 msgid "You enjoying yourself?"
-msgstr ""
+msgstr "享受得很？"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah shrugged as she walked closer. The last of her armor now shed."
-msgstr ""
+msgstr "莎拉一边走近，一边耸了耸肩。她身上的最后一层铠甲也随之脱落。"
 
 msgctxt "speaker:Sarah"
 msgid "A little bit, maybe."
-msgstr ""
+msgstr "有一点吧，也许。"
 
 msgctxt "speaker:Sarah"
 msgid "Seriously though. Was I with a guy or a girl in your fantasy?"
-msgstr ""
+msgstr "说真的，你幻想里的是男人还是女人？"
 
 msgctxt "speaker:Narrator"
 msgid "Kate stood up from the edge of the bed and firmly grabbed Sarah's ass."
-msgstr ""
+msgstr "凯特从床边站起身，一把紧紧抓住了莎拉的屁股。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah let out a surprised, but not entirely unamused shriek."
-msgstr ""
+msgstr "莎拉发出一声惊讶但并非完全不觉得好笑的尖叫。"
 
 msgctxt "speaker:Kate"
 msgid "I was just joking. I know I've fucked you so proper you can't settle for anything less than me."
-msgstr ""
+msgstr "我刚才只是开玩笑。我知道我把你伺候得那么到位，除了我你谁都看不上。"
 
 msgctxt "speaker:Sarah"
 msgid "Maybe that's true."
-msgstr ""
+msgstr "也许这是真的。"
 
 msgctxt "speaker:Kate"
 msgid "And it definitely wouldn't be any guy after you've been with me."
-msgstr ""
+msgstr "而且，在你跟我在一起之后，绝对不会有哪个男人能再入得了你的眼。"
 
 msgctxt "speaker:Kate"
 msgid "I tend to have that effect on poor wanna-be-straight girls like you."
-msgstr ""
+msgstr "我这种人，对你们这些假装直女的小可怜总是有这种效果。"
 
 msgctxt "speaker:Sarah"
 msgid "So you're whose to blame for all my uncontrollable lust whenever I see dark-haired women."
-msgstr ""
+msgstr "所以，每当我看到黑发女人时，那种无法控制的欲望都要怪你。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah felt Kate pinch her butt, just painful enough for her to enjoy."
-msgstr ""
+msgstr "莎拉感觉到凯特捏了她的屁股，那疼痛恰到好处，让她感到愉悦。"
 
 msgctxt "speaker:Kate"
 msgid "I see you've already taken your clothes off."
-msgstr ""
+msgstr "看来你已经把衣服脱了。"
 
 msgctxt "speaker:Sarah"
 msgid "Well...obviously."
-msgstr ""
+msgstr "嗯……显而易见。"
 
 msgctxt "speaker:Kate"
 msgid "What's so obvious?"
-msgstr ""
+msgstr "有什么明显的？"
 
 msgctxt "speaker:Sarah"
 msgid "Well...we were gonna..."
-msgstr ""
+msgstr "嗯……我们本来打算……"
 
 msgctxt "speaker:Kate"
 msgid "I just promised to meet you in your room. Maybe you're the one whose head is full of fantasies."
-msgstr ""
+msgstr "我只是答应去你房间见你。也许满脑子幻想的人是你呢。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah laughed, a little nervous."
-msgstr ""
+msgstr "莎拉笑了，有些紧张。"
 
 msgctxt "speaker:Sarah"
 msgid "Well, I can always get dressed again if that's what you want."
-msgstr ""
+msgstr "好吧，如果你想要的话，我随时可以再穿好衣服。"
 
 msgctxt "speaker:Narrator"
 msgid "Kate spanked Sarah on her ass with an open hand. The slap rang out across the large room."
-msgstr ""
+msgstr "凯特用手掌在莎拉的屁股上拍了一下。清脆的响声在大房间里回荡。"
 
 msgctxt "speaker:Kate"
 msgid "You come in here looking like this, gettin me all hot and heavy, and now you're talking about putting your clothes back on?"
-msgstr ""
+msgstr "你大老远跑进来，穿成这副样子，把我弄得火气这么大，现在倒跟我提把衣服穿上？"
 
 msgctxt "speaker:Sarah"
 msgid "Well...what do you want me to do about it?"
-msgstr ""
+msgstr "嗯……你想让我怎么做？"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah felt Kate grab both of her shoulders, firmly pressing her down onto her knees."
-msgstr ""
+msgstr "莎拉感到凯特抓住了她的双肩，用力将她按跪在地上。"
 
 msgctxt "speaker:Narrator"
 msgid "Falling down to her knees, Sarah found herself only inches away with her face from Kate's crotch."
-msgstr ""
+msgstr "莎拉双膝跪地，脸庞距凯特的胯下仅有几英寸之遥。"
 
 msgctxt "speaker:Kate"
 msgid "How about you just start by making up to me?"
-msgstr ""
+msgstr "要不你就先补偿我一下？"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah looked up and smiled at Kate as Kate looked down at her."
-msgstr ""
+msgstr "莎拉抬起头，看着俯视她的凯特，对她露出了微笑。"
 
 msgctxt "speaker:Sarah"
 msgid "I think I can do that."
-msgstr ""
+msgstr "我想我可以做到。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah reached out and fumbled with Kate's belt."
-msgstr ""
+msgstr "莎拉伸出手，笨拙地解开了凯特的腰带。"
 
 msgctxt "speaker:Narrator"
 msgid "Peeling away at her armor, Sarah quickly managed to get rid of most of the obstacles in her way, leaving Kate naked."
-msgstr ""
+msgstr "莎拉迅速剥去她的盔甲，甩开大部分障碍，让凯特一丝不挂。"
 
 msgctxt "speaker:Narrator"
 msgid "Eagerly, Sarah leaned in forward, pressing her lips up against Kate's exposed sex."
-msgstr ""
+msgstr "莎拉急切地俯身向前，将嘴唇贴在凯特裸露的私处上。"
 
 msgctxt "speaker:Narrator"
 msgid "Instantly she felt Kate's strong hands, gripping the back of her head, pressing her mouth deeper up against her."
-msgstr ""
+msgstr "她立刻感觉到凯特有力的双手抓住了她的后脑勺，将她的嘴更深地压向自己。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah opened her mouth further, sliding her lips across Kate's outer folds."
-msgstr ""
+msgstr "莎拉进一步张开嘴，嘴唇滑过凯特的外阴褶皱。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah slipped her tongue out, pressing it deep inside of Kate."
-msgstr ""
+msgstr "莎拉伸出舌头，深深地探入凯特体内。"
 
 msgctxt "speaker:Narrator"
 msgid "She could hear Kate moan approvingly overhead, reminding her she was doing a good job."
-msgstr ""
+msgstr "她听到凯特在上方发出赞许的呻吟，提醒她做得很好。"
 
 msgctxt "speaker:Narrator"
 msgid "Moving her tongue around, Sarah could feel Kate's body writhe on top of her, each motion soliciting another from her."
-msgstr ""
+msgstr "莎拉转动着舌头，能感觉到凯特的身体在她上方扭动，每一个动作都引得她继续深入。"
 
 msgctxt "speaker:Narrator"
 msgid "The heat of Kate's body, so closely pressed up against her face, was intoxicating."
-msgstr ""
+msgstr "凯特紧贴在她脸前的身体散发出的热度，令人迷醉。"
 
 msgctxt "speaker:Narrator"
 msgid "Sliding her tongue further up, Sarah gently moved her tongue across Kate's clit."
-msgstr ""
+msgstr "莎拉将舌头进一步向上滑动，轻轻地在凯特的阴蒂上舔过。"
 
 msgctxt "speaker:Narrator"
 msgid "A louder moan slipped from Kate's mouth, and Sarah could almost feel proud at her efforts."
-msgstr ""
+msgstr "一声更响亮的呻吟从凯特口中溢出，莎拉几乎为自己的努力感到骄傲。"
 
 msgctxt "speaker:Narrator"
 msgid "The feeling of Kate's body responding to her touch, combined with the smell and taste of Kate on her tongue, was enough to send Sarah herself into a frenzy."
-msgstr ""
+msgstr "感受到凯特身体对自己触碰的反应，再加上舌尖上凯特的味道与气息，足以让莎拉自己也陷入疯狂。"
 
 msgctxt "speaker:Narrator"
 msgid "She opened her mouth further, pressing her lips harder up against Kate, lapping out with her tongue more hungrily than before."
-msgstr ""
+msgstr "她张大了嘴，嘴唇更用力地紧贴着凯特，舌头比以往更加贪婪地舔舐出来。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah grabbed Kate's hips, part for balance, part to pull Kate deeper into her mouth."
-msgstr ""
+msgstr "莎拉抓住凯特的臀部，既是为了保持平衡，也是为了把凯特更深地拉进自己嘴里。"
 
 msgctxt "speaker:Narrator"
 msgid "She wanted to devour Kate, and she did as close a thing as she could."
-msgstr ""
+msgstr "她想要将凯特吞吃入腹，而她所做的已是最接近这一点的行为了。"
 
 msgctxt "speaker:Narrator"
 msgid "Above her, Sarah could hear that the occasional moan had become a constant one."
-msgstr ""
+msgstr "在她上方，莎拉听到凯特偶尔的呻吟已变成了持续的声响。"
 
 msgctxt "speaker:Narrator"
 msgid "She could feel the motions of Kate's body, the way she grinded her lower half back and forth up against Sarah's eager mouth."
-msgstr ""
+msgstr "她能感觉到凯特身体的动作，感受到她下半身前后磨蹭着莎拉急切张开的嘴。"
 
 msgctxt "speaker:Narrator"
 msgid "Then she felt Kate topple back, falling into the bed."
-msgstr ""
+msgstr "接着，她感觉到凯特向后倒去，跌进了床铺里。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah staid on her knees, moving up closer to the edge of the bed so she could continue her work."
-msgstr ""
+msgstr "莎拉跪在原地，身子向前挪近床沿，好继续她的活儿。"
 
 msgctxt "speaker:Kate"
 msgid "Sorry, but I can't keep standing if you're gonna work me like that."
-msgstr ""
+msgstr "抱歉，你要是这么折腾我，我可站不住了。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah only smiled at the compliment."
-msgstr ""
+msgstr "莎拉只是对这句赞美报以微笑。"
 
 msgctxt "speaker:Narrator"
 msgid "As if to remind her of her place, Sarah felt Kate grab her head again and put her back to work."
-msgstr ""
+msgstr "为了提醒她自己的本分，莎拉感觉到凯特再次抓住她的头，让她继续干活。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah obliged her."
-msgstr ""
+msgstr "莎拉顺从了她。"
 
 msgctxt "speaker:Narrator"
 msgid "Diving back in between Kate's legs, Sarah resumed going down on Kate with ever more zeal."
-msgstr ""
+msgstr "莎拉再次潜入凯特双腿之间，以愈发高涨的热情继续为凯特口交。"
 
 msgctxt "speaker:Narrator"
 msgid "Kate's moaning could now be heard everywhere in the room."
-msgstr ""
+msgstr "凯特的呻吟声现在可以在房间的每个角落都听到。"
 
 msgctxt "speaker:Narrator"
 msgid "To Sarah, Kate seemed to be everywhere."
-msgstr ""
+msgstr "在莎拉看来，凯特仿佛无处不在。"
 
 msgctxt "speaker:Narrator"
 msgid "Her body, her heat, the smell of her, Sarah could feel Kate invading every sense, and yet she was still hungry for more."
-msgstr ""
+msgstr "她的身体，她的气息，她的气味，莎拉感到凯特侵入了她的每一个感官，然而她仍然渴望更多。"
 
 msgctxt "speaker:Narrator"
 msgid "Reaching out with one hand, Sarah brought her fingers up to Kate's cunt."
-msgstr ""
+msgstr "莎拉伸出手，将手指伸向凯特的私处。"
 
 msgctxt "speaker:Narrator"
 msgid "She drove two fingers deep inside Kate, and found her so wet already that she offered no resistance."
-msgstr ""
+msgstr "她将两根手指深深探入凯特体内，发现她早已湿润不堪，毫无阻力。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah could feel Kate's entire body shudder, her back arch, her cries of ecstasy now almost deafening."
-msgstr ""
+msgstr "莎拉能感觉到凯特整个身体都在颤抖，背部弓起，她发出的欢愉呻吟声此刻几乎震耳欲聋。"
 
 msgctxt "speaker:Narrator"
 msgid "The grip on the back of her head only grew stronger, as if demanding more and more from her."
-msgstr ""
+msgstr "抓着她后脑勺的手劲越来越紧，仿佛是在索取更多。"
 
 msgctxt "speaker:Narrator"
 msgid "Combining the efforts of her mouth and her fingers, Sarah continued to work Kate."
-msgstr ""
+msgstr "莎拉结合嘴和手指的努力，继续对凯特施为。"
 
 msgctxt "speaker:Narrator"
 msgid "The feeling of power and control she had over Kate's body. How she could move her with the slightest kiss or curl of a finger."
-msgstr ""
+msgstr "那种对凯特身体的掌控感与支配权。她只需一个轻吻或手指的微曲，便能随意摆弄她。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah felt addicted to it."
-msgstr ""
+msgstr "莎拉感到自己对此上瘾了。"
 
 msgctxt "speaker:Narrator"
 msgid "Then she felt Kate's grip on her head dissapear."
-msgstr ""
+msgstr "接着，她感觉到凯特抓着她脑袋的手松开了。"
 
 msgctxt "speaker:Narrator"
 msgid "A thunderous cry rang out across the room, the high-pitched scream that Sarah had come to learn was how Kate climaxed."
-msgstr ""
+msgstr "一声震耳欲聋的尖叫响彻房间，那是莎拉早已熟知、凯特达到高潮时发出的尖锐嘶喊。"
 
 msgctxt "speaker:Narrator"
 msgid "Still working on Kate, Sarah could feel her entire body spasming, twisting, thrusting in every direction, as if trying to let out some uncontrollable surge of energy."
-msgstr ""
+msgstr "莎拉仍在对凯特施为，她能感觉到凯特的整个身体都在痉挛、扭动，向各个方向挺动，仿佛正试图释放一股无法控制的力量。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah buried her fingers deep inside of Kate with a final thrust, drawing out a last spasm, before feeling Kate's body go limp."
-msgstr ""
+msgstr "莎拉随着最后一次挺动，将手指深深插入凯特体内，引出了最后的痉挛，随后感觉到凯特的身体彻底瘫软下来。"
 
 msgctxt "speaker:Narrator"
 msgid "Placing one last kiss atop Kate's drenched sex, Sarah could feel Kate's body twist."
-msgstr ""
+msgstr "莎拉在凯特湿透的私处落下最后一个吻，她能感觉到凯特的身体正在扭动。"
 
 msgctxt "speaker:Kate"
 msgid "Aah! Stop! It's too sensitive."
-msgstr ""
+msgstr "啊！别了！太敏感了。"
 
 msgctxt "speaker:Sarah"
 msgid "Never thought I'd hear the day that you'd beg me to stop."
-msgstr ""
+msgstr "真没想到，我还有听到你求我停下的这一天。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah stood up from the floor and casually climbed into the bed, dropping down next to Kate."
-msgstr ""
+msgstr "莎拉从地板上站起身，随意地爬上床，倒在凯特身旁。"
 
 msgctxt "speaker:Narrator"
 msgid "She could hear Kate's heavy breathing, watching her chest and breasts rise and fall, exhausted."
-msgstr ""
+msgstr "她能听到凯特沉重的呼吸声，看着她因疲惫而起伏的胸膛和乳房。"
 
 msgctxt "speaker:Narrator"
 msgid "Watching Kate recover, Sarah felt pride swirl in herself, but there was also another feeling, one harder to place."
-msgstr ""
+msgstr "看着凯特恢复过来，莎拉心中涌起一股自豪感，但同时也夹杂着另一种难以名状的情绪。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah had come to learn it was less of a feeling, rather than the absence of another."
-msgstr ""
+msgstr "莎拉渐渐明白，那与其说是一种感觉，不如说是另一种感觉的缺失。"
 
 msgctxt "speaker:Narrator"
 msgid "She wasn't alone."
-msgstr ""
+msgstr "她并不孤单。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah was rarely truly alone, helping Vaelen manage the mercenary company was equal parts soldiering and equal parts administration. Always busy."
-msgstr ""
+msgstr "莎拉很少真正感到孤独，协助瓦伦管理佣兵团的工作让她一半时间在征战，另一半时间在处理行政事务。她总是忙个不停。"
 
 msgctxt "speaker:Narrator"
 msgid "But it was rare for her to feel connected with anyone the way she felt with Kate."
-msgstr ""
+msgstr "但像她对待凯特那样，与任何人产生如此深刻的联结，对她来说实属罕见。"
 
 msgctxt "speaker:Narrator"
 msgid "So many in the mercenary company had no idea who she was, truly was."
-msgstr ""
+msgstr "雇佣兵公司里有太多人根本不知道她是谁，真正的她。"
 
 msgctxt "speaker:Narrator"
 msgid "Her upbringing was so different from most, she'd also found that many of them struggled to understand her."
-msgstr ""
+msgstr "她的成长环境与大多数人截然不同，这也让她发现，许多人难以真正理解她。"
 
 msgctxt "speaker:Narrator"
 msgid "With her position as a commander, there had also been the loneliness that such a rank brought with it."
-msgstr ""
+msgstr "身为指挥官，她也承受着这一职位带来的孤独。"
 
 msgctxt "speaker:Narrator"
 msgid "But with Kate, it felt different."
-msgstr ""
+msgstr "但与凯特在一起时，感觉却截然不同。"
 
 msgctxt "speaker:Narrator"
 msgid "Kate had known her since they were children."
-msgstr ""
+msgstr "凯特从她们孩提时代起就认识她了。"
 
 msgctxt "speaker:Narrator"
 msgid "She had met Sarah was a princess, and they had managed to forge a bond despite that fact. True friends."
-msgstr ""
+msgstr "她认识莎拉时，莎拉还是一位公主，尽管身份悬殊，她们还是建立起了纽带。真正的朋友。"
 
 msgctxt "speaker:Narrator"
 msgid "And perhaps now more."
-msgstr ""
+msgstr "而如今，这份情谊或许更甚从前。"
 
 msgctxt "speaker:Narrator"
 msgid "Only in the presence of Kate did Sarah truly feel seen, for every part of who she had been and had now become."
-msgstr ""
+msgstr "只有在凯特面前，莎拉才真正感到自己被看见——无论是过去的她，还是如今的她。"
 
 msgctxt "speaker:Narrator"
 msgid "And despite all the tragedies of her life, Kate was still here."
-msgstr ""
+msgstr "尽管生活中遭遇了种种悲剧，凯特依然在这里。"
 
 msgctxt "speaker:Kate"
 msgid "Are you crying?"
-msgstr ""
+msgstr "你在哭吗？"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah suddenly snapped back to the present."
-msgstr ""
+msgstr "莎拉突然回过神来。"
 
 msgctxt "speaker:Sarah"
 msgid "What? No!"
-msgstr ""
+msgstr "什么？没有！"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah swiped at the corners of her eyes, wiping away any tears that might be there."
-msgstr ""
+msgstr "莎拉抹了抹眼角，擦去可能存在的泪水。"
 
 msgctxt "speaker:Kate"
 msgid "I know my vagina is pretty incredible but I've never seen it bring anyone to tears before."
-msgstr ""
+msgstr "我知道我的阴道很迷人，但我以前可没见过它能让任何人落泪。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah threw a pillow at Kate."
-msgstr ""
+msgstr "莎拉朝凯特扔了一个枕头。"
 
 msgctxt "speaker:Sarah"
 msgid "Shut up! It's not funny."
-msgstr ""
+msgstr "闭嘴！这不好笑。"
 
 msgctxt "speaker:Narrator"
 msgid "But Sarah couldn't help but laugh as she said the words."
-msgstr ""
+msgstr "但莎拉说着这些话时，忍不住笑出了声。"
 
 msgctxt "speaker:Narrator"
 msgid "To her own surprise, Sarah felt Kate grab her hand."
-msgstr ""
+msgstr "令她自己都感到惊讶的是，莎拉感觉到凯特握住了她的手。"
 
 msgctxt "speaker:Narrator"
 msgid "Out of all the things they'd done together, it was a small gesture, and still Sarah couldn't help but feel her heart beat faster as Kate's fingers intertwined with hers."
-msgstr ""
+msgstr "在他们共同经历的所有事情中，这只是一个微小的举动，但当凯特的手指与莎拉交缠时，莎拉仍不禁感到心跳加速。"
 
 msgctxt "speaker:Narrator"
 msgid "And Kate did nothing more. She simply laid, their fingers entwined, each recovering from the moment before."
-msgstr ""
+msgstr "凯特不再多言。她只是静静地躺着，十指紧扣，两人都在回味刚才的那一刻。"
 
 msgctxt "speaker:Narrator"
 msgid "A moment passed in silence."
-msgstr ""
+msgstr "沉默持续了片刻。"
 
 msgctxt "speaker:Kate"
 msgid "Do you mind if I sleep here tonight?"
-msgstr ""
+msgstr "你不介意我今晚睡在这儿吧？"
 
 msgctxt "speaker:Sarah"
 msgid "I usually sleep alone."
-msgstr ""
+msgstr "我通常是一个人睡。"
 
 msgctxt "speaker:Narrator"
 msgid "Kate looked at Sarah."
-msgstr ""
+msgstr "凯特看着莎拉。"
 
 msgctxt "speaker:Kate"
 msgid "I know. And I'm still asking."
-msgstr ""
+msgstr "我知道。但我还是在问。"
 
 msgctxt "speaker:Narrator"
 msgid "Why was this so hard for her, Sarah wondered."
-msgstr ""
+msgstr "莎拉暗自思忖，为什么这件事对她来说如此艰难。"
 
 msgctxt "speaker:Narrator"
 msgid "She hated the loneliness that gripped her heart, and yet she equally feared it fading."
-msgstr ""
+msgstr "她憎恨那紧紧攫住她内心的孤独，却又同样害怕它消散。"
 
 msgctxt "speaker:Sarah"
 msgid "Yeah...it's ok. You can sleep here tonight."
-msgstr ""
+msgstr "嗯……没事的。今晚你可以睡在这儿。"
 
 msgctxt "speaker:Narrator"
 msgid "Kate suddenly sat up."
-msgstr ""
+msgstr "凯特突然坐了起来。"
 
 msgctxt "speaker:Kate"
 msgid "You know, Sarah, I joke around a lot but...you do know this means more than just that to me, right?"
-msgstr ""
+msgstr "你知道的，莎拉，我平时爱开玩笑，但……你是知道的，这对我来说意义不止于此，对吧？"
 
 msgctxt "speaker:Narrator"
 msgid "The words didn't surprise Sarah."
-msgstr ""
+msgstr "这些话并没有让莎拉感到惊讶。"
 
 msgctxt "speaker:Sarah"
 msgid "I know. You mean a lot to me too."
-msgstr ""
+msgstr "我知道。你对我来说也很重要。"
 
 msgctxt "speaker:Kate"
 msgid "It's just that..."
-msgstr ""
+msgstr "只是……"
 
 msgctxt "speaker:Kate"
 msgid "You're so busy, all the time, and I get that."
-msgstr ""
+msgstr "你总是忙个不停，这我懂。"
 
 msgctxt "speaker:Kate"
 msgid "But I think sometimes you're alone because you have to be...and sometimes you're alone because you chose to be."
-msgstr ""
+msgstr "但我觉得，有时候你独处是因为不得不如此……而有时候，你独处是因为你选择了这样。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah pushed herself up to meet Kate's eyes at her level."
-msgstr ""
+msgstr "莎拉撑起身体，好让视线与凯特齐平。"
 
 msgctxt "speaker:Sarah"
 msgid "You think I chose that?"
-msgstr ""
+msgstr "你觉得是我自己选的？"
 
 msgctxt "speaker:Kate"
 msgid "I think...maybe it's like with me and the drinking, you know?"
-msgstr ""
+msgstr "我想……也许这就像我和喝酒一样，你懂吗？"
 
 msgctxt "speaker:Kate"
 msgid "You carry around so much from before, from when we escaped Rosanna...I think sometimes you feel guily about it."
-msgstr ""
+msgstr "你背负着太多过去的东西，从我们逃离罗桑娜的时候起……我觉得有时候你会为此感到内疚。"
 
 msgctxt "speaker:Sarah"
 msgid "Guilty?"
-msgstr ""
+msgstr "内疚？"
 
 msgctxt "speaker:Kate"
 msgid "Guilty for surviving."
-msgstr ""
+msgstr "因为幸存而感到内疚。"
 
 msgctxt "speaker:Kate"
 msgid "And you isolate yourself from other people...and me."
-msgstr ""
+msgstr "然后你把自己孤立起来，远离其他人……也远离我。"
 
 msgctxt "speaker:Kate"
 msgid "You use the loneliness to hurt yourself, because you feel like you deserve it."
-msgstr ""
+msgstr "你利用孤独来伤害自己，因为你觉得自己罪有应得。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah could feel Kate's words cut something inside of her. They rang too true to ignore."
-msgstr ""
+msgstr "莎拉能感觉到凯特的话像刀子一样刺进了她的心里。这些话真实得让她无法忽视。"
 
 msgctxt "speaker:Sarah"
 msgid "Maybe you're right."
-msgstr ""
+msgstr "也许你是对的。"
 
 msgctxt "speaker:Kate"
 msgid "Do you think Thomas would have wanted that for you?"
-msgstr ""
+msgstr "你觉得托马斯会希望这样对你吗？"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah felt the tears come as soon as she heard the name of her brother."
-msgstr ""
+msgstr "莎拉听到哥哥的名字时，眼泪便夺眶而出。"
 
 msgctxt "speaker:Narrator"
 msgid "A flow of tears became a sob, and before long, Sarah could feel her chest rising and falling as she began to wail."
-msgstr ""
+msgstr "泪水汇成呜咽，不久后，莎拉开始放声痛哭，能感觉到自己的胸口剧烈起伏。"
 
 msgctxt "speaker:Narrator"
 msgid "However long she had kept it inside, she couldn't have said. Only that now it was now all coming out."
-msgstr ""
+msgstr "她不知压抑了多久，只知道此刻一切再也无法遏制。"
 
 msgctxt "speaker:Narrator"
 msgid "Once released, there was no holding it in."
-msgstr ""
+msgstr "一旦释放，便再也无法抑制。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah felt the tears stain most of her face, her body was rocked by the heaving sobs, and she could hear her own voice echoing throughout the room."
-msgstr ""
+msgstr "莎拉感到泪水浸湿了大半张脸，身体因剧烈的抽泣而颤抖，她听见自己的声音在房间里回荡。"
 
 msgctxt "speaker:Narrator"
 msgid "But then, amidst it all, she also felt the other sensation."
-msgstr ""
+msgstr "但紧接着，在那一切之中，她还感受到了另一种触感。"
 
 msgctxt "speaker:Narrator"
 msgid "The feeling of Kate's arms, wrapped around her shoulders and along her back. Her strong body pressing up against her own."
-msgstr ""
+msgstr "凯特双臂环抱着她的肩膀，沿着她的后背收紧。她强壮的身体紧紧贴着她自己的身躯。"
 
 msgctxt "speaker:Narrator"
 msgid "And Kate held her firm, despite the tears, besides the sobbing. Kate didn't let go."
-msgstr ""
+msgstr "凯特紧紧抱着她，尽管她泪流满面、抽泣不止，凯特也没有松手。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah buried her face into Kate's shoulders and wept. Wrapping her arms around Kate, she wasn't sure if she was embracing her or holding onto her."
-msgstr ""
+msgstr "莎拉把脸埋进凯特的肩膀里，哭了起来。她双臂环住凯特，却分不清自己是在拥抱她，还是在紧紧抓住她。"
 
 msgctxt "speaker:Narrator"
 msgid "But it didn't matter to Kate. Kate simply held her as she wept."
-msgstr ""
+msgstr "但这并不重要。凯特只是静静地抱着她，任由她哭泣。"
 
 msgctxt "speaker:Narrator"
 msgid "When Sarah finally felt her sadness pull back, she retreated from Kate."
-msgstr ""
+msgstr "当莎拉终于感到悲伤退去时，她离开了凯特。"
 
 msgctxt "speaker:Narrator"
 msgid "She turned away from Kate."
-msgstr ""
+msgstr "她转过身，背对着凯特。"
 
 msgctxt "speaker:Sarah"
 msgid "I'm sorry. I'm an idiot. It's just...you said his name and I..."
-msgstr ""
+msgstr "对不起，我是个白痴。只是……你提到了他的名字，然后我就……"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah felt Kate draw closer to her, putting her hands back on her body."
-msgstr ""
+msgstr "莎拉感觉到凯特向她靠近，双手重新放回她的身上。"
 
 msgctxt "speaker:Kate"
 msgid "Don't apologize, Sarah."
-msgstr ""
+msgstr "别道歉，莎拉。"
 
 msgctxt "speaker:Kate"
 msgid "You never have to apologize to me."
-msgstr ""
+msgstr "你从来不需要向我道歉。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah could feel Kate grabbing her face, pulling her head up by her chin, forcing her to look at Kate."
-msgstr ""
+msgstr "莎拉能感觉到凯特抓住了她的脸，捏住她的下巴将她的头抬起来，迫使她看向凯特。"
 
 msgctxt "speaker:Narrator"
 msgid "Kate's hands came up to her faces, gently wiping away the tears."
-msgstr ""
+msgstr "凯特的手抚上她的脸庞，轻轻拭去泪水。"
 
 msgctxt "speaker:Narrator"
 msgid "And then she kissed her."
-msgstr ""
+msgstr "然后她吻了她。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah had felt Kate's body many times before, but was still surprised she could feel her in ways she hadn't before."
-msgstr ""
+msgstr "莎拉以前无数次感受过凯特的身体，但此刻她仍惊讶于自己竟能体验到此前从未有过的感觉。"
 
 msgctxt "speaker:Kate"
 msgid "Sarah..."
-msgstr ""
+msgstr "莎拉……"
 
 msgctxt "speaker:Kate"
 msgid "I want you to know that you don't have to be alone. Not so long as you have me."
-msgstr ""
+msgstr "我希望你知道，你不必独自承受。只要我在你身边，你就不会孤单。"
 
 msgctxt "speaker:Kate"
 msgid "Ever since we were little, I've always known that there was nobody else in this world that understood me as you did."
-msgstr ""
+msgstr "从我们小时候起，我就一直知道，这世上没有人能像你一样懂我。"
 
 msgctxt "speaker:Kate"
 msgid "That could look past all the bullshit about titles and ranks, and see who I really was!"
-msgstr ""
+msgstr "你能够透过那些关于头衔和等级的废话，看到真正的我！"
 
 msgctxt "speaker:Kate"
 msgid "I love you, Sarah."
-msgstr ""
+msgstr "我爱你，莎拉。"
 
 msgctxt "speaker:Narrator"
 msgid "The words hung between them."
-msgstr ""
+msgstr "话语悬停在两人之间。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah had known it to be true, but she could also feel there was a great difference between knowing a truth and speaking it."
-msgstr ""
+msgstr "莎拉一直知道这是真的，但她也能感觉到，知晓一个真相和说出它之间有着巨大的差别。"
 
 msgctxt "speaker:Narrator"
 msgid "She looked directly into Kate's eyes."
-msgstr ""
+msgstr "她直视着凯特的双眼。"
 
 msgctxt "menu"
 msgid "I love you too, Kate!"
@@ -115793,31 +115793,31 @@ msgstr "我也爱你，凯特！"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah knows in her heart that she feels the same way."
-msgstr ""
+msgstr "莎拉在心里知道，她也是同样的感受。"
 
 msgctxt "speaker:Sarah"
 msgid "I love you too."
-msgstr ""
+msgstr "我也爱你。"
 
 msgctxt "speaker:Narrator"
 msgid "The two lovers seize one another in their arms, sealing their vows with a kiss."
-msgstr ""
+msgstr "两位恋人紧紧相拥，以吻定情。"
 
 msgctxt "speaker:Narrator"
 msgid "Each finds their hands, eagerly exploring the body of the other, but lust is now joined by love as each claws at the other."
-msgstr ""
+msgstr "双方都急切地抚摸着对方，探索着彼此的身体，但此刻欲望已与爱意交织，她们如饥似渴地抓挠着对方。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah knows she wants to hold Kate. Feel her in her arms, touch her with her fingers."
-msgstr ""
+msgstr "莎拉知道自己想要拥抱凯特，想要将她拥入怀中，用指尖触碰她。"
 
 msgctxt "speaker:Narrator"
 msgid "She wants to feel Kate's body up against her own, to feel her as near to her as she is near to her heart."
-msgstr ""
+msgstr "她渴望感受到凯特的身体紧贴着自己的身体，感受她像贴近自己心脏那样贴近自己。"
 
 msgctxt "speaker:Narrator"
 msgid "As the night draws deeper, breathlessly, each confesses their love a hundred times over."
-msgstr ""
+msgstr "随着夜色渐深，她们气喘吁吁地一次次向对方倾诉爱意。"
 
 msgctxt "menu"
 msgid "We can't be more than this."
@@ -115825,243 +115825,243 @@ msgstr "不能再这样下去了。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah knows that Kate is dear to her, but she also knows that her life, her destiny, is too grand for something so small as love."
-msgstr ""
+msgstr "莎拉知道凯特对她而言弥足珍贵，但她同时也明白，自己的人生与命运太过宏大，容不下爱情这样渺小的事物。"
 
 msgctxt "speaker:Sarah"
 msgid "Kate, I..."
-msgstr ""
+msgstr "凯特，我……"
 
 msgctxt "speaker:Sarah"
 msgid "You're very special to me, but I can't promise you my heart."
-msgstr ""
+msgstr "你对我而言非常特别，但我无法承诺我的心属于你。"
 
 msgctxt "speaker:Sarah"
 msgid "It wouldn't be fair."
-msgstr ""
+msgstr "那不公平。"
 
 msgctxt "speaker:Sarah"
 msgid "I can't give myself like that, not at this moment in my life when I have so much more to do."
-msgstr ""
+msgstr "我不能那样把自己交出去，尤其是在我现在的人生阶段，还有那么多事情要做。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah speaks as kindly as she does, but when she looks deep into Kate's eyes, she knows that she has hurt her still."
-msgstr ""
+msgstr "莎拉说话时语气温和，但当她凝视凯特的双眼时，她知道自己的话依然伤害了她。"
 
 msgctxt "speaker:Kate"
 msgid "Forget I said anything, I was being stupid."
-msgstr ""
+msgstr "忘了我刚才说的话吧，我太傻了。"
 
 msgctxt "speaker:Kate"
 msgid "I let the moment get away from me."
-msgstr ""
+msgstr "我放走了那个时机。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah tries to touch Kate, comfort her, but she sees Kate retreat from her touch."
-msgstr ""
+msgstr "莎拉试图触碰凯特，给予她安慰，但她看到凯特从她的触碰中退缩了。"
 
 msgctxt "speaker:Kate"
 msgid "I just want to sleep, if that's ok."
-msgstr ""
+msgstr "我只想睡会儿，如果可以的话。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah nods, knowing not what else to say."
-msgstr ""
+msgstr "莎拉点了点头，知道再无话可说。"
 
 msgctxt "speaker:Narrator"
 msgid "Each lays down on their side of the bed."
-msgstr ""
+msgstr "两人各自躺到床的一侧。"
 
 msgctxt "speaker:Narrator"
 msgid "A blissful silence is replaced by a cold one."
-msgstr ""
+msgstr "惬意的宁静被冰冷的沉默取代。"
 
 msgctxt "speaker:Narrator"
 msgid "With each step, she undid one of the leather bands that kept her armor together."
-msgstr ""
+msgstr "随着每一步，她解开了一根固定盔甲的皮带。"
 
 msgctxt "speaker:Narrator"
 msgid "For Sarah it was a welcome noise, she disliked the eerie quiet that haunted some parts of the palace."
-msgstr ""
+msgstr "对莎拉来说，这是个令人欣慰的声音，她讨厌萦绕在宫殿某些地方的那种阴森的死寂。"
 
 msgctxt "speaker:Narrator"
 msgid "Then again, she concluded, her and the other soldiers were undoubtedly responsible for much of the quiet that had set down on the palace."
-msgstr ""
+msgstr "不过，她心想，她和那些士兵无疑对如今笼罩在宫殿里的这份寂静负有责任。"
 
 msgctxt "speaker:Narrator"
 msgid "As the last of her armor fell off, Sarah reached the bed and allowed herself to fall forward into it."
-msgstr ""
+msgstr "随着最后一件护甲脱落，莎拉走到床边，任由自己向前扑倒在床上。"
 
 msgctxt "speaker:Narrator"
 msgid "The bed welcomed her, its soft features wrapping around her body, almost pulling her in deeper."
-msgstr ""
+msgstr "床铺接纳了她，柔软的触感包裹着她的身体，几乎将她更深地卷入其中。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah sighed with deep relief."
-msgstr ""
+msgstr "莎拉长舒一口气，深感宽慰。"
 
 msgctxt "speaker:Narrator"
 msgid "It had been a very long time, perhaps years, since she'd slept in a bed like this."
-msgstr ""
+msgstr "距离她上次睡在这样的床上，已经过了很久，也许是好几年了。"
 
 msgctxt "speaker:Narrator"
 msgid "Living out on the road, soldiering, had made her grown used to being able to sleep just about anywhere."
-msgstr ""
+msgstr "漂泊在外的军旅生涯，让她早已习惯了随处而眠。"
 
 msgctxt "speaker:Narrator"
 msgid "But it  was moments like these where Sarah reminded herself that for as much as she had changed, she still craved some parts of her easier, previous life."
-msgstr ""
+msgstr "但正是在这样的时刻，莎拉提醒自己，尽管她已今非昔比，内心深处仍渴望着过去那段轻松生活里的某些片段。"
 
 msgctxt "speaker:Narrator"
 msgid "Turning around on her back, Sarah stared at the ceiling."
-msgstr ""
+msgstr "莎拉翻过身仰面躺下，凝视着天花板。"
 
 msgctxt "speaker:Narrator"
 msgid "The ceilings were far up."
-msgstr ""
+msgstr "天花板高得离谱。"
 
 msgctxt "speaker:Narrator"
 msgid "Everything about Bagrad had an odd grand property to it. All things, even the hallways, vast and enormous. Build in better times, build for better times."
-msgstr ""
+msgstr "巴格拉德的一切事物都带有一种奇特的宏伟感。所有东西，甚至走廊，都广阔而巨大。它们建于更美好的时代，为更美好的时代而建。"
 
 msgctxt "speaker:Narrator"
 msgid "With her armor now resting on the floor, the room had grown quiet again, save for the blistering sound of a small brazier, casting a warm light over the room."
-msgstr ""
+msgstr "随着铠甲被卸下置于地面，房间里再次恢复了宁静，唯有小炭盆发出的噼啪声打破了寂静，将温暖的光芒洒满整个房间。"
 
 msgctxt "speaker:Narrator"
 msgid "A lot had happened."
-msgstr ""
+msgstr "发生了很多事情。"
 
 msgctxt "speaker:Narrator"
 msgid "The battle. The monster. And now Vaelen with his brutal games."
-msgstr ""
+msgstr "那场战斗。那头怪物。还有现在瓦伦和他那残酷的游戏。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah could feel her mind racing, running in circles, trying to solve one problem only to be distracted by another."
-msgstr ""
+msgstr "莎拉感到思绪飞速运转，在原地打转，试图解决一个问题，却又被另一个问题分散了注意力。"
 
 msgctxt "speaker:Narrator"
 msgid "She knew she was never going to get any sleep thinking about monsters."
-msgstr ""
+msgstr "她很清楚，只要脑子里还在想着那些怪物，她就永远别想睡个好觉。"
 
 msgctxt "speaker:Narrator"
 msgid "An idea, like a spark, formed in Sarah's mind."
-msgstr ""
+msgstr "一个念头，如同火花般，在莎拉脑海中闪现。"
 
 msgctxt "speaker:Narrator"
 msgid "Perhaps it was the pressing of soft, expensive silk against her body, but Sarah's mind began to wander towards one way she knew of distracting her own mind."
-msgstr ""
+msgstr "也许是那柔软昂贵的丝绸紧贴着身体的触感，让莎拉的心思飘向了另一种她熟知的、能让自己分心的方式。"
 
 msgctxt "speaker:Narrator"
 msgid "Delirious with the fantasy of Atilla, Sarah cried out as she brought herself to orgasm."
-msgstr ""
+msgstr "沉浸在阿提拉的幻想中，莎拉在达到高潮时忍不住叫出了声。"
 
 msgctxt "speaker:Narrator"
 msgid "She cried out for nobody else to hear as she came."
-msgstr ""
+msgstr "她在高潮时叫出声，但刻意压低声音，不让旁人听见。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah shook her head, trying to push the idea out."
-msgstr ""
+msgstr "莎拉摇了摇头，试图将那个念头甩出脑海。"
 
 msgctxt "speaker:Narrator"
 msgid "She'd been on her feet all day, fought and killed her way through the city, she knew she needed to rest."
-msgstr ""
+msgstr "她站了一整天，在城里一路厮杀拼杀，她知道她需要休息。"
 
 msgctxt "speaker:Narrator"
 msgid "Real rest, not the kind she had contemplated for a moment."
-msgstr ""
+msgstr "这才是真正的休息，而非她方才片刻间所设想的那种。"
 
 msgctxt "speaker:Narrator"
 msgid "Spreading out her arms, Sarah felt her body sink deeper into the bed."
-msgstr ""
+msgstr "莎拉舒展双臂，感觉身体更深地陷进床铺里。"
 
 msgctxt "speaker:Narrator"
 msgid "Given the bed's quality, it wasn't long before Sarah found the rest she had been looking for."
-msgstr ""
+msgstr "鉴于床铺的质量，莎拉很快就找到了她一直渴望的休息。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah had woken up early the next morning to the sound of knocking at her door, a small headache reminding her of the celebration from the night before."
-msgstr ""
+msgstr "第二天清晨，莎拉被敲门声唤醒，轻微的头痛提醒着她昨晚的狂欢。"
 
 msgctxt "speaker:Narrator"
 msgid "Answering the door, she found Vaelen waiting for her."
-msgstr ""
+msgstr "打开门，她发现瓦伦正在等她。"
 
 msgctxt "speaker:Narrator"
 msgid "To Sarah's surprise, Vaelen was alone. He was rarely alone."
-msgstr ""
+msgstr "令莎拉惊讶的是，瓦伦独自一人。他很少独处。"
 
 msgctxt "speaker:Vaelen"
 msgid "We need to talk."
-msgstr ""
+msgstr "我们需要谈谈。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah didn't like the tone of his voice. It didn't sound like he was asking."
-msgstr ""
+msgstr "莎拉不喜欢他说话的语气。那听起来不像是在询问。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah closed the door to her room behind her."
-msgstr ""
+msgstr "莎拉随手关上了自己房间的门。"
 
 msgctxt "speaker:Narrator"
 msgid "Vaelen started to walk, motioning for her to keep up."
-msgstr ""
+msgstr "瓦伦迈开步子，示意她跟上。"
 
 msgctxt "speaker:Narrator"
 msgid "She caught up to him and began to walk besides him, keeping pace."
-msgstr ""
+msgstr "她快步跟上他，开始与他并肩而行，保持着相同的步速。"
 
 msgctxt "speaker:Vaelen"
 msgid "You enjoyed the celebrations?"
-msgstr ""
+msgstr "你喜欢那些庆祝活动吗？"
 
 msgctxt "speaker:Sarah"
 msgid "I managed."
-msgstr ""
+msgstr "我尽力了。"
 
 msgctxt "speaker:Narrator"
 msgid "She could see him smile."
-msgstr ""
+msgstr "她能看到他在微笑。"
 
 msgctxt "speaker:Narrator"
 msgid "There was something about his smile that had always unsettled her. It had taken her years before she finally realized what it was."
-msgstr ""
+msgstr "他的笑容总让她感到不安，她花了多年时间才终于明白原因所在。"
 
 msgctxt "speaker:Narrator"
 msgid "He never smiled genuinely."
-msgstr ""
+msgstr "他从未真心笑过。"
 
 msgctxt "speaker:Narrator"
 msgid "It was a reflex he performed, but there was never anything real behind it."
-msgstr ""
+msgstr "那不过是他下意识的动作，背后却从未有过任何真情实感。"
 
 msgctxt "speaker:Vaelen"
 msgid "The Mythran camp is in a bit of chaos after their prince was...well, you know."
-msgstr ""
+msgstr "米斯拉营地现在有点乱，因为他们的王子……嗯，你懂的。"
 
 msgctxt "speaker:Narrator"
 msgid "Eaten by a demon, Sarah thought."
-msgstr ""
+msgstr "被恶魔吞噬，莎拉心想。"
 
 msgctxt "speaker:Vaelen"
 msgid "Their commanders can't quite figure out whose supposed to be next in line for command."
-msgstr ""
+msgstr "他们的指挥官们还搞不清楚到底该由谁来接管指挥权。"
 
 msgctxt "speaker:Vaelen"
 msgid "Rest the poor bastard's soul, but it's not entirely unfortunate for us."
-msgstr ""
+msgstr "可怜那混蛋，不过对我们来说也不算全是坏事。"
 
 msgctxt "speaker:Vaelen"
 msgid "Now that they're too busy arguing amongst themselves, none of them have really found the time to press us about occupying the western wing."
-msgstr ""
+msgstr "现在他们忙着内斗，谁也没抽出时间来追问我们占据西翼的事。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah kept walking besides him, listening."
-msgstr ""
+msgstr "莎拉继续与他并肩走着，静静聆听。"
 
 msgctxt "speaker:Narrator"
 msgid "The hall was emptied out, save for them. Most soldiers were likely still sleeping off the night before."
-msgstr ""
+msgstr "大厅里只剩下他们两人。大多数士兵大概还在宿醉中沉睡。"
 
 msgctxt "speaker:Vaelen"
 msgid "But I don't know how long their discord will last, so I wanted to make our move now."
@@ -116069,15 +116069,15 @@ msgstr ""
 
 msgctxt "speaker:Sarah"
 msgid "Now?"
-msgstr ""
+msgstr "现在？"
 
 msgctxt "speaker:Vaelen"
 msgid "Yes."
-msgstr ""
+msgstr "没错。"
 
 msgctxt "speaker:Sarah"
 msgid "You mean break open the royal vault?"
-msgstr ""
+msgstr "你是说撬开皇家金库？"
 
 msgctxt "speaker:Narrator"
 msgid "Vaelen nodded."
@@ -116085,15 +116085,15 @@ msgstr ""
 
 msgctxt "speaker:Sarah"
 msgid "Wouldn't it be better to bring an entire unit of soldiers?"
-msgstr ""
+msgstr "难道不叫一整队士兵来帮忙更好吗？"
 
 msgctxt "speaker:Sarah"
 msgid "I mean, breaking it open alone is one thing, but carrying out all the valuables..."
-msgstr ""
+msgstr "我是说，一个人撬开金库是一回事，但要搬走所有的财宝……"
 
 msgctxt "speaker:Sarah"
 msgid "Not exactly a job for two people."
-msgstr ""
+msgstr "这活儿可不是两个人能干完的。"
 
 msgctxt "speaker:Narrator"
 msgid "Vaelen turned to her."
@@ -116101,11 +116101,11 @@ msgstr ""
 
 msgctxt "speaker:Vaelen"
 msgid "Sarah, this isn't about stealing some chests of gold from an old family vault."
-msgstr ""
+msgstr "莎拉，这可不是从旧家族金库里偷几箱金子那么简单。"
 
 msgctxt "speaker:Vaelen"
 msgid "There is a particular item in that room that I'm after, and I don't need an entire army of soldiers stomping around."
-msgstr ""
+msgstr "我要找的是那间屋子里的某件特定物品，我不需要一整支士兵大军在那里横冲直撞。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah had suspected there was more to his plan than simple avarice."
@@ -116113,7 +116113,7 @@ msgstr ""
 
 msgctxt "speaker:Sarah"
 msgid "What is it then?"
-msgstr ""
+msgstr "那到底是什么？"
 
 msgctxt "speaker:Vaelen"
 msgid "It's a gem. Or a jewel of a sort. In fact, I don't exactly know what it looks like."
