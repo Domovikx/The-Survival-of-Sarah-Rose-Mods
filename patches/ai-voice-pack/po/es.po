@@ -95,7 +95,7 @@ msgstr "Jaeid"
 
 msgctxt "speaker-name"
 msgid "Xanthippe"
-msgstr "Xantípipe"
+msgstr "Jantipa"
 
 msgctxt "speaker-name"
 msgid "Razaphel"
@@ -127,7 +127,7 @@ msgstr "Bran"
 
 msgctxt "speaker-name"
 msgid "Took"
-msgstr "Tomó"
+msgstr "Tuk"
 
 msgctxt "speaker-name"
 msgid "Synara"
@@ -287,7 +287,7 @@ msgstr "Arthur"
 
 msgctxt "speaker-name"
 msgid "Hugh"
-msgstr "Abrazarse para sentir el calor"
+msgstr "Hugo"
 
 msgctxt "speaker:Narrator"
 msgid "Castle Reinmeer"
@@ -1227,7 +1227,7 @@ msgstr "¡El rey! ¡El rey ha muerto!"
 
 msgctxt "speaker-name"
 msgid "Servant"
-msgstr "Esclavo"
+msgstr "Sirviente"
 
 msgctxt "speaker:Narrator"
 msgid "As the words hit Sarah, everything around her is drowned out."
@@ -75108,7 +75108,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Innkeeper"
-msgstr "Albergue"
+msgstr "Tabernero"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah looked up, suddenly startled from her thoughts."
@@ -75804,7 +75804,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Woman"
-msgstr "Mujer."
+msgstr "Mujer"
 
 msgctxt "speaker:Narrator"
 msgid "More voices called out, asking questions."
@@ -114412,7 +114412,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Female Soldier"
-msgstr "Una soldada"
+msgstr "Soldado"
 
 msgctxt "speaker:Narrator"
 msgid "She saw her turn towards her, suddenly she appeared startled."
@@ -121648,7 +121648,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Ragged Man"
-msgstr "Hombre Arruinado"
+msgstr "Hombre andrajoso"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah flinched, turning instantly towards the source of the voice."
@@ -156924,7 +156924,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Scout"
-msgstr "Escudo"
+msgstr "Explorador"
 
 msgctxt "speaker:Kate"
 msgid "What's that?!"
@@ -163104,7 +163104,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Spearmen"
-msgstr "Espaderos"
+msgstr "Lanceros"
 
 msgctxt "speaker:Spearmen"
 msgid "Come and learn from us!"
@@ -227065,7 +227065,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Scholar"
-msgstr "Sarah: ¿Académica?"
+msgstr "Erudito"
 
 msgctxt "speaker:Scholar"
 msgid "Did the scaffolding break? What happened?"
@@ -268098,7 +268098,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Voidling"
-msgstr "Voidling"
+msgstr "Engendro del vacío"
 
 msgctxt "speaker:Narrator"
 msgid "It uttered out a word in broken speech."

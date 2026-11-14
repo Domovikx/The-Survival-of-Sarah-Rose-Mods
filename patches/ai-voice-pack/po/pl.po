@@ -124,7 +124,7 @@ msgstr "Bran"
 
 msgctxt "speaker-name"
 msgid "Took"
-msgstr "Zabrał"
+msgstr "Tuk"
 
 msgctxt "speaker-name"
 msgid "Synara"
@@ -148,7 +148,7 @@ msgstr "Sakar"
 
 msgctxt "speaker-name"
 msgid "Matthew"
-msgstr "Matusz"
+msgstr "Mateusz"
 
 msgctxt "speaker-name"
 msgid "Eula"
@@ -25485,7 +25485,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Squire"
-msgstr "Szymon"
+msgstr "Giermek"
 
 msgctxt "speaker:Guard Captain"
 msgid "There are no words to be had!"
@@ -74062,7 +74062,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "The Official"
-msgstr "The Official"
+msgstr "Urzędnik"
 
 msgctxt "speaker:The Official"
 msgid "Belmont, are you going to introduce us?"
@@ -75750,7 +75750,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Official"
-msgstr "Oficjalny"
+msgstr "Urzędnik"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah turned to look at the man shouting."
@@ -78622,7 +78622,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Advisor"
-msgstr "Rada"
+msgstr "Doradca"
 
 msgctxt "speaker:Gilead"
 msgid "Which of them have rejected the proposal?"
@@ -114586,7 +114586,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Female soldier"
-msgstr "Żołnierka Belmont"
+msgstr "Żołnierka"
 
 msgctxt "speaker:Narrator"
 msgid "The woman climbed partly onto the bed, grabbing at Sarah's underwear and pulling it off."
@@ -121647,7 +121647,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Ragged Man"
-msgstr "Roztrzaskany mężczyzna"
+msgstr "Obdartus"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah flinched, turning instantly towards the source of the voice."
@@ -156923,7 +156923,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Scout"
-msgstr "Szpieg"
+msgstr "Zwiadowca"
 
 msgctxt "speaker:Kate"
 msgid "What's that?!"
@@ -190727,7 +190727,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Captain"
-msgstr "Kapitan Belmont"
+msgstr "Kapitan"
 
 msgctxt "speaker:Sigmund"
 msgid "I've never heard of no fucking Elyian Kingdom and I don't quite imagine I care to learn."
@@ -239915,7 +239915,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Master"
-msgstr "Panie"
+msgstr "Mistrz"
 
 msgctxt "speaker:Narrator"
 msgid "The grip on her body faded."
@@ -260087,7 +260087,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Sailor"
-msgstr "Żaglarz"
+msgstr "Żeglarz"
 
 msgctxt "speaker:Narrator"
 msgid "He screamed as loudly as he could, no less afraid of the direction that the mob was moving in."

@@ -72,7 +72,7 @@ msgstr "贝尔蒙特上校"
 
 msgctxt "speaker-name"
 msgid "Caleb"
-msgstr "凯尔"
+msgstr "凯莱布"
 
 msgctxt "speaker-name"
 msgid "Ephraim"
@@ -104,7 +104,7 @@ msgstr "阿拉里克"
 
 msgctxt "speaker-name"
 msgid "Shah Mahda"
-msgstr "沙·马哈达王子"
+msgstr "沙·马哈达"
 
 msgctxt "speaker-name"
 msgid "Samayra"
@@ -124,7 +124,7 @@ msgstr "布兰"
 
 msgctxt "speaker-name"
 msgid "Took"
-msgstr "拿"
+msgstr "图克"
 
 msgctxt "speaker-name"
 msgid "Synara"
@@ -152,7 +152,7 @@ msgstr "马修"
 
 msgctxt "speaker-name"
 msgid "Eula"
-msgstr "珐露珊"
+msgstr "尤拉"
 
 msgctxt "speaker-name"
 msgid "Gideon"
@@ -1224,7 +1224,7 @@ msgstr "陛下！陛下驾崩了！"
 
 msgctxt "speaker-name"
 msgid "Servant"
-msgstr "女仆"
+msgstr "仆人"
 
 msgctxt "speaker:Narrator"
 msgid "As the words hit Sarah, everything around her is drowned out."
@@ -74065,7 +74065,7 @@ msgstr "不，完全正确。"
 
 msgctxt "speaker-name"
 msgid "The Official"
-msgstr "官方"
+msgstr "官员"
 
 msgctxt "speaker:The Official"
 msgid "Belmont, are you going to introduce us?"
@@ -118725,7 +118725,7 @@ msgstr "一名士兵举起酒杯，一名女子从阴影中走出。"
 
 msgctxt "speaker:Narrator"
 msgid "Clothed in little if anything at all, she carried a pitcher and poured beer into the man's cup."
-msgstr ""
+msgstr "她几乎没穿什么衣服，手里拿着酒壶，往那个男人的杯子里倒啤酒。"
 
 msgctxt "speaker:Narrator"
 msgid "For her efforts, she received some jeers and groping of her body as she went around the campfire, refilling the cups."
@@ -118741,7 +118741,7 @@ msgstr "莎拉凝视着那个女人的双眼。"
 
 msgctxt "speaker:Narrator"
 msgid "Hollowed out."
-msgstr ""
+msgstr "空洞无物。"
 
 msgctxt "speaker:Narrator"
 msgid "Whatever spark resided in a person's eyes, hers had been snuffed out."
@@ -118749,95 +118749,95 @@ msgstr "无论一个人的眼中曾闪烁着怎样的光芒，她的光芒都已
 
 msgctxt "speaker:Narrator"
 msgid "The woman continued and passed by her."
-msgstr ""
+msgstr "女人继续说着，从她身边走过。"
 
 msgctxt "speaker:Narrator"
 msgid "Her skin colour and fashion of dress told Sarah enough. This woman was one of the many citizens of Bagrad that had been made a slave."
-msgstr ""
+msgstr "她的肤色和衣着打扮让莎拉心知肚明。这个女人是巴格拉德众多沦为奴隶的公民之一。"
 
 msgctxt "speaker:Narrator"
 msgid "Slavery wasn't legal in Lethram, but this far out from any civilization, it didn't seem to matter."
-msgstr ""
+msgstr "在莱瑟拉姆，奴隶制并不合法，但在这远离任何文明的地方，这似乎已无关紧要。"
 
 msgctxt "speaker:Narrator"
 msgid "The Mythran army made no objection of slavery, given that it was the law-of-the-land back in Mythra, and so nobody stopped the mercenary company from taking their own slaves."
-msgstr ""
+msgstr "由于在米斯拉这是当地法律，米斯拉军队对奴隶制并未提出异议，因此也没有人阻止这支雇佣兵队伍带走他们自己的奴隶。"
 
 msgctxt "speaker:Narrator"
 msgid "Perhaps they'd have to be released before they returned to Lethram, but Sarah could see most were content if only to own slaves for the moment."
-msgstr ""
+msgstr "也许在返回莱瑟姆之前他们会被释放，但莎拉看得出来，大多数人目前只要拥有奴隶就心满意足了。"
 
 msgctxt "speaker:Narrator"
 msgid "She could see their ravenous eyes, roaming freely across the woman's body, knowing each of them could and likely would possess her."
-msgstr ""
+msgstr "她能看到他们贪婪的目光，在那女人的身体上肆意游走，因为他们都知道，自己完全有能力，也极有可能将她据为己有。"
 
 msgctxt "speaker:Narrator"
 msgid "It troubled her more than it did them."
-msgstr ""
+msgstr "Это тревожило её больше, чем их."
 
 msgctxt "speaker:Narrator"
 msgid "A part of her could never forget that, if not for Kate's intervention, she herself would have been captured and likely treated no different than this woman."
-msgstr ""
+msgstr "她内心深处永远无法忘记，若不是凯特出手相救，她自己也会落得被俘的下场，并且很可能遭受与这名女子毫无二致的待遇。"
 
 msgctxt "speaker:Narrator"
 msgid "And yet, even as she thought of this, Sarah also knew she wouldn't save the woman either."
-msgstr ""
+msgstr "然而，就在她这样想的时候，莎拉也清楚自己并不会去救那个女人。"
 
 msgctxt "speaker:Narrator"
 msgid "Staring into the fire, she wondered how much she could really distance herself from what these men were doing."
-msgstr ""
+msgstr "凝视着火焰，她不禁思索自己究竟能在多大程度上与这些男人的所作所为划清界限。"
 
 msgctxt "speaker:Narrator"
 msgid "As a commander, she had more power than most, and yet..."
-msgstr ""
+msgstr "身为指挥官，她的权力比大多数人更大，然而……"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah watched one of the soldiers get up and walk after the woman."
-msgstr ""
+msgstr "莎拉看着一名士兵起身，跟在那名女子身后走去。"
 
 msgctxt "speaker:Narrator"
 msgid "Seizing her by the hands, she meekly followed him to a secluded part, just beyond the reach of the campfire."
-msgstr ""
+msgstr "他抓住她的手，她顺从地跟着他来到营地篝火照不到的隐蔽处。"
 
 msgctxt "speaker:Narrator"
 msgid "Samayra leaned in close to Sarah."
-msgstr ""
+msgstr "萨玛拉凑近莎拉。"
 
 msgctxt "speaker:Samayra"
 msgid "Where is he taking that woman?"
-msgstr ""
+msgstr "他要把那个女人带到哪里去？"
 
 msgctxt "speaker:Sarah"
 msgid "I know you're unfamiliar with the world, but surely you know enough to answer that question for yourself."
-msgstr ""
+msgstr "我知道你对这个世界还不熟悉，但想必你也有足够的智慧自己得出答案。"
 
 msgctxt "speaker:Samayra"
 msgid "Sarah...you can't let him do that."
-msgstr ""
+msgstr "莎拉……你不能让他那样做。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah rubbed her temples."
-msgstr ""
+msgstr "莎拉揉了揉太阳穴。"
 
 msgctxt "speaker:Sarah"
 msgid "It's...it's war, Samayra. Some win out, some lose. I can't go around fixing every injustice."
-msgstr ""
+msgstr "这是……这是战争，萨玛拉。有人赢，就有人输。我不能到处去纠正每一个不公。"
 
 msgctxt "speaker:Samayra"
 msgid "But...you can stop him! You can save her!"
-msgstr ""
+msgstr "可是……你可以阻止他！你可以救她！"
 
 msgctxt "speaker:Sarah"
 msgid "Why her? You don't think there are hundreds of women like her in this camp?"
-msgstr ""
+msgstr "为什么是她？你以为这营地里没有成百上千像她一样的女人吗？"
 
 msgctxt "speaker:Narrator"
 msgid "Samayra looked at the ground, scared to meet Sarah's gaze."
-msgstr ""
+msgstr "萨玛拉低头看着地面，不敢与莎拉对视。"
 
 msgctxt "speaker:Samayra"
 msgid "But she's here now...you're here now..."
-msgstr ""
+msgstr "但她现在就在这儿……你也在这儿……"
 
 msgctxt "menu"
 msgid "Intervene and save the woman"
@@ -118845,175 +118845,175 @@ msgstr "介入并救下这位女士"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah grunted."
-msgstr ""
+msgstr "莎拉哼了一声。"
 
 msgctxt "speaker:Narrator"
 msgid "Why. Why did she have to deal with her own annoying conscience. Why couldn't she just be a cold monster like the rest of them?"
-msgstr ""
+msgstr "为什么。为什么她非要被自己那烦人的良心折磨？为什么她不能像其他人一样，做一个冷酷无情的怪物呢？"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah punched the ground and crawled onto her feet."
-msgstr ""
+msgstr "莎拉一拳砸向地面，随后手脚并用地爬了起来。"
 
 msgctxt "speaker:Sarah"
 msgid "Fuck me..."
-msgstr ""
+msgstr "操……"
 
 msgctxt "speaker:Narrator"
 msgid "Walking a small distance away from the campfire, Sarah slowly saw the world grow darker around her."
-msgstr ""
+msgstr "莎拉走到离篝火稍远的地方，慢慢看到周围的世界变得昏暗起来。"
 
 msgctxt "speaker:Narrator"
 msgid "It wasn't long before she could hear the voices."
-msgstr ""
+msgstr "没过多久，她便听到了那些声音。"
 
 msgctxt "speaker:Soldier"
 msgid "Watch it. I feel teeth again and you'll regret it."
-msgstr ""
+msgstr "注意点。我再感觉到牙齿的话，你会后悔的。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah walked up towards where she heard the voices."
-msgstr ""
+msgstr "莎拉朝她听到声音的方向走去。"
 
 msgctxt "speaker:Narrator"
 msgid "As her eyes grew used to the darkness, Sarah could make out the shapes more clearly."
-msgstr ""
+msgstr "随着眼睛逐渐适应黑暗，莎拉能更清楚地辨认出那些身影。"
 
 msgctxt "speaker:Narrator"
 msgid "Down on her knees, the slave woman sat in front of the soldier."
-msgstr ""
+msgstr "她跪在地上，女奴坐在士兵面前。"
 
 msgctxt "speaker:Narrator"
 msgid "Her head bobbed up and down, leaving little confusion in Sarah's mind as to what was going on here."
-msgstr ""
+msgstr "她的脑袋上下起伏，让莎拉对眼前发生的事没有丝毫疑惑。"
 
 msgctxt "speaker:Soldier"
 msgid "Who the fuck is that?"
-msgstr ""
+msgstr "他妈的到底是谁？"
 
 msgctxt "speaker:Narrator"
 msgid "The slave woman tried to turn her head, but the soldier kept his grip on her hair, forcing her in place."
-msgstr ""
+msgstr "女奴试图转过头去，但士兵紧紧抓着她的头发，迫使她保持原位。"
 
 msgctxt "speaker:Sarah"
 msgid "You want to try that again, soldier?"
-msgstr ""
+msgstr "你想再试一次吗，士兵？"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah knew that as one of only very few female commanders, she didn't need an introduction."
-msgstr ""
+msgstr "莎拉很清楚，作为极少数女性指挥官之一，她根本不需要自我介绍。"
 
 msgctxt "speaker:Soldier"
 msgid "Commander...I...you seem to have caught me with my pants down."
-msgstr ""
+msgstr "指挥官……我……您好像抓到我裤子都没提好了。"
 
 msgctxt "speaker:Sarah"
 msgid "Yes, I can see that. You think this is fitting of a soldier in our company?"
-msgstr ""
+msgstr "是的，我看得很清楚。你觉得这种行为符合我们公司的军人标准吗？"
 
 msgctxt "speaker:Soldier"
 msgid "Commander...it's just some fun with one of the girls from Bagrad. Nothing serious."
-msgstr ""
+msgstr "长官……只是和巴格拉德的一个女孩玩玩而已。没什么认真的。"
 
 msgctxt "speaker:Narrator"
 msgid "She saw him turn his attention back to the woman."
-msgstr ""
+msgstr "她看见他把注意力重新转回到那个女人身上。"
 
 msgctxt "speaker:Soldier"
 msgid "And I didn't tell you to stop, did I? Get back to it."
-msgstr ""
+msgstr "我又没让你停下，对吧？继续吧。"
 
 msgctxt "speaker:Narrator"
 msgid "The slave woman dutifully followed his order. By now, she likely had long stopped resisting. It was easier that way."
-msgstr ""
+msgstr "女奴顺从地执行了他的命令。到了这会儿，她大概早就停止了反抗。那样做对她来说更轻松些。"
 
 msgctxt "speaker:Sarah"
 msgid "It's enough. Let the woman go."
-msgstr ""
+msgstr "够了。放那个女人走。"
 
 msgctxt "speaker:Narrator"
 msgid "The soldier looked at her, genuinely confused."
-msgstr ""
+msgstr "士兵看着她，一脸真正的困惑。"
 
 msgctxt "speaker:Soldier"
 msgid "Is...this a joke, commander, cause I don't get it."
-msgstr ""
+msgstr "这……是在开玩笑吗，指挥官？因为我不明白。"
 
 msgctxt "speaker:Sarah"
 msgid "This isn't a joke, let the woman go."
-msgstr ""
+msgstr "这不是玩笑，放了那个女人。"
 
 msgctxt "speaker:Soldier"
 msgid "She's a slave, I found and caught her myself. This is my right, no less than I have a right to any loot I can get."
-msgstr ""
+msgstr "她是奴隶，是我自己找到并抓住的。这是我的权利，就像我有权获得任何战利品一样。"
 
 msgctxt "speaker:Sarah"
 msgid "No, she isn't. She's a person, and we don't permit slavery in this mercenary company."
-msgstr ""
+msgstr "不，她不是。她是个人，我们佣兵团不允许奴隶制。"
 
 msgctxt "speaker:Narrator"
 msgid "The soldier laughed."
-msgstr ""
+msgstr "士兵笑了起来。"
 
 msgctxt "speaker:Soldier"
 msgid "Have you walked around the camp? There's plenty of girls out there like this one."
-msgstr ""
+msgstr "你逛过营地吗？外面像她这样的姑娘多的是。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah took another step forward."
-msgstr ""
+msgstr "莎拉又向前迈了一步。"
 
 msgctxt "speaker:Sarah"
 msgid "Be that as it may, you're not going to be doing that to her. Understand?"
-msgstr ""
+msgstr "即便如此，你也别想对她动手。听明白了吗？"
 
 msgctxt "speaker:Narrator"
 msgid "The soldier grunted."
-msgstr ""
+msgstr "士兵咕哝了一声。"
 
 msgctxt "speaker:Soldier"
 msgid "But...she already got me rock hard. Can't you at least let her finish the job she started?"
-msgstr ""
+msgstr "可是……她已经让我硬得不行了。你就不能让她把没做完的事做完吗？"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah grabbed the soldier by his collar and pulled him down."
-msgstr ""
+msgstr "莎拉抓住士兵的衣领，将他拽倒在地。"
 
 msgctxt "speaker:Narrator"
 msgid "He stumbled as he fell, his pants caught around his ankles as he tried to pull up his pants."
-msgstr ""
+msgstr "他摔倒时踉跄了一下，裤子卡在脚踝处，他试图把裤子提起来。"
 
 msgctxt "speaker:Sarah"
 msgid "Your dick is the least of my trouble. You wanna get off, go find and fuck a hole in the ground, you're done here, understand?"
-msgstr ""
+msgstr "你那话儿对我来说根本不算什么麻烦。想发泄的话，自己去地上找个洞干去，你在这儿的事算完了，听明白没？"
 
 msgctxt "speaker:Soldier"
 msgid "Y-y-yes, commander!"
-msgstr ""
+msgstr "是、是，长官！"
 
 msgctxt "speaker:Narrator"
 msgid "The soldier stumbled and crawled as he made his way back to the camp."
-msgstr ""
+msgstr "士兵踉跄着，爬回了营地。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah turned and looked at the woman."
-msgstr ""
+msgstr "莎拉转过身，看向那个女人。"
 
 msgctxt "speaker:Narrator"
 msgid "She still sat there, down on her knees, as if waiting for it to begin all over again."
-msgstr ""
+msgstr "她依然跪坐在那里，仿佛正等待着一切重新开始。"
 
 msgctxt "speaker:Narrator"
 msgid "There was something in her eyes..."
-msgstr ""
+msgstr "她的眼神中似乎有什么东西……"
 
 msgctxt "speaker:Narrator"
 msgid "She lowered her head, placing her forehead against the ground, extending her arms."
-msgstr ""
+msgstr "她低下头，将额头贴向地面，双臂向前伸展。"
 
 msgctxt "speaker:Slave Woman"
 msgid "Thank you..."
-msgstr ""
+msgstr "谢谢……"
 
 msgctxt "speaker-name"
 msgid "Slave Woman"
@@ -119021,79 +119021,79 @@ msgstr "女奴"
 
 msgctxt "speaker:Narrator"
 msgid "Her words were soft, muted."
-msgstr ""
+msgstr "她的声音轻柔而低沉。"
 
 msgctxt "speaker:Narrator"
 msgid "In the moment, Sarah hated herself. Hated herself for having ever thought that the woman hadn't deserved her help."
-msgstr ""
+msgstr "在那一刻，莎拉憎恨自己。憎恨自己曾经认为那个女人不配得到她的帮助。"
 
 msgctxt "speaker:Narrator"
 msgid "She kneeled down and took the woman's hand."
-msgstr ""
+msgstr "她跪下来，握住那个女人的手。"
 
 msgctxt "speaker:Sarah"
 msgid "It's alright. Get up and put your clothes back on. I'll take you back to the camp."
-msgstr ""
+msgstr "没事了。起来吧，把衣服穿好。我送你回营地。"
 
 msgctxt "speaker:Narrator"
 msgid "Back to the camp. She'd be no more safe there than she had been before, but the desert was a death sentence."
-msgstr ""
+msgstr "回到营地。她在那里并不比之前更安全，但沙漠意味着死亡。"
 
 msgctxt "speaker:Narrator"
 msgid "As instructed, the woman got dressed again and followed Sarah back to the camp."
-msgstr ""
+msgstr "遵照指示，那位女子重新穿好衣服，跟随莎拉回到了营地。"
 
 msgctxt "speaker:Narrator"
 msgid "As Sarah returned to the campfire and sat back down, she saw Samayra sitting there, waiting for her."
-msgstr ""
+msgstr "莎拉回到篝火旁重新坐下时，她看到萨玛拉正坐在那里等她。"
 
 msgctxt "speaker:Narrator"
 msgid "A huge wide grin spread across Samayra's face as she saw the slave woman returned safely."
-msgstr ""
+msgstr "看到奴隶女人平安归来，萨玛拉脸上绽开了灿烂的笑容。"
 
 msgctxt "speaker:Samayra"
 msgid "You did it!"
-msgstr ""
+msgstr "你做到了！"
 
 msgctxt "speaker:Sarah"
 msgid "Don't make a big deal out of it, alright."
-msgstr ""
+msgstr "别把它看得太重，好吗。"
 
 msgctxt "speaker:Narrator"
 msgid "Samayra leapt forward and threw her arms around Sarah, hugging her tightly."
-msgstr ""
+msgstr "萨玛拉冲上前去，双臂紧紧环住莎拉，用力拥抱了她。"
 
 msgctxt "speaker:Samayra"
 msgid "You're a really great person, Sarah, you really are."
-msgstr ""
+msgstr "莎拉，你真的是个很好的人，真的。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah felt tears stinging in her eyes at the sudden warmth of Samayra."
-msgstr ""
+msgstr "萨玛拉突如其来的温暖让莎拉感到眼眶刺痛，泪水涌了上来。"
 
 msgctxt "speaker:Sarah"
 msgid "I...forget it...just let me drink."
-msgstr ""
+msgstr "我……算了……让我喝点吧。"
 
 msgctxt "speaker:Narrator"
 msgid "Samayra leaned back, still smiling at her."
-msgstr ""
+msgstr "萨玛拉向后靠去，脸上仍带着对她的微笑。"
 
 msgctxt "speaker:Samayra"
 msgid "I'll get you a drink, you stay here."
-msgstr ""
+msgstr "我去给你倒酒，你留在这儿。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah leaned back and watched as Samayra took her cup and refilled it."
-msgstr ""
+msgstr "莎拉向后靠去，看着萨玛拉接过她的杯子并重新倒满。"
 
 msgctxt "speaker:Narrator"
 msgid "She'd spend years carefully building up the walls around her heart, and now this girl chipped away at them like they meant nothing."
-msgstr ""
+msgstr "她花了数年时间小心翼翼地筑起心墙，而这个女孩却像那些根本不值一提似的，将它们一点点凿碎。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah couldn't help but love her for it, and hate her for it."
-msgstr ""
+msgstr "莎拉不禁为此爱她，也为此恨她。"
 
 msgctxt "menu"
 msgid "Do nothing"
@@ -119101,23 +119101,23 @@ msgstr "什么都不做"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah waved her hand, dismissing any concern."
-msgstr ""
+msgstr "莎拉挥了挥手，表示不必担心。"
 
 msgctxt "speaker:Sarah"
 msgid "Forget it. This is how the real world works."
-msgstr ""
+msgstr "算了。现实世界就是这么运作的。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah threw back her drink."
-msgstr ""
+msgstr "莎拉仰头将酒一饮而尽。"
 
 msgctxt "speaker:Narrator"
 msgid "When she turned to look at Samayra, she could see in the girl's eyes that she had lost some measure of respect for her."
-msgstr ""
+msgstr "当她转头看向萨玛拉时，她能从女孩眼中看出，她对她的尊重已有所减退。"
 
 msgctxt "speaker:Narrator"
 msgid "What of it, Sarah thought. One more person that hates and despises me. Perhaps she deserved the scorn that she now invited."
-msgstr ""
+msgstr "那又怎样，莎拉心想。又多了一个恨我、鄙视我的人。也许她如今招致的轻蔑，正是她应得的。"
 
 msgctxt "speaker:Narrator"
 msgid "Slavery wasn't legal in Lethram, but this far out from any organized government, it didn't seem to matter."
@@ -119125,11 +119125,11 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Sarah stepped forward, closer."
-msgstr ""
+msgstr "莎拉向前迈了一步，靠得更近。"
 
 msgctxt "speaker:Sarah"
 msgid "It's me."
-msgstr ""
+msgstr "是我。"
 
 msgctxt "speaker:Soldier"
 msgid "Commander...it's just some fun with one of the girls from Bagrad. Nothing to worry about."
@@ -126770,7 +126770,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Mythran Officer"
-msgstr "神话军官"
+msgstr "米特拉军官"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah looked across the square, everywhere her men were already setting up their camps."
@@ -190730,7 +190730,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Captain"
-msgstr "贝尔蒙特上尉"
+msgstr "上尉"
 
 msgctxt "speaker:Sigmund"
 msgid "I've never heard of no fucking Elyian Kingdom and I don't quite imagine I care to learn."

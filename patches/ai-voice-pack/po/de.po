@@ -92,7 +92,7 @@ msgstr "Jaeid"
 
 msgctxt "speaker-name"
 msgid "Xanthippe"
-msgstr "Xantípp"
+msgstr "Xanthippe"
 
 msgctxt "speaker-name"
 msgid "Razaphel"
@@ -124,7 +124,7 @@ msgstr "Bran"
 
 msgctxt "speaker-name"
 msgid "Took"
-msgstr "Nahm"
+msgstr "Tuk"
 
 msgctxt "speaker-name"
 msgid "Synara"
@@ -132,7 +132,7 @@ msgstr "Synara"
 
 msgctxt "speaker-name"
 msgid "Nickolas"
-msgstr "Nick"
+msgstr "Nikolas"
 
 msgctxt "speaker-name"
 msgid "Sigmund"
@@ -180,7 +180,7 @@ msgstr "Dio"
 
 msgctxt "speaker-name"
 msgid "Cassius"
-msgstr "Cassio"
+msgstr "Cassius"
 
 msgctxt "speaker-name"
 msgid "Metis"
@@ -75748,7 +75748,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Official"
-msgstr "Offizier"
+msgstr "Beamter"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah turned to look at the man shouting."
@@ -97528,7 +97528,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Old Captain"
-msgstr "Alter Kapitän Belmont"
+msgstr "Alter Kapitän"
 
 msgctxt "speaker:Narrator"
 msgid "He grunted a deep sound of relief as he took her."
@@ -113476,7 +113476,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Male Soldier"
-msgstr "Soldat"
+msgstr "Männlicher Soldat"
 
 msgctxt "speaker:Narrator"
 msgid "She saw him turn towards her, suddenly he appeared startled."
@@ -187249,7 +187249,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Robber"
-msgstr "Sálmago"
+msgstr "Räuber"
 
 msgctxt "speaker:Sigmund"
 msgid "You step off aside, we'll be on our way and nobody needs to get hurt."
@@ -234393,7 +234393,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Barkeeper"
-msgstr "Kellner"
+msgstr "Barmann"
 
 msgctxt "speaker:Narrator"
 msgid "The Lower-Ward, out near the docks. Not the best part of town, but far from the worst. Working people most of all."
@@ -260085,7 +260085,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Sailor"
-msgstr "Marina"
+msgstr "Matrose"
 
 msgctxt "speaker:Narrator"
 msgid "He screamed as loudly as he could, no less afraid of the direction that the mob was moving in."
@@ -263317,7 +263317,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Barman"
-msgstr "Kellner"
+msgstr "Barmann"
 
 msgctxt "speaker:Sarah"
 msgid "Whatever you have then."

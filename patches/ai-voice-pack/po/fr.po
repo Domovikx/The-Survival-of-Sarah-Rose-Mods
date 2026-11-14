@@ -92,7 +92,7 @@ msgstr "Jaeid"
 
 msgctxt "speaker-name"
 msgid "Xanthippe"
-msgstr "Xantíppide"
+msgstr "Xanthippe"
 
 msgctxt "speaker-name"
 msgid "Razaphel"
@@ -124,7 +124,7 @@ msgstr "Bran"
 
 msgctxt "speaker-name"
 msgid "Took"
-msgstr "Pris"
+msgstr "Touk"
 
 msgctxt "speaker-name"
 msgid "Synara"
@@ -208,11 +208,11 @@ msgstr "Maeiv"
 
 msgctxt "speaker-name"
 msgid "Marshal Edmond"
-msgstr "Mariscal Edmond"
+msgstr "Maréchal Edmond"
 
 msgctxt "speaker-name"
 msgid "Duke Antonio"
-msgstr "Duque Antonio"
+msgstr "Duc Antonio"
 
 msgctxt "speaker-name"
 msgid "Garret"
@@ -4457,7 +4457,7 @@ msgstr "Prince Thomas Rose, aîné de la famille Rose, fils d'Orwell et héritie
 
 msgctxt "speaker-name"
 msgid "High Priest"
-msgstr "Alto Sacerdote"
+msgstr "Grand Prêtre"
 
 msgctxt "speaker:Narrator"
 msgid "Thomas stood up, as instructed."
@@ -67505,7 +67505,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Camp Guard"
-msgstr "Guardia del campamento"
+msgstr "Garde du camp"
 
 msgctxt "speaker:Narrator"
 msgid "The man was large, easily blocking Sarah from getting past him. He pushed her back."
@@ -75749,7 +75749,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Official"
-msgstr "Officier"
+msgstr "Fonctionnaire"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah turned to look at the man shouting."
@@ -121646,7 +121646,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Ragged Man"
-msgstr "Homme déchiré"
+msgstr "Homme en haillons"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah flinched, turning instantly towards the source of the voice."
@@ -140950,7 +140950,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Mayor"
-msgstr "Alcalde"
+msgstr "Maire"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah watched from the side as several soldiers came into the tavern, covered in blood."
@@ -170982,7 +170982,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "People"
-msgstr "Citoyens"
+msgstr "Gens"
 
 msgctxt "speaker:Narrator"
 msgid "They cried out her name, louder and louder."
@@ -175370,7 +175370,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Judge"
-msgstr "Juez"
+msgstr "Juge"
 
 msgctxt "speaker:Narrator"
 msgid "His eyes roamed over her body, only barely covered by the blanket."
@@ -263318,7 +263318,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Barman"
-msgstr "Barmen"
+msgstr "Barman"
 
 msgctxt "speaker:Sarah"
 msgid "Whatever you have then."
@@ -264890,7 +264890,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Founder"
-msgstr "Fundador"
+msgstr "Fondateur"
 
 msgctxt "speaker:Narrator"
 msgid "The man held out his arms, urging the room to be quiet."
@@ -268094,7 +268094,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Voidling"
-msgstr "Vóide"
+msgstr "Créature du vide"
 
 msgctxt "speaker:Narrator"
 msgid "It uttered out a word in broken speech."

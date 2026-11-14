@@ -124,7 +124,7 @@ msgstr "Bran"
 
 msgctxt "speaker-name"
 msgid "Took"
-msgstr "Prendi"
+msgstr "Tuk"
 
 msgctxt "speaker-name"
 msgid "Synara"
@@ -75106,7 +75106,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Innkeeper"
-msgstr "Ostazze"
+msgstr "Oste"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah looked up, suddenly startled from her thoughts."
@@ -107858,7 +107858,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Siege crew"
-msgstr "Siege crew"
+msgstr "Equipaggio d'assedio"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah turned around to her soldiers."
@@ -163103,7 +163103,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Spearmen"
-msgstr "Pionieri"
+msgstr "Lancieri"
 
 msgctxt "speaker:Spearmen"
 msgid "Come and learn from us!"
@@ -268095,7 +268095,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Voidling"
-msgstr "Voidling"
+msgstr "Creatura del vuoto"
 
 msgctxt "speaker:Narrator"
 msgid "It uttered out a word in broken speech."

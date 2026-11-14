@@ -32,7 +32,7 @@ msgstr "사라"
 
 msgctxt "speaker-name"
 msgid "King Orwell Rose"
-msgstr "킹 오를 로즈"
+msgstr "오를리 로즈 왕"
 
 msgctxt "speaker-name"
 msgid "Thomas"
@@ -68,11 +68,11 @@ msgstr "카롤린"
 
 msgctxt "speaker-name"
 msgid "Captain Belmont"
-msgstr "벨몬트 상사"
+msgstr "벨몬트 대위"
 
 msgctxt "speaker-name"
 msgid "Caleb"
-msgstr "케일"
+msgstr "케일럽"
 
 msgctxt "speaker-name"
 msgid "Ephraim"
@@ -104,7 +104,7 @@ msgstr "알라리크"
 
 msgctxt "speaker-name"
 msgid "Shah Mahda"
-msgstr "샤 마하다 공작"
+msgstr "샤 마하다"
 
 msgctxt "speaker-name"
 msgid "Samayra"
@@ -1432,7 +1432,7 @@ msgstr "그분은 그리워질 겁니다."
 
 msgctxt "speaker-name"
 msgid "Ambassador"
-msgstr "대사관장"
+msgstr "대사"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah didn't want to sound cynical, she was sure that many of them truly meant what they said. It just seemed like words, not just these words but all words, seemed so empty right now."
@@ -19799,7 +19799,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Basilisk"
-msgstr "basilisk"
+msgstr "바실리스크"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah could hear her children scream and cover themselves under the blanket, pulling close to her for safety and comfort."
@@ -74063,7 +74063,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "The Official"
-msgstr "공식"
+msgstr "관리"
 
 msgctxt "speaker:The Official"
 msgid "Belmont, are you going to introduce us?"
@@ -75107,7 +75107,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Innkeeper"
-msgstr "여관주"
+msgstr "여관 주인"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah looked up, suddenly startled from her thoughts."
@@ -75751,7 +75751,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Official"
-msgstr "공식"
+msgstr "관리"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah turned to look at the man shouting."
@@ -76455,7 +76455,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Tailor"
-msgstr "수선사"
+msgstr "재단사"
 
 msgctxt "speaker:Sarah"
 msgid "No I...was supposed to start today."
@@ -140888,7 +140888,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Blacksmith"
-msgstr "장인"
+msgstr "대장장이"
 
 msgctxt "speaker:Narrator"
 msgid "His deep voice, filled with panic, cut through the room."
@@ -160308,7 +160308,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Tribesman"
-msgstr "부족인"
+msgstr "부족민"
 
 msgctxt "speaker:Tribesman"
 msgid "Brave of you to come here alone."
@@ -161112,7 +161112,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Old Tribesman"
-msgstr "고대 부족인"
+msgstr "늙은 부족민"
 
 msgctxt "speaker:Narrator"
 msgid "His Tribal speak was entirely foreign to Sarah. She could make no sense of it. But to the men, it appeared to stir something."
@@ -163104,7 +163104,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Spearmen"
-msgstr "창검병사"
+msgstr "창병"
 
 msgctxt "speaker:Spearmen"
 msgid "Come and learn from us!"
@@ -163896,7 +163896,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Second man"
-msgstr "제 2 인"
+msgstr "두 번째 남자"
 
 msgctxt "speaker:Narrator"
 msgid "The men stumbled further into the room, the guards held them at a distance."
@@ -175272,7 +175272,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Court Official"
-msgstr "법관"
+msgstr "궁정 관리"
 
 msgctxt "speaker:Court Official"
 msgid "Until then, just wait. Not like you have anywhere else to be."
@@ -175448,7 +175448,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Court Offical"
-msgstr "법관"
+msgstr "궁정 관리"
 
 msgctxt "speaker:Judge"
 msgid "So you were sleeping like this on the streets? Indecent exposure, public vagrancy."
@@ -190728,7 +190728,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Captain"
-msgstr "캐프틴"
+msgstr "대위"
 
 msgctxt "speaker:Sigmund"
 msgid "I've never heard of no fucking Elyian Kingdom and I don't quite imagine I care to learn."

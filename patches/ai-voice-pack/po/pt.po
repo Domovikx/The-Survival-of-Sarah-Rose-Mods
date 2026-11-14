@@ -92,7 +92,7 @@ msgstr "Jaeid"
 
 msgctxt "speaker-name"
 msgid "Xanthippe"
-msgstr "Xantíppide"
+msgstr "Xantipa"
 
 msgctxt "speaker-name"
 msgid "Razaphel"
@@ -124,7 +124,7 @@ msgstr "Bran"
 
 msgctxt "speaker-name"
 msgid "Took"
-msgstr "Pegou"
+msgstr "Tuk"
 
 msgctxt "speaker-name"
 msgid "Synara"
@@ -78622,7 +78622,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Advisor"
-msgstr "Avisador"
+msgstr "Conselheiro"
 
 msgctxt "speaker:Gilead"
 msgid "Which of them have rejected the proposal?"
@@ -121647,7 +121647,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Ragged Man"
-msgstr "Homem Arrastado"
+msgstr "Homem esfarrapado"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah flinched, turning instantly towards the source of the voice."
@@ -163103,7 +163103,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Spearmen"
-msgstr "Espadachins"
+msgstr "Lanceiros"
 
 msgctxt "speaker:Spearmen"
 msgid "Come and learn from us!"
@@ -195091,7 +195091,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Old man"
-msgstr "Velho."
+msgstr "Velho"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah blushed and smiled."

@@ -126,7 +126,18 @@ node .opencode/skills/translate/translate_judge.mts <lang> <n> [--file <idx>] [-
 bash .opencode/skills/translate/review_cycle.sh <lang>                  # цикл мониторинга30 мин
 node .opencode/skills/translate/tone_census.mts --lang ru                # словарь книги: чем переведены pussy/cock/…
 node .opencode/skills/translate/tone_fix.mts --lang ru [--detect]        # регистр 18+ (см. ниже)
+node .opencode/skills/translate/translate_compare.mts --focus ru         # сравнение языков: где кто «сказал иначе»
+node .opencode/skills/translate/translate_compare.mts --names           # имена/подписи спикеров по всем языкам
+node .opencode/skills/translate/translate_names_fix.mts <fix.json> [--dry]  # точечная правка speaker-name
 ```
+
+**Сравнение языков между собой** (`translate_compare`): две таблицы — полный
+корпус и ПЕРЕСЕЧЕНИЕ (реплики, переведённые всеми языками; только по нему
+сравнение честное). Метрика «предл≠БОЛЬШ» — число предложений против медианы
+других языков (содержание, не длина). Внимание: на живом прогоне po
+перезаписывается ЦЕЛИКОМ из памяти процесса (`renderPo`), поэтому ручные
+правки в файле языка, который прямо сейчас переводится, теряются на
+следующем батче — сначала `translate_ctl stop`, потом правка, потом `start`.
 
 Общее ядро: `judge_client.mts` (промпт судьи v10, алиасы имён, `judgeLine`),
 `review_common_run.mts` (`commonRun`/`contentWords` — общий словесный фрагмент).

@@ -19800,7 +19800,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Basilisk"
-msgstr "basilisk"
+msgstr "バジリスク"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah could hear her children scream and cover themselves under the blanket, pulling close to her for safety and comfort."
@@ -74064,7 +74064,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "The Official"
-msgstr "公式"
+msgstr "役人"
 
 msgctxt "speaker:The Official"
 msgid "Belmont, are you going to introduce us?"
@@ -121649,7 +121649,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Ragged Man"
-msgstr "荒れた男"
+msgstr "ぼろをまとった男"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah flinched, turning instantly towards the source of the voice."
@@ -140953,7 +140953,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Mayor"
-msgstr "マヨール"
+msgstr "市長"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah watched from the side as several soldiers came into the tavern, covered in blood."
@@ -195093,7 +195093,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Old man"
-msgstr "老い"
+msgstr "老人"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah blushed and smiled."
@@ -260353,7 +260353,7 @@ msgstr ""
 
 msgctxt "speaker-name"
 msgid "Courier"
-msgstr "courier"
+msgstr "使者"
 
 msgctxt "speaker:Narrator"
 msgid "His sharp, high voice cut through the crowd."
