@@ -26,13 +26,21 @@
  * Read-only. Запуск из корня репы:
  *   node .opencode/skills/translate/translate_compare.mts [--examples 6]
  */
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 
 import { parsePo } from "../renpy-po/po_core.mts";
 
 const PO_DIR = "patches/ai-voice-pack/po";
-/** Порядок = language-priority.json (en первый как база). */
-const LANGS = ["ru", "zh", "de", "es", "pt", "ja", "fr", "pl", "ko", "it"];
+/**
+ * Порядок языков — НЕ хардкод: единственный источник —
+ * config/language-priority.json (ранги Steam-статистики; правило проекта —
+ * любой список языков идёт в этом порядке). 'en' отфильтрован: у него нет po
+ * (он база перевода). Если в po/ появится новый язык, он подхватится сам.
+ */
+const CANON = JSON.parse(readFileSync("config/language-priority.json", "utf-8")) as {
+  languages: { code: string }[];
+};
+const LANGS = CANON.languages.map((l) => l.code).filter((code) => code !== "en" && existsSync(`${PO_DIR}/${code}.po`));
 
 const examplesIdx = process.argv.indexOf("--examples");
 const EXAMPLES = Number(examplesIdx > 0 ? process.argv[examplesIdx + 1] : 6);
