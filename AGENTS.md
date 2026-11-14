@@ -58,6 +58,8 @@
   исходники — `patches/ai-voice-pack/vortex-extension/game-thesurvivalofsarahrose/`
   (автодетект по Steam App ID `2166470`, без хардкода пути); ставится копией в
   `%APPDATA%\Vortex\plugins\`.
+  Модель Vortex/Nexus, статусы страниц и чек-листы — `docs/vortex.md` и
+  `docs/nexus.md`.
   Исполняемые установщики (`tools/build/installer/*.ps1`) остались для
   отдельного `install.exe` на GitHub/Boosty — на Nexus их не кладём
   (`tasks/2026-11-13-single-file-installer.md`).
