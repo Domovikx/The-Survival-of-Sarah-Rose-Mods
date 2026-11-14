@@ -129,7 +129,8 @@ const DEFAULT_GAME_PATH = String.raw`C:\Program Files (x86)\Steam\steamapps\comm
 export const Install = () => {
   const { t, i18n } = useTranslation()
   const [copied, setCopied] = useState(false)
-  const shotLang = i18n.language?.startsWith('ru') ? 'russian' : 'english'
+  // Бейдж показываем на русском для RU-аудитории, иначе на китайском (ZHO)
+  const shotLang = i18n.language?.startsWith('ru') ? 'russian' : 'chinese'
 
   return (
     <Section title={t('install.title')} testId="install">
