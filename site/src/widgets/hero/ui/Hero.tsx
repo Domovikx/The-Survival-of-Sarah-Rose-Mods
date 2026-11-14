@@ -33,8 +33,8 @@ const styles = stylex.create({
     borderStyle: 'solid',
     borderColor: 'var(--border)',
     borderRadius: 999,
-    padding: '4px 12px',
-    fontSize: 13,
+    padding: '5px 12px',
+    fontSize: 14,
     color: 'var(--muted)',
   },
   badgeAge: {

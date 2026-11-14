@@ -137,3 +137,13 @@ html:lang(ko) li,
 html:lang(ko) figcaption {
   line-height: 1.65 !important;
 }
+
+/*Заголовки в CJK: плотный интерлиньяж (1.25) сжимает иероглифы — даём воздух.*/
+html:lang(zh) h1,
+html:lang(zh) h2,
+html:lang(ja) h1,
+html:lang(ja) h2,
+html:lang(ko) h1,
+html:lang(ko) h2 {
+  line-height: 1.4 !important;
+}

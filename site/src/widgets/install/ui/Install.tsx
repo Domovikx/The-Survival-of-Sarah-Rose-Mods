@@ -49,7 +49,7 @@ const styles = stylex.create({
   },
   hint: {
     color: 'var(--muted)',
-    fontSize: 13,
+    fontSize: 14,
     margin: 0,
   },
   where: {
@@ -103,16 +103,17 @@ const styles = stylex.create({
   },
   badgeCaption: {
     margin: 0,
-    fontSize: 13,
+    fontSize: 14,
     color: 'var(--muted)',
     maxWidth: 260,
   },
   copy: {
     appearance: 'none',
     cursor: 'pointer',
-    fontSize: 12,
+    fontSize: 14,
+    lineHeight: 1.45,
     fontWeight: 600,
-    padding: '5px 10px',
+    padding: '6px 11px',
     borderRadius: 6,
     backgroundColor: 'transparent',
     color: 'var(--text)',

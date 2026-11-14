@@ -58,7 +58,7 @@ const styles = stylex.create({
     },
   },
   caption: {
-    fontSize: 13,
+    fontSize: 14,
     color: 'var(--muted)',
     marginTop: 6,
   },
