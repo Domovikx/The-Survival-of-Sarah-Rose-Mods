@@ -10,6 +10,7 @@ import { resolveBackend } from "../../../scripts/llm_backend.mts";
 import { SPEAKER_GENDER } from "../../../patches/ai-voice-pack/casts/gender.mts";
 
 import { buildNameCanon, charsOf, judgeLine } from "./judge_client.mts";
+import { retryDecision } from "./backend_wait.mts";
 import { commonRun, contentWords } from "./review_common_run.mts";
 
 // Позиционные: <lang> [limit] [arc]; флаги и их значения (--retrans <файл>)
@@ -131,27 +132,75 @@ try {
 }
 
 const { url, model } = resolveBackend();
+
+// Бэкенд может уйти и вернуться (рестарт Strata при смене профиля, выгрузка
+// модели, OOM-перезапуск). Раньше такая пауза сжигала ВСЮ очередь за минуты:
+// каждый `fetch failed` закрывал строку как сбой, очередь доезжала до конца, и
+// прогон «завершался» без перевода (инцидент 2026-11-14 при первом рестарте
+// Strata — 41 486 «сбоев» за 122 с; прогресс не потерян только потому, что
+// сбойные строки не пишутся в done). Теперь ЖДЁМ бэкенд (см. backend_wait.mts)
+// и повторяем ту же строку — пауза стоит времени, но не результата.
+const BACKEND_WAIT_MS = Number(process.env.TSSR_BACKEND_WAIT_MS ?? 45 * 60_000);
+const sleep = (ms: number): Promise<void> => new Promise((r) => setTimeout(r, ms));
+
+/** Жив ли бэкенд (для сообщений о возобновлении). */
+const backendAlive = async (): Promise<boolean> => {
+  try {
+    const r = await fetch(`${url.replace(/\/+$/, "")}/v1/models`, { signal: AbortSignal.timeout(3000) });
+    return r.ok;
+  } catch {
+    return false;
+  }
+};
+
 const call = async (sys: string, usr: string, temp = 0): Promise<string> => {
-  const r = await fetch(`${url.replace(/\/+$/, "")}/v1/chat/completions`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      model,
-      messages: [
-        { role: "system", content: sys },
-        { role: "user", content: usr },
-      ],
-      temperature: temp,
-      max_tokens: 900,
-      stream: false,
-      reasoning_effort: "none",
-    }),
-    signal: AbortSignal.timeout(120_000),
-  });
-  const d = (await r.json()) as { choices?: Array<{ message?: { content?: string } }>; error?: unknown };
-  const s = d.choices?.[0]?.message?.content ?? "";
-  if (!s) throw new Error(JSON.stringify(d.error ?? d).slice(0, 140));
-  return s;
+  let waited = 0;
+  let delay = 2000;
+  let nextNotice = 60_000;
+  for (;;) {
+    try {
+      const r = await fetch(`${url.replace(/\/+$/, "")}/v1/chat/completions`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          model,
+          messages: [
+            { role: "system", content: sys },
+            { role: "user", content: usr },
+          ],
+          temperature: temp,
+          max_tokens: 900,
+          stream: false,
+          reasoning_effort: "none",
+        }),
+        signal: AbortSignal.timeout(120_000),
+      });
+      const d = (await r.json()) as { choices?: Array<{ message?: { content?: string } }>; error?: unknown };
+      const s = d.choices?.[0]?.message?.content ?? "";
+      if (!s) throw new Error(JSON.stringify(d.error ?? d).slice(0, 140));
+      if (waited > 0) console.log(`  [BACKEND-UP] ${new Date().toISOString()} — бэкенд отвечает, продолжаем`);
+      return s;
+    } catch (err) {
+      // Ждём только «бэкенд недоступен». Таймаут ответа (строка слишком
+      // длинная) и пустой контент сюда НЕ попадают — они лечатся повтором
+      // в вызывающем коде с температурой, как раньше.
+      const d = retryDecision(err, waited, BACKEND_WAIT_MS);
+      if (!d.wait) throw err;
+      if (waited === 0) {
+        console.log(
+          `  [BACKEND-DOWN] ${new Date().toISOString()} ${String(err).slice(0, 80)} — ждём бэкенд (строку не теряем)`,
+        );
+      } else if (waited >= nextNotice) {
+        console.log(
+          `  [BACKEND-DOWN] ждём ${Math.round(waited / 60_000)} мин (${(await backendAlive()) ? "порт уже жив" : "порт молчит"})`,
+        );
+        nextNotice += 60_000;
+      }
+      await sleep(delay);
+      waited += delay;
+      delay = Math.min(delay * 2, 30_000);
+    }
+  }
 };
 const fieldOf = (raw: string, key: string): string => {
   const k = raw.indexOf(`"${key}"`);

@@ -111253,7 +111253,7 @@ msgstr "更多的欢呼声响起，在大殿中回荡，直到掌声和欢呼声
 
 msgctxt "speaker:Narrator"
 msgid "Sarah continued to smile and wave, praying that it would soon be over."
-msgstr ""
+msgstr "莎拉继续微笑着挥手，祈祷这一切能尽快结束。"
 
 msgctxt "speaker:Vaelen"
 msgid "Well, that's enough everyone, let's not embarrass her any further."
@@ -111277,95 +111277,95 @@ msgstr "今晚，无论你是我的部下还是忠诚的米斯拉士兵，都不
 
 msgctxt "speaker:Narrator"
 msgid "Sarah watched as Vaelen clapped in his hand, signalling something to someone."
-msgstr ""
+msgstr "莎拉看着瓦伦拍了拍手，向某人发出信号。"
 
 msgctxt "speaker:Narrator"
 msgid "Off to the side of the room, Sarah watched a soldier enter."
-msgstr ""
+msgstr "在房间的一侧，莎拉看着一名士兵走了进来。"
 
 msgctxt "speaker:Narrator"
 msgid "In his hand, a chain, leading back."
-msgstr ""
+msgstr "他手里拿着一条链子，向后延伸。"
 
 msgctxt "speaker:Narrator"
 msgid "Then she saw them enter."
-msgstr ""
+msgstr "接着，她看到她们走了进来。"
 
 msgctxt "speaker:Narrator"
 msgid "All bound together by the chain, running from neck to neck, Sarah watched a parade of naked women being escorted into the room."
-msgstr ""
+msgstr "莎拉看着一队裸体女人被押进房间，她们全被一条从颈到颈的锁链连在一起。"
 
 msgctxt "speaker:Narrator"
 msgid "The chain seemed to keep going on and on, more women dragged along, bound by their neck and hands to the great chain that pulled them all."
-msgstr ""
+msgstr "那链条似乎无穷无尽，更多的女人被拖拽着，脖颈和双手都被绑在那条牵引着所有人的大铁链上。"
 
 msgctxt "speaker:Narrator"
 msgid "All around her, Sarah could hear the soldiers beginning to jeer."
-msgstr ""
+msgstr "莎拉周围，士兵们开始发出嘲弄的嘘声。"
 
 msgctxt "speaker:Narrator"
 msgid "Loud whistling noises rang out."
-msgstr ""
+msgstr "响起了响亮的口哨声。"
 
 msgctxt "speaker:Vaelen"
 msgid "These women here, my fine friends, aren't just any ladies."
-msgstr ""
+msgstr "这些女人，我的好朋友们，可不是什么普通的小姐。"
 
 msgctxt "speaker:Narrator"
 msgid "With the women now closer, Sarah could see the fear in their eyes."
-msgstr ""
+msgstr "随着女人们走近，莎拉看到了她们眼中的恐惧。"
 
 msgctxt "speaker:Narrator"
 msgid "All around them, she could see the ravenous appetite that filled the eyes of the soldiers that leered at them."
-msgstr ""
+msgstr "在她周围，她能看到那些对她和瓦伦投以淫邪目光的士兵眼中充满了贪婪的欲望。"
 
 msgctxt "speaker:Narrator"
 msgid "They would be devoured."
-msgstr ""
+msgstr "她们会被吞噬殆尽。"
 
 msgctxt "speaker:Vaelen"
 msgid "These women are fine and proper royal ladies of the court of Bagrad."
-msgstr ""
+msgstr "这些女人是巴格拉德宫廷中高贵端庄的皇室淑女。"
 
 msgctxt "speaker:Vaelen"
 msgid "Nobles, daughters of long and ancient bloodlines, accustomed to wearing the finest clothes!"
-msgstr ""
+msgstr "贵族们，拥有悠久古老血统的千金小姐们，早已习惯了身着华服！"
 
 msgctxt "speaker:Vaelen"
 msgid "Although, they seem to be without them for the moment!"
-msgstr ""
+msgstr "不过，眼下看来她们似乎什么都没穿！"
 
 msgctxt "speaker:Narrator"
 msgid "The crowd roared with a cruel laughter."
-msgstr ""
+msgstr "人群发出一阵残忍的哄笑。"
 
 msgctxt "speaker:Vaelen"
 msgid "This is my gift to you, my friends!"
-msgstr ""
+msgstr "这是送给你们的礼物，我的朋友们！"
 
 msgctxt "speaker:Vaelen"
 msgid "Once these ladies would have considered you too low to even look you in the eyes!"
-msgstr ""
+msgstr "曾经，这些女士们甚至觉得你们低贱到不配与她们对视！"
 
 msgctxt "speaker:Vaelen"
 msgid "But tonight, they will worship you like the heroes you are! Like the warriors you are! Like the conquerors of history that you are!"
-msgstr ""
+msgstr "但在今晚，他们会像崇拜英雄一样崇拜你们！像崇拜勇士一样崇拜你们！像崇拜历史的征服者一样崇拜你们！"
 
 msgctxt "speaker:Narrator"
 msgid "The crowd grew wild with cheers."
-msgstr ""
+msgstr "人群欢呼声震天，情绪高涨到了极点。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah had killed a beast from another world, but those cheers had seemed trivial compared to the pandemonium that Vaelen had unleashed."
-msgstr ""
+msgstr "莎拉曾击杀过来自异世界的魔兽，但比起瓦伦所引发的狂热骚动，那些欢呼声显得微不足道。"
 
 msgctxt "speaker:Narrator"
 msgid "He knew how to play a crowd."
-msgstr ""
+msgstr "他懂得如何操控人群。"
 
 msgctxt "speaker:Narrator"
 msgid "And Sarah realized that this was what he wanted."
-msgstr ""
+msgstr "莎拉意识到，这正是他所想要的。"
 
 msgctxt "speaker:Narrator"
 msgid "To seize back control of these men's hearts. To remind them that he was one of them, and Sarah, despite everything, an outsider."
@@ -111373,7 +111373,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Vaelen knew her position on the cruelty of war."
-msgstr ""
+msgstr "瓦伦清楚她对战争残酷性的立场。"
 
 msgctxt "speaker:Narrator"
 msgid "He was challenging her to do something. To step up and put a stop to this."
@@ -111381,15 +111381,15 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "But if she did step up and save these women, the soldiers would forever remember her as the woman that denied them their spoils of war."
-msgstr ""
+msgstr "但如果她挺身而出拯救这些女人，士兵们将永远记得她是那个剥夺了他们战利品的女人。"
 
 msgctxt "speaker:Narrator"
 msgid "She would forever alienate them from her."
-msgstr ""
+msgstr "她将永远与他们疏远。"
 
 msgctxt "speaker:Narrator"
 msgid "They would never fight for her."
-msgstr ""
+msgstr "他们绝不会为她而战。"
 
 msgctxt "speaker:Narrator"
 msgid "And so Sarah remained quiet."
@@ -111397,7 +111397,7 @@ msgstr ""
 
 msgctxt "speaker:Vaelen"
 msgid "But there is one more thing!"
-msgstr ""
+msgstr "但还有一件事！"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah felt her eyes drawn back to Vaelen again."
@@ -111409,7 +111409,7 @@ msgstr ""
 
 msgctxt "speaker:Vaelen"
 msgid "Bring her out!"
-msgstr ""
+msgstr "把她带出来！"
 
 msgctxt "speaker:Narrator"
 msgid "On his command, a soldier entered the room with another chain, but to this one, only a single woman was bound."
