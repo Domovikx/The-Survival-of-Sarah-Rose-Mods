@@ -87,86 +87,29 @@
 ValidateEditSubSectionForm()">`; синтетический `.click()` не срабатывает,
    вызывать функцию напрямую.
 
-## Готовый текст (английский — решение владельца 2026-11-14)
+## Готовый текст (минимальный, английский — решение владельца 2026-11-14)
 
-Решение: гайд делаем **на английском**, язык гайда в поле `language` ставим
-`english`, а все остальные ссылки (Nexus, Vortex-расширение, языки) уводим на
-лендинг — дальше лендинг сам перенаправляет куда надо. В гайде остаётся ОДНА
-ссылка — наш лендинг. Это снимает и вопрос «какой язык у мультиязычного
-руководства», и риск долгого скана из-за внешних ссылок.
+Задача гайда — **перевести игрока на лендинг**, а не пересказывать всё: установка,
+демо-плеер, скриншоты и FAQ живут там. В гайде — 5 строк и одна ссылка.
 
-- **Title:** The Survival of Sarah Rose — AI Voice Pack + 11 Languages (Install)
-- **Краткое описание:** короткая версия + голый URL лендинга (Steam показывает
-  его ссылкой).
-- **Раздел** (`sectionid=8970476`), заголовок «What this is, demo status and
-  installation»:
+- Язык гайда в поле `language` → `english`.
+- **Названия сторонних площадок и мод-менеджеров не упоминаем** (авто-скан Steam
+  может триггериться на бренды) — только «the patch website» и наш домен.
+- **Title:** The Survival of Sarah Rose — AI Voice Pack + 11 Languages
+- **Краткое описание:** две строки + голый URL лендинга.
+- **Раздел** (`sectionid=8970476`), заголовок «Install» — текст ниже.
 
 ```bbcode
-[h1]What this is[/h1]
+Unofficial fan patch for The Survival of Sarah Rose: AI voice acting (voice cloning) and text translations.
 
-Unofficial fan patch for The Survival of Sarah Rose: AI voice acting (voice cloning) plus text translations. The game must be purchased on Steam. The patch is free under CC BY-NC 4.0 and is for adults only (18+).
+Russian text is complete (69,120 lines); the other 10 languages are a demo up to the first choice. Voice is a demo in all 11 languages — 1,195 lines per language (Russian: 1,397).
 
-[h1]What is complete and what is demo[/h1]
+The game must be purchased on Steam. Free under CC BY-NC 4.0. 18+.
 
-[list]
-[*][b]Text:[/b] Russian — complete translation of the whole game (69,120 lines). The other 10 languages are a demo: the intro up to the first choice.
-[*][b]Voice:[/b] demo in all 11 languages — 1,195 voiced lines per language (Russian: 1,397). A full voice run is planned and will arrive as updates.
-[*]The in-game mod menu shows the status per language (text and voice separately) and marks every language button with a note sign when its voice pack is installed.
-[/list]
+[h1]Everything is on the patch website[/h1]
 
-[h1]Installation[/h1]
-
-[b]With Vortex (recommended)[/b]
-
-[list]
-[*]Install the game extension once — the link is on the patch website
-[*]In Vortex: Mods → "Install from file" → pick [b]main.7z[/b], then the [b]voice-language.7z[/b] packs you want
-[*]Deploy: files go to mods/tssr-ai-voice-pack/, no game files are modified
-[/list]
-
-[b]Manual[/b]
-
-[list]
-[*]Unpack [b]main.7z[/b] into the game folder (the one with TheSurvivalofSarahRose.exe): you get mods/tssr-ai-voice-pack/ and environment.txt
-[*]Unpack any [b]voice-language.7z[/b] packs into the same folder
-[*]Launch the game, open the mod menu (badge in the top-right) and pick your language
-[/list]
-
-[b]Update[/b] — install the new archives over the old ones. [b]Uninstall[/b] — delete mods/tssr-ai-voice-pack and environment.txt. The archives contain no executables, only .7z.
-
-[h1]Features[/h1]
-
-[list]
-[*]75+ cloned voices: characters and narration
-[*]Per-line emotions matched to the scene
-[*]Opus 24 kbps — about 17 MB per language pack
-[*]Language switcher inside the game menu (11 languages)
-[*]Demo/completeness status and voice-pack indicator in the menu
-[*]A line without a voice file plays silently — no crashes
-[*]Atomic mod folder: no original game files are touched
-[/list]
-
-[h1]Links[/h1]
-
-Patch website — demo player in 11 languages, screenshots, FAQ, downloads:
+Installation, the demo player in 11 languages, screenshots and FAQ:
 [url=https://domovikx.github.io/The-Survival-of-Sarah-Rose-Mods/]https://domovikx.github.io/The-Survival-of-Sarah-Rose-Mods/[/url]
-
-[h1]FAQ[/h1]
-
-[b]Is this an official translation?[/b]
-No, it is an unofficial fan work, not affiliated with the developers or publishers.
-
-[b]Why is the voice called a demo?[/b]
-The intro up to the first choice is voiced — 1,195 lines per language. A full run is planned; the status is visible in the mod menu.
-
-[b]Are the voices real?[/b]
-All voices are AI-generated (voice cloning); translations are machine-aided and human-reviewed.
-
-[b]Is it free?[/b]
-Yes, CC BY-NC 4.0: free to share and adapt with attribution, non-commercial only.
-
-[b]How can I help?[/b]
-Downloads and endorsements help other players find the patch; bugs and suggestions — via the patch website.
 ```
 
 Файл для вставки: `tmp/steam_guide_paste_en.txt` (4 блока: заголовок, краткое
