@@ -114609,7 +114609,7 @@ msgstr "她感觉到那女人的手——出乎意料地有力——抓住了她
 
 msgctxt "speaker:Female Soldier"
 msgid "Well, Sarah, you want to know my name?"
-msgstr ""
+msgstr "好吧，莎拉，你想了解我的名字？"
 
 msgctxt "speaker:Sarah"
 msgid "Sure, what's your name?"
@@ -114625,11 +114625,11 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Sarah watched as the woman dropped down to her knees, in between Sarah's legs."
-msgstr ""
+msgstr "莎拉看着那名女子跪倒在两腿之间。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah could feel the woman grabbing her legs, pushing them apart."
-msgstr ""
+msgstr "莎拉能感觉到女人抓住了她的双腿，将她们分开。"
 
 msgctxt "speaker:Narrator"
 msgid "As the woman leaned in, she softly kissed Sarah on her mound, inches above her sex."

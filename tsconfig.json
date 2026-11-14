@@ -20,7 +20,7 @@
     "scripts/**/*.mts",
     "demo/**/*.mts"
   ],
-  // tmp/ намеренно НЕ включён: там черновики и полная копия HEAD (head_baseline),
+  // tmp/ намеренно НЕ включён: там черновики, одноразовые скрипты и архив,
   // у site/ — свой tsconfig (jsx, paths, свои опции) — он проверяется отдельно.
   "exclude": ["node_modules", "**/node_modules", "dist", "**/dist", "tmp", "site"]
 }
