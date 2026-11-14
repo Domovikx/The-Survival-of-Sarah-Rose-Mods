@@ -90005,7 +90005,7 @@ msgstr "走回下面时，她转向尼克。"
 
 msgctxt "speaker:Sarah"
 msgid "Ooh yeah, you can't even fuck yourself, because your dick is locked up."
-msgstr ""
+msgstr "哦对，你连自慰都做不到，因为你的鸡巴被锁住了。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah slammed the door and marched back to Belmont's cabin."
@@ -90049,7 +90049,7 @@ msgstr "这是一个令人舒缓的声音。"
 
 msgctxt "speaker:Narrator"
 msgid "Focussing on the sound of his quill, Sarah slowly felt herself fade into sleep."
-msgstr ""
+msgstr "莎拉将注意力集中在羽毛笔的沙沙声上，渐渐沉入了梦乡。"
 
 msgctxt "menu"
 msgid "Let it go"
@@ -90065,7 +90065,7 @@ msgstr "尼克因同意船长那些疯狂的规则，自食其果。"
 
 msgctxt "speaker:Narrator"
 msgid "It wasn't her job to fight his battles."
-msgstr ""
+msgstr "这不是她替人打架的份内事。"
 
 msgctxt "speaker:Sarah"
 msgid "I'm sorry if I pressed the matter, captain Belmont."
@@ -90077,7 +90077,7 @@ msgstr "莎拉继续扭动着身体，与他紧贴在一起。"
 
 msgctxt "speaker:Captain Belmont"
 msgid "Don't worry blondie. I like that about you. Pure heart, taking pity on a stray dog."
-msgstr ""
+msgstr "别担心，金发妞。我就喜欢你这点。心地纯良，还同情一条流浪狗。"
 
 msgctxt "speaker:Captain Belmont"
 msgid "Good thing you got me lookin out for you, showin you what the real world is like."
@@ -90085,263 +90085,263 @@ msgstr "幸好有我在照着你，教你认清这真实的世界。"
 
 msgctxt "speaker:Narrator"
 msgid "She felt his hands sliding along her hips as she continued to dance for him."
-msgstr ""
+msgstr "她感觉到他的双手沿着她的臀部滑动，而她继续为他跳舞。"
 
 msgctxt "speaker:Narrator"
 msgid "He pulled her further back, pressing his hardened cock in between her cheeks."
-msgstr ""
+msgstr "他把她拉得更靠后，将硬挺的阴茎抵在她的两瓣臀肉之间。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah bucked her hips, sliding her ass up and down along the length of his cock."
-msgstr ""
+msgstr "莎拉扭动着臀部，沿着他坚硬的阴茎上下摩擦着她的屁股。"
 
 msgctxt "speaker:Narrator"
 msgid "Behind her, she could hear him undressing, his clothes hitting the floor with a solid thud."
-msgstr ""
+msgstr "在她身后，她听见他在脱衣服，衣物落地发出沉闷的声响。"
 
 msgctxt "speaker:Narrator"
 msgid "When he finally spun her around, she saw he was entirely naked."
-msgstr ""
+msgstr "当他终于将她转过来时，她看到他全身赤裸。"
 
 msgctxt "speaker:Narrator"
 msgid "A man."
-msgstr ""
+msgstr "一个男人。"
 
 msgctxt "speaker:Narrator"
 msgid "His large cock stood erect, his eager hands exploring her body, the pure hunger in his eyes. Every part of him told her how much he wanted her."
-msgstr ""
+msgstr "他硕大的阳具勃起，急切的双手在她身上探索，眼中满是纯粹的渴望。他的每一个部位都在向她传达着对她的强烈渴求。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah couldn't lie that being desired so overtly didn't excite her."
-msgstr ""
+msgstr "莎拉无法否认，被如此直白地渴望让她兴奋不已。"
 
 msgctxt "speaker:Narrator"
 msgid "All her life she had been prepared for the pagentry of court, the countless rules and etiquette that came with royal balls and courting."
-msgstr ""
+msgstr "她的一生都在为宫廷的繁文缛节做准备，那些伴随着皇家舞会和求爱过程的无数规则与礼仪。"
 
 msgctxt "speaker:Narrator"
 msgid "How to ask for a dance, what flower to offer up as a gift, which words to say and which not."
-msgstr ""
+msgstr "该如何邀请共舞，该献上何种鲜花作为礼物，又该说些什么、不该说什么。"
 
 msgctxt "speaker:Narrator"
 msgid "Rules upon rules, all meant to cover up and hide something so base."
-msgstr ""
+msgstr "层层叠叠的规矩，全都是为了掩盖和隐藏那些卑劣的本性。"
 
 msgctxt "speaker:Narrator"
 msgid "Here, in this cabin, with this man, it wasn't the life she had expected for herself or even the life she'd been prepared for."
-msgstr ""
+msgstr "在这里，在这间小木屋里，和这个男人在一起，这并非她为自己设想的生活，甚至也不是她曾为之做好准备的生活。"
 
 msgctxt "speaker:Narrator"
 msgid "And still, Sarah found there to be something of honesty here."
-msgstr ""
+msgstr "然而，莎拉却觉得这里有一种诚实。"
 
 msgctxt "speaker:Narrator"
 msgid "Wasn't this more truthful than all that pagentry?"
-msgstr ""
+msgstr "这难道不比那些繁文缛节更真实吗？"
 
 msgctxt "speaker:Narrator"
 msgid "He wanted her, every part of her, and he made no attempt to hide it."
-msgstr ""
+msgstr "他想要她，想要她的每一部分，并且毫不掩饰这一点。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah reached down and wrapped one hand around Belmont's shaft, slowly beginning to stroke it."
-msgstr ""
+msgstr "莎拉伸手向下，一只手握住贝尔蒙特的阴茎，开始缓慢地抚摸。"
 
 msgctxt "speaker:Sarah"
 msgid "Anything in particular you had in mind, captain?"
-msgstr ""
+msgstr "队长，你心里有没有特别想做的？"
 
 msgctxt "speaker:Narrator"
 msgid "She smiled as she spoke to him."
-msgstr ""
+msgstr "她对他说话时露出了微笑。"
 
 msgctxt "speaker:Narrator"
 msgid "For a moment, he didn't say anything, enjoying watching Sarah work his shaft. Then, he suddenly stood up from the chair."
-msgstr ""
+msgstr "有那么一瞬间，他一言不发，只是享受着观看莎拉侍奉自己阴茎的过程。随后，他突然从椅子上站了起来。"
 
 msgctxt "speaker:Narrator"
 msgid "Grabbing her by the wrists, he pulled her towards the bed, climbing in first and dragging Sarah in behind him."
-msgstr ""
+msgstr "他抓住她的手腕，将她拉向床边，率先爬了进去，把莎拉也拖了进来。"
 
 msgctxt "speaker:Narrator"
 msgid "She watched him climb onto his knees, his cock sticking out as if it were a challenge."
-msgstr ""
+msgstr "她看着他跪下，那话儿挺立着，仿佛在向她挑衅。"
 
 msgctxt "speaker:Narrator"
 msgid "She could feel his hands on her body, slowly guiding her along. Sarah simply followed his instructions."
-msgstr ""
+msgstr "她能感觉到他的手在她身上，缓慢地引导着她。莎拉只是顺从着他的指令。"
 
 msgctxt "speaker:Narrator"
 msgid "She'd become amazed at how she had learned to interpet even his slightest touch."
-msgstr ""
+msgstr "她不禁惊叹于自己竟已学会解读他哪怕最细微的触碰。"
 
 msgctxt "speaker:Narrator"
 msgid "Then, still upright, he seized her and pulled her on top of him."
-msgstr ""
+msgstr "随后，他仍保持着直立的姿势，一把抓住她并将她拉到自己身上坐下。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah allowed it to happen, her body seemingly weightless in his hands, wrapping her legs around him as best she could manage, wrapping her arms around his neck for balance."
-msgstr ""
+msgstr "莎拉任由事态发展，身体在他手中仿佛轻若无物，她尽力将双腿环住他，双臂搂住他的脖子以保持平衡。"
 
 msgctxt "speaker:Narrator"
 msgid "Her face, only inches from his."
-msgstr ""
+msgstr "她的脸，离他只有几英寸远。"
 
 msgctxt "speaker:Narrator"
 msgid "She felt him slowly lower her, her exposed sex gently pierced by the tip of his cock."
-msgstr ""
+msgstr "她感觉他缓缓将她放下，他的鸡巴尖端轻轻刺入她裸露的私处。"
 
 msgctxt "speaker:Narrator"
 msgid "She moaned as he penetrated her. This close to him, she felt it somehow more intimate, more exposed."
-msgstr ""
+msgstr "他进入她时，她呻吟起来。离他这么近，她觉得这种感觉 somehow 更加亲密，也更加暴露。"
 
 msgctxt "speaker:Narrator"
 msgid "One of his strong hands cupped her ass, keeping her in position up against his body, the other gripped the back of her head and pulled her in closer."
-msgstr ""
+msgstr "他的一只大手托住她的屁股，让她紧贴着他的身体保持姿势，另一只手则抓住她的后脑勺，将她拉得更近。"
 
 msgctxt "speaker:Narrator"
 msgid "Her mouth still half open from the moaning, she felt his tongue slide into her mouth with no resistance."
-msgstr ""
+msgstr "她的嘴还因呻吟而半张着，感觉他的舌头毫无阻碍地滑入她的口中。"
 
 msgctxt "speaker:Narrator"
 msgid "Eagerly, she met his with her own."
-msgstr ""
+msgstr "她急切地回应了他的吻。"
 
 msgctxt "speaker:Narrator"
 msgid "She wrapped her arms tighter around his neck, pulling herself deeper into the kiss."
-msgstr ""
+msgstr "她双臂紧紧环住他的脖子，将自己更深地探入这个吻中。"
 
 msgctxt "speaker:Narrator"
 msgid "Below herself, she felt him thrusting into her, but something was off."
-msgstr ""
+msgstr "在她身下，她感觉到他在进入她，但有些不对劲。"
 
 msgctxt "speaker:Narrator"
 msgid "It was his grip on her body, soft and gentle, that made her first understand."
-msgstr ""
+msgstr "正是他对自己身体的那种轻柔而温柔的掌控，让她第一次明白了这一点。"
 
 msgctxt "speaker:Narrator"
 msgid "There was a tenderness here."
-msgstr ""
+msgstr "这里有一种温柔。"
 
 msgctxt "speaker:Narrator"
 msgid "He was the first to break their kiss."
-msgstr ""
+msgstr "他是第一个结束这个吻的人。"
 
 msgctxt "speaker:Captain Belmont"
 msgid "Blondie..."
-msgstr ""
+msgstr "金发女郎……"
 
 msgctxt "speaker:Narrator"
 msgid "She tried to speak as he slowly continued to thrust in and out of her."
-msgstr ""
+msgstr "她试图开口说话，而他则缓慢而持续地进出着她的身体。"
 
 msgctxt "speaker:Captain Belmont"
 msgid "I know I'm rough on you sometimes, but you know why I have to be, right?"
-msgstr ""
+msgstr "我知道我有时候对你很粗暴，但你知道我为什么必须这样，对吧？"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah felt herself slowly lowered onto his cock, nothing compared to this feeling and she didn't want it to stop."
-msgstr ""
+msgstr "莎拉感觉自己的身体缓缓降落在他的肉棒上，这种感觉无与伦比，她不希望它停止。"
 
 msgctxt "speaker:Sarah"
 msgid "Yes, captain. Sometimes I misbehave, I understand."
-msgstr ""
+msgstr "是的，队长。有时候我确实不听话，我理解。"
 
 msgctxt "speaker:Captain Belmont"
 msgid "That too, but I also think you got potential."
-msgstr ""
+msgstr "还有，我也觉得你有潜力。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah was surprised. Compliments were a rare thing from him."
-msgstr ""
+msgstr "莎拉感到惊讶。他的赞美可是稀罕事。"
 
 msgctxt "speaker:Sarah"
 msgid "I...I didn't know you thought that."
-msgstr ""
+msgstr "我……我不知道你是这么想的。"
 
 msgctxt "speaker:Sarah"
 msgid "I always feel like you just keep me around because...well."
-msgstr ""
+msgstr "我一直觉得，你留着我大概只是因为……嗯。"
 
 msgctxt "speaker:Narrator"
 msgid "She could feel him thrust into her, as if to answer her point."
-msgstr ""
+msgstr "她能感觉到他顶入她体内，仿佛是在回应她的观点。"
 
 msgctxt "speaker:Captain Belmont"
 msgid "I won't lie, blondie. This started as a bit of fun for me."
-msgstr ""
+msgstr "我不撒谎，金发妞。这起初对我来说只是一场消遣。"
 
 msgctxt "speaker:Captain Belmont"
 msgid "I figured I'd fuck you a couple of times and throw you back onto land, but I really think you're something else."
-msgstr ""
+msgstr "我本来以为操你几次就把你送回岸上，但我真的觉得你与众不同。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah felt herself turn red. Why did she live for this man's praise so much?"
-msgstr ""
+msgstr "莎拉感到自己脸红了。她为什么如此渴望这个男人的赞美？"
 
 msgctxt "speaker:Sarah"
 msgid "I...thank you, captain Belmont. That really means something to me."
-msgstr ""
+msgstr "我……谢谢你，贝尔蒙特船长。这对我来说真的意义重大。"
 
 msgctxt "speaker:Captain Belmont"
 msgid "And you really mean something to me."
-msgstr ""
+msgstr "你对我来说真的很重要。"
 
 msgctxt "speaker:Captain Belmont"
 msgid "That's why I don't just wanna fuck you tonight."
-msgstr ""
+msgstr "这就是为什么今晚我不想只是跟你上床。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah was confused, because with his cock deep inside of her, it sure felt to her like that."
-msgstr ""
+msgstr "莎拉感到困惑，因为他的鸡巴深深插在她体内，感觉起来确实就是这样。"
 
 msgctxt "speaker:Sarah"
 msgid "You don't?"
-msgstr ""
+msgstr "你不这么想？"
 
 msgctxt "speaker:Narrator"
 msgid "He shook his head, continuing to slowly thrust in and out of her."
-msgstr ""
+msgstr "他摇了摇头，继续缓慢地进出着她。"
 
 msgctxt "speaker:Captain Belmont"
 msgid "I want to make love to you, blondie."
-msgstr ""
+msgstr "我想和你做爱，金发妞。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah felt her eyes go wide, her heart skipped a beat and her breath catch in her throat. Her pulse was racing."
-msgstr ""
+msgstr "莎拉感到双眼圆睁，心脏漏跳了一拍，呼吸卡在喉咙里。她的心跳加速了。"
 
 msgctxt "speaker:Sarah"
 msgid "I...no...we..."
-msgstr ""
+msgstr "我……不……我们……"
 
 msgctxt "speaker:Narrator"
 msgid "No, she thought, not like this."
-msgstr ""
+msgstr "不，她在心里想，不是这样的。"
 
 msgctxt "speaker:Narrator"
 msgid "What had existed between them was obvious. An exchange. He would have her body and she would have the stability he could offer, work, purpose."
-msgstr ""
+msgstr "他们之间存在的显而易见。这是一场交换。他得到她的身体，而她得到他能提供的稳定、工作和目标。"
 
 msgctxt "speaker:Narrator"
 msgid "Over time, Sarah couldn't deny it anymore, she had come to appreciate the physical parts of it too."
-msgstr ""
+msgstr "随着时间的推移，莎拉再也无法否认这一点，她甚至开始欣赏其中的肉体欢愉。"
 
 msgctxt "speaker:Narrator"
 msgid "But that had been it."
-msgstr ""
+msgstr "但也就仅此而已了。"
 
 msgctxt "speaker:Narrator"
 msgid "There wasn't any love here, there couldn't be, not between her and him."
-msgstr ""
+msgstr "这里没有爱，也不可能有，她和他就绝无可能。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah tried to buck her hips, lowering herself onto his cock faster, trying to pick up the pace."
-msgstr ""
+msgstr "莎拉试图扭动臀部，更快地将自己沉降到他的阴茎上，试图加快节奏。"
 
 msgctxt "speaker:Narrator"
 msgid "But she felt Belmont's grip on her ass, controlling her speed, keeping her from going to fast."
-msgstr ""
+msgstr "但她感觉到了贝尔蒙特的手抓在她的屁股上，控制着她的速度，让她无法过快。"
 
 msgctxt "speaker:Narrator"
 msgid "Again, slowly he entered her, driving deep inside her with a slow pace, causing her to feel every inch of him."
@@ -90349,43 +90349,43 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "She moaned, for there was no denying the pleasure of it."
-msgstr ""
+msgstr "她呻吟着，因为这种快感确实无法否认。"
 
 msgctxt "speaker:Captain Belmont"
 msgid "You're special, blondie, and you're special to me."
-msgstr ""
+msgstr "你很特别，金发妞，对我来说更是如此。"
 
 msgctxt "speaker:Narrator"
 msgid "She dug her nails into his back, a gesture that would often make him go faster, but he did not yield this time."
-msgstr ""
+msgstr "她指甲深深掐进他的背脊，这动作通常会让他的动作加快，但这次他并未让步。"
 
 msgctxt "speaker:Captain Belmont"
 msgid "There's a small chapel in Northam. Overlooking the sea."
-msgstr ""
+msgstr "北安姆有一座小教堂，面朝大海。"
 
 msgctxt "speaker:Captain Belmont"
 msgid "When we get there, I'm gonna go buy you a pretty ring and go down on one knee and I'll make you my wife."
-msgstr ""
+msgstr "到了那儿，我要去给你买枚漂亮的戒指，然后单膝跪地，让你成为我的妻子。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah pressed her forehead against his, panting loudly."
-msgstr ""
+msgstr "莎拉将额头抵在他的额头上，大口喘着气。"
 
 msgctxt "speaker:Narrator"
 msgid "She tried to kiss him, but he denied her, pulling back."
-msgstr ""
+msgstr "她试图吻他，但他拒绝了，往后退开。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah was desperate."
-msgstr ""
+msgstr "莎拉心急如焚。"
 
 msgctxt "speaker:Sarah"
 msgid "Yes, captain...yes."
-msgstr ""
+msgstr "是的，队长……是的。"
 
 msgctxt "speaker:Narrator"
 msgid "He pushed back into her, rewarding her for her answer."
-msgstr ""
+msgstr "他顶入她的体内，以行动回应她的顺从。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah moaned. Forcefully, she pressed her mouth up against his, demanding a kiss. This time, she was not denied."
@@ -90401,7 +90401,7 @@ msgstr ""
 
 msgctxt "speaker:Captain Belmont"
 msgid "You don't think they'll look at us funny? Hot young piece like you and a decrepit sea captain like me?"
-msgstr ""
+msgstr "你不担心别人会用异样的眼光看我们吗？像你这样年轻火辣的美女，配上一个我这样老掉牙的海军上校。"
 
 msgctxt "speaker:Narrator"
 msgid "He impaled her again."
