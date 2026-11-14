@@ -92213,7 +92213,7 @@ msgstr "是啊，金发妞。我抓到他偷窥我好几次了。他可没自己
 
 msgctxt "speaker:Captain Belmont"
 msgid "I knew that rat was planning something."
-msgstr ""
+msgstr "我就知道那老鼠在策划什么。"
 
 msgctxt "speaker:Sarah"
 msgid "Why...didn't you tell me?"
@@ -92233,11 +92233,11 @@ msgstr "金发丫头，我不愿让你看到我丑陋的一面，但我能信任
 
 msgctxt "speaker:Sarah"
 msgid "I'm...I'm on your side, captain!"
-msgstr ""
+msgstr "我……我是站在你这边的，船长！"
 
 msgctxt "speaker:Captain Belmont"
 msgid "Good, then let's go teach this mutinous fuck a lesson."
-msgstr ""
+msgstr "好，那我们去给这个叛变的混蛋一点教训。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah watched as captain Belmont took off and she huriedly followed him."
@@ -92257,99 +92257,99 @@ msgstr "她看见尼克拉斯在保险库附近，突然转过身来。她能看
 
 msgctxt "speaker:Nickolas"
 msgid "I...I....captain..."
-msgstr ""
+msgstr "我……我……船长……"
 
 msgctxt "speaker:Captain Belmont"
 msgid "Enough out of you, boy. Go waste your excuses on someone who gives a damn."
-msgstr ""
+msgstr "够了，小子。拿着你的借口去找个在乎的人说吧。"
 
 msgctxt "speaker:Nickolas"
 msgid "No...I..."
-msgstr ""
+msgstr "不……我……"
 
 msgctxt "speaker:Captain Belmont"
 msgid "You're here to steal from me. To go back on your contract, ya signed word. Treason. Mutiny."
-msgstr ""
+msgstr "你在这儿是为了偷我的东西。违背契约，你签过字的。叛国。兵变。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah could see the fear in Nick's face grow deeper."
-msgstr ""
+msgstr "莎拉看到尼克脸上的恐惧愈发加深。"
 
 msgctxt "speaker:Nickolas"
 msgid "No! I never...Sarah, tell him that..."
-msgstr ""
+msgstr "不！我从来没有……莎拉，你告诉他……"
 
 msgctxt "speaker:Narrator"
 msgid "He couldn't find the words."
-msgstr ""
+msgstr "他找不到合适的言辞。"
 
 msgctxt "speaker:Sarah"
 msgid "I was the one who told the captain what you were doing."
-msgstr ""
+msgstr "是我告诉队长你在做什么的。"
 
 msgctxt "speaker:Narrator"
 msgid "She saw his face of shock turn to one of horror. Betrayed. Sarah couldn't help but feel guilty."
-msgstr ""
+msgstr "她看到他震惊的表情转为惊恐。被背叛的滋味让莎拉不禁感到内疚。"
 
 msgctxt "speaker:Narrator"
 msgid "But it didn't matter. She had done what she had to do to survive."
-msgstr ""
+msgstr "但这已不重要。为了活下去，她只能这么做。"
 
 msgctxt "speaker:Nickolas"
 msgid "You fucking cunt!"
-msgstr ""
+msgstr "你他妈的贱人！"
 
 msgctxt "speaker:Narrator"
 msgid "Nick charged across the room towards the both of them."
-msgstr ""
+msgstr "尼克拉斯冲过房间，向两人扑去。"
 
 msgctxt "speaker:Narrator"
 msgid "Something flashed, glimmering in the dark."
-msgstr ""
+msgstr "有什么东西闪了一下，在黑暗中发出微光。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah could see Nick's eyes drawn to it. The sword of captain Belmont."
-msgstr ""
+msgstr "莎拉能看到尼克的目光被它吸引。那是队长贝尔蒙特的剑。"
 
 msgctxt "speaker:Captain Belmont"
 msgid "Now don't you go gettin no ideas, boy."
-msgstr ""
+msgstr "别动什么歪脑筋，小子。"
 
 msgctxt "speaker:Captain Belmont"
 msgid "I've cut down more than my fair share of people over the years. Trust me, you ain't gonna be no different."
-msgstr ""
+msgstr "这些年我砍死的人可不少。相信我，你也不会例外。"
 
 msgctxt "speaker:Narrator"
 msgid "For a moment, Nick seemed to consider his options, but his fear of the sword won on."
-msgstr ""
+msgstr "片刻间，尼克似乎权衡了一下自己的处境，但对那把剑的恐惧最终占了上风。"
 
 msgctxt "speaker:Nickolas"
 msgid "I...I'll leave. I promise I'll go back to my bunk. I'm sorry, captain Belmont."
-msgstr ""
+msgstr "我……我会走的。我保证回我的床铺去。对不起，贝尔蒙特队长。"
 
 msgctxt "speaker:Narrator"
 msgid "His voice grew weaker and softer with every word."
-msgstr ""
+msgstr "他的声音随着每一个字变得更加微弱和轻柔。"
 
 msgctxt "speaker:Captain Belmont"
 msgid "A little late for sorry's and apologies. Ya stole from the captain, that can't stand."
-msgstr ""
+msgstr "现在道歉可太晚了。你偷了上校的东西，这绝不容忍。"
 
 msgctxt "speaker:Narrator"
 msgid "Belmont gestured with the tip of his sword towards a string of rope."
-msgstr ""
+msgstr "Бельмонт указал кончиком меча на веревку."
 
 msgctxt "speaker:Captain Belmont"
 msgid "Fetch that blondie, and tie up his disloyal dog."
-msgstr ""
+msgstr "把那个金发女人抓来，把他的忠犬绑起来。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah knew she had to listen to the captain. She had chosen right by siding with him. Of course she had, the captain always won."
-msgstr ""
+msgstr "莎拉知道自己必须听从船长的命令。她选择站在他这一边，确实没错。当然没错，船长总是赢家。"
 
 msgctxt "speaker:Narrator"
 msgid "She walked over towards the rope and walked towards Nick."
-msgstr ""
+msgstr "她走向那根绳子，然后朝尼克走去。"
 
 msgctxt "speaker:Narrator"
 msgid "She grabbed his wrists, pulled them behind his back and began to tie his wrists together."
@@ -92357,19 +92357,19 @@ msgstr ""
 
 msgctxt "speaker:Nickolas"
 msgid "How could you do this to me..."
-msgstr ""
+msgstr "你怎么能这样对我……"
 
 msgctxt "speaker:Sarah"
 msgid "You did this to yourself."
-msgstr ""
+msgstr "是你自己害成这样的。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah continued to tie his arms, using the very knot that Nick had taught her weeks earlier. Solid, nothing that any man could break. The more you fought it, the tighter it got."
-msgstr ""
+msgstr "莎拉继续绑着他的手臂，用的是几周前尼克教过她的结。牢固无比，任何男人都挣脱不开。你越是挣扎，它就绑得越紧。"
 
 msgctxt "speaker:Captain Belmont"
 msgid "He tied up good and proper?"
-msgstr ""
+msgstr "他绑得结实又规范？"
 
 msgctxt "speaker:Sarah"
 msgid "Shall I take him to the storage closet?"
@@ -92377,11 +92377,11 @@ msgstr ""
 
 msgctxt "speaker:Captain Belmont"
 msgid "That won't be necessary blondie."
-msgstr ""
+msgstr "不必了，金发妞。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah looked at the captain in surprise."
-msgstr ""
+msgstr "莎拉惊讶地看着队长。"
 
 msgctxt "speaker:Sarah"
 msgid "Me...sir?"
@@ -92389,43 +92389,43 @@ msgstr ""
 
 msgctxt "speaker:Captain Belmont"
 msgid "Yes you, blondie, get over here and don't make me ask again."
-msgstr ""
+msgstr "没错，就是你，金发妞，过来，别让我再说第二遍。"
 
 msgctxt "speaker:Narrator"
 msgid "Doing as she was told, Sarah walked up towards Belmont, stopping in front of him."
-msgstr ""
+msgstr "莎拉照做，走到贝蒙特的面前停下。"
 
 msgctxt "speaker:Narrator"
 msgid "He grabbed her by the shoulders and spun her around, facing towards Nick."
-msgstr ""
+msgstr "他抓住她的肩膀，将她转过身去，让她面对尼克。"
 
 msgctxt "speaker:Captain Belmont"
 msgid "Ya know son, I can almost feel for ya. When I was your age, I woulda done everything for a bit of pussy too. I was crazy about it."
-msgstr ""
+msgstr "听着，孩子，我几乎能体会你的感受。想当年我也和你一般大，为了那点风流韵事什么事儿都干得出来。我当时可是迷得不行。"
 
 msgctxt "speaker:Captain Belmont"
 msgid "But one of the advantages of gettin older is that you start to be a bit wiser, and you learn to see pussy in perspective."
-msgstr ""
+msgstr "但变老的一个好处是，你会变得稍微明智一些，学会用更客观的眼光看待女人。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah felt her face turn red as she spoke about her like a piece of meat."
-msgstr ""
+msgstr "莎拉觉得自己的脸红了，因为自己刚才说话的样子就像一块肉。"
 
 msgctxt "speaker:Narrator"
 msgid "She suddenly felt captain Belmont grab the hem of her shirt, slowly pulling it up."
-msgstr ""
+msgstr "Она вдруг почувствовала, как капитан Бельмонт хватает край её рубашки и медленно поднимает её."
 
 msgctxt "speaker:Narrator"
 msgid "She knew fighting him was pointless."
-msgstr ""
+msgstr "她知道反抗他是徒劳的。"
 
 msgctxt "speaker:Narrator"
 msgid "Raising her arms, she allowed the captain to lift her shirt over her head, throwing it to the side."
-msgstr ""
+msgstr "她抬起双臂，任由队长将她的衬衫从头上脱下，扔到一旁。"
 
 msgctxt "speaker:Narrator"
 msgid "One of his hands cupped her breasts, pinching her nipples hard."
-msgstr ""
+msgstr "一只手托住她的乳房，用力捏着她的乳头。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah softly cried out at the sudden violation."

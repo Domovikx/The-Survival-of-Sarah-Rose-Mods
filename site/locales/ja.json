@@ -1,98 +1,98 @@
 {
-   "meta": {
-      "title": "The Survival of Sarah Rose — AI音声＆翻訳（11言語）",
-      "description": "非公式ファンパッチ：7言語のデモAI音声と、11言語の翻訳（ロシア語は完訳、他は最初の分岐までのデモ）。無料、18+。"
-   },
-   "header": {
-      "brand": "TSSR · AI音声パック",
-      "steam": "Steamページ",
-      "langLabel": "言語",
-      "themeLabel": "テーマ切替"
-   },
-   "hero": {
-      "title": "The Survival of Sarah Rose — AI音声",
-      "subtitle": "非公式ファンパッチ：The Survival of Sarah Rose の完全翻訳と AI 音声。",
-      "badgeTranslate": "11言語——RU完訳、他は最初の分岐までのデモ",
-      "badgeVoice": "音声：デモは11言語で100%——各1,195行（RU: 1,397）",
-      "badgeFormat": "Opus 24 kbps——1言語あたり15〜21MB（デモ）",
-      "badgeEngine": "Ren'Py 7.4.11 · Steam",
-      "badgeAge": "18+ コンテンツ",
-      "ctaSteam": "Steamで The Survival of Sarah Rose",
-      "ctaDownload": "Nexus Mods でダウンロード",
-      "installHint": "Steamで購入したゲームが必要。無料、CC BY-NC 4.0。"
-   },
-   "features": {
-      "title": "得られるもの",
-      "translateTitle": "翻訳",
-      "translateText": "ロシア語は全編。他の言語は冒頭（デモ範囲）。",
-      "voiceTitle": "AI 音声",
-      "voiceText": "キャラクターごとにクローン音声、シーンに合わせた感情表現。",
-      "voicesTitle": "生きている登場人物",
-      "voicesText": "サラ、ケイト、オーウェル王、トーマス、ヴァルガなど多数。"
-   },
-   "demo": {
-      "title": "実際に聴いてみる",
-      "lead": "ゲームの実際のセリフをAI音声で。クローン声と生きた感情。セリフを押すと——結果が聞けます。",
-      "play": "再生：{{name}}",
-      "pause": "一時停止：{{name}}",
-      "phrases": [
-         {
-            "speaker": "サラ",
-            "text": "でも、マジでトーマス。パパの言うこと、少なくとも半分くらいは聞いてくれない？ただ我々のためを考えてるだけだよ"
-         },
-         {
-            "speaker": "ケイト",
-            "text": "今さら慎ましさを装い始めるのは、ちょっと遅いわね、サラ。"
-         },
-         {
-            "speaker": "オーウェル王",
-            "text": "誰でも王になれる時代もある。だが、試練の時代こそが真の王を問う。そして君の兄は未だその準備ができていない。"
-         }
-      ]
-   },
-   "voice": {
-      "title": "音声 — デモ完成",
-      "ru": "ロシア語（RU）：完訳、デモ範囲を収録",
-      "en": "英語（EN）：オリジナルテキスト、デモ範囲を収録",
-      "missing": "音声がない行は無音で表示されます（エラーなし）。"
-   },
-   "install": {
-      "title": "インストール",
-      "step1": "Nexus Mods でパックをダウンロード——まず main（必須）、次に必要な音声パック。",
-      "step2": "main.7z をゲームフォルダ（TheSurvivalofSarahRose.exe がある場所）に展開すると、mods/tssr-ai-voice-pack と environment.txt ができます。音声パックも同じ手順。",
-      "step3": "ゲームを起動し、MOD メニュー（右上のバッジ）で言語を選びます。",
-      "note": "Steam で購入したゲームが必要です。非公式ファンパッチで、開発元とは無関係です。",
-      "cta": "Nexus Mods で開く",
-      "vortexHint": "Vortex を使う場合：ゲーム拡張を一度入れ、「Install from file」を使用。",
-      "whereTitle": "ゲームフォルダはどこ？",
-      "whereText": "Steam：ライブラリ → ゲームを右クリック → 管理 → ローカルファイルを閲覧。または既定のパス：",
-      "whereCopy": "パスをコピー"
-   },
-   "shots": {
-      "title": "スクリーンショット",
-      "prev": "前の画像",
-      "next": "次の画像",
-      "close": "閉じる",
-      "open": "フルサイズで開く",
-      "capGeneric": "ゲーム画面"
-   },
-   "faq": {
-      "title": "よくある質問",
-      "q1": "公式MODですか？",
-      "a1": "いいえ——非公式ファンパッチです。開発元・発売元とは無関係です。",
-      "q2": "成人向けコンテンツはありますか？",
-      "a2": "はい——ゲームは18歳以上向けです。18歳以上の方のみダウンロード・プレイしてください。",
-      "q3": "ライセンスは？",
-      "a3": "音声パックと翻訳はCC BY-NC 4.0：クレジット表記で共有・改変可、非営利のみ。",
-      "q4": "協力するには？",
-      "a4": "Nexus Mods で endorse をお願いします——他のプレイヤーが見つけやすくなります。不具合や要望は Nexus の Mod ページへ。"
-   },
-   "footer": {
-      "disclaimer": "非公式ファン作品です。オリジナルゲームの権利は各権利者に帰属します。",
-      "linksLabel": "リンク",
-      "linkSteam": "Steam",
-      "linkLicense": "CC BY-NC 4.0",
-      "age": "18+",
-      "linkNexus": "GitHub"
-   }
+    "meta": {
+        "title": "The Survival of Sarah Rose — AI音声＆翻訳（11言語）",
+        "description": "非公式ファンパッチ：7言語のデモAI音声と、11言語の翻訳（ロシア語は完訳、他は最初の分岐までのデモ）。無料、18+。"
+    },
+    "header": {
+        "brand": "TSSR · AI音声パック",
+        "steam": "Steamページ",
+        "langLabel": "言語",
+        "themeLabel": "テーマ切替"
+    },
+    "hero": {
+        "title": "The Survival of Sarah Rose — AI音声",
+        "subtitle": "非公式ファンパッチ：The Survival of Sarah Rose の完全翻訳と AI 音声。",
+        "badgeTranslate": "11言語——RU完訳、他は最初の分岐までのデモ",
+        "badgeVoice": "音声：デモは11言語で100%——各1,195行（RU: 1,397）",
+        "badgeFormat": "Opus 24 kbps——1言語あたり15〜21MB（デモ）",
+        "badgeEngine": "Ren'Py 7.4.11 · Steam",
+        "badgeAge": "18+ コンテンツ",
+        "ctaSteam": "Steamで The Survival of Sarah Rose",
+        "ctaDownload": "Nexus Mods でダウンロード",
+        "installHint": "Steamで購入したゲームが必要。無料、CC BY-NC 4.0。"
+    },
+    "features": {
+        "title": "得られるもの",
+        "translateTitle": "翻訳",
+        "translateText": "ロシア語は全編。他の言語は冒頭（デモ範囲）。",
+        "voiceTitle": "AI 音声",
+        "voiceText": "キャラクターごとにクローン音声、シーンに合わせた感情表現。",
+        "voicesTitle": "生きている登場人物",
+        "voicesText": "サラ、ケイト、オーウェル王、トーマス、ヴァルガなど多数。"
+    },
+    "demo": {
+        "title": "実際に聴いてみる",
+        "lead": "ゲームの実際のセリフをAI音声で。クローン声と生きた感情。セリフを押すと——結果が聞けます。",
+        "play": "再生：{{name}}",
+        "pause": "一時停止：{{name}}",
+        "phrases": [
+            {
+                "speaker": "サラ",
+                "text": "でも、マジでトーマス。パパの言うこと、少なくとも半分くらいは聞いてくれない？ただ我々のためを考えてるだけだよ"
+            },
+            {
+                "speaker": "ケイト",
+                "text": "今さら慎ましさを装い始めるのは、ちょっと遅いわね、サラ。"
+            },
+            {
+                "speaker": "オーウェル王",
+                "text": "誰でも王になれる時代もある。だが、試練の時代こそが真の王を問う。そして君の兄は未だその準備ができていない。"
+            }
+        ]
+    },
+    "voice": {
+        "title": "音声 — デモ完成",
+        "ru": "ロシア語（RU）：完訳、デモ範囲を収録",
+        "en": "英語（EN）：オリジナルテキスト、デモ範囲を収録",
+        "missing": "音声がない行は無音で表示されます（エラーなし）。"
+    },
+    "install": {
+        "title": "インストール",
+        "step1": "Nexus Mods でパックをダウンロード——まず main（必須）、次に必要な音声パック。",
+        "step2": "main.7z をゲームフォルダ（TheSurvivalofSarahRose.exe がある場所）に展開すると、mods/tssr-ai-voice-pack と environment.txt ができます。音声パックも同じ手順。",
+        "step3": "ゲームを起動し、MOD メニュー（右上のバッジ）で言語を選びます。",
+        "note": "Steam で購入したゲームが必要です。非公式ファンパッチで、開発元とは無関係です。",
+        "cta": "Nexus Mods で開く",
+        "vortexHint": "Vortex を使う場合：ゲーム拡張を一度入れ、「Install from file」を使用。",
+        "whereTitle": "ゲームフォルダはどこ？",
+        "whereText": "Steam：ライブラリ → ゲームを右クリック → 管理 → ローカルファイルを閲覧。または既定のパス：",
+        "whereCopy": "パスをコピー"
+    },
+    "shots": {
+        "title": "スクリーンショット",
+        "prev": "前の画像",
+        "next": "次の画像",
+        "close": "閉じる",
+        "open": "フルサイズで開く",
+        "capGeneric": "ゲーム画面"
+    },
+    "faq": {
+        "title": "よくある質問",
+        "q1": "公式MODですか？",
+        "a1": "いいえ——非公式ファンパッチです。開発元・発売元とは無関係です。",
+        "q2": "成人向けコンテンツはありますか？",
+        "a2": "はい——ゲームは18歳以上向けです。18歳以上の方のみダウンロード・プレイしてください。",
+        "q3": "ライセンスは？",
+        "a3": "音声パックと翻訳はCC BY-NC 4.0：クレジット表記で共有・改変可、非営利のみ。",
+        "q4": "協力するには？",
+        "a4": "Nexus Mods で endorse をお願いします——他のプレイヤーが見つけやすくなります。不具合や要望は Nexus の Mod ページへ。"
+    },
+    "footer": {
+        "disclaimer": "非公式ファン作品です。オリジナルゲームの権利は各権利者に帰属します。",
+        "linksLabel": "リンク",
+        "linkSteam": "Steam",
+        "linkLicense": "CC BY-NC 4.0",
+        "age": "18+",
+        "linkNexus": "Nexus Mods"
+    }
 }

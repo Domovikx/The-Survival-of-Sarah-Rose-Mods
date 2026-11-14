@@ -1,98 +1,98 @@
 {
-   "meta": {
-      "title": "The Survival of Sarah Rose — Voix IA + 11 langues",
-      "description": "Mod de fans non officiel : doublage IA de démo en 11 langues et traductions en 11 (russe complet ; les autres couvrent l’intro jusqu’au premier choix). Gratuit, 18+."
-   },
-   "header": {
-      "brand": "TSSR · Voix IA",
-      "steam": "Page Steam",
-      "langLabel": "Langue",
-      "themeLabel": "Changer de thème"
-   },
-   "hero": {
-      "title": "The Survival of Sarah Rose — Voix IA",
-      "subtitle": "Patch de fans non officiel : traduction complète et doublage IA pour The Survival of Sarah Rose.",
-      "badgeTranslate": "11 langues — RU complet, les autres en démo jusqu’au premier choix",
-      "badgeVoice": "Doublage : démo 100 % en 11 langues — 1 195 lignes chacune (RU : 1 397)",
-      "badgeFormat": "Opus 24 kbps — 15–21 Mo par langue (démo)",
-      "badgeEngine": "Ren'Py 7.4.11 · Steam",
-      "badgeAge": "Contenu 18+",
-      "ctaSteam": "The Survival of Sarah Rose sur Steam",
-      "ctaDownload": "Télécharger sur Nexus Mods",
-      "installHint": "Nécessite le jeu acheté sur Steam. Gratuit, CC BY-NC 4.0."
-   },
-   "features": {
-      "title": "Ce que vous obtenez",
-      "translateTitle": "Traduction",
-      "translateText": "Russe — toute l'histoire. Autres langues — le début (portée démo).",
-      "voiceTitle": "Doublage IA",
-      "voiceText": "Voix clonées, une par personnage, avec l'émotion adaptée à chaque scène.",
-      "voicesTitle": "Personnages vivants",
-      "voicesText": "Sarah, Kate, le roi Orwell, Thomas, Varga et des dizaines d'autres."
-   },
-   "demo": {
-      "title": "Écoutez par vous-même",
-      "lead": "De vraies répliques du jeu en voix IA : voix clonées, émotions vivantes. Touchez une réplique — et écoutez.",
-      "play": "Lire : {{name}}",
-      "pause": "Pause : {{name}}",
-      "phrases": [
-         {
-            "speaker": "Sarah",
-            "text": "Mais sérieusement, Thomas, tu devrais écouter ton père au moins parfois. Il essaie juste de faire ce qui est le mieux pour nous."
-         },
-         {
-            "speaker": "Kate",
-            "text": "Il est un peu tard pour commencer à faire semblant d'être modeste maintenant, Sarah."
-         },
-         {
-            "speaker": "Roi Orwell Rose",
-            "text": "N'importe qui peut être roi en temps de paix. C'est aux mauvais moments qu'un roi doit être prêt. Et ton frère ne l'est pas."
-         }
-      ]
-   },
-   "voice": {
-      "title": "Doublage — démo prête",
-      "ru": "Russe (RU) : traduction complète, périmètre démo doublé",
-      "en": "Anglais (EN) : le texte original, périmètre démo doublé",
-      "missing": "S’il manque une voix, le jeu affiche la réplique en silence (sans erreur)."
-   },
-   "install": {
-      "title": "Installation",
-      "step1": "Téléchargez le pack sur Nexus Mods — d'abord main (obligatoire), puis les packs de voix souhaités.",
-      "step2": "Décompressez main.7z dans le dossier du jeu (là où se trouve TheSurvivalofSarahRose.exe) : vous obtenez mods/tssr-ai-voice-pack et environment.txt. Les packs de voix, pareil.",
-      "step3": "Lancez le jeu, ouvrez le menu du mod (badge en haut à droite) et choisissez la langue.",
-      "note": "Nécessite le jeu acheté sur Steam. Patch de fans non officiel, sans lien avec les développeurs.",
-      "cta": "Ouvrir sur Nexus Mods",
-      "vortexHint": "Avec Vortex ? Installez une fois l'extension du jeu, puis « Install from file ».",
-      "whereTitle": "Où est le dossier du jeu ?",
-      "whereText": "Dans Steam : Bibliothèque → clic droit sur le jeu → Gérer → Parcourir les fichiers locaux. Ou le chemin par défaut :",
-      "whereCopy": "Copier le chemin"
-   },
-   "shots": {
-      "title": "Captures d’écran",
-      "prev": "Image précédente",
-      "next": "Image suivante",
-      "close": "Fermer",
-      "open": "ouvrir en taille réelle",
-      "capGeneric": "Capture du jeu"
-   },
-   "faq": {
-      "title": "FAQ",
-      "q1": "Est-ce un mod officiel ?",
-      "a1": "Non — un patch de fans non officiel, sans lien avec les développeurs ou éditeurs.",
-      "q2": "Y a-t-il du contenu pour adultes ?",
-      "a2": "Oui — le jeu est 18+. À télécharger et jouer uniquement si vous avez 18 ans ou plus.",
-      "q3": "Licence ?",
-      "a3": "Pack de voix et traduction : CC BY-NC 4.0 — partage et adaptation avec attribution, usage non commercial uniquement.",
-      "q4": "Comment aider ?",
-      "a4": "Endossez le mod sur Nexus Mods : cela aide les autres joueurs à le trouver. Bugs et suggestions : la page du mod sur Nexus."
-   },
-   "footer": {
-      "disclaimer": "Travail de fans non officiel. Tous droits du jeu original appartiennent à leurs détenteurs.",
-      "linksLabel": "Liens",
-      "linkSteam": "Steam",
-      "linkLicense": "CC BY-NC 4.0",
-      "age": "18+",
-      "linkNexus": "GitHub"
-   }
+    "meta": {
+        "title": "The Survival of Sarah Rose — Voix IA + 11 langues",
+        "description": "Mod de fans non officiel : doublage IA de démo en 11 langues et traductions en 11 (russe complet ; les autres couvrent l’intro jusqu’au premier choix). Gratuit, 18+."
+    },
+    "header": {
+        "brand": "TSSR · Voix IA",
+        "steam": "Page Steam",
+        "langLabel": "Langue",
+        "themeLabel": "Changer de thème"
+    },
+    "hero": {
+        "title": "The Survival of Sarah Rose — Voix IA",
+        "subtitle": "Patch de fans non officiel : traduction complète et doublage IA pour The Survival of Sarah Rose.",
+        "badgeTranslate": "11 langues — RU complet, les autres en démo jusqu’au premier choix",
+        "badgeVoice": "Doublage : démo 100 % en 11 langues — 1 195 lignes chacune (RU : 1 397)",
+        "badgeFormat": "Opus 24 kbps — 15–21 Mo par langue (démo)",
+        "badgeEngine": "Ren'Py 7.4.11 · Steam",
+        "badgeAge": "Contenu 18+",
+        "ctaSteam": "The Survival of Sarah Rose sur Steam",
+        "ctaDownload": "Télécharger sur Nexus Mods",
+        "installHint": "Nécessite le jeu acheté sur Steam. Gratuit, CC BY-NC 4.0."
+    },
+    "features": {
+        "title": "Ce que vous obtenez",
+        "translateTitle": "Traduction",
+        "translateText": "Russe — toute l'histoire. Autres langues — le début (portée démo).",
+        "voiceTitle": "Doublage IA",
+        "voiceText": "Voix clonées, une par personnage, avec l'émotion adaptée à chaque scène.",
+        "voicesTitle": "Personnages vivants",
+        "voicesText": "Sarah, Kate, le roi Orwell, Thomas, Varga et des dizaines d'autres."
+    },
+    "demo": {
+        "title": "Écoutez par vous-même",
+        "lead": "De vraies répliques du jeu en voix IA : voix clonées, émotions vivantes. Touchez une réplique — et écoutez.",
+        "play": "Lire : {{name}}",
+        "pause": "Pause : {{name}}",
+        "phrases": [
+            {
+                "speaker": "Sarah",
+                "text": "Mais sérieusement, Thomas, tu devrais écouter ton père au moins parfois. Il essaie juste de faire ce qui est le mieux pour nous."
+            },
+            {
+                "speaker": "Kate",
+                "text": "Il est un peu tard pour commencer à faire semblant d'être modeste maintenant, Sarah."
+            },
+            {
+                "speaker": "Roi Orwell Rose",
+                "text": "N'importe qui peut être roi en temps de paix. C'est aux mauvais moments qu'un roi doit être prêt. Et ton frère ne l'est pas."
+            }
+        ]
+    },
+    "voice": {
+        "title": "Doublage — démo prête",
+        "ru": "Russe (RU) : traduction complète, périmètre démo doublé",
+        "en": "Anglais (EN) : le texte original, périmètre démo doublé",
+        "missing": "S’il manque une voix, le jeu affiche la réplique en silence (sans erreur)."
+    },
+    "install": {
+        "title": "Installation",
+        "step1": "Téléchargez le pack sur Nexus Mods — d'abord main (obligatoire), puis les packs de voix souhaités.",
+        "step2": "Décompressez main.7z dans le dossier du jeu (là où se trouve TheSurvivalofSarahRose.exe) : vous obtenez mods/tssr-ai-voice-pack et environment.txt. Les packs de voix, pareil.",
+        "step3": "Lancez le jeu, ouvrez le menu du mod (badge en haut à droite) et choisissez la langue.",
+        "note": "Nécessite le jeu acheté sur Steam. Patch de fans non officiel, sans lien avec les développeurs.",
+        "cta": "Ouvrir sur Nexus Mods",
+        "vortexHint": "Avec Vortex ? Installez une fois l'extension du jeu, puis « Install from file ».",
+        "whereTitle": "Où est le dossier du jeu ?",
+        "whereText": "Dans Steam : Bibliothèque → clic droit sur le jeu → Gérer → Parcourir les fichiers locaux. Ou le chemin par défaut :",
+        "whereCopy": "Copier le chemin"
+    },
+    "shots": {
+        "title": "Captures d’écran",
+        "prev": "Image précédente",
+        "next": "Image suivante",
+        "close": "Fermer",
+        "open": "ouvrir en taille réelle",
+        "capGeneric": "Capture du jeu"
+    },
+    "faq": {
+        "title": "FAQ",
+        "q1": "Est-ce un mod officiel ?",
+        "a1": "Non — un patch de fans non officiel, sans lien avec les développeurs ou éditeurs.",
+        "q2": "Y a-t-il du contenu pour adultes ?",
+        "a2": "Oui — le jeu est 18+. À télécharger et jouer uniquement si vous avez 18 ans ou plus.",
+        "q3": "Licence ?",
+        "a3": "Pack de voix et traduction : CC BY-NC 4.0 — partage et adaptation avec attribution, usage non commercial uniquement.",
+        "q4": "Comment aider ?",
+        "a4": "Endossez le mod sur Nexus Mods : cela aide les autres joueurs à le trouver. Bugs et suggestions : la page du mod sur Nexus."
+    },
+    "footer": {
+        "disclaimer": "Travail de fans non officiel. Tous droits du jeu original appartiennent à leurs détenteurs.",
+        "linksLabel": "Liens",
+        "linkSteam": "Steam",
+        "linkLicense": "CC BY-NC 4.0",
+        "age": "18+",
+        "linkNexus": "Nexus Mods"
+    }
 }
