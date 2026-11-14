@@ -62,14 +62,29 @@ const styles = stylex.create({
     ':focus-visible': { outline: '2px solid var(--link)', outlineOffset: -2 },
   },
   itemActive: { color: 'var(--link)', fontWeight: 700 },
+  flag: {
+    width: 18,
+    height: 18,
+    borderRadius: '50%',
+    flexShrink: 0,
+    display: 'block',
+  },
+  label: { display: 'inline-flex', alignItems: 'center', gap: 8 },
   check: { fontSize: 12 },
 })
 
 /**
- * Язык: дропдаун с РОДНЫМИ названиями (едино с модом zzz_ui; 11 языков,
- * без флагов). Выбор мгновенный, сохраняется в localStorage (setLang),
+ * Язык: дропдаун с РОДНЫМИ названиями + круглые SVG-флаги (набор circle-flags,
+ * MIT, локально в public/flags — без внешних запросов). Флаг — это подсказка,
+ * язык всё равно подписан текстом (флаг ≠ язык; эмодзи-флаги на Windows не
+ * рисуются). Выбор мгновенный, сохраняется в localStorage (setLang),
  * закрытие по клику мимо / Escape; текущий отмечен галочкой.
  */
+const flagSrc = (lang: string): string => `${import.meta.env.BASE_URL}flags/${lang}.svg`
+
+const Flag = ({ lang }: { lang: string }) => (
+  <img {...stylex.props(styles.flag)} src={flagSrc(lang)} alt="" aria-hidden loading="lazy" />
+)
 export const LanguageSwitcher = () => {
   const { i18n, t } = useTranslation()
   const [open, setOpen] = useState(false)
@@ -105,7 +120,10 @@ export const LanguageSwitcher = () => {
         data-testid="lang-switcher"
         onClick={() => setOpen((v) => !v)}
       >
-        {LANG_LABELS[current]}
+        <span {...stylex.props(styles.label)}>
+          <Flag lang={current} />
+          {LANG_LABELS[current]}
+        </span>
         <span {...stylex.props(styles.chevron)} aria-hidden>
           ▼
         </span>
@@ -123,7 +141,10 @@ export const LanguageSwitcher = () => {
                   setOpen(false)
                 }}
               >
-                {LANG_LABELS[lang]}
+                <span {...stylex.props(styles.label)}>
+                  <Flag lang={lang} />
+                  {LANG_LABELS[lang]}
+                </span>
                 {lang === current && (
                   <span {...stylex.props(styles.check)} aria-hidden>
                     ✓
