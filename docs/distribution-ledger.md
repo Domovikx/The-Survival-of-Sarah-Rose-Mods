@@ -168,3 +168,16 @@
   при заполненных шагах; проверены тулбар, `?publish=true`, legacy-панель
   «Publish this mod», GraphQL (мутации publish нет). Вероятен гейт модерации
   категории Vortex Extensions.
+
+### 2026-11-14 — страница расширения ОПУБЛИКОВАНА
+
+- `https://www.nexusmods.com/site/mods/2600` — статус Published (в URL `?published=1`),
+  `FILES 1` (Vortex Extension 1.0.0, Main/Primary), картинка одна (арт игры).
+- Что мешало публикации: **пустое поле Full description** (Nexus не сохранял ввод
+  из синтетических событий — SCEditor прячет textarea в iframe) и **AI-дисклоуз**.
+  После сохранения описания через iframe + синхронизацию textarea появился баннер
+  «Well done! Your mod is ready to publish» и кнопка стала активной.
+- AI-дисклоуз выставлен: Mod Content = **AI-Generated** (код писался с AI),
+  Media-вариант не выбран (арт официальный).
+- Каталог `GET /v3/vortex/extensions` пока расширение не отдаёт — Vortex подхватывает
+  такие страницы в течение ~2 часов после публикации.
