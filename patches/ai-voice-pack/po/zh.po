@@ -154190,7 +154190,7 @@ msgstr "这正是她想要保持的姿态。但她怀疑，嘴里塞着他大半
 
 msgctxt "speaker:Captain Belmont"
 msgid "I was talking about our history together, Blondie. Don't be impolite by ignoring me."
-msgstr ""
+msgstr "我说的是我们之间的过往，金发妞。别不理我，这样可不礼貌。"
 
 msgctxt "speaker:Captain Belmont"
 msgid "Now I know you're busy and all, but I'll take an affirming mumble."
@@ -154234,11 +154234,11 @@ msgstr "他满意地呻吟着，每当她再次上下晃动脑袋时。"
 
 msgctxt "speaker:Narrator"
 msgid "Any other man and she might have imagined she'd be done with this soon. But unfortunately she knew the captain better than that."
-msgstr ""
+msgstr "换作别的男人，她或许以为很快就能结束。但不幸的是，她对这位舰长的了解远超于此。"
 
 msgctxt "speaker:Captain Belmont"
 msgid "Sadly I can't say the same."
-msgstr ""
+msgstr "可惜我没法这么说。"
 
 msgctxt "speaker:Captain Belmont"
 msgid "You fuck as many ship whores as I do, they all sort of start to look the same."
@@ -154254,23 +154254,23 @@ msgstr "船妓……在他眼里，她也就是个船妓罢了。"
 
 msgctxt "speaker:Captain Belmont"
 msgid "But you...you made an impression on me, Blondie. Even years later I still thought about you cleaning me up."
-msgstr ""
+msgstr "但你……你让我印象深刻，金发妞。哪怕过了这么多年，我脑子里还会浮现出你帮我清理的画面。"
 
 msgctxt "speaker:Captain Belmont"
 msgid "So you can imagine my surprise when I walked on this boat and learned that you were the big shot that everyone was talkin about."
-msgstr ""
+msgstr "所以你能想象我上船后得知你就是大家议论纷纷的那个风云人物时，有多惊讶。"
 
 msgctxt "speaker:Narrator"
 msgid "He wrapped his hand, tighter around the back of her neck, dictating her tempo."
-msgstr ""
+msgstr "Он крепче обхватил рукой её шею сзади, диктуя темп."
 
 msgctxt "speaker:Captain Belmont"
 msgid "An even bigger surprise when I learned that the girl that sucked my dick had been a princess of all things."
-msgstr ""
+msgstr "更让我吃惊的是，我得知那个给我口交的女孩竟然是个公主。"
 
 msgctxt "speaker:Captain Belmont"
 msgid "Old Belmont has seen all kinds, but you're about the only royalty that swallowed my loads."
-msgstr ""
+msgstr "老贝尔蒙特什么女人没见过，但你是唯一一个吞下我精液的皇室成员。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah looked up at him, fire in her eyes."
@@ -154278,7 +154278,7 @@ msgstr ""
 
 msgctxt "speaker:Captain Belmont"
 msgid "Oh please, save that anger for someone else, Blondie."
-msgstr ""
+msgstr "得了吧，把怒火留给别人吧，金发妞。"
 
 msgctxt "speaker:Captain Belmont"
 msgid "I know how you get wet in the cunt for me when you're sucking me off."
@@ -154290,11 +154290,11 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "She hated that most of all, how her body betrayed her."
-msgstr ""
+msgstr "她最痛恨的，莫过于此——她的身体背叛了她。"
 
 msgctxt "speaker:Captain Belmont"
 msgid "Speaking of your cunt, I don't think I ever had the pleasure, did I?"
-msgstr ""
+msgstr "说到你的下面，我想我好像还没享受过那种乐趣吧？"
 
 msgctxt "speaker:Narrator"
 msgid "It was true. All those years ago, he had only ever used her mouth."
@@ -154302,7 +154302,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Sarah felt a panic come over her, her eyes went wide."
-msgstr ""
+msgstr "莎拉感到一阵恐慌袭来，双眼圆睁。"
 
 msgctxt "speaker:Narrator"
 msgid "He yanked back her head, his cock falling from her mouth with a plopping sound."
