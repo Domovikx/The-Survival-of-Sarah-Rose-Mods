@@ -1,120 +1,120 @@
 {
-   "meta": {
-      "title": "The Survival of Sarah Rose — Głosy AI + 11 języków",
-      "description": "Nieoficjalny fanowski patch: demo udźwiękowienia AI w 7 językach plus tłumaczenia na 11 (rosyjski kompletny; pozostałe obejmują intro do pierwszego wyboru). Za darmo, 18+."
-   },
-   "header": {
-      "brand": "TSSR · Pakiet głosów AI",
-      "steam": "Strona Steam",
-      "github": "GitHub",
-      "langLabel": "Język",
-      "themeLabel": "Zmień motyw"
-   },
-   "hero": {
-      "title": "The Survival of Sarah Rose — Głosy AI",
-      "subtitle": "Nieoficjalny fanowski patch: tekst gry w 11 językach, a zakres demo (intro do pierwszego wyboru) w pełni udźwiękowiony w 7 językach — ponad 75 sklonowanych głosów z emocjonalną grą.",
-      "badgeTranslate": "11 języków — RU kompletny, pozostałe demo do pierwszego wyboru",
-      "badgeVoice": "Udźwiękowienie: demo 100 % w 7 językach — po 1 195 linii",
-      "badgeFormat": "Opus 24 kbps — ok. 17 MB na język (demo)",
-      "badgeEngine": "Ren'Py 7.4.11 · Steam",
-      "badgeAge": "Treść 18+",
-      "ctaSteam": "The Survival of Sarah Rose na Steam",
-      "ctaDownload": "Pobierz z Nexus Mods",
-      "ctaGithub": "Kod na GitHub",
-      "installHint": "Wymaga kupionej gry na Steam. Za darmo, CC BY-NC 4.0."
-   },
-   "features": {
-      "title": "Co dostajesz",
-      "translateTitle": "Tłumaczenia na 11 języków",
-      "translateText": "Rosyjski: kompletne tłumaczenie całej historii. Pozostałe 10 języków obejmuje zakres demo — intro do pierwszego wyboru.",
-      "voiceTitle": "Udźwiękowienie AI (demo, 7 języków)",
-      "voiceText": "Sklonowane głosy każdej postaci przez VoxCPM2 — emocjonalna gra dopasowana do sceny. Zakres demo (do pierwszego wyboru) jest w pełni udźwiękowiony w 7 językach; koreański jest w toku.",
-      "emotionTitle": "Emocjonalna gra",
-      "emotionText": "Każda linia niesie stan narratora: pożądanie, szept, sarkazm — nigdy monotonia.",
-      "voicesTitle": "Ponad 75 głosów",
-      "voicesText": "Sarah, narrator, król Orwell, Kate, Thomas, Varga i dziesiątki innych postaci."
-   },
-   "demo": {
-      "title": "Posłuchaj sam",
-      "lead": "Prawdziwe kwestie z gry z głosami AI: sklonowane głosy, żywe emocje. Dotknij linii — i posłuchaj efektu.",
-      "play": "Odtwórz: {{name}}",
-      "pause": "Pauza: {{name}}",
-      "phrases": [
-         {
-            "speaker": "Sarah",
-            "text": "Tutaj zawsze jest tak cicho. Coś jest nie tak."
-         },
-         {
-            "speaker": "Thomas",
-            "text": "Sarah... Próbuję utrzymać fasadę idealnego króla. Nawet na polu bitwy ukrywam swój strach."
-         },
-         {
-            "speaker": "Carolyn",
-            "text": "Aah, czy mam tak łatwo wyznać ci moje sekrety?"
-         },
-         {
-            "speaker": "Sarah",
-            "text": "To nie ty mnie prosisz, to ja proszę ciebie... zostań ze mną... proszę. Nikt inny na tym świecie nie był mi tak prawdziwym przyjacielem... kimś więcej niż przyjacielem."
-         },
-         {
-            "speaker": "Garret",
-            "text": "A co do krwi na twoich rękach, czym jest kilka kropel więcej? Chyba nie chcesz mi powiedzieć, że wcześniej nie zabijałaś innych?"
-         },
-         {
-            "speaker": "Sarah",
-            "text": "Każdej nocy, gdy się dotykam, moje jedyne fantazje to wspomnienia naszych spotkań."
-         },
-         {
-            "speaker": "Narrator",
-            "text": "Gdy przychodził do niej, jej serce waliło w piersi. Gdy się nie pojawiała, czuła, że zbliża się do łez."
-         }
-      ]
-   },
-   "voice": {
-      "title": "Udźwiękowienie — demo gotowe",
-      "total": "Zakres demo (do pierwszego wyboru) udźwiękowiony w 7 językach — po 1 195 linii. Koreański jest w toku; polski, portugalski i chiński są pokazane na tej stronie jako próbki. Pełny przebieg jest w planach.",
-      "ru": "Rosyjski (RU): kompletne tłumaczenie, zakres demo udźwiękowiony",
-      "en": "Angielski (EN): oryginalny tekst, zakres demo udźwiękowiony",
-      "missing": "Brak głosu? Gra wyświetli linię w ciszy (bez błędów)."
-   },
-   "install": {
-      "title": "Instalacja",
-      "step1": "Pobierz paczkę z Nexus Mods: main (rdzeń, wymagany) oraz wybrane pakiety głosów. Rozpakuj main.7z do folderu gry (tam, gdzie jest TheSurvivalofSarahRose.exe), aby pojawiły się mods/tssr-ai-voice-pack i environment.txt, a następnie w ten sam sposób rozpakuj archiwa głosów. Vortex: zainstaluj raz rozszerzenie gry i użyj „Install from file”.",
-      "step2": "Uruchom grę i otwórz ustawienia modu (badge w prawym górnym rogu) — 11 języków tekstu; głos podąża za wybranym językiem",
-      "step3": "Gotowe. Pierwsze uruchomienie może trwać dłużej — Ren'Py przebudowuje cache",
-      "note": "Wymaga kupionej gry na Steam. Ten patch jest nieoficjalny i niepowiązany z twórcami ani wydawcami."
-   },
-   "shots": {
-      "title": "Zrzuty ekranu",
-      "cap1": "Menu główne",
-      "cap2": "Chiński: tekst CJK bez kwadracików",
-      "cap3": "Strona patcha: język, głos, czcionka",
-      "cap4": "Lokalizacja niemiecka",
-      "cap5": "Narracja o stolicy",
-      "cap6": "Sarah biegnie w ramiona ojca",
-      "prev": "Poprzedni obraz",
-      "next": "Następny obraz",
-      "close": "Zamknij",
-      "open": "otwórz w pełnym rozmiarze"
-   },
-   "faq": {
-      "title": "FAQ",
-      "q1": "Czy to oficjalny mod?",
-      "a1": "Nie — nieoficjalny fanowski patch, niepowiązany z twórcami ani wydawcami.",
-      "q2": "Czy są treści dla dorosłych?",
-      "a2": "Tak — gra jest 18+. Pobieraj i graj tylko, jeśli masz 18 lat lub więcej.",
-      "q3": "Licencja?",
-      "a3": "Pakiet głosów i tłumaczenie: CC BY-NC 4.0 — udostępniaj i modyfikuj z podaniem autorstwa, tylko niekomercyjnie.",
-      "q4": "Jak mogę pomóc?",
-      "a4": "Dodaj gwiazdkę na GitHub, wyślij pull request lub otwórz issue."
-   },
-   "footer": {
-      "disclaimer": "Nieoficjalna fanowska praca. Wszystkie prawa do oryginalnej gry należą do ich właścicieli.",
-      "linksLabel": "Linki",
-      "linkGithub": "GitHub",
-      "linkSteam": "Steam",
-      "linkIssues": "Issues",
-      "linkLicense": "CC BY-NC 4.0",
-      "age": "18+"
-   }
+    "meta": {
+        "title": "The Survival of Sarah Rose — Głosy AI + 11 języków",
+        "description": "Nieoficjalny fanowski patch: demo udźwiękowienia AI w 7 językach plus tłumaczenia na 11 (rosyjski kompletny; pozostałe obejmują intro do pierwszego wyboru). Za darmo, 18+."
+    },
+    "header": {
+        "brand": "TSSR · Pakiet głosów AI",
+        "steam": "Strona Steam",
+        "github": "GitHub",
+        "langLabel": "Język",
+        "themeLabel": "Zmień motyw"
+    },
+    "hero": {
+        "title": "The Survival of Sarah Rose — Głosy AI",
+        "subtitle": "Nieoficjalna łatka fanowska: 11 języków tekstu i zakres demo (intro do pierwszego wyboru) w pełni udźwiękowiony we wszystkich 11 językach — 77 sklonowanych głosów z emocjonalnym podaniem.",
+        "badgeTranslate": "11 języków — RU kompletny, pozostałe demo do pierwszego wyboru",
+        "badgeVoice": "Udźwiękowienie: demo 100% w 11 językach — po 1 195 linii (RU: 1 397)",
+        "badgeFormat": "Opus 24 kbps — 15–21 MB na język (demo)",
+        "badgeEngine": "Ren'Py 7.4.11 · Steam",
+        "badgeAge": "Treść 18+",
+        "ctaSteam": "The Survival of Sarah Rose na Steam",
+        "ctaDownload": "Pobierz z Nexus Mods",
+        "ctaGithub": "Kod na GitHub",
+        "installHint": "Wymaga kupionej gry na Steam. Za darmo, CC BY-NC 4.0."
+    },
+    "features": {
+        "title": "Co dostajesz",
+        "translateTitle": "Tłumaczenia na 11 języków",
+        "translateText": "Rosyjski: kompletne tłumaczenie całej historii. Pozostałe 10 języków obejmuje zakres demo — intro do pierwszego wyboru.",
+        "voiceTitle": "Udźwiękowienie AI (demo, 11 języków)",
+        "voiceText": "Sklonowane głosy dla każdej postaci przez VoxCPM2 — emocjonalne podanie dopasowane do sceny. Zakres demo (do pierwszego wyboru) jest w pełni udźwiękowiony we wszystkich 11 językach.",
+        "emotionTitle": "Emocjonalna gra",
+        "emotionText": "Każda linia niesie stan narratora: pożądanie, szept, sarkazm — nigdy monotonia.",
+        "voicesTitle": "Ponad 75 głosów",
+        "voicesText": "Sarah, narrator, król Orwell, Kate, Thomas, Varga i dziesiątki innych postaci."
+    },
+    "demo": {
+        "title": "Posłuchaj sam",
+        "lead": "Prawdziwe kwestie z gry z głosami AI: sklonowane głosy, żywe emocje. Dotknij linii — i posłuchaj efektu.",
+        "play": "Odtwórz: {{name}}",
+        "pause": "Pauza: {{name}}",
+        "phrases": [
+            {
+                "speaker": "Sarah",
+                "text": "Tutaj zawsze jest tak cicho. Coś jest nie tak."
+            },
+            {
+                "speaker": "Thomas",
+                "text": "Sarah... Próbuję utrzymać fasadę idealnego króla. Nawet na polu bitwy ukrywam swój strach."
+            },
+            {
+                "speaker": "Carolyn",
+                "text": "Aah, czy mam tak łatwo wyznać ci moje sekrety?"
+            },
+            {
+                "speaker": "Sarah",
+                "text": "To nie ty mnie prosisz, to ja proszę ciebie... zostań ze mną... proszę. Nikt inny na tym świecie nie był mi tak prawdziwym przyjacielem... kimś więcej niż przyjacielem."
+            },
+            {
+                "speaker": "Garret",
+                "text": "A co do krwi na twoich rękach, czym jest kilka kropel więcej? Chyba nie chcesz mi powiedzieć, że wcześniej nie zabijałaś innych?"
+            },
+            {
+                "speaker": "Sarah",
+                "text": "Każdej nocy, gdy się dotykam, moje jedyne fantazje to wspomnienia naszych spotkań."
+            },
+            {
+                "speaker": "Narrator",
+                "text": "Gdy przychodził do niej, jej serce waliło w piersi. Gdy się nie pojawiała, czuła, że zbliża się do łez."
+            }
+        ]
+    },
+    "voice": {
+        "title": "Udźwiękowienie — demo gotowe",
+        "total": "Zakres demo (do pierwszego wyboru) jest udźwiękowiony w 11 językach: po 1 195 linii, rosyjski 1 397.",
+        "ru": "Rosyjski (RU): kompletne tłumaczenie, zakres demo udźwiękowiony",
+        "en": "Angielski (EN): oryginalny tekst, zakres demo udźwiękowiony",
+        "missing": "Brak głosu? Gra wyświetli linię w ciszy (bez błędów)."
+    },
+    "install": {
+        "title": "Instalacja",
+        "step1": "Pobierz paczkę z Nexus Mods: main (rdzeń, wymagany) oraz wybrane pakiety głosów. Rozpakuj main.7z do folderu gry (tam, gdzie jest TheSurvivalofSarahRose.exe), aby pojawiły się mods/tssr-ai-voice-pack i environment.txt, a następnie w ten sam sposób rozpakuj archiwa głosów. Vortex: zainstaluj raz rozszerzenie gry (nexusmods.com/site/mods/2600) i użyj „Install from file”.",
+        "step2": "Uruchom grę i otwórz ustawienia modu (badge w prawym górnym rogu) — 11 języków tekstu; głos podąża za wybranym językiem",
+        "step3": "Gotowe. Pierwsze uruchomienie może trwać dłużej — Ren'Py przebudowuje cache",
+        "note": "Wymaga kupionej gry na Steam. Ten patch jest nieoficjalny i niepowiązany z twórcami ani wydawcami."
+    },
+    "shots": {
+        "title": "Zrzuty ekranu",
+        "cap1": "Menu główne",
+        "cap2": "Chiński: tekst CJK bez kwadracików",
+        "cap3": "Strona patcha: język, głos, czcionka",
+        "cap4": "Lokalizacja niemiecka",
+        "cap5": "Narracja o stolicy",
+        "cap6": "Sarah biegnie w ramiona ojca",
+        "prev": "Poprzedni obraz",
+        "next": "Następny obraz",
+        "close": "Zamknij",
+        "open": "otwórz w pełnym rozmiarze"
+    },
+    "faq": {
+        "title": "FAQ",
+        "q1": "Czy to oficjalny mod?",
+        "a1": "Nie — nieoficjalny fanowski patch, niepowiązany z twórcami ani wydawcami.",
+        "q2": "Czy są treści dla dorosłych?",
+        "a2": "Tak — gra jest 18+. Pobieraj i graj tylko, jeśli masz 18 lat lub więcej.",
+        "q3": "Licencja?",
+        "a3": "Pakiet głosów i tłumaczenie: CC BY-NC 4.0 — udostępniaj i modyfikuj z podaniem autorstwa, tylko niekomercyjnie.",
+        "q4": "Jak mogę pomóc?",
+        "a4": "Dodaj gwiazdkę na GitHub, wyślij pull request lub otwórz issue."
+    },
+    "footer": {
+        "disclaimer": "Nieoficjalna fanowska praca. Wszystkie prawa do oryginalnej gry należą do ich właścicieli.",
+        "linksLabel": "Linki",
+        "linkGithub": "GitHub",
+        "linkSteam": "Steam",
+        "linkIssues": "Issues",
+        "linkLicense": "CC BY-NC 4.0",
+        "age": "18+"
+    }
 }

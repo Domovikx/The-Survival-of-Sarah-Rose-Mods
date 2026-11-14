@@ -1,0 +1,82 @@
+{
+  "note": "groupId — «семья» файла на Nexus; обновлять через GraphQL modFiles(gameId, modId) { name groupId } (см. MAP.md)",
+  "mod": {
+    "gameId": "11043",
+    "modId": "1"
+  },
+  "files": [
+    {
+      "name": "Main pack (required)",
+      "group": 8363757,
+      "archive": "TSSR-AI-Voice-Pack-main.7z",
+      "category": "main",
+      "updateModVersion": true
+    },
+    {
+      "name": "Voice RU (Russian)",
+      "group": 8363892,
+      "archive": "TSSR-AI-Voice-Pack-voice-ru.7z",
+      "category": "optional"
+    },
+    {
+      "name": "Voice EN (English)",
+      "group": 8363907,
+      "archive": "TSSR-AI-Voice-Pack-voice-en.7z",
+      "category": "optional"
+    },
+    {
+      "name": "Voice DE (German)",
+      "group": 8363919,
+      "archive": "TSSR-AI-Voice-Pack-voice-de.7z",
+      "category": "optional"
+    },
+    {
+      "name": "Voice ES (Spanish)",
+      "group": 8363943,
+      "archive": "TSSR-AI-Voice-Pack-voice-es.7z",
+      "category": "optional"
+    },
+    {
+      "name": "Voice FR (French)",
+      "group": 8363955,
+      "archive": "TSSR-AI-Voice-Pack-voice-fr.7z",
+      "category": "optional"
+    },
+    {
+      "name": "Voice IT (Italian)",
+      "group": 8363964,
+      "archive": "TSSR-AI-Voice-Pack-voice-it.7z",
+      "category": "optional"
+    },
+    {
+      "name": "Voice JA (Japanese)",
+      "group": 8369436,
+      "archive": "TSSR-AI-Voice-Pack-voice-ja.7z",
+      "category": "optional"
+    },
+    {
+      "name": "Voice KO (Korean)",
+      "group": 8370057,
+      "archive": "TSSR-AI-Voice-Pack-voice-ko.7z",
+      "category": "optional"
+    },
+    {
+      "name": "Voice PL (Polish)",
+      "group": 8370075,
+      "archive": "TSSR-AI-Voice-Pack-voice-pl.7z",
+      "category": "optional"
+    },
+    {
+      "name": "Voice PT (Portuguese)",
+      "group": 8370084,
+      "archive": "TSSR-AI-Voice-Pack-voice-pt.7z",
+      "category": "optional"
+    },
+    {
+      "name": "Voice ZH (Chinese)",
+      "group": 8371305,
+      "archive": "TSSR-AI-Voice-Pack-voice-zh.7z",
+      "category": "optional"
+    }
+  ]
+}

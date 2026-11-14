@@ -30368,7 +30368,7 @@ msgstr "那就当是个蹩脚的玩笑吧。"
 
 msgctxt "speaker:Duke Antonio"
 msgid "Consider it a poor joke then."
-msgstr ""
+msgstr "那就把它当成一个蹩脚的玩笑吧。"
 
 msgctxt "speaker:Sarah"
 msgid "No."
@@ -56016,7 +56016,7 @@ msgstr "其他人呢？"
 
 msgctxt "speaker:Jaeid"
 msgid "The others?"
-msgstr ""
+msgstr "其他的人？"
 
 msgctxt "speaker:Sarah"
 msgid "The people from my country."
@@ -80837,7 +80837,7 @@ msgstr "她开始挺动腰肢，仿佛在向他乞求更多。"
 
 msgctxt "speaker:Narrator"
 msgid "Eagerly he gave it to her as he fucked her harder."
-msgstr ""
+msgstr "他迫不及待地给了她，并且更用力地操着她。"
 
 msgctxt "speaker:Narrator"
 msgid "The young woman submitted herself further to him, having long lost any shame at the act."
@@ -84185,7 +84185,7 @@ msgstr "没什么，我不想拿我的烦心事来打扰你。"
 
 msgctxt "speaker:Ramsey"
 msgid "Listen, little lady, if you can't bother the barkeeper with your troubles, who can you bother with em?"
-msgstr ""
+msgstr "听着，小姑娘，如果你连酒保都不愿意用你的烦恼去麻烦，那你还能去麻烦谁呢？"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah could't help but laugh."
@@ -84193,767 +84193,767 @@ msgstr "莎拉忍不住笑了。"
 
 msgctxt "speaker:Sarah"
 msgid "I mean...okay, if you really don't mind..."
-msgstr ""
+msgstr "我的意思是……好吧，如果你真的不介意的话……"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah started telling him about her day. Slowly at first, then all at once."
-msgstr ""
+msgstr "莎拉开始向他讲述自己的一天。起初语速缓慢，随后便如决堤般倾泻而出。"
 
 msgctxt "speaker:Narrator"
 msgid "Walking the streets, searching for a job, turning it down, everything."
-msgstr ""
+msgstr "逛街、找工作、拒绝offer，诸如此类。"
 
 msgctxt "speaker:Narrator"
 msgid "Ramsey listened attentively as she poke."
-msgstr ""
+msgstr "拉姆齐专心致志地听着她絮叨。"
 
 msgctxt "speaker:Narrator"
 msgid "Only when she was finally done did he speak."
-msgstr ""
+msgstr "直到她终于说完，他才开口。"
 
 msgctxt "speaker:Ramsey"
 msgid "Well, that's quite a lot for a first day in town."
-msgstr ""
+msgstr "嗯，对于一个刚到镇上第一天的人来说，这经历可真是够丰富的。"
 
 msgctxt "speaker:Ramsey"
 msgid "But if you ask me, I think it's a good thing."
-msgstr ""
+msgstr "但在我看来，我觉得这是件好事。"
 
 msgctxt "speaker:Ramsey"
 msgid "Yeah. Ain't hearin nothin but bad things about them Estates."
-msgstr ""
+msgstr "是啊。关于那些庄园，我听到的全是坏话。"
 
 msgctxt "speaker:Ramsey"
 msgid "Rich folk. Powerful folk. Can't be trusted if you ask me. Better you be off chasin an honest job."
-msgstr ""
+msgstr "有钱人。有权势的人。依我看，这种人信不得。你还是去谋个正经差事吧。"
 
 msgctxt "speaker:Sarah"
 msgid "Thank you. It makes me feel a little better hearing that from you."
-msgstr ""
+msgstr "谢谢你。听你这么说，我心里稍微好受了一些。"
 
 msgctxt "speaker:Narrator"
 msgid "Ramsey smiled that broad smile of his."
-msgstr ""
+msgstr "拉姆齐露出了他那标志性的灿烂笑容。"
 
 msgctxt "speaker:Ramsey"
 msgid "Like I said, that's what the barkeep is for, dumpin your troubles on."
-msgstr ""
+msgstr "就像我说的，这就是酒保的活儿——听你倒苦水。"
 
 msgctxt "speaker:Sarah"
 msgid "Thank you again for listening, it really helps."
-msgstr ""
+msgstr "再次谢谢你听我说，这真的帮了大忙。"
 
 msgctxt "speaker:Sarah"
 msgid "This place...it's still all so new. It can feel a little lonely."
-msgstr ""
+msgstr "这个地方……一切都还这么陌生。难免会让人觉得有些孤单。"
 
 msgctxt "speaker:Sarah"
 msgid "I know that's weird to say in a city with so many people."
-msgstr ""
+msgstr "我知道，在这样一个人口众多的城市里说这话很奇怪。"
 
 msgctxt "speaker:Narrator"
 msgid "Ramsey nodded again."
-msgstr ""
+msgstr "拉姆齐再次点了点头。"
 
 msgctxt "speaker:Ramsey"
 msgid "Makes sense to me. I see all types of folks, drifting through, lookin for a way to live."
-msgstr ""
+msgstr "对我来说很合理。我见过各种各样的人，他们匆匆路过，都在寻找谋生的出路。"
 
 msgctxt "speaker:Sarah"
 msgid "How do they find their way?"
-msgstr ""
+msgstr "他们是怎么找到出路的？"
 
 msgctxt "speaker:Ramsey"
 msgid "My advice?"
-msgstr ""
+msgstr "我的建议？"
 
 msgctxt "speaker:Ramsey"
 msgid "I think people need stuff to do."
-msgstr ""
+msgstr "我觉得人总得找点事做。"
 
 msgctxt "speaker:Ramsey"
 msgid "Ain't nothin worse for a person than idle hands and an idle head."
-msgstr ""
+msgstr "对人来说，手闲脑空可是最糟糕不过的了。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah nodded along as he spoke."
-msgstr ""
+msgstr "莎拉一边听着，一边点头表示赞同。"
 
 msgctxt "speaker:Narrator"
 msgid "There was some truth to that, she figured."
-msgstr ""
+msgstr "她觉得这话不无道理。"
 
 msgctxt "speaker:Sarah"
 msgid "That's my problem, I guess. Still figuring that out."
-msgstr ""
+msgstr "我想这是我的问题。还在琢磨呢。"
 
 msgctxt "speaker:Narrator"
 msgid "Ramsey leaned across the bar."
-msgstr ""
+msgstr "拉姆齐俯身越过吧台。"
 
 msgctxt "speaker:Ramsey"
 msgid "Ya know, you don't need to figure it all out in one day."
-msgstr ""
+msgstr "你知道的，你没必要一天之内就把所有事都琢磨透。"
 
 msgctxt "speaker:Ramsey"
 msgid "I means, you could take a job while you keep lookin for that real purpose you seem to be lookin for."
-msgstr ""
+msgstr "我是说，你可以先找份工作，同时继续寻找你似乎一直在追寻的那个真正的目标。"
 
 msgctxt "speaker:Sarah"
 msgid "Sure...but where would I even start?"
-msgstr ""
+msgstr "嗯……但我该从哪里开始呢？"
 
 msgctxt "speaker:Narrator"
 msgid "Again, that broad smile of his."
-msgstr ""
+msgstr "又是他那宽大的笑容。"
 
 msgctxt "speaker:Ramsey"
 msgid "Why ain't you start here?"
-msgstr ""
+msgstr "为什么不在这里开始呢？"
 
 msgctxt "speaker:Sarah"
 msgid "Here?"
-msgstr ""
+msgstr "这里？"
 
 msgctxt "speaker:Ramsey"
 msgid "Sure."
-msgstr ""
+msgstr "没错。"
 
 msgctxt "speaker:Ramsey"
 msgid "My kids are a great help, but as you can see, we got more customers than we can handle."
-msgstr ""
+msgstr "我的孩子们帮了不少忙，但你也看到了，客人实在太多，我们根本应付不过来。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah looked about and knew that it was true. The Inn always seemed full of people."
-msgstr ""
+msgstr "莎拉环顾四周，知道他说得没错。这家客栈似乎总是挤满了人。"
 
 msgctxt "speaker:Ramsey"
 msgid "Sometimes I got customers waitin so long, they take off again."
-msgstr ""
+msgstr "有时候我让客人等太久，他们干脆扭头就走。"
 
 msgctxt "speaker:Ramsey"
 msgid "An extra pair of hands might just be what we need."
-msgstr ""
+msgstr "多一双援手或许正是我们需要的。"
 
 msgctxt "speaker:Sarah"
 msgid "You're...offering me a job here? Working at the Inn?"
-msgstr ""
+msgstr "你……是要给我一份工作？在客栈里工作？"
 
 msgctxt "speaker:Ramsey"
 msgid "Wouldn't be no top job I'm afraid, but the pay is fair, and we can teach you on the job."
-msgstr ""
+msgstr "恐怕不是个什么高管职位，但薪水公道，而且我们可以边干边教你。"
 
 msgctxt "speaker:Ramsey"
 msgid "You could learn how to work the room from my daughter Elsa, and my son Jacob can teach you about the stocking room."
-msgstr ""
+msgstr "你可以向我女儿艾尔莎学习如何打理客房，我儿子雅各布会教你关于储藏室的工作。"
 
 msgctxt "speaker:Ramsey"
 msgid "And tell you what, you do good work, you can keep the room you got here for free."
-msgstr ""
+msgstr "还有，你要是干得好，这间房就免费给你住。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah's eyes wide."
-msgstr ""
+msgstr "莎拉的眼睛睁得大大的。"
 
 msgctxt "speaker:Narrator"
 msgid "Ramsey made a good point. Even if she didn't want to keep working here forever, it would at least buy her time."
-msgstr ""
+msgstr "拉姆齐说得在理。即便她并不打算永远留在这里工作，这至少能让她争取到一些时间。"
 
 msgctxt "speaker:Narrator"
 msgid "She'd keep a place over her head, make some extra coin...some space to breathe."
-msgstr ""
+msgstr "她有了安身之所，还能赚点外快……有了一点喘息的空间。"
 
 msgctxt "speaker:Sarah"
 msgid "You...would really do that for me? We only just met..."
-msgstr ""
+msgstr "你……真的会为我做这些吗？我们才刚认识而已……"
 
 msgctxt "speaker:Narrator"
 msgid "Ramsey smiled as he nodded."
-msgstr ""
+msgstr "拉姆齐微笑着点了点头。"
 
 msgctxt "speaker:Ramsey"
 msgid "Of course."
-msgstr ""
+msgstr "当然。"
 
 msgctxt "speaker:Ramsey"
 msgid "I got a good sense for people, and you strike me as an honest and hard worker."
-msgstr ""
+msgstr "我识人很准，你给我的感觉是个诚实又肯吃苦的人。"
 
 msgctxt "speaker:Ramsey"
 msgid "And customers appreciate a pretty lady helpin them out with their order."
-msgstr ""
+msgstr "而且顾客们也很欣赏漂亮女士帮他们处理订单。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah couldn't help but blush as the compliments."
-msgstr ""
+msgstr "莎拉不禁因这些赞美而脸红。"
 
 msgctxt "speaker:Ramsey"
 msgid "Tell you what, how bout you take the night to sleep it over?"
-msgstr ""
+msgstr "这样吧，今晚先回去好好想想？"
 
 msgctxt "speaker:Ramsey"
 msgid "And if you're still interested, you can get started tomorrow, sound fair?"
-msgstr ""
+msgstr "如果你还感兴趣，明天就可以开始，这样很公平吧？"
 
 msgctxt "speaker:Sarah"
 msgid "Thank you! I will!"
-msgstr ""
+msgstr "谢谢！我会的！"
 
 msgctxt "speaker:Narrator"
 msgid "Ramsey looked past her."
-msgstr ""
+msgstr "拉姆齐越过她望去。"
 
 msgctxt "speaker:Ramsey"
 msgid "Gotta help out over there, but see you around!"
-msgstr ""
+msgstr "那边得去帮把手，不过回头见！"
 
 msgctxt "speaker:Narrator"
 msgid "With that, he took off."
-msgstr ""
+msgstr "说完，他便离开了。"
 
 msgctxt "speaker:Narrator"
 msgid "With the day winding down, Sarah decided to head to her room."
-msgstr ""
+msgstr "随着一天的结束，莎拉决定回房休息。"
 
 msgctxt "speaker:Narrator"
 msgid "Sitting in the small yet quiet spot, she couldn't help but feel a little proud of herself."
-msgstr ""
+msgstr "坐在这处虽小却安静的角落，她不禁为自己感到一丝骄傲。"
 
 msgctxt "speaker:Narrator"
 msgid "The day hadn't quite gone as she had planned, but she'd gotten a real job offer."
-msgstr ""
+msgstr "这一天并没有完全按照她的计划进行，但她确实收到了一份真正的工作录用通知。"
 
 msgctxt "speaker:Narrator"
 msgid "For the first time, she dared to think she might be alright."
-msgstr ""
+msgstr "有生以来，她第一次敢想，自己或许会没事的。"
 
 msgctxt "speaker:Narrator"
 msgid "Laying down her head, she was soon fast asleep."
-msgstr ""
+msgstr "她把头一枕，很快就进入了梦乡。"
 
 msgctxt "speaker:Narrator"
 msgid "When Sarah woke the next morning, her conversation with Ramsey was first on her mind."
-msgstr ""
+msgstr "莎拉第二天早上醒来时，她脑海中浮现的第一件事就是与拉姆齐的谈话。"
 
 msgctxt "speaker:Narrator"
 msgid "A job at this Inn might just be the thing she needed."
-msgstr ""
+msgstr "在这家旅馆工作也许正是她所需要的。"
 
 msgctxt "speaker:Narrator"
 msgid "Stability..."
-msgstr ""
+msgstr "稳定……"
 
 msgctxt "speaker:Narrator"
 msgid "And the Dunstin family seemed nice enough."
-msgstr ""
+msgstr "而邓斯汀一家看起来也挺和善的。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah had made up her mind."
-msgstr ""
+msgstr "莎拉已经打定主意了。"
 
 msgctxt "speaker:Narrator"
 msgid "Heading down stairs, she quickly found Ramsey, already hard at work."
-msgstr ""
+msgstr "走下楼梯时，她很快找到了拉姆齐，他已经开始忙碌工作了。"
 
 msgctxt "speaker:Ramsey"
 msgid "Mornin."
-msgstr ""
+msgstr "早啊。"
 
 msgctxt "speaker:Narrator"
 msgid "He greeted her as he continued to work."
-msgstr ""
+msgstr "他一边继续工作，一边向她打招呼。"
 
 msgctxt "speaker:Sarah"
 msgid "I...mister Ramsey, sir..."
-msgstr ""
+msgstr "我……拉姆齐先生，长官……"
 
 msgctxt "speaker:Narrator"
 msgid "He began to laugh loudly."
-msgstr ""
+msgstr "他开始大声笑了起来。"
 
 msgctxt "speaker:Ramsey"
 msgid "Listen, Sarah, don't ever call me that again."
-msgstr ""
+msgstr "听着，莎拉，别再那样叫我了。"
 
 msgctxt "speaker:Ramsey"
 msgid "You can just call me Ramsey, got it?"
-msgstr ""
+msgstr "你直接叫我拉姆齐就行，明白了吗？"
 
 msgctxt "speaker:Sarah"
 msgid "Of course, sir- I mean, Ramsey...I just wanted to speak to you...about what we discussed yesterday."
-msgstr ""
+msgstr "当然，先生——我是说，拉姆齐……我只是想和你谈谈……关于我们昨天讨论过的事情。"
 
 msgctxt "speaker:Ramsey"
 msgid "Yesterday?"
-msgstr ""
+msgstr "昨天？"
 
 msgctxt "speaker:Sarah"
 msgid "The...job offer?"
-msgstr ""
+msgstr "那……工作邀请？"
 
 msgctxt "speaker:Ramsey"
 msgid "Oh, of course! Sorry, little lady, I got so much goin on, sometimes I struggle to keep up with my own mind."
-msgstr ""
+msgstr "哦，当然！抱歉，小姑娘，我手头事情太多，有时候连自己的脑子都跟不上。"
 
 msgctxt "speaker:Ramsey"
 msgid "Did you make a decision?"
-msgstr ""
+msgstr "你做出决定了吗？"
 
 msgctxt "speaker:Sarah"
 msgid "I would very much like to take you up on it."
-msgstr ""
+msgstr "我非常乐意接受这份工作。"
 
 msgctxt "speaker:Narrator"
 msgid "Ramsey clasped his hands together."
-msgstr ""
+msgstr "拉姆齐双手合十。"
 
 msgctxt "speaker:Ramsey"
 msgid "That's great news!"
-msgstr ""
+msgstr "这真是好消息！"
 
 msgctxt "speaker:Narrator"
 msgid "A wide smile on his face seemed to suggest he was earnest."
-msgstr ""
+msgstr "他脸上灿烂的笑容似乎表明他是认真的。"
 
 msgctxt "speaker:Ramsey"
 msgid "Tell you what though, I'm a bit busy opening up here."
-msgstr ""
+msgstr "不过跟你说，我现在忙着开门营业呢。"
 
 msgctxt "speaker:Ramsey"
 msgid "How bout you grab a hold of my boy, Jacob. He can help you get started up."
-msgstr ""
+msgstr "要不你带上我的男孩雅各布，他能帮你起步。"
 
 msgctxt "speaker:Sarah"
 msgid "I will. Thank you for the opportunity!"
-msgstr ""
+msgstr "我会的。谢谢你给我这个机会！"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah watched as Ramsey took off, heading down into the cellars as he carried two large kegs with no trouble at all."
-msgstr ""
+msgstr "莎拉看着拉姆齐离开，他毫不费力地扛着两个大酒桶走向地下室。"
 
 msgctxt "speaker:Narrator"
 msgid "As she walked through the Inn, she saw that the first few customers were already seated and being served."
-msgstr ""
+msgstr "穿过酒馆时，她看到前几位客人已经落座，正在接受服务。"
 
 msgctxt "speaker:Narrator"
 msgid "Working here would probably mean waking up a lot earlier than she was used to."
-msgstr ""
+msgstr "在这工作大概意味着她得比平时早起很多。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah scanned the room, searching for Jacob."
-msgstr ""
+msgstr "莎拉扫视着房间，寻找雅各布。"
 
 msgctxt "speaker:Narrator"
 msgid "It took her a minute until she finally spotted him walking quickly through the room, carrying a crate full of fresh produce from the market."
-msgstr ""
+msgstr "她花了一分钟才终于看到他在房间里快步走着，手里搬着一箱从市场买来的新鲜农产品。"
 
 msgctxt "speaker:Narrator"
 msgid "She saw him continue to walk."
-msgstr ""
+msgstr "她看着他继续往前走。"
 
 msgctxt "speaker:Sarah"
 msgid "Hey, Jacob!"
-msgstr ""
+msgstr "嘿，雅各布！"
 
 msgctxt "speaker:Narrator"
 msgid "The boy stopped and turned at hearing his name."
-msgstr ""
+msgstr "男孩听到自己的名字，停下脚步转过身来。"
 
 msgctxt "speaker:Narrator"
 msgid "When his eyes fell on her, he looked more confused than anything."
-msgstr ""
+msgstr "当他的目光落在她身上时，他看起来更多的是困惑，而非其他任何情绪。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah quickly made her way towards him."
-msgstr ""
+msgstr "莎拉迅速朝他走去。"
 
 msgctxt "speaker:Jacob"
 msgid "I...is there anything you want?"
-msgstr ""
+msgstr "我……你有什么事吗？"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah kept up her smile, desite how curt he was with her."
-msgstr ""
+msgstr "莎拉保持着微笑，尽管他对待她十分简短冷淡。"
 
 msgctxt "speaker:Narrator"
 msgid "Clearly, the boy had not inherited the happy-go-lucky attitude of his father."
-msgstr ""
+msgstr "显然，这孩子并没有继承他父亲那种乐天派的性格。"
 
 msgctxt "speaker:Sarah"
 msgid "I spoke with your dad."
-msgstr ""
+msgstr "我和你父亲谈过了。"
 
 msgctxt "speaker:Sarah"
 msgid "He offered me a job here."
-msgstr ""
+msgstr "他给我提供了一份在这里的工作。"
 
 msgctxt "speaker:Narrator"
 msgid "She saw Jacob roll his eyes."
-msgstr ""
+msgstr "她看见雅各布翻了个白眼。"
 
 msgctxt "speaker:Jacob"
 msgid "Of course he did."
-msgstr ""
+msgstr "他当然这么说了。"
 
 msgctxt "speaker:Sarah"
 msgid "And he said that I should ask you for help on getting started."
-msgstr ""
+msgstr "他还说，我应该向你请教如何开始工作。"
 
 msgctxt "speaker:Narrator"
 msgid "Jacob held up the crate."
-msgstr ""
+msgstr "雅各布举起那个箱子。"
 
 msgctxt "speaker:Jacob"
 msgid "Well, I'm busy right now."
-msgstr ""
+msgstr "好吧，我现在很忙。"
 
 msgctxt "speaker:Jacob"
 msgid "And really, I have a full day of things to do, so just..."
-msgstr ""
+msgstr "而且说实话，我今天一整天都有事要做，所以……"
 
 msgctxt "speaker:Narrator"
 msgid "He gestured at a seat."
-msgstr ""
+msgstr "他指了指一个座位。"
 
 msgctxt "speaker:Jacob"
 msgid "Just wait and maybe I'll come by later today."
-msgstr ""
+msgstr "那你就等着吧，说不定我今天晚些时候会过去看看。"
 
 msgctxt "speaker:Jacob"
 msgid "But no promise, I'm really busy."
-msgstr ""
+msgstr "不过不保证啊，我真的很忙。"
 
 msgctxt "speaker:Narrator"
 msgid "And with with that, Sarah watched Jacob take off."
-msgstr ""
+msgstr "就这样，莎拉看着雅各布离去。"
 
 msgctxt "speaker:Narrator"
 msgid "She thought of calling after him, saying something, but he was already gone."
-msgstr ""
+msgstr "她本想喊住他，说点什么，但他已经走远了。"
 
 msgctxt "speaker:Narrator"
 msgid "Deflated, Sarah sat down on a nearby bench."
-msgstr ""
+msgstr "莎拉感到有些泄气，在附近的长椅上坐了下来。"
 
 msgctxt "speaker:Narrator"
 msgid "Jacob had said he'd come back later. Maybe. Or maybe not at all."
-msgstr ""
+msgstr "雅各布说过他晚些时候会回来。也许吧。或者根本不会。"
 
 msgctxt "speaker:Elsa"
 msgid "Don't mind him."
-msgstr ""
+msgstr "别在意他。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah looked up at the sudden voice."
-msgstr ""
+msgstr "莎拉抬起头，看向那突然响起的声音。"
 
 msgctxt "speaker:Elsa"
 msgid "My brother, Jacob. He can be an asshole sometimes."
-msgstr ""
+msgstr "我哥哥，雅各布。他有时候挺混蛋的。"
 
 msgctxt "speaker:Elsa"
 msgid "He doesn't mean to be, but...well..."
-msgstr ""
+msgstr "他不是故意的，只是……嗯……"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah softly shook her head."
-msgstr ""
+msgstr "莎拉轻轻摇了摇头。"
 
 msgctxt "speaker:Sarah"
 msgid "No, I don't think he was being mean...he said he was busy."
-msgstr ""
+msgstr "不，我不觉得他是在故意找茬……他说他很忙。"
 
 msgctxt "speaker:Narrator"
 msgid "The girl smiled as she sat down next to Sarah."
-msgstr ""
+msgstr "女孩在莎拉身旁坐下，露出了微笑。"
 
 msgctxt "speaker:Elsa"
 msgid "He's always busy."
-msgstr ""
+msgstr "他总是很忙。"
 
 msgctxt "speaker:Elsa"
 msgid "And he always thinks he has to everything himself."
-msgstr ""
+msgstr "而且他总是觉得自己什么都得亲力亲为。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah saw the woman's eyes go up and down her body."
-msgstr ""
+msgstr "莎拉看到那个女人的目光在她身上上下打量。"
 
 msgctxt "speaker:Elsa"
 msgid "I like your dress."
-msgstr ""
+msgstr "我喜欢你的裙子。"
 
 msgctxt "speaker:Sarah"
 msgid "Oh...thank you."
-msgstr ""
+msgstr "哦……谢谢。"
 
 msgctxt "speaker:Elsa"
 msgid "It's very...foreign, I think. Looks expensive."
-msgstr ""
+msgstr "它看起来很……异域，我觉得。看起来很贵。"
 
 msgctxt "speaker:Elsa"
 msgid "You're not from around here?"
-msgstr ""
+msgstr "你不是本地人？"
 
 msgctxt "speaker:Sarah"
 msgid "I came from Rosanna, by way of Lethram"
-msgstr ""
+msgstr "我来自罗赞娜，途经莱瑟拉姆。"
 
 msgctxt "speaker:Elsa"
 msgid "Ooh wow, yeah that is far away."
-msgstr ""
+msgstr "哇哦，确实挺远的。"
 
 msgctxt "speaker:Elsa"
 msgid "Good thing you made it here though."
-msgstr ""
+msgstr "不过你能平安到达这里，真是万幸。"
 
 msgctxt "speaker:Elsa"
 msgid "I heard all the stories of what's happening overseas, with those barbarians...yikes."
-msgstr ""
+msgstr "我听说了海外那边发生的所有故事，那些野蛮人……天哪。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah just nodded, the sharp pain of being reminded of what was happening in her home country, stining."
-msgstr ""
+msgstr "莎拉只是点了点头，被提醒起祖国正在发生的事，尖锐的刺痛感袭来。"
 
 msgctxt "speaker:Elsa"
 msgid "My name's Elsa, by the way."
-msgstr ""
+msgstr "顺便说一下，我叫艾尔莎。"
 
 msgctxt "speaker:Sarah"
 msgid "Yeah, I heard your name before from your father. And I saw you when I got here yesterday."
-msgstr ""
+msgstr "是啊，我之前听你父亲提起过你的名字。昨天我到的时候也见过你。"
 
 msgctxt "speaker:Narrator"
 msgid "Elsa smiled."
-msgstr ""
+msgstr "艾尔莎笑了笑。"
 
 msgctxt "speaker:Elsa"
 msgid "Ah, I must have missed you. Or maybe I was too busy. We had a lot of people over yesterday."
-msgstr ""
+msgstr "啊，我可能错过了你。或者也许我太忙了。昨天我们家里来了很多人。"
 
 msgctxt "speaker:Elsa"
 msgid "A lot of people most days, actually."
-msgstr ""
+msgstr "其实，大多数时候家里人都很多。"
 
 msgctxt "speaker:Sarah"
 msgid "Yeah, that's why Ramsey...uh, your father...he offered me a job..."
-msgstr ""
+msgstr "是啊，这就是为什么拉姆齐……呃，你父亲……他给我提供了一份工作……"
 
 msgctxt "speaker:Narrator"
 msgid "Elsa's face lit up."
-msgstr ""
+msgstr "艾尔莎的脸上露出了光彩。"
 
 msgctxt "speaker:Elsa"
 msgid "A job! That's awesome!"
-msgstr ""
+msgstr "工作！太棒了！"
 
 msgctxt "speaker:Sarah"
 msgid "It's...really? You're brother didn't seem that excited about it."
-msgstr ""
+msgstr "真的吗？你哥哥听起来对此并没有那么兴奋。"
 
 msgctxt "speaker:Narrator"
 msgid "Elsa shrugged."
-msgstr ""
+msgstr "艾尔莎耸了耸肩。"
 
 msgctxt "speaker:Elsa"
 msgid "Just ignore him. Like I said, he can be an asshole, but you'll learn his, uhm...oddities, I guess."
-msgstr ""
+msgstr "别理他。就像我说的，他有时候挺混蛋的，不过你慢慢就会习惯他的……那些怪癖了，我想。"
 
 msgctxt "speaker:Elsa"
 msgid "We should be happy to have an extra pair of hands!"
-msgstr ""
+msgstr "多一双人手，我们该高兴才对！"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah smiled, suddenly feeling good again about having accepted the job."
-msgstr ""
+msgstr "莎拉笑了笑，对接受这份工作重新感到安心。"
 
 msgctxt "speaker:Sarah"
 msgid "Yeah, your dad told me to speak to Jacob about getting started, but he...well, you heard him."
-msgstr ""
+msgstr "是啊，你爸爸让我跟雅各布谈谈怎么开始工作，但他……嗯，你也听到了。"
 
 msgctxt "speaker:Narrator"
 msgid "Elsa nodded."
-msgstr ""
+msgstr "艾尔莎点了点头。"
 
 msgctxt "speaker:Elsa"
 msgid "Sure. How about, instead, I help you get started?"
-msgstr ""
+msgstr "没问题。要不这样，我帮你开始吧？"
 
 msgctxt "speaker:Sarah"
 msgid "I'd love that!"
-msgstr ""
+msgstr "求之不得！"
 
 msgctxt "speaker:Elsa"
 msgid "Great! Just follow me to the bar."
-msgstr ""
+msgstr "太好了！跟我来酒吧。"
 
 msgctxt "speaker:Narrator"
 msgid "Elsa got up and motioned for Sarah to follow. She quickly did."
-msgstr ""
+msgstr "艾尔莎站起身，示意莎拉跟上。莎拉迅速照做。"
 
 msgctxt "speaker:Narrator"
 msgid "Behind the bar, Elsa laid out a scroll."
-msgstr ""
+msgstr "艾尔莎在吧台后面铺开了一张菜单卷轴。"
 
 msgctxt "speaker:Elsa"
 msgid "These here are the menu items."
-msgstr ""
+msgstr "这些就是菜单上的菜品。"
 
 msgctxt "speaker:Narrator"
 msgid "She ran her finger down the list."
-msgstr ""
+msgstr "她用手指顺着列表滑下。"
 
 msgctxt "speaker:Elsa"
 msgid "You can read, I assume?"
-msgstr ""
+msgstr "我想你会读吧？"
 
 msgctxt "speaker:Narrator"
 msgid "Her eyes tracked the items. Sandwhiches. Stew. Grilled pork."
-msgstr ""
+msgstr "她的目光扫过那些菜品。三明治。炖菜。烤猪肉。"
 
 msgctxt "speaker:Elsa"
 msgid "Just memorize the menu, and then you can start by taking on orders."
-msgstr ""
+msgstr "先把菜单背下来，然后就可以开始接单了。"
 
 msgctxt "speaker:Elsa"
 msgid "Write up an order list, file it up on the counter there, and my dad will cook them in order."
-msgstr ""
+msgstr "把点菜单写下来，放在那边的柜台上，我爸爸会按顺序做。"
 
 msgctxt "speaker:Elsa"
 msgid "Then you just take the orders back to the table."
-msgstr ""
+msgstr "然后你把单子端回桌上去就行了。"
 
 msgctxt "speaker:Elsa"
 msgid "Easy as can be, right?"
-msgstr ""
+msgstr "简单得很，对吧？"
 
 msgctxt "speaker:Narrator"
 msgid "It sounded easy enough."
-msgstr ""
+msgstr "听起来挺简单的。"
 
 msgctxt "speaker:Elsa"
 msgid "Great. My theory is that you learn by doing, so just get out on the floor and start taking some orders."
-msgstr ""
+msgstr "太好了。我的理论是，只有在实践中才能学到东西，所以赶紧去大厅开始接单吧。"
 
 msgctxt "speaker:Elsa"
 msgid "I'll take this side of the room, you take the other."
-msgstr ""
+msgstr "我在这边，你去另一边。"
 
 msgctxt "speaker:Sarah"
 msgid "Okay!"
-msgstr ""
+msgstr "好的！"
 
 msgctxt "speaker:Narrator"
 msgid "Full of energy, Sarah strode out onto the floor."
-msgstr ""
+msgstr "充满活力的莎拉大步走向大厅。"
 
 msgctxt "speaker:Narrator"
 msgid "Just about half the tables had customers waiting."
-msgstr ""
+msgstr "差不多一半的桌子都有客人在等着。"
 
 msgctxt "speaker:Captain Belmont"
 msgid "You wanna come work for me?"
-msgstr ""
+msgstr "你想来给我干活吗？"
 
 msgctxt "speaker:Sarah"
 msgid "You need a deck hand, and you're always looking for one, I thought, why not just hire me full time?"
-msgstr ""
+msgstr "既然你需要水手，而且你一直在招人，我想，为什么不直接雇我全职呢？"
 
 msgctxt "speaker:Captain Belmont"
 msgid "What about your big plans of living in this city?"
-msgstr ""
+msgstr "那你在这座城市生活的大计划呢？"
 
 msgctxt "speaker:Sarah"
 msgid "Why live here? What is waiting for me in a city where I don't know anybody?"
-msgstr ""
+msgstr "为什么要留在这里？在一个我谁也不认识的城市里，有什么在等着我呢？"
 
 msgctxt "speaker:Sarah"
 msgid "I'm starting to realize that, more than anything, I just wanted to get away from Lethram. Get away from everything that was keeping me there."
-msgstr ""
+msgstr "我开始意识到，比起其他任何事，我只是想逃离莱瑟拉姆。逃离所有把我困在那里的东西。"
 
 msgctxt "speaker:Sarah"
 msgid "Out there, on the sea, it was like nothing I ever saw before. I think maybe that's where I'm supposed to be, out on the open ocean."
-msgstr ""
+msgstr "在外面，在大海上，那景象是我从未见过的。我想，也许我本该属于那里，属于那片开阔的海洋。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah looked at captain Belmont."
-msgstr ""
+msgstr "莎拉看着船长贝尔蒙特。"
 
 msgctxt "speaker:Narrator"
 msgid "With her eyes, she pleaded."
-msgstr ""
+msgstr "她用眼神恳求着。"
 
 msgctxt "speaker:Narrator"
 msgid "She knew she had no right to ask this of him."
-msgstr ""
+msgstr "她知道她没有权利向他提出这样的要求。"
 
 msgctxt "speaker:Narrator"
 msgid "What little she knew of sailing had been learned only on this recent trip, and even then, she knew she was holding him back."
-msgstr ""
+msgstr "她所知道的航海知识全来自这次最近的航行，即便如此，她也清楚自己是在拖后腿。"
 
 msgctxt "speaker:Narrator"
 msgid "For what he paid her, he could no doubt get himself a proper crew member."
-msgstr ""
+msgstr "以他付给她的报酬，他毫无疑问能雇到一个真正合格的船员。"
 
 msgctxt "speaker:Narrator"
 msgid "And still, she pleaded."
-msgstr ""
+msgstr "尽管如此，她仍在恳求。"
 
 msgctxt "speaker:Captain Belmont"
 msgid "You can't rig a sail, couldn't tie a proper knot if your life depended on it and if I let you navigate we'd be lost at sea in under a day."
-msgstr ""
+msgstr "你既不会升帆，要是命悬一线也打不好一个像样的结；要是让你掌舵，我们不到一天就会在海上迷航。"
 
 msgctxt "speaker:Captain Belmont"
 msgid "But, you can scrub a deck and you're not all bad at sucking my cock."
-msgstr ""
+msgstr "不过，你擦甲板还是可以的，而且你吸我鸡巴的技术也不赖。"
 
 msgctxt "speaker:Narrator"
 msgid "He adjusted his belt and spat on the deck of his ship."
-msgstr ""
+msgstr "他调整了一下腰带，朝船甲板啐了一口。"
 
 msgctxt "speaker:Captain Belmont"
 msgid "So I suppose I could take you on."
-msgstr ""
+msgstr "看来我只能把你收下了。"
 
 msgctxt "speaker:Sarah"
 msgid "Thank you, captain Belmont! I promise I'll earn my keep."
-msgstr ""
+msgstr "谢谢您，贝尔蒙特船长！我保证我会努力干活，不负所托。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah ran up to him and embraced him."
-msgstr ""
+msgstr "莎拉跑上前去，拥抱了他。"
 
 msgctxt "speaker:Narrator"
 msgid "He grabbed her shoulders and pushed her away."
-msgstr ""
+msgstr "他抓住她的肩膀，把她推开。"
 
 msgctxt "speaker:Captain Belmont"
 msgid "This ain't no charity, blondie."
-msgstr ""
+msgstr "这可不是什么慈善事业，金发妞。"
 
 msgctxt "speaker:Captain Belmont"
 msgid "No, you don't."
-msgstr ""
+msgstr "不，你不需要。"
 
 msgctxt "speaker:Captain Belmont"
 msgid "This trip was one thing, but if you wanna be my deck hand, you're gonna have to learn how to work a ship proper."
-msgstr ""
+msgstr "这次行程算是个例外，但如果你想当我的水手，就得学会怎么正经地操作船只。"
 
 msgctxt "speaker:Sarah"
 msgid "I will. I promise I'll do better."
-msgstr ""
+msgstr "我会的。我保证会做得更好。"
 
 msgctxt "speaker:Captain Belmont"
 msgid "That means I'll take you on as an apprentice."
-msgstr ""
+msgstr "这意味着我会收你为学徒。"
 
 msgctxt "speaker:Sarah"
 msgid "Of course!"
-msgstr ""
+msgstr "当然！"
 
 msgctxt "speaker:Captain Belmont"
 msgid "And that means you get the pay of an apprentice."
-msgstr ""
+msgstr "这意味着你只能拿学徒的薪水。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah paused for a moment, but she knew she had no room to negotiate. In truth, she didn't think she could demand any wage at all, given her limited experience."
@@ -84961,15 +84961,15 @@ msgstr ""
 
 msgctxt "speaker:Sarah"
 msgid "Yes, that's fair."
-msgstr ""
+msgstr "是的，这很公平。"
 
 msgctxt "speaker:Captain Belmont"
 msgid "Alright then, let's make this official, follow me."
-msgstr ""
+msgstr "好吧，那就正式一点，跟我来。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah watched captain Belmont turn around and head below deck. Dutifully, she followed."
-msgstr ""
+msgstr "莎拉看着船长贝尔蒙特转身走向船舱下层，她顺从地跟了上去。"
 
 msgctxt "speaker:Narrator"
 msgid "Following Belmont, Sarah found herself back at his cabin, by now a familiar place."
@@ -84981,7 +84981,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Sarah had no illusions that her body didn't afford her certain considerations. It was a tool for her to use to her advantage."
-msgstr ""
+msgstr "莎拉很清楚，她的身体能给她带来某些优待。这是她可以利用来为自己谋利的工具。"
 
 msgctxt "speaker:Narrator"
 msgid "If that's what it would cost, she'd pay it."
