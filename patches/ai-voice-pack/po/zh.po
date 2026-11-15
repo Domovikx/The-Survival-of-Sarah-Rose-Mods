@@ -274245,9 +274245,10 @@ msgctxt "ui"
 msgid "Image% d of% d is blocked."
 msgstr "图片 %d/%d 已被屏蔽。"
 
+# changed
 msgctxt "ui"
 msgid "The Survival of Sarah Rose"
-msgstr "莎拉·罗斯的生存"
+msgstr "The Survival of Sarah Rose"
 
 msgctxt "speaker:Narrator"
 msgid "She jumped out of the bed, gathered what little she could."
@@ -276241,9 +276242,10 @@ msgctxt "ui"
 msgid "Quick saves"
 msgstr "快速存档"
 
+# changed
 msgctxt "ui"
 msgid "{#file_time}%A, %B %d %Y, %H:%M"
-msgstr "%A年%B月%d日%H时%M分"
+msgstr "{#file_time}%Y年%m月%d日 %A %H:%M"
 
 msgctxt "ui"
 msgid "empty slot"
@@ -276253,9 +276255,10 @@ msgctxt "ui"
 msgid "<"
 msgstr "<"
 
+# changed
 msgctxt "ui"
 msgid "{#auto_page}A"
-msgstr "A"
+msgstr "{#auto_page}A"
 
 msgctxt "ui"
 msgid "{#quick_page}Q"
