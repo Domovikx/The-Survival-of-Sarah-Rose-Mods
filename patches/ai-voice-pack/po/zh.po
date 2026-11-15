@@ -261874,83 +261874,83 @@ msgstr "这东西能喝吗？"
 
 msgctxt "speaker:Alaric"
 msgid "You probably know your wines better than me."
-msgstr ""
+msgstr "你大概比我更懂葡萄酒吧？"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah looks at the label on the bottle."
-msgstr ""
+msgstr "莎拉看了看瓶子上的标签。"
 
 msgctxt "speaker:Sarah"
 msgid "Huh...it is actually pretty good. I haven't had this in years. Rare, too."
-msgstr ""
+msgstr "嗯……其实还挺不错的。我已经很多年没喝过这种酒了。而且也很稀有。"
 
 msgctxt "speaker:Alaric"
 msgid "Not too rare to waste on a fella like me, I hope."
-msgstr ""
+msgstr "希望这酒不会太稀有，以至于要浪费在我这样的男人身上吧。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah jolts the bottle with a small burst of energy, causing the cork to pop off."
-msgstr ""
+msgstr "莎拉突然用一股小小的力量摇晃瓶子，导致软木塞弹了出来。"
 
 msgctxt "speaker:Sarah"
 msgid "Probably wasted on you, but I'd be a terrible host if I'd let you go thirsty."
-msgstr ""
+msgstr "也许这对你来说有点浪费，但如果我让你干渴离开，那可就太不像个好主人了。"
 
 msgctxt "speaker:Narrator"
 msgid "She sees Alaric grin as he reaches for the bottle."
-msgstr ""
+msgstr "她看见阿拉里克在伸手去拿瓶子时露出了微笑。"
 
 msgctxt "speaker:Narrator"
 msgid "Tilting it over, he takes a large swig."
-msgstr ""
+msgstr "他把瓶子倾斜过去，然后灌了一大口才。"
 
 msgctxt "speaker:Alaric"
 msgid "Not bad."
-msgstr ""
+msgstr "不错嘛。"
 
 msgctxt "speaker:Narrator"
 msgid "He holds the bottle out for Sarah to drink."
-msgstr ""
+msgstr "他把瓶子递向莎拉，让她喝酒。"
 
 msgctxt "speaker:Sarah"
 msgid "No, I'm good."
-msgstr ""
+msgstr "不，我没事。"
 
 msgctxt "speaker:Sarah"
 msgid "I've had a long day."
-msgstr ""
+msgstr "我这一天过得很累。"
 
 msgctxt "speaker:Narrator"
 msgid "Alaric keeps holding out the bottle."
-msgstr ""
+msgstr "阿拉里克仍然举着那瓶酒。"
 
 msgctxt "speaker:Alaric"
 msgid "Those are the best days to drink."
-msgstr ""
+msgstr "那些才是最适合喝酒的日子啊。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah rolls her eyes, knowing she won't win an argument with him."
-msgstr ""
+msgstr "莎拉翻了翻白眼，她知道自己根本赢不了这场争论。"
 
 msgctxt "speaker:Narrator"
 msgid "She grabs the bottle and takes a more modest sip."
-msgstr ""
+msgstr "她抓起酒瓶，这次只小酌了一口。"
 
 msgctxt "speaker:Narrator"
 msgid "As the wine hits her tongue, she's hit by a rush of sweetness."
-msgstr ""
+msgstr "随着葡萄酒滑入舌尖，一阵浓烈的甜意瞬间席卷了她。"
 
 msgctxt "speaker:Narrator"
 msgid "More than the flavor, she's shocked at the memories that the wine solicits."
-msgstr ""
+msgstr "比起味道本身，更让她震惊的是这杯酒勾起了哪些回忆。"
 
 msgctxt "speaker:Narrator"
 msgid "For the briefest instance, she's back home in Castle Reinmeer, tasting it for the first time."
-msgstr ""
+msgstr "有那么一瞬间，她仿佛回到了雷恩米尔城堡，第一次品尝这杯酒。"
 
 msgctxt "speaker:Narrator"
 msgid "Alaric smiles."
-msgstr ""
+msgstr "阿拉里克笑了。"
 
 msgctxt "speaker:Alaric"
 msgid "That good,huh?"
@@ -261958,7 +261958,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Sarah looks at the bottle. More memories flooding her mind."
-msgstr ""
+msgstr "莎拉注视着那瓶东西。更多记忆涌入了她的脑海。"
 
 msgctxt "speaker:Sarah"
 msgid "Yeah...it's just...I forgot what it tasted like. It's been a while."
