@@ -40,6 +40,28 @@ const FLAGS = (lang: string): string => join("tmp", `judge_${lang}.txt`);
 const FIX = (lang: string): string => join("tmp", `fix_${lang}.txt`);
 const LMS = join(process.env.USERPROFILE ?? "", ".lmstudio", "bin", "lms.exe");
 
+/**
+ * Бэкенд перевода: env (TSSR_LLM_URL/MODEL) важнее дефолта — так пульт работает
+ * и с headless llama-server, где LM Studio вообще не запущена.
+ */
+const BACKEND: { url: string; model: string } = {
+  url: process.env.TSSR_LLM_URL ?? TRANSLATE_BACKEND.url,
+  model: process.env.TSSR_LLM_MODEL ?? TRANSLATE_BACKEND.model,
+};
+const IS_LM_STUDIO = BACKEND.url.includes(":1234");
+
+/** Синхронная проверка «сервер отвечает» для не-LM бэкендов. */
+const httpOk = (url: string): boolean => {
+  const out = spawnSync(
+    "curl",
+    ["-s", "-o", process.platform === "win32" ? "NUL" : "/dev/null", "-w", "%{http_code}", "--max-time", "3", url],
+    {
+      encoding: "utf-8",
+    },
+  ).stdout;
+  return (out ?? "").trim() === "200";
+};
+
 const die = (message: string): never => {
   console.error(message);
   process.exit(1);
@@ -55,10 +77,12 @@ const run = (bin: string, args: string[]): string => {
  * Модель ЗАГРУЖЕНА в память? Проверяем `lms ps`, а не `/v1/models`: эндпоинт
  * отдаёт все СКАЧАННЫЕ модели (проверено 2026-11-15 — «загружена» было ложью).
  */
-const lmsLoaded = (): boolean => /index-translate-9b\s+index-translate-9b/m.test(run(LMS, ["ps"]));
+const lmsLoaded = (): boolean =>
+  IS_LM_STUDIO ? /index-translate-9b\s+index-translate-9b/m.test(run(LMS, ["ps"])) : httpOk(`${BACKEND.url}/v1/models`);
 
 /** Сервер LM Studio отвечает? (`lms load` иногда оставляет сервер выключенным.) */
-const lmsServerUp = (): boolean => /running/i.test(run(LMS, ["server", "status"]));
+const lmsServerUp = (): boolean =>
+  IS_LM_STUDIO ? /running/i.test(run(LMS, ["server", "status"])) : httpOk(`${BACKEND.url}/v1/models`);
 
 const progress = (lang: string): { filled: number; total: number } => {
   const text = readFileSync(PO(lang), "utf-8").replace(/\r\n/g, "\n");
@@ -84,13 +108,15 @@ const runningPid = (lang: string): number | null => {
 
 /** Поднимает LM Studio и грузит переводческую модель; падает, если не вышло. */
 const ensureBackend = (): void => {
+  if (!IS_LM_STUDIO) {
+    if (!httpOk(`${BACKEND.url}/v1/models`)) die(`бэкенд ${BACKEND.url} не отвечает (поднять: translate_queue.mts)`);
+    return;
+  }
   if (!existsSync(LMS)) die(`не нашёл lms.exe: ${LMS}`);
   if (!lmsServerUp()) run(LMS, ["server", "start"]);
   if (!lmsLoaded()) {
-    console.log(`загружаю ${TRANSLATE_BACKEND.model} (-c 8192 --parallel 4 --gpu max --ttl 86400)…`);
-    console.log(
-      run(LMS, ["load", TRANSLATE_BACKEND.model, "-c", "8192", "--parallel", "4", "--gpu", "max", "--ttl", "86400"]),
-    );
+    console.log(`загружаю ${BACKEND.model} (-c 8192 --parallel 4 --gpu max --ttl 86400)…`);
+    console.log(run(LMS, ["load", BACKEND.model, "-c", "8192", "--parallel", "4", "--gpu", "max", "--ttl", "86400"]));
     if (!lmsServerUp()) run(LMS, ["server", "start"]);
   }
   if (!lmsLoaded() || !lmsServerUp()) die("модель/сервер не поднялись — смотри вывод lms");
@@ -102,7 +128,7 @@ const main = async (): Promise<void> => {
   const args = process.argv.slice(2);
 
   if (!cmd || cmd === "status") {
-    console.log(`бэкенд перевода: ${TRANSLATE_BACKEND.url} | ${TRANSLATE_BACKEND.model}`);
+    console.log(`бэкенд перевода: ${BACKEND.url} | ${BACKEND.model}`);
     console.log(
       `LM Studio: сервер ${lmsServerUp() ? "UP" : "DOWN"} | модель ${lmsLoaded() ? "загружена" : "НЕ загружена — нужен up"}`,
     );
@@ -119,7 +145,7 @@ const main = async (): Promise<void> => {
 
   if (cmd === "up") {
     ensureBackend();
-    console.log(`готово: ${TRANSLATE_BACKEND.url} | ${TRANSLATE_BACKEND.model}`);
+    console.log(`готово: ${BACKEND.url} | ${BACKEND.model}`);
     return;
   }
 
@@ -133,8 +159,8 @@ const main = async (): Promise<void> => {
       stdio: ["ignore", fd, fd],
       env: {
         ...process.env,
-        TSSR_LLM_URL: TRANSLATE_BACKEND.url,
-        TSSR_LLM_MODEL: TRANSLATE_BACKEND.model,
+        TSSR_LLM_URL: BACKEND.url,
+        TSSR_LLM_MODEL: BACKEND.model,
       },
     });
     child.unref();
@@ -220,7 +246,7 @@ const main = async (): Promise<void> => {
     const child = spawn(process.execPath, [RUNNER, lang, "--retrans", FIX(lang)], {
       detached: true,
       stdio: ["ignore", fd, fd],
-      env: { ...process.env, TSSR_LLM_URL: TRANSLATE_BACKEND.url, TSSR_LLM_MODEL: TRANSLATE_BACKEND.model },
+      env: { ...process.env, TSSR_LLM_URL: BACKEND.url, TSSR_LLM_MODEL: BACKEND.model },
     });
     child.unref();
     writeFileSync(PID(lang), `${child.pid}\n`, "utf-8");
