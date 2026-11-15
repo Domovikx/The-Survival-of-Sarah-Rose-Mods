@@ -33,6 +33,11 @@ const DONE = (lang: string): string => join("tmp", `translate_${lang}.done`);
 const LOG = (lang: string): string => join("tmp", `translate_${lang}.run.log`);
 const PID = (lang: string): string => join("tmp", `translate_${lang}.pid`);
 const RUNNER = join(".opencode", "skills", "translate", "translate_run.mts");
+const REVIEW = join(".opencode", "skills", "translate", "translate_review.mts");
+const JUDGE = join(".opencode", "skills", "translate", "translate_judge.mts");
+const REPAIR = (lang: string): string => join("tmp", `repair_${lang}.txt`);
+const FLAGS = (lang: string): string => join("tmp", `judge_${lang}.txt`);
+const FIX = (lang: string): string => join("tmp", `fix_${lang}.txt`);
 const LMS = join(process.env.USERPROFILE ?? "", ".lmstudio", "bin", "lms.exe");
 
 const die = (message: string): never => {
@@ -154,6 +159,55 @@ const main = async (): Promise<void> => {
     return;
   }
 
+  if (cmd === "review") {
+    if (!LANG_RE.test(lang)) die("укажи язык");
+    const out = run(process.execPath, [REVIEW, lang, "--all"]);
+    const ids = [...out.matchAll(/\[изменено (\d+)\]/g)].map((m) => Number(m[1]));
+    const lines = ids.map((id) => `${id}\n`).join("");
+    writeFileSync(REPAIR(lang), lines, "utf-8");
+    const found = /НАЙДЕНО: (\d+)/.exec(out)?.[1] ?? String(ids.length);
+    console.log(`мех-ревью ${lang}: найдено ${found} → ${REPAIR(lang)}`);
+    return;
+  }
+
+  if (cmd === "judge") {
+    if (!LANG_RE.test(lang)) die("укажи язык");
+    const n = Number(args.find((a) => /^\d+$/.test(a)) ?? 200);
+    const spread = args.includes("--spread") ? ["--spread"] : [];
+    const out = run(process.execPath, [JUDGE, lang, String(n), ...spread]);
+    const ids = [...out.matchAll(/СУДЬЯ-BAD \[(\d+)\]/g)].map((m) => Number(m[1]));
+    const lines = ids.map((id) => `${id}\n`).join("");
+    if (lines) writeFileSync(FLAGS(lang), lines, { encoding: "utf-8", flag: "a" });
+    console.log(`судья ${lang}: проверено ${n}, плохих ${ids.length} → ${FLAGS(lang)}`);
+    return;
+  }
+
+  if (cmd === "fix") {
+    if (!LANG_RE.test(lang)) die("укажи язык");
+    if (runningPid(lang)) die(`${lang}: сначала stop — прогон идёт`);
+    const ids = new Set<number>();
+    for (const file of [REPAIR(lang), FLAGS(lang)]) {
+      if (!existsSync(file)) continue;
+      for (const token of readFileSync(file, "utf-8").split(/\s+/)) {
+        if (token.trim()) ids.add(Number(token));
+      }
+    }
+    const list = [...ids].filter((n) => Number.isFinite(n)).sort((a, b) => a - b);
+    if (!list.length) die("нечего чинить: нет списков из review/judge");
+    const lines = list.map((id) => `${id}\n`).join("");
+    writeFileSync(FIX(lang), lines, "utf-8");
+    const fd = openSync(LOG(lang), "a");
+    const child = spawn(process.execPath, [RUNNER, lang, "--retrans", FIX(lang)], {
+      detached: true,
+      stdio: ["ignore", fd, fd],
+      env: { ...process.env, TSSR_LLM_URL: TRANSLATE_BACKEND.url, TSSR_LLM_MODEL: TRANSLATE_BACKEND.model },
+    });
+    child.unref();
+    writeFileSync(PID(lang), `${child.pid}\n`, "utf-8");
+    console.log(`ремонт ${lang}: строк ${list.length} (PID ${child.pid}) | список ${FIX(lang)}`);
+    return;
+  }
+
   if (cmd === "reset") {
     if (!LANG_RE.test(lang)) die("укажи язык");
     if (!args.includes("--yes")) die(`reset ${lang} обнулит ВСЕ переводы в po. Повтори с --yes`);
@@ -168,7 +222,9 @@ const main = async (): Promise<void> => {
     return;
   }
 
-  die(`неизвестная команда «${cmd}». Есть: status | up | run <lang> | stop <lang> | reset <lang> --yes`);
+  die(
+    `неизвестная команда «${cmd}». Есть: status | up | run <lang> | stop <lang> | review <lang> | judge <lang> [n] [--spread] | fix <lang> | reset <lang> --yes`,
+  );
 };
 
 await main();
