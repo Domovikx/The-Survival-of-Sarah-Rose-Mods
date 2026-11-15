@@ -36,7 +36,8 @@
     "po:check": "node scripts/po_check.mts",
     "emotion:audit": "node patches/ai-voice-pack/tools/generate/scripts/emotion_audit.mts",
     "emotion:judge": "node patches/ai-voice-pack/tools/generate/scripts/emotion_judge.mts",
-    "format:md": "prettier --write \"**/*.md\""
+    "format:md": "prettier --write \"**/*.md\"",
+    "dash": "node .opencode/skills/local-dash/dashboard.mts --open"
   },
   "lint-staged": {
     "*.{js,mjs,cjs,ts,tsx,mts,cts}": [
