@@ -1,6 +1,6 @@
 import "i18next";
 
-import type { MessageKey } from "./i18n.types";
+import type { MessageKey } from "./i18n";
 
 /**
  * TS-мапинг i18n: t() типизирован формой сообщений каталога (src/shared/config/i18n.locales.ts) — обращение к несуществующему ключу (опечатка, удалённый ключ) =

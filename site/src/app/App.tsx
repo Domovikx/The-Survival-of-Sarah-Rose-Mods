@@ -10,7 +10,7 @@ import { Support } from "@/widgets/support";
 import { Downloads } from "@/widgets/downloads";
 import { VoiceStatus } from "@/widgets/voice-status";
 
-import { FEATURES } from "@/shared/config/flags";
+import { FEATURES } from "@/shared/config";
 
 export const App = () => (
   <>

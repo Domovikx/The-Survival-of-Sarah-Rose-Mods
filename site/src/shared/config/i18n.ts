@@ -4,7 +4,7 @@ import { initReactI18next } from "react-i18next";
 import { STORAGE_KEYS } from "./constants";
 import { CATALOGUE } from "./i18n.locales";
 import { localize } from "./i18n.types";
-import type { MessageKey, Messages } from "./i18n.types";
+import type { Localized } from "./i18n.types";
 import { LANGS } from "./languages";
 import type { Lang } from "./languages";
 
@@ -50,6 +50,16 @@ const getInitialLang = (): Lang => {
   if (LANGS.includes(saved as Lang)) return saved as Lang;
   return detectByBrowser() ?? DEFAULT_LANG;
 };
+
+/** Форма сообщений одного языка — её видит MESSAGES (ресурсы i18next). */
+export type Messages = Localized<typeof CATALOGUE>;
+
+/**
+ * Ключи каталога плоским юнионом: этим типом типизированы t() и tPhrase()
+ * (см. i18next.d.ts). Вложенный `Messages` там не годится — i18next раскручивает
+ * его рекурсивно и падает в TS2589 «type instantiation is excessively deep».
+ */
+export type MessageKey = keyof typeof CATALOGUE;
 
 /** Ресурсы i18next: язык -> сообщения (разворот каталога из i18n.locales.ts). */
 export const MESSAGES = Object.fromEntries(LANGS.map((lang) => [lang, localize(CATALOGUE, lang)])) as Record<

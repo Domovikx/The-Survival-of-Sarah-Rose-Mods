@@ -10,9 +10,9 @@
  *   • `dict()` — проверка полноты: забыли язык = ошибка TypeScript в locales;
  *   • `localize()` — разворот каталога в сообщения одного языка (ресурсы
  *     i18next собирает `i18n.ts`, тесты зовут `localize()` напрямую);
- *   • `MessageKey` — юнион ключей; им типизированы `t()` и `tPhrase()`.
+ *   • без импорта самого каталога: `MessageKey`/`Messages` (они зависят от
+ *     текстов) живут в `i18n.ts` — иначе получался бы тип-цикл locales <-> types.
  */
-import type { CATALOGUE } from "./i18n.locales";
 import { LANGS } from "./languages";
 import type { Lang } from "./languages";
 
@@ -35,16 +35,6 @@ export type Localized<T> = T extends Trans
  * incompatible»), а не только в компоненте, который дергает t().
  */
 export const dict = <T extends Tree>(value: T): T => value;
-
-/** Форма сообщений одного языка — её видит MESSAGES (ресурсы i18next). */
-export type Messages = Localized<typeof CATALOGUE>;
-
-/**
- * Ключи каталога плоским юнионом — этим типом типизированы t() и tPhrase()
- * (см. i18next.d.ts). Вложенный `Messages` там не годится: i18next раскручивает
- * его рекурсивно и падает в TS2589 «type instantiation is excessively deep».
- */
-export type MessageKey = keyof typeof CATALOGUE;
 
 const NON_EN = LANGS.filter((lang) => lang !== "en");
 

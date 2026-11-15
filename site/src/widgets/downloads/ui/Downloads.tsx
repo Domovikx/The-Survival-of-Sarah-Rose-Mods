@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 
-import { LANGS } from "@/shared/config/i18n";
+import { LANGS } from "@/shared/config";
 import { cx, Section } from "@/shared/ui";
 
 import { styles } from "./Downloads.styles";

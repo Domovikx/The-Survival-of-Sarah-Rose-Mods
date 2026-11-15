@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
-import { applyTheme, getInitialTheme, type Theme } from "@/shared/lib/theme";
+import { applyTheme, getInitialTheme, type Theme } from "@/shared/lib";
 import { cx, MoonIcon, SunIcon } from "@/shared/ui";
 
 import { styles } from "./ThemeToggle.styles";

@@ -1,8 +1,8 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 
-import { LANGS, tPhrase } from "@/shared/config/i18n";
-import type { Lang } from "@/shared/config/i18n";
+import { LANGS, tPhrase } from "@/shared/config";
+import type { Lang } from "@/shared/config";
 import { cx, PauseIcon, PlayIcon, Section } from "@/shared/ui";
 
 import { DEMO_PHRASES } from "./DemoPhrases.phrases";

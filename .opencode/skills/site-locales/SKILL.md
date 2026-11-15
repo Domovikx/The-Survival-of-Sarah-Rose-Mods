@@ -10,7 +10,7 @@ description: Локали сайта TSSR (site/src/shared/config/i18n.locales.t
 | Файл                                              | Что это                                                               |
 | ------------------------------------------------- | --------------------------------------------------------------------- |
 | `site/src/shared/config/i18n.locales.ts`          | **только тексты**: ключ = английский текст, значения — 10 языков      |
-| `site/src/shared/config/i18n.types.ts`            | типы, `dict()` (полнота языков), `localize()`, `MessageKey`           |
+| `site/src/shared/config/i18n.types.ts`            | типы, `dict()` (полнота языков), `localize()`                         |
 | `site/src/shared/config/i18n.ts`                  | рантайм: `i18next.init`, `MESSAGES`, `setLang`, `tPhrase`             |
 | `site/src/widgets/demo/ui/DemoPhrases.phrases.ts` | **сгенерировано из po**: демо-фразы + имена спикеров (отдельный кейс) |
 | `site/e2e/locales.spec.ts`                        | механическая перепроверка: пустые строки, `{{name}}`, мёртвые ключи   |

@@ -86,7 +86,7 @@ const file = `/**
  * Порядок фраз и uid — \`demo-manifest.json\` (рядом с gen_demo_phrases.mts).
  * Соответствие po стережёт \`site/e2e/demo.spec.ts\`.
  */
-import type { Lang } from "@/shared/config/languages";
+import type { Lang } from "@/shared/config";
 
 export type DemoPhrase = {
   /** uid = md5(английского текста) — имя файла аудио. */

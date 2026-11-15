@@ -1,7 +1,7 @@
 import { createRoot } from "react-dom/client";
 
 import { i18n, syncDocumentMeta } from "@/shared/config";
-import { applyTheme, getInitialTheme } from "@/shared/lib/theme";
+import { applyTheme, getInitialTheme } from "@/shared/lib";
 
 import { App } from "./App";
 
