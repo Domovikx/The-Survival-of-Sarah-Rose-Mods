@@ -1,76 +1,59 @@
-import * as stylex from '@stylexjs/stylex'
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from "react-i18next";
 
-import { LINKS } from '@/shared/config'
-import { Section } from '@/shared/ui'
+import { LINKS } from "@/shared/config";
+import { cx, Section } from "@/shared/ui";
 
-const styles = stylex.create({
-  panel: {
-    backgroundColor: 'var(--panel)',
-    borderWidth: 1,
-    borderStyle: 'solid',
-    borderColor: 'var(--border)',
-    borderRadius: 12,
-    padding: '16px 18px',
-  },
-  qa: {
-    margin: '10px 0',
-  },
-  q: {
-    margin: '0 0 4px',
-    fontSize: 16,
-  },
-  a: {
-    margin: 0,
-    color: 'var(--muted)',
-  },
-})
+import { styles } from "./Faq.styles";
 
 export const Faq = () => {
-  const { t } = useTranslation()
+  const { t } = useTranslation();
 
   return (
-    <Section title={t('faq.title')} testId="faq">
-      <div className={stylex.props(styles.panel).className} data-testid="faq-panel">
-        <div className={stylex.props(styles.qa).className} data-testid="faq-item-1">
-          <h3 className={stylex.props(styles.q).className} data-testid="faq-q-1">
-            {t('faq.q1')}
+    <Section title={t("FAQ")} testId="faq">
+      <div className={cx(styles.panel)} data-testid="faq-panel">
+        <div className={cx(styles.qa)} data-testid="faq-item-1">
+          <h3 className={cx(styles.q)} data-testid="faq-q-1">
+            {t("Is this an official mod?")}
           </h3>
-          <p className={stylex.props(styles.a).className} data-testid="faq-a-1">
-            {t('faq.a1')}
+          <p className={cx(styles.a)} data-testid="faq-a-1">
+            {t("No — an unofficial fan patch, not affiliated with the developers or publishers.")}
           </p>
         </div>
-        <div className={stylex.props(styles.qa).className} data-testid="faq-item-2">
-          <h3 className={stylex.props(styles.q).className} data-testid="faq-q-2">
-            {t('faq.q2')}
+        <div className={cx(styles.qa)} data-testid="faq-item-2">
+          <h3 className={cx(styles.q)} data-testid="faq-q-2">
+            {t("Is there adult content?")}
           </h3>
-          <p className={stylex.props(styles.a).className} data-testid="faq-a-2">
-            {t('faq.a2')}
+          <p className={cx(styles.a)} data-testid="faq-a-2">
+            {t("Yes — the game is 18+. Download and play only if you are 18 or older.")}
           </p>
         </div>
-        <div className={stylex.props(styles.qa).className} data-testid="faq-item-3">
-          <h3 className={stylex.props(styles.q).className} data-testid="faq-q-3">
-            {t('faq.q3')}
+        <div className={cx(styles.qa)} data-testid="faq-item-3">
+          <h3 className={cx(styles.q)} data-testid="faq-q-3">
+            {t("License?")}
           </h3>
-          <p className={stylex.props(styles.a).className} data-testid="faq-a-3">
-            {t('faq.a3')}{' '}
+          <p className={cx(styles.a)} data-testid="faq-a-3">
+            {t(
+              "The voice pack and translation are CC BY-NC 4.0: free to share and adapt with attribution, non-commercial only.",
+            )}{" "}
             <a href={LINKS.license} data-testid="faq-license-link">
-              {t('footer.linkLicense')}
+              {"CC BY-NC 4.0"}
             </a>
           </p>
         </div>
-        <div className={stylex.props(styles.qa).className} data-testid="faq-item-4">
-          <h3 className={stylex.props(styles.q).className} data-testid="faq-q-4">
-            {t('faq.q4')}
+        <div className={cx(styles.qa)} data-testid="faq-item-4">
+          <h3 className={cx(styles.q)} data-testid="faq-q-4">
+            {t("How to help?")}
           </h3>
-          <p className={stylex.props(styles.a).className} data-testid="faq-a-4">
-            {t('faq.a4')}{' '}
+          <p className={cx(styles.a)} data-testid="faq-a-4">
+            {t(
+              "Endorse the mod on Nexus Mods — it helps other players find it. Bugs and suggestions: the mod page on Nexus.",
+            )}{" "}
             <a href={LINKS.nexus} data-testid="faq-nexus-link">
-              {t('footer.linkNexus')}
+              {"Nexus Mods"}
             </a>
           </p>
         </div>
       </div>
     </Section>
-  )
-}
+  );
+};

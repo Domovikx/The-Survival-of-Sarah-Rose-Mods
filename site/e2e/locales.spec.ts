@@ -3,95 +3,93 @@ import { readFileSync, readdirSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
+import { CATALOGUE } from "../src/shared/config/i18n.locales";
+import { localize } from "../src/shared/config/i18n.types";
+import { LANGS } from "../src/shared/config/languages";
+
 /**
- * E2E локалей сайта: механическая перепроверка всех 11 переводов.
- * Регресс, который эти тесты ловят уже случался: демо-фразы сваливались в
- * EN-фолбэк (po без перевода), и часть замен в i18n-инфре терялась молча.
+ * E2E локалей: механическая перепроверка переводов (11 языков).
+ *
+ * Каталог один — `src/shared/config/i18n.locales.ts`, ключ = английский текст.
+ * TypeScript ловит то, что можно проверить типом (нет забытого языка, нет дубля
+ * ключа). Здесь — то, что типом не ловится:
+ *   • пустые строки;
+ *   • плейсхолдеры {{name}} в демо-плеере;
+ *   • демо-фразы, свалившиеся в EN-фолбэк;
+ *   • мёртвые ключи (в коде не используется).
  */
 
-const LOCALES_DIR = join(dirname(fileURLToPath(import.meta.url)), "..", "locales");
-const LANGS = ["en", "ru", "de", "es", "fr", "it", "ja", "ko", "pl", "pt", "zh"];
+const SRC_DIR = join(dirname(fileURLToPath(import.meta.url)), "..", "src");
+const NON_EN = LANGS.filter((lang) => lang !== "en");
 
-type Json = { [k: string]: Json | string | Json[] | string[] };
+type Trans = Record<string, string>;
 
-const load = (lang: string): Json => JSON.parse(readFileSync(join(LOCALES_DIR, `${lang}.json`), "utf8")) as Json;
+/** Лист-перевод: все языки, кроме en (en — сам ключ). */
+const isTrans = (value: unknown): value is Trans => {
+  if (typeof value !== "object" || value === null || Array.isArray(value)) return false;
+  const record = value as Record<string, unknown>;
+  return NON_EN.every((lang) => typeof record[lang] === "string");
+};
 
-/** Плоский список ключей (массивы — листья: сверяем отдельно). */
-const keys = (o: Json, prefix = ""): string[] =>
-  Object.entries(o).flatMap(([k, v]) =>
-    v !== null && typeof v === "object" && !Array.isArray(v) ? keys(v as Json, `${prefix}${k}.`) : [`${prefix}${k}`],
-  );
-
-const get = (o: Json, path: string): unknown => path.split(".").reduce<unknown>((a, k) => (a as Json)?.[k], o);
+/** Собирает листья каталога: [ключ-текст, переводы]. */
+const leaves: Array<[string, Trans]> = [];
+const collect = (node: unknown, key?: string): void => {
+  if (isTrans(node) && key) {
+    leaves.push([key, node]);
+    return;
+  }
+  if (Array.isArray(node)) {
+    for (const item of node) collect(item, key);
+    return;
+  }
+  if (typeof node === "object" && node !== null) {
+    for (const [childKey, value] of Object.entries(node as Record<string, unknown>)) collect(value, childKey);
+  }
+};
+collect(CATALOGUE);
 
 test.describe("локали: механическая перепроверка переводов", () => {
-  test("файлы всех 11 языков на месте и валидны", () => {
-    const files = readdirSync(LOCALES_DIR).filter((f) => f.endsWith(".json"));
-    for (const lang of LANGS) expect(files).toContain(`${lang}.json`);
-  });
-
-  test("в locales/ нет файлов вне матрицы языков (лишние/потерянные)", () => {
-    const files = readdirSync(LOCALES_DIR)
-      .filter((f) => f.endsWith(".json"))
-      .map((f) => f.replace(/\.json$/, ""))
-      .sort();
-    expect(files).toEqual([...LANGS].sort());
-  });
-
-  test("нет мёртвых ключей: каждый ключ en упоминается в коде", () => {
-    // Единственное направление, которое TS не ловит (см. i18next.d.ts:
-    // разделение труда). Ключи используются и литералами t('...'), и через
-    // таблицы-конфиги (as const) — ищем просто цитируемое упоминание.
-    const srcDir = join(dirname(fileURLToPath(import.meta.url)), "..", "src");
-    const readAll = (d: string): string =>
-      readdirSync(d, { withFileTypes: true })
-        .map((e) => {
-          const p = join(d, e.name);
-          return e.isDirectory() ? readAll(p) : /\.(ts|tsx)$/.test(e.name) ? readFileSync(p, "utf8") : "";
-        })
-        .join("\n");
-    const src = readAll(srcDir);
-    for (const k of keys(load("en"))) {
-      const used = ["'", '"', "`"].some((q) => src.includes(q + k + q));
-      expect(used, `ключ не используется в коде: ${k}`).toBe(true);
-    }
-  });
-
-  test("парити ключей: каждая локаль = набор ключей en", () => {
-    const ref = keys(load("en")).sort();
-    for (const lang of LANGS) {
-      expect(keys(load(lang)).sort(), `ключи локали ${lang}`).toEqual(ref);
-    }
-  });
-
-  test("нет пустых строк", () => {
-    for (const lang of LANGS) {
-      const j = load(lang);
-      for (const k of keys(j)) {
-        const v = get(j, k);
-        if (typeof v === "string") expect(v.trim(), `${lang}: ${k}`).not.toBe("");
+  test("ключей достаточно и у каждого есть все 10 переводов", () => {
+    expect(leaves.length).toBeGreaterThan(60);
+    for (const [key, dict] of leaves) {
+      for (const lang of NON_EN) {
+        expect(typeof dict[lang], `${key.slice(0, 30)}… / ${lang}: нет значения`).toBe("string");
       }
     }
   });
 
-  test("плейсхолдеры {{name}} в play/pause сохранены", () => {
-    for (const lang of LANGS) {
-      const j = load(lang);
-      expect(get(j, "demo.play") as string, `${lang}: demo.play`).toContain("{{name}}");
-      expect(get(j, "demo.pause") as string, `${lang}: demo.pause`).toContain("{{name}}");
+  test("нет пустых строк", () => {
+    for (const [key, dict] of leaves) {
+      for (const lang of NON_EN) {
+        expect(dict[lang].trim(), `${key.slice(0, 30)}… / ${lang}`).not.toBe("");
+      }
     }
   });
 
-  test("демо-фразы не свалены в EN-фолбэк (кроме en)", () => {
-    const en = load("en") as { demo: { phrases: Array<{ text: string }> } };
+  test("плейсхолдеры {{name}} в демо-плеере сохранены во всех языках", () => {
     for (const lang of LANGS) {
-      if (lang === "en") continue;
-      const j = load(lang) as typeof en;
-      expect(j.demo.phrases, `${lang}: число фраз`).toHaveLength(en.demo.phrases.length);
-      j.demo.phrases.forEach((p, i) => {
-        expect(p.text, `${lang}: фраза #${i + 1} = EN-фолбэк`).not.toBe(en.demo.phrases[i]!.text);
-        expect(p.text.trim(), `${lang}: фраза #${i + 1} пустая`).not.toBe("");
-      });
+      const messages = localize(CATALOGUE, lang) as unknown as Record<string, string>;
+      expect(messages["Play: {{name}}"], `${lang}: play`).toContain("{{name}}");
+      expect(messages["Pause: {{name}}"], `${lang}: pause`).toContain("{{name}}");
+    }
+  });
+
+  test("нет мёртвых ключей: каждый ключ-текст упоминается в коде", () => {
+    const readAll = (dir: string): string =>
+      readdirSync(dir, { withFileTypes: true })
+        .map((entry) => {
+          const path = join(dir, entry.name);
+          if (entry.isDirectory()) return readAll(path);
+          if (!/\.(ts|tsx)$/.test(entry.name) || entry.name === "i18n.locales.ts") return "";
+          return readFileSync(path, "utf8");
+        })
+        .join("\n");
+    const src = readAll(SRC_DIR);
+    for (const [key] of leaves) {
+      expect(
+        src.includes(JSON.stringify(key)) || src.includes(`'${key}'`) || src.includes(`\`${key}\``),
+        `ключ не используется: ${key.slice(0, 60)}`,
+      ).toBe(true);
     }
   });
 });

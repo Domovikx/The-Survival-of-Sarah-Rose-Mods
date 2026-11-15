@@ -1,0 +1,43 @@
+import * as stylex from "@stylexjs/stylex";
+
+export const styles = stylex.create({
+  panel: {
+    backgroundColor: "var(--panel)",
+    borderWidth: 1,
+    borderStyle: "solid",
+    borderColor: "var(--border)",
+    borderRadius: 12,
+    padding: "16px 22px",
+    display: "flex",
+    flexDirection: "column",
+    gap: 12,
+  },
+  lead: { margin: 0, color: "var(--muted)" },
+  list: { margin: 0, paddingLeft: 22, display: "flex", flexDirection: "column", gap: 6 },
+  item: { margin: 0 },
+  row: { display: "flex", flexWrap: "wrap", gap: 10, marginTop: 4 },
+  btn: {
+    "display": "inline-flex",
+    "alignItems": "center",
+    "padding": "10px 16px",
+    "borderRadius": 10,
+    "textDecoration": "none",
+    "fontWeight": 600,
+    "fontSize": 15,
+    "color": "var(--text)",
+    "backgroundColor": "var(--panel-2)",
+    "borderWidth": 1,
+    "borderStyle": "solid",
+    "borderColor": "var(--border)",
+    "transition": "border-color 150ms ease, color 150ms ease",
+    ":hover": { borderColor: "var(--link)", color: "var(--link)" },
+    ":focus-visible": { outline: "2px solid var(--link)", outlineOffset: 2 },
+  },
+  btnAccent: {
+    "color": "#fff",
+    "backgroundColor": "var(--accent)",
+    "borderColor": "var(--accent)",
+    ":hover": { color: "#fff", filter: "brightness(1.08)" },
+  },
+  thanks: { margin: 0, color: "var(--muted)", fontStyle: "italic" },
+});

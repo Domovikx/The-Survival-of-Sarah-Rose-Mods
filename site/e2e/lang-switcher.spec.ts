@@ -1,11 +1,12 @@
 import { expect, test, type Page } from "@playwright/test";
-import { readFileSync } from "node:fs";
-import { dirname, join } from "node:path";
-import { fileURLToPath } from "node:url";
+
+import { CATALOGUE } from "../src/shared/config/i18n.locales";
+import { localize } from "../src/shared/config/i18n.types";
+import { LANGS } from "../src/shared/config/languages";
 
 const BASE = "/The-Survival-of-Sarah-Rose-Mods/";
-const LOCALES_DIR = join(dirname(fileURLToPath(import.meta.url)), "..", "locales");
-const LANGS = ["en", "ru", "de", "es", "fr", "it", "ja", "ko", "pl", "pt", "zh"] as const;
+/** Титул вкладки — ключ каталога (en-текст), перевод разворачиваем из CATALOGUE. */
+const TITLE = "The Survival of Sarah Rose — AI Voice Pack + 11 Languages";
 
 const trigger = (page: Page) => page.getByTestId("lang-switcher");
 const option = (page: Page, lang: string) => page.getByTestId(`lang-${lang}`);
@@ -87,10 +88,8 @@ test.describe("язык: переключатель", () => {
       await openMenu(page);
       await option(page, lang).click();
       await expect(page.locator("html"), `html lang=${lang}`).toHaveAttribute("lang", lang);
-      const meta = JSON.parse(readFileSync(join(LOCALES_DIR, `${lang}.json`), "utf8")) as {
-        meta: { title: string };
-      };
-      await expect(page, `title ${lang}`).toHaveTitle(meta.meta.title);
+      const expected = (localize(CATALOGUE, lang) as unknown as Record<string, string>)[TITLE]!;
+      await expect(page, `title ${lang}`).toHaveTitle(expected);
     }
   });
 

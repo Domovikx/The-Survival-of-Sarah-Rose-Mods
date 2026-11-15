@@ -1,59 +1,42 @@
-import * as stylex from '@stylexjs/stylex'
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from "react-i18next";
 
-import { LINKS } from '@/shared/config'
-import { Container } from '@/shared/ui'
+import { LINKS } from "@/shared/config";
+import { Container, cx } from "@/shared/ui";
 
-const styles = stylex.create({
-  footer: {
-    marginTop: 48,
-    borderTop: '1px solid var(--border)',
-    padding: '18px 0 32px',
-    color: 'var(--muted)',
-    fontSize: 14,
-  },
-  links: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    gap: 12,
-    margin: '10px 0 0',
-    padding: 0,
-    listStyle: 'none',
-  },
-})
+import { styles } from "./Footer.styles";
 
 export const Footer = () => {
-  const { t } = useTranslation()
+  const { t } = useTranslation();
 
   return (
-    <footer className={stylex.props(styles.footer).className} data-testid="footer">
+    <footer className={cx(styles.footer)} data-testid="footer">
       <Container>
-        <p data-testid="footer-disclaimer">{t('footer.disclaimer')}</p>
-        <ul
-          className={stylex.props(styles.links).className}
-          aria-label={t('footer.linksLabel')}
-          data-testid="footer-links"
-        >
+        <p data-testid="footer-disclaimer">
+          {t(
+            "Unofficial fan work. All rights to the original game belong to its rights holders. Use at your own risk.",
+          )}
+        </p>
+        <ul className={cx(styles.links)} aria-label={t("Links")} data-testid="footer-links">
           <li>
             <a href={LINKS.nexus} data-testid="footer-link-nexus">
-              {t('footer.linkNexus')}
+              {"Nexus Mods"}
             </a>
           </li>
           <li>
             <a href={LINKS.steam} data-testid="footer-link-steam">
-              {t('footer.linkSteam')}
+              {"Steam"}
             </a>
           </li>
           <li>
             <a href={LINKS.license} data-testid="footer-link-license">
-              {t('footer.linkLicense')}
+              {"CC BY-NC 4.0"}
             </a>
           </li>
           <li>
-            <b data-testid="footer-age">{t('footer.age')}</b>
+            <b data-testid="footer-age">{"18+"}</b>
           </li>
         </ul>
       </Container>
     </footer>
-  )
-}
+  );
+};

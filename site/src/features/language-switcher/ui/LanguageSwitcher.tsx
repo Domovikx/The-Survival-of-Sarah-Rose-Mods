@@ -1,77 +1,10 @@
-import * as stylex from '@stylexjs/stylex'
-import { useEffect, useRef, useState } from 'react'
-import { useTranslation } from 'react-i18next'
+import { useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 
-import { LANGS, LANG_LABELS, setLang, type Lang } from '@/shared/config'
+import { LANGS, LANG_LABELS, setLang, type Lang } from "@/shared/config";
+import { cx } from "@/shared/ui";
 
-const styles = stylex.create({
-  root: { position: 'relative' },
-  button: {
-    display: 'inline-flex',
-    alignItems: 'center',
-    gap: 6,
-    fontWeight: 600,
-    fontSize: 14,
-    color: 'var(--text)',
-    cursor: 'pointer',
-    borderWidth: 1,
-    borderStyle: 'solid',
-    borderColor: 'var(--border)',
-    borderRadius: 8,
-    padding: '6px 12px',
-    backgroundColor: 'transparent',
-    transition: 'border-color 150ms ease, background-color 150ms ease',
-    ':hover': { backgroundColor: 'var(--panel-2)', borderColor: 'var(--link)' },
-    ':focus-visible': { outline: '2px solid var(--link)', outlineOffset: 2 },
-  },
-  chevron: { fontSize: 10, opacity: 0.7, transform: 'translateY(1px)' },
-  menu: {
-    position: 'absolute',
-    top: 'calc(100% + 6px)',
-    right: 0,
-    minWidth: 168,
-    maxHeight: 320,
-    overflowY: 'auto',
-    zIndex: 30,
-    padding: 6,
-    margin: 0,
-    listStyle: 'none',
-    borderRadius: 10,
-    borderWidth: 1,
-    borderStyle: 'solid',
-    borderColor: 'var(--border)',
-    backgroundColor: 'var(--panel)',
-    boxShadow: '0 8px 24px rgba(0, 0, 0, 0.28)',
-  },
-  item: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    gap: 8,
-    width: '100%',
-    textAlign: 'left',
-    fontSize: 14,
-    fontWeight: 500,
-    color: 'var(--text)',
-    cursor: 'pointer',
-    padding: '8px 10px',
-    borderRadius: 6,
-    borderWidth: 0,
-    backgroundColor: 'transparent',
-    ':hover': { backgroundColor: 'var(--panel-2)' },
-    ':focus-visible': { outline: '2px solid var(--link)', outlineOffset: -2 },
-  },
-  itemActive: { color: 'var(--link)', fontWeight: 700 },
-  flag: {
-    width: 18,
-    height: 18,
-    borderRadius: '50%',
-    flexShrink: 0,
-    display: 'block',
-  },
-  label: { display: 'inline-flex', alignItems: 'center', gap: 8 },
-  check: { fontSize: 12 },
-})
+import { styles } from "./LanguageSwitcher.styles";
 
 /**
  * Язык: дропдаун с РОДНЫМИ названиями + круглые SVG-флаги (набор circle-flags,
@@ -80,73 +13,73 @@ const styles = stylex.create({
  * рисуются). Выбор мгновенный, сохраняется в localStorage (setLang),
  * закрытие по клику мимо / Escape; текущий отмечен галочкой.
  */
-const flagSrc = (lang: string): string => `${import.meta.env.BASE_URL}flags/${lang}.svg`
+const flagSrc = (lang: string): string => `${import.meta.env.BASE_URL}flags/${lang}.svg`;
 
 const Flag = ({ lang }: { lang: string }) => (
-  <img {...stylex.props(styles.flag)} src={flagSrc(lang)} alt="" aria-hidden loading="lazy" />
-)
+  <img className={cx(styles.flag)} src={flagSrc(lang)} alt="" aria-hidden loading="lazy" />
+);
 export const LanguageSwitcher = () => {
-  const { i18n, t } = useTranslation()
-  const [open, setOpen] = useState(false)
-  const rootRef = useRef<HTMLDivElement>(null)
-  const current = (LANGS as readonly string[]).includes(i18n.resolvedLanguage ?? '')
+  const { i18n, t } = useTranslation();
+  const [open, setOpen] = useState(false);
+  const rootRef = useRef<HTMLDivElement>(null);
+  const current = (LANGS as readonly string[]).includes(i18n.resolvedLanguage ?? "")
     ? (i18n.resolvedLanguage as Lang)
-    : 'en'
+    : "en";
 
   useEffect(() => {
-    if (!open) return
+    if (!open) return;
     const onDown = (e: MouseEvent) => {
-      if (rootRef.current && !rootRef.current.contains(e.target as Node)) setOpen(false)
-    }
+      if (rootRef.current && !rootRef.current.contains(e.target as Node)) setOpen(false);
+    };
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') setOpen(false)
-    }
-    document.addEventListener('mousedown', onDown)
-    document.addEventListener('keydown', onKey)
+      if (e.key === "Escape") setOpen(false);
+    };
+    document.addEventListener("mousedown", onDown);
+    document.addEventListener("keydown", onKey);
     return () => {
-      document.removeEventListener('mousedown', onDown)
-      document.removeEventListener('keydown', onKey)
-    }
-  }, [open])
+      document.removeEventListener("mousedown", onDown);
+      document.removeEventListener("keydown", onKey);
+    };
+  }, [open]);
 
   return (
-    <div {...stylex.props(styles.root)} ref={rootRef}>
+    <div className={cx(styles.root)} ref={rootRef}>
       <button
         type="button"
-        {...stylex.props(styles.button)}
+        className={cx(styles.button)}
         aria-haspopup="listbox"
         aria-expanded={open}
-        aria-label={t('header.langLabel')}
+        aria-label={t("Language")}
         data-testid="lang-switcher"
         onClick={() => setOpen((v) => !v)}
       >
-        <span {...stylex.props(styles.label)}>
+        <span className={cx(styles.label)}>
           <Flag lang={current} />
           {LANG_LABELS[current]}
         </span>
-        <span {...stylex.props(styles.chevron)} aria-hidden>
+        <span className={cx(styles.chevron)} aria-hidden>
           ▼
         </span>
       </button>
       {open && (
-        <ul role="listbox" aria-label={t('header.langLabel')} {...stylex.props(styles.menu)}>
+        <ul role="listbox" aria-label={t("Language")} className={cx(styles.menu)}>
           {LANGS.map((lang) => (
             <li key={lang} role="option" aria-selected={lang === current}>
               <button
                 type="button"
-                {...stylex.props(styles.item, lang === current && styles.itemActive)}
+                className={cx(styles.item, lang === current && styles.itemActive)}
                 data-testid={`lang-${lang}`}
                 onClick={() => {
-                  setLang(lang)
-                  setOpen(false)
+                  setLang(lang);
+                  setOpen(false);
                 }}
               >
-                <span {...stylex.props(styles.label)}>
+                <span className={cx(styles.label)}>
                   <Flag lang={lang} />
                   {LANG_LABELS[lang]}
                 </span>
                 {lang === current && (
-                  <span {...stylex.props(styles.check)} aria-hidden>
+                  <span className={cx(styles.check)} aria-hidden>
                     ✓
                   </span>
                 )}
@@ -156,5 +89,5 @@ export const LanguageSwitcher = () => {
         </ul>
       )}
     </div>
-  )
-}
+  );
+};

@@ -1,78 +1,68 @@
-import i18n from 'i18next'
-import { initReactI18next } from 'react-i18next'
-import de from '../../../locales/de.json'
-import en from '../../../locales/en.json'
-import es from '../../../locales/es.json'
-import fr from '../../../locales/fr.json'
-import it from '../../../locales/it.json'
-import ja from '../../../locales/ja.json'
-import ko from '../../../locales/ko.json'
-import pl from '../../../locales/pl.json'
-import pt from '../../../locales/pt.json'
-import ru from '../../../locales/ru.json'
-import zh from '../../../locales/zh.json'
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
 
-/** Порядок = приоритет языков (config/language-priority.json, статистика Steam
- * окт 2026; владелец 2026-11-13) — не переставлять руками. */
-export const LANGS = ['en', 'zh', 'ru', 'es', 'pt', 'de', 'ja', 'fr', 'pl', 'ko', 'it'] as const
-export type Lang = (typeof LANGS)[number]
+import { STORAGE_KEYS } from "./constants";
+import { CATALOGUE } from "./i18n.locales";
+import { localize } from "./i18n.types";
+import type { MessageKey, Messages } from "./i18n.types";
+import { LANGS } from "./languages";
+import type { Lang } from "./languages";
+
+export type { Lang };
+export { LANGS };
 
 /** Дефолт — английский (международная аудитория); остальное — авто по языку браузера. */
-export const DEFAULT_LANG: Lang = 'en'
+export const DEFAULT_LANG: Lang = "en";
 
 /** Родные названия языков (едино с модом zzz_ui; без флагов — best practices). */
 export const LANG_LABELS: Record<Lang, string> = {
-  en: 'English',
-  ru: 'Русский',
-  de: 'Deutsch',
-  es: 'Español',
-  fr: 'Français',
-  it: 'Italiano',
-  ja: '日本語',
-  ko: '한국어',
-  pl: 'Polski',
-  pt: 'Português',
-  zh: '中文',
-}
+  en: "English",
+  ru: "Русский",
+  de: "Deutsch",
+  es: "Español",
+  fr: "Français",
+  it: "Italiano",
+  ja: "日本語",
+  ko: "한국어",
+  pl: "Polski",
+  pt: "Português",
+  zh: "中文",
+};
 
-import { STORAGE_KEYS } from './constants'
-
-const STORAGE_KEY = STORAGE_KEYS.lang
+const STORAGE_KEY = STORAGE_KEYS.lang;
 
 const detectByBrowser = (): Lang | null => {
-  if (typeof navigator === 'undefined') return null
-  const langs = navigator.languages?.length ? navigator.languages : [navigator.language]
+  if (typeof navigator === "undefined") return null;
+  const langs = navigator.languages?.length ? navigator.languages : [navigator.language];
   for (const l of langs) {
-    if (typeof l !== 'string') continue
-    const p = l.toLowerCase().split('-')[0]
-    if (!p) continue
+    if (typeof l !== "string") continue;
+    const p = l.toLowerCase().split("-")[0];
+    if (!p) continue;
     // zh-CN / zh-TW -> zh (иероглифические варианты объединяем — как в моде)
-    if (p === 'zh') return 'zh'
-    if ((LANGS as readonly string[]).includes(p)) return p as Lang
+    if (p === "zh") return "zh";
+    if ((LANGS as readonly string[]).includes(p)) return p as Lang;
   }
-  return null
-}
+  return null;
+};
 
 const getInitialLang = (): Lang => {
-  const saved = typeof localStorage !== 'undefined' ? localStorage.getItem(STORAGE_KEY) : null
-  if (LANGS.includes(saved as Lang)) return saved as Lang
-  return detectByBrowser() ?? DEFAULT_LANG
-}
+  const saved = typeof localStorage !== "undefined" ? localStorage.getItem(STORAGE_KEY) : null;
+  if (LANGS.includes(saved as Lang)) return saved as Lang;
+  return detectByBrowser() ?? DEFAULT_LANG;
+};
+
+/** Ресурсы i18next: язык -> сообщения (разворот каталога из i18n.locales.ts). */
+export const MESSAGES = Object.fromEntries(LANGS.map((lang) => [lang, localize(CATALOGUE, lang)])) as Record<
+  Lang,
+  Messages
+>;
 
 void i18n.use(initReactI18next).init({
-  resources: {
-    en: { translation: en },
-    ru: { translation: ru },
-    de: { translation: de },
-    es: { translation: es },
-    fr: { translation: fr },
-    it: { translation: it },
-    ja: { translation: ja },
-    ko: { translation: ko },
-    pl: { translation: pl },
-    pt: { translation: pt },
-    zh: { translation: zh },
-  },
+  resources: Object.fromEntries(LANGS.map((lang) => [lang, { translation: MESSAGES[lang] }])),
+  // Ключ = английский текст, а в текстах есть точки: иначе i18next резал бы
+  // ключ по точке и искал вложенный путь (решение 2026-11-15).
+  keySeparator: false,
+  nsSeparator: false,
   lng: getInitialLang(),
   fallbackLng: DEFAULT_LANG,
   // Бэст-практики i18next (дока configuration-options): белый список языков,
@@ -80,21 +70,40 @@ void i18n.use(initReactI18next).init({
   // только по базовому коду — матрица патча живёт на базовых кодах.
   supportedLngs: [...LANGS],
   nonExplicitSupportedLngs: true,
-  load: 'languageOnly',
+  load: "languageOnly",
   interpolation: { escapeValue: false },
-})
+});
 
 export const setLang = (lang: Lang): void => {
-  localStorage.setItem(STORAGE_KEY, lang)
-  void i18n.changeLanguage(lang)
-}
+  localStorage.setItem(STORAGE_KEY, lang);
+  void i18n.changeLanguage(lang);
+};
 
 /** Синхронизация document-меты (title/description/lang) со сменой языка. */
 export const syncDocumentMeta = (): void => {
-  document.documentElement.lang = i18n.language
-  document.title = i18n.t('meta.title')
-  const description = document.querySelector('meta[name="description"]')
-  if (description) description.setAttribute('content', i18n.t('meta.description'))
-}
+  document.documentElement.lang = i18n.language;
+  document.title = tPhrase("The Survival of Sarah Rose — AI Voice Pack + 11 Languages");
+  const description = document.querySelector('meta[name="description"]');
+  if (description)
+    description.setAttribute(
+      "content",
+      tPhrase(
+        "Unofficial fan patch: demo AI voice acting in 11 languages plus translations into 11 (Russian complete; the others cover the intro up to the first choice). Free, 18+.",
+      ),
+    );
+};
 
-export { i18n }
+/**
+ * Перевод строки, пришедшей из ДАННЫХ (демо-манифест): ключ = сам английский
+ * текст. В отличие от t(), принимает переменную — но только если это ключ
+ * каталога: опечатка или удалённый ключ = ошибка компиляции.
+ */
+// Каст объекта, а не функции: `i18n.t` типизирован объединением 86 длинных
+// литералов, и любое его упоминание в обёртке упирается в TS2589
+// («type instantiation is excessively deep»).
+const translateRaw = (i18n as unknown as { t: (key: string, vars?: Record<string, string>) => string }).t;
+
+/** Перевод текста-ключа; `vars` — подстановки вида `{{name}}`. */
+export const tPhrase = (text: MessageKey, vars?: Record<string, string>): string => translateRaw(text, vars);
+
+export { i18n };

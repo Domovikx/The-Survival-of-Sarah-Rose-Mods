@@ -7,4 +7,4 @@ export const FEATURES = {
   /** Блок прямых ссылок на архивы GitHub-релиза (резервный канал скачивания).
    *  Выключить (false) — блок исчезает с лендинга целиком. */
   downloads: true,
-} as const
+} as const;

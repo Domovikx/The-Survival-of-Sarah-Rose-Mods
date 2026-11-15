@@ -1,39 +1,23 @@
-import * as stylex from '@stylexjs/stylex'
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from "react-i18next";
 
-import { Section } from '@/shared/ui'
+import { cx, Section } from "@/shared/ui";
 
-const styles = stylex.create({
-  panel: {
-    backgroundColor: 'var(--panel)',
-    borderWidth: 1,
-    borderStyle: 'solid',
-    borderColor: 'var(--border)',
-    borderRadius: 12,
-    padding: '16px 18px',
-  },
-  total: {
-    margin: '0 0 8px',
-  },
-  list: {
-    margin: 0,
-    paddingLeft: 20,
-    color: 'var(--muted)',
-  },
-})
+import { styles } from "./VoiceStatus.styles";
 
 export const VoiceStatus = () => {
-  const { t } = useTranslation()
+  const { t } = useTranslation();
 
   return (
-    <Section title={t('voice.title')} testId="voice-status">
-      <div className={stylex.props(styles.panel).className} data-testid="voice-panel">
-        <ul className={stylex.props(styles.list).className} data-testid="voice-list">
-          <li data-testid="voice-ru">{t('voice.ru')}</li>
-          <li data-testid="voice-en">{t('voice.en')}</li>
-          <li data-testid="voice-missing">{t('voice.missing')}</li>
+    <Section title={t("Voice acting — demo ready")} testId="voice-status">
+      <div className={cx(styles.panel)} data-testid="voice-panel">
+        <ul className={cx(styles.list)} data-testid="voice-list">
+          <li data-testid="voice-ru">{t("Russian (RU): complete translation, demo scope voiced")}</li>
+          <li data-testid="voice-en">{t("English (EN): the original text, demo scope voiced")}</li>
+          <li data-testid="voice-missing">
+            {t("If a line has no voice file yet — the game just plays it silently (no errors, no crashes).")}
+          </li>
         </ul>
       </div>
     </Section>
-  )
-}
+  );
+};

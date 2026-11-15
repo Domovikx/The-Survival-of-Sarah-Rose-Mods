@@ -1,15 +1,6 @@
-import * as stylex from '@stylexjs/stylex'
-import type { PropsWithChildren } from 'react'
+import type { PropsWithChildren } from "react";
 
-const styles = stylex.create({
-  wrap: {
-    maxWidth: 920,
-    margin: '0 auto',
-    paddingLeft: 20,
-    paddingRight: 20,
-  },
-})
+import { styles } from "./Container.styles";
+import { cx } from "./cx";
 
-export const Container = ({ children }: PropsWithChildren) => (
-  <div className={stylex.props(styles.wrap).className}>{children}</div>
-)
+export const Container = ({ children }: PropsWithChildren) => <div className={cx(styles.wrap)}>{children}</div>;
