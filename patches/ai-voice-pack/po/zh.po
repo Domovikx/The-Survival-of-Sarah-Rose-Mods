@@ -66,9 +66,10 @@ msgctxt "speaker-name"
 msgid "Carolyn"
 msgstr "卡罗琳"
 
+# changed
 msgctxt "speaker-name"
 msgid "Captain Belmont"
-msgstr "贝尔蒙特上校"
+msgstr "贝尔蒙特船长"
 
 msgctxt "speaker-name"
 msgid "Caleb"
@@ -190730,9 +190731,10 @@ msgctxt "speaker:Captain"
 msgid "This here bridge belongs to the Elyian Kingdom."
 msgstr "这座桥属于埃利安王国。"
 
+# changed
 msgctxt "speaker-name"
 msgid "Captain"
-msgstr "上尉"
+msgstr "船长"
 
 msgctxt "speaker:Sigmund"
 msgid "I've never heard of no fucking Elyian Kingdom and I don't quite imagine I care to learn."
