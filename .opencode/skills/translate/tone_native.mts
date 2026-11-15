@@ -21,7 +21,7 @@
 import { appendFileSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
-import { resolveBackend } from "../../../scripts/llm_backend.mts";
+import { resolveTranslateBackend } from "./translate_backend.mts";
 
 import { markChanged, parsePo, renderPo, writePoAtomic } from "../renpy-po/po_core.mts";
 import { buildNameCanon, charsOf, nameGlossary } from "./judge_client.mts";
@@ -87,7 +87,7 @@ const STYLE: Record<string, { use: string }> = {
   zh: { use: "小穴、肉棒、屁股、两腿之间、胸口、腰" },
 };
 
-const backend = resolveBackend();
+const backend = resolveTranslateBackend(process.argv, process.env);
 
 /** Один вызов в родном формате: без system, thinking выключен, temp 0. */
 async function translate(

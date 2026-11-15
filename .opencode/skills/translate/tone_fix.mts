@@ -31,7 +31,7 @@
 import { appendFileSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
-import { resolveBackend } from "../../../scripts/llm_backend.mts";
+import { resolveTranslateBackend } from "./translate_backend.mts";
 import { parsePo, renderPo, writePoAtomic } from "../renpy-po/po_core.mts";
 import { checkEdit, findTerms, isDefective, LEXICON_LANGS, nextDefect, registerMismatch } from "./tone_lexicon.mts";
 
@@ -141,7 +141,7 @@ Do NOT judge elegance, do NOT ask for more anatomical precision, and do NOT defe
 
 For Japanese, Korean and Chinese note that a plain everyday word is right even when it is vaguer than the medical term.`;
 
-const backend = resolveBackend();
+const backend = resolveTranslateBackend(process.argv, process.env);
 
 const chat = async (system: string, user: string, temp: number, maxTokens = 150): Promise<string> => {
   for (let attempt = 0; attempt < 2; attempt++) {

@@ -18,6 +18,8 @@
 export const TRANSLATE_BACKEND = { url: "http://127.0.0.1:1234", model: "index-translate-9b" } as const;
 
 export type TranslateBackend = {
+  /** Имя бэкенда для логов (не пульт: у перевода он свой). */
+  name: string;
   url: string;
   model: string;
   /** true — модель/адрес переопределены (не переводческая модель). */
@@ -38,7 +40,7 @@ export const resolveTranslateBackend = (
   };
   const url = flag("base-url") ?? env.TSSR_LLM_URL ?? TRANSLATE_BACKEND.url;
   const model = flag("model") ?? env.TSSR_LLM_MODEL ?? TRANSLATE_BACKEND.model;
-  return { url, model, overridden: model !== TRANSLATE_BACKEND.model };
+  return { name: "translate", url, model, overridden: model !== TRANSLATE_BACKEND.model };
 };
 
 /**

@@ -135,13 +135,13 @@ try {
 // влияет; осознанный оверрайд — --model/--base-url или env (см. translate_backend.mts).
 const backend = resolveTranslateBackend(process.argv, process.env);
 const { url, model } = backend;
-if (!isTranslationModel(model) && !process.argv.includes("--allow-any-model")) {
+if (!isTranslationModel(model)) {
   console.error(
     `[STOP] модель «${model}» — НЕ переводческая.
 ` +
       `Переводы делает Index-Translate-9B (LM Studio :1234, см. SKILL «Модель»).
 ` +
-      `Общая модель в перевод не допускается (инцидент 2026-11-15). Осознанно — флаг --allow-any-model.`,
+      `Общая модель в перевод не допускается (инцидент 2026-11-15). Обходного флага нет.`,
   );
   process.exit(2);
 }
