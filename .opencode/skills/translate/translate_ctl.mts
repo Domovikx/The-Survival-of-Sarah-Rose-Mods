@@ -82,6 +82,20 @@ const runningPid = (lang: string): number | null => {
   return pid && alive(pid) ? pid : null;
 };
 
+/** Поднимает LM Studio и грузит переводческую модель; падает, если не вышло. */
+const ensureBackend = (): void => {
+  if (!existsSync(LMS)) die(`не нашёл lms.exe: ${LMS}`);
+  if (!lmsServerUp()) run(LMS, ["server", "start"]);
+  if (!lmsLoaded()) {
+    console.log(`загружаю ${TRANSLATE_BACKEND.model} (-c 8192 --parallel 4 --gpu max --ttl 86400)…`);
+    console.log(
+      run(LMS, ["load", TRANSLATE_BACKEND.model, "-c", "8192", "--parallel", "4", "--gpu", "max", "--ttl", "86400"]),
+    );
+    if (!lmsServerUp()) run(LMS, ["server", "start"]);
+  }
+  if (!lmsLoaded() || !lmsServerUp()) die("модель/сервер не поднялись — смотри вывод lms");
+};
+
 const main = async (): Promise<void> => {
   const [cmd, langArg] = process.argv.slice(2);
   const lang = langArg ?? "";
@@ -104,18 +118,7 @@ const main = async (): Promise<void> => {
   }
 
   if (cmd === "up") {
-    if (!existsSync(LMS)) die(`не нашёл lms.exe: ${LMS}`);
-    if (!lmsServerUp()) console.log(run(LMS, ["server", "start"]) || "server start: ok");
-    else console.log("сервер LM Studio уже работает");
-    if (lmsLoaded()) {
-      console.log(`модель ${TRANSLATE_BACKEND.model} уже загружена (8192 / parallel 4)`);
-    } else {
-      console.log("загружаю index-translate-9b (-c 8192 --parallel 4 --gpu max)…");
-      console.log(run(LMS, ["load", TRANSLATE_BACKEND.model, "-c", "8192", "--parallel", "4", "--gpu", "max"]));
-      // `lms load` умеет поднять приложение и оставить сервер выключенным.
-      if (!lmsServerUp()) console.log(run(LMS, ["server", "start"]) || "server start: ok");
-    }
-    if (!lmsLoaded() || !lmsServerUp()) die("модель/сервер не поднялись — смотри вывод lms");
+    ensureBackend();
     console.log(`готово: ${TRANSLATE_BACKEND.url} | ${TRANSLATE_BACKEND.model}`);
     return;
   }
@@ -123,11 +126,7 @@ const main = async (): Promise<void> => {
   if (cmd === "run") {
     if (!LANG_RE.test(lang)) die("укажи язык: ru|de|es|fr|it|pl|pt|ja|ko|zh");
     if (runningPid(lang)) die(`${lang}: прогон уже идёт (PID ${runningPid(lang)})`);
-    if (!lmsServerUp() || !lmsLoaded()) {
-      die(
-        `LM Studio: сервер ${lmsServerUp() ? "up" : "DOWN"}, модель ${lmsLoaded() ? "загружена" : "НЕ загружена"}. Сначала: translate_ctl.mts up`,
-      );
-    }
+    ensureBackend();
     const fd = openSync(LOG(lang), "a");
     const child = spawn(process.execPath, [RUNNER, lang], {
       detached: true,
@@ -157,6 +156,27 @@ const main = async (): Promise<void> => {
     rmSync(PID(lang), { force: true });
     console.log(`${lang}: остановлен (PID ${pid}), po дописан раннером`);
     return;
+  }
+
+  if (cmd === "watch") {
+    if (!LANG_RE.test(lang)) die("укажи язык");
+    console.log(`watch ${lang}: слежу за LM Studio и прогоном (раз в 60 с)`);
+    for (;;) {
+      if (!lmsServerUp()) {
+        console.log(`${new Date().toISOString()} сервер LM Studio упал — поднимаю`);
+        run(LMS, ["server", "start"]);
+      }
+      if (!lmsLoaded()) {
+        console.log(`${new Date().toISOString()} модель выгружена — загружаю`);
+        run(LMS, ["load", TRANSLATE_BACKEND.model, "-c", "8192", "--parallel", "4", "--gpu", "max", "--ttl", "86400"]);
+        if (!lmsServerUp()) run(LMS, ["server", "start"]);
+      }
+      await new Promise((resolve) => setTimeout(resolve, 60_000));
+      if (!runningPid(lang)) {
+        console.log(`${new Date().toISOString()} прогон ${lang} завершён — watch выходит`);
+        return;
+      }
+    }
   }
 
   if (cmd === "review") {

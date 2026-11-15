@@ -1,5 +1,5 @@
 /** Живой прогон перевода по po (построчно, правила из скилла translate). */
-import { appendFileSync, readFileSync } from "node:fs";
+import { appendFileSync, existsSync, readFileSync } from "node:fs";
 import { execSync } from "node:child_process";
 import { join } from "node:path";
 
@@ -71,6 +71,10 @@ const skill = readFileSync(SKILL, "utf-8");
 const o = skill.indexOf("<!-- ПРАВИЛА -->"),
   c = skill.indexOf("<!-- /ПРАВИЛА -->");
 const rules = skill.slice(o + "<!-- ПРАВИЛА -->".length, c).trim();
+
+/** Глоссарий языка (титулы, ранги, термины) — если файл есть, идёт в промпт. */
+const GLOSSARY_FILE = join(".opencode", "skills", "translate", "glossary", `${LANG}.md`);
+const glossary = existsSync(GLOSSARY_FILE) ? readFileSync(GLOSSARY_FILE, "utf-8").trim() : "";
 
 const text = readFileSync(PO, "utf-8").replace(/\r\n/g, "\n");
 const entries = parsePo(text).filter((e) => e.msgid);
@@ -382,7 +386,7 @@ const worker = async (): Promise<void> => {
       ctxBlock +
       namesBlock +
       `Said by: ${name}${genderNote}\nEN: ${e.msgid}\n${menuNote}\n` +
-      `STEP 1 — RESEARCH: using the context, write 2-3 sentences in ENGLISH (Latin script only) about the situation: ` +
+      `STEP 1 — RESEARCH: using the context, write 2-3 sentences about the situation ` +
       `who is speaking to whom, what just happened, and what this line does — and note each character's gender from NAMES in parentheses. ` +
       `Mind the ADDRESSEE — it decides forms like past-tense "you" — and the GENDER of every character (from NAMES).\n` +
       `STEP 2 — TRANSLATE ONLY the EN line into ${TARGET[LANG] ?? LANG}. The value of "tr" must contain ` +
@@ -516,7 +520,9 @@ const worker = async (): Promise<void> => {
     };
     let lastTr = ""; // для лога отклонённого кандидата (правило «полный лог»)
     try {
-      const sys = `You translate this game into ${TARGET[LANG] ?? LANG}. Follow these rules:\n\n${rules}`;
+      const sys =
+        `You translate this game into ${TARGET[LANG] ?? LANG}. Follow these rules:\n\n${rules}` +
+        (glossary ? `\n\nGLOSSARY — use exactly these renderings:\n${glossary}` : "");
       // Гейт судьи — только в режиме ремонта (--retrans): вклеенные/не те строки
       // ловит семантика, а не строковое сходство (пилот 2026-11-06: 18/30).
       const judgeGate = async (t: string): Promise<string | null> => {
