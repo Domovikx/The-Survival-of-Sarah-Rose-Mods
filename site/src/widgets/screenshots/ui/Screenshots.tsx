@@ -41,6 +41,8 @@ const SHOTS = [
 
 const shotSrc = (file: string) => `${SHOTS_BASE}${file}.jpg`;
 
+export const ROOT = "Screenshots";
+
 export const Screenshots = () => {
   const { t } = useTranslation();
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -153,9 +155,9 @@ export const Screenshots = () => {
 
   return (
     <Section title={t("Screenshots")} testId="screenshots">
-      <div className={cx(styles.grid)} data-testid="screenshots-grid">
+      <div className={cx(styles.grid)} data-testid={`${ROOT}--grid`}>
         {SHOTS.map((s, i) => (
-          <figure key={s} className={cx(styles.figure)} data-testid={`screenshot-${i}`}>
+          <figure key={s} className={cx(styles.figure)} data-testid={`${ROOT}--thumb-${i}`}>
             <button
               type="button"
               ref={(el) => {
@@ -164,11 +166,11 @@ export const Screenshots = () => {
               className={cx(styles.imgButton)}
               onClick={() => open(i)}
               aria-label={`${t("Screenshot from the game")} — ${t("open full size")}`}
-              data-testid={`screenshot-img-${i}`}
+              data-testid={`${ROOT}--img-${i}`}
             >
               <img className={cx(styles.img)} src={shotSrc(s)} alt={t("Screenshot from the game")} loading="lazy" />
             </button>
-            <figcaption className={cx(styles.caption)} data-testid={`screenshot-caption-${i}`}>
+            <figcaption className={cx(styles.caption)} data-testid={`${ROOT}--caption-${i}`}>
               {t("Screenshot from the game")}
             </figcaption>
           </figure>
@@ -188,14 +190,14 @@ export const Screenshots = () => {
           onClick={onOverlayClick}
           onTouchStart={onTouchStart}
           onTouchEnd={onTouchEnd}
-          data-testid="lightbox"
+          data-testid={`${ROOT}--lightbox`}
         >
           <button
             type="button"
             className={cx(styles.close)}
             onClick={close}
             aria-label={t("Close")}
-            data-testid="lightbox-close"
+            data-testid={`${ROOT}--lightbox-close`}
           >
             ×
           </button>
@@ -209,7 +211,7 @@ export const Screenshots = () => {
                 prev();
               }}
               aria-label={t("Previous screenshot")}
-              data-testid="lightbox-prev"
+              data-testid={`${ROOT}--lightbox-prev`}
             >
               ‹
             </button>
@@ -219,7 +221,7 @@ export const Screenshots = () => {
               src={shotSrc(shot)}
               alt={t("Screenshot from the game")}
               draggable={false}
-              data-testid="lightbox-img"
+              data-testid={`${ROOT}--lightbox-img`}
             />
 
             <button
@@ -230,13 +232,13 @@ export const Screenshots = () => {
                 next();
               }}
               aria-label={t("Next screenshot")}
-              data-testid="lightbox-next"
+              data-testid={`${ROOT}--lightbox-next`}
             >
               ›
             </button>
 
             <div className={cx(styles.metaRow)}>
-              <span className={cx(styles.counter)} data-testid="lightbox-counter">
+              <span className={cx(styles.counter)} data-testid={`${ROOT}--lightbox-counter`}>
                 {openIndex + 1} / {count}
               </span>
               <span className={cx(styles.overlayCaption)}>{t("Screenshot from the game")}</span>

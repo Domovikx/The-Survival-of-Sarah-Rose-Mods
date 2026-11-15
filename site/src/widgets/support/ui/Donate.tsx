@@ -16,21 +16,23 @@ const KOFI = "https://ko-fi.com/domovikx";
  * Стили общие с Support — это один слайс (`widgets/support`), поэтому
  * `Support.styles.ts` здесь не дублируется.
  */
+export const ROOT = "Donate";
+
 export const Donate = () => {
   const { t } = useTranslation();
 
   return (
-    <Section id="donate" title={t("Donation")} testId="donate">
-      <div className={cx(styles.panel)} data-testid="donate-panel">
+    <Section id="donate" title={t("Donation")} testId={ROOT}>
+      <div className={cx(styles.panel)} data-testid={`${ROOT}--panel`}>
         <p className={cx(styles.lead)}>
           {t("A donation on Boosty or Ko-fi — it pays for the AI and the hours behind the voice")}
         </p>
 
         <div className={cx(styles.row)}>
-          <a className={cx(styles.btn)} href={BOOSTY} data-testid="donate-boosty" rel="noopener">
+          <a className={cx(styles.btn)} href={BOOSTY} data-testid={`${ROOT}--boosty`} rel="noopener">
             {"Boosty"}
           </a>
-          <a className={cx(styles.btn)} href={KOFI} data-testid="donate-kofi" rel="noopener">
+          <a className={cx(styles.btn)} href={KOFI} data-testid={`${ROOT}--kofi`} rel="noopener">
             {"Ko-fi"}
           </a>
         </div>

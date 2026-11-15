@@ -8,8 +8,8 @@ const BASE = "/The-Survival-of-Sarah-Rose-Mods/";
 /** Титул вкладки — ключ каталога (en-текст), перевод разворачиваем из CATALOGUE. */
 const TITLE = "The Survival of Sarah Rose — AI Voice Pack + 11 Languages";
 
-const trigger = (page: Page) => page.getByTestId("lang-switcher");
-const option = (page: Page, lang: string) => page.getByTestId(`lang-${lang}`);
+const trigger = (page: Page) => page.getByTestId("LanguageSwitcher");
+const option = (page: Page, lang: string) => page.getByTestId(`LanguageSwitcher--${lang}`);
 const menu = (page: Page) => page.getByRole("listbox");
 
 /** Открыть дропдаун переключателя языков. */

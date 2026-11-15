@@ -7,17 +7,19 @@ import { Container, cx, SteamIcon } from "@/shared/ui";
 
 import { styles } from "./Header.styles";
 
+export const ROOT = "Header";
+
 export const Header = () => {
   const { t } = useTranslation();
 
   return (
-    <header className={cx(styles.header)} data-testid="header">
+    <header className={cx(styles.header)} data-testid={ROOT}>
       <Container>
-        <div className={cx(styles.inner)} data-testid="header-inner">
-          <a className={cx(styles.brand)} href="/" data-testid="header-brand">
+        <div className={cx(styles.inner)} data-testid={`${ROOT}--inner`}>
+          <a className={cx(styles.brand)} href="/" data-testid={`${ROOT}--brand`}>
             {t("TSSR · AI voice pack")}
           </a>
-          <a className={cx(styles.steamLink)} href={LINKS.steam} data-testid="steam-link">
+          <a className={cx(styles.steamLink)} href={LINKS.steam} data-testid={`${ROOT}--steam-link`}>
             <SteamIcon size={16} />
             {t("Steam page")}
           </a>

@@ -18,6 +18,8 @@ const flagSrc = (lang: string): string => `${import.meta.env.BASE_URL}flags/${la
 const Flag = ({ lang }: { lang: string }) => (
   <img className={cx(styles.flag)} src={flagSrc(lang)} alt="" aria-hidden loading="lazy" />
 );
+export const ROOT = "LanguageSwitcher";
+
 export const LanguageSwitcher = () => {
   const { i18n, t } = useTranslation();
   const [open, setOpen] = useState(false);
@@ -50,7 +52,7 @@ export const LanguageSwitcher = () => {
         aria-haspopup="listbox"
         aria-expanded={open}
         aria-label={t("Language")}
-        data-testid="lang-switcher"
+        data-testid={ROOT}
         onClick={() => setOpen((v) => !v)}
       >
         <span className={cx(styles.label)}>
@@ -68,7 +70,7 @@ export const LanguageSwitcher = () => {
               <button
                 type="button"
                 className={cx(styles.item, lang === current && styles.itemActive)}
-                data-testid={`lang-${lang}`}
+                data-testid={`${ROOT}--${lang}`}
                 onClick={() => {
                   setLang(lang);
                   setOpen(false);

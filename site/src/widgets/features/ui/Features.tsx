@@ -9,34 +9,36 @@ const CARDS = [
     icon: "🌐",
     titleKey: "Translation",
     textKey: "Russian — the whole story. Other languages — the opening (demo scope).",
-    testId: "features-card-translate",
+    key: "translate",
   },
   {
     icon: "🎙",
     titleKey: "AI voice acting",
     textKey: "Cloned voices, one per character, with the emotion matched to each scene.",
-    testId: "features-card-voice",
+    key: "voice",
   },
   {
     icon: "🗣",
     titleKey: "Living characters",
     textKey: "Sarah, Kate, King Orwell, Thomas, Varga and dozens more.",
-    testId: "features-card-voices",
+    key: "characters",
   },
 ] as const;
+
+export const ROOT = "Features";
 
 export const Features = () => {
   const { t } = useTranslation();
 
   return (
     <Section title={t("What you get")} testId="features">
-      <div className={cx(styles.grid)} data-testid="features-grid">
+      <div className={cx(styles.grid)} data-testid={`${ROOT}--grid`}>
         {CARDS.map((card) => (
-          <div key={card.titleKey} className={cx(styles.card)} data-testid={card.testId}>
-            <h3 className={cx(styles.cardTitle)} data-testid={`${card.testId}-title`}>
+          <div key={card.titleKey} className={cx(styles.card)} data-testid={`${ROOT}--card-${card.key}`}>
+            <h3 className={cx(styles.cardTitle)} data-testid={`${ROOT}--card-${card.key}-title`}>
               {card.icon} {t(card.titleKey)}
             </h3>
-            <p className={cx(styles.cardText)} data-testid={`${card.testId}-text`}>
+            <p className={cx(styles.cardText)} data-testid={`${ROOT}--card-${card.key}-text`}>
               {t(card.textKey)}
             </p>
           </div>

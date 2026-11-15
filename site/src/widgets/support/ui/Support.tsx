@@ -13,12 +13,14 @@ const STEAM_GUIDE = "https://steamcommunity.com/sharedfiles/filedetails/?id=3733
  * это пик ценности и действие без затрат, ровно тот порядок, который в
  * исследованиях конверсии даёт лучший отклик. Донат — отдельный блок ниже.
  */
+export const ROOT = "Support";
+
 export const Support = () => {
   const { t } = useTranslation();
 
   return (
-    <Section id="support" title={t("Support the project")} testId="support">
-      <div className={cx(styles.panel)} data-testid="support-panel">
+    <Section id="support" title={t("Support the project")} testId={ROOT}>
+      <div className={cx(styles.panel)} data-testid={`${ROOT}--panel`}>
         <p className={cx(styles.lead)}>
           {t(
             "The patch is non-commercial and made by one person in their spare time. If it has been useful, here is what really helps:",
@@ -33,10 +35,15 @@ export const Support = () => {
         </ul>
 
         <div className={cx(styles.row)}>
-          <a className={cx(styles.btn, styles.btnAccent)} href={LINKS.nexus} data-testid="support-nexus" rel="noopener">
+          <a
+            className={cx(styles.btn, styles.btnAccent)}
+            href={LINKS.nexus}
+            data-testid={`${ROOT}--nexus`}
+            rel="noopener"
+          >
             {t("Endorse on Nexus")}
           </a>
-          <a className={cx(styles.btn)} href={STEAM_GUIDE} data-testid="support-steam" rel="noopener">
+          <a className={cx(styles.btn)} href={STEAM_GUIDE} data-testid={`${ROOT}--steam`} rel="noopener">
             {t("Steam guide")}
           </a>
         </div>

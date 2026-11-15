@@ -1,23 +1,15 @@
 /**
  * СГЕНЕРИРОВАНО — руками не править.
  *
- * Демо-фразы сайта — ОТДЕЛЬНЫЙ кейс переводов: они берутся строго из
- * `patches/ai-voice-pack/po/<lang>.po` (из этих msgstr сгенерирован звук,
- * uid = md5 английского текста). Общий каталог сайта (`i18n.locales.ts`)
- * их не содержит — чтобы UI-переводы и игровые реплики не путались.
- *
- * Перегенерация: node .opencode/skills/site-locales/gen_demo_phrases.mts
- * Порядок фраз и uid — `demo-manifest.json` (рядом с gen_demo_phrases.mts).
- * Соответствие po стережёт `site/e2e/demo.spec.ts`.
+ * Источник: `patches/ai-voice-pack/po/<lang>.po` (тексты и имена спикеров) и
+ * `demo-manifest.json` (uid и английский). Перегенерация:
+ * `node .opencode/skills/site-locales/gen_demo_phrases.mts`.
  */
 import type { Lang } from "@/shared/config";
 
 export type DemoPhrase = {
-  /** uid = md5(английского текста) — имя файла аудио. */
   uid: string;
-  /** Имя спикера по языкам (из po). */
   speaker: Record<Lang, string>;
-  /** Текст реплики по языкам (из po). */
   text: Record<Lang, string>;
 };
 

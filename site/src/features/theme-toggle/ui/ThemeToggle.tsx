@@ -11,6 +11,8 @@ import { styles } from "./ThemeToggle.styles";
 // prefers-reduced-motion.
 
 /** Тема: круглая кнопка с морфингом ☀ (светлая) ↔ 🌙 (тёмная, дефолт проекта). */
+export const ROOT = "ThemeToggle";
+
 export const ThemeToggle = () => {
   const { t } = useTranslation();
   const [theme, setTheme] = useState<Theme>(getInitialTheme);
@@ -28,7 +30,7 @@ export const ThemeToggle = () => {
       className={cx(styles.toggle, styles.reducedMotion)}
       aria-label={t("Toggle theme")}
       aria-pressed={isDark}
-      data-testid="theme-switch"
+      data-testid={ROOT}
       onClick={handleToggle}
     >
       <span className={cx(styles.iconBox)}>

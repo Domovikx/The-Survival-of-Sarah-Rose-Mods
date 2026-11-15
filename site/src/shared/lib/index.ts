@@ -1,2 +1,2 @@
-export { getInitialTheme, applyTheme } from './theme'
-export type { Theme } from './theme'
+export { getInitialTheme, applyTheme } from "./theme";
+export type { Theme } from "./theme";

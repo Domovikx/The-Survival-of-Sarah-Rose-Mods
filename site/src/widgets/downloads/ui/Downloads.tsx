@@ -12,16 +12,10 @@ const RELEASE_BASE = "https://github.com/Domovikx/The-Survival-of-Sarah-Rose-Mod
 
 const asset = (name: string): string => `${RELEASE_BASE}/TSSR-AI-Voice-Pack-${name}.7z`;
 
-/**
- * Сколько ссылка остаётся заблокированной после нажатия.
- *
- * Зачем: браузер НЕ сообщает сайту ничего о ходе и конце скачивания (это
- * обычная ссылка на .7z). Без блокировки человек видит «ничего не происходит» и
- * жмёт ещё и ещё — а каждый клик запускает новую закачку того же файла. Сейчас
- * это 5 МБ и 15–21 МБ, дальше файлы будут под гигабайт: пачка одинаковых
- * закачек = потраченный трафик и забитый диск.
- */
+/** Пауза после клика: браузер не сообщает о конце закачки, без неё качают пачками. */
 const COOLDOWN_MS = 20_000;
+
+export const ROOT = "Downloads";
 
 export const Downloads = () => {
   const { t } = useTranslation();
@@ -37,7 +31,6 @@ export const Downloads = () => {
     };
   }, []);
 
-  /** Возвращает false, если нажатие надо погасить (файл уже качается). */
   const startDownload = useCallback((event: MouseEvent<HTMLAnchorElement>, key: string): void => {
     if (timers.current.has(key)) {
       event.preventDefault();
@@ -68,8 +61,8 @@ export const Downloads = () => {
   };
 
   return (
-    <Section title={t("Download")} testId="downloads">
-      <div className={cx(styles.panel)} data-testid="downloads-panel">
+    <Section title={t("Download")} testId={ROOT}>
+      <div className={cx(styles.panel)} data-testid={`${ROOT}--panel`}>
         <p className={cx(styles.lead)}>
           {t(
             "The patch is free. Please download from Nexus Mods when it is available: that is where the statistics and endorsements live, and they are what help other players find the patch. The links below are a backup channel for when Nexus or Vortex is not available for you.",
@@ -80,7 +73,7 @@ export const Downloads = () => {
           <a
             className={cx(styles.mainBtn, isPending("main") && styles.linkBusy)}
             href={asset("main")}
-            data-testid="download-main"
+            data-testid={`${ROOT}--main`}
             rel="noopener"
             {...linkState("main")}
           >
@@ -89,7 +82,7 @@ export const Downloads = () => {
           <span className={cx(styles.hint)}>{t("required — texts of 11 languages, fonts, mod menu")}</span>
         </div>
 
-        <p className={cx(styles.status)} role="status" aria-live="polite" data-testid="downloads-status">
+        <p className={cx(styles.status)} role="status" aria-live="polite" data-testid={`${ROOT}--status`}>
           {pending.length ? t("Download started — wait for the browser to finish. Clicking again is not needed.") : ""}
         </p>
 
@@ -101,7 +94,7 @@ export const Downloads = () => {
                 key={code}
                 className={cx(styles.chip, isPending(`voice-${code}`) && styles.linkBusy)}
                 href={asset(`voice-${code}`)}
-                data-testid={`download-voice-${code}`}
+                data-testid={`${ROOT}--voice-${code}`}
                 rel="noopener"
                 {...linkState(`voice-${code}`)}
               >

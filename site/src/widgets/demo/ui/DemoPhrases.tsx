@@ -165,7 +165,7 @@ const PhraseCard = ({ index, uid, phrase, uiLang, playing, progress, time, onTog
   const shownDuration = isPlaying && time.dur > 0 ? time.dur : knownDuration;
 
   return (
-    <article className={cx(styles.card)} data-testid={`demo-row-${index}`}>
+    <article className={cx(styles.card)} data-testid={`${ROOT}--row-${index}`}>
       <div className={cx(styles.top)}>
         <button
           type="button"
@@ -175,21 +175,21 @@ const PhraseCard = ({ index, uid, phrase, uiLang, playing, progress, time, onTog
               ? tPhrase("Pause: {{name}}", { name: phrase.speaker })
               : tPhrase("Play: {{name}}", { name: phrase.speaker })
           }
-          data-testid={`demo-play-${index}`}
+          data-testid={`${ROOT}--play-${index}`}
           data-playing={isPlaying}
           onClick={() => onToggle(uid, uiLang)}
         >
           {isPlaying ? <PauseIcon /> : <PlayIcon />}
         </button>
-        <span className={cx(styles.who)} data-testid={`demo-speaker-${index}`}>
+        <span className={cx(styles.who)} data-testid={`${ROOT}--speaker-${index}`}>
           {phrase.speaker}
         </span>
-        <span className={cx(styles.time)} data-testid={`demo-time-${index}`}>
+        <span className={cx(styles.time)} data-testid={`${ROOT}--time-${index}`}>
           {`${fmt(isPlaying ? time.cur : 0)} / ${fmt(shownDuration)}`}
         </span>
       </div>
 
-      <p className={cx(styles.text)} data-testid={`demo-text-${index}`}>
+      <p className={cx(styles.text)} data-testid={`${ROOT}--text-${index}`}>
         {phrase.text}
       </p>
 
@@ -208,7 +208,7 @@ const PhraseCard = ({ index, uid, phrase, uiLang, playing, progress, time, onTog
         aria-label={tPhrase(
           "Real in-game lines with AI voice acting: cloned voices, live emotions. Hit a line — and hear the result.",
         )}
-        data-testid={`demo-chips-${index}`}
+        data-testid={`${ROOT}--chips-${index}`}
       >
         {AUDIO_LANGS.map((l) => {
           const on = isPlaying && playing.lang === l.code;
@@ -219,7 +219,7 @@ const PhraseCard = ({ index, uid, phrase, uiLang, playing, progress, time, onTog
               className={cx(styles.chip, on && styles.chipOn)}
               aria-pressed={on}
               aria-label={`${l.label}: ${phrase.speaker}`}
-              data-testid={`demo-chip-${index}-${l.code}`}
+              data-testid={`${ROOT}--chip-${index}-${l.code}`}
               onClick={() => onToggle(uid, l.code)}
             >
               {l.label}
@@ -237,6 +237,8 @@ const PhraseCard = ({ index, uid, phrase, uiLang, playing, progress, time, onTog
  * Один плеер на страницу, волна = реальные пики из аудио, клик/драг по волне
  * перематывает.
  */
+export const ROOT = "DemoPhrases";
+
 export const DemoPhrases = () => {
   const { i18n } = useTranslation();
   const uiLangRaw = (i18n.resolvedLanguage ?? "en").slice(0, 2);
@@ -316,13 +318,13 @@ export const DemoPhrases = () => {
   );
 
   return (
-    <Section title={tPhrase("Hear it in action")} testId="demo">
-      <p className={cx(styles.lead)} data-testid="demo-lead">
+    <Section title={tPhrase("Hear it in action")} testId={ROOT}>
+      <p className={cx(styles.lead)} data-testid={`${ROOT}--lead`}>
         {tPhrase(
           "Real in-game lines with AI voice acting: cloned voices, live emotions. Hit a line — and hear the result.",
         )}
       </p>
-      <div className={cx(styles.list)} data-testid="demo-grid">
+      <div className={cx(styles.list)} data-testid={`${ROOT}--grid`}>
         {PHRASES.map((row, i) => {
           // Текст и имя спикера — из перевода игры (po), а не из каталога сайта.
           const phrase: Phrase = {

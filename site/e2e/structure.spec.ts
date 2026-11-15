@@ -95,6 +95,21 @@ test.describe("структура сайта: стили и иконки", () =>
     }
   });
 
+  test("data-testid: ROOT = имя компонента, id собираются от него", () => {
+    const components = FILES.filter((file) => file.endsWith(".tsx") && /widgets|features/.test(file));
+    const problems: string[] = [];
+    for (const file of components) {
+      const text = read(file);
+      const component = /^export const (\w+) = (?:\(|[^=]+=>)/m.exec(text)?.[1];
+      if (!component) continue;
+      const root = /^export const ROOT = "([^"]+)";$/m.exec(text)?.[1];
+      if (root !== component) problems.push(`${basename(file)}: ROOT «${root ?? "нет"}» != компонент «${component}»`);
+      for (const m of text.matchAll(/data-testid="([^"]+)"/g))
+        problems.push(`${basename(file)}: литеральный id «${m[1]}»`);
+    }
+    expect(problems, "id собираются как `${ROOT}--часть`").toEqual([]);
+  });
+
   test("все SVG-иконки — в shared/ui/icons.tsx", () => {
     const offenders = COMPONENTS.filter((file) => file !== ICONS && read(file).includes("<svg"));
     expect(offenders, "иконки собираем в shared/ui/icons.tsx (размер — проп size)").toEqual([]);
