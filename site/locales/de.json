@@ -96,13 +96,25 @@
           "age": "18+",
           "linkNexus": "Nexus Mods"
      },
-     "temp": {
-          "title": "Direkt herunterladen (vorübergehend)",
-          "lead": "Die Mod-Seite auf Nexus Mods wartet auf Freigabe. Solange sie geschlossen ist, gibt es die Archive hier - sonst ändert sich nichts.",
+     "download": {
+          "title": "Herunterladen",
+          "lead": "Der Patch ist kostenlos. Bitte lade ihn von Nexus Mods, wenn es verfügbar ist: dort liegen Statistiken und Empfehlungen, und genau darüber finden andere Spieler den Patch. Die Links unten sind ein Ersatzkanal, falls Nexus oder Vortex für dich nicht erreichbar ist.",
           "main": "Kernpaket herunterladen (main.7z)",
           "mainHint": "erforderlich - Texte in 11 Sprachen, Schriften, Mod-Menü",
           "voiceLabel": "Sprachpakete - eines pro Sprache (optional):",
           "install": "Entpacke main.7z in den Spielordner (neben TheSurvivalofSarahRose.exe), dann die gewünschten Sprachpakete. Das Abzeichen oben rechts öffnet das Mod-Menü.",
-          "note": "Vorübergehende Links: werden entfernt, sobald die Mod-Seite öffnet."
+          "note": "Hauptseite und Updates liegen auf Nexus Mods; hier ist eine Sicherungskopie der aktuellen Version."
+     },
+     "support": {
+          "title": "Projekt unterstützen",
+          "lead": "Der Patch ist nicht kommerziell und wird von einer Person in der Freizeit gemacht. Wenn er dir geholfen hat, hilft das hier wirklich:",
+          "likeNexus": "Empfehlung (Endorse) auf Nexus Mods - so finden andere Spieler den Patch",
+          "likeSteam": "Die Steam-Anleitung bewerten - so sehen ihn Neueinsteiger",
+          "donate": "Eine Spende über Boosty oder Ko-fi - sie bezahlt KI und die Stunden hinter der Stimme",
+          "btnNexus": "Auf Nexus empfehlen",
+          "btnSteam": "Steam-Anleitung",
+          "btnBoosty": "Boosty",
+          "btnKofi": "Ko-fi",
+          "thanks": "Danke. Selbst eine Empfehlung ist sichtbar, und eine Spende sind buchstäblich die nächsten Zeilen Sprachausgabe."
      }
 }

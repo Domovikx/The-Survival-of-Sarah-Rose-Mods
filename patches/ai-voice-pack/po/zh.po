@@ -216962,11 +216962,11 @@ msgstr "也就是说，哪怕只有一瞬间，他也必须松开抓着拉扎费
 
 msgctxt "speaker:Narrator"
 msgid "Sarah watched as the spirit leapt up, free from his torture. The thing's mouth opened like a snake, rows and rows of fangs emerging."
-msgstr ""
+msgstr "莎拉看着那灵体挣脱了折磨，腾空跃起。那东西的嘴像蛇一样张开，一排排獠牙显露出来。"
 
 msgctxt "speaker:Narrator"
 msgid "On Xan's face, she could see that the mage had realized his mistake by the shadow that the spirit now cast over him."
-msgstr ""
+msgstr "在桑的脸上，她能看出这位法师已经意识到了自己的错误，因为那灵体此刻正将阴影笼罩在他身上。"
 
 msgctxt "speaker:Narrator"
 msgid "Razaphel's mouth clamped shut, the rows of teeth catching Xan by his collarbone."
@@ -216974,11 +216974,11 @@ msgstr "拉扎费尔的嘴猛地合上，那排利齿死死咬住了赞的锁骨
 
 msgctxt "speaker:Narrator"
 msgid "Sarah watched."
-msgstr ""
+msgstr "莎拉注视着。"
 
 msgctxt "speaker:Narrator"
 msgid "Xan's entire head was gone, dissapeared into the mouth of the spirit. A muffled scream could be heard emerging from within."
-msgstr ""
+msgstr "赞的全部脑袋都没了，消失在了那灵体的口中。隐约的尖叫从内部传出。"
 
 msgctxt "speaker:Narrator"
 msgid "She watched as Xan tried to drive the spirit away, flailing his remaining arm with burning magic."
@@ -216986,7 +216986,7 @@ msgstr "她看着萨兰试图驱赶灵体，挥舞着仅存的胳膊，燃烧着
 
 msgctxt "speaker:Narrator"
 msgid "But the spirit could tolerate the pain, because it knew victory was near."
-msgstr ""
+msgstr "但灵魂能够忍受痛苦，因为它知道胜利就在眼前。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah watched Xan's body slow down. His flailing turned to twitching, until eventually, even that ceased."
@@ -216994,491 +216994,491 @@ msgstr "莎拉看着伊恩的身体逐渐停止挣扎。他胡乱挥舞的动作
 
 msgctxt "speaker:Narrator"
 msgid "With a loud crunch, Razaphel's jaws broke through the last of Xan's resistance, snapping his bones and tearing off his head."
-msgstr ""
+msgstr "伴随着一声巨响，拉扎费尔的颚骨击碎了赞最后的抵抗，折断他的骨骼并撕下了他的头颅。"
 
 msgctxt "speaker:Narrator"
 msgid "Xan's body collapsed to the floor with a solid thud."
-msgstr ""
+msgstr "赞的身体重重地摔在地板上。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah forced herself to look at her former mentor. She had caused this, wanted this. What right did she then have to now look away?"
-msgstr ""
+msgstr "莎拉强迫自己看向她曾经的导师。这一切都是她造成的，也是她所渴望的。既然如此，她又凭什么现在移开目光？"
 
 msgctxt "speaker:Narrator"
 msgid "Blood flowed freely from the stump on Xan's body, splattering the floor in blood. It didn't take long for the blood to darken and stain."
-msgstr ""
+msgstr "鲜血从萨恩尸体的断颈处涌出，溅落在地板上。没过多久，血迹便变深、凝固。"
 
 msgctxt "speaker:Narrator"
 msgid "Hovering over his body, the spirit."
-msgstr ""
+msgstr "Дух парил над его телом."
 
 msgctxt "speaker:Razaphel"
 msgid "It is done."
-msgstr ""
+msgstr "已经完成了。"
 
 msgctxt "speaker:Narrator"
 msgid "There was little more to say."
-msgstr ""
+msgstr "再无多言。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah had thought she would feel some kind of release, knowing she was free, but the act itself and its brutality had stripped her of that."
-msgstr ""
+msgstr "莎拉本以为知道自己重获自由时会感到某种释然，但这一行为本身及其残酷性却剥夺了她这种感受。"
 
 msgctxt "speaker:Narrator"
 msgid "Still, no matter how deep or far she searched her heart and soul, she found no regret. No secret wish to undo what she had done."
-msgstr ""
+msgstr "然而，无论她如何深入内心和灵魂去探寻，都找不到一丝悔意。没有想要 undo 所做之事的隐秘愿望。"
 
 msgctxt "speaker:Sarah"
 msgid "It is done..."
-msgstr ""
+msgstr "已经结束了……"
 
 msgctxt "speaker:Razaphel"
 msgid "Now you have your freedom."
-msgstr ""
+msgstr "现在你获得了自由。"
 
 msgctxt "speaker:Razaphel"
 msgid "So the question of now what is one you will have to answer for yourself."
-msgstr ""
+msgstr "所以，接下来该怎么做这个问题，你得自己拿主意。"
 
 msgctxt "speaker:Sarah"
 msgid "And our deal?"
-msgstr ""
+msgstr "我们的交易呢？"
 
 msgctxt "speaker:Razaphel"
 msgid "Our deal stands. I have fulfilled my end, and one day you will fulfill yours."
-msgstr ""
+msgstr "我们的协议依然有效。我已经履行了我的承诺，总有一天你会履行你的。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah had imagined the spirit might want her, seize her this very moment, but she understood that was foolish of her to think."
-msgstr ""
+msgstr "莎拉曾想象过，那灵体或许会想要她，甚至在此刻就将她占有，但她明白这种想法是多么愚蠢。"
 
 msgctxt "speaker:Narrator"
 msgid "The spirit had not risked everything for a chance to have her body. His demand, if it ever came, would be far more costly."
-msgstr ""
+msgstr "灵体并未冒一切风险只为换取与她身体的欢愉。他的要求，如果真会降临，代价将远为高昂。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah stood up and carefully stepped over the body, avoiding any blood."
-msgstr ""
+msgstr "莎拉站起身，小心翼翼地跨过那具尸体，避开了所有的血迹。"
 
 msgctxt "speaker:Razaphel"
 msgid "One advice, Sarah..."
-msgstr ""
+msgstr "一个建议，莎拉……"
 
 msgctxt "speaker:Razaphel"
 msgid "Take the fate stone and carry it through the house. Hold it up in every corner, and it will shroud the house from the eyes of the gods."
-msgstr ""
+msgstr "拿起命运石，带着它走遍屋子。在每个角落将它举起，它便能将屋子从诸神的视线中遮蔽起来。"
 
 msgctxt "speaker:Razaphel"
 msgid "And perhaps more acutely, shroud it from the mage's order."
-msgstr ""
+msgstr "或许更确切地说，还要把它从法师的秩序中遮蔽起来。"
 
 msgctxt "speaker:Narrator"
 msgid "In all the hurry, Sarah had not given much thought to what came after, or whether Xan's order might come after her."
-msgstr ""
+msgstr "在一片慌乱之中，莎拉并未过多思考之后的事，也没怎么想过赞的教团是否会追着她不放。"
 
 msgctxt "speaker:Sarah"
 msgid "Do you think they will come for me?"
-msgstr ""
+msgstr "你觉得他们会来找我吗？"
 
 msgctxt "speaker:Narrator"
 msgid "The spirit twirled, seeming unconcerned."
-msgstr ""
+msgstr "灵魂旋转着，似乎毫不在意。"
 
 msgctxt "speaker:Razaphel"
 msgid "Perhaps, or perhaps not. Their order is often hard to understand."
-msgstr ""
+msgstr "也许吧，也许不会。他们的教团行事往往难以捉摸。"
 
 msgctxt "speaker:Razaphel"
 msgid "But with the fate stone, you will cut out their most powerful tool, the eyes of the gods."
-msgstr ""
+msgstr "但有了命运石，你就能切断他们最强大的工具——神明的眼睛。"
 
 msgctxt "speaker:Razaphel"
 msgid "Without it, they can find you no easier than any ordinary mortal can. And this house, they will never find."
-msgstr ""
+msgstr "没有它，他们找你的难度不会比任何普通凡人更大。而这栋房子，他们永远也找不到。"
 
 msgctxt "speaker:Narrator"
 msgid "This gave Sarah some comfort."
-msgstr ""
+msgstr "这让莎拉感到些许安慰。"
 
 msgctxt "speaker:Narrator"
 msgid "The house had been a safe haven for her, and now, it could still be so."
-msgstr ""
+msgstr "这座房子曾是她安全的避风港，而现在，它依然可以是。"
 
 msgctxt "speaker:Narrator"
 msgid "Her house, she corrected herself. It all belonged to her now."
-msgstr ""
+msgstr "她纠正自己，是她的房子。现在一切都属于她了。"
 
 msgctxt "speaker:Narrator"
 msgid "She left the spirit without further words and did as instructed, carrying the fate stone throughout every room, warding the house."
-msgstr ""
+msgstr "她不再多言，便依言而行，手持命运石走遍屋内的每一间房，为宅邸施加庇护。"
 
 msgctxt "speaker:Narrator"
 msgid "Near the end, exhausted, she returned to her room."
-msgstr ""
+msgstr "临近尾声，筋疲力尽的她回到了自己的房间。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah dragged her feet as she walked into her bedroom."
-msgstr ""
+msgstr "莎拉拖着沉重的步伐走进卧室。"
 
 msgctxt "speaker:Narrator"
 msgid "The events of only a moment ago now feeling like a strange dream."
-msgstr ""
+msgstr "刚才发生的一切此刻竟感觉像是一场光怪陆离的梦境。"
 
 msgctxt "speaker:Narrator"
 msgid "Only the bruises on her body reminded her it was real."
-msgstr ""
+msgstr "唯有身上的淤青提醒着她，这一切都是真实的。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah looked at her bed."
-msgstr ""
+msgstr "莎拉看着她的床。"
 
 msgctxt "speaker:Narrator"
 msgid "Samayra was sound asleep, despite everything."
-msgstr ""
+msgstr "尽管经历了这一切，萨玛拉却睡得很沉。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah envied her."
-msgstr ""
+msgstr "莎拉羡慕她。"
 
 msgctxt "speaker:Narrator"
 msgid "Climbing into the bed next to Samayra, Sarah pulled herself closer, allowing herself to feel Samayra's body against her own."
-msgstr ""
+msgstr "莎拉爬上床，挨着萨玛拉躺下，将自己拉近，任由自己感受萨玛拉的身体贴着自己的身体。"
 
 msgctxt "speaker:Narrator"
 msgid "She felt Samayra begin to stir, but not quite wake up."
-msgstr ""
+msgstr "她感觉到萨玛拉开始有了动静，但还没有完全醒来。"
 
 msgctxt "speaker:Narrator"
 msgid "Her lithe frame. Her warm body. Her near perfect shape."
-msgstr ""
+msgstr "她纤细的身段。她温暖的身体。她近乎完美的曲线。"
 
 msgctxt "speaker:Sarah"
 msgid "I'm a terrible person."
-msgstr ""
+msgstr "我是个很糟糕的人。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah whispered into Samayra's ear."
-msgstr ""
+msgstr "莎拉对着萨玛拉的耳畔低语。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah held onto her, fearing that if she were to let go, she might lose one of the few things that remained to her."
-msgstr ""
+msgstr "莎拉紧紧抱着她，生怕一旦松手，就会失去这仅存的寥寥数物之一。"
 
 msgctxt "speaker:Narrator"
 msgid "As that fear grew, Sarah slowly slipped into a deep sleep."
-msgstr ""
+msgstr "随着恐惧不断蔓延，莎拉缓缓沉入了深沉的睡眠。"
 
 msgctxt "speaker:Narrator"
 msgid "Empty."
-msgstr ""
+msgstr "空虚。"
 
 msgctxt "speaker:Narrator"
 msgid "Alone, said a voice in her head."
-msgstr ""
+msgstr "\"孤独。\"脑海中响起一个声音。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah shook her head and let herself fall into the bed."
-msgstr ""
+msgstr "莎拉摇了摇头，任由自己倒在床上。"
 
 msgctxt "speaker:Narrator"
 msgid "Sleep."
-msgstr ""
+msgstr "睡觉。"
 
 msgctxt "speaker:Narrator"
 msgid "After all of this, she would need a year worth of sleep."
-msgstr ""
+msgstr "经历了这一切之后，她需要睡上一整年的觉。"
 
 msgctxt "speaker:Narrator"
 msgid "Not long after, Sarah slipped into a deep sleep."
-msgstr ""
+msgstr "不久之后，莎拉陷入了深沉的睡眠。"
 
 msgctxt "speaker:Narrator"
 msgid "As Sarah woke to the next day, she found Samayra still asleep."
-msgstr ""
+msgstr "莎拉醒来迎接新的一天时，发现萨玛拉仍在熟睡。"
 
 msgctxt "speaker:Narrator"
 msgid "In their sleep, Samayra had twisted herself round and round, until eventually ending up resting her head on Sarah's chest."
-msgstr ""
+msgstr "睡梦中，萨玛拉辗转反侧，最终将头枕在了莎拉的胸口上。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah didn't object."
-msgstr ""
+msgstr "莎拉没有反对。"
 
 msgctxt "speaker:Narrator"
 msgid "After a short while, she carefully sneaked out of the bed, leaving Samayra to sleep by herself."
-msgstr ""
+msgstr "过了一会儿，她小心翼翼地溜出床铺，让萨玛拉独自安睡。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah woke to the nex day."
-msgstr ""
+msgstr "莎拉在第二天醒来。"
 
 msgctxt "speaker:Narrator"
 msgid "The house made no sound."
-msgstr ""
+msgstr "房子没有发出任何声音。"
 
 msgctxt "speaker:Narrator"
 msgid "It felt to Sarah as if the silent and empty house judged her, a witness to her crimes."
-msgstr ""
+msgstr "莎拉觉得，这寂静空旷的房子仿佛在审视她，见证着她的罪行。"
 
 msgctxt "speaker:Narrator"
 msgid "Too awake to stay in bed, Sarah got up."
-msgstr ""
+msgstr "清醒得无法再躺在床上，莎拉起身了。"
 
 msgctxt "speaker:Narrator"
 msgid "Arriving in the main study room, Sarah slowly let her eyes glide across it."
-msgstr ""
+msgstr "莎拉走进主书房，目光缓缓扫过室内。"
 
 msgctxt "speaker:Narrator"
 msgid "The same."
-msgstr ""
+msgstr "一切如故。"
 
 msgctxt "speaker:Narrator"
 msgid "Everything was exactly as they had left it when they set out for Bagrad."
-msgstr ""
+msgstr "一切正如他们前往巴格拉德时离开的那样。"
 
 msgctxt "speaker:Narrator"
 msgid "The many books. The collection of artifacts. Even Xan's training instructions were still resting where they had been put down."
-msgstr ""
+msgstr "许多书籍。收藏品。甚至连Xan的训练指南都还静静地躺在它们被放置的地方。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah's eyes fell on Xan's desk."
-msgstr ""
+msgstr "莎拉的目光落在了赞的书桌上。"
 
 msgctxt "speaker:Narrator"
 msgid "Xan had a habit of drifting around the house. She would find him reading in the oddest of places."
-msgstr ""
+msgstr "赞有个在屋里四处游荡的习惯。她总能在最意想不到的地方发现他正在读书。"
 
 msgctxt "speaker:Narrator"
 msgid "But this room, and this desk, this had been the center of his studies, and with it, the center of his world."
-msgstr ""
+msgstr "但这间屋子，还有这张书桌，曾是他的研究重心，也是他世界的中心。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah had managed to find her own alcoves and rooms in the house, but this room was where they had spend most of their time together."
-msgstr ""
+msgstr "莎拉在这所房子里找到了属于自己的角落和房间，但这里却是他们共同度过最多时光的地方。"
 
 msgctxt "speaker:Narrator"
 msgid "She sighed heavily."
-msgstr ""
+msgstr "她重重地叹了口气。"
 
 msgctxt "speaker:Narrator"
 msgid "Perhaps, Sarah thought, if she had hated Xan all this would have been easier."
-msgstr ""
+msgstr "也许莎拉想，如果她一直憎恨赞恩，这一切本会容易得多。"
 
 msgctxt "speaker:Narrator"
 msgid "But she owed him too much to hate him. And so instead, the guilt lingered. The guilt of what she had done to buy herself her freedom."
-msgstr ""
+msgstr "但她欠他的太多，无法去恨他。于是，取而代之的是挥之不去的负罪感——那是她为了换取自由而犯下过错所带来的愧疚。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah wandered over towards the desk."
-msgstr ""
+msgstr "莎拉走到书桌旁。"
 
 msgctxt "speaker:Narrator"
 msgid "Sitting down in Xan's chair, she looked over the many papers and books that were piled up."
-msgstr ""
+msgstr "在Xan的椅子上坐下，她审视着桌上堆积如山的文件和书籍。"
 
 msgctxt "speaker:Narrator"
 msgid "It looked like a mess, but Sarah had seen him work enough to know there was a method to his madness."
-msgstr ""
+msgstr "看起来一团糟，但莎拉见过他工作的方式，知道这混乱中自有章法。"
 
 msgctxt "speaker:Narrator"
 msgid "Staring out at it now, the pile of documents just seemed like madness."
-msgstr ""
+msgstr "此刻凝视着它，那堆文件看起来简直就是一团乱麻。"
 
 msgctxt "speaker:Narrator"
 msgid "She carefully lifted one piece of paper from the pile and read the title of the document."
-msgstr ""
+msgstr "她小心翼翼地从那堆文件中拿起一张，读起了文件标题。"
 
 msgctxt "speaker:Narrator"
 msgid "'A preliminary Analysis on Snow Crystal as an Alchemical Catalyst.'"
-msgstr ""
+msgstr "《关于雪晶作为炼金催化剂的初步分析》。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah carefully put the piece of paper back where she had found it. Alchemical research was the last thing she was interested in at the moment."
-msgstr ""
+msgstr "莎拉小心翼翼地将那张纸放回原处。此刻，炼金术研究是她最不感兴趣的事情。"
 
 msgctxt "speaker:Narrator"
 msgid "Off to the side, coming from the window, Sarah could see movement."
-msgstr ""
+msgstr "莎拉瞥见窗边有动静。"
 
 msgctxt "speaker:Narrator"
 msgid "Getting back up, she walked up towards the window and stared out."
-msgstr ""
+msgstr "重新站起身来，她走到窗前向外凝视。"
 
 msgctxt "speaker:Narrator"
 msgid "Outside, Lethram went on as it always had. A bustling of commerce."
-msgstr ""
+msgstr "外面，莱瑟姆一如往常地运转着。商业活动繁忙喧嚣。"
 
 msgctxt "speaker:Narrator"
 msgid "The house sat upon one of the intersections connecting the wealthier port district with the poorer hill districts."
-msgstr ""
+msgstr "这栋房子坐落在连接富裕港口区与较贫穷山区的其中一个十字路口上。"
 
 msgctxt "speaker:Narrator"
 msgid "As a result, one could see just about every facet of the city play out from this window."
-msgstr ""
+msgstr "因此，从这个窗口几乎可以看到这座城市的所有面貌。"
 
 msgctxt "speaker:Narrator"
 msgid "Seeing the city that was as close to her as a home, it oddly soothed her."
-msgstr ""
+msgstr "看着这座对她而言宛如家园的城市，她感到一种奇异的安宁。"
 
 msgctxt "speaker:Narrator"
 msgid "Yet she was also happy to be inside."
-msgstr ""
+msgstr "然而，她也庆幸自己身处室内。"
 
 msgctxt "speaker:Narrator"
 msgid "A degree of seperation between herself and the real world, now again full of uncertainty."
-msgstr ""
+msgstr "一种与充满不确定性的现实世界之间的疏离感。"
 
 msgctxt "speaker:Narrator"
 msgid "For years, her only mantra had been to listen to Xan and follow his lessons. Now there was nobody to tell her what to do."
-msgstr ""
+msgstr "多年来，她唯一的信条就是听从赞并遵循他的教诲。如今，再也没有人告诉她该做什么了。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah knew she wasn't the weak girl from the alley anymore, but she also knew her power, great as it was, could not protect her from everything."
-msgstr ""
+msgstr "莎拉知道自己已不再是那个在巷子里软弱无助的女孩，但她也清楚，尽管力量强大，却无法让她免受一切伤害。"
 
 msgctxt "speaker:Narrator"
 msgid "Fading into existence from seemingly nowhere, the spirit manifested itself."
-msgstr ""
+msgstr "从似乎不存在的地方逐渐显现，这灵体具象化了。"
 
 msgctxt "speaker:Narrator"
 msgid "The blank mask that passed for a face sat upon his inky, black body as it twisted and swirled."
-msgstr ""
+msgstr "那张被当作面孔的空洞面具，戴在他那扭曲盘旋的漆黑躯体之上。"
 
 msgctxt "speaker:Narrator"
 msgid "After having carried the fate stone through the house, the spirit was now untethered from its flask."
-msgstr ""
+msgstr "在带着命运石穿过房子之后，这灵体如今已不再受限于它的瓶身。"
 
 msgctxt "speaker:Narrator"
 msgid "Whatever it was worth, it seemed to enjoy its new found freedom."
-msgstr ""
+msgstr "无论它值多少，它似乎很享受这 newfound 的自由。"
 
 msgctxt "speaker:Razaphel"
 msgid "You seem full of worry."
-msgstr ""
+msgstr "你似乎心事重重。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah kept staring out the window."
-msgstr ""
+msgstr "莎拉一直凝视着窗外。"
 
 msgctxt "speaker:Sarah"
 msgid "I have a lot to worry about."
-msgstr ""
+msgstr "我有许多值得担忧的事。"
 
 msgctxt "speaker:Razaphel"
 msgid "I imagined you would have taken more favorably to your new freedom."
-msgstr ""
+msgstr "我原以为你会更欣然接受你的新自由。"
 
 msgctxt "speaker:Sarah"
 msgid "What we did to Xan..."
-msgstr ""
+msgstr "我们对赞恩做的事……"
 
 msgctxt "speaker:Narrator"
 msgid "The spirit rushed forward."
-msgstr ""
+msgstr "灵魂冲上前去。"
 
 msgctxt "speaker:Razaphel"
 msgid "Do not concern yourself with the fate of that mage."
-msgstr ""
+msgstr "别去操心那个法师的命运。"
 
 msgctxt "speaker:Razaphel"
 msgid "He received not a fraction of what was due to him, consider it mercy."
-msgstr ""
+msgstr "他所得到的惩罚远不及他应得的，你就当这是仁慈吧。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah laughed humorlessly."
-msgstr ""
+msgstr "莎拉发出一声毫无幽默感的笑声。"
 
 msgctxt "speaker:Sarah"
 msgid "Mercy? We killed him."
-msgstr ""
+msgstr "仁慈？我们杀了他。"
 
 msgctxt "speaker:Narrator"
 msgid "For a moment, the spirit was quiet, only observing her. Then it spoke."
-msgstr ""
+msgstr "有那么一瞬间，灵魂安静下来，只是静静地看着她。然后它开口说话了。"
 
 msgctxt "speaker:Razaphel"
 msgid "So, is that what we must do now, Sarah?"
-msgstr ""
+msgstr "那么，莎拉，这就是我们现在必须做的吗？"
 
 msgctxt "speaker:Razaphel"
 msgid "Must we now perform the sad faces and the spilling of tears, so that we might imagine our conscience clean?"
-msgstr ""
+msgstr "难道我们现在还要摆出那副愁眉苦脸、涕泪横流的姿态，好让我们自以为问心无愧吗？"
 
 msgctxt "speaker:Narrator"
 msgid "The spirit reached out with his tendrils, shaped as claws, seizing her by the shoulders."
-msgstr ""
+msgstr "灵体伸出触须，化作利爪，一把抓住了她的肩膀。"
 
 msgctxt "speaker:Razaphel"
 msgid "I will make no apologies for seeking to rid myself of his horrid presence."
-msgstr ""
+msgstr "我绝不会为摆脱他那令人作呕的存在而道歉。"
 
 msgctxt "speaker:Razaphel"
 msgid "Nor should you make apologies for your part in securing your own freedom."
-msgstr ""
+msgstr "你也不该为争取自身自由的行为而道歉。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah shook her body."
-msgstr ""
+msgstr "莎拉颤抖着身体。"
 
 msgctxt "speaker:Sarah"
 msgid "Let go of me, Razaphel."
-msgstr ""
+msgstr "放开我，拉扎费尔。"
 
 msgctxt "speaker:Narrator"
 msgid "The spirit obliged, slinking back towards its corner."
-msgstr ""
+msgstr "那灵体顺从地退回了角落。"
 
 msgctxt "speaker:Razaphel"
 msgid "I imagine you might enjoy-"
-msgstr ""
+msgstr "我想你会很享受——"
 
 msgctxt "speaker:Sarah"
 msgid "You imagined wrong. I'm in no mood for anything, least of all that."
-msgstr ""
+msgstr "你想错了。我现在对什么都提不起兴趣，更别提那种事了。"
 
 msgctxt "speaker:Razaphel"
 msgid "Or perhaps the girl is now the object of your pleasures?"
-msgstr ""
+msgstr "还是说，现在那个女孩成了你取乐的对象了？"
 
 msgctxt "speaker:Sarah"
 msgid "Jealous, are we now?"
-msgstr ""
+msgstr "吃醋了？"
 
 msgctxt "speaker:Razaphel"
 msgid "Go ahead, mourn that wicked man, your mentor..."
-msgstr ""
+msgstr "尽管去哀悼那个邪恶的男人吧，你的导师……"
 
 msgctxt "speaker:Razaphel"
 msgid "But if you want, I shall tell you tales of what he did to me."
-msgstr ""
+msgstr "但如果你愿意，我可以告诉你他对我做了什么。"
 
 msgctxt "speaker:Razaphel"
 msgid "His many tortures, seeking to draw out from me my secrets. I wonder, would you think of him the same if you knew?"
-msgstr ""
+msgstr "他施加了种种酷刑，试图从我口中逼出我的秘密。我很好奇，如果你知道了这些，你对他的看法还会一样吗？"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah waved her hand, dismissing him."
-msgstr ""
+msgstr "莎拉挥了挥手，将他打发走。"
 
 msgctxt "speaker:Sarah"
 msgid "I don't have any illusions about him, but I do owe him for all he taught me."
-msgstr ""
+msgstr "我对他没有任何幻想，但我确实欠他一份人情，因为他教会了我一切。"
 
 msgctxt "speaker:Sarah"
 msgid "Without him, I'd still be what I was...lost, powerless."
-msgstr ""
+msgstr "没有他，我大概还是原来的样子……迷茫，无力。"
 
 msgctxt "speaker:Narrator"
 msgid "Slowly, the spirit emerged back from his corner, drawing closer."
-msgstr ""
+msgstr "渐渐地，那灵魂从角落中重新浮现，缓缓靠近。"
 
 msgctxt "speaker:Razaphel"
 msgid "Tell me, child of starlight..."
-msgstr ""
+msgstr "告诉我，星光之子……"
 
 msgctxt "speaker:Razaphel"
 msgid "For what reason have you taken his blood on your hands? What did you hope to gain?"
-msgstr ""
+msgstr "你为何将他的血沾满双手？你究竟想从中得到什么？"
 
 msgctxt "menu"
 msgid "Power"
@@ -217486,51 +217486,51 @@ msgstr "力量"
 
 msgctxt "speaker:Narrator"
 msgid "For a moment, Sarah considered the words of the spirit."
-msgstr ""
+msgstr "有那么一瞬间，莎拉考虑着这位精灵的话语。"
 
 msgctxt "speaker:Narrator"
 msgid "What did she want. Why had she done what she had done."
-msgstr ""
+msgstr "她想要什么。她为何要做出那样的举动。"
 
 msgctxt "speaker:Narrator"
 msgid "But the answer was obvious to her."
-msgstr ""
+msgstr "但答案对她来说显而易见。"
 
 msgctxt "speaker:Sarah"
 msgid "Power."
-msgstr ""
+msgstr "力量。"
 
 msgctxt "speaker:Narrator"
 msgid "A hissing sound emerged from the creature, the closest it could produce to a laugh."
-msgstr ""
+msgstr "那生物发出一声嘶鸣，那是它所能发出的最接近笑声的声音。"
 
 msgctxt "speaker:Razaphel"
 msgid "A most surprising answer."
-msgstr ""
+msgstr "真是令人惊讶的回答。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah turned to face Razaphel."
-msgstr ""
+msgstr "莎拉转过身，面对拉扎费尔。"
 
 msgctxt "speaker:Sarah"
 msgid "Surprising? How?"
-msgstr ""
+msgstr "令人惊讶？哪里了？"
 
 msgctxt "speaker:Razaphel"
 msgid "I have come across those who are delirious with lust for power."
-msgstr ""
+msgstr "我遇到过那些因对权力的渴望而神魂颠倒的人。"
 
 msgctxt "speaker:Razaphel"
 msgid "They are more often a simple kind, with simple pleasures."
-msgstr ""
+msgstr "他们大多属于简单的那种人，追求简单的快乐。"
 
 msgctxt "speaker:Razaphel"
 msgid "I imagined you more complex."
-msgstr ""
+msgstr "我想象中的你，应该更复杂一些。"
 
 msgctxt "speaker:Sarah"
 msgid "I only gave you the truth. I had no desire to impress you, spirit."
-msgstr ""
+msgstr "我只是给了你真相。我并没有想要取悦你的意思，灵体。"
 
 msgctxt "menu"
 msgid "Freedom"
@@ -217538,487 +217538,487 @@ msgstr "自由"
 
 msgctxt "speaker:Sarah"
 msgid "Freedom."
-msgstr ""
+msgstr "自由。"
 
 msgctxt "speaker:Razaphel"
 msgid "I suspected as much."
-msgstr ""
+msgstr "我早就猜到了。"
 
 msgctxt "speaker:Sarah"
 msgid "You thought that would be my answer."
-msgstr ""
+msgstr "你早就猜到我会这么回答。"
 
 msgctxt "speaker:Razaphel"
 msgid "Ever since you came to this place, I could see it in your eyes."
-msgstr ""
+msgstr "自从来到这个地方，我就从你的眼中看出来了。"
 
 msgctxt "speaker:Razaphel"
 msgid "This magic, it was but a tool for you. A tool to secure your real ambition, to live on your own accord."
-msgstr ""
+msgstr "这魔法，对你而言不过是个工具。一个用来实现你真正野心、让你能按自己意愿生活的工具。"
 
 msgctxt "speaker:Sarah"
 msgid "It's the truth."
-msgstr ""
+msgstr "这是事实。"
 
 msgctxt "speaker:Sarah"
 msgid "Even before I lost everything, I can now see that my life was being dictated by others."
-msgstr ""
+msgstr "即使在失去一切之前，我现在也能看清，我的生活一直由他人主宰。"
 
 msgctxt "speaker:Sarah"
 msgid "So when Xan threatend to take what little freedom I had managed to procure, away..."
-msgstr ""
+msgstr "所以当桑威胁要夺走我好不容易争取到的那点自由时……"
 
 msgctxt "speaker:Razaphel"
 msgid "You had to act."
-msgstr ""
+msgstr "你不得不这么做。"
 
 msgctxt "speaker:Razaphel"
 msgid "I understand, child."
-msgstr ""
+msgstr "我明白，孩子。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah sighed deeply and turned back to looking across the room."
-msgstr ""
+msgstr "莎拉深深叹了口气，转过身去，目光再次投向房间的另一侧。"
 
 msgctxt "speaker:Sarah"
 msgid "Now what..."
-msgstr ""
+msgstr "现在该怎么做……"
 
 msgctxt "speaker:Razaphel"
 msgid "You want me to answer that for you?"
-msgstr ""
+msgstr "你想让我替你把答案说出来吗？"
 
 msgctxt "speaker:Sarah"
 msgid "I just...I need to understand what my place is now."
-msgstr ""
+msgstr "我只是……我需要弄清楚我现在的位置。"
 
 msgctxt "speaker:Sarah"
 msgid "I freed myself from Xan but..."
-msgstr ""
+msgstr "我摆脱了赞，但是……"
 
 msgctxt "speaker:Razaphel"
 msgid "You are free to do as you wish, but you fear that you do not yet know what that is..."
-msgstr ""
+msgstr "你拥有随心所欲的自由，但你害怕自己还不知晓那究竟是什么……"
 
 msgctxt "speaker:Sarah"
 msgid "I need to better understand my circumstances. My position."
-msgstr ""
+msgstr "我需要更清楚地了解我的处境。我的地位。"
 
 msgctxt "speaker:Razaphel"
 msgid "Should you wish council, I am available."
-msgstr ""
+msgstr "如果您需要建议，我随时可以提供。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah smiled at the spirit."
-msgstr ""
+msgstr "莎拉对这位精灵露出了微笑。"
 
 msgctxt "speaker:Narrator"
 msgid "The truth was that she hardly knew what to make of Razaphel, alien as he was."
-msgstr ""
+msgstr "事实是，她几乎不知道该如何看待拉扎费尔，毕竟他是个外星人。"
 
 msgctxt "speaker:Narrator"
 msgid "But she also knew that there were not many people left that could understand her. And Sarah wasn't even sure Razaphel was people."
-msgstr ""
+msgstr "但她也知道，能理解她的人已经不多了。而且莎拉甚至不确定拉扎费尔是否算得上是人。"
 
 msgctxt "speaker:Sarah"
 msgid "Let me ponder it myself for a while."
-msgstr ""
+msgstr "让我自己再琢磨一会儿。"
 
 msgctxt "speaker:Narrator"
 msgid "The spirit swirled, animated."
-msgstr ""
+msgstr "灵魂翻涌，焕发生机。"
 
 msgctxt "speaker:Razaphel"
 msgid "Go, child, and enjoy your new found freedom."
-msgstr ""
+msgstr "去吧，孩子，享受你 newfound 的自由。"
 
 msgctxt "speaker:Narrator"
 msgid "With that, the spirit vanished same as it had appeared."
-msgstr ""
+msgstr "说完，那灵体便如出现时一般，瞬间消散。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah turned back towards the window, continuing to observe the movements of the city."
-msgstr ""
+msgstr "莎拉转身面向窗户，继续观察着城市的动静。"
 
 msgctxt "speaker:Narrator"
 msgid "What now, she wondered half in awe, half in fear."
-msgstr ""
+msgstr "接下来该怎么办呢？她心中既敬畏又恐惧地暗自思忖。"
 
 msgctxt "speaker:Narrator"
 msgid "The answer did not come to her. Not yet."
-msgstr ""
+msgstr "答案并未降临。至少现在还没有。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah had spend most of her day in deep thought."
-msgstr ""
+msgstr "莎拉这一天的大部分时间都沉浸在深深的沉思中。"
 
 msgctxt "speaker:Narrator"
 msgid "When even the sun had begun to set, and she was no closer to an answer, she had taken to wandering the house."
-msgstr ""
+msgstr "当太阳也开始西沉，而她仍未找到答案时，她开始在宅邸中四处游荡。"
 
 msgctxt "speaker:Narrator"
 msgid "She had spend years in this house, and over the course of it, she had come to know it like a maze."
-msgstr ""
+msgstr "她在这所房子里度过了多年时光，久而久之，她对它的熟悉程度宛如迷宫。"
 
 msgctxt "speaker:Narrator"
 msgid "No, she thought."
-msgstr ""
+msgstr "不，她心想。"
 
 msgctxt "speaker:Narrator"
 msgid "Not quite a maze, for a maze could be mastered and understood."
-msgstr ""
+msgstr "与其说是迷宫，因为迷宫是可以被征服和理解的。"
 
 msgctxt "speaker:Narrator"
 msgid "The house, rather, was forever changing and resisting being understood."
-msgstr ""
+msgstr "相反，这座房子永远在变化，抗拒着被理解。"
 
 msgctxt "speaker:Narrator"
 msgid "Rooms would be where they were. Only until they were not."
-msgstr ""
+msgstr "房间会待在它们原本的位置。直到它们不再如此。"
 
 msgctxt "speaker:Narrator"
 msgid "Hallways would have an exact number of doors. Only until it had more."
-msgstr ""
+msgstr "走廊里的门数量原本固定不变。直到它突然变多了。"
 
 msgctxt "speaker:Narrator"
 msgid "In the first year, Sarah had dedicated significant amounts of her intellect on trying to solve the puzzle that was the house."
-msgstr ""
+msgstr "在第一年里，莎拉曾将大量的智力投入到试图解开这座房子这个谜题上。"
 
 msgctxt "speaker:Narrator"
 msgid "Only when Xan had told her to give up on it, did she finally relent and accept that the house was beyond her ability to grasp."
-msgstr ""
+msgstr "直到扎恩让她放弃，她才最终妥协，承认这栋房子超出了她的理解能力。"
 
 msgctxt "speaker:Narrator"
 msgid "Still, on occasion, she could not resist pondering the mystery."
-msgstr ""
+msgstr "尽管如此，偶尔她仍忍不住去思索这个谜团。"
 
 msgctxt "speaker:Narrator"
 msgid "It was near the end of the night that Sarah came upon a room she had not yet encountered before."
-msgstr ""
+msgstr "夜深时分，莎拉发现了一间此前从未涉足的房间。"
 
 msgctxt "speaker:Narrator"
 msgid "The room appeared lived."
-msgstr ""
+msgstr "房间里有人住过的痕迹。"
 
 msgctxt "speaker:Narrator"
 msgid "Exploring through its contents, she found more relics, more writing and more books. Always more books."
-msgstr ""
+msgstr "翻查着里面的东西，她发现了更多的遗物、更多的文字和更多的书籍。总是有更多的书。"
 
 msgctxt "speaker:Narrator"
 msgid "Looking at the table, she saw a familiar handwriting covering the papers."
-msgstr ""
+msgstr "她看向桌子，看到上面铺着的纸张上写满了熟悉的字迹。"
 
 msgctxt "speaker:Razaphel"
 msgid "Aah, I see you've come upon his private study."
-msgstr ""
+msgstr "啊，看来你发现了他的私人书房。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah felt her brow furrow."
-msgstr ""
+msgstr "莎拉皱起了眉头。"
 
 msgctxt "speaker:Sarah"
 msgid "I thought you would have been up to something else by now."
-msgstr ""
+msgstr "我以为你到现在还在忙别的事呢。"
 
 msgctxt "speaker:Sarah"
 msgid "Or did you really work so hard to rid yourself of Xan just so you could torture me?"
-msgstr ""
+msgstr "还是说，你费尽心机除掉赞，其实只是为了折磨我？"
 
 msgctxt "speaker:Razaphel"
 msgid "It's a lonely house."
-msgstr ""
+msgstr "这房子太偏僻了。"
 
 msgctxt "speaker:Razaphel"
 msgid "Either I torture you, or I torture your new friend."
-msgstr ""
+msgstr "要么我折磨你，要么我折磨你的新朋友。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah snapped towards the spirit."
-msgstr ""
+msgstr "莎拉猛地转向那个灵体。"
 
 msgctxt "speaker:Sarah"
 msgid "You leave her alone, got that?"
-msgstr ""
+msgstr "你离她远点，听明白了吗？"
 
 msgctxt "speaker:Razaphel"
 msgid "Only jest. We are all friends here."
-msgstr ""
+msgstr "只是开玩笑。我们在这里都是朋友。"
 
 msgctxt "speaker:Razaphel"
 msgid "What else is there for me to do?"
-msgstr ""
+msgstr "我还能做什么呢？"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah ignored the spirit's pleading."
-msgstr ""
+msgstr "莎拉无视了那灵体的哀求。"
 
 msgctxt "speaker:Sarah"
 msgid "Did you say this was Xan's private study?"
-msgstr ""
+msgstr "你刚才说这是赞的私人书房？"
 
 msgctxt "speaker:Razaphel"
 msgid "Yes. He was a man who enjoyed his secrets."
-msgstr ""
+msgstr "是的。他是个喜欢把秘密藏在心底的人。"
 
 msgctxt "speaker:Sarah"
 msgid "Then how did you know about this place?"
-msgstr ""
+msgstr "那你怎么会知道这个地方？"
 
 msgctxt "speaker:Narrator"
 msgid "The spirit swirled around, exploring the corners of the room."
-msgstr ""
+msgstr "灵魂在周围盘旋，探索着房间的各个角落。"
 
 msgctxt "speaker:Razaphel"
 msgid "He knew you had sympathies for me, and so he carried out his interrogations with me in this place."
-msgstr ""
+msgstr "他知道你对我有好感，所以他就在这地方对我进行审问。"
 
 msgctxt "speaker:Sarah"
 msgid "interrogations."
-msgstr ""
+msgstr "审讯。"
 
 msgctxt "speaker:Razaphel"
 msgid "Tortures, to be more exact."
-msgstr ""
+msgstr "更确切地说，是酷刑。"
 
 msgctxt "speaker:Razaphel"
 msgid "His magic...your magic. To my kind it feels as flesh pressed against a forge."
-msgstr ""
+msgstr "他的魔法……你的魔法。对我们这类人来说，感觉就像肉体贴在熔炉上一样。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah shivered at the idea."
-msgstr ""
+msgstr "莎拉想到这一点不禁打了个寒颤。"
 
 msgctxt "speaker:Sarah"
 msgid "I never knew..."
-msgstr ""
+msgstr "我从来都不知道……"
 
 msgctxt "speaker:Razaphel"
 msgid "He did not want you to know, and I did not want to burden you with such knowledge."
-msgstr ""
+msgstr "他不想让你知道，我也不愿让你背负这样的知识。"
 
 msgctxt "speaker:Sarah"
 msgid "Burden me? It was you who he tortured. I would have listened to you..."
-msgstr ""
+msgstr "负担我？被折磨的是你。我会听你说的……"
 
 msgctxt "speaker:Razaphel"
 msgid "I know you would have, child."
-msgstr ""
+msgstr "我知道你会的，孩子。"
 
 msgctxt "speaker:Razaphel"
 msgid "You would have listened, and cared and you would have pleaded for him to stop."
-msgstr ""
+msgstr "你会倾听，会心疼，还会求他停下。"
 
 msgctxt "speaker:Razaphel"
 msgid "But your heart is soft while his was made of iron."
-msgstr ""
+msgstr "但你的心是柔软的，而他的心却是铁打的。"
 
 msgctxt "speaker:Razaphel"
 msgid "He would have continued the tortures, and back then, you would have been too weak to stop him."
-msgstr ""
+msgstr "他会继续施加折磨，而那时的你，太过软弱，无力阻止他。"
 
 msgctxt "speaker:Razaphel"
 msgid "And you would have been eaten by the guilt of serving a master so wicked."
-msgstr ""
+msgstr "而你，则会因侍奉如此邪恶的主人而饱受良心的谴责。"
 
 msgctxt "speaker:Razaphel"
 msgid "I wanted to spare you such troubles, and so I kept it a secret."
-msgstr ""
+msgstr "我想让你免受这些苦难，所以一直将其隐瞒。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah felt a deep sadness in her heart, knowing that all these years, she had not even realized this horror."
-msgstr ""
+msgstr "莎拉心中涌起一阵深沉的悲伤，她意识到这么多年来，自己竟从未察觉到这恐怖的真相。"
 
 msgctxt "speaker:Narrator"
 msgid "And the spirit, for all that it was, appeared not deserving of such brutality."
-msgstr ""
+msgstr "而灵魂，尽管它曾如此，却显得不值得遭受这般残酷。"
 
 msgctxt "speaker:Sarah"
 msgid "Does this place make you sad?"
-msgstr ""
+msgstr "这个地方让你感到难过吗？"
 
 msgctxt "speaker:Narrator"
 msgid "The spirit twirled around in the room for a while. Observing it."
-msgstr ""
+msgstr "灵魂在房间里盘旋了一会儿。观察着周围的一切。"
 
 msgctxt "speaker:Razaphel"
 msgid "It doesn't make me feel much of anything."
-msgstr ""
+msgstr "它并没让我产生什么感觉。"
 
 msgctxt "speaker:Sarah"
 msgid "It doesn't scare you? It would scare me."
-msgstr ""
+msgstr "这没吓到你吗？换作是我，我会害怕的。"
 
 msgctxt "speaker:Razaphel"
 msgid "His tortures were cruel, but he never drew anything from me that mattered, and so I know in the end he only stained his own soul with his crimes."
-msgstr ""
+msgstr "他的折磨虽残酷，却从未从我这里逼出任何有价值的东西，因此我知道到头来，他只是用罪行玷污了自己的灵魂。"
 
 msgctxt "speaker:Razaphel"
 msgid "Best to forgive and move on."
-msgstr ""
+msgstr "最好还是原谅并继续前行。"
 
 msgctxt "speaker:Sarah"
 msgid "Now that he is dead?"
-msgstr ""
+msgstr "现在他死了？"
 
 msgctxt "speaker:Razaphel"
 msgid "Exactly."
-msgstr ""
+msgstr "没错。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah sighed and leaned back over the desk."
-msgstr ""
+msgstr "莎拉叹了口气，身子向后仰，靠回书桌上。"
 
 msgctxt "speaker:Narrator"
 msgid "She reached down and grabbed a book that laid atop all the others."
-msgstr ""
+msgstr "她伸手下去，抓起了一本压在其他书上面的书。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah read the title."
-msgstr ""
+msgstr "莎拉读出了书名。"
 
 msgctxt "speaker:Narrator"
 msgid "'The Hollow World'."
-msgstr ""
+msgstr "《空洞世界》。"
 
 msgctxt "speaker:Narrator"
 msgid "The tome appeared thick and heavy. The leather binding expensive."
-msgstr ""
+msgstr "这本典籍看起来厚重无比，皮革封皮也显得十分昂贵。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah held it in her hand and look up towards Razaphel who spun around like a child through the air."
-msgstr ""
+msgstr "莎拉将它握在手中，抬头看向拉扎费尔，他像孩子一样在空中旋转。"
 
 msgctxt "speaker:Sarah"
 msgid "Do you have any idea what Xan was working on in here?"
-msgstr ""
+msgstr "你知道赞在这里研究什么吗？"
 
 msgctxt "speaker:Razaphel"
 msgid "Nothing I could ever be sure of. Whenever he brought me here, it was he who was asking me the questions."
-msgstr ""
+msgstr "我从来无法确定。每次他带我到这里来，都是他在问我问题。"
 
 msgctxt "speaker:Narrator"
 msgid "She held up the book to him."
-msgstr ""
+msgstr "她把书举到他面前。"
 
 msgctxt "speaker:Sarah"
 msgid "Do you know what this is?"
-msgstr ""
+msgstr "你知道这是什么吗？"
 
 msgctxt "speaker:Razaphel"
 msgid "I do, but child, you told me you longed to be free."
-msgstr ""
+msgstr "我知道，但孩子，你告诉过我你渴望自由。"
 
 msgctxt "speaker:Razaphel"
 msgid "It is a waste for a girl of your age to spend her time with dusty old books."
-msgstr ""
+msgstr "像你这样年纪的女孩，把时间花在满是灰尘的旧书上真是浪费。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah continued to hold up the book towards the spirit."
-msgstr ""
+msgstr "莎拉继续将书举向那个灵体。"
 
 msgctxt "speaker:Sarah"
 msgid "I thought we were done playing tricks and riddles. Tell me what this book is."
-msgstr ""
+msgstr "我以为我们不再玩这种捉迷藏和猜谜的游戏了。告诉我，这本书到底是什么。"
 
 msgctxt "speaker:Narrator"
 msgid "Razaphel slowly descended down, his mask-face pressed close to the cover of the book."
-msgstr ""
+msgstr "拉扎费尔缓缓降落，面具般的面庞紧贴着书的封面。"
 
 msgctxt "speaker:Razaphel"
 msgid "It is the foundational text of their order."
-msgstr ""
+msgstr "这是他们教派的奠基之作。"
 
 msgctxt "speaker:Razaphel"
 msgid "Written about three millenia ago, after the fall of their empire."
-msgstr ""
+msgstr "写于三千年前，在他们帝国覆灭之后。"
 
 msgctxt "speaker:Sarah"
 msgid "This book is three thousand years old?"
-msgstr ""
+msgstr "这本书有三千年的历史？"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah struggled to imagine such a thing."
-msgstr ""
+msgstr "莎拉难以想象那样的事物。"
 
 msgctxt "speaker:Razaphel"
 msgid "No, not this copy. But the text it contains is close enough to the original."
-msgstr ""
+msgstr "不，不是这一本。但它所包含的文字与原文已足够接近。"
 
 msgctxt "speaker:Razaphel"
 msgid "Perhaps a few minor revisions."
-msgstr ""
+msgstr "也许有一些细微的修订。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah placed the book back down and flipped open the cover."
-msgstr ""
+msgstr "莎拉把书放回去，翻开封面。"
 
 msgctxt "speaker:Narrator"
 msgid "Near the start of it, a long itemized index gave hints to the many pages and chapters it contained."
-msgstr ""
+msgstr "在书的开头部分，一个长长的分项索引暗示了其中包含的众多页面和章节。"
 
 msgctxt "speaker:Sarah"
 msgid "What is it about?"
-msgstr ""
+msgstr "这是关于什么的？"
 
 msgctxt "speaker:Narrator"
 msgid "The spirit produced the hissing laugh. Sarah never felt comfortable when it did."
-msgstr ""
+msgstr "那灵体发出了嘶嘶的笑声。莎拉对此总是感到不自在。"
 
 msgctxt "speaker:Razaphel"
 msgid "You want me for me to summarize this text for you? Impossible."
-msgstr ""
+msgstr "你想让我帮你总结这本书的内容？不可能。"
 
 msgctxt "speaker:Sarah"
 msgid "So you don't know what it is, after all?"
-msgstr ""
+msgstr "所以，你其实也不知道它是什么？"
 
 msgctxt "speaker:Razaphel"
 msgid "How do you explain the world to a child?"
-msgstr ""
+msgstr "你怎么向一个孩子解释这个世界？"
 
 msgctxt "speaker:Sarah"
 msgid "Are you calling me stupid?"
-msgstr ""
+msgstr "你是在骂我蠢吗？"
 
 msgctxt "speaker:Narrator"
 msgid "The spirit swirled around."
-msgstr ""
+msgstr "灵魂盘旋着。"
 
 msgctxt "speaker:Razaphel"
 msgid "No, Sarah, I do not believe you are foolish. Rather the opposite."
-msgstr ""
+msgstr "不，莎拉，我不认为你愚蠢。恰恰相反。"
 
 msgctxt "speaker:Sarah"
 msgid "So what then? What is it about?"
-msgstr ""
+msgstr "那到底是什么意思？它讲的是什么？"
 
 msgctxt "speaker:Razaphel"
 msgid "The book is a dense work, written in a different age, based upon principles that stretch back even further."
-msgstr ""
+msgstr "这是一部厚重的著作，成书于另一个时代，其依据的原则更是源远流长。"
 
 msgctxt "speaker:Razaphel"
 msgid "If I explain it to you, I can only do so as one explains the world to a child."
-msgstr ""
+msgstr "如果我向你解释，我只能像向孩子解释世界那样去做。"
 
 msgctxt "speaker:Razaphel"
 msgid "In analogy. In reduction. In simplicity."
-msgstr ""
+msgstr "通过类比。通过简化。通过单纯化。"
 
 msgctxt "speaker:Razaphel"
 msgid "But a child does not know the world when we shrink it down for them, they know only the simplified version."
-msgstr ""
+msgstr "但当我们把世界简化后，孩子所认知的并非真实的世界，而只是一个被简化的版本。"
 
 msgctxt "speaker:Razaphel"
 msgid "If you wish to learn of this book, truly learn it, you must commit yourself to the work that proceeds it."
-msgstr ""
+msgstr "如果你真想读懂这本书，真正理解它，你就必须投身于那些作为其基础的前置著作之中。"
 
 msgctxt "speaker:Razaphel"
 msgid "To understand this work and what it aims to produce, you must read several volumes that proceed it."
-msgstr ""
+msgstr "要理解这部作品及其旨在达成的效果，你必须阅读其前置的几卷内容。"
 
 msgctxt "speaker:Razaphel"
 msgid "Sufficiently ground your understanding of the principles at play."
-msgstr ""
+msgstr "务必将你对这些原则的理解夯实。"
 
 msgctxt "speaker:Razaphel"
 msgid "There exists no simplified version that would not butcher the truth so as to make it meaningless."
@@ -218026,23 +218026,23 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Sarah stepped back and eyed the book."
-msgstr ""
+msgstr "莎拉后退一步，打量着那本书。"
 
 msgctxt "speaker:Sarah"
 msgid "Fine, what do I need to read then?"
-msgstr ""
+msgstr "好吧，那我需要读些什么？"
 
 msgctxt "speaker:Razaphel"
 msgid "Always so eager..."
-msgstr ""
+msgstr "总是这么迫不及待……"
 
 msgctxt "speaker:Razaphel"
 msgid "I shall prepare a list for you, should you truly be interested."
-msgstr ""
+msgstr "如果你真的感兴趣，我会为你准备一份清单。"
 
 msgctxt "speaker:Sarah"
 msgid "Thank you, Razaphel."
-msgstr ""
+msgstr "谢谢你，拉扎费尔。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah suddenly felt her body wobble."
@@ -218054,7 +218054,7 @@ msgstr ""
 
 msgctxt "speaker:Razaphel"
 msgid "You're tired, child."
-msgstr ""
+msgstr "你累了，孩子。"
 
 msgctxt "speaker:Sarah"
 msgid "I think you're right..."
@@ -218066,7 +218066,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Sarah laughed as she moved towards the door."
-msgstr ""
+msgstr "莎拉笑着朝门口走去。"
 
 msgctxt "speaker:Sarah"
 msgid "I'm not a princess anymore, Razaphel."

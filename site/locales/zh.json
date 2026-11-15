@@ -96,13 +96,25 @@
           "age": "18+",
           "linkNexus": "Nexus Mods"
      },
-     "temp": {
-          "title": "直接下载（临时）",
-          "lead": "Nexus Mods 上的模组页面正在等待审核。在它开放之前，可以从这里下载压缩包——其他一切不变。",
+     "download": {
+          "title": "下载",
+          "lead": "补丁免费。如果 Nexus Mods 可用，请优先从那里下载：统计与推荐都在那里，其他玩家正是通过这些找到补丁。下面的链接是备用渠道，供 Nexus 或 Vortex 无法使用时使用。",
           "main": "下载主体（main.7z）",
           "mainHint": "必需 —— 11 种语言文本、字体、模组菜单",
           "voiceLabel": "语音包 —— 每种语言一个（可选）：",
           "install": "将 main.7z 解压到游戏目录（TheSurvivalofSarahRose.exe 所在位置），然后解压所需的语音包。右上角徽标打开模组菜单。",
-          "note": "临时链接：模组页面开放后即移除。"
+          "note": "主要页面与更新在 Nexus Mods；这里是当前版本的备份。"
+     },
+     "support": {
+          "title": "支持项目",
+          "lead": "补丁是非商业的，由一个人利用业余时间制作。如果它帮到了你，以下方式最有用：",
+          "likeNexus": "在 Nexus Mods 上点赞（endorse）——其他玩家正是靠这个数字找到补丁",
+          "likeSteam": "给 Steam 指南评分——新玩家由此发现它",
+          "donate": "在 Boosty 或 Ko-fi 上赞助——用于支付 AI 与配音时间",
+          "btnNexus": "在 Nexus 点赞",
+          "btnSteam": "Steam 指南",
+          "btnBoosty": "Boosty",
+          "btnKofi": "Ko-fi",
+          "thanks": "谢谢。哪怕一个赞也看得见，而赞助就是实实在在的下一段配音。"
      }
 }

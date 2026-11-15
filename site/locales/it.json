@@ -96,13 +96,25 @@
           "age": "18+",
           "linkNexus": "Nexus Mods"
      },
-     "temp": {
-          "title": "Download diretto (temporaneo)",
-          "lead": "La pagina del mod su Nexus Mods è in attesa di approvazione. Finché è chiusa, gli archivi sono qui - il resto non cambia.",
+     "download": {
+          "title": "Scarica",
+          "lead": "La patch è gratuita. Scaricala da Nexus Mods quando è disponibile: lì ci sono statistiche ed endorsement, ed è ciò che aiuta altri giocatori a trovare la patch. I link qui sotto sono un canale di riserva se Nexus o Vortex non ti funzionano.",
           "main": "Scarica la base (main.7z)",
           "mainHint": "obbligatorio - testi di 11 lingue, font, menu del mod",
           "voiceLabel": "Pacchetti voce - uno per lingua (facoltativo):",
           "install": "Estrai main.7z nella cartella del gioco (accanto a TheSurvivalofSarahRose.exe), poi i pacchetti voce. Il badge in alto a destra apre il menu del mod.",
-          "note": "Link temporanei: rimossi appena la pagina del mod sarà aperta."
+          "note": "La pagina principale e gli aggiornamenti stanno su Nexus Mods; qui c'è una copia di riserva della versione attuale."
+     },
+     "support": {
+          "title": "Sostenere il progetto",
+          "lead": "La patch è senza scopo di lucro ed è fatta da una persona nel tempo libero. Se ti è stata utile, questo è ciò che aiuta davvero:",
+          "likeNexus": "Un endorse su Nexus Mods - è così che altri giocatori trovano la patch",
+          "likeSteam": "Valutare la guida su Steam - è così che la vedono i nuovi",
+          "donate": "Una donazione su Boosty o Ko-fi - paga l'IA e le ore di voce",
+          "btnNexus": "Endorse su Nexus",
+          "btnSteam": "Guida Steam",
+          "btnBoosty": "Boosty",
+          "btnKofi": "Ko-fi",
+          "thanks": "Grazie. Anche un solo endorse si vede, e una donazione sono letteralmente le prossime righe di voce."
      }
 }

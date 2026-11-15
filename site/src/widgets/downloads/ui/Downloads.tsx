@@ -4,9 +4,9 @@ import { useTranslation } from 'react-i18next'
 import { LANGS } from '@/shared/config/i18n'
 import { Section } from '@/shared/ui'
 
-/** Временный релиз с архивами (пока страница мода в Nexus на апробации).
- *  Меняется вместе с тегом релиза; ссылки — прямые на ассеты GitHub. */
-const RELEASE_BASE = 'https://github.com/Domovikx/The-Survival-of-Sarah-Rose-Mods/releases/download/v-temp-2026.11.15-0008'
+/** Постоянный канал прямых ссылок: ассеты версии в GitHub-релизе.
+ *  Обновляется вместе с релизом (тег = версия пакета). */
+const RELEASE_BASE = 'https://github.com/Domovikx/The-Survival-of-Sarah-Rose-Mods/releases/download/v2026.11.15-0008'
 
 const asset = (name: string): string => `${RELEASE_BASE}/TSSR-AI-Voice-Pack-${name}.7z`
 
@@ -22,16 +22,8 @@ const styles = stylex.create({
     flexDirection: 'column',
     gap: 12,
   },
-  lead: {
-    margin: 0,
-    color: 'var(--muted)',
-  },
-  row: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    alignItems: 'center',
-    gap: 10,
-  },
+  lead: { margin: 0, color: 'var(--muted)' },
+  row: { display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 10 },
   mainBtn: {
     display: 'inline-flex',
     alignItems: 'center',
@@ -50,11 +42,7 @@ const styles = stylex.create({
     ':active': { transform: 'translateY(1px)' },
     ':focus-visible': { outline: '2px solid var(--link)', outlineOffset: 2 },
   },
-  chipsLabel: {
-    margin: 0,
-    color: 'var(--muted)',
-    fontSize: 14,
-  },
+  chipsLabel: { margin: 0, color: 'var(--muted)', fontSize: 14 },
   chip: {
     display: 'inline-flex',
     alignItems: 'center',
@@ -72,48 +60,39 @@ const styles = stylex.create({
     ':hover': { borderColor: 'var(--link)', color: 'var(--link)' },
     ':focus-visible': { outline: '2px solid var(--link)', outlineOffset: 2 },
   },
-  hint: {
-    margin: 0,
-    color: 'var(--muted)',
-    fontSize: 14,
-  },
-  note: {
-    margin: 0,
-    color: 'var(--muted)',
-    fontSize: 13,
-    fontStyle: 'italic',
-  },
+  hint: { margin: 0, color: 'var(--muted)', fontSize: 14 },
+  note: { margin: 0, color: 'var(--muted)', fontSize: 13, fontStyle: 'italic' },
 })
 
-export const TempDownloads = () => {
+export const Downloads = () => {
   const { t } = useTranslation()
 
   return (
-    <Section title={t('temp.title')} testId="temp-downloads">
-      <div className={stylex.props(styles.panel).className} data-testid="temp-downloads-panel">
-        <p className={stylex.props(styles.lead).className}>{t('temp.lead')}</p>
+    <Section title={t('download.title')} testId="downloads">
+      <div className={stylex.props(styles.panel).className} data-testid="downloads-panel">
+        <p className={stylex.props(styles.lead).className}>{t('download.lead')}</p>
 
         <div className={stylex.props(styles.row).className}>
           <a
             className={stylex.props(styles.mainBtn).className}
             href={asset('main')}
-            data-testid="temp-download-main"
+            data-testid="download-main"
             rel="noopener"
           >
-            {t('temp.main')}
+            {t('download.main')}
           </a>
-          <span className={stylex.props(styles.hint).className}>{t('temp.mainHint')}</span>
+          <span className={stylex.props(styles.hint).className}>{t('download.mainHint')}</span>
         </div>
 
         <div>
-          <p className={stylex.props(styles.chipsLabel).className}>{t('temp.voiceLabel')}</p>
+          <p className={stylex.props(styles.chipsLabel).className}>{t('download.voiceLabel')}</p>
           <div className={stylex.props(styles.row).className}>
             {LANGS.map((code) => (
               <a
                 key={code}
                 className={stylex.props(styles.chip).className}
                 href={asset(`voice-${code}`)}
-                data-testid={`temp-download-voice-${code}`}
+                data-testid={`download-voice-${code}`}
                 rel="noopener"
               >
                 {code.toUpperCase()}
@@ -122,8 +101,8 @@ export const TempDownloads = () => {
           </div>
         </div>
 
-        <p className={stylex.props(styles.hint).className}>{t('temp.install')}</p>
-        <p className={stylex.props(styles.note).className}>{t('temp.note')}</p>
+        <p className={stylex.props(styles.hint).className}>{t('download.install')}</p>
+        <p className={stylex.props(styles.note).className}>{t('download.note')}</p>
       </div>
     </Section>
   )

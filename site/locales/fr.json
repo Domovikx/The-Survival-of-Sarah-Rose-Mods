@@ -96,13 +96,25 @@
           "age": "18+",
           "linkNexus": "Nexus Mods"
      },
-     "temp": {
-          "title": "Téléchargement direct (temporaire)",
-          "lead": "La page du mod sur Nexus Mods attend une validation. Tant qu'elle est fermée, les archives sont ici - rien d'autre ne change.",
+     "download": {
+          "title": "Télécharger",
+          "lead": "Le patch est gratuit. Téléchargez-le depuis Nexus Mods quand c'est possible : c'est là que se trouvent les statistiques et les endorsements, et c'est ce qui aide les autres joueurs à trouver le patch. Les liens ci-dessous sont un canal de secours si Nexus ou Vortex ne vous sont pas accessibles.",
           "main": "Télécharger la base (main.7z)",
           "mainHint": "obligatoire - textes de 11 langues, polices, menu du mod",
           "voiceLabel": "Packs voix - un par langue (facultatif) :",
           "install": "Décompressez main.7z dans le dossier du jeu (à côté de TheSurvivalofSarahRose.exe), puis les packs voix souhaités. Le badge en haut à droite ouvre le menu du mod.",
-          "note": "Liens temporaires : retirés dès l'ouverture de la page du mod."
+          "note": "La page principale et les mises à jour sont sur Nexus Mods ; ici, c'est une copie de secours de la version actuelle."
+     },
+     "support": {
+          "title": "Soutenir le projet",
+          "lead": "Le patch est non commercial et réalisé par une seule personne sur son temps libre. S'il vous a servi, voici ce qui aide vraiment :",
+          "likeNexus": "Un endorsement sur Nexus Mods - c'est ainsi que les autres joueurs trouvent le patch",
+          "likeSteam": "Noter le guide Steam - c'est ainsi que les nouveaux le voient",
+          "donate": "Un don sur Boosty ou Ko-fi - il paie l'IA et les heures de doublage",
+          "btnNexus": "Endorser sur Nexus",
+          "btnSteam": "Guide Steam",
+          "btnBoosty": "Boosty",
+          "btnKofi": "Ko-fi",
+          "thanks": "Merci. Même un seul endorsement se voit, et un don, ce sont littéralement les prochaines lignes de voix."
      }
 }

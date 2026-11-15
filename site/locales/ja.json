@@ -96,13 +96,25 @@
           "age": "18+",
           "linkNexus": "Nexus Mods"
      },
-     "temp": {
-          "title": "直接ダウンロード（一時的）",
-          "lead": "Nexus Mods の MOD ページは承認待ちです。公開されるまで、アーカイブはこちらから取得できます。それ以外は変わりません。",
+     "download": {
+          "title": "ダウンロード",
+          "lead": "パッチは無料です。Nexus Mods が使える場合は、そちらからのダウンロードをお願いします。統計と endorse はそこに集まり、他のプレイヤーがパッチを見つける手がかりになります。下のリンクは、Nexus や Vortex が使えない場合の予備経路です。",
           "main": "本体をダウンロード（main.7z）",
           "mainHint": "必須 — 11 言語のテキスト、フォント、MOD メニュー",
           "voiceLabel": "音声パック — 言語ごとに 1 つ（任意）：",
           "install": "main.7z をゲームフォルダ（TheSurvivalofSarahRose.exe と同じ場所）に展開し、必要な音声パックも展開します。右上のバッジで MOD メニューが開きます。",
-          "note": "一時的なリンクです。MOD ページが公開され次第、削除します。"
+          "note": "主要ページと更新は Nexus Mods です。ここは現行バージョンの予備コピーです。"
+     },
+     "support": {
+          "title": "プロジェクトを支援",
+          "lead": "パッチは非営利で、一人が空き時間に作っています。役に立ったなら、次のことが本当に助かります：",
+          "likeNexus": "Nexus Mods での endorse — 他のプレイヤーはこの数字でパッチを見つけます",
+          "likeSteam": "Steam ガイドの評価 — 新規プレイヤーはここから見つけます",
+          "donate": "Boosty か Ko-fi での支援 — AI と音声制作の時間を支えます",
+          "btnNexus": "Nexus で endorse",
+          "btnSteam": "Steam ガイド",
+          "btnBoosty": "Boosty",
+          "btnKofi": "Ko-fi",
+          "thanks": "ありがとうございます。endorse が 1 つでも見えますし、支援はそのまま次の音声になります。"
      }
 }

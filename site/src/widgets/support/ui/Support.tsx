@@ -1,0 +1,92 @@
+import * as stylex from '@stylexjs/stylex'
+import { useTranslation } from 'react-i18next'
+
+import { LINKS } from '@/shared/config'
+import { Section } from '@/shared/ui'
+
+/** Ссылка на руководство в Steam (лайк/оценка) — витрина для новых игроков. */
+const STEAM_GUIDE = 'https://steamcommunity.com/sharedfiles/filedetails/?id=3733106761'
+const BOOSTY = 'https://boosty.to/domovikx'
+const KOFI = 'https://ko-fi.com/domovikx'
+
+const styles = stylex.create({
+  panel: {
+    backgroundColor: 'var(--panel)',
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: 'var(--border)',
+    borderRadius: 12,
+    padding: '16px 22px',
+    display: 'flex',
+    flexDirection: 'column',
+    gap: 12,
+  },
+  lead: { margin: 0, color: 'var(--muted)' },
+  list: { margin: 0, paddingLeft: 22, display: 'flex', flexDirection: 'column', gap: 6 },
+  item: { margin: 0 },
+  row: { display: 'flex', flexWrap: 'wrap', gap: 10, marginTop: 4 },
+  btn: {
+    display: 'inline-flex',
+    alignItems: 'center',
+    padding: '10px 16px',
+    borderRadius: 10,
+    textDecoration: 'none',
+    fontWeight: 600,
+    fontSize: 15,
+    color: 'var(--text)',
+    backgroundColor: 'var(--panel-2)',
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: 'var(--border)',
+    transition: 'border-color 150ms ease, color 150ms ease',
+    ':hover': { borderColor: 'var(--link)', color: 'var(--link)' },
+    ':focus-visible': { outline: '2px solid var(--link)', outlineOffset: 2 },
+  },
+  btnAccent: {
+    color: '#fff',
+    backgroundColor: 'var(--accent)',
+    borderColor: 'var(--accent)',
+    ':hover': { color: '#fff', filter: 'brightness(1.08)' },
+  },
+  thanks: { margin: 0, color: 'var(--muted)', fontStyle: 'italic' },
+})
+
+export const Support = () => {
+  const { t } = useTranslation()
+
+  return (
+    <Section title={t('support.title')} testId="support">
+      <div className={stylex.props(styles.panel).className} data-testid="support-panel">
+        <p className={stylex.props(styles.lead).className}>{t('support.lead')}</p>
+
+        <ul className={stylex.props(styles.list).className}>
+          <li className={stylex.props(styles.item).className}>{t('support.likeNexus')}</li>
+          <li className={stylex.props(styles.item).className}>{t('support.likeSteam')}</li>
+          <li className={stylex.props(styles.item).className}>{t('support.donate')}</li>
+        </ul>
+
+        <div className={stylex.props(styles.row).className}>
+          <a
+            className={stylex.props(styles.btn, styles.btnAccent).className}
+            href={LINKS.nexus}
+            data-testid="support-nexus"
+            rel="noopener"
+          >
+            {t('support.btnNexus')}
+          </a>
+          <a className={stylex.props(styles.btn).className} href={STEAM_GUIDE} data-testid="support-steam" rel="noopener">
+            {t('support.btnSteam')}
+          </a>
+          <a className={stylex.props(styles.btn).className} href={BOOSTY} data-testid="support-boosty" rel="noopener">
+            {t('support.btnBoosty')}
+          </a>
+          <a className={stylex.props(styles.btn).className} href={KOFI} data-testid="support-kofi" rel="noopener">
+            {t('support.btnKofi')}
+          </a>
+        </div>
+
+        <p className={stylex.props(styles.thanks).className}>{t('support.thanks')}</p>
+      </div>
+    </Section>
+  )
+}

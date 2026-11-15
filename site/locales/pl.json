@@ -96,13 +96,25 @@
           "age": "18+",
           "linkNexus": "Nexus Mods"
      },
-     "temp": {
-          "title": "Pobierz bezpośrednio (tymczasowo)",
-          "lead": "Strona moda na Nexus Mods czeka na zatwierdzenie. Dopóki jest zamknięta, archiwa są tutaj - reszta się nie zmienia.",
+     "download": {
+          "title": "Pobierz",
+          "lead": "Patch jest darmowy. Pobieraj go z Nexus Mods, gdy jest dostępny: tam są statystyki i endorsements, i to dzięki nim inni gracze znajdują patcha. Linki poniżej to kanał zapasowy, gdy Nexus lub Vortex są dla ciebie niedostępne.",
           "main": "Pobierz podstawę (main.7z)",
           "mainHint": "wymagane - teksty 11 języków, czcionki, menu moda",
           "voiceLabel": "Pakiety głosowe - po jednym na język (opcjonalnie):",
           "install": "Rozpakuj main.7z do folderu gry (obok TheSurvivalofSarahRose.exe), potem wybrane pakiety głosowe. Odznaka w prawym górnym rogu otwiera menu moda.",
-          "note": "Linki tymczasowe: usuniemy je, gdy strona moda zostanie otwarta."
+          "note": "Główna strona i aktualizacje są na Nexus Mods; tutaj jest kopia zapasowa bieżącej wersji."
+     },
+     "support": {
+          "title": "Wesprzyj projekt",
+          "lead": "Patch jest niekomercyjny i robi go jedna osoba w wolnym czasie. Jeśli ci się przydał, oto co naprawdę pomaga:",
+          "likeNexus": "Endorse na Nexus Mods - to dzięki tym liczbom inni gracze znajdują patcha",
+          "likeSteam": "Ocena poradnika w Steam - tak widzą go nowi gracze",
+          "donate": "Datek na Boosty lub Ko-fi - pokrywa koszt AI i godziny przy głosie",
+          "btnNexus": "Endorse na Nexus",
+          "btnSteam": "Poradnik Steam",
+          "btnBoosty": "Boosty",
+          "btnKofi": "Ko-fi",
+          "thanks": "Dziękuję. Nawet jeden endorse jest widoczny, a datek to dosłownie kolejne linie głosu."
      }
 }

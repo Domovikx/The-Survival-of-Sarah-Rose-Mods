@@ -96,13 +96,25 @@
           "age": "18+",
           "linkNexus": "Nexus Mods"
      },
-     "temp": {
-          "title": "Descarga directa (temporal)",
-          "lead": "La página del mod en Nexus Mods está pendiente de aprobación. Mientras esté cerrada, los archivos están aquí - lo demás no cambia.",
+     "download": {
+          "title": "Descargar",
+          "lead": "El parche es gratuito. Descárgalo de Nexus Mods siempre que esté disponible: ahí están las estadísticas y los endorsements, y es lo que ayuda a que otros jugadores encuentren el parche. Los enlaces de abajo son un canal de respaldo por si Nexus o Vortex no te funcionan.",
           "main": "Descargar base (main.7z)",
           "mainHint": "obligatorio - textos de 11 idiomas, fuentes, menú del mod",
           "voiceLabel": "Paquetes de voz - uno por idioma (opcional):",
-          "install": "Descomprime main.7z en la carpeta del juego (junto a TheSurvivalofSarahRose.exe) y luego los paquetes de voz. La insignia de la esquina superior derecha abre el menú del mod.",
-          "note": "Enlaces temporales: se retiran cuando abra la página del mod."
+          "install": "Descomprime main.7z en la carpeta del juego (junto a TheSurvivalofSarahRose.exe) y luego los paquetes de voz. La insignia superior derecha abre el menú del mod.",
+          "note": "La página principal y las actualizaciones están en Nexus Mods; aquí hay una copia de respaldo de la versión actual."
+     },
+     "support": {
+          "title": "Apoyar el proyecto",
+          "lead": "El parche es sin ánimo de lucro y lo hace una persona en su tiempo libre. Si te ha servido, esto es lo que de verdad ayuda:",
+          "likeNexus": "Un endorse en Nexus Mods: así otros jugadores encuentran el parche",
+          "likeSteam": "Valorar la guía de Steam: así la ven los nuevos",
+          "donate": "Una donación en Boosty o Ko-fi: paga la IA y las horas de voz",
+          "btnNexus": "Endorse en Nexus",
+          "btnSteam": "Guía de Steam",
+          "btnBoosty": "Boosty",
+          "btnKofi": "Ko-fi",
+          "thanks": "Gracias. Incluso un endorse se nota, y una donación son literalmente las siguientes líneas de voz."
      }
 }

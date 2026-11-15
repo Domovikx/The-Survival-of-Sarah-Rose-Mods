@@ -6,7 +6,8 @@ import { Header } from '@/widgets/header'
 import { Hero } from '@/widgets/hero'
 import { Install } from '@/widgets/install'
 import { Screenshots } from '@/widgets/screenshots'
-import { TempDownloads } from '@/widgets/temp-downloads'
+import { Support } from '@/widgets/support'
+import { Downloads } from '@/widgets/downloads'
 import { VoiceStatus } from '@/widgets/voice-status'
 
 import { FEATURES } from '@/shared/config/flags'
@@ -20,8 +21,9 @@ export const App = () => (
       <DemoPhrases />
       <VoiceStatus />
       <Install />
-      {FEATURES.tempDownloads ? <TempDownloads /> : null}
+      {FEATURES.downloads ? <Downloads /> : null}
       <Screenshots />
+      <Support />
       <Faq />
     </main>
     <Footer />

@@ -96,13 +96,25 @@
           "age": "18+",
           "linkNexus": "Nexus Mods"
      },
-     "temp": {
-          "title": "Direct download (temporary)",
-          "lead": "The mod page on Nexus Mods is awaiting approval. Until it opens, download the archives here - nothing else changes.",
+     "download": {
+          "title": "Download",
+          "lead": "The patch is free. Please download from Nexus Mods when it is available: that is where the statistics and endorsements live, and they are what help other players find the patch. The links below are a backup channel for when Nexus or Vortex is not available for you.",
           "main": "Download core (main.7z)",
           "mainHint": "required - texts of 11 languages, fonts, mod menu",
           "voiceLabel": "Voice packs - one per language (optional):",
-          "install": "Unpack main.7z into the game folder (next to TheSurvivalofSarahRose.exe), then any voice packs. The badge in the top-right corner opens the mod menu.",
-          "note": "Temporary links: removed as soon as the mod page opens."
+          "install": "Unpack main.7z into the game folder (next to TheSurvivalofSarahRose.exe), then the voice packs you want. The badge in the top-right corner opens the mod menu.",
+          "note": "The main page and updates live on Nexus Mods; here is a backup copy of the current version."
+     },
+     "support": {
+          "title": "Support the project",
+          "lead": "The patch is non-commercial and made by one person in their spare time. If it has been useful, here is what really helps:",
+          "likeNexus": "Endorse it on Nexus Mods - that is how other players find the patch",
+          "likeSteam": "Rate the Steam guide - that is how newcomers find it",
+          "donate": "A donation on Boosty or Ko-fi - it pays for the AI and the hours behind the voice",
+          "btnNexus": "Endorse on Nexus",
+          "btnSteam": "Steam guide",
+          "btnBoosty": "Boosty",
+          "btnKofi": "Ko-fi",
+          "thanks": "Thank you. Even one endorsement is visible, and a donation is literally the next lines of voice acting."
      }
 }

@@ -96,13 +96,25 @@
           "age": "18+",
           "linkNexus": "Nexus Mods"
      },
-     "temp": {
-          "title": "Download direto (temporário)",
-          "lead": "A página do mod na Nexus Mods está aguardando aprovação. Enquanto estiver fechada, os arquivos estão aqui - o resto não muda.",
+     "download": {
+          "title": "Baixar",
+          "lead": "O patch é gratuito. Baixe pela Nexus Mods quando estiver disponível: é lá que ficam as estatísticas e os endorsements, e é isso que ajuda outros jogadores a encontrar o patch. Os links abaixo são um canal reserva para quando a Nexus ou o Vortex não funcionarem para você.",
           "main": "Baixar base (main.7z)",
           "mainHint": "obrigatório - textos de 11 idiomas, fontes, menu do mod",
           "voiceLabel": "Pacotes de voz - um por idioma (opcional):",
-          "install": "Descompacte main.7z na pasta do jogo (ao lado de TheSurvivalofSarahRose.exe), depois os pacotes de voz. O selo no canto superior direito abre o menu do mod.",
-          "note": "Links temporários: removidos quando a página do mod abrir."
+          "install": "Descompacte main.7z na pasta do jogo (ao lado de TheSurvivalofSarahRose.exe) e depois os pacotes de voz. O selo no canto superior direito abre o menu do mod.",
+          "note": "A página principal e as atualizações ficam na Nexus Mods; aqui é uma cópia de segurança da versão atual."
+     },
+     "support": {
+          "title": "Apoiar o projeto",
+          "lead": "O patch é sem fins lucrativos e feito por uma pessoa no tempo livre. Se ele foi útil, isto é o que realmente ajuda:",
+          "likeNexus": "Um endorse na Nexus Mods - é assim que outros jogadores encontram o patch",
+          "likeSteam": "Avaliar o guia na Steam - é assim que os novatos o veem",
+          "donate": "Uma doação no Boosty ou Ko-fi - paga a IA e as horas de voz",
+          "btnNexus": "Endorse na Nexus",
+          "btnSteam": "Guia na Steam",
+          "btnBoosty": "Boosty",
+          "btnKofi": "Ko-fi",
+          "thanks": "Obrigado. Até um endorse é visível, e uma doação são literalmente as próximas linhas de voz."
      }
 }
