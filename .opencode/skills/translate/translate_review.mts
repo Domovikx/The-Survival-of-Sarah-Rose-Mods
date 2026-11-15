@@ -21,6 +21,45 @@ const LANG = process.argv[2] ?? "ru"; // языковой аргумент: node
 const ALL = process.argv.includes("--all");
 const PO = `patches/ai-voice-pack/po/${LANG}.po`;
 const MIXED = /([а-яё][a-zA-Z]|[a-zA-Z][а-яё])/;
+/** Русский текст в переводе не на русский (783 такие строки нашлись в zh). */
+const CYRILLIC = /[а-яёА-ЯЁ]{2,}/;
+/** Латинские слова, которым нечего делать в zh-переводе (кроме имён). */
+const LATIN = /[A-Za-z]{3,}/g;
+/** Имена/аббревиатуры, которые в переводе остаются латиницей. */
+const ALLOW_LATIN = new Set([
+  "Sarah",
+  "Kate",
+  "Thomas",
+  "Varga",
+  "Orwell",
+  "Rose",
+  "Belmont",
+  "Nick",
+  "Hugh",
+  "Alaric",
+  "Atilla",
+  "Samayra",
+  "Dalia",
+  "Carolyn",
+  "Lily",
+  "Xanthippe",
+  "Raza",
+  "Caleb",
+  "Sigmund",
+  "Hecate",
+  "Damian",
+  "Oryon",
+  "Voidling",
+  "TSSR",
+  "Nexus",
+  "Xan",
+  "Mythra",
+  "Kalshure",
+  "Rosanna",
+  "Ren",
+  "Ren'Py",
+  "Ctrl",
+]);
 
 const editDist = (a: string, b: string): number => {
   const dp = Array.from({ length: b.length + 1 }, (_, j) => j);
@@ -116,6 +155,22 @@ entries.forEach((e, i) => {
   if (!tr || e.msgctxt === "speaker-name") return;
   const head = HEAD_MAP.get(key(e)) ?? "";
 
+  // 0. Языковой мусор: русский текст в не-русском переводе и непереведённая
+  // латиница (наследие прогона на общей модели: в zh было 783 русских строк).
+  if (!RU && CYRILLIC.test(tr) && !CYRILLIC.test(e.msgid)) {
+    hit(i, "РУССКИЙ ТЕКСТ", e);
+    return;
+  }
+  if (!RU && !/[а-яА-ЯЁё]/.test(tr)) {
+    // Разметка ([unifyarmies], {#tag}) и название игры латиницей — норма.
+    const bare = tr.replace(/\[[^\]]*\]|\{[^}]*\}|The Survival of Sarah Rose/g, "");
+    for (const m of bare.matchAll(LATIN))
+      if (!ALLOW_LATIN.has(m[0])) {
+        hit(i, "ЛАТИНИЦА", e, m[0]);
+        return;
+      }
+  }
+
   // 1. Утечка соседней строки (дубль или содержательное совпадение).
   for (const n of [entries[i - 1], entries[i + 1]]) {
     if (!n || !n.msgstr || !n.msgid || n.msgid === e.msgid || n.msgctxt === "speaker-name") continue;
@@ -159,6 +214,7 @@ entries.forEach((e, i) => {
     /\b(?:not|nobody|nothing|none|never|cannot|can't|don't|doesn't|didn't|won't|wouldn't|couldn't|isn't|aren't|wasn't|weren't|hasn't|haven't|hadn't|no)\b/i.test(
       e.msgid,
     ) &&
+    RU &&
     tr !== head &&
     !ruNeg(tr) &&
     ruNeg(head)

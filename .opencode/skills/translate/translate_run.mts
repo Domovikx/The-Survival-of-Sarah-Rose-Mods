@@ -189,6 +189,9 @@ const call = async (sys: string, usr: string, temp = 0): Promise<string> => {
           max_tokens: 900,
           stream: false,
           reasoning_effort: "none",
+          // llama-server (llama.cpp) не знает reasoning_effort — гасим thinking
+          // его собственным ключом; LM Studio этот блок просто игнорирует.
+          chat_template_kwargs: { enable_thinking: false },
         }),
         signal: AbortSignal.timeout(120_000),
       });
@@ -411,6 +414,11 @@ const worker = async (): Promise<void> => {
       // в оригинале такого нет, значит и в переводе быть не должно.
       const mixed = /[а-яёА-ЯЁ][a-zA-Z]|[a-zA-Z][а-яёА-ЯЁ]/;
       if (mixed.test(tr) && !mixed.test(e.msgid)) return "смешанные алфавиты в одном слове";
+      // Целый русский текст в не-русском переводе (наследие прогона на общей
+      // модели: 783 строки zh были по-русски). Проверка языко-независимая.
+      if (LANG !== "ru" && /[а-яёА-ЯЁ]{2,}/.test(tr) && !/[а-яёА-ЯЁ]{2,}/.test(e.msgid)) {
+        return "русский текст в переводе";
+      }
       // Скобочные формы рода («прав(а)», «видел(а)») — художественный текст их не пишет.
       if (/\([а-яё]{1,8}\)/.test(tr) && !/\([a-zA-Zа-яё]{1,8}\)/.test(e.msgid))
         return "скобочная форма рода в переводе";
@@ -465,7 +473,9 @@ const worker = async (): Promise<void> => {
       for (const n of [entries[i - 1], entries[i + 1]]) {
         if (!n || !n.msgstr || !n.msgid || n.msgid === e.msgid) continue;
         if (sim(e.msgid, n.msgid) >= 0.6) continue; // оригиналы-дубли переводятся одинаково — не брак
-        if (sim(tr, n.msgstr) > 0.75) return "похоже на перевод соседней строки";
+        // Короткие реплики («Damn, boy.», «I want her!») законно похожи на соседей —
+        // для них сравнение не работает и запирало строку навсегда (2026-11-15).
+        if (e.msgid.length >= 20 && sim(tr, n.msgstr) > 0.75) return "похоже на перевод соседней строки";
         const run = commonRun(tr, n.msgstr);
         const rw = run ? run.split(" ").length : 0;
         if (
@@ -527,6 +537,11 @@ const worker = async (): Promise<void> => {
       // ловит семантика, а не строковое сходство (пилот 2026-11-06: 18/30).
       const judgeGate = async (t: string): Promise<string | null> => {
         if (!RETRANS) return null;
+        // Ремонт чужих строк: судья калиброван на «не выдумывай», но на ремонте
+        // он же блокирует законные правки (пример: «占有» вместо «强奸» — модель
+        // смягчила, судья завернул, а старая русская строка осталась). Для
+        // массового ремонта языкового мусора его можно выключить.
+        if (process.env.TSSR_RETRANS_NO_JUDGE === "1") return null;
         const j = await judgeLine(e.msgid, t, LANG, charsOf(e.msgctxt, e.msgid, NAME_CANON));
         return j && j.v === "bad" ? `судья: ${j.r}` : null;
       };
