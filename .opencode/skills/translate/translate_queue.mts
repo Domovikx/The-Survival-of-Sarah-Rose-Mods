@@ -19,7 +19,7 @@
  *   node .opencode/skills/translate/translate_queue.mts es --limit 40   # смоук-тест
  */
 import { spawn, spawnSync } from "node:child_process";
-import { existsSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, openSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
 import { parsePo } from "../renpy-po/po_core.mts";
@@ -116,13 +116,15 @@ const ensureBackend = async (): Promise<void> => {
 };
 
 const runOnce = (lang: string, extra: string[] = []): number => {
+  // Вывод прогона — в свой лог языка: пульт (local-dash) читает именно его.
+  const fd = openSync(join("tmp", `translate_${lang}.run.log`), "a");
   const env = {
     ...process.env,
     TSSR_LLM_URL: URL,
     TSSR_LLM_MODEL: "index-translate-9b",
     TSSR_RETRANS_NO_JUDGE: "1",
   };
-  const r = spawnSync(process.execPath, [RUNNER, lang, ...extra], { stdio: "inherit", env });
+  const r = spawnSync(process.execPath, [RUNNER, lang, ...extra], { stdio: ["ignore", fd, fd], env });
   return r.status ?? 1;
 };
 
@@ -149,7 +151,18 @@ const main = async (): Promise<void> => {
   });
 
   log(`очередь: ${targets.join(" → ") || "всё переведено"}${LIMIT ? ` (limit ${LIMIT})` : ""}`);
+
+  // Пульс: раз в 5 минут пишем, сколько готово у текущего языка (иначе между
+  // пассами, которые идут часами, в логе тишина).
+  let current = targets[0] ?? "";
+  const beat = setInterval(() => {
+    if (!current) return;
+    const { filled, total } = progress(current);
+    log(`${current}: ${filled}/${total} (${((filled / total) * 100).toFixed(1)}%)`);
+  }, 5 * 60_000);
+  beat.unref();
   for (const lang of targets) {
+    current = lang;
     let passes = 0;
     for (;;) {
       await ensureBackend();

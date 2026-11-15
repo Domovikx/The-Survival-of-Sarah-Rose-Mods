@@ -57200,51 +57200,51 @@ msgstr "¿Cuáles habían sido sus sueños, hace apenas unas semanas?"
 
 msgctxt "speaker:Narrator"
 msgid "Had she grown up on a farm, hoping to marry one of the men from her village?"
-msgstr ""
+msgstr "¿Había crecido en una granja, con la esperanza de casarse con uno de los hombres de su aldea?"
 
 msgctxt "speaker:Narrator"
 msgid "Had she lived in a city, perhaps hoping to inherit her father's business?"
-msgstr ""
+msgstr "Si hubiera vivido en una ciudad, ¿quizás habría soñado con heredar el negocio de su padre?"
 
 msgctxt "speaker:Narrator"
 msgid "Whatever her hopes or dreams had been, Sarah knew for certain that this was not one of them."
-msgstr ""
+msgstr "Fueran cuales fueran sus esperanzas o sueños, Sarah sabía con certeza que este no era uno de ellos."
 
 msgctxt "speaker:Narrator"
 msgid "She watched as the Tribesman reached out and slapped the girl on her ass."
-msgstr ""
+msgstr "Ella observó cómo el Tribal extendía la mano y le daba una bofetada en el trasero a la chica."
 
 msgctxt "speaker:Narrator"
 msgid "In this place, that was all the thanks a slave could expect for a job well done."
-msgstr ""
+msgstr "En este lugar, esa era toda la gratitud que una esclava podía esperar por un trabajo bien hecho."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah could see the girl's face."
-msgstr ""
+msgstr "Sarah podía ver el rostro de la chica."
 
 msgctxt "speaker:Narrator"
 msgid "Rage. Sadness. Self-control."
-msgstr ""
+msgstr "Ira. Tristeza. Autocontrol."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah could have imagined any of those emotions on the girl's face, given her treatment."
-msgstr ""
+msgstr "Sarah podría haber imaginado cualquiera de esas emociones en el rostro de la chica, dado el trato que había recibido."
 
 msgctxt "speaker:Narrator"
 msgid "But instead, Sarah found on her face the same expression she found on most slaves."
-msgstr ""
+msgstr "Pero, en cambio, Sarah encontró en su rostro la misma expresión que encontraba en la mayoría de los esclavos."
 
 msgctxt "speaker:Narrator"
 msgid "Muted. As if a fire had been snuffed out from behind their eyes."
-msgstr ""
+msgstr "Atenuada. Como si un fuego se hubiera apagado tras sus ojos."
 
 msgctxt "speaker:Narrator"
 msgid "The outrage of being made to parade near naked. To serve their conquerors. To endure their humilations."
-msgstr ""
+msgstr "La indignación de verse obligado a desfilar casi desnudo. A servir a sus conquistadores. A soportar sus humillaciones."
 
 msgctxt "speaker:Narrator"
 msgid "It was enough to bring anyone to rage."
-msgstr ""
+msgstr "Era suficiente para enfurecer a cualquiera."
 
 msgctxt "speaker:Narrator"
 msgid "But it never did. Instead, each of the slaves yearned for the same thing all others did."
@@ -57252,51 +57252,51 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Survive. They wanted to be alive more than anything else."
-msgstr ""
+msgstr "Sobrevivir. Querían estar vivos más que nada en el mundo."
 
 msgctxt "speaker:Narrator"
 msgid "And in this place, that meant enduring what the Tribesmen inflicted. Accepting their place in this new world."
-msgstr ""
+msgstr "Y en este lugar, eso significaba soportar lo que los miembros de las Tribus les infligían. Aceptar su lugar en este nuevo mundo."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah saw the girl being grabbed by the wrist, pulled down onto the lap of the soldier."
-msgstr ""
+msgstr "Sarah vio cómo agarraban a la chica por la muñeca y la tiraban hasta el regazo del soldado."
 
 msgctxt "speaker:Narrator"
 msgid "Her pitcher clattered to the floor."
-msgstr ""
+msgstr "Su jarra cayó al suelo con un estruendo."
 
 msgctxt "speaker:Narrator"
 msgid "Nobody paid it much mind. The same scene seemed to play out all over the room."
-msgstr ""
+msgstr "A nadie le importó mucho. La misma escena parecía repetirse por toda la habitación."
 
 msgctxt "speaker:Narrator"
 msgid "Happy soldiers and their spoils of war."
-msgstr ""
+msgstr "Soldados felices y sus botines de guerra."
 
 msgctxt "speaker:Narrator"
 msgid "She watched as the girl leaned in and kissed the soldier."
-msgstr ""
+msgstr "Ella observó cómo la chica se inclinaba y besaba al soldado."
 
 msgctxt "speaker:Narrator"
 msgid "Easier that way, Sarah thought. He would have her anyway, if she smiled or cried over it, made no difference."
-msgstr ""
+msgstr "Así era más fácil, pensó Sarah. De todos modos, él la tendría; ya fuera que ella sonriera o llorara por ello, no hacía ninguna diferencia."
 
 msgctxt "speaker:Jaeid"
 msgid "Look ahead."
-msgstr ""
+msgstr "Mira hacia adelante."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah turned her eyes away from the sight."
-msgstr ""
+msgstr "Sarah apartó la mirada de la escena."
 
 msgctxt "speaker:Jaeid"
 msgid "We are near to the Khan."
-msgstr ""
+msgstr "Estamos cerca del Khan."
 
 msgctxt "speaker:Jaeid"
 msgid "Do not forget to pay him the proper respects."
-msgstr ""
+msgstr "No olvides mostrarle el debido respeto."
 
 msgctxt "speaker:Narrator"
 msgid "Jaeid had done his best to prepare her for the evening."
