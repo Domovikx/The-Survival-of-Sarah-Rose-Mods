@@ -6236,7 +6236,7 @@ msgstr "Estamos encantados de recibirlos."
 
 msgctxt "speaker:Narrator"
 msgid "Smiles, compliments, condolences for her father, it was all an endless repetition, but Sarah shouldered it and never showed her exhaustion."
-msgstr ""
+msgstr "Sarah lo soportaba todo sin mostrar su agotamiento."
 
 msgctxt "speaker:Narrator"
 msgid "As the room filled up, Sarah could hear the buzz from inside grow louder."
@@ -6248,7 +6248,7 @@ msgstr "De vez en cuando, la multitud emitía gritos y aplausos mientras los art
 
 msgctxt "speaker:Narrator"
 msgid "With most of the nobles now in attendance, Sarah signalled the servants to continue welcoming any stragglers, as she went inside."
-msgstr ""
+msgstr "Con la mayoría de los nobles ya presentes, Sarah indicó a los sirvientes que siguieran recibiendo a los últimos invitados mientras ella entraba."
 
 msgctxt "speaker:Narrator"
 msgid "As soon as she stepped into the great hall, she felt the heat press upon her skin."
@@ -6256,195 +6256,195 @@ msgstr "En cuanto entró en el gran salón, sintió el calor presionarle la piel
 
 msgctxt "speaker:Narrator"
 msgid "The long tables were covered from end to end with different dishes. The many smells combining in the air, filling the great hall with a rare scent of festivity."
-msgstr ""
+msgstr "Las largas mesas estaban cubiertas de un extremo al otro con diversos platos. Los múltiples aromas se combinaban en el aire, llenando el gran salón con un raro aroma de festividad."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah continued walking through the center of the hall, up to the dais to take her place next to Thomas."
-msgstr ""
+msgstr "Sarah continuó caminando por el centro del salón, hasta llegar al estrado para tomar su lugar junto a Tomás."
 
 msgctxt "speaker:Narrator"
 msgid "She waved politely at faces she couldn't remember, and a few she could. Varga was there, as was Marion."
-msgstr ""
+msgstr "Ella saludó cortésmente a los rostros que no recordaba, y a algunos que sí. Varga estaba allí, al igual que Marion."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah wished she had the time to speak to them."
-msgstr ""
+msgstr "Sarah deseó tener tiempo para hablar con ellos."
 
 msgctxt "speaker:Narrator"
 msgid "Climing up the stairs, she sat down in a smaller, lower seat, besides Thomas. It was close enough to speak, but so far away from anyone else, she doubted they could hear them."
-msgstr ""
+msgstr "Mientras subía las escaleras, se sentó en un asiento más pequeño y bajo, junto a Tomás. Estaban lo suficientemente cerca como para hablar, pero tan lejos de los demás que dudaba que pudieran oírlos. —¿Están todos aquí? —preguntó Tomás."
 
 msgctxt "speaker:Thomas"
 msgid "Everyone here?"
-msgstr ""
+msgstr "¿Están todos aquí?"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah waved her hand as if to dismiss the question."
-msgstr ""
+msgstr "Sarah agitó la mano como para desestimar la pregunta."
 
 msgctxt "speaker:Sarah"
 msgid "Anyone who isn't here yet is probably not important enough to wait on."
-msgstr ""
+msgstr "Cualquiera que aún no esté aquí probablemente no sea lo suficientemente importante como para que esperemos."
 
 msgctxt "speaker:Thomas"
 msgid "Alright, shall I begin then?"
-msgstr ""
+msgstr "Bueno, ¿debo empezar entonces?"
 
 msgctxt "speaker:Narrator"
 msgid "She wondered why she felt so distant today. She always loved the winter grace festival."
-msgstr ""
+msgstr "Se preguntó por qué hoy se sentía tan distante. Siempre le había encantado el festival de la gracia invernal."
 
 msgctxt "speaker:Narrator"
 msgid "Perhaps, she thought, it's because this was the first major festival without her father. The day felt tainted, somehow."
-msgstr ""
+msgstr "Quizás, pensó, era porque este era el primer gran festival sin su padre. El día parecía, de alguna manera, manchado."
 
 msgctxt "speaker:Narrator"
 msgid "Thomas rose up from his seat, and an attendant stomped hard on the floor three times, bringing the room to a silence."
-msgstr ""
+msgstr "Tomás se levantó de su asiento, y un asistente pisó con fuerza el suelo tres veces, sumiendo la sala en el silencio."
 
 msgctxt "speaker:Thomas"
 msgid "Let me begin by welcoming all of you to this year's winter grace festival."
-msgstr ""
+msgstr "Permítanme comenzar dando la bienvenida a todos ustedes al festival de la gracia invernal de este año."
 
 msgctxt "speaker:Thomas"
 msgid "I stand here, happy to see so many friendly faces, and to see this great hall sing with a joy that can only come from good friends and good food."
-msgstr ""
+msgstr "Estoy aquí, feliz de ver tantas caras amigables y de ver este gran salón cantar con una alegría que solo puede provenir de buenos amigos y buena comida."
 
 msgctxt "speaker:Thomas"
 msgid "But there is also a pain in my heart. An absence that I feel, as surely as all of you."
-msgstr ""
+msgstr "Pero también hay un dolor en mi corazón. Una ausencia que siento, tan seguramente como todos ustedes."
 
 msgctxt "speaker:Thomas"
 msgid "My father presided over countless of these gatherings, but for me, this is a first."
-msgstr ""
+msgstr "Mi padre presidió innumerables reuniones como esta, pero para mí, esta es la primera vez."
 
 msgctxt "speaker:Thomas"
 msgid "Even now, I find myself instinctively looking at the door, waiting for him to walk through. A winter festival without him, almost seems, wrong."
-msgstr ""
+msgstr "Incluso ahora, me encuentro mirando instintivamente hacia la puerta, esperando que entre. Un festival de invierno sin él casi parece incorrecto."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah found herself surprised to see her brother echo her own feelings so closely."
-msgstr ""
+msgstr "Sarah se sorprendió al ver que su hermano reflejaba tan fielmente sus propios sentimientos."
 
 msgctxt "speaker:Thomas"
 msgid "The winter grace festival is about togetherness, so how do we celebrate that, when we are still mourning a loss that has separated us?"
-msgstr ""
+msgstr "El festival de la gracia invernal trata sobre la unión, así que ¿cómo lo celebramos si todavía estamos de luto por una pérdida que nos ha separado?"
 
 msgctxt "speaker:Thomas"
 msgid "We used to celebrate it with my father, but I propose, that this year, we instead celebrate in honour of him."
-msgstr ""
+msgstr "Solíamos celebrarlo con mi padre, pero propongo que este año lo celebremos en su honor."
 
 msgctxt "speaker:Thomas"
 msgid "Those of you who had the privilege of truly knowing my father, knew how much he enjoyed the winter grace festival."
-msgstr ""
+msgstr "Aquellos de ustedes que tuvieron el privilegio de conocer realmente a mi padre sabían cuánto disfrutaba del festival de la gracia invernal."
 
 msgctxt "speaker:Thomas"
 msgid "The company, the decorations, the food...the beer."
-msgstr ""
+msgstr "La compañía, las decoraciones, la comida... la cerveza."
 
 msgctxt "speaker:Narrator"
 msgid "A roaring laugh erupted from the room."
-msgstr ""
+msgstr "Una carcajada resonó por toda la sala."
 
 msgctxt "speaker:Thomas"
 msgid "So let us honour my father, by keeping his memory alive and celebrating this year's winter grace festival in the way that he would have wanted us to."
-msgstr ""
+msgstr "Así que honremos a mi padre manteniendo viva su memoria y celebrando el festival de la gracia invernal de este año de la manera en que él querría que lo hiciéramos."
 
 msgctxt "speaker:Narrator"
 msgid "Thomas raised a chalice."
-msgstr ""
+msgstr "Tomás levantó un cáliz."
 
 msgctxt "speaker:Thomas"
 msgid "To my father, a king without equal."
-msgstr ""
+msgstr "A mi padre, un rey sin igual."
 
 msgctxt "speaker:Narrator"
 msgid "All across the hall, others raised their cups and yelled out their toasts."
-msgstr ""
+msgstr "Por todo el salón, los demás levantaban sus copas y gritaban sus brindis."
 
 msgctxt "speaker:Narrator"
 msgid "As Thomas fell back into his seat, the party truly took off."
-msgstr ""
+msgstr "Mientras Thomas volvía a caer en su asiento, la fiesta realmente despegó."
 
 msgctxt "speaker:Narrator"
 msgid "Thomas looked at Sarah, he seemed utterly wracked and exhausted."
-msgstr ""
+msgstr "Tomás miró a Sarah; parecía completamente agotado y destrozado."
 
 msgctxt "speaker:Thomas"
 msgid "How did I do?"
-msgstr ""
+msgstr "¿Cómo me fue?"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah looked at Thomas, stunned."
-msgstr ""
+msgstr "Sarah miró a Tomás, atónita."
 
 msgctxt "speaker:Sarah"
 msgid "You were incredible, Thomas."
-msgstr ""
+msgstr "Fuiste increíble, Tomás."
 
 msgctxt "speaker:Thomas"
 msgid "You think so? I spend all night writing and memorizing it."
-msgstr ""
+msgstr "¿De verdad crees eso? Me pasé toda la noche escribiéndolo y memorizándolo."
 
 msgctxt "speaker:Narrator"
 msgid "She watched as her brother slouched back into his seat. He had been somewhat of a true king for a moment, but Sarah slowly realized it didn't come easy to him."
-msgstr ""
+msgstr "Ella observó cómo su hermano se recostaba en su asiento. Por un momento, él había parecido un rey de verdad, pero Sarah se dio cuenta poco a poco de que eso no le resultaba nada fácil."
 
 msgctxt "speaker:Narrator"
 msgid "The night carried on, and Sarah and Thomas spend it eating, receiving gifts from the nobles and listening to their troubles."
-msgstr ""
+msgstr "La noche continuó, y Sarah y Tomás la pasaron comiendo, recibiendo regalos de los nobles y escuchando sus problemas."
 
 msgctxt "speaker:Narrator"
 msgid "It was only towards the end of the night, when the mood suddenly shifted."
-msgstr ""
+msgstr "No fue hasta el final de la noche cuando el ambiente cambió de repente."
 
 msgctxt "speaker:Narrator"
 msgid "The door to the main hall burst open, each frame slamming into the walls. The sound echoed through the hall and a gust of wind was carried in."
-msgstr ""
+msgstr "La puerta del salón principal se abrió de golpe, cada marco estrellándose contra las paredes. El sonido resonó por todo el salón y una ráfaga de viento entró con fuerza."
 
 msgctxt "speaker:Narrator"
 msgid "A dreadful silence came over the room as a everyone turned their heads to see the source of the disturbance."
-msgstr ""
+msgstr "Un silencio aterrador se apoderó de la sala mientras todos giraban la cabeza para ver el origen de la perturbación."
 
 msgctxt "speaker:Narrator"
 msgid "Marching through the center of the hall, in great strides, was a man."
-msgstr ""
+msgstr "Caminando por el centro de la sala, a grandes zancadas, era un hombre."
 
 msgctxt "speaker:Narrator"
 msgid "His skin was a soft oaken brown, darker than any other in the room by far. His dark hair was swept back, cut in a practical fashion. A military fashion."
-msgstr ""
+msgstr "Su piel era de un suave marrón roble, mucho más oscuro que el de cualquier otra persona en la sala. Su cabello oscuro estaba peinado hacia atrás, cortado de forma práctica. Un corte militar."
 
 msgctxt "speaker:Narrator"
 msgid "His young face was contrasted by his old eyes."
-msgstr ""
+msgstr "Su rostro joven contrastaba con la vejez de sus ojos."
 
 msgctxt "speaker:Narrator"
 msgid "Just as his appearance and his style, the clothes he wore were foreign as well. A soft swirling white, mixed with a deep purple and the occasional leather patches of armor."
-msgstr ""
+msgstr "Al igual que su aspecto y su estilo, la ropa que llevaba también era extraña: un blanco suave y ondulante, combinado con un profundo violeta y algunos parches de cuero de armadura."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah had never seen a man dressed like this, but she didn't need to in order to know that this man hailed from the eastern desert."
-msgstr ""
+msgstr "Sarah nunca había visto a un hombre vestido así, pero no necesitaba verlo para saber que este hombre provenía del desierto oriental."
 
 msgctxt "speaker:Narrator"
 msgid "He was too alien to belong to her world."
-msgstr ""
+msgstr "Era demasiado ajeno para pertenecer a su mundo."
 
 msgctxt "speaker:Narrator"
 msgid "The man strode across the hall, ending up at the feet of the stairs that led up to the dais."
-msgstr ""
+msgstr "El hombre avanzó por el salón y llegó hasta los pies de las escaleras que subían al estrado."
 
 msgctxt "speaker:Narrator"
 msgid "Off to the sides, the guards had drawn in closer, but Thomas had waved to hold them off, seemingly more intrigued than afraid."
-msgstr ""
+msgstr "A los lados, los guardias se habían acercado más, pero Thomas les había hecho una seña para que se mantuvieran alejados, pareciendo más intrigado que asustado."
 
 msgctxt "speaker:Narrator"
 msgid "The foreign man fell to one knee."
-msgstr ""
+msgstr "El hombre extranjero cayó de rodilla."
 
 msgctxt "speaker:Emissary"
 msgid "King Thomas, I humbly greet you."
-msgstr ""
+msgstr "Rey Tomás, lo saludo humildemente."
 
 msgctxt "speaker-name"
 msgid "Emissary"
@@ -6452,107 +6452,107 @@ msgstr "Emissario"
 
 msgctxt "speaker:Narrator"
 msgid "Thomas motioned for the man to stand up."
-msgstr ""
+msgstr "Tomás le hizo una seña al hombre para que se levantara."
 
 msgctxt "speaker:Thomas"
 msgid "Please rise, visitor."
-msgstr ""
+msgstr "Levántese, por favor, visitante."
 
 msgctxt "speaker:Narrator"
 msgid "The man did as instructed. His eyes fell directly on Thomas, before switching towards Sarah."
-msgstr ""
+msgstr "El hombre hizo lo que le habían indicado. Sus ojos se posaron directamente en Tomás, antes de dirigirse hacia Sarah."
 
 msgctxt "speaker:Narrator"
 msgid "He only stared at her for a moment, before returning to Thomas, but to Sarah it felt like an eternity."
-msgstr ""
+msgstr "Él solo la miró fijamente por un momento antes de volver a dirigirse a Tomás, pero para Sarah pareció una eternidad."
 
 msgctxt "speaker:Narrator"
 msgid "There was something in this man's eyes. A purpose. All the others in the castle looked at her for who she was, a princess, but this man had the eyes of a predator."
-msgstr ""
+msgstr "Había algo en los ojos de aquel hombre. Un propósito. Todos los demás en el castillo la miraban por lo que era, una princesa, pero este hombre tenía los ojos de un depredador."
 
 msgctxt "speaker:Emissary"
 msgid "I have travelled far, hailing from deep within what you call the eastern desert, and I have come to deliver a gift, from my Master to you, king Thomas."
-msgstr ""
+msgstr "He viajado muy lejos, proveniente de las profundidades de lo que ustedes llaman el desierto oriental, y he venido a entregar un regalo de mi Amo para ti, rey Tomás."
 
 msgctxt "speaker:Narrator"
 msgid "The man's accent was faint, he was clearly well educated to speak the language of Rosanna so effortlessly."
-msgstr ""
+msgstr "El acento del hombre era apenas perceptible; era evidente que estaba bien educado, pues hablaba el idioma de Rosanna con una facilidad asombrosa."
 
 msgctxt "speaker:Narrator"
 msgid "Thomas was now leaning in, wanting to know more."
-msgstr ""
+msgstr "Thomas se inclinaba hacia él, deseando saber más."
 
 msgctxt "speaker:Thomas"
 msgid "A gift?"
-msgstr ""
+msgstr "¿Un regalo?"
 
 msgctxt "speaker:Narrator"
 msgid "The emissary nodded."
-msgstr ""
+msgstr "El emisario asintió."
 
 msgctxt "speaker:Emissary"
 msgid "My master, the great Khan Hassar, has tasked me to bring you a gift of peace."
-msgstr ""
+msgstr "Mi maestro, el gran kan Hassar, me ha encargado que le traiga un regalo de paz."
 
 msgctxt "speaker:Narrator"
 msgid "The room was still silent as a crypt."
-msgstr ""
+msgstr "La habitación seguía en silencio como una cripta."
 
 msgctxt "speaker:Emissary"
 msgid "Khan Hassar bears a great burden, placed upon him by the stars in heaven. He is to bring unity to this world, and bind all peoples together into a single tribe."
-msgstr ""
+msgstr "El kan Hassar carga con un gran peso, impuesto por las estrellas en el cielo. Su misión es unir este mundo y forjar a todos los pueblos en una única tribu."
 
 msgctxt "speaker:Emissary"
 msgid "In service of this great task, he has brought together the tribes of the desert, and brought low the far-eastern nations from beyond the desert."
-msgstr ""
+msgstr "Al servicio de esta gran tarea, ha reunido a las tribus del desierto y ha sometido a las naciones del lejano oriente que se encuentran más allá de él."
 
 msgctxt "speaker:Emissary"
 msgid "Great Emperors of dynasties that have endured for millenia, have bowed their heads low to Khan Hassar."
-msgstr ""
+msgstr "Los grandes emperadores de dinastías que han perdurado durante milenios han inclinado sus cabezas ante el khan Hassar."
 
 msgctxt "speaker:Emissary"
 msgid "But others, sought to impede his great task. It is because of them that I must sadly bear an offer of peace in one hand, and a warning in the other."
-msgstr ""
+msgstr "Pero otros intentaron impedir su gran misión. Es por ellos que debo, con tristeza, llevar una oferta de paz en una mano y una advertencia en la otra."
 
 msgctxt "speaker:Narrator"
 msgid "The emissary reached into a bag and pulled something out."
-msgstr ""
+msgstr "El emisario metió la mano en una bolsa y sacó algo."
 
 msgctxt "speaker:Narrator"
 msgid "A woman shrieked loudly, breaking through the silence. The room began to grow rowdy. Men began to shout obscenities."
-msgstr ""
+msgstr "Una mujer gritó con fuerza, rompiendo el silencio. La habitación comenzó a agitarse. Los hombres empezaron a gritar obscenidades."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah felt herself grow weak, but forced herself to look on. Look at the decapitated head that the emissary was now holding up for all to see."
-msgstr ""
+msgstr "Sarah sintió que se debilitaba, pero se obligó a seguir mirando. Observa la cabeza decapitada que el emisario ahora sostenía en alto para que todos la vieran."
 
 msgctxt "speaker:Emissary"
 msgid "This king was proud. Too proud to bend his head for Khan Hassar, and for this, he lost it."
-msgstr ""
+msgstr "Este rey era orgulloso. Demasiado orgulloso para inclinar la cabeza ante el khan Hassar, y por eso la perdió."
 
 msgctxt "speaker:Emissary"
 msgid "But, along with him, more than a hundred thousand of his countrymen perished with him, dying to defend this fool's honour."
-msgstr ""
+msgstr "Pero, junto con él, más de cien mil de sus compatriotas perecieron con él, muriendo para defender el honor de este necio."
 
 msgctxt "speaker:Emissary"
 msgid "And despite his arrogance, his sons and daughters were still made slaves to the Tribe."
-msgstr ""
+msgstr "Y, a pesar de su arrogancia, sus hijos e hijas aun así fueron hechos esclavos de la Tribu."
 
 msgctxt "speaker:Emissary"
 msgid "Khan Hassar wept for the senselessness of this carnage, and he vowed that before delivering war, he would always offer peace, so that this tragedy might never repeat itself."
-msgstr ""
+msgstr "El khan Hassar lloraba por la inutilidad de aquella masacre y juró que, antes de declarar la guerra, siempre ofrecería la paz, para que esta tragedia nunca se repitiera."
 
 msgctxt "speaker:Narrator"
 msgid "The emissary threw the head halfway up the stairs, where it remained, delicately balanced."
-msgstr ""
+msgstr "El emisario arrojó la cabeza hasta la mitad de las escaleras, donde quedó, delicadamente equilibrada."
 
 msgctxt "speaker:Emissary"
 msgid "And so, I was sent here. Sent to deliver this great offer of peace."
-msgstr ""
+msgstr "Y así, me enviaron aquí. Enviado para entregar esta gran oferta de paz."
 
 msgctxt "speaker:Emissary"
 msgid "King Thomas, on behalf of Khan Hassar, I command you to prostrate yourself before me as if I were him."
-msgstr ""
+msgstr "Rey Tomás, en nombre del khan Hassar, te ordeno que te prosternes ante mí como si yo fuera él."
 
 msgctxt "speaker:Emissary"
 msgid "Do this, and Khan Hassar will spare you and the entire nation of Rosanna a bloodshed you cannot begin to imagine."
