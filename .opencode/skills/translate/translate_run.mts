@@ -6,7 +6,7 @@ import { join } from "node:path";
 import { parsePo, renderPo, writePoAtomic } from "../../../.opencode/skills/renpy-po/po_core.mts";
 import { potIndex } from "../../../.opencode/skills/renpy-po/pot_resolve.mts";
 import { isDemoScope } from "../../../.opencode/skills/renpy-po/po2tl.mts";
-import { resolveBackend } from "../../../scripts/llm_backend.mts";
+import { isTranslationModel, resolveTranslateBackend } from "./translate_backend.mts";
 import { SPEAKER_GENDER } from "../../../patches/ai-voice-pack/casts/gender.mts";
 
 import { buildNameCanon, charsOf, judgeLine } from "./judge_client.mts";
@@ -19,7 +19,7 @@ const positional: string[] = [];
 for (let k = 2; k < process.argv.length; k++) {
   const a = process.argv[k];
   if (a.startsWith("--")) {
-    if (a === "--retrans") k++;
+    if (a === "--retrans" || a === "--model" || a === "--base-url") k++;
     continue;
   }
   positional.push(a);
@@ -131,7 +131,20 @@ try {
   /* не git — работаем без фильтра */
 }
 
-const { url, model } = resolveBackend();
+// Бэкенд перевода — своя модель (Index-Translate-9B), пульт бэкендов на неё не
+// влияет; осознанный оверрайд — --model/--base-url или env (см. translate_backend.mts).
+const backend = resolveTranslateBackend(process.argv, process.env);
+const { url, model } = backend;
+if (!isTranslationModel(model) && !process.argv.includes("--allow-any-model")) {
+  console.error(
+    `[STOP] модель «${model}» — НЕ переводческая.
+` +
+      `Переводы делает Index-Translate-9B (LM Studio :1234, см. SKILL «Модель»).
+` +
+      `Общая модель в перевод не допускается (инцидент 2026-11-15). Осознанно — флаг --allow-any-model.`,
+  );
+  process.exit(2);
+}
 
 // Бэкенд может уйти и вернуться (рестарт Strata при смене профиля, выгрузка
 // модели, OOM-перезапуск). Раньше такая пауза сжигала ВСЮ очередь за минуты:
@@ -571,7 +584,7 @@ const worker = async (): Promise<void> => {
 };
 
 console.log(
-  `прогон ${PO} | ${TARGET[LANG]} | ${model} | арка: ${ARC || "—"}${DEMO_ONLY ? " | DEMO-скоуп" : ""} | к работе ${total} (уже сделано ${IMPROVE ? "—" : done.size})${RETRANS ? " | MODE=retrans: ремонт строк из файла" : IMPROVE ? " | MODE=improve: ничего не записывается" : ""}`,
+  `прогон ${PO} | ${TARGET[LANG]} | ${model}${backend.overridden ? " | ⚠ НЕ переводческая модель" : ""} | арка: ${ARC || "—"}${DEMO_ONLY ? " | DEMO-скоуп" : ""} | к работе ${total} (уже сделано ${IMPROVE ? "—" : done.size})${RETRANS ? " | MODE=retrans: ремонт строк из файла" : IMPROVE ? " | MODE=improve: ничего не записывается" : ""}`,
 );
 // Главный поток под защитой: сбой воркера не должен висеть на интервале —
 // flush + clearInterval + ясный код выхода (инцидент 2026-11-07).

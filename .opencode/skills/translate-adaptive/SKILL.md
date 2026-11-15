@@ -102,6 +102,31 @@ node .opencode/skills/translate-adaptive/translate_ctl.mts auto --detach  # вк
 Watchdog ребут не переживает (это обычный процесс): после загрузки — та же
 команда `auto --detach`.
 
+## Связка языков (translate_chain)
+
+Когда языков много (очередь `config/language-priority.json`), руками запускать
+каждый — потеря времени и прогресса. `translate_chain.mts` гоняет языки по
+одному и коммитит чекпоинты (решение владельца 2026-11-15: «checkpoint'ы каждые
+~5 000 строк» — после инцидента с нулями в `zh.po`):
+
+```bash
+node .opencode/skills/translate-adaptive/translate_chain.mts            # по приоритету Steam
+node .opencode/skills/translate-adaptive/translate_chain.mts --detach   # в фон (переживает сессию)
+node .opencode/skills/translate-adaptive/translate_chain.mts stop        # стоп после текущего языка
+```
+
+- Порядок — `config/language-priority.json` без `en` (оригинал) и без готовых
+  языков (0 пустых `msgstr`); можно явно: `--langs es,pt`.
+- Запускает переводчик ЧЕРЕЗ пульт (`translate_ctl.mts start --lang <l>`), так
+  что Strata/приоритеты/ожидание бэкенда — те же, что у ручного запуска.
+- Раз в `--tick` (120 с) смотрит `po`: прирост ≥ `--checkpoint` (5 000) →
+  `git commit -- po/<lang>.po` сообщением `chore(po): <lang> — прогресс N/M`.
+  Коммитится ТОЛЬКО этот файл: индекс и чужие правки не затрагиваются.
+- Язык готов (0 пустых) → финальный коммит и следующий язык.
+- `stop` ставит маркер `tmp/translate_adaptive/chain.stop` и гасит саму связку;
+  **переводчик не убивается** (его гасит `translate_ctl pause|stop`).
+- Журнал — `tmp/translate_chain.log`, pid — `tmp/translate_adaptive/chain.pid`.
+
 ## Тесты
 
 ```bash

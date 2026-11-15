@@ -4,7 +4,7 @@
  * Общий для CLI (translate_judge.mts) и гейта ремонта (translate_run --retrans).
  */
 import { SPEAKER_GENDER } from "../../../patches/ai-voice-pack/casts/gender.mts";
-import { resolveBackend } from "../../../scripts/llm_backend.mts";
+import { resolveTranslateBackend } from "./translate_backend.mts";
 
 const TARGET: Record<string, string> = {
   ru: "Russian",
@@ -210,7 +210,9 @@ export const judgeLine = async (
   variant = "v10", // прод-конфиг по E2E-матрице 2026-11-06: recall 61/64
   verify = false,
 ): Promise<JudgeResult | null> => {
-  const { url, model } = resolveBackend();
+  // Судья калиброван на переводческой модели (журнал 2026-11-03): берём её же,
+  // а не активный бэкенд пульта.
+  const { url, model } = resolveTranslateBackend(process.argv, process.env);
   const target = TARGET[lang] ?? lang;
   // Метка языка — фактическая: до 2026-11-13 здесь было жёстко «ru», и судья
   // на 9 других языках получал перевод, подписанный как русский.

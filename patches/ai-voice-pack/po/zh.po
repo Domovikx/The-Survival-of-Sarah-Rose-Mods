@@ -663,35 +663,35 @@ msgstr "她曾希望替他读完那些书，再向他做个总结，好让他至
 
 msgctxt "speaker:Narrator"
 msgid "But Thomas was difficult. It wasn't that he was stupid, or even that he was lazy. If he was, Sarah thought, that would almost be easier."
-msgstr ""
+msgstr "但托马斯很难相处。这并不是因为他笨，甚至也不是因为他懒。如果真是那样，莎拉想，那反倒会容易一些。"
 
 msgctxt "speaker:Narrator"
 msgid "No, her brother Thomas was one of those unique people whose interests continually drifted from one topic to another."
-msgstr ""
+msgstr "不，她的哥哥托马斯就是那种兴趣总是从一个主题飘向另一个主题的特别人之一。"
 
 msgctxt "speaker:Narrator"
 msgid "His interests could stay fixed for months, only to completely shift in less than a day."
-msgstr ""
+msgstr "他的兴趣可以维持数月不变，却在不到一天的时间里彻底转向。"
 
 msgctxt "speaker:Narrator"
 msgid "Once he had spend an entire week learning everything there was to learn about how glass was made."
-msgstr ""
+msgstr "有一次，他花了整整一周的时间，把关于玻璃制造的一切能了解的东西都学了个遍。"
 
 msgctxt "speaker:Narrator"
 msgid "Once Thomas was interested in a thing, it seemed to completely envelop his every waking moment, and he rarely stopped until he understood the object of his obsession."
-msgstr ""
+msgstr "一旦托马斯对某件事物产生了兴趣，那似乎就会完全占据他所有清醒的时刻，而他很少会在彻底理解这个痴迷对象之前停下脚步。"
 
 msgctxt "speaker:Narrator"
 msgid "Had Thomas been obsessed with war, he could have been a general unlike any other, but out of his many interests, war never seemed to be one of them."
-msgstr ""
+msgstr "如果托马斯曾对战争产生过痴迷，他本可以成为一名无人能及的将军；然而在他众多的兴趣中，战争似乎从来都不是其中之一。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah had often wondered why. For most boys his age, war seemed to be the only thing they cared for. Soldiers, battle, glory."
-msgstr ""
+msgstr "莎拉常常思考其中的原因。对于大多数和他年龄相仿的男孩来说，战争似乎是他们唯一关心的事物——士兵、战斗、荣耀。"
 
 msgctxt "speaker:Narrator"
 msgid "Perhaps, Sarah speculated, it was simply his nature. Too kind to hurt anything, and so too soft for war, even the theory of war."
-msgstr ""
+msgstr "或许，莎拉推测道，这不过是他的本性罢了。他过于善良，无法伤害任何事物，也因此对战争太过温和，甚至对战争的理论也是如此。"
 
 msgctxt "speaker:Thomas"
 msgid "Is this all you do all day? so boring."
@@ -699,135 +699,135 @@ msgstr ""
 
 msgctxt "speaker:Sarah"
 msgid "AAAH!"
-msgstr ""
+msgstr "啊啊啊！"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah lets out a high-pitched scream and spins around."
-msgstr ""
+msgstr "莎拉发出一声尖叫声，然后猛地转过身来。"
 
 msgctxt "speaker:Narrator"
 msgid "Standing in the corner of her room is her brother, Thomas."
-msgstr ""
+msgstr "她房间的角落里站着她的哥哥托马斯。"
 
 msgctxt "speaker:Sarah"
 msgid "What are you doing creeping around my room? You should be in bed by now."
-msgstr ""
+msgstr "你在我房间里鬼鬼祟祟地做什么？你现在该躺在床上才对。"
 
 msgctxt "speaker:Thomas"
 msgid "I know, I know. I tried, but I was staring at the ceiling and I just couldn't get to sleep."
-msgstr ""
+msgstr "我知道，我知道。我试过了，但我一直盯着天花板看，怎么也睡不着。"
 
 msgctxt "speaker:Thomas"
 msgid "So I figured, obviously, my dear sister must be suffering the same fate as me, so why not share the misery?"
-msgstr ""
+msgstr "所以我心想，显然我亲爱的妹妹肯定也正经历着和我一样的困境，那为什么不一起分担这份苦楚呢？"
 
 msgctxt "speaker:Sarah"
 msgid "I sleep just fine, for your information."
-msgstr ""
+msgstr "我睡得可好了，告诉你。"
 
 msgctxt "speaker:Thomas"
 msgid "Pleeeeease don't send me back, ok? I really can't fall asleep."
-msgstr ""
+msgstr "求你了，别把我送回去好吗？我真的睡不着。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah sighs."
-msgstr ""
+msgstr "莎拉叹了口气。"
 
 msgctxt "speaker:Sarah"
 msgid "Ok, you can stay, but only for a bit. We're going to have the banquet tomorrow for Dad's return. If you don't get any rest, you're going to fall asleep in your soup like last time."
-msgstr ""
+msgstr "好吧，你可以留下，但也只能待一会儿。我们明天要为父亲回来办宴会。如果你不休息好，就会像上次一样在汤里睡着了。"
 
 msgctxt "speaker:Thomas"
 msgid "I didn't fall asleep in the soup!"
-msgstr ""
+msgstr "我没在汤里睡着！"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah laughs."
-msgstr ""
+msgstr "莎拉笑了起来。"
 
 msgctxt "speaker:Sarah"
 msgid "Sure, slipped into it, whatever."
-msgstr ""
+msgstr "当然，随便你怎么说。"
 
 msgctxt "speaker:Narrator"
 msgid "Thomas walks over to Sarah's desk and picks up the book."
-msgstr ""
+msgstr "托马斯走到莎拉的书桌旁，拿起那本书。"
 
 msgctxt "speaker:Thomas"
 msgid "Are you seriously reading this garbage?"
-msgstr ""
+msgstr "你居然真的在读这种垃圾？"
 
 msgctxt "speaker:Sarah"
 msgid "It's not as bad as you make it out to be. Also, you should try maybe doing what dad asks for a change."
-msgstr ""
+msgstr "这也没你夸大的那么糟。而且，为了换换口味，你应该试着照爸爸说的做吧。"
 
 msgctxt "speaker:Narrator"
 msgid "Thomas rolls his eyes."
-msgstr ""
+msgstr "托马斯翻了个白眼。"
 
 msgctxt "speaker:Thomas"
 msgid "We can't all be perfect like you."
-msgstr ""
+msgstr "我们不可能每个人都像你一样完美。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah smiles at her brother."
-msgstr ""
+msgstr "Sarah 朝哥哥笑了笑。"
 
 msgctxt "speaker:Sarah"
 msgid "True."
-msgstr ""
+msgstr "没错。"
 
 msgctxt "speaker:Thomas"
 msgid "Show off."
-msgstr ""
+msgstr "爱显摆的家伙。"
 
 msgctxt "speaker:Sarah"
 msgid "But seriously, Thomas, you should listen to Dad at least some of the time. He's only trying to do what is best for us."
-msgstr ""
+msgstr "不过说真的，托马斯，你至少应该偶尔听听爸爸的话。他只是想为我们好而已。"
 
 msgctxt "speaker:Narrator"
 msgid "Thomas casually drops the tome back on the desk."
-msgstr ""
+msgstr "托马斯漫不经心地把厚书放回桌上。"
 
 msgctxt "speaker:Thomas"
 msgid "Yeah, I know, but sometimes it just gets a bit much. Read this, train that, study such. Like, no matter how much I try, I just can't be like him, Sarah."
-msgstr ""
+msgstr "是啊，我知道，但有时这真的有点让人受不了。读这个，训练那个，学习这种那种的。不管我多努力，我就是没法像他那样，萨rah。"
 
 msgctxt "speaker:Thomas"
 msgid "All this, ruling a kingdom, it just comes easy for him."
-msgstr ""
+msgstr "这一切，包括统治一个王国，对他来说都来得太容易了。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah looks at her brother, his eyes fixed to the floor."
-msgstr ""
+msgstr "莎拉注视着她的哥哥，他的眼睛紧盯着地面。"
 
 msgctxt "speaker:Narrator"
 msgid "She gets up and puts her arms around him."
-msgstr ""
+msgstr "她站起身来，双臂环绕住他。"
 
 msgctxt "speaker:Sarah"
 msgid "That's not true. He told me how difficult it was, growing up under his father. How nothing he ever did was good enough."
-msgstr ""
+msgstr "那不是真的。他曾告诉我，在父亲手下长大是多么艰难，也告诉他，无论他做了什么都无法得到认可。"
 
 msgctxt "speaker:Sarah"
 msgid "Grandfather used to beat him, mercilessly."
-msgstr ""
+msgstr "祖父以前总是无情地殴打他。"
 
 msgctxt "speaker:Narrator"
 msgid "Thomas sudenly looks up, a shocked expression on his face."
-msgstr ""
+msgstr "托马斯突然抬起头，脸上露出震惊的表情。"
 
 msgctxt "speaker:Thomas"
 msgid "I didn't know that."
-msgstr ""
+msgstr "我不知道这件事。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah keeps hugging her brother."
-msgstr ""
+msgstr "莎拉一直抱着她的哥哥不放。"
 
 msgctxt "speaker:Sarah"
 msgid "He's tried to give us more freedom than he ever had. But you know, he's also preparing us for the real world."
-msgstr ""
+msgstr "他一直想给我们比过去更多的自由。不过你知道的，他也在让我们为真实的世界做好准备。"
 
 msgctxt "speaker:Sarah"
 msgid "Not everything is going to stay like things are now, Thomas. One day you will be king, and when that day comes, you need to be ready."
@@ -835,7 +835,7 @@ msgstr ""
 
 msgctxt "speaker:Thomas"
 msgid "Yeah...I guess I could try to be better."
-msgstr ""
+msgstr "是啊……我猜我可以试着变得更好。"
 
 msgctxt "speaker:Sarah"
 msgid "Just show some effort, even if you hate it. Pretending is half of what it takes to be a king."
@@ -843,47 +843,47 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Thomas looks at the bed."
-msgstr ""
+msgstr "托马斯注视着那张床。"
 
 msgctxt "speaker:Thomas"
 msgid "Could I sleep here tonight?"
-msgstr ""
+msgstr "我今晚可以睡在这儿吗？"
 
 msgctxt "speaker:Sarah"
 msgid "Thomas..."
-msgstr ""
+msgstr "托马斯……"
 
 msgctxt "speaker:Thomas"
 msgid "Please, like we used to."
-msgstr ""
+msgstr "求你了，就像我们从前那样吧。"
 
 msgctxt "speaker:Sarah"
 msgid "Yeah, when we were six. We're not kids anymore, it's not appropriate."
-msgstr ""
+msgstr "是啊，那是我们六岁的时候。我们现在已经不是小孩儿了，那样做并不合适。"
 
 msgctxt "speaker:Thomas"
 msgid "Pleeeeeease."
-msgstr ""
+msgstr "求求你了……"
 
 msgctxt "menu"
 msgid "Okay, just this once."
-msgstr ""
+msgstr "好吧，就这一次。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah and Thomas climb into the bed together."
-msgstr ""
+msgstr "Sarah和Thomas一起爬进了床里。"
 
 msgctxt "speaker:Narrator"
 msgid "Her brother hugs her, and she hugs him back."
-msgstr ""
+msgstr "她的哥哥拥抱她，她也回抱他。"
 
 msgctxt "speaker:Narrator"
 msgid "They stay, locked in an embrace. It doesn't take long for Thomas to fall asleep."
-msgstr ""
+msgstr "他们依然相拥着。没过多久，托马斯就睡着了。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah stares at the ornate ceiling. Her brother soundly asleep next to her."
-msgstr ""
+msgstr "莎拉凝视着华丽的天花板，她身旁的兄弟正酣然入睡。"
 
 msgctxt "speaker:Narrator"
 msgid "Nothing stays the same forever, but she wishes, some things could."
@@ -891,39 +891,39 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Grow up, little brother."
-msgstr ""
+msgstr "长大点，小妹妹。"
 
 msgctxt "speaker:Thomas"
 msgid "Whatever."
-msgstr ""
+msgstr "随你怎么说。"
 
 msgctxt "speaker:Narrator"
 msgid "Thomas storms off, angrily muttering to himself."
-msgstr ""
+msgstr "托马斯气呼呼地走了，嘴里还不停地咒骂着。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah wakes to the first beams of light breaking through her curtains."
-msgstr ""
+msgstr "莎拉在清晨第一缕阳光穿透窗帘时醒来。她的兄弟仍在一旁熟睡。"
 
 msgctxt "speaker:Narrator"
 msgid "Her brother is still asleep, next to her."
-msgstr ""
+msgstr "她的兄弟还睡在她旁边。"
 
 msgctxt "speaker:Narrator"
 msgid "It all feels peaceful. She likes to bully him sometimes, but truthfully, she loves her brother."
-msgstr ""
+msgstr "一切都显得如此平和。她有时喜欢欺负他，但说实话，她真的很爱自己的哥哥。"
 
 msgctxt "speaker:Narrator"
 msgid "She gently nudges him, knowing the banquet will start soon."
-msgstr ""
+msgstr "她轻轻推了推他，知道宴会很快就要开始了。"
 
 msgctxt "speaker:Sarah"
 msgid "Hey, time to wake up."
-msgstr ""
+msgstr "嘿，该醒醒了。"
 
 msgctxt "speaker:Narrator"
 msgid "Thomas grunts, acknowledging he's awake but hoping to be spared the day's official events."
-msgstr ""
+msgstr "托马斯低哼了一声，表示自己确实醒了，但心里却盼着能躲过今天那些正式的活动。"
 
 msgctxt "speaker:Sarah"
 msgid "Seriously, Thomas, you need to go to your room and get dressed before Dad comes and drags you to the banquet."
@@ -931,119 +931,119 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "Thomas drags himself from the bed."
-msgstr ""
+msgstr "托马斯从床上挣扎着爬了起来。"
 
 msgctxt "speaker:Thomas"
 msgid "I'm going!"
-msgstr ""
+msgstr "我走了！"
 
 msgctxt "speaker:Narrator"
 msgid "Thomas turns around before leaving."
-msgstr ""
+msgstr "托马斯临走前转过身来。"
 
 msgctxt "speaker:Thomas"
 msgid "See you at the banquet."
-msgstr ""
+msgstr "宴会见。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah waves to her brother."
-msgstr ""
+msgstr "莎拉朝哥哥挥了挥手。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah gets out of the bed and begins to get dressed for the banquet."
-msgstr ""
+msgstr "莎拉从床上爬起来，开始为宴会更衣。"
 
 msgctxt "speaker:Narrator"
 msgid "She watches herself in the mirror as she tries out a series of different dresses."
-msgstr ""
+msgstr "她在镜子前审视着自己，一边尝试着换上各式各样的礼服。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah feels the spectre of her mother, advising her with every choice."
-msgstr ""
+msgstr "莎拉能感受到母亲的身影，仿佛在每一次选择时都在为她出谋划策。"
 
 msgctxt "speaker:Narrator"
 msgid "\"Ooh no, not this one. Try that one\", she would say when Sarah was still young."
-msgstr ""
+msgstr "“哦不，别穿这件。试试那件。”当莎拉还小的时候，母亲总会这样说道。"
 
 msgctxt "speaker:Narrator"
 msgid "Her mother loved to dote on her, and Sarah had loved her doing it."
-msgstr ""
+msgstr "她的母亲曾经非常宠爱她，而莎拉也曾经很享受母亲的这种做法。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah felt herself tear up at the memories."
-msgstr ""
+msgstr "莎拉回忆起这些往事，不禁眼眶湿润。"
 
 msgctxt "speaker:Narrator"
 msgid "It was different for her, because she could still vaguely remember her mother. Thomas had been too small before she passed."
-msgstr ""
+msgstr "对她来说情况有所不同，因为她还能隐约记得自己的母亲。在母亲去世之前，托马斯还太小了。"
 
 msgctxt "speaker:Narrator"
 msgid "She wondered if it was worse to feel this sadness, or to have no memory at all. Each seemed a different kind of cruelty."
-msgstr ""
+msgstr "她不禁思索：感受这份悲伤更糟糕，还是完全没有记忆更残酷？两者似乎都是不同形式的残忍。"
 
 msgctxt "speaker:Narrator"
 msgid "After her mother had passed, it has just been Sarah, Thomas and her father."
-msgstr ""
+msgstr "在母亲去世后，家里只剩下莎拉、托马斯和父亲。"
 
 msgctxt "speaker:Narrator"
 msgid "Most kings would have remarried, but their father never had. When he lost their mother, she took part of his joy with her to the grave."
-msgstr ""
+msgstr "大多数国王都会再婚，但他们的父亲却从未如此。当母亲去世时，她带走了一部分他的喜悦，一同走向了坟墓。"
 
 msgctxt "speaker:Narrator"
 msgid "Her father had once told her that when their mother died, he had lost so much of himself, that he couldn't risk loving someone like that ever again."
-msgstr ""
+msgstr "她的父亲曾经告诉过她，当他们的母亲去世时，他失去了太多的自我，以至于从那以后，他再也无法冒险去爱一个人了。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah shakes her head and pushes away the memory. Composure. Just as Father always said."
-msgstr ""
+msgstr "莎拉摇了摇头，将那段记忆推远。保持镇定——就像父亲常说的那样。"
 
 msgctxt "speaker:Narrator"
 msgid "The tears could come later."
-msgstr ""
+msgstr "眼泪可以稍后再流。"
 
 msgctxt "speaker:Narrator"
 msgid "Save for herself, her bed is empty. She hopes Thomas won't be too upset that she had send him away."
-msgstr ""
+msgstr "除了她自己之外，她的床上空无一人。她希望托马斯不会因为自己把他送走而太伤心。"
 
 msgctxt "speaker:Narrator"
 msgid "Still, he should have known they were too old for that."
-msgstr ""
+msgstr "不过，他本该知道他们已经太老了，不适合那样做。"
 
 msgctxt "speaker:Narrator"
 msgid "\"Ooh no, not this one, try that one\" she would say when Sarah was still small."
-msgstr ""
+msgstr "“哦不，别选这个，试试那个吧。”当莎拉还小时，她曾这样说过。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah shakes her head and pushes away the memory. Composure. Just as father always said."
-msgstr ""
+msgstr "莎拉摇了摇头，将那段记忆推开。保持镇定——就像父亲总是说的那样。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah arrived in the great hall."
-msgstr ""
+msgstr "莎拉走进了那座宏伟的大厅。"
 
 msgctxt "speaker:Narrator"
 msgid "Settled in the center was a large oak table, long enough to house dozens of people on each side."
-msgstr ""
+msgstr "大厅中央摆放着一张巨大的橡木长桌，长度足以让两侧坐满数十人。"
 
 msgctxt "speaker:Narrator"
 msgid "Throughout the hall, servants ran up and down, placing plates, putting down silverware; some were ironing the sheet covering the oak table."
-msgstr ""
+msgstr "整个大厅里，仆人们跑来跑去，摆放着盘子、放下银器；有些人在熨烫铺在橡木桌上的床单。"
 
 msgctxt "speaker:Narrator"
 msgid "She enjoyed seeing the castle like this: alive, vibrant."
-msgstr ""
+msgstr "她喜欢看到这座城堡如此鲜活而充满生机。"
 
 msgctxt "speaker:Narrator"
 msgid "Some servants passed by, lowering their heads, mumbling their respects to their princess. Sarah acknowledged them and their efforts with a small nod."
-msgstr ""
+msgstr "一些仆人经过时低下头，轻声向公主表示敬意。萨拉则微微点头以示认可。"
 
 msgctxt "speaker:Thomas"
 msgid "So busy."
-msgstr ""
+msgstr "真是忙得不可开交啊。"
 
 msgctxt "speaker:Narrator"
 msgid "Thomas strolled into the great hall, stopping next to his sister."
-msgstr ""
+msgstr "托马斯漫步进入大厅，停在他姐姐身旁。"
 
 msgctxt "speaker:Sarah"
 msgid "At least you managed to get here in time."
@@ -1051,31 +1051,31 @@ msgstr ""
 
 msgctxt "speaker:Thomas"
 msgid "Yes, a certain someone gave me some advice. Said I should put in more of an effort."
-msgstr ""
+msgstr "是啊，某个特定的人给了我一些建议。他说我应该多付出些努力。"
 
 msgctxt "speaker:Sarah"
 msgid "Sounds like a smart person."
-msgstr ""
+msgstr "听起来是个聪明人。"
 
 msgctxt "speaker:Thomas"
 msgid "She likes to think she is."
-msgstr ""
+msgstr "她喜欢这么认为。"
 
 msgctxt "speaker:Narrator"
 msgid "Thomas winks at his sister."
-msgstr ""
+msgstr "托马斯朝妹妹眨了眨眼。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah rolls her eyes."
-msgstr ""
+msgstr "莎拉翻了翻白眼。"
 
 msgctxt "speaker:Narrator"
 msgid "At least he's trying, she thinks to herself."
-msgstr ""
+msgstr "至少他在努力，她心里想着。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah watches the people slowly fill into the great hall."
-msgstr ""
+msgstr "莎拉看着人们慢慢走进大厅。"
 
 msgctxt "speaker:Narrator"
 msgid "The court nobles were amongst the first. Always priding themselves on their own importance, each representing an important family."
@@ -1083,11 +1083,11 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "They had crowded around a young man with a thin frame and long, flowing blonde hair, reaching to his shoulders."
-msgstr ""
+msgstr "他们围住了一位身材瘦削、金发长及肩头的年轻男子。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah knew him and wasn't surprised to see him, Marion Achillea, from the Achillea family."
-msgstr ""
+msgstr "莎拉认识他，看到他也并不感到意外——他是来自阿基利亚家族的马里翁·阿基利亚。"
 
 msgctxt "speaker:Narrator"
 msgid "The Achillea family was one of the oldest and most prestigious families of Rosanna. They had fought with Sarah's ancestors in establishing the Rose dynasty. For their efforts, they were well rewarded."
@@ -1099,7 +1099,7 @@ msgstr ""
 
 msgctxt "speaker:Narrator"
 msgid "And Marion was their scion, first amongst all his peers. He walked around the room with a confidence that could only be the result of years of cultivation."
-msgstr ""
+msgstr "而马里昂正是他们的继承人，在同龄人中也首屈一指。他在房间里踱步时充满自信，而这种自信唯有多年精心培育方能造就。"
 
 msgctxt "speaker:Narrator"
 msgid "Marion was one of those nobles who knew exactly what station he belonged to, because he had been told so repeatedly from birth, and had his beliefs reaffirmed all his life."

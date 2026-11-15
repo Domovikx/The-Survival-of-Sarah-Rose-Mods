@@ -5,6 +5,28 @@ description: Построчный перевод TSSR (po/<lang>.po) — ЕДИ�
 
 # translate — построчный перевод (с нуля)
 
+## Модель
+
+Перевод делает **Index-Translate-9B** (IndexTeam, база Qwen3.5, 150 языков) в
+LM Studio на `127.0.0.1:1234` — специализированная переводческая модель, решение
+владельца 2026-11-03 (журнал `tasks/2026-11-03-index-translate-9b.md`: instTrans
+Quality 0.247 → 0.677 против базы, следование инструкции 0.061 → 0.821).
+
+Закреплено кодом: `translate_backend.mts` (`resolveTranslateBackend`) — CLI
+`--base-url`/`--model` → env `TSSR_LLM_URL`/`TSSR_LLM_MODEL` → дефолт
+`index-translate-9b`. **Пульт `scripts/llm_backend.mts` на перевод не влияет**:
+раньше перевод следовал за активным бэкендом, и 2026-11-15 прогон `zh` на 94 %
+прошёл на общей Qwen3.6-35B из Strata вместо переводческой модели. Если модель
+переопределена, в шапке прогона стоит `⚠ НЕ переводческая модель`.
+
+Запуск LM Studio (щадящий режим, требование владельца):
+
+```bash
+~/.lmstudio/bin/lms server start
+~/.lmstudio/bin/lms load index-translate-9b -c 8192 --parallel 4 --gpu max   # ~8.9 ГБ VRAM
+# НЕ гонять -c 24576 --parallel 8 (OOM) и не крутить unload/load без нужды
+```
+
 ## Как устроен перевод
 
 - **Построчно:** одна строка = один перевод. Переводится только целевая строка.
