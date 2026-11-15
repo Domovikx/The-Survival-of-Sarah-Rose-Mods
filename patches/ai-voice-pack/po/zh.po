@@ -23911,9 +23911,10 @@ msgctxt "speaker:Narrator"
 msgid "Sarah begged her, she was beyond pretending otherwise. Every fragment of her body wanted more."
 msgstr "莎拉苦苦哀求，她已无法再假装若无其事。她身体的每一寸都在渴望更多。"
 
+# changed
 msgctxt "speaker:Carolyn"
 msgid "Aah, so you're happy with my purchase?"
-msgstr "啊，看来你对我的‘服务’很满意？"
+msgstr "啊，看来你对我的这笔买卖很满意？"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah moaned as Lady Carolyn slowly began to thrust her hips, sliding and out of her."
@@ -38179,9 +38180,10 @@ msgctxt "speaker:Marshal Edmond"
 msgid "She has the experience and the character to perform the duties expected of such a high office."
 msgstr "她具备胜任这一崇高职位所需经验和品格。"
 
+# changed
 msgctxt "speaker:Marshal Edmond"
 msgid "I can think of nobody better in this room."
-msgstr "我想不出这房间里还有比她更合适的人选。"
+msgstr "这屋里我想不出更合适的人。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah smiled and gave Lord Edmond a quick nod of thanks."
@@ -40369,7 +40371,7 @@ msgstr "莎拉坐到了他的腿上。"
 
 msgctxt "speaker:Narrator"
 msgid "She slowly moved her body back and forth across his."
-msgstr "她缓缓地在身上前后挪动着身体。"
+msgstr "她缓缓地将自己的身体在他身上前后移动。"
 
 msgctxt "speaker:Sarah"
 msgid "Well, I'm not really looking for you to fulfill your general's duties..."
@@ -40917,7 +40919,7 @@ msgstr "对首都的大多数人来说，这成了一个英雄主义的美谈，
 
 msgctxt "speaker:Varga"
 msgid "Some of the very same people I put into the ground, only a season prior, had celebrated the annual harvest festival with me."
-msgstr "其中一些人，就在不久前我还和他们一起庆祝年度丰收节的那群人，如今却长眠于地下。"
+msgstr "有些正是那些被我亲手处决的人，就在一个季节之前，还曾和我一起庆祝过年度丰收节。"
 
 msgctxt "speaker:Varga"
 msgid "After that, they gave me my title, and I never looked back."
@@ -81527,7 +81529,7 @@ msgstr "莎拉感觉到他的鸡巴顶端抵在了她喉咙的后方。"
 
 msgctxt "speaker:Narrator"
 msgid "She had taken him has far as she could manage, and still, she knew there were inches of him left."
-msgstr "她已经尽力将他含到了极限，但她心里清楚，他体内还有几英寸留在那里。"
+msgstr "她已将他纳入自己所能承受的最深处，但她仍清楚，他的阴茎还有几英寸尚未进入。"
 
 msgctxt "speaker:Narrator"
 msgid "He smiled at that too."
@@ -89201,9 +89203,10 @@ msgctxt "speaker:Narrator"
 msgid "The captain's large hand was wrapped around the shaft, but there was enough space for him to slide up and down."
 msgstr "船长的大手包裹着那根肉棒，但仍有足够的空间让他上下滑动。"
 
+# changed
 msgctxt "speaker:Narrator"
 msgid "Sarah knew she could wrap both her hands around his shaft with space to spare, if only because she'd done it before."
-msgstr "莎拉知道，如果只是因为以前做过的话，她完全可以用双手环住他的阴茎，而且还能留出不少空隙。"
+msgstr "莎拉知道，她完全可以用双手环住他的阴茎，而且还能留出空隙——毕竟她以前就这么做过。"
 
 msgctxt "speaker:Narrator"
 msgid "His size had always been obvious to her, but it was especially obvious after having seen Nick's today."
@@ -91387,7 +91390,7 @@ msgstr "怎么着，小子，你以为能瞒过老贝尔蒙特上校是吧？"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah crawled back up to her feet."
-msgstr "莎拉爬回了她的脚上。"
+msgstr "莎拉重新爬了起来。"
 
 msgctxt "speaker:Captain Belmont"
 msgid "Even had to go and involve that little slut in your plan."
@@ -93595,7 +93598,7 @@ msgstr "真是可惜，你永远无法真正享受其中滋味，但这就是生
 
 msgctxt "speaker:Narrator"
 msgid "Nothing was said. Only the sounds of Sarah's blowjob could be heard."
-msgstr "没有人说话。只能听到莎拉给船长口交的声音。"
+msgstr "什么话也没说。只能听到莎拉口交的声音。"
 
 msgctxt "speaker:Captain Belmont"
 msgid "Answer me boy, or Gods forgive me I'll castrate your worthless pecker right here!"
@@ -124324,7 +124327,7 @@ msgstr "莎拉注意到她盯着自己的时间比平时长了些。"
 
 msgctxt "speaker:Sarah"
 msgid "Like what you see?"
-msgstr "喜欢看你吗？"
+msgstr "喜欢看到这些吗？"
 
 msgctxt "speaker:Narrator"
 msgid "Suddenly, Samayra's face shot up and met her eyes."
@@ -132012,7 +132015,7 @@ msgstr "她感觉到凯特的手在盔甲上移动。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah knew her armor could be a pain to put on and off, but she also knew Kate was being more than friendly."
-msgstr "莎拉知道她的盔甲穿脱起来很麻烦，但她也知道凯特只是出于友好。"
+msgstr "莎拉知道她的盔甲穿脱起来很麻烦，但她同样清楚，凯特的举动早已超出了单纯的友好。"
 
 msgctxt "speaker:Narrator"
 msgid "Kate's hands easily found the various clasps, and pulled it off piece by piece with ease."
@@ -135298,9 +135301,10 @@ msgctxt "speaker:Carolyn"
 msgid "The key would be to strike a balance. Keep him happy, keep you happy."
 msgstr "关键在于保持平衡。让他满意，也让你自己满意。"
 
+# changed
 msgctxt "speaker:Sarah"
 msgid "And whose going to keep you happy?"
-msgstr "那谁来让他满意呢？"
+msgstr "那谁来让你满意呢？"
 
 msgctxt "speaker:Carolyn"
 msgid "Ooh Sarah, you've become so many times more entertaining then when I last saw you."
@@ -139678,9 +139682,10 @@ msgctxt "speaker:Narrator"
 msgid "Dio leaned in."
 msgstr "迪奥凑近了些。"
 
+# changed
 msgctxt "speaker:Dio"
 msgid "He is surprised."
-msgstr "她感到惊讶。"
+msgstr "他感到惊讶。"
 
 msgctxt "speaker:Sarah"
 msgid "Surprised."
@@ -142970,9 +142975,10 @@ msgctxt "speaker:Narrator"
 msgid "Sarah saw in his face a hint of pain."
 msgstr "莎拉从他的脸上看到了一丝痛苦。"
 
+# changed
 msgctxt "speaker:Sarah"
 msgid "And she was more to you than you meant to her?"
-msgstr "而在我心里，你给我的分量，难道比你嘴上说的还要多吗？"
+msgstr "而她在你心中的分量，是否比你在她心中的更重？"
 
 msgctxt "speaker:Narrator"
 msgid "Garret nodded, staring into the fire."
@@ -168237,7 +168243,7 @@ msgstr "精神体抓住他的手臂时，他的手臂尚未完成完整的挥击
 
 msgctxt "speaker:Narrator"
 msgid "Its face mask parted and teeth like sharpened ivory clamped shut, ripping it clean off."
-msgstr "它的面具裂开，如磨尖象牙般的牙齿猛地咬合，将手臂生生撕下。"
+msgstr "它的面具裂开，露出如锋利象牙般的牙齿，随即狠狠咬合，将面具彻底撕下。"
 
 msgctxt "speaker:Narrator"
 msgid "The man looked stunned at the place where his arm had used to be."
@@ -168789,7 +168795,7 @@ msgstr "但这些男人渴望一场壮烈的死亡。"
 
 msgctxt "speaker:Narrator"
 msgid "And Sarah was eager to give it to them."
-msgstr "莎拉也渴望给予他们应得的教训。"
+msgstr "而莎拉则渴望给予他们这一切。"
 
 msgctxt "speaker:Narrator"
 msgid "She saw how her commands were relayed and her army sprung to life."
@@ -193468,9 +193474,10 @@ msgctxt "speaker:Narrator"
 msgid "If someone found them, who cared, she thought."
 msgstr "如果有人发现了他们，那又怎样呢，她心想。"
 
+# changed
 msgctxt "speaker:Narrator"
 msgid "Those who would come upon her could only marvel at her beauty and the rapture of this moment."
-msgstr "那些偶然撞见他们的人，只能惊叹于她的美貌，以及此刻的狂喜。"
+msgstr "偶然撞见她的人，只会惊叹于她的美貌与此刻的极乐。"
 
 msgctxt "speaker:Narrator"
 msgid "She pitied anyone who didn't live as she had lived in this very moment."
@@ -198406,7 +198413,7 @@ msgstr "在成长过程中，她从未有过家人无法得到供养的念头。
 
 msgctxt "speaker:Narrator"
 msgid "The idea of giving up one's entire life, just to provide for the generation before..."
-msgstr "为了供养上一代而放弃自己的一生……这个念头，"
+msgstr "放弃自己的一生，只为供养前一代人……这个想法她以前从未真正思考过。"
 
 msgctxt "speaker:Sarah"
 msgid "You're a good son."
@@ -204986,7 +204993,7 @@ msgstr "有什么好说的？"
 
 msgctxt "speaker:Marius"
 msgid "The both of you came up with some lie? You can't convince me that I didn't see what I saw."
-msgstr "你们俩一起编了个谎？别想骗我，我没看见我所看见的。"
+msgstr "你们俩就编了这么个谎？别想让我相信我没看到自己看到的东西。"
 
 msgctxt "speaker:Narrator"
 msgid "She snapped his finger."
@@ -220883,7 +220890,7 @@ msgstr "突然，她感到他的一只手越过她的身体向上伸来，紧紧
 
 msgctxt "speaker:Narrator"
 msgid "She nearly felt the air slip from her lungs."
-msgstr "她几乎感觉不到空气从肺里溜走。"
+msgstr "她几乎感觉空气从肺部被夺走。"
 
 msgctxt "speaker:Alaric"
 msgid "See what you missed out on all those years ago, ya slut?"
@@ -223635,7 +223642,7 @@ msgstr "萨玛拉翻了个白眼。"
 
 msgctxt "speaker:Samayra"
 msgid "Only so often that I can go to the bathhouse."
-msgstr "也就那么频繁，刚好够我去洗个澡。"
+msgstr "也就只能偶尔去趟浴场罢了。"
 
 msgctxt "speaker:Samayra"
 msgid "And unlike you, I can't spend all day reading."
@@ -231863,7 +231870,7 @@ msgstr "它来回晃动，她无法移开视线。这几乎让她失语。光是
 
 msgctxt "speaker:Narrator"
 msgid "Sarah felt the hard woord cut into her knees."
-msgstr "莎拉感到那坚硬的肉棒硌进了她的膝盖。"
+msgstr "莎拉感到坚硬的物体刺进她的膝盖。"
 
 msgctxt "speaker:Sarah"
 msgid "Can't I go on the bed?"
@@ -254347,7 +254354,7 @@ msgstr "不过，我告诉你一个小秘密。"
 
 msgctxt "speaker:Narrator"
 msgid "Belmont jerked her head back and forth, forcing Sarah to continue to suck him off."
-msgstr "贝尔蒙特脑袋前后晃动，迫使莎拉继续为他口交。"
+msgstr "贝尔蒙特船长让她的头前后晃动，强迫莎拉继续为他口交。"
 
 msgctxt "speaker:Captain Belmont"
 msgid "My next contract is for shippin out two dozen barrels of gunpowder."
@@ -261473,9 +261480,10 @@ msgctxt "speaker:Narrator"
 msgid "Hesitantly, Sarah nodded her head."
 msgstr "莎拉犹豫地点了点头。"
 
+# changed
 msgctxt "speaker:Narrator"
 msgid "She saw him flash his teeth in a grin, understanding that he had won her over."
-msgstr "她看见他咧嘴一笑，露出牙齿，明白自己已经说服了她。"
+msgstr "她看见他咧嘴一笑，知道他已经赢下了她的心。"
 
 msgctxt "speaker:Gilead"
 msgid "I'm very glad for your answer."
@@ -268066,9 +268074,10 @@ msgctxt "speaker:Narrator"
 msgid "A great force pulled her forward."
 msgstr "一股巨大的力量将你向前拉扯。"
 
+# changed
 msgctxt "speaker:Narrator"
 msgid "Something near her."
-msgstr "她发现了一个空地上，中央附近有一团小小的、蜷缩着的墨色物体。"
+msgstr "她身边有什么东西。"
 
 msgctxt "speaker:Narrator"
 msgid "She came upon a clearing, a small huddled mess of ink, near the center of it."
@@ -271364,7 +271373,7 @@ msgstr "不过话说回来，她倒也挺高兴，因为‘主人’似乎一点
 
 msgctxt "speaker:Narrator"
 msgid "Sarah began dusting the walls of the hallway."
-msgstr "莎拉开始打扫走廊的墙壁。她一边工作，一边瞥了瞥达莉亚——后者正开心地在走廊的另一头忙碌着。"
+msgstr "莎拉开始打扫走廊的墙壁。"
 
 msgctxt "speaker:Narrator"
 msgid "As she worked, she looked over at Dalia, who seemed happily working on her end of the hall."

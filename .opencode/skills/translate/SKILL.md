@@ -21,6 +21,25 @@ Quality 0.247 → 0.677 против базы, следование инстру
 флага нет: чужой модели раннер выходит с кодом 2 (общая Qwen/Strata в перевод
 не допускается — инцидент 2026-11-15, `MAP.md`).
 
+### Стабильный бэкенд: headless llama-server
+
+Сервер LM Studio живёт внутри GUI-приложения и умирает вместе с ним (и просто
+«сам по себе» — прогон вставал в `[BACKEND-DOWN]`). Для долгих прогонов запускаем
+**llama-server** из бэкендов LM Studio — он headless и держит нагрузку:
+
+```bash
+LLAMA="C:/Users/<user>/.lmstudio/extensions/backends/llama.cpp-win-x86_64-nvidia-cuda-avx2-2.54.0/llama-server.exe"
+"$LLAMA" -m "$HOME/.lmstudio/models/IndexTeam/Index-Translate-9B-GGUF/Index-Translate-9B.Q4_K_S.gguf"   -c 8192 -np 4 -ngl 99 --host 127.0.0.1 --port 8081 --alias index-translate-9b --no-webui
+
+# прогон/ремонт — на этот адрес:
+TSSR_LLM_URL=http://127.0.0.1:8081 TSSR_LLM_MODEL=index-translate-9b   node .opencode/skills/translate/translate_run.mts zh
+```
+
+Замер: 1 132 строки ремонта — 13.5 мин, 0 сбоев (у LM Studio прогон стоял).
+Грабли: llama.cpp не понимает `reasoning_effort` — thinking гасится только
+`chat_template_kwargs: {enable_thinking: false}` (в раннере уже стоит);
+загрузка модели занимает ~5 минут, до этого `/v1/models` отдаёт 503.
+
 Запуск LM Studio (щадящий режим, требование владельца):
 
 ```bash
