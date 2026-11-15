@@ -152537,9 +152537,10 @@ msgctxt "menu"
 msgid "Forsake Rosanna, remain a mercenary"
 msgstr "抛弃罗莎娜，成为雇佣兵"
 
+# changed
 msgctxt "speaker:Narrator"
 msgid "The word lingered."
-msgstr "这句话久久回荡。"
+msgstr "那个词久久不散。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah saw the worried confusion on Carolyn's face."
