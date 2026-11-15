@@ -32,7 +32,7 @@ msgstr "사라"
 
 msgctxt "speaker-name"
 msgid "King Orwell Rose"
-msgstr "오를리 로즈 왕"
+msgstr "오웰 로즈 왕"
 
 msgctxt "speaker-name"
 msgid "Thomas"
