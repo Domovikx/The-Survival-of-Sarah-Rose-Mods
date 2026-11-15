@@ -6,7 +6,7 @@ import { Header } from "@/widgets/header";
 import { Hero } from "@/widgets/hero";
 import { Install } from "@/widgets/install";
 import { Screenshots } from "@/widgets/screenshots";
-import { Support } from "@/widgets/support";
+import { Donate, Support } from "@/widgets/support";
 import { Downloads } from "@/widgets/downloads";
 import { VoiceStatus } from "@/widgets/voice-status";
 
@@ -19,11 +19,12 @@ export const App = () => (
       <Hero />
       <Features />
       <DemoPhrases />
+      <Support />
       <VoiceStatus />
       <Install />
       {FEATURES.downloads ? <Downloads /> : null}
+      <Donate />
       <Screenshots />
-      <Support />
       <Faq />
     </main>
     <Footer />

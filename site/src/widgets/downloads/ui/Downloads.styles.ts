@@ -50,6 +50,10 @@ export const styles = stylex.create({
     ":hover": { borderColor: "var(--link)", color: "var(--link)" },
     ":focus-visible": { outline: "2px solid var(--link)", outlineOffset: 2 },
   },
+  /** Блокировка после нажатия: видно, что клик принят, и повторный клик не идёт. */
+  linkBusy: { opacity: 0.55, pointerEvents: "none", cursor: "progress" },
+  /** Строка статуса: место зарезервировано, чтобы вёрстка не прыгала. */
+  status: { margin: 0, minHeight: 18, color: "var(--muted)", fontSize: 13 },
   hint: { margin: 0, color: "var(--muted)", fontSize: 14 },
   note: { margin: 0, color: "var(--muted)", fontSize: 13, fontStyle: "italic" },
 });

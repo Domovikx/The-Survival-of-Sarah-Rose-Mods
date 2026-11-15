@@ -18,6 +18,11 @@ export const Footer = () => {
         </p>
         <ul className={cx(styles.links)} aria-label={t("Links")} data-testid="footer-links">
           <li>
+            <a href="#support" data-testid="footer-link-support">
+              {t("Support the project")}
+            </a>
+          </li>
+          <li>
             <a href={LINKS.nexus} data-testid="footer-link-nexus">
               {"Nexus Mods"}
             </a>
