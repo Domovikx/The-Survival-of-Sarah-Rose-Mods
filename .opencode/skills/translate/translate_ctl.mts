@@ -160,22 +160,22 @@ const main = async (): Promise<void> => {
 
   if (cmd === "watch") {
     if (!LANG_RE.test(lang)) die("укажи язык");
-    console.log(`watch ${lang}: слежу за LM Studio и прогоном (раз в 60 с)`);
+    console.log(`watch ${lang}: слежу за LM Studio и прогоном (раз в 20 с)`);
+    let failures = 0;
     for (;;) {
-      if (!lmsServerUp()) {
-        console.log(`${new Date().toISOString()} сервер LM Studio упал — поднимаю`);
-        run(LMS, ["server", "start"]);
-      }
-      if (!lmsLoaded()) {
-        console.log(`${new Date().toISOString()} модель выгружена — загружаю`);
-        run(LMS, ["load", TRANSLATE_BACKEND.model, "-c", "8192", "--parallel", "4", "--gpu", "max", "--ttl", "86400"]);
-        if (!lmsServerUp()) run(LMS, ["server", "start"]);
-      }
-      await new Promise((resolve) => setTimeout(resolve, 60_000));
+      await new Promise((resolve) => setTimeout(resolve, 20_000));
       if (!runningPid(lang)) {
         console.log(`${new Date().toISOString()} прогон ${lang} завершён — watch выходит`);
         return;
       }
+      if (lmsServerUp() && lmsLoaded()) {
+        failures = 0;
+        continue;
+      }
+      failures++;
+      console.log(`${new Date().toISOString()} сервер/модель недоступны (попытка ${failures}) — поднимаю`);
+      if (failures > 2 && !lmsServerUp()) run(LMS, ["server", "stop"]);
+      ensureBackend();
     }
   }
 
