@@ -113,9 +113,10 @@ node tools/generate/scripts/voice_batch.mts \
   --lang ru --force --uid $(cat ../../tmp/voice_delta/changed.txt)
 ```
 
-**Итог:** `node tools/generate/scripts/voice_status.mts --fast` → RU и EN
-100%. Внимание на арки без ✓ и на счётчики done > total (остатки старых
-файлов).
+**Итог:** `node tools/generate/scripts/voice_status.mts --fast` → все языки из
+`audio/` (11) на 100 % от СВОЕГО плана (у каждого языка план = только
+переведённые реплики; `en` — по оригиналу). Внимание на арки без ✓ и на
+счётчики done > total (остатки старых файлов).
 
 **Эмоции:** новые uid без разметки озвучиваются без эмоциональных
 инструкций — это ок; глобальная разметка/переразметка тона — по скиллу

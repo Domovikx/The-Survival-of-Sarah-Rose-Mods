@@ -23,10 +23,47 @@ import { parseArgs } from "node:util";
 
 import { loadCatalog, PKG_ROOT } from "./voice_batch.mts";
 
-const LANGS = ["ru", "en"] as const;
 const AUDIO_DIR = join(PKG_ROOT, "audio");
 const OUTPUT_DIR = join(PKG_ROOT, "tools", "generate", "output");
 const aiVoiceDir = (lang: string) => join(AUDIO_DIR, lang);
+
+/**
+ * Языки озвучки = папки `audio/<lang>/`, порядок — из
+ * `config/language-priority.json` (единый источник порядка языков в проекте).
+ * Раньше список был зашит `["ru","en"]` (легаси прогона CosyVoice) и отчёты
+ * врали: показывали 2 языка из 11 (исправлено 2026-11-16).
+ */
+export function voiceLangs(): string[] {
+  let dirs: string[] = [];
+  try {
+    dirs = readdirSync(AUDIO_DIR).filter((d) => {
+      try {
+        return statSync(join(AUDIO_DIR, d)).isDirectory();
+      } catch {
+        return false;
+      }
+    });
+  } catch {
+    return [];
+  }
+  let order: string[] = [];
+  try {
+    const cfg = JSON.parse(readFileSync(join(PKG_ROOT, "..", "..", "config", "language-priority.json"), "utf-8")) as {
+      languages?: Array<{ code: string }>;
+    };
+    order = (cfg.languages ?? []).map((l) => l.code).filter(Boolean);
+  } catch {
+    /* конфига нет — останется алфавитный порядок */
+  }
+  const rank = (l: string): number => {
+    const i = order.indexOf(l);
+    return i < 0 ? 999 : i;
+  };
+  return dirs.toSorted((a, b) => rank(a) - rank(b) || a.localeCompare(b));
+}
+
+/** Снимок на момент запуска: набор языков меняется только с новым паком. */
+const LANGS = voiceLangs();
 
 // ------------------------------------------------------------- файлы -----
 
@@ -56,33 +93,44 @@ export function countDone(lang: string): { made: Map<string, number>; total: num
 
 // ----------------------------------------------------------- каталог -----
 
-let catalogCache: ReturnType<typeof loadCatalog> | null = null;
-function catalog(): ReturnType<typeof loadCatalog> {
-  if (catalogCache === null) {
-    try {
-      catalogCache = loadCatalog();
-    } catch {
-      catalogCache = [];
-    }
+/** Каталог по языку: `loadCatalog(lang)` подмешивает переводы po/<lang>.po. */
+const catalogCache = new Map<string, ReturnType<typeof loadCatalog>>();
+function catalog(lang: string): ReturnType<typeof loadCatalog> {
+  const hit = catalogCache.get(lang);
+  if (hit) return hit;
+  let value: ReturnType<typeof loadCatalog>;
+  try {
+    value = loadCatalog(lang);
+  } catch {
+    value = [];
   }
-  return catalogCache;
+  catalogCache.set(lang, value);
+  return value;
 }
 
-/** {арка: фраз} — озвучиваемые (dialogue+narration). */
-export function plan(): Map<string, number> {
+/**
+ * {арка: фраз} — план по языку. `en` звучится по оригиналу (po/en не существует),
+ * остальные языки — только ПЕРЕВЕДЁННЫЕ строки (пустой msgstr синтезировать нечем),
+ * иначе у языка с 3 % перевода показывалось бы «1195 из 68357» вместо «из 1200».
+ */
+const planCache = new Map<string, Map<string, number>>();
+export function plan(lang = "ru"): Map<string, number> {
+  const hit = planCache.get(lang);
+  if (hit) return hit;
   const p = new Map<string, number>();
-  for (const e of catalog()) {
-    if (e.category === "dialogue" || e.category === "narration") {
-      p.set(e.arc, (p.get(e.arc) ?? 0) + 1);
-    }
+  for (const e of catalog(lang)) {
+    if (e.category !== "dialogue" && e.category !== "narration") continue;
+    if (lang !== "en" && !e.new) continue;
+    p.set(e.arc, (p.get(e.arc) ?? 0) + 1);
   }
+  planCache.set(lang, p);
   return p;
 }
 
 /** {имя_голоса: {арка: фраз}} — план по голосам (Narrator = наррация). */
 export function charPlan(): Map<string, Map<string, number>> {
   const out = new Map<string, Map<string, number>>();
-  for (const e of catalog()) {
+  for (const e of catalog("ru")) {
     if (e.category !== "dialogue" && e.category !== "narration") continue;
     const who = e.category === "dialogue" ? e.who_name : "Narrator";
     if (!who) continue;
@@ -298,7 +346,7 @@ function cmdDetail(): number {
 export function healthScan(): { orphans: number; parts: number; sizes: Record<string, number> } {
   let orphans = 0;
   let parts = 0;
-  const sizes: Record<string, number> = { ru: 0, en: 0 };
+  const sizes: Record<string, number> = Object.fromEntries(LANGS.map((l) => [l, 0]));
   for (const lang of LANGS) {
     const base = aiVoiceDir(lang);
     if (!existsSync(base)) continue;
@@ -359,28 +407,31 @@ export async function main(argv: string[] = process.argv.slice(2)): Promise<numb
   if (opts.char) return cmdChar(opts.char);
   if (opts.detail) return cmdDetail();
 
-  const p = plan();
-  const planPerLang = [...p.values()].reduce((a, b) => a + b, 0);
-  const planTotal = planPerLang * 2;
-  const made = { ru: countDone("ru"), en: countDone("en") };
-  const total = made.ru.total + made.en.total;
+  const plans = new Map(LANGS.map((l) => [l, plan(l)]));
+  const sum = (m: Map<string, number>): number => [...m.values()].reduce((a, b) => a + b, 0);
+  const planTotal = [...plans.values()].reduce((a, m) => a + sum(m), 0);
+  const made = Object.fromEntries(LANGS.map((l) => [l, countDone(l)])) as Record<string, ReturnType<typeof countDone>>;
+  const total = LANGS.reduce((a, l) => a + made[l]!.total, 0);
 
   console.log("=== СТАТУС ГЕНЕРАЦИИ ОЗВУЧКИ ===");
-  console.log(`План: ${planTotal} фраз (${planPerLang} × 2 языка)`);
+  console.log(`План: ${planTotal} фраз на ${LANGS.length} языков (переведённые реплики)`);
   for (const lang of LANGS) {
     console.log(
-      `  ${padR(lang.toUpperCase(), 2)} ${padL(made[lang].total, 6)} готово (${padL(pct(made[lang].total, planPerLang).toFixed(2), 5)}%)`,
+      `  ${padR(lang.toUpperCase(), 2)} ${padL(made[lang]!.total, 6)} готово (${padL(pct(made[lang]!.total, sum(plans.get(lang)!)).toFixed(2), 5)}% от ${sum(plans.get(lang)!)})`,
     );
   }
   console.log(`  ВСЕГО: ${padL(total, 6)} / ${planTotal} (${pct(total, planTotal).toFixed(2)}%)`);
 
   console.log("\n=== АРКИ ===");
-  const arcs = [...p.keys()].sort();
+  const arcs = [...new Set([...plans.values()].flatMap((m) => [...m.keys()]))].toSorted();
   for (const lang of LANGS) {
-    const lines = arcs.map(
-      (a) =>
-        `${a.slice(0, 14)} ${made[lang].made.get(a) ?? 0}/${p.get(a)!} ${(made[lang].made.get(a) ?? 0) >= p.get(a)! ? "✓" : ""}`,
-    );
+    const p = plans.get(lang)!;
+    const lines = arcs
+      .filter((a) => p.has(a))
+      .map((a) => {
+        const done = made[lang]!.made.get(a) ?? 0;
+        return `${a.slice(0, 14)} ${done}/${p.get(a)!} ${done >= p.get(a)! ? "✓" : ""}`;
+      });
     console.log(`  ${lang.toUpperCase()}: ${lines.join(" | ")}`);
   }
 
@@ -390,14 +441,16 @@ export async function main(argv: string[] = process.argv.slice(2)): Promise<numb
   console.log(`  процессы шимов (cosy|vox): ${workers >= 0 ? workers : "? (нет tasklist)"}`);
   for (const lang of LANGS) {
     const arc = act.get(lang) ?? "?";
-    console.log(`  ${lang.toUpperCase()}: арка ${arc} (всего в арке ${p.get(arc) ?? 0})`);
+    console.log(`  ${lang.toUpperCase()}: арка ${arc} (всего в арке ${plans.get(lang)!.get(arc) ?? 0})`);
   }
 
   console.log("\n=== ЗДОРОВЬЕ ===");
   const h = healthScan();
   console.log(`  tmp-сирот (loudnorm/конвертер): ${h.orphans}`);
   console.log(`  недописанных .part (обрыв конверта): ${h.parts}`);
-  console.log(`  размер: RU ${(h.sizes.ru / 1e9).toFixed(1)} GB, EN ${(h.sizes.en / 1e9).toFixed(1)} GB`);
+  console.log(
+    `  размер: ${LANGS.map((l) => `${l.toUpperCase()} ${((h.sizes[l] ?? 0) / 1e9).toFixed(2)} GB`).join(", ")}`,
+  );
 
   if (opts.fast || total === 0) {
     console.log("\n(без замера скорости: --fast)");
