@@ -7,7 +7,7 @@ translate zh strings:
     new "图片 %d/%d 已被屏蔽。"
 
     old "The Survival of Sarah Rose"
-    new "莎拉·罗斯的生存"
+    new "The Survival of Sarah Rose"
 
     old "Scene Replay"
     new "场景重播"
@@ -70,7 +70,7 @@ translate zh strings:
     new "快速存档"
 
     old "{#file_time}%A, %B %d %Y, %H:%M"
-    new "%A年%B月%d日%H时%M分"
+    new "{#file_time}%A, %B %d %Y, %H:%M"
 
     old "empty slot"
     new "空位"
@@ -79,7 +79,7 @@ translate zh strings:
     new "<"
 
     old "{#auto_page}A"
-    new "A"
+    new "{#auto_page}A"
 
     old "{#quick_page}Q"
     new "{#quick_page}Q"
@@ -208,7 +208,7 @@ translate zh strings:
     new "截图。"
 
     old "Toggles assistive {a=https://www.renpy.org/l/voicing}self-voicing{/a}."
-    new "切换辅助{a=https://www.renpy.org/l/voicing}自我发声{/a}。"
+    new "切换辅助{a=https://www.renpy.org/l/voicing}自我语音{/a}。"
 
     old "Left Click"
     new "左键"
@@ -257,32 +257,3 @@ translate zh strings:
 
     old "Menu"
     new "菜单"
-
-    ## ── Кнопки меню и сохранений (добавлено 2026-11-14) ───────────────
-    ## Базовые экраны игры запрашивают эти подписи, но в таблице перевода
-    ## их не было: главное меню показывало Start / Settings / Exit
-    ## по-английски (проверено пробой в игре, а не на глаз).
-    old "Start"
-    new "开始"
-
-    old "Settings"
-    new "设置"
-
-    old "Quit"
-    new "退出"
-
-    old "Continue"
-    new "继续"
-
-    old "Main Menu"
-    new "主菜单"
-
-    old "Quick Save"
-    new "快速保存"
-
-    old "Quick Load"
-    new "快速读取"
-
-    old "Delete"
-    new "删除"
-

@@ -31,10 +31,10 @@ translate ru strings:
     new "Сохранить"
 
     old "Q.Save"
-    new "Б.сохр."
+    new "Сохранить"
 
     old "Q.Load"
-    new "Б.загр."
+    new "Загрузка"
 
     old "Prefs"
     new "Настройки"
@@ -257,32 +257,3 @@ translate ru strings:
 
     old "Menu"
     new "Меню"
-
-    ## ── Кнопки меню и сохранений (добавлено 2026-11-14) ───────────────
-    ## Базовые экраны игры запрашивают эти подписи, но в таблице перевода
-    ## их не было: главное меню показывало Start / Settings / Exit
-    ## по-английски (проверено пробой в игре, а не на глаз).
-    old "Start"
-    new "Начать"
-
-    old "Settings"
-    new "Настройки"
-
-    old "Quit"
-    new "Выйти"
-
-    old "Continue"
-    new "Продолжить"
-
-    old "Main Menu"
-    new "Главное меню"
-
-    old "Quick Save"
-    new "Быстрое сохранение"
-
-    old "Quick Load"
-    new "Быстрая загрузка"
-
-    old "Delete"
-    new "Удалить"
-

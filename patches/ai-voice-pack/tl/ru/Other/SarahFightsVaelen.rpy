@@ -70,7 +70,7 @@ translate ru strings:
     new "Сара уставилась на него."
 
     old "She saw him gripping the stone from the vault in Bagrad. He kept it under his clothes, but it was always obvious to one who knew it was there."
-    new "Она видела, как он сжимал камень из хранилища в Баграде. Он держал его под одеждой, но тот всегда был заметен тому, кто знал о его наличии. Его рука снова и снова перебирала им, словно монах с молитвенными бусами."
+    new "Она увидела, как он сжимал камень из хранилища в Баграде. Он прятал его под одеждой, но тот, кто знал о его наличии, всегда мог это заметить."
 
     old "His hand gripped and passed over it again and again, the way a monk would pass prayer beads."
     new "Его рука снова и снова сжималась и скользила по нему, как у монаха с молитвенными бусами."

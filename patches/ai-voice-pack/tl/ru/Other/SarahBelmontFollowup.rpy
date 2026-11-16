@@ -58,7 +58,7 @@ translate ru strings:
     new "Дай капитану Бельмонту отпор"
 
     old "Sarah can feel her anger grow. She can’t ignore him any longer."
-    new "Сара чувствует, как нарастает её гнев. Она больше не может игнорировать его. Её глаза резко поднимаются к капитану, и она начинает подниматься на борт его корабля."
+    new "Сара чувствует, как её гнев нарастает. Она больше не может его игнорировать."
 
     old "Her eyes shoot up, meeting the captain, and she begins to make her way onto his ship."
     new "Её взгляд резко поднимается к капитану, и она начинает подниматься на его корабль."

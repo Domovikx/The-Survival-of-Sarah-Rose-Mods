@@ -4738,7 +4738,7 @@ translate ru strings:
     new "Тяжёлые, грубые голоса."
 
     old "They're here somewhere!"
-    new "Они где-то здесь! Разнесите всё вдребезги, если придётся!"
+    new "Они где-то здесь!"
 
     old "Tear up everything if you have to!"
     new "Разорвите всё, если придётся!"

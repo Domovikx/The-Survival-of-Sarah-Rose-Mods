@@ -403,7 +403,7 @@ translate ru strings:
     new "Ты думаешь, я была плохим человеком, живя в том дворце?"
 
     old "For living with so much while others had so little?"
-    new "Ты думаешь, я была плохим человеком, раз жила там при таком изобилии, пока у других было так мало?"
+    new "За то, что жила в таком изобилии, пока у других было так мало?"
 
     old "Sarah reached over and took Samayra's hand."
     new "Сара протянула руку и взяла Самайру за руку."

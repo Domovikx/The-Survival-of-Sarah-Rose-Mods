@@ -2938,7 +2938,7 @@ translate ru strings:
     new "Старик улыбнулся."
 
     old "So to the point. No patience at all."
-    new "Ну что ж... Перейду сразу к делу. Совсем нет терпения."
+    new "Прямо к делу. Совсем нет терпения."
 
     old "Very well then...I will get straight to the point."
     new "Что ж... перейду прямо к сути."

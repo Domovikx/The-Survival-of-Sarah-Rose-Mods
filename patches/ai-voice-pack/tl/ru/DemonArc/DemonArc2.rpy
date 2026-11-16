@@ -1150,7 +1150,7 @@ translate ru strings:
     new "Поверь мне в этом."
 
     old "The beast released its grip on her throat and Sarah fall back down."
-    new "Зверь отпустил её горло, и Сара рухнула назад. Она тяжело приземлилась на холодный камень разрушенных стен."
+    new "Зверь отпустил её за шею, и Сара рухнула на землю."
 
     old "She landed hard on the cold stone of the broken ramparts."
     new "Она тяжело приземлилась на холодный камень разрушенных укреплений."

@@ -667,7 +667,7 @@ translate ru strings:
     new "Теперь он смотрел на неё."
 
     old "Your idea of an apology is watching a princess bathe...your idea of torture is a naked girl, trying to get your attention."
-    new "У тебя странный взгляд на жизнь, Джейид: извинением для тебя становится наблюдение за принцессой во время купания, а пыткой — обнажённая девушка, пытающаяся привлечь твоё внимание."
+    new "Твоя идея извинений — наблюдать, как принцесса принимает ванну... а твоя идея пыток — обнажённая девочка, пытающаяся привлечь твоё внимание."
 
     old "You have an odd outlook on life, Jaeid."
     new "У тебя странный взгляд на жизнь, Джаид."

@@ -7,7 +7,7 @@ translate es strings:
     new "Sarah"
 
     old "King Orwell Rose"
-    new "El Rey Orwell Rose"
+    new "Rey Orwell Rose"
 
     old "Thomas"
     new "Tomás"
@@ -52,7 +52,7 @@ translate es strings:
     new "Jaeid"
 
     old "Xanthippe"
-    new "Xantípipe"
+    new "Jantipa"
 
     old "Razaphel"
     new "Razafael"
@@ -76,7 +76,7 @@ translate es strings:
     new "Bran"
 
     old "Took"
-    new "Tomó"
+    new "Tuk"
 
     old "Synara"
     new "Síara"
@@ -196,13 +196,13 @@ translate es strings:
     new "Arthur"
 
     old "Hugh"
-    new "Abrazarse para sentir el calor"
+    new "Hugo"
 
     old "Sarah and Thomas in unison"
     new "Sarah y Thomas unánimes"
 
     old "Servant"
-    new "Esclavo"
+    new "Sirviente"
 
     old "Nobleman"
     new "Noble"
@@ -277,7 +277,7 @@ translate es strings:
     new "El Oficial"
 
     old "Innkeeper"
-    new "Albergue"
+    new "Tabernero"
 
     old "Official"
     new "Oficial"
@@ -286,7 +286,7 @@ translate es strings:
     new "Esclava"
 
     old "Woman"
-    new "Mujer."
+    new "Mujer"
 
     old "Man"
     new "Hombre"
@@ -328,7 +328,7 @@ translate es strings:
     new "Soldado masculino"
 
     old "Female Soldier"
-    new "Una soldada"
+    new "Soldado"
 
     old "Female soldier"
     new "Soldado femenino"
@@ -337,7 +337,7 @@ translate es strings:
     new "Mujer esclava"
 
     old "Ragged Man"
-    new "Hombre Arruinado"
+    new "Hombre andrajoso"
 
     old "Mythran Officer"
     new "Oficial Mythrano"
@@ -355,7 +355,7 @@ translate es strings:
     new "Espíritu del Bosque"
 
     old "Scout"
-    new "Escudo"
+    new "Explorador"
 
     old "Soldiers"
     new "Soldados"
@@ -373,7 +373,7 @@ translate es strings:
     new "Ingeniera"
 
     old "Spearmen"
-    new "Espaderos"
+    new "Lanceros"
 
     old "Engineers"
     new "Ingenieros"
@@ -421,7 +421,7 @@ translate es strings:
     new "Curadora"
 
     old "Scholar"
-    new "Sarah: ¿Académica?"
+    new "Erudito"
 
     old "Romanov Twin"
     new "Gémeles Romanov"
@@ -454,4 +454,4 @@ translate es strings:
     new "Oryon"
 
     old "Voidling"
-    new "Voidling"
+    new "Engendro del vacío"

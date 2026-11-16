@@ -7,7 +7,7 @@ translate zh strings:
     new "莎拉"
 
     old "King Orwell Rose"
-    new "奥尔文国王·罗斯"
+    new "奥威尔·罗斯国王"
 
     old "Thomas"
     new "托马斯"
@@ -34,10 +34,10 @@ translate zh strings:
     new "卡罗琳"
 
     old "Captain Belmont"
-    new "贝尔蒙特上校"
+    new "贝尔蒙特船长"
 
     old "Caleb"
-    new "凯尔"
+    new "凯莱布"
 
     old "Ephraim"
     new "以法莲"
@@ -61,7 +61,7 @@ translate zh strings:
     new "阿拉里克"
 
     old "Shah Mahda"
-    new "沙·马哈达王子"
+    new "沙·马哈达"
 
     old "Samayra"
     new "萨玛拉"
@@ -76,7 +76,7 @@ translate zh strings:
     new "布兰"
 
     old "Took"
-    new "拿"
+    new "图克"
 
     old "Synara"
     new "西纳拉"
@@ -97,7 +97,7 @@ translate zh strings:
     new "马修"
 
     old "Eula"
-    new "珐露珊"
+    new "尤拉"
 
     old "Gideon"
     new "吉迪恩"
@@ -202,7 +202,7 @@ translate zh strings:
     new "莎拉和托马斯异口同声"
 
     old "Servant"
-    new "女仆"
+    new "仆人"
 
     old "Nobleman"
     new "贵族"
@@ -274,7 +274,7 @@ translate zh strings:
     new "城市官员"
 
     old "The Official"
-    new "官方"
+    new "官员"
 
     old "Innkeeper"
     new "店主"
@@ -340,7 +340,7 @@ translate zh strings:
     new "衣衫褴褛的男人"
 
     old "Mythran Officer"
-    new "神话军官"
+    new "米特拉军官"
 
     old "Mythran Soldier"
     new "米特拉士兵"
@@ -406,7 +406,7 @@ translate zh strings:
     new "强盗"
 
     old "Captain"
-    new "贝尔蒙特上尉"
+    new "船长"
 
     old "Young man"
     new "年轻人"

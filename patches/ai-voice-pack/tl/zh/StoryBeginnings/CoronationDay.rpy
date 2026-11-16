@@ -181,7 +181,7 @@ translate zh strings:
     new "马里恩已经注意到她朝自己走来，并以恰到好处的鞠躬回应了她的屈膝礼。"
 
     old "Sarah couldn't help but be impressed with how effortless Marion could make everything look."
-    new "莎拉不禁为马里恩能将一切都显得如此 effortless 而感到折服。"
+    new "莎拉不禁对马里恩能将一切表现得如此轻松自如而心生钦佩。"
 
     old "Princess Sarah, my pleasure. Congratulations on your brother and our new sovereign."
     new "莎拉公主，我很乐意为您效劳。祝贺您和我们的新君主——您的兄弟。"

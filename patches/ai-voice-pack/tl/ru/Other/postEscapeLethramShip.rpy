@@ -2866,7 +2866,7 @@ translate ru strings:
     new "Сара приоткрыла губы, с нетерпением просунув язык ему в рот."
 
     old "In the soft dark of his house, she could still make out everything about him."
-    new "В тусклом свете его дома она всё ещё могла разглядеть всё в нём: черты лица, кожу, покрытую шрамами — всё это рассказывало историю долгой и суровой жизни."
+    new "В мягком мраке его дома она всё ещё могла разглядеть всё, что с ним было связано."
 
     old "The lines on his face, the leathered skin, the scars, all telling the tale of a long and rough life."
     new "Линии на его лице, грубая кожа, шрамы — всё это рассказывало историю долгой и суровой жизни."
