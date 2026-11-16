@@ -6110,7 +6110,7 @@ msgstr "Mas, se fizéssemos apenas as coisas que nos vêm com facilidade, nunca 
 
 msgctxt "speaker:Sarah"
 msgid "But if we only did the things that come easy to us, we'd never grow or learn to challenge ourselves."
-msgstr ""
+msgstr "Mas, se fizermos apenas o que nos é fácil, nunca cresceremos nem aprenderemos a nos desafiar."
 
 msgctxt "speaker:Narrator"
 msgid "She stopped walking and looked directly at Varga."
@@ -10462,7 +10462,7 @@ msgstr "Ao ouvir os ecos que produziam, ela começou a sentir um calor se espalh
 
 msgctxt "speaker:Narrator"
 msgid "Hearing the echoes they produced, began to release a heat in Sarah."
-msgstr ""
+msgstr "Ouvindo os ecos que produziam, começou a liberar um calor em Sarah."
 
 msgctxt "speaker:Narrator"
 msgid "She first felt it down between her own legs, a growing warmth that slowly grew into a burning heat."
@@ -10478,7 +10478,7 @@ msgstr "Ela não conseguia acreditar no quão molhada estava."
 
 msgctxt "speaker:Narrator"
 msgid "She couldn't believe how wet she was."
-msgstr ""
+msgstr "Ela não podia acreditar no quanta úmida ela estava."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah had, in secret, read some books about carnal acts, but no book could describe what she now felt."
@@ -11222,7 +11222,7 @@ msgstr "Um dos meus homens voltou da floresta de caça."
 
 msgctxt "speaker:Kravel"
 msgid "He informs us that they came across Marion's party and gave chase. They tried to pursue them, but his entourage escaped and managed to join up with an Achillea army unit."
-msgstr ""
+msgstr "Ele nos informa que seus homens encontraram o grupo de Marion e os perseguiram. Eles tentaram capturá-los, mas o grupo de Marion escapou e conseguiu se juntar a uma unidade do exército de Achillea."
 
 msgctxt "speaker:Kravel"
 msgid "My men, they're only a small scouting party. They were no match for Marion's soldiers, and so they retreated."
@@ -15142,7 +15142,7 @@ msgstr "Sarah pronunciou as palavras, mas elas se dissiparam. Simplesmente falar
 
 msgctxt "speaker:Narrator"
 msgid "Sarah uttered the words, but they faded out. Simply speaking was too much."
-msgstr ""
+msgstr "Sarah proferiu as palavras, mas elas foram desaparecendo. Simplesmente falar era demais para ela."
 
 msgctxt "speaker:Narrator"
 msgid "She could feel Lady Carolyn continue to stroke her hair."
@@ -25314,7 +25314,7 @@ msgstr "Claro, uma caravana fortemente armada como a que ela agora viajava raram
 
 msgctxt "speaker:Narrator"
 msgid "Of course, a heavily armed caravan like the one she now travelled in was rarely a target for bandits."
-msgstr ""
+msgstr "É claro que uma caravana pesadamente armada como a em que ela viajava agora raramente era um alvo para bandidos."
 
 msgctxt "speaker:Narrator"
 msgid "Bandits wanted money above all, and robbing nobles often only invited trouble."
@@ -30470,7 +30470,7 @@ msgstr "Mas você está enganada em um ponto."
 
 msgctxt "speaker:Duke Antonio"
 msgid "But you are mistaken on one point."
-msgstr ""
+msgstr "Mas estás enganada num ponto."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah raised one brow."
@@ -32594,7 +32594,7 @@ msgstr "Em vez disso, ela encontrou algo que não esperava: um servo, vindo info
 
 msgctxt "speaker:Narrator"
 msgid "Instead, she found something she had not expected."
-msgstr ""
+msgstr "Em vez disso, encontrou algo que não esperava."
 
 msgctxt "speaker:Narrator"
 msgid "A wooden box, placed just outside her room."
@@ -36194,7 +36194,7 @@ msgstr "No entanto, apesar dos séculos que se passaram, ainda havia uma tradiç
 
 msgctxt "speaker:Narrator"
 msgid "Still, despite the ages passed, there was a tradition for it. It was not unthinkable."
-msgstr ""
+msgstr "Ainda assim, apesar do tempo que havia passado, havia uma tradição para aquilo. Não era algo impensável."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah began to consider the proposal."
@@ -36798,7 +36798,7 @@ msgstr "Vou te usar por esta noite e vou garantir que crie memórias suficientes
 
 msgctxt "speaker:Duke Antonio"
 msgid "I'm gonna use you for the night and I'll make sure to make enough memories to last a lifetime."
-msgstr ""
+msgstr "Vou usar você esta noite e me certificarei de criar memórias suficientes para durar toda uma vida."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah gritted her teeth as he pressed deeper inside of her."
@@ -36982,7 +36982,7 @@ msgstr "Mãos. Boca. Kiska. Bunda."
 
 msgctxt "speaker:Narrator"
 msgid "Hands. Mouth. Cunt. Ass."
-msgstr ""
+msgstr "Mãos. Boca. Kiska. Traseira."
 
 msgctxt "speaker:Narrator"
 msgid "No part of her body was denied to him. No part he refrained from."
@@ -40118,7 +40118,7 @@ msgstr "Finalmente, ainda entrelaçados, o marido e a esposa caíram de lado na 
 
 msgctxt "speaker:Narrator"
 msgid "Finally, still entwined, the husband and wife collapsed sideways into the bed, still holding on to one another."
-msgstr ""
+msgstr "Finalmente, ainda entrelaçados, o casal caiu de lado na cama, ainda se segurando."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah looked into his eyes, her heavy breaths mingling with his, pressing their foreheads against each other."
@@ -41322,7 +41322,7 @@ msgstr "Mas, por outro lado, esse era justamente o objetivo: extinguir para semp
 
 msgctxt "speaker:Narrator"
 msgid "But then again, that had been the point. To forever snuff out any hint of resistance."
-msgstr ""
+msgstr "Mas, por outro lado, esse tinha sido o objetivo. Erradicar para sempre qualquer indício de resistência."
 
 msgctxt "speaker:Narrator"
 msgid "Because it was resistance and rebellion that had brought her to this point. Weakness and a tolerance for weak loyalty."
@@ -45930,7 +45930,7 @@ msgstr "Com a cabeça baixa, ela se forçou a comer o conteúdo miserável da ti
 
 msgctxt "speaker:Narrator"
 msgid "With her head hanging low, she forced herself to eat the miserable contents of the bowl."
-msgstr ""
+msgstr "Com a cabeça baixa, forçou-se a comer o miserável conteúdo da tigela."
 
 msgctxt "speaker:Narrator"
 msgid "She had managed to eat no more than two spoonfuls when she felt a small rock hitting her body."
@@ -53222,7 +53222,7 @@ msgstr "E eu? Nem sequer era especial dentro do nosso clã nômade."
 
 msgctxt "speaker:Sophia"
 msgid "I wasn't even special within our clan."
-msgstr ""
+msgstr "Eu não era nem mesmo especial dentro do nosso clã."
 
 msgctxt "speaker:Narrator"
 msgid "Sophia had a point. In terms of status, they were as different as they could be."
@@ -60778,7 +60778,7 @@ msgstr "Sarah deixou tudo aquilo para trás."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah left it all behind her."
-msgstr ""
+msgstr "Sarah deixou tudo isso para trás. Ela ainda era sua escrava, mas ele lhe concedeu essa primeira bondade. Ela se virou e lançou um último olhar para a tenda de escravas onde passara todas aquelas semanas. Jamais voltaria a esse lugar pelo resto de sua vida."
 
 msgctxt "speaker:Narrator"
 msgid "She would never return to this place, for the rest of her life."
@@ -66226,7 +66226,7 @@ msgstr "Sua vagina ainda não estará pronta, então, por enquanto, você pode u
 
 msgctxt "speaker:Captain Belmont"
 msgid "Your pussy won't be ready just yet, so for now, you can just use your mouth."
-msgstr ""
+msgstr "Sua buceta não estará pronta ainda, então, por enquanto, você só pode usar a boca."
 
 msgctxt "speaker:Narrator"
 msgid "The captain almost sounded gentle, explaining it to Sarah."
@@ -68902,7 +68902,7 @@ msgstr "Para Sarah, isso não era uma surpresa terrível. Kate também não havi
 
 msgctxt "speaker:Narrator"
 msgid "To Sarah, it wasn't a terrible surprise. Kate had failed to show up on other days as well."
-msgstr ""
+msgstr "Para Sarah, isso não foi uma grande surpresa. Kate também não tinha aparecido noutros dias."
 
 msgctxt "speaker:Narrator"
 msgid "In those days, Kate simply practiced by herself. Kate had left her with enough to learn and practice, so Sarah never felt like her training suffered."
@@ -69914,7 +69914,7 @@ msgstr "Efraim acrescentou: E também nem sempre há mulheres por perto."
 
 msgctxt "speaker:Ephraim"
 msgid "And there aren't always women around."
-msgstr ""
+msgstr "E também não há sempre mulheres por perto."
 
 msgctxt "speaker:Sarah"
 msgid "So you're both..."
@@ -70234,7 +70234,7 @@ msgstr "Não, não, as mesmas regras. Exatamente como você me chupou no navio. 
 
 msgctxt "speaker:Captain Belmont"
 msgid "No, no, same ground rules. Just like how you sucked me off on the ship. No clothes."
-msgstr ""
+msgstr "Não, não, as mesmas regras. Tal como quando me masturbaste no navio. Sem roupa."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah gritted her teeth, but obeyed the captain."
@@ -71178,7 +71178,7 @@ msgstr "Por que ela fez isso?"
 
 msgctxt "speaker:Narrator"
 msgid "Why did she do this."
-msgstr ""
+msgstr "Porque é que ela fez isto."
 
 msgctxt "speaker:Narrator"
 msgid "She continued, taking off her bra, her panties."
@@ -72650,7 +72650,7 @@ msgstr "Com um movimento circular, Belmont esfregou a borda de seu ânus com a b
 
 msgctxt "speaker:Narrator"
 msgid "With a circling motion, Belmont reamed the edge of her asshole with the bar of soap."
-msgstr ""
+msgstr "Com um movimento circular, Belmont roçou a borda do buraco do cu dela com o sabão."
 
 msgctxt "speaker:Narrator"
 msgid "Then, he slid a corner into her."
@@ -88930,7 +88930,7 @@ msgstr "Apesar disso, Sarah não pôde deixar de se sentir orgulhosa. Ela havia 
 
 msgctxt "speaker:Narrator"
 msgid "She had stood up for herself, and more importantly, Nick. For the first time she hadn't let the captain walk all over her."
-msgstr ""
+msgstr "Ela havia se levantado para se defender e, mais importante, para defender Nick. Pela primeira vez, ela não havia deixado o capitão passar por cima dela."
 
 msgctxt "speaker:Narrator"
 msgid "Despite everything, she found herself smiling through the pain."
@@ -102990,7 +102990,7 @@ msgstr "Em troca, Sarah tinha inúmeras perguntas sobre eles e suas origens. A v
 
 msgctxt "speaker:Narrator"
 msgid "In return, Sarah had endless questions for them and their origins. Life on a farm seemed utterly alien to her."
-msgstr ""
+msgstr "Em troca, Sarah tinha perguntas intermináveis para eles e sobre suas origens. A vida em uma fazenda parecia completamente estranha para ela."
 
 msgctxt "speaker:Narrator"
 msgid "Ephraim first noticed Caleb's hand sliding across his crotch."
@@ -106742,7 +106742,7 @@ msgstr "Mas Sarah percebeu que esse tinha sido seu erro desde o início: pensar 
 
 msgctxt "speaker:Narrator"
 msgid "But, Sarah realized, that had been her mistake from the start, thinking she could take her time."
-msgstr ""
+msgstr "Mas Sarah percebeu que aquele erro — pensar que podia levar seu tempo — tinha sido o problema desde o início."
 
 msgctxt "speaker:Narrator"
 msgid "The examinator released another blow, same as the last, but this time, Sarah was ready."
@@ -110786,7 +110786,7 @@ msgstr "Sarah também se fartou de elogios. Deve ter havido mal um único soldad
 
 msgctxt "speaker:Narrator"
 msgid "So too did she have her fill of praise. There must have barely been a single soldier who hadn't stopped her and asked her about killing the beast."
-msgstr ""
+msgstr "Assim também ela teve sua parte de elogios. Deve ter havido quase nenhum soldado que não a tivesse parado e perguntado sobre a morte da besta."
 
 msgctxt "speaker:Narrator"
 msgid "Those who had been present in the throne room had managed to turn the story of her killing the beast into a tale larger than life."
@@ -122027,7 +122027,7 @@ msgstr "Como um súbito alívio, ela sentiu o estresse e a dor desaparecerem de 
 
 msgctxt "speaker:Narrator"
 msgid "Like a rush, she felt the stress and pain flow away from her body, her thirst quenched, appetite sated."
-msgstr ""
+msgstr "Como uma corrente, ela sentiu o stress e a dor a afastarem-se do seu corpo, a sua sede saciada e o apetite satisfeito."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah became as once aware to the comfort of the absence of pain, as only those long trapped in it can be."
@@ -123127,7 +123127,7 @@ msgstr "Você já me conhece."
 
 msgctxt "speaker:Voice"
 msgid "You know me already."
-msgstr ""
+msgstr "Tu já me conheces."
 
 msgctxt "speaker:Voice"
 msgid "You are so very close now."
@@ -125719,7 +125719,7 @@ msgstr "Caleb virou-se para encará-la. Ele parecia tão feliz em vê-la quanto 
 
 msgctxt "speaker:Narrator"
 msgid "He seemed as happy to see her as always."
-msgstr ""
+msgstr "Ele parecia tão feliz por a ver como sempre."
 
 msgctxt "speaker:Narrator"
 msgid "Behind him she saw Ephraim wave at her."
@@ -133555,7 +133555,7 @@ msgstr "Observando, ela vê o preto sólido dar lugar a uma textura."
 
 msgctxt "speaker:Narrator"
 msgid "Observing, she sees the solid black give way to texture."
-msgstr ""
+msgstr "Ao observar, ela vê o preto sólido ceder lugar à textura."
 
 msgctxt "speaker:Narrator"
 msgid "It's not a void, she realizes. Amid the blackness, a dark mass writhes, twists and curls."
@@ -144675,7 +144675,7 @@ msgstr "Sinceramente, naquele momento, ela não tinha certeza se teria recusado 
 
 msgctxt "speaker:Narrator"
 msgid "Truthfully, in the moment, she wasn't sure she would have denied him any part of herself."
-msgstr ""
+msgstr "Verdadeiramente, naquele momento, ela não tinha a certeza de que lhe recusaria qualquer parte de si mesma."
 
 msgctxt "speaker:Narrator"
 msgid "Held down by his strong arms, his large frame, Sarah could do little but raise her ass, giving him easier access to herself."
@@ -149007,7 +149007,7 @@ msgstr "Não se preocupe com isso, Samayra. Não é sobre trabalho."
 
 msgctxt "speaker:Sarah"
 msgid "Don't worry about that, Samayra. It's not about work."
-msgstr ""
+msgstr "Não se preocupe com isso, Samay"
 
 msgctxt "speaker:Narrator"
 msgid "Ever since she had taken on the role of secretary for the mercenary company, she had proven her value many times over."
@@ -157227,7 +157227,7 @@ msgstr "E, como você disse, eu imaginei que saber quem está no comando da cida
 
 msgctxt "speaker:Kate"
 msgid "And like you said, I figured whose in charge of the town is probably something you care about."
-msgstr ""
+msgstr "E, como você disse, eu deduzi que descobrir quem comanda a cidade é provavelmente algo que te interessa."
 
 msgctxt "speaker:Kate"
 msgid "Figuring out who is colaborating with the Tribesmen."
@@ -163219,7 +163219,7 @@ msgstr "Ela havia conquistado sua primeira vitória verdadeira na guerra."
 
 msgctxt "speaker:Narrator"
 msgid "She had won her first true victory in the war."
-msgstr ""
+msgstr "Ela tinha conquistado a sua primeira verdadeira vitória na guerra."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah sat atop one of the battlements of the city of Calshure."
@@ -164603,7 +164603,7 @@ msgstr "E eles se moveram ainda mais rápido. Em um tempo que parecia não exist
 
 msgctxt "speaker:Narrator"
 msgid "And they moved faster still."
-msgstr ""
+msgstr "E eles moveram-se ainda mais depressa."
 
 msgctxt "speaker:Narrator"
 msgid "Carried on the winds, their Tribal war cries, striking fear before their blades had even landed."
@@ -168643,7 +168643,7 @@ msgstr "Sem dizer mais nada, Sarah se virou e começou a correr."
 
 msgctxt "speaker:Narrator"
 msgid "Saying nothing else, Sarah turned and began to run."
-msgstr ""
+msgstr "Narrador Sarah não disse nada mais. Virou-se e começou a correr."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah felt every muscle in her body scream, but she would not yield."
@@ -169111,7 +169111,7 @@ msgstr "Mas esse tipo de combate cobrava seu preço."
 
 msgctxt "speaker:Narrator"
 msgid "But that kind of fighting took its toll."
-msgstr ""
+msgstr "Mas esse tipo de combate teve as suas consequências."
 
 msgctxt "speaker:Narrator"
 msgid "It took its toll on both sides, but the Tribesmen did not have the numbers to spare for such a grinding conflict."
@@ -172235,7 +172235,7 @@ msgstr "Sarah podia ver como ele subia ansiosamente atrás dela, com seu membro 
 
 msgctxt "speaker:Narrator"
 msgid "Sarah could see how he eagerly climbed up behind her, his hard cock swinging from side to side."
-msgstr ""
+msgstr "Sarah conseguia ver como ele subia com entusiasmo para trás dela, com o seu membro duro a balançar de lado para lado."
 
 msgctxt "speaker:Alaric"
 msgid "God, I should be starting every day like this."
@@ -172955,7 +172955,7 @@ msgstr "Ela se ajoelhou diante de Aláric, com a boca ligeiramente aberta, revel
 
 msgctxt "speaker:Narrator"
 msgid "She looked up at him, her mouth slightly open, revealing an eagerness to take him into her mouth."
-msgstr ""
+msgstr "A expressão no rosto de Alaric lhe disse o suficiente. Ele gostou do desempenho servil dela."
 
 msgctxt "speaker:Narrator"
 msgid "The look on Alaric's face told her enough. He liked her servile performance."
@@ -176407,7 +176407,7 @@ msgstr "E, apesar de todo o desafio em seus olhos, ele parecia apenas mais excit
 
 msgctxt "speaker:Narrator"
 msgid "And for all the defiance in her eyes, he seemed only more aroused."
-msgstr ""
+msgstr "E, apesar de toda a rebeldia nos olhos dela, ele parecia apenas ainda mais excitado."
 
 msgctxt "speaker:Other man"
 msgid "Hey! Wadda bout me?"
@@ -178183,7 +178183,7 @@ msgstr "Foi então que ela percebeu que toda a separação entre eles era apenas
 
 msgctxt "speaker:Narrator"
 msgid "That's when she knew, that all seperation between them, was only imagination."
-msgstr ""
+msgstr "Foi então que ela soube: toda a separação entre eles não passava de imaginação."
 
 msgctxt "speaker:Narrator"
 msgid "They were a man and a woman. The rest, illusion, meant to distract from the simple truths of nature."
@@ -185227,7 +185227,7 @@ msgstr "Ela não havia pensado no fato de que a vida poderia ser segura, mas que
 
 msgctxt "speaker:Narrator"
 msgid "She hadn't thought about the fact that life might be safe, but that this might also be all there was."
-msgstr ""
+msgstr "Ela não tinha pensado que a vida talvez fosse segura, mas que isso talvez fosse também tudo o que havia."
 
 msgctxt "speaker:Sarah"
 msgid "Well...I wasn't planning on staying there forever."
@@ -186079,7 +186079,7 @@ msgstr "Sem uma autoridade central, a única regra sobre quem detinha o poder pa
 
 msgctxt "speaker:Sigmund"
 msgid "And when it comes to being merciless, there ain't nobody who was willing to go further than the bandit lords."
-msgstr ""
+msgstr "E quando se trata de ser impiedoso, não há ninguém disposto a ir mais longe do que os senhores bandidos."
 
 msgctxt "speaker:Sigmund"
 msgid "They were the only ones who understood, really understood, that strength was the only power that mattered in this new age."
@@ -193875,7 +193875,7 @@ msgstr "Um pouco grogue por causa do álcool, Sarah olhava para ele do outro lad
 
 msgctxt "speaker:Sarah"
 msgid "I wanted to thank you, before we got to Rahayal."
-msgstr ""
+msgstr "Eu queria agradecer-te, antes de chegarmos a Rahayal."
 
 msgctxt "speaker:Sigmund"
 msgid "Is that so?"
@@ -194467,7 +194467,7 @@ msgstr "É ali que os Noctori vivem."
 
 msgctxt "speaker:Sigmund"
 msgid "That's where the Noctori live."
-msgstr ""
+msgstr "É lá que vivem os Noctori."
 
 msgctxt "speaker:Sarah"
 msgid "Noctori?"
@@ -203327,7 +203327,7 @@ msgstr "Também está indo para a cidade em busca de trabalho?"
 
 msgctxt "speaker:Young woman"
 msgid "They says jobs plenty, good pay too."
-msgstr ""
+msgstr "Eles sempre dizem que há muitos empregos, e com um bom salário também."
 
 msgctxt "speaker:Sarah"
 msgid "They always say that, don't they?"
@@ -204627,7 +204627,7 @@ msgstr "Escute-me, garoto. Eu sou seu pai e estou te dizendo como as coisas vão
 
 msgctxt "speaker:Alfred"
 msgid "Listen to me, boy. I'm your father and I'm telling you how it's gonna be."
-msgstr ""
+msgstr "Escute-me, rapaz. Sou seu pai e estou dizendo a você como as coisas vão ser."
 
 msgctxt "speaker:Alfred"
 msgid "Go out into those fields, work, and clear your head."
@@ -216595,7 +216595,7 @@ msgstr "Mas você me faria arriscar muito. O mago pode me jogar de volta no vazi
 
 msgctxt "speaker:Razaphel"
 msgid "But you would have me risk a great deal. The mage can throw me back into the void with ease, should we fail."
-msgstr ""
+msgstr "Mas você quer que eu me arrisque tanto. O mago pode me lançar de volta ao vazio com facilidade, se falharmos."
 
 msgctxt "speaker:Sarah"
 msgid "But we won't fail!"
@@ -221915,7 +221915,7 @@ msgstr "Claro que não. Só me prometa que não vai fazer nada perigoso."
 
 msgctxt "speaker:Sarah"
 msgid "Of course not. Just promise me you won't do anything dangerous."
-msgstr ""
+msgstr "Claro que não. E mesmo que haja perigo, eu apenas gritarei e tu poderás vir salvar-me."
 
 msgctxt "speaker:Samayra"
 msgid "Of course not. And even if there is danger, I'll just scream and you can come save me."
@@ -222083,7 +222083,7 @@ msgstr "Ela correu, seus pés se movendo quase mais rápido do que ela mesma con
 
 msgctxt "speaker:Narrator"
 msgid "She ran, her feet running nearly faster than she could keep up herself, half stumbling."
-msgstr ""
+msgstr "Ela correu, os seus pés a correrem quase mais depressa do que ela própria conseguia acompanhar, meio a tropeçar."
 
 msgctxt "speaker:Narrator"
 msgid "Suddenly, Sarah rushed past one of the bookcases and from the corner of her eyes caught the red of Samayra's dress."
@@ -233287,7 +233287,7 @@ msgstr "Só agora você está lançando isso sobre si mesmo."
 
 msgctxt "speaker:Metis"
 msgid "Only now, you're casting it on yourself."
-msgstr ""
+msgstr "Só agora é que você o está lançando sobre si mesma."
 
 msgctxt "speaker:Narrator"
 msgid "And she spoke the words, imposing her own will on her body, which she now understood to be little more than an instrument. The shell of her true self."
@@ -235519,7 +235519,7 @@ msgstr "Sarah ainda o guardava? Alaric: Sim, é claro. Por quê? Você achou que
 
 msgctxt "speaker:Alaric"
 msgid "Yeah, of course. Why? You thought I'd pawn it off first chance I got?"
-msgstr ""
+msgstr "É, claro. Por quê? Achou que eu ia vendê-lo na primeira oportunidade que tivesse?"
 
 msgctxt "speaker:Sarah"
 msgid "Maybe, you never know with you."
@@ -237307,7 +237307,7 @@ msgstr "Xan, por outro lado, parecia mais acessível, quase ansioso para compart
 
 msgctxt "speaker:Narrator"
 msgid "Metis by contrast seemed easy, almost eager to share what he knew."
-msgstr ""
+msgstr "Metis, pelo contrário, parecia fácil, quase ansioso para partilhar o que sabia."
 
 msgctxt "speaker:Metis"
 msgid "So, I think that should be plenty for today, before I fry your brain."
@@ -241119,7 +241119,7 @@ msgstr "E, ainda assim, uma parte dela permanecia sempre assim... hesitante."
 
 msgctxt "speaker:Narrator"
 msgid "And still some part of her was always like that...hestitant."
-msgstr ""
+msgstr "E, no entanto, uma parte dela continuava sempre assim... hesitante."
 
 msgctxt "speaker:Narrator"
 msgid "She threw the letter back on top of the desk."
@@ -241959,7 +241959,7 @@ msgstr "Grandiosos templos, agulhas e monumentos imponentes."
 
 msgctxt "speaker:Narrator"
 msgid "Great temples, spires and towering monuments."
-msgstr ""
+msgstr "Grandes templos, agulhas e monumentos altíssimos."
 
 msgctxt "speaker:Narrator"
 msgid "Some had entirely collapsed, but most still stood, ruined as they were."
@@ -251987,7 +251987,7 @@ msgstr "Sarah soltou outro gemido ao sentir o grande membro dele pressionar entr
 
 msgctxt "speaker:Narrator"
 msgid "She could tell his size from how it pressed against her skin. As well as from vivid memory."
-msgstr ""
+msgstr "Ela conseguia perceber o tamanho dele por como ele pressionava sua pele, além de recordar com clareza."
 
 msgctxt "speaker:Alaric"
 msgid "This chick is so desperate, honestly, even I don't have the energy to be fucking anybody else."
@@ -252699,7 +252699,7 @@ msgstr "Transportadores, trabalhadores do cais, companheiros de navio e capitãe
 
 msgctxt "speaker:Narrator"
 msgid "Transporters, dock workers, ship mates, captains."
-msgstr ""
+msgstr "Transportadores, estivadores, companheiros de nave, capitães."
 
 msgctxt "speaker:Narrator"
 msgid "Cargo hailing from every corner of the explored world, and even some places Sarah couldn't recognize."
@@ -256631,7 +256631,7 @@ msgstr "Os sobreviventes estavam sentados em silêncio, apenas olhando para o ho
 
 msgctxt "speaker:Narrator"
 msgid "Their eyes full of trauma's they could not yet give word to."
-msgstr ""
+msgstr "Os olhos deles, cheios de um trauma ao qual ainda não conseguiam dar palavras."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah looked up to the sky."
@@ -262143,7 +262143,7 @@ msgstr "Ela sente o corpo começar a tremer, a estremecer."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah feels her body begin to tremble, shudder."
-msgstr ""
+msgstr "Sarah sente seu corpo começar a tremer, estremecer. Ela poderia transformá-lo em pó com apenas uma palavra, e ainda assim... Ela o sente por baixo."
 
 msgctxt "speaker:Sarah"
 msgid "Don't..."

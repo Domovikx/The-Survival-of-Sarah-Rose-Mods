@@ -1,4 +1,9 @@
-npx lint-staged
+# --no-stash: БЕЗ него lint-staged прячет неиндексированные изменения в git stash
+# и при падении задачи оставляет их там, откатывая файлы к HEAD (2026-11-16:
+# так «пропали» 59 строк pt во время работающего переводчика).
+npx lint-staged --no-stash
+# не коммитить po, пока его пишет прогон перевода
+node scripts/po_live_guard.mts
 npm run typecheck
 # локальная защита po от порчи (обнулённый/усечённый файл, остатки .part)
 node scripts/po_check.mts --staged

@@ -19,13 +19,14 @@
  *   node .opencode/skills/translate/translate_queue.mts es --limit 40   # смоук-тест
  */
 import { spawn, spawnSync } from "node:child_process";
-import { existsSync, openSync, readFileSync, writeFileSync } from "node:fs";
+import { closeSync, existsSync, openSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
 import { parsePo } from "../renpy-po/po_core.mts";
 
 const PO_DIR = join("patches", "ai-voice-pack", "po");
 const RUNNER = join(".opencode", "skills", "translate", "translate_run.mts");
+const SALVAGE = join(".opencode", "skills", "translate", "translate_salvage.mts");
 const STATE = join("tmp", "translate_queue.json");
 const LOG = join("tmp", "translate_queue.log");
 const LLAMA = join(
@@ -115,6 +116,43 @@ const ensureBackend = async (): Promise<void> => {
   throw new Error("llama-server не поднялся за 10 минут");
 };
 
+/**
+ * Спасение застрявших строк переводом 1:1 (без контекста).
+ *
+ * Зачем: известный баг модели — она «дописывает» соседнюю реплику, гейт такое
+ * отклоняет, и строка остаётся пустой. В контексте она видит уже испорченного
+ * соседа и повторяет ошибку пасс за пассом: 30 пассов дают НОЛЬ прогресса, а
+ * язык уходит в конец очереди с «дырами». Перевод 1:1 (только строка + язык)
+ * склейку физически не допускает — проверено на es (443 строки) и pt.
+ */
+const salvageStuck = (lang: string): { before: number; after: number } => {
+  const before = progress(lang).empty;
+  const fd = openSync(join("tmp", `translate_${lang}.salvage.log`), "a");
+  try {
+    spawnSync(process.execPath, [SALVAGE, lang, "--apply"], {
+      stdio: ["ignore", fd, fd],
+      env: { ...process.env, TSSR_LLM_URL: URL, TSSR_LLM_MODEL: "index-translate-9b" },
+    });
+  } finally {
+    closeSync(fd);
+  }
+  const left = progress(lang).empty;
+  if (left > 0) {
+    // список для ручного разбора (что именно не поддалось и почему)
+    const po = parsePo(readFileSync(join(PO_DIR, `${lang}.po`), "utf-8").replace(/\r\n/g, "\n")).filter((e) => e.msgid);
+    writeFileSync(
+      join("tmp", `translate_${lang}.stuck.txt`),
+      po
+        .map((e, i) => (e.msgstr.trim() ? -1 : i))
+        .filter((i) => i >= 0)
+        .map((i) => `${i}\n`)
+        .join(""),
+      "utf-8",
+    );
+  }
+  return { before, after: left };
+};
+
 const runOnce = (lang: string, extra: string[] = []): number => {
   // Вывод прогона — в свой лог языка: пульт (local-dash) читает именно его.
   const fd = openSync(join("tmp", `translate_${lang}.run.log`), "a");
@@ -190,7 +228,17 @@ const main = async (): Promise<void> => {
         await new Promise((r) => setTimeout(r, 60_000));
       }
       if (passes >= 30) {
-        log(`${lang}: 30 пассов — оставляю остаток на следующий запуск`);
+        const { before, after } = salvageStuck(lang);
+        log(`${lang}: 30 пассов без нуля → спасение 1:1: было пусто ${before}, осталось ${after}`);
+        if (after === 0) break;
+        if (after < before) {
+          // спасение помогло — даём ещё один обычный пасс на остаток
+          runOnce(lang);
+          const left = progress(lang).empty;
+          log(`${lang}: после спасения и пасса — пусто ${left}`);
+          if (left === 0) break;
+        }
+        log(`${lang}: остаток ${after} — список в tmp/translate_${lang}.stuck.txt`);
         break;
       }
     }
