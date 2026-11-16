@@ -41,6 +41,7 @@ import { SPEAKERS, VOICES } from "../../../casts/casts.mts";
 import { parsePo } from "../../../../../.opencode/skills/renpy-po/po_core.mts";
 import { DEMO_SCENES } from "../../../../../.opencode/skills/renpy-po/po2tl.mts";
 import { BATCH } from "./voice_presets.mts";
+import { voiceBase } from "./voice_names.mts";
 import { VoiceWorker } from "./voicekit/worker.mts";
 
 // ----------------------------------------------------------------- пути ----
@@ -264,10 +265,10 @@ export function selectPhrases(entries: CatalogEntry[], args: Args): Phrase[] {
       variant = char;
     }
     if (!ref) return [];
-    // Имя = контракт {uid}__{Спикер}.opus (владелец 2026-11-11: «убираем лишний
-    // постфикс» — инфикс движка Vox__ выпилен).
-    if (args.emotion) variant += `_${args.emotionTag}`;
-    const out = join(aiVoiceDir(args.lang), arc, `${uid}__${variant}.wav`);
+    // Имя = {en16}__{state8}__{вариант}.opus: тон входит в state8.
+    const demoEmo = args.noEmotion ? null : (args.emotion ?? null);
+    const demoBase = voiceBase({ en: args.text, variant, spoken: args.text, emotion: demoEmo });
+    const out = join(aiVoiceDir(args.lang), arc, `${demoBase}.wav`);
     phrases.push({
       uid,
       arc,
@@ -294,7 +295,9 @@ export function selectPhrases(entries: CatalogEntry[], args: Args): Phrase[] {
     if (args.arc && e.arc !== args.arc) continue;
     if (args.scene && (e.scene ?? null) !== args.scene) continue;
     if (args.char && (e.who_name || "Narrator") !== args.char) continue;
-    if (args.uid && !args.uid.includes(e.uid)) continue;
+    // ВАЖНО: пустой массив uid = «без фильтра». Проверка `if (args.uid && …)`
+    // отбрасывала ВСЕ фразы, потому что [] truthy (поймано 2026-11-16).
+    if ((args.uid?.length ?? 0) > 0 && !args.uid!.includes(e.uid)) continue;
     let ref: string | null;
     let variant: string;
     if (args.ref) {
@@ -305,16 +308,14 @@ export function selectPhrases(entries: CatalogEntry[], args: Args): Phrase[] {
       variant = voice;
     }
     if (!ref) continue; // не озвучен (нет активного рефа) — как в python
-    // Имя = контракт {uid}__{Спикер}.opus (владелец 2026-11-11: «убираем лишний
-    // постфикс» — инфикс движка Vox__ выпилен).
-    if (args.emotion) variant += `_${args.emotionTag}`;
-    else if (args.noEmotion) variant += "_plain";
+    // Суффиксы _passion/_plain не нужны: тон входит в state8.
     const emo = args.noEmotion ? null : args.emotion || e.emotion || null;
     // Текст языка: перевод po/<lang>.po (каталог читается под этот lang),
     // en — оригинал (po/en.po нет в десятке языков).
     const text = args.lang === "en" ? e.old : e.new;
     if (!text) continue; // непереведённая реплика — синтезировать нечего
-    const out = join(aiVoiceDir(args.lang), e.arc, `${e.uid}__${variant}.wav`);
+    const base = voiceBase({ en: e.old, variant, spoken: text, emotion: emo });
+    const out = join(aiVoiceDir(args.lang), e.arc, `${base}.wav`);
     phrases.push({
       uid: e.uid,
       arc: e.arc,

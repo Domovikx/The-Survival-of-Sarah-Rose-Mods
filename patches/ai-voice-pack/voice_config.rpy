@@ -107,7 +107,10 @@ init -999 python:
     def static_auto_voice(tlid):
         try:
             text = renpy.store._last_say_what or ""
-            uid = hashlib.md5(text.encode("utf-8")).hexdigest()
+            # Имя файла: {en16}__{state8}__{variant}.opus — первые 16 hex от md5
+            # оригинала (state8 рантайму неизвестен: тон и перевод живут в POT,
+            # поэтому ищем по префиксу и берём единственный актуальный файл).
+            uid = hashlib.md5(text.encode("utf-8")).hexdigest()[:16]
             lang = renpy.game.preferences.language or "en"
             arc = _arc_for_tlid(tlid)
 

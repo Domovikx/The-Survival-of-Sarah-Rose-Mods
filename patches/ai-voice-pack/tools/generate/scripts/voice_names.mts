@@ -107,15 +107,18 @@ export interface VoiceNameParts {
   emotion?: string | null;
 }
 
-/** Собрать имя файла. Бросает на пустых входах: молчаливое «имя из ничего» опаснее. */
-export const voiceFileName = ({ en, variant, spoken, emotion }: VoiceNameParts): string => {
+/** Собрать базовое имя (без расширения) — генератору нужен .wav, миграции .opus. */
+export const voiceBase = ({ en, variant, spoken, emotion }: VoiceNameParts): string => {
   if (!en.trim()) throw new Error("пустой английский оригинал");
   if (!ttsText(spoken)) throw new Error("пустой текст озвучки (непереведённая строка?)");
   const v = sanitizeVariant(variant);
   if (!v) throw new Error("пустое имя голоса после очистки");
   if (v.length > MAX_VARIANT) throw new Error(`имя голоса длиннее ${MAX_VARIANT}: ${v.length}`);
-  return `${enHash(en)}${NAME_SEP}${stateHash(spoken, emotion)}${NAME_SEP}${v}.${VOICE_EXT}`;
+  return `${enHash(en)}${NAME_SEP}${stateHash(spoken, emotion)}${NAME_SEP}${v}`;
 };
+
+/** Полное имя файла озвучки (по умолчанию .opus). */
+export const voiceFileName = (parts: VoiceNameParts): string => `${voiceBase(parts)}.${VOICE_EXT}`;
 
 export interface ParsedVoiceName {
   en16: string;

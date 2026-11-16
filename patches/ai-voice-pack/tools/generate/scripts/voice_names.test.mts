@@ -244,6 +244,13 @@ test("реальный корпус: миграция не даёт ни одн�
       const names = new Set<string>();
       for (const f of readdirSync(arcDir)) {
         const legacy = /^([0-9a-f]{32})__(.+)\.(?:opus|wav)$/.exec(f);
+        // Новая схема: имя уже целевое — проверяем уникальность и считаем.
+        if (parseVoiceName(f)) {
+          if (names.has(f)) collisions.push(`${lang}/${arc}/${f}`);
+          names.add(f);
+          checked++;
+          continue;
+        }
         if (!legacy) continue;
         const [, uid, variant] = legacy;
         const src = byUid.get(uid!);

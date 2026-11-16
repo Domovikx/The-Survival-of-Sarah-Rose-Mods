@@ -144,7 +144,7 @@ export function charPlan(): Map<string, Map<string, number>> {
 /** {variant: число стемов RU+EN} — сделано по голосам (стем uid__variant). */
 export function charMade(): Map<string, number> {
   const out = new Map<string, number>();
-  const re = /^([0-9a-f]{32}__.+)\.(?:wav|opus)$/;
+  const re = /^([0-9a-f]{16}__[0-9a-f]{8}__[^.]+)\.(?:wav|opus)$/;
   for (const lang of LANGS) {
     const base = aiVoiceDir(lang);
     if (!existsSync(base)) continue;
@@ -155,7 +155,7 @@ export function charMade(): Map<string, number> {
         const stems = new Set<string>();
         for (const f of readdirSync(p)) {
           const m = f.match(re);
-          if (m) stems.add(m[1]); // полный стем uid__variant
+          if (m) stems.add(m[1]!); // вариант голоса (третий сегмент имени)
         }
         for (const s of stems) {
           const variant = s.split("__")[1];
@@ -274,7 +274,7 @@ function cmdArc(arc: string, fast: boolean): number {
       const base = join(aiVoiceDir(lang), arc);
       const byVariant = new Map<string, number>();
       for (const f of readdirSync(base)) {
-        const m = f.match(/^[0-9a-f]{32}__(.+)\.(?:wav|opus)$/);
+        const m = f.match(/^[0-9a-f]{16}__[0-9a-f]{8}__([^.]+)\.(?:wav|opus)$/);
         if (m) byVariant.set(m[1], (byVariant.get(m[1]) ?? 0) + 1);
       }
       const top = [...byVariant.entries()].sort((a, b) => b[1] - a[1]).slice(0, 12);

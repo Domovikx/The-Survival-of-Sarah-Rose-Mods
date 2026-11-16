@@ -111,15 +111,15 @@ function buildExpectation(): Expectation {
   const nonSpeech = new Set<string>();
   const allUids = new Set<string>();
   for (const e of loadCatalog()) {
-    allUids.add(e.uid);
+    allUids.add(e.uid.slice(0, 16));
     if (e.category !== "dialogue" && e.category !== "narration") {
-      nonSpeech.add(e.uid);
+      nonSpeech.add(e.uid.slice(0, 16));
       continue;
     }
-    let info = speech.get(e.uid);
+    let info = speech.get(e.uid.slice(0, 16));
     if (!info) {
       info = { voices: new Set(), who: e.who_name || "Narrator", arcs: new Set(), ruTranslated: false };
-      speech.set(e.uid, info);
+      speech.set(e.uid.slice(0, 16), info);
     }
     const v = voiceForSpeaker(e);
     if (v) info.voices.add(v);
@@ -149,16 +149,31 @@ function listFiles(dir: string, base = ""): string[] {
   return out;
 }
 
-const FILE_RE = /^([0-9a-f]{32})__(.+)\.opus$/;
+/** Разбор имени файла: новая схема (en16__state8__variant) и легаси (uid32__variant). */
+function parseFile(name: string): { uid16: string; variant: string } | null {
+  const modern = /^([0-9a-f]{16})__[0-9a-f]{8}__(.+)\.(?:opus|wav)$/.exec(name);
+  if (modern) return { uid16: modern[1]!, variant: modern[2]! };
+  const legacy = /^([0-9a-f]{32})__(.+)\.(?:opus|wav)$/.exec(name);
+  if (legacy) return { uid16: legacy[1]!.slice(0, 16), variant: legacy[2]! };
+  return null;
+}
 
 function classify(lang: string, rel: string, exp: Expectation): Finding {
   const fileArc = rel.includes("/") ? rel.slice(0, rel.indexOf("/")) : "";
   const name = rel.slice(rel.lastIndexOf("/") + 1);
-  const m = FILE_RE.exec(name);
-  if (!m) {
-    return { lang, rel, uid: "", variant: "", arc: fileArc, kind: "WEIRD", detail: "имя не {32hex}__{variant}.opus" };
+  const parsed = parseFile(name);
+  if (!parsed) {
+    return {
+      lang,
+      rel,
+      uid: "",
+      variant: "",
+      arc: fileArc,
+      kind: "WEIRD",
+      detail: "имя не {en16}__{state8}__{variant}.opus",
+    };
   }
-  const [, uid, variant] = m;
+  const { uid16: uid, variant } = parsed;
   const info = exp.speech.get(uid);
   if (!info) {
     if (exp.nonSpeech.has(uid)) {
@@ -286,7 +301,8 @@ function fixArc(
       kept++; // арка неизвестна/совпадает — не трогаем
       continue;
     }
-    const name = `${f.uid}__${f.variant}.opus`;
+    // Имя файла не зависит от арки — переносим как есть (иначе потеряли бы state8).
+    const name = f.rel.slice(f.rel.lastIndexOf("/") + 1);
     const free = dests.filter((a) => !existsSync(join(dir, a, name)));
     conflicts += dests.length - free.length;
     if (free.length === 0) {
