@@ -23,6 +23,38 @@ const PO = `patches/ai-voice-pack/po/${LANG}.po`;
 const MIXED = /([а-яё][a-zA-Z]|[a-zA-Z][а-яё])/;
 /** Русский текст в переводе не на русский (783 такие строки нашлись в zh). */
 const CYRILLIC = /[а-яёА-ЯЁ]{2,}/;
+/** Частые английские слова — по ним ловим целые EN-куски в чужом переводе. */
+const EN_STOP = new Set([
+  "the",
+  "and",
+  "you",
+  "she",
+  "her",
+  "his",
+  "that",
+  "was",
+  "for",
+  "not",
+  "with",
+  "have",
+  "would",
+  "could",
+  "what",
+  "there",
+  "they",
+  "from",
+  "this",
+  "were",
+]);
+
+/** Концы предложений (заглавная после точки или конец строки) — для склеек. */
+const sentences = (s: string): number =>
+  (
+    s
+      .replace(/[.…\s-]+$/, "") // хвостовое многоточие/обрыв — не отдельное предложение
+      .match(/[.!?…]+(?=\s+[А-ЯЁA-ZÁÉÍÓÚÑÜ«"“]|$)/g) ?? []
+  ).length;
+
 /** Латинские слова, которым нечего делать в zh-переводе (кроме имён). */
 const LATIN = /[A-Za-z]{3,}/g;
 /** Имена/аббревиатуры, которые в переводе остаются латиницей. */
@@ -135,6 +167,8 @@ const hit = (i: number, cls: string, e: (typeof entries)[number], note = ""): vo
 // Ручные решения — ТОЛЬКО для ru: индексы языко-специфичны (для de и др.
 // наборы пусты, чтобы не пропускать чужие строки с теми же номерами).
 const RU = LANG === "ru";
+/** Проверки латиницы/иероглифов имеют смысл только для CJK-языков. */
+const CJK = LANG === "zh" || LANG === "ja" || LANG === "ko";
 const ACCEPTED = RU ? new Set([13399, 51493, 64282]) : new Set<number>();
 const UTECHKA_ACCEPTED = RU
   ? new Set([
@@ -155,13 +189,38 @@ entries.forEach((e, i) => {
   if (!tr || e.msgctxt === "speaker-name") return;
   const head = HEAD_MAP.get(key(e)) ?? "";
 
+  // 0a. Склейка соседней строки: перевод длиннее и в нём больше предложений,
+  // чем в оригинале (модель «дописывает» следующую реплику — 259 таких в es).
+  if (sentences(e.msgid) >= 1) {
+    const extra = sentences(tr) - sentences(e.msgid);
+    if (extra >= 1 && tr.length / Math.max(1, e.msgid.length) > 1.45) {
+      hit(i, "СКЛЕЙКА", e, `+${extra} предл.`);
+      return;
+    }
+  }
+
+  // 0b. Целый английский кусок в переводе (был баг: модель «дописывала» EN).
+  if (LANG !== "en") {
+    const runs = tr.match(/[A-Za-z']{2,}(?:\s+[A-Za-z']{2,}){2,}/g) ?? [];
+    const enRun = runs.find((run) => {
+      const words = run.split(/\s+/).map((w) => w.toLowerCase());
+      const common = words.filter((w) => EN_STOP.has(w)).length;
+      const title = /The Survival of Sarah Rose|The Desert Blooms/i.test(run);
+      return common >= 2 && !title;
+    });
+    if (enRun) {
+      hit(i, "АНГЛИЙСКИЙ", e, enRun.slice(0, 40));
+      return;
+    }
+  }
+
   // 0. Языковой мусор: русский текст в не-русском переводе и непереведённая
   // латиница (наследие прогона на общей модели: в zh было 783 русских строк).
   if (!RU && CYRILLIC.test(tr) && !CYRILLIC.test(e.msgid)) {
     hit(i, "РУССКИЙ ТЕКСТ", e);
     return;
   }
-  if (!RU && !/[а-яА-ЯЁё]/.test(tr)) {
+  if (CJK && !/[а-яА-ЯЁё]/.test(tr)) {
     // Разметка ([unifyarmies], {#tag}) и название игры латиницей — норма.
     const bare = tr.replace(/\[[^\]]*\]|\{[^}]*\}|The Survival of Sarah Rose/g, "");
     for (const m of bare.matchAll(LATIN))
@@ -191,7 +250,10 @@ entries.forEach((e, i) => {
     // по длине фрагмента (без contentWords).
     const run = commonRun(tr, n.msgstr);
     const rw = run ? run.split(" ").length : 0;
-    const glued = run && (LANG === "ru" ? rw >= 3 && contentWords(run) >= 2 : rw >= 4) && !sameOrigin;
+    // Порог не-ru — 6 слов: на романских языках 4-словные совпадения сплошь
+    // естественные коллокации («a la mayoría de», «sabía que no podía ser»),
+    // в es из 36 таких флагов реальной склейкой были 4 (2026-11-16).
+    const glued = run && (LANG === "ru" ? rw >= 3 && contentWords(run) >= 2 : rw >= 6) && !sameOrigin;
     // Утечка — только если так было НЕ в HEAD (иначе легаси, его не трогаем).
     if ((dup || glue || glued) && (ALL || tr !== head) && !UTECHKA_ACCEPTED.has(i)) {
       hit(i, "УТЕЧКА", e, glued && !dup && !glue ? `вклейка соседа: «${run}»` : "");

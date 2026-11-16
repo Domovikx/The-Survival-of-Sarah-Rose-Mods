@@ -197,6 +197,7 @@ node .opencode/skills/translate/tone_fix.mts --lang ru [--detect]        # ре�
 node .opencode/skills/translate/translate_compare.mts --focus ru         # сравнение языков: где кто «сказал иначе»
 node .opencode/skills/translate/translate_compare.mts --names           # имена/подписи спикеров по всем языкам
 node .opencode/skills/translate/translate_names_fix.mts <fix.json> [--dry]  # точечная правка speaker-name
+node .opencode/skills/translate/translate_salvage.mts <lang> [--apply] [--limit N]  # спасение пустых строк (вклейка)
 ```
 
 **Сравнение языков между собой** (`translate_compare`): две таблицы — полный
@@ -214,7 +215,32 @@ node .opencode/skills/translate/translate_names_fix.mts <fix.json> [--dry]  # т
 («scripts beside SKILL.md», opencode.ai/docs/skills, проверено 2026-11-08);
 миграция из `tmp/` — задача `tasks/2026-11-08-tmp-tools-to-opencode-structure.md`.
 
-### Регистр 18+ в готовом переводе (`tone_fix.mts`)
+### Вклейка соседней строки (`[СКЛЕЙКА]`) — как лечить
+
+RL-баг Index-Translate: модель «дописывает» следующую реплику в текущий
+перевод. Итог: строка `i` остаётся ПУСТОЙ, а её текст уже лежит в конце
+перевода строки `i-1`. Симптом в логе прогона — череда
+`ОШИБКА … вклейка соседней строки` / `похоже на перевод соседней строки`
+и пустые строки, которые «не переводятся» пассами (модель в контексте видит,
+что реплика уже переведена).
+
+Порядок ремонта (именно такой):
+
+```bash
+node .opencode/skills/translate/translate_review.mts es --all    # список [СКЛЕЙКА]
+node .opencode/skills/translate/translate_salvage.mts es --apply # 1) пустые — без контекста, 1:1
+TSSR_RETRANS_NO_JUDGE=1 node .opencode/skills/translate/translate_run.mts es --retrans <idx>  # 2) склеенные предыдущие
+```
+
+Сначала salvage: он переводит пустую строку ОДИН-В-ОДИН (system + одна линия,
+без сцены и контекста), поэтому склейка невозможна. Потом `--retrans` по
+склеенным ПРЕДЫДУЩИМ строкам — теперь сосед уже честный, и гейт вклейки
+не мешает. В обратном порядке `--retrans` буксует: гейт видит тот же склеенный
+сосед и отклоняет правильный перевод.
+
+Детектор `[СКЛЕЙКА]` в `translate_review` — эвристика «перевод длиннее и в нём
+больше предложений, чем в оригинале»; хвостовые многоточия и обрывы
+(`Ты же не…`) отдельными предложениями НЕ считаются.
 
 Правка уже переведённого корпуса, когда медицинский или книжный регистр
 проскочил в `po/<lang>.po`. Не переперевод: строку лечит модель, код лишь

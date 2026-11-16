@@ -480,7 +480,7 @@ const worker = async (): Promise<void> => {
         const rw = run ? run.split(" ").length : 0;
         if (
           run &&
-          (LANG === "ru" ? rw >= 3 && contentWords(run) >= 2 : rw >= 4) &&
+          (LANG === "ru" ? rw >= 3 && contentWords(run) >= 2 : rw >= 6) &&
           commonRun(e.msgid, n.msgid).split(" ").length < 3
         ) {
           return `вклейка соседней строки: «${run}»`;
