@@ -14,6 +14,7 @@
  *   node scripts/po_live_guard.mts
  */
 import { spawnSync } from "node:child_process";
+import { pathToFileURL } from "node:url";
 
 /** Сколько процессов перевода сейчас живо (node … translate_run/salvage/queue). */
 export function translatorsRunning(): number {
@@ -74,4 +75,6 @@ const main = (): number => {
   return 1;
 };
 
-if (process.argv[1] && import.meta.url === `file://${process.argv[1].replace(/\\/g, "/")}`) process.exit(main());
+// Гард обязан реально запускаться: сравнение через pathToFileURL (самодельный
+// `file://`+путь на Windows не совпадал, и гейт молча ничего не делал — 2026-11-16).
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) process.exit(main());
