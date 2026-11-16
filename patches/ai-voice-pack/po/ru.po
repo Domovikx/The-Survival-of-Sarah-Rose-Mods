@@ -27830,7 +27830,7 @@ msgstr "Судя по тому, что мне говорили, Безмолвн
 
 msgctxt "speaker:Sarah"
 msgid "A threat?"
-msgstr "Угроза? Какая именно?"
+msgstr "Угроза?"
 
 msgctxt "speaker:Sarah"
 msgid "What threat exactly?"
@@ -39227,7 +39227,7 @@ msgstr "Сара боялась, что помолвка станет лишь �
 
 msgctxt "speaker:Narrator"
 msgid "Following their official engagement, the two lovers had found themselves with more flexibility."
-msgstr "После официальной помолвки влюблённые получили больше свободы: у них стало меньше ограничений, люди задавали меньше вопросов и распространяли меньше слухов, а сами они обрели больше возможностей быть вместе."
+msgstr "После официальной помолвки у влюблённых появилось больше свободы."
 
 msgctxt "speaker:Narrator"
 msgid "They were could be alone more, people raised fewer questions and rumors, and they found more opportunities to be together."
@@ -46610,7 +46610,7 @@ msgstr "Теперь он смотрел на неё."
 
 msgctxt "speaker:Sarah"
 msgid "Your idea of an apology is watching a princess bathe...your idea of torture is a naked girl, trying to get your attention."
-msgstr "У тебя странный взгляд на жизнь, Джейид: извинением для тебя становится наблюдение за принцессой во время купания, а пыткой — обнажённая девушка, пытающаяся привлечь твоё внимание."
+msgstr "Твоя идея извинений — наблюдать, как принцесса принимает ванну... а твоя идея пыток — обнажённая девочка, пытающаяся привлечь твоё внимание."
 
 msgctxt "speaker:Sarah"
 msgid "You have an odd outlook on life, Jaeid."
@@ -70090,7 +70090,7 @@ msgstr "Дай капитану Бельмонту отпор"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah can feel her anger grow. She can’t ignore him any longer."
-msgstr "Сара чувствует, как нарастает её гнев. Она больше не может игнорировать его. Её глаза резко поднимаются к капитану, и она начинает подниматься на борт его корабля."
+msgstr "Сара чувствует, как её гнев нарастает. Она больше не может его игнорировать."
 
 msgctxt "speaker:Narrator"
 msgid "Her eyes shoot up, meeting the captain, and she begins to make her way onto his ship."
@@ -80081,7 +80081,7 @@ msgstr "Старик улыбнулся."
 
 msgctxt "speaker:Albert"
 msgid "So to the point. No patience at all."
-msgstr "Ну что ж... Перейду сразу к делу. Совсем нет терпения."
+msgstr "Прямо к делу. Совсем нет терпения."
 
 msgctxt "speaker:Albert"
 msgid "Very well then...I will get straight to the point."
@@ -105239,7 +105239,7 @@ msgstr "Орк рассмеялся, его голос был низким."
 
 msgctxt "speaker:Atilla"
 msgid "No girl, my hip at best. Sure, it would hurt, maybe leave a scar, but it would heal in a week for me."
-msgstr "Ты же не девушка... Мой бок — это максимум, на что ты способна. Конечно, будет больно, может, даже останется шрам, но для меня это заживёт за неделю."
+msgstr "Нет, девочка, в лучшем случае — мне в бедро. Конечно, будет больно, может, даже останется шрам, но у меня это заживёт за неделю."
 
 msgctxt "speaker:Atilla"
 msgid "You, on the other hand..."
@@ -127569,7 +127569,7 @@ msgstr "Она внезапно почувствовала, как рука Ке
 
 msgctxt "speaker:Narrator"
 msgid "Breaking from her deep thoughts, Sarah quickly turned to face her."
-msgstr "Вырвавшись из своих глубоких раздумий, Сара быстро обернулась к ней. Она увидела, что её старая подруга улыбается ей тем самым знакомым и многозначительным образом."
+msgstr "Вырвавшись из глубоких раздумий, Сара быстро обернулась к ней."
 
 msgctxt "speaker:Narrator"
 msgid "She found her old friend smiling at her in the familiar and meaningful way."
@@ -131284,7 +131284,7 @@ msgstr "Не так я это помню. Разве не наоборот бы�
 
 msgctxt "speaker:Narrator"
 msgid "Making their way towards a cleared out space that functioned as a staging ground, the two women began to prepare themselves."
-msgstr "Пробираясь к расчищенному пространству, служившему ареной, обе женщины начали готовиться. Кэйт предложила спарринг с вызывающим тоном: «Хочешь подраться? Черт, давно уже не было такого. Какой там был счёт снова — двадцать три против девятнадцати в мою пользу?» Сара возразила: «Я помню это иначе. Разве не всё было наоборот?» Кэйт ответила: «Ну, скажу я тебе так: я побью тебя так сильно, что ты будешь умолять меня перестать вести счёт»."
+msgstr "Пробираясь к расчищенному пространству, служившему местом сбора, обе женщины начали готовиться."
 
 msgctxt "speaker:Kate"
 msgid "Well, tell you what. I'm gonna beat you so hard you're gonna be begging me to stop keepin score."
@@ -136858,7 +136858,7 @@ msgstr "Сара уставилась на него."
 
 msgctxt "speaker:Narrator"
 msgid "She saw him gripping the stone from the vault in Bagrad. He kept it under his clothes, but it was always obvious to one who knew it was there."
-msgstr "Она видела, как он сжимал камень из хранилища в Баграде. Он держал его под одеждой, но тот всегда был заметен тому, кто знал о его наличии. Его рука снова и снова перебирала им, словно монах с молитвенными бусами."
+msgstr "Она увидела, как он сжимал камень из хранилища в Баграде. Он прятал его под одеждой, но тот, кто знал о его наличии, всегда мог это заметить."
 
 msgctxt "speaker:Narrator"
 msgid "His hand gripped and passed over it again and again, the way a monk would pass prayer beads."
@@ -181171,7 +181171,7 @@ msgstr "Тяжёлые, грубые голоса."
 
 msgctxt "speaker:Guard Captain"
 msgid "They're here somewhere!"
-msgstr "Они где-то здесь! Разнесите всё вдребезги, если придётся!"
+msgstr "Они где-то здесь!"
 
 msgctxt "speaker:Guard Captain"
 msgid "Tear up everything if you have to!"
@@ -195673,7 +195673,7 @@ msgstr "Это было не так уж и много, но уже достат
 
 msgctxt "speaker:Narrator"
 msgid "As she started to work the kitchen, she kept noticing Marius from the corner of her eyes."
-msgstr "Начав работать на кухне, она всё время замечала Мариуса краем глаза. Он тоже то и дело поглядывал на неё, ловя её взгляды и поворачиваясь точно так же, как и она."
+msgstr "Когда она начала работать на кухне, то то и дело замечала Мариуса краем глаза."
 
 msgctxt "speaker:Narrator"
 msgid "Shifting his eyes, catching glances and turning just as she did."
@@ -224135,7 +224135,7 @@ msgstr "Ты думаешь, я была плохим человеком, жив
 
 msgctxt "speaker:Samayra"
 msgid "For living with so much while others had so little?"
-msgstr "Ты думаешь, я была плохим человеком, раз жила там при таком изобилии, пока у других было так мало?"
+msgstr "За то, что жила в таком изобилии, пока у других было так мало?"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah reached over and took Samayra's hand."
@@ -229818,7 +229818,7 @@ msgstr "Сара на мгновение задумалась над тем, к�
 
 msgctxt "speaker:Narrator"
 msgid "Botany would offer many advantages outside of simply magic. She had never learned as much about potions as she'd wanted from Xan."
-msgstr "К тому же у неё всегда была врождённая склонность к растениям. Ботаника могла бы принести ей много преимуществ помимо самой магии. Она так и не изучила зельеварение настолько глубоко, насколько хотела бы от Ксана."
+msgstr "Ботаника давала бы множество преимуществ, помимо простой магии. Она так и не узнала от Ксана о зельях столько, сколько хотела."
 
 msgctxt "speaker:Narrator"
 msgid "In addition, she'd always had a natural affinity for plants."
@@ -233096,7 +233096,7 @@ msgstr "Давай попробуем как следует. Просто дел
 
 msgctxt "speaker:Narrator"
 msgid "Sarah watched intently as Metis weaved his hands near his own pot. Sarah could spot the faint traces of magical energy, entering the seed."
-msgstr "Сара пристально наблюдала, как Метис двигал руками над собственным горшком. Она могла разглядеть слабые следы магической энергии, проникающие в семя. Это было едва заметно — легко упустить, если не знать, на что смотреть."
+msgstr "Сара пристально наблюдала, как Метис водил руками над собственным горшком. Она могла разглядеть слабые следы магической энергии, проникающие в семя."
 
 msgctxt "speaker:Narrator"
 msgid "It was subtle, easy to miss if she didn't know what to look for."
@@ -234700,11 +234700,11 @@ msgstr "Пары и танцоры-одиночки стояли в против
 
 msgctxt "speaker:Narrator"
 msgid "Whenever a song ended, those on the floor made way for new dancers stepping in from the side."
-msgstr "Каждый раз, когда песня заканчивалась, те, кто был на площадке, уступали место новым танцорам, пришедшим сбоку."
+msgstr "Каждый раз, когда песня заканчивалась, те, кто был на танцполе, уступали место новым танцорам, входящим сбоку."
 
 msgctxt "speaker:Narrator"
 msgid "Round and round, the crowd managed its own informal system of swapping people in and out."
-msgstr "Круг за кругом толпа сама выработала неформальную систему смены людей: когда песня заканчивалась, те, кто был на танцполе, уступали место новичкам."
+msgstr "Круг за кругом толпа сама выработала неформальную систему замены людей."
 
 msgctxt "speaker:Narrator"
 msgid "By the time the fifth song came around, Sarah saw Samayra jump up."
@@ -264144,7 +264144,7 @@ msgstr "Сара приоткрыла губы, с нетерпением про
 
 msgctxt "speaker:Narrator"
 msgid "In the soft dark of his house, she could still make out everything about him."
-msgstr "В тусклом свете его дома она всё ещё могла разглядеть всё в нём: черты лица, кожу, покрытую шрамами — всё это рассказывало историю долгой и суровой жизни."
+msgstr "В мягком мраке его дома она всё ещё могла разглядеть всё, что с ним было связано."
 
 msgctxt "speaker:Narrator"
 msgid "The lines on his face, the leathered skin, the scars, all telling the tale of a long and rough life."
@@ -271298,7 +271298,7 @@ msgstr "Поверь мне в этом."
 
 msgctxt "speaker:Narrator"
 msgid "The beast released its grip on her throat and Sarah fall back down."
-msgstr "Зверь отпустил её горло, и Сара рухнула назад. Она тяжело приземлилась на холодный камень разрушенных стен."
+msgstr "Зверь отпустил её за шею, и Сара рухнула на землю."
 
 msgctxt "speaker:Narrator"
 msgid "She landed hard on the cold stone of the broken ramparts."

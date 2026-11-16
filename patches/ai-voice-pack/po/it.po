@@ -274243,7 +274243,7 @@ msgstr "Immagine %d di %d bloccata."
 
 msgctxt "ui"
 msgid "The Survival of Sarah Rose"
-msgstr "La Sopravvivenza di Sarah Rose"
+msgstr "The Survival of Sarah Rose"
 
 msgctxt "speaker:Narrator"
 msgid "She jumped out of the bed, gathered what little she could."

@@ -274244,7 +274244,7 @@ msgstr "이미지 %d/%d 은 차단되었습니다."
 
 msgctxt "ui"
 msgid "The Survival of Sarah Rose"
-msgstr "Sarah Rose의 생존"
+msgstr "The Survival of Sarah Rose"
 
 msgctxt "speaker:Narrator"
 msgid "She jumped out of the bed, gathered what little she could."

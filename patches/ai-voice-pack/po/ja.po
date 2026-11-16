@@ -274245,7 +274245,7 @@ msgstr "画像%d/%d はブロックされています。"
 
 msgctxt "ui"
 msgid "The Survival of Sarah Rose"
-msgstr "サラ・ローズの生存"
+msgstr "The Survival of Sarah Rose"
 
 msgctxt "speaker:Narrator"
 msgid "She jumped out of the bed, gathered what little she could."
