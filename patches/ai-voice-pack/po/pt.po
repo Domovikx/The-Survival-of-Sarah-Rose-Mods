@@ -142835,7 +142835,7 @@ msgstr "O que... é um tempo, exatamente?"
 
 msgctxt "speaker:Garret"
 msgid "Long."
-msgstr "É que... eu não me sinto tão confortável com isso quanto você."
+msgstr "Muito tempo."
 
 msgctxt "speaker:Sarah"
 msgid "I thought we were being honest with each other here."
@@ -262351,7 +262351,7 @@ msgstr "Tudo isso tinha regressado a ela."
 
 msgctxt "speaker:Narrator"
 msgid "Only for this man, to unmake her."
-msgstr "Apenas para que este homem a destruísse."
+msgstr "Apenas para que este homem a desfizesse."
 
 msgctxt "speaker:Narrator"
 msgid "This lowly, nobody, of a man."
