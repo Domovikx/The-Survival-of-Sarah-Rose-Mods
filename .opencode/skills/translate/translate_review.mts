@@ -206,7 +206,10 @@ entries.forEach((e, i) => {
       const words = run.split(/\s+/).map((w) => w.toLowerCase());
       const common = words.filter((w) => EN_STOP.has(w)).length;
       const title = /The Survival of Sarah Rose|The Desert Blooms/i.test(run);
-      return common >= 2 && !title;
+      // 3, не 2: в романских языках «for» — своё слово (pt «for» = «был»), и два
+      // совпадения давали ложные флаги вроде «se for isso que for preciso»
+      // (проверено на pt 2026-11-16). Настоящая английская вставка даёт 4+.
+      return common >= 3 && !title;
     });
     if (enRun) {
       hit(i, "АНГЛИЙСКИЙ", e, enRun.slice(0, 40));
