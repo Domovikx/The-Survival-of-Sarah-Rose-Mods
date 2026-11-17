@@ -33,7 +33,7 @@ const LANGS = ["zh", "ru", "es", "pt", "de", "ja", "fr", "pl", "ko", "it"];
  * живёт со старым JS и рисует «undefined» на новых полях (поймано 2026-11-16).
  * Поднимать при ЛЮБОМ изменении набора полей.
  */
-const API_VER = 15;
+const API_VER = 16;
 
 /** Прошлые значения CPU/RAM для дельты. */
 const prevCpu = cpus().map((c) => c.times);
@@ -192,7 +192,7 @@ const health = (): {
   samples: HealthSample[];
   stops: number;
   lastStop: { t: string; note: string } | null;
-  events: Array<{ t: string; kind: string }>;
+  events: Array<{ t: string; kind: string; note?: string }>;
 } => {
   const file = join("tmp", "health.csv");
   if (!existsSync(file)) return { samples: [], stops: 0, lastStop: null, events: [] };
@@ -200,7 +200,7 @@ const health = (): {
   if (mtime === healthCache.mtime && Date.now() - healthCache.at < 30_000) return healthCache.value;
   const lines = readFileSync(file, "utf-8").split(/\r?\n/).filter(Boolean);
   const samples: HealthSample[] = [];
-  const events: Array<{ t: string; kind: string }> = [];
+  const events: Array<{ t: string; kind: string; note?: string }> = [];
   let stops = 0;
   let lastStop: { t: string; note: string } | null = null;
   let prevNote = "";
@@ -210,7 +210,7 @@ const health = (): {
       stops++;
       // Причина остановки — в примечании предыдущего замера (RAM_МАЛО / GPU_ЖАР…).
       lastStop = { t: c[0] ?? "", note: prevNote || "порог" };
-      if (c[0]) events.push({ t: c[0], kind: "guard" });
+      if (c[0]) events.push({ t: c[0], kind: "guard", note: prevNote || "порог" });
       continue;
     }
     const temp = Number(c[1]);
@@ -604,9 +604,16 @@ async function tick() {
   const smp = hl.samples || [];
   const ev = hl.events || [];
   const lastS = smp.length ? smp[smp.length - 1] : null;
+  // Считаем остановки ТОЛЬКО в видимом окне и с причиной: иначе в заголовке
+  // висели старые срабатывания (например, до фикса порогов) и читалось как
+  // «оно опять остановилось» (владелец 2026-11-17).
+  const winFrom = smp.length ? Date.parse(smp[0].t) : 0;
+  const guardInWin = ev.filter((e) => e.kind === 'guard' && Date.parse(e.t) >= winFrom);
+  const lastGuard = guardInWin.length ? guardInWin[guardInWin.length - 1] : null;
   $('hnote').textContent = smp.length
-    ? '· ' + smp.length + ' замеров · страж останавливал: ' + hl.stops +
-      (hl.lastStop ? ' (последний раз — ' + hl.lastStop.note.toLowerCase().replace('_', ' ') + ')' : '')
+    ? '· ' + smp.length + ' замеров · в этом окне страж останавливал: ' + guardInWin.length +
+      (lastGuard && lastGuard.note ? ' (' + lastGuard.note.replace(/_/g, ' ').toLowerCase() + ')' : '') +
+      ' · всего за лог: ' + hl.stops
     : '· данных нет (страж не запущен)';
   $('hnow').innerHTML = lastS
     ? '<div class="muted" style="font-size:12px"><b style="color:#e6edf3">сейчас</b> · GPU ' + lastS.gpuTemp + ' °C · ' +
