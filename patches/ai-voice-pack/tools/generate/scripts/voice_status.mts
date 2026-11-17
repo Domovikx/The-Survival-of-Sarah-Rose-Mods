@@ -93,18 +93,32 @@ export function countDone(lang: string): { made: Map<string, number>; total: num
 
 // ----------------------------------------------------------- каталог -----
 
+/**
+ * mtime `po/<lang>.po` — по нему понимаем, что кэш устарел. Без этого план
+ * озвучки «замерзал» на значении первого вызова: пульт показывал de
+ * 1 202 / 7 008 при реальных 68 221 (баг 2026-11-17, язык ещё переводился).
+ */
+const poMtime = (lang: string): number => {
+  try {
+    return statSync(join(PKG_ROOT, "po", `${lang}.po`)).mtimeMs;
+  } catch {
+    return 0;
+  }
+};
+
 /** Каталог по языку: `loadCatalog(lang)` подмешивает переводы po/<lang>.po. */
-const catalogCache = new Map<string, ReturnType<typeof loadCatalog>>();
+const catalogCache = new Map<string, { mtime: number; value: ReturnType<typeof loadCatalog> }>();
 function catalog(lang: string): ReturnType<typeof loadCatalog> {
+  const mtime = poMtime(lang);
   const hit = catalogCache.get(lang);
-  if (hit) return hit;
+  if (hit && hit.mtime === mtime) return hit.value;
   let value: ReturnType<typeof loadCatalog>;
   try {
     value = loadCatalog(lang);
   } catch {
     value = [];
   }
-  catalogCache.set(lang, value);
+  catalogCache.set(lang, { mtime, value });
   return value;
 }
 

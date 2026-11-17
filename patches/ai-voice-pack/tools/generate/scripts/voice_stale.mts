@@ -24,8 +24,12 @@ import { join } from "node:path";
 import { parsePo } from "../../../../../.opencode/skills/renpy-po/po_core.mts";
 import { parseVoiceName, stateHash } from "./voice_names.mts";
 
-const AUDIO = join("patches", "ai-voice-pack", "audio");
-const POT_PATH = join("patches", "ai-voice-pack", "po", "template.pot");
+// Пути переопределяемы: тест гоняет тот же код на синтетическом корпусе (E2E
+// обнаружения устаревших), не трогая настоящий.
+const AUDIO = process.env.TSSR_AUDIO_DIR ?? join("patches", "ai-voice-pack", "audio");
+const POT_PATH = process.env.TSSR_POT ?? join("patches", "ai-voice-pack", "po", "template.pot");
+const PO_DIR = process.env.TSSR_PO_DIR ?? join("patches", "ai-voice-pack", "po");
+const REPORT = process.env.TSSR_STALE_JSON ?? join("tmp", "voice_stale.json");
 const args = process.argv.slice(2);
 const DELETE = args.includes("--delete");
 const DELETE_LEGACY = args.includes("--delete-legacy");
@@ -51,7 +55,7 @@ const poCache = new Map<string, Map<string, string>>();
 const poOf = (lang: string): Map<string, string> => {
   const cached = poCache.get(lang);
   if (cached) return cached;
-  const file = join("patches", "ai-voice-pack", "po", `${lang}.po`);
+  const file = join(PO_DIR, `${lang}.po`);
   const map = new Map<string, string>();
   if (existsSync(file))
     for (const e of parsePo(readFileSync(file, "utf-8").replace(/\r\n/g, "\n")))
@@ -105,7 +109,7 @@ for (const lang of readdirSync(AUDIO)) {
   }
 }
 
-writeFileSync(join("tmp", "voice_stale.json"), `${JSON.stringify(rows, null, 1)}\n`, "utf-8");
+writeFileSync(REPORT, `${JSON.stringify(rows, null, 1)}\n`, "utf-8");
 
 console.log(`=== АУДИТ ОЗВУЧКИ${DELETE || DELETE_LEGACY ? ` (удалено ${deleted})` : ""} ===`);
 for (const [lang, c] of Object.entries(counts)) {
@@ -121,5 +125,5 @@ if (examples.length) {
   console.log("\nпримеры устаревших:");
   for (const r of examples) console.log(`  ${r.file}\n    EN: ${(r.en ?? "").slice(0, 80)}`);
 }
-console.log(`\nотчёт: tmp/voice_stale.json`);
+console.log(`\nотчёт: ${REPORT}`);
 if (!DELETE && !DELETE_LEGACY) console.log("удалить устаревшие: --delete (легаси отдельно: --delete-legacy)");
