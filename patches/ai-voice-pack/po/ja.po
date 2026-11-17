@@ -10,6 +10,16 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
+# TSSR JA translation — скелет из po/template.pot (日本語).
+# msgstr "" = не переведено; заполняется построчно переводчиком.
+msgid ""
+msgstr "Project-Id-Version: TSSR-Mods 1.0\nPO-Revision-Date: 2026-10-23 00:00+0000\nLanguage: ja\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\n"
+
+# TSSR JA translation — скелет из po/template.pot (日本語).
+# msgstr "" = не переведено; заполняется построчно переводчиком.
+msgid ""
+msgstr "Project-Id-Version: TSSR-Mods 1.0\nPO-Revision-Date: 2026-10-23 00:00+0000\nLanguage: ja\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\n"
+
 msgctxt "speaker:Narrator"
 msgid "The Survival of Sarah Rose is an epic fantasy game. Production on TSSR is still ongoing."
 msgstr "『The Survival of Sarah Rose』は壮大なファンタジーゲームです。TSSRの制作はまだ進行中です。"
@@ -7044,7 +7054,7 @@ msgstr "マリオンは目を燃やしていたが、何も言わなかった。
 
 msgctxt "speaker:Narrator"
 msgid "His quiet rage almost seemed to worry Sarah more than his overt anger."
-msgstr "彼の静かな怒りは、彼の表立った怒りよりもサrahを不安にさせているようだった。"
+msgstr "彼の静かな怒りは、彼の表立った怒りよりもサラを不安にさせているようだった。"
 
 msgctxt "menu"
 msgid "We cannot put ourselves above the rest of the country; let the troops stay in the districts."
@@ -7220,7 +7230,7 @@ msgstr "中央付近の後方では、ローズ家の旗が翻っていた。金
 
 msgctxt "speaker:Narrator"
 msgid "Somewhere near that banner was Thomas."
-msgstr "その旗の近くにいるはずのトマス。その考えだけで、サrahの心臓は止まりそうになった。"
+msgstr "その旗の近くにいるはずのトマス。その考えだけで、サラの心臓は止まりそうになった。"
 
 msgctxt "speaker:Narrator"
 msgid "The idea alone made Sarah's heart feel like stopping."
@@ -7480,7 +7490,7 @@ msgstr "トマス。彼は生きていた。"
 
 msgctxt "speaker:Narrator"
 msgid "Less primal than the earlier emotion, but closer to her heart, she felt a deep joy, knowing that her brother had survived."
-msgstr "サrahは部屋を出て大広間へ向かい、兄を迎えに行った。"
+msgstr "以前の感情ほど原始的ではなく、だがより心に近い――兄が生き延びたと知り、彼女は深い喜びを覚えた。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah left her room to go to the great hall and greet her brother."
@@ -17376,7 +17386,7 @@ msgstr "結局のところ、最初にこの件について口を開いたのは
 
 msgctxt "speaker:Narrator"
 msgid "Both realized the realm could not thrive with a king who was no king, and so her brother proposed that she replace him."
-msgstr "両者とも、王でありもしない王が治める王国が繁栄することなどあり得ないと悟っていた。そのため、兄はサrahに自分の代わりに統治するよう提案したのだ。"
+msgstr "両者とも、王でありもしない王が治める王国が繁栄することなどあり得ないと悟っていた。そのため、兄はサラに自分の代わりに統治するよう提案したのだ。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah never wanted the crown for herself, but she accepted the role of regent, to rule in his stead until the day he would be better, though both feared such a day would never come."
@@ -38968,7 +38978,7 @@ msgstr "一歩一歩、連合のバラバラだった王国たちは一つにな
 
 msgctxt "speaker:Narrator"
 msgid "What had been driven apart in centuries would not be forged together in years, but the first steps had been undertaken."
-msgstr "その後の数週間で、連合評議会で行われた決定は徐々に広まっていった。法は書き換えられ、命令は下された。一歩一歩、連合のバラバラだった王国たちは一つになっていった。数多くの決定の中でも、一つだけ他のものより重く心に響くものがあった。何世紀にもわたって引き裂かれてきたものが、数年で再び結びつくことはないだろう。しかし、最初の歩みはすでに踏み出されていた。"
+msgstr "何世紀もかけて引き裂かれたものを、数年で再び結び合わせることはできないだろう。それでも、最初の一歩はすでに踏み出されていた。"
 
 msgctxt "speaker:Narrator"
 msgid "Out of the many decisions, there was one that weighed heavier than most."
@@ -40668,7 +40678,7 @@ msgstr "サラは生涯を兄のそばで過ごしてきた。兄が安全かど
 
 msgctxt "speaker:Narrator"
 msgid "With every day, Sarah grew more worried."
-msgstr "日が経つにつれて、サrahの不安はますます深まっていった。"
+msgstr "日が経つにつれて、サラの不安はますます深まっていった。"
 
 msgctxt "speaker:Narrator"
 msgid "Part of her knew that their enemy would use reason. Her brother was more valuable to them as a hostage than he was dead."
@@ -44384,7 +44394,7 @@ msgstr "マリオン、他にどうしろと？"
 
 msgctxt "speaker:Sarah"
 msgid "Kravel said-"
-msgstr "クラベルは言った――「あの老いたスパイマスターの言うことなんて、知ったこっちゃない。」"
+msgstr "クラベルは言った――"
 
 msgctxt "speaker:Marion"
 msgid "I could give a fuck what that old Spymaster has to say."
@@ -50580,7 +50590,7 @@ msgstr "でも今は、リラックスしましょう。この件は今夜また
 
 msgctxt "speaker:Narrator"
 msgid "Sarah watched as Naydeen began to swam, and she found herself following her."
-msgstr "サrahはナイディンが泳ぎ始めるのを見て、自分も彼女の後についていることに気づいた。"
+msgstr "サラはナイディンが泳ぎ始めるのを見て、自分も彼女の後についていることに気づいた。"
 
 msgctxt "menu"
 msgid "Refuse"
@@ -276253,7 +276263,7 @@ msgstr "<"
 
 msgctxt "ui"
 msgid "{#auto_page}A"
-msgstr "A"
+msgstr "{#auto_page}A"
 
 msgctxt "ui"
 msgid "{#quick_page}Q"

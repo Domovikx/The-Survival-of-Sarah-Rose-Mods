@@ -10,6 +10,16 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
+# TSSR KO translation — скелет из po/template.pot (한국어).
+# msgstr "" = не переведено; заполняется построчно переводчиком.
+msgid ""
+msgstr "Project-Id-Version: TSSR-Mods 1.0\nPO-Revision-Date: 2026-10-23 00:00+0000\nLanguage: ko\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\n"
+
+# TSSR KO translation — скелет из po/template.pot (한국어).
+# msgstr "" = не переведено; заполняется построчно переводчиком.
+msgid ""
+msgstr "Project-Id-Version: TSSR-Mods 1.0\nPO-Revision-Date: 2026-10-23 00:00+0000\nLanguage: ko\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\n"
+
 msgctxt "speaker:Narrator"
 msgid "The Survival of Sarah Rose is an epic fantasy game. Production on TSSR is still ongoing."
 msgstr "'사라 로즈의 생존(The Survival of Sarah Rose)'은 서사 판타지 게임입니다. TSSR의 제작은 아직 진행 중입니다."
@@ -164144,7 +164154,7 @@ msgstr ""
 
 msgctxt "menu"
 msgid "Set the mob loose, let them have their revenge"
-msgstr "mob을 풀어주어 복수를 하게 해라"
+msgstr "군중을 풀어 복수하게 하라"
 
 msgctxt "speaker:Narrator"
 msgid "She saw a smile creeping over the man's face."
@@ -276240,7 +276250,7 @@ msgstr "빠른 저장"
 
 msgctxt "ui"
 msgid "{#file_time}%A, %B %d %Y, %H:%M"
-msgstr "%A 년 %B 월 %d 일 %H 시 %M 분"
+msgstr "{#file_time}%A 년 %B 월 %d 일 %H 시 %M 분"
 
 msgctxt "ui"
 msgid "empty slot"
@@ -276252,7 +276262,7 @@ msgstr "<"
 
 msgctxt "ui"
 msgid "{#auto_page}A"
-msgstr "A"
+msgstr "{#auto_page}A"
 
 msgctxt "ui"
 msgid "{#quick_page}Q"

@@ -23,6 +23,7 @@ import { join } from "node:path";
 
 import { SPEAKER_GENDER } from "../../../patches/ai-voice-pack/casts/gender.mts";
 import { parsePo, renderPo, writePoAtomic } from "../renpy-po/po_core.mts";
+import { commonRun, sharePhrase } from "./review_common_run.mts";
 
 const TARGET: Record<string, string> = {
   ru: "Russian",
@@ -88,12 +89,35 @@ const translate = async (line: string, speaker: string | null, gender: string | 
 const CYRILLIC = /[а-яёА-ЯЁ]{2,}/;
 const EN_STOP = /\b(the|and|you|she|her|his|that|was|for|not|with|have|would|could)\b/i;
 
-const acceptable = (source: string, translated: string): string | null => {
+/**
+ * Порог «вклейки соседа» для не-ru языков — 6 слов: на романских/германских
+ * языках 4-словные совпадения сплошь естественные коллокации (калибровка
+ * `translate_review` 2026-11-16).
+ */
+const GLUE_WORDS = 6;
+
+/**
+ * Гейт результата. Проверка соседей обязательна: модель при temp0 регулярно
+ * отдаёт перевод СОСЕДНЕЙ строки, и без этой проверки склейка записывается
+ * молча (инцидент 2026-11-17: 124 «спасённые» строки de получили текст соседа,
+ * поймано механическим ревью). Логика — та же, что у `translate_review`:
+ * общий словесный фрагмент считает `commonRun` (единый детектор).
+ */
+const acceptable = (source: string, translated: string, at: number): string | null => {
   if (!translated) return "пусто";
   if (translated.includes("\n")) return "многострочно";
   if (LANG !== "ru" && CYRILLIC.test(translated)) return "русский текст";
   if (LANG !== "en" && EN_STOP.test(translated) && !EN_STOP.test(source)) return "английский текст";
   if (translated.length > source.length * 3 + 40) return "подозрительно длинно (склейка)";
+  for (const j of [at - 1, at + 1]) {
+    const n = entries[j];
+    if (!n || !n.msgstr.trim()) continue;
+    // Одинаковые оригиналы (префикс-расширение реплики) — законное совпадение.
+    if (sharePhrase(source, n.msgid)) continue;
+    if (n.msgstr.trim() === translated.trim()) return `перевод соседа #${j}`;
+    const run = commonRun(translated, n.msgstr);
+    if (run && run.split(" ").length >= GLUE_WORDS) return `вклейка соседа #${j}: «${run}»`;
+  }
   return null;
 };
 
@@ -123,7 +147,7 @@ for (const i of work) {
   const speaker = e.msgctxt?.startsWith("speaker:") ? e.msgctxt.slice(8).replace(/^"|"$/g, "") : null;
   const gender = speaker ? (SPEAKER_GENDER[speaker] ?? null) : null;
   const candidate = await translate(e.msgid, speaker, gender);
-  const problem = acceptable(e.msgid, candidate);
+  const problem = acceptable(e.msgid, candidate, i);
   if (problem) {
     failed++;
     console.log(`  сбой #${i}: ${problem}`);
