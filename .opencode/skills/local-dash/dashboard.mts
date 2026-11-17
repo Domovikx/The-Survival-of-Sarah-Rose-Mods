@@ -33,7 +33,7 @@ const LANGS = ["zh", "ru", "es", "pt", "de", "ja", "fr", "pl", "ko", "it"];
  * живёт со старым JS и рисует «undefined» на новых полях (поймано 2026-11-16).
  * Поднимать при ЛЮБОМ изменении набора полей.
  */
-const API_VER = 14;
+const API_VER = 15;
 
 /** Прошлые значения CPU/RAM для дельты. */
 const prevCpu = cpus().map((c) => c.times);
@@ -521,7 +521,13 @@ const spark = (points, color, label, unit, threshold, events) => {
   const span = hi0 - lo0 || Math.max(1, hi0 * 0.1);
   let lo = Math.max(0, lo0 - span * 0.15);
   let hi = hi0 + span * 0.15;
-  if (threshold !== undefined && threshold > hi) hi = threshold + span * 0.15;
+  // Порог обязан попадать в шкалу ВСЕГДА: у RAM порог 6 % был ниже диапазона
+  // (19…55 %), и пунктира не было видно вообще — читатель не понимал, далеко ли
+  // он от аварии (владелец 2026-11-17: «а граница на 3 графике где?»).
+  if (threshold !== undefined) {
+    if (threshold < lo) lo = Math.max(0, threshold - span * 0.05);
+    if (threshold > hi) hi = threshold + span * 0.05;
+  }
   const X = (t) => ((t - t0) / Math.max(1, t1 - t0)) * w;
   const Y = (v) => h - pad - ((Math.min(Math.max(v, lo), hi) - lo) / (hi - lo)) * (h - 2 * pad);
   // Медианный шаг — порог «разрыва».
