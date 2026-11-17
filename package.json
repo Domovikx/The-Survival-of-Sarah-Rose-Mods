@@ -38,7 +38,8 @@
     "emotion:audit": "node patches/ai-voice-pack/tools/generate/scripts/emotion_audit.mts",
     "emotion:judge": "node patches/ai-voice-pack/tools/generate/scripts/emotion_judge.mts",
     "format:md": "prettier --write \"**/*.md\"",
-    "dash": "node .opencode/skills/local-dash/dashboard.mts --open",
+    "dash": "node .opencode/skills/local-dash/dashboard.mts",
+    "dash:open": "node .opencode/skills/local-dash/dashboard.mts --open",
     "translate": "node .opencode/skills/translate/translate_queue.mts"
   },
   "lint-staged": {
