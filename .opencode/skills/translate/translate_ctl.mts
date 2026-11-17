@@ -261,7 +261,9 @@ const main = async (): Promise<void> => {
     const text = readFileSync(PO(lang), "utf-8").replace(/\r\n/g, "\n");
     const backup = join("tmp", `${lang}.po.bak`);
     writeFileSync(backup, text, "utf-8");
-    const cleared = parsePo(text).map((e) => ({ ...e, msgstr: "" }));
+    // filter(e => e.msgid) обязателен: parsePo отдаёт и шапку, а renderPo ждёт
+    // записи БЕЗ неё — иначе reset вписывает вторую шапку обычной записью.
+    const cleared = parsePo(text).filter((e) => e.msgid).map((e) => ({ ...e, msgstr: "" }));
     writePoAtomic(PO(lang), renderPo(cleared, poHeaderLines(text)));
     rmSync(DONE(lang), { force: true });
     console.log(`reset ${lang}: переводы очищены (резерв: ${backup}), кэш done удалён`);
