@@ -33,7 +33,7 @@ const LANGS = ["zh", "ru", "es", "pt", "de", "ja", "fr", "pl", "ko", "it"];
  * живёт со старым JS и рисует «undefined» на новых полях (поймано 2026-11-16).
  * Поднимать при ЛЮБОМ изменении набора полей.
  */
-const API_VER = 12;
+const API_VER = 13;
 
 /** Прошлые значения CPU/RAM для дельты. */
 const prevCpu = cpus().map((c) => c.times);
@@ -173,7 +173,12 @@ let procCache: { at: number; value: { llamaMB: number; nodeMB: number; nodeCount
 const healthCache = {
   at: 0,
   mtime: 0,
-  value: { samples: [] as HealthSample[], stops: 0, lastStop: null as { t: string; note: string } | null },
+  value: {
+    samples: [] as HealthSample[],
+    stops: 0,
+    lastStop: null as { t: string; note: string } | null,
+    events: [] as Array<{ t: string; kind: string }>,
+  },
 };
 interface HealthSample {
   t: string;
@@ -183,13 +188,19 @@ interface HealthSample {
   ramFreePct: number;
   cpu: number;
 }
-const health = (): { samples: HealthSample[]; stops: number; lastStop: { t: string; note: string } | null } => {
+const health = (): {
+  samples: HealthSample[];
+  stops: number;
+  lastStop: { t: string; note: string } | null;
+  events: Array<{ t: string; kind: string }>;
+} => {
   const file = join("tmp", "health.csv");
-  if (!existsSync(file)) return { samples: [], stops: 0, lastStop: null };
+  if (!existsSync(file)) return { samples: [], stops: 0, lastStop: null, events: [] };
   const mtime = statSync(file).mtimeMs;
   if (mtime === healthCache.mtime && Date.now() - healthCache.at < 30_000) return healthCache.value;
   const lines = readFileSync(file, "utf-8").split(/\r?\n/).filter(Boolean);
   const samples: HealthSample[] = [];
+  const events: Array<{ t: string; kind: string }> = [];
   let stops = 0;
   let lastStop: { t: string; note: string } | null = null;
   let prevNote = "";
@@ -199,6 +210,7 @@ const health = (): { samples: HealthSample[]; stops: number; lastStop: { t: stri
       stops++;
       // Причина остановки — в примечании предыдущего замера (RAM_МАЛО / GPU_ЖАР…).
       lastStop = { t: c[0] ?? "", note: prevNote || "порог" };
+      if (c[0]) events.push({ t: c[0], kind: "guard" });
       continue;
     }
     const temp = Number(c[1]);
@@ -213,7 +225,17 @@ const health = (): { samples: HealthSample[]; stops: number; lastStop: { t: stri
       cpu: Number(c[6]),
     });
   }
-  const value = { samples: samples.slice(-240), stops, lastStop };
+  // Старты бэкенда: по логу очереди. Так на графике видно «здесь прогон стоял,
+  // потому что llama-server упал и его поднимали» — главный вопрос после сбоя.
+  try {
+    const qlog = readFileSync(join("tmp", "translate_queue.log"), "utf-8");
+    for (const m of qlog.matchAll(/^(\S+Z) бэкенд лежит — запускаю llama-server$/gm)) {
+      if (m[1]) events.push({ t: m[1], kind: "backend" });
+    }
+  } catch {
+    /* лога нет — просто не будет меток */
+  }
+  const value = { samples: samples.slice(-240), stops, lastStop, events };
   healthCache.at = Date.now();
   healthCache.mtime = mtime;
   healthCache.value = value;
@@ -452,7 +474,7 @@ const PAGE = `<!doctype html>
   <div class="card c5"><h2>Очередь</h2><div id="queue"><span class="muted">загрузка…</span></div></div>
   <div class="card c3"><h2>Бэкенд перевода</h2><div id="tr"><span class="muted">загрузка…</span></div></div>
   <div class="card c4"><h2>GPU / CPU / RAM</h2><div id="sys"><span class="muted">загрузка…</span></div></div>
-  <div class="card c12"><h2>Здоровье ПК · health.csv <span class="muted" id="hnote"></span></h2>
+  <div class="card c12"><h2>Здоровье ПК <span class="muted" id="hnote"></span></h2>
     <div id="hnow"></div>
     <div id="hchart"></div>
   </div>
@@ -477,31 +499,59 @@ const size = (b) => !b ? '—' : b < 1073741824 ? Math.round(b / 1048576) + ' М
 const num = (n) => String(n).replace(/\\B(?=(\\d{3})+(?!\\d))/g, ' ');
 // Любое неизвестное значение печатаем как «—», а не «undefined».
 const N = (v) => (v === null || v === undefined ? '—' : num(v));
-// Мини-график: SVG-полилиния без библиотек. Шкала ДИНАМИЧЕСКАЯ (min..max с
-// запасом 10 %): при фиксированном 0..100 линия температуры 30–73 °C жалась к
-// низу и ничего не показывала (владелец 2026-11-17: «UI по пользе»).
-// threshold — горизонтальная пунктирная линия (порог стража), если попадает в шкалу.
-const spark = (vals, color, label, unit, threshold) => {
-  if (!vals.length) return '';
+// Мини-график: SVG без библиотек. Что важно для разбора сбоя (владелец 2026-11-17):
+//   - ось ВРЕМЕНИ (x по timestamp, а не по индексу) — иначе «когда» не ответить;
+//   - разрывы: если между замерами больше 2.5× медианного шага, линия рвётся
+//     (иначе простой прогона выглядит как «данные были»);
+//   - метки событий: остановка стражем и старт бэкенда (вертикальные риски);
+//   - порог всегда в шкале (иначе пунктир 300 Вт не рисуется при максе 274);
+//   - значение на правом краю + подписи времени под графиком.
+const spark = (points, color, label, unit, threshold, events) => {
+  if (!points.length) return '';
   const w = 1000, h = 56, pad = 4;
-  const lo0 = Math.min.apply(null, vals);
-  const hi0 = Math.max.apply(null, vals);
+  const ts = points.map((p) => Date.parse(p.t));
+  const vs = points.map((p) => p.v);
+  const t0 = ts[0], t1 = ts[ts.length - 1] || t0 + 1;
+  const lo0 = Math.min.apply(null, vs), hi0 = Math.max.apply(null, vs);
   const span = hi0 - lo0 || Math.max(1, hi0 * 0.1);
-  const lo = Math.max(0, lo0 - span * 0.15);
-  const hi = hi0 + span * 0.15;
-  const y = (v) => h - pad - ((Math.min(Math.max(v, lo), hi) - lo) / (hi - lo)) * (h - 2 * pad);
-  const pts = vals.map((v, i) => {
-    const x = vals.length === 1 ? 0 : (i / (vals.length - 1)) * w;
-    return x.toFixed(1) + ',' + y(v).toFixed(1);
-  }).join(' ');
-  const t = threshold !== undefined && threshold > lo && threshold < hi
-    ? '<line x1="0" y1="' + y(threshold).toFixed(1) + '" x2="' + w + '" y2="' + y(threshold).toFixed(1) +
+  let lo = Math.max(0, lo0 - span * 0.15);
+  let hi = hi0 + span * 0.15;
+  if (threshold !== undefined && threshold > hi) hi = threshold + span * 0.15;
+  const X = (t) => ((t - t0) / Math.max(1, t1 - t0)) * w;
+  const Y = (v) => h - pad - ((Math.min(Math.max(v, lo), hi) - lo) / (hi - lo)) * (h - 2 * pad);
+  // Медианный шаг — порог «разрыва».
+  const steps = ts.slice(1).map((t, i) => t - ts[i]).sort((a, b) => a - b);
+  const medStep = steps.length ? steps[Math.floor(steps.length / 2)] : 15000;
+  const gapMs = Math.max(medStep * 2.5, 45000);
+  const runs = [];
+  let cur = [points[0]];
+  for (let i = 1; i < points.length; i++) {
+    if (ts[i] - ts[i - 1] > gapMs) { runs.push(cur); cur = []; }
+    cur.push(points[i]);
+  }
+  runs.push(cur);
+  const lines = runs.filter((r) => r.length > 1).map((r) =>
+    '<polyline fill="none" stroke="' + color + '" stroke-width="1.5" vector-effect="non-scaling-stroke" points="' +
+    r.map((p) => X(Date.parse(p.t)).toFixed(1) + ',' + Y(p.v).toFixed(1)).join(' ') + '" />').join('');
+  const thrLine = threshold !== undefined && threshold >= lo && threshold <= hi
+    ? '<line x1="0" y1="' + Y(threshold).toFixed(1) + '" x2="' + w + '" y2="' + Y(threshold).toFixed(1) +
       '" stroke="#8b98a5" stroke-width="1" stroke-dasharray="6 6" vector-effect="non-scaling-stroke"/>'
     : '';
+  const evLines = (events || []).filter((e) => {
+    const t = Date.parse(e.t);
+    return t >= t0 && t <= t1;
+  }).map((e) => {
+    const col = e.kind === 'guard' ? '#f85149' : '#8b98a5';
+    return '<line x1="' + X(Date.parse(e.t)).toFixed(1) + '" y1="0" x2="' + X(Date.parse(e.t)).toFixed(1) +
+      '" y2="' + h + '" stroke="' + col + '" stroke-width="1" stroke-dasharray="2 3" vector-effect="non-scaling-stroke"/>';
+  }).join('');
+  const last = points[points.length - 1];
+  const hhmm = (iso) => iso.slice(11, 16);
   return '<div class="sp"><svg viewBox="0 0 ' + w + ' ' + h + '" preserveAspectRatio="none" style="width:100%;height:56px;display:block">' +
-    t + '<polyline fill="none" stroke="' + color + '" stroke-width="1.5" vector-effect="non-scaling-stroke" points="' + pts + '" /></svg>' +
+    thrLine + evLines + lines + '</svg>' +
     '<div class="muted" style="font-size:11px;display:flex;justify-content:space-between;gap:8px">' +
-    '<span>' + label + '</span><span>' + lo0.toFixed(0) + '…' + hi0.toFixed(0) + ' ' + unit +
+    '<span>' + label + ' <b style="color:#e6edf3">' + last.v.toFixed(0) + ' ' + unit + '</b></span>' +
+    '<span>' + hhmm(points[0].t) + ' → ' + hhmm(last.t) + ' · ' + lo0.toFixed(0) + '…' + hi0.toFixed(0) + ' ' + unit +
     (threshold !== undefined ? ' · порог ' + threshold : '') + '</span></div></div>';
 };
 async function tick() {
@@ -539,20 +589,24 @@ async function tick() {
       '<div class="row"><span>температура</span><span class="v">' + g.tempC + ' °C</span></div>' : '<div class="muted">nvidia-smi недоступен</div>') +
     '<div class="row"><span>CPU</span><span class="v">' + s.system.cpu + '%</span></div>' +
     '<div class="row"><span>RAM</span><span class="v">' + (s.system.memUsed/1024).toFixed(1) + ' / ' + (s.system.memTotal/1024).toFixed(1) + ' ГБ</span></div>';
-  const hl = s.health || { samples: [], stops: 0 };
+  const hl = s.health || { samples: [], stops: 0, lastStop: null, events: [] };
   const smp = hl.samples || [];
+  const ev = hl.events || [];
   const lastS = smp.length ? smp[smp.length - 1] : null;
   $('hnote').textContent = smp.length
-    ? '· ' + smp.length + ' замеров · остановок стражем: ' + hl.stops + (hl.lastStop ? ' (последняя: ' + hl.lastStop.note + ')' : '')
+    ? '· ' + smp.length + ' замеров · страж останавливал: ' + hl.stops +
+      (hl.lastStop ? ' (последний раз — ' + hl.lastStop.note.toLowerCase().replace('_', ' ') + ')' : '')
     : '· данных нет (страж не запущен)';
   $('hnow').innerHTML = lastS
     ? '<div class="row"><span>сейчас</span><span class="v">GPU ' + lastS.gpuTemp + ' °C · ' +
-      Math.round(lastS.gpuPower) + ' Вт · ' + lastS.gpuUtil + '% · кэш ' + lastS.ramFreePct + '% RAM</span></div>'
+      Math.round(lastS.gpuPower) + ' Вт · ' + lastS.gpuUtil + '% · RAM свободно ' + lastS.ramFreePct + ' %</span></div>'
     : '';
+  // Точки с временем: график строит ось по timestamp, а не по индексу.
+  const pts = (key) => smp.map((x) => ({ t: x.t, v: x[key] }));
   $('hchart').innerHTML = smp.length
-    ? spark(smp.map((x) => x.gpuPower), '#d29922', 'GPU мощность', 'Вт', 300) +
-      spark(smp.map((x) => x.gpuTemp), '#f85149', 'GPU температура', '°C', 85) +
-      spark(smp.map((x) => x.ramFreePct), '#3fb950', 'RAM свободно', '%', 6)
+    ? spark(pts('gpuPower'), '#d29922', 'GPU мощность', 'Вт', 300, ev) +
+      spark(pts('gpuTemp'), '#f85149', 'GPU температура', '°C', 85, ev) +
+      spark(pts('ramFreePct'), '#3fb950', 'RAM свободно', '%', 6, ev)
     : '';
   const q = s.queue;
   const lp = s.live ? pct(s.live.filled, s.live.total) : null;
