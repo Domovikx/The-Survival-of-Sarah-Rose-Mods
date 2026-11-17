@@ -172,6 +172,7 @@ const backendAlive = async (): Promise<boolean> => {
 
 const call = async (sys: string, usr: string, temp = 0): Promise<string> => {
   let waited = 0;
+  let deadFor = 0;
   let delay = 2000;
   let nextNotice = 60_000;
   for (;;) {
@@ -215,6 +216,20 @@ const call = async (sys: string, usr: string, temp = 0): Promise<string> => {
           `  [BACKEND-DOWN] ждём ${Math.round(waited / 60_000)} мин (${(await backendAlive()) ? "порт уже жив" : "порт молчит"})`,
         );
         nextNotice += 60_000;
+      }
+      // ПОРТ МОЛЧИТ — это не «модель грузится», а мёртвый процесс: раньше раннер
+      // ждал до 45 минут, и весь пасс стоял (поймано 2026-11-17: llama-server
+      // умер в 09:18, прогон встал на 10+ минут). Через 3 минуты молчания
+      // выходим с ошибкой — очередь перезапустит бэкенд и продолжит пасс.
+      if (!(await backendAlive())) {
+        deadFor += delay;
+        if (deadFor > 3 * 60_000) {
+          throw new Error(`бэкенд мёртв ${Math.round(deadFor / 60_000)} мин — отдаю управление очереди`, {
+            cause: err,
+          });
+        }
+      } else {
+        deadFor = 0;
       }
       await sleep(delay);
       waited += delay;
