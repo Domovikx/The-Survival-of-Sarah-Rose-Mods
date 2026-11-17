@@ -33,7 +33,7 @@ const LANGS = ["zh", "ru", "es", "pt", "de", "ja", "fr", "pl", "ko", "it"];
  * живёт со старым JS и рисует «undefined» на новых полях (поймано 2026-11-16).
  * Поднимать при ЛЮБОМ изменении набора полей.
  */
-const API_VER = 13;
+const API_VER = 14;
 
 /** Прошлые значения CPU/RAM для дельты. */
 const prevCpu = cpus().map((c) => c.times);
@@ -421,7 +421,7 @@ const state = async (): Promise<Record<string, unknown>> => {
     queue: queue ? { ...queue, current } : null,
     languages: LANGS.map((lang) => ({ lang, po: poStats(lang) })),
     voice: voiceStatsAsync(),
-    tail: current ? logTail(current) : [],
+    tail: current ? logTail(current, 8) : [],
     files: { logs: existsSync("tmp") ? readdirSync("tmp").filter((f) => f.endsWith(".run.log")).length : 0 },
   };
 };
@@ -450,7 +450,7 @@ const PAGE = `<!doctype html>
   .ok { color:var(--ok); } .bad { color:var(--bad); } .warn { color:var(--warn); } .muted { color:var(--muted); }
   .bar { height:6px; background:#0c0f12; border-radius:3px; overflow:hidden; margin:4px 0 8px; }
   .bar > i { display:block; height:100%; background:var(--ok); }
-  .tail { white-space:pre-wrap; color:var(--muted); font-size:12px; }
+  .tail { white-space:pre-wrap; color:var(--muted); font-size:12px; overflow:auto; max-height:300px; }
   .big { font-size:22px; }
   .arcs { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:2px 18px; margin-top:10px; }
   /* minmax(0,1fr) + overflow:hidden обязательны: иначе длинное имя арки
@@ -459,7 +459,8 @@ const PAGE = `<!doctype html>
   .arc { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:10px; align-items:baseline; font-size:12px; min-width:0; overflow:hidden; }
   .arc > span { white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
   .arc > span:last-child { text-align:right; }
-  .lingua { display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:0 26px; }
+  .lingua { display:grid; grid-auto-flow:column; grid-template-rows:repeat(5,auto); grid-template-columns:repeat(2,minmax(0,1fr)); gap:0 26px; }
+  @media (max-width:1500px) { .lingua { grid-auto-flow:row; grid-template-rows:none; grid-template-columns:1fr; } }
   .ling { display:grid; grid-template-columns:40px 30px 30px minmax(0,1fr); gap:10px; align-items:center; padding:3px 0; }
   .ling > span:last-child { min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
   .ring { display:block; }
@@ -477,6 +478,7 @@ const PAGE = `<!doctype html>
   <div class="card c12"><h2>Здоровье ПК <span class="muted" id="hnote"></span></h2>
     <div id="hnow"></div>
     <div id="hchart"></div>
+    <div id="htime" class="muted" style="font-size:11px;margin-top:6px"></div>
   </div>
   <div class="card c8"><h2>Языки: текст и озвучка</h2>
     <div class="hint muted">кольца: <b>перевод</b> — от всего POT · <b>озвучка</b> — от уже переведённого (навести — точные числа)</div>
@@ -551,7 +553,7 @@ const spark = (points, color, label, unit, threshold, events) => {
     thrLine + evLines + lines + '</svg>' +
     '<div class="muted" style="font-size:11px;display:flex;justify-content:space-between;gap:8px">' +
     '<span>' + label + ' <b style="color:#e6edf3">' + last.v.toFixed(0) + ' ' + unit + '</b></span>' +
-    '<span>' + hhmm(points[0].t) + ' → ' + hhmm(last.t) + ' · ' + lo0.toFixed(0) + '…' + hi0.toFixed(0) + ' ' + unit +
+    '<span>' + lo0.toFixed(0) + '…' + hi0.toFixed(0) + ' ' + unit +
     (threshold !== undefined ? ' · порог ' + threshold : '') + '</span></div></div>';
 };
 async function tick() {
@@ -578,13 +580,13 @@ async function tick() {
   $('tr').innerHTML =
     '<div class="row"><span>llama-server :8081</span><span>' + up(sv.translate.up) + '</span></div>' +
     '<div class="row"><span>модель</span><span class="v">' + (sv.translate.model || '—') + '</span></div>' +
-    '<div class="row"><span>LM Studio :1234</span><span>' + up(sv.lmstudio.up) + '</span></div>' +
-    '<div class="row"><span>Strata :8080</span><span>' + up(sv.strata.up) + '</span></div>' +
-    '<div class="row"><span title="рабочий набор включает mmap модели и буферы CUDA">llama-server RAM (с mmap)</span><span class="v">' + s.proc.llamaMB + ' МБ</span></div>';
+    '<div class="row"><span>LM Studio :1234</span><span>' + (sv.lmstudio.up ? up(1) : '<span class="muted">не используется</span>') + '</span></div>' +
+    '<div class="row"><span>Strata :8080</span><span>' + (sv.strata.up ? up(1) : '<span class="muted">не используется</span>') + '</span></div>' +
+    '<div class="row"><span title="рабочий набор включает mmap модели и буферы CUDA">llama-server RAM (с mmap)</span><span class="v">' + size(s.proc.llamaMB * 1048576) + '</span></div>';
   const g = s.gpu;
   $('sys').innerHTML =
     (g ? '<div class="row"><span>GPU</span><span class="v big">' + g.util + '%</span></div>' +
-      '<div class="bar"><i style="width:' + g.util + '%"></i></div>' +
+      '<div class="bar"><i style="width:' + g.util + '%;background:#4c8bd6"></i></div>' +
       '<div class="row"><span>видеопамять</span><span class="v">' + (g.usedMiB/1024).toFixed(1) + ' / ' + (g.totalMiB/1024).toFixed(1) + ' ГБ</span></div>' +
       '<div class="row"><span>температура</span><span class="v">' + g.tempC + ' °C</span></div>' : '<div class="muted">nvidia-smi недоступен</div>') +
     '<div class="row"><span>CPU</span><span class="v">' + s.system.cpu + '%</span></div>' +
@@ -607,6 +609,12 @@ async function tick() {
     ? spark(pts('gpuPower'), '#d29922', 'GPU мощность', 'Вт', 300, ev) +
       spark(pts('gpuTemp'), '#f85149', 'GPU температура', '°C', 85, ev) +
       spark(pts('ramFreePct'), '#3fb950', 'RAM свободно', '%', 6, ev)
+    : '';
+  // Одна общая подпись окна и легенда меток: три одинаковых «08:40 → 09:51»
+  // под каждым графиком были шумом (владелец 2026-11-17).
+  $('htime').textContent = smp.length
+    ? 'окно ' + smp[0].t.slice(11, 16) + ' → ' + smp[smp.length - 1].t.slice(11, 16) +
+      ' (UTC) · пунктир — порог · серая риска — старт бэкенда · красная — остановка стражем'
     : '';
   const q = s.queue;
   const lp = s.live ? pct(s.live.filled, s.live.total) : null;
