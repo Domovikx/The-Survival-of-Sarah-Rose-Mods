@@ -29776,7 +29776,7 @@ msgstr "Genug von dir. Du hast mehr als genug gesagt."
 
 msgctxt "speaker:Sarah"
 msgid "Enough from you. You have said more than plenty."
-msgstr ""
+msgstr "Das reicht von dir. Du hast schon mehr als genug gesagt."
 
 msgctxt "speaker:Duke Antonio"
 msgid "You struck me! You have no right-"
@@ -49760,7 +49760,7 @@ msgstr "Nach einem langen Tag kam ihr der Schlaf leicht."
 
 msgctxt "speaker:Narrator"
 msgid "A long day behind her, the sleep came easy."
-msgstr ""
+msgstr "Ein langer Tag lag hinter ihr, und der Schlaf kam leicht."
 
 msgctxt "menu"
 msgid "Reject him"
@@ -70016,7 +70016,7 @@ msgstr "Sie wandte sofort wieder den Kopf ab und ignorierte den widerlichen Mann
 
 msgctxt "speaker:Narrator"
 msgid "She instantly turned her head away again, ignoring the vile man. She pretended to continue shopping."
-msgstr ""
+msgstr "Sie drehte ihren Kopf sofort wieder weg und ignorierte den abscheulichen Mann. Sie tat so, als würde sie weiter einkaufen."
 
 msgctxt "speaker:Captain Belmont"
 msgid "Come on, blondie, I know you heard me."
@@ -113972,7 +113972,7 @@ msgstr "Sie konnte es spüren. Seine Nähe. Die Spitze seines Schwanzes, die san
 
 msgctxt "speaker:Narrator"
 msgid "She could feel it. His closeness. The tip of his cock, pressed just gently up against her opening."
-msgstr ""
+msgstr "Sie spürte es. Seine Nähe. Die Spitze seines Glieds, sanft gegen ihre Öffnung gedrückt."
 
 msgctxt "speaker:Narrator"
 msgid "But he didn't yet give it to her."
@@ -115032,7 +115032,7 @@ msgstr "Für einen Moment lagen beide in behaglicher Stille und spürten, wie di
 
 msgctxt "speaker:Narrator"
 msgid "For a moment, each laid in a comfortable silence, feeling the cold palace air sliding across their sweat covered bodies."
-msgstr ""
+msgstr "Einen Moment lang lagen sie beide in einem behaglichen Schweigen da und spürten, wie die kalte Luft des Palastes über ihre schweißbedeckten Körper glitt."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah could feel her skin tingle at the sensation of her hot body against the cool air."
@@ -126829,7 +126829,7 @@ msgstr "Ooh, und ich bezweifle, dass Sie viel Action zu sehen bekommen, aber es 
 
 msgctxt "speaker:Mythran Officer"
 msgid "Ooh, and I doubt you'll see much action, but there are some tribesmen that like to poke at our outer line, try and sneak into the city."
-msgstr ""
+msgstr "Oh, und ich bezweifle, dass du viel Action erleben wirst, aber es gibt einige Stammesleute, die gerne an unserer äußeren Linie herumfummeln und versuchen, in die Stadt einzudringen."
 
 msgctxt "speaker:Mythran Officer"
 msgid "Having some extra hands to secure the outter perimeter will work wonders."
@@ -151101,7 +151101,7 @@ msgstr "Seine Leute würden denken, er sei verrückt geworden. Ganz zu schweigen
 
 msgctxt "speaker:King Orwell Rose"
 msgid "His people would think he'd gone mad. Not to mention, if he fights two of his Lower Lords, the others in the Western Provinces will take advantage."
-msgstr ""
+msgstr "Sein Volk würde ihn für verrückt halten. Ganz zu schweigen davon, dass, wenn er gegen zwei seiner Untergebenen Lords kämpft, die anderen in den westlichen Provinzen die Gelegenheit nutzen würden."
 
 msgctxt "speaker:Sarah"
 msgid "They...they're really thinking about all of that?"
@@ -183609,7 +183609,7 @@ msgstr "Als Sarah weiterging, mündete die Straße in eine Landbrücke – den e
 
 msgctxt "speaker:Narrator"
 msgid "As Sarah continued, the road converged on a landbridge, the only definitive way in or out of Lethram."
-msgstr ""
+msgstr "Während Sarah weiterging, führte die Straße zu einer Landbrücke, dem einzigen festen Zugang zu oder aus Lethram."
 
 msgctxt "speaker:Narrator"
 msgid "Crossing it, Sarah for a moment expected someone might stop her, but to her surprise, nobody ever did."
