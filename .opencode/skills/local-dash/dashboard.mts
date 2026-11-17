@@ -33,7 +33,7 @@ const LANGS = ["zh", "ru", "es", "pt", "de", "ja", "fr", "pl", "ko", "it"];
  * живёт со старым JS и рисует «undefined» на новых полях (поймано 2026-11-16).
  * Поднимать при ЛЮБОМ изменении набора полей.
  */
-const API_VER = 7;
+const API_VER = 12;
 
 /** Прошлые значения CPU/RAM для дельты. */
 const prevCpu = cpus().map((c) => c.times);
@@ -162,6 +162,62 @@ const logTail = (lang: string, lines = 2): string[] => {
 let procCache: { at: number; value: { llamaMB: number; nodeMB: number; nodeCount: number } } = {
   at: 0,
   value: { llamaMB: 0, nodeMB: 0, nodeCount: 0 },
+};
+
+/**
+ * Здоровье ПК из `tmp/health.csv` (его пишет `scripts/health_guard.mts` каждые
+ * 15 с). Нужен график «что было до сброса»: Windows при жёстком ребуте не
+ * оставляет дампа, и единственный след — наши собственные замеры.
+ * Кэш по mtime: файл растёт, а опрос страницы идёт раз в 2 с.
+ */
+const healthCache = {
+  at: 0,
+  mtime: 0,
+  value: { samples: [] as HealthSample[], stops: 0, lastStop: null as { t: string; note: string } | null },
+};
+interface HealthSample {
+  t: string;
+  gpuTemp: number;
+  gpuPower: number;
+  gpuUtil: number;
+  ramFreePct: number;
+  cpu: number;
+}
+const health = (): { samples: HealthSample[]; stops: number; lastStop: { t: string; note: string } | null } => {
+  const file = join("tmp", "health.csv");
+  if (!existsSync(file)) return { samples: [], stops: 0, lastStop: null };
+  const mtime = statSync(file).mtimeMs;
+  if (mtime === healthCache.mtime && Date.now() - healthCache.at < 30_000) return healthCache.value;
+  const lines = readFileSync(file, "utf-8").split(/\r?\n/).filter(Boolean);
+  const samples: HealthSample[] = [];
+  let stops = 0;
+  let lastStop: { t: string; note: string } | null = null;
+  let prevNote = "";
+  for (const line of lines.slice(-400)) {
+    const c = line.split(",");
+    if (c[1] === "GUARD") {
+      stops++;
+      // Причина остановки — в примечании предыдущего замера (RAM_МАЛО / GPU_ЖАР…).
+      lastStop = { t: c[0] ?? "", note: prevNote || "порог" };
+      continue;
+    }
+    const temp = Number(c[1]);
+    if (!Number.isFinite(temp)) continue;
+    prevNote = (c[10] ?? "").trim();
+    samples.push({
+      t: c[0] ?? "",
+      gpuTemp: temp,
+      gpuPower: Number(c[2]),
+      gpuUtil: Number(c[4]),
+      ramFreePct: Number(c[7]),
+      cpu: Number(c[6]),
+    });
+  }
+  const value = { samples: samples.slice(-240), stops, lastStop };
+  healthCache.at = Date.now();
+  healthCache.mtime = mtime;
+  healthCache.value = value;
+  return value;
 };
 
 const processRam = (): { llamaMB: number; nodeMB: number; nodeCount: number } => {
@@ -333,6 +389,7 @@ const state = async (): Promise<Record<string, unknown>> => {
       : null,
     system: { cpu, memUsed, memTotal, memPeak },
     gpu: gpu(),
+    health: health(),
     proc: processRam(),
     servers: {
       translate: { ...translate, url: "127.0.0.1:8081" },
@@ -350,12 +407,21 @@ const state = async (): Promise<Record<string, unknown>> => {
 const PAGE = `<!doctype html>
 <html lang="ru"><head><meta charset="utf-8"><title>TSSR · пульт</title>
 <style>
-  :root { color-scheme: dark; --bg:#111417; --panel:#171c21; --line:#252c33; --fg:#e6edf3; --muted:#8b98a5; --ok:#3fb950; --bad:#f85149; --warn:#d29922; }
+  :root { color-scheme: dark; font-variant-numeric: tabular-nums; --bg:#111417; --panel:#171c21; --line:#252c33; --fg:#e6edf3; --muted:#8b98a5; --ok:#3fb950; --bad:#f85149; --warn:#d29922; }
   * { box-sizing: border-box; }
-  body { margin:0; padding:20px; background:var(--bg); color:var(--fg); font:14px/1.45 ui-monospace,Consolas,monospace; }
+  body { margin:0; padding:14px; background:var(--bg); color:var(--fg); font:14px/1.45 ui-monospace,Consolas,monospace; }
   h1 { font-size:15px; font-weight:600; margin:0 0 14px; color:var(--muted); letter-spacing:.04em; text-transform:uppercase; }
-  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:12px; }
-  .card { background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:12px 14px; }
+  .grid { display:grid; grid-template-columns:repeat(12,minmax(0,1fr)); gap:10px; }
+  .card { background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:10px 12px; }
+  .c3 { grid-column:span 3; } .c4 { grid-column:span 4; } .c5 { grid-column:span 5; }
+  .c6 { grid-column:span 6; } .c7 { grid-column:span 7; } .c8 { grid-column:span 8; }
+  .c12 { grid-column:1 / -1; }
+  /* Узкий экран: 12 колонок нечитаемы — складываем в две. */
+  @media (max-width:1100px) {
+    .grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+    .c3,.c4,.c5,.c6,.c7,.c8 { grid-column:span 1; }
+    .c12 { grid-column:1 / -1; }
+  }
   .card h2 { font-size:11px; margin:0 0 10px; color:var(--muted); text-transform:uppercase; letter-spacing:.06em; }
   .row { display:flex; justify-content:space-between; gap:12px; padding:2px 0; }
   .v { color:#fff; }
@@ -371,21 +437,32 @@ const PAGE = `<!doctype html>
   .arc { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:10px; align-items:baseline; font-size:12px; min-width:0; overflow:hidden; }
   .arc > span { white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
   .arc > span:last-child { text-align:right; }
-  .ling { display:grid; grid-template-columns:38px minmax(0,1fr) minmax(0,1fr) 78px; gap:16px; align-items:center; padding:4px 0; }
-  .ling .sub { font-size:11px; margin-top:3px; }
-  .ling > span:last-child { text-align:right; font-size:12px; }
+  .lingua { display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:0 26px; }
+  .ling { display:grid; grid-template-columns:40px 30px 30px minmax(0,1fr); gap:10px; align-items:center; padding:3px 0; }
+  .ling > span:last-child { min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .ring { display:block; }
+  .hint { font-size:11px; margin:2px 0 10px; }
+  /* Три графика в ряд: полоса на всю ширину давала «простыню» и вертикальный гап. */
+  #hchart { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:6px 18px; }
+  #hchart > .sp { min-width:0; }
   .stats { margin-top:12px; font-size:12px; }
 </style></head><body>
 <h1>TSSR · локальный пульт <span id="at" class="muted"></span></h1>
 <div class="grid">
-  <div class="card"><h2>Бэкенд перевода</h2><div id="tr"><span class="muted">загрузка…</span></div></div>
-  <div class="card"><h2>GPU / CPU / RAM</h2><div id="sys"><span class="muted">загрузка…</span></div></div>
-  <div class="card"><h2>Очередь</h2><div id="queue"><span class="muted">загрузка…</span></div></div>
-  <div class="card"><h2>Последнее в прогоне</h2><div id="tail" class="tail">…</div></div>
-  <div class="card" style="grid-column:1/-1"><h2>Языки: текст и озвучка</h2><div id="lingua"><span class="muted">загрузка…</span></div>
-    <div id="vhealth"></div>
-    <div id="arcs" class="arcs"></div>
+  <div class="card c5"><h2>Очередь</h2><div id="queue"><span class="muted">загрузка…</span></div></div>
+  <div class="card c3"><h2>Бэкенд перевода</h2><div id="tr"><span class="muted">загрузка…</span></div></div>
+  <div class="card c4"><h2>GPU / CPU / RAM</h2><div id="sys"><span class="muted">загрузка…</span></div></div>
+  <div class="card c12"><h2>Здоровье ПК · health.csv <span class="muted" id="hnote"></span></h2>
+    <div id="hnow"></div>
+    <div id="hchart"></div>
   </div>
+  <div class="card c8"><h2>Языки: текст и озвучка</h2>
+    <div class="hint muted">кольца: <b>перевод</b> — от всего POT · <b>озвучка</b> — от уже переведённого (навести — точные числа)</div>
+    <div id="lingua" class="lingua"><span class="muted">загрузка…</span></div>
+    <div id="vhealth"></div>
+    <div id="arcs" class="stats"></div>
+  </div>
+  <div class="card c4"><h2>Последнее в прогоне</h2><div id="tail" class="tail">…</div></div>
 </div>
 <script>
 const $ = (id) => document.getElementById(id);
@@ -400,6 +477,33 @@ const size = (b) => !b ? '—' : b < 1073741824 ? Math.round(b / 1048576) + ' М
 const num = (n) => String(n).replace(/\\B(?=(\\d{3})+(?!\\d))/g, ' ');
 // Любое неизвестное значение печатаем как «—», а не «undefined».
 const N = (v) => (v === null || v === undefined ? '—' : num(v));
+// Мини-график: SVG-полилиния без библиотек. Шкала ДИНАМИЧЕСКАЯ (min..max с
+// запасом 10 %): при фиксированном 0..100 линия температуры 30–73 °C жалась к
+// низу и ничего не показывала (владелец 2026-11-17: «UI по пользе»).
+// threshold — горизонтальная пунктирная линия (порог стража), если попадает в шкалу.
+const spark = (vals, color, label, unit, threshold) => {
+  if (!vals.length) return '';
+  const w = 1000, h = 56, pad = 4;
+  const lo0 = Math.min.apply(null, vals);
+  const hi0 = Math.max.apply(null, vals);
+  const span = hi0 - lo0 || Math.max(1, hi0 * 0.1);
+  const lo = Math.max(0, lo0 - span * 0.15);
+  const hi = hi0 + span * 0.15;
+  const y = (v) => h - pad - ((Math.min(Math.max(v, lo), hi) - lo) / (hi - lo)) * (h - 2 * pad);
+  const pts = vals.map((v, i) => {
+    const x = vals.length === 1 ? 0 : (i / (vals.length - 1)) * w;
+    return x.toFixed(1) + ',' + y(v).toFixed(1);
+  }).join(' ');
+  const t = threshold !== undefined && threshold > lo && threshold < hi
+    ? '<line x1="0" y1="' + y(threshold).toFixed(1) + '" x2="' + w + '" y2="' + y(threshold).toFixed(1) +
+      '" stroke="#8b98a5" stroke-width="1" stroke-dasharray="6 6" vector-effect="non-scaling-stroke"/>'
+    : '';
+  return '<div class="sp"><svg viewBox="0 0 ' + w + ' ' + h + '" preserveAspectRatio="none" style="width:100%;height:56px;display:block">' +
+    t + '<polyline fill="none" stroke="' + color + '" stroke-width="1.5" vector-effect="non-scaling-stroke" points="' + pts + '" /></svg>' +
+    '<div class="muted" style="font-size:11px;display:flex;justify-content:space-between;gap:8px">' +
+    '<span>' + label + '</span><span>' + lo0.toFixed(0) + '…' + hi0.toFixed(0) + ' ' + unit +
+    (threshold !== undefined ? ' · порог ' + threshold : '') + '</span></div></div>';
+};
 async function tick() {
   let s;
   try {
@@ -426,7 +530,7 @@ async function tick() {
     '<div class="row"><span>модель</span><span class="v">' + (sv.translate.model || '—') + '</span></div>' +
     '<div class="row"><span>LM Studio :1234</span><span>' + up(sv.lmstudio.up) + '</span></div>' +
     '<div class="row"><span>Strata :8080</span><span>' + up(sv.strata.up) + '</span></div>' +
-    '<div class="row"><span>llama-server RAM</span><span class="v">' + s.proc.llamaMB + ' МБ</span></div>';
+    '<div class="row"><span title="рабочий набор включает mmap модели и буферы CUDA">llama-server RAM (с mmap)</span><span class="v">' + s.proc.llamaMB + ' МБ</span></div>';
   const g = s.gpu;
   $('sys').innerHTML =
     (g ? '<div class="row"><span>GPU</span><span class="v big">' + g.util + '%</span></div>' +
@@ -435,6 +539,21 @@ async function tick() {
       '<div class="row"><span>температура</span><span class="v">' + g.tempC + ' °C</span></div>' : '<div class="muted">nvidia-smi недоступен</div>') +
     '<div class="row"><span>CPU</span><span class="v">' + s.system.cpu + '%</span></div>' +
     '<div class="row"><span>RAM</span><span class="v">' + (s.system.memUsed/1024).toFixed(1) + ' / ' + (s.system.memTotal/1024).toFixed(1) + ' ГБ</span></div>';
+  const hl = s.health || { samples: [], stops: 0 };
+  const smp = hl.samples || [];
+  const lastS = smp.length ? smp[smp.length - 1] : null;
+  $('hnote').textContent = smp.length
+    ? '· ' + smp.length + ' замеров · остановок стражем: ' + hl.stops + (hl.lastStop ? ' (последняя: ' + hl.lastStop.note + ')' : '')
+    : '· данных нет (страж не запущен)';
+  $('hnow').innerHTML = lastS
+    ? '<div class="row"><span>сейчас</span><span class="v">GPU ' + lastS.gpuTemp + ' °C · ' +
+      Math.round(lastS.gpuPower) + ' Вт · ' + lastS.gpuUtil + '% · кэш ' + lastS.ramFreePct + '% RAM</span></div>'
+    : '';
+  $('hchart').innerHTML = smp.length
+    ? spark(smp.map((x) => x.gpuPower), '#d29922', 'GPU мощность', 'Вт', 300) +
+      spark(smp.map((x) => x.gpuTemp), '#f85149', 'GPU температура', '°C', 85) +
+      spark(smp.map((x) => x.ramFreePct), '#3fb950', 'RAM свободно', '%', 6)
+    : '';
   const q = s.queue;
   const lp = s.live ? pct(s.live.filled, s.live.total) : null;
   $('queue').innerHTML = q
@@ -444,7 +563,7 @@ async function tick() {
         '<div class="row"><span>процент</span><span class="v">' + P(lp) + '</span></div>' +
         '<div class="row"><span>скорость</span><span class="v">' + (s.live.rate === null ? '…' : s.live.rate + ' стр/мин') + '</span></div>' +
         '<div class="row"><span>ETA</span><span class="v">' + (s.live.etaMin ? Math.floor(s.live.etaMin / 60) + ' ч ' + (s.live.etaMin % 60) + ' мин' : '—') + '</span></div>' : '') +
-      '<div class="row"><span>прогресс записан</span><span class="muted">' + String(q.at).slice(11, 19) + '</span></div>'
+      '<div class="row"><span>пасс стартовал</span><span class="muted">' + String(q.at).slice(11, 19) + '</span></div>'
     : '<div class="muted">очередь не запущена</div>';
   $('tail').textContent = (s.tail || []).join('\\n') || '—';
   const v = s.voice;
@@ -456,19 +575,29 @@ async function tick() {
     return;
   }
   const color = (p) => p === null ? 'var(--line)' : p >= 100 ? 'var(--ok)' : p > 3 ? 'var(--warn)' : 'var(--bad)';
+  // Кольцо вместо полосы: числа строк не нужны для визуала, проценты — нужны
+  // (владелец 2026-11-17: «UI оценивать по пользе»). Точные значения — в title.
+  const ring = (p, col) => {
+    const C = 94.25; // 2πr при r=15
+    const v = p === null ? 0 : Math.max(0, Math.min(100, p));
+    return '<svg class="ring" viewBox="0 0 36 36" width="26" height="26">' +
+      '<circle cx="18" cy="18" r="15" fill="none" stroke="#252c33" stroke-width="4"/>' +
+      (v > 0 ? '<circle cx="18" cy="18" r="15" fill="none" stroke="' + col + '" stroke-width="4" stroke-linecap="round" ' +
+        'stroke-dasharray="' + (C * v / 100).toFixed(1) + ' ' + C + '" transform="rotate(-90 18 18)"/>' : '') +
+      '<text x="18" y="21.5" text-anchor="middle" font-size="9.5" fill="#e6edf3">' + (p === null ? '—' : Math.round(v)) + '</text></svg>';
+  };
   const byLang = new Map(v.langs.map((l) => [l.lang, l]));
-  // Одна строка на язык: текст и озвучка рядом — один и тот же список не дублируем.
+  // Одна строка на язык: код + два кольца (текст, озвучка) + короткая справка.
   $('lingua').innerHTML = s.languages.map((t) => {
     const o = byLang.get(t.lang) || { done: 0, plan: 0, arcsDone: 0, arcsTotal: 0, bytes: 0 };
     const po = t.po || {};
     const tp = pct(po.filled, po.total);
     const vp = pct(o.done, o.plan);
     return '<div class="ling"><b>' + t.lang + '</b>' +
-      '<div><div class="bar"><i style="width:' + W(tp) + '%;background:' + color(tp) + '"></i></div>' +
-      '<div class="muted sub">текст ' + N(po.filled) + ' · ' + P(tp) + '</div></div>' +
-      '<div><div class="bar"><i style="width:' + W(vp) + '%;background:' + color(vp) + '"></i></div>' +
-      '<div class="muted sub">озвучка ' + N(o.done) + ' / ' + N(o.plan) + ' · ' + P(vp) + ' · ' + size(o.bytes) + '</div></div>' +
-      '<span class="muted">арки ' + o.arcsDone + '/' + o.arcsTotal + '</span></div>';
+      ring(tp, color(tp)) + ring(vp, color(vp)) +
+      '<span class="muted" style="font-size:11px" title="перевод ' + N(po.filled) + ' / ' + N(po.total) +
+      ' · озвучено ' + N(o.done) + ' / ' + N(o.plan) + ' переведённых · файлы ' + size(o.bytes) + '">' +
+      'арки ' + (o.arcsDone || 0) + '/' + (o.arcsTotal || 0) + '</span></div>';
   }).join('');
   const active = v.workers > 0 ? Object.entries(v.active).filter(([, a]) => a && a !== '?') : [];
   const bytes = v.langs.reduce((a, l) => a + (l.bytes || 0), 0);
@@ -481,10 +610,19 @@ async function tick() {
     ' · сироты loudnorm / .part <span class="' + (bad ? 'warn' : '') + '">' + v.orphans + ' / ' + v.parts + '</span>' +
     (active.length ? ' · в работе: ' + active.map(([l, a]) => l + ' → ' + a).join(', ') : '') +
     '</div>';
-  $('arcs').innerHTML = v.arcs.map((a) =>
-    '<div class="arc"><span class="muted">' + a.arc + '</span>' +
-    '<span class="' + (a.closed === a.total && a.total > 0 ? 'ok' : '') + '">' + a.closed + '/' + a.total + ' яз.' +
-    (a.closed === a.total && a.total > 0 ? ' ✓' : '') + '</span></div>').join('');
+  // 19 строк арок — шум: показываем только те, что УЖЕ начаты, и счётчики
+  // остальных. Сортировка по прогрессу: «что ближе к закрытию» — первое.
+  const fullArcs = v.arcs.filter((a) => a.total > 0 && a.closed === a.total).length;
+  const partialArcs = v.arcs.filter((a) => !(a.total > 0 && a.closed === a.total));
+  const started = partialArcs
+    .filter((a) => a.closed > 0)
+    .toSorted((a, b) => b.closed - a.closed || a.arc.localeCompare(b.arc));
+  const notStarted = partialArcs.length - started.length;
+  $('arcs').innerHTML = '<div class="stats muted">арки: <span class="' +
+    (fullArcs === v.arcs.length ? 'ok' : '') + '">' + fullArcs + ' / ' + v.arcs.length + '</span> закрыты полностью' +
+    (started.length ? ' · в работе: ' + started.slice(0, 6).map((a) => a.arc + ' ' + a.closed + '/' + a.total).join(' · ') : '') +
+    (started.length > 6 ? ' · +' + (started.length - 6) + ' ещё' : '') +
+    (notStarted ? ' · не начаты: ' + notStarted : '') + '</div>';
 }
 tick(); setInterval(tick, 2000);
 </script></body></html>`;

@@ -30,10 +30,12 @@ const num = (flag: string, def: number): number => {
 };
 const INTERVAL = num("--interval", 15);
 const GPU_TEMP_MAX = num("--gpu-temp", 85);
-const FREE_RAM_MIN_PCT = num("--free-ram-pct", 10);
+const FREE_RAM_MIN_PCT = num("--free-ram-pct", 4);
 const DISK_FREE_MIN_GB = num("--disk-min-gb", 5);
 const DRY = args.includes("--dry");
 const CSV = join("tmp", "health.csv");
+/** Сколько подряд замеров RAM ниже порога (см. ниже: одиночный провал не повод). */
+let ramLowStreak = 0;
 
 /** Строка GPU от nvidia-smi (нет утилиты — пусто, страж продолжит по RAM/CPU). */
 const gpu = (): { temp: number; power: number; limit: number; util: number; mem: number; thr: string } | null => {
@@ -126,10 +128,15 @@ for (;;) {
   const freeGb = Number((freemem() / 1024 ** 3).toFixed(1));
   const disk = diskFreeGb();
 
+  // RAM проверяем по ДВУМ подряд замерам: разовый провал бывает от загрузки
+  // модели/сборки мусора, и останавливать из-за него прогон бессмысленно
+  // (Windows живёт в подкачке; перезагрузки к OOM отношения не имеют).
+  ramLowStreak = freePct <= FREE_RAM_MIN_PCT ? ramLowStreak + 1 : 0;
+
   const notes: string[] = [];
   if (g && g.temp >= GPU_TEMP_MAX) notes.push(`GPU_ЖАР ${g.temp}°C`);
   if (g && g.limit > 0 && g.power / g.limit >= 0.95) notes.push(`GPU_ПОТОЛОК_ПИТАНИЯ ${g.power}/${g.limit}Вт`);
-  if (freePct <= FREE_RAM_MIN_PCT) notes.push(`RAM_МАЛО ${freePct}%`);
+  if (ramLowStreak >= 2) notes.push(`RAM_МАЛО ${freePct}% (2 замера)`);
   if (disk < DISK_FREE_MIN_GB) notes.push(`ДИСК_МАЛО ${disk.toFixed(1)}ГБ`);
 
   const line = [
