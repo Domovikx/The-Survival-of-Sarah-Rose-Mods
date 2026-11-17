@@ -134,10 +134,15 @@ for (;;) {
   ramLowStreak = freePct <= FREE_RAM_MIN_PCT ? ramLowStreak + 1 : 0;
 
   const notes: string[] = [];
+  // ОСТАНАВЛИВАЕМ только по температуре GPU. RAM и потолок питания — в
+  // примечания, но не стоп: 2026-11-17 страж погасил живой прогон при RAM 4 %
+  // (llama-server с -np 4 держит ~14 ГБ) и машина простояла 3 часа — это хуже
+  // пейджинга. Потолок мощности (285–300 Вт) у нас штатный режим инференса.
   if (g && g.temp >= GPU_TEMP_MAX) notes.push(`GPU_ЖАР ${g.temp}°C`);
-  if (g && g.limit > 0 && g.power / g.limit >= 0.95) notes.push(`GPU_ПОТОЛОК_ПИТАНИЯ ${g.power}/${g.limit}Вт`);
-  if (ramLowStreak >= 2) notes.push(`RAM_МАЛО ${freePct}% (2 замера)`);
+  if (g && g.limit > 0 && g.power / g.limit >= 0.95) notes.push(`питание_на_потолке ${g.power}/${g.limit}Вт`);
+  if (ramLowStreak >= 2) notes.push(`RAM_МАЛО ${freePct}%`);
   if (disk < DISK_FREE_MIN_GB) notes.push(`ДИСК_МАЛО ${disk.toFixed(1)}ГБ`);
+  const stopReason = notes.find((n) => n.startsWith("GPU_ЖАР"));
 
   const line = [
     new Date().toISOString(),
@@ -158,9 +163,9 @@ for (;;) {
     `${new Date().toISOString().slice(11, 19)} GPU ${g ? `${g.temp}°C ${g.power}Вт ${g.util}% ${g.mem}MiB` : "n/a"} | CPU ${c}% | RAM ${freePct}% (${freeGb} ГБ) | диск ${Number.isFinite(disk) ? disk.toFixed(1) : "?"} ГБ${notes.length ? ` | ⚠ ${notes.join(" ")}` : ""}`,
   );
 
-  if (notes.length && !DRY) {
+  if (stopReason && !DRY) {
     stopLoad();
-    console.log("Страж: нагрузка погашена (прогоны остановлены), строка-причина в tmp/health.csv");
+    console.log(`Страж: нагрузка погашена (${stopReason}), строка-причина в tmp/health.csv`);
     break;
   }
 
