@@ -465,9 +465,12 @@ const PAGE = `<!doctype html>
   .ling > span:last-child { min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
   .ring { display:block; }
   .hint { font-size:11px; margin:2px 0 10px; }
-  /* Три графика в ряд: полоса на всю ширину давала «простыню» и вертикальный гап. */
-  #hchart { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:6px 18px; }
-  #hchart > .sp { min-width:0; }
+  /* Ровно три равные колонки: auto-fit при широком окне давал колонки разной
+     ширины, и правые подписи упирались в край (владелец 2026-11-17). */
+  #hchart { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:6px 18px; }
+  @media (max-width:1200px) { #hchart { grid-template-columns:1fr; } }
+  #hchart > .sp { min-width:0; overflow:hidden; }
+  #hchart .lbl { white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
   .stats { margin-top:12px; font-size:12px; }
 </style></head><body>
 <h1>TSSR · локальный пульт <span id="at" class="muted"></span></h1>
@@ -552,8 +555,8 @@ const spark = (points, color, label, unit, threshold, events) => {
   return '<div class="sp"><svg viewBox="0 0 ' + w + ' ' + h + '" preserveAspectRatio="none" style="width:100%;height:56px;display:block">' +
     thrLine + evLines + lines + '</svg>' +
     '<div class="muted" style="font-size:11px;display:flex;justify-content:space-between;gap:8px">' +
-    '<span>' + label + ' <b style="color:#e6edf3">' + last.v.toFixed(0) + ' ' + unit + '</b></span>' +
-    '<span>' + lo0.toFixed(0) + '…' + hi0.toFixed(0) + ' ' + unit +
+    '<span class="lbl">' + label + ' <b style="color:#e6edf3">' + last.v.toFixed(0) + ' ' + unit + '</b></span>' +
+    '<span class="lbl">' + lo0.toFixed(0) + '…' + hi0.toFixed(0) + ' ' + unit +
     (threshold !== undefined ? ' · порог ' + threshold : '') + '</span></div></div>';
 };
 async function tick() {
@@ -600,8 +603,8 @@ async function tick() {
       (hl.lastStop ? ' (последний раз — ' + hl.lastStop.note.toLowerCase().replace('_', ' ') + ')' : '')
     : '· данных нет (страж не запущен)';
   $('hnow').innerHTML = lastS
-    ? '<div class="row"><span>сейчас</span><span class="v">GPU ' + lastS.gpuTemp + ' °C · ' +
-      Math.round(lastS.gpuPower) + ' Вт · ' + lastS.gpuUtil + '% · RAM свободно ' + lastS.ramFreePct + ' %</span></div>'
+    ? '<div class="muted" style="font-size:12px"><b style="color:#e6edf3">сейчас</b> · GPU ' + lastS.gpuTemp + ' °C · ' +
+      Math.round(lastS.gpuPower) + ' Вт · ' + lastS.gpuUtil + '% · RAM свободно ' + lastS.ramFreePct + ' %</div>'
     : '';
   // Точки с временем: график строит ось по timestamp, а не по индексу.
   const pts = (key) => smp.map((x) => ({ t: x.t, v: x[key] }));
@@ -614,7 +617,7 @@ async function tick() {
   // под каждым графиком были шумом (владелец 2026-11-17).
   $('htime').textContent = smp.length
     ? 'окно ' + smp[0].t.slice(11, 16) + ' → ' + smp[smp.length - 1].t.slice(11, 16) +
-      ' (UTC) · пунктир — порог · серая риска — старт бэкенда · красная — остановка стражем'
+      ' (UTC) · пунктир — порог · серая риска — старт бэкенда · красная — остановка стражем · разрыв линии — замеров не было (страж стоял)'
     : '';
   const q = s.queue;
   const lp = s.live ? pct(s.live.filled, s.live.total) : null;
