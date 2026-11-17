@@ -10,7 +10,7 @@
  * наших каталогов (как и оригинал).
  */
 
-import { renameSync, writeFileSync } from "node:fs";
+import { closeSync, fsyncSync, openSync, readSync, renameSync, writeSync } from "node:fs";
 
 /** Запись PO-файла. */
 /** Коды языков po/<lang>.po — ЕДИНЫЙ список (po_fix, po_list). */
@@ -188,29 +188,53 @@ export function renderPo(entries: PoEntry[], headerLines: string[]): string {
  *
  * ИНЦИДЕНТ 2026-10-26: перезапуск сервера убил процесс переводчика ПОСРЕДИ
  * writeFileSync — `de.po` остался обнулённым (7.5 МБ нулей, 0 msgid).
- * rename на тех же файловой системе атомарен: либо старая версия, либо новая,
- * но никогда «обрезанная/пустая».
+ * ПОВТОР 2026-11-17 на `ja.po`: файл нужного размера (9.3 МБ), но целиком из
+ * нулей — жёсткое убийство процесса (TerminateProcess) до того, как NTFS
+ * сбросила данные из кэша. Rename атомарен, но НЕ гарантирует, что данные уже
+ * на диске, поэтому `.part` теперь пишется с fsync и после rename файл
+ * проверяется на «не нули».
  */
 export function writePoAtomic(path: string, content: string): void {
   const tmp = `${path}.part`;
-  writeFileSync(tmp, content, "utf-8");
+  const data = Buffer.from(content, "utf-8");
+  const fd = openSync(tmp, "w");
+  try {
+    writeSync(fd, data);
+    // Без fsync данные живут в кэше ОС: при жёстком убийстве процесса файл
+    // остаётся нужной длины, но из нулей (инциденты 2026-10-26 и 2026-11-17).
+    fsyncSync(fd);
+  } finally {
+    closeSync(fd);
+  }
   // Windows: rename регулярно отдаёт EPERM, если файл в этот миг держит
   // антивирус/индексатор/редактор владельца (инцидент 2026-11-03: в режиме
   // --improve запись идёт после КАЖДОЙ строки и шанс на захват максимальный).
   // Rename атомарен и идемпотентен — ретраим до 8× по 60 мс, дальше — правда
   // ошибка. Сон синхронный (Atomics.wait): запись не должна пропускать
   // следующий flush вперёд, иначе порядок строк в файле поедет.
+  let renamed = false;
   let lastErr: unknown;
-  for (let attempt = 0; attempt < 8; attempt++) {
+  for (let attempt = 0; attempt < 8 && !renamed; attempt++) {
     try {
       renameSync(tmp, path);
-      return;
+      renamed = true;
     } catch (e) {
       lastErr = e;
       Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, 60);
     }
   }
-  throw lastErr;
+  if (!renamed) throw lastErr;
+
+  // Страховка от «правильного размера из нулей»: у po первый блок — шапка с `#`,
+  // значит нулевой первый байт = файл битый. Читаем 32 байта, не весь файл.
+  const hfd = openSync(path, "r");
+  try {
+    const buf = Buffer.alloc(32);
+    const n = readSync(hfd, buf, 0, 32, 0);
+    if (n > 0 && buf.subarray(0, n).every((b) => b === 0)) throw new Error(`запись обнулилась: ${path}`);
+  } finally {
+    closeSync(hfd);
+  }
 }
 
 export function normalizeText(s: string): string {

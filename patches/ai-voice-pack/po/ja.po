@@ -10,16 +10,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-# TSSR JA translation — скелет из po/template.pot (日本語).
-# msgstr "" = не переведено; заполняется построчно переводчиком.
-msgid ""
-msgstr "Project-Id-Version: TSSR-Mods 1.0\nPO-Revision-Date: 2026-10-23 00:00+0000\nLanguage: ja\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\n"
-
-# TSSR JA translation — скелет из po/template.pot (日本語).
-# msgstr "" = не переведено; заполняется построчно переводчиком.
-msgid ""
-msgstr "Project-Id-Version: TSSR-Mods 1.0\nPO-Revision-Date: 2026-10-23 00:00+0000\nLanguage: ja\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=1; plural=0;\n"
-
 msgctxt "speaker:Narrator"
 msgid "The Survival of Sarah Rose is an epic fantasy game. Production on TSSR is still ongoing."
 msgstr "『The Survival of Sarah Rose』は壮大なファンタジーゲームです。TSSRの制作はまだ進行中です。"
@@ -53014,107 +53004,107 @@ msgstr ""
 
 msgctxt "speaker:Sophia"
 msgid "I didn't believe what the girls were saying."
-msgstr ""
+msgstr "女の子たちの言っていたことを信じられなかった。あの男の子はいつも私に言い寄ってきて、いつか私と結婚するだろうと思っていたのに。今ではその考えを滑稽だと思って笑ってしまう。ある夜、まだアル・ガハエムに連れてこられていた頃、私はこっそりと砂丘へ抜け出した。"
 
 msgctxt "speaker:Sophia"
 msgid "But sure enough, I sat up there and watched one of the Tribesmen go to the slave pen for the men."
-msgstr ""
+msgstr "案の定、私はそこに座って、部族の男の一人が男性奴隷の囲いへ向かうのを見ていた。彼は相変わらずのハンサムな男の子だった。"
 
 msgctxt "speaker:Sophia"
 msgid "There he was, same handsome boy he always been."
-msgstr ""
+msgstr "ほら、やっぱり。昔からずっと、あのハンサムな男の子のままだったんだ。"
 
 msgctxt "speaker:Sophia"
 msgid "A little less confident now that he was being led along with a leash."
-msgstr ""
+msgstr "リードで引かれて連れて行かれている今となっては、少し自信がなくなっていた。"
 
 msgctxt "speaker:Sophia"
 msgid "I figure it must not have been the first time, because he got down on all fours without the Tribesman even telling him to."
-msgstr ""
+msgstr "初めてのことではなかったのだろう。部族の男に言われるまでもなく、彼は四つん這いになったのだから。"
 
 msgctxt "speaker:Sophia"
 msgid "And I watched."
-msgstr ""
+msgstr "そして私は見ていた。"
 
 msgctxt "speaker:Sophia"
 msgid "Watched as the Tribesman made a woman out of him."
-msgstr ""
+msgstr "部族の男が彼を女に変えていくのを見ていた。"
 
 msgctxt "speaker:Sophia"
 msgid "Made him moan like one too."
-msgstr ""
+msgstr "彼もまた、女性のように喘いでいたと思うかい？"
 
 msgctxt "speaker:Sophia"
 msgid "You think he ever knew he'd let a Tribesman use him like a woman, just so he'd have an extra meal to eat?"
-msgstr ""
+msgstr "彼が、ただ食料を一つ多く手に入れるためだけに、部族の男に女性のように扱われることを知っていたと思う？"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah shuddered as Sophia told the story."
-msgstr ""
+msgstr "ソフィアは、部族の男が彼を女に変えるのを見ていた。彼を女のように喘がせた。彼が、部族の男に女のように扱われることで、食料を一つ余分に手に入れられると知っていたと思うだろうか？"
 
 msgctxt "speaker:Sophia"
 msgid "That's when I knew, just about anyone can be a slave."
-msgstr ""
+msgstr "その時、私は気づいた。誰だって奴隷になり得るんだと。"
 
 msgctxt "speaker:Sophia"
 msgid "All that needs changin is their circumstance."
-msgstr ""
+msgstr "変わらなければならないのは、彼らの置かれた状況だけだ。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah looked across the surface of the pool."
-msgstr ""
+msgstr "サラは池の表面を眺めた。"
 
 msgctxt "speaker:Narrator"
 msgid "Maybe the girl was right, despite how grim the thoughts were."
-msgstr ""
+msgstr "もしかしたら、その考えがどれほど暗いものであっても、少女の言う通りだったのかもしれない。"
 
 msgctxt "speaker:Narrator"
 msgid "Maybe the world really was a cruel place, where the strongest ruled and the weakest suffered."
-msgstr ""
+msgstr "もしかしたら、世界は本当に残酷な場所なのかもしれない。そこでは最も強い者が支配し、最も弱い者が苦しむのだ。"
 
 msgctxt "speaker:Sarah"
 msgid "And you?"
-msgstr ""
+msgstr "あなたは？"
 
 msgctxt "speaker:Sophia"
 msgid "Me?"
-msgstr ""
+msgstr "ええと、私？"
 
 msgctxt "speaker:Sophia"
 msgid "Well, me and the rest of my folk all ended here in Al Gahaem."
-msgstr ""
+msgstr "ええ、私と仲間たちは、みんなここでアル・ガハエムにたどり着いたの。"
 
 msgctxt "speaker:Sophia"
 msgid "Some man comes asking me about the colour of a stone, and for I knew it, they brought me here."
-msgstr ""
+msgstr "どこかの男が石の色について尋ねてきたと思ったら、あっという間にここに連れてこられたのよ。"
 
 msgctxt "speaker:Narrator"
 msgid "Sophia slowly sank back into the water."
-msgstr ""
+msgstr "ソフィアはゆっくりと水の中へと体を沈めていった。"
 
 msgctxt "speaker:Sophia"
 msgid "Nicer than the place they had me before, so I don't complain."
-msgstr ""
+msgstr "前の場所よりマシだから、文句はないわ。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah kept studying Sophia's face, looking if there were hints about what she really thought."
-msgstr ""
+msgstr "サラはソフィアの顔をじっと見つめ、彼女が本当にどう思っているのか、その手がかりがないか探っていた。"
 
 msgctxt "speaker:Sarah"
 msgid "Don't you want to be free again?"
-msgstr ""
+msgstr "もう一度自由になりたいと思わないの？"
 
 msgctxt "speaker:Sophia"
 msgid "Stop talking silly."
-msgstr ""
+msgstr "馬鹿げた話はもうやめて。"
 
 msgctxt "speaker:Sophia"
 msgid "Come and join me in the pool, let's have a swim."
-msgstr ""
+msgstr "こっちに来てプールで一緒に泳ごうよ。"
 
 msgctxt "speaker:Narrator"
 msgid "Sophia motioned for Sarah to join her."
-msgstr ""
+msgstr "ソフィアはサラに手招きして、一緒に泳ごうと誘った。"
 
 msgctxt "menu"
 msgid "Swim with Sophia"
@@ -53122,415 +53112,415 @@ msgstr "ソフィアと泳ぐ"
 
 msgctxt "speaker:Sarah"
 msgid "Sure, why not."
-msgstr ""
+msgstr "ええ、いいわよ。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah threw off her clothes and jumped into the pool with Sophia."
-msgstr ""
+msgstr "サラは服を脱ぎ捨て、ソフィアと一緒にプールに飛び込んだ。"
 
 msgctxt "speaker:Narrator"
 msgid "The water was a perfect temperature for the warm desert climate."
-msgstr ""
+msgstr "水は暖かい砂漠の気候にぴったりの温度だった。"
 
 msgctxt "speaker:Narrator"
 msgid "It made her feel instantly refreshed."
-msgstr ""
+msgstr "それは彼女を瞬時にリフレッシュさせた。"
 
 msgctxt "speaker:Narrator"
 msgid "When she emerged again, Sarah flipp her long wet hair and felt it clamp to her back."
-msgstr ""
+msgstr "再び水面に顔を出したとき、サラは長い濡れた髪を振り払い、それが背中に張り付くのを感じた。"
 
 msgctxt "speaker:Narrator"
 msgid "As she opened her eyes, she saw Sophia swimming near her."
-msgstr ""
+msgstr "彼女が目を開けたとき、ソフィアが近くで泳いでいるのが見えた。"
 
 msgctxt "speaker:Sophia"
 msgid "I can see why he likes you."
-msgstr ""
+msgstr "彼が君を好きになる理由がわかるわ。"
 
 msgctxt "speaker:Narrator"
 msgid "Her eyes roamed freely across Sarah's exposed body."
-msgstr ""
+msgstr "彼女の視線はサラの露わになった体を自由にさまよった。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah did her best not to appear flustered by her words, even as she was."
-msgstr ""
+msgstr "サラは、ソフィアの言葉に動揺しているにもかかわらず、平静を装うよう最善を尽くした。"
 
 msgctxt "speaker:Sarah"
 msgid "Is that all we are? Play things for him."
-msgstr ""
+msgstr "それだけ？彼にとっての私たちが、ただの遊び道具なの？"
 
 msgctxt "speaker:Narrator"
 msgid "Sophia continued to casually swim."
-msgstr ""
+msgstr "ソフィアは、ここに来たばかりの頃にそのことを不思議に思っていた。"
 
 msgctxt "speaker:Sophia"
 msgid "I wondered about it when I first got here."
-msgstr ""
+msgstr "初めてここに来た時、私はそのことについて考えていた。"
 
 msgctxt "speaker:Sophia"
 msgid "But I never found an answer I liked."
-msgstr ""
+msgstr "でも、気に入るような答えは一度も見つけられなかった。"
 
 msgctxt "speaker:Narrator"
 msgid "Sophia stood up and ran her hands across her hips."
-msgstr ""
+msgstr "立ち上がって、ソフィアは両手を腰の上で滑らせた。"
 
 msgctxt "speaker:Sophia"
 msgid "I won't pretend to be an idiot, I know most men think I'm beautiful."
-msgstr ""
+msgstr "馬鹿のふりをするつもりはないわ。ほとんどの男が私を美しいと思っていることは知っている。"
 
 msgctxt "speaker:Sophia"
 msgid "But I'd hardly say I'm so uniquely beautiful that it could be a reason for me to be here."
-msgstr ""
+msgstr "でも、自分がここにいる理由になるほど、他に類を見ないほど美しいなんて、到底思えないわ。"
 
 msgctxt "speaker:Sophia"
 msgid "Plenty of girls I saw in the slave tents that were pretty. They didn't get picked."
-msgstr ""
+msgstr "奴隷のテントで見た女の子たちの中には、かなり綺麗な子もたくさんいたけど、彼女たちは選ばれなかったのよ。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah nodded as she contemplated what Sophia was telling her."
-msgstr ""
+msgstr "サラはソフィアの言葉を考えながら頷いた。"
 
 msgctxt "speaker:Sarah"
 msgid "So if it's not beauty, what else?"
-msgstr ""
+msgstr "じゃあ、美しさじゃなかったら、他に何があるの？"
 
 msgctxt "speaker:Sophia"
 msgid "You're getting to be a lot of fun."
-msgstr ""
+msgstr "だんだん面白くなってきたわね。"
 
 msgctxt "speaker:Sophia"
 msgid "Just make sure nobody hears you plotting and scheming."
-msgstr ""
+msgstr "誰にもあなたが企み事をしているのを聞かれないようにだけして。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah smiled back."
-msgstr ""
+msgstr "サラは微笑み返した。"
 
 msgctxt "speaker:Sarah"
 msgid "Just making conversation. Surely that's not forbidden."
-msgstr ""
+msgstr "ただの雑談よ。まさかそれが禁じられているわけでもないでしょう？"
 
 msgctxt "speaker:Sophia"
 msgid "Good. But how about you try for an answer."
-msgstr ""
+msgstr "いいわ。でも、答えを試してみたらどう？"
 
 msgctxt "speaker:Sarah"
 msgid "What about..."
-msgstr ""
+msgstr "どうかな…"
 
 msgctxt "speaker:Sarah"
 msgid "Status? Maybe we're special in some way?"
-msgstr ""
+msgstr "ステータス？もしかしたら、私たちは何らかの意味で特別なのかもしれない？"
 
 msgctxt "speaker:Sophia"
 msgid "Maybe. But you're a princess, Ayaka is a daughter of a noble house, Naydeen is a woman of the Tribes."
-msgstr ""
+msgstr "そうかもね。でも、あなたは王女で、アヤカは貴族の家の娘、ナイドインは部族の女性だわ。"
 
 msgctxt "speaker:Sophia"
 msgid "And me, nobody daughter to a nomad clan."
-msgstr ""
+msgstr "そして私は？遊牧民の一族の誰の子でもない、何者でもない存在だ。"
 
 msgctxt "speaker:Sophia"
 msgid "I wasn't even special within our clan."
-msgstr ""
+msgstr "私は、自分たちの部族の中でも特別な存在ではなかったのよ。"
 
 msgctxt "speaker:Narrator"
 msgid "Sophia had a point. In terms of status, they were as different as they could be."
-msgstr ""
+msgstr "ソフィアの言う通りだった。身分という点では、二人はこれ以上ないほど異なっていた。"
 
 msgctxt "speaker:Narrator"
 msgid "Noble, commoner. Outsider. Born into the Tribes."
-msgstr ""
+msgstr "貴族か、平民か。部外者か。部族に生まれた者か。"
 
 msgctxt "speaker:Sarah"
 msgid "We're all women..."
-msgstr ""
+msgstr "私たちは皆女性だ…"
 
 msgctxt "speaker:Sophia"
 msgid "That's true, I guess. Though who knows, maybe he has a special seperate harem for his men."
-msgstr ""
+msgstr "本当だわ、たぶん。でも、もしかしたら彼には男性のための特別な別個のハーレムがあるのかもね。"
 
 msgctxt "speaker:Sarah"
 msgid "You think so?"
-msgstr ""
+msgstr "そう思う？"
 
 msgctxt "speaker:Narrator"
 msgid "Sophia laughed loudly."
-msgstr ""
+msgstr "ソフィアは高らかに笑った。"
 
 msgctxt "speaker:Sophia"
 msgid "No, I don't. I'm pretty sure he only enjoys women."
-msgstr ""
+msgstr "いいえ、そうは思わないわ。彼は女性だけを楽しんでいるはずよ。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah looked directly at Sophia, effortlessly floating through the pool."
-msgstr ""
+msgstr "サラはソフィアをまっすぐ見つめ、プールの中を軽々と泳いでいた。"
 
 msgctxt "speaker:Sarah"
 msgid "Do you sleep with him?"
-msgstr ""
+msgstr "彼と寝てるの？"
 
 msgctxt "speaker:Narrator"
 msgid "Sophia looked back at her, matching her gaze. Trying to figure Sarah out as much as Sarah was figuring her out."
-msgstr ""
+msgstr "ソフィアは彼女を振り返り、視線を合わせた。サラが彼女を理解しようとしているのと同じように、彼女もまたサラを理解しようとしていた。"
 
 msgctxt "speaker:Sophia"
 msgid "I do."
-msgstr ""
+msgstr "そうよ。"
 
 msgctxt "speaker:Sophia"
 msgid "You think less of me for it?"
-msgstr ""
+msgstr "それで私のことを軽蔑しているの？"
 
 msgctxt "speaker:Sarah"
 msgid "No, I don't."
-msgstr ""
+msgstr "いいえ、そんなことないわ。"
 
 msgctxt "speaker:Sarah"
 msgid "I...I did too."
-msgstr ""
+msgstr "わ…私もそうだったの。"
 
 msgctxt "speaker:Narrator"
 msgid "Sophia just smiled."
-msgstr ""
+msgstr "ソフィアはただ微笑んだ。"
 
 msgctxt "speaker:Sophia"
 msgid "I figured you would."
-msgstr ""
+msgstr "そうなると思ってたわ。"
 
 msgctxt "speaker:Sophia"
 msgid "Everyone surrenders to him eventually."
-msgstr ""
+msgstr "誰もが最終的には彼に屈するものよ。"
 
 msgctxt "speaker:Narrator"
 msgid "But a part of her did. Resented the girl for surrendering to the Khan."
-msgstr ""
+msgstr "だが、彼女の心の一部はそうしていた。ハンに屈した少女を恨んでいたのだ。"
 
 msgctxt "speaker:Narrator"
 msgid "Couldn't they at least pretend to resist? Or did they really sell themselves so cheaply?"
-msgstr ""
+msgstr "彼らにせめて抵抗するふりくらいはできなかったのだろうか？それとも、本当にそんなに安っぽく自分を売り渡してしまったのだろうか？"
 
 msgctxt "speaker:Sophia"
 msgid "I didn't start sleeping with him right away."
-msgstr ""
+msgstr "すぐに彼と寝始めたわけじゃないの。"
 
 msgctxt "speaker:Sophia"
 msgid "Gods, I hated him for a long time."
-msgstr ""
+msgstr "ああ、長い間、彼のことが憎くてたまらなかったの。"
 
 msgctxt "speaker:Sophia"
 msgid "But...there are luxuries afforded to you if you please him."
-msgstr ""
+msgstr "でも…彼を喜ばせれば、あなたには贅沢も許されるのよ。"
 
 msgctxt "speaker:Sophia"
 msgid "And I was always worried."
-msgstr ""
+msgstr "そして、私はずっと心配していたの。"
 
 msgctxt "speaker:Sarah"
 msgid "Worried?"
-msgstr ""
+msgstr "ええ。彼が私をここに連れてきて、奴隷のテントから安全で守られた場所を与えてくれたのよ。"
 
 msgctxt "speaker:Sophia"
 msgid "Yeah. He brought me here, safe and sheltered from the slave tents."
-msgstr ""
+msgstr "ええ。彼が私をここに連れてきてくれたから、奴隷のテントからは安全で守られた暮らしができたの。"
 
 msgctxt "speaker:Sophia"
 msgid "I always knew he could send me back there if he wanted to."
-msgstr ""
+msgstr "彼が望めば、いつでも私をあの場所に戻すことができるって、ずっと分かってたの。"
 
 msgctxt "speaker:Sophia"
 msgid "And then I'd have to serve some other brute."
-msgstr ""
+msgstr "そして、また別の野蛮な男に仕える羽目になるのよ。"
 
 msgctxt "speaker:Sophia"
 msgid "Some of the girls there were serving men old enough to be their grandfathers, ugh."
-msgstr ""
+msgstr "あそこの女の子たちの中には、自分たちの祖父くらいの年齢の男に仕えている子もいたのよ、うっ。"
 
 msgctxt "speaker:Sophia"
 msgid "So if I'm going to have to serve any of them, might as well serve the strongest of them, right?"
-msgstr ""
+msgstr "だから、もし彼らの誰かに仕えることになるなら、一番強い男に仕えた方がまだマシだと思わない？"
 
 msgctxt "speaker:Sophia"
 msgid "Besides, he isn't entirely without his charms."
-msgstr ""
+msgstr "それに、彼も全く魅力がないわけではない。"
 
 msgctxt "speaker:Narrator"
 msgid "It made some degree of sense."
-msgstr ""
+msgstr "それはある程度理にかなっていた。"
 
 msgctxt "speaker:Narrator"
 msgid "A practical surrender."
-msgstr ""
+msgstr "実用的な降伏だ。"
 
 msgctxt "speaker:Sarah"
 msgid "It's interesting though."
-msgstr ""
+msgstr "でも、興味深いことではあるわ。"
 
 msgctxt "speaker:Sophia"
 msgid "What is?"
-msgstr ""
+msgstr "何？"
 
 msgctxt "speaker:Sarah"
 msgid "He brought you here...he let you deny him, and he didn't send you back."
-msgstr ""
+msgstr "彼が君をここに連れてきて…君が彼を拒絶しても、君を返さなかったことは…"
 
 msgctxt "speaker:Sarah"
 msgid "Seems he cares for more than just your body."
-msgstr ""
+msgstr "彼があなたの身体だけに関心があるわけではなさそうね。"
 
 msgctxt "speaker:Narrator"
 msgid "Sophia just nodded."
-msgstr ""
+msgstr "ソフィアはただ頷いただけだった。"
 
 msgctxt "speaker:Sophia"
 msgid "I guess that's true...doesn't get us much closer to what though."
-msgstr ""
+msgstr "まあ、それは確かだけど…それで、何がわかるっていうの？"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah recalled everything she experienced since she had been brought to this place."
-msgstr ""
+msgstr "サラは、この場所に連れてこられてから経験したすべてを思い出した。"
 
 msgctxt "speaker:Narrator"
 msgid "Then the most pressing memory came to her."
-msgstr ""
+msgstr "そして、最も切迫した記憶が彼女の頭に浮かんだ。"
 
 msgctxt "speaker:Sarah"
 msgid "And the stone?"
-msgstr ""
+msgstr "石は？"
 
 msgctxt "speaker:Sophia"
 msgid "Oh, that...yeah."
-msgstr ""
+msgstr "ああ、それ…ええ。"
 
 msgctxt "speaker:Narrator"
 msgid "It seemed obvious that played a part in it."
-msgstr ""
+msgstr "それが何らかの役割を果たしていたことは明らかだった。"
 
 msgctxt "speaker:Sarah"
 msgid "You think it means anything?"
-msgstr ""
+msgstr "何か意味があると思う？"
 
 msgctxt "speaker:Sophia"
 msgid "Probably...but I can't read words, just pictures. And none of the books in the library had any pictures on those stones."
-msgstr ""
+msgstr "たぶん…でも、私は言葉じゃなくて絵しか読めないの。それに、図書館の本には、あの石に描かれた絵は一枚もなかったわ。"
 
 msgctxt "speaker:Sophia"
 msgid "I do remember though..."
-msgstr ""
+msgstr "でも、確かに覚えているわ…"
 
 msgctxt "speaker:Sarah"
 msgid "Remember what?"
-msgstr ""
+msgstr "何を覚えているの？"
 
 msgctxt "speaker:Sophia"
 msgid "I was in the slave tent when Hassar came with his guards."
-msgstr ""
+msgstr "ハッサーが衛兵たちを連れてきた時、私は奴隷のテントにいました。"
 
 msgctxt "speaker:Sophia"
 msgid "They brought up all the girls and they forced them to look at the stone and tell him what it looked like."
-msgstr ""
+msgstr "彼らは少女たちを全員連れてきて、石を無理やり見せつけ、それがどう見えるか彼に説明させたの。"
 
 msgctxt "speaker:Sophia"
 msgid "And I remember it being so strange..."
-msgstr ""
+msgstr "そして、あれがどれほど奇妙だったか、今でも覚えているの…"
 
 msgctxt "speaker:Sophia"
 msgid "They all said the stone was black, but it seemed so obvious that it was red."
-msgstr ""
+msgstr "皆は石が黒いと言っていたけれど、それが赤いことは明らかだったのに。"
 
 msgctxt "speaker:Narrator"
 msgid "The stone had never seemed anything other than red to her as well."
-msgstr ""
+msgstr "彼女にとっても、その石は赤以外に見えたことは一度もなかったのだ。"
 
 msgctxt "speaker:Sophia"
 msgid "Like, it was so obvious, I couldn't understand how they'd even get it wrong."
-msgstr ""
+msgstr "まるで、それが明白すぎるほどだったから、どうして彼らが間違えるのか理解できなかったのよ。"
 
 msgctxt "speaker:Sophia"
 msgid "Then when they brought me up, and I told him it was red, he smiled at me so happily."
-msgstr ""
+msgstr "それから、彼らが私を呼び寄せ、私がそれは赤いと言ったとき、彼はとても嬉しそうに私に微笑んでくれた。"
 
 msgctxt "speaker:Sophia"
 msgid "Gods, I remember actually feeling proud for getting the right answer."
-msgstr ""
+msgstr "ちくしょう、正解できた時、本当に誇らしい気持ちになったのを今でも覚えてるのよ。"
 
 msgctxt "speaker:Sophia"
 msgid "Then they brought me here and I've been here since."
-msgstr ""
+msgstr "それから彼らは私をここに連れてきて、以来ずっとここにいるの。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah nodded again."
-msgstr ""
+msgstr "サラは再び頷いた。"
 
 msgctxt "speaker:Sarah"
 msgid "So the stone...it has to be important."
-msgstr ""
+msgstr "じゃあ、その石は…きっと重要なんだろうね。"
 
 msgctxt "speaker:Sophia"
 msgid "I figured that too, but that don't answer much else. Important how. Why?"
-msgstr ""
+msgstr "私もそう思ったけど、それじゃあ他のことはあまり答えになってないわ。どうして重要なのか、そして、なぜ？"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah looked at the far side of pool."
-msgstr ""
+msgstr "サラはプールの向こう側を見た。"
 
 msgctxt "speaker:Narrator"
 msgid "The library."
-msgstr ""
+msgstr "図書館だ。"
 
 msgctxt "speaker:Narrator"
 msgid "Sophia couldn't read. But Sarah could."
-msgstr ""
+msgstr "ソフィアは読書ができなかった。でもサラはできた。"
 
 msgctxt "speaker:Sarah"
 msgid "Maybe I can do some research, in the library."
-msgstr ""
+msgstr "図書館で何か調べ物ができるかもしれないわ。"
 
 msgctxt "speaker:Sarah"
 msgid "He has books on just about everything."
-msgstr ""
+msgstr "彼はありとあらゆることに関する本を持っている。"
 
 msgctxt "speaker:Narrator"
 msgid "Sophia swam closer to her."
-msgstr ""
+msgstr "ソフィアは彼女に泳ぎ寄った。"
 
 msgctxt "speaker:Sophia"
 msgid "Yeah, I guess."
-msgstr ""
+msgstr "ええ、そうね。"
 
 msgctxt "speaker:Sophia"
 msgid "I can't much help you there though."
-msgstr ""
+msgstr "でも、その点についてはあまり助けになれないわ。"
 
 msgctxt "speaker:Narrator"
 msgid "Suddenly she rose up from the water, close to Sarah."
-msgstr ""
+msgstr "突然、彼女は水の中から立ち上がり、サラのすぐ近くまでやって来た。"
 
 msgctxt "speaker:Narrator"
 msgid "So close it felt improper."
-msgstr ""
+msgstr "あまりにも近すぎて、不適切にさえ感じられた。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah was suddenly aware of her own nakedness again."
-msgstr ""
+msgstr "サラは突然、再び自身の裸の存在に気づかされた。"
 
 msgctxt "speaker:Narrator"
 msgid "And Sophia's nakedness."
-msgstr ""
+msgstr "そしてソフィアの裸もだ。"
 
 msgctxt "speaker:Sophia"
 msgid "Books are kinda boring though."
-msgstr ""
+msgstr "でも、本ってのはちょっと退屈だよね。"
 
 msgctxt "speaker:Narrator"
 msgid "She reached out with a hand, softly touching Sarah's hip."
-msgstr ""
+msgstr "彼女は手を伸ばし、サラの腰をそっと触った。"
 
 msgctxt "speaker:Sophia"
 msgid "You sure you don't want to do something more fun, first?"
-msgstr ""
+msgstr "本当に、まずもっと楽しいことをしたくないの？"
 
 msgctxt "menu"
 msgid "Have sex with Sophia"
@@ -53538,15 +53528,15 @@ msgstr "ソフィアとセックスする"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah met Sophia's eyes."
-msgstr ""
+msgstr "サラはソフィアの目を見つめた。"
 
 msgctxt "speaker:Narrator"
 msgid "She spotted the hunger in them."
-msgstr ""
+msgstr "彼女はソフィアの目の中に飢えを感じ取った。"
 
 msgctxt "speaker:Narrator"
 msgid "Same as the one she felt inside of herself."
-msgstr ""
+msgstr "彼女自身が内側で感じていたのと同じものだった。"
 
 msgctxt "menu"
 msgid "Refuse, go to the library"
@@ -53554,375 +53544,375 @@ msgstr "拒否して図書館へ行く"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah flinched and backed away."
-msgstr ""
+msgstr "サラは身を縮め、後ずさった。"
 
 msgctxt "speaker:Sarah"
 msgid "No, I'm...no, sorry..."
-msgstr ""
+msgstr "いいえ、私は…いや、ごめんなさい…"
 
 msgctxt "speaker:Narrator"
 msgid "She could see Sophia was dissapointed."
-msgstr ""
+msgstr "彼女はソフィアが失望しているのが見て取れた。"
 
 msgctxt "speaker:Sophia"
 msgid "Ugh, you're no fun."
-msgstr ""
+msgstr "うっ、あなたって全然面白くないわね。"
 
 msgctxt "speaker:Narrator"
 msgid "Sophia disappeared beneath the water again."
-msgstr ""
+msgstr "ソフィアは再び水の下に姿を消した。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah waited for a few moments longer, but when the girl emerged, she was on the far end of the pool."
-msgstr ""
+msgstr "サラはもう少し待っていたが、少女が現れた時には、彼女はプールの反対側にいた。"
 
 msgctxt "speaker:Narrator"
 msgid "It was obvious that she was done having whatever fun she had been having with Sarah."
-msgstr ""
+msgstr "彼女がサラとの遊びを終えたことは明らかだった。"
 
 msgctxt "speaker:Narrator"
 msgid "She knew when she wasn't wanted anymore."
-msgstr ""
+msgstr "彼女は自分がもはや歓迎されていないことを悟っていた。"
 
 msgctxt "speaker:Sarah"
 msgid "Sorry, I don't feel like a swim."
-msgstr ""
+msgstr "ごめん、泳ぐ気はないの。"
 
 msgctxt "speaker:Narrator"
 msgid "After she had left the pool, Sarah made her way straight to the library."
-msgstr ""
+msgstr "プールを離れた後、サラはまっすぐ図書館へと向かった。"
 
 msgctxt "speaker:Narrator"
 msgid "As she reached it, she could feel a shift in the air."
-msgstr ""
+msgstr "そこに着いた時、彼女は空気が変わったのを感じた。"
 
 msgctxt "speaker:Narrator"
 msgid "A dryer temperate."
-msgstr ""
+msgstr "乾燥した気候だ。"
 
 msgctxt "speaker:Narrator"
 msgid "Probably to preserve the quality of the books and spare them from the heat."
-msgstr ""
+msgstr "おそらく、本の質を保ち、熱から守るためだろう。"
 
 msgctxt "speaker:Narrator"
 msgid "Clever, she thought. The Tribesmen were most sophisticated than they appeared."
-msgstr ""
+msgstr "賢い、と彼女は思った。部族民は見た目よりもずっと洗練されていた。"
 
 msgctxt "speaker:Narrator"
 msgid "Or Hassar was, at least."
-msgstr ""
+msgstr "ハッサーも、少なくともそうだった。"
 
 msgctxt "speaker:Narrator"
 msgid "Jaeid walked up to Sarah and grabbed her by her arm and began to drag her away."
-msgstr ""
+msgstr "ジェイドはサラに歩み寄り、彼女の腕を掴んで引きずり始めた。"
 
 msgctxt "speaker:Sarah"
 msgid "What was that?"
-msgstr ""
+msgstr "何だったの？"
 
 msgctxt "speaker:Narrator"
 msgid "Jaeid shushes her."
-msgstr ""
+msgstr "ジェイドはサラを静かにさせた。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah felt herself being rushed out of the room, and only once far enough that nobody could hear them, did they speak again."
-msgstr ""
+msgstr "サラは自分が部屋から急いで連れ出されているのを感じ、十分に離れ、誰にも聞こえなくなったところで、ようやく再び口を開いた。"
 
 msgctxt "speaker:Sarah"
 msgid "Is that what this was all about?"
-msgstr ""
+msgstr "これが、これまでのことの真相だったの？"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah felt tears burn in her eyes."
-msgstr ""
+msgstr "サラは目に涙が熱くこみ上げてくるのを感じた。"
 
 msgctxt "speaker:Narrator"
 msgid "She had trusted him, and instead, she had now been given to him as some prized livestock, his slave."
-msgstr ""
+msgstr "彼女は彼を信頼していたのに、今やまるで貴重な家畜のように彼に与えられ、彼の奴隷となったのだ。"
 
 msgctxt "speaker:Sarah"
 msgid "You just wanted to claim me?"
-msgstr ""
+msgstr "ただ私を所有したかっただけなの？"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah crossed her arms, covering up her breasts, and walked a few steps away, staring into the distance."
-msgstr ""
+msgstr "サラは腕を組んで胸を隠し、数歩離れて遠くを見つめた。"
 
 msgctxt "speaker:Sarah"
 msgid "You know, you could have taken me. Or let the soldiers take me. Whatever. It would have all been the same."
-msgstr ""
+msgstr "ほら、あなたは私を連れて行くこともできたはずだ。あるいは兵士たちに私を連れて行かせてもよかった。どうでもいいことだった。結局は同じことだったはずなのに。"
 
 msgctxt "speaker:Sarah"
 msgid "But tricking me as well? Why? You didn't need to do that. Just so you could make a fool out of me?"
-msgstr ""
+msgstr "でも、私を騙す必要があったの？何のために？そんなことする必要はなかったのに。ただ私を馬鹿にするためだけ？"
 
 msgctxt "speaker:Narrator"
 msgid "Jaeid was leaning with his back against the wall."
-msgstr ""
+msgstr "ジェイドは壁に背中を預けて立っていた。"
 
 msgctxt "speaker:Jaeid"
 msgid "Are you done, Sarah?"
-msgstr ""
+msgstr "もう終わったのか、サラ？"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah turned back around to him."
-msgstr ""
+msgstr "サラは再び彼の方を向き直った。"
 
 msgctxt "speaker:Sarah"
 msgid "What? Not happy your slave isn't servile enough?"
-msgstr ""
+msgstr "何？自分の奴隷が十分に従順じゃないって不満なの？"
 
 msgctxt "speaker:Narrator"
 msgid "Jaeid sighed."
-msgstr ""
+msgstr "ジェイドはため息をついた。"
 
 msgctxt "speaker:Jaeid"
 msgid "You're not my slave, Sarah."
-msgstr ""
+msgstr "お前は俺の奴隷じゃないんだぞ、サラ。"
 
 msgctxt "speaker:Sarah"
 msgid "I'm not?"
-msgstr ""
+msgstr "違うの？"
 
 msgctxt "speaker:Sarah"
 msgid "Then what was all that just now?"
-msgstr ""
+msgstr "じゃあ、さっきのあれは何だったの？"
 
 msgctxt "speaker:Narrator"
 msgid "She was confused."
-msgstr ""
+msgstr "彼女は混乱していた。"
 
 msgctxt "speaker:Jaeid"
 msgid "Well...you are, officially, but I mean, between us, you're not my slave. I won't treat you as such, and I don't want to."
-msgstr ""
+msgstr "まあ…公式にはそうだけど、正直なところ、君は僕の奴隷じゃない。君を奴隷のように扱ったりしないし、そうしたくもないんだ。"
 
 msgctxt "speaker:Sarah"
 msgid "Then why did you do it? Why ask for me?"
-msgstr ""
+msgstr "じゃあ、なんでそんなことしたの？なんで私を頼んだの？"
 
 msgctxt "speaker:Jaeid"
 msgid "I don't know..."
-msgstr ""
+msgstr "わからない…"
 
 msgctxt "speaker:Jaeid"
 msgid "It just, it happened so fast. He said they would take you to the auction houses...and Sarah, I began to recall all these memories..."
-msgstr ""
+msgstr "それは、あまりにもあっという間に起こったんだ。彼らは君を競売会場に連れて行くと言っていた…そしてサラ、僕はこれらの記憶をすべて思い出し始めたんだ…"
 
 msgctxt "speaker:Jaeid"
 msgid "I began to remember when I was there, what it was like..."
-msgstr ""
+msgstr "そこにいる時、どんな感じだったか、思い出し始めたんだ…"
 
 msgctxt "speaker:Narrator"
 msgid "He paused, trying to regain himself."
-msgstr ""
+msgstr "彼は言葉を切り、気持ちを落ち着かせようとした。"
 
 msgctxt "speaker:Jaeid"
 msgid "I didn't want that for you. They break in new slaves, right there, in their backrooms. When I thought about you being there, it just seemed wrong."
-msgstr ""
+msgstr "君にはそんなことになってほしくなかった。奴らは新入りの奴隷を、裏の部屋でいきなり調教するんだ。君がそこにいることを考えると、ただただ間違っているように思えた。"
 
 msgctxt "speaker:Jaeid"
 msgid "So I did the only thing I could think of. I claimed you before anyone else could."
-msgstr ""
+msgstr "だから、俺は考えつく唯一のことをした。誰にも取られる前に、お前を自分のものにしたんだ。"
 
 msgctxt "speaker:Narrator"
 msgid "He turned his eyes to the ground."
-msgstr ""
+msgstr "彼は視線を地面に向けた。"
 
 msgctxt "speaker:Jaeid"
 msgid "Maybe that's not right either, but in the moment...I didn't know what else to do."
-msgstr ""
+msgstr "それも正しくないのかもしれないが、あの瞬間は…他にどうすればいいかわからなかったんだ。"
 
 msgctxt "speaker:Narrator"
 msgid "Now understanding what he had done, and what he had saved her from...she felt shame at her outburst."
-msgstr ""
+msgstr "今になって自分が何をしたのか、そして彼女を何から救ったのかを理解し…彼女は自分の爆発的な行動に恥じらいを感じた。"
 
 msgctxt "speaker:Narrator"
 msgid "She walked back over to Jaeid and put one hand on his arm."
-msgstr ""
+msgstr "彼女はジェイドの元へ戻り、彼の腕に片手を置いた。"
 
 msgctxt "speaker:Sarah"
 msgid "I'm sorry if I yelled at you, Jaeid."
-msgstr ""
+msgstr "ジェイド、私が怒鳴ってしまったなら、ごめんなさい。"
 
 msgctxt "speaker:Sarah"
 msgid "You vowed to keep me safe and I'm seeing now that you were only keeping your word as best you could."
-msgstr ""
+msgstr "あなたは私を守ると誓ったのに、今になって分かったわ。あなたはただ、できる限りその約束を守ろうとしていただけだったのね。"
 
 msgctxt "speaker:Narrator"
 msgid "Jaeid looked back up at her. A smile showed on his face. She could see that he was happy to be understood."
-msgstr ""
+msgstr "ジェイドは彼女を見上げ、顔に笑みを浮かべた。彼は理解されたことに喜んでいるのが見て取れた。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah put her arms on her hips."
-msgstr ""
+msgstr "サラは腰に手を当てた。"
 
 msgctxt "speaker:Narrator"
 msgid "She still found it odd how often she entirely forgot her own nakedness, and quickly crossed her arms in an attempt to cover her breasts."
-msgstr ""
+msgstr "彼女はまだ、自分が裸であることをいかに頻繁に完全に忘れてしまうのか不思議に思っていた。そして、胸を隠そうと素早く腕を組んだ。"
 
 msgctxt "speaker:Narrator"
 msgid "Play modest for him, she wondered. What was the point? What part of her had he not seen by now?"
-msgstr ""
+msgstr "彼の前で慎み深く振る舞うべきか、と彼女は思った。何の意味があるというのか？ 今となって、彼の目に見ていない部分はどこにもないではないか？"
 
 msgctxt "speaker:Sarah"
 msgid "But...what now?"
-msgstr ""
+msgstr "でも…これからどうするの？"
 
 msgctxt "speaker:Narrator"
 msgid "The question seemed to catch Jaeid by surprise."
-msgstr ""
+msgstr "その質問はジェイドを不意打ちしたようだった。"
 
 msgctxt "speaker:Jaeid"
 msgid "I...actually didn't think about that."
-msgstr ""
+msgstr "えっと…実は、そのことについては考えていなかったんだ。"
 
 msgctxt "speaker:Narrator"
 msgid "The two stood in silence for a while. Jaeid did his best to keep his eyes from her body. Even he proved human at times."
-msgstr ""
+msgstr "二人はしばらく沈黙したまま立っていた。ジェイドは必死に彼女の体から目をそらそうとした。彼でさえも、時には人間らしい弱さを見せるのだ。"
 
 msgctxt "speaker:Narrator"
 msgid "It was Sarah who finally decided to move forward."
-msgstr ""
+msgstr "最終的に前に進もうと決めたのはサラだった。"
 
 msgctxt "speaker:Sarah"
 msgid "We're a bit out in public here."
-msgstr ""
+msgstr "ここは人目につきやすい場所だ。"
 
 msgctxt "speaker:Sarah"
 msgid "Do you have a place we can go? Somewhere where we're not being eyed by everyone?"
-msgstr ""
+msgstr "どこか行ける場所はない？みんなにじろじろ見られないような場所で。"
 
 msgctxt "speaker:Narrator"
 msgid "Jaeid began to nod excitedly."
-msgstr ""
+msgstr "ジェイドは興奮して頷き始めた。"
 
 msgctxt "speaker:Jaeid"
 msgid "Yes, I do. Come, I'll take you there."
-msgstr ""
+msgstr "ええ、ありますよ。さあ、そこへ案内しましょう。"
 
 msgctxt "speaker:Narrator"
 msgid "He grabbed her hand."
-msgstr ""
+msgstr "彼は彼女の手を掴んだ。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah noticed that fact. It was an odd thing to notice."
-msgstr ""
+msgstr "サラはその事実に気づいた。それは奇妙な気づきだった。"
 
 msgctxt "speaker:Narrator"
 msgid "He grabbed her hand, rather than as he had done before, her wrists."
-msgstr ""
+msgstr "彼は以前とは違い、彼女の手首ではなく手を掴んだ。"
 
 msgctxt "speaker:Narrator"
 msgid "With their hands clasped together, he guided her out of the great palace, through the many streets of Al'Gahaem, down to his house."
-msgstr ""
+msgstr "手を取り合ったまま、彼は彼女を大宮殿から連れ出し、アル・ガハエムの多くの通りを抜け、自宅へと導いた。"
 
 msgctxt "speaker:Narrator"
 msgid "Weaving through the many busy streets and narrow alleys, he guided her towards his house."
-msgstr ""
+msgstr "賑やかな通りや狭い路地を縫うように進みながら、彼は彼女を自分の家へと導いた。"
 
 msgctxt "speaker:Narrator"
 msgid "Perhaps in Rosanna, the house would have seemed decent enough, something fitting for a skilled tradesmen."
-msgstr ""
+msgstr "おそらくロザンナにとってなら、この家はそれなりにまともで、熟練した職人にふさわしいものに見えたかもしれない。"
 
 msgctxt "speaker:Narrator"
 msgid "In this place, the house seemed nearer to a palace."
-msgstr ""
+msgstr "この場所では、家は宮殿に近いほど立派に見えた。"
 
 msgctxt "speaker:Narrator"
 msgid "With most living in tents and very few even owning any settled structure, the house by contrast seemed more impressive."
-msgstr ""
+msgstr "ほとんどの者がテントで暮らし、定住した家を持つ者さえごく少数である中で、この家は対照的にずっとうまく見えた。"
 
 msgctxt "speaker:Narrator"
 msgid "As soon as they stepped inside, the air instantly felt cooler to her skin."
-msgstr ""
+msgstr "中に入った途端、空気が彼女の肌を冷やした。"
 
 msgctxt "speaker:Sarah"
 msgid "This is your house?"
-msgstr ""
+msgstr "これがあなたの家？"
 
 msgctxt "speaker:Jaeid"
 msgid "I have served the Khan for many years now, faithfully. Such service comes with its own rewards."
-msgstr ""
+msgstr "私は長年にわたり、忠実にハーンに仕えてきました。そのような奉仕には、それ相応の報酬が伴うものです。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah took in the house. There were decorations that seemed to hail from every corner of the world."
-msgstr ""
+msgstr "サラは家の中を見渡した。そこには世界中の様々な場所から来たような装飾品が飾られていた。"
 
 msgctxt "speaker:Narrator"
 msgid "It gave the place an incoherent feeling. As if it was somewhat of a storage space, rather than a house that was lived in."
-msgstr ""
+msgstr "そこには支離滅裂な雰囲気が漂っていた。まるで、実際に人が住んでいる家というよりは、どこか物置のようだった。"
 
 msgctxt "speaker:Narrator"
 msgid "She looked at the serious and stoic face of Jaied. Perhaps that was exactly what his house was to him."
-msgstr ""
+msgstr "彼女はジャイードの真剣で無表情な顔を見つめた。おそらく、彼にとってこの家はまさにそのような存在なのだろう。"
 
 msgctxt "speaker:Sarah"
 msgid "It's...nice."
-msgstr ""
+msgstr "…素敵ね。"
 
 msgctxt "speaker:Narrator"
 msgid "In some way she meant it."
-msgstr ""
+msgstr "どこか本気味にそう言ったのだ。"
 
 msgctxt "speaker:Narrator"
 msgid "Jaeid shrugged."
-msgstr ""
+msgstr "ジェイドは肩をすくめた。"
 
 msgctxt "speaker:Jaeid"
 msgid "This house resides in what is known as the Old Quarter."
-msgstr ""
+msgstr "この家は旧市街として知られる場所に位置している。"
 
 msgctxt "speaker:Jaeid"
 msgid "Al'Gahaem is a city that rises and falls in cycles."
-msgstr ""
+msgstr "アル・ガハエムは、周期的に栄え、そして滅びる都市だ。"
 
 msgctxt "speaker:Narrator"
 msgid "He faced her."
-msgstr ""
+msgstr "彼は彼女の方を向いた。"
 
 msgctxt "speaker:Jaeid"
 msgid "Al'Gahaem is centrally located in the desert. It resides on one of the few large rock formations that allow any real construction."
-msgstr ""
+msgstr "その結果、ここは砂漠の中で都市が存在できる数少ない場所の一つなのだ。"
 
 msgctxt "speaker:Jaeid"
 msgid "As a result, it is one of the very few places in the desert that allows for a city to exist at all."
-msgstr ""
+msgstr "その結果、ここは砂漠において都市が存在できる極めて数少ない場所の一つとなっている。"
 
 msgctxt "speaker:Jaeid"
 msgid "Additionally, it sits upon a large vein of coal, allowing a degree of industry needed for the production of weaponry. Siege engines and such."
-msgstr ""
+msgstr "さらに、ここには大きな石炭脈があり、武器や攻城兵器などの生産に必要な程度の工業活動が可能になっている。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah listened intently."
-msgstr ""
+msgstr "サラは注意深く耳を傾けた。"
 
 msgctxt "speaker:Narrator"
 msgid "The desert sat next to Rosanna, but she had never heard or considered any of this."
-msgstr ""
+msgstr "砂漠はロザンナの隣に広がっていたが、彼女はこれまでその存在すら知らず、考えたこともなかった。"
 
 msgctxt "speaker:Jaeid"
 msgid "The problem that Al'Gahaem faces is that it is too important and too centrally located."
-msgstr ""
+msgstr "アル・ガハエムが直面している問題は、そこがあまりにも重要で、かつ中心部に位置しすぎていることだ。"
 
 msgctxt "speaker:Jaeid"
 msgid "This means that no single tribe can hope to hold it, because all the other tribes would prevent it."
-msgstr ""
+msgstr "つまり、どの部族も単独でそこを支配することは望めない。なぜなら、他のすべての部族がそれを阻止するからだ。"
 
 msgctxt "speaker:Jaeid"
 msgid "And so in most ages, the city slowly withers and dies."
-msgstr ""
+msgstr "そして、ほとんどの時代において、都市はゆっくりと衰退し、滅びていくのだ。"
 
 msgctxt "speaker:Jaeid"
 msgid "The soldiers leave with their money. The merchants quickly follow. The craftsmen depart after."
-msgstr ""
+msgstr "兵士たちは金を持って去っていく。商人たちもすぐに後を追う。職人たちもその後に出ていく。"
 
 msgctxt "speaker:Jaeid"
 msgid "Then the city shrinks all the way down to the Old Quarter, the small section of the city that is permanent."
-msgstr ""
+msgstr "すると、都市は旧市街まで完全に縮小してしまう。旧市街こそ、都市の中で恒久的な部分なのだ。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah nodded. She had only ever imagined cities to be permanent, like the capital back in Rosanna."
-msgstr ""
+msgstr "サラは頷いた。彼女はこれまで、都市はロザンナの首都のように永遠に存在するものだと想像していただけだった。"
 
 msgctxt "speaker:Narrator"
 msgid "Though she now realized, that was likely not permanent either, after the fall."
@@ -53930,7 +53920,7 @@ msgstr ""
 
 msgctxt "speaker:Jaeid"
 msgid "However, whenever the Tribes are united under the hand of a single Khan, these disputes are set aside."
-msgstr ""
+msgstr "しかし、部族たちが一人のハンの手に統一されるたびに、これらの争いは脇に追いやられるのだ。"
 
 msgctxt "speaker:Jaeid"
 msgid "The Khan settles in the city and the tribes put to rest their disagreements. For a time."
