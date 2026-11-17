@@ -46,6 +46,15 @@ const MODEL = join(
   "Index-Translate-9B.Q4_K_S.gguf",
 );
 const PORT = 8081;
+/** Сколько параллельных слотов просить у llama-server (ведёт scripts/np_switch.mts). */
+const NP = ((): number => {
+  try {
+    const v = Number.parseInt(readFileSync(join("tmp", "np.txt"), "utf-8").trim(), 10);
+    return Number.isFinite(v) && v >= 1 && v <= 16 ? v : 4;
+  } catch {
+    return 4;
+  }
+})();
 const URL = `http://127.0.0.1:${PORT}`;
 
 const args = process.argv.slice(2);
@@ -91,11 +100,11 @@ const ensureBackend = async (): Promise<void> => {
       MODEL,
       "-c",
       "8192",
-      // 4 параллельных слота: замеры 2026-11-17 — с -np 4 скорость ~150 стр/мин,
-      // с -np 1 падала до ~60 (цена экономии RAM). Слоты нужны: llama.cpp держит
-      // тёплый кэш промпта в каждом и переиспользует его между запросами.
+      // Число слотов = одновременные запросы раннера (8 воркеров). Значение
+      // берём из tmp/np.txt (его ведёт scripts/np_switch.mts по простою: за ПК
+      // 4 слота, ушёл >15 мин — 8). Без файла — 4.
       "-np",
-      "4",
+      String(NP),
       "-ngl",
       "99",
       "--host",
