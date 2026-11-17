@@ -63,7 +63,7 @@ export const DEFAULT_PYTHON = "C:/tools/cosyvoice3/.venv/Scripts/python.exe";
 /**
  * Движки инференса: свой шим (python, протокол v2) + venv.
  *
- * Имя файла = контракту {uid}__{Спикер}.opus для обоих движков
+ * Имя файла = контракту {en12}-{state6} {Спикер}.opus для обоих движков
  * (владелец 2026-11-11: «убираем лишний постфикс» — инфикс движка выпилен).
  */
 export const ENGINES = {
@@ -222,7 +222,7 @@ export interface Args {
   keepWav: boolean;
   /**
    * Только wav, без opus (voicekit/worker.mts encode, ветка req.wav_only):
-   * корпусной `{uid}__{variant}.opus` НЕ перезаписывается — режим сравнительных
+   * корпусной `{en12}-{state6} {variant}.opus` НЕ перезаписывается — режим сравнительных
    * съёмок Vox/Cosy (у keep_wav opus как раз пишется, инцидент 2026-10-27).
    */
   wavOnly: boolean;

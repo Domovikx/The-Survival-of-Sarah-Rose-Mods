@@ -23,6 +23,7 @@ import {
   isDemoEntry,
   voiceForSpeaker,
 } from "./voice_batch.mts";
+import { enHash, stateHash } from "./voice_names.mts";
 
 const SCRIPTS_DIR = dirname(fileURLToPath(import.meta.url));
 
@@ -122,17 +123,30 @@ describe("фильтры selectPhrases", () => {
     );
   });
 
-  it("--no-emotion: суффикс _plain и эмоция сброшена", () => {
+  it("--no-emotion: тон сброшен, имя голоса без суффиксов (тон живёт в state6)", () => {
     const phrases = selectPhrases(entries, { ...baseArgs, arc: "Prologue", noEmotion: true });
-    assert.ok(phrases.every((p) => p.variant.endsWith("_plain")));
+    assert.ok(phrases.length > 0, "фразы отобрались");
     assert.ok(phrases.every((p) => p.emotion === null));
+    assert.ok(
+      phrases.every((p) => p.variant === p.voice),
+      "никаких _plain: хвост = имя голоса",
+    );
+    assert.ok(
+      phrases.every((p) => p.out.includes(`-${stateHash(p.text, null)} ${p.voice}.wav`)),
+      "state6 считается от текста без тона",
+    );
   });
 
-  it("--emotion sad: пресет раскрыт, суффикс _em во всех вариантах", () => {
+  it("--emotion sad: пресет раскрыт, меняется state6, а не имя голоса", () => {
     const sad = parseCli(["--emotion", "sad"]).emotion;
     assert.match(sad ?? "", /Sadly/);
     const phrases = selectPhrases(entries, { ...baseArgs, arc: "Prologue", emotion: sad });
-    assert.ok(phrases.every((p) => p.variant.endsWith("_em")));
+    assert.ok(phrases.length > 0, "фразы отобрались");
+    assert.ok(
+      phrases.every((p) => p.variant === p.voice),
+      "никаких _em: хвост = имя голоса",
+    );
+    assert.ok(phrases.every((p) => p.out.includes(`-${stateHash(p.text, sad)} ${p.voice}.wav`)));
   });
 
   it("неозвученный голос пропускается (нет активного рефа)", () => {
@@ -144,14 +158,15 @@ describe("фильтры selectPhrases", () => {
 });
 
 describe("demo-режим --text", () => {
-  it("uid = md5(text), arc = Demo, out под voices-суффиксом", () => {
+  it("uid = md5(text), arc = Demo, имя файла = en12 от того же текста", () => {
     const text = "Тестовая фраза для демо-режима.";
     const uid = createHash("md5").update(text, "utf8").digest("hex");
     const phrases = selectPhrases(entries, { ...baseArgs, text, char: "Sarah" });
     assert.equal(phrases.length, 1);
     assert.equal(phrases[0].uid, uid);
     assert.equal(phrases[0].arc, "Demo");
-    assert.ok(phrases[0].out.includes(`${uid}__Sarah.wav`));
+    assert.ok(phrases[0].out.includes(`${enHash(text)}-`), `префикс не en12: ${phrases[0].out}`);
+    assert.ok(phrases[0].out.endsWith(" Sarah.wav"), `хвост не голос: ${phrases[0].out}`);
   });
 
   it("без рефа (--char неозвучен и --ref нет) — пусто", () => {
@@ -307,24 +322,27 @@ describe("движок voxcpm2 (2026-10-26: вердикт владельца «
     assert.notEqual(ENGINES.cosyvoice3.python, ENGINES.voxcpm2.python, "venv разные");
   });
 
-  it("selectPhrases: voxcpm2 -> {uid}__{Спикер}.opus (контракт рантайма, без инфикса движка)", () => {
+  it("selectPhrases: имя = {en12}-{state6} {Спикер}.opus (контракт рантайма, без инфикса движка)", () => {
     const ph = selectPhrases(entries, { ...baseArgs, engine: "voxcpm2" }).slice(0, 30);
     assert.ok(ph.length > 0, "фразы отобрались");
     for (const p of ph) {
       // владелец 2026-11-11: «убираем лишний постфикс» — имя строго контрактное
       assert.equal(p.variant, p.voice, `variant: ${p.variant}`);
-      assert.ok(p.out.endsWith(`__${p.voice}.wav`), `имя файла: ${p.out}`);
+      assert.ok(p.out.endsWith(` ${p.voice}.wav`), `имя файла: ${p.out}`);
+      assert.ok(p.out.includes(`${enHash(p.textOld)}-`), `префикс не en12 от EN: ${p.out}`);
     }
     // формат имён движков ЕДИНЫЙ: без --engine то же контрактное имя
     const plain = selectPhrases(entries, baseArgs).slice(0, 5);
     for (const p of plain) {
-      assert.ok(p.out.endsWith(`__${p.variant}.wav`), `контрактное имя: ${p.out}`);
+      assert.ok(p.out.endsWith(` ${p.variant}.wav`), `контрактное имя: ${p.out}`);
     }
   });
 
-  it("selectPhrases: --emotion сохраняет свой суффикс", () => {
+  it("selectPhrases: --emotion меняет state6, а не имя голоса", () => {
     const ph = selectPhrases(entries, { ...baseArgs, engine: "voxcpm2", emotion: "Whispering" })[0];
-    assert.match(ph.variant, /^.+_em$/);
+    assert.ok(ph, "фраза отобралась");
+    assert.equal(ph.variant, ph.voice);
+    assert.ok(ph.out.includes(`-${stateHash(ph.text, "Whispering")} ${ph.voice}.wav`), ph.out);
   });
 
   it("--keep-wav: флаг парсится и доходит до генератора (диагностика wav→opus)", () => {

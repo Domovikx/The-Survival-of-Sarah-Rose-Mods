@@ -1,31 +1,40 @@
 /**
- * voice_migrate.mts — разовый перенос корпуса на схему
- * `{en16}__{state8}__{variant}.opus`.
+ * voice_migrate.mts — перенос корпуса на схему `{en12}-{state6} {variant}.opus`.
+ *
+ * Читает ОБА старых поколения имён (hex `{en16}__{state8}__{variant}` и легаси
+ * `{uid32}__{variant}`) и пишет целевую base32-схему. Идемпотентен: файлы, уже
+ * лежащие в целевой схеме, считаются «already».
  *
  * Зачем версия перевода из git: у существующих файлов мы не знаем, из какого
  * текста они сделаны. Берём последний коммит `po/<lang>.po` ДО mtime файла — так
- * имя остаётся честным: «файл сделан из ТОГО перевода». state8 считается по
+ * имя остаётся честным: «файл сделан из ТОГО перевода». state6 считается по
  * текущему тону из POT (эмоции менялись редко и это отдельный класс отчёта).
  *
  * Запуск:
  *   node tools/generate/scripts/voice_migrate.mts --dry            # отчёт, ничего не трогает
  *   node tools/generate/scripts/voice_migrate.mts --apply          # переименовать
  *   node tools/generate/scripts/voice_migrate.mts --dry --lang ru  # только один язык
+ *   ... --prune-empty                                              # + удалить файлы, которые
+ *                                                                  #   нечем перевести и сейчас
+ *                                                                  #   (мёртвая озвучка)
  *
  * Отчёт: tmp/voice_migrate.json (полный) + сводка в консоль.
  */
 import { execSync } from "node:child_process";
 import { createHash } from "node:crypto";
-import { existsSync, readdirSync, readFileSync, renameSync, statSync, writeFileSync } from "node:fs";
+import { existsSync, readdirSync, readFileSync, renameSync, rmSync, statSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
 import { parsePo } from "../../../../../.opencode/skills/renpy-po/po_core.mts";
-import { parseVoiceName, voiceFileName } from "./voice_names.mts";
+import { hexStateHash, parseAnyVoiceName, voiceFileName } from "./voice_names.mts";
 
 const AUDIO = join("patches", "ai-voice-pack", "audio");
 const POT_PATH = join("patches", "ai-voice-pack", "po", "template.pot");
+const PO_DIR = join("patches", "ai-voice-pack", "po");
 const args = process.argv.slice(2);
 const APPLY = args.includes("--apply");
+/** Удалять файлы, которые нечем перевести И СЕЙЧАС (мёртвая озвучка). */
+const PRUNE_EMPTY = args.includes("--prune-empty");
 const langAt = args.indexOf("--lang");
 const ONLY_LANG = langAt >= 0 ? args[langAt + 1] : undefined;
 
@@ -35,22 +44,30 @@ const meta = (c: string[], p: string): string => (c.find((x) => x.startsWith(p))
 type Report = {
   lang: string;
   file: string;
-  reason: "rename" | "orphan" | "unknown-text" | "already" | "collision";
+  reason: "rename" | "orphan" | "unknown-text" | "already" | "collision" | "prune";
   to?: string;
   en?: string;
   text?: string;
+  /** Из какой схемы пришло имя (hex — предыдущая, uid32 — легаси). */
+  scheme?: string;
 };
 
-/** uid (md5 EN) → запись POT: текст, тон. */
+/**
+ * Ключи POT под ОБОИМИ поколениями имён: uid32 (легаси, полный md5) и en16
+ * (hex-схема). Переход идёт в одну сторону, поэтому мапа «входная».
+ */
 const pot = parsePo(readFileSync(POT_PATH, "utf-8").replace(/\r\n/g, "\n")).filter((e) => e.msgid);
 const byUid = new Map<string, { en: string; emotion: string; key: string }>();
-for (const e of pot)
-  byUid.set(md5(e.msgid), {
+for (const e of pot) {
+  const src = {
     en: e.msgid,
     emotion: meta(e.comments, "emotion_new:") || meta(e.comments, "emotion:"),
     // ключ po: msgctxt + msgid (одна и та же строка бывает у разных спикеров)
     key: `${e.msgctxt}\u0000${e.msgid}`,
-  });
+  };
+  byUid.set(md5(e.msgid), src);
+  byUid.set(md5(e.msgid).slice(0, 16), src);
+}
 
 /** История po по языку: [(ms, hash)] по возрастанию времени. */
 const historyCache = new Map<string, Array<{ ms: number; hash: string }>>();
@@ -104,31 +121,59 @@ const textAt = (lang: string, key: string, msgid: string, mtimeMs: number): stri
   return poAt(lang, version.hash).get(key) ?? "";
 };
 
+/** Перевод СЕЙЧАС (текущий po) — по нему решаем, живой ли файл вообще. */
+const currentPo = new Map<string, Map<string, string>>();
+const textNow = (lang: string, key: string, msgid: string): string => {
+  if (lang === "en") return msgid;
+  let map = currentPo.get(lang);
+  if (!map) {
+    map = new Map<string, string>();
+    const file = join(PO_DIR, `${lang}.po`);
+    if (existsSync(file))
+      for (const e of parsePo(readFileSync(file, "utf-8").replace(/\r\n/g, "\n")))
+        if (e.msgid) map.set(`${e.msgctxt}\u0000${e.msgid}`, e.msgstr);
+    currentPo.set(lang, map);
+  }
+  return map.get(key) ?? "";
+};
+
 const report: Report[] = [];
 const summary: Record<string, Record<string, number>> = {};
 let renamed = 0;
+let pruned = 0;
 let skipped = 0;
 
 for (const lang of readdirSync(AUDIO)) {
   const langDir = join(AUDIO, lang);
   if (!statSync(langDir).isDirectory()) continue;
   if (ONLY_LANG && lang !== ONLY_LANG) continue;
-  summary[lang] = summary[lang] ?? { "rename": 0, "orphan": 0, "unknown-text": 0, "already": 0, "collision": 0 };
+  summary[lang] = summary[lang] ?? {
+    "rename": 0,
+    "orphan": 0,
+    "unknown-text": 0,
+    "already": 0,
+    "collision": 0,
+    "prune": 0,
+  };
   const seen = new Map<string, string>();
 
   for (const arc of readdirSync(langDir)) {
     const arcDir = join(langDir, arc);
     if (!statSync(arcDir).isDirectory()) continue;
     for (const file of readdirSync(arcDir)) {
-      const legacy = /^([0-9a-f]{32})__(.+)\.(opus|wav)$/.exec(file);
-      const modern = parseVoiceName(file);
-      if (modern) {
+      const parsed = parseAnyVoiceName(file);
+      if (!parsed) continue;
+      if (parsed.scheme === "base32") {
+        // Уже в целевой схеме: второй прогон идемпотентен.
         summary[lang]!.already!++;
         continue;
       }
-      if (!legacy) continue;
-      const [, uid, variant, ext] = legacy;
-      const src = byUid.get(uid!);
+      const { scheme, en: uid, state: stateInName, variant } = parsed;
+      // Текст перевода НЕ берём из имени: state8 есть только у hex-схемы, а
+      // легаси его не хранит вовсе. Единственный честный источник для обоих —
+      // версия po на момент mtime файла (см. textAt).
+      void stateInName;
+      const src = byUid.get(uid);
       const rel = `${lang}/${arc}/${file}`;
       if (!src) {
         summary[lang]!.orphan!++;
@@ -136,13 +181,34 @@ for (const lang of readdirSync(AUDIO)) {
         continue;
       }
       const mtimeMs = statSync(join(arcDir, file)).mtimeMs;
-      const text = textAt(lang, src.key, src.en, mtimeMs);
+      let text = textAt(lang, src.key, src.en, mtimeMs);
       if (!text.trim()) {
+        // Версии po на момент mtime нет. Но state8 в имени — это ровно то, ЧТО
+        // было записано: если он совпадает с текущим переводом, файл актуален и
+        // переименовывается честно (иначе решить нечем — имя необратимо).
+        const now = textNow(lang, src.key, src.en);
+        if (scheme === "hex" && now.trim() && stateInName === hexStateHash(now, src.emotion)) text = now;
+      }
+      if (!text.trim()) {
+        // Перевести имя нечем: файл сделан из текста, которого уже нет ни в
+        // одной версии po. Если перевода нет и СЕЙЧАС — файл мёртв навсегда
+        // (играть его нечем), и --prune-empty его удаляет; иначе оставляем
+        // отчёт (легаси-имена ждут переозвучки).
+        if (PRUNE_EMPTY && !textNow(lang, src.key, src.en).trim()) {
+          summary[lang]!.prune!++;
+          report.push({ lang, file: rel, reason: "prune", en: src.en, scheme });
+          if (APPLY) {
+            rmSync(join(arcDir, file), { force: true });
+            pruned++;
+          }
+          continue;
+        }
         summary[lang]!["unknown-text"]!++;
-        report.push({ lang, file: rel, reason: "unknown-text", en: src.en });
+        report.push({ lang, file: rel, reason: "unknown-text", en: src.en, scheme });
         continue;
       }
-      const next = voiceFileName({ en: src.en, variant: variant!, spoken: text, emotion: src.emotion }).replace(
+      const ext = file.slice(file.lastIndexOf(".") + 1);
+      const next = voiceFileName({ en: src.en, variant, spoken: text, emotion: src.emotion }).replace(
         /\.opus$/,
         `.${ext}`,
       );
@@ -154,7 +220,7 @@ for (const lang of readdirSync(AUDIO)) {
       }
       seen.set(target, rel);
       summary[lang]!.rename!++;
-      report.push({ lang, file: rel, reason: "rename", to: `${lang}/${target}`, text });
+      report.push({ lang, file: rel, reason: "rename", to: `${lang}/${target}`, text, scheme });
       if (APPLY) {
         renameSync(join(arcDir, file), join(arcDir, next));
         renamed++;
@@ -168,8 +234,9 @@ writeFileSync(join("tmp", "voice_migrate.json"), `${JSON.stringify(report, null,
 console.log(`=== ${APPLY ? "МИГРАЦИЯ" : "dry-run"}: файлов к переименованию ${skipped || renamed}`);
 for (const [lang, s] of Object.entries(summary)) {
   console.log(
-    `  ${lang.padEnd(3)} переименовать ${String(s.rename).padStart(5)} | уже новая схема ${String(s.already).padStart(4)} | без строки в POT ${String(s.orphan).padStart(3)} | без перевода ${String(s["unknown-text"]).padStart(3)} | коллизий ${s.collision}`,
+    `  ${lang.padEnd(3)} переименовать ${String(s.rename).padStart(5)} | уже целевая ${String(s.already).padStart(4)} | без строки в POT ${String(s.orphan).padStart(3)} | без перевода ${String(s["unknown-text"]).padStart(3)} | мёртвых удалить ${String(s.prune).padStart(3)} | коллизий ${s.collision}`,
   );
 }
+if (pruned) console.log(`удалено мёртвых файлов (--prune-empty): ${pruned}`);
 console.log(`отчёт: tmp/voice_migrate.json${APPLY ? "" : " (dry — ничего не менялось)"}`);
 if (!APPLY && existsSync(join("tmp", "voice_migrate.json"))) console.log("применить: --apply");

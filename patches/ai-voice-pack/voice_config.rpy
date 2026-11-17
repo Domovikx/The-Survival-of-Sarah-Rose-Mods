@@ -1,20 +1,26 @@
 # AI Voice — runtime config for The Survival of Sarah Rose
 #
-# Layout: mods/tssr-ai-voice-pack/ai_voice/{ru,en}/{Arc}/{uid}__{variant}.wav
-#   uid = md5(old-текста реплики, UTF-8) — 32-hex, язык-независимый
-#   variant = имя рефа из voices.yaml (Sarah_3, Narrator, Thomas, ...)
+# Layout: mods/tssr-ai-voice-pack/ai_voice/{ru,en}/{Arc}/{en12}-{state6} {variant}.opus
+#   en12   = base32(md5(английского оригинала)[:8])[:12]  — какая это реплика (60 бит)
+#   state6 = base32(md5({emotion,text})[:4])[:6]           — что произносится (30 бит)
+#   variant = имя рефа из voice_list.json (Sarah_3, Narrator, King Orwell Rose)
 #   Arc  берётся из label-части translation ID + catalog/label_arc.json
 #
-# ПРИОРИТЕТ ПОИСКА (variant берётся из voices.yaml, who -> ref):
-#   1. {uid}__{активный вариант из voices.yaml}.wav   (yaml управляет звучанием)
-#   2. любой {uid}*.wav (первый по алфавиту)          (фолбэк)
+# Рантайм НЕ знает ни перевода, ни тона (они живут в POT, на стороне сборки),
+# поэтому state6 ему недоступен и ищется по префиксу:
+#
+# ПРИОРИТЕТ ПОИСКА (variant — из voice_list.json, who -> ref):
+#   1. {en12}-* {variant}.{opus,wav}   (файл своего голоса)
+#   2. {en12}-*.{opus,wav}             (фолбэк: любой файл этой реплики)
+#   Внутри: opus раньше wav, затем САМЫЙ СВЕЖИЙ по mtime — у реплики может лежать
+#   устаревшее состояние рядом с текущим, и последняя генерация правильная.
 
 # Приоритет -999: добавить свою папку в searchpath НАДО раньше любых других
 # init-блоков (zzz_ui использует init offset = -2 -> -20), иначе ранние
 # загрузки файлов (fonts/images) не найдут папку мода.
 init -999 python:
+    import base64
     import codecs
-    import glob
     import hashlib
     import json
     import os
@@ -104,43 +110,71 @@ init -999 python:
         label = m.group(1) if m else (tlid or "")
         return _label_arc.get(label, "_unknown")
 
+    # Имена файлов арки — один раз на арку. Пак неизменен в течение сессии, а
+    # список нужен на каждую реплику; glob не используем: в Python рантайма
+    # Ren'Py нет glob.escape (проверено в игре 2026-11-17: AttributeError),
+    # а собирать шаблон из имени персонажа без экранирования нельзя.
+    _dir_cache = { }
+
+    def _voice_files(lang, arc):
+        key = lang + "/" + arc
+        cached = _dir_cache.get(key)
+        if cached is not None:
+            return cached
+        base = os.path.join(_MOD_ROOT, _VOICE_ROOT, lang, arc)
+        try:
+            names = os.listdir(base)
+        except Exception:
+            names = []
+        names = [n for n in names
+                 if n.endswith(".opus") or n.endswith(".wav")]
+        _dir_cache[key] = names
+        return names
+
+    def _tssr_pick(names, variant, base):
+        # Приоритет: (1) файл своего варианта, (2) любой файл реплики;
+        # внутри — opus раньше wav, затем самый СВЕЖИЙ по mtime: у реплики может
+        # лежать устаревшее состояние рядом с текущим, последняя генерация верна.
+        best = None
+        for n in names:
+            ext = n.rsplit(".", 1)[-1]
+            own = bool(variant) and n.endswith(" " + variant + "." + ext)
+            try:
+                mt = os.path.getmtime(os.path.join(base, n))
+            except Exception:
+                mt = 0
+            score = (2 if own else 1, 0 if ext == "opus" else 1, mt)
+            if best is None or score > best[0]:
+                best = (score, n)
+        return best[1] if best else None
+
     def static_auto_voice(tlid):
         try:
             text = renpy.store._last_say_what or ""
-            # Имя файла: {en16}__{state8}__{variant}.opus — первые 16 hex от md5
-            # оригинала (state8 рантайму неизвестен: тон и перевод живут в POT,
-            # поэтому ищем по префиксу и берём единственный актуальный файл).
-            uid = hashlib.md5(text.encode("utf-8")).hexdigest()[:16]
+            # Имя файла: {en12}-{state6} {variant}.opus — первые 12 символов base32
+            # от первых 8 байт md5 оригинала (base32 RFC4648 — тот же, что у
+            # base64.b32encode в Python и у сборки: паритет стережёт тест).
+            uid = base64.b32encode(hashlib.md5(text.encode("utf-8")).digest()[:8]).decode()[:12]
             lang = renpy.game.preferences.language or "en"
             arc = _arc_for_tlid(tlid)
+            base_dir = os.path.join(_MOD_ROOT, _VOICE_ROOT, lang, arc)
 
-            # 1. Вариант из voices.yaml (ref: -> {variant}.wav)
+            # Голос: who -> вариант каста из voice_list.json; если спикера в
+            # каталоге нет (новая роль/переименование) — вариант нарратора,
+            # чтобы точная ветка не отключалась целиком.
             who = renpy.store._last_say_who
+            variant = None
             if who is not None:
-                wname = getattr(who, "name", None)
-                variant = _who_variant.get(wname)
-            else:
-                variant = _narrator_variant  # наррация
+                variant = _who_variant.get(getattr(who, "name", None))
+            if not variant:
+                variant = _narrator_variant
 
+            prefix = uid + "-"
+            names = [n for n in _voice_files(lang, arc) if n.startswith(prefix)]
+            picked = _tssr_pick(names, variant, base_dir)
             path = None
-            if variant:
-                for ext in ("opus", "wav"):
-                    cand = "{}/{}/{}/{}__{}.{}".format(
-                        _VOICE_ROOT, lang, arc, uid, variant, ext)
-                    if renpy.loadable(cand):
-                        path = cand
-                        break
-
-            # 2. Фолбэк: любой {uid}*.{opus,wav} в папке арки
-            if path is None:
-                for ext in ("opus", "wav"):
-                    pattern = os.path.join(
-                        _MOD_ROOT, _VOICE_ROOT, lang, arc, uid + "*." + ext)
-                    matches = sorted(glob.glob(pattern))
-                    if matches:
-                        path = "{}/{}/{}/{}".format(
-                            _VOICE_ROOT, lang, arc, os.path.basename(matches[0]))
-                        break
+            if picked is not None:
+                path = "{}/{}/{}/{}".format(_VOICE_ROOT, lang, arc, picked)
 
             _vdbg("CALL tlid={!r} text={!r} lang={!r} who={!r} variant={!r} path={} arcs={}".format(
                 tlid, text[:60], lang,

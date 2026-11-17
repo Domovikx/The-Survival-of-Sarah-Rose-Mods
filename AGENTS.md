@@ -251,20 +251,21 @@
 > Всё ниже про `cosyworker.py`/CosyVoice3/очереди `voice_queue.sh` — легаси
 > старого прогона RU/EN (код жив, новых прогонов на нём нет).
 
-### Ключ: uid = md5(old)
+### Ключ: en12 = base32(md5(old))
 
-`uid = md5(old-текст реплики в UTF-8)` — полный 32-hex, язык-независимый.
+`en12 = base32(md5(old-текст реплики в UTF-8)[:8])[:12]` — 60 бит, язык-независимый;
 `old` — оригинальный английский текст (ключ из `translate ru strings:`), он же
-`_last_say_what` в рантайме. Один uid = одна реплика; одинаковые тексты дедупятся
-автоматически.
+`_last_say_what` в рантайме. Один `en12` = одна реплика; одинаковые тексты дедупятся
+автоматически. Полная схема имени (второй хэш состояния, обоснование длин,
+миграция) — `docs/voice-naming.md`.
 
 ### Рантайм-раскладка (наш мод-контент, не пересекается с файлами игры)
 
 ```text
 mods/tssr-ai-voice-pack/          # АТОМАРНАЯ папка мода (корень игры)
   ai_voice/
-    ru/{Arc}/{uid}__{variant}.opus # русская озвучка, постфикс = имя рефа (СТАНДАРТ)
-    en/{Arc}/{uid}__{variant}.opus # английская озвучка, постфикс = имя рефа (СТАНДАРТ)
+    ru/{Arc}/{en12}-{state6} {variant}.opus # русская озвучка, хвост = имя рефа
+    en/{Arc}/{en12}-{state6} {variant}.opus # английская озвучка, хвост = имя рефа
                                   #   только opus; wav в ai_voice НЕТ (см. ниже)
   catalog/
     label_arc.json              # label -> Arc (артефакт СБОРКИ: генерит
@@ -283,7 +284,8 @@ mods/tssr-ai-voice-pack/          # АТОМАРНАЯ папка мода (ко
 **Поиск в игре:** `voice_config.rpy` читает `catalog/voice_list.json`
 (генерится из кастов: озвучен = есть реф `{Name}.wav`; variant = имя
 персонажа). Кто говорит → `_last_say_who.name` → variant из voice_list.json,
-затем фолбэк glob `{uid}*.opus`, `{uid}*.wav` (первый совпавший по алфавиту).
+затем glob `{en12}-* {variant}.{opus,wav}`, фолбэк — `{en12}-*.{opus,wav}`;
+из найденных берётся самый свежий по mtime (последняя генерация).
 **Формат — только opus** (миграция завершена 2026-10-14): `voice_batch.mts`
 пишет opus сразу (pipe loudnorm → libopus за один проход, wav не пишется),
 легаси-wav удалены с диска, `convert_all_opus.py` удалён — конвертировать
@@ -385,7 +387,7 @@ tools/generate/scripts/
                                #   overlay'ем; эвристика RULES или --llm-url
                                #   OpenAI-compatible LLM — LM Studio/ollama)
   voice_batch.mts              # БАТЧ-ОРКЕСТРАТОР: каталог POT -> audio/{lang}/{arc}/
-                               #   {uid}__{variant}.opus (эмоция из `#. emotion:` POT;
+                               #   {en12}-{state6} {variant}.opus (эмоция из POT;
                                #   --ref/--uid/--force/--emotion/--device cuda; wav НЕ
                                #   пишется: PCM из шима -> pipe f32le -> ffmpeg
                                #   loudnorm+libopus (TS, voicekit/audio.mts);
@@ -667,7 +669,7 @@ texts — рус. фразы с ЯВНЫМ признаком пола; файл
 4. Генерация ПО КАЖДОМУ варианту (файлы лежат рядом, постфикс = реф):
    node voice_batch.mts --char Sarah --ref casts/voices/Sarah/Sarah_1.wav --limit 5
    node voice_batch.mts --char Sarah --ref casts/voices/Sarah/Sarah_3.wav --limit 5
-   → audio/ru/{arc}/{uid}__Sarah_1.opus и {uid}__Sarah_3.opus
+   → audio/ru/{arc}/{en12}-{state6} Sarah_1.opus и … Sarah_3.opus
 5. Выбор: слушаешь пары в audio/ru/{arc}/ (одинаковые uid рядом)
 6. Фиксация: voice_manage.mts select {Name} {variant}
    → копирует {Name}_{variant}.wav → {Name}.wav (в корне каста)
@@ -685,9 +687,9 @@ texts — рус. фразы с ЯВНЫМ признаком пола; файл
 и отвечает лишь за список КТО озвучен.
 
 Чтобы вариант реально прозвучал — перегенерируй этим рефом (шаг 7 выше):
-файлы станут `{uid}__{Имя}.opus` и точный поиск их найдёт. Без перегенерации
-остаётся только glob-фолбэк (`{uid}*.opus`, первый по алфавиту) — он способен
-выбрать не тот вариант. Старые файлы удалять не обязательно.
+файлы станут `{en12}-{state6} {Имя}.opus`, и поиск по имени варианта их найдёт
+(`{en12}-* {Имя}.*`). Без перегенерации остаётся glob-фолбэк `{en12}-*` — он
+может взять файл другого варианта. Старые файлы удалять не обязательно.
 
 ### Инструменты
 
@@ -723,7 +725,7 @@ casts/voices/{Name}/
 
 Альтернативный реф без правки casts/voices.mts: `voice_batch.mts --ref`
 `casts/voices/{Name}/{Name}_{variant}.wav`
-(постфикс файла генерации = имя рефа: `{uid}__{variant}.wav`).
+(хвост файла генерации = имя рефа: `{en12}-{state6} {variant}.opus`).
 
 ### Эмоции в генерации (рецепт, проверено 2026-09-02)
 

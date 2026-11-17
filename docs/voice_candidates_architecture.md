@@ -38,7 +38,7 @@ voice_candidates/{Name}/
  Alaric.wav (корень каста)               ← финал (voice_manage select)
         │  каст Alaric.yaml: who_codes — кого озвучиваем (рубильник)
         ▼
- voice_batch --char Alaric → audio/ru/{arc}/{uid}__Alaric.opus
+ voice_batch --char Alaric → audio/ru/{arc}/{en12}-{state6} Alaric.opus
 ```
 
 ## Роли папок

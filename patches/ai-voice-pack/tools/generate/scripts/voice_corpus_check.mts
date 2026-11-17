@@ -46,7 +46,7 @@ function main(): number {
   const lang = val("--lang") ?? "ru";
   const loudness = Number(val("--loudness") ?? 5);
   // движок выбирает шим/venv; контракт имён ЕДИНЫЙ для обоих движков
-  // ({uid}__{Спикер}, владелец 2026-11-11: без лишнего постфикса)
+  // ({en12}-{state6} {Спикер}, владелец 2026-11-11: без лишнего постфикса)
   const engine = val("--engine") ?? "voxcpm2";
   const args = parseCli(["--lang", lang, "--engine", engine, ...(argv.includes("--demo") ? ["--demo"] : [])]);
   const phrases = selectPhrases(loadCatalog(lang), args);

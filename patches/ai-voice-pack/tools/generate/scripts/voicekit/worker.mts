@@ -47,7 +47,7 @@ export interface GenRequest {
   keep_wav?: boolean;
   /**
    * Только wav: PCM → writeWav16 → loudnorm, БЕЗ конверта в opus — корпусной
-   * `{uid}__{voice}.opus` не перезаписывается (сравнительные съёмки Vox/Cosy,
+   * `{en12}-{state6} {voice}.opus` не перезаписывается (сравнительные съёмки Vox/Cosy,
    * инцидент 2026-10-27: --keep-wav тихо перетёр 10 корпусных opus).
    */
   wav_only?: boolean;

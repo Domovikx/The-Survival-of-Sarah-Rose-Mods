@@ -9,17 +9,20 @@ description: Generate voice lines for The Survival of Sarah Rose using CosyVoice
 Fun-CosyVoice3-0.5B (voice clone). Архитектура, решения и тулы — в `AGENTS.md`
 проекта (обязательно читать).
 
-## Ключевая идея: uid = md5(old)
+## Ключевая идея: имя файла = два хэша от текста
 
-`uid = md5(old-текста, UTF-8)` — полный 32-hex, язык-независимый ключ реплики.
-`old` — исходный EN-текст из `translate ru strings:` (в рантайме = `_last_say_what`).
+`{en12}-{state6} {variant}.opus`: `en12 = base32(md5(old)[:8])[:12]` (какая
+реплика; 60 бит) и `state6 = base32(md5(канонический JSON {emotion,text})[:4])[:6]`
+(что произносится; 30 бит). `old` — исходный EN-текст из `translate ru strings:`
+(в рантайме = `_last_say_what`). Формулы, обоснование длин и миграция —
+`docs/voice-naming.md`.
 
 ## Рантайм-раскладка
 
 ```text
 ai_voice/                          # КОРЕНЬ ПРОЕКТА (рядом с game/), не внутри game/
-  ru/{Arc}/{uid}__{variant}.opus    # русская озвучка, постфикс = имя рефа (СТАНДАРТ)
-  en/{Arc}/{uid}__{variant}.opus    # английская озвучка (текст = old)
+  ru/{Arc}/{en12}-{state6} {variant}.opus  # русская озвучка, хвост = имя рефа
+  en/{Arc}/{en12}-{state6} {variant}.opus  # английская озвучка (текст = old)
                                     #   wav в ai_voice НЕТ (удалены 2026-10-14,
                                     #   финальная миграция) — только opus;
                                     #   wav остаются в casts/ (рефы)
@@ -32,9 +35,10 @@ Arc в рантайме = label-часть translation ID (`OpeningScene_92a05bc
 через `label_arc.json`. Папка вне game/ работает благодаря
 `config.searchpath.append("")` в voice_config.rpy.
 
-**Поиск в игре:** приоритет `{uid}__{активный вариант}.opus` (кто говорит →
+**Поиск в игре:** приоритет `{en12}-* {активный вариант}.{opus,wav}` (кто говорит →
 `_last_say_who.name` → `catalog/voice_list.json` → вариант = имя персонажа),
-затем фолбэк glob `{uid}*.opus` → `{uid}*.wav` (первый по алфавиту; wav-файлов
+затем фолбэк glob `{en12}-*.{opus,wav}`; из найденных берётся самый свежий по mtime
+(wav-файлов
 в ai_voice нет — фолбэк-ветка остаётся в коде, но пуста). Сменил
 `ref:` в yaml → `voice_manage.mts select` (voice_list.json — артефакт
 сборки из casts/voices.mts, реген не нужен) → в игре зазвучал новый вариант. Файлы разных
@@ -61,14 +65,14 @@ casts/voices/{Имя}/
 
 ## Тулы
 
-| Тул                            | Назначение                                                                                                                                      |
-| ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| `npm run potgen` / `po:update` | ре-инвентарь текстов → po/template.pot + po/ru.po; дельта added/changed/dropped = git diff template.pot (только при апдейте игры)               |
-| `voice_status.mts`             | статус/прогноз генерации: готово по языкам/аркам, %, воркеры, скорость (ВСЕГДА для «статус?», без ручного подсчёта)                             |
-| `add_candidate.mts`            | MP3-кандидат → реф: нарезка 10с + чистка + loudnorm, одним прогоном (инкрементально; подключает голос в casts/voices.mts)                       |
-| `clean_refs.mts`               | чистка рефа: highpass+afftdn+deesser+highshelf → loudnorm → фейды                                                                               |
-| `voice_manage.mts`             | list/status/select: фиксация A/B-варианта `{Имя}_{v}.wav → {Имя}.wav` (voice_list.json — артефакт сборки, реген не нужен)                       |
-| `voice_batch.mts`              | батч-генерация в ai_voice/{lang}/{arc}/{uid}__{variant}.opus (СРАЗУ opus, wav не пишется; `--ref` перезаписывает реф; инференс — cosyworker.py) |
+| Тул                            | Назначение                                                                                                                                               |
+| ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `npm run potgen` / `po:update` | ре-инвентарь текстов → po/template.pot + po/ru.po; дельта added/changed/dropped = git diff template.pot (только при апдейте игры)                        |
+| `voice_status.mts`             | статус/прогноз генерации: готово по языкам/аркам, %, воркеры, скорость (ВСЕГДА для «статус?», без ручного подсчёта)                                      |
+| `add_candidate.mts`            | MP3-кандидат → реф: нарезка 10с + чистка + loudnorm, одним прогоном (инкрементально; подключает голос в casts/voices.mts)                                |
+| `clean_refs.mts`               | чистка рефа: highpass+afftdn+deesser+highshelf → loudnorm → фейды                                                                                        |
+| `voice_manage.mts`             | list/status/select: фиксация A/B-варианта `{Имя}_{v}.wav → {Имя}.wav` (voice_list.json — артефакт сборки, реген не нужен)                                |
+| `voice_batch.mts`              | батч-генерация в ai_voice/{lang}/{arc}/{en12}-{state6} {variant}.opus (СРАЗУ opus, wav не пишется; `--ref` перезаписывает реф; инференс — cosyworker.py) |
 
 ## Генерация
 
@@ -79,14 +83,14 @@ node tools/generate/scripts/voice_batch.mts \
   [--ref casts/voices/{Имя}/{Имя}_{variant}.wav]
 ```
 
-- Модель грузится 1 раз; resumable (существующие скипаются по stem
-  `{uid}__{variant}`: есть .opus или .wav — включая постфикс варианта,
+- Модель грузится 1 раз; resumable (существующие скипаются по имени файла
+  `{en12}-{state6} {variant}`: есть .opus или .wav — включая хвост варианта,
   поэтому разные рефы не конфликтуют; wav без opus доконвертится сам)
 - Конфиг: cross_lingual + RL, flow-temp 0.8, cfg 0.7, RAS 0.8/25/0.1, seed 42, silent-trim
   (официальные параметры модели; flow-temp 1.2/cfg 0.9 давали артефакты)
 - Озвучиваются только dialogue+наррация и только касты с рефом {Голос}.wav
 - `--ref casts/voices/X/X_2.wav` — генерация конкретным вариантом БЕЗ правки
-  casts/voices.mts (файлы выйдут `{uid}__X_2.opus`); реестр не трогается
+  casts/voices.mts (файлы выйдут `… X_2.opus`); реестр не трогается
 - Автотрим хвостов (паттерн: тишина ≥80мс → всплеск ≤500мс у конца файла)
 - Авто-выравнивание уровня внутри опус-прохода (loudnorm dynamic
   -16 LUFS/TP -1.5) — CV3 гуляет на ±2-4 dB

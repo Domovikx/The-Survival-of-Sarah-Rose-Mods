@@ -8,14 +8,14 @@
  * (loadCatalog/voiceForSpeaker — импорт из voice_batch.mts), поэтому
  * расхождений «логика генерации vs логика аудита» быть не может.
  *
- * Классы (uid = md5(msgid), суффикс файла = вариант = имя каста):
- *   OK         — суффикс ∈ ожидаемым голосам uid
+ * Классы (ключ файла = en12 реплики, суффикс = вариант = имя каста):
+ *   OK         — суффикс ∈ ожидаемым голосам реплики
  *   WRONG_ROLE — суффикс не совпал с SPEAKERS[спикера] — ГЛАВНЫЙ класс
  *   VOICELESS  — спикер с null в SPEAKERS (осознанно без голоса), файл есть
- *   NON_SPEECH — uid есть в POT только как menu/ui/имя, а файл озвучен
- *   STALE      — uid в POT нет (строка выпала / текст изменился)
+ *   NON_SPEECH — реплика есть в POT только как menu/ui/имя, а файл озвучен
+ *   STALE      — реплики в POT нет (строка выпала / текст изменился)
  *   ARC        — суффикс верен, файл лежит не в той арке (report-only)
- *   WEIRD      — имя файла вне формата {32hex}__{variant}.opus (report-only)
+ *   WEIRD      — имя файла вне формата `{en12}-{state6} {variant}.opus` (report-only)
  *
  * Лечение:
  *   --delete   WRONG_ROLE/VOICELESS/NON_SPEECH/STALE → удаление (оба языка).
@@ -60,6 +60,7 @@ import { parseArgs } from "node:util";
 
 import { scanGame } from "../../../../../.opencode/skills/renpy-po/potgen.mts";
 import { loadCatalog, voiceForSpeaker } from "./voice_batch.mts";
+import { enHash, parseAnyVoiceName } from "./voice_names.mts";
 
 const SCRIPTS_DIR = dirname(fileURLToPath(import.meta.url));
 const PKG_ROOT = join(SCRIPTS_DIR, "..", "..", "..");
@@ -98,11 +99,11 @@ interface Finding {
 // ------------------------------------------------------------- ожидание ---
 
 interface Expectation {
-  /** uid речевых строк (dialogue/narration) → ожидания. */
+  /** Ключи имён файлов (en12 и en16) речевых строк → ожидания. */
   speech: Map<string, UidInfo>;
-  /** uid не-речевых строк (menu/ui/имя). */
+  /** То же для не-речевых строк (menu/ui/имя). */
   nonSpeech: Set<string>;
-  /** Все uid POT (речь + не-речь) — дрейф в --verify. */
+  /** Полный md5 (32 hex) всех строк POT — сверка с scanGame в --verify. */
   allUids: Set<string>;
 }
 
@@ -110,16 +111,19 @@ function buildExpectation(): Expectation {
   const speech = new Map<string, UidInfo>();
   const nonSpeech = new Set<string>();
   const allUids = new Set<string>();
+  /** Префиксы, которыми строка может называться в имени файла: en12 и en16. */
+  const prefixes = (e: { uid: string; old: string }): string[] => [enHash(e.old), e.uid.slice(0, 16)];
   for (const e of loadCatalog()) {
-    allUids.add(e.uid.slice(0, 16));
+    allUids.add(e.uid);
+    const keys = prefixes(e);
     if (e.category !== "dialogue" && e.category !== "narration") {
-      nonSpeech.add(e.uid.slice(0, 16));
+      for (const k of keys) nonSpeech.add(k);
       continue;
     }
-    let info = speech.get(e.uid.slice(0, 16));
+    let info = speech.get(keys[0]!);
     if (!info) {
       info = { voices: new Set(), who: e.who_name || "Narrator", arcs: new Set(), ruTranslated: false };
-      speech.set(e.uid.slice(0, 16), info);
+      for (const k of keys) speech.set(k, info);
     }
     const v = voiceForSpeaker(e);
     if (v) info.voices.add(v);
@@ -149,13 +153,16 @@ function listFiles(dir: string, base = ""): string[] {
   return out;
 }
 
-/** Разбор имени файла: новая схема (en16__state8__variant) и легаси (uid32__variant). */
-function parseFile(name: string): { uid16: string; variant: string } | null {
-  const modern = /^([0-9a-f]{16})__[0-9a-f]{8}__(.+)\.(?:opus|wav)$/.exec(name);
-  if (modern) return { uid16: modern[1]!, variant: modern[2]! };
-  const legacy = /^([0-9a-f]{32})__(.+)\.(?:opus|wav)$/.exec(name);
-  if (legacy) return { uid16: legacy[1]!.slice(0, 16), variant: legacy[2]! };
-  return null;
+/**
+ * Разбор имени файла через единый кодек: base32 (нынешняя схема), hex (предыдущая)
+ * и uid32 (легаси). Ключ ожидания — префикс из имени; для uid32 он урезан до 16,
+ * потому что POT-каталог индексируется первыми 16 hex-символами md5.
+ */
+function parseFile(name: string): { en: string; lookup: string; variant: string } | null {
+  const parsed = parseAnyVoiceName(name);
+  if (!parsed) return null;
+  const lookup = parsed.scheme === "uid32" ? parsed.en.slice(0, 16) : parsed.en;
+  return { en: parsed.en, lookup, variant: parsed.variant };
 }
 
 function classify(lang: string, rel: string, exp: Expectation): Finding {
@@ -170,10 +177,10 @@ function classify(lang: string, rel: string, exp: Expectation): Finding {
       variant: "",
       arc: fileArc,
       kind: "WEIRD",
-      detail: "имя не {en16}__{state8}__{variant}.opus",
+      detail: "имя не {en12}-{state6} {variant}.opus",
     };
   }
-  const { uid16: uid, variant } = parsed;
+  const { lookup: uid, variant } = parsed;
   const info = exp.speech.get(uid);
   if (!info) {
     if (exp.nonSpeech.has(uid)) {
@@ -353,9 +360,11 @@ export function main(argv: string[] = process.argv.slice(2)): number {
   const langs = values.lang ? [values.lang] : ["ru", "en"];
 
   const exp = buildExpectation();
-  const voiceless = [...exp.speech.values()].filter((i) => i.voices.size === 0).length;
+  // Ключей в мапах ДВА на строку (en12 и en16) — в отчёте нужны строки, не ключи.
+  const speechLines = new Set(exp.speech.values());
+  const voiceless = [...speechLines].filter((i) => i.voices.size === 0).length;
   console.log(
-    `PO: речевых uid ${exp.speech.size} (из них без голоса: ${voiceless}), не-речевых uid ${exp.nonSpeech.size}`,
+    `PO: речевых строк ${speechLines.size} (из них без голоса: ${voiceless}), не-речевых строк ${exp.nonSpeech.size / 2}`,
   );
 
   // 1) скан и классификация всех языков — ДО любых правок
@@ -367,7 +376,19 @@ export function main(argv: string[] = process.argv.slice(2)): number {
   // 2) сверка с сырьём — до лечения: живые STALE защищают --delete
   let verify: VerifyResult | null = null;
   if (values.verify) {
-    const staleUids = new Set(scanned.flatMap((s) => s.findings.filter((f) => f.kind === "STALE").map((f) => f.uid)));
+    const staleUids = new Set(
+      scanned.flatMap((s) =>
+        s.findings
+          .filter((f) => f.kind === "STALE")
+          .map((f) => {
+            // Полный md5 известен только у легаси-имён (`{uid32}__{variant}`) —
+            // только их и можно сверить с живой игрой: из en12/state6 обратной
+            // дороги к тексту нет (в этом и смысл схемы).
+            const parsed = parseFile(f.rel.slice(f.rel.lastIndexOf("/") + 1));
+            return parsed && /^[0-9a-f]{32}$/.test(parsed.en) ? parsed.en : f.uid;
+          }),
+      ),
+    );
     try {
       verify = verifyAgainstSource(exp, staleUids, values.game ?? DEFAULT_GAME_DIR);
     } catch (e) {

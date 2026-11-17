@@ -14,7 +14,7 @@ description: Пофразовые эмоции (`#. emotion:`) в po/template.po
 ```text
 #. arc: WarriorPath            ← арка (роутинг аудио в ai_voice/{lang}/{Arc}/)
 #. scene: WarriorQueen7Capital ← сцена (таргет --scene при точечной перегенерации)
-#. uid: <md5(msgid)>           ← ключ тона и суффикс {uid}__{Who}.opus
+#. uid: <md5(msgid)>           ← ключ тона (32-hex; имя файла считается из EN отдельно)
 #. emotion: Confidently and warmly   ← ТОН (всегда по-английски)
 msgctxt "speaker:Sarah"
 ```

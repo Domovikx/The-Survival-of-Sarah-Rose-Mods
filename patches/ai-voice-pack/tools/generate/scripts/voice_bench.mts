@@ -24,7 +24,7 @@
  */
 import { spawnSync } from "node:child_process";
 import { mkdirSync, writeFileSync } from "node:fs";
-import { join } from "node:path";
+import { basename, join } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
 import { DEFAULT_PYTHON, loadCatalog, PKG_ROOT, selectPhrases, type Args, type Phrase } from "./voice_batch.mts";
@@ -275,7 +275,9 @@ async function benchWorker(
         ref: p.ref,
         emotion: p.emotion,
         seed: o.generationSeed,
-        out: join(outDir, `${p.uid}__${p.voice}.wav`),
+        // Имя — как у корпуса (единственный источник правды: `p.out` из voiceBase);
+        // стенд только меняет расширение на .wav.
+        out: join(outDir, basename(p.out).replace(/\.[^.]+$/, ".wav")),
       });
       const wallSec = (Date.now() - t0) / 1000;
       const gen = shimLines.map(parseShimGenLine).find((x) => x !== null) ?? null;
