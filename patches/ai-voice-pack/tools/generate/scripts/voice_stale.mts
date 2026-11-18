@@ -51,18 +51,26 @@ type Row = { lang: string; file: string; cls: Cls; en?: string; variant?: string
  * POT-реплики под ТРЕМЯ ключами сразу: en12 (целевая схема), en16 (hex-переход)
  * и uid32 (легаси). Наборы символов не пересекаются, поэтому одна мапа
  * обслуживает все поколения имён без ветвления на каждом файле.
+ *
+ * ЗНАЧЕНИЕ — СПИСОК, а не одна запись: один и тот же EN-текст встречается у
+ * разных каст с РАЗНЫМ тоном («I do.» — Thomas/Sarah/Marion/Sophia), и каждая
+ * реплика имеет своё состояние. Одна запись на текст давала ложные STALE
+ * (поймано 2026-11-18 на de: 21 «устаревший» файл был живым).
  */
 const pot = parsePo(readFileSync(POT_PATH, "utf-8").replace(/\r\n/g, "\n")).filter((e) => e.msgid);
-const byEn = new Map<string, { en: string; emotion: string; key: string }>();
+type Src = { en: string; emotion: string; key: string };
+const byEn = new Map<string, Src[]>();
 for (const e of pot) {
-  const src = {
+  const src: Src = {
     en: e.msgid,
     emotion: meta(e.comments, "emotion_new:") || meta(e.comments, "emotion:"),
     key: `${e.msgctxt}\u0000${e.msgid}`,
   };
-  byEn.set(enHash(e.msgid), src);
-  byEn.set(hexEnHash(e.msgid), src);
-  byEn.set(md5Hex(e.msgid), src);
+  for (const k of [enHash(e.msgid), hexEnHash(e.msgid), md5Hex(e.msgid)]) {
+    const arr = byEn.get(k);
+    if (arr) arr.push(src);
+    else byEn.set(k, [src]);
+  }
 }
 
 const poCache = new Map<string, Map<string, string>>();
@@ -97,19 +105,24 @@ for (const lang of readdirSync(AUDIO)) {
       if (!parsed) continue;
       const rel = `${lang}/${arc}/${file}`;
       const { en, variant, scheme } = parsed;
-      const src = byEn.get(en);
+      const srcs = byEn.get(en);
 
       let cls: Cls;
-      if (!src) cls = "ORPHAN";
+      if (!srcs || !srcs.length) cls = "ORPHAN";
       else {
-        const text = lang === "en" ? src.en : (po.get(src.key) ?? "");
-        if (!text.trim()) cls = "NO-TRANSLATION";
+        // У одного EN-текста бывает несколько реплик (разные касты/тон).
+        const texts = srcs.map((s) => (lang === "en" ? s.en : (po.get(s.key) ?? "")));
+        if (texts.every((t) => !t.trim())) cls = "NO-TRANSLATION";
         else if (scheme === "uid32") cls = "LEGACY";
         else if (scheme === "hex") cls = "HEX";
-        else cls = parsed.state === stateHash(text, src.emotion) ? "OK" : "STALE";
+        else {
+          // Файл живой, если его состояние совпало с ЛЮБОЙ репликой этого текста.
+          const ok = srcs.some((s, i) => texts[i]!.trim() && parsed.state === stateHash(texts[i]!, s.emotion));
+          cls = ok ? "OK" : "STALE";
+        }
       }
       counts[lang]![cls]++;
-      rows.push({ lang, file: rel, cls, en: src?.en, variant });
+      rows.push({ lang, file: rel, cls, en: srcs?.[0]?.en, variant });
 
       if (DELETE && (cls === "STALE" || cls === "NO-TRANSLATION")) {
         rmSync(join(arcDir, file));
