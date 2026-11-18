@@ -654,6 +654,10 @@ const PAGE = `<!doctype html>
   @media (max-width:1500px) { #hchart { grid-template-columns:repeat(2,minmax(0,1fr)); } }
   @media (max-width:1200px) { #hchart { grid-template-columns:1fr; } }
   #hchart > .sp { min-width:0; overflow:hidden; }
+  /* Ось времени: метки позиционируются по проценту ширины, чтобы совпадать
+     с вертикальными засечками в SVG. */
+  .axis { position:relative; height:13px; margin:1px 0 2px; }
+  .axis span { position:absolute; top:0; font-size:10px; color:var(--muted); white-space:nowrap; }
   #hchart .lbl { white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
   .stats { margin-top:12px; font-size:12px; }
   /* Полоса состояния: проблемы первыми, всё хорошо — одна зелёная строка. */
@@ -696,13 +700,25 @@ const size = (b) => !b ? '—' : b < 1073741824 ? Math.round(b / 1048576) + ' М
 const num = (n) => String(n).replace(/\\B(?=(\\d{3})+(?!\\d))/g, ' ');
 // Любое неизвестное значение печатаем как «—», а не «undefined».
 const N = (v) => (v === null || v === undefined ? '—' : num(v));
+// Время в местной зоне: журналы пишут UTC, а человек сверяет с часами на столе
+// (владелец 2026-11-18: «не понимаю что когда идёт» — на экране были UTC-срезы).
+const hm = (v) => {
+  const d = v instanceof Date ? v : new Date(v);
+  return String(d.getHours()).padStart(2, '0') + ':' + String(d.getMinutes()).padStart(2, '0');
+};
+const hms = (v) => {
+  const d = v instanceof Date ? v : new Date(v);
+  return hm(d) + ':' + String(d.getSeconds()).padStart(2, '0');
+};
 // Мини-график: SVG без библиотек. Что важно для разбора сбоя (владелец 2026-11-17):
 //   - ось ВРЕМЕНИ (x по timestamp, а не по индексу) — иначе «когда» не ответить;
 //   - разрывы: если между замерами больше 2.5× медианного шага, линия рвётся
 //     (иначе простой прогона выглядит как «данные были»);
 //   - метки событий: остановка стражем и старт бэкенда (вертикальные риски);
 //   - порог всегда в шкале (иначе пунктир 300 Вт не рисуется при максе 274);
-//   - значение на правом краю + подписи времени под графиком.
+//   - значение на правом краю + подписи времени под графиком;
+//   - засечки оси времени: без них подпись окна не отвечает, в КАКОЙ момент был
+//     скачок температуры или просадка скорости (владелец 2026-11-18).
 const spark = (points, color, label, unit, threshold, events, lastSuffix, mode) => {
   if (!points.length) return '';
   const w = 1000, h = 56, pad = 4;
@@ -766,11 +782,29 @@ const spark = (points, color, label, unit, threshold, events, lastSuffix, mode) 
       '" y2="' + h + '" stroke="' + col + '" stroke-width="1" stroke-dasharray="2 3" vector-effect="non-scaling-stroke"/>';
   }).join('');
   const last = points[points.length - 1];
-  const hhmm = (iso) => iso.slice(11, 16);
+  // Засечки оси времени: шаг — круглые минуты, не больше 5 меток на график.
+  // Выравнивание по местному времени (иначе при смещении зоны метки «плывут»).
+  const spanMin = (t1 - t0) / 60000;
+  const tickMin = [1, 2, 5, 10, 15, 30, 60, 120, 180, 360, 720].find((m) => spanMin / m <= 5) || 1440;
+  const stepMs = tickMin * 60000;
+  const zoneMs = new Date(t0).getTimezoneOffset() * 60000;
+  const ticks = [];
+  for (let t = Math.ceil((t0 - zoneMs) / stepMs) * stepMs + zoneMs; t <= t1; t += stepMs) ticks.push(t);
+  const grid = ticks.map((t) =>
+    '<line x1="' + X(t).toFixed(1) + '" y1="0" x2="' + X(t).toFixed(1) + '" y2="' + h +
+    '" stroke="#2b3440" stroke-width="1" stroke-dasharray="2 4" vector-effect="non-scaling-stroke"/>').join('');
+  const axis = ticks.length
+    ? '<div class="axis">' + ticks.map((t) => {
+      const p = ((t - t0) / Math.max(1, t1 - t0)) * 100;
+      const anchor = p < 8 ? 'translateX(0)' : p > 92 ? 'translateX(-100%)' : 'translateX(-50%)';
+      return '<span style="left:' + p.toFixed(1) + '%;transform:' + anchor + '">' + hm(t) + '</span>';
+    }).join('') + '</div>'
+    : '';
   return '<div class="sp"><svg viewBox="0 0 ' + w + ' ' + h + '" preserveAspectRatio="none" style="width:100%;height:56px;display:block">' +
-    thrLine + evLines + lines + '</svg>' +
+    grid + thrLine + evLines + lines + '</svg>' + axis +
     '<div class="muted" style="font-size:11px;display:flex;justify-content:space-between;gap:8px">' +
-    '<span class="lbl">' + label + ' <b style="color:#e6edf3">' + last.v.toFixed(0) + ' ' + unit + (lastSuffix || '') + '</b></span>' +
+    '<span class="lbl">' + label + ' <b style="color:#e6edf3">' + last.v.toFixed(0) + ' ' + unit + (lastSuffix || '') +
+    '</b> <span class="muted">' + hm(last.t) + '</span></span>' +
     '<span class="lbl">' + lo0.toFixed(0) + '…' + hi0.toFixed(0) + ' ' + unit +
     (threshold !== undefined ? ' · порог ' + threshold : '') + '</span></div></div>';
 };
@@ -852,20 +886,39 @@ async function tick() {
     : '';
   // Точки с временем: график строит ось по timestamp, а не по индексу.
   const pts = (key) => smp.map((x) => ({ t: x.t, v: x[key] }));
+  // Слоты -np приводятся к окну здоровья: иначе соседние графики жили в разных
+  // шкалах (слоты — с утра, здоровье — час) и «когда было 8» не сопоставлялось.
+  const npPts = (() => {
+    const all = (s.np && s.np.points) || [];
+    if (!all.length || !smp.length) return [];
+    const from = Date.parse(smp[0].t);
+    const before = all.filter((p) => Date.parse(p.t) <= from);
+    const after = all.filter((p) => Date.parse(p.t) > from);
+    // Последнее известное значение «растягивается» на начало окна (режим step):
+    // иначе график слотов уходил в прошлое и жил в другой шкале времени.
+    const out = (before.length ? [{ t: smp[0].t, v: before[before.length - 1].v }] : []).concat(after);
+    // ...и на конец окна: без этого ось кончалась на последней смене -np
+    // (20:34 против 20:44 у остальных) и метки не совпадали по колонкам.
+    const end = smp[smp.length - 1].t;
+    if (out.length && Date.parse(out[out.length - 1].t) < Date.parse(end)) {
+      out.push({ t: end, v: out[out.length - 1].v });
+    }
+    return out;
+  })();
   $('hchart').innerHTML = smp.length
     ? spark(pts('gpuPower'), '#d29922', 'GPU мощность', 'Вт', 300, ev) +
       spark(pts('gpuTemp'), '#f85149', 'GPU температура', '°C', 85, ev) +
       spark(smp.map((x) => ({ t: x.t, v: 100 - x.ramFreePct })), '#3fb950', 'RAM занято', '%', 96, ev,
         ' (' + (s.system.memTotal / 1024 - (lastS.ramFreeGb ?? 0)).toFixed(1) + ' ГБ)') +
-      (s.np && s.np.points && s.np.points.length
-        ? spark(s.np.points, '#4c8bd6', 'Слоты llama (-np)', 'шт', undefined, [], '', 'step')
+      (npPts.length
+        ? spark(npPts, '#4c8bd6', 'Слоты llama (-np)', 'шт', undefined, [], '', 'step')
         : '')
     : '';
   // Одна общая подпись окна и легенда меток: три одинаковых «08:40 → 09:51»
   // под каждым графиком были шумом (владелец 2026-11-17).
   $('htime').textContent = smp.length
-    ? 'окно ' + smp[0].t.slice(11, 16) + ' → ' + smp[smp.length - 1].t.slice(11, 16) +
-      ' (UTC) · пунктир — порог · серая риска — старт бэкенда · красная — остановка стражем · разрыв линии — замеров не было (страж стоял)'
+    ? 'окно ' + hm(smp[0].t) + ' → ' + hm(smp[smp.length - 1].t) +
+      ' (местное время) · пунктир — порог · серая риска — старт бэкенда · красная — остановка стражем · разрыв линии — замеров не было (страж стоял)'
     : '';
   const q = s.queue;
   const lp = s.live ? pct(s.live.filled, s.live.total) : null;
@@ -883,7 +936,7 @@ async function tick() {
           '<div class="row"><span>скорость</span><span class="v">' + (s.live.rate === null ? '…' : s.live.rate + ' стр/мин') + '</span></div>' +
           '<div class="row"><span>осталось</span><span class="v">' + etaTxt + '</span></div>'
         : '') +
-      '<div class="row"><span>пасс стартовал</span><span class="muted">' + String(q.at).slice(11, 19) + '</span></div>' +
+      '<div class="row"><span>пасс стартовал</span><span class="muted">' + hms(q.at) + '</span></div>' +
       // График скорости: видно, падает темп или это разовая просадка.
       (s.speedHistory && s.speedHistory.length > 1
         ? spark(s.speedHistory, '#4c8bd6', 'скорость', 'стр/мин', undefined, [])
