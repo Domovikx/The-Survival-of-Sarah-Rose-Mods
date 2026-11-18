@@ -42,7 +42,9 @@ const gluedWith = (i: number, j: number): string | null => {
   const ta = a.msgstr.trim();
   const tb = b.msgstr.trim();
   if (ta === tb) return `дубль #${j}`;
-  if (tb.length >= 20 && ta.includes(tb)) return `вклейка #${j}`;
+  // Порог «20 символов» пропускал короткие вклейки («Oui. Bien sûr.» содержит
+  // «Oui.» — 4 символа). Считаем по СЛОВАМ: 3+ слова соседа внутри нашей строки.
+  if ((tb.length >= 10 || tb.split(" ").filter(Boolean).length >= 3) && ta.includes(tb)) return `вклейка #${j}`;
   const wa = ta.split(" ");
   const wb = tb.split(" ");
   // Общий кусок ≥ MIN_WORDS подряд — второй тип вклейки (частичное дописывание).
@@ -92,7 +94,13 @@ for (const e of entries) {
   if (hit) e.msgstr = "";
   idx++;
 }
-writePoAtomic(PO, renderPo(entries.filter((e) => e.msgid), header));
+writePoAtomic(
+  PO,
+  renderPo(
+    entries.filter((e) => e.msgid),
+    header,
+  ),
+);
 const after = parsePo(readFileSync(PO, "utf-8").replace(/\r\n/g, "\n")).filter((e) => e.msgid);
 console.log(
   `${LANG}: обнулено ${cleared.length}, пустых теперь ${after.filter((e) => !e.msgstr.trim()).length}. ` +

@@ -16,6 +16,8 @@
  */
 import { spawnSync } from "node:child_process";
 import { readFileSync, writeFileSync } from "node:fs";
+
+import { chooseNp } from "./health_rules.mts";
 import { join } from "node:path";
 
 const args = process.argv.slice(2);
@@ -105,7 +107,7 @@ for (;;) {
   const idle = idleSeconds();
   const np = currentNp();
   if (idle >= 0) {
-    const want = idle >= IDLE_MIN * 60 ? AWAY_NP : HERE_NP;
+    const want = chooseNp(idle, { idleMin: IDLE_MIN, awayNp: AWAY_NP, hereNp: HERE_NP });
     if (want !== np) {
       setNp(want);
       if (backendAlive()) {

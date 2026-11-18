@@ -29,6 +29,8 @@ const EN_TAG = "This line gets markup around it.";
 const EN_EMPTY = "This line loses its translation.";
 const EN_ORPHAN = "The English text here will change.";
 const EN_LEGACY = "This one has an old-style name.";
+/** Один и тот же EN у двух каст с РАЗНЫМ тоном (регресс 2026-11-18). */
+const EN_TWOTONE = "Same text, two different tones.";
 
 /** POT-запись с тоном (комментарии стоят ПЕРЕД своей записью). */
 const potEntry = (en: string): string =>
@@ -38,7 +40,10 @@ const pot = [
   'msgid ""',
   'msgstr ""',
   "",
-  ...[EN_OK, EN_TEXT, EN_TONE, EN_TAG, EN_EMPTY, EN_ORPHAN, EN_LEGACY].map(potEntry),
+  ...[EN_OK, EN_TEXT, EN_TONE, EN_TAG, EN_EMPTY, EN_ORPHAN, EN_LEGACY].map((e) => potEntry(e)),
+  // два разных тона для одного текста: файл с ЛЮБЫМ из них должен быть живым
+  potEntry(EN_TWOTONE, "Angry"),
+  potEntry(EN_TWOTONE, "Calm"),
 ].join("\n");
 
 const poEntry = (en: string, tr: string): string =>
@@ -55,6 +60,7 @@ const po = [
   poEntry(EN_EMPTY, ""),
   poEntry(EN_ORPHAN, "Английский изменился."),
   poEntry(EN_LEGACY, "Это старое имя."),
+  poEntry(EN_TWOTONE, "Один текст, два тона."),
 ].join("\n");
 
 test("E2E: voice_stale различает все классы (текст / тон / пусто / сирота / легаси)", () => {
@@ -83,6 +89,9 @@ test("E2E: voice_stale различает все классы (текст / то
   put(
     voiceFileName({ en: `${EN_ORPHAN} (old)`, variant: "Narrator", spoken: "Английский изменился.", emotion: "Calm" }),
   );
+  // 8. ОДИН ТЕКСТ, ДВА ТОНА: файл сгенерирован с тоном Calm — он живой,
+  //    даже если в POT тот же текст есть с тоном Angry (регресс 2026-11-18).
+  put(voiceFileName({ en: EN_TWOTONE, variant: "Narrator", spoken: "Один текст, два тона.", emotion: "Calm" }));
   // 7. LEGACY: имя старой схемы (uid есть в POT)
   put(`${createHash("md5").update(EN_LEGACY, "utf8").digest("hex")}__Narrator.opus`);
 
@@ -102,8 +111,8 @@ test("E2E: voice_stale различает все классы (текст / то
   const counts = rows.reduce<Record<string, number>>((acc, r) => ((acc[r.cls] = (acc[r.cls] ?? 0) + 1), acc), {});
   console.log("классы:", counts);
 
-  assert.equal(rows.length, 7, `должно быть 7 файлов:\n${out}`);
-  assert.equal(counts.OK, 2, "OK: неизменённая строка и строка с разметкой (разметка снимается до хэша)");
+  assert.equal(rows.length, 8, `должно быть 8 файлов:\n${out}`);
+  assert.equal(counts.OK, 3, "OK: две неизменённые + один текст с другим тоном у соседнего каста");
   assert.equal(counts.STALE, 2, "STALE: правка перевода и правка тона");
   assert.equal(counts["NO-TRANSLATION"], 1, "NO-TRANSLATION: перевод опустел");
   assert.equal(counts.ORPHAN, 1, "ORPHAN: английский текст изменился");

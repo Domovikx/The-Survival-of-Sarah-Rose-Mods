@@ -17,6 +17,8 @@
  * После ребута последняя строка CSV — то, что было за секунды до сброса.
  */
 import { spawnSync } from "node:child_process";
+
+import { stopReason } from "./health_rules.mts";
 import { closeSync, fsyncSync, openSync, statfsSync, writeSync } from "node:fs";
 import { cpus, freemem, totalmem } from "node:os";
 import { join } from "node:path";
@@ -142,7 +144,7 @@ for (;;) {
   if (g && g.limit > 0 && g.power / g.limit >= 0.95) notes.push(`питание_на_потолке ${g.power}/${g.limit}Вт`);
   if (ramLowStreak >= 2) notes.push(`RAM_МАЛО ${freePct}%`);
   if (disk < DISK_FREE_MIN_GB) notes.push(`ДИСК_МАЛО ${disk.toFixed(1)}ГБ`);
-  const stopReason = notes.find((n) => n.startsWith("GPU_ЖАР"));
+  const stop = stopReason(notes);
 
   const line = [
     new Date().toISOString(),
@@ -163,9 +165,9 @@ for (;;) {
     `${new Date().toISOString().slice(11, 19)} GPU ${g ? `${g.temp}°C ${g.power}Вт ${g.util}% ${g.mem}MiB` : "n/a"} | CPU ${c}% | RAM ${freePct}% (${freeGb} ГБ) | диск ${Number.isFinite(disk) ? disk.toFixed(1) : "?"} ГБ${notes.length ? ` | ⚠ ${notes.join(" ")}` : ""}`,
   );
 
-  if (stopReason && !DRY) {
+  if (stop && !DRY) {
     stopLoad();
-    console.log(`Страж: нагрузка погашена (${stopReason}), строка-причина в tmp/health.csv`);
+    console.log(`Страж: нагрузка погашена (${stop}), строка-причина в tmp/health.csv`);
     break;
   }
 
