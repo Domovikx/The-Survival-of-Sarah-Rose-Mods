@@ -33,7 +33,7 @@ const LANGS = ["zh", "ru", "es", "pt", "de", "ja", "fr", "pl", "ko", "it"];
  * живёт со старым JS и рисует «undefined» на новых полях (поймано 2026-11-16).
  * Поднимать при ЛЮБОМ изменении набора полей.
  */
-const API_VER = 21;
+const API_VER = 22;
 
 /** Прошлые значения CPU/RAM для дельты. */
 const prevCpu = cpus().map((c) => c.times);
@@ -777,10 +777,19 @@ async function tick() {
     return;
   }
   $('at').textContent = s.at.slice(11, 19);
+  // Заголовок вкладки = язык и процент: прогресс видно из панели задач, не открывая пульт.
+  document.title = s.live
+    ? (s.queue ? s.queue.lang + ' ' + P(pct(s.live.filled, s.live.total)) + ' · TSSR' : 'TSSR · пульт')
+    : 'TSSR · пульт';
   // Полоса состояния: сначала проблемы, потом «всё в норме».
   const alerts = [];
   if (!s.servers.translate.up) alerts.push(['bad', 'бэкенд перевода (:8081) не отвечает — перевод стоит']);
   if (!s.queue) alerts.push(['warn', 'очередь переводов не запущена']);
+  else {
+    const qAgeMin = (Date.now() - Date.parse(s.queue.at)) / 60_000;
+    const stalled = s.live && s.live.rate === null && qAgeMin > 12;
+    if (stalled) alerts.push(['warn', 'очередь молчит ' + Math.round(qAgeMin) + ' мин (пасс идёт, но прогресса нет)']);
+  }
   const lastH = s.health && s.health.samples.length ? s.health.samples.at(-1) : null;
   const lastStop = s.health && s.health.lastStop ? Date.parse(s.health.lastStop.t) : 0;
   if (lastStop && Date.now() - lastStop < 30 * 60_000) alerts.push(['warn', 'страж останавливал прогон недавно: ' + s.health.lastStop.note]);
