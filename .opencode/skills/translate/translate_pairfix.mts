@@ -1,20 +1,29 @@
 /**
- * translate_pairfix.mts — парная починка «перевода соседа».
+ * translate_pairfix.mts — восстановление строк, чей перевод оказался в соседней
+ * строке, когда совпадения текста недостаточно для однозначного вывода.
  *
- * Когда строка пуста, а сосед хранит перевод ЭТОЙ строки в ДРУГОЙ формулировке,
- * ни точное совпадение, ни вхождение не срабатывают: модель теперь переводит
- * иначе. Тогда решаем сравнением двух переводов:
+ * Проблема. Иногда соседняя строка содержит перевод данной строки в иной
+ * формулировке: точного совпадения или вхождения при этом нет, и автоматические
+ * проверки не могут определить, кому принадлежит текст.
  *
- *   cand_i = модель(EN_i)   cand_j = модель(EN_j)
- *   если msgstr_j ближе к cand_i, чем к cand_j → сосед держит НАШУ строку:
- *      наша строка получает cand_i, сосед — cand_j (его собственный перевод);
- *   иначе сосед в порядке, наша строка получает cand_i.
+ * Метод. Для пары строк запрашиваются два независимых перевода оригинала:
+ *   cand_i = перевод(EN_i), cand_j = перевод(EN_j).
+ * Текущий текст соседа сравнивается с обоими кандидатами. Если он ближе к
+ * cand_i, значит сосед хранит текст данной строки: строка получает cand_i,
+ * сосед — cand_j. Иначе сосед считается корректным, а строка получает cand_i.
+ *
+ * Режимы:
+ *   --pairs            обработка пар с одинаковым переводом (обе строки
+ *                      переводятся заново по своим оригиналам);
+ *   --flagged <файл>   обработка строк, помеченных translate_review как УТЕЧКА
+ *                      или СКЛЕЙКА; текст заменяется только при доказанном
+ *                      перевесе близости к соседу (защита от ложных срабатываний).
  *
  * Запуск:
- *   node .opencode/skills/translate/translate_pairfix.mts fr            # план
+ *   node .opencode/skills/translate/translate_pairfix.mts fr            # отчёт
  *   node .opencode/skills/translate/translate_pairfix.mts fr --apply
- *   ... --limit 20    # только первые N строк
- *   ... --po <путь>   # другой файл (E2E)
+ *   ... --limit 20    # ограничить число строк
+ *   ... --po <путь>   # другой файл (используется в тестах)
  */
 import { readFileSync, writeFileSync } from "node:fs";
 
@@ -149,7 +158,13 @@ if (args.includes("--flagged")) {
     process.exit(0);
   }
   writeFileSync(`tmp/${LANG}.po.flagged-backup`, text, "utf-8");
-  writePoAtomic(PO, renderPo(entries.filter((e) => e.msgid), text.split("\n\n")[0]!.split("\n")));
+  writePoAtomic(
+    PO,
+    renderPo(
+      entries.filter((e) => e.msgid),
+      text.split("\n\n")[0]!.split("\n"),
+    ),
+  );
   process.exit(0);
 }
 
@@ -199,7 +214,13 @@ if (args.includes("--pairs")) {
     process.exit(0);
   }
   writeFileSync(`tmp/${LANG}.po.pairs-backup`, text, "utf-8");
-  writePoAtomic(PO, renderPo(entries.filter((e) => e.msgid), text.split("\n\n")[0]!.split("\n")));
+  writePoAtomic(
+    PO,
+    renderPo(
+      entries.filter((e) => e.msgid),
+      text.split("\n\n")[0]!.split("\n"),
+    ),
+  );
   const after = parsePo(readFileSync(PO, "utf-8").replace(/\r\n/g, "\n")).filter((e) => e.msgid);
   console.log(`${LANG}: пустых теперь ${after.filter((e) => !e.msgstr.trim()).length}`);
   process.exit(0);
@@ -248,6 +269,12 @@ if (!APPLY) {
   process.exit(0);
 }
 writeFileSync(`tmp/${LANG}.po.pairfix-backup`, text, "utf-8");
-writePoAtomic(PO, renderPo(entries.filter((e) => e.msgid), text.split("\n\n")[0]!.split("\n")));
+writePoAtomic(
+  PO,
+  renderPo(
+    entries.filter((e) => e.msgid),
+    text.split("\n\n")[0]!.split("\n"),
+  ),
+);
 const after = parsePo(readFileSync(PO, "utf-8").replace(/\r\n/g, "\n")).filter((e) => e.msgid);
 console.log(`${LANG}: пустых теперь ${after.filter((e) => !e.msgstr.trim()).length}`);

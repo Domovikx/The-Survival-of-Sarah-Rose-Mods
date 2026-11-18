@@ -1,20 +1,28 @@
 /**
- * translate_clause_trim.mts — обрезка ЧАСТИЧНЫХ вклеек соседа.
+ * translate_clause_trim.mts — удаление частичных склеек: клауз соседней строки,
+ * попавших в начало или конец текущей.
  *
- * Остаток после полного «переезда текста»: строка начинается (или кончается)
- * клаузой, которая принадлежит соседу. Пример (fr #5122):
- *   наша:      «Quant à ses devoirs de père, Varga était, au contraire, …»
- *   сосед #5123: «Quant à ses devoirs de père, personne ne pouvait mieux faire…»
- * Наша клауза «Quant à ses devoirs de père» — чужая, её надо отрезать.
+ * Проблема. После восстановления строк, чей перевод целиком оказался в соседней
+ * строке, остаётся второй класс дефектов: строка начинается или заканчивается
+ * клаузой, принадлежащей соседу. Пример (`fr`, строка 5122):
+ *   текущая строка: «Quant à ses devoirs de père, Varga était, au contraire, …»
+ *   соседняя      : «Quant à ses devoirs de père, personne ne pouvait mieux faire…»
+ * Клауза «Quant à ses devoirs de père» относится к соседней строке.
  *
- * Правило консервативное: режем только если клауза (≥4 слов) совпадает с
- * клаузой соседа ДОСЛОВНО, оригиналы разные (sim < 0.7) и после обрезки
- * остаётся осмысленный хвост (≥ 15 символов). Не-латиница (CJK) — по подстроке
- * без пробелов, минимальная длина 6 символов.
+ * Метод. Клаузы сравниваются дословно (деление по знакам конца фразы). Кандидат
+ * принимается при условиях: в клаузе не менее 4 слов (для CJK — не менее 6
+ * символов), оригиналы строк различаются, после удаления остаётся не менее
+ * 15 символов текста.
+ *
+ * Режим --verify. Общая клауза может принадлежать любой из двух строк, поэтому
+ * удаление выполняется только после проверки моделью: оригиналы обеих строк
+ * переводятся независимо, и клауза отбрасывается лишь тогда, когда она есть в
+ * переводе соседа и отсутствует в собственном. Без --verify изменения не
+ * применяются.
  *
  * Запуск:
- *   node .opencode/skills/translate/translate_clause_trim.mts fr            # план
- *   node .opencode/skills/translate/translate_clause_trim.mts fr --apply
+ *   node .opencode/skills/translate/translate_clause_trim.mts fr            # отчёт
+ *   node .opencode/skills/translate/translate_clause_trim.mts fr --verify --apply
  *   ... --po <путь> --min-words 5
  */
 import { readFileSync, writeFileSync } from "node:fs";
@@ -174,6 +182,12 @@ for (const [i, f] of applied) {
   row.msgstr = f.after;
 }
 writeFileSync(`tmp/${LANG}.po.clausetrim-backup`, text, "utf-8");
-writePoAtomic(PO, renderPo(entries.filter((e) => e.msgid), text.split("\n\n")[0]!.split("\n")));
+writePoAtomic(
+  PO,
+  renderPo(
+    entries.filter((e) => e.msgid),
+    text.split("\n\n")[0]!.split("\n"),
+  ),
+);
 const after = parsePo(readFileSync(PO, "utf-8").replace(/\r\n/g, "\n")).filter((e) => e.msgid);
 console.log(`${LANG}: обрезано ${applied.size}, пустых после ${after.filter((e) => !e.msgstr.trim()).length}`);

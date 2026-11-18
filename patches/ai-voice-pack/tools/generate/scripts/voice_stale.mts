@@ -55,7 +55,7 @@ type Row = { lang: string; file: string; cls: Cls; en?: string; variant?: string
  * ЗНАЧЕНИЕ — СПИСОК, а не одна запись: один и тот же EN-текст встречается у
  * разных каст с РАЗНЫМ тоном («I do.» — Thomas/Sarah/Marion/Sophia), и каждая
  * реплика имеет своё состояние. Одна запись на текст давала ложные STALE
- * (поймано 2026-11-18 на de: 21 «устаревший» файл был живым).
+ * (наблюдение 2026-11-18, de: 21 файл был ошибочно помечен устаревшим).
  */
 const pot = parsePo(readFileSync(POT_PATH, "utf-8").replace(/\r\n/g, "\n")).filter((e) => e.msgid);
 type Src = { en: string; emotion: string; key: string };
