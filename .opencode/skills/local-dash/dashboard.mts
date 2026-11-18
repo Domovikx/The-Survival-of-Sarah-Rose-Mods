@@ -33,7 +33,7 @@ const LANGS = ["zh", "ru", "es", "pt", "de", "ja", "fr", "pl", "ko", "it"];
  * живёт со старым JS и рисует «undefined» на новых полях (поймано 2026-11-16).
  * Поднимать при ЛЮБОМ изменении набора полей.
  */
-const API_VER = 20;
+const API_VER = 21;
 
 /** Прошлые значения CPU/RAM для дельты. */
 const prevCpu = cpus().map((c) => c.times);
@@ -320,6 +320,94 @@ const health = (): {
   return value;
 };
 
+/**
+ * Процесс озвучки «сейчас»: запущен ли `voice_batch`, какой язык, сколько уже
+ * сделано из плана, скорость и ETA. Данные — из процесса (StartTime + cmdline),
+ * из лога батча (строка «фраз к генерации: N») и по mtime файлов в audio/<lang>.
+ * Кэш 12 с: обход ~1.3 тыс. файлов на язык не должен идти на каждый опрос.
+ */
+const voiceRunCache: { at: number; value: VoiceRun | null } = { at: 0, value: null };
+interface VoiceRun {
+  running: boolean;
+  lang: string;
+  total: number | null;
+  done: number | null;
+  perMin: number | null;
+  etaMin: number | null;
+  current: string | null;
+  workers: number;
+}
+const voiceRun = (): VoiceRun | null => {
+  if (Date.now() - voiceRunCache.at < 12_000) return voiceRunCache.value;
+  const ps = spawnSync(
+    "powershell",
+    [
+      "-NoProfile",
+      "-Command",
+      "Get-CimInstance Win32_Process -Filter \"Name='node.exe'\" | Where-Object { $_.CommandLine -match 'voice_batch' } | Select-Object -First 1 | ForEach-Object { $_.ProcessId.ToString() + '|' + $_.CreationDate.ToString('o') + '|' + $_.CommandLine }",
+    ],
+    { encoding: "utf-8", timeout: 15_000, windowsHide: true },
+  );
+  const line = String(ps.stdout ?? "").trim();
+  const workers = shimWorkers();
+  if (!line) {
+    const value =
+      workers > 0
+        ? { running: false, lang: "", total: null, done: null, perMin: null, etaMin: null, current: null, workers }
+        : null;
+    voiceRunCache.at = Date.now();
+    voiceRunCache.value = value;
+    return value;
+  }
+  const [pid, iso, cmdline] = line.split("|");
+  const lang = /--lang\s+(\S+)/.exec(cmdline ?? "")?.[1] ?? "";
+  const startMs = Date.parse(iso ?? "");
+  const base = join("patches", "ai-voice-pack", "audio", lang);
+  let done = 0;
+  let newest: { m: number; n: string } | null = null;
+  try {
+    for (const arc of readdirSync(base)) {
+      const dir = join(base, arc);
+      for (const f of readdirSync(dir)) {
+        if (!f.endsWith(".opus")) continue;
+        const m = statSync(join(dir, f)).mtimeMs;
+        if (!Number.isFinite(startMs) || m >= startMs) done++;
+        if (!newest || m > newest.m) newest = { m, n: f };
+      }
+    }
+  } catch {
+    /* папка ещё не создана */
+  }
+  // План берём из лога батча: «фраз к генерации: N».
+  let total: number | null = null;
+  try {
+    const log = readFileSync(
+      join("patches", "ai-voice-pack", "tools", "generate", "output", "voice", "batch.log"),
+      "utf-8",
+    );
+    const m = [...log.matchAll(/фраз к генерации: (\d+)/g)].at(-1);
+    if (m) total = Number(m[1]);
+  } catch {
+    /* лога нет */
+  }
+  const minutes = Number.isFinite(startMs) ? Math.max(0.1, (Date.now() - startMs) / 60_000) : 0;
+  const perMin = done > 0 && minutes > 0 ? Math.round((done / minutes) * 10) / 10 : null;
+  const value: VoiceRun = {
+    running: true,
+    lang,
+    total,
+    done,
+    perMin,
+    etaMin: total && perMin ? Math.max(0, Math.round((total - done) / perMin)) : null,
+    current: newest?.n ?? null,
+    workers,
+  };
+  void pid;
+  voiceRunCache.at = Date.now();
+  voiceRunCache.value = value;
+  return value;
+};
+
 const processRam = (): { llamaMB: number; nodeMB: number; nodeCount: number } => {
   if (Date.now() - procCache.at < 6000) return procCache.value;
   const out = shell(
@@ -499,6 +587,7 @@ const state = async (): Promise<Record<string, unknown>> => {
     queue: queue ? { ...queue, current } : null,
     languages: LANGS.map((lang) => ({ lang, po: poStats(lang) })),
     voice: voiceStatsAsync(),
+    voiceRun: voiceRun(),
     tail: current ? logTail(current, 8) : [],
     np: npHistory(),
     files: { logs: existsSync("tmp") ? readdirSync("tmp").filter((f) => f.endsWith(".run.log")).length : 0 },
@@ -564,6 +653,7 @@ const PAGE = `<!doctype html>
     <div id="htime" class="muted" style="font-size:11px;margin-top:6px"></div>
   </div>
   <div class="card c8"><h2>Языки: текст и озвучка</h2>
+    <div id="vrun" class="hint muted"></div>
     <div class="hint muted">кольца: <b>перевод</b> — от всего POT · <b>озвучка</b> — от уже переведённого (навести — точные числа)</div>
     <div id="lingua" class="lingua"><span class="muted">загрузка…</span></div>
     <div id="vhealth"></div>
@@ -730,6 +820,15 @@ async function tick() {
       '<div class="row"><span>пасс стартовал</span><span class="muted">' + String(q.at).slice(11, 19) + '</span></div>'
     : '<div class="muted">очередь не запущена</div>';
   $('tail').textContent = (s.tail || []).join('\\n') || '—';
+  const vr = s.voiceRun;
+  $('vrun').innerHTML = vr && vr.running
+    ? '<span class="ok">озвучка идёт</span> · ' + (vr.lang || '?') +
+      (vr.total ? ' · ' + N(vr.done) + ' / ' + N(vr.total) : ' · ' + N(vr.done) + ' файлов') +
+      (vr.perMin ? ' · ' + vr.perMin + ' файлов/мин' : '') +
+      (vr.etaMin !== null && vr.etaMin !== undefined ? ' · ETA ' + vr.etaMin + ' мин' : '') +
+      ' · воркеров ' + vr.workers +
+      (vr.current ? '<br>сейчас: ' + vr.current.replace(/&/g, '&amp;').replace(/</g, '&lt;') : '')
+    : (vr ? '<span class="muted">озвучка: не идёт · воркеров ' + vr.workers + '</span>' : '<span class="muted">озвучка: не идёт</span>');
   const v = s.voice;
   if (!v) {
     // Корпус озвучки считается в фоне (~9 с на холодную) — не подвешиваем страницу.
