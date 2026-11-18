@@ -27,6 +27,8 @@ tmp/
 # Логи и рантайм-диагностика мода/пайплайна (остаются на диске, в git не идут)
 *.log
 *.log.live
+# Исключение: журнал багов перевода — это знание, а не рантайм-лог
+!docs/translation-incidents.log
 update_check.txt
 last_menu_hook.txt
 .pytest_cache/
