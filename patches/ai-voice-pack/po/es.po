@@ -13,6 +13,14 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+# TSSR ES translation — файл забронирован (язык выбран владельцем 2026-10-20).
+# Español sirve para España y LatAm (inteligibilidad completa).
+# Наполнение: перевод через po/template.pot (кандидат №1 после ru;
+# технический гейт — мультиязычность TTS-голосов кастов).
+# msgstr "" = не переведено.
+msgid ""
+msgstr "Project-Id-Version: TSSR-Mods 1.0\nPO-Revision-Date: 2026-10-20 00:00+0000\nLanguage: es\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\n"
+
 msgctxt "speaker:Narrator"
 msgid "The Survival of Sarah Rose is an epic fantasy game. Production on TSSR is still ongoing."
 msgstr "The Survival of Sarah Rose es un juego de fantasía épica. La producción de TSSR todavía está en curso."
@@ -5004,11 +5012,11 @@ msgstr "Kate tenía algo muy serio. Sarah estaba confundida."
 
 msgctxt "speaker:Sarah"
 msgid "What are you doing here?"
-msgstr "¿Qué estás haciendo aquí?"
+msgstr "¿Qué haces aquí?"
 
 msgctxt "speaker:Sarah"
 msgid "I'm so glad it's you, what are you doing here?"
-msgstr "¡Qué alegría que seas tú! ¿Qué estás haciendo aquí?"
+msgstr "¡Qué alegría que seas tú! ¿Qué haces aquí?"
 
 msgctxt "speaker:Narrator"
 msgid "Kate sat down on the edge of the bed."

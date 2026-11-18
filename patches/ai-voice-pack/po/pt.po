@@ -10,6 +10,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+# TSSR PT translation — скелет из po/template.pot (Português).
+# msgstr "" = не переведено; заполняется построчно переводчиком.
+msgid ""
+msgstr "Project-Id-Version: TSSR-Mods 1.0\nPO-Revision-Date: 2026-10-23 00:00+0000\nLanguage: pt\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\n"
+
 msgctxt "speaker:Narrator"
 msgid "The Survival of Sarah Rose is an epic fantasy game. Production on TSSR is still ongoing."
 msgstr "The Survival of Sarah Rose é um jogo de fantasia épico. A produção de TSSR ainda está em andamento."
@@ -18158,7 +18163,7 @@ msgstr "Ela estava sendo boba?"
 
 msgctxt "speaker:Lily"
 msgid "What?"
-msgstr "Hã?"
+msgstr "O quê?"
 
 msgctxt "speaker:Sarah"
 msgid "Huh?"
@@ -35266,11 +35271,11 @@ msgstr "Isso inclui rejeitar você."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah stood up and slammed her fist on the table."
-msgstr "Que nojo!"
+msgstr "Sarah levantou-se e bateu com o punho na mesa."
 
 msgctxt "speaker:Sarah"
 msgid "Disgusting!"
-msgstr "Que nojo!"
+msgstr "Nojento!"
 
 msgctxt "speaker:Sarah"
 msgid "You are even more vile and low than I first suspected."
@@ -36778,7 +36783,7 @@ msgstr "Sarah havia imaginado alguns minutos constrangedores. Em vez disso, agor
 
 msgctxt "speaker:Sarah"
 msgid "We can-"
-msgstr "Aaaaaahhhh!!!!"
+msgstr "Nós podemos-"
 
 msgctxt "speaker:Sarah"
 msgid "Aaaaaahhhh!!!!"
@@ -46498,7 +46503,7 @@ msgstr "Jaeid acenou com a mão ao redor do oásis."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah took in all of the natural beauty. That a place of such life could exist, hidden among the desert, was hard to believe."
-msgstr "É lindo."
+msgstr "Sarah absorveu toda a beleza natural. Era difícil acreditar que um lugar com tanta vida pudesse existir, escondido no meio do deserto."
 
 msgctxt "speaker:Sarah"
 msgid "It's beautiful."
@@ -55326,7 +55331,7 @@ msgstr "Jasmim ficou em silêncio por um breve momento."
 
 msgctxt "speaker:Jasmine"
 msgid "I..."
-msgstr "Desculpe."
+msgstr "Eu..."
 
 msgctxt "speaker:Jasmine"
 msgid "Sorry."
@@ -77374,7 +77379,7 @@ msgstr "Kim se virou."
 
 msgctxt "speaker:Kim"
 msgid "HEY!!!"
-msgstr "NATHAN!!!"
+msgstr "EI!!!"
 
 msgctxt "speaker:Kim"
 msgid "NATHAN!!!"
@@ -96902,7 +96907,7 @@ msgstr "Assim que Nick tropeçou, e ela o puxou de volta para os pés, ela viu."
 
 msgctxt "speaker:Narrator"
 msgid "Just on the horizon..."
-msgstr "Luzes."
+msgstr "Bem no horizonte..."
 
 msgctxt "speaker:Narrator"
 msgid "Lights."
@@ -107994,7 +107999,7 @@ msgstr "Havia aqueles que construíram essa maravilha, Sarah percebeu, e havia a
 
 msgctxt "speaker:Narrator"
 msgid "She had often prayed that her father might look down on her and be proud of who she had become, but now she prayed that he would look away from her. She could not bear the idea of him watching her do this."
-msgstr "Perdoe-me, pai."
+msgstr "Ela frequentemente rezara para que seu pai olhasse para ela e se orgulhasse de quem ela havia se tornado, mas agora rezava para que ele desviasse o olhar dela. Ela não suportava a ideia de que ele a observasse fazer aquilo."
 
 msgctxt "speaker:Narrator"
 msgid "Forgive me father."
@@ -110542,11 +110547,11 @@ msgstr "Novamente, ela podia sentir a criatura se debatendo. Seu grito abafava t
 
 msgctxt "speaker:Narrator"
 msgid "Rip."
-msgstr "Rasgo."
+msgstr "Rip."
 
 msgctxt "speaker:Narrator"
 msgid "Tear."
-msgstr "Rasgo."
+msgstr "Rasgar."
 
 msgctxt "speaker:Narrator"
 msgid "Raising her sword above her head for yet another blow, Sarah caught a shade moving in the corner of her eyes."
@@ -111146,11 +111151,11 @@ msgstr "Como se você estivesse completamente sozinho no mundo. E nada pudesse d
 
 msgctxt "speaker:Narrator"
 msgid "It was worth it."
-msgstr "Tudo o que ela estava fazendo valia a pena. Sarah repetia seu sonho de novo e de novo, como se para se convencer."
+msgstr "Valeu a pena."
 
 msgctxt "speaker:Narrator"
 msgid "Everything she was doing was worth it. Sarah repeated her dream again and again, as if to convince herself."
-msgstr "Tudo o que ela estava fazendo valia a pena."
+msgstr "Tudo o que ela estava fazendo valia a pena. Sarah repetia seu sonho vez após vez, como se para se convencer."
 
 msgctxt "speaker:Narrator"
 msgid "It was another familiar voice that woke her up."
@@ -130907,7 +130912,7 @@ msgstr "Ela viu o rosto dele voltar ao seu estado natural. Frio e imóvel como p
 
 msgctxt "speaker:Vaelen"
 msgid "Nothing."
-msgstr "Nada disso importa."
+msgstr "Nada."
 
 msgctxt "speaker:Vaelen"
 msgid "None of this matters."
@@ -147663,7 +147668,7 @@ msgstr "Ele parecia tão concentrado no seu trabalho que não notava o resto do 
 
 msgctxt "speaker:Narrator"
 msgid "Sarah was only a few feet away when she spoke."
-msgstr "O que vai ser?"
+msgstr "Sarah estava a apenas alguns metros de distância quando falou."
 
 msgctxt "speaker:Sarah"
 msgid "What is it gonna be?"
@@ -156071,11 +156076,11 @@ msgstr "Este é o mundo em que nascemos."
 
 msgctxt "speaker:Sarah"
 msgid "It shouldn't be."
-msgstr "Não, você está certa sobre isso. Não deveria ser assim."
+msgstr "Não deveria ser."
 
 msgctxt "speaker:Kate"
 msgid "No, you're right about that. It shouldn't be."
-msgstr "Não, você está certa sobre isso. Não deveria ser assim."
+msgstr "Não, você está certo sobre isso. Não deveria ser."
 
 msgctxt "speaker:Kate"
 msgid "And who knows, if you win this, you might actually change a thing or two."
@@ -156563,11 +156568,11 @@ msgstr "Sarah riu, divertida com a maneira perfeita como a bola de neve a havia 
 
 msgctxt "speaker:Samayra"
 msgid "Wha!!!"
-msgstr "O que você fez?!"
+msgstr "O quê!!!"
 
 msgctxt "speaker:Samayra"
 msgid "What did you do!"
-msgstr "O que você fez?!"
+msgstr "O que você fez!"
 
 msgctxt "speaker:Sarah"
 msgid "It's called a snowball, desert girl."
@@ -157567,7 +157572,7 @@ msgstr "Você sabia disso quando pediu a missão?"
 
 msgctxt "speaker:Narrator"
 msgid "Kate looked at her."
-msgstr "Ela não disse nada."
+msgstr "Kate olhou para ela."
 
 msgctxt "speaker:Narrator"
 msgid "She said nothing."
@@ -160803,7 +160808,7 @@ msgstr "Eu vim aqui quando era jovem para visitar a família que vive aqui."
 
 msgctxt "speaker:Tribesman"
 msgid "Lived."
-msgstr "Ele a corrigiu."
+msgstr "Viveu."
 
 msgctxt "speaker:Narrator"
 msgid "He corrected her."
@@ -161251,11 +161256,11 @@ msgstr "E eu cumprirei minha palavra."
 
 msgctxt "speaker:Old Tribesman"
 msgid "But I must show them that I gain more than I give."
-msgstr "Mas preciso mostrar a eles que ganho mais do que dou."
+msgstr "Mas eu preciso mostrar a eles que ganho mais do que dou."
 
 msgctxt "speaker:Old Tribesman"
 msgid "I must show them...that I do not yield to you...even as I surrender."
-msgstr "Mas preciso mostrar a eles que ganho mais do que dou. Mesmo que me entregue a você."
+msgstr "Devo mostrar-lhes... que não me submeto a você... mesmo enquanto me rendo."
 
 msgctxt "speaker:Old Tribesman"
 msgid "You will have to give yourself to me."
@@ -164307,11 +164312,11 @@ msgstr "Não? Você nos negaria a justiça?!"
 
 msgctxt "speaker:Sarah"
 msgid "Justice?"
-msgstr "Você chama isso de justiça?"
+msgstr "Justiça?"
 
 msgctxt "speaker:Sarah"
 msgid "You call this justice? To have a man and his daughter thrown to the wolves on your account?"
-msgstr "Você chama isso de justiça? Deixar um homem e sua filha serem abandonados aos lobos por sua causa?"
+msgstr "Você chama isso de justiça? Deixar um homem e sua filha serem jogados aos lobos por sua causa?"
 
 msgctxt "speaker:Man"
 msgid "I can bring in others to testify."
@@ -165391,7 +165396,7 @@ msgstr "Talvez..."
 
 msgctxt "speaker:Sarah"
 msgid "I would have. I mean...back then, if you had asked."
-msgstr "Eu teria te dado filhos. Quero dizer... naquela época, se você tivesse pedido."
+msgstr "Eu teria. Quer dizer... naquela época, se você tivesse perguntado."
 
 msgctxt "speaker:Sarah"
 msgid "I would have given you children."
@@ -166923,11 +166928,11 @@ msgstr "Apesar da tortura e da perda, Sarah sorriu."
 
 msgctxt "speaker:Narrator"
 msgid "Her army had made it."
-msgstr "Ela havia conseguido."
+msgstr "O exército dela tinha chegado."
 
 msgctxt "speaker:Narrator"
 msgid "She had made it."
-msgstr "Ela havia conseguido."
+msgstr "Ela tinha conseguido."
 
 msgctxt "speaker:Narrator"
 msgid "On Sarah's orders, her army had begun to set itself atop the hill that overlooked the Capital."
@@ -226583,11 +226588,11 @@ msgstr "Sarah olhou para além do corpo do espírito, em direção ao monólito 
 
 msgctxt "speaker:Narrator"
 msgid "She gestured at it."
-msgstr "E aquilo?"
+msgstr "Ela gesticulou para aquilo."
 
 msgctxt "speaker:Sarah"
 msgid "And that?"
-msgstr "E aquilo?"
+msgstr "E isso?"
 
 msgctxt "speaker:Razaphel"
 msgid "Perceptive."
@@ -237111,11 +237116,11 @@ msgstr "Qualquer semente que esteja sobrecarregada com energia mágica morrerá.
 
 msgctxt "speaker:Metis"
 msgid "Any seed that is charged with the right amount will be considered infused and grow out to a magical variant."
-msgstr "Mas esta aqui."
+msgstr "Qualquer semente que seja carregada com a quantidade certa será considerada infundida e crescerá até se tornar uma variante mágica."
 
 msgctxt "speaker:Metis"
 msgid "But this one."
-msgstr "Mas esta aqui."
+msgstr "Mas este aqui."
 
 msgctxt "speaker:Narrator"
 msgid "He tapped the pot again."
@@ -247883,7 +247888,7 @@ msgstr "Samayra estava desafiadora, olhando diretamente para Hécate."
 
 msgctxt "speaker:Samayra"
 msgid "Clearly not."
-msgstr "Não. Claramente não."
+msgstr "Claramente que não."
 
 msgctxt "speaker:Hecate"
 msgid "No. Clearly not."
