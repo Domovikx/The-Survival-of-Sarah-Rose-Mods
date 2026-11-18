@@ -33,8 +33,8 @@ const EN_LEGACY = "This one has an old-style name.";
 const EN_TWOTONE = "Same text, two different tones.";
 
 /** POT-запись с тоном (комментарии стоят ПЕРЕД своей записью). */
-const potEntry = (en: string): string =>
-  ["#. arc: TestArc", "#. emotion: Calm", 'msgctxt "speaker:Narrator"', `msgid "${en}"`, ""].join("\n");
+const potEntry = (en: string, emotion = "Calm"): string =>
+  ["#. arc: TestArc", `#. emotion: ${emotion}`, 'msgctxt "speaker:Narrator"', `msgid "${en}"`, ""].join("\n");
 
 const pot = [
   'msgid ""',
