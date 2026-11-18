@@ -30,6 +30,7 @@ const AWAY_NP = num("--away-np", 8);
 const HERE_NP = num("--here-np", 4);
 const FILE = join("tmp", "np.txt");
 const LOG = join("tmp", "np_switch.log");
+const HISTORY = join("tmp", "np_history.csv");
 
 const log = (m: string): void => {
   const line = `${new Date().toISOString()} ${m}`;
@@ -85,12 +86,18 @@ const currentNp = (): number => {
 
 const setNp = (np: number): void => {
   writeFileSync(FILE, `${np}\n`, "utf-8");
+  // История шагов для пульта: видно, когда режим менялся (4 днём / 8 когда отошёл).
+  try {
+    writeFileSync(HISTORY, `${new Date().toISOString()},${np}\n`, { encoding: "utf-8", flag: "a" });
+  } catch {
+    /* история не критична */
+  }
 };
 
-if (!currentNp()) {
-  setNp(HERE_NP);
-  log(`старт: слотов по умолчанию ${HERE_NP} (tmp/np.txt создан)`);
-}
+// Стартовый шаг тоже пишем в историю: иначе график пуст до первого переключения.
+const START_NP = currentNp() || HERE_NP;
+setNp(START_NP);
+log(`старт: слотов ${START_NP}`);
 
 log(`слежение: простой > ${IDLE_MIN} мин → ${AWAY_NP} слотов, вернулся → ${HERE_NP}`);
 

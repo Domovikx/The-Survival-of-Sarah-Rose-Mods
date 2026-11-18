@@ -8,7 +8,7 @@
  * Запуск: node .opencode/skills/local-dash/dashboard.mts [--port 8087]
  */
 import { spawn, spawnSync } from "node:child_process";
-import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
+import { closeSync, existsSync, openSync, readFileSync, readdirSync, readSync, statSync } from "node:fs";
 import { createServer } from "node:http";
 import { join } from "node:path";
 import { cpus, freemem, totalmem } from "node:os";
@@ -33,7 +33,7 @@ const LANGS = ["zh", "ru", "es", "pt", "de", "ja", "fr", "pl", "ko", "it"];
  * живёт со старым JS и рисует «undefined» на новых полях (поймано 2026-11-16).
  * Поднимать при ЛЮБОМ изменении набора полей.
  */
-const API_VER = 16;
+const API_VER = 19;
 
 /** Прошлые значения CPU/RAM для дельты. */
 const prevCpu = cpus().map((c) => c.times);
@@ -63,10 +63,33 @@ const cpuPercent = (): number => {
 
 type GpuInfo = { util: number; usedMiB: number; totalMiB: number; tempC: number };
 let gpuCache: { at: number; value: GpuInfo | null } = { at: 0, value: null };
+/** Объём VRAM не меняется — узнаём один раз и больше nvidia-smi не зовём. */
+let gpuTotalMiB = 0;
 
+/**
+ * GPU для карточки. ГЛАВНОЕ: пульт не должен запускать `nvidia-smi` на каждый
+ * опрос страницы — каждый запуск это процесс + conhost, и в Task Manager это
+ * выглядело как «нода прыгает каждую секунду» (5.6 % ядра, замер 2026-11-17).
+ * Живые значения берём из `tmp/health.csv` (его пишет страж раз в 15 с), а
+ * nvidia-smi остаётся только фолбэком, когда стража нет.
+ */
 const gpu = (): GpuInfo | null => {
-  // nvidia-smi дёргаем не чаще раза в 3 с: страница не должна сама есть ресурсы.
-  if (Date.now() - gpuCache.at < 3000) return gpuCache.value;
+  const h = health();
+  const last = h.samples.at(-1);
+  if (last) {
+    if (!gpuTotalMiB) {
+      // Один раз за жизнь процесса (дальше объём берём из кэша).
+      const out = shell("nvidia-smi", ["--query-gpu=memory.total", "--format=csv,noheader,nounits"]);
+      gpuTotalMiB = Number(out.trim()) || 0;
+    }
+    return {
+      util: Number.isFinite(last.gpuUtil) ? last.gpuUtil : 0,
+      usedMiB: Number.isFinite(last.vramMiB) ? last.vramMiB : 0,
+      totalMiB: gpuTotalMiB,
+      tempC: last.gpuTemp,
+    };
+  }
+  if (Date.now() - gpuCache.at < 5000) return gpuCache.value;
   const out = shell("nvidia-smi", [
     "--query-gpu=utilization.gpu,memory.used,memory.total,temperature.gpu",
     "--format=csv,noheader,nounits",
@@ -76,7 +99,10 @@ const gpu = (): GpuInfo | null => {
     ?.split(",")
     .map((x) => Number(x.trim()));
   if (!parts || parts.length < 4 || parts.some(Number.isNaN)) return null;
-  return { util: parts[0]!, usedMiB: parts[1]!, totalMiB: parts[2]!, tempC: parts[3]! };
+  const value = { util: parts[0]!, usedMiB: parts[1]!, totalMiB: parts[2]!, tempC: parts[3]! };
+  gpuTotalMiB = value.totalMiB;
+  gpuCache = { at: Date.now(), value };
+  return value;
 };
 
 const probe = async (port: number): Promise<{ up: boolean; model?: string }> => {
@@ -120,12 +146,13 @@ const refreshPo = (lang: string): PoStat | null => {
 };
 
 const poStats = (lang: string): PoStat | null => {
-  const file = join(PO_DIR, `${lang}.po`);
   const cached = poCache.get(lang);
-  const mtime = existsSync(file) ? statSync(file).mtimeMs : 0;
   // Наружу отдаём только {filled,total} — служебный `at` клиенту не нужен.
   const plain = (): PoStat | null => (cached ? { filled: cached.filled, total: cached.total } : null);
-  if (cached && Date.now() - cached.at < 60_000 && cached.at >= mtime) return plain();
+  // Только по времени: при живом прогоне mtime po МЕНЯЕТСЯ КАЖДУЮ СЕКУНДУ,
+  // поэтому проверка «at >= mtime» всегда ложна и файл 10-16 МБ перечитывался
+  // на каждый опрос страницы (замер 2026-11-18: 53 % ядра).
+  if (cached && Date.now() - cached.at < 120_000) return plain();
   if (!poBusy.has(lang)) {
     poBusy.add(lang);
     setImmediate(() => {
@@ -149,14 +176,60 @@ const queueState = (): Record<string, unknown> | null => {
   }
 };
 
-const logTail = (lang: string, lines = 2): string[] => {
+/**
+ * Хвост лога языка. ЧИТАЕМ ТОЛЬКО КОНЕЦ ФАЙЛА: раньше здесь был readFileSync
+ * целиком, а `translate_<lang>.run.log` дорастает до 29 МБ — и это читалось на
+ * КАЖДЫЙ опрос страницы (раз в 2 с ≈ 15 МБ/с). Виноват в «нода прыгает и
+ * жрёт ресурсы» (замер 2026-11-18: 10 167 CPU-секунд за 14 часов).
+ */
+const logTail = (lang: string, lines = 8): string[] => {
   const file = join("tmp", `translate_${lang}.run.log`);
-  if (!existsSync(file)) return [];
-  const text = readFileSync(file, "utf-8");
-  return text
-    .split(/\r?\n/)
-    .filter((l) => l.trim() && !l.startsWith("  "))
-    .slice(-lines);
+  let fd: number | null = null;
+  try {
+    fd = openSync(file, "r");
+    const size = statSync(file).size;
+    const len = Math.min(size, 128 * 1024);
+    const buf = Buffer.alloc(len);
+    readSync(fd, buf, 0, len, size - len);
+    return buf
+      .toString("utf-8")
+      .split(/\r?\n/)
+      .filter((l) => l.trim() && !l.startsWith("  "))
+      .slice(-lines);
+  } catch {
+    return [];
+  } finally {
+    if (fd !== null) {
+      try {
+        closeSync(fd);
+      } catch {
+        /* уже закрыт */
+      }
+    }
+  }
+};
+
+/**
+ * История числа слотов llama-server (`tmp/np_history.csv`, пишет np_switch).
+ * Нужна, чтобы видеть: сейчас 4 или 8, и когда режим менялся (днём за ПК —
+ * 4, отошёл — 8).
+ */
+const npHistory = (): { current: number | null; points: Array<{ t: string; v: number }> } => {
+  const file = join("tmp", "np_history.csv");
+  if (!existsSync(file)) return { current: null, points: [] };
+  try {
+    const rows = readFileSync(file, "utf-8")
+      .split(/\r?\n/)
+      .filter(Boolean)
+      .map((l) => l.split(","))
+      .filter((c) => c.length >= 2)
+      .map((c) => ({ t: c[0]!, v: Number(c[1]) }))
+      .filter((p) => Number.isFinite(p.v));
+    const sorted = rows.toSorted((a, b) => Date.parse(a.t) - Date.parse(b.t));
+    return { current: sorted.length ? sorted[sorted.length - 1]!.v : null, points: sorted.slice(-240) };
+  } catch {
+    return { current: null, points: [] };
+  }
 };
 
 let procCache: { at: number; value: { llamaMB: number; nodeMB: number; nodeCount: number } } = {
@@ -187,6 +260,8 @@ interface HealthSample {
   gpuUtil: number;
   ramFreePct: number;
   cpu: number;
+  /** Занятая VRAM (МиБ) — из той же строки health.csv, чтобы не звать nvidia-smi. */
+  vramMiB: number;
 }
 const health = (): {
   samples: HealthSample[];
@@ -223,6 +298,7 @@ const health = (): {
       gpuUtil: Number(c[4]),
       ramFreePct: Number(c[7]),
       cpu: Number(c[6]),
+      vramMiB: Number(c[5]),
     });
   }
   // Старты бэкенда: по логу очереди. Так на графике видно «здесь прогон стоял,
@@ -367,7 +443,7 @@ const emptyVoice = (): VoiceStats => ({ langs: [], arcs: [], workers: 0, active:
  * рисует «загрузка…» для блока озвучки и получает цифры со следующего опроса.
  */
 const voiceStatsAsync = (): VoiceStats | null => {
-  if (voiceCache && Date.now() - voiceCache.at < 60_000) return voiceCache.value;
+  if (voiceCache && Date.now() - voiceCache.at < 600_000) return voiceCache.value;
   void computeVoice();
   return null;
 };
@@ -422,6 +498,7 @@ const state = async (): Promise<Record<string, unknown>> => {
     languages: LANGS.map((lang) => ({ lang, po: poStats(lang) })),
     voice: voiceStatsAsync(),
     tail: current ? logTail(current, 8) : [],
+    np: npHistory(),
     files: { logs: existsSync("tmp") ? readdirSync("tmp").filter((f) => f.endsWith(".run.log")).length : 0 },
   };
 };
@@ -467,7 +544,8 @@ const PAGE = `<!doctype html>
   .hint { font-size:11px; margin:2px 0 10px; }
   /* Ровно три равные колонки: auto-fit при широком окне давал колонки разной
      ширины, и правые подписи упирались в край (владелец 2026-11-17). */
-  #hchart { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:6px 18px; }
+  #hchart { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:6px 18px; }
+  @media (max-width:1500px) { #hchart { grid-template-columns:repeat(2,minmax(0,1fr)); } }
   @media (max-width:1200px) { #hchart { grid-template-columns:1fr; } }
   #hchart > .sp { min-width:0; overflow:hidden; }
   #hchart .lbl { white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
@@ -617,14 +695,17 @@ async function tick() {
     : '· данных нет (страж не запущен)';
   $('hnow').innerHTML = lastS
     ? '<div class="muted" style="font-size:12px"><b style="color:#e6edf3">сейчас</b> · GPU ' + lastS.gpuTemp + ' °C · ' +
-      Math.round(lastS.gpuPower) + ' Вт · ' + lastS.gpuUtil + '% · RAM свободно ' + lastS.ramFreePct + ' %</div>'
+      Math.round(lastS.gpuPower) + ' Вт · ' + lastS.gpuUtil + '% · RAM занято ' + (100 - lastS.ramFreePct) + ' %</div>'
     : '';
   // Точки с временем: график строит ось по timestamp, а не по индексу.
   const pts = (key) => smp.map((x) => ({ t: x.t, v: x[key] }));
   $('hchart').innerHTML = smp.length
     ? spark(pts('gpuPower'), '#d29922', 'GPU мощность', 'Вт', 300, ev) +
       spark(pts('gpuTemp'), '#f85149', 'GPU температура', '°C', 85, ev) +
-      spark(pts('ramFreePct'), '#3fb950', 'RAM свободно', '%', 6, ev)
+      spark(smp.map((x) => ({ t: x.t, v: 100 - x.ramFreePct })), '#3fb950', 'RAM занято', '%', 96, ev) +
+      (s.np && s.np.points && s.np.points.length
+        ? spark(s.np.points, '#4c8bd6', 'Слоты llama (-np)', 'шт', undefined, [])
+        : '')
     : '';
   // Одна общая подпись окна и легенда меток: три одинаковых «08:40 → 09:51»
   // под каждым графиком были шумом (владелец 2026-11-17).
@@ -702,7 +783,7 @@ async function tick() {
     (started.length > 6 ? ' · +' + (started.length - 6) + ' ещё' : '') +
     (notStarted ? ' · не начаты: ' + notStarted : '') + '</div>';
 }
-tick(); setInterval(tick, 2000);
+tick(); setInterval(tick, 3000);
 </script></body></html>`;
 
 /**

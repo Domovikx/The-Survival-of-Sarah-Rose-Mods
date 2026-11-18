@@ -95,6 +95,8 @@ const EN_STOP = /\b(the|and|you|she|her|his|that|was|for|not|with|have|would|cou
  * `translate_review` 2026-11-16).
  */
 const GLUE_WORDS = 6;
+/** Сколько раз текст «переехал» из испорченного соседа в свою строку. */
+let moved = 0;
 
 /**
  * Гейт результата. Проверка соседей обязательна: модель при temp0 регулярно
@@ -114,9 +116,29 @@ const acceptable = (source: string, translated: string, at: number): string | nu
     if (!n || !n.msgstr.trim()) continue;
     // Одинаковые оригиналы (префикс-расширение реплики) — законное совпадение.
     if (sharePhrase(source, n.msgid)) continue;
-    if (n.msgstr.trim() === translated.trim()) return `перевод соседа #${j}`;
+    // ТОЧНОЕ совпадение с соседом — не повод отклонить: сосед обычно и хранит
+    // перевод ЭТОЙ строки (сдвиг на одну при генерации). Принимаем кандидата и
+    // возвращаем соседа в «пустые», чтобы его перевели по его оригиналу
+    // (поймано 2026-11-18 на fr: 214 отказов «перевод соседа», язык стоял часами).
+    if (n.msgstr.trim() === translated.trim()) {
+      entries[j] = { ...n, msgstr: "" };
+      moved++;
+      return null;
+    }
     const run = commonRun(translated, n.msgstr);
-    if (run && run.split(" ").length >= GLUE_WORDS) return `вклейка соседа #${j}: «${run}»`;
+    const runWords = run ? run.split(" ").length : 0;
+    const nWords = n.msgstr.trim().split(" ").length;
+    if (runWords >= GLUE_WORDS) {
+      // Наш перевод СОДЕРЖИТ перевод соседа почти целиком (≥60 % его слов) →
+      // сосед хранит НАШУ строку (сдвиг с хвостом). Принимаем и очищаем соседа,
+      // иначе гейт запирает починку навсегда (2026-11-18, fr).
+      if (n.msgstr.trim().length >= 20 && (translated.includes(n.msgstr.trim()) || runWords >= nWords * 0.6)) {
+        entries[j] = { ...n, msgstr: "" };
+        moved++;
+        return null;
+      }
+      return `вклейка соседа #${j}: «${run}»`;
+    }
   }
   return null;
 };
@@ -162,4 +184,6 @@ for (const i of work) {
   }
 }
 if (APPLY) writePoAtomic(PO, renderPo(entries, header));
-console.log(`${LANG}: переведено ${done}, сбоев ${failed}${APPLY ? " (записано)" : " (dry-run)"}`);
+console.log(
+  `${LANG}: переведено ${done}, сбоев ${failed}, текст возвращён из соседей ${moved}${APPLY ? " (записано)" : " (dry-run)"}`,
+);
