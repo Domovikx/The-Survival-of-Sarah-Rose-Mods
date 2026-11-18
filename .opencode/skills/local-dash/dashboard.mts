@@ -33,7 +33,7 @@ const LANGS = ["zh", "ru", "es", "pt", "de", "ja", "fr", "pl", "ko", "it"];
  * работает со старым JS и выводит «undefined» для новых полей (2026-11-16).
  * Поднимать при ЛЮБОМ изменении набора полей.
  */
-const API_VER = 22;
+const API_VER = 23;
 
 /** Прошлые значения CPU/RAM для дельты. */
 const prevCpu = cpus().map((c) => c.times);
@@ -703,7 +703,7 @@ const N = (v) => (v === null || v === undefined ? '—' : num(v));
 //   - метки событий: остановка стражем и старт бэкенда (вертикальные риски);
 //   - порог всегда в шкале (иначе пунктир 300 Вт не рисуется при максе 274);
 //   - значение на правом краю + подписи времени под графиком.
-const spark = (points, color, label, unit, threshold, events, lastSuffix) => {
+const spark = (points, color, label, unit, threshold, events, lastSuffix, mode) => {
   if (!points.length) return '';
   const w = 1000, h = 56, pad = 4;
   const ts = points.map((p) => Date.parse(p.t));
@@ -733,9 +733,26 @@ const spark = (points, color, label, unit, threshold, events, lastSuffix) => {
     cur.push(points[i]);
   }
   runs.push(cur);
-  const lines = runs.filter((r) => r.length > 1).map((r) =>
-    '<polyline fill="none" stroke="' + color + '" stroke-width="1.5" vector-effect="non-scaling-stroke" points="' +
-    r.map((p) => X(Date.parse(p.t)).toFixed(1) + ',' + Y(p.v).toFixed(1)).join(' ') + '" />').join('');
+  // Режим step: значение сохраняется между изменениями, поэтому линия должна
+  // тянуться до следующей точки (иначе при редких изменениях график пуст).
+  const step = mode === 'step';
+  const lines = step
+    ? '<polyline fill="none" stroke="' + color + '" stroke-width="1.5" vector-effect="non-scaling-stroke" points="' +
+      (() => {
+        const pts = [];
+        for (let i = 0; i < points.length; i++) {
+          const x = X(Date.parse(points[i].t)).toFixed(1);
+          const y = Y(points[i].v).toFixed(1);
+          if (i > 0) pts.push(x + ',' + Y(points[i - 1].v).toFixed(1));
+          pts.push(x + ',' + y);
+        }
+        const lastY = Y(points[points.length - 1].v).toFixed(1);
+        pts.push(w + ',' + lastY);
+        return pts.join(' ');
+      })() + '" />'
+    : runs.filter((r) => r.length > 1).map((r) =>
+      '<polyline fill="none" stroke="' + color + '" stroke-width="1.5" vector-effect="non-scaling-stroke" points="' +
+      r.map((p) => X(Date.parse(p.t)).toFixed(1) + ',' + Y(p.v).toFixed(1)).join(' ') + '" />').join('');
   const thrLine = threshold !== undefined && threshold >= lo && threshold <= hi
     ? '<line x1="0" y1="' + Y(threshold).toFixed(1) + '" x2="' + w + '" y2="' + Y(threshold).toFixed(1) +
       '" stroke="#8b98a5" stroke-width="1" stroke-dasharray="6 6" vector-effect="non-scaling-stroke"/>'
@@ -841,7 +858,7 @@ async function tick() {
       spark(smp.map((x) => ({ t: x.t, v: 100 - x.ramFreePct })), '#3fb950', 'RAM занято', '%', 96, ev,
         ' (' + (s.system.memTotal / 1024 - (lastS.ramFreeGb ?? 0)).toFixed(1) + ' ГБ)') +
       (s.np && s.np.points && s.np.points.length
-        ? spark(s.np.points, '#4c8bd6', 'Слоты llama (-np)', 'шт', undefined, [])
+        ? spark(s.np.points, '#4c8bd6', 'Слоты llama (-np)', 'шт', undefined, [], '', 'step')
         : '')
     : '';
   // Одна общая подпись окна и легенда меток: три одинаковых «08:40 → 09:51»
