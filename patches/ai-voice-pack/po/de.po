@@ -15,6 +15,11 @@ msgstr ""
 msgid ""
 msgstr "Project-Id-Version: TSSR-Mods 1.0\nPO-Revision-Date: 2026-10-23 00:00+0000\nLanguage: de\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\n"
 
+# TSSR DE translation — скелет из po/template.pot (Deutsch).
+# msgstr "" = не переведено; заполняется построчно переводчиком.
+msgid ""
+msgstr "Project-Id-Version: TSSR-Mods 1.0\nPO-Revision-Date: 2026-10-23 00:00+0000\nLanguage: de\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\n"
+
 msgctxt "speaker:Narrator"
 msgid "The Survival of Sarah Rose is an epic fantasy game. Production on TSSR is still ongoing."
 msgstr "The Survival of Sarah Rose ist ein episches Fantasy-Spiel. Die Entwicklung von TSSR dauert noch an."
@@ -66409,7 +66414,7 @@ msgstr "Kate gibt sich selbst auf."
 
 msgctxt "speaker:Narrator"
 msgid "Kate turns to Sarah."
-msgstr "Kate wendet sich an Sarah. Es ist in Ordnung, Sarah... Ich habe uns hierher gebracht... Ich werde es tun."
+msgstr "Kate wendet sich an Sarah. Es ist in Ordnung, Sarah... Ich habe uns hierher gebracht..."
 
 msgctxt "speaker:Kate"
 msgid "It's ok, Sarah...I got us into this...I'll do it."
@@ -70017,7 +70022,7 @@ msgstr "Hey da, Blondine."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah turned her head towards the voice and saw captain Belmont, standing on the upper deck of his ship, waving at her."
-msgstr "Sie wandte sofort wieder den Kopf ab und ignorierte den widerlichen Mann. Sie tat so, als würde sie weiter einkaufen."
+msgstr "Sie wandte sofort wieder den Kopf ab und ignorierte den widerlichen Mann."
 
 msgctxt "speaker:Narrator"
 msgid "She instantly turned her head away again, ignoring the vile man. She pretended to continue shopping."
@@ -82897,7 +82902,7 @@ msgstr "Bevor sie es überhaupt bemerkt hatte, war es bereits dunkel."
 
 msgctxt "speaker:Narrator"
 msgid "Albert disabled the machine."
-msgstr "Das reicht für heute. Willst du nicht dein Gehirn durchrösten?"
+msgstr "Willst du nicht dein Gehirn durchrösten?"
 
 msgctxt "speaker:Albert"
 msgid "That's enough for today. Don't want to fry your brain."
@@ -156074,7 +156079,7 @@ msgstr "Das ist die Welt, in die wir hineingeboren werden."
 
 msgctxt "speaker:Sarah"
 msgid "It shouldn't be."
-msgstr "Nein, da hast du recht. So sollte es nicht sein."
+msgstr "So sollte es nicht sein."
 
 msgctxt "speaker:Kate"
 msgid "No, you're right about that. It shouldn't be."
@@ -225134,7 +225139,7 @@ msgstr "Hör zu, ich lege einfach alles offen dar."
 
 msgctxt "speaker:Alaric"
 msgid "What's so bad about two people that got the hots for each other to hook up?"
-msgstr "Was ist schon so schlimm daran, wenn zwei Menschen, die sich heiß ersehnen, einfach miteinander schlafen? Ich liebe dich nicht."
+msgstr "Was ist schon so schlimm daran, wenn zwei Menschen, die sich heiß ersehnen, einfach miteinander schlafen?"
 
 msgctxt "speaker:Sarah"
 msgid "That type of stuff should be between people that love each other. I don't love you."

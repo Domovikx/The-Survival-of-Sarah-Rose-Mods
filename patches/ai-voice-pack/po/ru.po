@@ -17,6 +17,12 @@ msgstr ""
 msgid ""
 msgstr "Project-Id-Version: TSSR-Mods 1.0\nPO-Revision-Date: 2026-10-20 00:00+0000\nLanguage: ru\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
+# TSSR RU translation — файл забронирован (язык выбран владельцем 2026-10-20).
+# Наполнение: prefill из корпуса tl/ru + переводы через po/template.pot
+# (см. .opencode/skills/renpy-po/SKILL.md). msgstr "" = не переведено.
+msgid ""
+msgstr "Project-Id-Version: TSSR-Mods 1.0\nPO-Revision-Date: 2026-10-20 00:00+0000\nLanguage: ru\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
 msgctxt "speaker:Narrator"
 msgid "The Survival of Sarah Rose is an epic fantasy game. Production on TSSR is still ongoing."
 msgstr "«The Survival of Sarah Rose» — это эпическая фэнтезийная игра. Разработка TSSR всё ещё продолжается."
@@ -177013,7 +177019,7 @@ msgstr "Это было бы проще. Это было бы правдивее
 
 msgctxt "speaker:Narrator"
 msgid "Because as much as she hated him...she wanted him more."
-msgstr "И точно так же, как она презирала другого мужчину... так же сильно она в этот момент желала его."
+msgstr "так же сильно она в этот момент желала его."
 
 msgctxt "speaker:Narrator"
 msgid "And just as much as she despised the other man...so too did she, in that moment, want him more."

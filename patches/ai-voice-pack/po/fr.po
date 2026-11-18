@@ -25,6 +25,11 @@ msgstr "Project-Id-Version: TSSR-Mods 1.0\nPO-Revision-Date: 2026-10-23 00:00+00
 msgid ""
 msgstr "Project-Id-Version: TSSR-Mods 1.0\nPO-Revision-Date: 2026-10-23 00:00+0000\nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n > 1);\n"
 
+# TSSR FR translation — скелет из po/template.pot (Français).
+# msgstr "" = не переведено; заполняется построчно переводчиком.
+msgid ""
+msgstr "Project-Id-Version: TSSR-Mods 1.0\nPO-Revision-Date: 2026-10-23 00:00+0000\nLanguage: fr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n > 1);\n"
+
 msgctxt "speaker:Narrator"
 msgid "The Survival of Sarah Rose is an epic fantasy game. Production on TSSR is still ongoing."
 msgstr "The Survival of Sarah Rose est un jeu de fantasy épique. La production de TSSR est toujours en cours."
@@ -66764,7 +66769,7 @@ msgstr "C'est le deuxième jour que, soudain, on tira la bâche de la tente."
 
 msgctxt "speaker:Narrator"
 msgid "Two men came into the tent. Neither seemed to notice Sarah and each fell into their own bunk."
-msgstr "C'étaient des soldats, c'était évident, mais ils semblaient aussi... jeunes. Pas plus âgés que Sarah, estima-t-elle."
+msgstr "C'étaient des soldats, c'était évident, mais ils semblaient aussi... jeunes."
 
 msgctxt "speaker:Narrator"
 msgid "They were soldiers, that much was obvious, but they also seemed...young. No older than Sarah, she estimated."
@@ -68912,7 +68917,7 @@ msgstr "Mais le lendemain, elle serait de retour sur le terrain d'entraînement,
 
 msgctxt "speaker:Narrator"
 msgid "Today Kate had agreed to meet with Sarah, but failed to show up."
-msgstr "Pour Sarah, ce n'était pas une terrible surprise. Kate n'avait pas non plus fait acte de présence les autres jours."
+msgstr "Kate n'avait pas non plus fait acte de présence les autres jours."
 
 msgctxt "speaker:Narrator"
 msgid "To Sarah, it wasn't a terrible surprise. Kate had failed to show up on other days as well."
@@ -70244,7 +70249,7 @@ msgstr "Elle s'approcha du bord de son bureau et s'agenouilla. Elle posa une mai
 
 msgctxt "speaker:Narrator"
 msgid "Just as she began to lean in, captain Belmont pushed her head back."
-msgstr "Non, non, mêmes règles. Exactement comme la fois où tu m'as sucé sur le navire. Pas de vêtements."
+msgstr "Exactement comme la fois où tu m'as sucé sur le navire. Pas de vêtements."
 
 msgctxt "speaker:Captain Belmont"
 msgid "No, no, same ground rules. Just like how you sucked me off on the ship. No clothes."
@@ -86608,7 +86613,7 @@ msgstr "Non, ce n'est pas... ce n'est pas comme ça."
 
 msgctxt "speaker:Sarah"
 msgid "It's not, I mean, it's not love. I don't love him."
-msgstr "Non, ce n'est pas... ce n'est pas de l'amour. Je ne l'aime pas."
+msgstr "ce n'est pas de l'amour. Je ne l'aime pas."
 
 msgctxt "speaker:Narrator"
 msgid "To her own surprise, she didn't see revulsion in his face. Only sympathy."
@@ -156085,7 +156090,7 @@ msgstr "C'est le monde dans lequel nous naissons."
 
 msgctxt "speaker:Sarah"
 msgid "It shouldn't be."
-msgstr "Non, tu as raison sur ce point. Ça ne devrait pas être comme ça."
+msgstr "Ça ne devrait pas être comme ça."
 
 msgctxt "speaker:Kate"
 msgid "No, you're right about that. It shouldn't be."
@@ -224301,7 +224306,7 @@ msgstr "Qui sait, peut-être même que je l'emmènerai faire un tour..."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah stabbed her finger into his chest."
-msgstr "Sarah, je t'avertis. N'y pense même pas."
+msgstr "Sarah, je t'avertis."
 
 msgctxt "speaker:Sarah"
 msgid "I'm warning you. Don't even think about it."
