@@ -33,7 +33,7 @@ const LANGS = ["zh", "ru", "es", "pt", "de", "ja", "fr", "pl", "ko", "it"];
  * живёт со старым JS и рисует «undefined» на новых полях (поймано 2026-11-16).
  * Поднимать при ЛЮБОМ изменении набора полей.
  */
-const API_VER = 19;
+const API_VER = 20;
 
 /** Прошлые значения CPU/RAM для дельты. */
 const prevCpu = cpus().map((c) => c.times);
@@ -259,6 +259,7 @@ interface HealthSample {
   gpuPower: number;
   gpuUtil: number;
   ramFreePct: number;
+  ramFreeGb: number;
   cpu: number;
   /** Занятая VRAM (МиБ) — из той же строки health.csv, чтобы не звать nvidia-smi. */
   vramMiB: number;
@@ -297,6 +298,7 @@ const health = (): {
       gpuPower: Number(c[2]),
       gpuUtil: Number(c[4]),
       ramFreePct: Number(c[7]),
+      ramFreeGb: Number(c[8]),
       cpu: Number(c[6]),
       vramMiB: Number(c[5]),
     });
@@ -589,7 +591,7 @@ const N = (v) => (v === null || v === undefined ? '—' : num(v));
 //   - метки событий: остановка стражем и старт бэкенда (вертикальные риски);
 //   - порог всегда в шкале (иначе пунктир 300 Вт не рисуется при максе 274);
 //   - значение на правом краю + подписи времени под графиком.
-const spark = (points, color, label, unit, threshold, events) => {
+const spark = (points, color, label, unit, threshold, events, lastSuffix) => {
   if (!points.length) return '';
   const w = 1000, h = 56, pad = 4;
   const ts = points.map((p) => Date.parse(p.t));
@@ -639,7 +641,7 @@ const spark = (points, color, label, unit, threshold, events) => {
   return '<div class="sp"><svg viewBox="0 0 ' + w + ' ' + h + '" preserveAspectRatio="none" style="width:100%;height:56px;display:block">' +
     thrLine + evLines + lines + '</svg>' +
     '<div class="muted" style="font-size:11px;display:flex;justify-content:space-between;gap:8px">' +
-    '<span class="lbl">' + label + ' <b style="color:#e6edf3">' + last.v.toFixed(0) + ' ' + unit + '</b></span>' +
+    '<span class="lbl">' + label + ' <b style="color:#e6edf3">' + last.v.toFixed(0) + ' ' + unit + (lastSuffix || '') + '</b></span>' +
     '<span class="lbl">' + lo0.toFixed(0) + '…' + hi0.toFixed(0) + ' ' + unit +
     (threshold !== undefined ? ' · порог ' + threshold : '') + '</span></div></div>';
 };
@@ -695,14 +697,17 @@ async function tick() {
     : '· данных нет (страж не запущен)';
   $('hnow').innerHTML = lastS
     ? '<div class="muted" style="font-size:12px"><b style="color:#e6edf3">сейчас</b> · GPU ' + lastS.gpuTemp + ' °C · ' +
-      Math.round(lastS.gpuPower) + ' Вт · ' + lastS.gpuUtil + '% · RAM занято ' + (100 - lastS.ramFreePct) + ' %</div>'
+      Math.round(lastS.gpuPower) + ' Вт · ' + lastS.gpuUtil + '% · RAM занято ' + (100 - lastS.ramFreePct) +
+      ' % (' + (s.system.memTotal / 1024 - lastS.ramFreeGb).toFixed(1) + ' из ' + (s.system.memTotal / 1024).toFixed(1) +
+      ' ГБ)</div>'
     : '';
   // Точки с временем: график строит ось по timestamp, а не по индексу.
   const pts = (key) => smp.map((x) => ({ t: x.t, v: x[key] }));
   $('hchart').innerHTML = smp.length
     ? spark(pts('gpuPower'), '#d29922', 'GPU мощность', 'Вт', 300, ev) +
       spark(pts('gpuTemp'), '#f85149', 'GPU температура', '°C', 85, ev) +
-      spark(smp.map((x) => ({ t: x.t, v: 100 - x.ramFreePct })), '#3fb950', 'RAM занято', '%', 96, ev) +
+      spark(smp.map((x) => ({ t: x.t, v: 100 - x.ramFreePct })), '#3fb950', 'RAM занято', '%', 96, ev,
+        ' (' + (s.system.memTotal / 1024 - (lastS.ramFreeGb ?? 0)).toFixed(1) + ' ГБ)') +
       (s.np && s.np.points && s.np.points.length
         ? spark(s.np.points, '#4c8bd6', 'Слоты llama (-np)', 'шт', undefined, [])
         : '')

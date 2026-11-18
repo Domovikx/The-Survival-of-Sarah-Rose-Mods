@@ -26,7 +26,8 @@ const LANG = args[0] ?? "fr";
 const APPLY = args.includes("--apply");
 const wordsAt = args.indexOf("--min-words");
 const MIN_WORDS = wordsAt >= 0 ? Number(args[wordsAt + 1]) : 6;
-const PO = `patches/ai-voice-pack/po/${LANG}.po`;
+// Путь переопределяем ради E2E-теста (тот же код на синтетическом po).
+const PO = process.env.TSSR_SALVAGE_PO ?? `patches/ai-voice-pack/po/${LANG}.po`;
 
 const text = readFileSync(PO, "utf-8").replace(/\r\n/g, "\n");
 const entries = parsePo(text);

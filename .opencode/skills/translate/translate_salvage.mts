@@ -47,7 +47,9 @@ const indicesAt = args.indexOf("--indices");
 const INDICES = indicesAt >= 0 ? args[indicesAt + 1] : undefined;
 const URL = process.env.TSSR_LLM_URL ?? "http://127.0.0.1:8081";
 const MODEL = process.env.TSSR_LLM_MODEL ?? "index-translate-9b";
-const PO = join("patches", "ai-voice-pack", "po", `${LANG}.po`);
+// Путь переопределяем: E2E-тест гоняет тот же код на синтетическом po
+// (иначе проверка «лечит ли салваж склейки» невозможна без порчи живого файла).
+const PO = process.env.TSSR_SALVAGE_PO ?? join("patches", "ai-voice-pack", "po", `${LANG}.po`);
 
 const text = readFileSync(PO, "utf-8").replace(/\r\n/g, "\n");
 // Индексы — как у translate_run/translate_review: шапка po отброшена (msgid ""),
@@ -122,6 +124,17 @@ const acceptable = (source: string, translated: string, at: number): string | nu
     // (поймано 2026-11-18 на fr: 214 отказов «перевод соседа», язык стоял часами).
     if (n.msgstr.trim() === translated.trim()) {
       entries[j] = { ...n, msgstr: "" };
+      moved++;
+      return null;
+    }
+    // Наш перевод вклеен в соседа (сосед = свой текст + наш) — отрезаем кусок у
+    // соседа, не теряя его собственный текст. Проверяем ДО порога по словам:
+    // иначе короткий кандидат («Ligne collée en queue.») проходил мимо и сосед
+    // навсегда оставался с вклеенной копией (поймано E2E 2026-11-18).
+    const cand = translated.trim();
+    if (cand.length >= 20 && n.msgstr.includes(cand)) {
+      const trimmed = n.msgstr.replace(cand, "").replace(/\s+/g, " ").trim();
+      entries[j] = { ...n, msgstr: trimmed };
       moved++;
       return null;
     }
