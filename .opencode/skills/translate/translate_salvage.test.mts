@@ -48,6 +48,10 @@ const MOCK: Record<string, string> = {
   "Legit shared prefix line continues here.": "Ligne à préfixe commun, la suite ici.",
   "Bad glue: the model appended the neighbour.": "Texte voisin sans rapport qui doit rester.",
   "Prompt line without stopwords.": "The model answered here in the English.",
+  // Парафраз (pl 2026-11-18): сосед хранит НАШУ строку, но слова легли иначе —
+  // дословного вхождения нет, общего хода в 3+ слова тоже.
+  "Paraphrase shift: the neighbour holds a rewording of this line.":
+    "Paraphrase : le voisin garde une reformulation de cette ligne.",
 };
 
 /** Запустить CLI асинхронно: иначе мок-сервер в этом же процессе не ответит. */
@@ -97,6 +101,9 @@ const build = (): string => {
     entry("Unrelated neighbour text that must stay.", "Texte voisin sans rapport qui doit rester."),
     // контроль: корректная строка не должна пострадать
     entry("Already correct line.", "Ligne déjà correcte."),
+    // 6) парафраз: сосед хранит НАШУ строку другими словами (общего хода < 3 слов)
+    entry("Paraphrase neighbour source: a different sentence entirely.", "Reformulation du voisin pour cette ligne."),
+    entry("Paraphrase shift: the neighbour holds a rewording of this line.", ""),
   ];
   return renderPo(rows, header);
 };
@@ -170,6 +177,15 @@ test("E2E: салваж лечит сдвиг, вклейку хвостом и 
 
     // Контроль: корректная строка не пострадала
     assert.equal(get("Already correct line."), "Ligne déjà correcte.");
+
+    // 7) парафраз: наш текст в нашей строке, сосед очищен (его переведут заново).
+    //    Регресс pl 2026-11-18: проверка на дословное совпадение не видела парафраз,
+    //    и 114 строк стояли 30 пассов («похоже на перевод соседней строки»).
+    assert.equal(
+      get("Paraphrase shift: the neighbour holds a rewording of this line."),
+      MOCK["Paraphrase shift: the neighbour holds a rewording of this line."],
+    );
+    assert.equal(get("Paraphrase neighbour source: a different sentence entirely."), "");
   } finally {
     await new Promise<void>((r) => server.close(() => r()));
     rmSync(DIR, { recursive: true, force: true });

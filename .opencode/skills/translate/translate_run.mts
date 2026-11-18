@@ -336,9 +336,12 @@ if (RETRANS) {
   for (const i of RETRANS) if (i >= 0 && i < entries.length) queue.push(i);
 } else {
   for (let i = 0; i < entries.length; i++) {
-    // po — источник истины очереди: заполненное = сделано (без done-файлов —
-    // tmp-состояние не критично и восстанавливается из po). done = только кэш.
-    if (!IMPROVE && (done.has(i) || entries[i].msgstr.trim())) continue;
+    // po — источник истины очереди: заполненное = сделано. done — только кэш
+    // счётчика, и он НЕ должен перекрывать пустоту: строку очищает салваж
+    // (перенос текста из соседа), её индекс при этом уже лежит в done — с
+    // проверкой `done.has(i)` такая строка не вернулась бы в работу никогда
+    // (инцидент pl 2026-11-18: 87 очищенных доноров остались пустыми).
+    if (!IMPROVE && entries[i].msgstr.trim()) continue;
     const e = entries[i];
     if (ARC && potIndex().resolve(e.msgctxt, e.msgid)?.arc !== ARC) continue;
     if (DEMO_ONLY && !isDemoScope(e.msgctxt, potIndex().resolve(e.msgctxt, e.msgid))) continue;

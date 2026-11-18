@@ -23,7 +23,7 @@ import { join } from "node:path";
 
 import { SPEAKER_GENDER } from "../../../patches/ai-voice-pack/casts/gender.mts";
 import { parsePo, renderPo, writePoAtomic } from "../renpy-po/po_core.mts";
-import { commonRun, sharePhrase } from "./review_common_run.mts";
+import { commonRun, normTok, sharePhrase } from "./review_common_run.mts";
 
 const TARGET: Record<string, string> = {
   ru: "Russian",
@@ -101,11 +101,31 @@ const GLUE_WORDS = 6;
 let moved = 0;
 
 /**
+ * Сходство переводов по множествам значимых слов (Dice): одна и та же строка,
+ * переведённая дважды, даёт почти те же слова в другом порядке. Нужно для
+ * случаев, когда сосед хранит перевод ЭТОЙ строки, но модель сформулировала
+ * иначе и общего словесного хода не хватает до порога `GLUE_WORDS`
+ * (pl 2026-11-18: «udać się do wielkiej sali i» против «pójść do wielkiej sali»).
+ */
+const sigWords = (s: string): string[] => normTok(s).filter((w) => w.length > 2);
+const dice = (a: string, b: string): number => {
+  const A = new Set(sigWords(a));
+  const B = new Set(sigWords(b));
+  if (!A.size || !B.size) return 0;
+  let shared = 0;
+  for (const w of A) if (B.has(w)) shared++;
+  return (2 * shared) / (A.size + B.size);
+};
+
+/**
  * Гейт результата. Проверка соседей обязательна: модель при temp0 регулярно
  * отдаёт перевод СОСЕДНЕЙ строки, и без этой проверки склейка записывается
  * молча (инцидент 2026-11-17: 124 «спасённые» строки de получили текст соседа,
  * выявлено механическим ревью). Логика совпадает с `translate_review`:
  * общий словесный фрагмент считает `commonRun` (единый детектор).
+ * Обратный случай — сосед сверху хранит перевод ЭТОЙ строки (сдвиг на одну):
+ * тогда его текст очищается, а свой пишется здесь. Совпадение может быть
+ * дословным, частичным или парафразом (`dice`) — все три ветки ведут к переезду.
  */
 const acceptable = (source: string, translated: string, at: number): string | null => {
   if (!translated) return "пусто";
@@ -141,6 +161,18 @@ const acceptable = (source: string, translated: string, at: number): string | nu
     const run = commonRun(translated, n.msgstr);
     const runWords = run ? run.split(" ").length : 0;
     const nWords = n.msgstr.trim().split(" ").length;
+    // Парафраз того же перевода: сосед хранит НАШУ строку, просто слова легли
+    // иначе — общего хода может не хватить до GLUE_WORDS. Без этой ветки строка
+    // запирается навсегда (pl 2026-11-18: 114 строк стояли 30 пассов, сосед
+    // сверху держал их перевод). Сравнение по множествам значимых слов, чтобы
+    // не зависеть от порядка и от длины общего фрагмента.
+    const d = dice(translated, n.msgstr);
+    if (translated.length >= 25 && n.msgstr.trim().length >= 25 && d >= 0.5) {
+      entries[j] = { ...n, msgstr: "" };
+      moved++;
+      console.log(`  переезд #${at} <- #${j} (сходство ${d.toFixed(2)}): сосед хранил перевод этой строки`);
+      return null;
+    }
     if (runWords >= GLUE_WORDS) {
       // Наш перевод СОДЕРЖИТ перевод соседа почти целиком (≥60 % его слов) →
       // сосед хранит НАШУ строку (сдвиг с хвостом). Принимаем и очищаем соседа,
@@ -150,7 +182,7 @@ const acceptable = (source: string, translated: string, at: number): string | nu
         moved++;
         return null;
       }
-      return `вклейка соседа #${j}: «${run}»`;
+      return `вклейка соседа #${j}: «${run}» (сходство ${d.toFixed(2)})`;
     }
   }
   return null;

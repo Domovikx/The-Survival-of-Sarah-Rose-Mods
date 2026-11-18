@@ -1,7 +1,20 @@
 # --no-stash: БЕЗ него lint-staged прячет неиндексированные изменения в git stash
 # и при падении задачи оставляет их там, откатывая файлы к HEAD (2026-11-16:
 # так «пропали» 59 строк pt во время работающего переводчика).
+#
+# Цена --no-stash: линт-стагед ставит в индекс ВСЁ изменённое в рабочей копии, а
+# не только то, что было staged (проверено 2026-11-18: коммит кода дважды
+# утащил за собой po/*.po целиком). Поэтому запоминаем состав индекса до
+# запуска и возвращаем ровно его — лишнее из индекса снимаем, файлы на диске
+# не трогаем.
+INDEX_BEFORE=$(mktemp)
+INDEX_EXTRA=$(mktemp)
+git diff --cached --name-only >"$INDEX_BEFORE"
 npx lint-staged --no-stash
+git diff --cached --name-only | grep -vxF -f "$INDEX_BEFORE" >"$INDEX_EXTRA" || true
+if [ -s "$INDEX_EXTRA" ]; then xargs -r -a "$INDEX_EXTRA" git restore --staged --; fi
+rm -f "$INDEX_BEFORE" "$INDEX_EXTRA"
+
 # не коммитить po, пока его пишет прогон перевода
 node scripts/po_live_guard.mts
 npm run typecheck
