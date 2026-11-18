@@ -439,6 +439,19 @@ const processRam = (): { llamaMB: number; nodeMB: number; nodeCount: number } =>
 /** Скорость и ETA: сэмпл прогресса текущего языка раз в ~30 с. */
 let sample: { lang: string; filled: number; at: number } | null = null;
 /**
+ * История скорости текущего языка (для графика в пульте): точка раз в ~20 с,
+ * последний час. Иначе видно только мгновенную цифру и непонятно, падает ли
+ * скорость или это разовая просадка.
+ */
+const speedHistory: Array<{ t: string; v: number }> = [];
+const pushSpeed = (lang: string, rate: number): void => {
+  const last = speedHistory.at(-1);
+  if (last && Date.now() - Date.parse(last.t) < 20_000) return;
+  speedHistory.push({ t: new Date().toISOString(), v: rate });
+  while (speedHistory.length > 180) speedHistory.shift();
+  void lang;
+};
+/**
  * Последняя посчитанная скорость. Без кэша число живёт ОДИН запрос (тот, что
  * перешагнул окно 30 с), а остальные 14 из 15 опросов снова показывали «…» —
  * скорость мигала (поймано глазами 2026-11-16).
@@ -558,6 +571,7 @@ const state = async (): Promise<Record<string, unknown>> => {
     } else if (Date.now() - sample.at > 30_000) {
       const perMin = ((live.filled - sample.filled) / (Date.now() - sample.at)) * 60_000;
       rateCache = { lang: current, perMin, at: Date.now() };
+      pushSpeed(current, Math.max(0, Math.round(perMin)));
       sample = { lang: current, filled: live.filled, at: Date.now() };
     }
   }
@@ -590,6 +604,7 @@ const state = async (): Promise<Record<string, unknown>> => {
     voiceRun: voiceRun(),
     tail: current ? logTail(current, 8) : [],
     np: npHistory(),
+    speedHistory: current ? speedHistory.slice(-120) : [],
     files: { logs: existsSync("tmp") ? readdirSync("tmp").filter((f) => f.endsWith(".run.log")).length : 0 },
   };
 };
@@ -641,8 +656,15 @@ const PAGE = `<!doctype html>
   #hchart > .sp { min-width:0; overflow:hidden; }
   #hchart .lbl { white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
   .stats { margin-top:12px; font-size:12px; }
+  /* Полоса состояния: проблемы первыми, всё хорошо — одна зелёная строка. */
+  .alerts { margin:0 0 10px; font-size:13px; }
+  .alerts .al { padding:7px 11px; border-radius:8px; margin-bottom:6px; border:1px solid var(--line); background:var(--panel); }
+  .alerts .al.bad { border-color:var(--bad); color:var(--bad); }
+  .alerts .al.warn { border-color:var(--warn); color:var(--warn); }
+  .alerts .al.ok { border-color:#1f6feb33; color:var(--muted); }
 </style></head><body>
 <h1>TSSR · локальный пульт <span id="at" class="muted"></span></h1>
+<div id="alerts" class="alerts"></div>
 <div class="grid">
   <div class="card c5"><h2>Очередь</h2><div id="queue"><span class="muted">загрузка…</span></div></div>
   <div class="card c3"><h2>Бэкенд перевода</h2><div id="tr"><span class="muted">загрузка…</span></div></div>
@@ -755,6 +777,17 @@ async function tick() {
     return;
   }
   $('at').textContent = s.at.slice(11, 19);
+  // Полоса состояния: сначала проблемы, потом «всё в норме».
+  const alerts = [];
+  if (!s.servers.translate.up) alerts.push(['bad', 'бэкенд перевода (:8081) не отвечает — перевод стоит']);
+  if (!s.queue) alerts.push(['warn', 'очередь переводов не запущена']);
+  const lastH = s.health && s.health.samples.length ? s.health.samples.at(-1) : null;
+  const lastStop = s.health && s.health.lastStop ? Date.parse(s.health.lastStop.t) : 0;
+  if (lastStop && Date.now() - lastStop < 30 * 60_000) alerts.push(['warn', 'страж останавливал прогон недавно: ' + s.health.lastStop.note]);
+  if (lastH && lastH.ramFreePct <= 10) alerts.push(['warn', 'мало RAM: свободно ' + lastH.ramFreePct + ' %']);
+  if (lastH && lastH.gpuTemp >= 80) alerts.push(['bad', 'GPU горячий: ' + lastH.gpuTemp + ' °C']);
+  if (!alerts.length) alerts.push(['ok', 'всё в норме']);
+  $('alerts').innerHTML = alerts.map((a) => '<div class="al ' + a[0] + '">' + a[1] + '</div>').join('');
   const sv = s.servers;
   $('tr').innerHTML =
     '<div class="row"><span>llama-server :8081</span><span>' + up(sv.translate.up) + '</span></div>' +
@@ -810,14 +843,25 @@ async function tick() {
     : '';
   const q = s.queue;
   const lp = s.live ? pct(s.live.filled, s.live.total) : null;
+  const etaAbs = s.live && s.live.etaMin ? new Date(Date.now() + s.live.etaMin * 60_000) : null;
+  const etaTxt = s.live && s.live.etaMin
+    ? Math.floor(s.live.etaMin / 60) + ' ч ' + (s.live.etaMin % 60) + ' мин' +
+      (etaAbs ? ' (≈ ' + String(etaAbs.getHours()).padStart(2, '0') + ':' + String(etaAbs.getMinutes()).padStart(2, '0') + ')' : '')
+    : '—';
   $('queue').innerHTML = q
-    ? '<div class="row"><span>текущий язык</span><span class="v">' + q.lang + '</span></div>' +
-      (s.live ? '<div class="row"><span>готово</span><span class="v">' + N(s.live.filled) + ' / ' + N(s.live.total) + '</span></div>' +
-        '<div class="bar"><i style="width:' + W(lp) + '%"></i></div>' +
-        '<div class="row"><span>процент</span><span class="v">' + P(lp) + '</span></div>' +
-        '<div class="row"><span>скорость</span><span class="v">' + (s.live.rate === null ? '…' : s.live.rate + ' стр/мин') + '</span></div>' +
-        '<div class="row"><span>ETA</span><span class="v">' + (s.live.etaMin ? Math.floor(s.live.etaMin / 60) + ' ч ' + (s.live.etaMin % 60) + ' мин' : '—') + '</span></div>' : '') +
-      '<div class="row"><span>пасс стартовал</span><span class="muted">' + String(q.at).slice(11, 19) + '</span></div>'
+    ? '<div class="row"><span>текущий язык</span><span class="v big">' + q.lang +
+        (s.live ? ' · ' + P(lp) : '') + '</span></div>' +
+      (s.live
+        ? '<div class="bar"><i style="width:' + W(lp) + '%"></i></div>' +
+          '<div class="row"><span>готово</span><span class="v">' + N(s.live.filled) + ' / ' + N(s.live.total) + '</span></div>' +
+          '<div class="row"><span>скорость</span><span class="v">' + (s.live.rate === null ? '…' : s.live.rate + ' стр/мин') + '</span></div>' +
+          '<div class="row"><span>осталось</span><span class="v">' + etaTxt + '</span></div>'
+        : '') +
+      '<div class="row"><span>пасс стартовал</span><span class="muted">' + String(q.at).slice(11, 19) + '</span></div>' +
+      // График скорости: видно, падает темп или это разовая просадка.
+      (s.speedHistory && s.speedHistory.length > 1
+        ? spark(s.speedHistory, '#4c8bd6', 'скорость', 'стр/мин', undefined, [])
+        : '')
     : '<div class="muted">очередь не запущена</div>';
   $('tail').textContent = (s.tail || []).join('\\n') || '—';
   const vr = s.voiceRun;
@@ -851,7 +895,13 @@ async function tick() {
   };
   const byLang = new Map(v.langs.map((l) => [l.lang, l]));
   // Одна строка на язык: код + два кольца (текст, озвучка) + короткая справка.
-  $('lingua').innerHTML = s.languages.map((t) => {
+  // Сначала языки В РАБОТЕ, потом готовые: смотреть надо на то, что движется.
+  const langsOrdered = s.languages.slice().sort((a, b) => {
+    const pa = a.po && a.po.total ? a.po.filled / a.po.total : 0;
+    const pb = b.po && b.po.total ? b.po.filled / b.po.total : 0;
+    return pa - pb;
+  });
+  $('lingua').innerHTML = langsOrdered.map((t) => {
     const o = byLang.get(t.lang) || { done: 0, plan: 0, arcsDone: 0, arcsTotal: 0, bytes: 0 };
     const po = t.po || {};
     const tp = pct(po.filled, po.total);
