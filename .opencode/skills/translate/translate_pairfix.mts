@@ -149,7 +149,7 @@ if (args.includes("--flagged")) {
     process.exit(0);
   }
   writeFileSync(`tmp/${LANG}.po.flagged-backup`, text, "utf-8");
-  writePoAtomic(PO, renderPo(entries, text.split("\n\n")[0]!.split("\n")));
+  writePoAtomic(PO, renderPo(entries.filter((e) => e.msgid), text.split("\n\n")[0]!.split("\n")));
   process.exit(0);
 }
 
@@ -199,7 +199,7 @@ if (args.includes("--pairs")) {
     process.exit(0);
   }
   writeFileSync(`tmp/${LANG}.po.pairs-backup`, text, "utf-8");
-  writePoAtomic(PO, renderPo(entries, text.split("\n\n")[0]!.split("\n")));
+  writePoAtomic(PO, renderPo(entries.filter((e) => e.msgid), text.split("\n\n")[0]!.split("\n")));
   const after = parsePo(readFileSync(PO, "utf-8").replace(/\r\n/g, "\n")).filter((e) => e.msgid);
   console.log(`${LANG}: пустых теперь ${after.filter((e) => !e.msgstr.trim()).length}`);
   process.exit(0);
@@ -248,6 +248,6 @@ if (!APPLY) {
   process.exit(0);
 }
 writeFileSync(`tmp/${LANG}.po.pairfix-backup`, text, "utf-8");
-writePoAtomic(PO, renderPo(entries, text.split("\n\n")[0]!.split("\n")));
+writePoAtomic(PO, renderPo(entries.filter((e) => e.msgid), text.split("\n\n")[0]!.split("\n")));
 const after = parsePo(readFileSync(PO, "utf-8").replace(/\r\n/g, "\n")).filter((e) => e.msgid);
 console.log(`${LANG}: пустых теперь ${after.filter((e) => !e.msgstr.trim()).length}`);

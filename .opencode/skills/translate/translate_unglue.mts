@@ -92,7 +92,7 @@ for (const e of entries) {
   if (hit) e.msgstr = "";
   idx++;
 }
-writePoAtomic(PO, renderPo(entries, header));
+writePoAtomic(PO, renderPo(entries.filter((e) => e.msgid), header));
 const after = parsePo(readFileSync(PO, "utf-8").replace(/\r\n/g, "\n")).filter((e) => e.msgid);
 console.log(
   `${LANG}: обнулено ${cleared.length}, пустых теперь ${after.filter((e) => !e.msgstr.trim()).length}. ` +

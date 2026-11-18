@@ -174,6 +174,6 @@ for (const [i, f] of applied) {
   row.msgstr = f.after;
 }
 writeFileSync(`tmp/${LANG}.po.clausetrim-backup`, text, "utf-8");
-writePoAtomic(PO, renderPo(entries, text.split("\n\n")[0]!.split("\n")));
+writePoAtomic(PO, renderPo(entries.filter((e) => e.msgid), text.split("\n\n")[0]!.split("\n")));
 const after = parsePo(readFileSync(PO, "utf-8").replace(/\r\n/g, "\n")).filter((e) => e.msgid);
 console.log(`${LANG}: обрезано ${applied.size}, пустых после ${after.filter((e) => !e.msgstr.trim()).length}`);
