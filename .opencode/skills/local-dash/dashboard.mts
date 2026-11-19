@@ -48,7 +48,7 @@ const LANGS = ((): string[] => {
  * работает со старым JS и выводит «undefined» для новых полей (2026-11-16).
  * Поднимать при ЛЮБОМ изменении набора полей.
  */
-const API_VER = 37;
+const API_VER = 41;
 
 /** Прошлые значения CPU/RAM для дельты. */
 const prevCpu = cpus().map((c) => c.times);
@@ -587,6 +587,19 @@ const voiceStatsAsync = (): VoiceStats | null => {
   return null;
 };
 
+/**
+ * Замер ряда прогресса (график «Скорость перевода»). Идёт по таймеру, а не по
+ * запросам страницы: иначе ряд рвётся, когда пульт закрыт (2026-11-19). Язык
+ * берём из состояния очереди — без открытой вкладки currentLang пустой.
+ */
+const sampleTick = (): void => {
+  if (!currentLang) {
+    const q = queueState();
+    currentLang = typeof q?.lang === "string" ? (q.lang as string) : "";
+  }
+  if (currentLang) poStats(currentLang);
+};
+
 const state = async (): Promise<Record<string, unknown>> => {
   const cpu = cpuPercent();
   const memTotal = Math.round(totalmem() / 1024 / 1024);
@@ -703,6 +716,10 @@ const PAGE = `<!doctype html>
      с вертикальными засечками в SVG. */
   .axis { position:relative; height:13px; margin:1px 0 2px; }
   .axis span { position:absolute; top:0; font-size:10px; color:var(--muted); white-space:nowrap; }
+  /* Подписи горизонтальных отметок: чуть левее края, на фоне панели, чтобы
+     пунктир не просвечивал сквозь цифры. */
+  .yaxis span { position:absolute; left:2px; transform:translateY(-50%); font-size:9px; line-height:1;
+    color:var(--muted); background:var(--panel); padding:1px 2px; }
   .sp .lbl { white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
   .stats { margin-top:12px; font-size:12px; }
   /* Полоса состояния: проблемы первыми, всё хорошо — одна зелёная строка. */
@@ -867,12 +884,11 @@ const spark = (points, color, label, unit, threshold, events, lastSuffix, mode) 
 };
 
 /**
- * Скорость перевода: СКОЛЬКО СТРОК переведено за интервал. Столбик — строки за
- * 2 минуты, линия поверх — скользящее среднее по трём столбикам (отдельные
- * замеры «пилят», средняя показывает тренд). Окно — час, как у графиков
- * здоровья: оси совпадают, и просадка видна на обеих картинках в одном месте.
- * Шаг 2 мин выбран по картинке: на часе это 30 столбиков — не «пила» и не
- * «кирпич»; замеров внутри столбика ~8 (кэш po обновляется раз в 15 с).
+ * Скорость перевода: СКОЛЬКО СТРОК переведено за интервал. Считаем по
+ * корзинам (1–10 мин), но рисуем линией скользящего среднего по трём корзинам:
+ * отдельные замеры «пилят», а столбики выглядели грубо (владелец: «убери
+ * страшные столбики», 2026-11-19). Окно — до часа, как у здоровья: оси
+ * совпадают, и просадка видна на обеих картинках в одном месте.
  */
 const bars = (points, color, rate) => {
   if (!points || points.length < 2) return '<div class="muted" style="font-size:12px">нет данных — очередь не идёт</div>';
@@ -904,16 +920,24 @@ const bars = (points, color, rate) => {
   const X = (t) => ((t - t0) / (t1 - t0)) * w;
   const Y = (v) => h - pad - (v / peak) * (h - 2 * pad);
   const bw = w / n;
-  const rects = vals.map((v, i) => v > 0
-    ? '<rect x="' + (i * bw + 0.5).toFixed(1) + '" y="' + Y(v).toFixed(1) + '" width="' + Math.max(1, bw - 1.2).toFixed(1) +
-      '" height="' + (h - pad - Y(v)).toFixed(1) + '" fill="' + color + '" opacity="0.4"/>'
-    : '').join('');
   const avg = vals.map((_, i) => {
     const win = [vals[i - 1], vals[i], vals[i + 1]].filter((x) => x !== undefined);
     return win.reduce((a, b) => a + b, 0) / win.length;
   });
   const line = '<polyline fill="none" stroke="' + color + '" stroke-width="1.6" vector-effect="non-scaling-stroke" points="' +
     avg.map((v, i) => ((i + 0.5) * bw).toFixed(1) + ',' + Y(v).toFixed(1)).join(' ') + '" />';
+  // Горизонтальные отметки по значениям: без них линию не с чем сверить
+  // (владелец 2026-11-19). Подписи — HTML-слоем: внутри SVG с
+  // preserveAspectRatio="none" текст растягивается по ширине.
+  const yLevels = [];
+  const mag = Math.pow(10, Math.floor(Math.log10(Math.max(1, peak / 2))));
+  const stepV = Math.max(1, (peak / 2 <= mag ? 1 : peak / 2 <= 2 * mag ? 2 : 5) * mag);
+  for (let v = stepV; v <= peak; v += stepV) yLevels.push(v);
+  const hMarks = yLevels.map((v) =>
+    '<line x1="0" y1="' + Y(v).toFixed(1) + '" x2="' + w + '" y2="' + Y(v).toFixed(1) +
+    '" stroke="#2b3440" stroke-width="1" stroke-dasharray="2 6" vector-effect="non-scaling-stroke"/>').join('');
+  const yLabels = yLevels.map((v) =>
+    '<span style="top:' + ((Y(v) / h) * 100).toFixed(1) + '%">' + v + '</span>').join('');
   const ticks = timeTicks(t0, t1);
   const grid = tickGrid(ticks, X, h);
   const axis = tickAxis(ticks, t0, t1);
@@ -921,8 +945,8 @@ const bars = (points, color, rate) => {
   const perMin = Math.round(total / spanMin);
   // Подпись на две коротких части: карточка узкая (c5-ряд), длинный текст
   // налезал сам на себя (2026-11-19).
-  return '<div class="sp"><svg viewBox="0 0 ' + w + ' ' + h + '" preserveAspectRatio="none" style="width:100%;height:56px;display:block">' +
-    grid + rects + line + '</svg>' + axis +
+  return '<div class="sp" style="position:relative"><svg viewBox="0 0 ' + w + ' ' + h + '" preserveAspectRatio="none" style="width:100%;height:56px;display:block">' +
+    grid + hMarks + line + '</svg>' + '<div class="yaxis">' + yLabels + '</div>' + axis +
     '<div class="muted" style="font-size:11px;display:flex;justify-content:space-between;gap:8px">' +
     '<span class="lbl"><b style="color:#e6edf3">' + (rate === null ? '…' : rate) + '</b> стр/мин</span>' +
     '<span class="lbl" title="столбик ' + bucketMin + ' мин · в среднем ' + perMin + '/мин · пик ' + peak +
@@ -1154,17 +1178,6 @@ export const start = (): void => {
     }
   })();
   void computeVoice();
-  // Ряд прогресса (график «Скорость перевода») наполняем по ТАЙМЕРУ: если
-  // опираться на запросы страницы, ряд рвётся, когда пульт закрыт, и точки
-  // идут неровно (2026-11-19). Язык берём из состояния очереди, а не из
-  // последнего запроса — иначе без открытой вкладки таймер ничего не делает.
-  const sampleTick = (): void => {
-    if (!currentLang) {
-      const q = queueState();
-      currentLang = typeof q?.lang === "string" ? (q.lang as string) : "";
-    }
-    if (currentLang) poStats(currentLang);
-  };
   sampleTick();
   setInterval(sampleTick, 15_000).unref();
   createServer((req, res) => {
