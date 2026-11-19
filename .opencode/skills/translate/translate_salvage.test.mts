@@ -52,6 +52,7 @@ const MOCK: Record<string, string> = {
   // дословного вхождения нет, общего хода в 3+ слова тоже.
   "Paraphrase shift: the neighbour holds a rewording of this line.":
     "Paraphrase : le voisin garde une reformulation de cette ligne.",
+  "Paraphrase neighbour source: a different sentence entirely.": "Reformulation du voisin pour cette ligne.",
 };
 
 /** Запустить CLI асинхронно: иначе мок-сервер в этом же процессе не ответит. */
@@ -171,9 +172,11 @@ test("E2E: салваж лечит сдвиг, вклейку хвостом и 
     // 5) английский ответ модели отклоняется: строка остаётся пустой
     assert.equal(get("Prompt line without stopwords."), "");
     // 6) политика «доверяем нашей строке»: кандидат совпал с соседом → сосед
-    //    очищается (иначе дедлок), наша строка получает текст
+    //    очищается и тут же переводится (иначе дедлок и качели)
     assert.equal(get("Bad glue: the model appended the neighbour."), "Texte voisin sans rapport qui doit rester.");
-    assert.equal(get("Unrelated neighbour text that must stay."), "");
+    // Донор переводится В ЭТОМ ЖЕ прогоне (а не остаётся пустым): иначе следующий
+    // запуск снова «переезжает» на него и строки ходят по кругу (2026-11-19).
+    assert.equal(get("Unrelated neighbour text that must stay."), "Texte voisin sans rapport qui doit rester.");
 
     // Контроль: корректная строка не пострадала
     assert.equal(get("Already correct line."), "Ligne déjà correcte.");
@@ -185,7 +188,10 @@ test("E2E: салваж лечит сдвиг, вклейку хвостом и 
       get("Paraphrase shift: the neighbour holds a rewording of this line."),
       MOCK["Paraphrase shift: the neighbour holds a rewording of this line."],
     );
-    assert.equal(get("Paraphrase neighbour source: a different sentence entirely."), "");
+    assert.equal(
+      get("Paraphrase neighbour source: a different sentence entirely."),
+      MOCK["Paraphrase neighbour source: a different sentence entirely."],
+    );
   } finally {
     await new Promise<void>((r) => server.close(() => r()));
     rmSync(DIR, { recursive: true, force: true });

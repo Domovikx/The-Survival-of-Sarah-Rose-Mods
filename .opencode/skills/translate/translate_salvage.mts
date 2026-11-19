@@ -107,6 +107,13 @@ const EN_STOP = /\b(the|and|you|she|her|his|that|was|for|not|with|have|would|cou
 const GLUE_WORDS = 6;
 /** Сколько раз текст «переехал» из испорченного соседа в свою строку. */
 let moved = 0;
+/**
+ * Доноры, у которых текст забрали: их надо перевести в ЭТОМ ЖЕ прогоне. Иначе
+ * строка остаётся пустой до следующего запуска, и следующий запуск снова
+ * «переезжает» на неё же — получаются качели между двумя похожими строками
+ * (fr 2026-11-19: 33657/33658 ходили туда-обратно).
+ */
+const cleared = new Set<number>();
 
 /**
  * Сходство переводов по множествам значимых слов (Dice): одна и та же строка,
@@ -135,7 +142,7 @@ const dice = (a: string, b: string): number => {
  * тогда его текст очищается, а свой пишется здесь. Совпадение может быть
  * дословным, частичным или парафразом (`dice`) — все три ветки ведут к переезду.
  */
-const acceptable = (source: string, translated: string, at: number): string | null => {
+const acceptable = (source: string, translated: string, at: number, allowMove = true): string | null => {
   if (!translated) return "пусто";
   if (translated.includes("\n")) return "многострочно";
   if (LANG !== "ru" && CYRILLIC.test(translated)) return "русский текст";
@@ -151,8 +158,11 @@ const acceptable = (source: string, translated: string, at: number): string | nu
     // возвращаем соседа в «пустые», чтобы его перевели по его оригиналу
     // (наблюдение 2026-11-18, fr: 214 отказов «перевод соседа» и простой языка).
     if (n.msgstr.trim() === translated.trim()) {
-      entries[j] = { ...n, msgstr: "" };
-      moved++;
+      if (allowMove) {
+        entries[j] = { ...n, msgstr: "" };
+        cleared.add(j);
+        moved++;
+      }
       return null;
     }
     // Наш перевод вклеен в соседа (сосед = свой текст + наш) — отрезаем кусок у
@@ -161,9 +171,12 @@ const acceptable = (source: string, translated: string, at: number): string | nu
     // оставался с вклеенной копией (обнаружено E2E-тестом 2026-11-18).
     const cand = translated.trim();
     if (cand.length >= 20 && n.msgstr.includes(cand)) {
-      const trimmed = n.msgstr.replace(cand, "").replace(/\s+/g, " ").trim();
-      entries[j] = { ...n, msgstr: trimmed };
-      moved++;
+      if (allowMove) {
+        const trimmed = n.msgstr.replace(cand, "").replace(/\s+/g, " ").trim();
+        entries[j] = { ...n, msgstr: trimmed };
+        if (trimmed) cleared.add(j);
+        moved++;
+      }
       return null;
     }
     const run = commonRun(translated, n.msgstr);
@@ -176,7 +189,9 @@ const acceptable = (source: string, translated: string, at: number): string | nu
     // не зависеть от порядка и от длины общего фрагмента.
     const d = dice(translated, n.msgstr);
     if (translated.length >= 25 && n.msgstr.trim().length >= 25 && d >= 0.5) {
+      if (!allowMove) continue;
       entries[j] = { ...n, msgstr: "" };
+      cleared.add(j);
       moved++;
       console.log(`  переезд #${at} <- #${j} (сходство ${d.toFixed(2)}): сосед хранил перевод этой строки`);
       return null;
@@ -186,8 +201,11 @@ const acceptable = (source: string, translated: string, at: number): string | nu
       // сосед хранит НАШУ строку (сдвиг с хвостом). Принимаем и очищаем соседа,
       // иначе гейт запирает починку навсегда (2026-11-18, fr).
       if (n.msgstr.trim().length >= 20 && (translated.includes(n.msgstr.trim()) || runWords >= nWords * 0.6)) {
-        entries[j] = { ...n, msgstr: "" };
-        moved++;
+        if (allowMove) {
+          entries[j] = { ...n, msgstr: "" };
+          cleared.add(j);
+          moved++;
+        }
         return null;
       }
       return `вклейка соседа #${j}: «${run}» (сходство ${d.toFixed(2)})`;
@@ -217,10 +235,14 @@ console.log(
 
 let done = 0;
 let failed = 0;
+/** Спикер и пол — их же просит промпт (род/обращения). */
+const voiceOf = (e: { msgctxt?: string }): { speaker: string | null; gender: string | null } => {
+  const speaker = e.msgctxt?.startsWith("speaker:") ? e.msgctxt.slice(8).replace(/^"|"$/g, "") : null;
+  return { speaker, gender: speaker ? (SPEAKER_GENDER[speaker] ?? null) : null };
+};
 for (const i of work) {
   const e = entries[i]!;
-  const speaker = e.msgctxt?.startsWith("speaker:") ? e.msgctxt.slice(8).replace(/^"|"$/g, "") : null;
-  const gender = speaker ? (SPEAKER_GENDER[speaker] ?? null) : null;
+  const { speaker, gender } = voiceOf(e);
   const candidate = await translate(e.msgid, speaker, gender);
   const problem = acceptable(e.msgid, candidate, i);
   if (problem) {
@@ -235,6 +257,24 @@ for (const i of work) {
     writePoAtomic(PO, renderPo(entries, header));
     console.log(`  … ${done}/${work.length}`);
   }
+}
+// Доноры, у которых забрали текст: переводим сразу и БЕЗ права «переезда»
+// (allowMove=false) — иначе две похожие строки будут отбирать текст друг у
+// друга при каждом запуске (fr 2026-11-19: 33657/33658 ходили по кругу).
+for (const j of cleared) {
+  const e = entries[j];
+  if (!e || e.msgstr.trim()) continue;
+  const { speaker, gender } = voiceOf(e);
+  const candidate = await translate(e.msgid, speaker, gender);
+  const problem = acceptable(e.msgid, candidate, j, false);
+  if (problem) {
+    failed++;
+    console.log(`  сбой донора #${j}: ${problem}`);
+    continue;
+  }
+  entries[j] = { ...e, msgstr: candidate };
+  done++;
+  if (!APPLY) console.log(`  донор #${j} ${e.msgid.slice(0, 60)} => ${candidate.slice(0, 60)}`);
 }
 if (APPLY) writePoAtomic(PO, renderPo(entries, header));
 console.log(
