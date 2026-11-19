@@ -32,73 +32,31 @@ The Survival of Sarah Rose — Full Translation (10 Languages) + AI Voice Over
 The whole story in Russian, Chinese, Spanish, Portuguese, German, Japanese, French, Polish, Korean and Italian — 69,120 translated lines each — plus a demo AI voice cast. Free fan patch.
 ```
 
-## Steam guide — тело (BBCode, вставлять в редактор гайда)
+## Steam guide — тело (ПРОСТОЙ ТЕКСТ, без тегов и без ссылок)
+
+Прошлый раз Steam завернул гайд из-за разметки и ссылок — здесь ни того, ни другого.
+Заголовок и тело вставляются как обычный текст: пустые строки = абзацы.
 
 ```text
-[quote]The entire story, playable in your language — with an AI voice cast you can actually hear.[/quote]
+The whole story is translated into 10 languages, and 11 languages have a demo AI voice-over.
 
-[h2]What this is[/h2]
-An unofficial fan patch for [b]The Survival of Sarah Rose[/b] that adds:
+Full text languages: Russian, Chinese (Simplified), Spanish, Portuguese, German, Japanese, French, Polish, Korean, Italian. English is the original. Every language above is the complete script — 69,120 lines each, not a demo slice.
 
-[list]
-[*][b]Full text translation[/b] of the whole game — [b]69,120 lines per language[/b], 691,200 lines in total, zero lines left untranslated.
-[*][b]Demo AI voice-over[/b] in 11 languages — every main character has a cloned voice, with the tone matched to the scene.
-[*]In-game language picker, a progress screen, and fonts tuned for Chinese, Japanese and Korean text.
-[/list]
+Voice-over is demo: 1,171 to 1,399 lines per language, in English, Russian, Chinese, Spanish, Portuguese, German, Japanese, French, Polish, Korean and Italian. Cloned voices per character, tone matched to the scene.
 
-[h2]Languages — full text, 100%[/h2]
-[list]
-[*]English (original)
-[*]Russian — Русский
-[*]Chinese (Simplified) — 简体中文
-[*]Spanish — Español
-[*]Portuguese — Português
-[*]German — Deutsch
-[*]Japanese — 日本語
-[*]French — Français
-[*]Polish — Polski
-[*]Korean — 한국어
-[*]Italian — Italiano
-[/list]
-Every language above is a complete translation of the story, not a demo slice.
+How to install: download the main archive and the voice pack for your language from the project page on GitHub — account Domovikx, repository The-Survival-of-Sarah-Rose-Mods, section Releases. Unpack both into the game folder (the one with TheSurvivalofSarahRose.exe), or install with Vortex: main first, then the voice pack. In the game, open the mod menu on the title screen and pick a language.
 
-[h2]AI voice-over (demo)[/h2]
-Voiced languages: English, Russian, Chinese, Spanish, Portuguese, German, Japanese, French, Polish, Korean, Italian.
-1,171–1,399 voiced lines per language — the opening chapters, enough to hear each main character and the mixing. A full voice-over is prioritised by player requests: say which language and which arc you want next in the comments.
+Want a full voice-over? Today it is a demo subset of the script. If you want the whole game voiced, leave a comment under this guide in this format:
 
-[h2]How to install (2 minutes)[/h2]
-[list=1]
-[*]Download the main archive and the voice pack for your language from the links below.
-[*]Unpack both into the game folder (the one with TheSurvivalofSarahRose.exe), or install with Vortex: [b]main first, then the voice pack[/b].
-[*]Launch the game, open the mod menu on the title screen, pick your language.
-[/list]
+voice: Spanish
 
-[h2]FAQ[/h2]
-[b]Is it free?[/b] Yes. Unofficial fan patch, free, for the 18+ version of the game.
-[b]Does it change the story or gameplay?[/b] No. Text and audio only; saves and gameplay are untouched.
-[b]Why is the voice-over a demo?[/b] Voice lines are generated locally on a 16 GB GPU; the full script is thousands of lines per language. The demo is the proof of quality — the rest is funded and scheduled by demand.
-[b]How do I remove it?[/b] Delete [code]mods/tssr-ai-voice-pack/[/code] from the game folder.
+One comment is one vote. A full pass is 69,120 lines, about 10 hours of GPU time. The language with the most comments is recorded first. Downloads of the voice pack for your language are counted as well, summed across all releases.
 
-[h2]Links[/h2]
-[list]
-[*][url=https://github.com/Domovikx/The-Survival-of-Sarah-Rose-Mods/releases]Download — GitHub Releases[/url]
-[*][url=https://domovikx.github.io/The-Survival-of-Sarah-Rose-Mods/]Landing page with voice samples[/url]
-[*][url=https://github.com/Domovikx/The-Survival-of-Sarah-Rose-Mods]Source and issue tracker[/url]
-[/list]
-
-[h2]Supported languages (search terms)[/h2]
-The Survival of Sarah Rose Russian translation — The Survival of Sarah Rose на русском, перевод Sarah Rose, русский перевод;
-The Survival of Sarah Rose Chinese translation — 简体中文, 汉化, 中文翻译;
-The Survival of Sarah Rose Spanish translation — Traducción al español, Español;
-The Survival of Sarah Rose Portuguese translation — Tradução para português, Português (Brasil);
-The Survival of Sarah Rose German translation — Deutsche Übersetzung, Deutsch;
-The Survival of Sarah Rose Japanese translation — 日本語化, 日本語翻訳;
-The Survival of Sarah Rose French translation — Traduction française, Français;
-The Survival of Sarah Rose Polish translation — Tłumaczenie na polski, Polski;
-The Survival of Sarah Rose Korean translation — 한국어 번역, 한국어;
-The Survival of Sarah Rose Italian translation — Traduzione italiana, Italiano;
-AI voice acting, AI voice over, dubbed, fan patch, mod.
+Free unofficial fan patch, 18+. Text and audio only: saves and gameplay are untouched. To remove it, delete the folder mods/tssr-ai-voice-pack from the game directory.
 ```
+
+Если Steam и на этот раз попросит источник — добавлять только одну строку обычным текстом,
+без разметки: `github.com/Domovikx/The-Survival-of-Sarah-Rose-Mods/releases`.
 
 ## Nexus — description (BBCode; без донат-ссылок)
 
