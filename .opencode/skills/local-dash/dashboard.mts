@@ -48,7 +48,7 @@ const LANGS = ((): string[] => {
  * работает со старым JS и выводит «undefined» для новых полей (2026-11-16).
  * Поднимать при ЛЮБОМ изменении набора полей.
  */
-const API_VER = 24;
+const API_VER = 29;
 
 /** Прошлые значения CPU/RAM для дельты. */
 const prevCpu = cpus().map((c) => c.times);
@@ -139,6 +139,8 @@ const probe = async (port: number): Promise<{ up: boolean; model?: string }> => 
 type PoStat = { filled: number; total: number };
 const poCache = new Map<string, PoStat & { at: number }>();
 const poBusy = new Set<string>();
+/** Язык, который переводится прямо сейчас: его po читаем чаще (скорость/ETA). */
+let currentLang = "";
 
 /**
  * Счётчик po по тексту файла. Вынесен чистой функцией ради теста (2026-11-16:
@@ -164,16 +166,22 @@ const poStats = (lang: string): PoStat | null => {
   const cached = poCache.get(lang);
   // Наружу отдаём только {filled,total} — служебный `at` клиенту не нужен.
   const plain = (): PoStat | null => (cached ? { filled: cached.filled, total: cached.total } : null);
-  // Только по времени: при живом прогоне mtime po МЕНЯЕТСЯ КАЖДУЮ СЕКУНДУ,
-  // поэтому проверка «at >= mtime» всегда ложна и файл 10-16 МБ перечитывался
-  // на каждый опрос страницы (замер 2026-11-18: 53 % ядра).
-  if (cached && Date.now() - cached.at < 120_000) return plain();
+  // TTL: 120 с для «холодных» языков (10 файлов по 15 МБ не читаем без нужды),
+  // 15 с — для языка, который ПЕРЕВОДИТСЯ сейчас: по его приросту считается
+  // скорость и ETA. Долгий кэш давал «0 стр/мин» почти на каждом замере, потому
+  // что окно замера (30 с) короче кэша (2026-11-19).
+  const ttl = lang === currentLang ? 15_000 : 120_000;
+  if (cached && Date.now() - cached.at < ttl) return plain();
   if (!poBusy.has(lang)) {
     poBusy.add(lang);
     setImmediate(() => {
       try {
+        const prev = poCache.get(lang);
         const fresh = refreshPo(lang);
-        if (fresh) poCache.set(lang, { at: Date.now(), ...fresh });
+        if (fresh) {
+          poCache.set(lang, { at: Date.now(), ...fresh });
+          noteProgress(lang, prev, fresh);
+        }
       } finally {
         poBusy.delete(lang);
       }
@@ -451,8 +459,6 @@ const processRam = (): { llamaMB: number; nodeMB: number; nodeCount: number } =>
   return value;
 };
 
-/** Скорость и ETA: сэмпл прогресса текущего языка раз в ~30 с. */
-let sample: { lang: string; filled: number; at: number } | null = null;
 /**
  * История скорости текущего языка (для графика в пульте): точка раз в ~20 с,
  * последний час. Иначе видно только мгновенную цифру и непонятно, падает ли
@@ -472,6 +478,23 @@ const pushSpeed = (lang: string, rate: number): void => {
  * скорость отображалась нестабильно (замечено 2026-11-16).
  */
 let rateCache: { lang: string; perMin: number; at: number } | null = null;
+
+/**
+ * Скорость считаем ПО ФАКТУ чтения po: окно = реальный интервал между двумя
+ * перечитываниями файла. Раньше её мерили по опросу страницы (окно 30 с), но
+ * кэш po живёт 120 с (сейчас 15 с для текущего языка) — окно оказывалось то
+ * нулевым, то «прыжком», и пульт показывал «0 стр/мин» при живом прогоне
+ * (2026-11-19). Здесь окно всегда настоящее, дельты — только по своему языку.
+ */
+function noteProgress(lang: string, prev: (PoStat & { at: number }) | undefined, fresh: PoStat): void {
+  if (!prev || lang !== currentLang) return;
+  const dt = Date.now() - prev.at;
+  if (dt < 1_000) return;
+  if (fresh.filled < prev.filled) return; // перезапись/сброс — не считаем прогрессом
+  const perMin = ((fresh.filled - prev.filled) / dt) * 60_000;
+  rateCache = { lang, perMin: Math.max(0, perMin), at: Date.now() };
+  pushSpeed(lang, Math.max(0, Math.round(perMin)));
+}
 
 type VoiceLang = { lang: string; done: number; plan: number; arcsDone: number; arcsTotal: number; bytes: number };
 type VoiceStats = {
@@ -576,20 +599,14 @@ const state = async (): Promise<Record<string, unknown>> => {
   const [translate, lmstudio, strata] = await Promise.all([probe(8081), probe(1234), probe(8080)]);
   const queue = queueState();
   const current = typeof queue?.lang === "string" ? (queue.lang as string) : "";
+  // Текущий язык знает poStats: для него кэш короче, иначе скорость и ETA
+  // считались по цифре, обновляемой раз в две минуты (пульт показывал
+  // «0 стр/мин» и «осталось —» при живом прогоне, 2026-11-19).
+  currentLang = current;
 
   const live = current ? poStats(current) : null;
-  // Скорость считаем раз в ~30 с, но ОТДАЁМ последнее известное значение, пока
-  // оно относится к тому же языку: иначе цифра мигает «…» на каждом опросе.
-  if (live && current) {
-    if (!sample || sample.lang !== current) {
-      sample = { lang: current, filled: live.filled, at: Date.now() };
-    } else if (Date.now() - sample.at > 30_000) {
-      const perMin = ((live.filled - sample.filled) / (Date.now() - sample.at)) * 60_000;
-      rateCache = { lang: current, perMin, at: Date.now() };
-      pushSpeed(current, Math.max(0, Math.round(perMin)));
-      sample = { lang: current, filled: live.filled, at: Date.now() };
-    }
-  }
+  // Скорость обновляет noteProgress (при перечитывании po), здесь только
+  // отдаём последнее значение для текущего языка; `null` = ещё не измеряли.
   const rate: number | null =
     rateCache && rateCache.lang === current ? Math.max(0, Math.round(rateCache.perMin)) : null;
 
@@ -632,18 +649,23 @@ const PAGE = `<!doctype html>
   body { margin:0; padding:14px; background:var(--bg); color:var(--fg); font:14px/1.45 ui-monospace,Consolas,monospace; }
   h1 { font-size:15px; font-weight:600; margin:0 0 14px; color:var(--muted); letter-spacing:.04em; text-transform:uppercase; }
   .grid { display:grid; grid-template-columns:repeat(12,minmax(0,1fr)); gap:10px; }
-  .card { background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:10px 12px; }
+  .card { background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:10px 12px; min-width:0; }
   .c3 { grid-column:span 3; } .c4 { grid-column:span 4; } .c5 { grid-column:span 5; }
   .c6 { grid-column:span 6; } .c7 { grid-column:span 7; } .c8 { grid-column:span 8; }
+  .c9 { grid-column:span 9; }
   .c12 { grid-column:1 / -1; }
   /* Узкий экран: 12 колонок нечитаемы — складываем в две. */
   @media (max-width:1100px) {
     .grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
     .c3,.c4,.c5,.c6,.c7,.c8 { grid-column:span 1; }
+    .c9 { grid-column:span 2; }
     .c12 { grid-column:1 / -1; }
   }
   .card h2 { font-size:11px; margin:0 0 10px; color:var(--muted); text-transform:uppercase; letter-spacing:.06em; }
   .row { display:flex; justify-content:space-between; gap:12px; padding:2px 0; }
+  /* Длинные значения (имя модели) не вылезают за карточку: ужимаем с многоточием. */
+  .row > span { min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .row > span:last-child { text-align:right; }
   .v { color:#fff; }
   .ok { color:var(--ok); } .bad { color:var(--bad); } .warn { color:var(--warn); } .muted { color:var(--muted); }
   .bar { height:6px; background:#0c0f12; border-radius:3px; overflow:hidden; margin:4px 0 8px; }
@@ -664,10 +686,12 @@ const PAGE = `<!doctype html>
   .ring { display:block; }
   .hint { font-size:11px; margin:2px 0 10px; }
   /* Ровно три равные колонки: auto-fit при широком окне давал колонки разной
-     ширины, и правые подписи упирались в край (владелец 2026-11-17). */
-  #hchart { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:6px 18px; }
+     ширины, и правые подписи упирались в край (владелец 2026-11-17).
+     Слоты -np вынесены в отдельную карточку справа (владелец 2026-11-19). */
+  #hchart { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:6px 18px; }
   @media (max-width:1500px) { #hchart { grid-template-columns:repeat(2,minmax(0,1fr)); } }
   @media (max-width:1200px) { #hchart { grid-template-columns:1fr; } }
+  #npchart { min-width:0; }
   #hchart > .sp { min-width:0; overflow:hidden; }
   /* Ось времени: метки позиционируются по проценту ширины, чтобы совпадать
      с вертикальными засечками в SVG. */
@@ -688,10 +712,14 @@ const PAGE = `<!doctype html>
   <div class="card c5"><h2>Очередь</h2><div id="queue"><span class="muted">загрузка…</span></div></div>
   <div class="card c3"><h2>Бэкенд перевода</h2><div id="tr"><span class="muted">загрузка…</span></div></div>
   <div class="card c4"><h2>GPU / CPU / RAM</h2><div id="sys"><span class="muted">загрузка…</span></div></div>
-  <div class="card c12"><h2>Здоровье ПК <span class="muted" id="hnote"></span></h2>
+  <div class="card c9"><h2>Здоровье ПК <span class="muted" id="hnote"></span></h2>
     <div id="hnow"></div>
     <div id="hchart"></div>
     <div id="htime" class="muted" style="font-size:11px;margin-top:6px"></div>
+  </div>
+  <div class="card c3"><h2>Слоты llama (-np)</h2>
+    <div id="npchart"></div>
+    <div class="hint muted" style="margin:4px 0 0">4 — за ПК · 8 — простой &gt; 15 мин</div>
   </div>
   <div class="card c8"><h2>Языки: текст и озвучка</h2>
     <div id="vrun" class="hint muted"></div>
@@ -842,7 +870,7 @@ async function tick() {
     location.reload();
     return;
   }
-  $('at').textContent = s.at.slice(11, 19);
+  $('at').textContent = hms(s.at);
   // Заголовок вкладки = язык и процент: прогресс видно из панели задач, не открывая пульт.
   document.title = s.live
     ? (s.queue ? s.queue.lang + ' ' + P(pct(s.live.filled, s.live.total)) + ' · TSSR' : 'TSSR · пульт')
@@ -853,7 +881,10 @@ async function tick() {
   if (!s.queue) alerts.push(['warn', 'очередь переводов не запущена']);
   else {
     const qAgeMin = (Date.now() - Date.parse(s.queue.at)) / 60_000;
-    const stalled = s.live && s.live.rate === null && qAgeMin > 12;
+    // Только ИЗМЕРЕННЫЙ ноль: rate === null — это «сэмпла ещё нет» (пульт
+    // только что перезапущен), и предупреждение «молчит» было ложным
+    // (поймано 2026-11-19 сразу после рестарта при живом прогоне).
+    const stalled = s.live && s.live.rate === 0 && qAgeMin > 12;
     if (stalled) alerts.push(['warn', 'очередь молчит ' + Math.round(qAgeMin) + ' мин (пасс идёт, но прогресса нет)']);
   }
   const lastH = s.health && s.health.samples.length ? s.health.samples.at(-1) : null;
@@ -924,11 +955,13 @@ async function tick() {
     ? spark(pts('gpuPower'), '#d29922', 'GPU мощность', 'Вт', 300, ev) +
       spark(pts('gpuTemp'), '#f85149', 'GPU температура', '°C', 85, ev) +
       spark(smp.map((x) => ({ t: x.t, v: 100 - x.ramFreePct })), '#3fb950', 'RAM занято', '%', 96, ev,
-        ' (' + (s.system.memTotal / 1024 - (lastS.ramFreeGb ?? 0)).toFixed(1) + ' ГБ)') +
-      (npPts.length
-        ? spark(npPts, '#4c8bd6', 'Слоты llama (-np)', 'шт', undefined, [], '', 'step')
-        : '')
+        ' (' + (s.system.memTotal / 1024 - (lastS.ramFreeGb ?? 0)).toFixed(1) + ' ГБ)')
     : '';
+  // Слоты -np — отдельная карточка: режим меняется редко, следить за ним
+  // удобнее рядом, а не четвёртым графиком в полосе здоровья (2026-11-19).
+  $('npchart').innerHTML = npPts.length
+    ? spark(npPts, '#4c8bd6', 'сейчас', 'шт', undefined, [], '', 'step')
+    : '<div class="muted" style="font-size:12px">истории нет — сторож слотов не запущен</div>';
   // Одна общая подпись окна и легенда меток: три одинаковых «08:40 → 09:51»
   // под каждым графиком были шумом (владелец 2026-11-17).
   $('htime').textContent = smp.length
