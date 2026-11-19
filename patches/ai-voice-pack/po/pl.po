@@ -7145,7 +7145,7 @@ msgstr "Nigdy, Thomasie, nigdy cię nie zostawię."
 
 msgctxt "speaker:Narrator"
 msgid "The two siblings continued to hug each other, as disaster drew nearer."
-msgstr "Dwoje rodzeństwa wciąż się przytulało, gdy katastrofa zbliżała się coraz bardziej. Thomas błagał: „Sarah… proszę, nigdy mnie nie opuszczaj. Bez ciebie straciłbym się całkowicie”. Sarah odpowiedziała: „Nigdy, Thomas, nigdy cię nie zostawię”."
+msgstr "Dwójka rodzeństwa nadal się przytulała, gdy katastrofa zbliżała się coraz bardziej."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah stood outside on the balcony of her room. From here, the view stretched across the castle, the city and even far out to the fields beyond."
@@ -10925,7 +10925,7 @@ msgstr "Barion potknął się, próbując chwycić za stół i krzesło, ale gdz
 
 msgctxt "speaker:Narrator"
 msgid "As she collapsed down unto the floor, it was the Spymaster Kravel who first approached him."
-msgstr "Gdy on upadł na podłogę, to właśnie Spymaster Kravel jako pierwszy do niego podszedł."
+msgstr "Gdy osunęła się na podłogę, to właśnie Mistrz Szpiegów Kravel jako pierwszy do niego podszedł."
 
 msgctxt "speaker:Kravel"
 msgid "I'm sorry, old friend."
@@ -19397,7 +19397,7 @@ msgstr "Zawsze."
 
 msgctxt "speaker:Narrator"
 msgid "With a final kiss, each of the two parted ways, having risked too much already by staying."
-msgstr "Po ostatnim pocałunku obaj rozstali się, ryzykując już zbyt wiele, pozostając razem."
+msgstr "Po ostatnim pocałunku oboje się rozstali, ryzykując już zbyt wiele, pozostając razem."
 
 msgctxt "speaker:Lily"
 msgid "And I don't have many of those either."
@@ -44997,7 +44997,7 @@ msgstr "Sarah patrzyła, jak Marion ustawił się naprzeciwko jej łóżka."
 
 msgctxt "speaker:Marion"
 msgid "Strip."
-msgstr "Rozeprzyj się."
+msgstr "Rozebrać się."
 
 msgctxt "speaker:Sarah"
 msgid "Marion, I-"
@@ -47701,7 +47701,7 @@ msgstr "Ale dam ci radę od starego człowieka: kiedyś też byłem młody jak t
 
 msgctxt "speaker:Hassar"
 msgid "But their pussies are the same as any other."
-msgstr "Ale ich kiski są takie same jak wszystkie inne."
+msgstr "Ale ich cipki są takie same jak u wszystkich innych."
 
 msgctxt "speaker:Narrator"
 msgid "The entire room of sycophants burst out into laughter."
@@ -48061,7 +48061,7 @@ msgstr "Robimy to, bo chcemy. Bo to nasz chan. I naprawdę zapewnia nam wszystko
 
 msgctxt "speaker:Narrator"
 msgid "Sarah didn't know much about the world of the tribesmen, but she doubted that she had much rights to refuse Hassar if he forced herself on her."
-msgstr "Sarah nie wiedziała wiele o świecie plemion, ale wątpiła, czy miała jakiekolwiek prawo odmówić Hassarowi, gdyby ten zmusił ją do seksu."
+msgstr "Sarah niewiele wiedziała o świecie plemion, ale wątpiła, czy miała jakiekolwiek prawo do odmowy Hassarowi, gdyby ten zmusił ją do uległości."
 
 msgctxt "speaker:Sarah"
 msgid "He didn't force himself on you?"
@@ -52201,7 +52201,7 @@ msgstr "Doznania związane z jego ogromnym członkiem wewnątrz niej, wbijający
 
 msgctxt "speaker:Sarah"
 msgid "I...because...we....we...lost..."
-msgstr "Ja...bo...my...my...straciliśmy..."
+msgstr "Ja...bo...że...my...my...przegraliśmy..."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah tried to speak in between his thrusts."
@@ -60661,7 +60661,7 @@ msgstr "Mężczyźni z kolei wciąż zbierali się w nocy przy krawędzi namiotu
 
 msgctxt "speaker:Narrator"
 msgid "Huddled in silence, they worked themselves to fantasies of what the tribesmen had in reality."
-msgstr "Przytuliwszy się w ciszy, oddawali się fantazjom o tym, co plemiennicy mieli w rzeczywistości."
+msgstr "Zdani w ciszę, oddali się fantazjom o tym, jak w rzeczywistości wyglądali członkowie plemienia."
 
 msgctxt "speaker:Narrator"
 msgid "They spilled their seeds to the infertile earth."
@@ -66782,7 +66782,7 @@ msgstr "Hę, też myślałem, że to Kate..."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah didn't know what to say, and only stared at the both of them."
-msgstr "Sarah nie wiedziała, co powiedzieć, i tylko wpatrywała się w obu mężczyzn."
+msgstr "Sarah nie wiedziała, co powiedzieć, i tylko wpatrywała się w nich obu."
 
 msgctxt "speaker:Caleb"
 msgid "Hey, I asked you a question!"
@@ -73630,7 +73630,7 @@ msgstr "Mimo to, trzymał ją przy ziemi i kontynuował swój atak na jej ciało
 
 msgctxt "speaker:Narrator"
 msgid "The hard work with the crates. The roughness of his sex."
-msgstr "Ciężka praca ze skrzyniami. Surowość jego seksu."
+msgstr "Ciężka praca z skrzyniami. Chrupkość jego ciała."
 
 msgctxt "speaker:Narrator"
 msgid "All of it had tired out her body."
@@ -79250,7 +79250,7 @@ msgstr "Dwa tygodnie... a raczej pewnie trzy tygodnie."
 
 msgctxt "speaker:Tailor"
 msgid "Let the Headmaster know, and you'll be put back on the schedule when your uniform is ready."
-msgstr "Poinformuj dyrektora, a gdy twój mundur będzie gotowy, zostaniesz ponownie wpisana na listę."
+msgstr "Poinformuj dyrektora, a zostaniesz dodany z powrotem do harmonogramu, gdy twój mundur będzie gotowy."
 
 msgctxt "speaker:Sarah"
 msgid "I can't just...I need the job! I need the money! I can't not work for three weeks."
@@ -80150,7 +80150,7 @@ msgstr "Jako moja uczennica, nauczyłbym cię wszystkiego, co musisz wiedzieć."
 
 msgctxt "speaker:Albert"
 msgid "And working in my workshop, you would be safe from whatever is preying on those girls."
-msgstr "A pracując w moim warsztacie, byłabyś bezpieczna przed wszystkim, co poluje na te dziewczyny."
+msgstr "A pracując w moim warsztacie, byłoby ci bezpiecznie przed wszystkim, co poluje na te dziewczyny."
 
 msgctxt "speaker:Narrator"
 msgid "He reached out and grabbed her hands."
@@ -81410,7 +81410,7 @@ msgstr "Zamiast tego nachylił się jeszcze bardziej, jego język stawał się c
 
 msgctxt "speaker:Narrator"
 msgid "Sarah abandoned any restraint as she came, spreading her legs, grinding herself up against his eager mouth."
-msgstr "Sarah porzuciła wszelkie powściągliwość, gdy doznała orgazmu, rozchylając nogi i napierając swoim ciałem na jego żądne usta."
+msgstr "Sarah porzuciła wszelkie hamulce, gdy doznała orgazmu, rozchylając nogi i ocierając się o jego żądne usta."
 
 msgctxt "speaker:Narrator"
 msgid "When the last waves of pleasure receded, she fell back, exhausted into the sofa."
@@ -82130,7 +82130,7 @@ msgstr "A co z samą Rosanną?"
 
 msgctxt "speaker:Carolyn"
 msgid "To rule it, you will need the right names."
-msgstr "Aby nią rządzić, będziesz potrzebował właściwych nazw."
+msgstr "Aby nim rządzić, będziesz potrzebować właściwych imion."
 
 msgctxt "speaker:Carolyn"
 msgid "We are a proud people. It takes more than the raw strength of two legions to make us bend."
@@ -95090,7 +95090,7 @@ msgstr "Pod koniec musiała przypomnieć mu, że jego jądra były już do reszt
 
 msgctxt "speaker:Narrator"
 msgid "He had fucked her one last time for good measure."
-msgstr "Przeleżał ją ostatni raz, dla pewności."
+msgstr "Zrobił to z nią ostatni raz, dla pewności."
 
 msgctxt "speaker:Narrator"
 msgid "Stretching her arms, she could feel the pain in her muscles there too."
@@ -95454,7 +95454,7 @@ msgstr "Tak, przyjmuję."
 
 msgctxt "speaker:Narrator"
 msgid "The priest waved his hands in ceremony."
-msgstr "Kapitan straży machał rękami w ramach ceremonii."
+msgstr "Kapłan machał rękami w obrzędzie."
 
 msgctxt "speaker:Priest"
 msgid "Then before me, as a representative of the gods, I declare you husband and wife."
@@ -99970,7 +99970,7 @@ msgstr "W końcu, choć nie trwało to tak długo, jak się obawiała, stworzeni
 
 msgctxt "speaker:Narrator"
 msgid "A last high pitched shriek as it spewed out its seed across her cell."
-msgstr "Ostatni, wysoki krzyk rozległ się, gdy wytrysnęło jego nasienie na jej celę."
+msgstr "Ostatni, przenikliwy krzyk, gdy wypluło swoje nasienie po całej jej celi."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah did her best to avoid it, but could not prevent at least some of the semen from falling on her skin."
@@ -112402,7 +112402,7 @@ msgstr "Oparła się do tyłu, składając kolejny pocałunek na ustach Samayry,
 
 msgctxt "speaker:Narrator"
 msgid "Lower still, Sarah could see that Kate, more eager and more direct, had placed herself in between Samayra's legs."
-msgstr "Niżej jeszcze, Sarah widziała, że Kate, bardziej zdesperowana i bardziej bezpośrednia, znalazła się między nogami Samayry."
+msgstr "Niżej jeszcze, Sarah widziała, że Kate, bardziej zapałana i bezpośrednia, ustawiła się między nogami Samayry."
 
 msgctxt "speaker:Narrator"
 msgid "In the midsts of kising Samayra, Sarah suddenly felt the girl flinch and cry out against her."
@@ -114030,7 +114030,7 @@ msgstr "No proszę."
 
 msgctxt "speaker:Male Soldier"
 msgid "I think you were just getting an attitude because you weren't getting enough dick."
-msgstr "Myślę, że właśnie nabierałaś arogancji, bo nie dostawałaś wystarczająco dużo chuja."
+msgstr "Myślę, że po prostu nabierałeś arogancji, bo nie dostawałeś wystarczająco dużo chuja."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah felt him stopping his thrusts."
@@ -117278,7 +117278,7 @@ msgstr "To wszystko, co naprawdę możemy zrobić, Efraim. Obiecajmy sobie, że 
 
 msgctxt "speaker:Sarah"
 msgid "And see through on that promise."
-msgstr "I zobacz, jak to obietnicę łamiesz."
+msgstr "I zobacz, czy dotrzymasz tej obietnicy."
 
 msgctxt "speaker:Narrator"
 msgid "She watched as he wiped away a tear."
@@ -119622,7 +119622,7 @@ msgstr "Minęła pół godziny, zanim zakończyli dyskusję i poszli skonfrontow
 
 msgctxt "speaker:Narrator"
 msgid "Arriving in Vaelen's tent, they found him already waiting for them."
-msgstr "Gdy dotarli do namiotu Vaelena, zastali go już na nich czekającego. Po półgodzinnej rozmowie postanowili stawić mu czoła. Vaelen, mężczyzna, pyta ich teraz, czy znaleźli odpowiedź, której szukał."
+msgstr "Gdy dotarli do namiotu Vaelena, zastali go już na nich czekającego."
 
 msgctxt "speaker:Vaelen"
 msgid "Have you found me the answer I'm looking for?"
@@ -126107,7 +126107,7 @@ msgstr "Przez cały ten czas dźwięki ich trzech ciał rozbrzmiewały w zimnym 
 
 msgctxt "speaker:Narrator"
 msgid "The wet slicking of their members, entering both orifices."
-msgstr "Wilgotne, śliskie pocieranie ich członków, wchodzących do obu otworów."
+msgstr "Mokra, śliska nawilżenie ich członków, wchodzących do obu otworów."
 
 msgctxt "speaker:Narrator"
 msgid "The way their pleasured grunts rang out as they ravaged her body from both ends."
@@ -136015,7 +136015,7 @@ msgstr "Niedługo potem Sarah poczuła doznania własnego orgazmu, które unosi�
 
 msgctxt "speaker:Narrator"
 msgid "Desperately, as she came, she continued to drive her own fingers inside of Carolyn."
-msgstr "W rozpaczy, osiągając orgazm, nadal wsuwała swoje palce do wnętrra Carolyn."
+msgstr "W rozpaczy, podchodząc, wciąż wsuwała swoje palce do Carolyn."
 
 msgctxt "speaker:Narrator"
 msgid "Reaching her own peak, Sarah cried out."
@@ -144307,7 +144307,7 @@ msgstr "Garret! Przestań!"
 
 msgctxt "speaker:Narrator"
 msgid "The creature advanced again."
-msgstr "Stworzenie znów ruszyło do ataku, machając w jej stronę ogromnymi pazurami."
+msgstr "Stworzenie znów ruszyło naprzód."
 
 msgctxt "speaker:Narrator"
 msgid "Suddenly it lunged, swiping at her with its great claws."
@@ -172255,7 +172255,7 @@ msgstr "Sarah wcisnęła twarz w materac, tłumiąc jęk."
 
 msgctxt "speaker:Narrator"
 msgid "It was an odd mix of pain and pleasure at being taken raw."
-msgstr "To było dziwne połączenie bólu i przyjemności z tego, że został przyjęty bez zabezpieczenia."
+msgstr "To była dziwna mieszanka bólu i przyjemności z bycia zdemaskowanym."
 
 msgctxt "speaker:Narrator"
 msgid "She could hear the market place was already filling up with people, and she didn't want to risk being found out."
@@ -172435,7 +172435,7 @@ msgstr "Jakikolwiek powód przejął kontrolę nad Alaricem, szybko ustąpił, g
 
 msgctxt "speaker:Narrator"
 msgid "He drove his cock into her, up to its hilt, and grunted loudly as he came."
-msgstr "Wbił w nią swojego członka aż do nasady i głośno zgrzytnął, gdy doszedł."
+msgstr "Wprowadził swojego członka w nią aż po nasadę i głośno stęknął, gdy doszedł."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah could feel the familiar feeling of his seed spilling into her."
@@ -176591,7 +176591,7 @@ msgstr "Kurwa... naprawdę wiesz, co robisz."
 
 msgctxt "speaker:Narrator"
 msgid "He groaned with pleasure as he slipped his cock in and out of her mouth."
-msgstr "Zażenował z przyjemności, gdy wsuwał i wysuwał swojego członka z jej ust."
+msgstr "Zażenął z przyjemnością, gdy wsuwał i wysuwał swojego członka z jej ust."
 
 msgctxt "speaker:Narrator"
 msgid "Fucking, Sarah realized...he was fucking her mouth."
@@ -186131,7 +186131,7 @@ msgstr "Ich miasta stały się pustymi miastami duchów. Wieś również była p
 
 msgctxt "speaker:Sigmund"
 msgid "With no real economy left, the only way to make money was robbing merchants."
-msgstr "Bez prawdziwej gospodarki, jedynym sposobem na zarabianie pieniędzy było okradanie kupców. Ale im więcej okradali kupców, tym mniej z nich decydowało się na podróż starą drogą, wybierając zamiast tego drogę morską."
+msgstr "Ponieważ nie pozostała już żadna prawdziwa gospodarka, jedynym sposobem na zarabianie pieniędzy było okradanie kupców."
 
 msgctxt "speaker:Sigmund"
 msgid "But the more they robbed merchants, the less merchants took to the old road, deciding to instead travel by sea."
@@ -188295,7 +188295,7 @@ msgstr "Dopiero gdy ostatnia porcja trafiła w jej ciało, Sarah znów otworzył
 
 msgctxt "speaker:Narrator"
 msgid "She saw Sakar, looking down on her with a satisfied grin on his face."
-msgstr "Dobra dziewczynka."
+msgstr "Zobaczyła Sakara, który patrzył na nią z góry z zadowolonym uśmiechem na twarzy."
 
 msgctxt "speaker:Sakar"
 msgid "Good girl."
@@ -190095,7 +190095,7 @@ msgstr "A jednak nie potrafiła się oszukać."
 
 msgctxt "speaker:Narrator"
 msgid "A real princess didn't go out to the forest at night, alone, with a near stranger, and suck him off for a story."
-msgstr "Prawdziwa księżniczka nie wychodziłaby w nocy do lasu sama, z prawie obcym mężczyzną, żeby go ssąć w zamian za opowieść."
+msgstr "Prawdziwa księżniczka nie wychodziłaby w nocy do lasu sama, z prawie obcym człowiekiem, i nie ssałaby go dla opowieści."
 
 msgctxt "speaker:Narrator"
 msgid "Or was that just a lie she told herself."
@@ -192979,7 +192979,7 @@ msgstr "Co... jaka jest ta druga historia?"
 
 msgctxt "speaker:Sakar"
 msgid "Fine, since you worked so hard for it."
-msgstr "No dobrze, skoro tak bardzo się o to starałaś."
+msgstr "Dobrze, skoro tak ciężko na to pracowałeś."
 
 msgctxt "speaker:Sakar"
 msgid "Sigmund would tell you that...swinging from that rope, he received a vision."
@@ -202347,7 +202347,7 @@ msgstr "Cal po calu czuła, jak on wchodzi w nią."
 
 msgctxt "speaker:Narrator"
 msgid "The filling sensation driving her ever more in heat, eager for more of it."
-msgstr "Uczucie wypełnienia napędzało ją coraz bardziej do gorąca, pragnąc jeszcze więcej tego."
+msgstr "Uczucie wypełnienia napędzało ją w coraz większe podniecenie, sprawiając, że pragnęła jeszcze więcej."
 
 msgctxt "speaker:Narrator"
 msgid "But she held back her desire to rush him."
@@ -204867,7 +204867,7 @@ msgstr "Powtarzała to tak długo, aż niemal uwierzyła, że on już nigdy nie 
 
 msgctxt "speaker:Narrator"
 msgid "Just as her heart began to set, she glanced out the window and saw the figure of Marius making his way up the road."
-msgstr "Gdy tylko jej serce zaczęło znosić rozczarowanie, spojrzała przez okno i zobaczyła postać Mariusa idącego drogą."
+msgstr "Gdy tylko jej serce zaczęło się uspokajać, spojrzała przez okno i zobaczyła postać Mariusza zbliżającego się drogą."
 
 msgctxt "speaker:Narrator"
 msgid "Even from a distance, she could see he was in a foul mood."
@@ -205767,7 +205767,7 @@ msgstr "I wiedziała, że był wobec niej szczery."
 
 msgctxt "speaker:Alfred"
 msgid "Now, would you forgive an impatient fiancé and give him a small advance on his wedding night?"
-msgstr "No, czy wybaczyłabyś niecierpliwej narzeczonej i dała mu mały przedsmak ich pierwszej wspólnej nocy ślubnej?"
+msgstr "A więc, czy wybaczyłbyś niecierpliwemu narzeczonemu i dałbyś mu mały przedsmak noc poślubnej?"
 
 msgctxt "speaker:Narrator"
 msgid "Laughing and giggling, the two new lovers retired to his bed chamber."
@@ -214052,7 +214052,7 @@ msgstr "Sarah... co zrobiłaś..."
 
 msgctxt "speaker:Narrator"
 msgid "Who was she."
-msgstr "Kim ona w ogóle była, żeby tu przychodzić po tylu latach i zadawać jej pytania."
+msgstr "Kim ona była."
 
 msgctxt "speaker:Narrator"
 msgid "Who was she to come here, after all these years, and question her."
@@ -217112,7 +217112,7 @@ msgstr "Zostawiła ducha bez dalszych słów i zrobiła, jak jej kazano, nosząc
 
 msgctxt "speaker:Narrator"
 msgid "Near the end, exhausted, she returned to her room."
-msgstr "Sarah ciągnęła nogami, wchodząc do swojej sypialni."
+msgstr "Pod koniec, wyczerpana, wróciła do swojego pokoju."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah dragged her feet as she walked into her bedroom."
@@ -222516,7 +222516,7 @@ msgstr "Zmęczona bezczynnością, Sarah zaczęła podchodzić."
 
 msgctxt "speaker:Narrator"
 msgid "Taking off her clothes as she neared, Sarah joined Samayra in the mist of Razaphel's body."
-msgstr "Zdzierając ubranie, gdy się zbliżała, Sarah dołączyła do Samayry w oparach ciała Razafela."
+msgstr "Zdzierając ubranie, gdy się zbliżała, Sarah dołączyła do Samayry w mgle ciała Razaphela."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah placed her hands on Samayra's shoulders and pulled her in closer."
@@ -223236,7 +223236,7 @@ msgstr "Wszędzie wokół niej atak nasilał się."
 
 msgctxt "speaker:Narrator"
 msgid "Twisting her arms, spreading her legs, binding her throat."
-msgstr "Kręcił jej ramionami, rozszerzał jej nogi i wiązał jej gardło."
+msgstr "Skręcając ramiona, rozchylając nogi, wiążąc sobie gardło."
 
 msgctxt "speaker:Narrator"
 msgid "She was a plaything in his grip, and she prayed it would never end."
@@ -225756,7 +225756,7 @@ msgstr "To już dawno zapomniane miasto, jedno z pierwszych, które upadło pod 
 
 msgctxt "speaker:Razaphel"
 msgid "None still live there, but a Mythran host now occupies it."
-msgstr "Tam nikt już nie żyje, ale teraz zajmuje go armia Mythran."
+msgstr "Nikt tam już nie żyje, ale teraz zajmuje go gospodarz z rasy Mythran."
 
 msgctxt "speaker:Sarah"
 msgid "A Mythran army? Why?"
@@ -230980,7 +230980,7 @@ msgstr "Cokolwiek do tego czasu? Powiedziałabym, żebyśmy liczyli minuty na ze
 
 msgctxt "speaker:Alaric"
 msgid "I could fuck your brains out on this bed. That should kill some time."
-msgstr "Mógłbym cię przelecieć do szaleństwa na tym łóżku. To powinno zabić trochę czasu."
+msgstr "Mógłbym cię pieprzyć do szaleństwa na tym łóżku. To chyba zabiłoby trochę czasu."
 
 msgctxt "speaker:Sarah"
 msgid "Tempting offer, but I think I'll pass."
@@ -232424,7 +232424,7 @@ msgstr "Co ona właściwie robiła przez te wszystkie lata?"
 
 msgctxt "speaker:Narrator"
 msgid "She was a mage. Power beyond what most could ever hope for, called forth with the snap of a finger."
-msgstr "Była magiem. Moc, której większość nigdy nie mogłaby się doczekać, przywoływana jednym szturchnięciem palca."
+msgstr "Była magiem. Posiadała moc, o jakiej większość ludzi mogła tylko marzyć, przywoływaną jednym pstryknięciem palców."
 
 msgctxt "speaker:Narrator"
 msgid "Alaric was a poor match, even if she hadn't been a mage."
@@ -236208,7 +236208,7 @@ msgstr "Ale posłusznie, nie uroniła ani jednej kropli."
 
 msgctxt "speaker:Narrator"
 msgid "When she could taste the last of his semen dissapear down her throat, he pulled out."
-msgstr "Gdy poczuła, jak ostatnie resztki jego nasienia znikają jej w gardle, on się wycofał."
+msgstr "Gdy poczuła, jak ostatnie resztki jego nasienia znikają w jej gardle, on się wycofał."
 
 msgctxt "speaker:Narrator"
 msgid "Her mouth suddenly empty of him, Sarah felt a desire to have him back."
@@ -236568,7 +236568,7 @@ msgstr "Obserwowała, jak Razafael przesuwał się przez Wielką Salę."
 
 msgctxt "speaker:Razaphel"
 msgid "Yet you are more powerful than you have ever been. And you will grow more powerful still."
-msgstr "A jednak jesteś potężniejsza niż kiedykolwiek wcześniej. I będziesz stawać się jeszcze potężniejsza."
+msgstr "A jednak jesteś potężniejszy niż kiedykolwiek wcześniej. I będziesz stawał się jeszcze potężniejszy."
 
 msgctxt "speaker:Razaphel"
 msgid "What does it all add up to?"
@@ -239448,7 +239448,7 @@ msgstr "Sarah poczuła się jak pijana tym aktem, pragnieniem i surowością ich
 
 msgctxt "speaker:Narrator"
 msgid "It wasn't long into it that Sarah could see and feel in Samayra her climax."
-msgstr "Nie minęło wiele czasu, zanim Sarah zobaczyła i poczuła u Samayry jej orgazm."
+msgstr "Niedługo potem Sarah zaczęła dostrzegać i odczuwać w Samayrze jej kulminację."
 
 msgctxt "speaker:Narrator"
 msgid "Hearing the girl howl under her was more than Sarah could endure."
@@ -240352,7 +240352,7 @@ msgstr "Och, bogowie, powiedz mi, że nie poszłaś za tym."
 
 msgctxt "speaker:Sarah"
 msgid "No, I didn't."
-msgstr "Nie, nie poszłam."
+msgstr "Nie, nie zrobiłam tego."
 
 msgctxt "speaker:Metis"
 msgid "Gods, you have no idea how lucky you got."
@@ -243232,7 +243232,7 @@ msgstr "Sarah szybko zrozumiała, że musi dalej połykać, jeśli chce mieć ja
 
 msgctxt "speaker:Narrator"
 msgid "All the while, the goblin continued to thrust, fucking her mouth until it was entirely satisfied."
-msgstr "Przez cały ten czas goblin wciąż pchał, kochając jej usta, aż był w pełni zadowolony."
+msgstr "W międzyczasie goblin wciąż napierał, pieprząc jej usta, aż był w pełni zadowolony."
 
 msgctxt "speaker:Narrator"
 msgid "She swallowed more of it, gulping each time he added. More of his seed and cum dissapeared down her throat."
@@ -244852,7 +244852,7 @@ msgstr "Dopiero teraz Sarah po raz pierwszy zobaczyła innego goblina."
 
 msgctxt "speaker:Narrator"
 msgid "The creature was stirring, already naked and its member rising."
-msgstr "Stworzenie się poruszało, już nagie, a jego członkowie stali."
+msgstr "Stworzenie się poruszało, już nagie, a jego człon się unosił."
 
 msgctxt "speaker:Narrator"
 msgid "Her master did not seem angry at the intrusion."
@@ -245032,7 +245032,7 @@ msgstr "Była zaskoczona tym, jak bardzo była mokra i jak niewielki opór stawi
 
 msgctxt "speaker:Narrator"
 msgid "Only the droning pleasure."
-msgstr "Tylko tępe, nieprzerwane rozkosz."
+msgstr "Tylko monotonna przyjemność."
 
 msgctxt "speaker:Narrator"
 msgid "The bliss of a thoughtless life."
@@ -249896,7 +249896,7 @@ msgstr "Nawet teraz działasz zgodnie z ich planem."
 
 msgctxt "speaker:King-On-The-Outside"
 msgid "Controlled by those Demons who you would worship as Gods."
-msgstr "Jesteś kontrolowana przez tych demonów, którym oddajesz cześć jak bogom."
+msgstr "Kontrolowani przez tych demonów, których ty czciłbyś jak bogów."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah shuddered as the pounding voice drove deeper into her flesh, down into her bones."
@@ -259440,7 +259440,7 @@ msgstr "Błagała desperackim głosem."
 
 msgctxt "speaker:Captain"
 msgid "So eager."
-msgstr "Tak niecierpliwa."
+msgstr "Taki niecierpliwy."
 
 msgctxt "speaker:Narrator"
 msgid "He increased his pace, fucking her only slightly faster, only frusting her more."
@@ -266660,7 +266660,7 @@ msgstr "Sarah..."
 
 msgctxt "speaker:Oryon"
 msgid "Did you never wonder how or why the Mythran Empire stood so far above and beyond all other nations?"
-msgstr "Czy nigdy nie zastanawiałaś się, jak lub dlaczego Imperium Mythran stało tak daleko ponad wszystkimi innymi narodami?"
+msgstr "Czy nigdy nie zastanawiałeś się, jak i dlaczego Imperium Mythran stało tak daleko ponad wszystkimi innymi narodami?"
 
 msgctxt "speaker:Sarah"
 msgid "Hasn't there always been a nation that stands above the others?"

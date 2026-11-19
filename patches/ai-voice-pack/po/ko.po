@@ -8767,7 +8767,7 @@ msgstr "전투 소리는 곧 살육의 소리로 변했다. 남자들이 비명�
 
 msgctxt "speaker:Narrator"
 msgid "The sounds of soldiers dying, soon became the sounds of citizens, as she could hear Hassar's army make its way through the gates and into the city."
-msgstr "병사들이 죽는 소리는 곧 시민들이 죽는 소리로 변했고, 그녀는 하사르의 군대가 성문을 뚫고 도시로 진입하는 것을 들을 수 있었다."
+msgstr "군인들이 죽는 소리는 곧 시민들의 소리로 바뀌었다. 그녀는 하사르의 군대가 성문을 뚫고 도시 안으로 진입하는 것을 들을 수 있었기 때문이다."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah forced herself onto her feet, and looked down."
@@ -11647,7 +11647,7 @@ msgstr "제 가족이 당신을 배신했습니다. 저에게 기회를 주신�
 
 msgctxt "speaker:Lily"
 msgid "I was trained from a young age in martial combat. I know how to wield a sword. Please allow me to server your family as the rest of my clan failed to do."
-msgstr "저는 어릴 때부터 무술 전투 훈련을 받았습니다. 검을 다루는 법도 압니다. 제 가문이 실패했던 것처럼, 제 가문의 이름을 깨끗하게 되찾기 위해 평생 당신을 위해 복무하게 해 주십시오."
+msgstr "저는 어릴 때부터 무술 전투 훈련을 받았습니다. 검을 다루는 법도 압니다. 제 가문의 다른 구성원들이 실패했지만, 제발 저희 가족을 위해 제가 봉사하게 해 주십시오."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah studied her a while longer."
@@ -12367,7 +12367,7 @@ msgstr "주변 환경은 사라지고 오직 쾌락만이 남아서 다른 모�
 
 msgctxt "speaker:Narrator"
 msgid "Lady Carolyn is sitting on the edge of the bed, pouring more wax onto her, fueling the cycle of pain and pleasure."
-msgstr "당신을 다시 진정시켜야겠어요, 사라."
+msgstr "캐롤린 여사는 침대 가장자리에 앉아 자신의 몸에 더 많은 밀랍을 부으며 고통과 쾌락의 순환을 부추기고 있습니다."
 
 msgctxt "speaker:Carolyn"
 msgid "I'll need to bring you down again, Sarah."
@@ -18499,7 +18499,7 @@ msgstr "만약 통치의 스트레스가 너무 무거워지면... 꼭 알려줘
 
 msgctxt "speaker:Narrator"
 msgid "Sarah felt her face turn bright red."
-msgstr "사라는... 정말... 가야만 해..."
+msgstr "사라는 얼굴이 새빨개지는 것을 느꼈다."
 
 msgctxt "speaker:Sarah"
 msgid "I...I really have to..."
@@ -21579,7 +21579,7 @@ msgstr "모두가 그랬다. 멀리 떨어진 마에이브만은 빼고."
 
 msgctxt "speaker:Narrator"
 msgid "Maeiv who had offended few, and took offense from few."
-msgstr "마에이브는 모욕을 거의 가하지 않았고, 모욕도 거의 받지 않았다."
+msgstr "적은 사람을 불쾌하게 했고, 적은 사람에게서 불쾌감을 느낀 마에이브."
 
 msgctxt "speaker:Narrator"
 msgid "Maeiv whose armies still stood solid and whose wealth had only grown where others faded."
@@ -24639,7 +24639,7 @@ msgstr "사라가 팔을 벌리자 미리암이 그 품으로 뛰어들었다."
 
 msgctxt "speaker:Narrator"
 msgid "Orwen, her son, older by a few years than his sister and pretending to be stronger than he was, held back for a moment."
-msgstr "오웜, 너도 이리 와."
+msgstr "오르웬, 그의 아들은 누나보다 몇 살 많았고, 실제보다 더 강한 척하며 잠시 몸을 거두었다."
 
 msgctxt "speaker:Sarah"
 msgid "You too, Orwen, come here."
@@ -25551,7 +25551,7 @@ msgstr "각하... 부디 마차로 돌아가 주십시오. 이곳은 안전하�
 
 msgctxt "speaker:Squire"
 msgid "We are not bandits!"
-msgstr "우린 사기꾼이 아니야!"
+msgstr "우린 산적 아니야!"
 
 msgctxt "speaker:Guard Captain"
 msgid "These troublemakers then! They are blocking the road!"
@@ -26271,7 +26271,7 @@ msgstr "응?"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah had spoken her name, but hardly knew what else to say."
-msgstr "사라는 자신의 이름을 말했지만, 그 외에는 무슨 말을 해야 할지 몰랐다. 그녀는 자신이 얼굴이 붉어지는 것을 느꼈는데, 이는 그녀에게 낯선 경험이었다. 릴리가 그녀의 머리카락을 뒤로 쓸어 넘기며 깊은 눈빛으로 그녀를 바라보는 것도 느껴졌다. 릴리가 '응?'이라고 물었다. 사라에게는 이 순간을 깨뜨릴 만한 어떤 말이라도 더 하는 것이 위험하게 느껴졌고, 그녀는 그 순간을 깨뜨리지 않기 위해 무엇이든 할 준비가 되어 있었다."
+msgstr "사라는 자신의 이름을 말했지만, 그 외에는 무슨 말을 해야 할지 거의 몰랐다."
 
 msgctxt "speaker:Narrator"
 msgid "It seemed to her that any word further might break this moment. And Sarah would have done anything to prevent that."
@@ -34556,7 +34556,7 @@ msgstr "그러니까 그 이야기들을 듣고 이제 두려워하는 거야?"
 
 msgctxt "speaker:Narrator"
 msgid "The Duke forced a smile."
-msgstr "경비대장이 억지 미소를 지었다."
+msgstr "두크는 억지로 미소를 지었다."
 
 msgctxt "speaker:Duke Antonio"
 msgid "Well...I would not put it as such, of course."
@@ -38697,7 +38697,7 @@ msgstr "안토니오 공작이 항의하려 했다."
 
 msgctxt "speaker:Duke Antonio"
 msgid "You expect me to live under this man? Who so constantly insults me?"
-msgstr "저를 이렇게 모욕하는 남자의 아래에서 살라고요? 그게 전부라고 생각하면 다행이겠네요."
+msgstr "이 남자의 아래에서 살라고요? 저를 끊임없이 모욕하는 이 남자의 아래에서요?"
 
 msgctxt "speaker:Marshal Edmond"
 msgid "You are a very insultable man, Antonio. Be glad that is all I do."
@@ -47705,7 +47705,7 @@ msgstr "하지만 늙은이인 내가 한 가지 지혜를 알려주지. 나도 
 
 msgctxt "speaker:Hassar"
 msgid "But their pussies are the same as any other."
-msgstr "하지만 그들의 성기는 다른 누구와도 똑같을 뿐이야."
+msgstr "하지만 그들의 보지는 다른 누구와도 똑같아."
 
 msgctxt "speaker:Narrator"
 msgid "The entire room of sycophants burst out into laughter."
@@ -49505,7 +49505,7 @@ msgstr "사라는 고개를 끄덕이고 눈을 내리깔며 계속해서 자신
 
 msgctxt "speaker:Narrator"
 msgid "Bobbing her head up and down his cock, faster and faster, she could feel him reach deeper and deeper into her."
-msgstr "그녀의 머리가 그의 성기 위를 오르내리며 점점 더 빨라졌고, 그는 그녀의 몸속으로 점점 더 깊이 들어오는 것을 느낄 수 있었다."
+msgstr "그의 성기 위에서 고개를 위아래로 흔들며 점점 더 빠르게 움직이자, 그녀는 그가 자신의 몸속으로 점점 더 깊숙이 파고드는 것을 느낄 수 있었다."
 
 msgctxt "speaker:Narrator"
 msgid "The drool from her mouth, sliding past his shaft, running down her own chin."
@@ -67869,7 +67869,7 @@ msgstr "거의 2주가 지났다."
 
 msgctxt "speaker:Narrator"
 msgid "Two weeks in which Sarah had been able to do little more than sit in her tent or explore the camp."
-msgstr "사라가 텐트 안에서 침대에 쓰러진 지 거의 2주가 지났지만, 경비대원들은 여전히 그녀를 내보내지 않았다."
+msgstr "사라는 2주 동안 텐트 안에 앉아 있거나 캠프를 둘러보는 것 외에는 거의 아무것도 할 수 없었다."
 
 msgctxt "speaker:Narrator"
 msgid "The guards would still not let her leave."
@@ -70393,7 +70393,7 @@ msgstr "벨몬트 선장은 사라의 머리를 놓아주었다."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah leaned back in to take the captain’s cock back into her mouth and finish him."
-msgstr "사라는 몸을 뒤로 기울이며 선장의 성기를 다시 입에 넣고 그를 끝까지 만족시키려 했다."
+msgstr "사라는 뒤로 기대며 선장의 성기를 다시 입으로 받아 마무리했다."
 
 msgctxt "speaker:Narrator"
 msgid "To her surprise, he simply stood up and began to put it away, pulling up his pants and buckling his belt."
@@ -71473,7 +71473,7 @@ msgstr "그의 성기 끝에서 여전히 사라의 가슴 사이에 박힌 채�
 
 msgctxt "speaker:Narrator"
 msgid "Sarah never broke her motion, continuing to thrust up and down and load after load of semen sprayed onto her face, onto her chest."
-msgstr "사라는 자신의 움직임을 멈추지 않고 계속해서 위아래로 움직이며 그녀의 얼굴과 가슴 위로 계속해서 정액이 분사되는 것을 받았다."
+msgstr "사라는 움직임을 멈추지 않고 계속해서 위아래로 움직이며, 그녀의 얼굴과 가슴 위로 정액이 계속해서 분사되었다."
 
 msgctxt "speaker:Narrator"
 msgid "To her own surprise, she felt herself come along with him."
@@ -72193,7 +72193,7 @@ msgstr "그녀는 벨몬트에게 능글맞은 미소를 지어 보였다."
 
 msgctxt "speaker:Captain Belmont"
 msgid "Or just cause I got you hollerin like I paid you for it."
-msgstr "아니면 내가 돈을 주고 부르는 것처럼 네가 그렇게 소리 지르게 해서라도."
+msgstr "아니, 내가 돈을 줬다고 생각해서 그렇게 소리 지르는 건 아니겠지."
 
 msgctxt "speaker:Narrator"
 msgid "As she had come to appreciate the sex, so too had she come to appreciate Belmont."
@@ -73633,7 +73633,7 @@ msgstr "하지만 그는 여전히 그녀를 바닥에 억누른 채 그녀의 �
 
 msgctxt "speaker:Narrator"
 msgid "The hard work with the crates. The roughness of his sex."
-msgstr "상자를 다루는 힘든 일과 그의 거친 성행위."
+msgstr "상자를 다루는 힘든 작업. 그의 성기의 거친 느낌."
 
 msgctxt "speaker:Narrator"
 msgid "All of it had tired out her body."
@@ -76725,7 +76725,7 @@ msgstr "그는 그녀의 몸 위를 몇 번이고 다시 손으로 훑었다."
 
 msgctxt "speaker:Narrator"
 msgid "More than once he grazed her sex, her ass, her breasts, her waist."
-msgstr "그는 그녀의 성기, 엉덩이, 가슴, 허리를 한두 번이 아니라 계속 스쳤다."
+msgstr "그는 그녀의 성기, 엉덩이, 가슴, 허리를 한두 번이 아니도록 스쳤다."
 
 msgctxt "speaker:Narrator"
 msgid "Every part of her, and always the same excuse."
@@ -76905,7 +76905,7 @@ msgstr "신들께 감사할 따름이었지. 적어도 그들 사이에는 그�
 
 msgctxt "speaker:Narrator"
 msgid "The old tailor had ran the measuring tape so far up along the insides of her legs, that his hand had grazed her."
-msgstr "노인은 재봉틀 줄자를 그녀의 다리 안쪽을 따라 너무 높이 끌어올려 그의 손이 그녀의 몸을 스치게 만들었다."
+msgstr "늙은 재단사는 줄자를 그녀의 다리 안쪽을 따라 너무 높이 끌어올렸더니, 그의 손이 그녀의 몸에 스칠 뻔했다."
 
 msgctxt "speaker:Narrator"
 msgid "He gestured at her nipples. Hard and erect, pressing through the fabric of her bra."
@@ -77809,7 +77809,7 @@ msgstr "그들을 바라보던 그녀는 네이탄이 여전히 삽입을 하고
 
 msgctxt "speaker:Narrator"
 msgid "The last of his powerful thrusts, then a loud grunt as he filled Kim up with his cum."
-msgstr "그의 마지막 강력한 삽입이 끝나자, 그는 김을 자신의 정액으로 채우며 큰 신음을 내뱉었다."
+msgstr "그의 마지막 강력한 삽입과 함께, 김 씨의 몸 안에 정액을 채워 넣으며 큰 신음 소리를 냈다."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah watched as he pumped himself empty into the girl, then pulled out."
@@ -81593,7 +81593,7 @@ msgstr "그가 그녀의 입안으로 사정을 마쳤을 때, 사라는 그저 
 
 msgctxt "speaker:Narrator"
 msgid "His seed, spilling out across her mouth, her tongue, and eagerly down her throat."
-msgstr "그의 정액이 그녀의 입과 혀 위로 쏟아져 내리며, 그녀는 그것을 갈망하며 목구멍으로 삼켰다."
+msgstr "그의 씨앗이 그녀의 입과 혀 위로 쏟아져 나와, 탐욕스럽게 그녀의 목구멍으로 흘러내렸다."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah swallowed all of it, eager to possess some part of him."
@@ -82493,7 +82493,7 @@ msgstr "부족민들이 이 땅을 휩쓸고 지나간 후, 당신 같은 사람
 
 msgctxt "speaker:Gilead"
 msgid "More than a few are in that hall right now, earning their keep."
-msgstr "지금 그 홀에는 당신 같은 사람들이 적지 않게 머물며 생계를 유지하고 있죠."
+msgstr "지금 그 홀에는 적지 않은 사람들이 있으며, 그들은 자신의 가치를 증명하고 있습니다."
 
 msgctxt "speaker:Sarah"
 msgid "I managed to escape in time."
@@ -91313,7 +91313,7 @@ msgstr "하지만 사실 나는 내 도구를 가지러 가지 않을 거야."
 
 msgctxt "speaker:Captain Belmont"
 msgid "I'm going to pay your little friend a visit."
-msgstr "그래. 그 쥐새끼 같은 놈이 나를 훔쳐보는 걸 봤을 때부터 뭔가 계획하고 있다는 걸 알았지. 자기가 생각하는 것만큼 똑똑하지도 않아."
+msgstr "네 작은 친구를 한번 찾아봐야겠군."
 
 msgctxt "speaker:Captain Belmont"
 msgid "Yeah. I knew that rat fuck was planning something when I caught him spying on me. He ain't as clever as he likes to think he is."
@@ -94193,7 +94193,7 @@ msgstr "무슨 일에 대해 말인가?"
 
 msgctxt "speaker:Sarah"
 msgid "Would you believe me if I said your cock?"
-msgstr "당신의 성기가 그랬다고 하면 믿으시겠어요?"
+msgstr "당신 거라고 하면 믿으시겠어요?"
 
 msgctxt "speaker:Captain Belmont"
 msgid "Sure, it's been known to leave an impression on most women."
@@ -95637,7 +95637,7 @@ msgstr "사라는 거친 숨을 몰아쉬는 와중에도 말을 하려고 애�
 
 msgctxt "speaker:Captain Belmont"
 msgid "For as long as you live, that's gonna be the only cock you'll ever let in there, got that?"
-msgstr "네가 살아있는 한, 네가 받아들일 유일한 성기는 바로 이거일 거야, 알겠지?"
+msgstr "살아있는 한, 네가 그 안에 들여보낼 수 있는 유일한 거시기는 바로 그것뿐이야, 알겠지?"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah nodded as she began to feel her body rock back and forth from Belmont's thrusts."
@@ -97621,7 +97621,7 @@ msgstr "하루 종일, 그리고 밤늦게까지 그들은 성관계와 회복�
 
 msgctxt "speaker:Narrator"
 msgid "Bend over, on her knees, on top of him, beneath him."
-msgstr "그녀의 위에, 그의 아래에, 무릎을 꿇은 채, 그를 덮친 채로 몸을 구부려."
+msgstr "허리를 숙여, 무릎을 꿇고, 그의 위에, 그의 아래에."
 
 msgctxt "speaker:Narrator"
 msgid "Every fantasy he ever had of her, he'd inflict."
@@ -99069,7 +99069,7 @@ msgstr "사라는 거칠고 갑작스러운 침해에 비명을 질렀다."
 
 msgctxt "speaker:Narrator"
 msgid "Orcs seemed to enjoy violence in all things, even their sex."
-msgstr "오르크는 모든 일에 폭력을 즐기는 듯했다. 심지어 성관계조차도. 그는 막 그녀의 몸을 거칠게 덮쳤다. 그녀는 그의 거대한 성기 앞에서 거의 꿰뚫릴 뻔했다. 그 거칠고 갑작스러운 침범에 그녀는 비명을 질렀다. 이제 그는 그녀를 죽일지도 모른다."
+msgstr "오크들은 모든 일에 폭력을 즐기는 듯했고, 심지어 성관계조차도 예외는 아니었다."
 
 msgctxt "speaker:Gorak"
 msgid "Maybe I kill you after I'm done."
@@ -102493,7 +102493,7 @@ msgstr "그들 각자가 한쪽을 맡아 사라의 옷을 벗기기 시작하�
 
 msgctxt "speaker:Narrator"
 msgid "Sarah lets the men undress her."
-msgstr "사라는 남자들이 자신을 해체하도록 내버려 두었다."
+msgstr "사라는 남자들이 자신의 옷을 벗기는 것을 내버려 둔다."
 
 msgctxt "speaker:Narrator"
 msgid "Caleb is first, and clearly the more aggressive one. He puts his hands on the back of Sarah's head, pulling her in for a kiss."
@@ -114033,7 +114033,7 @@ msgstr "자, 이제 됐어."
 
 msgctxt "speaker:Male Soldier"
 msgid "I think you were just getting an attitude because you weren't getting enough dick."
-msgstr "네가 태도가 나빠진 건 그냥 자지를 충분히 못 받아서 그런 것 같네."
+msgstr "내 생각에 넌 그냥 자지를 충분히 못 받아서 태도가 나빴던 거야."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah felt him stopping his thrusts."
@@ -116921,7 +116921,7 @@ msgstr "끝없이 변화하는 붉은색이 그 안에서 춤추며 소용돌이
 
 msgctxt "speaker:Narrator"
 msgid "She shouted his name. It echoed through the vast vault."
-msgstr "사라! 발렌!!!"
+msgstr "그녀가 그의 이름을 외쳤다. 그 소리는 광활한 금고 안에 울려 퍼졌다."
 
 msgctxt "speaker:Sarah"
 msgid "Vaelen!!!"
@@ -119985,7 +119985,7 @@ msgstr "그리고 무엇보다도, 무자비한 태양의 공격이 있었다."
 
 msgctxt "speaker:Narrator"
 msgid "Where first the soldiers had cried out against it, hurled their insults, there was now only a brooding hatred for the thing."
-msgstr "처음에는 군인들이 태양과 더위에 대해 외치고 욕설을 퍼부었으나, 이제는 그 대상에 대한 깊은 증오만이 남아 있었다."
+msgstr "처음에는 병사들이 그것에 맞서 소리치며 모욕을 퍼부었지만, 이제는 그저 그 존재에 대한 묵직한 증오만이 남아 있었다."
 
 msgctxt "speaker:Narrator"
 msgid "Those who dared to say anything of the sun, the heat, were met only by angry glares."
@@ -125570,7 +125570,7 @@ msgstr "깊은 신음 소리가 들리더니, 이미 상당한 크기의 그의 
 
 msgctxt "speaker:Narrator"
 msgid "As his semen spilled into her, Sarah could feel it coat the insides of her sex."
-msgstr "그의 정액이 그녀의 몸속으로 쏟아져 들어오자, 사라는 그것이 자신의 성기 내부를 감싸는 것을 느낄 수 있었다."
+msgstr "그의 정액이 그녀의 몸속으로 흘러들어오자, 사라는 그것이 자신의 성기 안쪽을 감싸는 것을 느낄 수 있었다."
 
 msgctxt "speaker:Narrator"
 msgid "Slowly, his manic thrusts began to build back down."
@@ -126110,7 +126110,7 @@ msgstr "그동안 그들의 세 몸이 내는 소리가 차가운 사막의 공�
 
 msgctxt "speaker:Narrator"
 msgid "The wet slicking of their members, entering both orifices."
-msgstr "그들의 성기가 서로를 적시며 두 구멍으로 동시에 들어가는 느낌."
+msgstr "그들의 성기가 젖어 미끄러워지며 두 구멍 모두로 들어간다."
 
 msgctxt "speaker:Narrator"
 msgid "The way their pleasured grunts rang out as they ravaged her body from both ends."
@@ -136018,7 +136018,7 @@ msgstr "얼마 지나지 않아, 사라는 자신의 오르가즘이 다리에�
 
 msgctxt "speaker:Narrator"
 msgid "Desperately, as she came, she continued to drive her own fingers inside of Carolyn."
-msgstr "절정에 달하는 동안에도 그녀는 절박하게 자신의 손가락을 카롤린의 몸속으로 계속 밀어 넣었다."
+msgstr "절망적으로, 그녀는 다가오면서 계속해서 자신의 손가락을 캐롤린의 안으로 밀어 넣었다."
 
 msgctxt "speaker:Narrator"
 msgid "Reaching her own peak, Sarah cried out."
@@ -140338,7 +140338,7 @@ msgstr "물론이지."
 
 msgctxt "speaker:Kate"
 msgid "You mind if I fuck your secretary?"
-msgstr "내 비서를 범해도 괜찮겠어?"
+msgstr "비서랑 섹스해도 괜찮을까?"
 
 msgctxt "speaker:Sarah"
 msgid "Very funny. Don't bully the girl, she's been through enough."
@@ -144310,7 +144310,7 @@ msgstr "가렛! 멈춰!"
 
 msgctxt "speaker:Narrator"
 msgid "The creature advanced again."
-msgstr "괴물이 다시 다가와 거대한 발톱으로 그녀를 덮쳤다."
+msgstr "생물이 다시 다가왔다."
 
 msgctxt "speaker:Narrator"
 msgid "Suddenly it lunged, swiping at her with its great claws."
@@ -156911,7 +156911,7 @@ msgstr "좋아, 보고할 내용은 뭐지?"
 
 msgctxt "speaker:Narrator"
 msgid "Kate gestured towards the tent."
-msgstr "케이트가 텐트 쪽으로 손짓하며 말했다. \"보고해 드릴 수 있는데, 우리 둘만 이야기하면 안 될까요?\""
+msgstr "케이트가 텐트를 가리켰다."
 
 msgctxt "speaker:Kate"
 msgid "I can brief you, shall we do it in private?"
@@ -163056,7 +163056,7 @@ msgstr "남은 부족민들은 자신들의 선택지를 고심하고 있었다.
 
 msgctxt "speaker:Narrator"
 msgid "Those that had not charged into the spearmen, had slowed down too much to perform another charge."
-msgstr "돌격하지 않았던 부족민들은 너무 늦게 속도를 줄여 다시 돌격할 수 없게 되었다."
+msgstr "창병들에게 돌격하지 않았던 이들은 다시 돌격하기에는 너무 많이 속도가 느려져 있었다."
 
 msgctxt "speaker:Narrator"
 msgid "And even if they could, their fate would be the same."
@@ -171900,7 +171900,7 @@ msgstr "그가 그녀와 섹스를 한 것은 그가 더 강했기 때문이고,
 
 msgctxt "speaker:Narrator"
 msgid "She focussed on his cum still seeping out from between her legs as a reminder."
-msgstr "그녀는 그의 정액이 여전히 다리 사이로 흘러나오는 것을 보며 스스로를 상기했다."
+msgstr "그녀는 그 증거로, 여전히 다리 사이로 흘러나오는 그의 정액에 집중했다."
 
 msgctxt "speaker:Narrator"
 msgid "This is what happens if you're weak. The strong fuck you, and all you can do is bend over a crate and give it up."
@@ -176596,7 +176596,7 @@ msgstr "젠장... 너 정말 뭘 하는지 알고 있구나."
 
 msgctxt "speaker:Narrator"
 msgid "He groaned with pleasure as he slipped his cock in and out of her mouth."
-msgstr "그는 쾌락에 신음하며 자신의 성기를 그녀의 입에 넣었다 빼고 있었다."
+msgstr "그는 그녀의 입에 자신의 성기를 넣었다 빼기를 반복하며 쾌락에 찬 신음을 내뱉었다."
 
 msgctxt "speaker:Narrator"
 msgid "Fucking, Sarah realized...he was fucking her mouth."
@@ -179296,7 +179296,7 @@ msgstr "하지만 그녀가 감각이 빠르게 밀려왔다 사라질 것이라
 
 msgctxt "speaker:Narrator"
 msgid "Spreading up through her nose, out into her mouth, Sarah could feel and smell the smoke, passing through her."
-msgstr "코로 숨을 들이마시자 사라는 연기가 냄새를 맡기도 전에 기어오르는 것을 느꼈다. 달콤한 향기가 천둥소리가 번개를 따라오듯 뒤따르며 맴돌았다. 하지만 그녀는 그 감각이 빠르게 지나가기를 기대했지만, 오히려 더욱 깊숙이 파고들었다."
+msgstr "코를 통해 퍼져나가 입으로 이어지는 연기, 사라는 연기가 자신을 통과하는 것을 느끼고 냄새도 맡을 수 있었다."
 
 msgctxt "speaker:Narrator"
 msgid "As it sank into her chest, crawling across her shoulders, rising up into her eyes and digging into her mind."
@@ -185956,7 +185956,7 @@ msgstr "대부분의 세계에 비하면 안전하지는 않지만, 도시 경�
 
 msgctxt "speaker:Narrator"
 msgid "Sigmund gesturd with his knife, further up the road."
-msgstr "시그문드가 칼을 휘두르며, 길 더 위쪽을 언급했다."
+msgstr "지그문드가 칼을 들고 길 위쪽으로 더 나아갔다."
 
 msgctxt "speaker:Sigmund"
 msgid "Up ahead and we'll be hitting the edge of the Korval forest."
@@ -190100,7 +190100,7 @@ msgstr "하지만 그녀는 스스로를 속일 수 없었다."
 
 msgctxt "speaker:Narrator"
 msgid "A real princess didn't go out to the forest at night, alone, with a near stranger, and suck him off for a story."
-msgstr "진짜 공주라면 밤에 혼자 숲으로 나가서, 거의 모르는 남자와 함께, 이야기를 듣기 위해 그의 성기를 빨지는 않았을 거야."
+msgstr "진짜 공주라면 밤에 거의 모르는 남자와 함께 혼자 숲으로 나가서 이야기를 듣기 위해 그에게 구강성교를 하지는 않았을 거야."
 
 msgctxt "speaker:Narrator"
 msgid "Or was that just a lie she told herself."
@@ -193705,7 +193705,7 @@ msgstr "내 말은... 너희 모두를 그리워하게 될 거야. 너희가 길
 
 msgctxt "speaker:Narrator"
 msgid "Sakar eyed her."
-msgstr "사카르가 그녀를 쳐다보았다. 라하얄에서 그녀가 자신을 그리워하지 않을까 궁금해했다. 그녀는 방금 자신이 모두를 그리워할 것이라고 말했는데, 특히 그녀를 안전하게 지켜준 그들을 말이다. 만약 그가 그녀가 혼자 떠나려는 것을 막지 않았다면, 그녀는 여전히 레스람에 갇혀 있었을 것이다. 혹은 더 나쁜 상황이었을지도 모른다. 이제 그는 라하얄이 대체 뭐가 그렇게 특별한지, 왜 그곳이어야 하는지 묻고 있었다."
+msgstr "사카르가 그녀를 쳐다보았다."
 
 msgctxt "speaker:Sakar"
 msgid "What's so special about Rahayal anyway? Why there?"
@@ -199654,7 +199654,7 @@ msgstr "그를 올려다보던 그녀는 그가 인정하듯 미소 짓는 것�
 
 msgctxt "speaker:Narrator"
 msgid "She took him back into her mouth, and began the rest of her life."
-msgstr "그녀는 그를 다시 입에 담고, 남은 인생을 시작했다."
+msgstr "그녀는 그를 다시 입안으로 받아들였고, 남은 삶을 시작했다."
 
 msgctxt "speaker:Narrator"
 msgid "In the years after, she would give him several more children."
@@ -202714,7 +202714,7 @@ msgstr "정말 행복해요."
 
 msgctxt "speaker:Narrator"
 msgid "Kissing his chest, she slowly trailed down, inch by inch with each kiss, until she reached lower still."
-msgstr "그의 가슴에 키스를 퍼부으며, 그녀는 한 입 한 입 천천히 아래로 내려가, 더 아래에 도달할 때까지 계속했다."
+msgstr "그의 가슴에 입을 맞추며, 그녀는 입맞춤을 한 번 한 번 이어가며 천천히 아래로 내려갔고, 마침내 더 아래에 도달했다."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah grinned and looked up at her husband who by now understood her intentions."
@@ -203075,7 +203075,7 @@ msgstr "내가 이곳에 오기 전까지 살았던 삶... 그건 정말... 너�
 
 msgctxt "speaker:Narrator"
 msgid "Marius stepped forward."
-msgstr "하지만 내가 널 도와줄 수 있는데!"
+msgstr "마리우스가 앞으로 나섰다."
 
 msgctxt "speaker:Marius"
 msgid "But I could help you!"
@@ -203616,7 +203616,7 @@ msgstr "그의 냄새."
 
 msgctxt "speaker:Narrator"
 msgid "Well endowed, she did her best to fit all of him into her mouth, and partially her throat."
-msgstr "성기가 잘 발달한 그는, 그녀가 자신의 입과 목에 그의 성기 전체를 최대한 담으려 애썼다."
+msgstr "풍만한 몸매의 그녀는 그의 온몸을 입과 목구멍 일부까지 받아들이기 위해 최선을 다했다."
 
 msgctxt "speaker:Narrator"
 msgid "And above her, the approving groans of the old man."
@@ -204516,7 +204516,7 @@ msgstr "마지막 남은 이성을 붙잡은 채, 그녀는 그에게 몸을 내
 
 msgctxt "speaker:Narrator"
 msgid "She held onto him for dear life as he continued to fuck her, driving the orgasm deeper."
-msgstr "그가 계속해서 자신을 범하며 오르가즘을 더욱 깊게 밀어붙이자, 그녀는 목숨을 부지하기 위해 그를 붙잡았다."
+msgstr "그녀는 그가 계속해서 자신을 범하며 오르가즘을 더욱 깊게 몰아붙이는 동안, 목숨을 부지하기 위해 그를 붙잡았다."
 
 msgctxt "speaker:Narrator"
 msgid "Synapses, drowned in blissful white fire."
@@ -206136,7 +206136,7 @@ msgstr "그가 절정에 이르렀을 때, 그녀는 그의 정액을 받아들�
 
 msgctxt "speaker:Narrator"
 msgid "He fucked her mouth, and with each release, she eagerly swallowed his seed down her throat."
-msgstr "그가 그녀의 입을 범할 때마다, 그녀는 그의 정자를 갈망하며 목구멍 깊숙이 삼켰다."
+msgstr "그는 그녀의 입을 범했고, 그가 사정할 때마다 그녀는 그의 정자를 갈망하며 목구멍으로 삼켰다."
 
 msgctxt "speaker:Narrator"
 msgid "Distantly, she realized, she had never been happier."
@@ -207216,7 +207216,7 @@ msgstr "저는 공주예요..."
 
 msgctxt "speaker:Razaphel"
 msgid "You were one..."
-msgstr "너는 공주였지..."
+msgstr "당신은 하나였습니다..."
 
 msgctxt "speaker:Narrator"
 msgid "How could this creature know."
@@ -208116,7 +208116,7 @@ msgstr "어쩌면 조금 더 머물고 싶은가 보군."
 
 msgctxt "speaker:Narrator"
 msgid "With what little force still left in her, Sarah managed just enough strength to spin herself around on the floor, turning over and landing just outside the spirit's circle."
-msgstr "사라는 아직 남아있는 얼마 안 되는 힘으로 겨우 바닥에서 몸을 돌릴 수 있었다. 그녀는 정신의 형체가 자신의 드러난 등을 부드럽게 스치는 것을 느꼈지만, 그를 향해 돌아볼 수는 없었다. 그는 어디에 있었을까? 그 순간, 정신은 그녀의 발목을 더 단단히 붙잡았다. 어쩌면 조금 더 머물고 싶은 걸까? 라자펠이 물었다. 눈가에서 그녀는 정신이 자신을 향해 손을 뻗는 것을 보았다. 하지만 이제 그녀는 그에게 너무 멀리 떨어져 있었다."
+msgstr "사라는 남은 얼마 안 되는 힘으로 겨우 몸을 돌려 바닥에서 한 바퀴 돌더니, 정신의 원 바로 바깥에 착지했다."
 
 msgctxt "speaker:Narrator"
 msgid "From the corner of her eyes, she saw the spirit reach for her. But she was too far for him now."
@@ -211716,7 +211716,7 @@ msgstr "사라는 부드럽게 흐느끼기 시작했다."
 
 msgctxt "speaker:Narrator"
 msgid "Why did this still hurt her so?"
-msgstr "그녀는 왜 아직도 이렇게 약해서 다정한 포옹 하나에 무너져 내리는 걸까?"
+msgstr "이건 왜 아직도 그녀에게 그렇게 아팠을까?"
 
 msgctxt "speaker:Narrator"
 msgid "Why was she still so weak that even a kind hug could cause her to breakdown."
@@ -221624,7 +221624,7 @@ msgstr "주인이라고요? 잔을 말하는 건가요?"
 
 msgctxt "speaker:Curator"
 msgid "Xanthippe was the master of this space, but the connection was recently severed."
-msgstr "대체할 인물이 없는 이상, 당신은 현재 주인인 것 같군요."
+msgstr "잔티페는 이 공간의 주인이었지만, 최근 그 연결이 끊어졌습니다."
 
 msgctxt "speaker:Curator"
 msgid "For lack of alternative, you would appear to be the current master."
@@ -223244,7 +223244,7 @@ msgstr "그녀의 주위에서 공격이 더욱 격렬해졌다."
 
 msgctxt "speaker:Narrator"
 msgid "Twisting her arms, spreading her legs, binding her throat."
-msgstr "그의 손에 붙잡힌 그녀는 그저 이 고통이 끝나기만을 기도할 뿐이었다."
+msgstr "팔을 비틀고, 다리를 벌리고, 목을 묶는다."
 
 msgctxt "speaker:Narrator"
 msgid "She was a plaything in his grip, and she prayed it would never end."
@@ -225764,7 +225764,7 @@ msgstr "그곳은 오랫동안 잊혀졌지. 수 세기 전, 사막의 진격으
 
 msgctxt "speaker:Razaphel"
 msgid "None still live there, but a Mythran host now occupies it."
-msgstr "거기에는 이제 아무도 살지 않지만, 미스란 군대가 그곳을 점령하고 있어."
+msgstr "거기에는 아직 살아있는 존재가 없지만, 지금은 미스란의 숙주가 그곳을 차지하고 있습니다."
 
 msgctxt "speaker:Sarah"
 msgid "A Mythran army? Why?"
@@ -230988,7 +230988,7 @@ msgstr "그때까지 할 만한 거라도 있어? 시계로 시간을 세는 걸
 
 msgctxt "speaker:Alaric"
 msgid "I could fuck your brains out on this bed. That should kill some time."
-msgstr "이 침대 위에서 네 머릿속을 다 빼내 버릴 만큼 격렬하게 할 수도 있어. 그럼 시간도 좀 때울 수 있겠지."
+msgstr "이 침대에서 네 머릿속을 다 박살 내줄 수도 있어. 그럼 시간 좀 때울 수 있겠지."
 
 msgctxt "speaker:Sarah"
 msgid "Tempting offer, but I think I'll pass."
@@ -236216,7 +236216,7 @@ msgstr "하지만 그녀는 의무적으로, 단 한 방울도 흘리지 않았�
 
 msgctxt "speaker:Narrator"
 msgid "When she could taste the last of his semen dissapear down her throat, he pulled out."
-msgstr "그의 정액 마지막 흔적이 목구멍으로 사라지는 것을 느끼는 순간, 그는 빠져나왔다."
+msgstr "그녀가 그의 정액 마지막 흔적이 목구멍으로 사라지는 것을 느낄 수 있을 때, 그는 빼냈다."
 
 msgctxt "speaker:Narrator"
 msgid "Her mouth suddenly empty of him, Sarah felt a desire to have him back."
@@ -237656,7 +237656,7 @@ msgstr "식물이 자신만큼이나 자신을 갈망할 수 있다는 것을 �
 
 msgctxt "speaker:Narrator"
 msgid "As she pressed the head of the flower deeper between her legs, she could feel the tendrils move up along her body."
-msgstr "꽃의 머리가 그녀의 다리 사이로 더 깊이 눌려감에 따라, 그녀는 꽃줄기들이 몸을 따라 위로 움직이는 것을 느낄 수 있었다."
+msgstr "그녀가 꽃의 머리를 다리 사이로 더 깊이 밀어 넣자, 촉수들이 몸을 따라 위로 움직이는 것이 느껴졌다."
 
 msgctxt "speaker:Narrator"
 msgid "At every part of her, they wrapped and coiled around her."
@@ -242880,7 +242880,7 @@ msgstr "그의 얼굴에서는 긴장감의 흔적조차 보이지 않았다. �
 
 msgctxt "speaker:Narrator"
 msgid "How."
-msgstr "어떻게? 겨우 자기 몸집의 절반밖에 안 되는 작은 생물이 어떻게 저런 신체적 힘을 가질 수 있는 거지?"
+msgstr "어떻게."
 
 msgctxt "speaker:Narrator"
 msgid "How could such a small creature, barely half her size, have such physical strength?"
@@ -243240,7 +243240,7 @@ msgstr "사라는 빨리 깨달았다. 삼키기를 계속해야만 겨우 삼�
 
 msgctxt "speaker:Narrator"
 msgid "All the while, the goblin continued to thrust, fucking her mouth until it was entirely satisfied."
-msgstr "그동안 고블린은 계속해서 삽입하며, 그녀의 입이 완전히 만족할 때까지 범했다."
+msgstr "그동안 고블린은 계속해서 삽입하며, 완전히 만족할 때까지 그녀의 입을 범했다."
 
 msgctxt "speaker:Narrator"
 msgid "She swallowed more of it, gulping each time he added. More of his seed and cum dissapeared down her throat."
@@ -244860,7 +244860,7 @@ msgstr "이제야 사라는 처음으로 다른 고블린을 보게 되었다."
 
 msgctxt "speaker:Narrator"
 msgid "The creature was stirring, already naked and its member rising."
-msgstr "그 생물은 이미 벌거벗은 채 움직이기 시작했고, 그의 성기도 서기 시작했다."
+msgstr "그 생물이 꿈틀거리기 시작했고, 이미 알몸인 채로 성기가 서기 시작했다."
 
 msgctxt "speaker:Narrator"
 msgid "Her master did not seem angry at the intrusion."
@@ -245040,7 +245040,7 @@ msgstr "그녀는 자신이 얼마나 젖어 있는지, 마음과 몸에서 저�
 
 msgctxt "speaker:Narrator"
 msgid "Only the droning pleasure."
-msgstr "무의식적인 삶의 행복."
+msgstr "지루한 쾌락뿐."
 
 msgctxt "speaker:Narrator"
 msgid "The bliss of a thoughtless life."
@@ -245580,7 +245580,7 @@ msgstr "이전에는 고블린 물질이 그녀의 혈관을 태웠지만, 이�
 
 msgctxt "speaker:Narrator"
 msgid "Now, if she was denied the sweet nectar for too long, her skin became iritable, and the warm comfortable feeling turned to a burning pain."
-msgstr "하지만 그녀는 똑똑했다. 사라는 스스로에게 되뇌었다. 이제 만약 그녀가 그 달콤한 넥타를 너무 오랫동안 받지 못하면, 그녀의 피부는 자극받았고, 따뜻하고 편안한 느낌은 타는 듯한 통증으로 변했다."
+msgstr "만약 그녀가 달콤한 넥타를 너무 오랫동안 거부당하면, 그녀의 피부는 자극적으로 변하고, 따뜻하고 편안한 느낌은 타는 듯한 고통으로 바뀌었습니다."
 
 msgctxt "speaker:Narrator"
 msgid "But she was smart, Sarah reminded herself."
@@ -249904,7 +249904,7 @@ msgstr "지금도 당신은 그들의 계획대로 움직이고 있지."
 
 msgctxt "speaker:King-On-The-Outside"
 msgid "Controlled by those Demons who you would worship as Gods."
-msgstr "당신은 그 악마들에게 조종당하고 있잖아. 당신은 그들이 신처럼 숭배하는 바로 그 악마들이지. 아무것도 모르는 사라 로즈야. 당신은 그저 그들의 도구, 그들의 꼭두각시일 뿐이야."
+msgstr "당신이 신으로 숭배할 그 악마들에게 조종당하고 있네."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah shuddered as the pounding voice drove deeper into her flesh, down into her bones."
@@ -252244,7 +252244,7 @@ msgstr "그녀는 온몸을 관통하는 오르가즘의 쾌락 파도 사이로
 
 msgctxt "speaker:Narrator"
 msgid "Had he asked her something."
-msgstr "신이시여, 내가 이미 너를 너무 멍청하게 만들었나?"
+msgstr "그가 그녀에게 무언가를 물었다면."
 
 msgctxt "speaker:Alaric"
 msgid "Gods, did I fuck you stupid already?"
@@ -264140,7 +264140,7 @@ msgstr "사라는 뒤로 넘어지며 온전히 자신을 그에게 내어주었
 
 msgctxt "speaker:Narrator"
 msgid "His strong hand seized on her waist, the other on her breast, leaning forward, fucking her a bull in heat."
-msgstr "그의 강한 손이 그녀의 허리를 붙잡았고, 다른 한 손은 그녀의 가슴을 감쌌다. 그는 몸을 앞으로 기울이며 발정 난 황소처럼 그녀를 범했다."
+msgstr "그의 강한 손이 그녀의 허리를 붙잡았고, 다른 한 손은 그녀의 가슴을 감쌌다. 그는 앞으로 기울이며, 발정 난 황소처럼 그녀를 범했다."
 
 msgctxt "speaker:Sarah"
 msgid "Aah...fuck...yes...like...that..."
@@ -265948,7 +265948,7 @@ msgstr "사라는 분수 가장자리에 다가서자 방의 경계들이 점점
 
 msgctxt "speaker:Narrator"
 msgid "A bloodied hand emerged from the surface of the pool, though she could see the body it was attached to."
-msgstr "피투성이의 손 하나가 연못 표면에서 나타났지만, 그녀는 그 손이 붙어 있는 몸은 볼 수 없었다."
+msgstr "피투성이인 손이 수영장 표면에서 튀어나왔지만, 그녀는 그 손이 붙어 있는 몸은 볼 수 있었다."
 
 msgctxt "speaker:Narrator"
 msgid "Around her, she could feel the vibrations in the air, producing a soft hiss."
@@ -269913,7 +269913,7 @@ msgstr "감금 생활로 그녀의 몸은 점점 더 약해져 있었다."
 
 msgctxt "speaker:Narrator"
 msgid "The cold stone halls where he kept her were sparse."
-msgstr "그가 그녀를 가두어 둔 차가운 돌 복도는 아무것도 없었다."
+msgstr "그가 그녀를 가두어 두었던 차가운 돌 복도는 허술했다."
 
 msgctxt "speaker:Narrator"
 msgid "So few details, no windows nor natural light, it made the halls feel endless and claustrophobic at the same time."

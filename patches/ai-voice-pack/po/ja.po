@@ -2813,7 +2813,7 @@ msgstr "サラの背中は前後に反り、体でケイトに続けるよう懇
 # changed
 msgctxt "speaker:Narrator"
 msgid "Having her hands between the princess' legs, making her moan and writhe around, feeling her grind into her, begging for more..."
-msgstr "姫の両脚の間に手を差し込み、彼女を喘がせ、身をよじらせるようにして、彼女が自分に擦り寄ってくるのを感じながら、もっとと懇願するのを聞く……"
+msgstr "王女の両脚の間に手を差し入れ、彼女を喘がせ、身をよじらせ、自分の方へと擦り寄せさせ、もっとと懇願させるように…"
 
 msgctxt "speaker:Narrator"
 msgid "For Kate this was a pleasure far deeper than Sarah's inexperienced attempts to please her."
@@ -12368,7 +12368,7 @@ msgstr "周囲のすべてが霞み、快楽だけが残り、他の感覚や経
 
 msgctxt "speaker:Narrator"
 msgid "Lady Carolyn is sitting on the edge of the bed, pouring more wax onto her, fueling the cycle of pain and pleasure."
-msgstr "キャロリンはベッドの端に座り、サラにさらに蝋を注ぎ込み、苦痛と快楽の循環を煽っている。"
+msgstr "キャロリン夫人はベッドの端に座り、さらに蝋を自身に注ぎ込み、苦痛と快楽のサイクルを煽っている。"
 
 msgctxt "speaker:Carolyn"
 msgid "I'll need to bring you down again, Sarah."
@@ -13088,7 +13088,7 @@ msgstr "そしてある日、こんな野原で、彼は倒れてしまった。
 
 msgctxt "speaker:Sarah"
 msgid "The doctor had him laying in bed for weeks because of it."
-msgstr "医者のせいで、彼は数週間もベッドで寝たままだったのよ。"
+msgstr "そのせいで、医者に数週間もベッドで寝たきりにされていたの。"
 
 msgctxt "speaker:Lily"
 msgid "Why are you telling me this?"
@@ -24640,7 +24640,7 @@ msgstr "サラは腕を広げると、ミリアムは飛びついて抱きしめ
 
 msgctxt "speaker:Narrator"
 msgid "Orwen, her son, older by a few years than his sister and pretending to be stronger than he was, held back for a moment."
-msgstr "オーウェンも、こっちにおいで。"
+msgstr "オーウェンは、彼女の息子で、姉より数年年上であり、自分の方が強いふりをしながら、一瞬動きを止めた。"
 
 msgctxt "speaker:Sarah"
 msgid "You too, Orwen, come here."
@@ -26272,7 +26272,7 @@ msgstr "え？"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah had spoken her name, but hardly knew what else to say."
-msgstr "サラは自分の名前を口にしたが、それ以上何を言えばいいのか分からなかった。この瞬間を壊さないためには、どんなことでもしたかったのだ。"
+msgstr "サラは自分の名前を口にしたものの、他に何を言えばいいのかほとんど分からなかった。"
 
 msgctxt "speaker:Narrator"
 msgid "It seemed to her that any word further might break this moment. And Sarah would have done anything to prevent that."
@@ -47704,7 +47704,7 @@ msgstr "だが、年寄りの知恵を一つ授けてやろう。俺もかつて
 
 msgctxt "speaker:Hassar"
 msgid "But their pussies are the same as any other."
-msgstr "だが、彼女たちの『あそこ』も他の女と何ら変わりない。"
+msgstr "でも、あいつらの性器は他の奴らと同じだ。"
 
 msgctxt "speaker:Narrator"
 msgid "The entire room of sycophants burst out into laughter."
@@ -51304,7 +51304,7 @@ msgstr "性的な部分に敏感なサラは、その同じような敏感さが
 
 msgctxt "speaker:Narrator"
 msgid "Each limb in her body felt racked from the excercise."
-msgstr "彼女の体の四肢は、その行為によって疲れ果てているように感じられた。"
+msgstr "彼女の体の各部位が、その運動によってひどく消耗しているように感じられた。"
 
 msgctxt "speaker:Narrator"
 msgid "She struggled to move, much more say anything, only laying there, regaining her strength."
@@ -60664,7 +60664,7 @@ msgstr "一方、男たちは夜になると、今もテントの端に集まっ
 
 msgctxt "speaker:Narrator"
 msgid "Huddled in silence, they worked themselves to fantasies of what the tribesmen had in reality."
-msgstr "静かに身を寄せ合いながら、彼らは部族の男たちが実際に持っていたものについての空想に没頭していた。"
+msgstr "静寂に身を縮こまらせながら、彼らは部族民が実際には何を持っていたのかという空想に没頭していた。"
 
 msgctxt "speaker:Narrator"
 msgid "They spilled their seeds to the infertile earth."
@@ -61744,7 +61744,7 @@ msgstr "ほら、全部が悪いわけじゃないのよ。"
 
 msgctxt "speaker:Mary"
 msgid "Tons of tribesmen out here violent as can be. He's rough, but he don't hit you or nothing. Not unless you give him reason to."
-msgstr "「ここの多くの者たちと比べれば、彼に慣れれば、人生もそんなに悪くないってわかるようになるわ。」"
+msgstr "ここには暴力的な部族民が大勢いる。彼は荒っぽいけど、殴ったりはしないよ。理由がない限りはね。"
 
 msgctxt "speaker:Mary"
 msgid "Once you get used to him, you'll learn life ain't that bad, compared to most others here."
@@ -67869,7 +67869,7 @@ msgstr "二週間近くが過ぎていた。"
 
 msgctxt "speaker:Narrator"
 msgid "Two weeks in which Sarah had been able to do little more than sit in her tent or explore the camp."
-msgstr "サラはテントに入り、ベッドに倒れ込んだ。まだ昼間だったが、彼女はもうベッドから出る気になれなかった。二週間近くが過ぎていた。衛兵たちは依然として彼女を外出させようとしなかった。"
+msgstr "サラがテントに座っているか、キャンプ場を探索する以外に大して何もできなかった2週間。"
 
 msgctxt "speaker:Narrator"
 msgid "The guards would still not let her leave."
@@ -70393,7 +70393,7 @@ msgstr "ベルモント船長はサラの頭から手を離した。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah leaned back in to take the captain’s cock back into her mouth and finish him."
-msgstr "サラは身を乗り出して船長のペニスを再び口の中に受け入れ、彼を果てさせようとした。"
+msgstr "サラは身を乗り出して船長のペニスを再び口の中に受け入れ、最後まで吸い上げた。"
 
 msgctxt "speaker:Narrator"
 msgid "To her surprise, he simply stood up and began to put it away, pulling up his pants and buckling his belt."
@@ -72373,7 +72373,7 @@ msgstr "とりとめもない話でも構わないよ、金髪の娘。口以外
 
 msgctxt "speaker:Sarah"
 msgid "I'm pretty good using it that other way too."
-msgstr "口以外の方法で言葉を操るのも、なかなか得意なんだ。"
+msgstr "その方法でも、結構うまく使えるんだ。"
 
 msgctxt "speaker:Narrator"
 msgid "Belmont gave her another spank on the rear, then let his grip on her slip."
@@ -73633,7 +73633,7 @@ msgstr "それでも、彼は彼女を地面に押さえつけたまま、彼女
 
 msgctxt "speaker:Narrator"
 msgid "The hard work with the crates. The roughness of his sex."
-msgstr "荷箱を扱った重労働も、彼の荒々しいセックスも、すべてが彼女の体を疲れ果てさせていた。"
+msgstr "箱との厳しい作業。彼の性の荒々しさ。"
 
 msgctxt "speaker:Narrator"
 msgid "All of it had tired out her body."
@@ -75081,7 +75081,7 @@ msgstr "それが何であれ、サラには確信が持てなかった。ただ
 
 msgctxt "speaker:Narrator"
 msgid "Change."
-msgstr "それだけのことでも、彼女は不思議に思う理由を得た。"
+msgstr "変化。"
 
 msgctxt "speaker:Narrator"
 msgid "That alone gave her cause to wonder."
@@ -77809,7 +77809,7 @@ msgstr "彼らの方を見ると、ナサンがまだ突き続けているのが
 
 msgctxt "speaker:Narrator"
 msgid "The last of his powerful thrusts, then a loud grunt as he filled Kim up with his cum."
-msgstr "彼の力強い最後の突き、そしてキムを精液で満たした時の大きなうめき声。"
+msgstr "力強い最後の一突き。そして、キムに精液を注ぎ込むと、彼は大きなうめき声を漏らした。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah watched as he pumped himself empty into the girl, then pulled out."
@@ -85373,7 +85373,7 @@ msgstr "彼女は静かにその言葉を口にした。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah cried out as she felt Belmont's massive cock press into her."
-msgstr "サラは叫び声を上げた。ベルモント船長の巨大なペニスが彼女の中に押し込まれるのを感じて。"
+msgstr "サラはベルモントの巨大なペニスが自分の中に押し込まれるのを感じ、叫び声を上げた。"
 
 msgctxt "speaker:Narrator"
 msgid "She was already wet for him, but given his size, he was never easy to fit."
@@ -91314,7 +91314,7 @@ msgstr "だが、実際には自分の道具を取りに行くつもりはない
 
 msgctxt "speaker:Captain Belmont"
 msgid "I'm going to pay your little friend a visit."
-msgstr "ああ。あのネズミ野郎が何か企んでいるのは、俺が奴を監視しているのを見つけた時から分かっていた。奴は自分が思っているほど賢くはないんだ。"
+msgstr "お前のちびっ子友達に会いに行ってやる。"
 
 msgctxt "speaker:Captain Belmont"
 msgid "Yeah. I knew that rat fuck was planning something when I caught him spying on me. He ain't as clever as he likes to think he is."
@@ -94194,7 +94194,7 @@ msgstr "何について？"
 
 msgctxt "speaker:Sarah"
 msgid "Would you believe me if I said your cock?"
-msgstr "あなたの『それ』が何かって、信じますか？"
+msgstr "もし私が「あなたのチンコ」と言ったら、信じてくれる？"
 
 msgctxt "speaker:Captain Belmont"
 msgid "Sure, it's been known to leave an impression on most women."
@@ -95094,7 +95094,7 @@ msgstr "結局のところ、彼女は彼に、彼の睾丸はとっくの昔に
 
 msgctxt "speaker:Narrator"
 msgid "He had fucked her one last time for good measure."
-msgstr "念のためにもう一度、彼は彼女と交わった。"
+msgstr "念のため、彼は彼女と最後にもう一度セックスした。"
 
 msgctxt "speaker:Narrator"
 msgid "Stretching her arms, she could feel the pain in her muscles there too."
@@ -110786,7 +110786,7 @@ msgstr "豚の丸焼きが、焚き火の炎が肉と軟骨を舐め、艶やか
 
 msgctxt "speaker:Narrator"
 msgid "Sarah had her fill, both of wine and food."
-msgstr "サラもまた、酒も食事も存分に楽しんでいた。獣を倒したことについて、彼女を呼び止めて尋ねなかった兵士はほとんどいなかったに違いない。"
+msgstr "サラはワインも料理も、すっかり満足した。"
 
 msgctxt "speaker:Narrator"
 msgid "So too did she have her fill of praise. There must have barely been a single soldier who hadn't stopped her and asked her about killing the beast."
@@ -114034,7 +114034,7 @@ msgstr "ほらな。"
 
 msgctxt "speaker:Male Soldier"
 msgid "I think you were just getting an attitude because you weren't getting enough dick."
-msgstr "お前が態度を悪くしていたのは、ただちんぽが足りなかったからだろうな。"
+msgstr "お前が態度を悪くしてたのは、ただセックスが足りなかったからだと思うぞ。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah felt him stopping his thrusts."
@@ -117282,7 +117282,7 @@ msgstr "本当にできるのはそれだけよ、エフレイム。自分たち
 
 msgctxt "speaker:Sarah"
 msgid "And see through on that promise."
-msgstr "そして、あの約束を破ったのね。"
+msgstr "その約束を貫いて。"
 
 msgctxt "speaker:Narrator"
 msgid "She watched as he wiped away a tear."
@@ -119986,7 +119986,7 @@ msgstr "そして何よりも、容赦ない太陽の猛攻があった。"
 
 msgctxt "speaker:Narrator"
 msgid "Where first the soldiers had cried out against it, hurled their insults, there was now only a brooding hatred for the thing."
-msgstr "かつて兵士たちが太陽や暑さに対して叫び、罵っていた場所には、今やただ重苦しい憎しみが漂うだけだった。"
+msgstr "最初、兵士たちはそれに対して叫び声を上げ、罵詈雑言を浴びせていたが、今やそこにはただ、その存在に対する重苦しい憎悪だけが残っていた。"
 
 msgctxt "speaker:Narrator"
 msgid "Those who dared to say anything of the sun, the heat, were met only by angry glares."
@@ -122871,7 +122871,7 @@ msgstr "どこへ行っても、人々はまるで俺が靴についた糞以下
 
 msgctxt "speaker:Narrator"
 msgid "Sarah could see Gideon return in his mind to his own demons."
-msgstr "ええ、あなたもきっと楽ではなかったでしょうね。"
+msgstr "サラは、ギデオンが心の中で再び自身の悪魔たちへと戻っていくのを見て取れた。"
 
 msgctxt "speaker:Sarah"
 msgid "Sure, you probably didn't have it very easy either."
@@ -125571,7 +125571,7 @@ msgstr "深い唸り声が響き、続いて彼のすでに大きかったペニ
 
 msgctxt "speaker:Narrator"
 msgid "As his semen spilled into her, Sarah could feel it coat the insides of her sex."
-msgstr "彼の精液が彼女の中に溢れ出すと、サラはそれが性器の内部を覆うのを感じた。"
+msgstr "彼の精液が彼女の中に溢れ出すと、サラはそれが自身の性器の内側を覆うのを感じた。"
 
 msgctxt "speaker:Narrator"
 msgid "Slowly, his manic thrusts began to build back down."
@@ -129895,7 +129895,7 @@ msgstr "サラは二人のどちらをどう思えばいいのか分からなか
 
 msgctxt "speaker:Narrator"
 msgid "As the night went on, Lady Carolyn made her way through the crowd."
-msgstr "夜が更けるにつれて、キャロリン夫人は人混みの中を移動していった。彼女は微笑み、頷き、演じるべき役割を完璧にこなしていた。"
+msgstr "夜が更けるにつれ、キャロリン夫人は人混みの中を進んでいった。"
 
 msgctxt "speaker:Narrator"
 msgid "Expertly, she appeared to favor no person above the other, moving and stopping for the occasional conversation."
@@ -136019,7 +136019,7 @@ msgstr "間もなく、サラは自身のオーガズムの感覚を覚えた。
 
 msgctxt "speaker:Narrator"
 msgid "Desperately, as she came, she continued to drive her own fingers inside of Carolyn."
-msgstr "絶頂を迎えながらも、彼女は必死に自分の指をキャロリンの体内に押し込み続けた。"
+msgstr "必死に、彼女はやって来ると同時に、自分の指をキャロリンの内に押し込み続けた。"
 
 msgctxt "speaker:Narrator"
 msgid "Reaching her own peak, Sarah cried out."
@@ -140339,7 +140339,7 @@ msgstr "もちろん。"
 
 msgctxt "speaker:Kate"
 msgid "You mind if I fuck your secretary?"
-msgstr "君の秘書とヤっても構わないか？"
+msgstr "君の秘書とヤってもいい？"
 
 msgctxt "speaker:Sarah"
 msgid "Very funny. Don't bully the girl, she's been through enough."
@@ -165591,7 +165591,7 @@ msgstr "絶頂が彼女を包み込み、彼女は彼への狂信的な崇拝の
 
 msgctxt "speaker:Narrator"
 msgid "Behind her, he continued to take her, and for a moment she felt him so deeply and intensely."
-msgstr "彼女の背後で、彼は彼女を受け入れ続け、一瞬、彼女は彼を深く、強烈に感じた。"
+msgstr "彼女の背後で、彼は彼女を貫き続け、一瞬、彼女は彼を深く、強烈に感じた。"
 
 msgctxt "speaker:Narrator"
 msgid "On the tent in front of her, she saw their shadows of their entwined body, watching how he took her as his own."
@@ -169552,7 +169552,7 @@ msgstr "「うわああああ！！！」"
 
 msgctxt "speaker:Narrator"
 msgid "Kamal shrieked like a pig to the slaughter as the soldiers grabbed his arms and twisted them."
-msgstr "カマルは屠殺される豚のように悲鳴を上げた。兵士たちが彼の腕を掴んでねじり上げる中、彼はもがいたが、それが何の違いももたらさないようだった。"
+msgstr "兵士たちに腕を掴まれ、ねじり上げられると、カマルは屠殺される豚のように悲鳴を上げた。"
 
 msgctxt "speaker:Narrator"
 msgid "As they pushed his fat body into the ground, he writhed around as if it made any difference."
@@ -171900,7 +171900,7 @@ msgstr "彼は彼女を犯した。なぜなら彼の方が強かったからで
 
 msgctxt "speaker:Narrator"
 msgid "She focussed on his cum still seeping out from between her legs as a reminder."
-msgstr "彼女は、彼の精液がまだ脚の間から滲み出ているのを見つめ、それを痛烈な現実の証として意識していた。"
+msgstr "彼女は、彼が射精した精液がまだ脚の間から滲み出ているのを見つめ、それを思い出の印とした。"
 
 msgctxt "speaker:Narrator"
 msgid "This is what happens if you're weak. The strong fuck you, and all you can do is bend over a crate and give it up."
@@ -181816,7 +181816,7 @@ msgstr "では、そうしましょう。"
 
 msgctxt "speaker:Matthew"
 msgid "Well my name is Matthew, but you can call me officer Matt, got that?"
-msgstr "ええ、私の名前はマシューだけど、マット警官って呼んでくれていいよ。わかった？"
+msgstr "ええ、私の名前はマシューですが、マット巡査と呼んでください。分かった？"
 
 msgctxt "speaker:Matthew"
 msgid "And your name, inmate?"
@@ -190100,7 +190100,7 @@ msgstr "それでも、彼女は自分を騙すことはできなかった。"
 
 msgctxt "speaker:Narrator"
 msgid "A real princess didn't go out to the forest at night, alone, with a near stranger, and suck him off for a story."
-msgstr "本物の王女なら、夜に一人で森へ出て、ほとんど見知らぬ男と会い、物語のために彼を口淫したりはしないだろう。"
+msgstr "本物の姫様なら、夜に森へ一人で、ほとんど見知らぬ男と一緒に出かけたり、物語を聞かせるために彼をしゃぶったりなどしないわ。"
 
 msgctxt "speaker:Narrator"
 msgid "Or was that just a lie she told herself."
@@ -199652,7 +199652,7 @@ msgstr "彼を見上げると、彼女は彼が満足げに微笑むのを見た
 
 msgctxt "speaker:Narrator"
 msgid "She took him back into her mouth, and began the rest of her life."
-msgstr "彼女は彼を再び口の中に迎え入れ、それからの人生を始めた。"
+msgstr "彼女は彼を再び口の中に迎え入れ、残りの人生を始めた。"
 
 msgctxt "speaker:Narrator"
 msgid "In the years after, she would give him several more children."
@@ -204512,7 +204512,7 @@ msgstr "意識の最後のかけらで、彼女は彼の方へ身を投げ出し
 
 msgctxt "speaker:Narrator"
 msgid "She held onto him for dear life as he continued to fuck her, driving the orgasm deeper."
-msgstr "彼女は必死で彼にしがみつき、彼が彼女を突き上げ、オーガズムをさらに深めていく中、意識を保とうともがいていた。"
+msgstr "彼女は必死に彼にしがみつき、彼が彼女を犯し続ける中、絶頂はさらに深まっていった。"
 
 msgctxt "speaker:Narrator"
 msgid "Synapses, drowned in blissful white fire."
@@ -206132,7 +206132,7 @@ msgstr "彼が絶頂に達する頃には、彼女は彼の精液を待ち望ん
 
 msgctxt "speaker:Narrator"
 msgid "He fucked her mouth, and with each release, she eagerly swallowed his seed down her throat."
-msgstr "彼は彼女の口を犯し、射精するたびに、彼女は彼の種を喉の奥まで貪るように飲み込んだ。"
+msgstr "彼は彼女の口を犯し、射精するたびに、彼女は熱心に彼の精液を喉の奥まで飲み込んだ。"
 
 msgctxt "speaker:Narrator"
 msgid "Distantly, she realized, she had never been happier."
@@ -212252,7 +212252,7 @@ msgstr "そうなると宮殿はほとんど無防備になる。衛兵はほん
 
 msgctxt "speaker:Sarah"
 msgid "A handful of guards...and me."
-msgstr "その通り。"
+msgstr "衛兵が数人……それに私。"
 
 msgctxt "speaker:Xanthippe"
 msgid "That's right."
@@ -214596,7 +214596,7 @@ msgstr "彼女の命はどうなるの？"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah and Xan watched the Shah struggle."
-msgstr "兵士たちがここへ進軍してきたら、私たちがあなたを守ることができなければ、彼らは想像を絶するほど残酷になるでしょう。あなたは強く、街のために死ぬ覚悟があるのかもしれませんが、サマイラはどうなるのですか？彼女の命はどうなるのですか？"
+msgstr "サラとザンはシャーが苦闘するのを見ていた。"
 
 msgctxt "speaker:Shah Mahda"
 msgid "Curse the both of you..."
@@ -218556,7 +218556,7 @@ msgstr "これを信頼できる？この家を？"
 
 msgctxt "speaker:Razaphel"
 msgid "You can trust it to do what it has done for centuries. Survive."
-msgstr "それを信頼すれば、何世紀にもわたってそうしてきたように、それも恩を返すだろう。私が推測できた限りでは、それにはその根源的な本能以外に望みはほとんどない。"
+msgstr "何世紀にもわたってそうしてきたように、それは信頼できる。生き残るために。"
 
 msgctxt "speaker:Razaphel"
 msgid "If you give it what it wants, it will return the favor. It possess few desires outside of that base instinct, from what I have been able to deduce."
@@ -220896,7 +220896,7 @@ msgstr "恐怖に反応するどころか、サラはさらに身を委ね、よ
 
 msgctxt "speaker:Narrator"
 msgid "Seemingly, this was the reaction Alaric had hoped for, and he rewarded her by driving his cock deeper still."
-msgstr "どうやら、これがアラリックが望んでいた反応のようだ。彼は彼女に報いるように、さらに深く彼のペニスを突き入れた。"
+msgstr "どうやら、これがアラリックが望んでいた反応だったようで、彼は彼女の反応に報いるかのように、さらに深くペニスを突き入れた。"
 
 msgctxt "speaker:Narrator"
 msgid "The pain, the domination, the humiliation, the pleasure, all of it swirled in Sarah's mind and body."
@@ -222520,7 +222520,7 @@ msgstr "立ち尽くすだけでは飽き足らず、サラは歩み寄り始め
 
 msgctxt "speaker:Narrator"
 msgid "Taking off her clothes as she neared, Sarah joined Samayra in the mist of Razaphel's body."
-msgstr "近づくにつれて服を脱ぎながら、サラはラザフェルの体の霧の中にサマヤラと共に加わった。"
+msgstr "近づきながら服を脱ぎ、サラはラザフェルの体の霧の中へサマヤラと共に身を投じた。"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah placed her hands on Samayra's shoulders and pulled her in closer."
@@ -223240,7 +223240,7 @@ msgstr "彼女の周囲で、襲撃はますます激しくなった。"
 
 msgctxt "speaker:Narrator"
 msgid "Twisting her arms, spreading her legs, binding her throat."
-msgstr "彼の腕をねじり、脚を広げ、喉を締め上げた。"
+msgstr "腕をねじり、脚を広げ、喉を縛る。"
 
 msgctxt "speaker:Narrator"
 msgid "She was a plaything in his grip, and she prayed it would never end."
@@ -225760,7 +225760,7 @@ msgstr "それはとうに忘れ去られている。何世紀も前に、砂漠
 
 msgctxt "speaker:Razaphel"
 msgid "None still live there, but a Mythran host now occupies it."
-msgstr "そこにはもう誰も住んでいないが、今ではミスランの軍勢が占拠している。"
+msgstr "そこにはもう誰も生きていないが、今ではミスランの宿主が住んでいる。"
 
 msgctxt "speaker:Sarah"
 msgid "A Mythran army? Why?"
@@ -230984,7 +230984,7 @@ msgstr "それまで何かする？時計の針を数えるって言うけど、
 
 msgctxt "speaker:Alaric"
 msgid "I could fuck your brains out on this bed. That should kill some time."
-msgstr "このベッドで君の脳みそをぶち壊してやることもできる。それで少しは時間つぶせるだろう。"
+msgstr "このベッドで、お前の脳みそをぶちのめしてやることもできる。それで時間稼ぎにはなるだろうな。"
 
 msgctxt "speaker:Sarah"
 msgid "Tempting offer, but I think I'll pass."
@@ -243956,7 +243956,7 @@ msgstr "彼女はあの忌まわしい生き物を見つめ、その巨大なモ
 
 msgctxt "speaker:Narrator"
 msgid "Why fight him, she thought to herself."
-msgstr "彼が拒否するものを、彼が奪い取ることができるのだ、と彼女は思った。"
+msgstr "彼と戦う必要がどこにあるのか、彼女は心の中で思った。"
 
 msgctxt "speaker:Narrator"
 msgid "He could take whatever she denied him."
@@ -245036,7 +245036,7 @@ msgstr "彼女は自分がどれほど濡れているか、心も体もほとん
 
 msgctxt "speaker:Narrator"
 msgid "Only the droning pleasure."
-msgstr "思考が何も考えない生活の至福をもたらすだけ。"
+msgstr "ただ単調な快楽だけ。"
 
 msgctxt "speaker:Narrator"
 msgid "The bliss of a thoughtless life."
@@ -264136,7 +264136,7 @@ msgstr "サラは後ずさりし、彼にすべてを委ねた。"
 
 msgctxt "speaker:Narrator"
 msgid "His strong hand seized on her waist, the other on her breast, leaning forward, fucking her a bull in heat."
-msgstr "彼の力強い手が彼女の腰を掴み、もう片方の手が彼女の胸を捉え、彼は身を乗り出して、発情期の雄牛のように彼女を犯した。"
+msgstr "彼の力強い手が彼女の腰を掴み、もう片方の手が彼女の胸を捉え、身を乗り出して、発情期の雄牛のように彼女を犯した。"
 
 msgctxt "speaker:Sarah"
 msgid "Aah...fuck...yes...like...that..."

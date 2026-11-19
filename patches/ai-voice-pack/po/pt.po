@@ -5518,7 +5518,7 @@ msgstr "Eu estava esperando não chegar atrasado..."
 
 msgctxt "speaker:Narrator"
 msgid "Varga looks around the table."
-msgstr "Mas agora temo que possa ter chegado cedo demais."
+msgstr "Varga olha ao redor da mesa."
 
 msgctxt "speaker:Varga"
 msgid "But now I fear I might be too early."
@@ -6606,7 +6606,7 @@ msgstr "Nenhum pode ameaçar Rosanna; faça dele um exemplo!"
 
 msgctxt "speaker:Narrator"
 msgid "Thomas rose up from his throne."
-msgstr "Thomas não está à mercê de bárbaros do deserto que vêm à terra dos homens civilizados para proferir ameaças."
+msgstr "Thomas levantou-se de seu trono."
 
 msgctxt "speaker:Thomas"
 msgid "It is not up for barbarians from the desert to come to the land of civilized men and utter threats."
@@ -7686,7 +7686,7 @@ msgstr "Sarah ouviu um leve arrastado em suas próprias palavras."
 
 msgctxt "speaker:Varga"
 msgid "Where I come from, the beer is horrid, but it's all we can afford. So in order to make it last longer, we spike it with addelroot, to get yourself drunk faster."
-msgstr "Na minha terra, a cerveja é horrível, mas é tudo o que podemos pagar. Então, para fazê-la durar mais, nós a misturamos com addelroot, para te deixar bêbada mais rápido."
+msgstr "De onde eu venho, a cerveja é horrível, mas é tudo o que podemos pagar. Então, para fazê-la durar mais, nós a misturamos com raiz de addel para ficar bêbado mais rápido."
 
 msgctxt "speaker:Sarah"
 msgid "Help! Help! I'm being poisoned by Lord Varga!"
@@ -10926,7 +10926,7 @@ msgstr "Barion tropeçou, tentando agarrar a mesa e a cadeira, mas por onde quer
 
 msgctxt "speaker:Narrator"
 msgid "As she collapsed down unto the floor, it was the Spymaster Kravel who first approached him."
-msgstr "Desculpe, velho amigo."
+msgstr "Enquanto ela desabava no chão, foi o Mestre Espião Kravel quem se aproximou dele primeiro."
 
 msgctxt "speaker:Kravel"
 msgid "I'm sorry, old friend."
@@ -47700,9 +47700,10 @@ msgctxt "speaker:Hassar"
 msgid "But I'll give you a word of wisdom from an old man, I used to be young like you, dreaming of bedding every princess or queen in the world."
 msgstr "Mas vou te dar um conselho de um homem velho: eu também já fui jovem como você, sonhando em me deitar com todas as princesas e rainhas do mundo."
 
+# changed
 msgctxt "speaker:Hassar"
 msgid "But their pussies are the same as any other."
-msgstr "Mas as kisas delas são iguais a qualquer outra."
+msgstr "Mas as suas bocetas são iguais às de qualquer outra."
 
 msgctxt "speaker:Narrator"
 msgid "The entire room of sycophants burst out into laughter."
@@ -48062,7 +48063,7 @@ msgstr "Nós fazemos isso porque queremos. Porque ele é o nosso Khan. E ele rea
 
 msgctxt "speaker:Narrator"
 msgid "Sarah didn't know much about the world of the tribesmen, but she doubted that she had much rights to refuse Hassar if he forced herself on her."
-msgstr "Sarah não sabia muito sobre o mundo dos tribais, mas duvidava que tivesse muitos direitos para recusar Hassar se ele a forçasse a ter relações com ele."
+msgstr "Sarah não sabia muito sobre o mundo dos tribais, mas duvidava que tivesse muitos direitos para recusar Hassar se ele a forçasse."
 
 msgctxt "speaker:Sarah"
 msgid "He didn't force himself on you?"
@@ -60662,7 +60663,7 @@ msgstr "Os homens, por sua vez, ainda se reuniam perto da borda da tenda à noit
 
 msgctxt "speaker:Narrator"
 msgid "Huddled in silence, they worked themselves to fantasies of what the tribesmen had in reality."
-msgstr "Encolhidos em silêncio, eles se entregavam a fantasias sobre o que os membros da tribo realmente possuíam."
+msgstr "Encolhidos em silêncio, eles se entregaram a fantasias sobre o que os membros da tribo realmente tinham."
 
 msgctxt "speaker:Narrator"
 msgid "They spilled their seeds to the infertile earth."
@@ -79250,7 +79251,7 @@ msgstr "Duas semanas... provavelmente mais como três semanas."
 
 msgctxt "speaker:Tailor"
 msgid "Let the Headmaster know, and you'll be put back on the schedule when your uniform is ready."
-msgstr "Informe o Diretor, e você será colocada de volta na programação quando seu uniforme estiver pronto."
+msgstr "Informe o Diretor, e você será colocado de volta na programação assim que seu uniforme estiver pronto."
 
 msgctxt "speaker:Sarah"
 msgid "I can't just...I need the job! I need the money! I can't not work for three weeks."
@@ -99970,7 +99971,7 @@ msgstr "Finalmente, embora não tenha durado tanto quanto ela temia, a criatura 
 
 msgctxt "speaker:Narrator"
 msgid "A last high pitched shriek as it spewed out its seed across her cell."
-msgstr "Um último grito agudo soou enquanto ela espalhava sua semente por toda a cela dela."
+msgstr "Um último grito agudo enquanto expelia sua semente por toda a sua cela."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah did her best to avoid it, but could not prevent at least some of the semen from falling on her skin."
@@ -110782,7 +110783,7 @@ msgstr "Porcos inteiros brilhavam e estalavam enquanto as chamas das fogueiras l
 
 msgctxt "speaker:Narrator"
 msgid "Sarah had her fill, both of wine and food."
-msgstr "Sarah também se fartou de elogios. Deve ter havido mal um único soldado que não a tenha parado para perguntar sobre como ela matou a besta."
+msgstr "Sarah se saciou, tanto de vinho quanto de comida."
 
 msgctxt "speaker:Narrator"
 msgid "So too did she have her fill of praise. There must have barely been a single soldier who hadn't stopped her and asked her about killing the beast."
@@ -114030,7 +114031,7 @@ msgstr "Pronto aí."
 
 msgctxt "speaker:Male Soldier"
 msgid "I think you were just getting an attitude because you weren't getting enough dick."
-msgstr "Acho que você só estava ficando com essa atitude porque não estava recebendo pau suficiente."
+msgstr "Acho que você só estava ficando com uma atitude porque não estava conseguindo pica suficiente."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah felt him stopping his thrusts."
@@ -136015,7 +136016,7 @@ msgstr "Em pouco tempo, Sarah sentiu a sensação de seu próprio orgasmo subind
 
 msgctxt "speaker:Narrator"
 msgid "Desperately, as she came, she continued to drive her own fingers inside of Carolyn."
-msgstr "Desesperadamente, enquanto chegava ao clímax, ela continuava a introduzir os próprios dedos dentro de Carolyn."
+msgstr "Desesperadamente, enquanto se aproximava, ela continuava a introduzir os próprios dedos dentro de Carolyn."
 
 msgctxt "speaker:Narrator"
 msgid "Reaching her own peak, Sarah cried out."
@@ -148807,7 +148808,7 @@ msgstr "E, durante todo esse tempo, ela via os olhos famintos e o sorriso de apr
 
 msgctxt "speaker:Narrator"
 msgid "As if Kate had never seen anything that she desired more."
-msgstr "Como se Kate nunca tivesse visto nada que desejasse mais do que ela."
+msgstr "Como se Kate nunca tivesse visto nada que desejasse mais."
 
 msgctxt "speaker:Narrator"
 msgid "And in the moment, Sarah wanted nothing more than to be the object of Kate's desire."
@@ -172256,7 +172257,7 @@ msgstr "Sarah enterrou o rosto no colchão, afogando o gemido que escapava dela.
 
 msgctxt "speaker:Narrator"
 msgid "It was an odd mix of pain and pleasure at being taken raw."
-msgstr "Era uma estranha mistura de dor e prazer por estar sendo tomada sem proteção."
+msgstr "Era uma estranha mistura de dor e prazer ao ser tomada crua."
 
 msgctxt "speaker:Narrator"
 msgid "She could hear the market place was already filling up with people, and she didn't want to risk being found out."
@@ -190096,7 +190097,7 @@ msgstr "E, no entanto, ela não conseguia se enganar."
 
 msgctxt "speaker:Narrator"
 msgid "A real princess didn't go out to the forest at night, alone, with a near stranger, and suck him off for a story."
-msgstr "Uma princesa de verdade não sairia para a floresta à noite, sozinha, com um quase estranho, e o chuparia só por ouvir uma história."
+msgstr "Uma princesa de verdade não sairia para a floresta à noite, sozinha, com um quase estranho, para chupá-lo em troca de uma história."
 
 msgctxt "speaker:Narrator"
 msgid "Or was that just a lie she told herself."
@@ -207208,7 +207209,7 @@ msgstr "Eu sou uma princesa..."
 
 msgctxt "speaker:Razaphel"
 msgid "You were one..."
-msgstr "Você era uma..."
+msgstr "Você era um..."
 
 msgctxt "speaker:Narrator"
 msgid "How could this creature know."
@@ -214052,7 +214053,7 @@ msgstr "Sarah... o que você fez..."
 
 msgctxt "speaker:Narrator"
 msgid "Who was she."
-msgstr "Quem era ela para vir aqui, depois de todos esses anos, e questioná-la."
+msgstr "Quem era ela?"
 
 msgctxt "speaker:Narrator"
 msgid "Who was she to come here, after all these years, and question her."
@@ -218552,7 +218553,7 @@ msgstr "Posso confiar nisso? Na casa?"
 
 msgctxt "speaker:Razaphel"
 msgid "You can trust it to do what it has done for centuries. Survive."
-msgstr "Você pode confiar que ela fará o que tem feito por séculos: sobreviver."
+msgstr "Você pode confiar que ele fará o que tem feito por séculos. Sobreviver."
 
 msgctxt "speaker:Razaphel"
 msgid "If you give it what it wants, it will return the favor. It possess few desires outside of that base instinct, from what I have been able to deduce."
@@ -225756,7 +225757,7 @@ msgstr "Há muito tempo que foi esquecida, uma das primeiras cidades a cair dian
 
 msgctxt "speaker:Razaphel"
 msgid "None still live there, but a Mythran host now occupies it."
-msgstr "Não há mais ninguém vivendo lá, mas agora um exército Mythran ocupa o lugar."
+msgstr "Nenhum deles ainda vive lá, mas um hospedeiro Mythran agora ocupa o local."
 
 msgctxt "speaker:Sarah"
 msgid "A Mythran army? Why?"
@@ -236568,7 +236569,7 @@ msgstr "Ela observou enquanto Razafael atravessava o Grande Salão."
 
 msgctxt "speaker:Razaphel"
 msgid "Yet you are more powerful than you have ever been. And you will grow more powerful still."
-msgstr "Mas você é mais poderosa do que jamais foi. E se tornará ainda mais poderosa."
+msgstr "No entanto, você é mais poderoso do que nunca foi. E se tornará ainda mais poderoso."
 
 msgctxt "speaker:Razaphel"
 msgid "What does it all add up to?"
@@ -240352,7 +240353,7 @@ msgstr "Oh, meus deuses, me diga que você não seguiu isso."
 
 msgctxt "speaker:Sarah"
 msgid "No, I didn't."
-msgstr "Não, não segui."
+msgstr "Não, eu não fiz."
 
 msgctxt "speaker:Metis"
 msgid "Gods, you have no idea how lucky you got."
@@ -259441,7 +259442,7 @@ msgstr "Ela implorou com uma voz desesperada."
 
 msgctxt "speaker:Captain"
 msgid "So eager."
-msgstr "Tão ansiosa."
+msgstr "Tão ansioso."
 
 msgctxt "speaker:Narrator"
 msgid "He increased his pace, fucking her only slightly faster, only frusting her more."
@@ -260889,7 +260890,7 @@ msgstr "Mythran era verdadeiramente um Império que não tinha igual no mundo."
 
 msgctxt "speaker:Narrator"
 msgid "It wasn't surprising that Gilead, as one of its elites, would have the best of the best."
-msgstr "Não era surpreendente que Gilead, como um de seus elite, tivesse o melhor de tudo."
+msgstr "Não era surpreendente que Gilead, como uma de suas elites, tivesse o melhor dos melhores."
 
 msgctxt "speaker:Narrator"
 msgid "When the gate had finally swung open, Sarah could see inside the entire estate."
