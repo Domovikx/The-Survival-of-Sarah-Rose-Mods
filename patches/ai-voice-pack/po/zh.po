@@ -161235,9 +161235,10 @@ msgctxt "speaker:Old Tribesman"
 msgid "We are a warrior people. Strength...real or perceived...it is of great import."
 msgstr "我们是尚武的民族。力量……无论是真实的还是被感知的……都至关重要。"
 
+# changed
 msgctxt "speaker:Narrator"
 msgid "Sarah nodded. He could not afford to be made to look weak."
-msgstr "莎拉点了点头。她不能让自己显得软弱。"
+msgstr "莎拉点了点头。他不能让自己显得软弱。"
 
 msgctxt "speaker:Old Tribesman"
 msgid "Good, because there is the issue of your...sex."
