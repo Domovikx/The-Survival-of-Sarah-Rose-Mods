@@ -48,7 +48,7 @@ const LANGS = ((): string[] => {
  * работает со старым JS и выводит «undefined» для новых полей (2026-11-16).
  * Поднимать при ЛЮБОМ изменении набора полей.
  */
-const API_VER = 43;
+const API_VER = 44;
 
 /** Прошлые значения CPU/RAM для дельты. */
 const prevCpu = cpus().map((c) => c.times);
@@ -985,7 +985,10 @@ async function tick() {
     // Только ИЗМЕРЕННЫЙ ноль: rate === null — это «сэмпла ещё нет» (пульт
     // только что перезапущен), и предупреждение «молчит» было ложным
     // (поймано 2026-11-19 сразу после рестарта при живом прогоне).
-    const stalled = s.live && s.live.rate === 0 && qAgeMin > 12;
+    // И только когда работа ЕСТЬ: при 100 % очередь завершается штатно, и
+    // «молчит» на завершённом переводе — ложная тревога (поймано 2026-11-19).
+    const finished = s.live && s.live.filled >= s.live.total;
+    const stalled = !finished && s.live && s.live.rate === 0 && qAgeMin > 12;
     if (stalled) alerts.push(['warn', 'очередь молчит ' + Math.round(qAgeMin) + ' мин (пасс идёт, но прогресса нет)']);
   }
   const lastH = s.health && s.health.samples.length ? s.health.samples.at(-1) : null;
