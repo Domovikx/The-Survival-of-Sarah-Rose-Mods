@@ -73628,9 +73628,10 @@ msgctxt "speaker:Narrator"
 msgid "Still, he kept her pinned to the ground and continued his assault on her body."
 msgstr "Mimo to, trzymał ją przy ziemi i kontynuował swój atak na jej ciało."
 
+# changed
 msgctxt "speaker:Narrator"
 msgid "The hard work with the crates. The roughness of his sex."
-msgstr "Ciężka praca z skrzyniami. Chrupkość jego ciała."
+msgstr "Ciężka praca ze skrzyniami. Szorstkość jego płci."
 
 msgctxt "speaker:Narrator"
 msgid "All of it had tired out her body."
@@ -95088,9 +95089,10 @@ msgctxt "speaker:Narrator"
 msgid "By the end she had to remind him that his balls were by now well and truly empty."
 msgstr "Pod koniec musiała przypomnieć mu, że jego jądra były już do reszty puste."
 
+# changed
 msgctxt "speaker:Narrator"
 msgid "He had fucked her one last time for good measure."
-msgstr "Zrobił to z nią ostatni raz, dla pewności."
+msgstr "Pieprzył ją ostatni raz, na dobitkę."
 
 msgctxt "speaker:Narrator"
 msgid "Stretching her arms, she could feel the pain in her muscles there too."
@@ -126105,9 +126107,10 @@ msgctxt "speaker:Narrator"
 msgid "All the while, the sounds of their three bodies rang out over the cold desert air."
 msgstr "Przez cały ten czas dźwięki ich trzech ciał rozbrzmiewały w zimnym pustynnym powietrzu."
 
+# changed
 msgctxt "speaker:Narrator"
 msgid "The wet slicking of their members, entering both orifices."
-msgstr "Mokra, śliska nawilżenie ich członków, wchodzących do obu otworów."
+msgstr "Mokre, śliskie nawilżenie ich członków wchodzących do obu otworów."
 
 msgctxt "speaker:Narrator"
 msgid "The way their pleasured grunts rang out as they ravaged her body from both ends."
@@ -136013,9 +136016,10 @@ msgctxt "speaker:Narrator"
 msgid "Before long, Sarah felt the sensation of her own orgasm, rushing up from her legs and exploding out across her body."
 msgstr "Niedługo potem Sarah poczuła doznania własnego orgazmu, które unosiły się od jej nóg i eksplodowały po całym ciele."
 
+# changed
 msgctxt "speaker:Narrator"
 msgid "Desperately, as she came, she continued to drive her own fingers inside of Carolyn."
-msgstr "W rozpaczy, podchodząc, wciąż wsuwała swoje palce do Carolyn."
+msgstr "W rozpaczy, dochodząc, wciąż wsuwała swoje palce do Carolyn."
 
 msgctxt "speaker:Narrator"
 msgid "Reaching her own peak, Sarah cried out."
@@ -171893,9 +171897,10 @@ msgctxt "speaker:Narrator"
 msgid "He had fucked her, because he was stronger, and she had let herself be weak."
 msgstr "Przeleżał ją, bo był silniejszy, a ona pozwoliła sobie na słabość."
 
+# changed
 msgctxt "speaker:Narrator"
 msgid "She focussed on his cum still seeping out from between her legs as a reminder."
-msgstr "Skupiła się na jego nasieniu, które wciąż sączyło się między jej nogami, jako na przypomnieniu."
+msgstr "Skupiła się na jego nasieniu, które wciąż sączyło się między jej nogami, jako przypomnienie."
 
 msgctxt "speaker:Narrator"
 msgid "This is what happens if you're weak. The strong fuck you, and all you can do is bend over a crate and give it up."
@@ -172253,9 +172258,10 @@ msgctxt "speaker:Narrator"
 msgid "Sarah pushed her face into the mattress, drowning out her moan."
 msgstr "Sarah wcisnęła twarz w materac, tłumiąc jęk."
 
+# changed
 msgctxt "speaker:Narrator"
 msgid "It was an odd mix of pain and pleasure at being taken raw."
-msgstr "To była dziwna mieszanka bólu i przyjemności z bycia zdemaskowanym."
+msgstr "To była dziwna mieszanka bólu i przyjemności z brania jej na surowo."
 
 msgctxt "speaker:Narrator"
 msgid "She could hear the market place was already filling up with people, and she didn't want to risk being found out."

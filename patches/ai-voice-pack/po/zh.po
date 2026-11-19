@@ -73635,9 +73635,10 @@ msgctxt "speaker:Narrator"
 msgid "Still, he kept her pinned to the ground and continued his assault on her body."
 msgstr "尽管如此，他仍将她死死压在身下，继续对她身体发起猛烈攻势。"
 
+# changed
 msgctxt "speaker:Narrator"
 msgid "The hard work with the crates. The roughness of his sex."
-msgstr "搬运木箱的艰辛。他那性别的粗犷。"
+msgstr "搬运木箱的艰辛。他那性器的粗糙。"
 
 msgctxt "speaker:Narrator"
 msgid "All of it had tired out her body."
@@ -81415,9 +81416,10 @@ msgctxt "speaker:Narrator"
 msgid "Instead, he leaned in more still, his tongue ever more ferocious, drawing out every possible fraction of pleasure."
 msgstr "相反，他凑得更近，舌头愈发狂野，榨取着每一丝可能的快感。"
 
+# changed
 msgctxt "speaker:Narrator"
 msgid "Sarah abandoned any restraint as she came, spreading her legs, grinding herself up against his eager mouth."
-msgstr "莎拉完全放下了所有矜持，双腿张开，将身体紧贴着他渴望的唇。"
+msgstr "莎拉在高潮中放下了所有矜持，张开双腿，把身体紧贴着他渴望的唇。"
 
 msgctxt "speaker:Narrator"
 msgid "When the last waves of pleasure receded, she fell back, exhausted into the sofa."

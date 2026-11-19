@@ -136016,9 +136016,10 @@ msgctxt "speaker:Narrator"
 msgid "Before long, Sarah felt the sensation of her own orgasm, rushing up from her legs and exploding out across her body."
 msgstr "얼마 지나지 않아, 사라는 자신의 오르가즘이 다리에서부터 솟아올라 온몸으로 폭발하는 것을 느꼈다."
 
+# changed
 msgctxt "speaker:Narrator"
 msgid "Desperately, as she came, she continued to drive her own fingers inside of Carolyn."
-msgstr "절망적으로, 그녀는 다가오면서 계속해서 자신의 손가락을 캐롤린의 안으로 밀어 넣었다."
+msgstr "절망 속에서, 그녀는 절정에 달하면서 계속 자신의 손가락을 캐롤린 안으로 밀어 넣었다."
 
 msgctxt "speaker:Narrator"
 msgid "Reaching her own peak, Sarah cried out."
@@ -190098,9 +190099,10 @@ msgctxt "speaker:Narrator"
 msgid "And yet she could not deceive herself."
 msgstr "하지만 그녀는 스스로를 속일 수 없었다."
 
+# changed
 msgctxt "speaker:Narrator"
 msgid "A real princess didn't go out to the forest at night, alone, with a near stranger, and suck him off for a story."
-msgstr "진짜 공주라면 밤에 거의 모르는 남자와 함께 혼자 숲으로 나가서 이야기를 듣기 위해 그에게 구강성교를 하지는 않았을 거야."
+msgstr "진짜 공주라면 밤에 거의 모르는 남자와 단둘이 숲으로 나가서 이야기 하나 때문에 그에게 입으로 해주지 않았을 거야."
 
 msgctxt "speaker:Narrator"
 msgid "Or was that just a lie she told herself."
