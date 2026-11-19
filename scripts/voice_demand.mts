@@ -44,7 +44,7 @@ for (const rel of releases) {
   }
 }
 
-const rows = [...voice.entries()].sort((a, b) => b[1] - a[1]);
+const rows = [...voice.entries()].toSorted((a, b) => b[1] - a[1]);
 const total = rows.reduce((s, [, n]) => s + n, 0);
 
 console.log(`релизов: ${releases.length} | скачиваний main: ${core} | voice-паков всего: ${total}`);
