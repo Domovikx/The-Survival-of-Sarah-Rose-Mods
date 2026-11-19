@@ -1,22 +1,16 @@
 import { useTranslation } from "react-i18next";
 
-import { FEATURES, LANGS, LANG_LABELS, LINKS, type Lang } from "@/shared/config";
+import { FEATURES, LINKS } from "@/shared/config";
 import { cx, Section } from "@/shared/ui";
 
 import { styles } from "./VoiceDemand.styles";
 
-/** Тег текущего релиза: кнопки ведут прямо в ассеты (скачивание = «голос» за язык).
- *  Обновляется вместе с релизом, как и RELEASE_BASE в блоке Downloads. */
-const RELEASE = "https://github.com/Domovikx/The-Survival-of-Sarah-Rose-Mods/releases/download/v2026.11.19-2237";
-
-const voicePack = (code: string): string => `${RELEASE}/TSSR-AI-Voice-Pack-voice-${code}.7z`;
-
 export const ROOT = "VoiceDemand";
 
 /**
- * Спрос на полную озвучку. Метрика одна и та же на всех площадках: скачивание
- * voice-пака языка + endorsements на Nexus (когда страница откроется).
- * Кнопки ведут прямо в ассеты — это работает уже сейчас, до апрува Nexus.
+ * Спрос на полную озвучку. Ссылки на voice-паки здесь НЕ дублируются: они в
+ * блоке Download (иначе два списка из 11 ссылок, см. ревизию 2026-11-20).
+ * Здесь только правило подсчёта и каналы: комментарии Steam, endorsements Nexus.
  */
 export const VoiceDemand = () => {
   const { t } = useTranslation();
@@ -29,21 +23,6 @@ export const VoiceDemand = () => {
             "Votes are simple: leave a comment under the Steam guide and say which language you want — any wording is fine. Endorsing the mod on Nexus counts too, and so do downloads of the voice pack for your language (summed across all releases). A full voice-over is 69,120 lines, about 10 hours of GPU — the language with the most votes is recorded first.",
           )}
         </p>
-
-        <div className={cx(styles.grid)} data-testid={`${ROOT}--langs`}>
-          {LANGS.map((code) => (
-            <a
-              key={code}
-              className={cx(styles.lang)}
-              href={voicePack(code)}
-              data-testid={`${ROOT}--lang-${code}`}
-              title={LANG_LABELS[code as Lang]}
-            >
-              <span className={cx(styles.code)}>{code.toUpperCase()}</span>
-              <span className={cx(styles.native)}>{LANG_LABELS[code as Lang]}</span>
-            </a>
-          ))}
-        </div>
 
         <div className={cx(styles.row)}>
           {FEATURES.nexus ? (
@@ -58,7 +37,7 @@ export const VoiceDemand = () => {
           <a className={cx(styles.link)} href={LINKS.steamGuide} data-testid={`${ROOT}--steam`}>
             {t("Comment on the Steam guide — write your language")}
           </a>
-          <a className={cx(styles.link)} href={`${LINKS.github}/releases`} data-testid={`${ROOT}--all`}>
+          <a className={cx(styles.link)} href="#download" data-testid={`${ROOT}--downloads`}>
             {t("All downloads")}
           </a>
         </div>

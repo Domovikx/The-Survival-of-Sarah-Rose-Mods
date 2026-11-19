@@ -1,16 +1,10 @@
 import { useCallback, useEffect, useRef, useState, type MouseEvent } from "react";
 import { useTranslation } from "react-i18next";
 
-import { LANGS } from "@/shared/config";
+import { LANGS, packAsset } from "@/shared/config";
 import { cx, Section } from "@/shared/ui";
 
 import { styles } from "./Downloads.styles";
-
-/** Постоянный канал прямых ссылок: ассеты версии в GitHub-релизе.
- *  Обновляется вместе с релизом (тег = версия пакета). */
-const RELEASE_BASE = "https://github.com/Domovikx/The-Survival-of-Sarah-Rose-Mods/releases/download/v2026.11.19-2237";
-
-const asset = (name: string): string => `${RELEASE_BASE}/TSSR-AI-Voice-Pack-${name}.7z`;
 
 /** Пауза после клика: браузер не сообщает о конце закачки, без неё качают пачками. */
 const COOLDOWN_MS = 20_000;
@@ -61,7 +55,7 @@ export const Downloads = () => {
   };
 
   return (
-    <Section title={t("Download")} testId={ROOT}>
+    <Section id="download" title={t("Download")} testId={ROOT}>
       <div className={cx(styles.panel)} data-testid={`${ROOT}--panel`}>
         <p className={cx(styles.lead)}>
           {t(
@@ -72,7 +66,7 @@ export const Downloads = () => {
         <div className={cx(styles.row)}>
           <a
             className={cx(styles.mainBtn, isPending("main") && styles.linkBusy)}
-            href={asset("main")}
+            href={packAsset("main")}
             data-testid={`${ROOT}--main`}
             rel="noopener"
             {...linkState("main")}
@@ -93,7 +87,7 @@ export const Downloads = () => {
               <a
                 key={code}
                 className={cx(styles.chip, isPending(`voice-${code}`) && styles.linkBusy)}
-                href={asset(`voice-${code}`)}
+                href={packAsset(`voice-${code}`)}
                 data-testid={`${ROOT}--voice-${code}`}
                 rel="noopener"
                 {...linkState(`voice-${code}`)}
