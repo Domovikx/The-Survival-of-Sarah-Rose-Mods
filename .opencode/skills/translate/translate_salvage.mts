@@ -45,6 +45,10 @@ const limitAt = args.indexOf("--limit");
 const LIMIT = limitAt >= 0 ? Number(args[limitAt + 1]) : 0;
 const indicesAt = args.indexOf("--indices");
 const INDICES = indicesAt >= 0 ? args[indicesAt + 1] : undefined;
+// Ремонт «английских слов внутри перевода» (ko/ja 2026-11-19): модель оставляла
+// `pretender`, `hadn't`, `vasal` в корейском тексте даже при переводе 1:1 —
+// нужна явная инструкция, иначе temp0 воспроизводит тот же гибрид.
+const NO_LATIN = args.includes("--no-latin");
 const URL = process.env.TSSR_LLM_URL ?? "http://127.0.0.1:8081";
 const MODEL = process.env.TSSR_LLM_MODEL ?? "index-translate-9b";
 // Путь переопределяем: E2E-тест гоняет тот же код на синтетическом po
@@ -59,7 +63,11 @@ const header = text.split("\n\n")[0].split("\n");
 
 const SYSTEM =
   `You translate this game into ${TARGET[LANG] ?? LANG}. Translate ONLY the given line. ` +
-  `Output the translation and nothing else: no quotes, no explanations, no speaker name, no extra sentences.`;
+  `Output the translation and nothing else: no quotes, no explanations, no speaker name, no extra sentences.` +
+  (NO_LATIN
+    ? ` Write the whole line in the target language: no English words left untranslated ` +
+      `(translate every verb, noun and particle). Only proper names may stay in Latin script.`
+    : "");
 
 const translate = async (line: string, speaker: string | null, gender: string | null): Promise<string> => {
   // Только пол спикера: этого хватает для рода/обращений, и он НЕ тянет за собой
