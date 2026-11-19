@@ -54384,7 +54384,7 @@ msgstr "はっきり言ってるか？"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah witnessed the moment suddenly grow tense."
-msgstr "サrahは、その瞬間が突然緊張した様子を目の当たりにした。"
+msgstr "サラは、その瞬間が突然緊張に満ちていくのを目の当たりにした。"
 
 msgctxt "speaker:Narrator"
 msgid "A pause lingered. Then, Jasmine spoke."
@@ -60140,7 +60140,7 @@ msgstr "大まかに言えば、彼女は無理やり投げ倒されたが、サ
 
 msgctxt "speaker:Narrator"
 msgid "For a moment, unused to the darkness, Sarah feels almost blind, but slowly her eyes settle."
-msgstr "一瞬、暗闇に慣れていないサrahはほとんど目が見えないように感じたが、徐々に目が慣れていった。"
+msgstr "一瞬、暗闇に慣れていないサラはほとんど目が見えないように感じたが、徐々に目が慣れていった。"
 
 msgctxt "speaker:Narrator"
 msgid "The guards leave."
@@ -63626,9 +63626,10 @@ msgctxt "speaker:Narrator"
 msgid "And so instead, she did as he told her."
 msgstr "だから彼女は、彼の言う通りにした。"
 
+# changed
 msgctxt "speaker:Narrator"
 msgid "Pulling the sponge back up and back down again, she scrubbed his skin as thoroughly as she could."
-msgstr "スポンジを再び上から下へと引き下ろしながら、彼女は彼の肌をできる限り念入りに scrub した。"
+msgstr "スポンジを再び引き上げ、また下ろしながら、彼女は彼の肌をできる限り入念にこすった。"
 
 msgctxt "speaker:Narrator"
 msgid "Making sure to clean his side, she slowly made his way behind him, pulling the sponge across the back of his body."
@@ -86024,7 +86025,7 @@ msgstr "す、すみません、ベルモント船長！ごめんなさい！"
 
 msgctxt "speaker:Captain Belmont"
 msgid "To hell with your apologies, blondie. Best you hope I don't find any dirt nowhere on my ship or you can scrub into the night."
-msgstr "謝罪などいらない、金髪の娘よ。私の船のどこにも汚れが見つからないことを祈るがいい。さもなければ、夜が明けるまで scrub することになるぞ。"
+msgstr "謝罪なんてくそくらえだ、金髪の小僧。俺の船のどこにも汚れたものが見つからないことを祈った方がいい。さもなければ、夜になるまでこすり洗いさせてやるからな。"
 
 msgctxt "speaker:Sarah"
 msgid "No, captain Belmont! I promise, sir, the ship is spotless!"
@@ -86034,9 +86035,10 @@ msgctxt "speaker:Narrator"
 msgid "She heard him grunt some words, perhaps only half believing her."
 msgstr "彼女は彼が何かを呟くのを聞いたが、おそらく彼女の言葉を半信半疑で聞いていただけだろう。"
 
+# changed
 msgctxt "speaker:Captain Belmont"
 msgid "This here is Nickolas, but you can just call him Nick."
-msgstr "こいつがニックolasだが、ニックと呼べばいい。"
+msgstr "こいつはニコラスだが、ニックと呼べばいい。"
 
 msgctxt "speaker:Narrator"
 msgid "Belmont gestured behind him."
@@ -91136,7 +91138,7 @@ msgstr "そんなはずはない。"
 
 msgctxt "speaker:Sarah"
 msgid "If he does, he'll...Nick he might kill you over it."
-msgstr "もし彼が本当にそうしたら…ニックolasは、そのことで君を殺すかもしれない。"
+msgstr "もし彼がそうしたら、彼は…ニックは、そのことで君を殺すかもしれない。"
 
 msgctxt "speaker:Sarah"
 msgid "All that, because of what? So you can feel like a man again?"
@@ -116040,7 +116042,7 @@ msgstr "ミトランの陣営は、彼らの王子が…まあ、ご存知の通
 
 msgctxt "speaker:Narrator"
 msgid "Eaten by a demon, Sarah thought."
-msgstr "悪魔に食われた、とサrahは思った。"
+msgstr "悪魔に食われた、とサラは思った。"
 
 msgctxt "speaker:Vaelen"
 msgid "Their commanders can't quite figure out whose supposed to be next in line for command."
@@ -136801,7 +136803,7 @@ msgstr "この先の道は…これ以上我々を許さないだろう。淘汰
 
 msgctxt "speaker:Narrator"
 msgid "Sarah looked at him with pity."
-msgstr "サrahは彼を哀れみの目で見つめた。"
+msgstr "サラは彼を哀れみの眼差しで見つめた。"
 
 msgctxt "speaker:Sarah"
 msgid "Then we are both fools for this."
@@ -167675,9 +167677,10 @@ msgctxt "speaker:Narrator"
 msgid "The steel from the blade, glimmered."
 msgstr "刃の鋼が、きらりと光った。"
 
+# changed
 msgctxt "speaker:Narrator"
 msgid "She cried out her command, and one by one, Sarah heard the loud thuds of the trebuchet slings."
-msgstr "彼女は命令を叫び、一つ、また一つと、サラは投石機の sling の大きな音を立てるのを聞いた。"
+msgstr "彼女が号令を叫ぶと、サラは投石機の投石紐が一つ、また一つと大きな音を立てるのを聞いた。"
 
 msgctxt "speaker:Narrator"
 msgid "She watched as the giant boulders soared through the air."
@@ -190013,7 +190016,7 @@ msgstr "俺のチンポを集中して扱え。"
 
 msgctxt "speaker:Narrator"
 msgid "There was a silence as Sarah looked up at him."
-msgstr "サラが彼を見上げたとき、静寂が訪れた。先ほどの平手打ちで彼女の頬に自分のよだれが張り付いていた。サカールは注意を逸らさないよう促し、自分のペニスを扱くことに集中するよう命じている。このセリフは、サカールがサラをさらに脅し、従わせるための言葉であり、彼の攻撃的な態度を強調している。サラ（女性）とサカール（男性）の対話において、サカールは過去形の「you」を女性形（来た、来たなど）で用いるべきだが、ここでは命令形や脅し文調が主であるため、文脈から判断して適切な形を選ぶ必要がある。"
+msgstr "サラが彼を見上げたとき、静寂が訪れた。"
 
 msgctxt "speaker:Sakar"
 msgid "Got that? Or do I need to slap you around a few more times with my dick?"
@@ -194993,7 +194996,7 @@ msgstr "サラはマリアスについていきながら彼を観察していた
 
 msgctxt "speaker:Narrator"
 msgid "Growing up at court, her father had taught her from an early age to learn to read people's faces."
-msgstr "宮廷で育ったサrahは、幼い頃から父に人を読む術を教わっていた。"
+msgstr "宮廷で育った彼女は、幼い頃から父から人相を読む術を教わっていた。"
 
 msgctxt "speaker:Narrator"
 msgid "What they pretended to think. What they were really thinking. Lies. Pretend. Hidden meanings."
@@ -202897,7 +202900,7 @@ msgstr "ええ。男の子よ。"
 
 msgctxt "speaker:Narrator"
 msgid "And he fell down next to her, tears of happiness flowing freely."
-msgstr "そして彼は彼女の隣に倒れ込み、喜びの涙を freely 流した。"
+msgstr "そして彼は彼女の隣に倒れ込み、喜びの涙が溢れ出た。"
 
 msgctxt "speaker:Narrator"
 msgid "The three of them laid in the bed, nestled together as a family for the first time."
@@ -219813,7 +219816,7 @@ msgstr "その非難、否定はできないな、お嬢ちゃん。"
 
 msgctxt "speaker:Sarah"
 msgid "Don't call me girly."
-msgstr "「girlyなんて呼ばないで。」"
+msgstr "女の子っぽいなんて呼ばないで。"
 
 msgctxt "speaker:Narrator"
 msgid "The man took a step forward, clearly meant to intimidate her."
@@ -226285,7 +226288,7 @@ msgstr "サラの言葉は激しく、早口で飛び出した。"
 
 msgctxt "speaker:Sarah"
 msgid "I won't pretend your life was easy, but mine hasn't been easy either."
-msgstr "あなたの人生が楽だったなんて pretend しないけど、私の人生だって楽だったわけじゃないのよ。"
+msgstr "あなたの人生が楽だったなんて思いませんが、私の人生も楽だったわけではありません。"
 
 msgctxt "speaker:Sarah"
 msgid "You don't think I have a thousand excuses to drink myself to death in a ditch somewhere?"
@@ -247117,7 +247120,7 @@ msgstr "彼女は少女の頼みを喜んで聞き入れた。"
 
 msgctxt "speaker:Narrator"
 msgid "Pressing her fingers deeper inside of Samayra, she felt how drenched she was."
-msgstr "指をサムヤラの体内にさらに深く押し込むと、サrahは彼女がどれほど濡れているかを感じた。"
+msgstr "指をサマヤラの奥深くまで押し込むと、彼女がどれほど濡れているかが感じられた。"
 
 msgctxt "speaker:Narrator"
 msgid "Her legs, parting, offering more of herself up to her."
@@ -247129,7 +247132,7 @@ msgstr "サラはサマヤラの体内に指を深く曲げ入れ、それに応
 
 msgctxt "speaker:Narrator"
 msgid "Samayra moaned, increasingly louder, but all her cries were lost to the ruins and the wilderness."
-msgstr "サマヤラはますます大きな声で喘いだが、その叫びはすべて廃墟と荒野に消えていった。彼女の脚が開き、さらなる自分を彼女に捧げた。サrahがサマヤラの体内に指を曲げると、サマヤラの体全体が快楽に耐えきれず身をよじった。そして、それらすべてはサrahだけのものだった。"
+msgstr "サマヤラは、ますます大きな声で呻いたが、彼女の叫びはすべて廃墟と荒野に消えていった。"
 
 msgctxt "speaker:Narrator"
 msgid "They belonged to Sarah alone."
@@ -252825,7 +252828,7 @@ msgstr "じゃあ、俺が飲み物を何杯か奢ってやるから、どうし
 
 msgctxt "speaker:Captain Belmont"
 msgid "Sorry, mage suit."
-msgstr "すまない、魔法使いの服（mage suit）のことだ。"
+msgstr "すまない、メイジスーツ。"
 
 msgctxt "menu"
 msgid "Have drinks with Captain Belmont"
@@ -270201,7 +270204,7 @@ msgstr "サラは涙が目に染みるのを感じた。しかし、他に何が
 
 msgctxt "speaker:Narrator"
 msgid "The creature released its grip on her."
-msgstr "その生き物は彼女からの grip を解いた。"
+msgstr "その生き物は彼女から手を離した。"
 
 msgctxt "speaker:Daemon"
 msgid "Good. You're starting to understand."
@@ -274909,7 +274912,7 @@ msgstr "…『デン』って、何？"
 
 msgctxt "speaker:Narrator"
 msgid "Alaric looked around, making sure there was nobody else."
-msgstr "アラリックは周囲を見渡し、他に誰もいないことを確認した。普段は物事をあまり深刻に捉えない男でありながら、今や彼自身も恐れているようだった。サrahは「デン」とは何かと尋ねた。"
+msgstr "アラリックは周りを見渡し、他に誰もいないことを確認した。"
 
 msgctxt "speaker:Alaric"
 msgid "Back in the day, Lethram was smaller. Before it got rich off trade and shippin."

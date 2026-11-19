@@ -9683,7 +9683,7 @@ msgstr "아니면 그건 그냥 계속 나아가서 두통은 다 무시해야 �
 
 msgctxt "speaker:Narrator"
 msgid "Sarah crossed her arms."
-msgstr "사라가 팔짱을 끼며 말했다. \"머리가 곧 터질 것처럼 아플 테니, 좀 쉬는 게 좋을 거야.\" 토마스가 웃었다. \"아니면, 그냥 계속 나아가서 두통은 다 건너뛰어야 한다는 뜻일지도 모르지.\""
+msgstr "사라는 팔짱을 꼈다."
 
 msgctxt "speaker:Sarah"
 msgid "You might be king, but you're also my little brother, and unlike those sycophants, you can trust me to tell you what you actually need, not just what you want to hear."
@@ -10335,7 +10335,7 @@ msgstr "그가 그 일을 제대로 생각하지는 않았을 거라고 생각�
 
 msgctxt "speaker:Sarah"
 msgid "And you didn't stop him?"
-msgstr "그를 막지 않았다고? 사라, 나는 마리온에게 그가 한 짓은 바보 같은 짓이라고 말했어. 하지만 토마스가 자기 말을 끝내자, 내가 뭘 할 수 있었겠어?"
+msgstr "그럼도 그를 막지 않았어?"
 
 msgctxt "speaker:Varga"
 msgid "Stop him? Sarah, I told Marion he was an idiot for what he was going to do, but once Thomas said his piece, what could I have done?"
@@ -26579,7 +26579,7 @@ msgstr "그녀 자신과 하인, 그리고 몇몇 경비병들 외에는 홀이 
 
 msgctxt "speaker:Narrator"
 msgid "Lily walked up to her."
-msgstr "릴리가 그녀에게 다가가며 물었다. \"어떻게 생각해? 그녀가 정말 바쁜 건가, 아니면 그냥 연기하는 건가?\""
+msgstr "릴리가 그녀에게 다가갔다."
 
 msgctxt "speaker:Lily"
 msgid "What do you think? She really busy or just acting?"
@@ -32492,7 +32492,7 @@ msgstr "나를 훔쳐 데려가길 원해? 말만 해. 해가 뜨기 전에 우�
 
 msgctxt "speaker:Narrator"
 msgid "Sarah ran her hand along Lily's face."
-msgstr "사라가 릴리의 얼굴을 따라 손을 쓸 때, 오르가즘의 쾌감이 절정에 달했다가 가라앉기 시작하자, 그녀는 숨을 헐떡이며 침대로 뒤로 쓰러져 회복하고 있었다. 릴리는 여전히 그녀 위로 우뚝 서서 침대에 묶어두는 자세를 유지하고 있었다. 릴리는 '나에게 훔쳐 가고 싶니? 말만 하면 해가 뜨기 전에 사라질 수 있어...'라고 속삭였다. 하지만 사라는 '오늘 밤은 안 돼...'라고 대답했다."
+msgstr "사라는 릴리의 얼굴을 따라 손을 쓸었다."
 
 msgctxt "speaker:Sarah"
 msgid "Not tonight..."
@@ -93701,7 +93701,7 @@ msgstr "그는 그녀의 머리를 자신의 성기에서 빼내고 말을 걸�
 
 msgctxt "speaker:Narrator"
 msgid "Sarah looked up at him as he towered over her."
-msgstr "사라가 그를 올려다보았다. 그는 그녀 위로 우뚝 솟아 있었다. 그녀는 그를 경멸하며, 그가 하층민이고 자신보다 아래라고 생각했었다. 이제 그는 그녀의 배에 아이들을 넣어주며 자신의 후계자를 확보하려 하고 있었다. 블론디, 그거 좋겠지? 그는 그녀의 머리를 자신의 성기에서 빼내며 말했다."
+msgstr "사라는 자신을 우뚝 서 있는 그를 올려다보았다."
 
 msgctxt "speaker:Narrator"
 msgid "How she had looked down on him, thought he was lowborn, beneath her..."
@@ -103057,7 +103057,7 @@ msgstr "그녀가 외쳤다."
 
 msgctxt "speaker:Narrator"
 msgid "Somewhat entertained by this new version of Sarah, Ephraim joined her chant."
-msgstr "에프라임은 사라의 새로운 모습에 어느 정도 흥미를 느끼고 그녀의 외침에 동참했다. 사라(여성)는 와인병을 높이 들며 '벗어! 벗어! 벗어!'라고 외쳤고, 내레이터는 그녀의 외침을 묘사했다. 이어서 에프라임(남성)도 '벗어! 벗어! 벗어!'라고 외쳤다."
+msgstr "새로운 버전의 사라를 보며 어느 정도 즐거워진 에프라임은 그녀의 찬트에 동참했다."
 
 msgctxt "speaker:Ephraim"
 msgid "Strip! Strip! Strip!"
@@ -108069,7 +108069,7 @@ msgstr "소수의 병사들이 그녀의 발자취를 따라 뒤따랐다."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah had studied the maps of the city, but down at the street level, it was harder to make sense of where they were."
-msgstr ""
+msgstr "사라는 도시 지도를 연구했지만, 거리 수준에서는 그들이 어디에 있는지 파악하기 어려웠다."
 
 msgctxt "speaker:Narrator"
 msgid "Still, she knew roughly where the palace stood, which was enough."
@@ -134326,7 +134326,7 @@ msgstr "왜 신들은 이를 막지 않았을까?"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah considered her question for a while."
-msgstr "사라는 잠시 자신의 질문을 곱씹었다. 신들은... 모든 것을 알고 전지전능하지 않은가? 그들이 어떻게 이 일을 막지 못했을까?"
+msgstr "사라는 잠시 자신의 질문을 곱씹었다."
 
 msgctxt "speaker:Sarah"
 msgid "The Gods...they are all knowing and all powerful. How could they not have prevented this?"
@@ -204984,7 +204984,7 @@ msgstr "알프레드가 책임자라는 것을 그녀는 깨달았다."
 
 msgctxt "speaker:Marius"
 msgid "What is there to talk?"
-msgstr "둘 다 무슨 거짓말을 생각해 낸 거지? 내가 본 걸 못 봤다고 설득할 순 없을 텐데."
+msgstr "무슨 할 말이 있겠어?"
 
 msgctxt "speaker:Marius"
 msgid "The both of you came up with some lie? You can't convince me that I didn't see what I saw."
@@ -214600,7 +214600,7 @@ msgstr "그녀의 삶은 어떡할 거야?"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah and Xan watched the Shah struggle."
-msgstr "그들의 병사들이 이곳으로 진군해 오면, 우리가 당신을 보호해 줄 수 없으니, 그들은 당신이 상상할 수 있는 것보다 훨씬 더 잔인해질 거야. 당신은 강할지도 모르고, 도시를 위해 기꺼이 죽을 수도 있겠지만, 사마이라의 경우는 어떡할 거예요? 그녀의 삶은요?"
+msgstr "사라와 잔은 샤의 고군분투를 지켜보았다."
 
 msgctxt "speaker:Shah Mahda"
 msgid "Curse the both of you..."
@@ -258632,7 +258632,7 @@ msgstr "아아악! 젠장!!! 아아악!!!"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah's cries grew louder and louder as her desperate fingers gripped the sheets."
-msgstr "사라의 비명은 점점 더 커졌고, 그녀의 절박한 손가락이 시트를 꽉 움켜쥐었다. 점점 더 강해지는 쾌락의 맥박 소리는 그녀의 몸을 흔드는 요란한 합창으로 변했다. 아아악! 젠장!!! 아아악!!! 더 이상 이러면 그녀는 그들을 찢어발길지도 모른다."
+msgstr "사라의 울음소리는 점점 더 커졌고, 절박한 그녀의 손가락은 시트를 꽉 움켜쥐었다."
 
 msgctxt "speaker:Narrator"
 msgid "Any more and she'd rip them apart."

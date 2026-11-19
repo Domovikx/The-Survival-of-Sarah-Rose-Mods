@@ -696,7 +696,7 @@ msgstr "Peut-être que, songea Sarah, c'était simplement sa nature. Trop bon po
 
 msgctxt "speaker:Thomas"
 msgid "Is this all you do all day? so boring."
-msgstr "Est-ce que c'est tout ce que tu fais toute la journée ? C'est si ennuyeux."
+msgstr "C’est tout ce que tu fais de la journée ? C’est tellement ennuyeux."
 
 msgctxt "speaker:Sarah"
 msgid "AAAH!"
@@ -3421,7 +3421,7 @@ msgstr "Les maîtres-espions étaient difficiles à croire, par la nature même 
 
 msgctxt "speaker:Narrator"
 msgid "Lastly was Lady Carolyn. As master of the royal accounts, she oversaw the economy of Rosanna."
-msgstr "Enfin, il y avait Lady Carolyn. En tant que maîtresse des comptes royaux, elle supervisait l'économie de Розанна."
+msgstr "Enfin, il y avait Lady Carolyn. En tant que maîtresse des comptes royaux, elle supervisait l'économie de Rosanna."
 
 msgctxt "speaker:Narrator"
 msgid "Managing everything from the tax laws to the foreign trade agreements, it was a position as important as any other on the council."
@@ -5729,7 +5729,7 @@ msgstr "Comme je l'ai dit, rien de définitif, mais il semble bien qu'une armée
 
 msgctxt "speaker:Narrator"
 msgid "Sarah turned to Thomas."
-msgstr "Sarah se tourna vers Thomas. Il nous faut y réfléchir sérieusement, Thomas. Je pense qu'on peut dire qu'il est fort probable qu'une attaque vienne de l'est."
+msgstr "Sarah se tourna vers Thomas."
 
 msgctxt "speaker:Sarah"
 msgid "We need to consider this seriously, Thomas. I think it's fair to say that it's more likely than not that an attack might come from the east."
@@ -5741,7 +5741,7 @@ msgstr "Thomas hocha la tête, les yeux toujours fixés sur la table."
 
 msgctxt "speaker:Narrator"
 msgid "Kravel shook his head."
-msgstr "Kravel secoua la tête. Il n'y avait pas de nouveaux rapports ni d'informations. La frontière était restée plutôt calme."
+msgstr "Kravel secoua la tête."
 
 msgctxt "speaker:Kravel"
 msgid "No new reports or information. It's mostly been quiet on the frontier."
@@ -7217,7 +7217,7 @@ msgstr "Près du centre, un peu en retrait, le drapeau de la maison Rose flottai
 
 msgctxt "speaker:Narrator"
 msgid "Somewhere near that banner was Thomas."
-msgstr "L'idée seule suffisait à faire cesser le cœur de Sarah. Thomas se trouvait quelque part près de cet étendard."
+msgstr "Quelque part près de cette bannière se trouvait Thomas."
 
 msgctxt "speaker:Narrator"
 msgid "The idea alone made Sarah's heart feel like stopping."
@@ -8385,7 +8385,7 @@ msgstr "Marion marqua une pause."
 
 msgctxt "speaker:Marion"
 msgid "That's why it pains me to bring something up to you."
-msgstr "C'est pourquoi cela me fait mal de devoir t'annoncer quelque chose, Sarah. J'ai toujours essayé d'être à la hauteur. En comprenant un peu ce que toi et ton frère avez traversé, j'espérais pouvoir aider à alléger le fardeau de votre famille."
+msgstr "C'est pourquoi cela me fait mal de vous aborder sur ce sujet."
 
 msgctxt "speaker:Sarah"
 msgid "What is it, Marion?"
@@ -17793,7 +17793,7 @@ msgstr "Tu t'échappes de tes devoirs, n'est-ce pas ?"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah walked up to her brother."
-msgstr "Sarah, c'est toi qui parles. Peut-être devrais-je leur rappeler qui est vraiment le roi."
+msgstr "Sarah s'approcha de son frère."
 
 msgctxt "speaker:Sarah"
 msgid "You're one to speak. Maybe I should remind them whose really king."
@@ -17893,7 +17893,7 @@ msgstr "Je suis contente de te voir aller mieux. Tu sais, si jamais tu te sens �
 
 msgctxt "speaker:Narrator"
 msgid "Sarah could not even finish her sentence before Thomas cut her off."
-msgstr "Sarah n'avait même pas eu le temps de finir sa phrase que Thomas l'interrompit. Il semblait vouloir éviter de parler de cette histoire de roi, comme s'il n'en avait jamais eu le courage. Leur échange révélait une tension sous-jacente, mêlant inquiétude et malaise."
+msgstr "Sarah n'avait même pas eu le temps de finir sa phrase que Thomas l'avait déjà interrompue."
 
 msgctxt "speaker:Thomas"
 msgid "Please, Sarah. Don't even bring up the thought. This king business...I never had the stomach for it, not really."
@@ -20501,7 +20501,7 @@ msgstr "Sarah se souvenait de ses propres expériences."
 
 msgctxt "speaker:Narrator"
 msgid "Varga was if anything, the opposite. He only seemed to love her more, if such a thing was possible."
-msgstr "Quant à ses devoirs de père, Varga était, au contraire, tout le contraire. Il semblait seulement l'aimer encore plus, si une telle chose était possible."
+msgstr "Varga était, au contraire, tout le contraire. Il ne semblait que l'aimer davantage, si tant est qu'une telle chose fût possible."
 
 msgctxt "speaker:Narrator"
 msgid "And as for his duties as a father, none could do better, not in her eyes or those of her children."
@@ -25889,7 +25889,7 @@ msgstr "Merci pour votre confiance, Dame Rose."
 
 msgctxt "speaker:Damian"
 msgid "We pray only that you allow us to continue on our quest to rid these provinces of bandits."
-msgstr "Nous ne vous importunerons pas un instant de plus. Nous vous prions seulement de nous permettre de continuer notre quête pour débarrasser ces provinces des bandits."
+msgstr "Nous ne prions que pour que vous nous permettiez de poursuivre notre quête afin de débarrasser ces provinces des bandits."
 
 msgctxt "speaker:Damian"
 msgid "We will not trouble you a moment more."
@@ -26989,7 +26989,7 @@ msgstr "Il plaisante en disant qu'il mourrait probablement le jour où il cesser
 
 msgctxt "speaker:Narrator"
 msgid "She leaned back in her chair."
-msgstr "Non, il compte mourir en exercice. Il y a une certaine beauté là-dedans, je suppose. Connaître avec certitude le rôle qu'on est destiné à jouer dans la vie."
+msgstr "Elle s’adossa à sa chaise."
 
 msgctxt "speaker:Maeiv"
 msgid "No, he means to die in the harness. There is a beauty in that, I suppose. To know for certain your own role to play in life."
@@ -28381,7 +28381,7 @@ msgstr "C'est un Noctori, nommé Gilead."
 
 msgctxt "speaker:Narrator"
 msgid "Noctorio were the ruling elite that lived within the Eternal Court."
-msgstr "Les Noctorio étaient l'élite dirigeante qui vivait au sein de la Cour Éternelle. Dotés d'une longévité extrêmement grande, la plupart d'entre eux avaient environ trois siècles."
+msgstr "Les Noctorio étaient l'élite dirigeante qui vivait au sein de la Cour Éternelle."
 
 msgctxt "speaker:Narrator"
 msgid "Blessed with exceedingly long lifespans, most were some three centuries old."
@@ -31437,7 +31437,7 @@ msgstr "Maintenant, la question serait : pourrait-elle obtenir les voix nécessa
 
 msgctxt "speaker:Narrator"
 msgid "A tie would not be enough. She would need to settle the matter sufficiently. At least more than three."
-msgstr "Un match nul ne suffirait pas. Elle devrait trancher l'affaire de manière décisive. Au moins plus de trois. Sarah connaissait aussi sa propre position : fermement contre."
+msgstr "Un match nul ne suffirait pas. Elle devrait régler l'affaire de manière décisive. Au moins plus de trois."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah knew her own position. Firmly against."
@@ -32677,7 +32677,7 @@ msgstr "Au lieu de cela, pour l'instant, profitez de mon cadeau et pensez à moi
 
 msgctxt "speaker:Narrator"
 msgid "Sarah dropped the letter on the bed."
-msgstr "Sarah déposa la lettre sur le lit. Son visage rougit à nouveau en regardant l'objet."
+msgstr "Sarah a posé la lettre sur le lit."
 
 msgctxt "speaker:Narrator"
 msgid "Looking back down at the thing, her face again turned more red."
@@ -33085,7 +33085,7 @@ msgstr "Je ne le disais que pour plaisanter."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah awkwardly nodded."
-msgstr "Sarah hocha la tête avec malaise... Je suppose. La mort de mon père... elle plane encore sur moi."
+msgstr "Sarah hocha la tête, mal à l'aise."
 
 msgctxt "speaker:Sarah"
 msgid "It is fine...I suppose. My father...his death still lingers."
@@ -33265,7 +33265,7 @@ msgstr "Nous pourrons toujours revenir sur cette question une fois la guerre ter
 
 msgctxt "speaker:Sarah"
 msgid "I couldn't agree with you more."
-msgstr "Bien sûr. Ma position est la plus sage, et vous êtes très sage."
+msgstr "Je ne pourrais pas être plus d'accord avec vous."
 
 msgctxt "speaker:Maeiv"
 msgid "Of course. My position is the wisest, and you are very wise."
@@ -37525,7 +37525,7 @@ msgstr "Donc, c'est l'acheteur qui détient tout le pouvoir, pas le marchand."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah saw Antonio's face contort."
-msgstr "Sarah vit le visage d'Antonio se tordre. Il avait pourtant essayé de trouver un argument, mais n'en avait aucun."
+msgstr "Sarah vit le visage d'Antonio se tordre."
 
 msgctxt "speaker:Narrator"
 msgid "He tried to offer up an argument, but he had none."
@@ -37697,7 +37697,7 @@ msgstr "Ce ne peut pas être cet imbecile gras d'Antonio. Maeiv... elle est asse
 
 msgctxt "speaker:Narrator"
 msgid "Sarah observed him for a moment."
-msgstr "Il était convaincu que sa revendication était solide. Sarah réalisa qu'il avait raison ; sa revendication l'était."
+msgstr "Sarah l'observa un instant."
 
 msgctxt "speaker:Narrator"
 msgid "He was confident his claim was strong. Sarah realized he was correct; his claim was strong."
@@ -39365,7 +39365,7 @@ msgstr "Le jour du mariage était arrivé à une vitesse fulgurante."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah was standing in the alcove near the entrance to the great hall."
-msgstr "De loin, elle pouvait entendre les murmures et le brouhaha venant de l'intérieur. La pièce débordait de monde."
+msgstr "Sarah se tenait dans l'alcôve près de l'entrée de la grande salle."
 
 msgctxt "speaker:Narrator"
 msgid "From the distance, she could hear the murmurs and buzzing from inside. The room was bursting at the seams with people."
@@ -44617,7 +44617,7 @@ msgstr "Elle sentit ses yeux suivre les mouvements de ses mains tandis qu'il se 
 
 msgctxt "speaker:Narrator"
 msgid "Pulling off his shirt revealed his muscled frame."
-msgstr "En retirant sa chemise, son corps musclé apparut. Pas une seule cicatrice à déceler."
+msgstr "En retirant sa chemise, son corps musclé fut révélé."
 
 msgctxt "speaker:Narrator"
 msgid "Like the rest of him, it was flawless. Not a scar to be found."
@@ -50201,7 +50201,7 @@ msgstr "Une nouvelle amie, n'est-ce pas ?"
 
 msgctxt "speaker:Narrator"
 msgid "Naydeen smiled at the woman."
-msgstr "Naydeen sourit à la femme. Ayaka, rencontrons Sarah. Sarah, rencontrons Ayaka."
+msgstr "Naydeen sourit à la femme."
 
 msgctxt "speaker:Naydeen"
 msgid "Ayaka, meet Sarah. Sarah, meet Ayaka."
@@ -54189,7 +54189,7 @@ msgstr "Sarah n'a pas fini sa phrase, mais les mots ont tout de même été pron
 
 msgctxt "speaker:Narrator"
 msgid "Jasmine suddenly laughed."
-msgstr "Jasmine a soudainement ri. Les dieux n'auraient pas pu le sauver s'il avait tenté quoi que ce soit avec elle."
+msgstr "Jasmine se mit soudain à rire."
 
 msgctxt "speaker:Jasmine"
 msgid "The Gods couldn't save him if he tried anything with me."
@@ -56949,7 +56949,7 @@ msgstr "Alors, ils jouent à leurs jeux."
 
 msgctxt "speaker:Narrator"
 msgid "Jaeid gestured at Sarah's slave clothes."
-msgstr "Jaeid fit un geste vers les vêtements d'esclave de Sarah. Même tes vêtements... ils n'ont pas été conçus par hasard. Ils ont été faits pour te dégrader."
+msgstr "Jaeid fit un geste vers les vêtements d'esclave de Sarah."
 
 msgctxt "speaker:Jaeid"
 msgid "Even your clothes...these are not designed by accident. They are made to degrade you."
@@ -59765,7 +59765,7 @@ msgstr "Le voir ainsi lui fit se demander à quoi il aurait pu ressembler dans s
 
 msgctxt "speaker:Narrator"
 msgid "Her eyes drifted down further to between his legs."
-msgstr "Ses yeux descendirent encore plus bas, vers l'entrejambe de l'homme. Sans le savoir, sa bouche s'ouvrit."
+msgstr "Ses yeux descendirent encore plus bas, jusqu’à l’espace entre ses jambes."
 
 msgctxt "speaker:Narrator"
 msgid "Unknowingly, her mouth fell open."
@@ -65017,7 +65017,7 @@ msgstr "De sa position, Sarah pouvait voir Kate parler à un homme. Elle n'avait
 
 msgctxt "speaker:Narrator"
 msgid "Only now did Sarah have a moment to consider what was going on."
-msgstr "Ce n'est qu'à ce moment-là que Sarah eut un instant pour comprendre ce qui se passait. Elle se demanda si elle avait perdu la tête."
+msgstr "Ce n’est qu’à ce moment-là que Sarah eut le temps de réfléchir à ce qui se passait."
 
 msgctxt "speaker:Narrator"
 msgid "Had she lost her mind, she wondered."
@@ -65393,7 +65393,7 @@ msgstr "Sarah ne dit rien à Kate sur ce qui s'est passé avec le capitaine. Ce 
 
 msgctxt "speaker:Narrator"
 msgid "Kate crawls up from underneath the sheets and lays down next to her."
-msgstr "Kate sort de sous les draps et s'allonge à côté d'elle. Tu aimes la façon dont je te remercie ?"
+msgstr "Kate sort de sous les draps et s'allonge à côté d'elle."
 
 msgctxt "speaker:Kate"
 msgid "You like how I say thank you?"
@@ -66505,7 +66505,7 @@ msgstr "La foule s'amincissait, mais cela semblait encore très peuplé à Sarah
 
 msgctxt "speaker:Sarah"
 msgid "How much farther is it?"
-msgstr "Il ne reste plus beaucoup de chemin. Le camp est installé sur l'une des anciennes places du marché."
+msgstr "Combien de temps encore ?"
 
 msgctxt "speaker:Kate"
 msgid "It's not much further. The camp is set up in one of the old marketplaces."
@@ -66749,11 +66749,11 @@ msgstr "C'est le deuxième jour que, soudain, on tira la bâche de la tente."
 
 msgctxt "speaker:Narrator"
 msgid "Two men came into the tent. Neither seemed to notice Sarah and each fell into their own bunk."
-msgstr "C'étaient des soldats, c'était évident, mais ils semblaient aussi... jeunes."
+msgstr "Deux hommes entrèrent dans la tente. Aucun des deux ne sembla remarquer Sarah, et chacun s’affala sur son propre lit de camp."
 
 msgctxt "speaker:Narrator"
 msgid "They were soldiers, that much was obvious, but they also seemed...young. No older than Sarah, she estimated."
-msgstr "C’étaient des soldats, c’était évident, mais ils semblaient aussi... jeunes. Pas plus âgés que Sarah, estima-t-elle."
+msgstr "Ils étaient soldats, c’était évident, mais ils semblaient aussi… jeunes. Pas plus âgés que Sarah, estima-t-elle."
 
 msgctxt "speaker:Narrator"
 msgid "Unsure of what was happening, or what to say, Sarah kept quiet."
@@ -73089,7 +73089,7 @@ msgstr "Travailler aussi dur que ça lui vidait l'esprit, chassant nombre des di
 
 msgctxt "speaker:Narrator"
 msgid "She found herself increasingly realizing she no longer had all those thoughts intruding on her every waking moment."
-msgstr "Elle se rendait de plus en plus compte qu'elle n'avait plus toutes ces pensées qui lui envahissaient chaque instant de veille. Au lieu de cela, elle pouvait simplement être."
+msgstr "Elle se rendait de plus en plus compte qu'elle n'avait plus toutes ces pensées qui lui envahissaient chaque instant de veille."
 
 msgctxt "speaker:Narrator"
 msgid "Instead, she could just be."
@@ -73813,7 +73813,7 @@ msgstr "Cela avait réinitialisé leur relation. Cela fit réaliser à Sarah qu'
 
 msgctxt "speaker:Narrator"
 msgid "With her new understanding Sarah began to submit herself to him fully."
-msgstr "Avec cette nouvelle prise de conscience, Sarah commença à se soumettre entièrement à lui. Elle répétait sans cesse qu’il était le capitaine et elle une simple matelote."
+msgstr "Avec sa nouvelle compréhension, Sarah commença à se soumettre entièrement à lui."
 
 msgctxt "speaker:Narrator"
 msgid "She followed his every order both on the ship and in bed. She kept reminding herself, he was the captain and she a deck hand."
@@ -74469,7 +74469,7 @@ msgstr "Je dois partir."
 
 msgctxt "speaker:Narrator"
 msgid "She patted Belmont on the arm."
-msgstr "Sarah vit le sourire sur son visage. Ce n'était pas le vin qu'il cherchait."
+msgstr "Elle tapota Belmont sur le bras."
 
 msgctxt "speaker:Sarah"
 msgid "Sorry, I have to leave."
@@ -74533,7 +74533,7 @@ msgstr "C'est ça que je vais le plus regretter."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah let his hands explore every part of her. There was something arousing about being so desired by someone."
-msgstr "Sarah laissait ses mains explorer chaque partie de son corps. Il y avait quelque chose d'excitant à être ainsi désirée par quelqu'un. Elle aimait aussi le fait qu'il ne se retienne jamais. Il la saisissait parce qu'il pouvait à peine se contrôler."
+msgstr "Sarah laissa ses mains explorer chaque partie de son corps. Il y avait quelque chose d’excitant à être ainsi désirée par quelqu’un."
 
 msgctxt "speaker:Narrator"
 msgid "She also loved how he never held back. He grabbed at her because he could barely control himself."
@@ -86549,7 +86549,7 @@ msgstr "Sarah sentit sa voix s'adoucir."
 
 msgctxt "speaker:Narrator"
 msgid "She had loved today. Meeting someone like Nick had made her believe that her life wouldn't be an endless tragedy."
-msgstr "Elle avait aimé cette journée. Rencontrer quelqu'un comme Nick lui avait fait croire que sa vie ne serait pas une tragédie sans fin. Maintenant, elle devait lui avouer cette vérité."
+msgstr "Elle avait adoré cette journée. Rencontrer quelqu'un comme Nick lui avait fait croire que sa vie ne serait pas une tragédie sans fin."
 
 msgctxt "speaker:Narrator"
 msgid "But now she had to confess this fact to him."
@@ -96213,11 +96213,11 @@ msgstr "Sarah savait qu'il luttait, et supportait ses avances, aussi fréquentes
 
 msgctxt "speaker:Narrator"
 msgid "In time, she felt her husband settle down into retired life."
-msgstr "Avec le temps, elle sentit son mari s'installer dans la vie de retraite. Il continuait à la prendre fréquemment, mais telle était sa nature : cela n'était plus qu'une simple routine."
+msgstr "Avec le temps, elle sentit son mari s’installer dans la vie de retraité."
 
 msgctxt "speaker:Narrator"
 msgid "He still took her frequently, but such was his nature, it had now simply ceased to be an obsession."
-msgstr "Il continuait tout de même à la prendre fréquemment, mais telle était sa nature ; cela avait simplement cessé d’être une obsession."
+msgstr "Il continuait tout de même à la prendre fréquemment, mais telle était sa nature ; cela avait désormais simplement cessé d’être une obsession."
 
 msgctxt "speaker:Narrator"
 msgid "Instead, to Sarah's surprise, she found her husband taking towards his role as a father."
@@ -102405,7 +102405,7 @@ msgstr "Nous aurions pu passer un moment privé à tous les trois ?"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah suddenly noticed both Ephraim and Caleb staring at her."
-msgstr "Sarah remarqua soudain que Ephraïm et Caleb la fixaient tous les deux. Leur regard parcourait son corps, et Caleb semblait particulièrement captivé par elle."
+msgstr "Sarah remarqua soudainement qu’Éphraïm et Caleb la fixaient tous les deux."
 
 msgctxt "speaker:Narrator"
 msgid "Their eyes began exploring her body, especially Caleb seemed to be taken with her."
@@ -103485,7 +103485,7 @@ msgstr "Mais, tu ne peux pas te permettre de m'avoir."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah had reasoned the orc might require convincing."
-msgstr "Sarah se dit que l'orc pourrait avoir besoin d'être convaincu. Elle peut lui offrir la moitié de tous ses futurs salaires. Cela devrait rendre son temps précieux."
+msgstr "Sarah s’était dit que l’orc pourrait avoir besoin d’être convaincu."
 
 msgctxt "speaker:Sarah"
 msgid "I thought about that. I can offer you half of all my future paychecks. That should make it worth your time."
@@ -104425,7 +104425,7 @@ msgstr "Comment suis-je censée gérer quelque chose comme ça ?"
 
 msgctxt "speaker:Narrator"
 msgid "Atilla came up to her."
-msgstr "Atilla s'approcha d'elle. Il se souvint de ce qu'il t'avait dit : tout cela va bien au-delà de la force brute. Tu es humaine, et une femme, pour couronner le tout."
+msgstr "Atilla s'approcha d'elle."
 
 msgctxt "speaker:Atilla"
 msgid "Remember what I told you, it’s about far more than just raw strength. You’re a human, and a woman to match."
@@ -106373,11 +106373,11 @@ msgstr "Je ne t'oublierai jamais non plus, Atilla."
 
 msgctxt "speaker:Atilla"
 msgid "Listen, girl, one day somewhere in the future, one a day that will seem no different to you than any other, I will die on some unknown battlefield, far away."
-msgstr "Écoute, fille, un jour, quelque part dans le futur, un jour qui ne te semblera pas différent des autres, je mourrai sur un champ de bataille inconnu, loin de là. Tu ne sauras même pas quand, et tu n'apprendras jamais où. Je disparaîtrai simplement de ce monde. Accroche-toi à ce que nous avons eu, et laisse-moi partir."
+msgstr "Écoute, ma fille, un jour, quelque part dans le futur, un jour qui ne te semblera pas différent des autres, je mourrai sur un champ de bataille inconnu, loin de là."
 
 msgctxt "speaker:Atilla"
 msgid "You won't know when, and you will never learn where. I will simply fade from this world. Hold onto what we had, and let me go."
-msgstr "Tu ne sauras pas quand, et tu n'apprendras jamais où. Je vais simplement disparaître de ce monde. Accroche-toi à ce que nous avions, et laisse-moi partir."
+msgstr "Tu ne sauras pas quand, et tu n'apprendras jamais où. Je vais simplement disparaître de ce monde. Accroche-toi à ce que nous avons eu, et laisse-moi partir."
 
 msgctxt "speaker:Sarah"
 msgid "No, you can't."
@@ -114401,7 +114401,7 @@ msgstr "Debout à côté d'elle, elle sentait sa présence avec acuité, alors q
 
 msgctxt "speaker:Narrator"
 msgid "The female soldier sighed."
-msgstr "La soldate féminine soupira. « Ne me commence même pas avec ça. Rien que de l'argent maudit depuis que j'ai commencé. »"
+msgstr "La soldate soupira."
 
 msgctxt "speaker:Female Soldier"
 msgid "Don't fucking get me started on that. Nothin but bleedin money since I started."
@@ -127962,7 +127962,7 @@ msgstr "J'étais effrayée, parce que ma mère aurait été en colère, et à ca
 
 msgctxt "speaker:Narrator"
 msgid "Kate laughed to herself as she retold the story."
-msgstr "Kate rit d'elle-même en racontant cette histoire. Elle évoquait les avertissements de sa mère, qui lui avait toujours dit de rester loin d'elle, craignant que les gens ordinaires ne s'attirent des ennuis en s'approchant de nobles comme lui. Pourtant, en entendant quelqu'un pleurer, elle s'était précipitée, pour découvrir que c'était lui, ce qui l'avait terrifiée : sa mère aurait été furieuse, et toutes ces histoires lui faisaient croire qu'il pourrait... on ne sait pas, cracher du feu ou quelque chose comme ça."
+msgstr "Kate rit dans son coin en racontant à nouveau l'histoire."
 
 msgctxt "speaker:Kate"
 msgid "But I guess when I saw you there, I figured, you're not really all that different."
@@ -128298,7 +128298,7 @@ msgstr "Des cicatrices restaient, bien que Sarah gardât cela pour elle."
 
 msgctxt "speaker:Narrator"
 msgid "Samayra walked up closer to Sarah."
-msgstr "Samayra s'approcha de Sarah. Tu sais, tu es plutôt forte, mais c'est normal de pleurer parfois. Moi aussi, je le fais."
+msgstr "Samayra s'approcha de Sarah."
 
 msgctxt "speaker:Samayra"
 msgid "You know, you're pretty tough, but it's ok to cry sometimes. I do it."
@@ -134642,7 +134642,7 @@ msgstr "Ce n'est pas obligé d'en être ainsi."
 
 msgctxt "speaker:Razaphel"
 msgid "I can break the bond that binds you to their design."
-msgstr "Je peux briser le lien qui te rattache à leur dessein."
+msgstr "Je peux briser le lien qui vous attache à leur conception."
 
 msgctxt "speaker:Razaphel"
 msgid "I can shatter the link between yourself and the divine."
@@ -137318,7 +137318,7 @@ msgstr "Une princesse devenue mercenaire. Une mercenaire devenue commandante. Mo
 
 msgctxt "speaker:Vaelen"
 msgid "Forget these fools around us whose destinies are unbound."
-msgstr "Alors, viens donc, Sarah, et laissons-nous cueillir cette récompense. Oublie ces imbéciles autour de nous, dont les destins sont sans limites."
+msgstr "Oublie ces imbéciles qui nous entourent, dont les destins sont sans limites."
 
 msgctxt "speaker:Vaelen"
 msgid "So come now, Sarah, and let us reap this bounty."
@@ -141498,7 +141498,7 @@ msgstr "Merci, j'irai lui parler et verrai comment résoudre cette affaire."
 
 msgctxt "speaker:Narrator"
 msgid "The Mayor grabbed her hands just before she left."
-msgstr "Le maire lui saisit les mains juste avant qu'elle ne parte. Merci... vraiment."
+msgstr "La maire lui a saisi les mains juste avant qu'elle ne parte."
 
 msgctxt "speaker:Mayor"
 msgid "Thank you...truly."
@@ -142370,7 +142370,7 @@ msgstr "Je suis vraiment désolée. Je sais ce que tu ressens."
 
 msgctxt "speaker:Narrator"
 msgid "Garret's face grew angry."
-msgstr "Garret : Tu sais ce que je ressens ?! Comment pourrais-tu seulement savoir ce qu'est une telle perte ?!"
+msgstr "Le visage de Garret s'assombrit de colère."
 
 msgctxt "speaker:Garret"
 msgid "You know how I feel?! How could you possibly know what such loss is like?!"
@@ -148858,7 +148858,7 @@ msgstr "Tu jouis."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah fell slightly back onto the bed."
-msgstr "Sarah s'est légèrement laissée tomber sur le lit. Un sourire sur le visage. C'était quelque chose qu'elle pouvait faire."
+msgstr "Sarah recula légèrement sur le lit."
 
 msgctxt "speaker:Narrator"
 msgid "A smile on her face. That she could do."
@@ -150242,7 +150242,7 @@ msgstr "Nous avions un jardin à l'intérieur du château, mais nous avions auss
 
 msgctxt "speaker:Narrator"
 msgid "Garret walked into the room and sat down on the bed next to her."
-msgstr "Garret entra dans la pièce et s'assit sur le lit à côté d'elle. Le lit rebondit doucement sous son poids, faisant légèrement glisser Sarah vers lui."
+msgstr "Garret entra dans la pièce et s'assit sur le lit à côté d'elle."
 
 msgctxt "speaker:Narrator"
 msgid "The bed softly bounced as he put his weight down on it, causing Sarah to slightly slide towards him."
@@ -155418,7 +155418,7 @@ msgstr "Elle tapota la carte du doigt près du symbole d'une ville."
 
 msgctxt "speaker:Narrator"
 msgid "The city of Ridgehaven."
-msgstr "La ville de Ridgehaven. Quels ont été les rapports de là-bas ?"
+msgstr "La ville de Ridgehaven."
 
 msgctxt "speaker:Sarah"
 msgid "What about Ridgehaven? What has been the report there?"
@@ -157014,7 +157014,7 @@ msgstr "Allons-tu t'expliquer ?"
 
 msgctxt "speaker:Narrator"
 msgid "Kate held up the scroll."
-msgstr "Kate : Le rapport est là. Tu peux le lire, tout y est."
+msgstr "Kate leva le parchemin."
 
 msgctxt "speaker:Kate"
 msgid "The report is here. You can read it, it's all in there."
@@ -157654,7 +157654,7 @@ msgstr "Punir Kate"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah knew what had to be done."
-msgstr "Sarah savait ce qu'il fallait faire. Elle ne pouvait pas simplement te laisser t'en sortir sans aucune punition."
+msgstr "Sarah savait ce qu'il fallait faire."
 
 msgctxt "speaker:Sarah"
 msgid "You know I can't just let you walk away from this without any punishment."
@@ -160778,7 +160778,7 @@ msgstr "Des souvenirs remontèrent en elle depuis les profondeurs de sa mémoire
 
 msgctxt "speaker:Narrator"
 msgid "Her father had brought her along on a diplomatic visit to meet the family that ruled the city of Calshure."
-msgstr "Son père l'avait emmenée lors d'une visite diplomatique pour rencontrer la famille qui régnait sur la ville de Calshure. Ce n'était pas une famille très influente, mais pas une famille sans importance non plus."
+msgstr "Son père l'avait emmenée lors d'une visite diplomatique pour rencontrer la famille qui dirigeait la ville de Calshure."
 
 msgctxt "speaker:Narrator"
 msgid "Not a prominent family, but not a trivial one either."
@@ -160818,7 +160818,7 @@ msgstr "Sont-ils morts en défendant la ville ?"
 
 msgctxt "speaker:Narrator"
 msgid "The old Tribesman shook his head."
-msgstr "Le vieil homme tribal secoua la tête. Leur père l'avait fait, en affrontant nos forces sur le champ de bataille."
+msgstr "Le vieil homme de la tribu secoua la tête."
 
 msgctxt "speaker:Tribesman"
 msgid "Their father did, meeting our forces on the battlefield."
@@ -162318,7 +162318,7 @@ msgstr "Par comparaison, ceux-ci pouvaient à peine être qualifiés de murs."
 
 msgctxt "speaker:Narrator"
 msgid "She had broken that city. She would break this one all the same."
-msgstr "Pourtant, cela lui semblait différent. Elle avait détruit cette ville-là. Elle détruirait celle-ci de la même façon."
+msgstr "Elle avait détruit cette ville. Elle détruirait cette autre de la même manière."
 
 msgctxt "speaker:Narrator"
 msgid "Still, it felt different."
@@ -162954,7 +162954,7 @@ msgstr "Les Tribaux."
 
 msgctxt "speaker:Narrator"
 msgid "A large unit of Tribesman cavalary was rushing up behind the scouting units."
-msgstr "Une grande unité de cavalerie tribale chargeait derrière les unités d'exploration. Les Tribaux, étant des cavaliers plus expérimentés, réduisaient rapidement la distance qui les séparait."
+msgstr "Une grande unité de cavalerie tribale se précipitait derrière les unités de reconnaissance."
 
 msgctxt "speaker:Narrator"
 msgid "There was a distance between the two, but the Tribesmen, being the more skilled riders, were quickly closing the distance."
@@ -167738,7 +167738,7 @@ msgstr "Elle-même se replia au centre de son armée, d'où elle pouvait surveil
 
 msgctxt "speaker:Narrator"
 msgid "The distance between her army and the Tribesmen had shrunk."
-msgstr "La distance entre son armée et les Tribesmen s'était réduite. Si proche maintenant, elle pouvait entendre le battement et le piétinement de leurs chevaux."
+msgstr "La distance entre son armée et les Tribaux s’était réduite."
 
 msgctxt "speaker:Narrator"
 msgid "Now so close, she could hear the beating and stomping of their horses."
@@ -168434,7 +168434,7 @@ msgstr "Tu dois te replier vers les lignes arrière !"
 
 msgctxt "speaker:Narrator"
 msgid "The Tribesmen continued to move towards them."
-msgstr "Les membres de la tribu continuaient d'avancer vers eux. Kate, qui venait de les avertir d'une menace imminente, leur ordonna de se replier dans les lignes arrière pour échapper à l'attaque. Sarah, quant à elle, semblait hésiter à obéir, comme si elle refusait d'abandonner la confrontation directe."
+msgstr "Les membres de la tribu continuèrent d'avancer vers eux."
 
 msgctxt "speaker:Sarah"
 msgid "But-"
@@ -174810,7 +174810,7 @@ msgstr "Il poussa les deux autres gardes du coude."
 
 msgctxt "speaker:Guard"
 msgid "Girly is offerin to pay her debts to society the old fashioned way."
-msgstr "Girly, voilà la première chose intelligente qui sort de ta bouche. Tu proposes de payer tes dettes à la société à l'ancienne."
+msgstr "Girly propose de rembourser ses dettes envers la société à l'ancienne."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah did her best to look brave, even as the three guards advanced on her."
@@ -185126,7 +185126,7 @@ msgstr "C'est... magnifique."
 
 msgctxt "speaker:Narrator"
 msgid "Sakar nodded along with her."
-msgstr "Sakar hochait la tête en signe d'approbation, suivant le mouvement de Sarah. Il semblait partagé entre l'admiration du paysage et une certaine gêne face à son enthousiasme. Leur échange, à la fois léger et chargé de sous-entendus, révélait une complicité naissante, teintée d'une tendresse discrète mais palpable."
+msgstr "Sakar hocha la tête en même temps qu'elle."
 
 msgctxt "speaker:Sakar"
 msgid "It is."
@@ -194474,7 +194474,7 @@ msgstr "Les Noctori ?"
 
 msgctxt "speaker:Narrator"
 msgid "Sigmund looked at her."
-msgstr "Sigmund la regarda. Tu sais lire et écrire, tu es assez instruite, et tu oses me dire que tu ne les connais pas ?"
+msgstr "Sigmund la regarda."
 
 msgctxt "speaker:Sigmund"
 msgid "You can read and write, you're educated enough, and you're telling me you don't know about them?"
@@ -195254,7 +195254,7 @@ msgstr "Tu le penses vraiment ? Pourquoi donc ?"
 
 msgctxt "speaker:Narrator"
 msgid "Sarah wondered about how much she wanted to reveal about herself."
-msgstr "Sarah se demandait jusqu'où elle voulait aller dans la révélation de sa vie privée à Marius. Elle tenta de changer de sujet en parlant des tâches que son père lui avait demandées, comme si cela pouvait dissimuler sa gêne."
+msgstr "Sarah se demandait jusqu'où elle voulait aller dans la révélation de sa propre personne."
 
 msgctxt "speaker:Sarah"
 msgid "It's nothing, maybe we can talk about that another time. I, uhh...you're dad told you to show me the chores, right?"
@@ -195810,7 +195810,7 @@ msgstr "Alors qu'elle se retournait dans son lit, elle vit la lumière qui entra
 
 msgctxt "speaker:Narrator"
 msgid "Standing in the doorframe was Alfred."
-msgstr "Alfred se tenait dans l'encadrement de la porte. Sarah le regardait. Aucun des deux ne parlait ni ne bougeait depuis un instant."
+msgstr "Alfred se tenait dans l'encadrement de la porte."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah watched him as he watched her. Neither spoke nor moved for a moment."
@@ -196802,7 +196802,7 @@ msgstr "Une pointe de culpabilité lui transperça le cœur."
 
 msgctxt "speaker:Narrator"
 msgid "Did she not abandon her people by being here? Running away from her troubles?"
-msgstr "Mais qui était-elle, se demanda-t-elle ? N'avait-elle pas abandonné son peuple en restant ici ? En fuyant ses propres problèmes ?"
+msgstr "N’a-t-elle pas abandonné son peuple en étant ici ? En fuyant ses problèmes ?"
 
 msgctxt "speaker:Narrator"
 msgid "But who was she, she thought."
@@ -198342,7 +198342,7 @@ msgstr "Pendant qu'ils prenaient leur repas ensemble, Marius lui raconta sa jour
 
 msgctxt "speaker:Narrator"
 msgid "Sarah quickly realized her notion of farm life was quite different from the reality."
-msgstr "Sarah comprit vite que son idée de la vie à la ferme était bien différente de la réalité. Elle était simplement heureuse de pouvoir être utile ici."
+msgstr "Sarah réalisa rapidement que son idée de la vie à la ferme était bien différente de la réalité."
 
 msgctxt "speaker:Narrator"
 msgid "The grueling hours. The back breaking labor."
@@ -204790,7 +204790,7 @@ msgstr "Alors... et maintenant, on fait quoi ?"
 
 msgctxt "speaker:Narrator"
 msgid "Alfred pointed at her clothes."
-msgstr "Alfred désigna ses vêtements du doigt. Ces vêtements avaient de la saleté par terre, et il y en avait encore une pile à laver."
+msgstr "Alfred a montré ses vêtements du doigt."
 
 msgctxt "speaker:Alfred"
 msgid "Laundry is a good place to start. Those clothes got dirt on the floor, and we got a pile more."
@@ -205986,7 +205986,7 @@ msgstr "Promis."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah whispered in his ear."
-msgstr "Sarah lui murmura à l'oreille : « Promets-moi d'être mon taureau. »"
+msgstr "Sarah lui chuchota à l'oreille."
 
 msgctxt "speaker:Sarah"
 msgid "Promise you will be my bull."
@@ -206902,7 +206902,7 @@ msgstr "Je vais te le dire. Tout."
 
 msgctxt "speaker:Narrator"
 msgid "Deep into the night, Sarah told her story, everything from having lived in Rosanna to what had brought her to Lethram and caused her to end up on his doorstep."
-msgstr "Tard dans la nuit, Sarah raconta son histoire, de tout : sa vie à Rosanna, ce qui l’avait amenée à Lethram et l’avait poussée à se retrouver sur le seuil de sa porte. Xan, quant à lui, semblait à la fois profondément intéressé par son récit et étrangement dépourvu de jugement."
+msgstr "Au cœur de la nuit, Sarah raconta son histoire, de sa vie à Rosanna jusqu’à ce qui l’avait amenée à Lethram et l’avait conduite à se retrouver sur le seuil de sa porte."
 
 msgctxt "speaker:Narrator"
 msgid "Xan, for his part, seemed to be both deeply interested in her story, as well as strangely without judgement."
@@ -209666,7 +209666,7 @@ msgstr "Alors, nous choisissons nos combats avec soin."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah began to lose attention as she noticed soft lights creep into the room from outside."
-msgstr "Sarah commença à perdre attention en remarquant des lumières douces s'infiltrer dans la pièce depuis l'extérieur. Sa ville. Son pays."
+msgstr "Sarah commença à perdre concentration en remarquant de douces lumières s'infiltrer dans la pièce depuis l'extérieur."
 
 msgctxt "speaker:Narrator"
 msgid "She walked over to the windows and looked outside into the capital. Her city. Her country."
@@ -212246,7 +212246,7 @@ msgstr "Cela laisse le palais presque entièrement sans défense. Il ne restera 
 
 msgctxt "speaker:Sarah"
 msgid "A handful of guards...and me."
-msgstr "C'est exact. Une poignée de gardes... et moi."
+msgstr "Une poignée de gardes... et moi."
 
 msgctxt "speaker:Xanthippe"
 msgid "That's right."
@@ -218162,7 +218162,7 @@ msgstr "Sarah se réveilla dans un lit vide, tôt le lendemain matin."
 
 msgctxt "speaker:Narrator"
 msgid "The house had a silence that seemed overwhelming. The kind that pounded on the ears."
-msgstr "La maison était plongée dans un silence qui semblait écrasant. Un silence qui martelait les oreilles. Ce genre de silence qui pesait lourdement sur l'esprit."
+msgstr "La maison était plongée dans un silence qui semblait écrasant. Le genre de silence qui martelait les oreilles."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah sighed to herself, if only to break through the silence."
@@ -225650,7 +225650,7 @@ msgstr "Alors, donne-les-moi. Dis-moi les réponses aux questions que je ne sais
 
 msgctxt "speaker:Narrator"
 msgid "The spirit drifted through the room."
-msgstr "Le spectre flottait dans la pièce. Il aimait parler, mais maintenant, il semblait hésitant."
+msgstr "L'esprit flottait dans la pièce."
 
 msgctxt "speaker:Narrator"
 msgid "It liked to speak, but now it seemed hesitant."
@@ -228850,7 +228850,7 @@ msgstr "Nauyziri ? Pff, qu'est-ce qu'on pourrait bien vouloir dans cet endroit ?
 
 msgctxt "speaker:Narrator"
 msgid "Sarah left the question unanswered."
-msgstr "Sarah n'a pas répondu à la question. Comme tu l'as dit, la ville était... peu impressionnante."
+msgstr "Sarah n’a pas répondu à la question."
 
 msgctxt "speaker:Sarah"
 msgid "Turned out to be nothing. As you said, the city was...unimpressive."
@@ -229458,7 +229458,7 @@ msgstr "Metis fit une grimace dégoûtée."
 
 msgctxt "speaker:Narrator"
 msgid "Metis raised an eyebrow."
-msgstr "Tu n'as jamais eu cette impression de lui ? Tu es son élève depuis quelques années maintenant, non ?"
+msgstr "Metis haussa un sourcil."
 
 msgctxt "speaker:Metis"
 msgid "You never got that vibe from him? You've been his student for a few years now, right?"
@@ -235122,7 +235122,7 @@ msgstr "Pourquoi était-il putainement sexy, pensa-t-elle."
 
 msgctxt "speaker:Narrator"
 msgid "She knew she should just forget him. What they had done in the alley. What he had done to her at his home..."
-msgstr "Elle savait qu'elle devrait simplement l'oublier. Ce qu'ils avaient fait dans la ruelle. Ce qu'il lui avait fait chez lui... Pourtant, comme une écharde, elle ne pouvait jamais vraiment l'ignorer. Alaric... cet enfoiré. Ce criminel horrible, dégoûtant... Pourquoi était-il si putain de sexy, se demandait-elle."
+msgstr "Elle savait qu'elle aurait dû simplement l'oublier. Ce qu'ils avaient fait dans la ruelle. Ce qu'il lui avait fait chez lui..."
 
 msgctxt "speaker:Narrator"
 msgid "Yet like a splinter, she could never truly ignore him."
@@ -236830,7 +236830,7 @@ msgstr "Les groupes les plus importants ont dévoré les plus petits. Et ainsi d
 
 msgctxt "speaker:Razaphel"
 msgid "The-King-On-The-Outside."
-msgstr "Le Roi-En-Extérieur. Réalisant cette fin inévitable, je savais que je devais m'échapper avant d'être moi aussi dévoré."
+msgstr "Le Roi à l'Extérieur."
 
 msgctxt "speaker:Razaphel"
 msgid "Realizing this inevitable fate, I knew I had to slip away before I too would be consumed."
@@ -237026,7 +237026,7 @@ msgstr "Ils avaient besoin de temps pour germer, mais à présent, elle espérai
 
 msgctxt "speaker:Narrator"
 msgid "Lined up near the back of the room were the pots and seedlings that she had practiced with."
-msgstr "Près du fond de la pièce étaient alignés les pots et les jeunes pousses avec lesquels elle s'était exercée. Chacun portait un numéro pour le distinguer des autres."
+msgstr "Alignés près de l'arrière de la pièce se trouvaient les pots et les jeunes plants avec lesquels elle s'était entraînée."
 
 msgctxt "speaker:Narrator"
 msgid "Each had a number on it, to distinguish it from the others."
@@ -238026,7 +238026,7 @@ msgstr "Elle écarta les bras, comme si elle attendait des applaudissements."
 
 msgctxt "speaker:Narrator"
 msgid "Metis casually clapped his hands."
-msgstr "Metis applaudit nonchalamment. C’est pas mal. Tu apprends vite."
+msgstr "Metis applaudit nonchalamment."
 
 msgctxt "speaker:Metis"
 msgid "Not bad. You're a quick study."
@@ -240422,7 +240422,7 @@ msgstr "Rappelle-toi de Laitha."
 
 msgctxt "speaker:Narrator"
 msgid "Sarah repeated the name in her word over and over again and slowly found herself return to that place."
-msgstr "Sous elle, les jungles luxuriantes, débordantes de vie. Sarah répétait le nom dans sa tête, encore et encore, et se retrouva lentement à retourner dans cet endroit."
+msgstr "Sarah répétait le nom dans sa tête encore et encore, et se retrouva peu à peu de retour à cet endroit."
 
 msgctxt "speaker:Narrator"
 msgid "Below her, the lush jungles, sprawling with life."
@@ -247498,7 +247498,7 @@ msgstr "De toute façon, comme je m'apprêtais à vous le dire, avant que mon im
 
 msgctxt "speaker:Hecate"
 msgid "Witch and famous explorer."
-msgstr "Une sorcière et exploratrice célèbre, peut-être. Mais ça ne suffira sûrement pas à tenir éloignée une sorcière chevronnée comme moi, n'est-ce pas ?"
+msgstr "Sorcière et célèbre exploratrice."
 
 msgctxt "speaker:Narrator"
 msgid "She gestured at the man next to her."
@@ -253066,7 +253066,7 @@ msgstr "Une partie d'elle avait envie de bondir sur lui et de le frapper pour so
 
 msgctxt "speaker:Captain Belmont"
 msgid "Talkin of you gettin what you wants."
-msgstr "Et pour ce qui est de ce que tu as obtenu, eh bien... Je pourrais te laisser payer ce que tu devais. C'était la seule façon pour toi de le faire."
+msgstr "En parlant de ça, tu obtiendras ce que tu veux."
 
 msgctxt "speaker:Captain Belmont"
 msgid "How about you catch me up on how you ended up lookin like this."
@@ -253598,7 +253598,7 @@ msgstr "De grincement de dents, Sarah retira un de ses vêtements."
 
 msgctxt "speaker:Narrator"
 msgid "Belmont handed her back the bottle."
-msgstr "Le capitaine Belmont lui rendit la bouteille. « Tu veux réessayer, la blonde ? »"
+msgstr "Belmont lui rendit la bouteille."
 
 msgctxt "speaker:Captain Belmont"
 msgid "Care to try again, Blondie?"
@@ -253750,7 +253750,7 @@ msgstr "Pas si vieux que ça, la blonde."
 
 msgctxt "speaker:Sarah"
 msgid "Fuck! How are you this good..."
-msgstr "Putain ! Comment peux-tu être aussi doué... ?"
+msgstr "Merde ! Comment tu peux être aussi douée..."
 
 msgctxt "speaker:Sarah"
 msgid "Let me just..."
@@ -254818,7 +254818,7 @@ msgstr "Trempée de sa propre sueur, étourdie par l'alcool, son corps brûlait 
 
 msgctxt "speaker:Narrator"
 msgid "What did it matter, she thought for a brief moment."
-msgstr "Qu'est-ce que cela pouvait bien importer, pensa-t-elle un bref instant ? Son âge, sa distance, sa laideur ? Rien de tout cela n'avait d'importance s'il lui faisait ressentir une telle passion."
+msgstr "Qu'est-ce que cela importait, pensa-t-elle un bref instant."
 
 msgctxt "speaker:Narrator"
 msgid "What did it matter if he was old, or far, or ugly? What did any of it matter if he made her feel like this?"
@@ -255562,7 +255562,7 @@ msgstr "En projetant ses bras en avant, la flamme pâle se précipita vers la b�
 
 msgctxt "speaker:Narrator"
 msgid "And as the magical fire struck its inky body, the creature screamed."
-msgstr "Et alors que le feu magique frappait son corps sombre, la créature poussa un cri aigu et furieux, comme celui d'un animal pris au piège."
+msgstr "Et alors que le feu magique frappait son corps d'encre, la créature hurla."
 
 msgctxt "speaker:Narrator"
 msgid "A high pitched, furious scream, like an animal snared in a trap."
@@ -259466,11 +259466,11 @@ msgstr "Son cœur battait à tout rompre, le plaisir parcourant son corps avec u
 
 msgctxt "speaker:Narrator"
 msgid "Only moments ago, she could not have imagined sleeping with this old man."
-msgstr "Il y a quelques instants à peine, elle n'aurait jamais pu imaginer coucher avec cet homme âgé. Maintenant, elle ne pouvait plus imaginer arrêter."
+msgstr "Il y a seulement quelques instants, elle n'aurait jamais pu imaginer se coucher avec ce vieil homme."
 
 msgctxt "speaker:Narrator"
 msgid "Now she couldn't imagine ever stopping."
-msgstr "Maintenant, elle ne pouvait plus imaginer s'arrêter un jour."
+msgstr "Maintenant, elle ne pouvait plus imaginer un jour s'arrêter."
 
 msgctxt "speaker:Narrator"
 msgid "His strong hands grabbed both of her ass cheeks again, holding her in place just on the edge of the desk."
@@ -261046,7 +261046,7 @@ msgstr "Elle pourrait avoir besoin de lui, et elle avait déjà affronté des cr
 
 msgctxt "speaker:Sarah"
 msgid "I hear you have summoned me."
-msgstr "J'entends dire que tu m'as convoqué. Non, je dirais plutôt que c'est une invitation."
+msgstr "J'entends dire que vous m'avez fait appel."
 
 msgctxt "speaker:Gilead"
 msgid "Summon? No, I would call it an invitation."
@@ -274806,7 +274806,7 @@ msgstr "En se faufilant et en tournant, ils disparurent dans les rues arrière d
 
 msgctxt "speaker:Narrator"
 msgid "Sarah saw the night life of the city."
-msgstr "Alors que la partie légale de la ville s'endormait, la partie illégale s'éveillait. Sarah vit la vie nocturne de la ville."
+msgstr "Sarah a découvert la vie nocturne de la ville."
 
 msgctxt "speaker:Narrator"
 msgid "How just as the legal part of the city fell asleep, the illegal part came to life."
