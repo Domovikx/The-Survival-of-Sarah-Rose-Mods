@@ -154,6 +154,21 @@ The Survival of Sarah Rose — AI Voice Pack, релиз 2026.11.19
 
 ---
 
+## Обратная связь по качеству перевода (GitHub)
+
+Канал — Issue-шаблон `.github/ISSUE_TEMPLATE/translation-feedback.yml`
+(метка `translation`): язык, место в игре, текущая строка, предлагаемая строка,
+причина. Это дешевле для владельца, чем собирать ревью самому: пользователи
+находят ляпы в игре, а мы батчем правим их в следующем релизе.
+
+Формулировка для лендинга/описаний (EN):
+
+```text
+Found a line that reads wrong? Open an issue with the language, the scene and your
+suggestion — confirmed reports are fixed in the next release, and re-voiced if the
+line has audio.
+```
+
 ## Как обновлять
 
 1. В Steam-гайде меняются заголовок (полные названия, не коды) и тело.
