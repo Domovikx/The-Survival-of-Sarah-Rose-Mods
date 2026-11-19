@@ -7,7 +7,7 @@ translate ja strings:
     new "画像%d/%d はブロックされています。"
 
     old "The Survival of Sarah Rose"
-    new "サラ・ローズの生存"
+    new "The Survival of Sarah Rose"
 
     old "Scene Replay"
     new "シーンリプレイ"
@@ -19,7 +19,7 @@ translate ja strings:
     new "戻る"
 
     old "History"
-    new "歴史"
+    new "履歴"
 
     old "Skip"
     new "スキップ"
@@ -79,7 +79,7 @@ translate ja strings:
     new "<"
 
     old "{#auto_page}A"
-    new "A"
+    new "{#auto_page}A"
 
     old "{#quick_page}Q"
     new "{#quick_page}Q"
@@ -257,32 +257,3 @@ translate ja strings:
 
     old "Menu"
     new "メニュー"
-
-    ## ── Кнопки меню и сохранений (добавлено 2026-11-14) ───────────────
-    ## Базовые экраны игры запрашивают эти подписи, но в таблице перевода
-    ## их не было: главное меню показывало Start / Settings / Exit
-    ## по-английски (проверено пробой в игре, а не на глаз).
-    old "Start"
-    new "はじめから"
-
-    old "Settings"
-    new "設定"
-
-    old "Quit"
-    new "終了"
-
-    old "Continue"
-    new "続きから"
-
-    old "Main Menu"
-    new "メインメニュー"
-
-    old "Quick Save"
-    new "クイックセーブ"
-
-    old "Quick Load"
-    new "クイックロード"
-
-    old "Delete"
-    new "削除"
-

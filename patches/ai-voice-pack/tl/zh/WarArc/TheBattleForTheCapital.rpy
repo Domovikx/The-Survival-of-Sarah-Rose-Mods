@@ -1336,7 +1336,7 @@ translate zh strings:
     new "他又说了些什么，其他人则对他的话报以笑声。"
 
     old "All at once, each of the men pull out their cocks and begin stroking them."
-    new "突然，每个男人掏出他们的鸡巴并开始自慰。"
+    new "突然间，每个男人都掏出他们的阴茎，开始抚摸起来。"
 
     old "Sarah doesn't understand, she tries to look away, but the man near her head keeps her gaze fixed. When she tries to close her eyes, she gets a soft slap to the face."
     new "莎拉不明白发生了什么，她试图移开视线，但靠近她头部的男人迫使她保持注视。当她试图闭上眼睛时，脸上挨了一记轻柔的巴掌。"

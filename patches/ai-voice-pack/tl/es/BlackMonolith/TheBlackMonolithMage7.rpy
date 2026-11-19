@@ -4,7 +4,7 @@
 translate es strings:
 
     old "Sarah was sitting behind her desk in the main study."
-    new "Detrás de su escritorio, en el estudio principal, Sarah estaba sentada. Sobre la mesa, una mezcla caótica de textos: algunos los había elegido ella, otros Metis y otros el espíritu."
+    new "Sarah estaba sentada detrás de su escritorio en el estudio principal."
 
     old "Spread out on her desk, a wild mix of texts. Some selected by herself, some by Metis, some by the spirit."
     new "Esparcidos sobre su escritorio, un caos de textos. Algunos seleccionados por ella misma, otros por Metis y otros por el espíritu."

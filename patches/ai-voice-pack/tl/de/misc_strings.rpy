@@ -52,7 +52,7 @@ translate de strings:
     new "Jaeid"
 
     old "Xanthippe"
-    new "Xantípp"
+    new "Xanthippe"
 
     old "Razaphel"
     new "Razafael"
@@ -76,13 +76,13 @@ translate de strings:
     new "Bran"
 
     old "Took"
-    new "Nahm"
+    new "Tuk"
 
     old "Synara"
     new "Synara"
 
     old "Nickolas"
-    new "Nick"
+    new "Nikolas"
 
     old "Sigmund"
     new "Sigmund"
@@ -118,7 +118,7 @@ translate de strings:
     new "Dio"
 
     old "Cassius"
-    new "Cassio"
+    new "Cassius"
 
     old "Metis"
     new "Metis"
@@ -280,7 +280,7 @@ translate de strings:
     new "Wirt"
 
     old "Official"
-    new "Offizier"
+    new "Beamter"
 
     old "Slave"
     new "Knechtin"
@@ -301,7 +301,7 @@ translate de strings:
     new "Priester"
 
     old "Old Captain"
-    new "Alter Kapitän Belmont"
+    new "Alter Kapitän"
 
     old "Orc"
     new "Ork"
@@ -322,7 +322,7 @@ translate de strings:
     new "Prinz Mythran"
 
     old "Male Soldier"
-    new "Soldat"
+    new "Männlicher Soldat"
 
     old "Male soldier"
     new "Männlicher Soldat"
@@ -403,7 +403,7 @@ translate de strings:
     new "Anderer Mann"
 
     old "Robber"
-    new "Sálmago"
+    new "Räuber"
 
     old "Captain"
     new "Kapitän"
@@ -427,7 +427,7 @@ translate de strings:
     new "Romanov Zwillinge"
 
     old "Barkeeper"
-    new "Kellner"
+    new "Barmann"
 
     old "Master"
     new "Meister"
@@ -439,13 +439,13 @@ translate de strings:
     new "Barkeeper"
 
     old "Sailor"
-    new "Marina"
+    new "Matrose"
 
     old "Courier"
     new "Kurier"
 
     old "Barman"
-    new "Kellner"
+    new "Barmann"
 
     old "Founder"
     new "Stifter"

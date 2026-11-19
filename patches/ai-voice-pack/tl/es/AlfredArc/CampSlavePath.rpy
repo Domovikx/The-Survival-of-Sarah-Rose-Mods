@@ -868,7 +868,7 @@ translate es strings:
     new "Los hombres, por su parte, todavía se reunían cerca del borde de la tienda por la noche."
 
     old "Huddled in silence, they worked themselves to fantasies of what the tribesmen had in reality."
-    new "Acurrucados en silencio, se entregaban a fantasías sobre lo que los miembros de la tribu habían sido en realidad."
+    new "Acurrucados en silencio, se entregaron a fantasías sobre lo que los miembros de la tribu eran en realidad."
 
     old "They spilled their seeds to the infertile earth."
     new "Derramaron sus semillas sobre la tierra estéril."

@@ -1315,7 +1315,7 @@ translate es strings:
     new "Él la mantuvo inmóvil mientras ella presionaba la parte inferior de su cuerpo contra su trasero."
 
     old "Sarah let out another moan as she felt his large member press in between the cheeks of her ass."
-    new "Sarah dejó escapar otro gemido al sentir cómo su enorme miembro se presionaba entre los pliegues de su trasero. También podía reconocer su tamaño por la forma en que le rozaba la piel, y por los vívidos recuerdos que tenía."
+    new "Sarah soltó otro gemido al sentir cómo su gran miembro se presionaba entre las nalgas de su trasero."
 
     old "She could tell his size from how it pressed against her skin. As well as from vivid memory."
     new "Podía deducir su tamaño por cómo presionaba su piel, así como por el recuerdo vívido que tenía."
@@ -1504,7 +1504,7 @@ translate es strings:
     new "Intentó hablar entre las olas orgásmicas de placer que pulsaban por su cuerpo."
 
     old "Had he asked her something."
-    new "¿Dioses, ya te he follado hasta dejarte tonta?"
+    new "Si él le hubiera preguntado algo."
 
     old "Gods, did I fuck you stupid already?"
     new "¡Dioses! ¿Ya te follé hasta dejarte estúpida?"

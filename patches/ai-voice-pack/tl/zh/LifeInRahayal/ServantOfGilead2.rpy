@@ -475,7 +475,7 @@ translate zh strings:
     new "还是说，他的财富和权力弥补了其他方面的不足？"
 
     old "Sarah watched the young woman throw back her head and cry out as she finished."
-    new "莎拉看着那个年轻女子仰起头，在高潮中发出一声尖叫。"
+    new "莎拉看着那个年轻女子仰起头，在动作结束时发出一声呼喊。"
 
     old "Sarah shook her head and quickly turned away."
     new "莎拉摇了摇头，迅速转过身去。"
@@ -874,7 +874,7 @@ translate zh strings:
     new "相反，他凑得更近，舌头愈发狂野，榨取着每一丝可能的快感。"
 
     old "Sarah abandoned any restraint as she came, spreading her legs, grinding herself up against his eager mouth."
-    new "莎拉在达到高潮时彻底放弃了矜持，张开双腿，将自己磨蹭向他急切吻弄的唇口。"
+    new "莎拉在高潮中放下了所有矜持，张开双腿，把身体紧贴着他渴望的唇。"
 
     old "When the last waves of pleasure receded, she fell back, exhausted into the sofa."
     new "当最后一波快感退去，她无力地瘫倒在沙发上。"
@@ -1405,7 +1405,7 @@ translate zh strings:
     new "那罗莎娜本人呢？"
 
     old "To rule it, you will need the right names."
-    new "要统治它，你需要合适的人脉。"
+    new "要统治它，你需要正确的名字。"
 
     old "We are a proud people. It takes more than the raw strength of two legions to make us bend."
     new "我们是一个骄傲的民族。仅凭两个军团的蛮力，不足以让我们屈服。"
@@ -1807,7 +1807,7 @@ translate zh strings:
     new "基利德咧嘴一笑。"
 
     old "He has a taste for blondes. He won't be able to resist you, I imagine."
-    new "他喜欢金发女郎。我想，你是无法抗拒他的。"
+    new "他喜欢金发女郎。我猜他肯定忍不住会对你下手。"
 
     old "Sarah shivered. Was this what she was to be reduced down to, over and over again?"
     new "莎拉打了个寒颤。难道她注定要一次又一次地被贬低到只剩这副躯壳吗？"

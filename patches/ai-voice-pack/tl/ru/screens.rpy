@@ -31,10 +31,10 @@ translate ru strings:
     new "Сохранить"
 
     old "Q.Save"
-    new "Сохранить"
+    new "Б.Сохранить"
 
     old "Q.Load"
-    new "Загрузка"
+    new "Б.Загрузить"
 
     old "Prefs"
     new "Настройки"

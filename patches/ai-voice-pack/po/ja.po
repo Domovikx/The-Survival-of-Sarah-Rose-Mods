@@ -276174,9 +276174,10 @@ msgctxt "ui"
 msgid "Back"
 msgstr "戻る"
 
+# changed
 msgctxt "ui"
 msgid "History"
-msgstr "歴史"
+msgstr "履歴"
 
 msgctxt "ui"
 msgid "Skip"

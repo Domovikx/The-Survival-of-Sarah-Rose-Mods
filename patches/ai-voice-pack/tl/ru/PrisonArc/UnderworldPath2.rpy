@@ -91,7 +91,7 @@ translate ru strings:
     new "Сара уткнулась лицом в матрас, заглушая свой стон."
 
     old "It was an odd mix of pain and pleasure at being taken raw."
-    new "Это было странное сочетание боли и наслаждения от того, что он взял её без презерватива."
+    new "Это было странное сочетание боли и удовольствия от того, что её взяли без защиты."
 
     old "She could hear the market place was already filling up with people, and she didn't want to risk being found out."
     new "Она слышала, как на рынке уже собирались люди, и не хотела рисковать тем, чтобы её обнаружили."

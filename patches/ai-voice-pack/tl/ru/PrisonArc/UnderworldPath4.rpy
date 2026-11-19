@@ -1711,7 +1711,7 @@ translate ru strings:
     new "Это было бы проще. Это было бы правдивее."
 
     old "Because as much as she hated him...she wanted him more."
-    new "И точно так же, как она презирала другого мужчину... так же сильно она в этот момент желала его."
+    new "так же сильно она в этот момент желала его."
 
     old "And just as much as she despised the other man...so too did she, in that moment, want him more."
     new "И точно так же, как она презирала другого мужчину... так же в этот момент она хотела его ещё больше."
@@ -4036,7 +4036,7 @@ translate ru strings:
     new "Ты бежишь по улицам, а стража всё ещё ищет тебя."
 
     old "And not to mention, out there, you ain't gonna find much of that dreamstalk you've got such a taste for."
-    new "И не говоря уже о том, что там, снаружи, тебе вряд ли удастся найти той самой dreamstalk, к которой у тебя такая страсть."
+    new "И не говоря уже о том, что там, снаружи, тебе вряд ли удастся найти много той самой мечтотравы, которая тебе так нравится."
 
     old "Alaric gritted his teeth."
     new "Аларик стиснул зубы."

@@ -874,7 +874,7 @@ translate ru strings:
     new "Возможно, это было потому, что она уже бывала здесь раньше."
 
     old "This was what came after each battle. The mass funeral for all the soldiers too young to have made any name or fortune for themselves."
-    new "Вот что следовало за каждой битвой: массовые похороны для всех солдат, которые были слишком молоды, чтобы обрести имя или fortuna."
+    new "Вот что следовало за каждой битвой. Массовые похороны для всех солдат, которые были слишком молоды, чтобы успеть создать себе имя или состояние."
 
     old "Without any money, or really anyone to care, all they received was either a mass grave or cremation, depending on how solid the earth was. Nameless."
     new "Без каких-либо денег или хотя бы кого-то, кому было бы не всё равно, им доставалось лишь то, что зависело от прочности земли: либо массовая могила, либо кремация. Безымянные."

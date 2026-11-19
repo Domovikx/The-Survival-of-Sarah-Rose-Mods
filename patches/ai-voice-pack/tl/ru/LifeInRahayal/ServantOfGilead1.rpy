@@ -79,7 +79,7 @@ translate ru strings:
     new "Это главные ворота. Очевидно, они не предназначены для вас. Пожалуйста, следуйте за мной к служебному входу."
 
     old "Sarah remained transfixed for a moment longer."
-    new "Сара ещё на мгновение застыла в изумлении, и лишь когда поняла, что остальные от неё отдаляются, побежала за ними."
+    new "Сара ещё на мгновение застыла, не отрывая взгляда."
 
     old "Only when she realized the others were getting away from her did she run after her."
     new "Только когда она поняла, что остальные убегают от неё, она побежала за ними."
@@ -1327,7 +1327,7 @@ translate ru strings:
     new "Оглянувшись на них, она увидела, что Натан всё ещё толкался."
 
     old "The last of his powerful thrusts, then a loud grunt as he filled Kim up with his cum."
-    new "Последний его мощной толчок, а затем громкий стон — и он наполнил Ким своей спермой."
+    new "Последний мощный толчок, а затем громкий стон — он кончил в Ким."
 
     old "Sarah watched as he pumped himself empty into the girl, then pulled out."
     new "Сара смотрела, как он опустошил себя в девушку, а затем вытащил его."
@@ -1966,7 +1966,7 @@ translate ru strings:
     new "Слишком амбициозно?"
 
     old "Ambitious?"
-    new "Слишком амбициозно?"
+    new "Амбициозный?"
 
     old "Was this Empire of ours not build on men of vision? Must we now instead be ruled by cowards that squable over meaningless frontiers?"
     new "Разве наша Империя не строилась на людях с видением? Неужели теперь нами должны править трусы, спорящие о бессмысленных границах?"
@@ -2359,7 +2359,7 @@ translate ru strings:
     new "Ничего страшного. Многие новые девушки всё портят."
 
     old "They crawl on their knees but they don't pull up their skirts properly, so they usually scrape them and tear them on a loose brick."
-    new "Они ползают на коленях, но не умеют правильно поднимать юбки, поэтому обычно царапают и рвут их о loose brick."
+    new "Они ползают на коленях, но не подтягивают юбки как следует, поэтому обычно царапают и рвут их о рыхлый кирпич."
 
     old "He gestured towards a large pile of maid uniforms."
     new "Он указал на большую груду униформы горничных."

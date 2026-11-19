@@ -175,7 +175,7 @@ translate es strings:
     new "Fuera lo que fuese, Sarah no podía estar segura; lo único que sabía era que las sensaciones de dolor eran ahora distintas a como habían sido antes."
 
     old "Change."
-    new "Eso, por sí solo, le daba motivos para preguntarse."
+    new "Cambio."
 
     old "That alone gave her cause to wonder."
     new "Eso solo ya le daba motivo para preguntárselo."

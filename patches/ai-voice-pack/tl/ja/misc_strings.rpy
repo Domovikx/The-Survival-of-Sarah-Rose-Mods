@@ -7,7 +7,7 @@ translate ja strings:
     new "サラ"
 
     old "King Orwell Rose"
-    new "王オルウェル・ローズ"
+    new "オーウェル・ローズ王"
 
     old "Thomas"
     new "トマス"
@@ -235,7 +235,7 @@ translate ja strings:
     new "両方"
 
     old "Basilisk"
-    new "basilisk"
+    new "バジリスク"
 
     old "Merchant"
     new "商人"
@@ -274,7 +274,7 @@ translate ja strings:
     new "市政官"
 
     old "The Official"
-    new "公式"
+    new "役人"
 
     old "Innkeeper"
     new "宿屋の主人"
@@ -337,7 +337,7 @@ translate ja strings:
     new "奴隷の女"
 
     old "Ragged Man"
-    new "荒れた男"
+    new "ぼろをまとった男"
 
     old "Mythran Officer"
     new "ミトラの士官"
@@ -349,7 +349,7 @@ translate ja strings:
     new "鍛冶屋"
 
     old "Mayor"
-    new "マヨール"
+    new "市長"
 
     old "Woodland Spirit"
     new "森の精霊"
@@ -412,7 +412,7 @@ translate ja strings:
     new "若い男"
 
     old "Old man"
-    new "老い"
+    new "老人"
 
     old "Servants"
     new "従者"
@@ -442,7 +442,7 @@ translate ja strings:
     new "セーラー"
 
     old "Courier"
-    new "courier"
+    new "使者"
 
     old "Barman"
     new "バーマン"

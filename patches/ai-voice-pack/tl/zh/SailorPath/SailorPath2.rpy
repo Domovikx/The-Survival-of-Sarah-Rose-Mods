@@ -253,7 +253,7 @@ translate zh strings:
     new "她对着贝尔蒙特露出一个狡黠的微笑。"
 
     old "Or just cause I got you hollerin like I paid you for it."
-    new "或者只是因为我让你叫得像收了钱似的。"
+    new "或者，就因为我让你喊得跟付了钱似的。"
 
     old "As she had come to appreciate the sex, so too had she come to appreciate Belmont."
     new "正如她开始享受性爱一样，她也开始欣赏贝尔蒙特。"
@@ -388,7 +388,7 @@ translate zh strings:
     new "我不介意你唠叨，金发妞。你不张嘴干别的事的时候，说话还挺好听的。"
 
     old "I'm pretty good using it that other way too."
-    new "我用那方面也很在行。"
+    new "我那样用也挺擅长的。"
 
     old "Belmont gave her another spank on the rear, then let his grip on her slip."
     new "贝尔蒙特船长又在她臀上拍了一巴掌，然后松开了对她的掌控。"

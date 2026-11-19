@@ -139,7 +139,7 @@ translate ru strings:
     new "Я принцесса..."
 
     old "You were one..."
-    new "Ты была одной из них..."
+    new "Ты был одним..."
 
     old "How could this creature know."
     new "Откуда это существо могло знать?"
@@ -244,7 +244,7 @@ translate ru strings:
     new "Но... что это вообще такое?"
 
     old "They're called a lot of things, but my order, we call them voidlings."
-    new "Их называют по-разному, но мы, члены моего ордена, зовём их voidlings."
+    new "Их называют по-разному, но мы, из моего ордена, называем их пустотными."
 
     old "They are creatures of the void, born out of the shadows in the under realm."
     new "Это существа из пустоты, рождённые из теней в подземном мире."

@@ -109,7 +109,7 @@ translate es strings:
     new "Ella observó cómo Razafael flotaba por el Gran Salón."
 
     old "Yet you are more powerful than you have ever been. And you will grow more powerful still."
-    new "Sin embargo, eres más poderosa que nunca. Y seguirás volviéndote aún más poderosa."
+    new "Sin embargo, eres más poderoso que nunca. Y te volverás aún más poderoso."
 
     old "What does it all add up to?"
     new "¿A qué conduce todo esto?"

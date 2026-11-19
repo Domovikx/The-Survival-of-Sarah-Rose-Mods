@@ -892,7 +892,7 @@ translate es strings:
     new "¡Oh! ¡Joder! ¡Señor!"
 
     old "The creature only quickend its pace."
-    new "La criatura solo aceleró el paso. Su polla, reluciente por la vagina mojada de la mujer."
+    new "La criatura solo aceleró su paso."
 
     old "Its cock, glistening from the woman's wet cunt."
     new "Su pene, brillante por la vagina húmeda de la mujer."

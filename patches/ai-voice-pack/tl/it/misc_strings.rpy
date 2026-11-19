@@ -7,7 +7,7 @@ translate it strings:
     new "Sarah"
 
     old "King Orwell Rose"
-    new "Rey Orwell Rose"
+    new "Re Orwell Rose"
 
     old "Thomas"
     new "Tomás"
@@ -76,7 +76,7 @@ translate it strings:
     new "Bran"
 
     old "Took"
-    new "Prendi"
+    new "Tuk"
 
     old "Synara"
     new "Sinara"
@@ -277,7 +277,7 @@ translate it strings:
     new "L'Ufficiale"
 
     old "Innkeeper"
-    new "Ostazze"
+    new "Oste"
 
     old "Official"
     new "Ufficiale"
@@ -316,7 +316,7 @@ translate it strings:
     new "Esaminatore"
 
     old "Siege crew"
-    new "Siege crew"
+    new "Equipaggio d'assedio"
 
     old "Mythran Prince"
     new "Principe Mythran"
@@ -373,7 +373,7 @@ translate it strings:
     new "Ingegnere"
 
     old "Spearmen"
-    new "Pionieri"
+    new "Lancieri"
 
     old "Engineers"
     new "Ingegneri"
@@ -454,4 +454,4 @@ translate it strings:
     new "Oryon"
 
     old "Voidling"
-    new "Voidling"
+    new "Creatura del vuoto"

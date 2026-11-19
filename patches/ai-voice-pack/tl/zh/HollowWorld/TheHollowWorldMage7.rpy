@@ -262,7 +262,7 @@ translate zh strings:
     new "我……哇，这——我简直不敢相信！"
 
     old "Samayra stumbled over her own words as she tried to formulate a thought."
-    new "萨玛拉试图理清思绪，却因激动而口齿不清。"
+    new "萨玛伊拉试图组织语言时，话到嘴边却结结巴巴。"
 
     old "Let's go, I think there's a place somewhere nearby."
     new "走吧，我觉得附近应该有个地方。"

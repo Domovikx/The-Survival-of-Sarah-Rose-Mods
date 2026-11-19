@@ -1333,7 +1333,7 @@ translate es strings:
     new "Ella observó cómo Razafael se retorcía lentamente en el aire, mientras los bordes de su cuerpo se desintegraban en una fina niebla que se extendía por toda la habitación."
 
     old "I offer you my knowledge freely."
-    new "No te impongo condiciones. No hagas exigencias."
+    new "Te ofrezco mi conocimiento libremente."
 
     old "I make no conditions. Impose no demands."
     new "No impongo condiciones. No exijo nada."

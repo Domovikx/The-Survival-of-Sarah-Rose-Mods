@@ -2227,7 +2227,7 @@ translate zh strings:
     new "莎拉感到自己的身体因高潮的冲击而剧烈颤动，她的身体在萨玛拉的身上扭动，两人同时达到了性高潮。"
 
     old "Only when it receded did they slowly untangle and fall into the bed, apart."
-    new "直到高潮退去，他们才慢慢分开，各自倒在了床上。"
+    new "只有当潮水退去时，他们才慢慢解开纠缠，分躺在床上。"
 
     old "Sweat, heat, the smell of sex."
     new "汗水、热气，还有性爱的气息。"
@@ -3004,7 +3004,7 @@ translate zh strings:
     new "莎拉向后倒去，将自己全然交给了他。"
 
     old "His strong hand seized on her waist, the other on her breast, leaning forward, fucking her a bull in heat."
-    new "他有力的手紧紧扣住她的腰肢，另一只手则按在她胸前，身体前倾，如一头发情的公牛般疯狂地与她交合。"
+    new "他强有力的手一把抓住她的腰，另一只手则按在她的胸前，身体前倾，像一头发情的公牛一样猛烈地占有她。"
 
     old "Aah...fuck...yes...like...that..."
     new "啊……该死……对……就这样……"

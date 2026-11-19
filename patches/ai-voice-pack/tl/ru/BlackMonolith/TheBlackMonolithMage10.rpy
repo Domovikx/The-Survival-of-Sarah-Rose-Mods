@@ -496,7 +496,7 @@ translate ru strings:
     new "Понимание того, что растение могло желать её так же, как и она его, — никогда ещё ни одно чувство не казалось ей столь правильным."
 
     old "As she pressed the head of the flower deeper between her legs, she could feel the tendrils move up along her body."
-    new "Пока она вдавливала головку цветка всё глубже между ног, она чувствовала, как усики ползут вверх по её телу."
+    new "Когда она вдавила головку цветка глубже между ног, она почувствовала, как усики ползут вверх по её телу."
 
     old "At every part of her, they wrapped and coiled around her."
     new "Они обвивали и сплетались вокруг каждой части её тела."
@@ -2491,7 +2491,7 @@ translate ru strings:
     new "О боги, скажи мне, ты же не пошла за ним?"
 
     old "No, I didn't."
-    new "Нет, я не пошла."
+    new "Нет, я не делала этого."
 
     old "Gods, you have no idea how lucky you got."
     new "Боги, ты даже не представляешь, как тебе повезло."

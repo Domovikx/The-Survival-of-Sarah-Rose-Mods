@@ -1714,7 +1714,7 @@ translate es strings:
     new "Sarah se levantó y se dio la vuelta para salir de la habitación."
 
     old "She had secured the vote for her position."
-    new "Ella había conseguido el voto para su postura. Deseaba que todos mantuviéramos ejércitos separados."
+    new "Había conseguido el voto para su puesto."
 
     old "My position is clear. I wish for us all to maintain seperate armies."
     new "Mi postura es clara. Deseo que todos nosotros mantengamos ejércitos separados."

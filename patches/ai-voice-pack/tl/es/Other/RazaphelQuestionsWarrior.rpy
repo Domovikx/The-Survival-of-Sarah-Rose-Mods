@@ -91,7 +91,7 @@ translate es strings:
     new "¿Por qué los dioses no impidieron esto?"
 
     old "Sarah considered her question for a while."
-    new "Sarah reflexionó un momento sobre su pregunta. Los dioses... ellos son omniscientes y omnipotentes. ¿Cómo no habrían podido evitar esto?"
+    new "Sarah reflexionó un momento sobre su pregunta."
 
     old "The Gods...they are all knowing and all powerful. How could they not have prevented this?"
     new "Los Dioses... ellos lo saben todo y son omnipotentes. ¿Cómo es posible que no lo hubieran evitado?"

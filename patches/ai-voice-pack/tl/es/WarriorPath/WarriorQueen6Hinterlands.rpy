@@ -754,7 +754,7 @@ translate es strings:
     new "¡Lanceros! ¡Avancen!"
 
     old "They could not just sit here and wait for the Tribesmen to finish them off."
-    new "No podían simplemente quedarse sentados aquí y esperar a que los Tribesmen los acabaran. Ella tenía que hacer algo."
+    new "No podían simplemente quedarse sentados aquí esperando a que los miembros de la tribu acabaran con ellos."
 
     old "Slowly, her spearmen began to advance across the field, giving chase to the Tribesmen."
     new "Lentamente, sus lanceros comenzaron a avanzar por el campo, persiguiendo a los miembros de la tribu."

@@ -276192,9 +276192,10 @@ msgctxt "ui"
 msgid "Save"
 msgstr "Zapisz"
 
+# changed
 msgctxt "ui"
 msgid "Q.Save"
-msgstr "Zapisz"
+msgstr "Q.Zapisz"
 
 msgctxt "ui"
 msgid "Q.Load"

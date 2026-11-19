@@ -298,7 +298,7 @@ translate ru strings:
     new "Он снова натянул штаны и быстро вышел из комнаты."
 
     old "Sarah was left, fully in heat."
-    new "Сару оставили одну — в полном течке."
+    new "Сара осталась одна, полностью в течке."
 
     old "Nearly she stumbled after him, begging for her turn."
     new "Она едва не бросилась за ним, моля о своей очереди."
@@ -835,7 +835,7 @@ translate ru strings:
     new "Последним остатком рассудка она бросилась вперёд к нему, чтобы не рухнуть спиной на стол."
 
     old "She held onto him for dear life as he continued to fuck her, driving the orgasm deeper."
-    new "Она цеплялась за него изо всех сил, пока он продолжал трахать её, загоняя оргазм всё глубже."
+    new "Она цеплялась за него изо всех сил, пока он продолжал трахать её, доводя оргазм до ещё большей глубины."
 
     old "Synapses, drowned in blissful white fire."
     new "Синапсы, утопленные в блаженном белом огне."
@@ -1483,7 +1483,7 @@ translate ru strings:
     new "На мгновение они оба пристально посмотрели друг на друга."
 
     old "Then why are you staring."
-    new "Тогда чего ты уставилась?"
+    new "Тогда чего уставился?"
 
     old "Sarah paused for a moment, searching for the right word."
     new "Сара на мгновение замерла, ища подходящие слова."

@@ -40,7 +40,7 @@ translate ru strings:
     new "Постепенно обломки, из которых состояла баррикада у королевских покоев, падали один за другим, поскольку её разбирали изнутри."
 
     old "Climbing out through the small passage, was the Shah."
-    new "Выползая через узкий проход, был сам шах."
+    new "Из маленького прохода выбрался шах."
 
     old "Aah, finally. I was afraid my men would have to break a sweat getting you out of there."
     new "Ах, наконец-то! Я боялся, что моим людям придётся попотеть, чтобы вытащить тебя оттуда."

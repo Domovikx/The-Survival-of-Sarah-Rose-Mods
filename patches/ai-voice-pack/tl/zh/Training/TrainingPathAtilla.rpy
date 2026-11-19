@@ -34,7 +34,7 @@ translate zh strings:
     new "即便他那绿色的皮肤没有暴露身份，莎拉也会从其他事实中得知。他那如原木般粗壮的手臂，那肌肉虬结的胸膛，以及他比周围男人至少高出一个头的体格。"
 
     old "She knew she had made the right choice, there was nobody else who came close in strength."
-    new "她知道自己做对了选择，在力量方面，没有人能与他相提并论。"
+    new "她知道自己做出了正确的选择，因为再没有其他人能在力量上与她相提并论。"
 
     old "Sarah cleared her throat, trying to get the orc's attention."
     new "莎拉清了清嗓子，试图引起兽人的注意。"

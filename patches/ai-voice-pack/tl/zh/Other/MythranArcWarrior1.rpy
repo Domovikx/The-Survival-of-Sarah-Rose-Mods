@@ -82,7 +82,7 @@ translate zh strings:
     new "凯特挑了挑眉。"
 
     old "You mind if I fuck your secretary?"
-    new "你介意我操你的秘书吗？"
+    new "介意我操你秘书吗？"
 
     old "Very funny. Don't bully the girl, she's been through enough."
     new "真幽默。别欺负人家姑娘，她已经够受的了。"

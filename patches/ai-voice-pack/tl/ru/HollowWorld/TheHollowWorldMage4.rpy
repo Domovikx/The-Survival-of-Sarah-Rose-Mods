@@ -775,7 +775,7 @@ translate ru strings:
     new "Сара наклонилась вперёд и нежно поцеловала Самайру в губы."
 
     old "As often, she found the girl surprised, but not unreceptive to her advances."
-    new "Как и ожидалось, она обнаружила, что девушка была удивлена, но не оттолкнула её avances."
+    new "Как и обычно, она обнаружила, что девочка была удивлена, но не против её ухаживаний."
 
     old "It's not something I do as often as you might think."
     new "Это не то, что я делаю так часто, как ты, возможно, думаешь."
@@ -928,7 +928,7 @@ translate ru strings:
     new "На этот раз Сара почувствовала, как Самайра наклонилась вперёд и вместо этого поцеловала её."
 
     old "Sarah opened her mouth, eagerly welcoming Samayra's advances on her body."
-    new "Сара открыла рот, с энтузиазмом принимая avances Самайры на своём теле."
+    new "Сара открыла рот, с нетерпением принимая ласки Самайры."
 
     old "Their tongues met and clashed, as Samayra began to show an initiative that Sarah had scarcely expected from her before this moment."
     new "Их языки встретились и столкнулись, когда Самайра начала проявлять такую инициативу, какой Сара до этого момента от неё едва ли ожидала."

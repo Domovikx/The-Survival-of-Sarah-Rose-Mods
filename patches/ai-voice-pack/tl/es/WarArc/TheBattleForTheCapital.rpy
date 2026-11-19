@@ -1024,7 +1024,7 @@ translate es strings:
     new "No puedes estar hablando en serio... ¿tú y yo?"
 
     old "Marion looked slightly offended at her reaction."
-    new "Marion la miró hasta que, de repente, comprendió la implicación de sus palabras. Sarah no podía creerlo: ¿él y ella? Marion, al ver su reacción, se sintió ligeramente ofendido."
+    new "Marion pareció ligeramente ofendida por su reacción."
 
     old "Is it that absurd? House Achillea is one of the oldest and most loyal in all of Rosanna. Many matches have been made between your family and mine."
     new "¿Tan absurdo es? La casa Achillea es una de las más antiguas y leales de toda Rosanna. Se han concertado muchas uniones entre tu familia y la mía."

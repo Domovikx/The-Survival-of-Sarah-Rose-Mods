@@ -2746,7 +2746,7 @@ translate zh strings:
     new "不再有王国，不再有战争，也不再有政治。"
 
     old "Not even this place, this cave, or the fire."
-    new "甚至连这个地方，这个洞穴，还有那火焰，都不存在了。"
+    new "就连这个地方，这个洞穴，还有这团火，都不是。"
 
     old "Only them."
     new "只有他们。"

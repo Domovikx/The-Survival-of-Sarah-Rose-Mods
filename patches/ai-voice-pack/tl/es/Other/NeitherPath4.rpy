@@ -1096,7 +1096,7 @@ translate es strings:
     new "Sarah casi gritó esas palabras."
 
     old "And still you let her walk all over you."
-    new "¿Y aun así la dejaste pisotearte? ¿Y quién era ella para ti?"
+    new "Y aun así, dejas que te pise."
 
     old "Are you that pathetic?"
     new "¿Tan patética eres?"
@@ -1471,7 +1471,7 @@ translate es strings:
     new "Había imaginado que estaba sola, que todos sus aliados la habían abandonado y que su familia se había perdido para ella, pero ahora se daba cuenta de que todavía había quienes se preocupaban por ella..."
 
     old "Cared for her as Lady Carolyn did."
-    new "Sarah pronunció esas palabras, pero se desvanecieron. Hablar, simplemente, era demasiado."
+    new "Cuidarla como lo hizo Lady Carolyn."
 
     old "Sarah uttered the words, but they faded out. Simply speaking was too much."
     new "Sarah pronunció las palabras, pero estas se desvanecieron. Simplemente hablar era demasiado."

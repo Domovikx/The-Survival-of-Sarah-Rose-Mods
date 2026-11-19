@@ -214,7 +214,7 @@ translate es strings:
     new "Lentamente, el espíritu emergió de nuevo desde su rincón, acercándose poco a poco."
 
     old "Tell me, child of starlight..."
-    new "Dime, hija de la luz estelar..."
+    new "Dime, hijo de la luz de las estrellas..."
 
     old "For what reason have you taken his blood on your hands? What did you hope to gain?"
     new "¿Por qué razón has manchado tus manos con su sangre? ¿Qué esperabas ganar con eso?"

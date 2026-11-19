@@ -49,7 +49,7 @@ translate fr strings:
     new "Peut-être que, songea Sarah, c'était simplement sa nature. Trop bon pour faire du mal à quoi que ce soit, et donc trop tendre pour la guerre, même la théorie de la guerre."
 
     old "Is this all you do all day? so boring."
-    new "Est-ce que c'est tout ce que tu fais toute la journée ? C'est si ennuyeux."
+    new "C’est tout ce que tu fais de la journée ? C’est tellement ennuyeux."
 
     old "AAAH!"
     new "Aaaah !"

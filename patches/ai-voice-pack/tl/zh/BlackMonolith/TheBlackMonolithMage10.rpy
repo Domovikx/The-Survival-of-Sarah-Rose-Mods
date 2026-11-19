@@ -496,7 +496,7 @@ translate zh strings:
     new "知道这株植物也能像她渴望它那样渴望自己，这种感觉从未如此正确过。"
 
     old "As she pressed the head of the flower deeper between her legs, she could feel the tendrils move up along her body."
-    new "随着她将花头更深地压入两腿之间，她能感觉到触须沿着她的身体向上攀爬。"
+    new "当她将花朵的花头更深地按在双腿之间时，能感觉到那些触须沿着身体向上移动。"
 
     old "At every part of her, they wrapped and coiled around her."
     new "在身体的每一处，它们都缠绕着她。"
@@ -1825,7 +1825,7 @@ translate zh strings:
     new "莎拉发现自己沉醉于这场欢爱，沉醉于那份欲望，沉醉于两人结合时的原始与粗粝。萨玛拉的身体如今顺从地迎合着她的每一次触碰。"
 
     old "It wasn't long into it that Sarah could see and feel in Samayra her climax."
-    new "没过多久，莎拉便从萨玛拉身上察觉到了她高潮的来临。"
+    new "没过多久，莎拉就能在萨马伊拉身上看到并感受到她的高潮。"
 
     old "Hearing the girl howl under her was more than Sarah could endure."
     new "听着身下的女孩发出尖叫，莎拉再也无法忍受。"

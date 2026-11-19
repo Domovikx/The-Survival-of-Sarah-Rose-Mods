@@ -1297,7 +1297,7 @@ translate es strings:
     new "Se giró bruscamente."
 
     old "Marius was standing a small distance away."
-    new "Marius estaba de pie a una corta distancia. Me disculpo, no quise asustarte."
+    new "Marius estaba de pie a poca distancia."
 
     old "I'm sorry, I didn't meant to scare you."
     new "Lo siento, no quería asustarte."

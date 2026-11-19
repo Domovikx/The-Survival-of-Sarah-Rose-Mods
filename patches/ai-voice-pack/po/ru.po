@@ -276400,13 +276400,15 @@ msgctxt "ui"
 msgid "Save"
 msgstr "Сохранить"
 
+# changed
 msgctxt "ui"
 msgid "Q.Save"
-msgstr "Сохранить"
+msgstr "Б.Сохранить"
 
+# changed
 msgctxt "ui"
 msgid "Q.Load"
-msgstr "Загрузка"
+msgstr "Б.Загрузить"
 
 msgctxt "ui"
 msgid "Prefs"

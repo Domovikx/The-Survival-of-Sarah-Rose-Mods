@@ -37,7 +37,7 @@ translate es strings:
     new "Ella no siente miedo."
 
     old "A voice rises up towards her."
-    new "Una voz se eleva hacia ella. Estás cerca, Sarah."
+    new "Una voz se eleva hacia ella."
 
     old "You are close, Sarah."
     new "Estás cerca, Sarah."

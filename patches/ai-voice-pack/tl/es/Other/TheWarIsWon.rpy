@@ -190,7 +190,7 @@ translate es strings:
     new "Sorprendido, su rostro pasó de serio a sorprendido, pero luego se alegró al darse cuenta de que era Sarah."
 
     old "You almost gave me a heart attack."
-    new "Casi me provocas un infarto. No sabía que tuvieras tantos enemigos en el castillo como para tener tanto miedo."
+    new "Casi me das un infarto."
 
     old "A heart attack? Didn't know you had so many enemies in the castle to be fearful of."
     new "¿Un ataque al corazón? No sabía que tuvieras tantos enemigos en el castillo como para tener miedo."

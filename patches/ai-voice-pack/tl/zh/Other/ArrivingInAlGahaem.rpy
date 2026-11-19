@@ -508,7 +508,7 @@ translate zh strings:
     new "不过，作为一个过来人，我给你一句忠告：我也曾像你们一样年轻，梦想着睡遍世界上所有的公主和女王。"
 
     old "But their pussies are the same as any other."
-    new "但她们的身子跟别人没什么两样。"
+    new "但它们的阴部和其他任何人的都一样。"
 
     old "The entire room of sycophants burst out into laughter."
     new "满屋子的阿谀奉承之人哄堂大笑。"

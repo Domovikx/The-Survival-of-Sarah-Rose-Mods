@@ -868,7 +868,7 @@ translate ru strings:
     new "Мужчины же по ночам всё ещё собирались у края палатки."
 
     old "Huddled in silence, they worked themselves to fantasies of what the tribesmen had in reality."
-    new "Сжавшись в молчании, они доводили себя до фантазий о том, что у членов племени было на самом деле."
+    new "Сжавшись в молчании, они разогрели себя фантазиями о том, что на самом деле было у членов племени."
 
     old "They spilled their seeds to the infertile earth."
     new "Они извергли своё семя на бесплодную землю."

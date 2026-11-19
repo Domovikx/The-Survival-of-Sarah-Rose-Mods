@@ -136,7 +136,7 @@ translate ru strings:
     new "Сара медленно поднялась на ноги."
 
     old "She knew he had little use or interest in her once his needs had been seen to, and so she turned and made her way towards the kitchen."
-    new "Она знала, что, как только её потребности будут удовлетворены, он больше не будет нуждаться в ней или интересоваться ею, поэтому она повернулась и пошла на кухню."
+    new "Она знала, что, как только её потребности будут удовлетворены, он не увидит в ней ни пользы, ни интереса, и поэтому она развернулась и направилась на кухню."
 
     old "The kitchen was empty, save for herself."
     new "Кухня была пуста — только она сама."

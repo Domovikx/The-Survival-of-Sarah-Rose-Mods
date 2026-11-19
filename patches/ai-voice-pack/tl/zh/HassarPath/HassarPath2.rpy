@@ -565,7 +565,7 @@ translate zh strings:
     new "莎拉点了点头，垂下眼帘，继续她的工作。"
 
     old "Bobbing her head up and down his cock, faster and faster, she could feel him reach deeper and deeper into her."
-    new "她上下套弄着他那根肉棒，速度越来越快，她能感觉到他正一寸寸深入她的体内。"
+    new "她上下耸动着头，沿着他的阴茎越来越快，能感觉到他正越来越深地进入她的体内。"
 
     old "The drool from her mouth, sliding past his shaft, running down her own chin."
     new "口水从她嘴里流出，滑过他的阴茎，顺着她自己的下巴滴落。"

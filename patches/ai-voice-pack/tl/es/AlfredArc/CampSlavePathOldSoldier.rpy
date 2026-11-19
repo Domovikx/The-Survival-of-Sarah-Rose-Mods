@@ -229,7 +229,7 @@ translate es strings:
     new "Después de unos momentos, ella finalmente sintió que su pene se deslizaba entre sus piernas cuando él se desplomaba en la cama junto a ella."
 
     old "Sarah slowly let her rear down, laying down on her chest in the bed."
-    new "Sarah dejó caer lentamente su trasero, acostándose sobre el pecho en la cama."
+    new "Sarah bajó lentamente la parte trasera de su cuerpo, acostándose boca abajo en la cama."
 
     old "It wasn't so much that she wanted to lay here with him, as that her muscles had been so thoroughly exploited that she could no longer find the energy to move."
     new "No era tanto que quisiera quedarse allí acostada con él, sino que sus músculos habían sido tan exhaustivamente utilizados que ya no podía encontrar la energía para moverse."

@@ -70,7 +70,7 @@ translate zh strings:
     new "终于，尽管没有她担心的那么久，这生物还是找到了释放。"
 
     old "A last high pitched shriek as it spewed out its seed across her cell."
-    new "随着最后一声尖锐的尖叫，它向牢房里喷涌出精液。"
+    new "它发出最后一声尖厉的嘶叫，将种子喷洒满了她的牢房。"
 
     old "Sarah did her best to avoid it, but could not prevent at least some of the semen from falling on her skin."
     new "莎拉尽力躲避，但还是没能阻止一些精液落在她身上。"
@@ -340,7 +340,7 @@ translate zh strings:
     new "现在他拥有了一位女性，完全属于他自己。一位渴望满足他欲望的女性。"
 
     old "Sarah lowered her head, pressing her lips up against the head of the goblin's cock."
-    new "莎拉低下头，将嘴唇贴在哥布林的鸡巴头上。"
+    new "莎拉低下头，将双唇贴向哥布林阴茎的顶端。"
 
     old "And the creature let out an approving shriek."
     new "那生物发出一声赞许的尖叫。"

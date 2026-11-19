@@ -355,7 +355,7 @@ translate zh strings:
     new "但我其实并不会去拿我的工具。"
 
     old "I'm going to pay your little friend a visit."
-    new "我要去拜访一下你的小情人。"
+    new "我要去拜访一下你的那个小朋友。"
 
     old "Yeah. I knew that rat fuck was planning something when I caught him spying on me. He ain't as clever as he likes to think he is."
     new "是啊。我早就知道那该死的老鼠在打什么鬼主意，因为我抓到他偷窥我的时候。他可没他自己想的那么聪明。"
@@ -1423,7 +1423,7 @@ translate zh strings:
     new "随着贝尔蒙特抽插的速度加快，莎拉感到自己愈发湿润，努力让他深入得更深。"
 
     old "Her moans came more frequent and grew louder as the captain took her harder and harder."
-    new "随着船长愈发猛烈地侵犯她，她的呻吟声变得更加频繁且响亮。"
+    new "随着船长愈发猛烈地动作，她的呻吟声也愈发频繁，并且越来越响。"
 
     old "Sarah let out a shriek as she felt Belmont's hand grope around her wet cunt."
     new "莎拉发出一声尖叫，感觉到贝尔蒙特的手在她湿润的私处间摸索。"

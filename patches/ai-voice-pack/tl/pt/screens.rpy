@@ -7,7 +7,7 @@ translate pt strings:
     new "Imagem %d de %d bloqueada."
 
     old "The Survival of Sarah Rose"
-    new "A Sobrevivência de Sarah Rose"
+    new "The Survival of Sarah Rose"
 
     old "Scene Replay"
     new "Replay da Cena"
@@ -37,7 +37,7 @@ translate pt strings:
     new "Q.Carregar"
 
     old "Prefs"
-    new "Prefs"
+    new "Preferências"
 
     old "Hide UI"
     new "Esconder"
@@ -70,7 +70,7 @@ translate pt strings:
     new "Salvar rápido"
 
     old "{#file_time}%A, %B %d %Y, %H:%M"
-    new "%A, %B %d %Y, %H:%M"
+    new "{#file_time}%A, %B %d %Y, %H:%M"
 
     old "empty slot"
     new "vazio"
@@ -79,7 +79,7 @@ translate pt strings:
     new "<"
 
     old "{#auto_page}A"
-    new "A"
+    new "{#auto_page}A"
 
     old "{#quick_page}Q"
     new "{#quick_page}Q"
@@ -257,32 +257,3 @@ translate pt strings:
 
     old "Menu"
     new "Menu"
-
-    ## ── Кнопки меню и сохранений (добавлено 2026-11-14) ───────────────
-    ## Базовые экраны игры запрашивают эти подписи, но в таблице перевода
-    ## их не было: главное меню показывало Start / Settings / Exit
-    ## по-английски (проверено пробой в игре, а не на глаз).
-    old "Start"
-    new "Iniciar"
-
-    old "Settings"
-    new "Configurações"
-
-    old "Quit"
-    new "Sair"
-
-    old "Continue"
-    new "Continuar"
-
-    old "Main Menu"
-    new "Menu principal"
-
-    old "Quick Save"
-    new "Salvamento rápido"
-
-    old "Quick Load"
-    new "Carregamento rápido"
-
-    old "Delete"
-    new "Excluir"
-

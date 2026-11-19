@@ -286,7 +286,7 @@ translate zh strings:
     new "关于什么？"
 
     old "Would you believe me if I said your cock?"
-    new "你信不信我说的是你的鸡巴？"
+    new "如果我说你的鸡巴，你会相信吗？"
 
     old "Sure, it's been known to leave an impression on most women."
     new "当然，这确实让大多数女人印象深刻。"

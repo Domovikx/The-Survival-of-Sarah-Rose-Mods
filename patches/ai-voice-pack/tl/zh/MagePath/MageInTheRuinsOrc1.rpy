@@ -631,7 +631,7 @@ translate zh strings:
     new "莎拉很快意识到，如果想顺利咽下去，她必须不停地吞咽。"
 
     old "All the while, the goblin continued to thrust, fucking her mouth until it was entirely satisfied."
-    new "与此同时，哥布林继续挺动腰身，直到彻底满足才停下对她的口交。"
+    new "与此同时，那个哥布林仍在不断抽插，直到完全满足为止。"
 
     old "She swallowed more of it, gulping each time he added. More of his seed and cum dissapeared down her throat."
     new "她咽下更多液体，每次他射出新的精液，她都大口吞咽。更多的精液顺着她的喉咙滑了下去。"

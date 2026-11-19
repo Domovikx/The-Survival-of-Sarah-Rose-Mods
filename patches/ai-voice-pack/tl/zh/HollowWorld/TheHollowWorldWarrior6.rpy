@@ -2203,7 +2203,7 @@ translate zh strings:
     new "当莎拉将中指探入吉迪恩裸露的臀缝时，她明白自己已将他永远改变。"
 
     old "His already weakend and womanly moaning transformed completely to one of submission."
-    new "他原本就虚弱且带有女性化的呻吟，彻底转变为臣服的姿态。"
+    new "他原本就虚弱而充满女性气息的呻吟声，彻底转变为一种顺从的呻吟。"
 
     old "There was no part of him that held on to any figment of pride or masculinity, instead prostrating himself completely before her."
     new "他身上已无任何骄傲或男子气概的残留，而是完全向她俯首称臣。"
@@ -2473,7 +2473,7 @@ translate zh strings:
     new "低沉的吼叫，紧接着是他那已经不小的肉棒进一步膨胀。"
 
     old "As his semen spilled into her, Sarah could feel it coat the insides of her sex."
-    new "随着他的精液射入体内，莎拉能感觉到它涂满了她私处的内壁。"
+    new "随着他的精液流入她的体内，莎拉能感觉到它包裹着她的性器官内部。"
 
     old "Slowly, his manic thrusts began to build back down."
     new "渐渐地，他狂乱的冲刺开始缓和下来。"
@@ -2869,7 +2869,7 @@ translate zh strings:
     new "与此同时，他们三具身体发出的声响在寒冷的沙漠空气中回荡。"
 
     old "The wet slicking of their members, entering both orifices."
-    new "他们身体的湿润滑腻，同时进入两个孔洞。"
+    new "他们身体湿润滑腻的接触，同时进入了两个孔洞。"
 
     old "The way their pleasured grunts rang out as they ravaged her body from both ends."
     new "他们从前后两端肆意蹂躏她身体时，那充满快意的粗重喘息声此起彼伏。"

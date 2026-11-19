@@ -982,7 +982,7 @@ translate ru strings:
     new "И всё же она не могла себя обмануть."
 
     old "A real princess didn't go out to the forest at night, alone, with a near stranger, and suck him off for a story."
-    new "Настоящая принцесса не пошла бы ночью в лес одна с почти незнакомцем, чтобы отсосать ему ради одной истории."
+    new "Настоящая принцесса не стала бы ночью выходить в лес в одиночку с почти незнакомцем и делать ему минет ради сказки."
 
     old "Or was that just a lie she told herself."
     new "Или это была всего лишь ложь, которую она сказала самой себе?"
@@ -1117,7 +1117,7 @@ translate ru strings:
     new "Я расскажу тебе, клянусь душами своей семьи."
 
     old "But it's late, they're gonna wonder where we are, it's a long story, and honestly, you tired me out."
-    new "Но уже поздно, они начнут задаваться вопросом, где мы. Это долгая история, и, честно говоря, ты меня измотала."
+    new "Но уже поздно, они начнут удивляться, где мы. Это долгая история, и, честно говоря, ты меня устал."
 
     old "So really, when you think about it, it's your fault for giving good head."
     new "Так что, если подумать, на самом деле это твоя вина — за то, что так хорошо меня отсосала."

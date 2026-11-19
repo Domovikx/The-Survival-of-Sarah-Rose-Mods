@@ -1108,7 +1108,7 @@ translate es strings:
     new "Sarah no sabía qué pensar de ninguno de los dos."
 
     old "As the night went on, Lady Carolyn made her way through the crowd."
-    new "A medida que avanzaba la noche, Lady Carolyn se abría paso entre la multitud, interactuando con los invitados sin mostrar favoritismo alguno. Su comportamiento parecía perfectamente natural, como si cada gesto estuviera en consonancia con el papel que debía desempeñar."
+    new "A medida que avanzaba la noche, Lady Carolyn se abrió paso entre la multitud."
 
     old "Expertly, she appeared to favor no person above the other, moving and stopping for the occasional conversation."
     new "Con pericia, parecía no favorecer a ninguna persona por encima de las demás, moviéndose y deteniéndose para una conversación ocasional."
@@ -1789,7 +1789,7 @@ translate es strings:
     new "Parecía que estabas ocupado en otras cosas."
 
     old "Sarah stepped closer to him."
-    new "Sarah se acercó más a él. El narrador sonrió con dolor. Vaelen comentó que parecía estar ocupada en otra cosa. Sarah le preguntó cuál era su problema."
+    new "Sarah se acercó más a él."
 
     old "What is your problem?"
     new "¿Cuál es tu problema?"

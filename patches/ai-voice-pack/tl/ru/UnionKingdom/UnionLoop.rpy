@@ -727,7 +727,7 @@ translate ru strings:
     new "Сара почувствовала, как её лицо покраснело."
 
     old "A proposal like this, equally bold as it was base."
-    new "Предложение такое же смелое, как и безосновательное."
+    new "Такое предложение — столь же смелое, сколь и безосновательное."
 
     old "I...you cannot be serious..."
     new "Я... ты не серьёзно..."

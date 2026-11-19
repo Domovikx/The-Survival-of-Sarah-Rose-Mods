@@ -178,7 +178,7 @@ translate zh strings:
     new "他们是残忍的男人……但终究是男人。"
 
     old "Maybe she could play to their base nature."
-    new "也许她可以利用他们原始的兽性。"
+    new "或许她可以利用他们本性中的那一面。"
 
     old "I'm sure there has been some misunderstanding here."
     new "我确信这里一定有什么误会。"

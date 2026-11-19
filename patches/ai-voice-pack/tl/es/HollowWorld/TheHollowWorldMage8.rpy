@@ -187,7 +187,7 @@ translate es strings:
     new "Hace mucho tiempo que fue olvidada: fue una de las primeras ciudades en caer ante el avance del desierto, hace ya muchos siglos."
 
     old "None still live there, but a Mythran host now occupies it."
-    new "No queda nadie viviendo allí, pero ahora un ejército mythran la ocupa."
+    new "Ninguno sigue viviendo allí, pero ahora un anfitrión Mythran lo ocupa."
 
     old "A Mythran army? Why?"
     new "¿Un ejército mythran? ¿Por qué?"

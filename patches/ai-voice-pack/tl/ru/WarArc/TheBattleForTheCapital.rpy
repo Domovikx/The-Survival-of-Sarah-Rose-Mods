@@ -1123,7 +1123,7 @@ translate ru strings:
     new "С вершины стен отдали приказ лучникам стрелять, и все они разом выстрелили."
 
     old "The first volley of arrows flew through the air, streaking through the air like a shadow, but Hassar's army was too far up the hill."
-    new "Первая salva стрел пронеслась по воздуху, оставляя за собой следы, словно тень, но армия Хассара была слишком далеко наверху холма."
+    new "Первый залп стрел пронесся по воздуху, промелькнув, словно тень, но армия Хассара была слишком далеко на вершине холма."
 
     old "Not a single arrow struck a target."
     new "Ни одна стрела не достигла цели."

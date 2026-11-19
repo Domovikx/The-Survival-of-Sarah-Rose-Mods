@@ -187,7 +187,7 @@ translate zh strings:
     new "它早已被人遗忘，那是数百年前沙漠推进时最早沦陷的城市之一。"
 
     old "None still live there, but a Mythran host now occupies it."
-    new "如今那里已无人居住，取而代之的是一支米瑟兰军队。"
+    new "那里已经没有生命存在，但现在却被一个神话生物宿主占据着。"
 
     old "A Mythran army? Why?"
     new "米斯拉军队？为什么？"

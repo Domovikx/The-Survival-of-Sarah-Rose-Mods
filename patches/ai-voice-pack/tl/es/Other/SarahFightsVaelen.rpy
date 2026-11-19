@@ -157,7 +157,7 @@ translate es strings:
     new "¡Vamos, Sarah Rose, y cosechemos esta recompensa!"
 
     old "Sarah watched as Vaelen leapt across the space between them."
-    new "Sarah observó cómo Vaelen saltaba el espacio que los separaba. Ella, con voz fría, expresó que nada de esto le daba placer, mientras él le recordaba que los dioses nunca se habían preocupado por su felicidad, sino que sembraban tragedia para cosechar adoración. Ahora, le invitaba a disfrutar juntos de esta recompensa. La narración describió el movimiento de Vaelen con fuerza y velocidad."
+    new "Sarah observó cómo Vaelen saltaba por el espacio que los separaba."
 
     old "His arm released like a cannon, his blade swinging with incredible strength and speed."
     new "Su brazo se liberó como un cañón, y su espada se balanceó con una fuerza y velocidad increíbles."

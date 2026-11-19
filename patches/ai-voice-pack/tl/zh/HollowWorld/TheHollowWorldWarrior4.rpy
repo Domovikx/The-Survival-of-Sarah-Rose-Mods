@@ -943,7 +943,7 @@ translate zh strings:
     new "我不告诉你，这可不是游戏的一部分，对吧？"
 
     old "Ugh! This is gonna haunt me."
-    new "呸！这念头会让我恶心好一阵子。"
+    new "呃！这事儿会一直困扰我的。"
 
     old "I once had sex with an orc"
     new "曾与兽人发生过关系"

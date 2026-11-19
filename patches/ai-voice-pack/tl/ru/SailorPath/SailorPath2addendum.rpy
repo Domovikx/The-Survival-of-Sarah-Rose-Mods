@@ -436,7 +436,7 @@ translate ru strings:
     new "Тем не менее, он продолжал держать её прижатой к полу и не прекращал свою атаку на её тело."
 
     old "The hard work with the crates. The roughness of his sex."
-    new "Тяжёлая работа с ящиками. Грубость его секса."
+    new "Тяжёлая работа с ящиками. Грубость его естества."
 
     old "All of it had tired out her body."
     new "Всё это вымотало её тело."

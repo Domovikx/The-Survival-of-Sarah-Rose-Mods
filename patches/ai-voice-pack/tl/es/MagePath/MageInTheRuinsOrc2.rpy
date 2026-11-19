@@ -616,7 +616,7 @@ translate es strings:
     new "En su pecho, Sarah solo sentía una llama ardiente."
 
     old "One that now swiftly travelled down lower, settling between her legs."
-    new "Una que ahora descendió rápidamente, asintiendo entre sus piernas."
+    new "Una que ahora descendía rápidamente, posándose entre sus piernas."
 
     old "Feverishly, she kissed the goblin back, spreading open her mouth, and letting his tongue deep inside of her mouth."
     new "Fiebrilmente, ella besó al goblin, abriendo su boca y dejando que su lengua entrara profundamente en la suya."

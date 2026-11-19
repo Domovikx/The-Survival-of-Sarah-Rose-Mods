@@ -922,7 +922,7 @@ translate ru strings:
     new "Он поднял её в воздух, покружил и опустил обратно на землю."
 
     old "You were incredible!"
-    new "Ты была невероятна!"
+    new "Ты был невероятен!"
 
     old "Sarah felt her face flush red with embarrassment."
     new "Сара почувствовала, как её лицо вспыхнуло от смущения."

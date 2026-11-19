@@ -922,7 +922,7 @@ translate es strings:
     new "Concéntrate en follar mi pene."
 
     old "There was a silence as Sarah looked up at him."
-    new "Hubo un silencio mientras Sarah lo miraba. Su propia saliva se le había pegado a la mejilla donde él la había abofeteado. Sakar le dijo que no se distrajera. Que se concentrara en follarle el pene. ¿Lo has entendido? ¿O necesito abofetearte unas cuantas veces más con mi polla?"
+    new "Hubo un silencio mientras Sarah lo miraba."
 
     old "Got that? Or do I need to slap you around a few more times with my dick?"
     new "¿Lo entendiste? ¿O necesito darte unas cuantas bofetadas más con mi pene?"
@@ -982,7 +982,7 @@ translate es strings:
     new "Y, sin embargo, no podía engañarse a sí misma."
 
     old "A real princess didn't go out to the forest at night, alone, with a near stranger, and suck him off for a story."
-    new "Una princesa de verdad no saldría al bosque por la noche, sola, con un casi desconocido, para chuparle el pene a cambio de una historia."
+    new "Una princesa de verdad no saldría al bosque por la noche, sola, con un casi desconocido, para chupárselo a cambio de un cuento."
 
     old "Or was that just a lie she told herself."
     new "¿O era eso simplemente una mentira que se contaba a sí misma?"

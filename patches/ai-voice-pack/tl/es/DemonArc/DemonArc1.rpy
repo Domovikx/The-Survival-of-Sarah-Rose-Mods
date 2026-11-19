@@ -286,7 +286,7 @@ translate es strings:
     new "Tenemos que... tenemos que..."
 
     old "Calm down, how about that?"
-    new "¿Te calmas? ¿De qué hablas? Estamos atrapadas en la... mazmorra de esta cosa o algo así."
+    new "Tranquilízate, ¿qué te parece?"
 
     old "Calm down? What are you talking about? We're trapped in this thing's...dungeon or something."
     new "¿Calmarme? ¿De qué estás hablando? Estamos atrapados en la... mazmorra o lo que sea de esta cosa."

@@ -3682,7 +3682,7 @@ translate ru strings:
     new "Посмотрев на него, она увидела, что он одобрительно улыбается."
 
     old "She took him back into her mouth, and began the rest of her life."
-    new "Она снова взяла его в рот и начала остальную жизнь."
+    new "Она снова взяла его в рот и начала остальную часть своей жизни."
 
     old "In the years after, she would give him several more children."
     new "В последующие годы она родила ему ещё нескольких детей."

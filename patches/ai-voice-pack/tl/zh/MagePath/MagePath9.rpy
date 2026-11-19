@@ -235,7 +235,7 @@ translate zh strings:
     new "莎拉……你做了什么……"
 
     old "Who was she."
-    new "她算老几，"
+    new "她是谁？"
 
     old "Who was she to come here, after all these years, and question her."
     new "毕竟，过了这么多年，她凭什么来到这里质问她。"

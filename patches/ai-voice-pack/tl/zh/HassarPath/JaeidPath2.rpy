@@ -415,7 +415,7 @@ translate zh strings:
     new "我们可以明天腾出一间客房，让她住那里。"
 
     old "Or hell, she can clear it out for us. If we're going to be having a slave over anyway."
-    new "或者干脆，既然反正要留个奴隶，让他自己收拾出来也行。"
+    new "或者，她也可以替我们清理掉。反正我们也是要留个奴隶在身边的。"
 
     old "Jaeid took a step forward."
     new "贾伊德向前迈了一步。"

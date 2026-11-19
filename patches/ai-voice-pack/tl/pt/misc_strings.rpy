@@ -52,7 +52,7 @@ translate pt strings:
     new "Jaeid"
 
     old "Xanthippe"
-    new "Xantíppide"
+    new "Xantipa"
 
     old "Razaphel"
     new "Razafael"
@@ -76,7 +76,7 @@ translate pt strings:
     new "Bran"
 
     old "Took"
-    new "Pegou"
+    new "Tuk"
 
     old "Synara"
     new "Sinará"
@@ -295,7 +295,7 @@ translate pt strings:
     new "Costureiro"
 
     old "Advisor"
-    new "Avisador"
+    new "Conselheiro"
 
     old "Priest"
     new "Sacerdote"
@@ -337,7 +337,7 @@ translate pt strings:
     new "Mulher Escrava"
 
     old "Ragged Man"
-    new "Homem Arrastado"
+    new "Homem esfarrapado"
 
     old "Mythran Officer"
     new "Oficial Mythra"
@@ -373,7 +373,7 @@ translate pt strings:
     new "Engenheiro"
 
     old "Spearmen"
-    new "Espadachins"
+    new "Lanceiros"
 
     old "Engineers"
     new "Engenheiros"
@@ -412,7 +412,7 @@ translate pt strings:
     new "Jovem"
 
     old "Old man"
-    new "Velho."
+    new "Velho"
 
     old "Servants"
     new "Servos"

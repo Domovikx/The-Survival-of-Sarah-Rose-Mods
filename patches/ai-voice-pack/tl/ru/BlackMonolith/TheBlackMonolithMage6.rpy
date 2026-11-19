@@ -619,7 +619,7 @@ translate ru strings:
     new "Метис скрипнул костяшками по толстому переплёту фолианта."
 
     old "However, at the end of the day, you must remember the golden rule when it comes to this field."
-    new "Однако в конечном счёте ты должна помнить золотое правило, когда речь заходит об этой области."
+    new "Однако в конечном счёте вы должны помнить золотое правило, когда речь идёт об этой области."
 
     old "And that is?"
     new "И это что?"

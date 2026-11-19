@@ -208,7 +208,7 @@ translate ru strings:
     new "Ты в порядке, Калеб?"
 
     old "Somewhat embarassed, Caleb responds."
-    new "Да, это ничего, не обращай внимания."
+    new "Слегка смущённый, Калеб отвечает."
 
     old "Yes, it's nothing, ignore it."
     new "Да, это ничего, просто игнорируй."

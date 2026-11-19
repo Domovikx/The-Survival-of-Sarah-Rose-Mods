@@ -331,7 +331,7 @@ translate ru strings:
     new "Ложь, скажи, что у тебя нет денег."
 
     old "We don't have any money on us, we can't pay you."
-    new "У нас при себе нет денег, мы не можем вас заплатить."
+    new "У нас нет с собой денег, мы не можем вам заплатить."
 
     old "I believe that you don't have any money...but I'm sure we can find a means of payment."
     new "Я полагаю, что у вас действительно нет денег... но я уверен: мы всегда можем найти другой способ оплаты."
@@ -466,7 +466,7 @@ translate ru strings:
     new "Одной рукой он хватает Сару за затылок, другой — Кейт."
 
     old "You figure out who takes what. But don't be selfish...share."
-    new "Сами разберётесь, кому что достанется. Но не будьте эгоистками... Делитесь."
+    new "Ты разбираешься, кто что забирает. Но не будь эгоистом... делись."
 
     old "He waves his cock back and forth in front of Sarah and Kate."
     new "Он размахивает своим членом перед Сарой и Кейт."

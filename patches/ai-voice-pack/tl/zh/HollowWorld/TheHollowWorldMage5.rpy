@@ -979,7 +979,7 @@ translate zh strings:
     new "莎拉非但没有因恐惧而退缩，反而更加顺从地俯下身去，将臀部更用力地抵向他。"
 
     old "Seemingly, this was the reaction Alaric had hoped for, and he rewarded her by driving his cock deeper still."
-    new "看来这正是阿拉里克所期望的反应，他通过将自己的肉棒更深地挺入来奖励她。"
+    new "显然，这正是阿拉里克所期望的反应，他于是进一步将他的阴茎深深插入，作为回报。"
 
     old "The pain, the domination, the humiliation, the pleasure, all of it swirled in Sarah's mind and body."
     new "痛苦、支配、屈辱与快感，这一切在莎拉的心中和身体里交织翻涌。"

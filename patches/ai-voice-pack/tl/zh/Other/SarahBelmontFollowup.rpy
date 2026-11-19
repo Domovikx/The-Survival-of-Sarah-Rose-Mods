@@ -322,7 +322,7 @@ translate zh strings:
     new "贝尔蒙特松开了对莎拉脑袋的抓握。"
 
     old "Sarah leaned back in to take the captain’s cock back into her mouth and finish him."
-    new "莎拉向后靠去，再次将船长的肉棒含入口中，准备帮他射出来。"
+    new "莎拉向后靠了靠，将船长的阴茎重新含入口中，想要让他彻底高潮。"
 
     old "To her surprise, he simply stood up and began to put it away, pulling up his pants and buckling his belt."
     new "令她惊讶的是，他只是站起身来，开始收拾东西，拉起裤子并扣好皮带。"

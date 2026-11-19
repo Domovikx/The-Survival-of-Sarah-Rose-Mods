@@ -733,7 +733,7 @@ translate ru strings:
     new "Язык отнялся?"
 
     old "You were so tough just a few hours ago. My cock make you forget how to talk back?"
-    new "А куда делась та твоя бранность? Всего несколько часов назад ты была такой смелой. Неужели мой член заставил тебя забыть, как отвечать?"
+    new "Ты был таким крутым всего несколько часов назад. Мой член заставил тебя забыть, как отвечать?"
 
     old "She would bear his insults, same as she would bear his use of her body. She could endure."
     new "Она стерпела бы его оскорбления так же, как и то, как он использовал её тело. Она могла выдержать это."

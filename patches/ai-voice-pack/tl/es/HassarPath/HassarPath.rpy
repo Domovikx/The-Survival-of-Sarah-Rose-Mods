@@ -241,7 +241,7 @@ translate es strings:
     new "Lo hacemos porque queremos. Porque él es nuestro Khan. Y realmente nos provee a todos."
 
     old "Sarah didn't know much about the world of the tribesmen, but she doubted that she had much rights to refuse Hassar if he forced herself on her."
-    new "Sarah no sabía mucho sobre el mundo de los miembros de la tribu, pero dudaba de si realmente tenía derecho a rechazar a Hassar si él se imponía a ella."
+    new "Sarah no sabía mucho sobre el mundo de los miembros de la tribu, pero dudaba de que tuviera muchos derechos para rechazar a Hassar si él la forzaba."
 
     old "He didn't force himself on you?"
     new "¿Él no se te impuso?"

@@ -2407,7 +2407,7 @@ translate zh strings:
     new "脑袋向后仰着，喉咙大张，她再也压抑不住，随着他每一次深入，呻吟声愈发响亮。"
 
     old "I think you were just getting an attitude because you weren't getting enough dick."
-    new "我看你刚才摆架子，就是因为没得到足够的操。"
+    new "我觉得你刚才态度那么差，纯粹是因为没得到足够的性满足。"
 
     old "Sarah felt him stopping his thrusts."
     new "莎拉感觉到他停止了抽插。"

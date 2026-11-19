@@ -526,7 +526,7 @@ translate zh strings:
     new "在那之前有什么事可做吗？我本想说数着墙上的钟点打发时间，但你连个钟都没有。"
 
     old "I could fuck your brains out on this bed. That should kill some time."
-    new "我可以在这张床上把你干得神魂颠倒，这应该能打发些时间。"
+    new "我可以在这张床上把你干得神魂颠倒。这样应该能打发点时间。"
 
     old "Tempting offer, but I think I'll pass."
     new "诱人的提议，不过我想我还是算了吧。"

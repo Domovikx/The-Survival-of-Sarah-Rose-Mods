@@ -2479,7 +2479,7 @@ translate es strings:
     new "Una expresión de pánico en su rostro."
 
     old "I...was that...who was that?"
-    new "Yo... ¿eso fue...? ¿Quién era esa persona?"
+    new "Yo... ¿eso fue...? ¿Quién fue eso?"
 
     old "What are you talking about? I just...you dissapeared, I was searching for you, but you vanished!"
     new "¿De qué estás hablando? Yo solo... desapareciste, te estuve buscando, ¡pero te esfumaste!"

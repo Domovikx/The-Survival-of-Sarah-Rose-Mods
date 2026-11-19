@@ -76,7 +76,7 @@ translate pl strings:
     new "Bran"
 
     old "Took"
-    new "Zabrał"
+    new "Tuk"
 
     old "Synara"
     new "Synara"
@@ -94,7 +94,7 @@ translate pl strings:
     new "Sakar"
 
     old "Matthew"
-    new "Matusz"
+    new "Mateusz"
 
     old "Eula"
     new "Eula"
@@ -253,7 +253,7 @@ translate pl strings:
     new "Kapitan Straży"
 
     old "Squire"
-    new "Szymon"
+    new "Giermek"
 
     old "Voice"
     new "Głos"
@@ -274,13 +274,13 @@ translate pl strings:
     new "Urzędnik miejski"
 
     old "The Official"
-    new "The Official"
+    new "Urzędnik"
 
     old "Innkeeper"
     new "Karczmarz"
 
     old "Official"
-    new "Oficjalny"
+    new "Urzędnik"
 
     old "Slave"
     new "Niewolnik"
@@ -295,7 +295,7 @@ translate pl strings:
     new "Krawiec"
 
     old "Advisor"
-    new "Rada"
+    new "Doradca"
 
     old "Priest"
     new "Ksiądz"
@@ -331,13 +331,13 @@ translate pl strings:
     new "Żołnierzka"
 
     old "Female soldier"
-    new "Żołnierka Belmont"
+    new "Żołnierka"
 
     old "Slave Woman"
     new "Kobieta niewolnica"
 
     old "Ragged Man"
-    new "Roztrzaskany mężczyzna"
+    new "Obdartus"
 
     old "Mythran Officer"
     new "Oficer Mithra"
@@ -355,7 +355,7 @@ translate pl strings:
     new "Duch Lasy"
 
     old "Scout"
-    new "Szpieg"
+    new "Zwiadowca"
 
     old "Soldiers"
     new "Żołnierze"
@@ -406,7 +406,7 @@ translate pl strings:
     new "Rozbójnik"
 
     old "Captain"
-    new "Kapitan Belmont"
+    new "Kapitan"
 
     old "Young man"
     new "Młody mężczyzna"
@@ -430,7 +430,7 @@ translate pl strings:
     new "Barman"
 
     old "Master"
-    new "Panie"
+    new "Mistrz"
 
     old "King-On-The-Outside"
     new "Król poza murami"
@@ -439,7 +439,7 @@ translate pl strings:
     new "Barman"
 
     old "Sailor"
-    new "Żaglarz"
+    new "Żeglarz"
 
     old "Courier"
     new "Kurier"

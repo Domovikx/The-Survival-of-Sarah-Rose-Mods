@@ -49,7 +49,7 @@ translate de strings:
     new "Vielleicht, so spekulierte Sarah, war es einfach seine Natur. Zu gütig, um irgendetwas zu verletzen, und deshalb auch zu sanft für den Krieg, selbst die Theorie des Krieges."
 
     old "Is this all you do all day? so boring."
-    new "Ist das alles, was du den ganzen Tag tust? Wie langweilig."
+    new "Ist das alles, was du den ganzen Tag tust? So langweilig."
 
     old "AAAH!"
     new "Aaaah!"

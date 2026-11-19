@@ -733,7 +733,7 @@ translate zh strings:
     new "到了夜里，在帐篷边缘，再也听不到欢愉的呻吟声了。"
 
     old "Instead, Sarah now would see the men, hunched over, working themselves."
-    new "取而代之的是，莎拉如今看到的男人们都佝偻着身子，正在自慰。"
+    new "相反，现在莎拉会看到那些男人正弯着腰，自己干活。"
 
     old "Their seed spilled impotently on the earth, where it would never take root."
     new "他们的精液无力地洒落在大地上，永远无法生根发芽。"
@@ -868,7 +868,7 @@ translate zh strings:
     new "至于那些男人，到了晚上依然聚集在帐篷边缘。"
 
     old "Huddled in silence, they worked themselves to fantasies of what the tribesmen had in reality."
-    new "他们沉默地挤在一起，在幻想中回味着部落女人在现实中带给他们的感受。"
+    new "他们沉默地蜷缩在一起，在想象中编织出关于那些部落成员的真实图景。"
 
     old "They spilled their seeds to the infertile earth."
     new "他们将精液洒向贫瘠的土地。"

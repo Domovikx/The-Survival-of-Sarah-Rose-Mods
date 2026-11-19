@@ -13,7 +13,7 @@ translate zh strings:
     new "每天她还会抽出一些时间深入探索这栋房子，打扫一间很少使用的房间。"
 
     old "It was an odd thing, the way in which the dimensions from the house betrayed its outward appearance."
-    new "这房子的尺寸与外观大相径庭，实在有些古怪。"
+    new "这确实有些奇怪——这座房子的各个维度，与它的外在表象并不相符。"
 
     old "Room after room revealed itself to her."
     new "一间又一间的房间向她显露出来。"
@@ -667,7 +667,7 @@ translate zh strings:
     new "被死死按在背上，她感到那灵体攫住了她。"
 
     old "It entered her further from below and gripped tight her breasts."
-    new "它从下方更深入地进入她体内，并紧紧抓住她的乳房。"
+    new "它从下方更深入地进入她体内，并紧紧抓住了她的双乳。"
 
     old "Sarah began to feel the early signs of pleasure build within her."
     new "莎拉开始感受到愉悦的早期迹象在她体内积聚。"

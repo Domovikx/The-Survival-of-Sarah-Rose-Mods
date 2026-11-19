@@ -1090,7 +1090,7 @@ translate ru strings:
     new "Сара обернулась и побежала."
 
     old "Sarah her and thought of her."
-    new "Сара — она? Или сначала она подумала о ней, а потом увидела её?"
+    new "Сара думала о ней."
 
     old "Or had she thought of her and then seen her?"
     new "Или же она сначала подумала о ней, а потом увидела?"

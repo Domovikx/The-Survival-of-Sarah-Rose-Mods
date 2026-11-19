@@ -862,7 +862,7 @@ translate es strings:
     new "Pero, obedientemente, no derramó ni una sola gota."
 
     old "When she could taste the last of his semen dissapear down her throat, he pulled out."
-    new "Cuando sintió que el último rastro de su semen desaparecía por su garganta, él se retiró."
+    new "Cuando pudo sentir cómo el último resto de su semen desaparecía por su garganta, él se retiró."
 
     old "Her mouth suddenly empty of him, Sarah felt a desire to have him back."
     new "Con la boca repentinamente vacía de él, Sarah sintió el deseo de tenerlo de vuelta."

@@ -238,7 +238,7 @@ translate es strings:
     new "¿Por qué te vas?"
 
     old "Cause you'd be mad to be workin at that freak's Estate."
-    new "¿Locura? ¿Por qué? Porque estarías loca de trabajar en la propiedad de ese bicho raro."
+    new "Porque estarías loco de trabajar en la propiedad de ese bicho raro."
 
     old "Mad? Why?"
     new "¿Locura? ¿Por qué?"

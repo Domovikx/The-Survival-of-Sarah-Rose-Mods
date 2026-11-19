@@ -739,7 +739,7 @@ translate zh strings:
     new "萨卡尔落地时带着一种轻盈的优雅。"
 
     old "Krip more collided with the earth than anything else."
-    new "克里普更像是重重地摔在地上，而不是平稳落地。"
+    new "克里普更多次与地球相撞，而非与其他任何事物相撞。"
 
     old "Wood? Where?"
     new "木头？在哪儿？"
@@ -1396,7 +1396,7 @@ translate zh strings:
     new "莎拉看着他跳下车。"
 
     old "He grabbed her hand and helped her down from the box, onto the ground."
-    new "他抓住她的手，扶她下车，站到地上。"
+    new "他抓住她的手，把她从箱子上扶了下来，放到地上。"
 
     old "Well, this is where we part our ways."
     new "好了，我们就在这里分道扬镳。"

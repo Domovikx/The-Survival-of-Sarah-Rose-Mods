@@ -862,7 +862,7 @@ translate zh strings:
     new "但她尽职尽责，一滴也没有洒出来。"
 
     old "When she could taste the last of his semen dissapear down her throat, he pulled out."
-    new "当她能尝到最后一丝精液顺着喉咙咽下时，他抽了出来。"
+    new "当她的喉咙里尝到最后一丝他的精液消失时，他抽了出来。"
 
     old "Her mouth suddenly empty of him, Sarah felt a desire to have him back."
     new "嘴里突然空了，莎拉感到渴望他再次回来。"
@@ -997,7 +997,7 @@ translate zh strings:
     new "谢我什么？"
 
     old "For letting me get off."
-    new "谢谢你让我高潮。"
+    new "谢谢你让我下车。"
 
     old "His arms suddenly parted."
     new "他的双臂突然张开。"

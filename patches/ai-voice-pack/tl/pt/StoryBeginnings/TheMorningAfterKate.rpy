@@ -337,7 +337,7 @@ translate pt strings:
     new "Mestres espiões eram difíceis de confiar, pela natureza do seu trabalho, mas, dentro do possível, Kravel havia se mostrado confiável e leal. Era o melhor que se podia esperar de um mestre espião."
 
     old "Lastly was Lady Carolyn. As master of the royal accounts, she oversaw the economy of Rosanna."
-    new "Por fim, havia Lady Carolyn. Como mestra das contas reais, ela supervisionava a economia de Розанна."
+    new "Por fim, havia Lady Carolyn. Como mestra das contas reais, ela supervisionava a economia de Rosanna."
 
     old "Managing everything from the tax laws to the foreign trade agreements, it was a position as important as any other on the council."
     new "Gerindo tudo, desde as leis tributárias até os acordos de comércio exterior, era uma posição tão importante quanto qualquer outra no conselho."

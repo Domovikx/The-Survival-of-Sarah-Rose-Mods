@@ -730,7 +730,7 @@ translate ru strings:
     new "Сара вскрикнула, стоная."
 
     old "He leaned in more, sliding inch by inch."
-    new "Он прижался ещё сильнее, проникая внутрь дюйм за дюймом."
+    new "Он наклонился ещё ближе, продвигаясь дюйм за дюймом."
 
     old "Sprawled out on his desk, she felt him enter her, deeper and wider than any man."
     new "Раскинувшись на его столе, она почувствовала, как он вошёл в неё — глубже и шире, чем какой-либо мужчина."

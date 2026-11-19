@@ -652,7 +652,7 @@ translate ru strings:
     new "Вскоре Сара ощутила оргазм, который поднялся от её ног и взорвался по всему телу."
 
     old "Desperately, as she came, she continued to drive her own fingers inside of Carolyn."
-    new "В отчаянии, достигая пика наслаждения, она продолжала вводить свои пальцы в Каролин."
+    new "В отчаянии, кончая, она продолжала вводить свои пальцы в Каролин."
 
     old "Reaching her own peak, Sarah cried out."
     new "Достигнув своего пика, Сара закричала."

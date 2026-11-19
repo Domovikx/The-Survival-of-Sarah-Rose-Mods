@@ -337,7 +337,7 @@ translate fr strings:
     new "Les maîtres-espions étaient difficiles à croire, par la nature même de leur travail, mais dans la mesure du possible, Kravel s'était montré fiable et loyal. C'était le mieux que l'on pût espérer d'un maître-espion."
 
     old "Lastly was Lady Carolyn. As master of the royal accounts, she oversaw the economy of Rosanna."
-    new "Enfin, il y avait Lady Carolyn. En tant que maîtresse des comptes royaux, elle supervisait l'économie de Розанна."
+    new "Enfin, il y avait Lady Carolyn. En tant que maîtresse des comptes royaux, elle supervisait l'économie de Rosanna."
 
     old "Managing everything from the tax laws to the foreign trade agreements, it was a position as important as any other on the council."
     new "En effet, la gestion de tout, des lois fiscales aux accords commerciaux étrangers, constituait une fonction aussi essentielle que n'importe quelle autre au sein du conseil."

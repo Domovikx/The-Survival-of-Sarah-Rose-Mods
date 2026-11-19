@@ -7,7 +7,7 @@ translate ko strings:
     new "사라"
 
     old "King Orwell Rose"
-    new "킹 오를 로즈"
+    new "오웰 로즈 왕"
 
     old "Thomas"
     new "토마스"
@@ -34,10 +34,10 @@ translate ko strings:
     new "카롤린"
 
     old "Captain Belmont"
-    new "벨몬트 상사"
+    new "벨몬트 대위"
 
     old "Caleb"
-    new "케일"
+    new "케일럽"
 
     old "Ephraim"
     new "에프라이임"
@@ -61,7 +61,7 @@ translate ko strings:
     new "알라리크"
 
     old "Shah Mahda"
-    new "샤 마하다 공작"
+    new "샤 마하다"
 
     old "Samayra"
     new "사마이라"
@@ -211,7 +211,7 @@ translate ko strings:
     new "귀부인"
 
     old "Ambassador"
-    new "대사관장"
+    new "대사"
 
     old "High Priest"
     new "대제사장"
@@ -235,7 +235,7 @@ translate ko strings:
     new "둘"
 
     old "Basilisk"
-    new "basilisk"
+    new "바실리스크"
 
     old "Merchant"
     new "상인"
@@ -274,13 +274,13 @@ translate ko strings:
     new "도시 관리"
 
     old "The Official"
-    new "공식"
+    new "관리"
 
     old "Innkeeper"
-    new "여관주"
+    new "여관 주인"
 
     old "Official"
-    new "공식"
+    new "관리"
 
     old "Slave"
     new "노예"
@@ -292,7 +292,7 @@ translate ko strings:
     new "남자"
 
     old "Tailor"
-    new "수선사"
+    new "재단사"
 
     old "Advisor"
     new "자문관"
@@ -346,7 +346,7 @@ translate ko strings:
     new "미트란 병사"
 
     old "Blacksmith"
-    new "장인"
+    new "대장장이"
 
     old "Mayor"
     new "시장"
@@ -364,22 +364,22 @@ translate ko strings:
     new "전령"
 
     old "Tribesman"
-    new "부족인"
+    new "부족민"
 
     old "Old Tribesman"
-    new "고대 부족인"
+    new "늙은 부족민"
 
     old "Engineer"
     new "엔지니어"
 
     old "Spearmen"
-    new "창검병사"
+    new "창병"
 
     old "Engineers"
     new "엔지니어"
 
     old "Second man"
-    new "제 2 인"
+    new "두 번째 남자"
 
     old "Guards"
     new "경호대원"
@@ -391,13 +391,13 @@ translate ko strings:
     new "강도"
 
     old "Court Official"
-    new "법관"
+    new "궁정 관리"
 
     old "Judge"
     new "판사"
 
     old "Court Offical"
-    new "법관"
+    new "궁정 관리"
 
     old "Other man"
     new "남자"
@@ -406,7 +406,7 @@ translate ko strings:
     new "도둑"
 
     old "Captain"
-    new "캐프틴"
+    new "대위"
 
     old "Young man"
     new "젊은 남자"

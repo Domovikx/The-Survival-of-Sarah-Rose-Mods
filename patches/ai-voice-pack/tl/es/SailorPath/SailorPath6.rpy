@@ -2011,7 +2011,7 @@ translate es strings:
     new "Blondie..."
 
     old "She tried to speak as he slowly continued to thrust in and out of her."
-    new "Ella intentó hablar mientras él seguía embistiéndola lenta y profundamente."
+    new "Ella intentó hablar mientras él seguía embistiéndola lenta y repetidamente."
 
     old "I know I'm rough on you sometimes, but you know why I have to be, right?"
     new "Sé que a veces soy duro contigo, pero sabes por qué tengo que serlo, ¿verdad?"

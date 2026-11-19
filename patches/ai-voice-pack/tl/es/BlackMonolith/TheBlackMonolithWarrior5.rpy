@@ -652,7 +652,7 @@ translate es strings:
     new "Poco después, Sarah sintió la sensación de su propio orgasmo, que subía desde sus piernas y explotaba por todo su cuerpo."
 
     old "Desperately, as she came, she continued to drive her own fingers inside of Carolyn."
-    new "Desesperadamente, mientras llegaba al clímax, ella seguía introduciendo sus propios dedos dentro de Carolyn."
+    new "Desesperadamente, mientras se acercaba, continuaba introduciendo sus propios dedos en Carolyn."
 
     old "Reaching her own peak, Sarah cried out."
     new "Al alcanzar su propio clímax, Sarah gritó."
@@ -787,7 +787,7 @@ translate es strings:
     new "Toda su vida había seguido un camino estrecho y se había mantenido en el orden. Ahora, tan cerca de su momento final, todo se le escapa."
 
     old "Razaphel! Undo this!"
-    new "¡Razafael! ¡Deshecho esto!"
+    new "¡Razaphel! ¡Deshaga esto!"
 
     old "The damage I have done to him cannot be undone in a moment."
     new "El daño que le he causado no puede repararse en un instante."

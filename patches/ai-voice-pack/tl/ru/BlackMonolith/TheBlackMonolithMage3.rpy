@@ -232,7 +232,7 @@ translate ru strings:
     new "Ну, как я уже говорила, он уехал на недели, а то и на месяцы, и я не могу сказать, вернётся ли он вообще."
 
     old "But you're more than welcome to stay for as long as you like."
-    new "Но ты более чем welcome остаться здесь на всё время, которое пожелаешь."
+    new "Но вы совершенно свободны остаться здесь столько, сколько пожелаете."
 
     old "Metis gave a wide smile."
     new "Метис широко улыбнулся."

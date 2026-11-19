@@ -847,7 +847,7 @@ translate ru strings:
     new "Ну, раз уж мы с другом уже не на дежурстве, почему бы тебе не присоединиться к нам?"
 
     old "Yeah, we're gonna go back to celebrating I think. We caught the intruder, determined there was no risk. Job done."
-    new "Да, я думаю, мы вернёмся к празднованию. Мы поймали intrudera и поняли, что риска нет. Работа сделана."
+    new "Да, думаю, мы вернёмся к празднованию. Мы поймали злоумышленника и установили, что никакой опасности нет. Работа сделана."
 
     old "The soldier sat down against the wall of the ruined house."
     new "Солдат присел у стены разрушенного дома."

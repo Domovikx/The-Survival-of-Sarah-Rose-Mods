@@ -742,7 +742,7 @@ translate ru strings:
     new "Это не просто история, Сара."
 
     old "I was there when the first Empire ruled, and I lived through the greatest Era our species had ever seen."
-    new "Я был там, когда правила первая Империя, и я пережил величайшую эпоху, которую когда-либо видела наша especie."
+    new "Я был там, когда правила Первая Империя, и я пережил величайшую Эпоху, какую когда-либо видело наше вид."
 
     old "We used to build cities that made places like this seem like dung heaps."
     new "Мы строили города, из-за которых такие места, как это, казались просто навозными ямами."
@@ -1729,7 +1729,7 @@ translate ru strings:
     new "Но это место... эта Империя, этот город..."
 
     old "Did you never wonder how or why the Mythran Empire stood so far above and beyond all other nations?"
-    new "Разве ты никогда не задавалась вопросом, как или почему Мифранская Империя так сильно превосходила все остальные нации?"
+    new "Ты никогда не задумывался, как и почему Империя Митранов так сильно превосходила все остальные нации?"
 
     old "Hasn't there always been a nation that stands above the others?"
     new "Разве не существовало всегда нации, которая стояла бы выше всех остальных?"
@@ -1861,7 +1861,7 @@ translate ru strings:
     new "Сара посмотрела на него и, к своему удивлению, узнала мужчину."
 
     old "Gabriel, she recalled distantly."
-    new "Габриэль, — с трудом вспомнила она."
+    new "Габриэль, — отдаленно вспомнила она."
 
     old "The knight that travelled with Hecate when they met in the ruins."
     new "Рыцарь, который путешествовал с Гекатой, когда они встретились в руинах."

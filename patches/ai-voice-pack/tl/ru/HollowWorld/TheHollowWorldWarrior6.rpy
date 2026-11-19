@@ -2473,7 +2473,7 @@ translate ru strings:
     new "Глубокий рык, а затем его и без того внушительный член стал ещё больше."
 
     old "As his semen spilled into her, Sarah could feel it coat the insides of her sex."
-    new "Когда его сперма хлынула в неё, Сара чувствовала, как она обволакивает её плоть внутри."
+    new "Когда его сперма излилась в неё, Сара почувствовала, как она обволакивает внутренние стенки её влагалища."
 
     old "Slowly, his manic thrusts began to build back down."
     new "Постепенно его одержимые толчки начали замедляться."

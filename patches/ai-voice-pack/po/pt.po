@@ -276196,9 +276196,10 @@ msgctxt "ui"
 msgid "Q.Load"
 msgstr "Q.Carregar"
 
+# changed
 msgctxt "ui"
 msgid "Prefs"
-msgstr "Prefs"
+msgstr "Preferências"
 
 msgctxt "ui"
 msgid "Hide UI"

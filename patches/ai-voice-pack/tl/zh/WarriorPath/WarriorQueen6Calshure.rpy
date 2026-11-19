@@ -955,7 +955,7 @@ translate zh strings:
     new "我们是尚武的民族。力量……无论是真实的还是被感知的……都至关重要。"
 
     old "Sarah nodded. He could not afford to be made to look weak."
-    new "莎拉点了点头。她不能让自己显得软弱。"
+    new "莎拉点了点头。他不能让自己显得软弱。"
 
     old "Good, because there is the issue of your...sex."
     new "很好，因为还有一个问题，那就是你的……性别。"
@@ -1645,7 +1645,7 @@ translate zh strings:
     new "部落男人的玩物。这就是她现在的样子。"
 
     old "As one man finished, another took his place."
-    new "当一个男人射完后，另一个便接替了他。"
+    new "一人刚结束，另一人便接替了他的位置。"
 
     old "One cock slipping from her mouth, another quickly entering her again."
     new "一个肉棒从她嘴里滑出，另一个又迅速插了进去。"

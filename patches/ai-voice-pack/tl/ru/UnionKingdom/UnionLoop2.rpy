@@ -1831,7 +1831,7 @@ translate ru strings:
     new "Лучше тех слуг, которые без устали трудятся, чтобы накрывать им столы, а потом они эту еду выбрасывают?"
 
     old "Superior to the servant that works tirelessly to clean their estates?"
-    new "Кому же они превосходят? Слугам, которые без устали трудятся, чтобы убирать в их поместьях?"
+    new "Выше слуги, который неустанно трудится, чтобы убирать их поместья?"
 
     old "Most of them would collapse if they had to work a single week as the people they look down on."
     new "Большинство из них не выдержали бы и недели работы на тех, кого они презирают."

@@ -433,7 +433,7 @@ translate zh strings:
     new "他的脸上冒着烟。但莎拉意识到，那里几乎没什么脸了，只有一团冒泡的漆黑黏液。"
 
     old "Boiling oil, she realized. They were throwing burning oil down at them."
-    new "她意识到，那是沸腾的油。"
+    new "滚烫的油！她意识到，他们正在朝他们泼烧着的油。"
 
     old "Hesitation now meant death."
     new "犹豫意味着死亡。"

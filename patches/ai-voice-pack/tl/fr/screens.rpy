@@ -7,7 +7,7 @@ translate fr strings:
     new "L'image %d de %d est bloquée."
 
     old "The Survival of Sarah Rose"
-    new "La Survie de Sarah Rose"
+    new "The Survival of Sarah Rose"
 
     old "Scene Replay"
     new "Replay de la scène"
@@ -19,7 +19,7 @@ translate fr strings:
     new "Retour"
 
     old "History"
-    new "Historia"
+    new "Historique"
 
     old "Skip"
     new "Sauter"
@@ -28,13 +28,13 @@ translate fr strings:
     new "Auto"
 
     old "Save"
-    new "Sauvegarder"
+    new "Enregistrer"
 
     old "Q.Save"
-    new "Sauv.rap."
+    new "Q.Enregistrer"
 
     old "Q.Load"
-    new "Charg.rap."
+    new "Q.Charger"
 
     old "Prefs"
     new "Préférences"
@@ -70,7 +70,7 @@ translate fr strings:
     new "Guardar rápido"
 
     old "{#file_time}%A, %B %d %Y, %H:%M"
-    new "%A, %B %d %Y, %H:%M"
+    new "{#file_time}%A, %B %d %Y, %H:%M"
 
     old "empty slot"
     new "vide"
@@ -79,7 +79,7 @@ translate fr strings:
     new "<"
 
     old "{#auto_page}A"
-    new "A"
+    new "{#auto_page}A"
 
     old "{#quick_page}Q"
     new "{#quick_page}Q"
@@ -220,10 +220,10 @@ translate fr strings:
     new "Clic droit"
 
     old "Mouse Wheel Up\\nClick Rollback Side"
-    new "Roue de la souris vers le haut\\nClic pour remonter"
+    new "Molette de la souris vers le haut\\nCliquez pour annuler le côté"
 
     old "Mouse Wheel Down"
-    new "Roue de la souris vers le bas"
+    new "Molette de souris vers le bas"
 
     old "Right Trigger\\nA/Bottom Button"
     new "Déclencheur droit\\nBouton A/Bas"
@@ -257,32 +257,3 @@ translate fr strings:
 
     old "Menu"
     new "Menu"
-
-    ## ── Кнопки меню и сохранений (добавлено 2026-11-14) ───────────────
-    ## Базовые экраны игры запрашивают эти подписи, но в таблице перевода
-    ## их не было: главное меню показывало Start / Settings / Exit
-    ## по-английски (проверено пробой в игре, а не на глаз).
-    old "Start"
-    new "Commencer"
-
-    old "Settings"
-    new "Paramètres"
-
-    old "Quit"
-    new "Quitter"
-
-    old "Continue"
-    new "Continuer"
-
-    old "Main Menu"
-    new "Menu principal"
-
-    old "Quick Save"
-    new "Sauvegarde rapide"
-
-    old "Quick Load"
-    new "Chargement rapide"
-
-    old "Delete"
-    new "Supprimer"
-

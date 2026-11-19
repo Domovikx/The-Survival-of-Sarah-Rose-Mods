@@ -709,7 +709,7 @@ translate es strings:
     new "Sobre todo, el niño que una vez había sido solo un concepto ahora era lo suficientemente grande como para sentirse moverse."
 
     old "She saw Belmont's eyes grow wide as he spotted her and realized the fact of her being."
-    new "Vio cómo los ojos de Belmont se abrieran de par en par al verla y comprender la realidad de su existencia."
+    new "Ella vio cómo los ojos de Belmont se abrieran de par en par al verla y al darse cuenta de su existencia."
 
     old "There was rarely a more joyous couple in all the world."
     new "Rara vez había existido una pareja más feliz en todo el mundo."

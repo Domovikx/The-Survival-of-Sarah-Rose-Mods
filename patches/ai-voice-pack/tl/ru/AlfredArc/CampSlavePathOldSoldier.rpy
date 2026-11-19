@@ -229,7 +229,7 @@ translate ru strings:
     new "Спустя несколько мгновений она наконец почувствовала, как его член выскользнул из-под её ног, когда он рухнул на кровать рядом с ней."
 
     old "Sarah slowly let her rear down, laying down on her chest in the bed."
-    new "Сара медленно опустила таз, лёжа на груди в постели."
+    new "Сара медленно опустила зад, укладываясь на кровати на грудь."
 
     old "It wasn't so much that she wanted to lay here with him, as that her muscles had been so thoroughly exploited that she could no longer find the energy to move."
     new "Дело было не столько в том, что она хотела лежать здесь с ним, сколько в том, что её мышцы были так полностью истощены, что у неё больше не оставалось сил даже пошевелиться."

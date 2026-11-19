@@ -34,7 +34,7 @@ translate zh strings:
     new "到后来，她不得不提醒他，他的蛋蛋这会儿已经彻底空了。"
 
     old "He had fucked her one last time for good measure."
-    new "为了保险起见，他又最后一次狠狠地干了她。"
+    new "为了保险起见，他最后又操了她一次。"
 
     old "Stretching her arms, she could feel the pain in her muscles there too."
     new "伸展双臂时，她也能感觉到那里的肌肉酸痛。"
@@ -439,7 +439,7 @@ translate zh strings:
     new "莎拉在沉重的喘息间隙试图开口说话。"
 
     old "For as long as you live, that's gonna be the only cock you'll ever let in there, got that?"
-    new "只要你活着，那就是你唯一允许放进那里的东西，明白了吗？"
+    new "只要你还活着，那就会是你这辈子唯一能放进去的家伙，明白吗？"
 
     old "Sarah nodded as she began to feel her body rock back and forth from Belmont's thrusts."
     new "莎拉点头，随着贝尓蒙特的抽插，她开始感觉到身体前后摇晃。"
@@ -709,7 +709,7 @@ translate zh strings:
     new "最重要的是，那个曾经只存在于概念中的孩子，如今已经大得能感觉到他在动。"
 
     old "She saw Belmont's eyes grow wide as he spotted her and realized the fact of her being."
-    new "她看到贝尔蒙特的眼睛因认出她并意识到她怀孕的事实而睁得大大的。"
+    new "她看到贝尔蒙特一发现她，眼睛就瞪大了，并意识到她的存在。"
 
     old "There was rarely a more joyous couple in all the world."
     new "这世上鲜有比他们更幸福的夫妻了。"

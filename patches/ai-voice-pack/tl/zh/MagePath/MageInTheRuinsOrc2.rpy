@@ -481,7 +481,7 @@ translate zh strings:
     new "她一边抚弄着他，一边玩弄着自己的身体。"
 
     old "Grabbing her ass, squeezing her tits, groping between her legs."
-    new "她抓住他的屁股，揉捏着他的胸部，手探入两人之间。"
+    new "抓住她的屁股，捏住她的乳房，在双腿之间摸索。"
 
     old "He had captured her...so maybe this was fair...Sarah vaguely thought."
     new "他把她掳走了……所以这也许算是公平……莎拉迷迷糊糊地想着。"
@@ -1156,7 +1156,7 @@ translate zh strings:
     new "莎拉感到身体随着潮水般的快感而起伏摇晃。"
 
     old "The liquid made her body sensitive to their every touch, amplifying the sensations of their sex beyond anything a human could offer her."
-    new "液体使她的身体对彼此的每一次触碰都变得敏感，放大了他们性器带来的感官刺激，远超任何人类所能给予她的。"
+    new "这种液体使她的身体对他们每一次触碰都异常敏感，将他们性爱的感觉放大到了人类无法给予她的程度。"
 
     old "As once followed the other, soon her whole body and mind was drenched in blinding pleasure."
     new "正如先前所跟随的那样，很快她的整个身心都沉浸在令人目眩神迷的快感之中。"

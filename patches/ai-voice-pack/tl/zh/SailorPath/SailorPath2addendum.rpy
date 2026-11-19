@@ -436,7 +436,7 @@ translate zh strings:
     new "尽管如此，他仍将她死死压在身下，继续对她身体发起猛烈攻势。"
 
     old "The hard work with the crates. The roughness of his sex."
-    new "搬运箱子的繁重体力活。他下体的粗暴对待。"
+    new "搬运木箱的艰辛。他那性器的粗糙。"
 
     old "All of it had tired out her body."
     new "这一切都让她的身体疲惫不堪。"

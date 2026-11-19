@@ -4,7 +4,7 @@
 translate es strings:
 
     old "Sarah walks up towards Cassius."
-    new "Sarah se acerca a Casio. Todavía estoy herida por mi caída."
+    new "Sarah camina hacia Cassius."
 
     old "I am still wounded from my fall."
     new "Todavía estoy herido por mi caída."

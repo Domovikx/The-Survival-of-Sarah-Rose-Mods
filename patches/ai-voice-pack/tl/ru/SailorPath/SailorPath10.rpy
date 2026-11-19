@@ -34,7 +34,7 @@ translate ru strings:
     new "К концу ночи ей пришлось напомнить ему, что его яйца к этому моменту уже были совершенно пусты."
 
     old "He had fucked her one last time for good measure."
-    new "Он переспал с ней в последний раз — для верности."
+    new "Он трахнул её в последний раз, для верности."
 
     old "Stretching her arms, she could feel the pain in her muscles there too."
     new "Растягивая руки, она ощущала боль и в мышцах."

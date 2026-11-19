@@ -3241,7 +3241,7 @@ translate ru strings:
     new "Она взмолилась отчаянным голосом."
 
     old "So eager."
-    new "Такая жадная."
+    new "Такой нетерпеливый."
 
     old "He increased his pace, fucking her only slightly faster, only frusting her more."
     new "Он ускорил темп, трахая её лишь немного быстрее, но только сильнее её раздражая."
@@ -3478,7 +3478,7 @@ translate ru strings:
     new "И это лишь заставило её застонать ещё громче."
 
     old "The desk creaked with violent force as he mercilessly fucked her."
-    new "Деска с грохотом треснула под натиском его жестоких толчков. Он безжалостно трахал её, а она чувствовала, как возраст на его руках лишь усиливает её стоны. Этот звук заставил её закричать ещё громче."
+    new "Стол скрипнул от яростной силы, когда он безжалостно трахал её."
 
     old "You love my cock?"
     new "Ты любишь мой член?"

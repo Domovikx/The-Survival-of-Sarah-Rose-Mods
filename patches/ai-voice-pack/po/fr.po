@@ -276168,9 +276168,10 @@ msgctxt "ui"
 msgid "Back"
 msgstr "Retour"
 
+# changed
 msgctxt "ui"
 msgid "History"
-msgstr "Historia"
+msgstr "Historique"
 
 msgctxt "ui"
 msgid "Skip"
@@ -276188,9 +276189,10 @@ msgctxt "ui"
 msgid "Q.Save"
 msgstr "Q.Enregistrer"
 
+# changed
 msgctxt "ui"
 msgid "Q.Load"
-msgstr "Chargement"
+msgstr "Q.Charger"
 
 msgctxt "ui"
 msgid "Prefs"

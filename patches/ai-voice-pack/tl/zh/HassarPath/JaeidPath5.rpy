@@ -466,7 +466,7 @@ translate zh strings:
     new "莎拉继续在市场中走动，完成她的购物。"
 
     old "Before long, she had all the things she had come for."
-    new "没过多久，她便买齐了所有需要的东西。"
+    new "没过多久，她就得到了自己此行的所有收获。"
 
     old "Paying the merchants, she carried the food items back to Jaeid's house."
     new "付完钱后，她提着买好的食物回到了贾伊德的住处。"

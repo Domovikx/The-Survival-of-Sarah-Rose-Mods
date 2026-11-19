@@ -424,7 +424,7 @@ translate ru strings:
     new "Её тело было обнято вокруг его."
 
     old "She reached down with both hands, cleaning up the old soldier's cock, and putting it back into his pants."
-    new "Она протянула обе руки вниз, очистила член старого солдата и засунула его обратно в штаны."
+    new "Она протянула обе руки вниз, почистила член старого солдата и засунула его обратно в штаны."
 
     old "Then, she leaned in and kissed him."
     new "Затем она наклонилась и поцеловала его."

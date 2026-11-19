@@ -76,7 +76,7 @@ translate es strings:
     new "Lo dije solo en broma."
 
     old "Sarah awkwardly nodded."
-    new "Sarah asintió con torpeza... supongo. La muerte de mi padre... todavía pesa."
+    new "Sarah asintió con torpeza."
 
     old "It is fine...I suppose. My father...his death still lingers."
     new "Está bien... supongo. Mi padre... su muerte todavía persiste."

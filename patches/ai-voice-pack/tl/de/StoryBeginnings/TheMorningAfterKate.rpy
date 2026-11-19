@@ -337,7 +337,7 @@ translate de strings:
     new "Spionemeister waren aufgrund ihrer Arbeit schwer zu vertrauen, aber soweit möglich hatte sich Kravel als zuverlässig und loyal erwiesen. Das war das Beste, was man von einem Spionemeister erwarten konnte."
 
     old "Lastly was Lady Carolyn. As master of the royal accounts, she oversaw the economy of Rosanna."
-    new "Zuletzt kam Lady Carolyn. Als Herrin der königlichen Rechnungen überwachte sie die Wirtschaft von Розанна."
+    new "Zuletzt war da Lady Carolyn. Als Leiterin der königlichen Finanzen überwachte sie die Wirtschaft von Rosanna."
 
     old "Managing everything from the tax laws to the foreign trade agreements, it was a position as important as any other on the council."
     new "Er war für alles verantwortlich, von den Steuergesetzen bis zu den Handelsabkommen mit dem Ausland – eine Position, die genauso wichtig war wie jede andere im Rat."

@@ -340,7 +340,7 @@ translate es strings:
     new "Son tan brillantes aquí fuera. Nunca las había visto tan brillantes como ahora."
 
     old "Sarah looked up and saw the night sky."
-    new "Pero el cielo no era como ella lo conocía. Tan vasto y tan lleno de estrellas que estas bañaban el firmamento en una luz azul y fría."
+    new "Sarah levantó la vista y vio el cielo nocturno."
 
     old "But it was not like the sky as she knew it all. So vast and so plentiful, the stars bathed the sky in a cold blue light."
     new "Pero no era como el cielo que ella conocía. Tan inmenso y tan abundante, que las estrellas bañaban el firmamento con una luz azul fría."

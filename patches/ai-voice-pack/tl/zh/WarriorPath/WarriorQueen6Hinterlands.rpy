@@ -430,7 +430,7 @@ translate zh strings:
     new "当然可以。"
 
     old "You and the rest of your mob of frenzied men, seeking to settle a score."
-    new "你和你那群狂热的暴徒，不过是为了报私仇罢了。"
+    new "你和一群狂热的同伴，前来寻仇。"
 
     old "Who would dare to disagree with you now?"
     new "现在谁敢反对你呢？"
@@ -562,7 +562,7 @@ translate zh strings:
     new "在人群中，莎拉只看到一张被泪水毁掉的脸。"
 
     old "The innkeepers daughter, held back by the guards that oversaw her father's execution."
-    new "女儿是客栈老板的，被看守她父亲行刑的卫兵们拦住了。"
+    new "客栈老板的女儿，被看守她父亲处决的卫兵拦住了。"
 
     old "Sarah couldn't help but feel sad for the girl, regardless of if her father had deserved his fate."
     new "莎拉忍不住为这个女孩感到难过，不管她的父亲是否罪有应得。"

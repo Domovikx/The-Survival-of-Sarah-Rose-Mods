@@ -1309,7 +1309,7 @@ translate zh strings:
     new "随后，种子从他的阴茎尖端喷射而出，溅洒在莎拉的腹部。"
 
     old "Stunned, she looked down at his acumulated cum, pooling around her belly button."
-    new "她震惊地低头看着那些积聚的精液，它们在她肚脐周围汇聚成一滩。"
+    new "她震惊地低头看着他积聚的精液，正汇聚在她的肚脐周围。"
 
     old "Somehow, it felt even worse than if he had finished inside of her."
     new "不知为何，这感觉甚至比他在她体内射精还要糟糕。"
@@ -3682,7 +3682,7 @@ translate zh strings:
     new "她抬头看着他，见他赞许地笑了。"
 
     old "She took him back into her mouth, and began the rest of her life."
-    new "她再次将他含入口中，从此开始了余生的岁月。"
+    new "她将他重新吞入口中，开始了余生的生活。"
 
     old "In the years after, she would give him several more children."
     new "在此后的岁月里，她又为他生下了好几个孩子。"

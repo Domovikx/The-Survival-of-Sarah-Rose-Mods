@@ -31,7 +31,7 @@ translate es strings:
     new "Además, sus mapas eran mucho mejores que cualquier otro que tuvieran. Junto con navegantes expertos, era probable que salieran del desierto en muy poco tiempo."
 
     old "More requests came in during the day."
-    new "Llegaron más solicitudes durante el día. Aprobadas. Denegadas. Denegadas. Aprobadas."
+    new "Durante el día llegaron más solicitudes."
 
     old "Approved. Denied. Denied. Approved."
     new "Aprobado. Denegado. Denegado. Aprobado."

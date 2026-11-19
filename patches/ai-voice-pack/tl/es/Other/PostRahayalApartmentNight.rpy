@@ -757,7 +757,7 @@ translate es strings:
     new "Porque, en la totalidad de la historia, ¿en qué ha consistido realmente?"
 
     old "Sarah clenched her fists again."
-    new "¡La gente! ¡La gente vivía allí sus vidas! Y no se merecían esto..."
+    new "Sarah volvió a apretar los puños."
 
     old "People! People lived their lives there! And they didn't deserve this..."
     new "¡Gente! ¡La gente vivía sus vidas allí! Y no merecían esto..."
@@ -1861,7 +1861,7 @@ translate es strings:
     new "Sarah miró hacia allí y, para su sorpresa, reconoció al hombre."
 
     old "Gabriel, she recalled distantly."
-    new "Gabriel, recordó ella con distancia."
+    new "Gabriel, recordó ella con vaguedad."
 
     old "The knight that travelled with Hecate when they met in the ruins."
     new "El caballero que viajaba con Hécate cuando se conocieron en las ruinas."

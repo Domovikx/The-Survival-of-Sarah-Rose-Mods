@@ -943,7 +943,7 @@ translate zh strings:
     new "莎拉看着贝尔蒙特。他是吃醋了吗？"
 
     old "Captain...if he tried to fuck me, I don't think he'd even manage to get it in me."
-    new "上尉……就算他真敢对我动手，我觉得他也未必能把我弄进去。"
+    new "船长……就算他想要上我，我估计他连进去都做不到。"
 
     old "Now Belmont bursted into laughter."
     new "此时，贝尔蒙特放声大笑起来。"

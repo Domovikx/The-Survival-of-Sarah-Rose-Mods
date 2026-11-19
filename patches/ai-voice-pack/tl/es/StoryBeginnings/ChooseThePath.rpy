@@ -49,10 +49,10 @@ translate es strings:
     new "Kate tenía algo muy serio. Sarah estaba confundida."
 
     old "What are you doing here?"
-    new "¿Qué estás haciendo aquí?"
+    new "¿Qué haces aquí?"
 
     old "I'm so glad it's you, what are you doing here?"
-    new "¡Qué alegría que seas tú! ¿Qué estás haciendo aquí?"
+    new "¡Qué alegría que seas tú! ¿Qué haces aquí?"
 
     old "Kate sat down on the edge of the bed."
     new "Kate se sentó en el borde de la cama."

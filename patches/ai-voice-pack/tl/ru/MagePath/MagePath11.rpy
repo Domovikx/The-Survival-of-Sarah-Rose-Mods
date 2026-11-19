@@ -463,7 +463,7 @@ translate ru strings:
     new "Прошло здесь."
 
     old "Xan leads them through the door, leading through more corridors, and finally, appearing before the waypoint."
-    new "Ксантиппа ведёт их через дверь, дальше по коридорам, и наконец они оказываются перед «waypoint»."
+    new "Сян ведёт их через дверь, проходит ещё по нескольким коридорам и, наконец, появляется перед точкой маршрута."
 
     old "The waypoint. The magical portal that connected between Xan's house and the palace. Only when correctly manipulated did it function, otherwise, it was a door like any other."
     new "Пункт назначения. Магический портал, соединявший дом Зана с дворцом. Он функционировал лишь при правильном управлении; в противном случае был не более чем обычной дверью."

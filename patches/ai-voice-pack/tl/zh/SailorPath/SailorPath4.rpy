@@ -385,7 +385,7 @@ translate zh strings:
     new "她轻声说出了这些话。"
 
     old "Sarah cried out as she felt Belmont's massive cock press into her."
-    new "莎拉感到贝尔蒙特的巨物顶入体内，不禁失声叫了出来。"
+    new "莎拉尖叫起来，她感到贝尔蒙特巨大的阴茎顶进自己的身体。"
 
     old "She was already wet for him, but given his size, he was never easy to fit."
     new "她早已为他湿润，但鉴于他的尺寸，要容纳他绝非易事。"

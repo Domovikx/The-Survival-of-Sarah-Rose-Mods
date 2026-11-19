@@ -652,7 +652,7 @@ translate zh strings:
     new "没过多久，莎拉便感受到了自己高潮的来临，那股感觉从双腿涌起，随即爆发并席卷全身。"
 
     old "Desperately, as she came, she continued to drive her own fingers inside of Carolyn."
-    new "在她高潮来临时，她拼命地将手指继续深入卡罗琳体内。"
+    new "她拼命地，一边靠近，一边继续用自己的手指插入卡罗琳体内。"
 
     old "Reaching her own peak, Sarah cried out."
     new "到达顶峰时，莎拉叫出了声。"

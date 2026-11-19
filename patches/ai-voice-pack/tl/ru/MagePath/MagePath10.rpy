@@ -241,7 +241,7 @@ translate ru strings:
     new "А как же её жизнь?"
 
     old "Sarah and Xan watched the Shah struggle."
-    new "Сара и Ксантиппа смотрели, как шах боролся. Они видели, с какой мучительной борьбой он справлялся."
+    new "Сара и Зан наблюдали за борьбой шаха."
 
     old "Curse the both of you..."
     new "Прокляты вы оба..."

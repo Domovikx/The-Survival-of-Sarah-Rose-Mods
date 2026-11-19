@@ -235,7 +235,7 @@ translate zh strings:
     new "随着他加快节奏，又一次高潮席卷了她。"
 
     old "Then she felt his cock swell inside of her, spreading her apart one last time."
-    new "接着她感觉到他的鸡巴在她体内膨胀，最后一次将她撑开。"
+    new "接着，她感到他的阴茎在她体内膨胀，最后一次将她的身体撑开。"
 
     old "The man's cum filled her up."
     new "男人的精液灌满了她。"
@@ -370,7 +370,7 @@ translate zh strings:
     new "他强奸了她，因为他更强壮，而她任由自己变得软弱。"
 
     old "She focussed on his cum still seeping out from between her legs as a reminder."
-    new "她盯着自己腿间仍在渗出的精液，以此作为提醒。"
+    new "她专注于他精液仍从双腿间渗出的景象，以此提醒自己。"
 
     old "This is what happens if you're weak. The strong fuck you, and all you can do is bend over a crate and give it up."
     new "这就是你软弱的下场。强者会操你，而你唯一能做的，就是趴在一个板条箱上，任人摆布。"

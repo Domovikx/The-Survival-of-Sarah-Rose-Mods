@@ -370,7 +370,7 @@ translate ru strings:
     new "В конце концов они пощадили её от смерти, но женщина, которую вытащили из той таверны, уже никогда не была прежней."
 
     old "Her father dead, her fortunes ruined, she would go on to live the life of an outcast."
-    new "Ее отец был мертв, ее fortuna была уничтожена, и ей предстояло прожить жизнь изгнанницы."
+    new "Ее отец умер, ее состояние было разорено, и ей предстояло прожить жизнь изгнанницы."
 
     old "The child she would carry, spawned from hatred, would inherit the traitor's mark of his mother."
     new "Ребёнок, которого она выносила и который был порождён ненавистью, унаследует знак предателя от своей матери."

@@ -1063,7 +1063,7 @@ translate zh strings:
     new "他抬头看着她，一脸满足。脸上挂着惬意的笑容。"
 
     old "Sarah didn't know what to say. She kept looking at him as he got up and began putting his cock away."
-    new "莎拉不知该说什么。她一直注视着他，看他站起身来，把鸡巴收好。"
+    new "莎拉不知道该说什么。她一直盯着他看，直到他站起来开始收起自己的阴茎。"
 
     old "You're not bad to look at."
     new "你长得也不赖。"

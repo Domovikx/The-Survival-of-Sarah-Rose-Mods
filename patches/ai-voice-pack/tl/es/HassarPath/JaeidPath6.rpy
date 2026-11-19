@@ -40,7 +40,7 @@ translate es strings:
     new "Para mí... y para ti también."
 
     old "Sarah tried to make sense of what Jaeid was saying."
-    new "Sarah intentaba comprender lo que Jaeid le estaba diciendo. Él le había extendido una invitación a ella, y también a él mismo. Ahora, ella se preguntaba por qué el Khan quería verla a ella en particular."
+    new "Sarah intentó entender lo que Jaeid estaba diciendo."
 
     old "I...the Khan? Why does he want to see me?"
     new "Yo... ¿el Kan? ¿Por qué quiere verme?"

@@ -688,7 +688,7 @@ translate zh strings:
     new "莎拉感觉到他精液的第一股绳索喷溅在她的脸上。她闭上了眼睛，但嘴巴依然张着。"
 
     old "More loads followed, onto her breasts, her shoulder, into her hair and even past onto her lower back."
-    new "随后又是几股精液射在她身上，落在她的乳房、肩膀上，溅进她的头发里，甚至流到了她的后腰下方。"
+    new "更多的重物接踵而至，压在她的胸部、肩膀，塞进她的头发里，甚至一路延伸到她的下背部。"
 
     old "Sarah caught what she could with her mouth, but she was covered in it. Drenched in it."
     new "莎拉尽力用嘴接住能接到的部分，但她浑身都是。湿透了。"

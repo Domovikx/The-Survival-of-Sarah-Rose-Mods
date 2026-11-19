@@ -280,7 +280,7 @@ translate es strings:
     new "Su cuerpo se había debilitado durante su cautiverio."
 
     old "The cold stone halls where he kept her were sparse."
-    new "Los fríos pasillos de piedra donde él la mantenían eran escasos en detalles."
+    new "Los fríos pasillos de piedra donde la mantenía eran escasos."
 
     old "So few details, no windows nor natural light, it made the halls feel endless and claustrophobic at the same time."
     new "Tan pocas eran las detalles, sin ventanas ni luz natural, que los pasillos parecían infinitos y claustrofóbicos al mismo tiempo."

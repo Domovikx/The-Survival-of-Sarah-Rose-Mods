@@ -352,7 +352,7 @@ translate es strings:
     new "Bueno, si realmente te transformaras en una forma así, te convertirías por completo en ella."
 
     old "Even your mind, your intellect, would become animalistic."
-    new "Incluso tu mente, tu intelecto, se volverían animales."
+    new "Incluso tu mente, tu intelecto, se volverían animalescos."
 
     old "And once you reach a state like that...how do you get back?"
     new "Y una vez que llegas a un estado así... ¿cómo vuelves?"

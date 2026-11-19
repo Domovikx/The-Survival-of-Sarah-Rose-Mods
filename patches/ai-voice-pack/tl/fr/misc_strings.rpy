@@ -7,7 +7,7 @@ translate fr strings:
     new "Sarah"
 
     old "King Orwell Rose"
-    new "Rey Orwell Rose"
+    new "Roi Orwell Rose"
 
     old "Thomas"
     new "Thomas"
@@ -52,7 +52,7 @@ translate fr strings:
     new "Jaeid"
 
     old "Xanthippe"
-    new "Xantíppide"
+    new "Xanthippe"
 
     old "Razaphel"
     new "Razafael"
@@ -76,7 +76,7 @@ translate fr strings:
     new "Bran"
 
     old "Took"
-    new "Pris"
+    new "Touk"
 
     old "Synara"
     new "Synara"
@@ -139,10 +139,10 @@ translate fr strings:
     new "Maeiv"
 
     old "Marshal Edmond"
-    new "Mariscal Edmond"
+    new "Maréchal Edmond"
 
     old "Duke Antonio"
-    new "Duque Antonio"
+    new "Duc Antonio"
 
     old "Garret"
     new "Garret"
@@ -214,7 +214,7 @@ translate fr strings:
     new "Ambassadrice"
 
     old "High Priest"
-    new "Alto Sacerdote"
+    new "Grand Prêtre"
 
     old "Noble wife"
     new "Femme noble"
@@ -265,7 +265,7 @@ translate fr strings:
     new "Officier"
 
     old "Camp Guard"
-    new "Guardia del campamento"
+    new "Garde du camp"
 
     old "Camp Soldier"
     new "Soldat de camp"
@@ -280,7 +280,7 @@ translate fr strings:
     new "Aubergiste"
 
     old "Official"
-    new "Officier"
+    new "Fonctionnaire"
 
     old "Slave"
     new "Esclave"
@@ -337,7 +337,7 @@ translate fr strings:
     new "Femme esclave"
 
     old "Ragged Man"
-    new "Homme déchiré"
+    new "Homme en haillons"
 
     old "Mythran Officer"
     new "Officier Mythra"
@@ -349,7 +349,7 @@ translate fr strings:
     new "Forgeron"
 
     old "Mayor"
-    new "Alcalde"
+    new "Maire"
 
     old "Woodland Spirit"
     new "Esprit de la forêt"
@@ -385,7 +385,7 @@ translate fr strings:
     new "Gardes"
 
     old "People"
-    new "Citoyens"
+    new "Gens"
 
     old "Brigand"
     new "Bandit"
@@ -394,7 +394,7 @@ translate fr strings:
     new "Officiel de la cour"
 
     old "Judge"
-    new "Juez"
+    new "Juge"
 
     old "Court Offical"
     new "Fonctionnaire de la Cour"
@@ -445,13 +445,13 @@ translate fr strings:
     new "Courrier"
 
     old "Barman"
-    new "Barmen"
+    new "Barman"
 
     old "Founder"
-    new "Fundador"
+    new "Fondateur"
 
     old "Oryon"
     new "Oryon"
 
     old "Voidling"
-    new "Vóide"
+    new "Créature du vide"

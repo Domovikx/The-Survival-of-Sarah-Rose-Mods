@@ -211,7 +211,7 @@ translate es strings:
     new "Samayra se detuvo de repente. Sus hombros comenzaron a temblar, y un suave sollozo escapó de su boca."
 
     old "Please, you're a mage, you have incredible power..."
-    new "Por favor, eres un mago, tienes un poder increíble..."
+    new "Por favor, eres una maga, tienes un poder increíble..."
 
     old "Will you keep me and my father safe if the army...if they get inside the city?"
     new "¿Me protegerás a mí y a mi padre si el ejército... si logran entrar en la ciudad?"

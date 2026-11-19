@@ -2500,7 +2500,7 @@ translate zh strings:
     new "由于经验不足，莎拉并没有完全明白马里恩的计划。"
 
     old "When the first of his cum splashed against her face, she understood."
-    new "当第一滴精液溅到她的脸上时，她明白了。"
+    new "当第一股精液溅到她的脸上时，她明白了。"
 
     old "On instinct, she tried to get away, but his grip was on her."
     new "出于本能，她试图挣脱，但他的手紧紧扣着她。"

@@ -7,7 +7,7 @@ translate ko strings:
     new "이미지 %d/%d 은 차단되었습니다."
 
     old "The Survival of Sarah Rose"
-    new "Sarah Rose의 생존"
+    new "The Survival of Sarah Rose"
 
     old "Scene Replay"
     new "시나리오 재생"
@@ -31,10 +31,10 @@ translate ko strings:
     new "저장"
 
     old "Q.Save"
-    new "빠른저장"
+    new "Q.저장"
 
     old "Q.Load"
-    new "빠른불러오기"
+    new "Q.로드"
 
     old "Prefs"
     new "설정"
@@ -70,7 +70,7 @@ translate ko strings:
     new "빠른 저장"
 
     old "{#file_time}%A, %B %d %Y, %H:%M"
-    new "%A 년 %B 월 %d 일 %H 시 %M 분"
+    new "{#file_time}%A 년 %B 월 %d 일 %H 시 %M 분"
 
     old "empty slot"
     new "빈 자리"
@@ -79,7 +79,7 @@ translate ko strings:
     new "<"
 
     old "{#auto_page}A"
-    new "A"
+    new "{#auto_page}A"
 
     old "{#quick_page}Q"
     new "{#quick_page}Q"
@@ -235,7 +235,7 @@ translate ko strings:
     new "오른쪽 어깨"
 
     old "D-Pad, Sticks"
-    new "D-Pad, 조이스틱"
+    new "D-패드, 스틱"
 
     old "Start, Guide"
     new "시작, 가이드"
@@ -257,32 +257,3 @@ translate ko strings:
 
     old "Menu"
     new "메뉴"
-
-    ## ── Кнопки меню и сохранений (добавлено 2026-11-14) ───────────────
-    ## Базовые экраны игры запрашивают эти подписи, но в таблице перевода
-    ## их не было: главное меню показывало Start / Settings / Exit
-    ## по-английски (проверено пробой в игре, а не на глаз).
-    old "Start"
-    new "시작"
-
-    old "Settings"
-    new "설정"
-
-    old "Quit"
-    new "종료"
-
-    old "Continue"
-    new "계속하기"
-
-    old "Main Menu"
-    new "메인 메뉴"
-
-    old "Quick Save"
-    new "빠른 저장"
-
-    old "Quick Load"
-    new "빠른 불러오기"
-
-    old "Delete"
-    new "삭제"
-

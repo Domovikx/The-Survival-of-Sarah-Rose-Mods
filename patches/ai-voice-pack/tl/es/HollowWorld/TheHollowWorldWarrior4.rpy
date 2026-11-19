@@ -562,7 +562,7 @@ translate es strings:
     new "Gideon agitó los brazos."
 
     old "Follow me, get a drink."
-    new "Sígueme y cómete algo de beber."
+    new "Sígueme, toma algo de beber."
 
     old "Sarah followed Gideon, ducking in between sleds and campfires until she reached his campsite, a small ways away from the rest of the camp."
     new "Sarah siguió a Gideon, agachándose entre trineos y fogatas hasta llegar a su campamento, un poco alejado del resto del campamento."

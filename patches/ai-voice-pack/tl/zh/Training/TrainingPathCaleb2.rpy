@@ -67,7 +67,7 @@ translate zh strings:
     new "莎拉试图重新站起来，拍了拍身上的灰尘，比起真的受伤，她更多的是感到难堪。"
 
     old "It's ok, I just, I messed it up."
-    new "没事，我只是……摔得有点惨。"
+    new "没关系，我只是……我搞砸了。"
 
     old "Sarah tries to stand, but the second she does, she feels a sharp pain shoot through her right ankle."
     new "莎拉试图站起来，但就在她站起的瞬间，一阵剧痛从她的右脚踝窜过。"

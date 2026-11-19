@@ -46,7 +46,7 @@ translate zh strings:
     new "在抵御部落入侵、保卫国家的过程中，她在权衡旧贵族家族的利益时显得过于短视。"
 
     old "In turn, thousands had died in the fighting."
-    new "作为回报，成千上万的人在战斗中丧生。"
+    new "同样，成千上万的人在战斗中丧生。"
 
     old "Sarah did not want to risk such a tragedy again."
     new "莎拉不想再冒这样的悲剧重演的风险。"

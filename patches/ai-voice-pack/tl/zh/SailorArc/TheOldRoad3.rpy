@@ -982,7 +982,7 @@ translate zh strings:
     new "然而，她无法自欺欺人。"
 
     old "A real princess didn't go out to the forest at night, alone, with a near stranger, and suck him off for a story."
-    new "真正的公主不会在深夜独自走进森林，和一个几乎陌生的男人上床，只为换回一个故事。"
+    new "真正的公主不会在夜晚独自前往森林，和一个几乎不认识的人在一起，还为了听个故事就为他口交。"
 
     old "Or was that just a lie she told herself."
     new "还是说，那不过是她用来欺骗自己的谎言。"

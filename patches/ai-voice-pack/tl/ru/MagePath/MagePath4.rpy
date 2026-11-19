@@ -181,7 +181,7 @@ translate ru strings:
     new "Я всё ещё принцесса. На практике это может и ничего не значить — без королевства или армии, — но я всё равно обязана исполнять свой долг перед народом."
 
     old "Xan shook his head."
-    new "Ксантиппа покачал головой."
+    new "Зан покачал головой."
 
     old "You're not, Sarah. You're on a path to something different now, something greater."
     new "Ты уже не та, Сара. Теперь ты на пути к чему-то другому, к чему-то большему."

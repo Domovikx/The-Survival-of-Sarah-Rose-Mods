@@ -859,7 +859,7 @@ translate ru strings:
     new "Вместе они двинулись к комнате Сары."
 
     old "Unbeknownst to Samayra, Sarah traced her finger across the walls as she walked, leaving a soft trace of lingering magic, leading from the vault back to her room."
-    new "Не зная об этом, Самайра шла дальше, а Сара проводила пальцем по стенам, оставляя мягкий след lingering-магии, который вёл от хранилища обратно в её комнату."
+    new "Самайра и не подозревала, что Сара, идя, проводила пальцем по стенам, оставляя лёгкий след остаточной магии, который вёл от хранилища обратно в её комнату."
 
     old "Sarah returned to her room and watched Samayra dissapear back into the secret tunnels, too nervous to speak much of what had transpired between them."
     new "Сара вернулась в свою комнату и смотрела, как Самайра исчезает в тайных туннелях, будучи слишком нервной, чтобы сказать хоть слово о том, что только что произошло между ними."

@@ -379,7 +379,7 @@ translate es strings:
     new "Cada uno de ellos estaba curtido por la batalla; habían visto innumerables combates y derramamientos de sangre."
 
     old "They would charge into battle with song and drink themselves into a stupor to celebrate after."
-    new "Pero esto no tenía nada que ver con eso. Se lanzarían a la batalla cantando y se emborracharían hasta caer en un estupor para celebrarlo después."
+    new "Se lanzarían a la batalla cantando y, después, se emborracharían hasta caer en un estupor para celebrarlo."
 
     old "But this was nothing like that."
     new "Pero esto no era nada parecido a aquello."

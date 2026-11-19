@@ -1030,7 +1030,7 @@ translate es strings:
     new "Sí. ¿Y qué pasa con ella?"
 
     old "Do you remember her name?"
-    new "¿Recuerdas su nombre? ¿No se había ido ya después de... dos semanas?"
+    new "¿Recuerdas cómo se llama?"
 
     old "Her name? Wasn't she gone after like...two weeks?"
     new "¿Su nombre? ¿No se fue después de... como dos semanas?"
@@ -1327,7 +1327,7 @@ translate es strings:
     new "Al mirar hacia ellos, vio que Nathan seguía embistiendo."
 
     old "The last of his powerful thrusts, then a loud grunt as he filled Kim up with his cum."
-    new "El último de sus potentes embestidas, y luego un fuerte gruñido mientras llenaba a Kim con su semen."
+    new "Su última y potente embestida, seguida de un fuerte gruñido mientras llenaba a Kim con su semen."
 
     old "Sarah watched as he pumped himself empty into the girl, then pulled out."
     new "Sarah observó cómo él se vaciaba dentro de la chica y luego se retiraba."

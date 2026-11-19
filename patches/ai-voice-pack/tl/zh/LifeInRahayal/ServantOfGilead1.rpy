@@ -1327,7 +1327,7 @@ translate zh strings:
     new "她看向他们，看到内森仍在挺动。"
 
     old "The last of his powerful thrusts, then a loud grunt as he filled Kim up with his cum."
-    new "他有力的冲刺迎来了最后的几下，随后发出一声粗重的低吼，将精液全部射入金的体内。"
+    new "他最后一次有力地刺入，接着发出一声粗重的喘息，将精液全部注入金体内。"
 
     old "Sarah watched as he pumped himself empty into the girl, then pulled out."
     new "莎拉看着他向女孩体内排空，然后拔了出来。"

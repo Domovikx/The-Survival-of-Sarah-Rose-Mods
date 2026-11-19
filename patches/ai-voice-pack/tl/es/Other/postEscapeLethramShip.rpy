@@ -2533,7 +2533,7 @@ translate es strings:
     new "Chocó su copa con la de ella."
 
     old "So here's to drinkin with the prettiest girl in the bar."
-    new "Bueno, ya sea que hayas ganado con esfuerzo o fácilmente, al final saliste victoriosa. Y aquí va un brindis por beber con la chica más guapa del bar."
+    new "Así que, ¡por beber con la chica más guapa del bar!"
 
     old "And here's to drinking with the man that has the best wine in the bar."
     new "Y aquí va un brindis por beber con el hombre que tiene el mejor vino del bar."

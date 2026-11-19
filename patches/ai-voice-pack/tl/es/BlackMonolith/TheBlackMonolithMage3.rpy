@@ -151,7 +151,7 @@ translate es strings:
     new "Metis puso cara de asco."
 
     old "Metis raised an eyebrow."
-    new "¿Nunca tuviste esa sensación con él? Llevas varios años siendo su estudiante, ¿no?"
+    new "Metis enarcó una ceja."
 
     old "You never got that vibe from him? You've been his student for a few years now, right?"
     new "¿Nunca tuviste esa vibra con él? Has sido su alumna durante varios años ya, ¿no?"

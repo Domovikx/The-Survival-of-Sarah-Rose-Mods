@@ -166,7 +166,7 @@ translate zh strings:
     new "他的气味。"
 
     old "Well endowed, she did her best to fit all of him into her mouth, and partially her throat."
-    new "她天赋极佳，努力将他的全部纳入口中，甚至部分吞入喉咙。"
+    new "她身材丰满，尽力将他的全部塞进嘴里，还有一部分塞进了喉咙。"
 
     old "And above her, the approving groans of the old man."
     new "而在他上方，传来那位老男人赞许的低吼声。"
@@ -298,7 +298,7 @@ translate zh strings:
     new "他重新穿上裤子，迅速离开了房间。"
 
     old "Sarah was left, fully in heat."
-    new "莎拉独自留在原地，浑身燥热难耐。"
+    new "莎拉被独自留下，正值发情期。"
 
     old "Nearly she stumbled after him, begging for her turn."
     new "她差点踉跄着追上去，乞求轮到她。"
@@ -835,7 +835,7 @@ translate zh strings:
     new "凭借最后一丝理智，她向前扑进他怀里，以免自己向后倒翻在桌上。"
 
     old "She held onto him for dear life as he continued to fuck her, driving the orgasm deeper."
-    new "她死死抱住他，任他继续挺弄，将高潮推得更深。"
+    new "她紧紧抱住他，仿佛为了保命一般，而他则继续与她交合，将高潮推向更深处。"
 
     old "Synapses, drowned in blissful white fire."
     new "神经突触，沉溺于极乐白火之中。"

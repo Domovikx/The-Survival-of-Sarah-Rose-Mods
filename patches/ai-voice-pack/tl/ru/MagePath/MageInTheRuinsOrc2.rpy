@@ -139,7 +139,7 @@ translate ru strings:
     new "Сара сомневалась, что это настоящая вода, учитывая её запах."
 
     old "Still, watching the goblin quench his thirst suddenly reminded Sarah of how dry her own mouth was."
-    new "Тем не менее, наблюдение за тем, как гоблин утолил жажду, внезапно напомнило Саре о том, насколько сухой была её собственная boca."
+    new "Тем не менее, наблюдая, как гоблин утоляет жажду, Сара вдруг вспомнила, насколько пересохло у неё во рту."
 
     old "How her stomach rumbled from the lack of food."
     new "Как у неё заурчало в животе от голода."

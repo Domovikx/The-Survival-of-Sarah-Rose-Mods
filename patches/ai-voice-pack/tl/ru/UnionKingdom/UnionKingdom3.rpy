@@ -160,7 +160,7 @@ translate ru strings:
     new "После смерти последнего короля Союза между его детьми началась жестокая война за престол, которая охватила всю территорию Союза."
 
     old "More than a few suspected the Mythran Empire of spreading the seeds for strife, but once the chaos had been unleashed, it could no longer be restrained."
-    new "Многие подозревали Митранскую империю в том, что она сеет семена раздора, но как только хаос был unleashed, его уже не удалось сдержать."
+    new "Немало кто подозревал, что Митранская империя сеет семена раздоров, но как только хаос был развязан, его уже не удалось сдержать."
 
     old "The Union fell into civil war."
     new "Союз погрузился в гражданскую войну."

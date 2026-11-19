@@ -640,7 +640,7 @@ translate ru strings:
     new "Ты должна хотя бы столько ему дать, понимаешь? Представься перед ним чистой."
 
     old "Reluctantly, Sarah nodded."
-    new "С Сара с неохотой кивнула."
+    new "С неохотой Сара кивнула."
 
     old "The truth was that she knew the woman was right."
     new "Правда была в том, что она знала: женщина права."

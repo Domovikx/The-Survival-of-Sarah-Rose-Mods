@@ -276197,9 +276197,10 @@ msgctxt "ui"
 msgid "Save"
 msgstr "저장"
 
+# changed
 msgctxt "ui"
 msgid "Q.Save"
-msgstr "저장"
+msgstr "Q.저장"
 
 msgctxt "ui"
 msgid "Q.Load"

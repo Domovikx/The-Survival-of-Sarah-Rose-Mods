@@ -985,7 +985,7 @@ translate es strings:
     new "¡Oh, Dioses!"
 
     old "Sarah could not repress her own cries."
-    new "Sarah no podía reprimir sus propios gritos. Su cuerpo se retorcía ante el tacto de Carolyn mientras esta introducía dos dedos en ella. Sarah soltó un grito ahogado, entregándose por completo a ese momento de liberación tan raro para ella."
+    new "Sarah no pudo reprimir sus propios llantos."
 
     old "You're going out into a dangerous place."
     new "Vas a salir a un lugar peligroso."

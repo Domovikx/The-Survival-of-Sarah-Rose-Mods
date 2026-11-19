@@ -691,7 +691,7 @@ translate es strings:
     new "Lo siento mucho. Sé cómo te sientes."
 
     old "Garret's face grew angry."
-    new "¡¿Sabes cómo me siento?! ¡¿Cómo podrías saber lo que es una pérdida así?!"
+    new "El rostro de Garret se enfureció."
 
     old "You know how I feel?! How could you possibly know what such loss is like?!"
     new "¡Sabes cómo me siento yo?! ¿Cómo podrías saber siquiera lo que es semejante pérdida?!"

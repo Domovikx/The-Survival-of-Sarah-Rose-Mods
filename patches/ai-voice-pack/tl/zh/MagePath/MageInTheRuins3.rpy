@@ -1369,7 +1369,7 @@ translate zh strings:
     new "突然，他动了起来。"
 
     old "He climbed up onto his knees, grabbing her waist and manipulating her body with this hands, he moved her about the bed."
-    new "他跪起身，抓住她的腰，用双手摆弄着她的身体，让她在床上变换姿势。"
+    new "他双膝跪地，抓住她的腰，用双手操控着她的身体，在床上来回移动。"
 
     old "As the covers fell off, Sarah saw him fully for the first time that day."
     new "随着被子滑落，莎拉第一次看清了他那天的模样。"
@@ -1504,7 +1504,7 @@ translate zh strings:
     new "她试图在贯穿身体的阵阵快感浪潮中开口说话。"
 
     old "Had he asked her something."
-    new "他刚才是在问她什么吗。"
+    new "如果他问她什么的话。"
 
     old "Gods, did I fuck you stupid already?"
     new "老天，我是不是已经把你操傻了？"
@@ -2701,7 +2701,7 @@ translate zh strings:
     new "听着，金发妞。在大海上，可没有什么公平或不公平的漂亮规矩。"
 
     old "It's life or don't."
-    new "要么接受现实，要么滚蛋。"
+    new "要么活，要么死。"
 
     old "Now you believe me that I got this bottle of a pirate?"
     new "现在你相信我这瓶海盗酒是真的了吧？"

@@ -424,7 +424,7 @@ translate zh strings:
     new "她的身体紧贴着他。"
 
     old "She reached down with both hands, cleaning up the old soldier's cock, and putting it back into his pants."
-    new "她双手向下，帮老兵擦干净了鸡巴，然后把它塞回裤子里。"
+    new "她伸出双手，为那位老士兵清理了他的阴茎，然后把它塞回他的裤子里。"
 
     old "Then, she leaned in and kissed him."
     new "随后，她凑上前吻了他。"

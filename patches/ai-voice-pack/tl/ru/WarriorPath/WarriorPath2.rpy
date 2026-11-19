@@ -559,7 +559,7 @@ translate ru strings:
     new "Ваэлен покачал головой."
 
     old "They're still barricaded up in the throne room, back in the royal quarters."
-    new "Они всё ещё barricaded там, в тронном зале, в королевских покоях."
+    new "Они всё ещё заперты в тронном зале, в королевских покоях."
 
     old "I came here to ask you to join me."
     new "Я пришёл сюда, чтобы попросить тебя присоединиться ко мне."

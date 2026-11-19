@@ -1861,7 +1861,7 @@ translate zh strings:
     new "莎拉转过头去，惊讶地认出了那个男人。"
 
     old "Gabriel, she recalled distantly."
-    new "加布里埃尔，她模糊地想起。"
+    new "加百列，她遥远地回忆道。"
 
     old "The knight that travelled with Hecate when they met in the ruins."
     new "那个和赫卡忒一起在废墟里相遇时同行的骑士。"

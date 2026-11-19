@@ -445,7 +445,7 @@ translate es strings:
     new "Su entorno se desvanece; solo queda el placer, que desplaza todos los demás sentidos y experiencias."
 
     old "Lady Carolyn is sitting on the edge of the bed, pouring more wax onto her, fueling the cycle of pain and pleasure."
-    new "Necesitaré hacerte bajar de nuevo, Sarah."
+    new "Lady Carolyn está sentada en el borde de la cama, vertiendo más cera sobre sí misma, alimentando el ciclo de dolor y placer."
 
     old "I'll need to bring you down again, Sarah."
     new "Tendré que bajarte de nuevo, Sarah."

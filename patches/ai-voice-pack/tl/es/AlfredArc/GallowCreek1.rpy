@@ -55,7 +55,7 @@ translate es strings:
     new "Mientras continuaba caminando, Sarah se dio cuenta de que no pocas personas en el campo la estaban observando."
 
     old "Gallow Creek was a tiny hovel from what Sigmund had told her."
-    new "Gallow Creek era una choza diminuta, según lo que Sigmund le había contado. Parecía un lugar seguro y lleno de gente amable, pero probablemente no estaban acostumbrados a recibir muchos visitantes."
+    new "Gallow Creek era una pequeña choza, según lo que Sigmund le había contado."
 
     old "Safe and full of good people from what he said, but they probably were not used to many visitors."
     new "Según lo que dijo, el lugar es seguro y está lleno de buena gente, pero probablemente no estén acostumbrados a muchos visitantes."

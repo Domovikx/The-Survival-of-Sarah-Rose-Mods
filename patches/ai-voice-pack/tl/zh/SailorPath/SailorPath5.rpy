@@ -1144,7 +1144,7 @@ translate zh strings:
     new "他在她体内射精时发出了一声低吼。"
 
     old "Sarah could feel the familiar feeling of his cum filling her up."
-    new "莎拉能感觉到他精液灌满她的熟悉感。"
+    new "莎拉能感受到他精液填满自己的熟悉感觉。"
 
     old "He had claimed her, same as he had done most every night. Marked his territory."
     new "他占有了她，就像大多数夜晚所做的那样。宣示了他的领地。"

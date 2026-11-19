@@ -472,7 +472,7 @@ translate ru strings:
     new "Мифраны на это и рассчитывают, ведь они знают: единый Союз был бы им не по силам."
 
     old "But divided, they will slowly carve us up and turn us into vassals."
-    new "Но раздробленные, мы позволим им медленно расчленить нас и превратить в вассалов."
+    new "Но, будучи разобщёнными, они будут медленно расчленять нас и превращать в вассалов."
 
     old "So what then? What options do we have? The Mythran Empire is the most powerful force in the known world."
     new "И что тогда? Какие у нас есть варианты? Митранская империя — самая могущественная сила в известном мире."

@@ -276172,9 +276172,10 @@ msgctxt "ui"
 msgid "Back"
 msgstr "Indietro"
 
+# changed
 msgctxt "ui"
 msgid "History"
-msgstr "Historia"
+msgstr "Cronologia"
 
 msgctxt "ui"
 msgid "Skip"
@@ -276192,9 +276193,10 @@ msgctxt "ui"
 msgid "Q.Save"
 msgstr "Q.Salva"
 
+# changed
 msgctxt "ui"
 msgid "Q.Load"
-msgstr "C.Carrega"
+msgstr "Q.Carica"
 
 msgctxt "ui"
 msgid "Prefs"

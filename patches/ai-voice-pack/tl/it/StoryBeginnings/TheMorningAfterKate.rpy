@@ -319,13 +319,13 @@ translate it strings:
     new "Ogni membro si inchinò, prima a Tomás e poi a Sarah, prima di prendere posto al tavolo."
 
     old "General Barion was the longest sitting member of the council. He had served in every conflict Rosanna had fought under King Orwell."
-    new "Barion era il membro più anziano del consiglio. Aveva partecipato a ogni conflitto che Розанна aveva combattuto sotto il regno di Orwell."
+    new "Il generale Barion era il membro del consiglio con il mandato più lungo. Aveva servito in ogni conflitto che Rosanna aveva combattuto sotto il re Orwell."
 
     old "He was an accomplished general, and most soldiers loved him for having fought side-by-side with them on the battlefield. Some generals in Rosanna's army had not so much as seen a battle."
     new "Era un generale abile, e la maggior parte dei soldati lo amava per aver combattuto al loro fianco sul campo di battaglia. Alcuni generali dell'esercito di Rosanna non avevano nemmeno mai visto una guerra."
 
     old "Spymaster Kravel had been on the council for a little over a decade. He had replaced the old spymaster who had plotted to sabotage king Orwell's peace negotiations with Rosanna's neighbor, Normandi."
-    new "Il maestro delle spie Kravel era nel consiglio da poco più di un decennio. Aveva sostituito il vecchio maestro delle spie che aveva complottato per sabotare i negoziati di pace del re Orwell con Normandi, il vicino di Розанна."
+    new "Il capo degli spie Kravel era nel consiglio da poco più di un decennio. Aveva sostituito il vecchio capo degli spie, che aveva complottato per sabotare i negoziati di pace del re Orwell con Normandi, il vicino di Rosanna."
 
     old "Kravel had informed King Orwell of the plot, and for his loyalty and talents, received his promotion."
     new "Kravel aveva informato il re Orwell del complotto e, per la sua lealtà e i suoi talenti, aveva ricevuto la promozione."
@@ -337,7 +337,7 @@ translate it strings:
     new "Gli spymaster erano difficili da fidarsi, data la natura del loro lavoro, ma per quanto possibile, Kravel si era dimostrato affidabile e leale. Era il meglio che ci si potesse aspettare da uno spymaster."
 
     old "Lastly was Lady Carolyn. As master of the royal accounts, she oversaw the economy of Rosanna."
-    new "Infine c'era Lady Carolyn. In qualità di maestra dei conti reali, supervisionava l'economia di Розанна."
+    new "Infine c'era Lady Carolyn. In qualità di responsabile dei conti reali, supervisionava l'economia di Rosanna."
 
     old "Managing everything from the tax laws to the foreign trade agreements, it was a position as important as any other on the council."
     new "Gestendo tutto, dalle leggi fiscali agli accordi commerciali internazionali, era una posizione importante quanto qualsiasi altra nel consiglio."

@@ -994,7 +994,7 @@ translate zh strings:
     new "莎拉咬紧牙关，强迫自己转过身去。"
 
     old "The quicker she did, the quicker he'd finish."
-    new "她动作越快，他射得就越快。"
+    new "她越快，他就能越快完成。"
 
     old "Just as she turned to face him again, she saw him hunch over, groaning."
     new "就在她再次转身面向他时，她看见他弯下腰，发出呻吟。"

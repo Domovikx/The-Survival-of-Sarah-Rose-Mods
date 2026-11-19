@@ -178,7 +178,7 @@ translate es strings:
     new "Quiero decir, los burdeles los puedo entender, ¿pero de verdad tienes que traerlos hasta casa?"
 
     old "Sarah saw Jaied become flustered."
-    new "¡No! ¡Eso no es lo que está pasando en absoluto!"
+    new "Sarah vio que Jaied se ponía nervioso."
 
     old "No! That's not what this is at all!"
     new "¡No! ¡Para nada es eso!"

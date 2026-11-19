@@ -649,7 +649,7 @@ translate zh strings:
     new "从白天一直到深夜，他们在情欲与休憩之间反复切换。"
 
     old "Bend over, on her knees, on top of him, beneath him."
-    new "弯下腰，跪着，骑在他身上，或者在他下面。"
+    new "弯腰，跪下，骑在他身上，在他下面。"
 
     old "Every fantasy he ever had of her, he'd inflict."
     new "他曾经对她有过的每一个幻想，他都要一一实现。"

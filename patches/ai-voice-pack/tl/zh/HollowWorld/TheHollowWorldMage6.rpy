@@ -955,7 +955,7 @@ translate zh strings:
     new "莎拉厌倦了只是站在一旁，开始走了过去。"
 
     old "Taking off her clothes as she neared, Sarah joined Samayra in the mist of Razaphel's body."
-    new "莎拉走近时脱下衣服，加入了萨玛拉和拉扎费尔被雾气笼罩的身体之中。"
+    new "随着她逐渐靠近，莎拉脱下衣物，与萨马伊拉一同融入了拉扎菲尔身体的迷雾之中。"
 
     old "Sarah placed her hands on Samayra's shoulders and pulled her in closer."
     new "莎拉将双手搭在萨玛拉的肩膀上，将她拉近。"

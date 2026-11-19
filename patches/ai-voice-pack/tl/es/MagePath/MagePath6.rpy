@@ -217,7 +217,7 @@ translate es strings:
     new "No, a esos los mataron."
 
     old "Sarah wasn't sure if Xan was joking or not."
-    new "Sarah no estaba segura de si Xan bromeaba o no. Entre ellos flotaba un silencio, pero a ninguno de los dos parecía importarle mucho."
+    new "Sarah no estaba segura de si Xan estaba bromeando o no."
 
     old "A silence lingered between the pair, but neither seemed to mind it much."
     new "Un silencio persistía entre los dos, pero ninguno parecía importarle demasiado."

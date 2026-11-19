@@ -1075,7 +1075,7 @@ translate es strings:
     new "Vuelve a casa"
 
     old "Sarah had heard and seen enough."
-    new "Sarah ya había oído y visto bastante. No necesitaba más de aquel tipo asqueroso."
+    new "Sarah ya había oído y visto suficiente."
 
     old "She'd had enough of this creep and didn't need much more of him."
     new "Ya había tenido suficiente de este tipo y no necesitaba mucho más de él."
