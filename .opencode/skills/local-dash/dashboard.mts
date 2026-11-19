@@ -48,7 +48,7 @@ const LANGS = ((): string[] => {
  * работает со старым JS и выводит «undefined» для новых полей (2026-11-16).
  * Поднимать при ЛЮБОМ изменении набора полей.
  */
-const API_VER = 30;
+const API_VER = 37;
 
 /** Прошлые значения CPU/RAM для дельты. */
 const prevCpu = cpus().map((c) => c.times);
@@ -180,6 +180,10 @@ const poStats = (lang: string): PoStat | null => {
         const fresh = refreshPo(lang);
         if (fresh) {
           poCache.set(lang, { at: Date.now(), ...fresh });
+          if (lang === currentLang) {
+            progressHistory.push({ t: new Date().toISOString(), v: fresh.filled });
+            while (progressHistory.length > 400) progressHistory.shift();
+          }
           noteProgress(lang, prev, fresh);
         }
       } finally {
@@ -460,18 +464,13 @@ const processRam = (): { llamaMB: number; nodeMB: number; nodeCount: number } =>
 };
 
 /**
- * История скорости текущего языка (для графика в пульте): точка раз в ~20 с,
- * последний час. Иначе видно только мгновенную цифру и непонятно, падает ли
- * скорость или это разовая просадка.
+ * История ПРОГРЕССА текущего языка: (время, сколько строк переведено). Клиент
+ * режет её на интервалы и показывает «сколько строк за 2 минуты» — это объём
+ * работы, а не мгновенная скорость, которая скачет от батчей записи po
+ * (2026-11-19). Сбрасывается при смене языка: чужие строки в графике — враньё.
  */
-const speedHistory: Array<{ t: string; v: number }> = [];
-const pushSpeed = (lang: string, rate: number): void => {
-  const last = speedHistory.at(-1);
-  if (last && Date.now() - Date.parse(last.t) < 20_000) return;
-  speedHistory.push({ t: new Date().toISOString(), v: rate });
-  while (speedHistory.length > 180) speedHistory.shift();
-  void lang;
-};
+const progressHistory: Array<{ t: string; v: number }> = [];
+let progressLang = "";
 /**
  * Последняя посчитанная скорость. Без кэша число живёт ОДИН запрос (тот, что
  * перешагнул окно 30 с), а остальные 14 из 15 опросов снова показывали «…» —
@@ -493,7 +492,6 @@ function noteProgress(lang: string, prev: (PoStat & { at: number }) | undefined,
   if (fresh.filled < prev.filled) return; // перезапись/сброс — не считаем прогрессом
   const perMin = ((fresh.filled - prev.filled) / dt) * 60_000;
   rateCache = { lang, perMin: Math.max(0, perMin), at: Date.now() };
-  pushSpeed(lang, Math.max(0, Math.round(perMin)));
 }
 
 type VoiceLang = { lang: string; done: number; plan: number; arcsDone: number; arcsTotal: number; bytes: number };
@@ -603,6 +601,11 @@ const state = async (): Promise<Record<string, unknown>> => {
   // считались по цифре, обновляемой раз в две минуты (пульт показывал
   // «0 стр/мин» и «осталось —» при живом прогоне, 2026-11-19).
   currentLang = current;
+  // Смена языка: история прогресса прошлого языка в графике — мусор.
+  if (current !== progressLang) {
+    progressHistory.length = 0;
+    progressLang = current;
+  }
 
   const live = current ? poStats(current) : null;
   // Скорость обновляет noteProgress (при перечитывании po), здесь только
@@ -636,7 +639,7 @@ const state = async (): Promise<Record<string, unknown>> => {
     voiceRun: voiceRun(),
     tail: current ? logTail(current, 8) : [],
     np: npHistory(),
-    speedHistory: current ? speedHistory.slice(-120) : [],
+    progress: current ? progressHistory.slice(-300) : [],
     files: { logs: existsSync("tmp") ? readdirSync("tmp").filter((f) => f.endsWith(".run.log")).length : 0 },
   };
 };
@@ -688,7 +691,13 @@ const PAGE = `<!doctype html>
   /* Каждый график здоровья — своя карточка (c3): на общем полотне они
      сжимались, а сравнить «в какой момент что было» удобнее по одной шкале
      в отдельной рамке (владелец 2026-11-19). */
-  #h1, #h2, #h3, #npchart { min-width:0; }
+  /* Пять равных карточек в ряд: здоровье (3) + слоты + скорость. Сетка 12
+     колонок на 5 не делится, поэтому у ряда своя раскладка. */
+  .row5 { grid-column:1 / -1; display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:10px; }
+  @media (max-width:1700px) { .row5 { grid-template-columns:repeat(3,minmax(0,1fr)); } }
+  @media (max-width:1150px) { .row5 { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+  @media (max-width:760px) { .row5 { grid-template-columns:1fr; } }
+  #h1, #h2, #h3, #npchart, #speed { min-width:0; }
   .sp { min-width:0; overflow:hidden; }
   /* Ось времени: метки позиционируются по проценту ширины, чтобы совпадать
      с вертикальными засечками в SVG. */
@@ -709,14 +718,17 @@ const PAGE = `<!doctype html>
   <div class="card c5"><h2>Очередь</h2><div id="queue"><span class="muted">загрузка…</span></div></div>
   <div class="card c3"><h2>Бэкенд перевода</h2><div id="tr"><span class="muted">загрузка…</span></div></div>
   <div class="card c4"><h2>GPU / CPU / RAM</h2><div id="sys"><span class="muted">загрузка…</span></div></div>
-  <div class="card c3"><h2>GPU мощность</h2><div id="h1"><span class="muted">загрузка…</span></div></div>
-  <div class="card c3"><h2>GPU температура</h2><div id="h2"><span class="muted">загрузка…</span></div></div>
-  <div class="card c3"><h2>RAM занято</h2><div id="h3"><span class="muted">загрузка…</span></div></div>
-  <div class="card c3"><h2>Слоты llama (-np)</h2>
-    <div id="npchart"><span class="muted">загрузка…</span></div>
-    <div class="hint muted" style="margin:4px 0 0">4 — за ПК · 8 — простой &gt; 15 мин</div>
+  <div class="row5">
+    <div class="card"><h2>GPU мощность</h2><div id="h1"><span class="muted">загрузка…</span></div></div>
+    <div class="card"><h2>GPU температура</h2><div id="h2"><span class="muted">загрузка…</span></div></div>
+    <div class="card"><h2>RAM занято</h2><div id="h3"><span class="muted">загрузка…</span></div></div>
+    <div class="card"><h2>Слоты llama (-np)</h2>
+      <div id="npchart"><span class="muted">загрузка…</span></div>
+      <div class="hint muted" style="margin:4px 0 0">4 — за ПК · 8 — простой &gt; 15 мин</div>
+    </div>
+    <div class="card"><h2>Скорость перевода</h2><div id="speed"><span class="muted">загрузка…</span></div></div>
+    <div id="htime" class="hint muted" style="grid-column:1 / -1; margin:-4px 2px 0"></div>
   </div>
-  <div id="htime" class="hint muted" style="grid-column:1 / -1; margin:-4px 2px 0"></div>
   <div class="card c8"><h2>Языки: текст и озвучка</h2>
     <div id="vrun" class="hint muted"></div>
     <div class="hint muted">кольца: <b>перевод</b> — от всего POT · <b>озвучка</b> — от уже переведённого (навести — точные числа)</div>
@@ -758,6 +770,27 @@ const hms = (v) => {
 //   - значение на правом краю + подписи времени под графиком;
 //   - засечки оси времени: без них подпись окна не отвечает, в КАКОЙ момент был
 //     скачок температуры или просадка скорости (владелец 2026-11-18).
+// Ось времени общая для ВСЕХ графиков: одинаковый шаг и одинаковые подписи.
+// Иначе «здоровье» и «скорость» рядом читаются как разные времена (2026-11-19).
+const timeTicks = (t0, t1) => {
+  const spanMin = (t1 - t0) / 60000;
+  const tickMin = [1, 2, 5, 10, 15, 30, 60, 120, 180, 360, 720].find((m) => spanMin / m <= 5) || 1440;
+  const stepMs = tickMin * 60000;
+  const zoneMs = new Date(t0).getTimezoneOffset() * 60000;
+  const out = [];
+  for (let t = Math.ceil((t0 - zoneMs) / stepMs) * stepMs + zoneMs; t <= t1; t += stepMs) out.push(t);
+  return out;
+};
+const tickGrid = (ticks, X, h) => ticks.map((t) =>
+  '<line x1="' + X(t).toFixed(1) + '" y1="0" x2="' + X(t).toFixed(1) + '" y2="' + h +
+  '" stroke="#2b3440" stroke-width="1" stroke-dasharray="2 4" vector-effect="non-scaling-stroke"/>').join('');
+const tickAxis = (ticks, t0, t1) => ticks.length
+  ? '<div class="axis">' + ticks.map((t) => {
+    const p = ((t - t0) / Math.max(1, t1 - t0)) * 100;
+    const anchor = p < 8 ? 'translateX(0)' : p > 92 ? 'translateX(-100%)' : 'translateX(-50%)';
+    return '<span style="left:' + p.toFixed(1) + '%;transform:' + anchor + '">' + hm(t) + '</span>';
+  }).join('') + '</div>'
+  : '';
 const spark = (points, color, label, unit, threshold, events, lastSuffix, mode) => {
   if (!points.length) return '';
   const w = 1000, h = 56, pad = 4;
@@ -821,24 +854,9 @@ const spark = (points, color, label, unit, threshold, events, lastSuffix, mode) 
       '" y2="' + h + '" stroke="' + col + '" stroke-width="1" stroke-dasharray="2 3" vector-effect="non-scaling-stroke"/>';
   }).join('');
   const last = points[points.length - 1];
-  // Засечки оси времени: шаг — круглые минуты, не больше 5 меток на график.
-  // Выравнивание по местному времени (иначе при смещении зоны метки «плывут»).
-  const spanMin = (t1 - t0) / 60000;
-  const tickMin = [1, 2, 5, 10, 15, 30, 60, 120, 180, 360, 720].find((m) => spanMin / m <= 5) || 1440;
-  const stepMs = tickMin * 60000;
-  const zoneMs = new Date(t0).getTimezoneOffset() * 60000;
-  const ticks = [];
-  for (let t = Math.ceil((t0 - zoneMs) / stepMs) * stepMs + zoneMs; t <= t1; t += stepMs) ticks.push(t);
-  const grid = ticks.map((t) =>
-    '<line x1="' + X(t).toFixed(1) + '" y1="0" x2="' + X(t).toFixed(1) + '" y2="' + h +
-    '" stroke="#2b3440" stroke-width="1" stroke-dasharray="2 4" vector-effect="non-scaling-stroke"/>').join('');
-  const axis = ticks.length
-    ? '<div class="axis">' + ticks.map((t) => {
-      const p = ((t - t0) / Math.max(1, t1 - t0)) * 100;
-      const anchor = p < 8 ? 'translateX(0)' : p > 92 ? 'translateX(-100%)' : 'translateX(-50%)';
-      return '<span style="left:' + p.toFixed(1) + '%;transform:' + anchor + '">' + hm(t) + '</span>';
-    }).join('') + '</div>'
-    : '';
+  const ticks = timeTicks(t0, t1);
+  const grid = tickGrid(ticks, X, h);
+  const axis = tickAxis(ticks, t0, t1);
   return '<div class="sp"><svg viewBox="0 0 ' + w + ' ' + h + '" preserveAspectRatio="none" style="width:100%;height:56px;display:block">' +
     grid + thrLine + evLines + lines + '</svg>' + axis +
     '<div class="muted" style="font-size:11px;display:flex;justify-content:space-between;gap:8px">' +
@@ -846,6 +864,69 @@ const spark = (points, color, label, unit, threshold, events, lastSuffix, mode) 
     '</b> <span class="muted">' + hm(last.t) + '</span></span>' +
     '<span class="lbl">' + lo0.toFixed(0) + '…' + hi0.toFixed(0) + ' ' + unit +
     (threshold !== undefined ? ' · порог ' + threshold : '') + '</span></div></div>';
+};
+
+/**
+ * Скорость перевода: СКОЛЬКО СТРОК переведено за интервал. Столбик — строки за
+ * 2 минуты, линия поверх — скользящее среднее по трём столбикам (отдельные
+ * замеры «пилят», средняя показывает тренд). Окно — час, как у графиков
+ * здоровья: оси совпадают, и просадка видна на обеих картинках в одном месте.
+ * Шаг 2 мин выбран по картинке: на часе это 30 столбиков — не «пила» и не
+ * «кирпич»; замеров внутри столбика ~8 (кэш po обновляется раз в 15 с).
+ */
+const bars = (points, color, rate) => {
+  if (!points || points.length < 2) return '<div class="muted" style="font-size:12px">нет данных — очередь не идёт</div>';
+  const w = 1000, h = 64, pad = 3;
+  const t1 = Date.parse(points[points.length - 1].t);
+  // Окно — не больше часа и не шире того, что реально накоплено: иначе первые
+  // полчаса после старта пульта график пустой справа и врёт «за час».
+  const first = Date.parse(points[0].t);
+  let t0 = Math.max(first, t1 - 60 * 60_000);
+  // Минимум 10 минут окна: на двух минутах столбики получаются по пол-экрана и
+  // график выглядит сплошным блоком (сразу после старта пульта).
+  if (t1 - t0 < 10 * 60_000) t0 = t1 - 10 * 60_000;
+  const spanMin = Math.max(1, (t1 - t0) / 60_000);
+  // Шаг столбика — чтобы их было 10-20: час → 5 мин, десять минут → минута.
+  const bucketMin = [1, 2, 5, 10].find((m) => spanMin / m <= 20) || 10;
+  const BUCKET = bucketMin * 60_000;
+  const n = Math.max(1, Math.round((t1 - t0) / BUCKET));
+  const vals = [];
+  for (let i = 0; i < n; i++) vals.push(0);
+  for (let i = 1; i < points.length; i++) {
+    const t = Date.parse(points[i].t);
+    if (t < t0) continue;
+    const d = points[i].v - points[i - 1].v;
+    if (d <= 0) continue;
+    const b = Math.min(n - 1, Math.floor((t - t0) / BUCKET));
+    vals[b] += d;
+  }
+  const peak = Math.max(1, Math.max.apply(null, vals));
+  const X = (t) => ((t - t0) / (t1 - t0)) * w;
+  const Y = (v) => h - pad - (v / peak) * (h - 2 * pad);
+  const bw = w / n;
+  const rects = vals.map((v, i) => v > 0
+    ? '<rect x="' + (i * bw + 0.5).toFixed(1) + '" y="' + Y(v).toFixed(1) + '" width="' + Math.max(1, bw - 1.2).toFixed(1) +
+      '" height="' + (h - pad - Y(v)).toFixed(1) + '" fill="' + color + '" opacity="0.4"/>'
+    : '').join('');
+  const avg = vals.map((_, i) => {
+    const win = [vals[i - 1], vals[i], vals[i + 1]].filter((x) => x !== undefined);
+    return win.reduce((a, b) => a + b, 0) / win.length;
+  });
+  const line = '<polyline fill="none" stroke="' + color + '" stroke-width="1.6" vector-effect="non-scaling-stroke" points="' +
+    avg.map((v, i) => ((i + 0.5) * bw).toFixed(1) + ',' + Y(v).toFixed(1)).join(' ') + '" />';
+  const ticks = timeTicks(t0, t1);
+  const grid = tickGrid(ticks, X, h);
+  const axis = tickAxis(ticks, t0, t1);
+  const total = vals.reduce((a, b) => a + b, 0);
+  const perMin = Math.round(total / spanMin);
+  // Подпись на две коротких части: карточка узкая (c5-ряд), длинный текст
+  // налезал сам на себя (2026-11-19).
+  return '<div class="sp"><svg viewBox="0 0 ' + w + ' ' + h + '" preserveAspectRatio="none" style="width:100%;height:56px;display:block">' +
+    grid + rects + line + '</svg>' + axis +
+    '<div class="muted" style="font-size:11px;display:flex;justify-content:space-between;gap:8px">' +
+    '<span class="lbl"><b style="color:#e6edf3">' + (rate === null ? '…' : rate) + '</b> стр/мин</span>' +
+    '<span class="lbl" title="столбик ' + bucketMin + ' мин · в среднем ' + perMin + '/мин · пик ' + peak +
+    ' за ' + bucketMin + ' мин · ' + hm(t1) + '">' + num(total) + ' строк / ' + Math.round(spanMin) + ' мин</span></div></div>';
 };
 async function tick() {
   let s;
@@ -974,12 +1055,11 @@ async function tick() {
           '<div class="row"><span>скорость</span><span class="v">' + (s.live.rate === null ? '…' : s.live.rate + ' стр/мин') + '</span></div>' +
           '<div class="row"><span>осталось</span><span class="v">' + etaTxt + '</span></div>'
         : '') +
-      '<div class="row"><span>пасс стартовал</span><span class="muted">' + hms(q.at) + '</span></div>' +
-      // График скорости: видно, падает темп или это разовая просадка.
-      (s.speedHistory && s.speedHistory.length > 1
-        ? spark(s.speedHistory, '#4c8bd6', 'скорость', 'стр/мин', undefined, [])
-        : '')
+      '<div class="row"><span>пасс стартовал</span><span class="muted">' + hms(q.at) + '</span></div>'
     : '<div class="muted">очередь не запущена</div>';
+  // Скорость — отдельной карточкой: там объём по интервалам, а не мгновенная
+  // цифра. В карточке очереди график только отнимал место (2026-11-19).
+  $('speed').innerHTML = bars(s.progress || [], '#4c8bd6', s.live ? s.live.rate : null);
   $('tail').textContent = (s.tail || []).join('\\n') || '—';
   const vr = s.voiceRun;
   $('vrun').innerHTML = vr && vr.running
@@ -1074,6 +1154,19 @@ export const start = (): void => {
     }
   })();
   void computeVoice();
+  // Ряд прогресса (график «Скорость перевода») наполняем по ТАЙМЕРУ: если
+  // опираться на запросы страницы, ряд рвётся, когда пульт закрыт, и точки
+  // идут неровно (2026-11-19). Язык берём из состояния очереди, а не из
+  // последнего запроса — иначе без открытой вкладки таймер ничего не делает.
+  const sampleTick = (): void => {
+    if (!currentLang) {
+      const q = queueState();
+      currentLang = typeof q?.lang === "string" ? (q.lang as string) : "";
+    }
+    if (currentLang) poStats(currentLang);
+  };
+  sampleTick();
+  setInterval(sampleTick, 15_000).unref();
   createServer((req, res) => {
     if (req.url?.startsWith("/api/state")) {
       void state().then((s) => {
