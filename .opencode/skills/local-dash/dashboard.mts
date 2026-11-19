@@ -48,7 +48,7 @@ const LANGS = ((): string[] => {
  * работает со старым JS и выводит «undefined» для новых полей (2026-11-16).
  * Поднимать при ЛЮБОМ изменении набора полей.
  */
-const API_VER = 29;
+const API_VER = 30;
 
 /** Прошлые значения CPU/RAM для дельты. */
 const prevCpu = cpus().map((c) => c.times);
@@ -685,19 +685,16 @@ const PAGE = `<!doctype html>
   .ling > span:last-child { min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
   .ring { display:block; }
   .hint { font-size:11px; margin:2px 0 10px; }
-  /* Ровно три равные колонки: auto-fit при широком окне давал колонки разной
-     ширины, и правые подписи упирались в край (владелец 2026-11-17).
-     Слоты -np вынесены в отдельную карточку справа (владелец 2026-11-19). */
-  #hchart { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:6px 18px; }
-  @media (max-width:1500px) { #hchart { grid-template-columns:repeat(2,minmax(0,1fr)); } }
-  @media (max-width:1200px) { #hchart { grid-template-columns:1fr; } }
-  #npchart { min-width:0; }
-  #hchart > .sp { min-width:0; overflow:hidden; }
+  /* Каждый график здоровья — своя карточка (c3): на общем полотне они
+     сжимались, а сравнить «в какой момент что было» удобнее по одной шкале
+     в отдельной рамке (владелец 2026-11-19). */
+  #h1, #h2, #h3, #npchart { min-width:0; }
+  .sp { min-width:0; overflow:hidden; }
   /* Ось времени: метки позиционируются по проценту ширины, чтобы совпадать
      с вертикальными засечками в SVG. */
   .axis { position:relative; height:13px; margin:1px 0 2px; }
   .axis span { position:absolute; top:0; font-size:10px; color:var(--muted); white-space:nowrap; }
-  #hchart .lbl { white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .sp .lbl { white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
   .stats { margin-top:12px; font-size:12px; }
   /* Полоса состояния: проблемы первыми, всё хорошо — одна зелёная строка. */
   .alerts { margin:0 0 10px; font-size:13px; }
@@ -712,15 +709,14 @@ const PAGE = `<!doctype html>
   <div class="card c5"><h2>Очередь</h2><div id="queue"><span class="muted">загрузка…</span></div></div>
   <div class="card c3"><h2>Бэкенд перевода</h2><div id="tr"><span class="muted">загрузка…</span></div></div>
   <div class="card c4"><h2>GPU / CPU / RAM</h2><div id="sys"><span class="muted">загрузка…</span></div></div>
-  <div class="card c9"><h2>Здоровье ПК <span class="muted" id="hnote"></span></h2>
-    <div id="hnow"></div>
-    <div id="hchart"></div>
-    <div id="htime" class="muted" style="font-size:11px;margin-top:6px"></div>
-  </div>
+  <div class="card c3"><h2>GPU мощность</h2><div id="h1"><span class="muted">загрузка…</span></div></div>
+  <div class="card c3"><h2>GPU температура</h2><div id="h2"><span class="muted">загрузка…</span></div></div>
+  <div class="card c3"><h2>RAM занято</h2><div id="h3"><span class="muted">загрузка…</span></div></div>
   <div class="card c3"><h2>Слоты llama (-np)</h2>
-    <div id="npchart"></div>
+    <div id="npchart"><span class="muted">загрузка…</span></div>
     <div class="hint muted" style="margin:4px 0 0">4 — за ПК · 8 — простой &gt; 15 мин</div>
   </div>
+  <div id="htime" class="hint muted" style="grid-column:1 / -1; margin:-4px 2px 0"></div>
   <div class="card c8"><h2>Языки: текст и озвучка</h2>
     <div id="vrun" class="hint muted"></div>
     <div class="hint muted">кольца: <b>перевод</b> — от всего POT · <b>озвучка</b> — от уже переведённого (навести — точные числа)</div>
@@ -919,17 +915,6 @@ async function tick() {
   const winFrom = smp.length ? Date.parse(smp[0].t) : 0;
   const guardInWin = ev.filter((e) => e.kind === 'guard' && Date.parse(e.t) >= winFrom);
   const lastGuard = guardInWin.length ? guardInWin[guardInWin.length - 1] : null;
-  $('hnote').textContent = smp.length
-    ? '· ' + smp.length + ' замеров · в этом окне страж останавливал: ' + guardInWin.length +
-      (lastGuard && lastGuard.note ? ' (' + lastGuard.note.replace(/_/g, ' ').toLowerCase() + ')' : '') +
-      ' · всего за лог: ' + hl.stops
-    : '· данных нет (страж не запущен)';
-  $('hnow').innerHTML = lastS
-    ? '<div class="muted" style="font-size:12px"><b style="color:#e6edf3">сейчас</b> · GPU ' + lastS.gpuTemp + ' °C · ' +
-      Math.round(lastS.gpuPower) + ' Вт · ' + lastS.gpuUtil + '% · RAM занято ' + (100 - lastS.ramFreePct) +
-      ' % (' + (s.system.memTotal / 1024 - lastS.ramFreeGb).toFixed(1) + ' из ' + (s.system.memTotal / 1024).toFixed(1) +
-      ' ГБ)</div>'
-    : '';
   // Точки с временем: график строит ось по timestamp, а не по индексу.
   const pts = (key) => smp.map((x) => ({ t: x.t, v: x[key] }));
   // Слоты -np приводятся к окну здоровья: иначе соседние графики жили в разных
@@ -951,23 +936,28 @@ async function tick() {
     }
     return out;
   })();
-  $('hchart').innerHTML = smp.length
-    ? spark(pts('gpuPower'), '#d29922', 'GPU мощность', 'Вт', 300, ev) +
-      spark(pts('gpuTemp'), '#f85149', 'GPU температура', '°C', 85, ev) +
-      spark(smp.map((x) => ({ t: x.t, v: 100 - x.ramFreePct })), '#3fb950', 'RAM занято', '%', 96, ev,
+  // Каждый график — в своей карточке; в подписи значения — «сейчас» и время.
+  const noData = '<div class="muted" style="font-size:12px">данных нет</div>';
+  $('h1').innerHTML = smp.length ? spark(pts('gpuPower'), '#d29922', 'сейчас', 'Вт', 300, ev) : noData;
+  $('h2').innerHTML = smp.length ? spark(pts('gpuTemp'), '#f85149', 'сейчас', '°C', 85, ev) : noData;
+  $('h3').innerHTML = smp.length
+    ? spark(smp.map((x) => ({ t: x.t, v: 100 - x.ramFreePct })), '#3fb950', 'сейчас', '%', 96, ev,
         ' (' + (s.system.memTotal / 1024 - (lastS.ramFreeGb ?? 0)).toFixed(1) + ' ГБ)')
-    : '';
-  // Слоты -np — отдельная карточка: режим меняется редко, следить за ним
-  // удобнее рядом, а не четвёртым графиком в полосе здоровья (2026-11-19).
+    : noData;
+  // Слоты -np — четвёртая карточка: режим меняется редко, в общей полосе он
+  // только мешал (2026-11-19).
   $('npchart').innerHTML = npPts.length
     ? spark(npPts, '#4c8bd6', 'сейчас', 'шт', undefined, [], '', 'step')
     : '<div class="muted" style="font-size:12px">истории нет — сторож слотов не запущен</div>';
-  // Одна общая подпись окна и легенда меток: три одинаковых «08:40 → 09:51»
-  // под каждым графиком были шумом (владелец 2026-11-17).
+  // Одна общая подпись окна и легенда меток на всю строку: повторять «08:40 →
+  // 09:51» под каждым графиком — шум (владелец 2026-11-17).
   $('htime').textContent = smp.length
-    ? 'окно ' + hm(smp[0].t) + ' → ' + hm(smp[smp.length - 1].t) +
-      ' (местное время) · пунктир — порог · серая риска — старт бэкенда · красная — остановка стражем · разрыв линии — замеров не было (страж стоял)'
-    : '';
+    ? 'окно ' + hm(smp[0].t) + ' → ' + hm(smp[smp.length - 1].t) + ' (местное время) · ' +
+      smp.length + ' замеров · страж в окне: ' + guardInWin.length +
+      (lastGuard && lastGuard.note ? ' (' + lastGuard.note.replace(/_/g, ' ').toLowerCase() + ')' : '') +
+      ' · всего за лог: ' + hl.stops +
+      ' · пунктир — порог · серая риска — старт бэкенда · красная — остановка стражем · разрыв линии — замеров не было'
+    : 'данных нет (страж не запущен)';
   const q = s.queue;
   const lp = s.live ? pct(s.live.filled, s.live.total) : null;
   const etaAbs = s.live && s.live.etaMin ? new Date(Date.now() + s.live.etaMin * 60_000) : null;
