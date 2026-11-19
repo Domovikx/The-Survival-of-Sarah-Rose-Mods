@@ -98,7 +98,7 @@ export const syncDocumentMeta = (): void => {
     description.setAttribute(
       "content",
       tPhrase(
-        "Unofficial fan patch: demo AI voice acting in 11 languages plus translations into 11 (Russian complete; the others cover the intro up to the first choice). Free, 18+.",
+        "Unofficial fan patch: full text translation into 10 languages plus demo AI voice acting in 11 languages. Free, 18+.",
       ),
     );
 };

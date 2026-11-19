@@ -8,7 +8,7 @@ const CARDS = [
   {
     icon: "🌐",
     titleKey: "Translation",
-    textKey: "Russian — the whole story. Other languages — the opening (demo scope).",
+    textKey: "Text: all 10 languages complete (69 120 lines each). Voice: demo in 11 languages.",
     key: "translate",
   },
   {

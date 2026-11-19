@@ -20,10 +20,10 @@ export const Hero = () => {
       </p>
       <div className={cx(styles.badges)} data-testid={`${ROOT}--badges`}>
         <span className={cx(styles.badge)} data-testid={`${ROOT}--badge-translate`}>
-          {t("11 languages — RU complete, others demo up to the first choice")}
+          {t("10 languages — full text; demo voice in 11")}
         </span>
         <span className={cx(styles.badge)} data-testid={`${ROOT}--badge-voice`}>
-          {t("Voice acting: demo 100% in 11 languages — 1 195 lines each (RU: 1 397)")}
+          {t("Voice acting: demo in 11 languages — 1 171–1 399 lines per language")}
         </span>
         <span className={cx(styles.badge)} data-testid={`${ROOT}--badge-format`}>
           {t("Opus 24 kbps — 15–21 MB per language (demo)")}

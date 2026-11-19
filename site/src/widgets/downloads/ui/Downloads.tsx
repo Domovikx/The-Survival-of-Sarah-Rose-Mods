@@ -8,7 +8,7 @@ import { styles } from "./Downloads.styles";
 
 /** Постоянный канал прямых ссылок: ассеты версии в GitHub-релизе.
  *  Обновляется вместе с релизом (тег = версия пакета). */
-const RELEASE_BASE = "https://github.com/Domovikx/The-Survival-of-Sarah-Rose-Mods/releases/download/v2026.11.15-0008";
+const RELEASE_BASE = "https://github.com/Domovikx/The-Survival-of-Sarah-Rose-Mods/releases/download/v2026.11.19-2237";
 
 const asset = (name: string): string => `${RELEASE_BASE}/TSSR-AI-Voice-Pack-${name}.7z`;
 
@@ -79,7 +79,7 @@ export const Downloads = () => {
           >
             {isPending("main") ? t("Downloading…") : t("Download core (main.7z)")}
           </a>
-          <span className={cx(styles.hint)}>{t("required — texts of 11 languages, fonts, mod menu")}</span>
+          <span className={cx(styles.hint)}>{t("required — texts of 10 languages, fonts, mod menu")}</span>
         </div>
 
         <p className={cx(styles.status)} role="status" aria-live="polite" data-testid={`${ROOT}--status`}>
