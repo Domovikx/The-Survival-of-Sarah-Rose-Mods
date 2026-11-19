@@ -103,8 +103,21 @@ an option of this engine)`** → флаг есть в `strata launch --help` и 
     перевода**; лечится `translate_ctl.mts start` (поднимает Strata и
     переводчик), прогресс не теряется.
 
-17. **Связка языков (`translate_chain.mts`)** живёт как отдельный процесс и
-    **не** переживает `translate_ctl.mts stop` осознанно: `stop` останавливает
-    Strata, связка видит «переводчика нет» и перезапускает его (в этом её
-    работа). Полная остановка: сначала `translate_chain.mts stop` (маркер
-    `chain.stop`), потом `translate_ctl.mts stop`. Проверено 2026-11-15.
+17. **`translate_ctl start` поднимает Strata и запускает `translate_run` без
+    env-оверрайда → перевод идёт общей моделью, а не переводческой.** Проверено
+    2026-11-15/17: `zh` на 94 % переведена Qwen3.6-35B из Strata, потому что
+    запуск шёл через пульт. Модель перевода закреплена в коде
+    (`translate/translate_backend.mts`: Index-Translate-9B, `:1234`), а очередь
+    `translate_queue.mts` поднимает свой headless `llama-server` (:8081) и
+    передаёт адрес/модель через env. Что делать: перевод запускать ТОЛЬКО
+    очередью (`translate/translate-start.cmd` или `translate_queue.mts`); `start`
+    у пульта не использовать, из пульта — `status`/`pause`/`stop`.
+
+18. **Две очереди одновременно = потеря строк** → каждый `translate_queue.mts`
+    держит свою копию po в памяти и пишет файл ЦЕЛИКОМ (последний победил),
+    плюс под каждой очередью свой `translate_run`; проверено 2026-11-17 (после
+    рестарта сервера остался старый инстанс из bash, рядом поднялся новый из
+    cmd → 2 очереди и 3 прогона на одном `ja`). Что делать: перед запуском
+    проверить процессы (`Get-CimInstance Win32_Process` по `translate_queue`),
+    убить дубли и поднять РОВНО один `translate-start.cmd`; признак нормы —
+    один `translate_queue` + один `translate_run`.
