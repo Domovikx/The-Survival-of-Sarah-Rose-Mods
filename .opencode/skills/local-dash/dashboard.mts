@@ -48,7 +48,7 @@ const LANGS = ((): string[] => {
  * работает со старым JS и выводит «undefined» для новых полей (2026-11-16).
  * Поднимать при ЛЮБОМ изменении набора полей.
  */
-const API_VER = 44;
+const API_VER = 46;
 
 /** Прошлые значения CPU/RAM для дельты. */
 const prevCpu = cpus().map((c) => c.times);
@@ -234,6 +234,90 @@ const logTail = (lang: string, lines = 8): string[] => {
       }
     }
   }
+};
+
+/** Хвост произвольного файла (байты с конца) — чтобы не читать мегабайтные логи целиком. */
+const tailText = (file: string, bytes = 96 * 1024): string => {
+  let fd: number | null = null;
+  try {
+    fd = openSync(file, "r");
+    const size = statSync(file).size;
+    const len = Math.min(size, bytes);
+    const buf = Buffer.alloc(len);
+    readSync(fd, buf, 0, len, size - len);
+    return buf.toString("utf-8");
+  } catch {
+    return "";
+  } finally {
+    if (fd !== null) {
+      try {
+        closeSync(fd);
+      } catch {
+        /* уже закрыт */
+      }
+    }
+  }
+};
+
+/**
+ * Разбор хвоста `vox_gen_<lang>.log` (очередь VoxCPM): последняя арка, счётчик
+ * `[i/N] vox <Arc>` и число закрытых арок. Чистая функция — её и тестируем.
+ */
+export const parseVoxLog = (text: string): { arc: string; i: number; n: number; doneArcs: number } => {
+  let arc = "";
+  let startArc = "";
+  let i = 0;
+  let n = 0;
+  let doneArcs = 0;
+  for (const line of text.split(/\r?\n/)) {
+    const done = /^=== DONE \S+ (\S+) /.exec(line);
+    if (done) {
+      doneArcs++;
+      continue;
+    }
+    const start = /^=== START \S+ (\S+) /.exec(line);
+    if (start) startArc = start[1]!;
+    const prog = /^\[(\d+)\/(\d+)\] vox (\S+)/.exec(line);
+    if (prog) {
+      i = Number(prog[1]);
+      n = Number(prog[2]);
+      arc = prog[3]!;
+    }
+  }
+  return { arc: arc || startArc, i, n, doneArcs };
+};
+
+type VoiceQueueRow = {
+  lang: string;
+  arc: string;
+  i: number;
+  n: number;
+  doneArcs: number;
+  ageMin: number;
+  running: boolean;
+};
+
+/**
+ * Очередь озвучки на пульте: состояние по каждому языку из логов vox_queue.
+ * «Идёт» = лог обновился меньше 5 минут назад (прогресс пишется на каждую
+ * фразу), иначе «стоит». Читаем только хвост: ru-лог дорастает до 1.2 МБ.
+ */
+const voiceQueue = (): VoiceQueueRow[] => {
+  const dir = join("patches", "ai-voice-pack", "tools", "generate", "output", "voice");
+  const rows: VoiceQueueRow[] = [];
+  let files: string[] = [];
+  try {
+    files = readdirSync(dir).filter((f) => /^vox_gen_[a-z]{2}\.log$/.test(f));
+  } catch {
+    return rows;
+  }
+  for (const f of files) {
+    const file = join(dir, f);
+    const parsed = parseVoxLog(tailText(file));
+    const ageMin = Math.round((Date.now() - statSync(file).mtimeMs) / 60_000);
+    rows.push({ lang: f.slice(8, 10), ...parsed, ageMin, running: ageMin < 5 });
+  }
+  return rows.toSorted((a, b) => Number(b.running) - Number(a.running) || a.lang.localeCompare(b.lang));
 };
 
 /**
@@ -650,6 +734,7 @@ const state = async (): Promise<Record<string, unknown>> => {
     languages: LANGS.map((lang) => ({ lang, po: poStats(lang) })),
     voice: voiceStatsAsync(),
     voiceRun: voiceRun(),
+    voiceQueue: voiceQueue(),
     tail: current ? logTail(current, 8) : [],
     np: npHistory(),
     progress: current ? progressHistory.slice(-300) : [],
@@ -750,6 +835,9 @@ const PAGE = `<!doctype html>
     <div id="lingua" class="lingua"><span class="muted">загрузка…</span></div>
     <div id="vhealth"></div>
     <div id="arcs" class="stats"></div>
+  </div>
+  <div class="card c12"><h2>Озвучка: очередь <span class="muted" id="vqnote"></span></h2>
+    <div id="vqueue"><span class="muted">загрузка…</span></div>
   </div>
   <div class="card c4"><h2>Последнее в прогоне</h2><div id="tail" class="tail">…</div></div>
 </div>
@@ -1087,6 +1175,23 @@ async function tick() {
   // Скорость — отдельной карточкой: там объём по интервалам, а не мгновенная
   // цифра. В карточке очереди график только отнимал место (2026-11-19).
   $('speed').innerHTML = bars(s.progress || [], '#4c8bd6', s.live ? s.live.rate : null);
+  // Давность лога: минуты → часы → дни (29473 мин нечитаемо).
+  const ageText = (m) =>
+    m <= 0 ? 'только что' : m < 60 ? m + ' мин назад' : m < 1440 ? Math.round(m / 60) + ' ч назад' : Math.round(m / 1440) + ' дн назад';
+  // Очередь озвучки: последняя арка, счётчик i/N, свежесть лога.
+  const vq = s.voiceQueue || [];
+  $('vqnote').textContent = vq.length ? '· ' + vq.filter((r) => r.running).length + ' в работе из ' + vq.length + ' языков' : '';
+  $('vqueue').innerHTML = vq.length
+    ? vq.map((r) => {
+        const p = r.n ? Math.round((r.i / r.n) * 100) : 0;
+        const state = r.running ? '<span class="ok">идёт</span>' : '<span class="muted">стоит</span>';
+        return '<div class="row"><span>' + r.lang + ' · ' + (r.arc || '—') + ' · ' + state + '</span>' +
+          '<span class="v">' + N(r.i) + ' / ' + N(r.n) + ' · ' + p + '%</span></div>' +
+          '<div class="bar"><i style="width:' + p + '%"></i></div>' +
+          '<div class="muted" style="font-size:11px;margin:-2px 0 8px">арок закрыто: ' + r.doneArcs +
+          ' · лог ' + ageText(r.ageMin) + '</div>';
+      }).join('')
+    : '<div class="muted">логов очереди нет — озвучка не запускалась</div>';
   $('tail').textContent = (s.tail || []).join('\\n') || '—';
   const vr = s.voiceRun;
   $('vrun').innerHTML = vr && vr.running
