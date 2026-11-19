@@ -46,9 +46,7 @@ Voice-over is demo: 1,171 to 1,399 lines per language, in English, Russian, Chin
 
 How to install: download the main archive and the voice pack for your language from the project page on GitHub — account Domovikx, repository The-Survival-of-Sarah-Rose-Mods, section Releases. Unpack both into the game folder (the one with TheSurvivalofSarahRose.exe), or install with Vortex: main first, then the voice pack. In the game, open the mod menu on the title screen and pick a language.
 
-Want a full voice-over? Today it is a demo subset of the script. If you want the whole game voiced, leave a comment under this guide in this format:
-
-voice: Spanish
+Want a full voice-over? Today it is a demo subset of the script. If you want the whole game voiced, leave a comment under this guide and write which language you want — any wording is fine, in any language.
 
 One comment is one vote. A full pass is 69,120 lines, about 10 hours of GPU time. The language with the most comments is recorded first. Downloads of the voice pack for your language are counted as well, summed across all releases.
 

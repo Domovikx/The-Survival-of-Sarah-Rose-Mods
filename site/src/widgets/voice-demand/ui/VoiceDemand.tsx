@@ -26,7 +26,7 @@ export const VoiceDemand = () => {
       <div className={cx(styles.panel)} data-testid={`${ROOT}--panel`}>
         <p className={cx(styles.lead)} data-testid={`${ROOT}--lead`}>
           {t(
-            "Votes are counted as comments under the Steam guide (write {{fmt}}) and as Nexus endorsements. Downloads of the voice pack for your language are counted too, summed across all releases. A full voice-over is 69,120 lines, about 10 hours of GPU — the language with the most votes is recorded first.",
+            "Votes are simple: leave a comment under the Steam guide and say which language you want — any wording is fine. Endorsing the mod on Nexus counts too, and so do downloads of the voice pack for your language (summed across all releases). A full voice-over is 69,120 lines, about 10 hours of GPU — the language with the most votes is recorded first.",
           )}
         </p>
 
