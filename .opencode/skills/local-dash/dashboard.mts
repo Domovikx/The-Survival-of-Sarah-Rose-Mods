@@ -48,7 +48,7 @@ const LANGS = ((): string[] => {
  * работает со старым JS и выводит «undefined» для новых полей (2026-11-16).
  * Поднимать при ЛЮБОМ изменении набора полей.
  */
-const API_VER = 41;
+const API_VER = 43;
 
 /** Прошлые значения CPU/RAM для дельты. */
 const prevCpu = cpus().map((c) => c.times);
@@ -668,13 +668,11 @@ const PAGE = `<!doctype html>
   .card { background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:10px 12px; min-width:0; }
   .c3 { grid-column:span 3; } .c4 { grid-column:span 4; } .c5 { grid-column:span 5; }
   .c6 { grid-column:span 6; } .c7 { grid-column:span 7; } .c8 { grid-column:span 8; }
-  .c9 { grid-column:span 9; }
   .c12 { grid-column:1 / -1; }
   /* Узкий экран: 12 колонок нечитаемы — складываем в две. */
   @media (max-width:1100px) {
     .grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
     .c3,.c4,.c5,.c6,.c7,.c8 { grid-column:span 1; }
-    .c9 { grid-column:span 2; }
     .c12 { grid-column:1 / -1; }
   }
   .card h2 { font-size:11px; margin:0 0 10px; color:var(--muted); text-transform:uppercase; letter-spacing:.06em; }
@@ -758,7 +756,9 @@ const PAGE = `<!doctype html>
 <script>
 const $ = (id) => document.getElementById(id);
 // null = знаменатель неизвестен: показываем «—», а не ложные 0 %.
-const pct = (a, b) => (b ? Math.round((a / b) * 1000) / 10 : null);
+// ПРОЦЕНТЫ ОКРУГЛЯЕМ ВНИЗ: 69 106/69 120 — это 99.9, а не «100 %» при
+// четырнадцати непереведённых строках (правило «не врать цифрами», 2026-11-19).
+const pct = (a, b) => (b ? Math.floor((a / b) * 1000) / 10 : null);
 const P = (p) => p === null ? '—' : p + '%';
 const W = (p) => (p === null ? 0 : p);
 const up = (s) => s ? '<span class="ok">UP</span>' : '<span class="bad">down</span>';
@@ -879,7 +879,7 @@ const spark = (points, color, label, unit, threshold, events, lastSuffix, mode) 
     '<div class="muted" style="font-size:11px;display:flex;justify-content:space-between;gap:8px">' +
     '<span class="lbl">' + label + ' <b style="color:#e6edf3">' + last.v.toFixed(0) + ' ' + unit + (lastSuffix || '') +
     '</b> <span class="muted">' + hm(last.t) + '</span></span>' +
-    '<span class="lbl">' + lo0.toFixed(0) + '…' + hi0.toFixed(0) + ' ' + unit +
+    '<span class="lbl">' + (lo0 === hi0 ? lo0.toFixed(0) : lo0.toFixed(0) + '…' + hi0.toFixed(0)) + ' ' + unit +
     (threshold !== undefined ? ' · порог ' + threshold : '') + '</span></div></div>';
 };
 
