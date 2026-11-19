@@ -55,6 +55,9 @@ export const VoiceDemand = () => {
               {t("The Nexus page is pending approval — the link will appear here once it is live.")}
             </span>
           )}
+          <a className={cx(styles.link)} href={LINKS.steamGuide} data-testid={`${ROOT}--steam`}>
+            {t("Comment on the Steam guide — write your language")}
+          </a>
           <a className={cx(styles.link)} href={`${LINKS.github}/releases`} data-testid={`${ROOT}--all`}>
             {t("All downloads")}
           </a>

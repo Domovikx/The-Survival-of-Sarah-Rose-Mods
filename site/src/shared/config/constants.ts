@@ -13,5 +13,7 @@ export const LINKS = {
   github: "https://github.com/Domovikx/The-Survival-of-Sarah-Rose-Mods",
   issues: "https://github.com/Domovikx/The-Survival-of-Sarah-Rose-Mods/issues",
   steam: "https://store.steampowered.com/app/2166470/The_Survival_of_Sarah_Rose/",
+  /** Гайд в Steam: лайки и комментарии — основной канал спроса на озвучку. */
+  steamGuide: "https://steamcommunity.com/sharedfiles/filedetails/?id=3733106761",
   license: "https://creativecommons.org/licenses/by-nc/4.0/",
 } as const;

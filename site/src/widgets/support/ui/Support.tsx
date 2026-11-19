@@ -5,9 +5,6 @@ import { cx, Section } from "@/shared/ui";
 
 import { styles } from "./Support.styles";
 
-/** Ссылка на руководство в Steam (лайк/оценка) — витрина для новых игроков. */
-const STEAM_GUIDE = "https://steamcommunity.com/sharedfiles/filedetails/?id=3733106761";
-
 /**
  * Бесплатные действия (endorse + оценка гайда) — стоят сразу после демо:
  * это пик ценности и действие без затрат, ровно тот порядок, который в
@@ -43,7 +40,7 @@ export const Support = () => {
           >
             {t("Endorse on Nexus")}
           </a>
-          <a className={cx(styles.btn)} href={STEAM_GUIDE} data-testid={`${ROOT}--steam`} rel="noopener">
+          <a className={cx(styles.btn)} href={LINKS.steamGuide} data-testid={`${ROOT}--steam`} rel="noopener">
             {t("Steam guide")}
           </a>
         </div>

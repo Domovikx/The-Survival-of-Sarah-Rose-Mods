@@ -997,4 +997,16 @@ export const CATALOGUE = dict({
     ko: "모든 다운로드",
     it: "Tutti i download",
   },
+  "Comment on the Steam guide — write your language": {
+    ru: "Оставьте комментарий к руководству Steam — выберите свой язык",
+    zh: "在 Steam 指南上留言 — 选择你的语言",
+    es: "Comenta en la guía de Steam — escribe tu idioma",
+    pt: "Comente no guia da Steam — escreva no seu idioma",
+    de: "Kommentar zum Steam-Leitfaden — gib deine Sprache an",
+    ja: "Steamガイドにコメントする — あなたの言語で書いてください",
+    fr: "Commenter le guide Steam — écrivez votre langue",
+    pl: "Skomentuj poradnik na Steamie — napisz w swoim języku",
+    ko: "Steam 가이드에 댓글을 남겨주세요 — 사용 언어를 선택하세요",
+    it: "Commenta la guida di Steam — scrivi nella tua lingua",
+  },
 } as const);
