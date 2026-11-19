@@ -27,13 +27,28 @@ import {
 
 const PORT = Number(process.argv[process.argv.indexOf("--port") + 1]) || 8087;
 const PO_DIR = join("patches", "ai-voice-pack", "po");
-const LANGS = ["zh", "ru", "es", "pt", "de", "ja", "fr", "pl", "ko", "it"];
+/**
+ * Языки блока «текст и озвучка» — В ПОРЯДКЕ config/language-priority.json
+ * (единый источник порядка языков в UI; en не показываем — у него нет po).
+ * Список не сортируется по прогрессу: владельцу удобнее ревьюить в приоритете
+ * языков, а не «что сейчас движется» (2026-11-19).
+ */
+const LANGS = ((): string[] => {
+  try {
+    const cfg = JSON.parse(readFileSync(join("config", "language-priority.json"), "utf-8")) as {
+      languages: Array<{ code: string }>;
+    };
+    return cfg.languages.map((l) => l.code).filter((c) => c !== "en");
+  } catch {
+    return ["zh", "ru", "es", "pt", "de", "ja", "fr", "pl", "ko", "it"];
+  }
+})();
 /**
  * Версия формата /api/state. Страница, открытая до перезапуска пульта, иначе
  * работает со старым JS и выводит «undefined» для новых полей (2026-11-16).
  * Поднимать при ЛЮБОМ изменении набора полей.
  */
-const API_VER = 23;
+const API_VER = 24;
 
 /** Прошлые значения CPU/RAM для дельты. */
 const prevCpu = cpus().map((c) => c.times);
@@ -974,12 +989,9 @@ async function tick() {
   };
   const byLang = new Map(v.langs.map((l) => [l.lang, l]));
   // Одна строка на язык: код + два кольца (текст, озвучка) + короткая справка.
-  // Сначала языки В РАБОТЕ, потом готовые: смотреть надо на то, что движется.
-  const langsOrdered = s.languages.slice().sort((a, b) => {
-    const pa = a.po && a.po.total ? a.po.filled / a.po.total : 0;
-    const pb = b.po && b.po.total ? b.po.filled / b.po.total : 0;
-    return pa - pb;
-  });
+  // Порядок — приоритет языков из config/language-priority.json (сортировку по
+  // прогрессу убрали: ревьюить удобнее в приоритете, 2026-11-19).
+  const langsOrdered = s.languages;
   $('lingua').innerHTML = langsOrdered.map((t) => {
     const o = byLang.get(t.lang) || { done: 0, plan: 0, arcsDone: 0, arcsTotal: 0, bytes: 0 };
     const po = t.po || {};
