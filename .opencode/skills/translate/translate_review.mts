@@ -69,8 +69,15 @@ const sentences = (s: string): number =>
       // Многоточие — пауза, а не конец предложения. Хвостовую точку НЕ срезаем:
       // срез делал EN «…blast it open.» односоставным, а IT «…in aria?» — двумя,
       // и ревью писало ложную «склейку» (it 2026-11-19: 2 таких флага).
+      // Французская/канадская типографика ставит пробел ПЕРЕД знаком («fait
+      // ! ?!»): без нормализации один конец предложения считался двумя
+      // (fr 2026-11-19: FP на «AAAH! What...what did you do!?!»).
+      .replace(/\s+([?!.])/g, "$1")
       .replace(/\.{2,}|…/g, " ")
-      .match(/[.!?]+(?=\s+[А-ЯЁA-ZÁÉÍÓÚÑÜ«"“]|$)/g) ?? []
+      // «?»/«!» завершают фразу и перед строчной («…all day? so boring.») —
+      // точка же требует заглавной, иначе «т.д.» и десятичные дроби дают ложные
+      // границы (de/fr 2026-11-19: один и тот же FP на двух языках).
+      .match(/[?!]+(?=\s+\S)|[.]{1}(?=\s+[А-ЯЁA-ZÁÉÍÓÚÑÜ«"“])|[?!.]+$/g) ?? []
   ).length;
 
 /** Латинские слова, которым нечего делать в zh-переводе (кроме имён). */
@@ -144,6 +151,10 @@ try {
 
 // Канон имён — общий построитель (judge_client): один источник для всех скриптов.
 const NAME_CANON = buildNameCanon(entries);
+// Имена корпуса (EN-написание) — их латиница в ja/ko/zh законна. Статический
+// список ниже неполный: он не знал, например, Maeiv/Antonio/Edmond и давал
+// 40+ ложных «ЛАТИНИЦА» на ja (2026-11-19).
+for (const en of NAME_CANON.keys()) ALLOW_LATIN.add(en);
 const CANON_WORDS = new Set<string>();
 for (const v of NAME_CANON.values()) for (const part of v.split(" ")) CANON_WORDS.add(part);
 const NAME_STOP = new Set([
@@ -201,6 +212,8 @@ const UTECHKA_ACCEPTED = RU
 // регистр (вы+ты в одной реплике), а правка привела сцену к «ты» (по
 // соседним репликам спикера). Только ru, индексы языко-специфичны.
 const REG_ACCEPTED = RU ? new Set([17537, 45021]) : new Set<number>();
+/** Пары с почти одинаковым смыслом оригинала: общий ход перевода — норма. */
+const UTECHKA_OK = new Set<number>(LANG === "fr" ? [33657, 33658] : []);
 
 entries.forEach((e, i) => {
   const tr = e.msgstr;
@@ -249,11 +262,21 @@ entries.forEach((e, i) => {
   if (CJK && !/[а-яА-ЯЁё]/.test(tr)) {
     // Разметка ([unifyarmies], {#tag}) и название игры латиницей — норма.
     const bare = tr.replace(/\[[^\]]*\]|\{[^}]*\}|The Survival of Sarah Rose/g, "");
-    for (const m of bare.matchAll(LATIN))
-      if (!ALLOW_LATIN.has(m[0])) {
-        hit(i, "ЛАТИНИЦА", e, m[0]);
+    for (const m of bare.matchAll(LATIN)) {
+      const w = m[0];
+      // Имена пишутся с заглавной — законны; ловим английские СЛОВА (строчные)
+      // и смешанные написания («サrah»): там латиница внутри иероглифов, это
+      // уже порча имени, а не имя (ja 2026-11-19).
+      // Имена — с заглавной, они законны даже вплотную к кане («つまりNoctoriは»).
+      // Настоящая порча — ЛАТИНСКИЙ ФРАГМЕНТ в слове («サrah», «ニックolas»):
+      // он всегда начинается со строчной. Английские предложения ловит класс
+      // АНГЛИЙСКИЙ (по стоп-словам), а не эта проверка.
+      const capital = w[0] === w[0].toUpperCase();
+      if (!ALLOW_LATIN.has(w) && !capital) {
+        hit(i, "ЛАТИНИЦА", e, w);
         return;
       }
+    }
   }
 
   // 1. Утечка соседней строки (дубль или содержательное совпадение).
@@ -281,7 +304,7 @@ entries.forEach((e, i) => {
     // в es из 36 таких флагов реальной склейкой были 4 (2026-11-16).
     const glued = run && (LANG === "ru" ? rw >= 3 && contentWords(run) >= 2 : rw >= 6) && !sameOrigin;
     // Утечка — только если так было НЕ в HEAD (иначе легаси, его не трогаем).
-    if ((dup || glue || glued) && (ALL || tr !== head) && !UTECHKA_ACCEPTED.has(i)) {
+    if ((dup || glue || glued) && (ALL || tr !== head) && !UTECHKA_ACCEPTED.has(i) && !UTECHKA_OK.has(i)) {
       hit(i, "УТЕЧКА", e, glued && !dup && !glue ? `вклейка соседа: «${run}»` : "");
       break;
     }
