@@ -21,11 +21,11 @@ export const App = () => (
       <Features />
       <DemoPhrases />
       <Support />
-      <VoiceProgress />
+      {FEATURES.progress ? <VoiceProgress /> : null}
       <VoiceDemand />
       <Install />
       {FEATURES.downloads ? <Downloads /> : null}
-      <Donate />
+      {FEATURES.donate ? <Donate /> : null}
       <Screenshots />
       <Faq />
     </main>

@@ -22,7 +22,7 @@ export const VoiceDemand = () => {
       <div className={cx(styles.panel)} data-testid={`${ROOT}--panel`}>
         <p className={cx(styles.lead)} data-testid={`${ROOT}--lead`}>
           {t(
-            "Votes are simple: leave a comment under the Steam guide and say which language you want — any wording is fine. Downloads of the voice pack for your language also count, summed across all releases. The language with the most votes is recorded first; the progress block above shows how much is already done.",
+            "Votes are simple: leave a comment under the Steam guide and say which language you want — any wording is fine. Downloads of the voice pack for your language also count, summed across all releases. The language with the most votes is recorded first.",
           )}
         </p>
 

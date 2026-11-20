@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
+import { FEATURES } from "@/shared/config";
 import { cx, Section } from "@/shared/ui";
 
 import { styles } from "./Install.styles";
@@ -75,9 +76,11 @@ export const Install = () => {
           <a className={cx(styles.cta)} href="#download" data-testid={`${ROOT}--cta`}>
             {t("Open downloads")}
           </a>
-          <p className={cx(styles.hint)} data-testid={`${ROOT}--vortex-hint`}>
-            {t("Using Vortex? Install the game extension once, then use “Install from file”.")}
-          </p>
+          {FEATURES.vortex ? (
+            <p className={cx(styles.hint)} data-testid={`${ROOT}--vortex-hint`}>
+              {t("Using Vortex? Install the game extension once, then use “Install from file”.")}
+            </p>
+          ) : null}
         </div>
         <p className={cx(styles.note)} data-testid={`${ROOT}--note`}>
           {t("Requires the game bought on Steam. Unofficial fan patch, not affiliated with the developers.")}
