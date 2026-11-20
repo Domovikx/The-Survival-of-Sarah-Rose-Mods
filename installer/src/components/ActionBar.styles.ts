@@ -36,7 +36,7 @@ export const styles = stylex.create({
     "cursor": "pointer",
     "padding": "11px 20px",
     "borderRadius": 10,
-    "border": "none",
+    "borderWidth": 0,
     "fontSize": 14.5,
     "fontWeight": 700,
     "color": "#fff",

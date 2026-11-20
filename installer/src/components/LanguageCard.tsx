@@ -33,13 +33,15 @@ type Props = {
 export const LanguageCard = ({ lang, files, want, size, busy, onToggle }: Props) => {
   const installed = files !== undefined;
   const pending = want !== installed;
+  // Состояние несёт тумблер и рамка, поэтому в подписи — только ФАКТ:
+  // сколько аудиофайлов стоит или сколько весит пак. «установлено · …» — шум.
   const state = pending
     ? want
       ? t("will be installed")
       : t("will be removed")
     : installed
-      ? t("installed · {{n}} files", { n: (files ?? 0).toLocaleString("en-US") })
-      : t("not installed · {{size}}", { size });
+      ? t("{{n}} audio files", { n: (files ?? 0).toLocaleString("en-US") })
+      : size;
 
   return (
     <div
@@ -52,7 +54,7 @@ export const LanguageCard = ({ lang, files, want, size, busy, onToggle }: Props)
         busy && styles.busy,
       )}
     >
-      <img className={cx(styles.flag)} src={`/flags/${lang}.svg`} alt="" width={22} height={16} />
+      <img className={cx(styles.flag)} src={`/flags/${lang}.svg`} alt="" width={22} height={22} />
       <div className={cx(styles.head)}>
         <span className={cx(styles.name)}>{NAMES[lang] ?? lang.toUpperCase()}</span>
         <span className={cx(styles.code)}>{lang.toUpperCase()}</span>

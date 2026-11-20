@@ -49,7 +49,7 @@ export const styles = stylex.create({
     "cursor": "pointer",
     "padding": "9px 18px",
     "borderRadius": 10,
-    "border": "none",
+    "borderWidth": 0,
     "fontSize": 13.5,
     "fontWeight": 700,
     "color": "#fff",

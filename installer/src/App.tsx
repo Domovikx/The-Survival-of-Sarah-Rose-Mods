@@ -10,12 +10,10 @@ import { Header } from "@/components/Header";
 import { LogPanel } from "@/components/LogPanel";
 import { LINKS, VOICE_LANGS, voiceAsset } from "@/core/pack";
 import { useInstaller } from "@/hooks/useInstaller";
-import { getLang, initLang, LANG_LABELS, setLang, t, UI_LANGS, type UiLang } from "@/i18n";
+import { getLang, initLang, setLang, t, type UiLang } from "@/i18n";
 import { cx } from "@/ui/cx";
 
 import { styles } from "./App.styles";
-
-const LANGS = UI_LANGS.map((code) => ({ code, label: LANG_LABELS[code] }));
 
 export const App = () => {
   const [lang, setLangState] = useState<UiLang>(getLang());
@@ -41,7 +39,7 @@ export const App = () => {
 
   return (
     <div className={cx(styles.app)}>
-      <Header lang={lang} langs={LANGS} onChange={changeLang} />
+      <Header lang={lang} onChange={changeLang} />
 
       <main className={cx(styles.main)}>
         <GameCard game={inst.game} detected={inst.detected} busy={inst.busy} onRedetect={() => void inst.detect()} />
@@ -54,23 +52,23 @@ export const App = () => {
           onToggle={inst.toggleLang}
         />
         <LogPanel lines={inst.lines} />
-
-        <div className={cx(styles.footer)}>
-          <span>{t("Like the patch?")}</span>
-          <button type="button" className={cx(styles.link)} onClick={() => void openUrl(LINKS.github)}>
-            {t("Star on GitHub")}
-          </button>
-          <span className={cx(styles.dot)}>·</span>
-          <button type="button" className={cx(styles.link)} onClick={() => void openUrl(LINKS.steamGuide)}>
-            {t("Steam guide")}
-          </button>
-          <span className={cx(styles.dot)}>·</span>
-          <button type="button" className={cx(styles.link)} onClick={() => void openUrl(LINKS.issues)}>
-            {t("Report an issue")}
-          </button>
-          <span className={cx(styles.pushRight)}>v0.1.0</span>
-        </div>
       </main>
+
+      <div className={cx(styles.footer)}>
+        <span>{t("Like the patch?")}</span>
+        <button type="button" className={cx(styles.link)} onClick={() => void openUrl(LINKS.github)}>
+          {t("Star on GitHub")}
+        </button>
+        <span className={cx(styles.dot)}>·</span>
+        <button type="button" className={cx(styles.link)} onClick={() => void openUrl(LINKS.steamGuide)}>
+          {t("Steam guide")}
+        </button>
+        <span className={cx(styles.dot)}>·</span>
+        <button type="button" className={cx(styles.link)} onClick={() => void openUrl(LINKS.issues)}>
+          {t("Report an issue")}
+        </button>
+        <span className={cx(styles.pushRight)}>v0.1.0</span>
+      </div>
 
       <ActionBar
         status={inst.status}

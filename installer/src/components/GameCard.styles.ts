@@ -2,6 +2,7 @@ import * as stylex from "@stylexjs/stylex";
 
 export const styles = stylex.create({
   card: {
+    flexShrink: 0,
     borderWidth: 1,
     borderStyle: "solid",
     borderColor: "var(--border)",

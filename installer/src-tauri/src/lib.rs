@@ -446,9 +446,31 @@ fn scan_install(game: String) -> InstallState {
     }
 }
 
-/// Файлов озвучки в каталоге языка (только `.opus`/`.wav`).
+/// Имя файла корпуса по контракту `{en12}-{state6} {variant}.opus`.
+///
+/// Считаем ТОЛЬКО такие файлы: движок игры ищет ровно их, а любой другой
+/// `.opus`/`.wav` (бенч-имена, огрызки) — не озвучка. Проверено на инциденте
+/// 2026-11-20: 1 851 файл с именами стенда выглядел как «прогресс», но игра
+/// их не находила.
+fn is_contract_name(stem: &str) -> bool {
+    const B32: &str = "ABCDEFGHIJKLMNOPQRSTUVWXYZ234567";
+    let bytes: Vec<char> = stem.chars().collect();
+    if bytes.len() < 21 {
+        return false;
+    }
+    let is_b32 = |c: char| B32.contains(c);
+    bytes[..12].iter().all(|c| is_b32(*c))
+        && bytes[12] == '-'
+        && bytes[13..19].iter().all(|c| is_b32(*c))
+        && bytes[19] == ' '
+        && bytes[20..].iter().any(|c| !c.is_whitespace())
+}
+
+/// Атомарный счёт озвучки языка: ОДНА реплика = ОДИН стем (`{...}.opus`),
+/// независимо от того, лежит рядом wav (легаси) или нет. Считаем только имена
+/// по контракту — «файлов вообще» недостаточно.
 fn count_voice_files(dir: &Path) -> u32 {
-    let mut count = 0u32;
+    let mut stems: std::collections::HashSet<String> = std::collections::HashSet::new();
     let mut stack = vec![dir.to_path_buf()];
     while let Some(d) = stack.pop() {
         let Ok(entries) = fs::read_dir(&d) else {
@@ -458,12 +480,23 @@ fn count_voice_files(dir: &Path) -> u32 {
             let p = e.path();
             if p.is_dir() {
                 stack.push(p);
-            } else if p.extension().is_some_and(|x| x == "opus" || x == "wav") {
-                count += 1;
+                continue;
+            }
+            let Some(ext) = p.extension().and_then(|x| x.to_str()) else {
+                continue;
+            };
+            if ext != "opus" && ext != "wav" {
+                continue;
+            }
+            let Some(stem) = p.file_stem().and_then(|x| x.to_str()) else {
+                continue;
+            };
+            if is_contract_name(stem) {
+                stems.insert(stem.to_string());
             }
         }
     }
-    count
+    stems.len() as u32
 }
 
 /// Удалить озвучку одного языка (только `ai_voice/<lang>/` внутри нашего мода).

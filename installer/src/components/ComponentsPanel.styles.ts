@@ -1,7 +1,7 @@
 import * as stylex from "@stylexjs/stylex";
 
 export const styles = stylex.create({
-  panel: { display: "flex", flexDirection: "column", gap: 12 },
+  panel: { flexShrink: 0, display: "flex", flexDirection: "column", gap: 12 },
   head: { display: "flex", alignItems: "baseline", gap: 10 },
   title: { margin: 0, fontSize: 16 },
   hint: { color: "var(--muted)", fontSize: 12.5 },

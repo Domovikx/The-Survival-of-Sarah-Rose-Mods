@@ -32,12 +32,15 @@ export const styles = stylex.create({
     borderStyle: "dashed",
   },
   busy: { opacity: 0.55, pointerEvents: "none" },
+  // Флаги в наборе — КРУГЛЫЕ (circle-flags): держим квадрат 22×22 и круглый
+  // крой, иначе получается «прямоугольник с обрезанным кружком» (2026-11-20).
   flag: {
     gridArea: "flag",
     width: 22,
-    height: 16,
-    borderRadius: 3,
-    objectFit: "cover",
+    height: 22,
+    borderRadius: "50%",
+    objectFit: "contain",
+    flexShrink: 0,
     boxShadow: "0 0 0 1px var(--border)",
   },
   head: { gridArea: "head", display: "flex", alignItems: "baseline", gap: 6, minWidth: 0 },

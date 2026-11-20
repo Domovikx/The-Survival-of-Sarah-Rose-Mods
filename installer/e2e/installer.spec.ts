@@ -40,7 +40,8 @@ test.describe("установщик: интерфейс", () => {
   test("смена языка интерфейса меняет подписи", async ({ page }) => {
     await page.goto("/");
     await expect(page.getByTestId("Game")).toContainText("Игра");
-    await page.getByTestId("Header--lang").selectOption("en");
+    await page.getByTestId("LangSwitcher").click();
+    await page.getByTestId("LangSwitcher--en").click();
     await expect(page.getByTestId("Game")).toContainText("Game");
     await expect(page.getByTestId("Actions--apply")).toHaveText("Apply changes");
   });
