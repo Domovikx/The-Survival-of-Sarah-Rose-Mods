@@ -10,8 +10,11 @@ import { fileURLToPath } from "node:url";
 import { type Phrase } from "./voice_batch.mts";
 import { writeWav16 } from "./voicekit/audio.mts";
 import {
+  BENCH_AUDIO,
+  benchDestDir,
   buildMatrix,
   buildPlan,
+  corpusWriteError,
   DEFAULT_CFG,
   DEFAULT_TIMESTEPS,
   filterByUids,
@@ -631,4 +634,25 @@ test("filterDone: ФС-фолбэк — реальный opus на диске п
   } finally {
     rmSync(dir, { recursive: true, force: true });
   }
+});
+
+// ------------------------------------------- корпус vs стенд (2026-11-20) ----
+
+const CORPUS = join("C:", "repo", "patches", "ai-voice-pack", "audio");
+
+test("benchDestDir: из корпуса уводит в output/voxbench с той же аркой", () => {
+  const out = join(CORPUS, "en", "Prologue", "x.wav");
+  assert.equal(benchDestDir(out, "", CORPUS), join(BENCH_AUDIO, "en", "Prologue"));
+});
+
+test("benchDestDir: --out-dir переопределяет базу, структура lang/arc сохраняется", () => {
+  const out = join(CORPUS, "en", "WarArc", "x.wav");
+  const got = benchDestDir(out, join("tmp", "my-bench"), CORPUS);
+  assert.equal(got, join("tmp", "my-bench", "en", "WarArc"));
+});
+
+test("corpusWriteError: корпус запрещён, папка стенда — можно", () => {
+  assert.ok(corpusWriteError(join(CORPUS, "en", "Prologue"), CORPUS));
+  assert.equal(corpusWriteError(join(BENCH_AUDIO, "en", "Prologue"), CORPUS), null);
+  assert.equal(corpusWriteError(join("tmp", "my-bench", "en"), CORPUS), null);
 });

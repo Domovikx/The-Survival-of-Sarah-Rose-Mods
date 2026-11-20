@@ -60,7 +60,7 @@ import { parseArgs } from "node:util";
 
 import { scanGame } from "../../../../../.opencode/skills/renpy-po/potgen.mts";
 import { loadCatalog, voiceForSpeaker } from "./voice_batch.mts";
-import { enHash, parseAnyVoiceName } from "./voice_names.mts";
+import { enHash, parseVoiceName } from "./voice_names.mts";
 
 const SCRIPTS_DIR = dirname(fileURLToPath(import.meta.url));
 const PKG_ROOT = join(SCRIPTS_DIR, "..", "..", "..");
@@ -159,10 +159,12 @@ function listFiles(dir: string, base = ""): string[] {
  * потому что POT-каталог индексируется первыми 16 hex-символами md5.
  */
 function parseFile(name: string): { en: string; lookup: string; variant: string } | null {
-  const parsed = parseAnyVoiceName(name);
+  // ТОЛЬКО контрактное имя (base32). Легаси hex/uid32 больше не «норма»:
+  // бенч складывал сюда `{uid}__{voice}__Vox...`, игра такой файл не находит
+  // (инцидент 2026-11-20) — аудит обязан видеть это как WEIRD, а не как OK.
+  const parsed = parseVoiceName(name);
   if (!parsed) return null;
-  const lookup = parsed.scheme === "uid32" ? parsed.en.slice(0, 16) : parsed.en;
-  return { en: parsed.en, lookup, variant: parsed.variant };
+  return { en: parsed.en, lookup: parsed.en, variant: parsed.variant };
 }
 
 function classify(lang: string, rel: string, exp: Expectation): Finding {
@@ -177,7 +179,7 @@ function classify(lang: string, rel: string, exp: Expectation): Finding {
       variant: "",
       arc: fileArc,
       kind: "WEIRD",
-      detail: "имя не {en12}-{state6} {variant}.opus",
+      detail: "имя не по контракту {en12}-{state6} {variant}.opus (легаси/бенч-мусор)",
     };
   }
   const { lookup: uid, variant } = parsed;

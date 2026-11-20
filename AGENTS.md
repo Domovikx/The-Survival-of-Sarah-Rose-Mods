@@ -82,6 +82,23 @@
   msgstr в `po/<lang>.po`, озвучка = файлы в `audio/<lang>`), порядок языков —
   из `config/language-priority.json`. Рантайм только читает JSON (нет файла —
   строк нет, без падения). Тест — `menu_progress.test.mts` (5 проверок).
+- **В корпус `audio/` пишет ТОЛЬКО `voice_batch`** (гейты после инцидента
+  2026-11-20: легаси-очередь `vox_queue` → `voxcpm_bench` за ночь положила в
+  `audio/en` 1 851 файл бенч-имён `{uid}__{voice}__Vox...`, которые движок не
+  находит, а счётчики показывали прогресс). `vox_queue` отключён, стенд пишет в
+  `tools/generate/output/voxbench/` (в корпус — отказ), `countDone`/
+  `catalog_gen`/`healthScan` считают только `isCorpusName`, `build_pack` падает
+  на имени не по контракту, `voice_corpus.test.mts` требует легаси = 0 и
+  запускается в CI (`npm run test:voice:corpus`). Подробности —
+  `docs/voice-naming.md` («Гейты», «Инцидент 2026-11-20»).
+- **Публичный прогресс полной озвучки** (2026-11-20): снимок для лендинга
+  генерит `scripts/voice_progress.mts` (из корня репы; аргументы `--no-write`,
+  `--json`) -> `site/src/shared/config/voice-progress.generated.ts`, вывод —
+  блок `VoiceProgress` перед блоком спроса. Счётчики берёт `voice_status.mts`,
+  скорость — из маркеров `=== START/DONE <lang> <arc> HH:MM ===` лога очереди
+  (средняя за арку; замер по опросу страницы давал скачки 0..десятки). Сайт
+  статичный, поэтому страница честно показывает дату снимка. Полный EN =
+  68 357 реплик ≈ 10 суток GPU при 4.4 реплик/мин (детали — скилл `.opencode/skills/tssr-voice-status`).
 - **Перевод строк, собранных в коде.** `_()` — маркер для `.rpy`-кода; внутри
   python-функций он НЕ переводит (проверено 2026-11-14: строка статуса в меню
   оставалась английской при русском UI). Для строк, собранных в Python, —
@@ -416,15 +433,18 @@ tools/generate/scripts/
                                #   интерактиву; лог output/voice/gen_all_{lang}.log)
                                #   СТАРТ ТОЛЬКО ЧЕРЕЗ ПУЛЬТ (voice_ctl/voice-start.cmd),
                                #   голый запуск запрещён (теряется приоритет/детач)
-  vox_queue.mts                # VOX-ОЧЕРЕДЬ (VoxCPM, 11 языков): node vox_queue.mts {lang|all}
-                               #   (обход арок Prologue/StoryBeginnings/WarArc, resumable
-                               #   --resume, низкий приоритет; лог output/voice/vox_gen_{lang}.log)
-                               #   СТАРТ ТОЛЬКО ЧЕРЕЗ ПУЛЬТ (voice_ctl/vox-start.cmd)
+  vox_queue.mts                # ОТКЛЮЧЕН 2026-11-20: звал voxcpm_bench, а тот писал в
+                               #   audio/<lang>/<arc>/ имена бенча `{uid}__{voice}__Vox_cfg...`,
+                               #   которых движок НЕ находит (5 ч прогона EN = 1 851
+                               #   невидимый файл при «прогрессе» 2 998). Остались только
+                               #   чистые функции (CLI/аргументы стенда) — на них тесты.
+                               #   Канон полной озвучки: voice_ctl.mts vox-start <lang>
+                               #   = voice_batch.mts --engine voxcpm2 --lang <lang>
   voice_ctl.mts                # ПУЛЬТ очередями (Windows, node, только stdlib; порт
                                #   voice_ctl.py 2026-10-30): status/start/stop/soft-stop/
                                #   pause/resume/watch/logs [ru|en|all] + vox-* (11 языков)
-                               #   (процессы ищет по cmdline voice_batch.mts/voice_queue.sh и
-                               #   voxcpm_bench.mts/vox_queue.mts; пауза = NtSuspendProcess,
+                               #   (vox-start = voice_batch --engine voxcpm2; процессы ищет по
+                               #   cmdline voice_batch/voice_queue.sh и движку; пауза = NtSuspendProcess,
                                #   метка — output/voice/ctl_paused[_vox]_{lang}.json)
                                #   Двойной клик: voice-*.cmd и vox-*.cmd
 ```

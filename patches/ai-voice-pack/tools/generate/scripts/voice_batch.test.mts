@@ -309,9 +309,13 @@ describe("движок voxcpm2 (2026-10-26: вердикт владельца «
     assert.equal(v.engine, "voxcpm2");
     assert.match(v.python.replace(/\\/g, "/"), /voxcpm2\/\.venv/, "venv VoxCPM2, не cosyvoice3");
 
+    // 2026-11-20: дефолт — КАНОН voxcpm2 (контрактные имена + звук как у демо);
+    // легаси CosyVoice3 включается только явным --engine cosyvoice3.
     const d = parseCli([]);
-    assert.equal(d.engine, "cosyvoice3");
-    assert.equal(d.python, ENGINES.cosyvoice3.python, "дефолт по-прежнему CosyVoice3");
+    assert.equal(d.engine, "voxcpm2");
+    assert.equal(d.python, ENGINES.voxcpm2.python, "дефолт — VoxCPM2");
+    const legacy = parseCli(["--engine", "cosyvoice3"]);
+    assert.equal(legacy.python, ENGINES.cosyvoice3.python, "легаси по явному флагу");
 
     assert.throws(() => parseCli(["--engine", "nope"]), /неизвестный движок/);
   });

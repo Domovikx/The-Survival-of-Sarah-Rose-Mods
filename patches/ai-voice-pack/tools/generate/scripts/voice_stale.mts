@@ -44,6 +44,11 @@ const ONLY_LANG = langAt >= 0 ? args[langAt + 1] : undefined;
 
 const meta = (c: string[], p: string): string => (c.find((x) => x.startsWith(p)) ?? "").slice(p.length).trim();
 
+/**
+ * LEGACY покрывает и БЕНЧ-имена (`{uid}__{voice}__Vox_cfg...`): они тоже
+ * `{uid32}__{variant}` и движок их не видит — удалять их можно `--delete-legacy`
+ * (2026-11-20: именно так в корпус попадал стенд).
+ */
 type Cls = "OK" | "STALE" | "NO-TRANSLATION" | "ORPHAN" | "HEX" | "LEGACY";
 type Row = { lang: string; file: string; cls: Cls; en?: string; variant?: string };
 

@@ -44,7 +44,7 @@ const meta = (c: string[], p: string): string => (c.find((x) => x.startsWith(p))
 type Report = {
   lang: string;
   file: string;
-  reason: "rename" | "orphan" | "unknown-text" | "already" | "collision" | "prune";
+  reason: "rename" | "orphan" | "unknown-text" | "already" | "collision" | "prune" | "bench";
   to?: string;
   en?: string;
   text?: string;
@@ -154,6 +154,7 @@ for (const lang of readdirSync(AUDIO)) {
     "already": 0,
     "collision": 0,
     "prune": 0,
+    "bench": 0,
   };
   const seen = new Map<string, string>();
 
@@ -169,6 +170,14 @@ for (const lang of readdirSync(AUDIO)) {
         continue;
       }
       const { scheme, en: uid, state: stateInName, variant } = parsed;
+      // БЕНЧ-ФАЙЛ (`{uid}__{voice}__Vox_cfg...`) — НЕ легаси-корпус: звук сделан
+      // другим конфигом, а имя получило бы вид «канонического». Не переименовываем
+      // (2026-11-20: так чуть не легализовали 1 851 файл с cfg 2.6).
+      if (file.includes("__Vox")) {
+        summary[lang]!.bench!++;
+        report.push({ lang, file: `${lang}/${arc}/${file}`, reason: "bench" });
+        continue;
+      }
       // Текст перевода НЕ берём из имени: state8 есть только у hex-схемы, а
       // легаси его не хранит вовсе. Единственный честный источник для обоих —
       // версия po на момент mtime файла (см. textAt).
@@ -234,7 +243,7 @@ writeFileSync(join("tmp", "voice_migrate.json"), `${JSON.stringify(report, null,
 console.log(`=== ${APPLY ? "МИГРАЦИЯ" : "dry-run"}: файлов к переименованию ${skipped || renamed}`);
 for (const [lang, s] of Object.entries(summary)) {
   console.log(
-    `  ${lang.padEnd(3)} переименовать ${String(s.rename).padStart(5)} | уже целевая ${String(s.already).padStart(4)} | без строки в POT ${String(s.orphan).padStart(3)} | без перевода ${String(s["unknown-text"]).padStart(3)} | мёртвых удалить ${String(s.prune).padStart(3)} | коллизий ${s.collision}`,
+    `  ${lang.padEnd(3)} переименовать ${String(s.rename).padStart(5)} | уже целевая ${String(s.already).padStart(4)} | без строки в POT ${String(s.orphan).padStart(3)} | без перевода ${String(s["unknown-text"]).padStart(3)} | мёртвых удалить ${String(s.prune).padStart(3)} | коллизий ${s.collision} | бенч (не трогаем) ${String(s.bench ?? 0).padStart(2)}`,
   );
 }
 if (pruned) console.log(`удалено мёртвых файлов (--prune-empty): ${pruned}`);

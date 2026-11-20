@@ -615,14 +615,16 @@ export function parseQcCli(argv: string[]): QcCli {
         );
     }
   }
-  if (!o.dir) o.dir = join(PKG_ROOT, "audio", o.lang);
+  // Дефолт — БЕНЧ-папка (стенд больше не пишет в корпус: там имена по
+  // контракту, а стенд делает {uid}__{voice}__Vox... — 2026-11-20).
+  if (!o.dir) o.dir = join(PKG_ROOT, "tools", "generate", "output", "voxbench", o.lang);
   if (!o.archive) o.archive = join(PKG_ROOT, "..", "..", "tmp", "voxcpm_bench", "rejected");
   return o;
 }
 
 export const QC_USAGE = [
   "vox_qc.mts — судья генерируемых wav (брак -> REJECT до прослушивания)",
-  "  --dir <папка>     что проверять (дефолт: audio/<lang>)",
+  "  --dir <папка>     что проверять (дефолт: output/voxbench/<lang>)",
   "  --lang <ru>       язык для дефолтного --dir",
   "  --filter <строка> проверять только файлы, содержащие строку",
   "  --json <файл>     записать полный отчёт JSON",

@@ -29,6 +29,7 @@ import { fileURLToPath, pathToFileURL } from "node:url";
 
 import { parseLabelMap } from "../../../../../.opencode/skills/renpy-po/potgen.mts";
 import { VOICES } from "../../../casts/voices.mts";
+import { isCorpusName } from "./voice_names.mts";
 
 const SCRIPTS_DIR = dirname(fileURLToPath(import.meta.url));
 /** patches/ai-voice-pack */
@@ -99,7 +100,9 @@ function countAudio(dir: string): number {
   for (const entry of readdirSync(dir, { withFileTypes: true })) {
     const full = join(dir, entry.name);
     if (entry.isDirectory()) n += countAudio(full);
-    else if (entry.name.endsWith(".opus") || entry.name.endsWith(".wav")) n += 1;
+    // Только имена по контракту: бенч-файлы (`uid__voice__Vox...`) движок не
+    // находит, и в меню мода они не «озвучка» (2026-11-20).
+    else if ((entry.name.endsWith(".opus") || entry.name.endsWith(".wav")) && isCorpusName(entry.name)) n += 1;
   }
   return n;
 }

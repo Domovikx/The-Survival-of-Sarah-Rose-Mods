@@ -29,6 +29,7 @@ import {
   resetCatalogCache,
   treeFiles,
   VOICE_LANGS,
+  badVoiceNames,
 } from "./build_pack.mts";
 import { readArchive, type ArchiveRead } from "./archive.mts";
 
@@ -246,12 +247,33 @@ function test_environment_txt_in_pack(): void {
   });
 }
 
+function test_voice_pack_rejects_non_contract_names(): void {
+  /* Имя не по контракту (бенч `{uid}__{voice}__Vox...`) в архив НЕ попадает:
+     игра такие файлы не находит (инцидент 2026-11-20). */
+  withTmp((tmp) => {
+    const src = join(tmp, "ru", "OpeningScene");
+    mkdirSync(src, { recursive: true });
+    writeFileSync(join(src, "0a586a6093ec8e5d7590eee40bfd7fb9__Sarah__Vox_cfg2.6_ts30_dn.opus"), Buffer.from("fake"));
+    const orig = { ...VOICE_LANGS };
+    for (const k of Object.keys(VOICE_LANGS)) delete VOICE_LANGS[k];
+    VOICE_LANGS["ru"] = join(tmp, "ru");
+    try {
+      const out = join(tmp, "dist");
+      mkdirSync(out);
+      assert.throws(() => buildVoice("ru", out), /не по контракту/);
+    } finally {
+      for (const k of Object.keys(VOICE_LANGS)) delete VOICE_LANGS[k];
+      Object.assign(VOICE_LANGS, orig);
+    }
+  });
+}
+
 function test_voice_pack_files_in_mod_dir(): void {
   /* Озвучка кладётся в mods/<папка>/ai_voice/<lang>/ (дерево фейковое). */
   withTmp((tmp) => {
     const src = join(tmp, "ru", "OpeningScene");
     mkdirSync(src, { recursive: true });
-    writeFileSync(join(src, "deadbeef__Sarah_3.opus"), Buffer.from("fake"));
+    writeFileSync(join(src, "IDQ3UEAURZD5-VXIODG Sarah_3.opus"), Buffer.from("fake"));
     // monkeypatch VOICE_LANGS (как setattr в pytest) — с откатом
     const orig = { ...VOICE_LANGS };
     for (const k of Object.keys(VOICE_LANGS)) delete VOICE_LANGS[k];
@@ -265,7 +287,7 @@ function test_voice_pack_files_in_mod_dir(): void {
       assert.deepEqual(
         readArchive(res.target).names.toSorted(),
         [
-          MOD_DIR + "/ai_voice/ru/OpeningScene/deadbeef__Sarah_3.opus",
+          MOD_DIR + "/ai_voice/ru/OpeningScene/IDQ3UEAURZD5-VXIODG Sarah_3.opus",
           // FOMOD для Vortex (без кода — Nexus не карантинит)
           "fomod/info.xml",
           "fomod/ModuleConfig.xml",
@@ -440,6 +462,7 @@ test(
 );
 test("test_environment_txt_is_relative", test_environment_txt_is_relative);
 test("test_environment_txt_in_pack", test_environment_txt_in_pack);
+test("test_voice_pack_rejects_non_contract_names", test_voice_pack_rejects_non_contract_names);
 test("test_voice_pack_files_in_mod_dir", test_voice_pack_files_in_mod_dir);
 test("test_installers_wait_for_game_to_close", test_installers_wait_for_game_to_close);
 test("test_install_cmd_console_is_utf8", test_install_cmd_console_is_utf8);
@@ -452,3 +475,10 @@ test("test_mod_root_canonical_fallback_is_mod_dir", test_mod_root_canonical_fall
 test("test_main_pack_ships_no_rpyc", test_main_pack_ships_no_rpyc);
 test("test_main_pack_is_mirror_of_patch_tree", test_main_pack_is_mirror_of_patch_tree);
 test("test_patch_root_is_install_mirror", test_patch_root_is_install_mirror);
+
+test("badVoiceNames: бенч/легаси имена не проходят в архив, контрактные — проходят", () => {
+  const ok = ["IDQ3UEAURZD5-VXIODG Carolyn.opus", "23XL3KZ3WMR3-TKL5KV Narrator.opus"];
+  const bad = ["0a586a6093ec8e5d7590eee40bfd7fb9__Sarah__Vox_cfg2.6_ts30_dn.opus", "abc__def.opus"];
+  assert.deepEqual(badVoiceNames([...ok, "README.txt"]), []);
+  assert.deepEqual(badVoiceNames([...ok, ...bad]).length, 2);
+});

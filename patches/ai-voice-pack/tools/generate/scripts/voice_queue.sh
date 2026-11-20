@@ -33,7 +33,7 @@ ARCS="Prologue StoryBeginnings Other WarriorPath MagePath BlackMonolith UnionKin
 
 for arc in $ARCS; do
   echo "=== START $LANG_ARG $arc $(date +%H:%M) ===" >> "$LOG"
-  node "$DIR/voice_batch.mts" --arc "$arc" --lang "$LANG_ARG" >> "$LOG" 2>&1 &
+  node "$DIR/voice_batch.mts" --engine cosyvoice3 --arc "$arc" --lang "$LANG_ARG" >> "$LOG" 2>&1 &
   BATCH_PID=$!
   sleep 1
   # BelowNormal для python-шинов (инференс идёт в python; node — лёгкий

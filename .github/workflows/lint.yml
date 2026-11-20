@@ -20,3 +20,8 @@ jobs:
         run: npm run lint:md
       - name: prettier check
         run: npm run format:check
+      # Гейт корпуса: в audio/ только имена по контракту {en12}-{state6} {variant}.
+      # 2026-11-20 стенд насыпал 1 851 файл бенч-имён, игра их не находила,
+      # а счётчики показывали прогресс — тест падает на любом таком файле.
+      - name: voice corpus contract
+        run: npm run test:voice:corpus

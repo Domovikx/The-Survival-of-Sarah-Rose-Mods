@@ -206,6 +206,13 @@ export const parseVoiceName = (name: string): ParsedVoiceName | null => {
   return { scheme: "base32", en: m[1]!, state: m[2]!, variant: m[3]! };
 };
 
+/**
+ * Имя файла КОРПУСА по контракту: base32-схема `{en12}-{state6} {variant}.opus|wav`.
+ * Единственный предикат «это озвучка, которую видит игра»: hex/uid32/бенч-имена
+ * (`{uid}__{voice}__Vox...`) — НЕ корпус (инцидент 2026-11-20).
+ */
+export const isCorpusName = (name: string): boolean => parseVoiceName(name) !== null;
+
 /** Имя предыдущей схемы `{en16}__{state8}__{variant}` (только период миграции). */
 const HEX_RE = new RegExp(`^([0-9a-f]{${HEX_EN_LEN}})__([0-9a-f]{${HEX_STATE_LEN}})__(.+)\\.(?:opus|wav)$`);
 

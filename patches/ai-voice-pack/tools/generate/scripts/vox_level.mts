@@ -61,13 +61,15 @@ export function parseLevelCli(argv: string[]): LevelCli {
         throw new Error(`неизвестная опция: ${argv[i]} (есть --dir/--lang/--filter/--all/--dry-run/--help)`);
     }
   }
-  if (!o.dir) o.dir = join(PKG_ROOT, "audio", o.lang);
+  // Дефолт — БЕНЧ-папка (стенд больше не пишет в корпус: там имена по
+  // контракту, а стенд делает {uid}__{voice}__Vox... — 2026-11-20).
+  if (!o.dir) o.dir = join(PKG_ROOT, "tools", "generate", "output", "voxbench", o.lang);
   return o;
 }
 
 export const LEVEL_USAGE = [
   "vox_level.mts — выравнивание уровня wav до -16 LUFS / TP -1.5 (двухпроходно, без искажений)",
-  "  --dir <папка>     что выравнивать (дефолт: audio/<lang>)",
+  "  --dir <папка>     что выравнивать (дефолт: output/voxbench/<lang>)",
   "  --lang <ru>       язык для дефолтного --dir",
   "  --filter <строка> только файлы, содержащие строку",
   "  --all              включить ВСЕ wav (без флага — только наши *__Vox* / *_cfg*)",

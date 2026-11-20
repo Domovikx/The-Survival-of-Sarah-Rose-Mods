@@ -19,7 +19,7 @@
  *
  * Vox-очередь (vox_queue.mts, 11 языков — те же операции со своими логами)::
  *
- *   node voice_ctl.mts vox-start [lang|all]  # запуск (resumable, ниже приоритет)
+ *   node voice_ctl.mts vox-start [lang|all]  # запуск voice_batch --engine voxcpm2 (resumable)
  *   node voice_ctl.mts vox-stop / vox-pause / vox-resume
  *   node voice_ctl.mts logs --vox --lang de  # лог vox_gen_{lang}.log
  *
@@ -27,7 +27,7 @@
  *
  * Как это работает:
  *   - очереди = scripts/voice_queue.sh {ru|en} (bash, resumable, низкий приоритет)
- *     | scripts/vox_queue.mts {lang} (node, 11 языков, resumable --resume);
+ *     | voice_batch.mts --engine voxcpm2 --lang {lang} (канон: имена по контракту);
  *   - процессы ищутся по cmdline (PowerShell CIM): 'voice_queue.sh'/'vox_queue.mts'
  *     (обертка) и 'voice_batch.mts'/'voxcpm_bench.mts' (оркестратор) + '--lang {lang}';
  *   - пауза = NtSuspendProcess по оркестраторам (шим доделывает текущую фразу
@@ -639,7 +639,7 @@ const CTL_HELP = `Пульт очередей озвучки TSSR
   logs [--lang lang] [-n N] [--vox]  хвост лога
   lower|vox-lower                понизить приоритет всей VOX-ветки до BelowNormal + EcoQoS + affinity
   vox-auto start|stop|status      автотроттлинг: пауза при нагрузке, возобновление при простое
-  vox-start|vox-stop|vox-pause|vox-resume [lang]  Vox-очередь (11 языков)`;
+  vox-start|vox-stop|vox-pause|vox-resume [lang]  Vox (voice_batch --engine voxcpm2)`;
 
 function cmdStatus(a: CtlArgs): number {
   const rc = printStatus(normLangs(a.lang, a.kind), a.kind);
@@ -658,7 +658,11 @@ async function cmdStart(a: CtlArgs): Promise<number> {
   let cmd: string[];
   let hint: string;
   if (a.kind === "vox") {
-    cmd = [process.execPath, join(SCRIPTS_DIR, "vox_queue.mts")];
+    // Канон — `voice_batch.mts --engine voxcpm2`: он пишет ФАЙЛЫ ПО КОНТРАКТУ
+    // `{en12}-{state6} {variant}.opus`. Легаси `vox_queue.mts` звал бенч, и тот
+    // складывал в audio/ имена `{uid}__{voice}__Vox_cfg...`, которые движок НЕ
+    // находит (баг 2026-11-20: 1 851 такой файл в audio/en при живом «прогрессе»).
+    cmd = [process.execPath, join(SCRIPTS_DIR, "voice_batch.mts"), "--engine", "voxcpm2"];
     hint = "запуск: node voice_ctl.mts vox-start [lang|all]";
   } else {
     const bash = findBash();
@@ -677,7 +681,9 @@ async function cmdStart(a: CtlArgs): Promise<number> {
     }
     let pid: number;
     try {
-      const p = spawn(cmd[0], [...cmd.slice(1), lang], {
+      // vox-контур: voice_batch ждёт `--lang <l>`; cosy-очередь — позиционный язык
+      const args = [...cmd.slice(1), ...(a.kind === "vox" ? ["--lang", lang] : [lang])];
+      const p = spawn(cmd[0], args, {
         cwd: ROOT,
         stdio: "ignore",
         detached: true,
@@ -695,9 +701,9 @@ async function cmdStart(a: CtlArgs): Promise<number> {
     await sleep(5000);
     if (a.kind === "vox") lowerVoxPriority(getVoxAutoCfg());
     if (findQueues(lang, a.kind).length || findWorkers(lang, a.kind).length) {
-      console.log(
-        `${lang.toUpperCase()}: запущено (pid ${pid}), лог output/voice/${basename(fmt(logTmpl(a.kind), lang))}`,
-      );
+      // vox-контур пишет ОБЩИЙ batch.log (voice_batch), cosy — свой gen_all_<lang>.log
+      const logName = a.kind === "vox" ? "batch.log" : basename(fmt(logTmpl(a.kind), lang));
+      console.log(`${lang.toUpperCase()}: запущено (pid ${pid}), лог output/voice/${logName}`);
     } else {
       console.log(`${lang.toUpperCase()}: стартовал, но очередь не видна — ${hint}`);
     }

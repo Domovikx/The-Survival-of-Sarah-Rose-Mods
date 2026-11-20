@@ -65,14 +65,14 @@ casts/voices/{Имя}/
 
 ## Тулы
 
-| Тул                            | Назначение                                                                                                                                               |
-| ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `npm run potgen` / `po:update` | ре-инвентарь текстов → po/template.pot + po/ru.po; дельта added/changed/dropped = git diff template.pot (только при апдейте игры)                        |
-| `voice_status.mts`             | статус/прогноз генерации: готово по языкам/аркам, %, воркеры, скорость (ВСЕГДА для «статус?», без ручного подсчёта)                                      |
-| `add_candidate.mts`            | MP3-кандидат → реф: нарезка 10с + чистка + loudnorm, одним прогоном (инкрементально; подключает голос в casts/voices.mts)                                |
-| `clean_refs.mts`               | чистка рефа: highpass+afftdn+deesser+highshelf → loudnorm → фейды                                                                                        |
-| `voice_manage.mts`             | list/status/select: фиксация A/B-варианта `{Имя}_{v}.wav → {Имя}.wav` (voice_list.json — артефакт сборки, реген не нужен)                                |
-| `voice_batch.mts`              | батч-генерация в ai_voice/{lang}/{arc}/{en12}-{state6} {variant}.opus (СРАЗУ opus, wav не пишется; `--ref` перезаписывает реф; инференс — cosyworker.py) |
+| Тул                            | Назначение                                                                                                                                                                                           |
+| ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `npm run potgen` / `po:update` | ре-инвентарь текстов → po/template.pot + po/ru.po; дельта added/changed/dropped = git diff template.pot (только при апдейте игры)                                                                    |
+| `voice_status.mts`             | статус/прогноз генерации: готово по языкам/аркам, %, воркеры, скорость (ВСЕГДА для «статус?», без ручного подсчёта)                                                                                  |
+| `add_candidate.mts`            | MP3-кандидат → реф: нарезка 10с + чистка + loudnorm, одним прогоном (инкрементально; подключает голос в casts/voices.mts)                                                                            |
+| `clean_refs.mts`               | чистка рефа: highpass+afftdn+deesser+highshelf → loudnorm → фейды                                                                                                                                    |
+| `voice_manage.mts`             | list/status/select: фиксация A/B-варианта `{Имя}_{v}.wav → {Имя}.wav` (voice_list.json — артефакт сборки, реген не нужен)                                                                            |
+| `voice_batch.mts`              | батч-генерация в ai_voice/{lang}/{arc}/{en12}-{state6} {variant}.opus (СРАЗУ opus; движок по умолчанию `--engine voxcpm2` → voxcpmworker.py, `cosyvoice3` — только явно; `--ref` перезаписывает реф) |
 
 ## Генерация
 

@@ -25,7 +25,8 @@
  *       [--demo]                        только демо-скоуп поставки (патч1)
  *       [--ref path] [--emotion E] [--emotion-tag T] [--emotion-ru R]
  *       [--no-emotion] [--text T] [--device cuda|cpu] [--python PATH]
- *       [--engine cosyvoice3|voxcpm2]   движок: свой шим/venv + метка variant
+ *       [--engine voxcpm2|cosyvoice3]   движок (дефолт voxcpm2 — канон;
+ *                                       cosyvoice3 — легаси, только явно)
  *       [--keep-wav]                оставить исходный wav рядом с opus
  *       [--wav-only]                только wav, opus корпуса не перезаписывать
  *                                   (диагностика конверта wav→opus)
@@ -405,7 +406,7 @@ const CLI_OPTIONS = {
   // без default: значение считается в parseCli по выбранному движку
   // (иначе default CLI перебивал venv voxcpm2 своим cosyvoice3)
   "python": { type: "string" },
-  "engine": { type: "string", default: "cosyvoice3" },
+  "engine": { type: "string", default: "voxcpm2" },
   "keep-wav": { type: "boolean", default: false },
   "wav-only": { type: "boolean", default: false },
 } as const;
@@ -415,7 +416,7 @@ export function parseCli(argv: string[]): Args {
   const { values } = parseArgs({ args: argv, options: CLI_OPTIONS });
   const presets = BATCH.instruct_presets as Record<string, string>;
   const emotion = values.emotion && presets[values.emotion] ? presets[values.emotion] : values.emotion;
-  const engine = (values.engine ?? "cosyvoice3") as EngineName;
+  const engine = (values.engine ?? "voxcpm2") as EngineName;
   if (!(engine in ENGINES)) {
     throw new Error(`неизвестный движок "${engine}". Доступные: ${Object.keys(ENGINES).join(", ")}`);
   }
@@ -452,7 +453,7 @@ export function parseCli(argv: string[]): Args {
 
 export async function main(argv: string[] = process.argv.slice(2)): Promise<number> {
   const args = parseCli(argv);
-  const engine = ENGINES[args.engine ?? "cosyvoice3"];
+  const engine = ENGINES[args.engine ?? "voxcpm2"];
   const entries = loadCatalog(args.lang);
   const phrases = selectPhrases(entries, args);
   log(`фраз к генерации: ${phrases.length} (lang=${args.lang}, force=${args.force})`);
@@ -467,7 +468,7 @@ export async function main(argv: string[] = process.argv.slice(2)): Promise<numb
     script: engine.shim,
     // voxcpm2-шим не принимает --device: CUDA выбирается сама; cfg/timesteps —
     // дефолты самого шима (вердикт со стенда voxcpm_bench.mts, 2026-10-27)
-    args: (args.engine ?? "cosyvoice3") === "cosyvoice3" ? ["--device", args.device] : [],
+    args: (args.engine ?? "voxcpm2") === "cosyvoice3" ? ["--device", args.device] : [],
     onLog: (l) => log(`[shim] ${l}`),
   });
 

@@ -25,13 +25,10 @@
  *   - Stop: Ctrl+C/kill раннера безопасен (текущая фраза может не дописаться —
  *     её нет в opus, resume перегенерирует).
  */
-import { spawn, spawnSync, type ChildProcess } from "node:child_process";
-import { appendFileSync, mkdirSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
 const SCRIPTS_DIR = dirname(fileURLToPath(import.meta.url));
-const GENERATE_DIR = dirname(SCRIPTS_DIR);
 const BENCH = join(SCRIPTS_DIR, "voxcpm_bench.mts");
 
 /** Языки игры (11 po-языков): валидация аргумента и `all` в пульте. */
@@ -125,128 +122,24 @@ export function progressLine(line: string, st: ProgressState, arc: string): stri
   return null;
 }
 
-function hm(): string {
-  const d = new Date();
-  return `${String(d.getHours()).padStart(2, "0")}:${String(d.getMinutes()).padStart(2, "0")}`;
-}
-
-function logLine(logPath: string, s: string): void {
-  appendFileSync(logPath, s + "\n", "utf-8");
-  console.log(s);
-}
-
-/** Ниже обычного приоритета для python-шинов (зеркало voice_queue.sh; ошибки молча игнорируем). */
-function lowerPythonPriority(): void {
-  spawnSync("wmic", ["process", "where name='python.exe'", "call", "setpriority", "16384"], {
-    windowsHide: true,
-    stdio: "ignore",
-  });
-}
-
-function runArc(lang: string, arc: string, logPath: string): Promise<number> {
-  logLine(logPath, `=== START ${lang} ${arc} ${hm()} ===`);
-  const st = progressState();
-  let done: ((code: number) => void) | null = null;
-  const child = spawn(process.execPath, benchQueueArgs(lang, arc), {
-    env: { ...process.env, VOXCPM_DENOISER: "1", OMP_NUM_THREADS: process.env.OMP_NUM_THREADS ?? "6" },
-    stdio: ["ignore", "pipe", "pipe"],
-    windowsHide: true,
-  });
-  currentChild = child;
-  lowerPythonPriority();
-  // шим стартует после model-load (~секунды) — добиваем приоритет повтором
-  const rePriority = setTimeout(lowerPythonPriority, 10_000);
-  // Буфер на поток: чанк может рвать строку посередине — прогресс считаем
-  // только по целым строкам.
-  const makeTee = () => {
-    let pending = "";
-    return (chunk: Buffer): void => {
-      const text = pending + chunk.toString("utf-8");
-      const lines = text.split(/\r?\n/);
-      pending = lines.pop() ?? "";
-      process.stdout.write(text.slice(0, text.length - pending.length));
-      appendFileSync(logPath, text.slice(0, text.length - pending.length), "utf-8");
-      for (const line of lines) {
-        const p = progressLine(line, st, arc);
-        if (p) logLine(logPath, p);
-      }
-    };
-  };
-  child.stdout.on("data", makeTee());
-  child.stderr.on("data", makeTee());
-  child.on("close", (code) => {
-    clearTimeout(rePriority);
-    currentChild = null;
-    done?.(code ?? 1);
-  });
-  child.on("error", (err) => {
-    clearTimeout(rePriority);
-    currentChild = null;
-    logLine(logPath, `ошибка запуска стенда: ${err.message}`);
-    done?.(1);
-  });
-  return new Promise((resolve) => {
-    done = resolve;
-  });
-}
-
-/** Текущий дочерний стенд — для kill-дерева при Ctrl+C/stop. */
-let currentChild: ChildProcess | null = null;
-
-function killCurrent(): void {
-  if (!currentChild?.pid) return;
-  spawnSync("taskkill", ["/PID", String(currentChild.pid), "/T", "/F"], { windowsHide: true, stdio: "ignore" });
-}
-
-async function main(argv: string[]): Promise<number> {
-  let cli: QueueCli;
-  try {
-    cli = parseQueueCli(argv);
-  } catch (e) {
-    console.error(e instanceof Error ? e.message : String(e));
-    return 2;
-  }
-  const logDir = join(GENERATE_DIR, "output", "voice");
-  mkdirSync(logDir, { recursive: true });
-  const logPath = join(logDir, `vox_gen_${cli.lang}.log`);
-  if (cli.dryRun) {
-    for (const arc of cli.arcs) console.log(`node ${benchQueueArgs(cli.lang, arc).join(" ")}`);
-    return 0;
-  }
-
-  const stop = (sig: string): void => {
-    logLine(logPath, `=== STOPPED ${cli.lang} ${sig} ${hm()} ===`);
-    killCurrent();
-    process.exit(130);
-  };
-  process.on("SIGINT", () => stop("SIGINT"));
-  process.on("SIGTERM", () => stop("SIGTERM"));
-
-  let failures = 0;
-  for (const arc of cli.arcs) {
-    // eslint-disable-next-line no-await-in-loop -- последовательно: одна GPU, арка за аркой
-    const rc = await runArc(cli.lang, arc, logPath);
-    if (rc === 0) logLine(logPath, `=== DONE ${cli.lang} ${arc} ${hm()} ===`);
-    else {
-      failures += 1;
-      logLine(logPath, `=== FAILED ${cli.lang} ${arc} rc=${rc} ${hm()} ===`);
-    }
-  }
-  logLine(logPath, `=== ALL DONE ${cli.lang} ${hm()} ===`);
-  if (failures > 0) {
-    console.error(`${failures} арка(и) с ошибкой — смотри лог ${logPath}`);
-    return 1;
-  }
-  return 0;
-}
+/**
+ * ОТКЛЮЧЕНО 2026-11-20. Очередь звала `voxcpm_bench`, а стенд пишет в
+ * `audio/<lang>/<arc>/` бенч-имена `{uid}__{voice}__Vox_cfg...`. Движок ищет
+ * `{en12}-{state6} {variant}.opus`, поэтому 5 часов прогона EN дали 1 851
+ * файл, которого игра не видит, — а счётчики при этом показывали «прогресс».
+ *
+ * Канон: `voice_batch.mts --engine voxcpm2 --lang <l>` (он и есть `vox-start`
+ * пульта): имя строит `voice_constants`-путь `voiceBase` из `voice_names.mts`.
+ * Чистые функции (разбор CLI, аргументы стенда, разбор прогресса) остались —
+ * на них тесты и расчёты.
+ */
+const main = (): number => {
+  console.error("vox_queue: ОТКЛЮЧЕНО — писал имена не по контракту {en12}-{state6} {variant}.opus.");
+  console.error("Полная озвучка: node voice_ctl.mts vox-start <lang>  (= voice_batch --engine voxcpm2)");
+  return 2;
+};
 
 // Запуск только напрямую (импорт в тестах не исполняет очередь).
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
-  main(process.argv.slice(2)).then(
-    (code) => process.exit(code),
-    (e) => {
-      console.error(e);
-      process.exit(1);
-    },
-  );
+  process.exit(main());
 }

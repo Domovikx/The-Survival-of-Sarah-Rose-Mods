@@ -26,6 +26,7 @@ import { tmpdir } from "node:os";
 import { basename, join, relative, resolve, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 
+import { isCorpusName } from "../generate/scripts/voice_names.mts";
 import { ArchiveAbort, writeArchive, type ArchiveEntry } from "./archive.mts";
 
 // ai-voice-pack/tools/build/build_pack.mts -> ../../.. = patches/ai-voice-pack
@@ -413,6 +414,16 @@ export function buildMain(outDir: string, opts: { level?: number } = {}): BuildR
  * Озвучка одного языка: audio/<lang>/** -> mods/.../ai_voice/<lang>/**.
  * Плюс СВОЙ атомарный установщик в корне зипа (владелец 2026-11-12:
  * «отдельные аудио-установщики, атомарно»; предохранитель на ядро main). */
+/**
+ * Файлы озвучки не по контракту (`{en12}-{state6} {variant}.opus`).
+ *
+ * Гейт сборки (2026-11-20): стенд однажды насыпал в `audio/` имена
+ * `{uid}__{voice}__Vox...`; игра их не находит, а в архив они уехали бы как
+ * «озвучка». Пустая выборка = можно паковать.
+ */
+export const badVoiceNames = (paths: string[]): string[] =>
+  paths.filter((p) => /\.(opus|wav)$/i.test(p) && !isCorpusName(basename(p)));
+
 export function buildVoice(lang: string, outDir: string): BuildResult | null {
   const src = VOICE_LANGS[lang];
   let st;
@@ -427,8 +438,21 @@ export function buildVoice(lang: string, outDir: string): BuildResult | null {
   }
   const name = `TSSR-AI-Voice-Pack-voice-${lang}.7z`;
   const target = join(outDir, name);
+  const all = treeFiles(src);
+  const bad = badVoiceNames(all);
+  if (bad.length > 0) {
+    throw new ArchiveAbort(
+      `voice-${lang}: ${bad.length} файл(ов) не по контракту {en12}-{state6} {variant}.opus — ` +
+        `например ${bad
+          .slice(0, 3)
+          .map((p) => basename(p))
+          .join(", ")}. ` +
+        `В корпус пишет только voice_batch --engine voxcpm2; стенд — в output/voxbench. ` +
+        `Проверка: node --test patches/ai-voice-pack/tools/generate/scripts/voice_corpus.test.mts`,
+    );
+  }
   const entries: ArchiveEntry[] = [];
-  for (const p of treeFiles(src)) {
+  for (const p of all) {
     entries.push(archiveEntry(`${MOD_DIR}/ai_voice/${lang}/${relative(src, p).split(sep).join("/")}`, p));
   }
   // Только FOMOD, без установщиков (Nexus-карантин за executables).

@@ -22,7 +22,7 @@ import { pathToFileURL } from "node:url";
 import { parseArgs } from "node:util";
 
 import { loadCatalog, PKG_ROOT } from "./voice_batch.mts";
-import { parseAnyVoiceName } from "./voice_names.mts";
+import { isCorpusName, parseAnyVoiceName } from "./voice_names.mts";
 
 const AUDIO_DIR = join(PKG_ROOT, "audio");
 const OUTPUT_DIR = join(PKG_ROOT, "tools", "generate", "output");
@@ -81,7 +81,12 @@ export function countDone(lang: string): { made: Map<string, number>; total: num
       const stems = new Set<string>();
       for (const f of readdirSync(p)) {
         if (f.includes(".ln.tmp.")) continue; // сироты loudnorm — не реплики
-        if (f.endsWith(".wav") || f.endsWith(".opus")) stems.add(f.replace(/\.[^.]+$/, ""));
+        if (!f.endsWith(".wav") && !f.endsWith(".opus")) continue;
+        // Только ИМЯ ПО КОНТРАКТУ `{en12}-{state6} {variant}` (base32): файлы
+        // бенча (`{uid}__{voice}__Vox_cfg...`) движок не находит, и считать их
+        // озвучкой = врать в статусе, пульте и меню мода (2026-11-20).
+        if (!isCorpusName(f)) continue;
+        stems.add(f.replace(/\.[^.]+$/, ""));
       }
       made.set(arc, stems.size);
       total += stems.size;
@@ -354,9 +359,11 @@ function cmdDetail(): number {
 }
 
 /** Один обход корпуса: сироты .ln.tmp, недописанные .part, размеры по языкам. */
-export function healthScan(): { orphans: number; parts: number; sizes: Record<string, number> } {
+export function healthScan(): { orphans: number; parts: number; junk: number; sizes: Record<string, number> } {
   let orphans = 0;
   let parts = 0;
+  /** Файлы озвучки НЕ по контракту (бенч/легаси) — игра их не видит. */
+  let junk = 0;
   const sizes: Record<string, number> = Object.fromEntries(LANGS.map((l) => [l, 0]));
   for (const lang of LANGS) {
     const base = aiVoiceDir(lang);
@@ -385,12 +392,13 @@ export function healthScan(): { orphans: number; parts: number; sizes: Record<st
         } else if (f.endsWith(".part")) {
           parts++;
         } else if (f.endsWith(".wav") || f.endsWith(".opus")) {
+          if (!isCorpusName(f)) junk++;
           sizes[lang] += st.size;
         }
       }
     }
   }
-  return { orphans, parts, sizes };
+  return { orphans, parts, junk, sizes };
 }
 
 /** Замер скорости: прирост стемов за 60с -> прогноз. */

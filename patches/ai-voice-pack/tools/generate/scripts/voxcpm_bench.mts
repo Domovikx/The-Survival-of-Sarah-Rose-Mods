@@ -92,10 +92,10 @@
  *   ... --cfgs 2,2.25,2.5 --ts 30                                                     # подбор cfg на одной фразе
  *   ... --picks 10                                                                    # 10 разных фраз
  *   ... --picks 10 --seed 7                                                           # другие 10 фраз
- *   ... --arc StoryBeginnings --picks 9999 --resume --seed 49 --cfg 2.6 --ts 30      # очередь (resume)
- *      (--resume: фразы с готовым opus ПРОПУСКАЮТСЯ — обрыв/остановка/ребут не теряют
- *       прогресс, повторный запуск продолжает с места; массовый обход арок/языков —
- *       vox_queue.mts, он и гоняет это с конфигом пролога)
+ *   ... --arc StoryBeginnings --picks 9999 --resume --seed 49 --cfg 2.6 --ts 30      # пилот арки (resume)
+ *      (--resume: фразы с готовым файлом ПРОПУСКАЮТСЯ — обрыв/остановка/ребут не
+ *       теряют прогресс. В КОРПУС стенд не пишет: см. ниже)
+ *   ... --out-dir tmp/my-bench                                                       # своя папка результата
  *   ... --knobs                                                                       # справочник кнобков
  *   ... --picks 10 --opt normalize=true --opt retry_badcase=false                     # оперативный конфиг
  *   ... --each-voice --per-voice 3                                                    # 72 голоса x 3 фразы
@@ -112,6 +112,12 @@
  *       `vox_qc.mts --filter <uid> --rank` / `--pick`, победитель -> каноническое
  *       победитель -> каноническое имя {uid}__{voice}__Vox_cfg{cfg}_ts{ts}.wav)
  *
+ * КУДА ПИШЕТ (2026-11-20): по умолчанию `tools/generate/output/voxbench/<lang>/<arc>/`,
+ * НЕ в `patches/ai-voice-pack/audio/`. Корпус — только `voice_batch.mts --engine
+ * voxcpm2` (имена по контракту `{en12}-{state6} {variant}.opus`). Стенд, нацеленный
+ * внутрь audio/, останавливается ДО генерации: его имена `{uid}__{voice}__Vox...`
+ * игра не находит (так за ночь 2026-11-20 накопился 1 851 невидимый файл).
+ *
  * ПАЙПЛАЙН (владелец 2026-10-28, инлайн с 2026-10-30): генерация СЫРЫМ wav ->
  * СРАЗУ после записи каждой фразы конвейер (выравнивание -16/TP-1.5 ->
  * opus 48 kHz/24 kbps -> удаление wav) -> в папке ТОЛЬКО opus, пачка wav
@@ -123,7 +129,7 @@
  */
 import { spawnSync } from "node:child_process";
 import { appendFileSync, existsSync, mkdirSync, readFileSync, readdirSync, rmSync, writeFileSync } from "node:fs";
-import { basename, dirname, join } from "node:path";
+import { basename, dirname, join, relative, resolve, sep } from "node:path";
 import { pathToFileURL } from "node:url";
 
 import { ENGINES, loadCatalog, type Args, type Phrase, PKG_ROOT, selectPhrases } from "./voice_batch.mts";
@@ -134,6 +140,38 @@ import { VoiceWorker } from "./voicekit/worker.mts";
 /** Репа-корень: PKG_ROOT = patches/ai-voice-pack -> ../../. */
 const REPO_ROOT = join(PKG_ROOT, "..", "..");
 const BENCH_DIR = join(REPO_ROOT, "tmp", "voxcpm_bench");
+/** КОРПУС (то, что уезжает в игру) — писать сюда имеет право только voice_batch. */
+export const CORPUS_AUDIO = join(PKG_ROOT, "audio");
+/** Куда стенд пишет по умолчанию: output/voxbench/<lang>/<arc> (вне корпуса). */
+export const BENCH_AUDIO = join(PKG_ROOT, "tools", "generate", "output", "voxbench");
+
+/**
+ * Куда писать бенч-файл вместо корпуса: сохраняем структуру `<lang>/<arc>`.
+ *
+ * ИСТОРИЯ (2026-11-20): стенд писал прямо в `audio/<lang>/<arc>/` именами
+ * `{uid}__{voice}__Vox_cfg...`. Игра ищет `{en12}-{state6} {variant}.opus`,
+ * поэтому 5 часов прогона EN дали 1 851 файл, которого движок не видит, а
+ * счётчики показывали «прогресс». Теперь бенч по умолчанию вне корпуса.
+ */
+export const benchDestDir = (out: string, outDir = "", corpusAudio = CORPUS_AUDIO): string => {
+  const rel = relative(corpusAudio, dirname(out));
+  return join(outDir || BENCH_AUDIO, rel);
+};
+
+/** Путь внутри корпуса? (сравнение по префиксу после resolve, регистр Windows). */
+export const isInside = (root: string, p: string): boolean => {
+  const a = resolve(root).toLowerCase() + sep;
+  const b = resolve(p).toLowerCase() + sep;
+  return b.startsWith(a);
+};
+
+/** Ошибка, если стенд пытается писать в корпус (там только контрактные имена). */
+export const corpusWriteError = (dest: string, corpusAudio = CORPUS_AUDIO): string | null =>
+  isInside(corpusAudio, dest)
+    ? `стенд не пишет в корпус (${dest}): игра ищет {en12}-{state6} {variant}.opus, ` +
+      `а стенд делает {uid}__{voice}__Vox... Используй voice_batch --engine voxcpm2 ` +
+      `или задай --out-dir вне patches/ai-voice-pack/audio`
+    : null;
 /** Тренировочная фраза стенда (та, на которой виден хаос генерации). */
 export const TRAIN_UID = "2bd6a3aac9e53970fcbf557dcd253cf0";
 /** Дефолты стенда = дефолты шима. ЛЕСТНИЦА владельца (2026-10-27):
@@ -469,6 +507,8 @@ interface BenchCli {
    * в объекте выигрывают) и в extra/имя файла (метка `_key=value`).
    */
   opts: Record<string, number | boolean>;
+  /** Куда писать файлы (`--out-dir`); пусто = output/voxbench (вне корпуса). */
+  outDir: string;
   /** Только напечатать справочник кнобков и выйти (`--knobs`). */
   knobs: boolean;
   dryRun: boolean;
@@ -519,6 +559,7 @@ export function parseBenchCli(argv: string[]): BenchCli {
     cfg: DEFAULT_CFG,
     ts: DEFAULT_TIMESTEPS,
     opts: {},
+    outDir: "",
     knobs: false,
     dryRun: false,
     resume: false,
@@ -624,6 +665,9 @@ export function parseBenchCli(argv: string[]): BenchCli {
         break;
       case "--emotion":
         o.emotion = next();
+        break;
+      case "--out-dir":
+        o.outDir = next();
         break;
       case "--name-tag":
         o.nameTag = next().replace(/[^\w.-]/g, "_");
@@ -791,6 +835,8 @@ export function filterByUids(phrases: Phrase[], uids: string[]): Phrase[] {
 
 /** Построение плана: матрица на одну фразу либо выборка N фраз (пилот). */
 function planOnce(o: BenchCli, phrases: Phrase[]): PlanItem[] {
+  /** Каталог назначения: корпус -> output/voxbench (или --out-dir). */
+  const dest = (out: string): string => benchDestDir(out, o.outDir);
   if (o.eachVoice) {
     // По N фраз на КАЖДЫЙ голос: перемешиваем seed'ом и режем по perVoice,
     // чтобы голоса не выбирались всегда одной и той же «первой» фразой.
@@ -812,7 +858,7 @@ function planOnce(o: BenchCli, phrases: Phrase[]): PlanItem[] {
     return [...byVoice.values()].flat().map((p) => ({
       n: o.start,
       name: `${p.uid}__${p.voice}__Vox${cfgTag}${tag}${nt}`,
-      wavPath: join(dirname(p.out), `${p.uid}__${p.voice}__Vox${cfgTag}${tag}${nt}.wav`),
+      wavPath: join(dest(p.out), `${p.uid}__${p.voice}__Vox${cfgTag}${tag}${nt}.wav`),
       phrase: p,
       cfg: o.cfg,
       ts: o.ts,
@@ -831,7 +877,7 @@ function planOnce(o: BenchCli, phrases: Phrase[]): PlanItem[] {
     return sample.map((p) => ({
       n: o.start,
       name: `${p.uid}__${p.voice}__Vox${cfgTag}${tag}${nt}`,
-      wavPath: join(dirname(p.out), `${p.uid}__${p.voice}__Vox${cfgTag}${tag}${nt}.wav`),
+      wavPath: join(dest(p.out), `${p.uid}__${p.voice}__Vox${cfgTag}${tag}${nt}.wav`),
       phrase: p,
       cfg: o.cfg,
       ts: o.ts,
@@ -857,7 +903,7 @@ function planOnce(o: BenchCli, phrases: Phrase[]): PlanItem[] {
     return {
       n,
       name,
-      wavPath: join(dirname(one.out), `${name}.wav`),
+      wavPath: join(dest(one.out), `${name}.wav`),
       phrase: one,
       cfg: run.cfg,
       ts: run.ts,
@@ -959,6 +1005,16 @@ export async function main(argv: string[] = process.argv.slice(2)): Promise<numb
   if (plan.length === 0) {
     console.error(`план пуст: --only=${o.only ?? "-"} / --picks=${o.picks} (кандидатов ${phrases.length})`);
     return 1;
+  }
+  // Гейт: в корпус пишет ТОЛЬКО voice_batch (контрактные имена). Стенд,
+  // нацеленный внутрь audio/, останавливаем ДО генерации (2026-11-20: так
+  // накопилось 1 851 файла, которого игра не видит).
+  for (const it of plan) {
+    const err = corpusWriteError(dirname(it.wavPath));
+    if (err) {
+      console.error(`ERROR: ${err}`);
+      return 2;
+    }
   }
   if (o.resume) {
     // Обрыв/остановка/ребут: готовые opus не трогаем — продолжаем с места.

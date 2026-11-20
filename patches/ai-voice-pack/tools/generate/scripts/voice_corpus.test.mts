@@ -63,7 +63,7 @@ const walk = (dir: string, rel = ""): void => {
 };
 walk(AUDIO);
 
-test("корпус: каждый файл по целевой схеме или документированное легаси", () => {
+test("корпус: КАЖДЫЙ файл по контракту {en12}-{state6} {variant} (легаси = 0)", () => {
   const modern: string[] = [];
   const hex: string[] = [];
   const legacy: string[] = [];
@@ -77,9 +77,16 @@ test("корпус: каждый файл по целевой схеме или 
   }
   assert.deepEqual(weird, [], `файлы с непонятным именем: ${weird.slice(0, 5).join(", ")}`);
   assert.deepEqual(hex, [], `не мигрировано (hex-схема): ${hex.length}, напр. ${hex.slice(0, 3).join(", ")}`);
+  // ЛЕГАСИ = 0, а не «< 300»: допуск скрыл инцидент 2026-11-20, когда стенд
+  // писал в корпус `{uid}__{voice}__Vox...` — игра таких файлов не находит,
+  // а счётчики показывали прогресс. Любое имя не по контракту — падение.
+  assert.deepEqual(
+    legacy,
+    [],
+    `файлы не по контракту: ${legacy.length}, напр. ${legacy.slice(0, 3).join(", ")} — ` +
+      "в корпус пишет только voice_batch --engine voxcpm2 (стенд — в output/voxbench)",
+  );
   assert.ok(modern.length > 12_000, `целевой схемы подозрительно мало: ${modern.length}`);
-  // Легаси остаются только там, где на момент генерации перевода в po не было.
-  assert.ok(legacy.length < 300, `легаси слишком много: ${legacy.length}`);
   console.log(
     `  целевая схема: ${modern.length} | hex: ${hex.length} | легаси: ${legacy.length} | всего: ${files.length}`,
   );
