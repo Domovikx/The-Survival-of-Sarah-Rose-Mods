@@ -5,15 +5,16 @@
  */
 export type ErrorStatus = { key: string; params?: Record<string, string> };
 
-/** Признаки «файл занят другой программой» в тексте ошибки Windows. */
+/**
+ * Признаки «файл занят другой программой» (Windows: sharing violation).
+ * Сюда НЕ входят «access denied»/os error 5: это чаще права на папку, и
+ * подсказка «закройте игру» там была бы враньём (отдельный случай).
+ */
 const BUSY = [
   "os error 32",
-  "os error 5",
-  "access is denied",
   "sharing violation",
-  "process cannot access",
-  "отказано в доступе",
-  "процесс не может получить доступ",
+  "process cannot access the file",
+  "процесс не может получить доступ к файлу",
   "используется другим процессом",
 ];
 
