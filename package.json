@@ -40,14 +40,19 @@
     "format:md": "prettier --write \"**/*.md\"",
     "dash": "node .opencode/skills/local-dash/dashboard.mts",
     "dash:open": "node .opencode/skills/local-dash/dashboard.mts --open",
-    "translate": "node .opencode/skills/translate/translate_queue.mts"
+    "translate": "node .opencode/skills/translate/translate_queue.mts",
+    "test:voice:corpus": "node --test patches/ai-voice-pack/tools/generate/scripts/voice_corpus.test.mts",
+    "test:voice:names": "node --test patches/ai-voice-pack/tools/generate/scripts/voice_names.test.mts"
   },
   "lint-staged": {
     "*.{js,mjs,cjs,ts,tsx,mts,cts}": [
       "oxlint --fix",
       "prettier --write"
     ],
-    "*.{json,css,html,md,yml,yaml}": [
+    "*.{json,css,html,yml,yaml}": [
+      "prettier --write"
+    ],
+    "*.md": [
       "markdownlint-cli2 --fix",
       "prettier --write"
     ]
