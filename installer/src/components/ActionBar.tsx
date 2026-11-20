@@ -18,6 +18,8 @@ type Props = {
   coreOnly: boolean;
   /** Какое действие идёт (лоадер ставим именно на его кнопку). */
   job: "apply" | "uninstall" | null;
+  /** Помечено «снять всё»: кнопка честно говорит, что произойдёт. */
+  removeAll: boolean;
   canUninstall: boolean;
   onApply: () => void;
   onUninstall: () => void;
@@ -32,6 +34,7 @@ export const ActionBar = ({
   changes,
   coreOnly,
   job,
+  removeAll,
   canUninstall,
   onApply,
   onUninstall,
@@ -57,16 +60,20 @@ export const ActionBar = ({
           />
         </div>
         <div className={cx(styles.actions)}>
-          <button
-            type="button"
-            className={cx(styles.danger)}
-            data-testid={`${ROOT}--uninstall`}
-            disabled={busy || !canUninstall}
-            onClick={onUninstall}
-          >
-            {busy && job === "uninstall" ? <Spinner size={14} /> : null}
-            {t("Uninstall mod")}
-          </button>
+          {/* Пока висит пометка «снять всё», вторая кнопка удаления не нужна:
+              одно действие — одна кнопка (иначе два одинаковых выбора). */}
+          {removeAll ? null : (
+            <button
+              type="button"
+              className={cx(styles.danger)}
+              data-testid={`${ROOT}--uninstall`}
+              disabled={busy || !canUninstall}
+              onClick={onUninstall}
+            >
+              {busy && job === "uninstall" ? <Spinner size={14} /> : null}
+              {t("Uninstall mod")}
+            </button>
+          )}
           <button
             type="button"
             className={cx(styles.primary)}
@@ -79,6 +86,8 @@ export const ActionBar = ({
                 <Spinner size={15} />
                 {active ? `${Math.round(active.pct)}%` : t("Working…")}
               </>
+            ) : removeAll ? (
+              t("Remove everything")
             ) : coreOnly && !busy ? (
               t("Install main pack")
             ) : (

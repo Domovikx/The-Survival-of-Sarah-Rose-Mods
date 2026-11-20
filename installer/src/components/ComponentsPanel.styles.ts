@@ -13,6 +13,13 @@ export const styles = stylex.create({
     // значки в колонках стоят по одной вертикали (2026-11-20).
     "display": "grid",
     "gridTemplateColumns": "24px 1fr auto",
+    "width": "100%",
+    "textAlign": "left",
+    "font": "inherit",
+    "color": "inherit",
+    "cursor": "pointer",
+    // Кнопка иначе рисуется системной плашкой: по умолчанию — как фон.
+    "backgroundColor": "transparent",
     "alignItems": "center",
     "columnGap": 12,
     "padding": "12px 14px",
@@ -26,7 +33,11 @@ export const styles = stylex.create({
     "transitionProperty": "border-color, background-color",
     "transitionDuration": "140ms",
     ":hover": { borderColor: "var(--accent-fg)" },
+    ":focus-visible": { outline: "2px solid var(--accent-fg)", outlineOffset: 2 },
+    ":disabled": { cursor: "default" },
   },
+  /** Во время установки карточка гаснет, как и языки. */
+  coreBusy: { opacity: 0.55, pointerEvents: "none" },
   coreOn: {
     backgroundColor: "var(--panel-2)",
     borderColor: "var(--state-border)",
@@ -36,6 +47,7 @@ export const styles = stylex.create({
   coreText: { display: "flex", flexDirection: "column", gap: 2, minWidth: 0 },
   coreTitle: { fontSize: 14.5, fontWeight: 600 },
   coreSub: { fontSize: 12.5, color: "var(--muted)" },
+  coreSubPending: { color: "var(--accent-fg)" },
   /** Ячейка индикатора: вторая колонка сетки, как `switch` у языков. */
   coreState: { display: "flex", flexShrink: 0 },
   /**

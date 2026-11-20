@@ -46,11 +46,13 @@ export const App = () => {
         <ComponentsPanel
           state={inst.state}
           langs={VOICE_LANGS}
-          desired={inst.desired}
+          desired={inst.effective}
           sizeOf={sizeOf}
           busy={inst.busy}
           active={inst.active}
           onToggle={inst.toggleLang}
+          removeAll={inst.removeAll}
+          onCoreClick={inst.toggleCore}
         />
         <LogPanel lines={inst.lines} />
       </main>
@@ -62,6 +64,7 @@ export const App = () => {
         progress={inst.progress}
         active={inst.active}
         job={inst.job}
+        removeAll={inst.removeAll}
         busy={inst.busy}
         changes={inst.changes}
         coreOnly={inst.changes > 0 && !inst.state?.core && !inst.diff.install.length && !inst.diff.remove.length}

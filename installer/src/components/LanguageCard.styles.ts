@@ -48,6 +48,8 @@ export const styles = stylex.create({
     boxShadow: "0 0 0 3px var(--state-bg)",
   },
   busy: { opacity: 0.55, pointerEvents: "none" },
+  /** «Снять всё»: язык всё равно уйдёт — кликать нечего, но не гасим. */
+  locked: { pointerEvents: "none", cursor: "default" },
   // Флаги в наборе — КРУГЛЫЕ (circle-flags): держим квадрат 22×22 и круглый
   // крой, иначе получается «прямоугольник с обрезанным кружком» (2026-11-20).
   flag: {

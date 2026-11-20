@@ -29,11 +29,13 @@ type Props = {
   busy: boolean;
   /** Качается прямо сейчас: процент файла (лоадер вместо иконки состояния). */
   activity?: { pct: number } | null;
+  /** Помечено «снять всё»: тумблеры заблокированы без затемнения. */
+  locked?: boolean;
   onToggle: (value: boolean) => void;
 };
 
 /** Один язык: флаг, название, состояние и тумблер «должен стоять». */
-export const LanguageCard = ({ lang, files, want, size, busy, activity, onToggle }: Props) => {
+export const LanguageCard = ({ lang, files, want, size, busy, activity, locked, onToggle }: Props) => {
   const installed = files !== undefined;
   const pending = want !== installed;
   // Состояние несёт тумблер и рамка, поэтому в подписи — только ФАКТ:
@@ -66,6 +68,7 @@ export const LanguageCard = ({ lang, files, want, size, busy, activity, onToggle
         styles.card,
         installed && styles.installed,
         pending && want && styles.pendingAdd,
+        locked && styles.locked,
         busy && styles.busy,
       )}
     >
@@ -100,7 +103,7 @@ export const LanguageCard = ({ lang, files, want, size, busy, activity, onToggle
         type="checkbox"
         role="switch"
         checked={want}
-        disabled={busy}
+        disabled={busy || locked}
         aria-label={`${NAMES[lang] ?? lang} ${lang.toUpperCase()}`}
         onChange={(e) => onToggle(e.target.checked)}
       />

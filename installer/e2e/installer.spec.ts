@@ -131,6 +131,41 @@ test.describe("установщик: положительные сценарии
     await expect(page.getByTestId("Language--en-meta")).toContainText("аудиофайлов");
   });
 
+  test("основной пак: пометка «снять всё», отмена и удаление через «Применить»", async ({ page }) => {
+    const core = page.getByTestId("Components--core");
+    await expect(core).toHaveAttribute("data-state", "installed");
+
+    // Клик по установленному паку НЕ удаляет сразу — помечает намерение.
+    await core.click();
+    await expect(core).toHaveAttribute("data-state", "remove");
+    await expect(core).toContainText("будет удалено");
+    // Языки не могут остаться без пака — все помечены на удаление.
+    for (const lang of ["en", "ru", "de"]) {
+      await expect(page.getByTestId(`Language--${lang}-meta`)).toHaveText("будет удалено");
+    }
+    // Кнопка говорит, что произойдёт, а не абстрактное «Применить изменения».
+    await expect(page.getByTestId("Actions--apply")).toHaveText("Удалить всё");
+
+    // Повторный клик отменяет намерение — всё снова стоит.
+    await core.click();
+    await expect(core).toHaveAttribute("data-state", "installed");
+    await expect(page.getByTestId("Language--en-meta")).toContainText("аудиофайлов");
+    await expect(page.getByTestId("Actions--apply")).toBeDisabled();
+
+    // Пометка → «Применить» → подтверждение → пусто.
+    await core.click();
+    await page.getByTestId("Actions--apply").click();
+    await expect(page.getByTestId("Confirm")).toBeVisible();
+    await page.getByTestId("Confirm--ok").click();
+    await expect(core).toHaveAttribute("data-state", "absent", { timeout: 20_000 });
+    await expect(page.getByTestId("Actions--apply")).toHaveText("Установить основной пак");
+
+    // Из пустого состояния клик по карточке ставит пак.
+    await core.click();
+    await settle(page);
+    await expect(core).toHaveAttribute("data-state", "installed");
+  });
+
   test("удаление мода из полного состояния возвращает пустой экран", async ({ page }) => {
     await uninstallAll(page);
 

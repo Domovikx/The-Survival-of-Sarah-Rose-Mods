@@ -30,6 +30,11 @@ export const useInstaller = () => {
   const [release, setRelease] = useState<Release | null>(null);
   /** Желаемое состояние языков (тумблеры): true = должен стоять. */
   const [desired, setDesired] = useState<ReadonlyMap<string, boolean>>(new Map());
+  /**
+   * «Снять основной пак» = снять ВСЁ: пак обязателен, без него языки бесполезны.
+   * Это намерение (пометка), а действие выполняет «Применить» — как у языков.
+   */
+  const [removeAll, setRemoveAll] = useState(false);
   const [lines, setLines] = useState<readonly string[]>([]);
   const [busy, setBusy] = useState(false);
   /**
@@ -51,8 +56,16 @@ export const useInstaller = () => {
   }, []);
 
   const installed = useMemo(() => new Set((state?.langs ?? []).map((l) => l.lang)), [state]);
-  const diff = useMemo(() => diffLangs(VOICE_LANGS, desired, installed), [desired, installed]);
-  const changes = diff.install.length + diff.remove.length + (state && !state.core ? 1 : 0);
+  /** Что реально показывать в тумблерах: при «снять всё» все языки выключены. */
+  const effective = useMemo(() => {
+    if (!removeAll) return desired;
+    const next = new Map(desired);
+    for (const lang of VOICE_LANGS) if (installed.has(lang)) next.set(lang, false);
+    return next;
+  }, [desired, installed, removeAll]);
+  const diff = useMemo(() => diffLangs(VOICE_LANGS, effective, installed), [effective, installed]);
+  const changes =
+    diff.install.length + diff.remove.length + (state && !state.core ? 1 : 0) + (state?.core && removeAll ? 1 : 0);
 
   const assetSize = useCallback(
     (asset: string): string => {
@@ -90,6 +103,7 @@ export const useInstaller = () => {
       }
       const inv = await invoke<InstallState>("scan_install", { game: found.path });
       setState(inv);
+      setRemoveAll(false);
       setDesired(new Map(VOICE_LANGS.map((lang) => [lang, inv.langs.some((l) => l.lang === lang)])));
       setDetected(true);
       setStatus(
@@ -200,11 +214,15 @@ export const useInstaller = () => {
           key: "installing {{i}}/{{n}}: {{what}}",
           params: { i: String(done + 1), n: String(total), what: lang.toUpperCase() },
         });
+        // Ставим ПО ОДНОМУ: нужен прогресс по текущему файлу и порядок
+        // (ядро → языки), параллель тут только запутает прогресс.
+        // eslint-disable-next-line no-await-in-loop
         await installAsset(voiceAsset(lang), rel, appDir, lang);
         plan.current.done = ++done;
       }
       for (const lang of remove) {
         setStatus({ key: "removing {{what}}…", params: { what: lang.toUpperCase() } });
+        // eslint-disable-next-line no-await-in-loop
         const files = await invoke<number>("remove_lang", { game: game.path, lang });
         log(`removed ${lang.toUpperCase()}: ${files} files`);
         plan.current.done = ++done;
@@ -225,21 +243,26 @@ export const useInstaller = () => {
     }
   }, [detect, diff, fetchRelease, game, installAsset, log, release, state]);
 
-  const apply = useCallback(() => {
-    if (!state) return;
-    const { remove } = diff;
-    if (!remove.length) {
-      void runApply();
-      return;
+  /** Удаление мода: общая реализация для кнопки и для «снять всё». */
+  const runUninstall = useCallback(async () => {
+    if (!game) return;
+    setBusy(true);
+    setJob("uninstall");
+    setStatus({ key: "removing the mod…" });
+    try {
+      const r = await invoke<UninstallReport>("uninstall", { game: game.path });
+      log(
+        `uninstall: mod=${r.removed_mod ? "removed" : "absent"}, env=${r.removed_environment ? "removed" : "present"}`,
+      );
+      await detect();
+    } catch (e) {
+      log(`uninstall failed: ${String(e)}`);
+      setStatus(errorStatus(e));
+    } finally {
+      setJob(null);
+      setBusy(false);
     }
-    setConfirm({
-      title: `${t("Apply changes")}?`,
-      detail: `${remove.map((l) => l.toUpperCase()).join(", ")} — ${t("will be removed")}`,
-      confirmLabel: t("Apply changes"),
-      danger: true,
-      run: () => void runApply(),
-    });
-  }, [diff, runApply, state]);
+  }, [detect, game, log]);
 
   const uninstall = useCallback(() => {
     if (!game) return;
@@ -252,28 +275,44 @@ export const useInstaller = () => {
         : undefined,
       confirmLabel: t("Uninstall mod"),
       danger: true,
-      run: () => {
-        void (async () => {
-          setBusy(true);
-          setJob("uninstall");
-          setStatus({ key: "removing the mod…" });
-          try {
-            const r = await invoke<UninstallReport>("uninstall", { game: game.path });
-            log(
-              `uninstall: mod=${r.removed_mod ? "removed" : "absent"}, env=${r.removed_environment ? "removed" : "present"}`,
-            );
-            await detect();
-          } catch (e) {
-            log(`uninstall failed: ${String(e)}`);
-            setStatus(errorStatus(e));
-          } finally {
-            setJob(null);
-            setBusy(false);
-          }
-        })();
-      },
+      run: () => void runUninstall(),
     });
-  }, [detect, game, log, state]);
+  }, [game, runUninstall, state?.other_mods]);
+
+  const apply = useCallback(() => {
+    if (!state) return;
+    // «Снять всё» — это удаление мода целиком: спрашиваем так же, как кнопка
+    // удаления (одно и то же действие не должно иметь двух разных диалогов).
+    if (removeAll) {
+      uninstall();
+      return;
+    }
+    const { remove } = diff;
+    if (!remove.length) {
+      void runApply();
+      return;
+    }
+    setConfirm({
+      title: `${t("Apply changes")}?`,
+      detail: `${remove.map((l) => l.toUpperCase()).join(", ")} — ${t("will be removed")}`,
+      confirmLabel: t("Apply changes"),
+      danger: true,
+      run: () => void runApply(),
+    });
+  }, [diff, runApply, removeAll, state, uninstall]);
+
+  /**
+   * Клик по карточке основного пака: стоит → помечаем «снять всё»
+   * (повторный клик снимает пометку); не стоит → ставим пак.
+   */
+  const toggleCore = useCallback(() => {
+    if (busy) return;
+    if (!state?.core) {
+      void runApply();
+      return;
+    }
+    setRemoveAll((prev) => !prev);
+  }, [busy, runApply, state?.core]);
 
   const toggleLang = useCallback((lang: string, value: boolean) => {
     setDesired((prev) => new Map(prev).set(lang, value));
@@ -282,6 +321,8 @@ export const useInstaller = () => {
   return {
     game,
     state,
+    removeAll,
+    effective,
     release,
     desired,
     lines,
@@ -299,6 +340,7 @@ export const useInstaller = () => {
     apply,
     uninstall,
     toggleLang,
+    toggleCore,
     closeConfirm: () => setConfirm(null),
   };
 };
