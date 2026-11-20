@@ -7,7 +7,8 @@
  *   3. распаковывает оба (7z своим кодеком, без внешнего 7-Zip);
  *   4. инвентарь видит ядро и EN с файлами;
  *   5. удаляет EN (`remove_lang`) — язык исчезает из инвентаря;
- *   6. делает uninstall — папка мода и `environment.txt` удалены.
+ *   6. делает uninstall — папка мода и `environment.txt` удалены;
+ *   7. ставит всё заново — мод и `environment.txt` на месте (полный цикл).
  *
  * Запуск: `npm run e2e` (нужен собранный release-exe: `npm run tauri build`).
  * Сеть обязательна: скачивается ~35 МБ из последнего релиза.
@@ -49,12 +50,18 @@ expect(/scan core=true/i.test(out), "инвентарь не видит ядро
 expect(/langs=\[\("en", \d+\)\]/.test(out), "инвентарь не видит EN после установки");
 expect(/removed en \(\d+ files\)/i.test(out), "язык EN не удалился");
 expect(/env_removed=true/.test(out), "uninstall не убрал environment.txt");
+expect(
+  /reinstall core=true en_files=\d+ env=true/.test(out),
+  "повторная установка не восстановила мод и environment.txt",
+);
 expect(/selftest: OK/i.test(out), "selftest не дошёл до OK");
 
-// Мод после uninstall удалён — проверяем и снаружи, не только по логу.
+// Снаружи проверяем ФИНАЛ цикла (мод ставится заново после удаления):
+// папка мода и environment.txt на месте, а скачанные архивы не копятся.
 const modDir = join(work, "game", "mods", "tssr-ai-voice-pack");
-expect(!existsSync(modDir), `папка мода осталась: ${modDir}`);
-const leftovers = existsSync(join(work, "game")) ? readdirSync(join(work, "game")) : [];
-console.log(
-  `E2E OK: установка core+EN, удаление языка и полный uninstall проверены (${leftovers.length} записей осталось в temp).`,
-);
+expect(existsSync(modDir), `после повторной установки нет папки мода: ${modDir}`);
+expect(existsSync(join(work, "game", "environment.txt")), "после повторной установки нет environment.txt");
+const archives = readdirSync(work).filter((name) => name.endsWith(".7z"));
+expect(archives.length === 0, `скачанные архивы не удалены: ${archives.join(", ")}`);
+
+console.log("E2E OK: установка → удаление языка → uninstall → повторная установка (архивы убираются).");

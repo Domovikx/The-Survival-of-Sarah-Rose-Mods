@@ -175,7 +175,11 @@ fn sha256_file(path: String) -> Result<String, String> {
 }
 
 /// Скачать файл с докачкой (Range); прогресс отдаёт колбэк.
-async fn download_impl<F: Fn(u64, Option<u64>)>(url: &str, dest: &str, on_progress: F) -> Result<u64, String> {
+async fn download_impl<F: Fn(u64, Option<u64>)>(
+    url: &str,
+    dest: &str,
+    on_progress: F,
+) -> Result<u64, String> {
     let path = PathBuf::from(dest);
     if let Some(dir) = path.parent() {
         fs::create_dir_all(dir).map_err(|e| format!("{dest}: {e}"))?;
@@ -185,50 +189,66 @@ async fn download_impl<F: Fn(u64, Option<u64>)>(url: &str, dest: &str, on_progre
         .user_agent("tssr-installer/0.1")
         .build()
         .map_err(|e| e.to_string())?;
-    let mut req = client.get(url);
-    if have > 0 {
-        req = req.header("Range", format!("bytes={have}-"));
-    }
-    let resp = req.send().await.map_err(|e| format!("{url}: {e}"))?;
-    let status = resp.status();
-    if !status.is_success() {
-        return Err(format!("HTTP {status} для {url}"));
-    }
-    // Сервер не умеет Range — начинаем заново, иначе приклеим кусок не туда.
-    if have > 0 && status != reqwest::StatusCode::PARTIAL_CONTENT {
-        have = 0;
-    }
-    let total = resp.content_length().map(|len| len + have);
-    let mut file = OpenOptions::new()
-        .create(true)
-        .write(true)
-        .append(have > 0)
-        .truncate(have == 0)
-        .open(&path)
-        .map_err(|e| format!("{dest}: {e}"))?;
 
-    let mut stream = resp.bytes_stream();
-    let mut downloaded = have;
-    let started = Instant::now();
-    let mut last_emit = Instant::now();
-    while let Some(chunk) = stream.next().await {
-        let chunk = chunk.map_err(|e| e.to_string())?;
-        file.write_all(&chunk).map_err(|e| e.to_string())?;
-        downloaded += chunk.len() as u64;
-        if last_emit.elapsed() > Duration::from_millis(120) {
-            on_progress(downloaded, total);
-            last_emit = Instant::now();
+    // Докачка с повтором: если локальный файл уже ПОЛНЫЙ (архив остался с
+    // прошлой установки), сервер отвечает 416 Range Not Satisfiable. Раньше
+    // это ломало повторную установку после удаления (найдено E2E 2026-11-20).
+    let mut restarted = false;
+    loop {
+        let mut req = client.get(url);
+        if have > 0 {
+            req = req.header("Range", format!("bytes={have}-"));
         }
+        let resp = req.send().await.map_err(|e| format!("{url}: {e}"))?;
+        let status = resp.status();
+
+        if status == reqwest::StatusCode::RANGE_NOT_SATISFIABLE && !restarted {
+            println!("download: файл уже полный — начинаем заново ({dest})");
+            let _ = fs::remove_file(&path);
+            have = 0;
+            restarted = true;
+            continue;
+        }
+        if !status.is_success() {
+            return Err(format!("HTTP {status} для {url}"));
+        }
+        // Сервер не умеет Range — начинаем заново, иначе приклеим кусок не туда.
+        if have > 0 && status != reqwest::StatusCode::PARTIAL_CONTENT {
+            have = 0;
+        }
+
+        let total = resp.content_length().map(|len| len + have);
+        let mut file = OpenOptions::new()
+            .create(true)
+            .write(true)
+            .append(have > 0)
+            .truncate(have == 0)
+            .open(&path)
+            .map_err(|e| format!("{dest}: {e}"))?;
+
+        let mut stream = resp.bytes_stream();
+        let mut downloaded = have;
+        let started = Instant::now();
+        let mut last_emit = Instant::now();
+        while let Some(chunk) = stream.next().await {
+            let chunk = chunk.map_err(|e| e.to_string())?;
+            file.write_all(&chunk).map_err(|e| e.to_string())?;
+            downloaded += chunk.len() as u64;
+            if last_emit.elapsed() > Duration::from_millis(120) {
+                on_progress(downloaded, total);
+                last_emit = Instant::now();
+            }
+        }
+        file.flush().map_err(|e| e.to_string())?;
+        on_progress(downloaded, total.or(Some(downloaded)));
+        let secs = started.elapsed().as_secs_f64().max(0.001);
+        println!(
+            "download: {downloaded} байт за {:.1} с ({:.1} МБ/с) -> {dest}",
+            secs,
+            (downloaded as f64 / 1_048_576.0) / secs
+        );
+        return Ok(downloaded);
     }
-    file.flush().map_err(|e| e.to_string())?;
-    on_progress(downloaded, total.or(Some(downloaded)));
-    let secs = started.elapsed().as_secs_f64().max(0.001);
-    println!(
-        "download: {downloaded} байт за {:.1} с ({:.1} МБ/с) -> {dest}",
-        secs,
-        (downloaded as f64 / 1_048_576.0) / secs
-    );
-    Ok(downloaded)
 }
 
 /// Распаковать архивы в папку; возвращает число файлов (раскладка = установка).
@@ -236,7 +256,13 @@ async fn extract_impl(archive: &str, dest: &str) -> Result<u32, String> {
     let dest_path = PathBuf::from(dest);
     fs::create_dir_all(&dest_path).map_err(|e| format!("{dest}: {e}"))?;
     sevenz_rust::decompress_file(archive, &dest_path).map_err(|e| format!("{archive}: {e}"))?;
-    Ok(count_files(&dest_path))
+    let files = count_files(&dest_path);
+    // После успешной распаковки архив не нужен: иначе рядом с exe копятся
+    // сотни мегабайт и повторная установка упирается в «уже полный» файл.
+    if let Err(e) = fs::remove_file(archive) {
+        println!("extract: не удалось удалить {archive}: {e}");
+    }
+    Ok(files)
 }
 
 /// Сколько файлов лежит под папкой (рекурсивно) — для лога установки.
@@ -274,11 +300,36 @@ async fn extract(archive: String, dest: String) -> Result<u32, String> {
     extract_impl(&archive, &dest).await
 }
 
+/// Скачать и распаковать ядро + английскую озвучку (как «Применить» в UI).
+/// Вынесено, чтобы selftest мог прогнать один и тот же путь дважды.
+fn selftest_install(root_s: &str, out_dir: &std::path::Path) -> Result<(), String> {
+    const TAG: &str = "v2026.11.19-2237";
+    const BASE: &str =
+        "https://github.com/Domovikx/The-Survival-of-Sarah-Rose-Mods/releases/download";
+    for asset in [
+        "TSSR-AI-Voice-Pack-main.7z",
+        "TSSR-AI-Voice-Pack-voice-en.7z",
+    ] {
+        let dest = out_dir.join(asset).display().to_string();
+        println!("selftest: download {asset}");
+        let bytes = tauri::async_runtime::block_on(download_impl(
+            &format!("{BASE}/{TAG}/{asset}"),
+            &dest,
+            |_, _| {},
+        ))?;
+        println!("  {bytes} bytes");
+        let files = tauri::async_runtime::block_on(extract_impl(&dest, root_s))?;
+        println!("  extracted {files} files");
+    }
+    Ok(())
+}
+
 /// Проверка пайплайна без окна (E2E прототипа): находит игру, ставит core и
 /// один язык в тестовую папку, проверяет инвентарь, удаляет язык и мод.
 pub fn selftest(out: &str) -> i32 {
     const TAG: &str = "v2026.11.19-2237";
-    const BASE: &str = "https://github.com/Domovikx/The-Survival-of-Sarah-Rose-Mods/releases/download";
+    const BASE: &str =
+        "https://github.com/Domovikx/The-Survival-of-Sarah-Rose-Mods/releases/download";
     let out_dir = PathBuf::from(out);
     if let Err(e) = fs::create_dir_all(&out_dir) {
         eprintln!("selftest: папка {out}: {e}");
@@ -298,33 +349,10 @@ pub fn selftest(out: &str) -> i32 {
         return 1;
     }
 
-    // 1) core + 2) язык EN — как это делает UI по галочкам.
-    for (asset, url) in [
-        (
-            "TSSR-AI-Voice-Pack-main.7z",
-            format!("{BASE}/{TAG}/TSSR-AI-Voice-Pack-main.7z"),
-        ),
-        (
-            "TSSR-AI-Voice-Pack-voice-en.7z",
-            format!("{BASE}/{TAG}/TSSR-AI-Voice-Pack-voice-en.7z"),
-        ),
-    ] {
-        let dest = out_dir.join(asset).display().to_string();
-        println!("selftest: download {asset}");
-        match tauri::async_runtime::block_on(download_impl(&url, &dest, |_, _| {})) {
-            Ok(bytes) => println!("  {bytes} bytes"),
-            Err(e) => {
-                eprintln!("selftest: download {asset} failed: {e}");
-                return 1;
-            }
-        }
-        match tauri::async_runtime::block_on(extract_impl(&dest, &root_s)) {
-            Ok(files) => println!("  extracted {files} files"),
-            Err(e) => {
-                eprintln!("selftest: extract {asset} failed: {e}");
-                return 1;
-            }
-        }
+    // 1) ядро + язык EN — как «Применить» в UI.
+    if let Err(e) = selftest_install(&root_s, &out_dir) {
+        eprintln!("selftest: установка не удалась: {e}");
+        return 1;
     }
 
     // 3) инвентарь: ядро + EN с файлами.
@@ -332,11 +360,19 @@ pub fn selftest(out: &str) -> i32 {
     println!(
         "selftest: scan core={} langs={:?} env={} other={:?}",
         st.core,
-        st.langs.iter().map(|l| (l.lang.clone(), l.files)).collect::<Vec<_>>(),
+        st.langs
+            .iter()
+            .map(|l| (l.lang.clone(), l.files))
+            .collect::<Vec<_>>(),
         st.environment,
         st.other_mods
     );
-    let en_files = st.langs.iter().find(|l| l.lang == "en").map(|l| l.files).unwrap_or(0);
+    let en_files = st
+        .langs
+        .iter()
+        .find(|l| l.lang == "en")
+        .map(|l| l.files)
+        .unwrap_or(0);
     if !st.core || en_files == 0 {
         eprintln!("selftest: FATAL: после установки нет core или EN");
         return 1;
@@ -371,7 +407,28 @@ pub fn selftest(out: &str) -> i32 {
         eprintln!("selftest: FATAL: папка мода осталась после uninstall");
         return 1;
     }
-    println!("selftest: OK — install(core+lang) / remove_lang / uninstall");
+    // 6) ПОВТОРНАЯ установка после полного удаления: папка мода и
+    //    environment.txt должны вернуться — иначе игра не увидит мод.
+    if let Err(e) = selftest_install(&root_s, &out_dir) {
+        eprintln!("selftest: повторная установка не удалась: {e}");
+        return 1;
+    }
+    let again = scan_install(root_s.clone());
+    let again_en = again
+        .langs
+        .iter()
+        .find(|l| l.lang == "en")
+        .map(|l| l.files)
+        .unwrap_or(0);
+    println!(
+        "selftest: reinstall core={} en_files={again_en} env={}",
+        again.core, again.environment
+    );
+    if !again.core || again_en == 0 || !again.environment {
+        eprintln!("selftest: FATAL: после повторной установки состояние неверное");
+        return 1;
+    }
+    println!("selftest: OK — install(core+lang) / remove_lang / uninstall / reinstall");
     0
 }
 

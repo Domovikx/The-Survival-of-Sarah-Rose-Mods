@@ -88,7 +88,12 @@ export const LanguageCard = ({ lang, files, want, size, busy, activity, onToggle
       </span>
       {/* Состояние показывает ИКОНКА: ✓ стоит · + можно поставить · − убрать.
           Клик по плашке (label) переключает; чекбокс скрыт, но доступен с клавиатуры. */}
-      <StateIcon state={iconState} data-testid={`${ROOT}--${lang}-toggle`} data-state={iconState} />
+      <StateIcon
+        state={iconState}
+        className={cx(styles.iconSlot)}
+        data-testid={`${ROOT}--${lang}-toggle`}
+        data-state={iconState}
+      />
       <input
         data-testid={`${ROOT}--${lang}-switch`}
         className={cx(styles.input)}

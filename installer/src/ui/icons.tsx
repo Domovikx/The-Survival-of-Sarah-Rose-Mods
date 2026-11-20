@@ -43,3 +43,11 @@ export const ExternalIcon = ({ size = 14 }: IconProps) => (
     <path d="M8 16 16 8M9 8h7v7" />
   </svg>
 );
+
+/** Основной пак: коробка (первая колонка карточки, как флаг у языков). */
+export const PackageIcon = ({ size = 22 }: IconProps) => (
+  <svg {...base(size)}>
+    <path d="M21 8 12 3 3 8v8l9 5 9-5V8z" />
+    <path d="m3 8 9 5 9-5M12 13v8" />
+  </svg>
+);

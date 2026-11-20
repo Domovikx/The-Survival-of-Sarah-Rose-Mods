@@ -61,6 +61,37 @@ test.describe("установщик: исходное состояние", () =>
   });
 });
 
+test.describe("установщик: единый hover", () => {
+  test("индикатор состояния стоит по центру карточки по вертикали", async ({ page }) => {
+    const gaps = await page.getByTestId("Language--de").evaluate((card) => {
+      const icon = card.querySelector('[data-testid="Language--de-toggle"]');
+      if (!icon) throw new Error("индикатор не найден");
+      const c = card.getBoundingClientRect();
+      const i = icon.getBoundingClientRect();
+      return { top: i.top - c.top, bottom: c.bottom - i.bottom };
+    });
+    // Раньше иконка занимала первую строку сетки и стояла у заголовка.
+    expect(Math.abs(gaps.top - gaps.bottom)).toBeLessThan(1.5);
+  });
+
+  test("основной пак подсвечивается при наведении так же, как голосовой", async ({ page }) => {
+    const border = (id: string): Promise<string> =>
+      page.getByTestId(id).evaluate((el) => getComputedStyle(el).borderTopColor);
+
+    const coreIdle = await border("Components--core");
+    await page.getByTestId("Components--core").hover();
+    // Переход рамки 140 мс: читаем цвет, когда он устоялся.
+    await page.waitForTimeout(220);
+    const coreHover = await border("Components--core");
+    await page.getByTestId("Language--en").hover();
+    await page.waitForTimeout(220);
+    const langHover = await border("Language--en");
+
+    expect(coreHover).not.toBe(coreIdle); // подсветка вообще есть
+    expect(coreHover).toBe(langHover); // и она та же, что у языков
+  });
+});
+
 test.describe("установщик: положительные сценарии", () => {
   test("полный цикл: пусто → ядро + 2 языка → удаление одного языка", async ({ page }) => {
     await uninstallAll(page);

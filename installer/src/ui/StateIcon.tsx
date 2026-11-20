@@ -18,10 +18,11 @@ export type State = "installed" | "add" | "remove" | "busy";
 
 const styles = stylex.create({
   ring: {
+    // Блочный элемент: в карточке это элемент раскладки, не текст.
+    display: "flex",
     width: 28,
     height: 28,
     borderRadius: "50%",
-    display: "inline-flex",
     alignItems: "center",
     justifyContent: "center",
     color: "var(--muted)",
@@ -54,20 +55,22 @@ const ICONS: Record<Exclude<State, "busy">, () => React.ReactElement> = {
 
 type Props = {
   "state": State;
+  /** Дополнительные стили места (например, `grid-area` от карточки). */
+  "className"?: string;
   /** Подпись для скринридеров (у немых иконок её нет по умолчанию). */
   "label"?: string;
   "data-testid"?: string;
   "data-state"?: string;
 };
 
-export const StateIcon = ({ state, label, ...rest }: Props) => (
-  <span
-    className={cx(styles.ring, styles[state])}
+export const StateIcon = ({ state, label, className, ...rest }: Props) => (
+  <div
+    className={[cx(styles.ring, styles[state]), className].filter(Boolean).join(" ")}
     aria-hidden={label ? undefined : true}
     aria-label={label}
     role={label ? "img" : undefined}
     {...rest}
   >
     {state === "busy" ? <Spinner /> : ICONS[state]()}
-  </span>
+  </div>
 );

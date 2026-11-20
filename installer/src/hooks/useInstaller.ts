@@ -2,6 +2,7 @@ import { invoke } from "@tauri-apps/api/core";
 import { listen } from "@tauri-apps/api/event";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
+import { errorStatus } from "@/core/errors";
 import { formatBytes, percent } from "@/core/format";
 import { fallbackRelease, RELEASE_API, VOICE_LANGS, voiceAsset } from "@/core/pack";
 import { diffLangs } from "@/core/plan";
@@ -264,6 +265,7 @@ export const useInstaller = () => {
             await detect();
           } catch (e) {
             log(`uninstall failed: ${String(e)}`);
+            setStatus(errorStatus(e));
           } finally {
             setJob(null);
             setBusy(false);

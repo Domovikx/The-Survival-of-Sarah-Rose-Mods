@@ -6,8 +6,12 @@ export const styles = stylex.create({
     // Ширина колонки: 1 колонка на узком окне, 2 на среднем, 3 на широком.
     // Последняя неполная строка центрируется родителем (justify-content).
     "flexBasis": "100%",
-    "@media (min-width: 640px)": { flexBasis: "calc((100% - 10px) / 2)" },
-    "@media (min-width: 1000px)": { flexBasis: "calc((100% - 20px) / 3)" },
+    "minWidth": 0,
+    // −0.5px: страховка от округления при масштабировании. Без неё третья
+    // карточка может вылезти за контейнер на доли пикселя, и правая рамка
+    // обрежется краем окна («горизонт пропал», 2026-11-20).
+    "@media (min-width: 640px)": { flexBasis: "calc((100% - 10px) / 2 - 0.5px)" },
+    "@media (min-width: 1000px)": { flexBasis: "calc((100% - 20px) / 3 - 0.5px)" },
     "display": "grid",
     "gridTemplateColumns": "24px 1fr auto",
     "gridTemplateAreas": '"flag head switch" "flag meta switch"',
@@ -62,5 +66,7 @@ export const styles = stylex.create({
   metaOk: { color: "var(--accent-fg)" },
   metaAdd: { color: "var(--accent-fg)" },
   metaRemove: { color: "var(--muted)" },
+  /** Слот индикатора: вторая строка сетки тоже, поэтому по центру карточки. */
+  iconSlot: { gridArea: "switch" },
   input: { position: "absolute", opacity: 0, width: 0, height: 0 },
 });

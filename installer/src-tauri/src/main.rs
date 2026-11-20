@@ -6,7 +6,10 @@ fn main() {
     // поиск игры, скачивание и распаковку (прототип, фаза 0).
     let args: Vec<String> = std::env::args().collect();
     if let Some(i) = args.iter().position(|a| a == "--selftest") {
-        let out = args.get(i + 1).cloned().unwrap_or_else(|| "tmp/selftest".to_string());
+        let out = args
+            .get(i + 1)
+            .cloned()
+            .unwrap_or_else(|| "tmp/selftest".to_string());
         std::process::exit(installer_lib::selftest(&out));
     }
     installer_lib::run()

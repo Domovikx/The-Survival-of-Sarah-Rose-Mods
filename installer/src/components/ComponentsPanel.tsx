@@ -1,5 +1,6 @@
 import type { InstallState } from "@/core/types";
 import { t } from "@/i18n";
+import { PackageIcon } from "@/ui/icons";
 import { StateIcon } from "@/ui/StateIcon";
 import { cx } from "@/ui/cx";
 
@@ -33,6 +34,9 @@ export const ComponentsPanel = ({ state, langs, desired, sizeOf, busy, active, o
       </div>
 
       <div className={cx(styles.core, state?.core && styles.coreOn)} data-testid={`${ROOT}--core`}>
+        <span className={cx(styles.coreIcon)} aria-hidden="true">
+          <PackageIcon />
+        </span>
         <div className={cx(styles.coreText)}>
           <span className={cx(styles.coreTitle)}>{t("Main pack")}</span>
           <span className={cx(styles.coreSub)}>

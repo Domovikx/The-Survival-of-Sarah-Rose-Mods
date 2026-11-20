@@ -189,6 +189,18 @@ export const CATALOGUE: Record<string, Trans> = {
     ko: "완료",
     it: "fatto",
   },
+  "the game is running — close it and try again": {
+    zh: "游戏正在运行 — 请关闭游戏后重试",
+    ru: "игра запущена — закройте её и повторите",
+    es: "el juego está abierto — ciérralo y vuelve a intentarlo",
+    pt: "o jogo está aberto — feche-o e tente novamente",
+    de: "das Spiel läuft — bitte schließen und erneut versuchen",
+    ja: "ゲームが起動中です — 終了して再試行してください",
+    fr: "le jeu est ouvert — fermez-le et réessayez",
+    pl: "gra jest uruchomiona — zamknij ją i spróbuj ponownie",
+    ko: "게임이 실행 중입니다 — 종료하고 다시 시도하세요",
+    it: "il gioco è aperto — chiudilo e riprova",
+  },
   "error": {
     zh: "错误",
     ru: "ошибка",
