@@ -132,6 +132,45 @@ test.describe("установщик: положительные сценарии
     await expect(page.getByTestId("Language--en-meta")).toContainText("аудиофайлов");
   });
 
+  test("удаление мода показывает лоадер (спиннер + бегущая полоса)", async ({ page }) => {
+    await page.getByTestId("Actions--uninstall").click();
+    await page.getByTestId("Confirm--ok").click();
+
+    await expect(page.getByTestId("Actions--spinner")).toBeVisible();
+    await expect(page.getByTestId("Actions--status")).toContainText("удаление мода");
+    await expect(page.getByTestId("Actions--progress")).toBeVisible();
+    // Прогресса в байтах при удалении нет — полоса бегущая, а не «0%».
+    const anim = await page.getByTestId("Actions--progress-fill").evaluate((el) => getComputedStyle(el).animationName);
+    expect(anim).not.toBe("none");
+
+    await expect(page.getByTestId("Components--core-badge")).toHaveText("не установлено", { timeout: 20_000 });
+    await expect(page.getByTestId("Actions--spinner")).toHaveCount(0);
+  });
+
+  test("удаление языка показывает спиннер и статус с кодом языка", async ({ page }) => {
+    await page.getByTestId("Language--ru").click();
+    await page.getByTestId("Actions--apply").click();
+    await page.getByTestId("Confirm--ok").click();
+
+    await expect(page.getByTestId("Actions--spinner")).toBeVisible();
+    await expect(page.getByTestId("Actions--status")).toContainText("удаление RU");
+    await expect(page.getByTestId("Language--ru-meta")).toHaveText("будет удалено");
+
+    await settle(page);
+    await expect(page.getByTestId("Language--ru-meta")).toHaveText(/MB/);
+  });
+
+  test("смена языка переводит и статус внизу (не застывает на прошлом)", async ({ page }) => {
+    await expect(page.getByTestId("Actions--status")).toContainText("Основной пак");
+
+    await page.getByTestId("LangSwitcher").click();
+    await page.getByTestId("LangSwitcher--de").click();
+
+    await expect(page.getByTestId("Actions--status")).toContainText("Hauptpaket");
+    await expect(page.getByTestId("Actions--status")).not.toContainText("Основной пак");
+    await expect(page.getByTestId("Components")).toContainText("Was installieren");
+  });
+
   test("смена языка интерфейса меняет подписи", async ({ page }) => {
     await expect(page.getByTestId("Game")).toContainText("Игра");
     await page.getByTestId("LangSwitcher").click();

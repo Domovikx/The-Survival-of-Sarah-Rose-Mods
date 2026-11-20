@@ -8,6 +8,9 @@ import { diffLangs } from "@/core/plan";
 import type { DownloadProgress, GameInfo, InstallState, Release, UninstallReport } from "@/core/types";
 import { t } from "@/i18n";
 
+/** Статус работы: ключ каталога + подстановки (переводится при рендере). */
+export type Status = { key: string; params?: Record<string, string> };
+
 export type ConfirmRequest = {
   title: string;
   detail?: string;
@@ -28,10 +31,16 @@ export const useInstaller = () => {
   const [desired, setDesired] = useState<ReadonlyMap<string, boolean>>(new Map());
   const [lines, setLines] = useState<readonly string[]>([]);
   const [busy, setBusy] = useState(false);
-  const [status, setStatus] = useState("");
+  /**
+   * Статус хранится КЛЮЧОМ, а не готовой строкой: иначе при смене языка
+   * интерфейса внизу остаётся текст на прошлом языке (замечание 2026-11-20).
+   */
+  const [status, setStatus] = useState<Status | null>(null);
   const [progress, setProgress] = useState(0);
   /** Что качается прямо сейчас: код языка (null = ядро) и процент файла. */
   const [active, setActive] = useState<{ lang: string | null; pct: number } | null>(null);
+  /** Какое действие идёт: от него зависит лоадер в панели действий. */
+  const [job, setJob] = useState<"apply" | "uninstall" | null>(null);
   const [confirm, setConfirm] = useState<ConfirmRequest | null>(null);
   const [detected, setDetected] = useState(false);
 
@@ -67,7 +76,7 @@ export const useInstaller = () => {
   }, [log]);
 
   const detect = useCallback(async () => {
-    setStatus(t("detecting game…"));
+    setStatus({ key: "detecting game…" });
     try {
       const found = await invoke<GameInfo | null>("find_game");
       setGame(found);
@@ -75,7 +84,7 @@ export const useInstaller = () => {
         setState(null);
         setDetected(true);
         log(t("game not found: official Steam version is required (App ID 2166470)"));
-        setStatus(t("game not found"));
+        setStatus({ key: "game not found" });
         return;
       }
       const inv = await invoke<InstallState>("scan_install", { game: found.path });
@@ -85,9 +94,9 @@ export const useInstaller = () => {
       setStatus(
         inv.core
           ? inv.langs.length
-            ? t("main pack + {{n}} voice packs", { n: inv.langs.length })
-            : t("main pack installed, no voice packs")
-          : t("not installed"),
+            ? { key: "main pack + {{n}} voice packs", params: { n: String(inv.langs.length) } }
+            : { key: "main pack installed, no voice packs" }
+          : { key: "not installed" },
       );
       log(`game: ${found.path}`);
       setRelease((prev) => prev ?? null);
@@ -100,7 +109,7 @@ export const useInstaller = () => {
       }
     } catch (e) {
       log(`detect failed: ${String(e)}`);
-      setStatus(t("error"));
+      setStatus({ key: "error" });
     }
   }, [fetchRelease, log, release]);
 
@@ -123,17 +132,14 @@ export const useInstaller = () => {
       const what = label.current ? label.current.toUpperCase() : t("Main pack");
       setStatus(
         size > 0
-          ? t("Downloading {{what}}: {{done}} / {{total}} ({{n}}%)", {
-              what,
-              done: formatBytes(downloaded),
-              total: formatBytes(size),
-              n: pct.toFixed(0),
-            })
-          : t("Downloading {{what}}: {{done}} ({{n}}%)", {
-              what,
-              done: formatBytes(downloaded),
-              n: pct.toFixed(0),
-            }),
+          ? {
+              key: "Downloading {{what}}: {{done}} / {{total}} ({{n}}%)",
+              params: { what, done: formatBytes(downloaded), total: formatBytes(size), n: pct.toFixed(0) },
+            }
+          : {
+              key: "Downloading {{what}}: {{done}} ({{n}}%)",
+              params: { what, done: formatBytes(downloaded), n: pct.toFixed(0) },
+            },
       );
     });
     return () => {
@@ -156,7 +162,7 @@ export const useInstaller = () => {
       log(`  ${formatBytes(bytes)} за ${secs.toFixed(1)} с (${formatBytes(bytes / secs)}/s)`);
       const sha = await invoke<string>("sha256_file", { path: dest });
       log(`  sha256 ${sha}`);
-      setStatus(t("extracting…"));
+      setStatus({ key: "extracting…" });
       const files = await invoke<number>("extract", { archive: dest, dest: game.path });
       log(`  распаковано файлов: ${files}`);
       label.current = null;
@@ -171,6 +177,7 @@ export const useInstaller = () => {
     const { install, remove } = diff;
     if (!needCore && !install.length && !remove.length) return;
     setBusy(true);
+    setJob("apply");
     setProgress(0);
     setActive(null);
     try {
@@ -180,31 +187,39 @@ export const useInstaller = () => {
       plan.current = { done: 0, total };
       let done = 0;
       if (needCore) {
-        setStatus(t("installing {{i}}/{{n}}: {{what}}", { i: 1, n: total, what: t("Main pack") }));
+        setStatus({
+          key: "installing {{i}}/{{n}}: {{what}}",
+          params: { i: "1", n: String(total), what: t("Main pack") },
+        });
         await installAsset("TSSR-AI-Voice-Pack-main.7z", rel, appDir, null);
         plan.current.done = ++done;
       }
       for (const lang of install) {
-        setStatus(t("installing {{i}}/{{n}}: {{what}}", { i: done + 1, n: total, what: lang.toUpperCase() }));
+        setStatus({
+          key: "installing {{i}}/{{n}}: {{what}}",
+          params: { i: String(done + 1), n: String(total), what: lang.toUpperCase() },
+        });
         await installAsset(voiceAsset(lang), rel, appDir, lang);
         plan.current.done = ++done;
       }
       for (const lang of remove) {
+        setStatus({ key: "removing {{what}}…", params: { what: lang.toUpperCase() } });
         const files = await invoke<number>("remove_lang", { game: game.path, lang });
         log(`removed ${lang.toUpperCase()}: ${files} files`);
         plan.current.done = ++done;
       }
       log(t("done — launch the game and open the mod menu (badge in the top-right)"));
-      setStatus(t("done"));
+      setStatus({ key: "done" });
       await detect();
     } catch (e) {
       log(`apply failed: ${String(e)}`);
-      setStatus(t("error"));
+      setStatus({ key: "error" });
       setProgress(100);
     } finally {
       setActive(null);
       label.current = null;
       plan.current = { done: 0, total: 0 };
+      setJob(null);
       setBusy(false);
     }
   }, [detect, diff, fetchRelease, game, installAsset, log, release, state]);
@@ -239,6 +254,8 @@ export const useInstaller = () => {
       run: () => {
         void (async () => {
           setBusy(true);
+          setJob("uninstall");
+          setStatus({ key: "removing the mod…" });
           try {
             const r = await invoke<UninstallReport>("uninstall", { game: game.path });
             log(
@@ -248,6 +265,7 @@ export const useInstaller = () => {
           } catch (e) {
             log(`uninstall failed: ${String(e)}`);
           } finally {
+            setJob(null);
             setBusy(false);
           }
         })();
@@ -269,6 +287,7 @@ export const useInstaller = () => {
     status,
     progress,
     active,
+    job,
     confirm,
     detected,
     diff,

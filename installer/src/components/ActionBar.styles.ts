@@ -1,5 +1,14 @@
 import * as stylex from "@stylexjs/stylex";
 
+/**
+ * Бегущая полоса: когда прогресса в байтах нет (удаление), честнее показать
+ * «работа идёт», чем пустой трек. Ширина 34% + сдвиг — визуальный индикатор.
+ */
+const slide = stylex.keyframes({
+  from: { transform: "translateX(-100%)" },
+  to: { transform: "translateX(300%)" },
+});
+
 export const styles = stylex.create({
   bar: {
     position: "sticky",
@@ -46,6 +55,14 @@ export const styles = stylex.create({
     transitionProperty: "width",
     transitionDuration: "180ms",
     transitionTimingFunction: "ease-out",
+  },
+  fillIndeterminate: {
+    "width": "34%",
+    "animationName": slide,
+    "animationDuration": "1.1s",
+    "animationIterationCount": "infinite",
+    "animationTimingFunction": "ease-in-out",
+    "@media (prefers-reduced-motion: reduce)": { animationDuration: "3s" },
   },
   actions: { marginLeft: "auto", display: "flex", alignItems: "center", gap: 10 },
   primary: {

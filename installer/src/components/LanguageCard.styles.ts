@@ -3,6 +3,11 @@ import * as stylex from "@stylexjs/stylex";
 export const styles = stylex.create({
   card: {
     "cursor": "pointer",
+    // Ширина колонки: 1 колонка на узком окне, 2 на среднем, 3 на широком.
+    // Последняя неполная строка центрируется родителем (justify-content).
+    "flexBasis": "100%",
+    "@media (min-width: 640px)": { flexBasis: "calc((100% - 10px) / 2)" },
+    "@media (min-width: 1000px)": { flexBasis: "calc((100% - 20px) / 3)" },
     "display": "grid",
     "gridTemplateColumns": "24px 1fr auto",
     "gridTemplateAreas": '"flag head switch" "flag meta switch"',

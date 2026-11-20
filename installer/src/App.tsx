@@ -10,7 +10,7 @@ import { Header } from "@/components/Header";
 import { LogPanel } from "@/components/LogPanel";
 import { VOICE_LANGS, voiceAsset } from "@/core/pack";
 import { useInstaller } from "@/hooks/useInstaller";
-import { getLang, initLang, setLang, type UiLang } from "@/i18n";
+import { getLang, initLang, setLang, t, type UiLang } from "@/i18n";
 import { cx } from "@/ui/cx";
 
 import { styles } from "./App.styles";
@@ -58,9 +58,10 @@ export const App = () => {
       <Footer />
 
       <ActionBar
-        status={inst.status}
+        status={inst.status ? t(inst.status.key, inst.status.params) : ""}
         progress={inst.progress}
         active={inst.active}
+        job={inst.job}
         busy={inst.busy}
         changes={inst.changes}
         coreOnly={inst.changes > 0 && !inst.state?.core && !inst.diff.install.length && !inst.diff.remove.length}

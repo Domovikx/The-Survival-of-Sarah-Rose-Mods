@@ -16,6 +16,8 @@ type Props = {
   changes: number;
   /** Нет установки вообще: единственное действие — поставить основной пак. */
   coreOnly: boolean;
+  /** Какое действие идёт (лоадер ставим именно на его кнопку). */
+  job: "apply" | "uninstall" | null;
   canUninstall: boolean;
   onApply: () => void;
   onUninstall: () => void;
@@ -29,6 +31,7 @@ export const ActionBar = ({
   busy,
   changes,
   coreOnly,
+  job,
   canUninstall,
   onApply,
   onUninstall,
@@ -48,8 +51,8 @@ export const ActionBar = ({
             иначе элементы прыгают при старте установки. */}
         <div className={cx(styles.track, !busy && styles.trackIdle)} data-testid={`${ROOT}--progress`}>
           <div
-            className={cx(styles.fill)}
-            style={{ width: `${busy ? Math.max(1, progress) : 0}%` }}
+            className={cx(styles.fill, busy && !active && styles.fillIndeterminate)}
+            style={busy && !active ? undefined : { width: `${busy ? Math.max(1, progress) : 0}%` }}
             data-testid={`${ROOT}--progress-fill`}
           />
         </div>
@@ -61,6 +64,7 @@ export const ActionBar = ({
             disabled={busy || !canUninstall}
             onClick={onUninstall}
           >
+            {busy && job === "uninstall" ? <Spinner size={14} /> : null}
             {t("Uninstall mod")}
           </button>
           <button
@@ -70,12 +74,12 @@ export const ActionBar = ({
             disabled={busy || changes === 0}
             onClick={onApply}
           >
-            {busy ? (
+            {busy && job === "apply" ? (
               <>
                 <Spinner size={15} />
                 {active ? `${Math.round(active.pct)}%` : t("Working…")}
               </>
-            ) : coreOnly ? (
+            ) : coreOnly && !busy ? (
               t("Install main pack")
             ) : (
               t("Apply changes")

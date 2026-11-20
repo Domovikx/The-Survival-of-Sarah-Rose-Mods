@@ -43,9 +43,15 @@ export const styles = stylex.create({
     backgroundColor: "var(--state-bg)",
     borderColor: "var(--state-border)",
   },
+  /**
+   * Лента карточек (flex, не grid): у сетки последняя неполная строка всегда
+   * прижата влево, а тут она центрируется — 11 языков дают 3+3+3+2.
+   * Колонки задаются шириной карточки (см. LanguageCard.styles: card).
+   */
   grid: {
-    display: "grid",
-    gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))",
+    display: "flex",
+    flexWrap: "wrap",
+    justifyContent: "center",
     gap: 10,
   },
 });

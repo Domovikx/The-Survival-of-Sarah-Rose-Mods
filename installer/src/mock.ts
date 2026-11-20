@@ -105,12 +105,15 @@ export const installMockBackend = (): void => {
         return 2452;
       }
       case "remove_lang": {
+        // Настоящее удаление языка — тысячи файлов, это заметное время.
+        await sleep(500);
         const lang = String(args?.lang);
         const files = installed.langs.find((l) => l.lang === lang)?.files ?? 0;
         installed = { ...installed, langs: installed.langs.filter((l) => l.lang !== lang) };
         return files;
       }
       case "uninstall":
+        await sleep(900);
         installed = { core: false, langs: [], environment: false, other_mods: [] };
         return { removed_mod: true, removed_environment: true, kept_environment: false, other_mods: [] };
       default:
