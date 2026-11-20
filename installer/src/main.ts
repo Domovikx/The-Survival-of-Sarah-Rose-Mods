@@ -1,10 +1,10 @@
 import { invoke } from "@tauri-apps/api/core";
 import { listen } from "@tauri-apps/api/event";
+import { openUrl } from "@tauri-apps/plugin-opener";
 
 import { formatBytes, percent } from "./core/format";
 import { LINKS, RELEASE_API, VOICE_LANGS, voiceAsset } from "./core/pack";
-import { openUrl } from "@tauri-apps/plugin-opener";
-import { buildPlan, describeItem, type InstallItem } from "./core/plan";
+import { diffLangs } from "./core/plan";
 import type { DownloadProgress, GameInfo, InstallState, Release, UninstallReport } from "./core/types";
 import { getLang, initLang, LANG_LABELS, setLang, t, UI_LANGS, type UiLang } from "./i18n";
 
@@ -14,8 +14,7 @@ const $ = <T extends HTMLElement>(id: string): T => {
   return el as T;
 };
 
-/** Названия языков — НА СВОЁМ языке (как в переключателе и на сайте):
- *  узнаётся мгновенно, не зависит от языка интерфейса. */
+/** Названия языков — НА СВОЁМ языке (узнаётся мгновенно, как в переключателе). */
 const LANG_NAMES: Record<string, string> = {
   en: "English",
   zh: "中文",
@@ -29,10 +28,11 @@ const LANG_NAMES: Record<string, string> = {
   ko: "한국어",
   it: "Italiano",
 };
+
 const logEl = $("log");
 const barEl = $("bar");
 const statusEl = $("status");
-const installBtn = $<HTMLButtonElement>("install");
+const applyBtn = $<HTMLButtonElement>("install");
 const uninstallBtn = $<HTMLButtonElement>("uninstall");
 const langsEl = $("langs");
 const uiLangEl = $<HTMLSelectElement>("ui-lang");
@@ -41,8 +41,8 @@ let game: GameInfo | null = null;
 let state: InstallState | null = null;
 let release: Release | null = null;
 let busy = false;
-/** Отмеченные к установке языки (уже стоящие сюда не попадают). */
-const selected = new Set<string>();
+/** Желаемое состояние языков (переключатели): true = должен стоять. */
+const desired = new Map<string, boolean>();
 
 const log = (text: string, kind: "ok" | "warn" | "err" | "" = ""): void => {
   const at = new Date().toTimeString().slice(0, 8);
@@ -62,27 +62,10 @@ const assetSize = (asset: string): string => {
   return found ? formatBytes(found.size) : "—";
 };
 
-const setBusy = (value: boolean): void => {
-  busy = value;
-  refresh();
-};
+const installedLangs = (): Set<string> => new Set((state?.langs ?? []).map((l) => l.lang));
 
-const planNow = (): InstallItem[] =>
-  state
-    ? buildPlan({
-        coreInstalled: state.core,
-        selected: [...selected],
-        installed: state.langs.map((l) => l.lang),
-      })
-    : [];
-
-/** Все статические подписи по `data-i18n` (при смене языка — заново). */
-const applyI18n = (): void => {
-  for (const el of document.querySelectorAll<HTMLElement>("[data-i18n]")) {
-    el.textContent = t(el.dataset.i18n ?? "");
-  }
-  document.documentElement.lang = getLang();
-};
+/** Разница «желаемое vs установленное» — то, что сделает кнопка Apply. */
+const diff = (): ReturnType<typeof diffLangs> => diffLangs(VOICE_LANGS, desired, installedLangs());
 
 const refresh = (): void => {
   if (state) {
@@ -90,44 +73,40 @@ const refresh = (): void => {
     core.textContent = t(state.core ? "installed" : "not installed");
     core.classList.toggle("on", state.core);
   }
-  const plan = planNow();
-  const toInstall = plan.filter((i) => i.kind === "lang").length;
-  installBtn.disabled = busy || !game || plan.length === 0;
-  installBtn.textContent = busy
-    ? t("Working…")
-    : toInstall > 0
-      ? t("Install selected ({{n}})", { n: toInstall })
-      : !state?.core
-        ? t("Install core")
-        : t("Install selected");
+  const { install, remove } = diff();
+  const changes = install.length + remove.length + (state?.core ? 0 : 1);
+  applyBtn.disabled = busy || !game || changes === 0;
+  applyBtn.textContent = busy ? t("Working…") : t("Apply changes");
   uninstallBtn.disabled = busy || !game || (!state?.core && !state?.langs.length);
   document.querySelectorAll<HTMLElement>(".lang-card").forEach((card) => {
     card.classList.toggle("busy", busy);
-    const box = card.querySelector<HTMLInputElement>("input[type=checkbox]");
-    if (box) box.disabled = busy || box.dataset.installed === "1";
+    const box = card.querySelector<HTMLInputElement>("input[role=switch]");
+    if (box) box.disabled = busy;
   });
 };
 
-const langCard = (lang: string, installedFiles: number | undefined): HTMLElement => {
-  const installed = installedFiles !== undefined;
+/** Флаг языка: SVG из лендинга (11 файлов, 24 КБ — копия в installer/public/flags). */
+const flagFor = (lang: string): HTMLImageElement => {
+  const img = document.createElement("img");
+  img.className = "flag";
+  img.src = `${import.meta.env.BASE_URL}flags/${lang}.svg`;
+  img.alt = "";
+  img.width = 22;
+  img.height = 16;
+  return img;
+};
+
+const langCard = (lang: string, files: number | undefined): HTMLElement => {
+  const installed = files !== undefined;
+  const want = desired.get(lang) ?? installed;
+  const pending = want !== installed;
+
   const card = document.createElement("div");
-  card.className = `lang-card${installed ? " installed" : ""}`;
+  card.className = `lang-card${installed ? " installed" : ""}${pending ? " pending" : ""}`;
   card.dataset.lang = lang;
 
-  const pick = document.createElement("label");
-  pick.className = "lang-pick";
-  const box = document.createElement("input");
-  box.type = "checkbox";
-  box.dataset.lang = lang;
-  box.dataset.installed = installed ? "1" : "0";
-  box.checked = installed || selected.has(lang);
-  box.disabled = busy || installed;
-  box.addEventListener("change", () => {
-    if (box.checked) selected.add(lang);
-    else selected.delete(lang);
-    refresh();
-  });
-
+  const head = document.createElement("div");
+  head.className = "lang-head";
   const name = document.createElement("span");
   name.className = "lang-name";
   name.textContent = LANG_NAMES[lang] ?? lang.toUpperCase();
@@ -135,25 +114,36 @@ const langCard = (lang: string, installedFiles: number | undefined): HTMLElement
   code.className = "lang-code";
   code.textContent = lang.toUpperCase();
   name.append(code);
-  pick.append(box, name);
+  head.append(flagFor(lang), name);
 
   const meta = document.createElement("div");
   meta.className = "lang-meta";
-  meta.textContent = installed
-    ? t("installed · {{n}} files", { n: (installedFiles ?? 0).toLocaleString("en-US") })
-    : t("not installed · {{size}}", { size: assetSize(voiceAsset(lang)) });
+  if (pending) meta.classList.add(want ? "want" : "drop");
+  meta.textContent = pending
+    ? t(want ? "will be installed" : "will be removed")
+    : installed
+      ? t("installed · {{n}} files", { n: (files ?? 0).toLocaleString("en-US") })
+      : t("not installed · {{size}}", { size: assetSize(voiceAsset(lang)) });
 
-  const action = document.createElement("div");
-  action.className = "lang-action";
-  const remove = document.createElement("button");
-  remove.type = "button";
-  remove.className = "btn tiny";
-  remove.textContent = t("Remove");
-  remove.hidden = !installed;
-  remove.addEventListener("click", () => void removeLang(lang));
-  action.append(remove);
+  // Переключатель: включён = язык должен стоять. Он НЕ качает сразу —
+  // копит изменения, применяет кнопка «Применить изменения».
+  const sw = document.createElement("label");
+  sw.className = "switch";
+  const box = document.createElement("input");
+  box.type = "checkbox";
+  box.setAttribute("role", "switch");
+  box.checked = want;
+  box.dataset.lang = lang;
+  box.addEventListener("change", () => {
+    desired.set(lang, box.checked);
+    renderLangs();
+    refresh();
+  });
+  const track = document.createElement("span");
+  track.className = "track";
+  sw.append(box, track);
 
-  card.append(pick, meta, action);
+  card.append(head, meta, sw);
   return card;
 };
 
@@ -163,7 +153,14 @@ const renderLangs = (): void => {
   for (const lang of VOICE_LANGS) langsEl.append(langCard(lang, byLang.get(lang)));
 };
 
-/** Полный перерисов: язык интерфейса мог смениться, подписи — заново. */
+/** Все статические подписи по `data-i18n` (при смене языка — заново). */
+const applyI18n = (): void => {
+  for (const el of document.querySelectorAll<HTMLElement>("[data-i18n]")) {
+    el.textContent = t(el.dataset.i18n ?? "");
+  }
+  document.documentElement.lang = getLang();
+};
+
 const renderAll = (): void => {
   applyI18n();
   renderLangs();
@@ -193,7 +190,13 @@ const detect = async (): Promise<void> => {
     $("game-path").textContent = game.path;
     $("game-build").textContent = game.build_id ?? "unknown";
     state = await invoke<InstallState>("scan_install", { game: game.path });
-    for (const l of state.langs) selected.delete(l.lang);
+    // Желаемое состояние сбрасываем к факту: пользователь видит правду.
+    desired.clear();
+    for (const lang of VOICE_LANGS)
+      desired.set(
+        lang,
+        state.langs.some((l) => l.lang === lang),
+      );
     if (!release) {
       try {
         release = await fetchRelease();
@@ -217,12 +220,12 @@ const fetchRelease = async (): Promise<Release> => {
   return data;
 };
 
-const installItem = async (item: InstallItem, rel: Release, appDir: string): Promise<void> => {
+const installAsset = async (assetName: string, rel: Release, appDir: string): Promise<void> => {
   if (!game) return;
-  const asset = rel.assets.find((a) => a.name === item.asset);
-  if (!asset) throw new Error(`${item.asset} not found in ${rel.tag_name}`);
+  const asset = rel.assets.find((a) => a.name === assetName);
+  if (!asset) throw new Error(`${assetName} not found in ${rel.tag_name}`);
   const dest = `${appDir}\\${asset.name}`;
-  log(`${describeItem(item)}: ${formatBytes(asset.size)} → ${dest}`);
+  log(`${asset.name}: ${formatBytes(asset.size)} → ${dest}`);
   const started = Date.now();
   const bytes = await invoke<number>("download", { url: asset.browser_download_url, dest });
   const secs = Math.max(0.001, (Date.now() - started) / 1000);
@@ -233,55 +236,59 @@ const installItem = async (item: InstallItem, rel: Release, appDir: string): Pro
   log(`  extracted ${files} files`, "ok");
 };
 
-const installSelected = async (): Promise<void> => {
+/** Применить изменения: доставить отмеченное, удалить снятое, починить ядро. */
+const applyChanges = async (): Promise<void> => {
   if (!game || !state) return;
-  setBusy(true);
+  const { install, remove } = diff();
+  const needCore = !state.core;
+  if (!install.length && !remove.length && !needCore) return;
+
+  const parts: string[] = [];
+  if (needCore) parts.push("Core");
+  if (install.length) parts.push(`+ ${install.map((l) => l.toUpperCase()).join(", ")}`);
+  if (remove.length) parts.push(`− ${remove.map((l) => l.toUpperCase()).join(", ")}`);
+  const question = `${t("Apply changes")}: ${parts.join("  ")}?`;
+  if (!window.confirm(question)) return;
+
+  setBusy();
   barEl.style.width = "0%";
   try {
     const appDir = await invoke<string>("app_dir");
     release = release ?? (await fetchRelease());
-    const plan = planNow();
-    if (!plan.length) {
-      log("nothing to do: everything selected is already installed", "warn");
-      return;
-    }
-    log(`plan: ${plan.map(describeItem).join(" → ")}`);
     let done = 0;
-    for (const item of plan) {
-      setStatus(t("installing {{i}}/{{n}}: {{what}}", { i: done + 1, n: plan.length, what: describeItem(item) }));
-      await installItem(item, release, appDir);
+    const total = (needCore ? 1 : 0) + install.length + remove.length;
+
+    if (needCore) {
+      setStatus(t("installing {{i}}/{{n}}: {{what}}", { i: 1, n: total, what: "Core" }));
+      await installAsset("TSSR-AI-Voice-Pack-main.7z", release, appDir);
       done += 1;
-      barEl.style.width = `${percent(done, plan.length).toFixed(1)}%`;
+    }
+    for (const lang of install) {
+      setStatus(t("installing {{i}}/{{n}}: {{what}}", { i: done + 1, n: total, what: lang.toUpperCase() }));
+      await installAsset(voiceAsset(lang), release, appDir);
+      done += 1;
+      barEl.style.width = `${percent(done, total).toFixed(1)}%`;
+    }
+    for (const lang of remove) {
+      const files = await invoke<number>("remove_lang", { game: game.path, lang });
+      log(`removed ${lang.toUpperCase()}: ${files} files`, "ok");
+      done += 1;
+      barEl.style.width = `${percent(done, total).toFixed(1)}%`;
     }
     log(t("done — launch the game and open the mod menu (badge in the top-right)"), "ok");
     setStatus("done");
-    selected.clear();
     await detect();
   } catch (e) {
-    log(`install failed: ${String(e)}`, "err");
+    log(`apply failed: ${String(e)}`, "err");
     setStatus("error");
   } finally {
     setBusy(false);
   }
 };
 
-const removeLang = async (lang: string): Promise<void> => {
-  if (!game) return;
-  const question = t("Remove {{name}} ({{code}}) voice pack?", {
-    name: LANG_NAMES[lang] ?? lang,
-    code: lang.toUpperCase(),
-  });
-  if (!window.confirm(question)) return;
-  setBusy(true);
-  try {
-    const files = await invoke<number>("remove_lang", { game: game.path, lang });
-    log(`removed ${lang.toUpperCase()}: ${files} files`, "ok");
-    await detect();
-  } catch (e) {
-    log(`remove failed: ${String(e)}`, "err");
-  } finally {
-    setBusy(false);
-  }
+const setBusy = (value = true): void => {
+  busy = value;
+  refresh();
 };
 
 const uninstallAll = async (): Promise<void> => {
@@ -291,7 +298,7 @@ const uninstallAll = async (): Promise<void> => {
     ? `\n\n${t("Other mods in mods/ ({{list}}) are kept, environment.txt stays.", { list: others.join(", ") })}`
     : "";
   if (!window.confirm(`${t("Uninstall TSSR AI Voice Pack from {{path}}?", { path: game.path })}${note}`)) return;
-  setBusy(true);
+  setBusy();
   try {
     const r = await invoke<UninstallReport>("uninstall", { game: game.path });
     log(
@@ -300,7 +307,6 @@ const uninstallAll = async (): Promise<void> => {
       }`,
       "ok",
     );
-    selected.clear();
     await detect();
   } catch (e) {
     log(`uninstall failed: ${String(e)}`, "err");
@@ -332,7 +338,7 @@ const initUiLang = (): void => {
 };
 
 $("redetect").addEventListener("click", () => void detect());
-installBtn.addEventListener("click", () => void installSelected());
+applyBtn.addEventListener("click", () => void applyChanges());
 uninstallBtn.addEventListener("click", () => void uninstallAll());
 
 // Внешние ссылки («спасибо»/обратная связь) — в системном браузере.
@@ -346,6 +352,6 @@ void (async () => {
   initLang(systemLocale);
   initUiLang();
   applyI18n();
-  log("installer prototype: core + voice packs, install / remove language / uninstall");
+  log("installer: core + voice packs, install / remove / uninstall");
   await detect();
 })();

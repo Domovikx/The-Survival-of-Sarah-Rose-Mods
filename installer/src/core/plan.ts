@@ -40,3 +40,21 @@ export const buildPlan = ({ coreInstalled, selected, installed }: PlanInput): In
 /** Человеческая подпись пункта плана — для лога. */
 export const describeItem = (item: InstallItem): string =>
   item.kind === "core" ? "Core (texts, fonts, mod menu)" : `Voice: ${item.lang?.toUpperCase() ?? "?"}`;
+
+/**
+ * Разница «переключатели vs реальность» для кнопки Apply:
+ *   install — включили, но в игре нет; remove — выключили, а в игре стоит.
+ *
+ * Чистая функция (без Tauri/DOM): именно её поведение — суть UI с тумблерами,
+ * поэтому она покрыта тестами.
+ */
+export type LangDiff = { install: string[]; remove: string[] };
+
+export const diffLangs = (
+  all: readonly string[],
+  desired: ReadonlyMap<string, boolean>,
+  installed: ReadonlySet<string>,
+): LangDiff => ({
+  install: all.filter((lang) => desired.get(lang) === true && !installed.has(lang)),
+  remove: all.filter((lang) => desired.get(lang) === false && installed.has(lang)),
+});

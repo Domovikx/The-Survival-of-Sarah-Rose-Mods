@@ -1,7 +1,7 @@
 import { describe, expect, test } from "vitest";
 
 import { CORE_ASSET, voiceAsset } from "./pack";
-import { buildPlan, describeItem } from "./plan";
+import { buildPlan, describeItem, diffLangs } from "./plan";
 
 /**
  * План установки — та часть, где ошибка дороже всего: «поставил язык без
@@ -40,5 +40,31 @@ describe("describeItem", () => {
   test("ядро и язык подписаны по-разному", () => {
     expect(describeItem({ kind: "core", asset: CORE_ASSET })).toContain("Core");
     expect(describeItem({ kind: "lang", lang: "ru", asset: voiceAsset("ru") })).toContain("RU");
+  });
+});
+
+describe("diffLangs (тумблеры языков)", () => {
+  const all = ["en", "ru", "de"] as const;
+
+  test("включили отсутствующий → install; выключили стоящий → remove", () => {
+    const desired = new Map<string, boolean>([
+      ["en", true],
+      ["ru", false],
+      ["de", true],
+    ]);
+    expect(diffLangs(all, desired, new Set(["ru", "de"]))).toEqual({ install: ["en"], remove: ["ru"] });
+  });
+
+  test("ничего не меняли → пустая разница (кнопка Apply выключена)", () => {
+    const desired = new Map<string, boolean>([
+      ["en", true],
+      ["ru", false],
+    ]);
+    expect(diffLangs(all, desired, new Set(["en"]))).toEqual({ install: [], remove: [] });
+  });
+
+  test("язык вне списка игнорируется", () => {
+    const desired = new Map<string, boolean>([["xx", true]]);
+    expect(diffLangs(all, desired, new Set())).toEqual({ install: [], remove: [] });
   });
 });

@@ -266,10 +266,13 @@ h2 {
 
 .lang-card {
   display: grid;
-  grid-template-columns: 1fr auto;
-  grid-template-areas: "pick action" "meta action";
+  grid-template-columns: 24px 1fr auto;
+  grid-template-areas:
+    "flag head switch"
+    "flag meta switch";
   align-items: center;
-  gap: 2px 12px;
+  column-gap: 12px;
+  row-gap: 1px;
   padding: 12px 14px;
   border: 1px solid var(--border);
   border-radius: 12px;
@@ -288,25 +291,32 @@ h2 {
   background: rgba(63, 185, 80, 0.07);
 }
 
+/* Есть неприменённое изменение: пунктир, чтобы было видно «ещё не в игре». */
+.lang-card.pending {
+  border-style: dashed;
+  border-color: var(--accent);
+}
+
 .lang-card.busy {
   opacity: 0.6;
   pointer-events: none;
 }
 
-.lang-pick {
-  grid-area: pick;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  cursor: pointer;
-  min-width: 0;
+.lang-card .flag {
+  grid-area: flag;
+  width: 22px;
+  height: 16px;
+  border-radius: 3px;
+  object-fit: cover;
+  box-shadow: 0 0 0 1px var(--border);
 }
 
-.lang-pick input {
-  width: 18px;
-  height: 18px;
-  accent-color: var(--accent);
-  flex: 0 0 auto;
+.lang-head {
+  grid-area: head;
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  min-width: 0;
 }
 
 .lang-name {
@@ -318,10 +328,10 @@ h2 {
 }
 
 .lang-code {
+  margin-left: 6px;
   color: var(--muted);
   font-weight: 500;
-  font-size: 13px;
-  margin-left: 4px;
+  font-size: 12px;
 }
 
 .lang-meta {
@@ -329,15 +339,74 @@ h2 {
   color: var(--muted);
   font-size: 13px;
   font-variant-numeric: tabular-nums;
-  padding-left: 28px;
 }
 
-.lang-action {
-  grid-area: action;
+.lang-meta.want {
+  color: var(--ok);
 }
 
-.lang-action .btn.tiny[hidden] {
-  display: none;
+.lang-meta.drop {
+  color: var(--warn);
+}
+
+/* Переключатель «должен стоять» (не качает сразу — копит изменения). */
+.switch {
+  grid-area: switch;
+  position: relative;
+  display: inline-flex;
+  cursor: pointer;
+}
+
+.switch input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch .track {
+  position: relative;
+  width: 42px;
+  height: 24px;
+  border-radius: 999px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  transition:
+    background-color 140ms ease,
+    border-color 140ms ease;
+}
+
+.switch .track::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--muted);
+  transition:
+    transform 140ms ease,
+    background-color 140ms ease;
+}
+
+.switch input:checked + .track {
+  background: color-mix(in srgb, var(--accent) 45%, transparent);
+  border-color: var(--accent);
+}
+
+.switch input:checked + .track::after {
+  transform: translateX(18px);
+  background: var(--accent-fg);
+}
+
+.switch input:focus-visible + .track {
+  outline: 2px solid var(--accent-fg);
+  outline-offset: 2px;
+}
+
+.switch input:disabled + .track {
+  opacity: 0.5;
 }
 
 /* ------------------------------------------------------------- status -- */
@@ -400,9 +469,32 @@ h2 {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 8px;
-  padding: 2px 4px 0;
+  gap: 10px;
+  padding: 14px 4px 2px;
+  border-top: 1px solid var(--border);
   color: var(--muted);
+  font-size: 13px;
+}
+
+/* «Ссылки» в футере: текстовые кнопки, а не серые системные кнопки. */
+.foot .link {
+  appearance: none;
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  color: var(--accent-fg);
+  cursor: pointer;
+}
+
+.foot .link:hover {
+  text-decoration: underline;
+}
+
+.foot .link:focus-visible {
+  outline: 2px solid var(--accent-fg);
+  outline-offset: 3px;
+  border-radius: 4px;
 }
 
 .foot .dot {
