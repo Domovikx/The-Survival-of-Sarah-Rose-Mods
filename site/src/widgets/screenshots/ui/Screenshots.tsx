@@ -26,17 +26,17 @@ const SHOTS_BASE = `${import.meta.env.BASE_URL}shots/`;
 // 9 кадров: 5 «под язык» + 4 фиксированных (EN/RU вперемешку = доказательство
 // перевода). Дубли (dialogue_2/3 в EN и RU совпадают байт-в-байт) не дублируем.
 // Кадры, снятые с игры и лежащие на Nexus (9 штук после чистки, разные языки интерфейса).
-// Файлы: site/public/shots/nexus_NN.jpg. Порядок = порядок галереи.
+// Файлы: site/public/shots/shot_NN.jpg. Порядок = порядок галереи.
 const SHOTS = [
-  "nexus_01",
-  "nexus_02",
-  "nexus_03",
-  "nexus_05",
-  "nexus_06",
-  "nexus_07",
-  "nexus_08",
-  "nexus_09",
-  "nexus_10",
+  "shot_01",
+  "shot_02",
+  "shot_03",
+  "shot_05",
+  "shot_06",
+  "shot_07",
+  "shot_08",
+  "shot_09",
+  "shot_10",
 ] as const;
 
 const shotSrc = (file: string) => `${SHOTS_BASE}${file}.jpg`;

@@ -65,7 +65,7 @@ test.describe("скриншоты: лайтбокс", () => {
     await expect(role).toHaveAttribute("role", "dialog");
     await expect(role).toHaveAttribute("aria-modal", "true");
     await expect(counter(page)).toHaveText("1 / 9");
-    await expect(page.getByTestId(`Screenshots--lightbox-img`)).toHaveAttribute("src", /nexus_01\.jpg$/);
+    await expect(page.getByTestId(`Screenshots--lightbox-img`)).toHaveAttribute("src", /shot_01\.jpg$/);
     await expect(page.getByTestId(`Screenshots--lightbox`)).toContainText("Screenshot from the game");
     // Прокрутка фона заблокирована (APG: под контентом диалога inert).
     await expect.poll(() => page.evaluate(() => document.body.style.overflow)).toBe("hidden");
@@ -79,7 +79,7 @@ test.describe("скриншоты: лайтбокс", () => {
 
     await page.getByTestId(`Screenshots--lightbox-next`).click();
     await expect(counter(page)).toHaveText("2 / 9");
-    await expect(page.getByTestId(`Screenshots--lightbox-img`)).toHaveAttribute("src", /nexus_02\.jpg$/);
+    await expect(page.getByTestId(`Screenshots--lightbox-img`)).toHaveAttribute("src", /shot_02\.jpg$/);
     await expect(dialog(page)).toBeVisible();
 
     await page.getByTestId(`Screenshots--lightbox-next`).click();
@@ -174,6 +174,6 @@ test.describe("скриншоты: лайтбокс", () => {
   test("открытие с середины галереи — свой кадр", async ({ page }) => {
     await openLightbox(page, 4);
     await expect(counter(page)).toHaveText("5 / 9");
-    await expect(page.getByTestId(`Screenshots--lightbox-img`)).toHaveAttribute("src", /nexus_06\.jpg$/);
+    await expect(page.getByTestId(`Screenshots--lightbox-img`)).toHaveAttribute("src", /shot_06\.jpg$/);
   });
 });
