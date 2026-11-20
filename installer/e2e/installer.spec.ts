@@ -1,6 +1,33 @@
 import { expect, test } from "@playwright/test";
 
 /**
+ * Фикстура релиза: тесты не должны зависеть от GitHub API (в прогоне он отдавал
+ * 403 — тест «падал» из-за лимита запросов, а не из-за интерфейса). Размеры
+ * нужны настоящие по смыслу: по ним карточка показывает «15.4 MB» и прогресс.
+ */
+const MB = (n: number): number => Math.round(n * 1024 * 1024);
+const LANGS = ["en", "zh", "ru", "es", "pt", "de", "ja", "fr", "pl", "ko", "it"];
+const RELEASE = {
+  tag_name: "test-release",
+  assets: [
+    {
+      name: "TSSR-AI-Voice-Pack-main.7z",
+      size: MB(18),
+      browser_download_url: "https://example.invalid/main.7z",
+    },
+    ...LANGS.map((lang) => ({
+      name: `TSSR-AI-Voice-Pack-voice-${lang}.7z`,
+      size: MB(17),
+      browser_download_url: `https://example.invalid/voice-${lang}.7z`,
+    })),
+  ],
+};
+
+test.beforeEach(async ({ page }) => {
+  await page.route("https://api.github.com/repos/**", (route) => route.fulfill({ json: RELEASE }));
+});
+
+/**
  * Интерфейс установщика (мок-бэкенд): состояния, тумблеры, диалог, локали.
  * Селекторы — только через `data-testid` от ROOT компонента.
  */
@@ -38,6 +65,27 @@ test.describe("установщик: интерфейс", () => {
     await page.getByTestId("Confirm--cancel").click();
     await expect(page.getByTestId("Confirm")).toHaveCount(0);
     await expect(page.getByTestId("Language--en-meta")).toHaveText("будет удалено");
+  });
+
+  test("загрузка: спиннер и полоса привязаны к прогрессу скачивания", async ({ page }) => {
+    await page.goto("/");
+    // Сначала убираем EN — мок отдаёт прогресс только для установки.
+    await page.getByTestId("Language--en").click();
+    await page.getByTestId("Actions--apply").click();
+    await page.getByTestId("Confirm--ok").click();
+    await expect(page.getByTestId("Language--en-meta")).toContainText("MB");
+
+    // Ставим обратно: пока идёт скачивание, виден спиннер, полоса и проценты.
+    await page.getByTestId("Language--en").click();
+    await page.getByTestId("Actions--apply").click();
+    await expect(page.getByTestId("Actions--spinner")).toBeVisible();
+    await expect(page.getByTestId("Actions--progress")).toBeVisible();
+    await expect(page.getByTestId("Language--en-meta")).toContainText("загрузка");
+    await expect(page.getByTestId("Actions--apply")).toContainText("%");
+
+    // После установки лоадер уходит, а карточка снова показывает счёт.
+    await expect(page.getByTestId("Language--en-meta")).toContainText("аудиофайлов", { timeout: 20_000 });
+    await expect(page.getByTestId("Actions--spinner")).toHaveCount(0);
   });
 
   test("смена языка интерфейса меняет подписи", async ({ page }) => {

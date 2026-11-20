@@ -38,7 +38,7 @@ describe("buildPlan", () => {
 
 describe("describeItem", () => {
   test("ядро и язык подписаны по-разному", () => {
-    expect(describeItem({ kind: "core", asset: CORE_ASSET })).toContain("Core");
+    expect(describeItem({ kind: "core", asset: CORE_ASSET })).toContain("Main pack");
     expect(describeItem({ kind: "lang", lang: "ru", asset: voiceAsset("ru") })).toContain("RU");
   });
 });

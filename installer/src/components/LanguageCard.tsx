@@ -1,5 +1,6 @@
 import { t } from "@/i18n";
 import { CheckIcon, MinusIcon, PlusIcon } from "@/ui/icons";
+import { Spinner } from "@/ui/Spinner";
 import { cx } from "@/ui/cx";
 
 import { styles } from "./LanguageCard.styles";
@@ -27,22 +28,27 @@ type Props = {
   want: boolean;
   size: string;
   busy: boolean;
+  /** Качается прямо сейчас: процент файла (лоадер вместо иконки состояния). */
+  activity?: { pct: number } | null;
   onToggle: (value: boolean) => void;
 };
 
 /** Один язык: флаг, название, состояние и тумблер «должен стоять». */
-export const LanguageCard = ({ lang, files, want, size, busy, onToggle }: Props) => {
+export const LanguageCard = ({ lang, files, want, size, busy, activity, onToggle }: Props) => {
   const installed = files !== undefined;
   const pending = want !== installed;
   // Состояние несёт тумблер и рамка, поэтому в подписи — только ФАКТ:
   // сколько аудиофайлов стоит или сколько весит пак. «установлено · …» — шум.
-  const state = pending
-    ? want
-      ? t("will be installed")
-      : t("will be removed")
-    : installed
-      ? t("{{n}} audio files", { n: (files ?? 0).toLocaleString("en-US") })
-      : size;
+  // Лоадер перебивает подпись: пока файл качается, процент важнее размера.
+  const state = activity
+    ? t("downloading {{n}}%", { n: Math.round(activity.pct) })
+    : pending
+      ? want
+        ? t("will be installed")
+        : t("will be removed")
+      : installed
+        ? t("{{n}} audio files", { n: (files ?? 0).toLocaleString("en-US") })
+        : size;
 
   // Карточка — это <label>: клик в ЛЮБОМ месте переключает язык (не только
   // по тумблеру) — привычное поведение строки-настройки (замечание 2026-11-20).
@@ -65,6 +71,7 @@ export const LanguageCard = ({ lang, files, want, size, busy, onToggle }: Props)
         data-testid={`${ROOT}--${lang}-meta`}
         className={cx(
           styles.meta,
+          activity && styles.metaOk,
           !pending && installed && styles.metaOk,
           pending && want && styles.metaAdd,
           pending && !want && styles.metaRemove,
@@ -79,12 +86,20 @@ export const LanguageCard = ({ lang, files, want, size, busy, onToggle }: Props)
           styles.stateIcon,
           installed && !pending && styles.stateOn,
           pending && want && styles.stateAdd,
-          pending && !want && styles.stateRemove,
+          activity && styles.stateBusy,
         )}
         data-testid={`${ROOT}--${lang}-toggle`}
         aria-hidden="true"
       >
-        {installed && !pending ? <CheckIcon /> : pending && !want ? <MinusIcon /> : <PlusIcon />}
+        {activity ? (
+          <Spinner />
+        ) : installed && !pending ? (
+          <CheckIcon />
+        ) : pending && !want ? (
+          <MinusIcon />
+        ) : (
+          <PlusIcon />
+        )}
       </span>
       <input
         data-testid={`${ROOT}--${lang}-switch`}

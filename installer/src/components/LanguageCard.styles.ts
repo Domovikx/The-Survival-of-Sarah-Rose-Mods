@@ -82,6 +82,12 @@ export const styles = stylex.create({
     color: "var(--accent-fg)",
     borderColor: "var(--accent)",
   },
+  /** Идёт загрузка: рамка светится, иконка вращается. */
+  stateBusy: {
+    color: "var(--accent-fg)",
+    borderColor: "var(--state-border)",
+    backgroundColor: "var(--state-bg)",
+  },
   stateRemove: {
     color: "var(--muted)",
     backgroundColor: "transparent",

@@ -49,6 +49,7 @@ export const App = () => {
           desired={inst.desired}
           sizeOf={sizeOf}
           busy={inst.busy}
+          active={inst.active}
           onToggle={inst.toggleLang}
         />
         <LogPanel lines={inst.lines} />
@@ -59,6 +60,7 @@ export const App = () => {
       <ActionBar
         status={inst.status}
         progress={inst.progress}
+        active={inst.active}
         busy={inst.busy}
         changes={inst.changes}
         canUninstall={Boolean(inst.state?.core || inst.state?.langs.length)}

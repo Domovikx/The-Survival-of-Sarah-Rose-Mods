@@ -5,6 +5,8 @@ export const styles = stylex.create({
   head: { display: "flex", alignItems: "baseline", gap: 10 },
   title: { margin: 0, fontSize: 16 },
   hint: { color: "var(--muted)", fontSize: 12.5 },
+  // Как и карточки языков: не установлено — сливается с фоном, установлено —
+  // плитка. Иначе «не установлено» выглядит заметнее, чем «стоит» (2026-11-20).
   core: {
     display: "flex",
     alignItems: "center",
@@ -14,7 +16,10 @@ export const styles = stylex.create({
     borderWidth: 1,
     borderStyle: "solid",
     borderColor: "var(--border)",
+  },
+  coreOn: {
     backgroundColor: "var(--panel-2)",
+    borderColor: "var(--state-border)",
   },
   coreText: { display: "flex", flexDirection: "column", gap: 2, minWidth: 0 },
   coreTitle: { fontSize: 14.5, fontWeight: 600 },

@@ -20,7 +20,7 @@ export const styles = stylex.create({
     width: "100%",
     margin: "0 auto",
   },
-  summary: { display: "flex", flexDirection: "column", gap: 2, minWidth: 0 },
+  summary: { display: "flex", alignItems: "center", gap: 8, minWidth: 0, color: "var(--accent-fg)" },
   status: {
     margin: 0,
     fontSize: 13,
@@ -37,10 +37,23 @@ export const styles = stylex.create({
     overflow: "hidden",
     flexShrink: 0,
   },
-  fill: { height: "100%", backgroundColor: "var(--accent)", transition: "width 140ms linear" },
+  /** В покое полоса не видна, но место держит — панель не прыгает. */
+  trackIdle: { visibility: "hidden" },
+  fill: {
+    height: "100%",
+    backgroundColor: "var(--accent)",
+    // StyleX не понимает shorthand `transition` — только longhands.
+    transitionProperty: "width",
+    transitionDuration: "180ms",
+    transitionTimingFunction: "ease-out",
+  },
   actions: { marginLeft: "auto", display: "flex", alignItems: "center", gap: 10 },
   primary: {
     "appearance": "none",
+    "display": "inline-flex",
+    "alignItems": "center",
+    "gap": 8,
+    "whiteSpace": "nowrap",
     "cursor": "pointer",
     "padding": "11px 20px",
     "borderRadius": 10,
@@ -53,8 +66,9 @@ export const styles = stylex.create({
     "transitionDuration": "120ms",
     ":hover:not(:disabled)": { filter: "brightness(1.08)" },
     ":active:not(:disabled)": { transform: "translateY(1px)" },
-    ":disabled": { opacity: 0.45, cursor: "default" },
     ":focus-visible": { outline: "2px solid var(--accent-fg)", outlineOffset: 2 },
+    // Во время установки кнопка занята: курсор «ждём», но не «нельзя».
+    ":disabled": { opacity: 0.75, cursor: "progress" },
   },
   danger: {
     "appearance": "none",

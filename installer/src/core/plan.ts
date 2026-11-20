@@ -39,7 +39,7 @@ export const buildPlan = ({ coreInstalled, selected, installed }: PlanInput): In
 
 /** Человеческая подпись пункта плана — для лога. */
 export const describeItem = (item: InstallItem): string =>
-  item.kind === "core" ? "Core (texts, fonts, mod menu)" : `Voice: ${item.lang?.toUpperCase() ?? "?"}`;
+  item.kind === "core" ? "Main pack (texts, fonts, mod menu)" : `Voice: ${item.lang?.toUpperCase() ?? "?"}`;
 
 /**
  * Разница «переключатели vs реальность» для кнопки Apply:

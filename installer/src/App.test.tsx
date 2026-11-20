@@ -15,7 +15,7 @@ describe("App", () => {
     const html = renderToString(<App />);
     expect(html).toContain("The Survival of Sarah Rose");
     expect(html).toContain("Игра");
-    expect(html).toContain("Компоненты");
+    expect(html).toContain("Что установить");
     expect(html).toContain("Применить изменения");
     expect(html).toContain("Удалить мод");
     // 11 языков озвучки — по флагу на каждого (SSR может продублировать атрибут)

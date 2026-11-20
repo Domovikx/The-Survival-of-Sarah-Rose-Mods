@@ -85,8 +85,25 @@ export const installMockBackend = (): void => {
         }
         return total;
       }
-      case "extract":
+      case "extract": {
+        // Как Rust: распаковка МЕНЯЕТ установку, иначе после «Применить»
+        // повторный scan_install не увидит новый язык (E2E ловил это).
+        const archive = String(args?.archive ?? "");
+        const voice = /-voice-([a-z]{2})\.7z$/.exec(archive);
+        if (voice) {
+          const lang = voice[1] ?? "";
+          const files = LANGS[lang] ?? 0;
+          installed = {
+            ...installed,
+            langs: [...installed.langs.filter((l) => l.lang !== lang), { lang, files }].sort((a, b) =>
+              a.lang.localeCompare(b.lang),
+            ),
+          };
+        } else if (archive.endsWith("main.7z")) {
+          installed = { ...installed, core: true, environment: true };
+        }
         return 2452;
+      }
       case "remove_lang": {
         const lang = String(args?.lang);
         const files = installed.langs.find((l) => l.lang === lang)?.files ?? 0;
