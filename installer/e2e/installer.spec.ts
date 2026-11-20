@@ -108,8 +108,9 @@ test.describe("установщик: положительные сценарии
     expect(bg).toBe("rgba(0, 0, 0, 0)");
     await expect(page.getByTestId("Actions--uninstall")).toBeDisabled();
 
-    // Из пустого состояния «Применить» ставит обязательный основной пак.
-    await expect(page.getByTestId("Actions--apply")).toBeEnabled();
+    // Из пустого состояния кнопка не «Применить изменения», а по делу:
+    // единственное действие — поставить обязательный основной пак.
+    await expect(page.getByTestId("Actions--apply")).toHaveText("Установить основной пак");
     await page.getByTestId("Actions--apply").click();
     await settle(page);
     await expect(page.getByTestId("Components--core-badge")).toHaveText("установлено");

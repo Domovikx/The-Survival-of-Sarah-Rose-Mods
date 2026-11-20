@@ -309,6 +309,18 @@ export const CATALOGUE: Record<string, Trans> = {
     ko: "취소",
     it: "Annulla",
   },
+  "Install main pack": {
+    zh: "安装主包",
+    ru: "Установить основной пак",
+    es: "Instalar paquete principal",
+    pt: "Instalar pacote principal",
+    de: "Hauptpaket installieren",
+    ja: "メインパックをインストール",
+    fr: "Installer le pack principal",
+    pl: "Zainstaluj pakiet główny",
+    ko: "메인 팩 설치",
+    it: "Installa pacchetto principale",
+  },
   "Apply changes": {
     zh: "应用更改",
     ru: "Применить изменения",

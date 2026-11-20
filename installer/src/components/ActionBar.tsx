@@ -14,13 +14,25 @@ type Props = {
   active: { lang: string | null; pct: number } | null;
   busy: boolean;
   changes: number;
+  /** Нет установки вообще: единственное действие — поставить основной пак. */
+  coreOnly: boolean;
   canUninstall: boolean;
   onApply: () => void;
   onUninstall: () => void;
 };
 
 /** Нижняя панель: состояние, прогресс и два действия — всегда на виду. */
-export const ActionBar = ({ status, progress, active, busy, changes, canUninstall, onApply, onUninstall }: Props) => {
+export const ActionBar = ({
+  status,
+  progress,
+  active,
+  busy,
+  changes,
+  coreOnly,
+  canUninstall,
+  onApply,
+  onUninstall,
+}: Props) => {
   const { bottom } = useScrollEdges();
 
   return (
@@ -63,6 +75,8 @@ export const ActionBar = ({ status, progress, active, busy, changes, canUninstal
                 <Spinner size={15} />
                 {active ? `${Math.round(active.pct)}%` : t("Working…")}
               </>
+            ) : coreOnly ? (
+              t("Install main pack")
             ) : (
               t("Apply changes")
             )}

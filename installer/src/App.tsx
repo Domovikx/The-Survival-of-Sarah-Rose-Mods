@@ -63,6 +63,7 @@ export const App = () => {
         active={inst.active}
         busy={inst.busy}
         changes={inst.changes}
+        coreOnly={inst.changes > 0 && !inst.state?.core && !inst.diff.install.length && !inst.diff.remove.length}
         canUninstall={Boolean(inst.state?.core || inst.state?.langs.length)}
         onApply={inst.apply}
         onUninstall={inst.uninstall}
