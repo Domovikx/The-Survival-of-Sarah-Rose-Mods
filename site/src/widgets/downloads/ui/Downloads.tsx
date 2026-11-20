@@ -59,7 +59,7 @@ export const Downloads = () => {
       <div className={cx(styles.panel)} data-testid={`${ROOT}--panel`}>
         <p className={cx(styles.lead)}>
           {t(
-            "The patch is free. Please download from Nexus Mods when it is available: that is where the statistics and endorsements live, and they are what help other players find the patch. The links below are a backup channel for when Nexus or Vortex is not available for you.",
+            "The patch is free. All files come straight from the GitHub Releases of the project — no account needed. If a download does not start, open the release page.",
           )}
         </p>
 
@@ -102,9 +102,6 @@ export const Downloads = () => {
           {t(
             "Unpack main.7z into the game folder (next to TheSurvivalofSarahRose.exe), then the voice packs you want. The badge in the top-right corner opens the mod menu.",
           )}
-        </p>
-        <p className={cx(styles.note)}>
-          {t("The main page and updates live on Nexus Mods; here is a backup copy of the current version.")}
         </p>
       </div>
     </Section>

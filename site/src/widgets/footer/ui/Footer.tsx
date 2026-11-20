@@ -25,8 +25,8 @@ export const Footer = () => {
             </a>
           </li>
           <li>
-            <a href={LINKS.nexus} data-testid={`${ROOT}--link-nexus`}>
-              {"Nexus Mods"}
+            <a href={LINKS.github} data-testid={`${ROOT}--link-github`} rel="noopener">
+              {"GitHub"}
             </a>
           </li>
           <li>

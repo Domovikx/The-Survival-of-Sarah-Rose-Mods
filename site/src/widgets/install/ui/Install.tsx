@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
-import { LINKS } from "@/shared/config";
 import { cx, Section } from "@/shared/ui";
 
 import { styles } from "./Install.styles";
@@ -21,7 +20,9 @@ export const Install = () => {
       <div className={cx(styles.panel)} data-testid={`${ROOT}--panel`}>
         <ol className={cx(styles.list)} data-testid={`${ROOT}--steps`}>
           <li className={cx(styles.item)} data-testid={`${ROOT}--step-1`}>
-            {t("Download the pack on Nexus Mods — start with main (required), then add the voice packs you want.")}
+            {t(
+              "Download the patch from GitHub Releases — start with main (required), then add the voice packs you want.",
+            )}
           </li>
           <li className={cx(styles.item)} data-testid={`${ROOT}--step-2`}>
             {t(
@@ -71,8 +72,8 @@ export const Install = () => {
           </div>
         </details>
         <div className={cx(styles.ctaRow)}>
-          <a className={cx(styles.cta)} href={LINKS.nexus} data-testid={`${ROOT}--cta`}>
-            {t("Open on Nexus Mods")}
+          <a className={cx(styles.cta)} href="#download" data-testid={`${ROOT}--cta`}>
+            {t("Open downloads")}
           </a>
           <p className={cx(styles.hint)} data-testid={`${ROOT}--vortex-hint`}>
             {t("Using Vortex? Install the game extension once, then use “Install from file”.")}

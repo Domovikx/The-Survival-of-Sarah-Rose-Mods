@@ -26,7 +26,7 @@ export const Support = () => {
 
         <ul className={cx(styles.list)}>
           <li className={cx(styles.item)}>
-            {t("Endorse it on Nexus Mods — that is how other players find the patch")}
+            {t("Star the repository on GitHub — that is how other players find the patch")}
           </li>
           <li className={cx(styles.item)}>{t("Rate the Steam guide — that is how newcomers find it")}</li>
         </ul>
@@ -34,11 +34,11 @@ export const Support = () => {
         <div className={cx(styles.row)}>
           <a
             className={cx(styles.btn, styles.btnAccent)}
-            href={LINKS.nexus}
-            data-testid={`${ROOT}--nexus`}
+            href={LINKS.github}
+            data-testid={`${ROOT}--github`}
             rel="noopener"
           >
-            {t("Endorse on Nexus")}
+            {t("Star on GitHub")}
           </a>
           <a className={cx(styles.btn)} href={LINKS.steamGuide} data-testid={`${ROOT}--steam`} rel="noopener">
             {t("Steam guide")}

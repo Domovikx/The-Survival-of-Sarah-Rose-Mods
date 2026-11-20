@@ -38,7 +38,7 @@ export const Donate = () => {
         </div>
 
         <p className={cx(styles.thanks)}>
-          {t("Thank you. Even one endorsement is visible, and a donation is literally the next lines of voice acting.")}
+          {t("Thank you. Every star and every donation is visible — a donation is literally the next lines of voice acting.")}
         </p>
       </div>
     </Section>

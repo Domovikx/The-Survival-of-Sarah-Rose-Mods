@@ -9,6 +9,7 @@ import { Screenshots } from "@/widgets/screenshots";
 import { Donate, Support } from "@/widgets/support";
 import { Downloads } from "@/widgets/downloads";
 import { VoiceDemand } from "@/widgets/voice-demand";
+import { VoiceProgress } from "@/widgets/voice-progress";
 
 import { FEATURES } from "@/shared/config";
 
@@ -20,6 +21,7 @@ export const App = () => (
       <Features />
       <DemoPhrases />
       <Support />
+      <VoiceProgress />
       <VoiceDemand />
       <Install />
       {FEATURES.downloads ? <Downloads /> : null}

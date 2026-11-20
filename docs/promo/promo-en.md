@@ -48,7 +48,7 @@ How to install: download the main archive and the voice pack for your language f
 
 Want a full voice-over? Today it is a demo subset of the script. If you want the whole game voiced, leave a comment under this guide and write which language you want — any wording is fine, in any language.
 
-One comment is one vote. A full pass is 69,120 lines, about 10 hours of GPU time. The language with the most comments is recorded first. Downloads of the voice pack for your language are counted as well, summed across all releases.
+One comment is one vote. A full pass is 68,357 lines — at the measured speed that is about 10 days of continuous GPU time. The language with the most comments is recorded first. Downloads of the voice pack for your language are counted as well, summed across all releases. The English voice-over is being recorded now; progress is shown on the project page.
 
 Free unofficial fan patch, 18+. Text and audio only: saves and gameplay are untouched. To remove it, delete the folder mods/tssr-ai-voice-pack from the game directory.
 ```

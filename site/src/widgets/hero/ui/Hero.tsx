@@ -40,8 +40,8 @@ export const Hero = () => {
           <SteamIcon size={20} />
           {t("The Survival of Sarah Rose on Steam")}
         </a>
-        <a className={cx(styles.mainBtn)} href={LINKS.nexus} data-testid={`${ROOT}--download`}>
-          {t("Download on Nexus Mods")}
+        <a className={cx(styles.mainBtn)} href="#download" data-testid={`${ROOT}--download`}>
+          {t("Download the patch")}
         </a>
       </div>
       <p className={cx(styles.hint)} data-testid={`${ROOT}--hint`}>

@@ -48,10 +48,10 @@ export const Faq = () => {
           </h3>
           <p className={cx(styles.a)} data-testid={`${ROOT}--a-4`}>
             {t(
-              "Endorse the mod on Nexus Mods — it helps other players find it. Bugs and suggestions: the mod page on Nexus.",
+              "Tell other players about it: rate the Steam guide and share the patch page. Bugs and suggestions: open an issue on GitHub.",
             )}{" "}
-            <a href={LINKS.nexus} data-testid={`${ROOT}--nexus-link`}>
-              {"Nexus Mods"}
+            <a href={LINKS.issues} data-testid={`${ROOT}--issues-link`}>
+              {"GitHub Issues"}
             </a>
           </p>
         </div>

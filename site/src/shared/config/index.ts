@@ -3,3 +3,5 @@ export type { Lang } from "./i18n";
 export { STORAGE_KEYS, LINKS } from "./constants";
 export { PACK, packAsset, RELEASES_URL } from "./pack";
 export { FEATURES } from "./flags";
+export { VOICE_PROGRESS } from "./voice-progress.generated";
+export type { VoiceProgressData } from "./voice-progress.generated";
