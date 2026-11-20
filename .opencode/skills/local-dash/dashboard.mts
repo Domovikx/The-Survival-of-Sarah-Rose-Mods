@@ -24,6 +24,9 @@ import {
   shimWorkers,
   voiceLangs,
 } from "../../../patches/ai-voice-pack/tools/generate/scripts/voice_status.mts";
+// Скорость озвучки — из того же разбора логов, что и публичный прогресс
+// (scripts/voice_progress.mts): один парсер маркеров START/DONE на два места.
+import { isRecording, rateFrom, scanCorpus } from "../../../scripts/voice_progress.mts";
 
 const PORT = Number(process.argv[process.argv.indexOf("--port") + 1]) || 8087;
 const PO_DIR = join("patches", "ai-voice-pack", "po");
@@ -48,7 +51,7 @@ const LANGS = ((): string[] => {
  * работает со старым JS и выводит «undefined» для новых полей (2026-11-16).
  * Поднимать при ЛЮБОМ изменении набора полей.
  */
-const API_VER = 46;
+const API_VER = 48;
 
 /** Прошлые значения CPU/RAM для дельты. */
 const prevCpu = cpus().map((c) => c.times);
@@ -236,56 +239,8 @@ const logTail = (lang: string, lines = 8): string[] => {
   }
 };
 
-/** Хвост произвольного файла (байты с конца) — чтобы не читать мегабайтные логи целиком. */
-const tailText = (file: string, bytes = 96 * 1024): string => {
-  let fd: number | null = null;
-  try {
-    fd = openSync(file, "r");
-    const size = statSync(file).size;
-    const len = Math.min(size, bytes);
-    const buf = Buffer.alloc(len);
-    readSync(fd, buf, 0, len, size - len);
-    return buf.toString("utf-8");
-  } catch {
-    return "";
-  } finally {
-    if (fd !== null) {
-      try {
-        closeSync(fd);
-      } catch {
-        /* уже закрыт */
-      }
-    }
-  }
-};
-
-/**
- * Разбор хвоста `vox_gen_<lang>.log` (очередь VoxCPM): последняя арка, счётчик
- * `[i/N] vox <Arc>` и число закрытых арок. Чистая функция — её и тестируем.
- */
-export const parseVoxLog = (text: string): { arc: string; i: number; n: number; doneArcs: number } => {
-  let arc = "";
-  let startArc = "";
-  let i = 0;
-  let n = 0;
-  let doneArcs = 0;
-  for (const line of text.split(/\r?\n/)) {
-    const done = /^=== DONE \S+ (\S+) /.exec(line);
-    if (done) {
-      doneArcs++;
-      continue;
-    }
-    const start = /^=== START \S+ (\S+) /.exec(line);
-    if (start) startArc = start[1]!;
-    const prog = /^\[(\d+)\/(\d+)\] vox (\S+)/.exec(line);
-    if (prog) {
-      i = Number(prog[1]);
-      n = Number(prog[2]);
-      arc = prog[3]!;
-    }
-  }
-  return { arc: arc || startArc, i, n, doneArcs };
-};
+/** История измеренной скорости по языку — для графика (последние ~90 точек). */
+const vqHistory = new Map<string, Array<{ t: string; v: number }>>();
 
 type VoiceQueueRow = {
   lang: string;
@@ -295,29 +250,63 @@ type VoiceQueueRow = {
   doneArcs: number;
   ageMin: number;
   running: boolean;
+  /** Текущая скорость (строк/мин) и прогноз до конца арки, если идёт. */
+  rate: number | null;
+  etaMin: number | null;
+  /** История скорости для графика (последние ~90 замеров). */
+  history: Array<{ t: string; v: number }>;
 };
 
+/** Кэш строк очереди: скан корпуса (13 тыс. stat) — не на каждый опрос страницы. */
+let vqCache: { at: number; value: VoiceQueueRow[] } = { at: 0, value: [] };
+
 /**
- * Очередь озвучки на пульте: состояние по каждому языку из логов vox_queue.
- * «Идёт» = лог обновился меньше 5 минут назад (прогресс пишется на каждую
- * фразу), иначе «стоит». Читаем только хвост: ru-лог дорастает до 1.2 МБ.
+ * Очередь озвучки на пульте — ПО КОРПУСУ, а не по логам: `voice_batch` пишет
+ * файл на каждую реплику, поэтому «идёт» = свежий mtime, а скорость = файлы за
+ * последний час. Логи у контуров разные (`vox_gen_*.log` у легаси-очереди,
+ * общий `batch.log` у voice_batch) — файлы же одинаковы для любого движка.
+ * Считаем только имена по контракту (бенч-файлы игра не видит).
  */
 const voiceQueue = (): VoiceQueueRow[] => {
-  const dir = join("patches", "ai-voice-pack", "tools", "generate", "output", "voice");
+  if (Date.now() - vqCache.at < 20_000) return vqCache.value;
   const rows: VoiceQueueRow[] = [];
-  let files: string[] = [];
-  try {
-    files = readdirSync(dir).filter((f) => /^vox_gen_[a-z]{2}\.log$/.test(f));
-  } catch {
-    return rows;
+  const now = Date.now();
+  for (const lang of voiceLangs()) {
+    let files: ReturnType<typeof scanCorpus>;
+    try {
+      files = scanCorpus(lang);
+    } catch {
+      continue;
+    }
+    if (!files.length) continue;
+    const newest = files.reduce((a, f) => (f.mtimeMs > a.mtimeMs ? f : a), files[0]!);
+    const ageMin = Math.round((now - newest.mtimeMs) / 60_000);
+    const running = isRecording(files, now);
+    // Показываем идущие и те, где писали за последние 2 ч: старые демо-файлы
+    // (писали 10 ч назад) — не «очередь», а шум.
+    if (!running && ageMin > 120) continue;
+    const plan = voicePlan(lang);
+    const arc = newest.arc;
+    const n = plan.get(arc) ?? 0;
+    const i = files.filter((f) => f.arc === arc).length;
+    let doneArcs = 0;
+    for (const [a, total] of plan) {
+      if (total > 0 && files.filter((f) => f.arc === a).length >= total) doneArcs++;
+    }
+    const measured = running ? rateFrom(files, now) : null;
+    const rate = measured === null ? null : Math.round(measured * 10) / 10;
+    const etaMin = rate && rate > 0 && n > i ? Math.round((n - i) / rate) : null;
+    if (rate !== null) {
+      const hist = vqHistory.get(lang) ?? [];
+      hist.push({ t: new Date().toISOString(), v: rate });
+      while (hist.length > 90) hist.shift();
+      vqHistory.set(lang, hist);
+    }
+    rows.push({ lang, arc, i, n, doneArcs, ageMin, running, rate, etaMin, history: vqHistory.get(lang) ?? [] });
   }
-  for (const f of files) {
-    const file = join(dir, f);
-    const parsed = parseVoxLog(tailText(file));
-    const ageMin = Math.round((Date.now() - statSync(file).mtimeMs) / 60_000);
-    rows.push({ lang: f.slice(8, 10), ...parsed, ageMin, running: ageMin < 5 });
-  }
-  return rows.toSorted((a, b) => Number(b.running) - Number(a.running) || a.lang.localeCompare(b.lang));
+  const value = rows.toSorted((a, b) => Number(b.running) - Number(a.running) || a.lang.localeCompare(b.lang));
+  vqCache = { at: now, value };
+  return value;
 };
 
 /**
@@ -586,6 +575,8 @@ type VoiceStats = {
   active: Record<string, string>;
   orphans: number;
   parts: number;
+  /** Файлы озвучки не по контракту — игра их не видит (бенч/легаси). */
+  junk: number;
 };
 
 /** Обход корпуса озвучки дорогой (11 языков × ~1.2 тыс. файлов) — кэш 60 с. */
@@ -651,6 +642,7 @@ const computeVoice = async (): Promise<VoiceStats> => {
       active: Object.fromEntries(activeArcs()),
       orphans: h.orphans,
       parts: h.parts,
+      junk: h.junk,
     };
     voiceCache = { at: Date.now(), value };
     return value;
@@ -659,7 +651,7 @@ const computeVoice = async (): Promise<VoiceStats> => {
   }
 };
 
-const emptyVoice = (): VoiceStats => ({ langs: [], arcs: [], workers: 0, active: {}, orphans: 0, parts: 0 });
+const emptyVoice = (): VoiceStats => ({ langs: [], arcs: [], workers: 0, active: {}, orphans: 0, parts: 0, junk: 0 });
 
 /**
  * Отдаём кэш, а если он протух — запускаем пересчёт и возвращаем `null`: UI
@@ -1180,18 +1172,30 @@ async function tick() {
     m <= 0 ? 'только что' : m < 60 ? m + ' мин назад' : m < 1440 ? Math.round(m / 60) + ' ч назад' : Math.round(m / 1440) + ' дн назад';
   // Очередь озвучки: последняя арка, счётчик i/N, свежесть лога.
   const vq = s.voiceQueue || [];
+  // Полный объём языка — из карточки «текст и озвучка» (там done/plan по языку).
+  const vlangs = new Map(((s.voice && s.voice.langs) || []).map((l) => [l.lang, l]));
+  // Минуты в человекочитаемое: 45 мин / 6.5 ч / 10.3 сут.
+  const dur = (m) => (m < 90 ? m + ' мин' : m / 60 < 36 ? (m / 60).toFixed(1) + ' ч' : (m / 1440).toFixed(1) + ' сут');
   $('vqnote').textContent = vq.length ? '· ' + vq.filter((r) => r.running).length + ' в работе из ' + vq.length + ' языков' : '';
   $('vqueue').innerHTML = vq.length
     ? vq.map((r) => {
         const p = r.n ? Math.round((r.i / r.n) * 100) : 0;
         const state = r.running ? '<span class="ok">идёт</span>' : '<span class="muted">стоит</span>';
+        const eta = r.etaMin === null ? '' : ' · арка: осталось ~' + dur(r.etaMin);
+        const speed = r.rate === null ? '' : ' · ' + r.rate + ' стр/мин';
+        // Сколько осталось до ПОЛНОЙ озвучки языка — главная цифра для
+        // «когда будет всё»: план минус записанное, делить на скорость.
+        const full = vlangs.get(r.lang);
+        const left = full ? Math.max(0, full.plan - full.done) : null;
+        const fullText = left !== null && r.rate ? ' · до полной: ' + N(left) + ' строк ≈ ' + dur(Math.round(left / r.rate)) : '';
         return '<div class="row"><span>' + r.lang + ' · ' + (r.arc || '—') + ' · ' + state + '</span>' +
           '<span class="v">' + N(r.i) + ' / ' + N(r.n) + ' · ' + p + '%</span></div>' +
           '<div class="bar"><i style="width:' + p + '%"></i></div>' +
-          '<div class="muted" style="font-size:11px;margin:-2px 0 8px">арок закрыто: ' + r.doneArcs +
-          ' · лог ' + ageText(r.ageMin) + '</div>';
+          '<div class="muted" style="font-size:11px;margin:-2px 0 8px">' + speed + eta + fullText +
+          ' · арок закрыто: ' + r.doneArcs + ' · лог ' + ageText(r.ageMin) + '</div>' +
+          (r.history && r.history.length > 1 ? spark(r.history, '#8957e5', 'скорость', 'стр/мин', undefined, []) : '');
       }).join('')
-    : '<div class="muted">логов очереди нет — озвучка не запускалась</div>';
+    : '<div class="muted">озвучка сейчас не идёт: за последние 2 ч файлов не писалось</div>';
   $('tail').textContent = (s.tail || []).join('\\n') || '—';
   const vr = s.voiceRun;
   $('vrun').innerHTML = vr && vr.running
@@ -1240,13 +1244,14 @@ async function tick() {
   }).join('');
   const active = v.workers > 0 ? Object.entries(v.active).filter(([, a]) => a && a !== '?') : [];
   const bytes = v.langs.reduce((a, l) => a + (l.bytes || 0), 0);
-  const bad = v.orphans || v.parts;
+  const bad = v.orphans || v.parts || v.junk;
   // Одной строкой: три полнострочных ряда «подпись … значение» давали
   // полосу пустоты в середине (владелец: «что за гап?», 2026-11-16).
   $('vhealth').innerHTML = '<div class="stats muted">' +
     'корпус ' + size(bytes) +
     ' · шимы-воркеры <span class="' + (v.workers > 0 ? 'ok' : '') + '">' + (v.workers < 0 ? '—' : v.workers) + '</span>' +
     ' · сироты loudnorm / .part <span class="' + (bad ? 'warn' : '') + '">' + v.orphans + ' / ' + v.parts + '</span>' +
+    (v.junk ? ' · <span class="warn" title="бенч/легаси-имена: игра их не находит">не по контракту ' + v.junk + '</span>' : '') +
     (active.length ? ' · в работе: ' + active.map(([l, a]) => l + ' → ' + a).join(', ') : '') +
     '</div>';
   // 19 строк арок — шум: показываем только те, что УЖЕ начаты, и счётчики

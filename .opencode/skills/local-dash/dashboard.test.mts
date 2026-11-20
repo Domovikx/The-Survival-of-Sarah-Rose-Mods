@@ -10,7 +10,12 @@ import { join } from "node:path";
 import { test } from "node:test";
 
 import { parsePo } from "../renpy-po/po_core.mts";
-import { arcsClosed, countPo, parseVoxLog } from "./dashboard.mts";
+import { arcsClosed, countPo } from "./dashboard.mts";
+
+/** Перевод строки без ESC-последовательностей: heredoc уже дважды превращал
+ *  "
+" в реальный перенос внутри литерала. */
+const NL = String.fromCharCode(10);
 import { loadCatalog } from "../../../patches/ai-voice-pack/tools/generate/scripts/voice_batch.mts";
 import { plan, voiceLangs } from "../../../patches/ai-voice-pack/tools/generate/scripts/voice_status.mts";
 
@@ -109,27 +114,6 @@ test("plan(en) = все озвучиваемые фразы POT, остальн�
   }
 });
 
-// --------------------------------------------------- очередь озвучки -----
-
-/** Перевод строки без ESC-последовательностей: в этом репозитории prettier/
- *  heredoc уже дважды превращали "\n" в реальный перенос внутри литерала. */
-const NL = String.fromCharCode(10);
-
-test("parseVoxLog: последняя арка, счётчик и число закрытых арок", () => {
-  const log = [
-    "=== START en Prologue 12:24 ===",
-    "=== DONE en Prologue 12:24 ===",
-    "=== START en StoryBeginnings 12:24 ===",
-    "[4/1025] vox StoryBeginnings",
-    "[7/1025] vox StoryBeginnings",
-  ].join(NL);
-  assert.deepEqual(parseVoxLog(log), { arc: "StoryBeginnings", i: 7, n: 1025, doneArcs: 1 });
-});
-
-test("parseVoxLog: пустой хвост не выдумывает арку", () => {
-  assert.deepEqual(parseVoxLog(""), { arc: "", i: 0, n: 0, doneArcs: 0 });
-});
-
-test("parseVoxLog: START без прогресса — арка известна, счётчик нулевой", () => {
-  assert.deepEqual(parseVoxLog("=== START es WarArc 09:03 ==="), { arc: "WarArc", i: 0, n: 0, doneArcs: 0 });
-});
+// Очередь озвучки теперь считается по корпусу (mtime файлов по контракту),
+// её чистая часть (rateFrom/isRecording/scanCorpus) покрыта
+// `scripts/voice_progress.test.mts` — дублировать парсер логов больше нечего.
