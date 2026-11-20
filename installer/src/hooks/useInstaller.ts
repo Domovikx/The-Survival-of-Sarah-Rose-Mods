@@ -229,7 +229,8 @@ export const useInstaller = () => {
     if (!game) return;
     const others = state?.other_mods ?? [];
     setConfirm({
-      title: t("Remove the Sarah Rose AI voice pack from {{path}}?", { path: game.path }),
+      // Путь и так виден в карточке игры — в заголовке он только шумит.
+      title: t("Remove the Sarah Rose AI voice pack?"),
       detail: others.length
         ? t("Other mods in mods/ ({{list}}) are kept, environment.txt stays.", { list: others.join(", ") })
         : undefined,
