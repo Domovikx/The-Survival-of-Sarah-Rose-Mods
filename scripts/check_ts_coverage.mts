@@ -63,7 +63,7 @@ const reports: Report[] = [
   report(
     "корень (.mts: skills/po/casts/tools/scripts/demo)",
     tscFiles(["--noEmit"]),
-    walk(ROOT, [".mts"], ["tmp", "dist", "site"]),
+    walk(ROOT, [".mts"], ["tmp", "dist", "site", "installer"]),
     [".mts"],
   ),
   report(
@@ -71,6 +71,13 @@ const reports: Report[] = [
     tscFiles(["--noEmit", "-p", "site/tsconfig.json"]),
     walk(join(ROOT, "site"), [".ts", ".tsx"], ["dist"]),
     [".ts", ".tsx"],
+  ),
+  // Инсталлятор — отдельное приложение со своим tsconfig (WebView2/DOM + vitest).
+  report(
+    "installer (.ts/.tsx)",
+    tscFiles(["--noEmit", "-p", "installer/tsconfig.json"]),
+    walk(join(ROOT, "installer"), [".ts", ".tsx", ".mts"], ["dist", "node_modules"]),
+    [".ts", ".tsx", ".mts"],
   ),
 ];
 

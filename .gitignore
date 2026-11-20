@@ -51,3 +51,4 @@ nul
 .env
 .env.local
 !.env.example
+site/public/installer/

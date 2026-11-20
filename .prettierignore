@@ -14,3 +14,6 @@ site/public/
 manifest.json
 **/.pytest_cache/
 patches/ai-voice-pack/catalog/voice_list.json
+installer/src-tauri/target/
+installer/src-tauri/gen/
+installer/package-lock.json
