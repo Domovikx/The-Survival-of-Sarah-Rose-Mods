@@ -17,3 +17,5 @@ patches/ai-voice-pack/catalog/voice_list.json
 installer/src-tauri/target/
 installer/src-tauri/gen/
 installer/package-lock.json
+# генерируемый артефакт (см. npm run gen:langs)
+installer/src/core/langs.generated.ts

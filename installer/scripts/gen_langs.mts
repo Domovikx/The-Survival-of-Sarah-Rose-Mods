@@ -35,5 +35,7 @@ const banner = `/**
  */
 `;
 
+// Компактная запись (как JSON) — файл в `.prettierignore`: генерируемый
+// артефакт не переформатируется, иначе после каждой сборки грязное дерево.
 writeFileSync(outPath, `${banner}export const LANG_ORDER = ${JSON.stringify(codes)} as const;\n`, "utf-8");
 console.log(`langs: ${codes.join(", ")} → ${outPath}`);
