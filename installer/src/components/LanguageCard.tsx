@@ -53,7 +53,6 @@ export const LanguageCard = ({ lang, files, want, size, busy, onToggle }: Props)
         styles.card,
         installed && styles.installed,
         pending && want && styles.pendingAdd,
-        pending && !want && styles.pendingRemove,
         busy && styles.busy,
       )}
     >

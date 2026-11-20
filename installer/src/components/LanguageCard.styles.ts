@@ -14,7 +14,8 @@ export const styles = stylex.create({
     "borderWidth": 1,
     "borderStyle": "solid",
     "borderColor": "var(--border)",
-    "backgroundColor": "var(--panel-2)",
+    // Заливки нет: неустановленный язык читается как «фон», а не как плитка.
+    // Плиткой становится только установленный (см. `installed`).
     "transitionProperty": "border-color, background-color, box-shadow",
     "transitionDuration": "140ms",
     // Один hover-паттерн на всё приложение: рамка accent-fg (как у кнопок и
@@ -23,10 +24,11 @@ export const styles = stylex.create({
     // Только клавиатурный фокус: после клика мышью рамка не нужна.
     ":has(input:focus-visible)": { outline: "2px solid var(--accent-fg)", outlineOffset: 2 },
   },
-  // Установлено: только индиго-рамка. Заливку не даём — 11 подряд
-  // залитых карточек превращаются в шум (палитра сайта, без зелёного).
+  // Установлено: плитка с заливкой и индиго-рамкой. Это единственный
+  // «включённый» вид — неустановленные остаются прозрачными (2026-11-20).
   installed: {
     borderColor: "var(--state-border)",
+    backgroundColor: "var(--panel-2)",
   },
   // Пунктира в интерфейсе нет нигде (как и на лендинге): состояние несут
   // цвет рамки, свечение и иконка, а не тип линии (2026-11-20).
@@ -35,11 +37,6 @@ export const styles = stylex.create({
   pendingAdd: {
     borderColor: "var(--accent)",
     boxShadow: "0 0 0 3px var(--state-bg)",
-  },
-  // Удаление — карточка становится «пустой» (без заливки): видно, что язык
-  // уходит, но без пунктира и без новых цветов.
-  pendingRemove: {
-    backgroundColor: "transparent",
   },
   busy: { opacity: 0.55, pointerEvents: "none" },
   // Флаги в наборе — КРУГЛЫЕ (circle-flags): держим квадрат 22×22 и круглый
