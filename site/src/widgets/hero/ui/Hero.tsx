@@ -19,17 +19,11 @@ export const Hero = () => {
         {t("Unofficial fan patch: a full translation and AI voice acting for The Survival of Sarah Rose.")}
       </p>
       <div className={cx(styles.badges)} data-testid={`${ROOT}--badges`}>
-        <span className={cx(styles.badge)} data-testid={`${ROOT}--badge-translate`}>
-          {t("10 languages — full text; demo voice in 11")}
+        <span className={cx(styles.badge)} data-testid={`${ROOT}--badge-text`}>
+          {t("Full text in 10 languages")}
         </span>
         <span className={cx(styles.badge)} data-testid={`${ROOT}--badge-voice`}>
-          {t("Voice acting: demo in 11 languages — 1 171–1 399 lines per language")}
-        </span>
-        <span className={cx(styles.badge)} data-testid={`${ROOT}--badge-format`}>
-          {t("Opus 24 kbps — 15–21 MB per language (demo)")}
-        </span>
-        <span className={cx(styles.badge)} data-testid={`${ROOT}--badge-engine`}>
-          {"Ren'Py 7.4.11 · Steam"}
+          {t("Demo voice in 11 languages")}
         </span>
         <span className={cx(styles.badge, styles.badgeAge)} data-testid={`${ROOT}--badge-age`}>
           {t("18+ adult content")}

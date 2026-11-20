@@ -1,24 +1,24 @@
 import { useTranslation } from "react-i18next";
 
-import { cx, Section } from "@/shared/ui";
+import { cx, GlobeIcon, MicIcon, Section, UsersIcon } from "@/shared/ui";
 
 import { styles } from "./Features.styles";
 
 const CARDS = [
   {
-    icon: "🌐",
+    icon: GlobeIcon,
     titleKey: "Translation",
-    textKey: "Text: all 10 languages complete (69 120 lines each). Voice: demo in 11 languages.",
+    textKey: "All story text is translated into every supported language.",
     key: "translate",
   },
   {
-    icon: "🎙",
+    icon: MicIcon,
     titleKey: "AI voice acting",
     textKey: "Cloned voices, one per character, with the emotion matched to each scene.",
     key: "voice",
   },
   {
-    icon: "🗣",
+    icon: UsersIcon,
     titleKey: "Living characters",
     textKey: "Sarah, Kate, King Orwell, Thomas, Varga and dozens more.",
     key: "characters",
@@ -36,7 +36,10 @@ export const Features = () => {
         {CARDS.map((card) => (
           <div key={card.titleKey} className={cx(styles.card)} data-testid={`${ROOT}--card-${card.key}`}>
             <h3 className={cx(styles.cardTitle)} data-testid={`${ROOT}--card-${card.key}-title`}>
-              {card.icon} {t(card.titleKey)}
+              <span className={cx(styles.titleIcon)} aria-hidden="true">
+                <card.icon size={22} />
+              </span>
+              {t(card.titleKey)}
             </h3>
             <p className={cx(styles.cardText)} data-testid={`${ROOT}--card-${card.key}-text`}>
               {t(card.textKey)}

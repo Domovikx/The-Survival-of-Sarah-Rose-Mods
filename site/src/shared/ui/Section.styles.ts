@@ -4,6 +4,8 @@ export const styles = stylex.create({
   section: {
     paddingTop: 12,
     paddingBottom: 12,
+    // Переход по якорю (#download) не должен прятать заголовок под липкой шапкой.
+    scrollMarginTop: 104,
   },
   title: {
     fontSize: "clamp(20px, 3vw, 26px)",

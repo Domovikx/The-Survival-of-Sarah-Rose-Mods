@@ -53,3 +53,69 @@ export const PauseIcon = ({ size = 15 }: IconProps) => (
     <rect x="14" y="5" width="4" height="14" rx="1" />
   </svg>
 );
+
+/**
+ * Иконки блока «What you get». Линейные (stroke), одна толщина 1.8 и один
+ * viewBox 24×24 — раньше там были эмодзи 🌐🎙🗣: они рисуются системным
+ * эмодзи-шрифтом, разного веса и цвета, а «говорящая голова» и микрофон
+ * сливались в одно пятно (замечание владельца 2026-11-20).
+ */
+
+/** Перевод: глобус с меридианами. */
+export const GlobeIcon = ({ size = 20 }: IconProps) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth={1.8}
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    aria-hidden="true"
+  >
+    <circle cx="12" cy="12" r="9" />
+    <path d="M3 12h18" />
+    <path d="M12 3c2.6 2.4 4 5.6 4 9s-1.4 6.6-4 9c-2.6-2.4-4-5.6-4-9s1.4-6.6 4-9z" />
+  </svg>
+);
+
+/** Озвучка: микрофон. */
+export const MicIcon = ({ size = 20 }: IconProps) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth={1.8}
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    aria-hidden="true"
+  >
+    <rect x="9" y="2.5" width="6" height="11" rx="3" />
+    <path d="M5.5 11.5a6.5 6.5 0 0 0 13 0" />
+    <path d="M12 18v3.5" />
+    <path d="M9 21.5h6" />
+  </svg>
+);
+
+/** Живые персонажи: два силуэта (каст), а не «говорящая голова». */
+export const UsersIcon = ({ size = 20 }: IconProps) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth={1.8}
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    aria-hidden="true"
+  >
+    <circle cx="9" cy="8" r="3.2" />
+    <path d="M3.5 20c0-3 2.5-5.2 5.5-5.2s5.5 2.2 5.5 5.2" />
+    <path d="M16 5.4a3.2 3.2 0 0 1 0 6.2" />
+    <path d="M17.2 14.4c2 .7 3.3 2.5 3.3 5.6" />
+  </svg>
+);
