@@ -15,10 +15,11 @@ export const styles = stylex.create({
   },
   head: { display: "flex", alignItems: "center", gap: 10 },
   title: { margin: 0, fontSize: 14, fontWeight: 600, color: "var(--muted)", letterSpacing: "0.2px" },
+  // Бейдж — сразу после заголовка; вправо уезжает только кнопка,
+  // иначе два auto-margin делят шапку и бейдж «висит» по центру (2026-11-20).
   status: {
-    marginLeft: "auto",
-    fontSize: 12,
-    fontWeight: 600,
+    fontSize: 11.5,
+    fontWeight: 700,
     color: "var(--accent-fg)",
     backgroundColor: "var(--state-bg)",
     borderWidth: 1,
@@ -26,6 +27,8 @@ export const styles = stylex.create({
     borderColor: "var(--state-border)",
     borderRadius: 999,
     padding: "3px 10px",
+    letterSpacing: "0.4px",
+    textTransform: "uppercase",
   },
   statusBad: {
     color: "var(--muted)",
@@ -35,7 +38,8 @@ export const styles = stylex.create({
   row: { display: "flex", gap: 12, alignItems: "baseline" },
   key: { width: 108, flexShrink: 0, color: "var(--muted)", fontSize: 13 },
   value: { margin: 0, fontSize: 14, wordBreak: "break-all", fontVariantNumeric: "tabular-nums" },
-  actions: { display: "flex", gap: 8, marginTop: 2 },
+  /** Кнопка поиска — справа в шапке карточки: путь и сборка читаются слева. */
+  detect: { marginLeft: "auto" },
   ghost: {
     "appearance": "none",
     "cursor": "pointer",
@@ -48,7 +52,7 @@ export const styles = stylex.create({
     "color": "var(--text)",
     "fontSize": 13,
     "fontWeight": 500,
-    ":hover": { borderColor: "var(--accent-fg)", color: "var(--accent-fg)" },
+    ":hover": { backgroundColor: "var(--panel-2)", borderColor: "var(--accent-fg)" },
     ":focus-visible": { outline: "2px solid var(--accent-fg)", outlineOffset: 2 },
   },
 });

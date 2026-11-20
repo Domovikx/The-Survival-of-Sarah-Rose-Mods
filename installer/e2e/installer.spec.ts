@@ -7,6 +7,7 @@ import { expect, test } from "@playwright/test";
 test.describe("установщик: интерфейс", () => {
   test("мок: игра найдена, ядро и 11 языков показаны", async ({ page }) => {
     await page.goto("/");
+    await expect(page.getByTestId("Header--logo")).toBeVisible();
     await expect(page.getByTestId("Game")).toBeVisible();
     await expect(page.getByTestId("Game--status")).toHaveText("установлено");
     await expect(page.getByTestId("Game--path")).toContainText("The Survival of Sarah Rose");
@@ -20,7 +21,8 @@ test.describe("установщик: интерфейс", () => {
     await page.goto("/");
     const apply = page.getByTestId("Actions--apply");
     await expect(apply).toBeDisabled();
-    await page.getByTestId("Language--en-toggle").click();
+    // Клик по ПЛАШКЕ (не только по тумблеру) переключает язык.
+    await page.getByTestId("Language--en").click();
     await expect(page.getByTestId("Language--en-meta")).toHaveText("будет удалено");
     await expect(page.getByTestId("Language--en-switch")).not.toBeChecked();
     await expect(apply).toBeEnabled();
@@ -28,7 +30,8 @@ test.describe("установщик: интерфейс", () => {
 
   test("Apply с удалением открывает свой диалог; Cancel ничего не меняет", async ({ page }) => {
     await page.goto("/");
-    await page.getByTestId("Language--en-toggle").click();
+    // Клик по ПЛАШКЕ (не только по тумблеру) переключает язык.
+    await page.getByTestId("Language--en").click();
     await page.getByTestId("Actions--apply").click();
     await expect(page.getByTestId("Confirm")).toBeVisible();
     await expect(page.getByTestId("Confirm--title")).toContainText("Применить изменения");

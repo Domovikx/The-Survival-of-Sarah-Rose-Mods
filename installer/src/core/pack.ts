@@ -6,14 +6,20 @@
  * выпуске нового пака.
  */
 
+import { LANG_ORDER } from "./langs.generated";
+
 export const REPO = "Domovikx/The-Survival-of-Sarah-Rose-Mods";
 export const RELEASE_API = `https://api.github.com/repos/${REPO}/releases/latest`;
 
 /** Имя ассета ядра (main: тексты, шрифты, меню мода). */
 export const CORE_ASSET = "TSSR-AI-Voice-Pack-main.7z";
 
-/** Озвучка — отдельными паками; в прототипе только показываем (ещё не ставим). */
-export const VOICE_LANGS = ["en", "ru", "zh", "es", "pt", "de", "ja", "fr", "pl", "ko", "it"] as const;
+/**
+ * Озвучка — отдельными паками. ПОРЯДОК языков — из `config/language-priority.json`
+ * (единый источник, генерится в `langs.generated.ts`): Steam-статистика,
+ * решение владельца 2026-11-13. Руками список не правим.
+ */
+export const VOICE_LANGS = LANG_ORDER;
 
 export type Lang = (typeof VOICE_LANGS)[number];
 

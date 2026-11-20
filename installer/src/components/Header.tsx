@@ -16,16 +16,15 @@ type Props = {
 /** Шапка: наш логотип, название и переключатель языка интерфейса. */
 export const Header = ({ lang, onChange }: Props) => (
   <header className={cx(styles.header)} data-testid={ROOT}>
-    <img className={cx(styles.logo)} src={iconUrl} alt="" />
-    <div className={cx(styles.titles)}>
-      <h1 className={cx(styles.title)}>TSSR AI Voice Pack</h1>
-      <p className={cx(styles.sub)}>{t("Windows · official Steam version only")}</p>
-    </div>
-    <div className={cx(styles.right)}>
-      <LangSwitcher lang={lang} onChange={onChange} />
-      <span className={cx(styles.alpha)} data-testid={`${ROOT}--alpha`}>
-        alpha
-      </span>
+    <div className={cx(styles.inner)}>
+      <img className={cx(styles.logo)} src={iconUrl} alt="" width={42} height={42} data-testid={`${ROOT}--logo`} />
+      <div className={cx(styles.titles)}>
+        <h1 className={cx(styles.title)}>TSSR AI Voice Pack</h1>
+        <p className={cx(styles.sub)}>{t("Windows · official Steam version only")}</p>
+      </div>
+      <div className={cx(styles.right)}>
+        <LangSwitcher lang={lang} onChange={onChange} />
+      </div>
     </div>
   </header>
 );

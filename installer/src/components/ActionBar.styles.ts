@@ -2,15 +2,22 @@ import * as stylex from "@stylexjs/stylex";
 
 export const styles = stylex.create({
   bar: {
+    position: "sticky",
+    bottom: 0,
+    zIndex: 20,
+    borderTopWidth: 1,
+    borderTopStyle: "solid",
+    borderTopColor: "var(--border)",
+    backgroundColor: "var(--bg)",
+  },
+  inner: {
     display: "flex",
     alignItems: "center",
     gap: 14,
     padding: "14px 24px",
-    borderTopWidth: 1,
-    borderTopStyle: "solid",
-    borderTopColor: "var(--border)",
-    backgroundColor: "color-mix(in srgb, var(--bg) 92%, transparent)",
-    backdropFilter: "blur(10px)",
+    maxWidth: 1040,
+    width: "100%",
+    margin: "0 auto",
   },
   summary: { display: "flex", flexDirection: "column", gap: 2, minWidth: 0 },
   status: {
@@ -60,7 +67,7 @@ export const styles = stylex.create({
     "borderWidth": 1,
     "borderStyle": "solid",
     "borderColor": "var(--border)",
-    ":hover:not(:disabled)": { borderColor: "var(--accent-fg)", color: "var(--accent-fg)" },
+    ":hover:not(:disabled)": { backgroundColor: "var(--panel-2)", borderColor: "var(--accent-fg)" },
     ":disabled": { opacity: 0.45, cursor: "default" },
     ":focus-visible": { outline: "2px solid var(--accent-fg)", outlineOffset: 2 },
   },

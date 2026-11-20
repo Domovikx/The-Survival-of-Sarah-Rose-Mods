@@ -1,4 +1,5 @@
 import { t } from "@/i18n";
+import { CheckIcon, MinusIcon, PlusIcon } from "@/ui/icons";
 import { cx } from "@/ui/cx";
 
 import { styles } from "./LanguageCard.styles";
@@ -43,8 +44,10 @@ export const LanguageCard = ({ lang, files, want, size, busy, onToggle }: Props)
       ? t("{{n}} audio files", { n: (files ?? 0).toLocaleString("en-US") })
       : size;
 
+  // Карточка — это <label>: клик в ЛЮБОМ месте переключает язык (не только
+  // по тумблеру) — привычное поведение строки-настройки (замечание 2026-11-20).
   return (
-    <div
+    <label
       data-testid={`${ROOT}--${lang}`}
       className={cx(
         styles.card,
@@ -70,21 +73,30 @@ export const LanguageCard = ({ lang, files, want, size, busy, onToggle }: Props)
       >
         {state}
       </span>
-      <label className={cx(styles.switch)} data-testid={`${ROOT}--${lang}-toggle`}>
-        <input
-          data-testid={`${ROOT}--${lang}-switch`}
-          className={cx(styles.input)}
-          type="checkbox"
-          role="switch"
-          checked={want}
-          disabled={busy}
-          aria-label={`${NAMES[lang] ?? lang} ${lang.toUpperCase()}`}
-          onChange={(e) => onToggle(e.target.checked)}
-        />
-        <span className={cx(styles.track, want && styles.trackOn)}>
-          <span className={cx(styles.knob, want && styles.knobOn)} />
-        </span>
-      </label>
-    </div>
+      {/* Состояние показывает ИКОНКА: ✓ стоит · + можно поставить · − убрать.
+          Клик по плашке (label) переключает; чекбокс скрыт, но доступен с клавиатуры. */}
+      <span
+        className={cx(
+          styles.stateIcon,
+          installed && !pending && styles.stateOn,
+          pending && want && styles.stateAdd,
+          pending && !want && styles.stateRemove,
+        )}
+        data-testid={`${ROOT}--${lang}-toggle`}
+        aria-hidden="true"
+      >
+        {installed && !pending ? <CheckIcon /> : pending && !want ? <MinusIcon /> : <PlusIcon />}
+      </span>
+      <input
+        data-testid={`${ROOT}--${lang}-switch`}
+        className={cx(styles.input)}
+        type="checkbox"
+        role="switch"
+        checked={want}
+        disabled={busy}
+        aria-label={`${NAMES[lang] ?? lang} ${lang.toUpperCase()}`}
+        onChange={(e) => onToggle(e.target.checked)}
+      />
+    </label>
   );
 };

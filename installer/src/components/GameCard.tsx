@@ -23,6 +23,15 @@ export const GameCard = ({ game, detected, busy, onRedetect }: Props) => (
           {game ? t("installed") : t("not found")}
         </span>
       ) : null}
+      <button
+        type="button"
+        className={cx(styles.ghost, styles.detect)}
+        data-testid={`${ROOT}--detect`}
+        onClick={onRedetect}
+        disabled={busy}
+      >
+        {t("Detect again")}
+      </button>
     </div>
     <div className={cx(styles.row)}>
       <span className={cx(styles.key)}>{t("Folder")}</span>
@@ -35,17 +44,6 @@ export const GameCard = ({ game, detected, busy, onRedetect }: Props) => (
       <p className={cx(styles.value)} data-testid={`${ROOT}--build`}>
         {game?.build_id ?? "—"}
       </p>
-    </div>
-    <div className={cx(styles.actions)}>
-      <button
-        type="button"
-        className={cx(styles.ghost)}
-        data-testid={`${ROOT}--detect`}
-        onClick={onRedetect}
-        disabled={busy}
-      >
-        {t("Detect again")}
-      </button>
     </div>
   </section>
 );

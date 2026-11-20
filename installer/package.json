@@ -11,7 +11,9 @@
     "test": "vitest run",
     "e2e": "node scripts/e2e.mts",
     "preview:web": "vite build && vite preview --port 4173 --strictPort",
-    "e2e:ui": "playwright test"
+    "e2e:ui": "playwright test",
+    "gen:langs": "node scripts/gen_langs.mts",
+    "prebuild": "npm run gen:langs"
   },
   "dependencies": {
     "@tauri-apps/api": "^2",

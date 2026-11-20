@@ -23,7 +23,7 @@ export const styles = stylex.create({
     "textAlign": "left",
     "cursor": "pointer",
     "fontSize": 13,
-    ":hover": { color: "var(--text)" },
+    ":hover": { backgroundColor: "var(--panel-2)", color: "var(--text)" },
     ":focus-visible": { outline: "2px solid var(--accent-fg)", outlineOffset: -2 },
   },
   title: { color: "var(--text)", fontWeight: 600, flexShrink: 0 },

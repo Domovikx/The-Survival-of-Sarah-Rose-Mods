@@ -19,7 +19,7 @@ export const styles = stylex.create({
     "backgroundColor": "transparent",
     "transitionProperty": "border-color, background-color",
     "transitionDuration": "150ms",
-    ":hover": { backgroundColor: "var(--panel-2)", borderColor: "var(--link)" },
+    ":hover": { backgroundColor: "var(--panel-2)", borderColor: "var(--accent-fg)" },
     ":focus-visible": { outline: "2px solid var(--accent-fg)", outlineOffset: 2 },
   },
   chevron: { fontSize: 9, opacity: 0.75, transform: "translateY(1px)" },

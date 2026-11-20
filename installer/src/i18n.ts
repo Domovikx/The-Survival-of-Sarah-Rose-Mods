@@ -7,7 +7,10 @@
  * Правило одно: **новый текст — сразу 10 переводов**, пропуск ловится типом.
  */
 
-export const UI_LANGS = ["en", "zh", "ru", "es", "pt", "de", "ja", "fr", "pl", "ko", "it"] as const;
+import { LANG_ORDER } from "@/core/langs.generated";
+
+/** Порядок языков — тот же, что у списков игры и сайта (config/language-priority.json). */
+export const UI_LANGS = LANG_ORDER;
 export type UiLang = (typeof UI_LANGS)[number];
 type NonEn = Exclude<UiLang, "en">;
 
@@ -188,7 +191,7 @@ export const CATALOGUE: Record<string, Trans> = {
   },
   "core + {{n}} voice packs": {
     zh: "核心 + {{n}} 个语音包",
-    ru: "ядро + {{n}} голосовых паков",
+    ru: "Ядро + {{n}} голосовых паков",
     es: "núcleo + {{n}} paquetes de voz",
     pt: "núcleo + {{n}} pacotes de voz",
     de: "Kern + {{n}} Sprachpakete",
@@ -200,7 +203,7 @@ export const CATALOGUE: Record<string, Trans> = {
   },
   "core installed, no voice packs": {
     zh: "核心已安装，暂无语音包",
-    ru: "ядро установлено, голосовых паков нет",
+    ru: "Ядро установлено, голосовых паков нет",
     es: "núcleo instalado, sin paquetes de voz",
     pt: "núcleo instalado, sem pacotes de voz",
     de: "Kern installiert, keine Sprachpakete",
@@ -221,18 +224,6 @@ export const CATALOGUE: Record<string, Trans> = {
     pl: "nie znaleziono",
     ko: "찾을 수 없음",
     it: "non trovato",
-  },
-  "Details": {
-    zh: "详情",
-    ru: "Подробности",
-    es: "Detalles",
-    pt: "Detalhes",
-    de: "Details",
-    ja: "詳細",
-    fr: "Détails",
-    pl: "Szczegóły",
-    ko: "세부 정보",
-    it: "Dettagli",
   },
   "Cancel": {
     zh: "取消",
