@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 84 60" width="168" height="120">
+  <!-- Логотип-глиф для шапки: без подложки и без рамки — это не иконка-кнопка,
+       а знак приложения. Плашка остаётся только у exe-иконки. -->
+  <path
+    d="M18 4h32a10 10 0 0 1 10 10v20a10 10 0 0 1-10 10H34L20 54V44h-2A10 10 0 0 1 8 34V14A10 10 0 0 1 18 4z"
+    fill="#5563d8"
+  />
+  <rect x="28" y="12" width="12" height="20" rx="6" fill="#e8ebf2" />
+  <path d="M23 26a11 11 0 0 0 22 0" fill="none" stroke="#e8ebf2" stroke-width="3.4" stroke-linecap="round" />
+  <path d="M34 38v5" fill="none" stroke="#e8ebf2" stroke-width="3.4" stroke-linecap="round" />
+  <path d="M29 44h10" fill="none" stroke="#e8ebf2" stroke-width="3.4" stroke-linecap="round" />
+  <path d="M64 18a9 9 0 0 1 0 18" fill="none" stroke="#9aa6f5" stroke-width="3.4" stroke-linecap="round" />
+  <path d="M73 12a17 17 0 0 1 0 30" fill="none" stroke="#9aa6f5" stroke-width="3.4" stroke-linecap="round" opacity="0.55" />
+</svg>

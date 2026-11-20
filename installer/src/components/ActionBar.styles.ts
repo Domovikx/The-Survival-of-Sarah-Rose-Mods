@@ -7,9 +7,10 @@ export const styles = stylex.create({
     zIndex: 20,
     borderTopWidth: 1,
     borderTopStyle: "solid",
-    borderTopColor: "var(--border)",
+    borderTopColor: "transparent",
     backgroundColor: "var(--bg)",
   },
+  barStuck: { borderTopColor: "var(--border)" },
   inner: {
     display: "flex",
     alignItems: "center",
