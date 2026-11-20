@@ -36,7 +36,7 @@ export const styles = stylex.create({
   // Логотип — чистый глиф (SVG, без подложки и рамки): в шапке это знак
   // приложения, а не иконка-кнопка (2026-11-20).
   logo: {
-    width: 42,
+    width: 46,
     height: 30,
     objectFit: "contain",
     flexShrink: 0,

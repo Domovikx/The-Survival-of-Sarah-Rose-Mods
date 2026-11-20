@@ -1,14 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 84 60" width="168" height="120">
-  <!-- Логотип-глиф для шапки: без подложки и без рамки — это не иконка-кнопка,
-       а знак приложения. Плашка остаётся только у exe-иконки. -->
-  <path
-    d="M18 4h32a10 10 0 0 1 10 10v20a10 10 0 0 1-10 10H34L20 54V44h-2A10 10 0 0 1 8 34V14A10 10 0 0 1 18 4z"
-    fill="#5563d8"
-  />
-  <rect x="28" y="12" width="12" height="20" rx="6" fill="#e8ebf2" />
-  <path d="M23 26a11 11 0 0 0 22 0" fill="none" stroke="#e8ebf2" stroke-width="3.4" stroke-linecap="round" />
-  <path d="M34 38v5" fill="none" stroke="#e8ebf2" stroke-width="3.4" stroke-linecap="round" />
-  <path d="M29 44h10" fill="none" stroke="#e8ebf2" stroke-width="3.4" stroke-linecap="round" />
-  <path d="M64 18a9 9 0 0 1 0 18" fill="none" stroke="#9aa6f5" stroke-width="3.4" stroke-linecap="round" />
-  <path d="M73 12a17 17 0 0 1 0 30" fill="none" stroke="#9aa6f5" stroke-width="3.4" stroke-linecap="round" opacity="0.55" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="5 5 79 52" width="158" height="104">
+  <!-- Знак приложения: пузырь с микрофоном и две волны. Всё выровнено по сетке
+       (пузырь 6..58, микрофон по центру 32, волны 64..86), микрофон целиком
+       внутри пузыря — без подложки и рамки: в шапке это логотип, не кнопка. -->
+  <path d="M16 6h32a10 10 0 0 1 10 10v18a10 10 0 0 1-10 10H30L18 56V44h-2A10 10 0 0 1 6 34V16A10 10 0 0 1 16 6z" fill="#5563d8" />
+  <rect x="27" y="12" width="10" height="18" rx="5" fill="#e8ebf2" />
+  <path d="M22 26a10 10 0 0 0 20 0" fill="none" stroke="#e8ebf2" stroke-width="3.2" stroke-linecap="round" />
+  <path d="M32 36v4" fill="none" stroke="#e8ebf2" stroke-width="3.2" stroke-linecap="round" />
+  <path d="M27 41h10" fill="none" stroke="#e8ebf2" stroke-width="3.2" stroke-linecap="round" />
+  <path d="M62 19a7 7 0 0 1 0 14" fill="none" stroke="#9aa6f5" stroke-width="3.2" stroke-linecap="round" />
+  <path d="M70 13a13 13 0 0 1 0 26" fill="none" stroke="#9aa6f5" stroke-width="3.2" stroke-linecap="round" opacity="0.55" />
 </svg>
