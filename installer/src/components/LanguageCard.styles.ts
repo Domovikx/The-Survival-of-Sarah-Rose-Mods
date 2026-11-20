@@ -17,9 +17,10 @@ export const styles = stylex.create({
     transitionProperty: "border-color, background-color, box-shadow",
     transitionDuration: "140ms",
   },
+  // Установлено: только индиго-рамка. Заливку не даём — 11 подряд
+  // залитых карточек превращаются в шум (палитра сайта, без зелёного).
   installed: {
-    borderColor: "color-mix(in srgb, var(--ok) 40%, var(--border))",
-    backgroundColor: "var(--ok-bg)",
+    borderColor: "var(--state-border)",
   },
   pendingAdd: {
     borderColor: "var(--accent)",
@@ -27,7 +28,7 @@ export const styles = stylex.create({
     boxShadow: "0 0 0 3px color-mix(in srgb, var(--accent) 16%, transparent)",
   },
   pendingRemove: {
-    borderColor: "color-mix(in srgb, var(--warn) 60%, var(--border))",
+    borderColor: "var(--border)",
     borderStyle: "dashed",
   },
   busy: { opacity: 0.55, pointerEvents: "none" },
@@ -43,9 +44,9 @@ export const styles = stylex.create({
   name: { fontSize: 15, fontWeight: 600, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" },
   code: { marginLeft: 6, fontSize: 11.5, fontWeight: 600, color: "var(--muted)", letterSpacing: "0.4px" },
   meta: { gridArea: "meta", fontSize: 12.5, color: "var(--muted)", fontVariantNumeric: "tabular-nums" },
-  metaOk: { color: "var(--ok)" },
+  metaOk: { color: "var(--accent-fg)" },
   metaAdd: { color: "var(--accent-fg)" },
-  metaRemove: { color: "var(--warn)" },
+  metaRemove: { color: "var(--muted)" },
   switch: { gridArea: "switch", position: "relative", display: "inline-flex", cursor: "pointer" },
   input: { position: "absolute", opacity: 0, width: 0, height: 0 },
   track: {

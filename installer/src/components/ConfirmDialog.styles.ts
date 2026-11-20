@@ -57,5 +57,5 @@ export const styles = stylex.create({
     ":hover": { filter: "brightness(1.08)" },
     ":focus-visible": { outline: "2px solid var(--accent-fg)", outlineOffset: 2 },
   },
-  confirmDanger: { backgroundColor: "var(--err)" },
+  confirmDanger: { backgroundColor: "var(--accent-hover)" },
 });

@@ -34,9 +34,9 @@ export const styles = stylex.create({
     color: "var(--muted)",
   },
   badgeOn: {
-    color: "var(--ok)",
-    backgroundColor: "var(--ok-bg)",
-    borderColor: "color-mix(in srgb, var(--ok) 45%, var(--border))",
+    color: "var(--accent-fg)",
+    backgroundColor: "var(--state-bg)",
+    borderColor: "var(--state-border)",
   },
   grid: {
     display: "grid",

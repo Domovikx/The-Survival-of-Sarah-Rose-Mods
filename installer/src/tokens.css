@@ -13,11 +13,10 @@
   --accent: #5563d8;
   --accent-fg: #9aa6f5;
   --accent-hover: #4653c4;
-  --ok: #3fb950;
-  --warn: #d29922;
-  --err: #f85149;
-  --ok-bg: rgba(63, 185, 80, 0.1);
-  --err-bg: rgba(248, 81, 73, 0.1);
+  --link: #9aa6f5;
+  /* «Состояние установлено» — индиго-подложка лендинга (age-bg/age-border). */
+  --state-bg: #1b2140;
+  --state-border: #384180;
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
 }
 
@@ -31,12 +30,10 @@
     --muted: #5c6678;
     --accent: #3f4dbf;
     --accent-fg: #3f4dbf;
-    --accent-hover: #35419f;
-    --ok: #1a7f37;
-    --warn: #9a6700;
-    --err: #b42318;
-    --ok-bg: rgba(26, 127, 55, 0.08);
-    --err-bg: rgba(180, 35, 24, 0.07);
+    --accent-hover: #33409b;
+    --link: #3f4dbf;
+    --state-bg: #e9ebfa;
+    --state-border: #bcc3f0;
     --shadow: 0 10px 30px rgba(24, 32, 56, 0.12);
   }
 }
