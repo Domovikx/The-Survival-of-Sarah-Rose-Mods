@@ -5,11 +5,10 @@ export const STORAGE_KEYS = {
 } as const;
 
 export const LINKS = {
-  /** Витрина и все скачивания — Nexus Mods (решение владельца 2026-11-13:
-   *  статистика и рейтинг в одном месте, GitHub остаётся портфолио/исходниками). */
-  nexus: "https://www.nexusmods.com/mods/1?game_id=11043",
-  /** Страница расширения Vortex (Modding Tools → Vortex Extensions). */
-  vortexExtension: "https://www.nexusmods.com/games/site/mods/2600",
+  // Nexus-ссылки убраны из бандла до публикации страницы мода (2026-11-20):
+  // на лендинге не должно быть ни текста, ни URL. Вернуть вместе с блоками:
+  //   nexus: "https://www.nexusmods.com/mods/1?game_id=11043",
+  //   vortexExtension: "https://www.nexusmods.com/games/site/mods/2600",
   github: "https://github.com/Domovikx/The-Survival-of-Sarah-Rose-Mods",
   issues: "https://github.com/Domovikx/The-Survival-of-Sarah-Rose-Mods/issues",
   steam: "https://store.steampowered.com/app/2166470/The_Survival_of_Sarah_Rose/",
