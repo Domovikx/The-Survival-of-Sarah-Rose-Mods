@@ -229,7 +229,7 @@ export const useInstaller = () => {
     if (!game) return;
     const others = state?.other_mods ?? [];
     setConfirm({
-      title: t("Uninstall TSSR AI Voice Pack from {{path}}?", { path: game.path }),
+      title: t("Remove the Sarah Rose AI voice pack from {{path}}?", { path: game.path }),
       detail: others.length
         ? t("Other mods in mods/ ({{list}}) are kept, environment.txt stays.", { list: others.join(", ") })
         : undefined,
