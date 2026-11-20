@@ -1,0 +1,40 @@
+import * as stylex from "@stylexjs/stylex";
+
+export const styles = stylex.create({
+  panel: {
+    borderWidth: 1,
+    borderStyle: "solid",
+    borderColor: "var(--border)",
+    borderRadius: 14,
+    backgroundColor: "var(--panel)",
+    overflow: "hidden",
+  },
+  toggle: {
+    "appearance": "none",
+    "width": "100%",
+    "display": "flex",
+    "alignItems": "center",
+    "gap": 8,
+    "padding": "12px 18px",
+    "background": "none",
+    "border": "none",
+    "color": "var(--muted)",
+    "font": "inherit",
+    "fontSize": 13,
+    "cursor": "pointer",
+    ":hover": { color: "var(--text)" },
+    ":focus-visible": { outline: "2px solid var(--accent-fg)", outlineOffset: -2 },
+  },
+  arrow: { transition: "transform 140ms ease" },
+  arrowOpen: { transform: "rotate(90deg)" },
+  pre: {
+    margin: 0,
+    maxHeight: 160,
+    overflow: "auto",
+    padding: "0 18px 14px",
+    font: "12px/1.55 Consolas, 'Cascadia Mono', monospace",
+    color: "var(--muted)",
+    whiteSpace: "pre-wrap",
+    wordBreak: "break-word",
+  },
+});

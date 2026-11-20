@@ -68,9 +68,13 @@ src-tauri/      Rust: find_game (реестр+vdf+acf), download (Range+прог
 ## Тесты
 
 ```bash
-npm test      # vitest: план установки, форматтеры, полнота 10 переводов
-npm run e2e   # собранный exe в режиме --selftest: core+EN → Remove EN → uninstall
+npm test        # vitest: план, diff тумблеров, форматтеры, полнота 10 переводов, SSR-смоук
+npm run e2e     # собранный exe в режиме --selftest: core+EN → Remove EN → uninstall
+npm run e2e:ui  # Playwright: интерфейс в браузере на мок-бэкенде (тумблеры, диалог, локали)
 ```
 
 `npm run e2e` качает ~35 МБ из последнего релиза и работает в `installer/tmp/e2e`
 (реальную папку игры не трогает). Перед ним нужен `npm run tauri build`.
+
+Посмотреть интерфейс без Tauri: `npm run dev` (мок-бэкенд включается сам) или
+`npm run preview:web` для прод-сборки. Мок отключается `?mock=0`.

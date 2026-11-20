@@ -4,81 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TSSR AI Voice Pack — Installer</title>
-    <link rel="stylesheet" href="/src/styles.css" />
   </head>
   <body>
-    <main class="app">
-      <header class="top">
-        <div>
-          <h1>TSSR AI Voice Pack</h1>
-          <p class="sub" data-i18n="Windows · official Steam version only">Windows · official Steam version only</p>
-        </div>
-        <div class="top-right">
-          <select id="ui-lang" class="select" aria-label="Interface language"></select>
-          <span class="ver" id="ver">v0.1.0</span>
-        </div>
-      </header>
-
-      <section class="card">
-        <h2 data-i18n="Game">Game</h2>
-        <p class="row">
-          <span class="k" data-i18n="Folder">Folder</span><span class="v" id="game-path">detecting…</span>
-        </p>
-        <p class="row">
-          <span class="k" data-i18n="Steam build">Steam build</span><span class="v" id="game-build">—</span>
-        </p>
-        <button class="btn ghost" id="redetect" type="button" data-i18n="Detect again">Detect again</button>
-      </section>
-
-      <section class="card">
-        <h2 data-i18n="Components">Components</h2>
-
-        <div class="comp-core">
-          <div class="comp-core-text">
-            <div class="comp-title" data-i18n="Core">Core</div>
-            <div class="comp-sub" data-i18n="Texts in 10 languages, fonts, mod menu. Required for any voice pack.">
-              Texts in 10 languages, fonts, mod menu. Required for any voice pack.
-            </div>
-          </div>
-          <span class="badge" id="core-state">—</span>
-        </div>
-
-        <div class="comp-head">
-          <span class="comp-title" data-i18n="Voice packs">Voice packs</span>
-          <span class="muted" data-i18n="optional · one per language · 15–21 MB each">
-            optional · one per language · 15–21 MB each
-          </span>
-        </div>
-
-        <div class="langs" id="langs"></div>
-      </section>
-
-      <section class="card">
-        <div class="actions">
-          <button class="btn big" id="install" type="button" disabled>Install selected</button>
-          <span class="muted" id="status">—</span>
-          <button class="btn danger push" id="uninstall" type="button" disabled data-i18n="Uninstall mod">
-            Uninstall mod
-          </button>
-        </div>
-        <div class="bar"><i id="bar"></i></div>
-      </section>
-
-      <section class="card grow">
-        <h2 data-i18n="Log">Log</h2>
-        <pre id="log" class="log"></pre>
-      </section>
-
-      <footer class="foot">
-        <span class="muted small" data-i18n="Like the patch?">Like the patch?</span>
-        <button class="link" id="link-github" type="button" data-i18n="Star on GitHub">Star on GitHub</button>
-        <span class="dot">·</span>
-        <button class="link" id="link-guide" type="button" data-i18n="Steam guide">Steam guide</button>
-        <span class="dot">·</span>
-        <button class="link" id="link-issues" type="button" data-i18n="Report an issue">Report an issue</button>
-        <span class="muted small push-right alpha">alpha</span>
-      </footer>
-    </main>
-    <script type="module" src="/src/main.ts"></script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

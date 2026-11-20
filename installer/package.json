@@ -9,14 +9,24 @@
     "preview": "vite preview",
     "tauri": "tauri",
     "test": "vitest run",
-    "e2e": "node scripts/e2e.mts"
+    "e2e": "node scripts/e2e.mts",
+    "preview:web": "vite build && vite preview --port 4173 --strictPort",
+    "e2e:ui": "playwright test"
   },
   "dependencies": {
     "@tauri-apps/api": "^2",
-    "@tauri-apps/plugin-opener": "^2"
+    "@tauri-apps/plugin-opener": "^2",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
   },
   "devDependencies": {
+    "@playwright/test": "^1.65.1",
+    "@stylexjs/stylex": "^0.19.1",
+    "@stylexjs/unplugin": "^0.19.1",
     "@tauri-apps/cli": "^2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.3.0",
     "typescript": "~6.0.3",
     "vite": "^8.0.16",
     "vitest": "^5.1.1"

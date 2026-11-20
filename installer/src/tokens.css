@@ -1,0 +1,78 @@
+/*
+ * Токены интерфейса — те же значения, что на лендинге
+ * (site/src/app/styles/global.css), чтобы окно установщика читалось как часть
+ * проекта. Тёмная тема — основная, светлая включается по системной настройке.
+ */
+:root {
+  --bg: #141824;
+  --panel: #1d2333;
+  --panel-2: #232b3f;
+  --border: #2d3550;
+  --text: #e8ebf2;
+  --muted: #9aa4bc;
+  --accent: #5563d8;
+  --accent-fg: #9aa6f5;
+  --accent-hover: #4653c4;
+  --ok: #3fb950;
+  --warn: #d29922;
+  --err: #f85149;
+  --ok-bg: rgba(63, 185, 80, 0.1);
+  --err-bg: rgba(248, 81, 73, 0.1);
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f4f6fb;
+    --panel: #ffffff;
+    --panel-2: #eef1f8;
+    --border: #d7dcea;
+    --text: #1a1f2b;
+    --muted: #5c6678;
+    --accent: #3f4dbf;
+    --accent-fg: #3f4dbf;
+    --accent-hover: #35419f;
+    --ok: #1a7f37;
+    --warn: #9a6700;
+    --err: #b42318;
+    --ok-bg: rgba(26, 127, 55, 0.08);
+    --err-bg: rgba(180, 35, 24, 0.07);
+    --shadow: 0 10px 30px rgba(24, 32, 56, 0.12);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font:
+    15px/1.5 system-ui,
+    "Segoe UI",
+    Roboto,
+    "Noto Sans",
+    "Noto Sans SC",
+    "Noto Sans JP",
+    "Noto Sans KR",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--accent) 40%, transparent);
+}
+
+/* Полосы прокрутки в тон панелям (иначе светлая полоса в тёмном окне). */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}

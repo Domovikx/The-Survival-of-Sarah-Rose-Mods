@@ -1,0 +1,46 @@
+import * as stylex from "@stylexjs/stylex";
+
+export const styles = stylex.create({
+  panel: { display: "flex", flexDirection: "column", gap: 12 },
+  head: { display: "flex", alignItems: "baseline", gap: 10 },
+  title: { margin: 0, fontSize: 16 },
+  hint: { color: "var(--muted)", fontSize: 12.5 },
+  core: {
+    display: "flex",
+    alignItems: "center",
+    gap: 14,
+    padding: "14px 16px",
+    borderRadius: 12,
+    borderWidth: 1,
+    borderStyle: "solid",
+    borderColor: "var(--border)",
+    backgroundColor: "var(--panel-2)",
+  },
+  coreText: { display: "flex", flexDirection: "column", gap: 2, minWidth: 0 },
+  coreTitle: { fontSize: 14.5, fontWeight: 600 },
+  coreSub: { fontSize: 12.5, color: "var(--muted)" },
+  badge: {
+    marginLeft: "auto",
+    flexShrink: 0,
+    fontSize: 11.5,
+    fontWeight: 700,
+    letterSpacing: "0.4px",
+    textTransform: "uppercase",
+    padding: "4px 10px",
+    borderRadius: 999,
+    borderWidth: 1,
+    borderStyle: "solid",
+    borderColor: "var(--border)",
+    color: "var(--muted)",
+  },
+  badgeOn: {
+    color: "var(--ok)",
+    backgroundColor: "var(--ok-bg)",
+    borderColor: "color-mix(in srgb, var(--ok) 45%, var(--border))",
+  },
+  grid: {
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))",
+    gap: 10,
+  },
+});
