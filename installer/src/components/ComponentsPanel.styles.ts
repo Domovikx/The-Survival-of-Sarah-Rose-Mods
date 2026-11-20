@@ -24,25 +24,8 @@ export const styles = stylex.create({
   coreText: { display: "flex", flexDirection: "column", gap: 2, minWidth: 0 },
   coreTitle: { fontSize: 14.5, fontWeight: 600 },
   coreSub: { fontSize: 12.5, color: "var(--muted)" },
-  badge: {
-    marginLeft: "auto",
-    flexShrink: 0,
-    fontSize: 11.5,
-    fontWeight: 700,
-    letterSpacing: "0.4px",
-    textTransform: "uppercase",
-    padding: "4px 10px",
-    borderRadius: 999,
-    borderWidth: 1,
-    borderStyle: "solid",
-    borderColor: "var(--border)",
-    color: "var(--muted)",
-  },
-  badgeOn: {
-    color: "var(--accent-fg)",
-    backgroundColor: "var(--state-bg)",
-    borderColor: "var(--state-border)",
-  },
+  /** Индикатор состояния прижат вправо, как у карточек языков. */
+  coreState: { marginLeft: "auto", display: "flex", flexShrink: 0 },
   /**
    * Лента карточек (flex, не grid): у сетки последняя неполная строка всегда
    * прижата влево, а тут она центрируется — 11 языков дают 3+3+3+2.

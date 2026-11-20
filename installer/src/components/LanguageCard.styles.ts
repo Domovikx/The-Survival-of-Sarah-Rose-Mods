@@ -62,41 +62,5 @@ export const styles = stylex.create({
   metaOk: { color: "var(--accent-fg)" },
   metaAdd: { color: "var(--accent-fg)" },
   metaRemove: { color: "var(--muted)" },
-  /** Иконка состояния в правой колонке (✓ / + / −). */
-  stateIcon: {
-    gridArea: "switch",
-    width: 28,
-    height: 28,
-    borderRadius: "50%",
-    display: "inline-flex",
-    alignItems: "center",
-    justifyContent: "center",
-    color: "var(--muted)",
-    borderWidth: 1,
-    borderStyle: "solid",
-    borderColor: "var(--border)",
-    transitionProperty: "color, background-color, border-color",
-    transitionDuration: "140ms",
-  },
-  stateOn: {
-    color: "var(--accent-fg)",
-    backgroundColor: "var(--state-bg)",
-    borderColor: "var(--state-border)",
-  },
-  stateAdd: {
-    color: "var(--accent-fg)",
-    borderColor: "var(--accent)",
-  },
-  /** Идёт загрузка: рамка светится, иконка вращается. */
-  stateBusy: {
-    color: "var(--accent-fg)",
-    borderColor: "var(--state-border)",
-    backgroundColor: "var(--state-bg)",
-  },
-  stateRemove: {
-    color: "var(--muted)",
-    backgroundColor: "transparent",
-    borderColor: "var(--border)",
-  },
   input: { position: "absolute", opacity: 0, width: 0, height: 0 },
 });

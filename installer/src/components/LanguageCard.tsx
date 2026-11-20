@@ -1,6 +1,5 @@
 import { t } from "@/i18n";
-import { CheckIcon, MinusIcon, PlusIcon } from "@/ui/icons";
-import { Spinner } from "@/ui/Spinner";
+import { StateIcon, type State } from "@/ui/StateIcon";
 import { cx } from "@/ui/cx";
 
 import { styles } from "./LanguageCard.styles";
@@ -50,6 +49,14 @@ export const LanguageCard = ({ lang, files, want, size, busy, activity, onToggle
         ? t("{{n}} audio files", { n: (files ?? 0).toLocaleString("en-US") })
         : size;
 
+  const iconState: State = activity
+    ? "busy"
+    : installed && !pending
+      ? "installed"
+      : pending && !want
+        ? "remove"
+        : "add";
+
   // Карточка — это <label>: клик в ЛЮБОМ месте переключает язык (не только
   // по тумблеру) — привычное поведение строки-настройки (замечание 2026-11-20).
   return (
@@ -81,26 +88,7 @@ export const LanguageCard = ({ lang, files, want, size, busy, activity, onToggle
       </span>
       {/* Состояние показывает ИКОНКА: ✓ стоит · + можно поставить · − убрать.
           Клик по плашке (label) переключает; чекбокс скрыт, но доступен с клавиатуры. */}
-      <span
-        className={cx(
-          styles.stateIcon,
-          installed && !pending && styles.stateOn,
-          pending && want && styles.stateAdd,
-          activity && styles.stateBusy,
-        )}
-        data-testid={`${ROOT}--${lang}-toggle`}
-        aria-hidden="true"
-      >
-        {activity ? (
-          <Spinner />
-        ) : installed && !pending ? (
-          <CheckIcon />
-        ) : pending && !want ? (
-          <MinusIcon />
-        ) : (
-          <PlusIcon />
-        )}
-      </span>
+      <StateIcon state={iconState} data-testid={`${ROOT}--${lang}-toggle`} data-state={iconState} />
       <input
         data-testid={`${ROOT}--${lang}-switch`}
         className={cx(styles.input)}

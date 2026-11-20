@@ -35,7 +35,7 @@ const uninstallAll = async (page: Page): Promise<void> => {
   await page.getByTestId("Actions--uninstall").click();
   await expect(page.getByTestId("Confirm")).toBeVisible();
   await page.getByTestId("Confirm--ok").click();
-  await expect(page.getByTestId("Components--core-badge")).toHaveText("не установлено");
+  await expect(page.getByTestId("Components--core-state")).toHaveAttribute("data-state", "absent");
 };
 
 /** Дождаться конца работы: спиннер исчез, кнопка снова «Применить изменения». */
@@ -51,7 +51,7 @@ test.describe("установщик: исходное состояние", () =>
     await expect(page.getByTestId("Game--status")).toHaveText("установлено");
     await expect(page.getByTestId("Game--path")).toContainText("The Survival of Sarah Rose");
     await expect(page.getByTestId("Game--build")).not.toHaveText("—");
-    await expect(page.getByTestId("Components--core-badge")).toHaveText("установлено");
+    await expect(page.getByTestId("Components--core-state")).toHaveAttribute("data-state", "installed");
     for (const lang of LANGS) {
       await expect(page.getByTestId(`Language--${lang}`)).toBeVisible();
       await expect(page.getByTestId(`Language--${lang}-meta`)).toContainText("аудиофайлов");
@@ -82,7 +82,7 @@ test.describe("установщик: положительные сценарии
     await page.getByTestId("Actions--apply").click();
     await settle(page);
 
-    await expect(page.getByTestId("Components--core-badge")).toHaveText("установлено");
+    await expect(page.getByTestId("Components--core-state")).toHaveAttribute("data-state", "installed");
     await expect(page.getByTestId("Language--en-meta")).toContainText("аудиофайлов");
     await expect(page.getByTestId("Language--ru-meta")).toContainText("аудиофайлов");
     // Остальные языки не тронуты.
@@ -113,7 +113,7 @@ test.describe("установщик: положительные сценарии
     await expect(page.getByTestId("Actions--apply")).toHaveText("Установить основной пак");
     await page.getByTestId("Actions--apply").click();
     await settle(page);
-    await expect(page.getByTestId("Components--core-badge")).toHaveText("установлено");
+    await expect(page.getByTestId("Components--core-state")).toHaveAttribute("data-state", "installed");
   });
 
   test("загрузка: спиннер и полоса привязаны к прогрессу скачивания", async ({ page }) => {
@@ -143,7 +143,9 @@ test.describe("установщик: положительные сценарии
     const anim = await page.getByTestId("Actions--progress-fill").evaluate((el) => getComputedStyle(el).animationName);
     expect(anim).not.toBe("none");
 
-    await expect(page.getByTestId("Components--core-badge")).toHaveText("не установлено", { timeout: 20_000 });
+    await expect(page.getByTestId("Components--core-state")).toHaveAttribute("data-state", "absent", {
+      timeout: 20_000,
+    });
     await expect(page.getByTestId("Actions--spinner")).toHaveCount(0);
   });
 
@@ -192,7 +194,7 @@ test.describe("установщик: отрицательные сценарии
 
     // Язык по-прежнему установлен и всё ещё помечен на удаление.
     await expect(page.getByTestId("Language--en-meta")).toHaveText("будет удалено");
-    await expect(page.getByTestId("Components--core-badge")).toHaveText("установлено");
+    await expect(page.getByTestId("Components--core-state")).toHaveAttribute("data-state", "installed");
   });
 
   test("отмена подтверждения удаления мода сохраняет установку", async ({ page }) => {
@@ -201,7 +203,7 @@ test.describe("установщик: отрицательные сценарии
     await expect(page.getByTestId("Confirm--title")).toContainText("Sarah Rose");
     await page.getByTestId("Confirm--cancel").click();
 
-    await expect(page.getByTestId("Components--core-badge")).toHaveText("установлено");
+    await expect(page.getByTestId("Components--core-state")).toHaveAttribute("data-state", "installed");
     await expect(page.getByTestId("Language--en-meta")).toContainText("аудиофайлов");
     await expect(page.getByTestId("Actions--uninstall")).toBeEnabled();
   });

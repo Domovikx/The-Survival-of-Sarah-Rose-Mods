@@ -1,5 +1,6 @@
 import type { InstallState } from "@/core/types";
 import { t } from "@/i18n";
+import { StateIcon } from "@/ui/StateIcon";
 import { cx } from "@/ui/cx";
 
 import { LanguageCard } from "./LanguageCard";
@@ -38,9 +39,17 @@ export const ComponentsPanel = ({ state, langs, desired, sizeOf, busy, active, o
             {t("Texts in 10 languages, fonts, mod menu. Required for any voice pack.")}
           </span>
         </div>
-        <span className={cx(styles.badge, state?.core && styles.badgeOn)} data-testid={`${ROOT}--core-badge`}>
-          {state?.core ? t("installed") : t("not installed")}
-        </span>
+        {/* Тот же индикатор, что у голосовых паков: ✓ стоит · + можно
+            поставить. Раньше здесь был текстовый бейдж — поведение читалось
+            иначе, чем у языков (замечание 2026-11-20). */}
+        <div className={cx(styles.coreState)}>
+          <StateIcon
+            state={state?.core ? "installed" : "add"}
+            label={state?.core ? t("installed") : t("not installed")}
+            data-testid={`${ROOT}--core-state`}
+            data-state={state?.core ? "installed" : "absent"}
+          />
+        </div>
       </div>
 
       <div className={cx(styles.grid)} data-testid={`${ROOT}--grid`}>
