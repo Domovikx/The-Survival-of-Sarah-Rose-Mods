@@ -28,14 +28,18 @@ export const styles = stylex.create({
   installed: {
     borderColor: "var(--state-border)",
   },
+  // Пунктира в интерфейсе нет нигде (как и на лендинге): состояние несут
+  // цвет рамки, свечение и иконка, а не тип линии (2026-11-20).
+  // Прибавление — индиго-рамка + мягкое свечение токеном (не color-mix:
+  // браузер его не считал, и рамка выходила ярче нужного).
   pendingAdd: {
     borderColor: "var(--accent)",
-    borderStyle: "dashed",
-    boxShadow: "0 0 0 3px color-mix(in srgb, var(--accent) 16%, transparent)",
+    boxShadow: "0 0 0 3px var(--state-bg)",
   },
+  // Удаление — карточка становится «пустой» (без заливки): видно, что язык
+  // уходит, но без пунктира и без новых цветов.
   pendingRemove: {
-    borderColor: "var(--border)",
-    borderStyle: "dashed",
+    backgroundColor: "transparent",
   },
   busy: { opacity: 0.55, pointerEvents: "none" },
   // Флаги в наборе — КРУГЛЫЕ (circle-flags): держим квадрат 22×22 и круглый
@@ -80,13 +84,11 @@ export const styles = stylex.create({
   stateAdd: {
     color: "var(--accent-fg)",
     borderColor: "var(--accent)",
-    borderStyle: "dashed",
   },
   stateRemove: {
     color: "var(--muted)",
     backgroundColor: "transparent",
     borderColor: "var(--border)",
-    borderStyle: "dashed",
   },
   input: { position: "absolute", opacity: 0, width: 0, height: 0 },
 });

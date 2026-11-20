@@ -13,7 +13,7 @@ describe("App", () => {
   test("рендерится в строку: шапка, игра, компоненты, действия", () => {
     initLang("ru-RU");
     const html = renderToString(<App />);
-    expect(html).toContain("TSSR AI Voice Pack");
+    expect(html).toContain("The Survival of Sarah Rose");
     expect(html).toContain("Игра");
     expect(html).toContain("Компоненты");
     expect(html).toContain("Применить изменения");

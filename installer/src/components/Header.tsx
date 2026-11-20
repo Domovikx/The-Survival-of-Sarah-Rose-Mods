@@ -1,6 +1,10 @@
-import logoUrl from "@/assets/logo.svg";
+import { openUrl } from "@tauri-apps/plugin-opener";
+
+import { LINKS } from "@/core/pack";
 import { useScrollEdges } from "@/hooks/useScrollEdges";
 import { t, type UiLang } from "@/i18n";
+import { ExternalIcon } from "@/ui/icons";
+import { LogoMark } from "@/ui/LogoMark";
 import { LangSwitcher } from "./LangSwitcher";
 import { cx } from "@/ui/cx";
 
@@ -14,7 +18,7 @@ type Props = {
   onChange: (lang: UiLang) => void;
 };
 
-/** Шапка: наш логотип, название и переключатель языка интерфейса. */
+/** Шапка: логотип, название и переключатель языка интерфейса. */
 export const Header = ({ lang, onChange }: Props) => {
   const { top } = useScrollEdges();
 
@@ -22,10 +26,22 @@ export const Header = ({ lang, onChange }: Props) => {
     <header className={cx(styles.header, top && styles.headerScrolled)} data-testid={ROOT}>
       <div className={cx(styles.inner)}>
         {/* Глиф без подложки: в шапке это знак приложения, а не кнопка. */}
-        <img className={cx(styles.logo)} src={logoUrl} alt="" data-testid={`${ROOT}--logo`} />
+        <LogoMark className={cx(styles.logo)} data-testid={`${ROOT}--logo`} />
         <div className={cx(styles.titles)}>
-          <h1 className={cx(styles.title)}>TSSR AI Voice Pack</h1>
-          <p className={cx(styles.sub)}>{t("Windows · official Steam version only")}</p>
+          {/* Полное имя игры, а не аббревиатура: «TSSR» ничего не говорит
+              человеку, который просто скачал мод (замечание 2026-11-20). */}
+          <h1 className={cx(styles.title)}>The Survival of Sarah Rose</h1>
+          {/* Подзаголовок — ссылка на страницу игры в Steam: «официальная
+              версия» просит, чтобы её можно было открыть. */}
+          <button
+            type="button"
+            className={cx(styles.sub, styles.subLink)}
+            data-testid={`${ROOT}--steam`}
+            onClick={() => void openUrl(LINKS.steamStore)}
+          >
+            {t("AI voice pack · Windows · only the official Steam version")}
+            <ExternalIcon />
+          </button>
         </div>
         <div className={cx(styles.right)}>
           <LangSwitcher lang={lang} onChange={onChange} />

@@ -1,21 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
-  <!-- Плашка-подложка: цвет фона лендинга, скруглённые углы. -->
-  <rect width="1024" height="1024" rx="210" fill="#141824"/>
+  <!-- Плашка: фон лендинга, скруглённые углы — знак выживает на светлой панели
+       задач, потому что несёт собственную тёмную подложку. -->
+  <rect width="1024" height="1024" rx="210" fill="#141824" />
 
-  <!-- Речевой пузырь с хвостиком (индиго лендинга). -->
-  <path
-    d="M300 240h420a100 100 0 0 1 100 100v260a100 100 0 0 1-100 100H470L330 810V700h-30a100 100 0 0 1-100-100V340a100 100 0 0 1 100-100z"
-    fill="#5563d8"
-  />
-
-  <!-- Микрофон внутри пузыря: капсула + дужка + ножка. -->
-  <rect x="455" y="300" width="110" height="190" rx="55" fill="#e8ebf2"/>
-  <path d="M415 450a95 95 0 0 0 190 0" fill="none" stroke="#e8ebf2" stroke-width="30" stroke-linecap="round"/>
-  <path d="M510 545v70" fill="none" stroke="#e8ebf2" stroke-width="30" stroke-linecap="round"/>
-  <path d="M460 640h100" fill="none" stroke="#e8ebf2" stroke-width="30" stroke-linecap="round"/>
-
-  <!-- Волны звука справа: три дуги, светлый лавандовый (вписаны в квадрат). -->
-  <path d="M700 400a112 112 0 0 1 0 224" fill="none" stroke="#9aa6f5" stroke-width="32" stroke-linecap="round"/>
-  <path d="M776 372a150 150 0 0 1 0 280" fill="none" stroke="#9aa6f5" stroke-width="32" stroke-linecap="round" opacity="0.7"/>
-  <path d="M852 344a188 188 0 0 1 0 336" fill="none" stroke="#9aa6f5" stroke-width="32" stroke-linecap="round" opacity="0.4"/>
+  <!-- Знак — эквалайзер (выбор владельца 2026-11-20): тот же, что в шапке,
+       отмасштабирован по сетке. Полосы 96, зазор 48, центр 512. -->
+  <g fill="#9aa6f5">
+    <rect x="176" y="412" width="96" height="200" rx="48" />
+    <rect x="320" y="332" width="96" height="360" rx="48" />
+    <rect x="464" y="232" width="96" height="560" rx="48" fill="#5563d8" />
+    <rect x="608" y="332" width="96" height="360" rx="48" />
+    <rect x="752" y="412" width="96" height="200" rx="48" />
+  </g>
 </svg>

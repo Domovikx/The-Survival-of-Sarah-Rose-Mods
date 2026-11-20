@@ -36,3 +36,10 @@ export const MinusIcon = ({ size = 16 }: IconProps) => (
     <path d="M5 12h14" />
   </svg>
 );
+
+/** Внешняя ссылка: стрелка «наружу» (открывается браузер). */
+export const ExternalIcon = ({ size = 14 }: IconProps) => (
+  <svg {...base(size)}>
+    <path d="M8 16 16 8M9 8h7v7" />
+  </svg>
+);

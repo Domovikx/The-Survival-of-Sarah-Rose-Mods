@@ -33,17 +33,17 @@ type Trans = Record<NonEn, string>;
 
 /** Каталог (экспорт — для теста полноты переводов). */
 export const CATALOGUE: Record<string, Trans> = {
-  "Windows · official Steam version only": {
-    zh: "Windows · 仅支持 Steam 官方版本",
-    ru: "Windows · только официальная версия из Steam",
-    es: "Windows · solo la versión oficial de Steam",
-    pt: "Windows · apenas a versão oficial da Steam",
-    de: "Windows · nur die offizielle Steam-Version",
-    ja: "Windows · Steam 公式版のみ対応",
-    fr: "Windows · version officielle Steam uniquement",
-    pl: "Windows · tylko oficjalna wersja ze Steam",
-    ko: "Windows · 공식 Steam 버전 전용",
-    it: "Windows · solo versione ufficiale Steam",
+  "AI voice pack · Windows · only the official Steam version": {
+    zh: "AI 语音 · Windows · 仅支持 Steam 官方版本",
+    ru: "AI-озвучка · Windows · только официальная версия из Steam",
+    es: "Voces IA · Windows · solo la versión oficial de Steam",
+    pt: "Vozes de IA · Windows · apenas a versão oficial da Steam",
+    de: "KI-Stimmen · Windows · nur die offizielle Steam-Version",
+    ja: "AI音声 · Windows · Steam 公式版のみ対応",
+    fr: "Voix IA · Windows · version officielle Steam uniquement",
+    pl: "Głos AI · Windows · tylko oficjalna wersja ze Steam",
+    ko: "AI 음성 · Windows · 공식 Steam 버전 전용",
+    it: "Voci IA · Windows · solo versione ufficiale Steam",
   },
   "Game": {
     zh: "游戏",

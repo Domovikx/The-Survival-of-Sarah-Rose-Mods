@@ -53,6 +53,13 @@ export const installMockBackend = (): void => {
     }
     if (cmd === "plugin:event|unlisten") return null;
 
+    // Внешние ссылки: в браузере открываем вкладку (в exe это делает плагин,
+    // иначе клик по ссылке в шапке/футере молча ничего не делал).
+    if (cmd === "plugin:opener|open_url") {
+      window.open(String(args?.url ?? ""), "_blank", "noopener");
+      return null;
+    }
+
     switch (cmd) {
       case "system_locale":
         return navigator.language || "ru-RU";

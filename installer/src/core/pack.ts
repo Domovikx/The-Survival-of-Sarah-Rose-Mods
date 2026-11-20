@@ -31,4 +31,6 @@ export const LINKS = {
   issues: `https://github.com/${REPO}/issues`,
   /** Steam-гайд: лайки/комментарии — основной канал спроса на озвучку. */
   steamGuide: "https://steamcommunity.com/sharedfiles/filedetails/?id=3733106761",
+  /** Страница игры в Steam (App ID 2166470) — «официальная версия» в шапке. */
+  steamStore: "https://store.steampowered.com/app/2166470/",
 } as const;

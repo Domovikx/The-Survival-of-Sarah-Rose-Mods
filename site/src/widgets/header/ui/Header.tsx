@@ -17,7 +17,7 @@ export const Header = () => {
       <Container>
         <div className={cx(styles.inner)} data-testid={`${ROOT}--inner`}>
           <a className={cx(styles.brand)} href="/" data-testid={`${ROOT}--brand`}>
-            {t("TSSR · AI voice pack")}
+            {t("Sarah Rose · AI voice pack")}
           </a>
           <a className={cx(styles.steamLink)} href={LINKS.steam} data-testid={`${ROOT}--steam-link`}>
             <SteamIcon size={16} />
