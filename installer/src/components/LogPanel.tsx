@@ -34,7 +34,11 @@ export const LogPanel = ({ lines }: { lines: readonly string[] }) => {
         onClick={() => setOpen(!open)}
       >
         <span className={cx(styles.title)}>{t("Log")}</span>
-        {open ? null : <span className={cx(styles.hint)}>{last || "—"}</span>}
+        {open ? null : (
+          <span className={cx(styles.hint)} title={last || undefined}>
+            {last || "—"}
+          </span>
+        )}
         <span className={cx(styles.chevron, open && styles.chevronOpen)} aria-hidden>
           ›
         </span>

@@ -1,9 +1,5 @@
-import { openUrl } from "@tauri-apps/plugin-opener";
-
-import { LINKS } from "@/core/pack";
 import { useScrollEdges } from "@/hooks/useScrollEdges";
-import { t, type UiLang } from "@/i18n";
-import { ExternalIcon } from "@/ui/icons";
+import { type UiLang } from "@/i18n";
 import { LogoMark } from "@/ui/LogoMark";
 import { LangSwitcher } from "./LangSwitcher";
 import { cx } from "@/ui/cx";
@@ -24,26 +20,17 @@ export const Header = ({ lang, onChange }: Props) => {
 
   return (
     <header className={cx(styles.header, top && styles.headerScrolled)} data-testid={ROOT}>
-      <div className={cx(styles.inner)}>
+      <div className={cx(styles.inner)} data-testid={`${ROOT}--inner`}>
         {/* Глиф без подложки: в шапке это знак приложения, а не кнопка. */}
         <LogoMark className={cx(styles.logo)} data-testid={`${ROOT}--logo`} />
-        <div className={cx(styles.titles)}>
+        <div className={cx(styles.titles)} data-testid={`${ROOT}--titles`}>
           {/* Полное имя игры, а не аббревиатура: «TSSR» ничего не говорит
               человеку, который просто скачал мод (замечание 2026-11-20). */}
-          <h1 className={cx(styles.title)}>The Survival of Sarah Rose</h1>
-          {/* Подзаголовок — ссылка на страницу игры в Steam: «официальная
-              версия» просит, чтобы её можно было открыть. */}
-          <button
-            type="button"
-            className={cx(styles.sub, styles.subLink)}
-            data-testid={`${ROOT}--steam`}
-            onClick={() => void openUrl(LINKS.steamStore)}
-          >
-            {t("AI voice pack · Windows · only the official Steam version")}
-            <ExternalIcon />
-          </button>
+          <h1 className={cx(styles.title)} data-testid={`${ROOT}--title`}>
+            The Survival of Sarah Rose
+          </h1>
         </div>
-        <div className={cx(styles.right)}>
+        <div className={cx(styles.right)} data-testid={`${ROOT}--lang`}>
           <LangSwitcher lang={lang} onChange={onChange} />
         </div>
       </div>

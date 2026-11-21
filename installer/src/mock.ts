@@ -41,7 +41,9 @@ export const installMockBackend = (): void => {
     for (const [, l] of listeners) if (l.event === event) l.handler({ event, id: 0, payload });
   };
 
-  const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+  // `?slow` растягивает загрузку в 3 раза: удобно смотреть лоадеры глазами.
+  const slowFactor = new URLSearchParams(window.location.search).has("slow") ? 3 : 1;
+  const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms * slowFactor));
 
   const invoke = async (cmd: string, args?: Record<string, unknown>): Promise<unknown> => {
     // Подписка/отписка событий: Tauri присылает id колбэка и имя события.
@@ -68,8 +70,13 @@ export const installMockBackend = (): void => {
       case "find_game":
         // `?nogame` — посмотреть состояние «игра не найдена» (только мок).
         if (new URLSearchParams(window.location.search).has("nogame")) return null;
+        // `?longpath` — очень длинный путь: проверяем эллипсис и отсутствие
+        // горизонтальной прокрутки на узком окне (2026-11-21).
+        const longPath = new URLSearchParams(window.location.search).has("longpath")
+          ? `${DEMO_GAME}Very Deep Folder With A Long NameAnother Nested FolderAnd One More Level For Width`
+          : DEMO_GAME;
         return {
-          path: DEMO_GAME,
+          path: longPath,
           library: DEMO_GAME.replace(/\\steamapps.*/, ""),
           build_id: "25854678",
           mod_installed: true,

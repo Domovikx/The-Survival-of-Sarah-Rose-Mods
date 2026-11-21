@@ -37,25 +37,5 @@ export const styles = stylex.create({
   },
   titles: { display: "flex", flexDirection: "column", gap: 2, minWidth: 0 },
   title: { margin: 0, fontSize: 19, lineHeight: 1.2, letterSpacing: "0.2px" },
-  sub: {
-    margin: 0,
-    color: "var(--muted)",
-    fontSize: 12.5,
-  },
-  /** Подзаголовок-ссылка на Steam: тот же кегль, ссылка узнаётся по hover. */
-  subLink: {
-    "appearance": "none",
-    "cursor": "pointer",
-    "display": "inline-flex",
-    "alignItems": "center",
-    "gap": 5,
-    "padding": 0,
-    "borderWidth": 0,
-    "backgroundColor": "transparent",
-    "textAlign": "left",
-    "fontFamily": "inherit",
-    ":hover": { color: "var(--accent-fg)", textDecoration: "underline" },
-    ":focus-visible": { outline: "2px solid var(--accent-fg)", outlineOffset: 2 },
-  },
   right: { marginLeft: "auto", display: "flex", alignItems: "center", gap: 10 },
 });

@@ -106,7 +106,7 @@ export const Downloads = () => {
                 {isPending("installer") ? t("Downloading…") : t("Download installer (.exe)")}
               </a>
               <p className={cx(styles.meta)}>
-                {[t("Windows 10/11 · official Steam version only"), sizeText("TSSR-AI-Voice-Pack-Installer.exe")]
+                {[t("Windows 10/11 · official Steam version only"), sizeText(INSTALLER_ASSET)]
                   .filter(Boolean)
                   .join(" · ")}
               </p>

@@ -47,7 +47,7 @@ const settle = async (page: Page): Promise<void> => {
 test.describe("установщик: исходное состояние", () => {
   test("игра найдена, основной пак и 11 языков показаны", async ({ page }) => {
     await expect(page.getByTestId("Header--logo")).toBeVisible();
-    await expect(page.getByTestId("Header--steam")).toContainText("Steam");
+    await expect(page.getByTestId("Game--steam")).toContainText("Steam");
     await expect(page.getByTestId("Game--status")).toHaveAttribute("data-state", "installed");
     await expect(page.getByTestId("Game--path")).toContainText("The Survival of Sarah Rose");
     await expect(page.getByTestId("Game--build")).not.toHaveText("—");
@@ -89,6 +89,42 @@ test.describe("установщик: единый hover", () => {
 
     expect(coreHover).not.toBe(coreIdle); // подсветка вообще есть
     expect(coreHover).toBe(langHover); // и она та же, что у языков
+  });
+});
+
+test.describe("установщик: адаптив", () => {
+  test("узкое окно (820): нет горизонтальной прокрутки, длинный путь — эллипсис + title", async ({ page }) => {
+    await page.setViewportSize({ width: 820, height: 700 });
+    await page.goto("/?longpath");
+
+    const path = page.getByTestId("Game--path");
+    await expect(path).toBeVisible();
+
+    // Одна строка с эллипсисом: текст шире контейнера, но не рвёт раскладку.
+    const fit = await path.evaluate((el) => ({
+      ellipsis: getComputedStyle(el).textOverflow,
+      clipped: el.scrollWidth > el.clientWidth + 1,
+      lines: Math.round(el.getBoundingClientRect().height / parseFloat(getComputedStyle(el).lineHeight)),
+      title: el.getAttribute("title"),
+      width: el.getBoundingClientRect().width,
+    }));
+    expect(fit.ellipsis).toBe("ellipsis");
+    expect(fit.clipped).toBe(true);
+    expect(fit.lines).toBe(1);
+    expect(fit.title).toContain("Very Deep Folder");
+    expect(fit.width).toBeGreaterThan(0);
+
+    // Страница не «ездит» по горизонтали — главный признак сломанной адаптивки.
+    const doc = await page.evaluate(() => ({
+      sw: document.documentElement.scrollWidth,
+      cw: document.documentElement.clientWidth,
+    }));
+    expect(doc.sw).toBe(doc.cw);
+
+    // Панель действий целиком в окне: кнопки не уезжают за край.
+    const apply = await page.getByTestId("Actions--apply").boundingBox();
+    expect(apply).not.toBeNull();
+    expect((apply?.x ?? 0) + (apply?.width ?? 0)).toBeLessThanOrEqual(820);
   });
 });
 
@@ -180,6 +216,50 @@ test.describe("установщик: положительные сценарии
     await page.getByTestId("Actions--apply").click();
     await settle(page);
     await expect(page.getByTestId("Components--core-state")).toHaveAttribute("data-state", "installed");
+  });
+
+  test("лоадеры: один спиннер на язык, полоса в процентах, всё лишнее заблокировано", async ({ page }) => {
+    await uninstallAll(page);
+    await page.getByTestId("Language--en").click();
+    await page.getByTestId("Actions--apply").click();
+
+    // Основной пак качается первым — карточка EN ещё не в работе.
+    await expect(page.getByTestId("Actions--spinner")).toBeVisible();
+    await expect(page.getByTestId("Actions--progress")).toHaveAttribute("data-state", "percent");
+
+    // Дошло до EN: лоадер ровно в его карточке, и он ОДИН на всей странице.
+    await expect(page.getByTestId("Language--en-loader")).toBeVisible({ timeout: 15_000 });
+    await expect(page.getByTestId("Language--en-toggle")).toHaveAttribute("data-state", "busy");
+    await expect(page.locator('[data-testid$="-loader"]')).toHaveCount(1);
+    await expect(page.getByTestId("Language--en-meta")).toContainText("загрузка");
+
+    // Пока идёт работа, ничего не нажимается: поиск, удаление, тумблеры.
+    await expect(page.getByTestId("Game--detect")).toBeDisabled();
+    await expect(page.getByTestId("Actions--uninstall")).toBeDisabled();
+    await expect(page.getByTestId("Actions--apply")).toBeDisabled();
+    await expect(page.getByTestId("Language--ru-switch")).toBeDisabled();
+
+    // После установки: лоадеров нет, кнопки снова живые.
+    await settle(page);
+    await expect(page.locator('[data-testid$="-loader"]')).toHaveCount(0);
+    await expect(page.getByTestId("Language--en-toggle")).toHaveAttribute("data-state", "installed");
+    await expect(page.getByTestId("Game--detect")).toBeEnabled();
+    await expect(page.getByTestId("Actions--uninstall")).toBeEnabled();
+  });
+
+  test("удаление: бегущая полоса, без лоадеров карточек, кнопки заблокированы", async ({ page }) => {
+    await page.getByTestId("Actions--uninstall").click();
+    await page.getByTestId("Confirm--ok").click();
+
+    await expect(page.getByTestId("Actions--progress")).toHaveAttribute("data-state", "indeterminate");
+    await expect(page.getByTestId("Actions--spinner")).toBeVisible();
+    // При удалении байтового прогресса нет — карточных спиннеров быть не должно.
+    await expect(page.locator('[data-testid$="-loader"]')).toHaveCount(0);
+    await expect(page.getByTestId("Game--detect")).toBeDisabled();
+    await expect(page.getByTestId("Actions--apply")).toBeDisabled();
+
+    await expect(page.getByTestId("Actions--spinner")).toHaveCount(0, { timeout: 20_000 });
+    await expect(page.getByTestId("Game--detect")).toBeEnabled();
   });
 
   test("загрузка: спиннер и полоса привязаны к прогрессу скачивания", async ({ page }) => {

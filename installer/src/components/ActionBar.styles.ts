@@ -90,6 +90,9 @@ export const styles = stylex.create({
   danger: {
     "appearance": "none",
     "cursor": "pointer",
+    // «Mod deinstallieren» на узком окне ломалось в две строки и раздувало
+    // панель: подпись всегда в одну строку (2026-11-21).
+    "whiteSpace": "nowrap",
     "padding": "10px 16px",
     "borderRadius": 10,
     "fontSize": 13.5,
@@ -102,5 +105,6 @@ export const styles = stylex.create({
     ":hover:not(:disabled)": { backgroundColor: "var(--panel-2)", borderColor: "var(--accent-fg)" },
     ":disabled": { opacity: 0.45, cursor: "default" },
     ":focus-visible": { outline: "2px solid var(--accent-fg)", outlineOffset: 2 },
+    "@media (max-width: 900px)": { padding: "8px 12px", fontSize: 13 },
   },
 });

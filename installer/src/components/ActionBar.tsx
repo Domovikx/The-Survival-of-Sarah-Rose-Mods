@@ -46,13 +46,17 @@ export const ActionBar = ({
       <div className={cx(styles.inner)}>
         <div className={cx(styles.summary)}>
           {busy ? <Spinner size={15} data-testid={`${ROOT}--spinner`} /> : null}
-          <span className={cx(styles.status)} data-testid={`${ROOT}--status`}>
+          <span className={cx(styles.status)} data-testid={`${ROOT}--status`} title={status || undefined}>
             {busy ? status : status || "—"}
           </span>
         </div>
         {/* Полоса есть всегда (место зарезервировано), но видна только в работе:
             иначе элементы прыгают при старте установки. */}
-        <div className={cx(styles.track, !busy && styles.trackIdle)} data-testid={`${ROOT}--progress`}>
+        <div
+          className={cx(styles.track, !busy && styles.trackIdle)}
+          data-testid={`${ROOT}--progress`}
+          data-state={busy ? (active ? "percent" : "indeterminate") : "idle"}
+        >
           <div
             className={cx(styles.fill, busy && !active && styles.fillIndeterminate)}
             style={busy && !active ? undefined : { width: `${busy ? Math.max(1, progress) : 0}%` }}
@@ -84,7 +88,10 @@ export const ActionBar = ({
             {busy && job === "apply" ? (
               <>
                 <Spinner size={15} />
-                {active ? `${Math.round(active.pct)}%` : t("Working…")}
+                {/* Процент кнопки = ОБЩИЙ прогресс плана, как у полосы:
+                    процент текущего файла показан в его карточке, и два
+                    разных числа рядом читались как ошибка. */}
+                {active ? `${Math.round(progress)}%` : t("Working…")}
               </>
             ) : removeAll ? (
               t("Remove everything")

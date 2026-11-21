@@ -64,9 +64,11 @@ type Props = {
   "label"?: string;
   "data-testid"?: string;
   "data-state"?: string;
+  /** Отдельный id для спиннера: лоадер проверяется e2e независимо от иконки. */
+  "loaderTestId"?: string;
 };
 
-export const StateIcon = ({ state, label, className, ...rest }: Props) => (
+export const StateIcon = ({ state, label, className, loaderTestId, ...rest }: Props) => (
   <div
     className={[cx(styles.ring, styles[state]), className].filter(Boolean).join(" ")}
     aria-hidden={label ? undefined : true}
@@ -74,6 +76,6 @@ export const StateIcon = ({ state, label, className, ...rest }: Props) => (
     role={label ? "img" : undefined}
     {...rest}
   >
-    {state === "busy" ? <Spinner /> : ICONS[state]()}
+    {state === "busy" ? <Spinner data-testid={loaderTestId} /> : ICONS[state]()}
   </div>
 );

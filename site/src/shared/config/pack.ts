@@ -16,8 +16,17 @@ const BASE = `https://github.com/${PACK.repo}/releases/download/${PACK.tag}`;
 /** Прямая ссылка на ассет релиза: `main` или `voice-<lang>`. */
 export const packAsset = (name: string): string => `${BASE}/TSSR-AI-Voice-Pack-${name}.7z`;
 
-/** Имя ассета инсталлятора (Windows, один exe; в архивах Nexus его быть не может). */
-export const INSTALLER_ASSET = "TSSR-AI-Voice-Pack-Installer.exe";
+/**
+ * Имя ассета инсталлятора — СЕМАНТИЧНОЕ и УНИКАЛЬНОЕ по версии.
+ *
+ * Зачем версия в имени: exe скачивается в «Загрузки», где обычно уже лежат
+ * прошлые версии с тем же именем — браузер дописывает «(1)», и невозможно
+ * понять, какой файл свежий (замечание владельца 2026-11-21). Пакеты .7z
+ * версию не несут, но их и качает инсталлятор, а не человек руками.
+ */
+export const installerAsset = (tag: string): string => `Sarah-Rose-AI-Voice-Installer-${tag}.exe`;
+
+export const INSTALLER_ASSET = installerAsset(PACK.tag);
 
 /** Прямая ссылка на файл релиза с любым расширением (инсталлятор, README…). */
 export const packFile = (fileName: string): string => `${BASE}/${fileName}`;

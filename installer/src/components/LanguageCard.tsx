@@ -74,7 +74,9 @@ export const LanguageCard = ({ lang, files, want, size, busy, activity, locked, 
     >
       <img className={cx(styles.flag)} src={`/flags/${lang}.svg`} alt="" width={22} height={22} />
       <div className={cx(styles.head)}>
-        <span className={cx(styles.name)}>{NAMES[lang] ?? lang.toUpperCase()}</span>
+        <span className={cx(styles.name)} title={NAMES[lang] ?? lang.toUpperCase()}>
+          {NAMES[lang] ?? lang.toUpperCase()}
+        </span>
         <span className={cx(styles.code)}>{lang.toUpperCase()}</span>
       </div>
       <span
@@ -94,6 +96,7 @@ export const LanguageCard = ({ lang, files, want, size, busy, activity, locked, 
       <StateIcon
         state={iconState}
         className={cx(styles.iconSlot)}
+        loaderTestId={`${ROOT}--${lang}-loader`}
         data-testid={`${ROOT}--${lang}-toggle`}
         data-state={iconState}
       />
