@@ -175,6 +175,12 @@ const main = (): void => {
   /** Зависание: процесс жив, а файлы не появляются (шимы иногда залипают). */
   let lastCount = -1;
   let stalledSince = Date.now();
+  /**
+   * Пауза после отката по здоровью. Без неё режим «мигал»: откат на 1 воркер
+   * освобождал VRAM → следующая проверка снова включала 2 → 96 % VRAM → откат,
+   * и так каждую минуту (каждое переключение — kill + перезагрузка модели).
+   */
+  let healthCooldownUntil = 0;
 
   /** Погасить батч и дождаться, пока GPU освободится. */
   const stopChild = async (): Promise<void> => {
@@ -209,9 +215,12 @@ const main = (): void => {
 
     // Здоровье: перегрев или почти полная VRAM — откатываемся на 1 воркер.
     const h = gpuHealth();
-    if (h && want > 1 && (h.temp >= opts.maxTemp || h.vramPct >= opts.maxVram)) {
-      log(`здоровье: ${h.temp}°C, VRAM ${h.vramPct}% → откат на 1 воркер`);
+    if (Date.now() < healthCooldownUntil && want > 1) {
       want = 1;
+    } else if (h && want > 1 && (h.temp >= opts.maxTemp || h.vramPct >= opts.maxVram)) {
+      log(`здоровье: ${h.temp}°C, VRAM ${h.vramPct}% → откат на 1 воркер, 30 мин не пробую 2`);
+      want = 1;
+      healthCooldownUntil = Date.now() + 30 * 60_000;
     }
     // Раз в 5 минут сверяем прогресс: жив, но не пишет 15 минут → перезапуск.
     if (Date.now() - lastStart > 5 * 60_000) {
