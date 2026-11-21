@@ -35,6 +35,7 @@
     "test:dash": "node --test .opencode/skills/local-dash/dashboard.test.mts",
     "test:refs": "node --test patches/ai-voice-pack/tools/generate/scripts/clean_refs.test.mts patches/ai-voice-pack/tools/generate/scripts/add_candidate.test.mts",
     "test:speakers": "node --test patches/ai-voice-pack/tools/generate/scripts/speaker_map.test.mts",
+    "test:voice:adaptive": "node --test .opencode/skills/tssr-voice-status/voice_adaptive.test.mts",
     "test:voice:autocommit": "node --test .opencode/skills/tssr-voice-status/voice_autocommit.test.mts",
     "test:voice:corpus": "node --test patches/ai-voice-pack/tools/generate/scripts/voice_corpus.test.mts",
     "test:voice:e2e": "set \"TSSR_VOICE_E2E=1\" && node --test patches/ai-voice-pack/tools/generate/scripts/voice_batch_e2e.test.mts",
@@ -44,6 +45,7 @@
     "translate": "node .opencode/skills/translate/translate_queue.mts",
     "typecheck": "tsc --noEmit && tsc --noEmit -p site/tsconfig.json && node scripts/check_ts_coverage.mts",
     "verify": "node .opencode/skills/renpy-extract/extract_texts.mts verify",
+    "voice:adaptive": "node .opencode/skills/tssr-voice-status/voice_adaptive.mts",
     "voice:autocommit": "node .opencode/skills/tssr-voice-status/voice_autocommit.mts",
     "voice:autocommit:watch": "node .opencode/skills/tssr-voice-status/voice_autocommit.mts --every 30"
   },

@@ -1,0 +1,170 @@
+/**
+ * Адаптивная озвучка: пока владелец за ПК — один воркер (ПК отзывчив),
+ * если его нет ≥ N минут — два воркера (полная загрузка GPU).
+ *
+ * Простой идёт ~4–5 реплик/мин на одном воркере и ~7–8 на двух (замер
+ * 2026-11-21: 12 реплик за 209 с против 13 за 154 с без загрузки модели),
+ * но два воркера занимают ~15.3 ГБ VRAM из 16.3 — держать их постоянно
+ * рядом с играми/браузером рискованно.
+ *
+ * Запуск:
+ *   node .opencode/skills/tssr-voice-status/voice_adaptive.mts
+ *   node .opencode/skills/tssr-voice-status/voice_adaptive.mts --idle 900 --lang en
+ *
+ * Ключи: --lang en, --idle 900 (секунд «нет ввода» до полной загрузки),
+ *        --poll 60 (период проверки), --dry (только печатать решение).
+ */
+import { spawn, execFileSync, type ChildProcess } from "node:child_process";
+import { appendFileSync, existsSync, mkdirSync, rmSync, writeFileSync } from "node:fs";
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
+
+const root = join(dirname(fileURLToPath(import.meta.url)), "..", "..", "..");
+const logPath = join(root, "tmp/voice_adaptive.log");
+const stopFlag = join(root, "tmp/voice_adaptive.stop");
+const batch = join(root, "patches/ai-voice-pack/tools/generate/scripts/voice_batch.mts");
+
+export type Opts = { lang: string; idle: number; poll: number; dry: boolean };
+
+export const parseArgs = (argv: string[]): Opts => {
+  const num = (flag: string, fallback: number): number => {
+    const i = argv.indexOf(flag);
+    return i >= 0 ? Number(argv[i + 1]) || fallback : fallback;
+  };
+  const li = argv.indexOf("--lang");
+  return {
+    lang: li >= 0 ? (argv[li + 1] ?? "en") : "en",
+    idle: num("--idle", 900),
+    poll: num("--poll", 60),
+    dry: argv.includes("--dry"),
+  };
+};
+
+/**
+ * Сколько воркеров держать при таком простое. Ровно два состояния:
+ * владелец вернулся (любой ввод за последние N секунд) — 1, иначе 2.
+ */
+export const desiredWorkers = (idleSeconds: number, idleThreshold: number): 1 | 2 =>
+  idleSeconds >= idleThreshold ? 2 : 1;
+
+/** Секунды с последнего ввода (Windows); -1 — не смогли узнать. */
+export const idleSeconds = (): number => {
+  if (process.platform !== "win32") return 0;
+  const ps = [
+    "$sig='[DllImport(\"user32.dll\")] public static extern bool GetLastInputInfo(ref LASTINPUTINFO plii);';",
+    "Add-Type -Namespace W -Name U -MemberDefinition ('public struct LASTINPUTINFO { public uint cbSize; public uint dwTime; } ' + $sig);",
+    "$i=New-Object W.U+LASTINPUTINFO; $i.cbSize=[Runtime.InteropServices.Marshal]::SizeOf($i);",
+    "[void][W.U]::GetLastInputInfo([ref]$i);",
+    "[math]::Floor((([uint32][Environment]::TickCount - $i.dwTime) / 1000))",
+  ].join(" ");
+  try {
+    return Number(
+      execFileSync("powershell", ["-NoProfile", "-Command", ps], { encoding: "utf-8", timeout: 5000 }).trim(),
+    );
+  } catch {
+    return -1;
+  }
+};
+
+const log = (text: string): void => {
+  const line = `${new Date().toISOString().slice(11, 19)}  ${text}`;
+  console.log(line);
+  mkdirSync(dirname(logPath), { recursive: true });
+  appendFileSync(logPath, `${line}\n`, "utf-8");
+};
+
+/** Живые voice_batch этого языка, запущенные НЕ нами (пульт/старые прогоны). */
+const foreignBatches = (lang: string): number[] => {
+  try {
+    const out = execFileSync(
+      "powershell",
+      [
+        "-NoProfile",
+        "-Command",
+        "Get-CimInstance Win32_Process -Filter \"Name='node.exe'\" | Where-Object { $_.CommandLine -match 'voice_batch' } | ForEach-Object { $_.ProcessId }",
+      ],
+      { encoding: "utf-8", timeout: 5000 },
+    );
+    return out
+      .split(/\s+/)
+      .map(Number)
+      .filter((pid) => Number.isInteger(pid) && pid > 0);
+  } catch {
+    void lang;
+    return [];
+  }
+};
+
+const startBatch = (opts: Opts, workers: number): ChildProcess => {
+  for (const pid of foreignBatches(opts.lang)) {
+    if (pid !== process.pid) {
+      try {
+        execFileSync("taskkill", ["/PID", String(pid), "/F"], { stdio: "ignore" });
+        log(`чужой voice_batch ${pid} остановлен (источник истины — этот сторож)`);
+      } catch {
+        /* уже нет */
+      }
+    }
+  }
+  log(`старт: воркеров ${workers}`);
+  // --engine voxcpm2 ОБЯЗАТЕЛЕН: без маркера движка пульт считает процесс
+  // легаси-контуром CosyVoice и показывает «STOPPED» при живом прогоне.
+  const child = spawn(
+    process.execPath,
+    [batch, "--engine", "voxcpm2", "--lang", opts.lang, "--workers", String(workers)],
+    {
+      cwd: root,
+      stdio: ["ignore", "pipe", "pipe"],
+    },
+  );
+  child.stdout?.on("data", (d: Buffer) => appendFileSync(logPath, d.toString(), "utf-8"));
+  child.stderr?.on("data", (d: Buffer) => appendFileSync(logPath, d.toString(), "utf-8"));
+  return child;
+};
+
+const main = (): void => {
+  const opts = parseArgs(process.argv.slice(2));
+  if (existsSync(stopFlag)) rmSync(stopFlag, { force: true });
+  let workers = 0;
+  let child: ChildProcess | null = null;
+  let lastStart = 0;
+
+  const tick = (): void => {
+    if (existsSync(stopFlag)) {
+      log("найден tmp/voice_adaptive.stop — останавливаюсь");
+      child?.kill();
+      rmSync(stopFlag, { force: true });
+      process.exit(0);
+    }
+    if (child && child.exitCode !== null) {
+      log(`voice_batch завершился (код ${child.exitCode}) — перезапущу, если очередь не пуста`);
+      child = null;
+      workers = 0;
+    }
+    const idle = idleSeconds();
+    const want = desiredWorkers(idle < 0 ? 0 : idle, opts.idle);
+    if (want !== workers) {
+      if (opts.dry) {
+        log(`[dry] простой ${idle}s → воркеров ${want} (сейчас ${workers || "нет"})`);
+        workers = want;
+        return;
+      }
+      child?.kill();
+      if (Date.now() - lastStart < 15_000) {
+        log("слишком частые переключения — жду");
+        return;
+      }
+      child = startBatch(opts, want);
+      workers = want;
+      lastStart = Date.now();
+      log(`простой ${idle}s → режим ${want === 2 ? "полный (2)" : "экономный (1)"}`);
+    }
+  };
+
+  log(`сторож старт: язык ${opts.lang}, порог простоя ${opts.idle}s, опрос ${opts.poll}s`);
+  writeFileSync(join(root, "tmp/voice_adaptive.pid"), String(process.pid), "utf-8");
+  tick();
+  setInterval(tick, opts.poll * 1000);
+};
+
+if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) main();
