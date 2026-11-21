@@ -92,7 +92,7 @@ export const Downloads = () => {
           {FEATURES.installer ? (
             <div className={cx(styles.option)} data-testid={`${ROOT}--installer-card`}>
               <span className={cx(styles.tag)}>{t("Recommended")}</span>
-              <h3 className={cx(styles.optionTitle)}>{t("Installer for Windows")}</h3>
+              <h3 className={cx(styles.optionTitle)}>{t("Mod manager for Windows")}</h3>
               <p className={cx(styles.optionText)}>
                 {t("Finds the game automatically, installs only the packs you tick, uninstalls cleanly.")}
               </p>
@@ -103,7 +103,7 @@ export const Downloads = () => {
                 rel="noopener"
                 {...linkState("installer")}
               >
-                {isPending("installer") ? t("Downloading…") : t("Download installer (.exe)")}
+                {isPending("installer") ? t("Downloading…") : t("Download mod manager (.exe)")}
               </a>
               <p className={cx(styles.meta)}>
                 {[t("Windows 10/11 · official Steam version only"), sizeText(INSTALLER_ASSET)]

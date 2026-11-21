@@ -24,7 +24,7 @@ export const packAsset = (name: string): string => `${BASE}/TSSR-AI-Voice-Pack-$
  * понять, какой файл свежий (замечание владельца 2026-11-21). Пакеты .7z
  * версию не несут, но их и качает инсталлятор, а не человек руками.
  */
-export const installerAsset = (tag: string): string => `Sarah-Rose-AI-Voice-Installer-${tag}.exe`;
+export const installerAsset = (tag: string): string => `Sarah-Rose-Mod-Manager-${tag}.exe`;
 
 export const INSTALLER_ASSET = installerAsset(PACK.tag);
 

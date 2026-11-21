@@ -1,6 +1,6 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
-  "productName": "Sarah Rose AI Voice Pack",
+  "productName": "Sarah Rose Mod Manager",
   "version": "0.1.0",
   "identifier": "com.domovikx.tssr-installer",
   "build": {
@@ -13,7 +13,7 @@
     "withGlobalTauri": true,
     "windows": [
       {
-        "title": "The Survival of Sarah Rose — AI Voice Pack",
+        "title": "The Survival of Sarah Rose — Mod Manager",
         "width": 900,
         "height": 680,
         "minWidth": 820,
