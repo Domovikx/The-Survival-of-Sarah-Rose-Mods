@@ -66,6 +66,8 @@ export const installMockBackend = (): void => {
       case "app_dir":
         return "C:\\TSSR-Voice-Pack";
       case "find_game":
+        // `?nogame` — посмотреть состояние «игра не найдена» (только мок).
+        if (new URLSearchParams(window.location.search).has("nogame")) return null;
         return {
           path: DEMO_GAME,
           library: DEMO_GAME.replace(/\\steamapps.*/, ""),

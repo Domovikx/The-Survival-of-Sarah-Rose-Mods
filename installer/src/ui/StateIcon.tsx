@@ -1,6 +1,6 @@
 import * as stylex from "@stylexjs/stylex";
 
-import { CheckIcon, MinusIcon, PlusIcon } from "@/ui/icons";
+import { AlertIcon, CheckIcon, MinusIcon, PlusIcon } from "@/ui/icons";
 import { cx } from "@/ui/cx";
 import { Spinner } from "@/ui/Spinner";
 
@@ -14,7 +14,7 @@ import { Spinner } from "@/ui/Spinner";
  *   remove    — − в нейтральном круге («будет удалено»);
  *   busy      — спиннер вместо иконки (идёт загрузка).
  */
-export type State = "installed" | "add" | "remove" | "busy";
+export type State = "installed" | "add" | "remove" | "busy" | "missing";
 
 const styles = stylex.create({
   ring: {
@@ -40,6 +40,8 @@ const styles = stylex.create({
   },
   add: { color: "var(--accent-fg)", borderColor: "var(--accent)" },
   remove: { color: "var(--muted)", backgroundColor: "transparent" },
+  /** Не найдено: нейтральный круг с предупреждением (красного в палитре нет). */
+  missing: { color: "var(--muted)", backgroundColor: "transparent" },
   busy: {
     color: "var(--accent-fg)",
     backgroundColor: "var(--state-bg)",
@@ -51,6 +53,7 @@ const ICONS: Record<Exclude<State, "busy">, () => React.ReactElement> = {
   installed: () => <CheckIcon />,
   add: () => <PlusIcon />,
   remove: () => <MinusIcon />,
+  missing: () => <AlertIcon />,
 };
 
 type Props = {

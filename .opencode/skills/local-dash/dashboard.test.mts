@@ -10,6 +10,7 @@ import { join } from "node:path";
 import { test } from "node:test";
 
 import { parsePo } from "../renpy-po/po_core.mts";
+import { isDashPayload, parseNetstat } from "./port.mts";
 import { arcsClosed, countPo } from "./dashboard.mts";
 
 /** Перевод строки без ESC-последовательностей: heredoc уже дважды превращал
@@ -112,6 +113,28 @@ test("plan(en) = все озвучиваемые фразы POT, остальн�
     if (lang === "en") continue;
     assert.ok(sum(plan(lang)) <= en, `${lang}: план озвучки больше, чем реплик в POT`);
   }
+});
+
+// Порт пульта: распознаём СВОЙ процесс среди чужих (dash:open перезапускает
+// только пульт и никогда не убивает чужое приложение на порту).
+test("parseNetstat находит только LISTENING нужного порта", () => {
+  const out = [
+    "  TCP    127.0.0.1:8087         0.0.0.0:0              LISTENING       4242",
+    "  TCP    127.0.0.1:8087         127.0.0.1:55555        ESTABLISHED     4242",
+    "  TCP    127.0.0.1:8088         0.0.0.0:0              LISTENING       9999",
+    "  TCP    [::1]:8087             [::]:0                 LISTENING       4243",
+  ].join(NL);
+  assert.deepEqual(parseNetstat(out, 8087).toSorted(), [4242, 4243]);
+  assert.deepEqual(parseNetstat(out, 8088), [9999]);
+  assert.deepEqual(parseNetstat(out, 7000), []);
+});
+
+test("isDashPayload отличает пульт от чужого ответа", () => {
+  assert.equal(isDashPayload({ v: 3, system: {}, languages: [] }), true);
+  assert.equal(isDashPayload({ hello: "world" }), false);
+  assert.equal(isDashPayload(null), false);
+  // Похоже, но не пульт: нет версии API.
+  assert.equal(isDashPayload({ system: {}, languages: [] }), false);
 });
 
 // Очередь озвучки теперь считается по корпусу (mtime файлов по контракту),

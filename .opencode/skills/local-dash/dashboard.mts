@@ -8,7 +8,8 @@
  * Запуск: node .opencode/skills/local-dash/dashboard.mts [--port 8087]
  */
 import { spawn, spawnSync } from "node:child_process";
-import { closeSync, existsSync, openSync, readFileSync, readdirSync, readSync, statSync } from "node:fs";
+import { closeSync, existsSync, openSync, readFileSync, readdirSync, readSync, statSync, writeFileSync } from "node:fs";
+import { isDashProcess, isDashUp, killPids, listenerPids, portBusy, waitPortFree } from "./port.mts";
 import { createServer } from "node:http";
 import { join } from "node:path";
 import { cpus, freemem, totalmem } from "node:os";
@@ -1293,24 +1294,59 @@ export const start = (): void => {
   void computeVoice();
   sampleTick();
   setInterval(sampleTick, 15_000).unref();
-  createServer((req, res) => {
-    if (req.url?.startsWith("/api/state")) {
-      void state().then((s) => {
-        res.writeHead(200, { "Content-Type": "application/json; charset=utf-8", "Cache-Control": "no-store" });
-        res.end(JSON.stringify(s));
-      });
-      return;
-    }
-    res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
-    res.end(PAGE);
-  }).listen(PORT, "127.0.0.1", () => {
+  // Если порт занят НАШИМ пультом (старый процесс после закрытия вкладки или
+  // повторный `dash:open`) — перезапускаем его. Чужое приложение не трогаем:
+  // показываем, что делать, и выходим (замечание владельца 2026-11-21).
+  const ensurePort = async (): Promise<boolean> => {
+    if (!(await portBusy(PORT))) return true;
     const url = `http://127.0.0.1:${PORT}`;
-    console.log(`пульт: ${url}`);
-    if (process.argv.includes("--open")) {
-      const cmd = process.platform === "win32" ? ["cmd", ["/c", "start", "", url]] : ["xdg-open", [url]];
-      spawn(cmd[0] as string, cmd[1] as string[], { detached: true, stdio: "ignore" }).unref();
+    const pids = listenerPids(PORT);
+    // «Наш» определяем двумя способами: ответ /api/state ИЛИ командная строка
+    // процесса. Второй нужен на холодном старте, когда первый ответ ещё
+    // считается (иначе пульт принимал сам себя за «чужое приложение»).
+    const ours = (await isDashUp(PORT)) || pids.some(isDashProcess);
+    if (!ours) {
+      console.error(`пульт: порт ${PORT} занят другим приложением (${url}) — закройте его или укажите --port`);
+      return false;
     }
-  });
+    console.log(`пульт: перезапуск на ${url}${pids.length ? ` (останавливаю pid ${pids.join(", ")})` : ""}`);
+    killPids(pids);
+    if (!(await waitPortFree(PORT))) {
+      console.error(`пульт: порт ${PORT} не освободился за 5 с — закройте процесс вручную`);
+      return false;
+    }
+    return true;
+  };
+
+  const serve = (): void => {
+    createServer((req, res) => {
+      if (req.url?.startsWith("/api/state")) {
+        void state().then((s) => {
+          res.writeHead(200, { "Content-Type": "application/json; charset=utf-8", "Cache-Control": "no-store" });
+          res.end(JSON.stringify(s));
+        });
+        return;
+      }
+      res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
+      res.end(PAGE);
+    }).listen(PORT, "127.0.0.1", () => {
+      const url = `http://127.0.0.1:${PORT}`;
+      try {
+        writeFileSync("tmp/dash.pid", String(process.pid), "utf-8");
+      } catch {
+        /* tmp нет — не критично */
+      }
+      console.log(`пульт: ${url}`);
+      if (process.argv.includes("--open")) {
+        const cmd = process.platform === "win32" ? ["cmd", ["/c", "start", "", url]] : ["xdg-open", [url]];
+        spawn(cmd[0] as string, cmd[1] as string[], { detached: true, stdio: "ignore" }).unref();
+      }
+    });
+  };
+
+  void (async () => {
+    if (await ensurePort()) serve();
+  })();
 };
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) start();

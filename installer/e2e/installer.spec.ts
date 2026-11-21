@@ -48,7 +48,7 @@ test.describe("установщик: исходное состояние", () =>
   test("игра найдена, основной пак и 11 языков показаны", async ({ page }) => {
     await expect(page.getByTestId("Header--logo")).toBeVisible();
     await expect(page.getByTestId("Header--steam")).toContainText("Steam");
-    await expect(page.getByTestId("Game--status")).toHaveText("установлено");
+    await expect(page.getByTestId("Game--status")).toHaveAttribute("data-state", "installed");
     await expect(page.getByTestId("Game--path")).toContainText("The Survival of Sarah Rose");
     await expect(page.getByTestId("Game--build")).not.toHaveText("—");
     await expect(page.getByTestId("Components--core-state")).toHaveAttribute("data-state", "installed");

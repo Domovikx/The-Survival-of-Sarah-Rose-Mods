@@ -52,3 +52,5 @@ nul
 .env.local
 !.env.example
 site/public/installer/
+# рантайм-маркеры пульта (пауза очереди), не часть репозитория
+patches/ai-voice-pack/tools/generate/output/voice/ctl_paused_*.json

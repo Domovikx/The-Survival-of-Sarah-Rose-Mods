@@ -15,28 +15,11 @@ export const styles = stylex.create({
   },
   head: { display: "flex", alignItems: "center", gap: 10 },
   title: { margin: 0, fontSize: 14, fontWeight: 600, color: "var(--muted)", letterSpacing: "0.2px" },
-  // Бейдж — сразу после заголовка; вправо уезжает только кнопка,
-  // иначе два auto-margin делят шапку и бейдж «висит» по центру (2026-11-20).
-  status: {
-    fontSize: 11.5,
-    fontWeight: 700,
-    color: "var(--accent-fg)",
-    backgroundColor: "var(--state-bg)",
-    borderWidth: 1,
-    borderStyle: "solid",
-    borderColor: "var(--state-border)",
-    borderRadius: 999,
-    padding: "3px 10px",
-    letterSpacing: "0.4px",
-    textTransform: "uppercase",
-  },
-  statusBad: {
-    color: "var(--muted)",
-    backgroundColor: "transparent",
-    borderColor: "var(--border)",
-  },
-  row: { display: "flex", gap: 12, alignItems: "baseline" },
-  key: { width: 108, flexShrink: 0, color: "var(--muted)", fontSize: 13 },
+  // Шапка: заголовок · «Найти заново» · индикатор. Высота шапки задаётся
+  // индикатором (28px) — строки ниже выровнены по одной сетке, поэтому
+  // «грибы» (разъезд по вертикали) не появляются.
+  row: { display: "grid", gridTemplateColumns: "108px 1fr", gap: 12, alignItems: "center" },
+  key: { color: "var(--muted)", fontSize: 13 },
   value: { margin: 0, fontSize: 14, wordBreak: "break-all", fontVariantNumeric: "tabular-nums" },
   /** Кнопка поиска — справа в шапке карточки: путь и сборка читаются слева. */
   detect: { marginLeft: "auto" },
