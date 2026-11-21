@@ -127,6 +127,18 @@ const foreignBatches = (lang: string): number[] => {
   }
 };
 
+/** Дождаться, пока VRAM освободится (после kill старого батча). */
+export const waitVramFree = async (belowPct = 25, timeoutMs = 30_000): Promise<boolean> => {
+  const until = Date.now() + timeoutMs;
+  while (Date.now() < until) {
+    const h = gpuHealth();
+    if (!h || h.vramPct < belowPct) return true;
+    // eslint-disable-next-line no-await-in-loop
+    await new Promise((r) => setTimeout(r, 500));
+  }
+  return false;
+};
+
 const startBatch = (opts: Opts, workers: number): ChildProcess => {
   for (const pid of foreignBatches(opts.lang)) {
     if (pid !== process.pid) {
@@ -164,7 +176,22 @@ const main = (): void => {
   let lastCount = -1;
   let stalledSince = Date.now();
 
-  const tick = (): void => {
+  /** Погасить батч и дождаться, пока GPU освободится. */
+  const stopChild = async (): Promise<void> => {
+    const c = child;
+    child = null;
+    workers = 0;
+    if (!c || c.exitCode !== null) return;
+    await new Promise<void>((resolve) => {
+      c.once("exit", () => resolve());
+      c.kill();
+      setTimeout(resolve, 8000);
+    });
+    const freed = await waitVramFree();
+    log(freed ? "GPU освободилась — можно стартовать" : "VRAM не освободилась за 30 с");
+  };
+
+  const tick = async (): Promise<void> => {
     if (existsSync(stopFlag)) {
       log("найден tmp/voice_adaptive.stop — останавливаюсь");
       child?.kill();
@@ -175,6 +202,7 @@ const main = (): void => {
       log(`voice_batch завершился (код ${child.exitCode}) — перезапущу, если очередь не пуста`);
       child = null;
       workers = 0;
+      await waitVramFree();
     }
     const idle = idleSeconds();
     let want: number = desiredWorkers(idle < 0 ? 0 : idle, opts.idle) === 2 ? opts.full : 1;
@@ -206,11 +234,11 @@ const main = (): void => {
         workers = want;
         return;
       }
-      child?.kill();
-      if (Date.now() - lastStart < 15_000) {
+      if (Date.now() - lastStart < 30_000) {
         log("слишком частые переключения — жду");
         return;
       }
+      await stopChild();
       child = startBatch(opts, want);
       workers = want;
       lastStart = Date.now();
@@ -220,8 +248,8 @@ const main = (): void => {
 
   log(`сторож старт: язык ${opts.lang}, порог простоя ${opts.idle}s, опрос ${opts.poll}s`);
   writeFileSync(join(root, "tmp/voice_adaptive.pid"), String(process.pid), "utf-8");
-  tick();
-  setInterval(tick, opts.poll * 1000);
+  void tick();
+  setInterval(() => void tick(), opts.poll * 1000);
 };
 
 if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) main();
