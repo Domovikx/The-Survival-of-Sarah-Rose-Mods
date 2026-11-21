@@ -11,10 +11,19 @@ test("desiredWorkers: ушёл на 15 мин — два воркера, вер�
 });
 
 test("parseArgs: дефолты и флаги", () => {
-  assert.deepEqual(parseArgs([]), { lang: "en", idle: 900, poll: 60, dry: false });
-  const o = parseArgs(["--lang", "ru", "--idle", "120", "--poll", "15", "--dry"]);
+  assert.deepEqual(parseArgs([]), {
+    lang: "en",
+    idle: 900,
+    poll: 60,
+    dry: false,
+    full: 2,
+    maxTemp: 83,
+    maxVram: 97,
+  });
+  const o = parseArgs(["--lang", "ru", "--idle", "120", "--poll", "15", "--dry", "--full", "3"]);
   assert.equal(o.lang, "ru");
   assert.equal(o.idle, 120);
   assert.equal(o.poll, 15);
   assert.equal(o.dry, true);
+  assert.equal(o.full, 3);
 });

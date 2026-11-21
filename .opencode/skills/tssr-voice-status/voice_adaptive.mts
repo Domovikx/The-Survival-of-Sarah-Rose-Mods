@@ -15,6 +15,8 @@
  *        --poll 60 (период проверки), --dry (только печатать решение).
  */
 import { spawn, execFileSync, type ChildProcess } from "node:child_process";
+
+import { countDone } from "../../../patches/ai-voice-pack/tools/generate/scripts/voice_status.mts";
 import { appendFileSync, existsSync, mkdirSync, rmSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -24,7 +26,18 @@ const logPath = join(root, "tmp/voice_adaptive.log");
 const stopFlag = join(root, "tmp/voice_adaptive.stop");
 const batch = join(root, "patches/ai-voice-pack/tools/generate/scripts/voice_batch.mts");
 
-export type Opts = { lang: string; idle: number; poll: number; dry: boolean };
+export type Opts = {
+  lang: string;
+  idle: number;
+  poll: number;
+  dry: boolean;
+  /** Воркеров в «полном» режиме (на 16 ГБ больше двух не влезает). */
+  full: number;
+  /** Порог температуры GPU, °C: выше — принудительно экономный режим. */
+  maxTemp: number;
+  /** Порог занятой VRAM, %: выше — экономный режим (иначе своп и темп в ноль). */
+  maxVram: number;
+};
 
 export const parseArgs = (argv: string[]): Opts => {
   const num = (flag: string, fallback: number): number => {
@@ -37,6 +50,9 @@ export const parseArgs = (argv: string[]): Opts => {
     idle: num("--idle", 900),
     poll: num("--poll", 60),
     dry: argv.includes("--dry"),
+    full: Math.max(1, Math.min(4, num("--full", 2))),
+    maxTemp: num("--max-temp", 83),
+    maxVram: num("--max-vram", 97),
   };
 };
 
@@ -63,6 +79,22 @@ export const idleSeconds = (): number => {
     );
   } catch {
     return -1;
+  }
+};
+
+/** Здоровье GPU: температура и процент занятой VRAM (null — nvidia-smi недоступен). */
+export const gpuHealth = (): { temp: number; vramPct: number } | null => {
+  try {
+    const out = execFileSync(
+      "nvidia-smi",
+      ["--query-gpu=temperature.gpu,memory.used,memory.total", "--format=csv,noheader,nounits"],
+      { encoding: "utf-8", timeout: 4000 },
+    ).trim();
+    const [temp, used, total] = out.split(",").map((x) => Number(x.trim()));
+    if (!Number.isFinite(temp!) || !Number.isFinite(used!) || !Number.isFinite(total!) || !total) return null;
+    return { temp: temp!, vramPct: Math.round((used! / total!) * 100) };
+  } catch {
+    return null;
   }
 };
 
@@ -128,6 +160,9 @@ const main = (): void => {
   let workers = 0;
   let child: ChildProcess | null = null;
   let lastStart = 0;
+  /** Зависание: процесс жив, а файлы не появляются (шимы иногда залипают). */
+  let lastCount = -1;
+  let stalledSince = Date.now();
 
   const tick = (): void => {
     if (existsSync(stopFlag)) {
@@ -142,7 +177,29 @@ const main = (): void => {
       workers = 0;
     }
     const idle = idleSeconds();
-    const want = desiredWorkers(idle < 0 ? 0 : idle, opts.idle);
+    let want: number = desiredWorkers(idle < 0 ? 0 : idle, opts.idle) === 2 ? opts.full : 1;
+
+    // Здоровье: перегрев или почти полная VRAM — откатываемся на 1 воркер.
+    const h = gpuHealth();
+    if (h && want > 1 && (h.temp >= opts.maxTemp || h.vramPct >= opts.maxVram)) {
+      log(`здоровье: ${h.temp}°C, VRAM ${h.vramPct}% → откат на 1 воркер`);
+      want = 1;
+    }
+    // Раз в 5 минут сверяем прогресс: жив, но не пишет 15 минут → перезапуск.
+    if (Date.now() - lastStart > 5 * 60_000) {
+      const now = countDone(opts.lang).total;
+      if (now !== lastCount) {
+        lastCount = now;
+        stalledSince = Date.now();
+      } else if (child && Date.now() - stalledSince > 15 * 60_000) {
+        log(`нет новых файлов 15 мин (всего ${now}) — перезапуск`);
+        child.kill();
+        child = null;
+        workers = 0;
+        stalledSince = Date.now();
+      }
+    }
+
     if (want !== workers) {
       if (opts.dry) {
         log(`[dry] простой ${idle}s → воркеров ${want} (сейчас ${workers || "нет"})`);
