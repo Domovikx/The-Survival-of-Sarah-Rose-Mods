@@ -141,3 +141,21 @@ npm run voice:adaptive        # --idle 900 --poll 60 по умолчанию
 Останавливается флагом `tmp/voice_adaptive.stop` (или убить процесс). Пульт
 показывает такой прогон как RUNNING: voice_batch без флага движка — уже VOX
 (CosyVoice3-контура больше нет).
+
+## Пауза на несколько дней (ПК нужен другому агенту)
+
+Полная остановка — БЕЗ автозапуска:
+
+```bash
+echo stop > tmp/voice_adaptive.stop            # сторож выйдет и не поднимет батч
+# автокоммит — по PID (НЕ убивать все node: рядом работают другие агенты):
+powershell -NoProfile -Command "Get-CimInstance Win32_Process |
+  Where-Object { $_.CommandLine -match 'voice_autocommit' } |
+  ForEach-Object { Stop-Process -Id $_.ProcessId -Force }"
+```
+
+Проверить, что тихо: `voice_ctl status` → EN STOPPED, `nvidia-smi` → ~1–2 ГБ.
+Сторож с `--start-at HH:MM` сам поднимется в назначенное время (тихий режим),
+но на несколько дней его лучше просто не запускать.
+
+Чек-лист возобновления и состояние прогресса — `tasks/2026-11-22-voice-resume.md`.
