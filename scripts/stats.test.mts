@@ -1,7 +1,8 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
 
-import { packTagFrom, sameStats, type Stats } from "./stats.mts";
+import type { Stats } from "../config/stats.types.ts";
+import { packTagFrom, renderStats } from "./stats.mts";
 
 const base: Stats = {
   updatedAt: "2026-11-22T00:00:00.000Z",
@@ -18,10 +19,12 @@ test("packTagFrom: вытаскивает тег из конфига сайта"
   assert.equal(packTagFrom("no tag here"), "");
 });
 
-test("sameStats: дата не считается изменением, числа — считаются", () => {
-  const later = { ...base, updatedAt: "2026-12-01T00:00:00.000Z" };
-  assert.equal(sameStats(base, later), true);
-  const changed = structuredClone(base);
-  changed.perLang.en!.voice.done = 4;
-  assert.equal(sameStats(base, changed), false);
+test("renderStats: валидный TS-модуль с типом и данными", () => {
+  const text = renderStats(base);
+  assert.match(text, /import type \{ Stats \} from "\.\/stats\.types\.ts";/);
+  assert.match(text, /export const STATS = \{/);
+  assert.match(text, /as const satisfies Stats;/);
+  assert.match(text, /"en": /);
+  // Дата попадает в снимок (её видно на сайте как «снимок от …»).
+  assert.match(text, /"updatedAt": "2026-11-22T00:00:00\.000Z"/);
 });

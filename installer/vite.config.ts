@@ -16,5 +16,11 @@ export default defineConfig({
   },
   // Tauri: фиксированный порт для dev, чтобы открывалось ровно то окно.
   clearScreen: false,
-  server: { port: 1420, strictPort: true, host: false },
+  server: {
+    port: 1420,
+    strictPort: true,
+    host: false,
+    // Общий снимок чисел лежит выше корня проекта: разрешаем чтение.
+    fs: { allow: [".."] },
+  },
 });

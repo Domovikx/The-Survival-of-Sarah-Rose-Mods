@@ -30,6 +30,8 @@ export const styles = stylex.create({
     margin: "0 auto",
   },
   summary: { display: "flex", alignItems: "center", gap: 8, minWidth: 0, color: "var(--accent-fg)" },
+  /** ФИНАЛ: галочка и текст одного цвета — зелёный «готово». */
+  summaryReady: { color: "var(--ok)" },
   status: {
     margin: 0,
     fontSize: 13,
@@ -38,6 +40,7 @@ export const styles = stylex.create({
     overflow: "hidden",
     textOverflow: "ellipsis",
   },
+  statusReady: { color: "var(--ok)", fontWeight: 600 },
   track: {
     width: 240,
     height: 6,

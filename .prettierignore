@@ -19,3 +19,4 @@ installer/src-tauri/gen/
 installer/package-lock.json
 # генерируемый артефакт (см. npm run gen:langs)
 installer/src/core/langs.generated.ts
+config/stats.generated.ts

@@ -59,3 +59,10 @@ export const AlertIcon = ({ size = 16 }: IconProps) => (
     <path d="M12 9v4M12 16.5v.5" />
   </svg>
 );
+
+/** Запустить игру: треугольник «play» (финальное состояние установщика). */
+export const PlayIcon = ({ size = 16 }: IconProps) => (
+  <svg {...base(size)}>
+    <path d="M8 5.5v13l11-6.5z" />
+  </svg>
+);

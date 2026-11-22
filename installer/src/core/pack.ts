@@ -26,14 +26,19 @@ export type Lang = (typeof VOICE_LANGS)[number];
 
 export const voiceAsset = (lang: string): string => `TSSR-AI-Voice-Pack-voice-${lang}.7z`;
 
+/** Steam App ID игры: по нему ищется установка и запускается игра. */
+export const STEAM_APP_ID = "2166470";
+
 /** Куда ведут «спасибо»-ссылки инсталлятора (внешний браузер через opener). */
 export const LINKS = {
   github: `https://github.com/${REPO}`,
   issues: `https://github.com/${REPO}/issues`,
   /** Steam-гайд: лайки/комментарии — основной канал спроса на озвучку. */
   steamGuide: "https://steamcommunity.com/sharedfiles/filedetails/?id=3733106761",
-  /** Страница игры в Steam (App ID 2166470) — «официальная версия» в шапке. */
-  steamStore: "https://store.steampowered.com/app/2166470/",
+  /** Страница игры в Steam — «официальная версия» в шапке. */
+  steamStore: `https://store.steampowered.com/app/${STEAM_APP_ID}/`,
+  /** Запуск игры из финального состояния («всё установлено — можно играть»). */
+  runGame: `steam://rungameid/${STEAM_APP_ID}`,
 } as const;
 
 /**

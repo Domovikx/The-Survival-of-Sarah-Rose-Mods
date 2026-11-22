@@ -37,6 +37,15 @@ export const App = () => {
 
   const sizeOf = useCallback((langCode: string) => inst.assetSize(voiceAsset(langCode)), [inst]);
 
+  // ФИНАЛ: вместо счётчика «основной пак · языков: 11» — что делать дальше.
+  const statusText = inst.ready
+    ? inst.state?.langs.length
+      ? t("Everything is installed — you can play")
+      : t("Main pack is installed — pick a voice language")
+    : inst.status
+      ? t(inst.status.key, inst.status.params)
+      : "";
+
   return (
     <div className={cx(styles.app)} data-testid="App">
       <Header lang={lang} onChange={changeLang} />
@@ -60,11 +69,12 @@ export const App = () => {
       <Footer />
 
       <ActionBar
-        status={inst.status ? t(inst.status.key, inst.status.params) : ""}
+        status={statusText}
         progress={inst.progress}
         active={inst.active}
         job={inst.job}
         removeAll={inst.removeAll}
+        ready={inst.ready}
         busy={inst.busy}
         changes={inst.changes}
         coreOnly={inst.changes > 0 && !inst.state?.core && !inst.diff.install.length && !inst.diff.remove.length}

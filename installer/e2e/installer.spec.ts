@@ -38,10 +38,14 @@ const uninstallAll = async (page: Page): Promise<void> => {
   await expect(page.getByTestId("Components--core-state")).toHaveAttribute("data-state", "absent");
 };
 
-/** Дождаться конца работы: спиннер исчез, кнопка снова «Применить изменения». */
+/**
+ * Дождаться конца работы: спиннер исчез, панель в финале — живая кнопка
+ * «Играть» вместо неактивной «Применить изменения» (замечание 2026-11-21).
+ */
 const settle = async (page: Page): Promise<void> => {
   await expect(page.getByTestId("Actions--spinner")).toHaveCount(0, { timeout: 30_000 });
-  await expect(page.getByTestId("Actions--apply")).toHaveText("Применить изменения");
+  await expect(page.getByTestId("Actions--play")).toHaveText("Играть");
+  await expect(page.getByTestId("Actions--status")).toHaveAttribute("data-state", "ready");
 };
 
 test.describe("установщик: исходное состояние", () => {
@@ -56,8 +60,11 @@ test.describe("установщик: исходное состояние", () =>
       await expect(page.getByTestId(`Language--${lang}`)).toBeVisible();
       await expect(page.getByTestId(`Language--${lang}-meta`)).toContainText("аудиофайлов");
     }
-    // Ничего не меняли — «Применить» недоступно.
-    await expect(page.getByTestId("Actions--apply")).toBeDisabled();
+    // Ничего не меняли — это ФИНАЛ: строка «всё установлено» и кнопка «Играть»,
+    // а не неактивная «Применить изменения» (замечание владельца 2026-11-21).
+    await expect(page.getByTestId("Actions--status")).toHaveText("Всё установлено — можно играть");
+    await expect(page.getByTestId("Actions--play")).toBeEnabled();
+    await expect(page.getByTestId("Actions--apply")).toHaveCount(0);
   });
 });
 
@@ -122,13 +129,32 @@ test.describe("установщик: адаптив", () => {
     expect(doc.sw).toBe(doc.cw);
 
     // Панель действий целиком в окне: кнопки не уезжают за край.
-    const apply = await page.getByTestId("Actions--apply").boundingBox();
+    const apply = await page.getByTestId("Actions--play").boundingBox();
     expect(apply).not.toBeNull();
     expect((apply?.x ?? 0) + (apply?.width ?? 0)).toBeLessThanOrEqual(820);
   });
 });
 
 test.describe("установщик: положительные сценарии", () => {
+  test("финал: «всё установлено — можно играть», кнопка запускает игру через Steam", async ({ page }) => {
+    const status = page.getByTestId("Actions--status");
+    await expect(status).toHaveText("Всё установлено — можно играть");
+    await expect(status).toHaveAttribute("data-state", "ready");
+
+    // Кнопка ведёт именно в игру (Steam App ID 2166470), а не в магазин.
+    await page.evaluate(() => {
+      const w = window as unknown as { __opened: string[]; open: (url?: string | URL) => Window | null };
+      w.__opened = [];
+      w.open = (url?: string | URL) => {
+        w.__opened.push(String(url));
+        return null;
+      };
+    });
+    await page.getByTestId("Actions--play").click();
+    const opened = await page.evaluate(() => (window as unknown as { __opened: string[] }).__opened);
+    expect(opened).toEqual(["steam://rungameid/2166470"]);
+  });
+
   test("полный цикл: пусто → ядро + 2 языка → удаление одного языка", async ({ page }) => {
     await uninstallAll(page);
 
@@ -182,11 +208,12 @@ test.describe("установщик: положительные сценарии
     // Кнопка говорит, что произойдёт, а не абстрактное «Применить изменения».
     await expect(page.getByTestId("Actions--apply")).toHaveText("Удалить всё");
 
-    // Повторный клик отменяет намерение — всё снова стоит.
+    // Повторный клик отменяет намерение — всё снова стоит, панель в финале.
     await core.click();
     await expect(core).toHaveAttribute("data-state", "installed");
     await expect(page.getByTestId("Language--en-meta")).toContainText("аудиофайлов");
-    await expect(page.getByTestId("Actions--apply")).toBeDisabled();
+    await expect(page.getByTestId("Actions--play")).toBeEnabled();
+    await expect(page.getByTestId("Actions--apply")).toHaveCount(0);
 
     // Пометка → «Применить» → подтверждение → пусто.
     await core.click();
@@ -200,6 +227,8 @@ test.describe("установщик: положительные сценарии
     await core.click();
     await settle(page);
     await expect(core).toHaveAttribute("data-state", "installed");
+    // Озвучек нет — финал честно предлагает выбрать язык, а не «можно играть».
+    await expect(page.getByTestId("Actions--status")).toHaveText("Основной пак установлен — выберите язык озвучки");
   });
 
   test("удаление мода из полного состояния возвращает пустой экран", async ({ page }) => {
@@ -309,13 +338,13 @@ test.describe("установщик: положительные сценарии
   });
 
   test("смена языка переводит и статус внизу (не застывает на прошлом)", async ({ page }) => {
-    await expect(page.getByTestId("Actions--status")).toContainText("Основной пак");
+    await expect(page.getByTestId("Actions--status")).toContainText("Всё установлено");
 
     await page.getByTestId("LangSwitcher").click();
     await page.getByTestId("LangSwitcher--de").click();
 
-    await expect(page.getByTestId("Actions--status")).toContainText("Hauptpaket");
-    await expect(page.getByTestId("Actions--status")).not.toContainText("Основной пак");
+    await expect(page.getByTestId("Actions--status")).toContainText("Alles installiert");
+    await expect(page.getByTestId("Actions--status")).not.toContainText("Всё установлено");
     await expect(page.getByTestId("Components")).toContainText("Was installieren");
   });
 
@@ -324,7 +353,7 @@ test.describe("установщик: положительные сценарии
     await page.getByTestId("LangSwitcher").click();
     await page.getByTestId("LangSwitcher--en").click();
     await expect(page.getByTestId("Game")).toContainText("Game");
-    await expect(page.getByTestId("Actions--apply")).toHaveText("Apply changes");
+    await expect(page.getByTestId("Actions--play")).toHaveText("Play");
   });
 });
 
@@ -354,17 +383,20 @@ test.describe("установщик: отрицательные сценарии
     await expect(page.getByTestId("Actions--uninstall")).toBeEnabled();
   });
 
-  test("без изменений «Применить» недоступно, тумблеры не трогают установку", async ({ page }) => {
-    const apply = page.getByTestId("Actions--apply");
-    await expect(apply).toBeDisabled();
+  test("без изменений «Применить» нет: панель в финале, кнопки не «висят» мёртвыми", async ({ page }) => {
+    await expect(page.getByTestId("Actions--apply")).toHaveCount(0);
+    await expect(page.getByTestId("Actions--play")).toBeEnabled();
 
-    // Сняли и вернули — изменений нет, кнопка снова недоступна.
+    // Сняли язык — появилась работа, «Применить» на месте и активно.
     await page.getByTestId("Language--en").click();
     await expect(page.getByTestId("Language--en-meta")).toHaveText("будет удалено");
-    await expect(apply).toBeEnabled();
+    await expect(page.getByTestId("Actions--apply")).toBeEnabled();
+
+    // Вернули — изменений нет, снова финал.
     await page.getByTestId("Language--en").click();
     await expect(page.getByTestId("Language--en-meta")).toContainText("аудиофайлов");
-    await expect(apply).toBeDisabled();
+    await expect(page.getByTestId("Actions--apply")).toHaveCount(0);
+    await expect(page.getByTestId("Actions--play")).toBeEnabled();
   });
 
   test("во время установки тумблеры заблокированы", async ({ page }) => {

@@ -17,8 +17,13 @@
 
 ## Производные артефакты (не править руками)
 
-- `config/stats.generated.json` — общий снимок (языки, перевод, озвучка, тег);
-  обновление: `npm run stats:update`, проверка свежести: `npm run stats:check`.
+- `config/stats.generated.ts` — общий снимок (языки, перевод, озвучка, тег) как
+  **TS-модуль**: потребители пишут `import { STATS } from "…/stats.generated"`
+  и берут `STATS.perLang.en.voice.done` — без JSON и парсинга. Обновление:
+  `npm run stats:update`, проверка свежести: `npm run stats:check` (встроена в
+  `site predeploy`); типы — `config/stats.types.ts`.
+- мок установщика (`installer/src/mock.ts`) берёт счётчики языков из `STATS`,
+  поэтому превью на `localhost:5175` больше не живёт «своими» числами.
 - `site/src/shared/config/voice-progress.generated.ts` — снимок для лендинга:
   `node scripts/voice_progress.mts`.
 - `catalog/progress.json` в собранном паке — цифры «текст/озвучка» для меню

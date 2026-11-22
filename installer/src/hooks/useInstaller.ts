@@ -66,6 +66,12 @@ export const useInstaller = () => {
   const diff = useMemo(() => diffLangs(VOICE_LANGS, effective, installed), [effective, installed]);
   const changes =
     diff.install.length + diff.remove.length + (state && !state.core ? 1 : 0) + (state?.core && removeAll ? 1 : 0);
+  /**
+   * ФИНАЛ: мод стоит и применять нечего. Отдельный флаг, потому что «кнопка
+   * неактивна» — не ответ пользователю: внизу должна быть строка «всё
+   * установлено — можно играть» и живая кнопка «Играть» (2026-11-21).
+   */
+  const ready = Boolean(state?.core) && changes === 0 && !busy;
 
   const assetSize = useCallback(
     (asset: string): string => {
@@ -335,6 +341,7 @@ export const useInstaller = () => {
     detected,
     diff,
     changes,
+    ready,
     assetSize,
     detect,
     apply,

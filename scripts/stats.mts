@@ -4,13 +4,13 @@
  * Зачем. Числа («11 языков», «X из Y строк переведено/озвучено») живут в
  * нескольких местах: лендинг, установщик, меню мода, README, Steam-гайд. Если
  * каждый считает сам — они расходятся. Источник один: файлы на диске (`po/`,
- * `audio/`, `config/language-priority.json`); производные места либо берут
- * готовый артефакт, либо проверяются `--check`.
+ * `audio/`, `config/language-priority.json`); остальные места импортируют
+ * готовый TS-модуль (`STATS`) — без JSON и парсинга.
  *
  * Запуск (из корня репы):
- *   npm run stats:update          # напечатать + обновить config/stats.generated.json
+ *   npm run stats:update          # обновить config/stats.generated.ts
+ *   npm run stats:check           # пересчитать и сравнить (CI/деплой)
  *   node scripts/stats.mts --no-write   # только напечатать
- *   npm run stats:check           # пересчитать и сравнить с файлом (CI/деплой)
  *
  * Не автоматизируется: числа внутри прозаических переводов сайта («11 языков»
  * в 11 локалях). Их список и порядок обновления — `docs/stats.md`.
@@ -19,35 +19,20 @@ import { readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
+import type { LangStats, Stats } from "../config/stats.types.ts";
 import { parsePo } from "../.opencode/skills/renpy-po/po_core.mts";
 import { countDone, plan as voicePlan } from "../patches/ai-voice-pack/tools/generate/scripts/voice_status.mts";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
-const OUT = join(ROOT, "config", "stats.generated.json");
+const OUT = join(ROOT, "config", "stats.generated.ts");
 const PO_DIR = join(ROOT, "patches", "ai-voice-pack", "po");
 const PRIORITY = join(ROOT, "config", "language-priority.json");
 const SITE_PACK = join(ROOT, "site", "src", "shared", "config", "pack.ts");
 
-export type LangStats = {
-  /** Перевод: сколько строк заполнено и сколько всего. */
-  po: { filled: number; total: number };
-  /** Озвучка: сколько реплик записано и сколько в плане. */
-  voice: { done: number; plan: number };
-};
-
-export type Stats = {
-  updatedAt: string;
-  /** Тег релиза, на который ссылается сайт (`PACK.tag`). */
-  packTag: string;
-  /** Порядок языков — из config/language-priority.json. */
-  langs: string[];
-  perLang: Record<string, LangStats>;
-};
+const readJson = <T,>(path: string): T => JSON.parse(readFileSync(path, "utf-8")) as T;
 
 /** Тег пака из конфига сайта: единственное место, где он задан строкой. */
 export const packTagFrom = (source: string): string => /tag:\s*"([^"]+)"/.exec(source)?.[1] ?? "";
-
-const readJson = <T,>(path: string): T => JSON.parse(readFileSync(path, "utf-8")) as T;
 
 /** Снимок по файлам на диске (единственный источник чисел). */
 export const computeStats = (now = new Date()): Stats => {
@@ -67,10 +52,7 @@ export const computeStats = (now = new Date()): Stats => {
     const planMap = voicePlan(lang);
     perLang[lang] = {
       po,
-      voice: {
-        done: countDone(lang).total,
-        plan: [...planMap.values()].reduce((sum, n) => sum + n, 0),
-      },
+      voice: { done: countDone(lang).total, plan: [...planMap.values()].reduce((sum, n) => sum + n, 0) },
     };
   }
 
@@ -82,26 +64,50 @@ export const computeStats = (now = new Date()): Stats => {
   };
 };
 
-/** Снимки равны, если совпадают без даты (дата меняется каждый запуск). */
-export const sameStats = (a: Stats, b: Stats): boolean =>
-  JSON.stringify({ ...a, updatedAt: "" }) === JSON.stringify({ ...b, updatedAt: "" });
+/**
+ * Рендер снимка в TS-модуль: потребители просто делают
+ * `import { STATS } from ".../stats.generated"` — без JSON.parse.
+ */
+export const renderStats = (stats: Stats): string => {
+  const body = JSON.stringify(stats, null, 2)
+    .split("\n")
+    .map((line) => `  ${line}`)
+    .join("\n")
+    .trimStart();
+  return `/**
+ * СГЕНЕРИРОВАНО — руками не править.
+ *
+ * Источник: \`scripts/stats.mts\` (языки — config/language-priority.json,
+ * перевод — po/<lang>.po, озвучка — audio/ + план POT, тег — site/.../pack.ts).
+ * Перегенерация: \`npm run stats:update\`. Проверка: \`npm run stats:check\`.
+ */
+import type { Stats } from "./stats.types.ts";
+
+export const STATS = ${body} as const satisfies Stats;
+
+export type { LangStats, Stats } from "./stats.types.ts";
+`;
+};
+
+const withoutDate = (text: string): string => text.replace(/^\s*"updatedAt": .*$/m, "");
 
 const main = (): number => {
   const args = new Set(process.argv.slice(2));
   const fresh = computeStats();
 
   if (args.has("--check")) {
-    const old = readJson<Stats>(OUT);
-    if (sameStats(old, fresh)) {
+    let got = "";
+    try {
+      got = readFileSync(OUT, "utf-8");
+    } catch {
+      console.error("stats: файла снимка нет — `npm run stats:update`");
+      return 1;
+    }
+    if (withoutDate(renderStats(fresh)) === withoutDate(got)) {
       console.log(`stats: ок (${fresh.packTag}, языков ${fresh.langs.length})`);
       return 0;
     }
     console.error("stats: снимок УСТАРЕЛ — `npm run stats:update`");
-    for (const lang of fresh.langs) {
-      const before = JSON.stringify(old.perLang[lang]);
-      const after = JSON.stringify(fresh.perLang[lang]);
-      if (before !== after) console.error(`  ${lang}: ${before} → ${after}`);
-    }
     return 1;
   }
 
@@ -112,7 +118,7 @@ const main = (): number => {
   console.log(`озвучка: ${sum((s) => s.voice.done)} реплик (сумма по языкам)`);
 
   if (!args.has("--no-write")) {
-    writeFileSync(OUT, `${JSON.stringify(fresh, null, 2)}\n`, "utf-8");
+    writeFileSync(OUT, renderStats(fresh), "utf-8");
     console.log(`снимок: ${OUT}`);
   }
   return 0;

@@ -8,21 +8,18 @@
  * Включается сам, если приложение открыто НЕ в Tauri; отключается `?mock=0`.
  */
 import type { InstallState } from "@/core/types";
+import { STATS } from "../../config/stats.generated.ts";
 
 const DEMO_GAME = "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Survival of Sarah Rose";
-const LANGS: Record<string, number> = {
-  en: 1195,
-  zh: 1284,
-  ru: 1397,
-  es: 1284,
-  pt: 1284,
-  de: 1284,
-  ja: 1173,
-  fr: 1171,
-  pl: 1171,
-  ko: 1171,
-  it: 1171,
-};
+/**
+ * Сколько файлов «стоит» у языка в демо-превью. НЕ хардкод: берём общий снимок
+ * чисел (`config/stats.generated.ts`, генерит `npm run stats:update`), поэтому
+ * карточки в моке всегда показывают актуальный корпус (замечание 2026-11-22:
+ * «EN старые числа» — мок жил своей жизнью).
+ */
+const LANGS: Record<string, number> = Object.fromEntries(
+  STATS.langs.map((lang) => [lang, STATS.perLang[lang]?.voice.done ?? 0]),
+);
 
 /** Слушатели событий Tauri: id → функция (нужно для `listen`). */
 type Handler = (event: { event: string; id: number; payload: unknown }) => void;
