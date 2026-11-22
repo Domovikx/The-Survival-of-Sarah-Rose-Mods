@@ -1,6 +1,6 @@
 /**
- * e2e-прогон реального шима cosyworker.py на CUDA: ping -> gen (демо-фраза) -> quit.
- * Запуск: C:/tools/cosyvoice3/.venv — НЕ нужен, спавнит python сам.
+ * e2e-прогон реального шима voxcpmworker.py на CUDA: ping -> gen (демо-фраза) -> quit.
+ * Запуск: venv C:/tools/voxcpm2 — НЕ нужен, спавнит python сам.
  *   node patches/ai-voice-pack/tools/generate/scripts/voicekit/worker_e2e.mts
  */
 import { mkdtempSync, rmSync } from "node:fs";
@@ -10,8 +10,8 @@ import { fileURLToPath } from "node:url";
 
 import { VoiceWorker } from "./worker.mts";
 
-const PY = "C:/tools/cosyvoice3/.venv/Scripts/python.exe";
-const SHIM = fileURLToPath(new URL("../cosyworker.py", import.meta.url));
+const PY = "C:/tools/voxcpm2/.venv/Scripts/python.exe";
+const SHIM = fileURLToPath(new URL("../voxcpmworker.py", import.meta.url));
 const REF =
   "C:/Users/Domo/workspace/The-Survival-of-Sarah-Rose-Mods/patches/ai-voice-pack/casts/voices/Sarah/Sarah.wav";
 
@@ -21,7 +21,7 @@ const out = join(tmp, "Demo", "e2e__Sarah.wav");
 const w = new VoiceWorker({
   python: PY,
   script: SHIM,
-  args: ["--device", "cuda"],
+  args: [],
   onLog: (l) => console.error("[shim]", l),
 });
 

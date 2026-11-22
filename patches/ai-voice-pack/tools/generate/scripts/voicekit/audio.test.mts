@@ -8,7 +8,7 @@
  * (behavioral: без выходного -ar в tensorToOpus loudnorm ресемплит до 192k
  * и libopus сам берёт 48000 — бага 2026-10-23, редактор владельца не
  * открывал такие файлы). Раньше этот фикс охранял текстовый гард по
- * cosyworker.py, теперь живёт здесь по-настоящему, через ffprobe.
+ * python-шим, теперь живёт здесь по-настоящему, через ffprobe.
  *
  * Запуск: node --test patches/ai-voice-pack/tools/generate/scripts/voicekit/audio.test.mts
  */

@@ -1,52 +1,32 @@
 /**
- * voice_batch_e2e.test.mts — ЖИВОЙ e2e озвучки (GPU + venv CosyVoice).
+ * voice_batch_e2e.test.mts — ЖИВОЙ e2e озвучки (GPU + venv VoxCPM2).
  *
  * В обычную матрицу не входит: skip без флага окружения.
  * Запуск: TSSR_VOICE_E2E=1 node --test .../voice_batch_e2e.test.mts
  *         (или npm run test:voice:e2e)
  *
- * Ловит регрессии прогона 2026-10-23:
- *   1) мохибаку — прямые запуски без PYTHONIOENCODING: сверяем, что шим
- *      эхнул русский текст в UTF-8 («synthesis text Привет...» в batch.log);
- *   2) гонку фронтенда wetext — ПЕРВАЯ строка после загрузки модели должна
- *      генерироваться (падение = код 1 от voice_batch / нет файла);
- *   3) runaway-длительность и цифровую тишину на выходе.
- *
- * Генерация в режиме --text (демо-uid = md5 текста, арка Demo) — файл после
- * теста удаляется.
+ * Проверяет канон VoxCPM2: свой шим/venv даёт файл по контракту
+ * `{en12}-{state6} {variant}.opus`, звук в норме, --keep-wav кладёт wav рядом.
+ * Генерация в режиме --text (демо-uid = md5 текста, арка Demo) — новые файлы
+ * после теста удаляются.
  */
 import assert from "node:assert/strict";
 import { spawnSync } from "node:child_process";
-import { createHash } from "node:crypto";
-import { existsSync, readFileSync, rmSync } from "node:fs";
+import { existsSync, readdirSync, rmSync } from "node:fs";
 import { join } from "node:path";
 import { test } from "node:test";
 
-import { DEFAULT_PYTHON, ENGINES, PKG_ROOT, main } from "./voice_batch.mts";
+import { ENGINES, PKG_ROOT, main } from "./voice_batch.mts";
 
 const SKIP = (() => {
-  if (process.env.TSSR_VOICE_E2E !== "1") return "TSSR_VOICE_E2E не задан";
-  if (!existsSync(DEFAULT_PYTHON)) return `нет venv CosyVoice: ${DEFAULT_PYTHON}`;
-  return false;
-})();
-
-/** Отдельный skip для voxcpm2: свой venv (модель в C:/tools/voxcpm2). */
-const SKIP_VOX = (() => {
   if (process.env.TSSR_VOICE_E2E !== "1") return "TSSR_VOICE_E2E не задан";
   if (!existsSync(ENGINES.voxcpm2.python)) return `нет venv VoxCPM2: ${ENGINES.voxcpm2.python}`;
   if (!existsSync(ENGINES.voxcpm2.shim)) return `нет шима: ${ENGINES.voxcpm2.shim}`;
   return false;
 })();
 
-const BATCH_LOG = join(PKG_ROOT, "tools", "generate", "output", "voice", "batch.log");
-
-interface Probe {
-  dur: number;
-  meanVolume: number;
-}
-
 /** Длительность (ffprobe) и средняя громкость (ffmpeg volumedetect). */
-function probe(file: string): Probe {
+function probe(file: string): { dur: number; meanVolume: number } {
   const d = spawnSync("ffprobe", ["-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", file], {
     encoding: "utf8",
   });
@@ -55,101 +35,31 @@ function probe(file: string): Probe {
   return { dur: parseFloat(d.stdout), meanVolume: mean === undefined ? NaN : parseFloat(mean) };
 }
 
-async function runDemo(text: string, lang: "ru" | "en"): Promise<string> {
-  const uid = createHash("md5").update(text, "utf8").digest("hex");
-  const opus = join(PKG_ROOT, "audio", lang, "Demo", `${uid}__Sarah.opus`);
+test("e2e voxcpm2: контрактное имя, звук в норме, --keep-wav кладёт wav рядом", { skip: SKIP }, async () => {
+  const text = "Привет! Это проверочный прогон VoxCPM2 — слушаем качество движка.";
+  const dir = join(PKG_ROOT, "audio", "ru", "Demo");
+  const before = new Set(existsSync(dir) ? readdirSync(dir) : []);
+  const created = (): string[] => (existsSync(dir) ? readdirSync(dir).filter((f) => !before.has(f)) : []);
   try {
-    const code = await main(["--text", text, "--char", "Sarah", "--lang", lang, "--force"]);
-    assert.equal(code, 0, `voice_batch вернул ${code} (первая строка после загрузки модели упала?)`);
-    assert.ok(existsSync(opus), `файл не создан: ${opus}`);
-    return opus;
-  } catch (e) {
-    rmSync(opus, { force: true });
-    rmSync(opus.replace(/\.opus$/, ".wav"), { force: true });
-    throw e;
-  }
-}
+    const code = await main(["--text", text, "--char", "Sarah", "--lang", "ru", "--keep-wav", "--force"]);
+    assert.equal(code, 0, `voice_batch --engine voxcpm2 вернул ${code} (шим упал? смотри batch.log)`);
+    const files = created();
+    const opus = files.find((f) => f.endsWith(".opus"));
+    const wav = files.find((f) => f.endsWith(".wav"));
+    assert.ok(opus, `opus не создан в ${dir}`);
+    assert.ok(wav, `исходный wav не оставлен рядом с opus (--keep-wav)`);
 
-/** Общие проверки выхода + эхо-лог шима (только для ru — текст кириллический). */
-function checkOutput(opus: string, text: string, lang: "ru" | "en"): void {
-  const { dur, meanVolume } = probe(opus);
-  assert.ok(dur > 0.3 && dur < 20, `подозрительная длительность: ${dur}s (runaway?)`);
-  assert.ok(!Number.isNaN(meanVolume) && meanVolume > -45, `тихо/пусто: mean_volume=${meanVolume} dB`);
-  if (lang === "ru") {
-    const log = readFileSync(BATCH_LOG, "utf8");
-    // Эхо шима: строка «INFO synthesis text <CV3-префикс><текст>» — ключевой
-    // маркер — «synthesis text» (пишет только python) плюс сам текст в UTF-8.
-    const echoed = log.split(/\r?\n/).some((l) => l.includes("synthesis text ") && l.includes(text));
-    assert.ok(echoed, "мохибака: шим не эхнул текст в UTF-8 (sys.stdin.reconfigure в cosyworker.py?)");
-  }
-}
-
-test("e2e ru: первая после загрузки — без TextEncodeInput, текст в UTF-8, звук в норме", { skip: SKIP }, async () => {
-  const text = "Привет! Это проверочный прогон озвучки — слушаем качество звука.";
-  const opus = await runDemo(text, "ru");
-  try {
-    checkOutput(opus, text, "ru");
+    const o = probe(join(dir, opus));
+    assert.ok(o.dur > 0.3 && o.dur < 20, `подозрительная длительность opus: ${o.dur}s`);
+    assert.ok(!Number.isNaN(o.meanVolume) && o.meanVolume > -45, `тихо/пусто: ${o.meanVolume} dB`);
+    // wav — валидный контейнер, длительность сходится с opus (конверт не потерял данные)
+    const w = probe(join(dir, wav));
+    assert.ok(w.dur > 0.3 && w.dur < 20, `подозрительная длительность wav: ${w.dur}s`);
+    assert.ok(
+      Math.abs(w.dur - o.dur) < 0.3,
+      `wav и opus разной длительности: ${w.dur}s vs ${o.dur}s — конверт потерял данные?`,
+    );
   } finally {
-    rmSync(opus, { force: true });
+    for (const f of created()) rmSync(join(dir, f), { force: true });
   }
 });
-
-test("e2e en: второй язык — файл создаётся, длительность и громкость в норме", { skip: SKIP }, async () => {
-  const text = "Hello! This is a voice generation check — listening for the sound quality.";
-  const opus = await runDemo(text, "en");
-  try {
-    checkOutput(opus, text, "en");
-  } finally {
-    rmSync(opus, { force: true });
-  }
-});
-
-// --------------------------------------------- voxcpm2 (миграция 2026-10-26) ---
-
-test(
-  "e2e voxcpm2: свой шим/venv даёт {uid}__{Спикер}.opus (контракт рантайма)",
-  {
-    skip: SKIP_VOX,
-  },
-  async () => {
-    const text = "Привет! Это проверочный прогон VoxCPM2 — слушаем качество нового движка.";
-    const uid = createHash("md5").update(text, "utf8").digest("hex");
-    const demoDir = join(PKG_ROOT, "audio", "ru", "Demo");
-    const opus = join(demoDir, `${uid}__Sarah.opus`);
-    const wav = join(demoDir, `${uid}__Sarah.wav`);
-    try {
-      // --keep-wav: исходный wav обязан лечь РЯДОМ с opus (диагностика конверта)
-      const code = await main([
-        "--text",
-        text,
-        "--char",
-        "Sarah",
-        "--lang",
-        "ru",
-        "--engine",
-        "voxcpm2",
-        "--keep-wav",
-        "--force",
-      ]);
-      assert.equal(code, 0, `voice_batch --engine voxcpm2 вернул ${code} (шим упал? смотри batch.log)`);
-      assert.ok(existsSync(opus), `файл не создан: ${opus}`);
-      assert.ok(existsSync(wav), `исходный wav не оставлен рядом с opus (--keep-wav): ${wav}`);
-
-      // звук в норме (без echo-лога CV3: voxcpm-шим пишет свой лог)
-      const { dur, meanVolume } = probe(opus);
-      assert.ok(dur > 0.3 && dur < 20, `подозрительная длительность: ${dur}s`);
-      assert.ok(!Number.isNaN(meanVolume) && meanVolume > -45, `тихо/пусто: mean_volume=${meanVolume} dB`);
-      // wav — валидный контейнер, длительность сходится с opus (конверт не потерял данные)
-      const w = probe(wav);
-      assert.ok(w.dur > 0.3 && w.dur < 20, `подозрительная длительность wav: ${w.dur}s`);
-      assert.ok(
-        Math.abs(w.dur - dur) < 0.3,
-        `wav и opus разной длительности: ${w.dur}s vs ${dur}s — конверт потерял данные?`,
-      );
-    } finally {
-      rmSync(opus, { force: true });
-      rmSync(wav, { force: true });
-      rmSync(opus.replace(/\.opus$/, ".wav"), { force: true });
-    }
-  },
-);

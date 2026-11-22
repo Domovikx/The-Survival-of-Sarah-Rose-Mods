@@ -37,9 +37,9 @@ staging → swap с ретраями и откатом.
 - `tools/build/` — сборка дистрибутива (`build_pack.mts` + `archive.mts`/`7z`);
 - `tools/generate/scripts/` — весь пайплайн:
   - `voicekit/` — ядро: `paths.py` (ЕДИНСТВЕННОЕ место с путями),
-    `config.py`, `tts_env.py`, `model_dir.py`, `cv3.py`;
-  - `voice_ctl.mts` + `voice-*.cmd` + `vox-*.cmd` — пульт очередями (статус/старт/пауза/остановка/soft-stop, cosy+vox); двойной клик.
-  - `voice_batch.mts`, `voice_queue.sh` — генерация (resumable, низкий
+    `config.py`, `tts_env.py`;
+  - `voice_ctl.mts` + `vox-*.cmd` — пульт очередями (статус/старт/пауза/остановка/soft-stop, контур VOX/VoxCPM2); двойной клик.
+  - `voice_batch.mts` — генерация (VoxCPM2, resumable, низкий
     приоритет, старт только через пульт);
   - `voice_status/sync/manage/...` — статус, каталог, отчёты;
   - `shots_capture.ps1` + `zz_capture.rpy` — съёмка UI для лендинга;

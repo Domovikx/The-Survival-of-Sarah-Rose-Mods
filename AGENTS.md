@@ -270,11 +270,13 @@
 
 ## Архитектура озвучки
 
-> **Движок генерации — VoxCPM2** (полная миграция с CosyVoice3, 2026-11):
-> запуск `voice_batch.mts --engine voxcpm2 --lang <l> [--demo]`, общий лог
-> `output/voice/batch.log`, статус/ETA — пульт `voice_ctl.mts status`.
-> Всё ниже про `cosyworker.py`/CosyVoice3/очереди `voice_queue.sh` — легаси
-> старого прогона RU/EN (код жив, новых прогонов на нём нет).
+> **Движок генерации — VoxCPM2 (единственный, миграция с CosyVoice3 завершена
+> 2026-11).** Запуск `voice_batch.mts --engine voxcpm2 --lang <l> [--demo]`
+> (флаг `--engine` принимается только со значением `voxcpm2` — других движков
+> нет), общий лог `output/voice/batch.log`, статус/ETA/пауза/стоп — пульт
+> `voice_ctl.mts` (контур один — VOX, 11 языков). Легаси-ветка CosyVoice3
+> (`cosyworker.py`, `voice_queue.sh`, cosy-очереди, обёртки `voice-*.cmd`)
+> удалена 2026-11-21 — команды запуска на ней больше не существуют.
 
 ### Ключ: en12 = base32(md5(old))
 
@@ -380,8 +382,8 @@ casts/voices/
     {Имя}.wav                 # АКТИВНЫЙ реф в корне каста (озвучен = есть реф);
                               #   варианты A/B рядом: {Имя}_{v}.wav
 tools/generate/scripts/
-  voicekit/                    # ЯДРО: python-шимы (config, cv3, model_dir, paths,
-                               #   tts_env) + TS-контур генерации:
+  voicekit/                    # ЯДРО: python-шимы (config, paths, tts_env)
+                               #   + TS-контур генерации:
                                #   worker.mts     # клиент шима: протокол v2 (PCM),
                                #                 #   ретрай TextEncodeInput, кодирование
                                #   audio.mts      # f32le pipe -> loudnorm -> libopus -ar sr
@@ -413,12 +415,12 @@ tools/generate/scripts/
                                #   OpenAI-compatible LLM — LM Studio/ollama)
   voice_batch.mts              # БАТЧ-ОРКЕСТРАТОР: каталог POT -> audio/{lang}/{arc}/
                                #   {en12}-{state6} {variant}.opus (эмоция из POT;
-                               #   --ref/--uid/--force/--emotion/--device cuda; wav НЕ
+                               #   --ref/--uid/--force/--emotion; wav НЕ
                                #   пишется: PCM из шима -> pipe f32le -> ffmpeg
                                #   loudnorm+libopus (TS, voicekit/audio.mts);
-                               #   ИНФЕРЕНС шеллит в python cosyworker.py)
-  cosyworker.py                # ИНФЕРЕНС CosyVoice — ЕДИНСТВЕННЫЙ python генерации
-                               #   (венв C:/tools/cosyvoice3): модель один раз на
+                               #   ИНФЕРЕНС шеллит в python voxcpmworker.py)
+  voxcpmworker.py              # ИНФЕРЕНС VoxCPM2 — ЕДИНСТВЕННЫЙ python генерации
+                               #   (венв C:/tools/voxcpm2): модель один раз на
                                #   процесс; протокол v2 — отдаёт СЫРОЙ PCM
                                #   (pcm_b64 + sr), НЕ пишет файлов (opus/wav
                                #   на TS); torch в node невозможен
@@ -435,12 +437,6 @@ tools/generate/scripts/
                                #   POT-арку), --verify (сверка с сырьём game/:
                                #   POT-дрейф + STALE жив/мёртв), --dry (план без
                                #   правок ФС); отчёт tmp/role_audit.json
-  voice_queue.sh               # ОЧЕРЕДЬ генерации: bash tools/generate/scripts/voice_queue.sh {ru|en}
-                               #   (все арки, resumable, НИЗКИЙ приоритет
-                               #   BelowNormal + OMP_NUM_THREADS=6 — не мешает
-                               #   интерактиву; лог output/voice/gen_all_{lang}.log)
-                               #   СТАРТ ТОЛЬКО ЧЕРЕЗ ПУЛЬТ (voice_ctl/voice-start.cmd),
-                               #   голый запуск запрещён (теряется приоритет/детач)
   vox_queue.mts                # ОТКЛЮЧЕН 2026-11-20: звал voxcpm_bench, а тот писал в
                                #   audio/<lang>/<arc>/ имена бенча `{uid}__{voice}__Vox_cfg...`,
                                #   которых движок НЕ находит (5 ч прогона EN = 1 851
@@ -449,12 +445,12 @@ tools/generate/scripts/
                                #   Канон полной озвучки: voice_ctl.mts vox-start <lang>
                                #   = voice_batch.mts --engine voxcpm2 --lang <lang>
   voice_ctl.mts                # ПУЛЬТ очередями (Windows, node, только stdlib; порт
-                               #   voice_ctl.py 2026-10-30): status/start/stop/soft-stop/
-                               #   pause/resume/watch/logs [ru|en|all] + vox-* (11 языков)
-                               #   (vox-start = voice_batch --engine voxcpm2; процессы ищет по
-                               #   cmdline voice_batch/voice_queue.sh и движку; пауза = NtSuspendProcess,
-                               #   метка — output/voice/ctl_paused[_vox]_{lang}.json)
-                               #   Двойной клик: voice-*.cmd и vox-*.cmd
+                               #   voice_ctl.py 2026-10-30): один контур VOX (11 языков) —
+                               #   status/start/stop/soft-stop/pause/resume/watch/logs;
+                               #   vox-* — алиасы (vox-start = voice_batch --engine voxcpm2;
+                               #   процессы ищет по cmdline voice_batch/voxcpm_bench)
+                               #   пауза = NtSuspendProcess, метка — output/voice/ctl_paused_vox_{lang}.json
+                               #   Двойной клик: voice-status.cmd / voice-watch.cmd и vox-*.cmd
 ```
 
 ### Ребут ПК: порядок запуска (двойной клик, без админа)
@@ -466,13 +462,13 @@ tools/generate/scripts/
    (сервер + qwen3.5-9b на GPU); контроль: `lms server status`.
    Освободить VRAM под озвучку —
    `tools/generate/scripts/stop-lmstudio.cmd`
-2. `tools/generate/scripts/voice-start.cmd` — обе очереди озвучки (resumable, низкий приоритет)
-3. `tools/generate/scripts/vox-start.cmd` — Vox-очередь 11 языков (VoxCPM,
+2. `tools/generate/scripts/vox-start.cmd` — Vox-очередь 11 языков (VoxCPM2,
    resumable, низкий приоритет; при необходимости — на GPU свободной от LM Studio)
 
 Контроль: `tools/generate/scripts/voice-status.cmd` (сводка), `tools/generate/scripts/voice-watch.cmd` (живой
-мониторинг), пауза — `tools/generate/scripts/voice-pause.cmd` (снять — `voice-resume.cmd`),
-остановка — `tools/generate/scripts/voice-stop.cmd` (vox — `vox-*.cmd`). Агентам: статус смотреть пультом
+мониторинг), пауза — `tools/generate/scripts/vox-pause.cmd` (снять — `vox-resume.cmd`),
+остановка — `tools/generate/scripts/vox-stop.cmd` (те же команды без префикса зовёт
+`voice_ctl.mts`). Агентам: статус смотреть пультом
 (`node tools/generate/scripts/voice_ctl.mts status`), не ручным подсчётом файлов.
 
 ## Миграция python → TypeScript (приказ владельца 2026-10-23)
@@ -495,14 +491,14 @@ tools/generate/scripts/
 
 ### Граница (шаг «cosyworker → TS», 2026-10-23)
 
-| Слой                                                   | Язык   | Файлы                                                                                                                                                                                        |
-| ------------------------------------------------------ | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Оркестрация батча: каталог, фильтры, эмоции, логи, ETA | TS     | `voice_batch.mts`                                                                                                                                                                            |
-| Клиент шима: протокол v2, ffmpeg-цепочка               | TS     | `voicekit/worker.mts`, `voicekit/audio.mts`                                                                                                                                                  |
-| Инференс (torch/ASR/pickle — физически python)         | python | `voxcpmworker.py` (ОСНОВНОЙ, VoxCPM2), `voice_design.py` (Qwen3-TTS), `asr_refs.py` (faster-whisper), `read_persistent.py` (pickle Ren'Py)                                                   |
-| Рефы/голоса/статус/разметка/скрины/нелюдские голоса    | TS     | `add_candidate`, `voice_manage`, `voice_status`, `emotion_tag`, `shots_for_site.mts`, `beastify.mts` и пр.                                                                                   |
-| Сборка дистрибутива                                    | TS     | `tools/build/build_pack.mts` (порт 2026-11-12; `.py` = легаси)                                                                                                                               |
-| CLI-легаси (на вымирание)                              | python | `cosyworker.py` (CosyVoice3 — легаси после миграции на VoxCPM2), `beastify.py`/`shots_for_site.py` (портированы), `thermal_guard.py`, `voice_push_chunked.py`, `voicekit/*` (шимы инференса) |
+| Слой                                                   | Язык   | Файлы                                                                                                                                           |
+| ------------------------------------------------------ | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| Оркестрация батча: каталог, фильтры, эмоции, логи, ETA | TS     | `voice_batch.mts`                                                                                                                               |
+| Клиент шима: протокол v2, ffmpeg-цепочка               | TS     | `voicekit/worker.mts`, `voicekit/audio.mts`                                                                                                     |
+| Инференс (torch/ASR/pickle — физически python)         | python | `voxcpmworker.py` (ОСНОВНОЙ, VoxCPM2), `voice_design.py` (Qwen3-TTS), `asr_refs.py` (faster-whisper), `read_persistent.py` (pickle Ren'Py)      |
+| Рефы/голоса/статус/разметка/скрины/нелюдские голоса    | TS     | `add_candidate`, `voice_manage`, `voice_status`, `emotion_tag`, `shots_for_site.mts`, `beastify.mts` и пр.                                      |
+| Сборка дистрибутива                                    | TS     | `tools/build/build_pack.mts` (порт 2026-11-12; `.py` = легаси)                                                                                  |
+| CLI-легаси (на вымирание)                              | python | `beastify.py`/`shots_for_site.py` (портированы), `thermal_guard.py`, `voice_push_chunked.py` (CosyVoice3-шим `cosyworker.py` удалён 2026-11-21) |
 
 Протокол v2 (2026-10-23): шим отдаёт СЫРОЙ PCM (`pcm_b64` = float32 LE mono,
 плюс поле `sr`), файлов не пишет. Дальше всё на TS: ретрай холодного фронтенда
@@ -521,8 +517,8 @@ libopus 24k с ОБЯЗАТЕЛЬНЫМ выходным `-ar sr` → `.part` �
   перенос алгоритма = порт + тест-паритет (пример: `beastify.test.mts`,
   `build_pack.test.mts`).
 - Внешний код не импортируется (см. «Инкапсуляция тулов»).
-- Гарды: `voice_batch.test.mts` (блок «миграция python → TS», UTF-8,
-  OpusHead-текстовый) и `voicekit/audio.test.mts` (behavioral: OpusHead
+- Гарды: `voice_batch.test.mts` (формат имён/движок, OpusHead-текстовый)
+  и `voicekit/audio.test.mts` (behavioral: OpusHead
   original-rate == 24000 через ПАРСЕР заголовка — **ffprobe
   `stream.sample_rate` для opus ВСЕГДА 48000 и контракт НЕ проверяет**,
   проверено на корпусе 2026-10-23).
@@ -534,10 +530,9 @@ libopus 24k с ОБЯЗАТЕЛЬНЫМ выходным `-ar sr` → `.part` �
 скрипты, site-packages). Внешний код — только чтение референсов/моделей.
 Если нужна функция из внешнего тула — КОПИРУЙ её в `tools/generate/scripts/voicekit/`
 (адаптируя под нашу раскладку) и используй СВОЮ. Пример: `make_tuned_model_dir`
-и `link_tree` раньше брались из W40K `cosyvoice3_demo.py` — теперь это
-наш `tools/generate/scripts/voicekit/model_dir.py` (атомарная запись yaml + автохилка,
-2026-09-16, причина: неатомарный `open('w')` во внешнем коде обнулил
-`cosyvoice3.yaml` при kill и навсегда ломал загрузку модели). Следовать
+и `link_tree` раньше брались из W40K `cosyvoice3_demo.py` — переносили в
+`voicekit/model_dir.py` (атомарная запись yaml, 2026-09-16); модуль удалён
+2026-11-21 вместе с веткой CosyVoice3. Следовать
 этому правилу всегда: наш код = единственный источник правды, внешний —
 не трогаем (править чужие файлы запрещено).
 
@@ -885,7 +880,7 @@ CLI `~/.lmstudio/bin/lms.exe`, сервер на **127.0.0.1:1234**
   ярлык «LM Studio Server» в автозагрузке (shell:startup) гоняет этот
   скрипт свёрнутым.
 - `stop-lmstudio.cmd` — выгружает модели (VRAM 7.5 → 1.0 ГБ) и гасит
-  сервер: запускать, когда ПК нужен под озвучку (CUDA CosyVoice требует
+  сервер: запускать, когда ПК нужен под озвучку (VoxCPM2 требует
   VRAM) или другую тяжёлую GPU-задачу.
 - контроль: `lms server status`, `lms ls`; `curl 127.0.0.1:1234/v1/models`.
 - **Выгрузка после простоя** — `scripts/lmstudio_idle.mts` (+ `.cmd`):
@@ -953,25 +948,22 @@ qwen/qwen3.5-9b) — ВСЕГДА 127.0.0.1, не localhost. Выбор в TUI: 
    `start-ollama-vulkan.cmd` удалён. Правило «127.0.0.1 вместо localhost» —
    из той же истории, оставлено.
 
-### GPU для CosyVoice: DirectML НЕ работает (2026-09-04, опыт AMD)
+### GPU: CUDA (DirectML отклонён, 2026-09-04, опыт AMD)
 
-**Актуально:** CosyVoice идёт на **CUDA** — `voice_batch.mts --device cuda`
-(fp16, rtf ~3 против ~8 на CPU).
+**Актуально:** генерация идёт на **CUDA** — voxcpmworker.py сам выбирает
+устройство (флаг `--device` у шима VoxCPM2 не принимается и пультом не
+передаётся).
 
-DirectML на AMD RX 6600 XT проверен и отклонён, причины:
+DirectML на AMD RX 6600 XT проверялся для CosyVoice3 и отклонён, причины:
 
 - OOM посреди генерации, даже при свободной VRAM (DirectML не читает память RDNA2);
 - CPU-fallback части операций → первый токен 40 с, ускорения нет;
 - баг бэкенда: 3D-`concat` с пустым тензором падает.
 
-**Итог: `voice_batch.mts --device dml` НЕ использовать** (не доделан, OOM).
+**Итог: `--device dml` НЕ использовать** (не доделан, OOM).
 Единственный простой GPU-путь — NVIDIA CUDA; для AMD был бы WSL2+ROCm
-(не делали). Откат установлен: `torch==2.3.1` CPU-only, torch-directml удалён.
-
-В коде CosyVoice остались безвредные патчи под env-гейтом `TSSR_DML=1`
-(активны только при `--device dml`): `device`/`map_location`, one-hot вместо
-`weight[idx]`, concat без пустых тензоров, identity-декораторы, fp16.
-CPU-режим (по умолчанию) не затронут.
+(не делали). CosyVoice3-код с DirectML-патчами удалён 2026-11-21 вместе
+с самой веткой.
 
 ## Статус
 

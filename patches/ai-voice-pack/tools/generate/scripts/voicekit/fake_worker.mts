@@ -1,7 +1,7 @@
 /**
  * fake_worker.mts — фейковый инференс-шим для тестов voicekit/worker.mts.
  *
- * Говорит протоколом v2 (как cosyworker.py), но без модели:
+ * Говорит протоколом v2 (как voxcpmworker.py), но без модели:
  *   ping -> ok,
  *   gen -> ok: 1.5с синуса 24000 Гц как сырой PCM base64 (файл уже пишет
  *     сам worker.mts через ffmpeg — как в проде),

@@ -22,7 +22,7 @@ metadata:
 1. `git status` — репа чистая (или известно, что мешает; чужую недоделку не
    трогай). `git log --oneline -3` — понять, на чём остановились.
 2. Установка игры на месте: `ls "$TSSR_GAME/game/script.rpy"` (или
-   Steam-путь). `gh` залогинен. КосyVoice: `C:\tools\cosyvoice3\.venv\Scripts\python.exe`.
+   Steam-путь). `gh` залогинен. VoxCPM2: `C:\tools\voxcpm2\.venv\Scripts\python.exe`.
 3. Договориться с владельцем про PUSH: коммиты по готовности, пуш — ТОЛЬКО
    по явной просьбе.
 

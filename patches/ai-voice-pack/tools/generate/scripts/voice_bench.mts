@@ -2,7 +2,7 @@
  * voice_bench.mts — бенч-харнесс движка озвучки («до/после» при смене стека).
  *
  * Задача: tasks/2026-10-24-voice-engine-update-benchmark.md. Меряет СКОРОСТЬ
- * production-пути: шим cosyworker.py (инференс) -> trim -> opus (VoiceWorker).
+ * production-пути: шим voxcpmworker.py (инференс) -> opus (VoiceWorker).
  * Пишет результаты во временную папку tmp/voice_bench/, корпус audio/<lang> НЕ
  * трогает (каждая фраза уходит в свой out-файл бенча).
  *
@@ -17,7 +17,7 @@
  *   node tools/generate/scripts/voice_bench.mts --tag A --n 60 --dry-run  # выборка
  *   node tools/generate/scripts/voice_bench.mts --tag A --n 60             # база
  *   node tools/generate/scripts/voice_bench.mts --tag B --n 60 \
- *     --python C:/tools/cosyvoice3-bench/.venv/Scripts/python.exe          # кандидат
+ *     --python C:/tools/voxcpm2/.venv/Scripts/python.exe                # другой venv
  *   node tools/generate/scripts/voice_bench.mts --tag D3 --n 60 --workers 3
  *
  * ИТОГ: tmp/voice_bench/<tag>.jsonl (пофразовино) + <tag>-summary.json.
@@ -27,11 +27,11 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import { basename, join } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
-import { DEFAULT_PYTHON, loadCatalog, PKG_ROOT, selectPhrases, type Args, type Phrase } from "./voice_batch.mts";
+import { ENGINES, loadCatalog, PKG_ROOT, selectPhrases, type Args, type Phrase } from "./voice_batch.mts";
 import { VoiceWorker } from "./voicekit/worker.mts";
 
 const SCRIPTS_DIR = fileURLToPath(new URL(".", import.meta.url));
-const SHIM = join(SCRIPTS_DIR, "cosyworker.py");
+const SHIM = join(SCRIPTS_DIR, "voxcpmworker.py");
 /** Репа-корень: PKG_ROOT = patches/ai-voice-pack -> ../../. */
 const REPO_ROOT = join(PKG_ROOT, "..", "..");
 const BENCH_DIR = join(REPO_ROOT, "tmp", "voice_bench");
@@ -177,9 +177,9 @@ export function parseBenchCli(argv: string[]): BenchCli {
     tag: "run",
     n: 60,
     lang: "ru",
-    python: DEFAULT_PYTHON,
-    device: "cuda",
+    python: ENGINES.voxcpm2.python,
     workers: 1,
+    device: "cuda",
     generationSeed: 42,
     sampleSeed: 42,
     dryRun: false,
@@ -251,7 +251,8 @@ async function benchWorker(
   const w = new VoiceWorker({
     python,
     script: SHIM,
-    args: ["--device", o.device],
+    // voxcpm2-шим не принимает --device: CUDA выбирается сама
+    args: [],
     onLog: (l) => {
       shimLines.push(l);
       console.log(`  [shim${workerIdx}] ${l}`);
@@ -314,6 +315,7 @@ export async function main(argv: string[] = process.argv.slice(2)): Promise<numb
     wavOnly: false,
     emotionTag: "",
     device: o.device,
+    workers: 1,
     python: o.python,
   };
   const all = selectPhrases(entries, args);

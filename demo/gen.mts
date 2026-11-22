@@ -2,7 +2,7 @@
  * demo/gen.mts — ОДНА фраза через реальный TS-путь озвучки (протокол v2).
  *
  * Ровно та же цепочка, что в боевой генерации (voice_batch.mts → VoiceWorker):
- *   шим cosyworker.py (CUDA) → PCM float32 → trim (voicekit/trim.mts)
+ *   шим voxcpmworker.py (CUDA) → PCM float32
  *   → writeWav16 + loudnorm -16 LUFS (voicekit/audio.mts) → libopus 24k mono
  * Единственная разница с боем: keep_wav=true — wav НЕ выбрасывается, а
  * остаётся рядом с opus (в бою opus пишется из pipe напрямую, wav не пишется).
@@ -23,8 +23,8 @@ import { VoiceWorker } from "../patches/ai-voice-pack/tools/generate/scripts/voi
 const DEMO_DIR = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(DEMO_DIR, "..");
 const SCRIPTS = join(ROOT, "patches", "ai-voice-pack", "tools", "generate", "scripts");
-const PYTHON = "C:/tools/cosyvoice3/.venv/Scripts/python.exe";
-const SHIM = join(SCRIPTS, "cosyworker.py");
+const PYTHON = "C:/tools/voxcpm2/.venv/Scripts/python.exe";
+const SHIM = join(SCRIPTS, "voxcpmworker.py");
 const POT = join(ROOT, "patches", "ai-voice-pack", "po", "template.pot");
 const REF = join(ROOT, "patches", "ai-voice-pack", "casts", "voices", "Carolyn", "Carolyn.wav");
 // Реплика из жалобы: en/BlackMonolith/9650...__Carolyn.opus
@@ -80,7 +80,7 @@ if (!existsSync(REF)) throw new Error(`нет рефа голоса: ${REF}`);
 const w = new VoiceWorker({
   python: PYTHON,
   script: SHIM,
-  args: ["--device", "cuda"],
+  args: [],
   onLog: (l) => console.log(l),
 });
 try {

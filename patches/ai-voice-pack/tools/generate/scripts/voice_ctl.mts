@@ -3,67 +3,58 @@
  *
  * Порт voice_ctl.py на TS (2026-10-30): проект — образец максимального
  * использования TS, python в пайплайне остаётся только под инференс
- * (torch/CV3/VoxCPM), а пульт python не требовал. NtSuspendProcess —
+ * (torch/VoxCPM), а пульт python не требовал. NtSuspendProcess —
  * PowerShell Add-Type с P/Invoke того же ntdll (замена ctypes).
  *
- * Быстрые команды вместо поиска тулов вручную::
+ * Контур ОДИН — VoxCPM2 (CosyVoice3-ветка удалена 2026-11-21). Команды::
  *
- *   node voice_ctl.mts status              # что сейчас происходит (+ блок VOX)
- *   node voice_ctl.mts start [ru|en|all]   # запуск cosy-очередей (resumable)
- *   node voice_ctl.mts stop [ru|en|all]    # остановка (kill-дерева)
+ *   node voice_ctl.mts status              # сводка VOX по языкам
+ *   node voice_ctl.mts start [lang|all]    # запуск (voice_batch --engine voxcpm2, resumable)
+ *   node voice_ctl.mts stop [lang|all]     # остановка (kill-дерева)
  *   node voice_ctl.mts soft-stop [lang] [--timeout 300]  # доделать текущий файл и встать
- *   node voice_ctl.mts pause [ru|en|all]   # пауза (заморозка оркестраторов)
- *   node voice_ctl.mts resume [ru|en|all]  # снять с паузы
+ *   node voice_ctl.mts pause [lang|all]    # пауза (заморозка оркестраторов)
+ *   node voice_ctl.mts resume [lang|all]   # снять с паузы
  *   node voice_ctl.mts watch [--interval 30]  # живой мониторинг
- *   node voice_ctl.mts logs [--lang ru] [-n 20] [--vox]  # хвост лога
+ *   node voice_ctl.mts logs [--lang ru] [-n 20]  # хвост лога
  *
- * Vox-очередь (vox_queue.mts, 11 языков — те же операции со своими логами)::
+ * `vox-*` — алиасы тех же команд (их зовёт планировщик и vox-*.cmd):
+ * `vox-start / vox-stop / vox-pause / vox-resume / vox-lower / vox-auto`.
+ * Флаг `--vox` принимается как no-op (совместимость со старыми вызовами).
  *
- *   node voice_ctl.mts vox-start [lang|all]  # запуск voice_batch --engine voxcpm2 (resumable)
- *   node voice_ctl.mts vox-stop / vox-pause / vox-resume
- *   node voice_ctl.mts logs --vox --lang de  # лог vox_gen_{lang}.log
- *
- * Двойной клик (без админа): voice-*.cmd и vox-*.cmd (зовут этот модуль).
+ * Двойной клик (без админа): voice-status.cmd / voice-watch.cmd и vox-*.cmd.
  *
  * Как это работает:
- *   - очереди = scripts/voice_queue.sh {ru|en} (bash, resumable, низкий приоритет)
- *     | voice_batch.mts --engine voxcpm2 --lang {lang} (канон: имена по контракту);
- *   - процессы ищутся по cmdline (PowerShell CIM): 'voice_queue.sh'/'vox_queue.mts'
+ *   - очередь = `voice_batch.mts --engine voxcpm2 --lang {lang}` (канон: имена
+ *     по контракту {en12}-{state6} {variant}.opus);
+ *   - процессы ищутся по cmdline (PowerShell CIM): 'vox_queue.mts'
  *     (обертка) и 'voice_batch.mts'/'voxcpm_bench.mts' (оркестратор) + '--lang {lang}';
  *   - пауза = NtSuspendProcess по оркестраторам (шим доделывает текущую фразу
- *     и замирает), состояние — output/voice/ctl_paused[_vox]_{lang}.json;
+ *     и замирает), состояние — output/voice/ctl_paused_vox_{lang}.json;
  *   - soft-stop = снять паузу (если была) + дождаться '  saved ' текущего файла
  *     в логе + обычный stop (CPU и RAM свободны);
  *   - генерация resumable: перезапуск продолжает с места останова.
  */
 import { spawn, spawnSync } from "node:child_process";
-import { existsSync, mkdirSync, readFileSync, readdirSync, rmSync, statSync, writeFileSync } from "node:fs";
-import { basename, dirname, join } from "node:path";
+import { existsSync, mkdirSync, readFileSync, rmSync, statSync, writeFileSync } from "node:fs";
+import { dirname, join } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
 const SCRIPTS_DIR = dirname(fileURLToPath(import.meta.url));
 const ROOT = dirname(SCRIPTS_DIR); // generate/
-const PKG_ROOT = join(ROOT, "..", ".."); // patches/ai-voice-pack
-const AUDIO_DIR = join(PKG_ROOT, "audio");
 
-export const LANGS = ["ru", "en"] as const;
-export const QUEUE_MARK = "voice_queue.sh";
-export const WORKER_MARK = "voice_batch.mts";
 export const VOX_LANGS = ["ru", "en", "de", "es", "fr", "it", "ja", "ko", "pl", "pt", "zh"] as const;
 export const VOX_QUEUE_MARK = "vox_queue.mts";
 export const VOX_WORKER_MARK = "voxcpm_bench.mts";
 export const STALE_LOG_SEC = 180; // лог старше — считаем очередь зависшей
 
-export type Kind = "cosy" | "vox";
-
-/** Шаблон лога контура: gen_all_{lang}.log | vox_gen_{lang}.log. */
-export function logTmpl(kind: Kind = "cosy"): string {
-  return join(ROOT, "output", "voice", kind === "vox" ? "vox_gen_{}.log" : "gen_all_{}.log");
+/** Шаблон лога контура: vox_gen_{lang}.log. */
+export function logTmpl(): string {
+  return join(ROOT, "output", "voice", "vox_gen_{}.log");
 }
 
-/** Шаблон метки паузы: ctl_paused_{lang}.json | ctl_paused_vox_{lang}.json (разные — паузы не путаются). */
-export function pauseTmpl(kind: Kind = "cosy"): string {
-  return join(ROOT, "output", "voice", kind === "vox" ? "ctl_paused_vox_{}.json" : "ctl_paused_{}.json");
+/** Шаблон метки паузы: ctl_paused_vox_{lang}.json. */
+export function pauseTmpl(): string {
+  return join(ROOT, "output", "voice", "ctl_paused_vox_{}.json");
 }
 
 /** batch.log пишет строки с таймкодом 'HH:MM:SS [n/m] ...' — префикс опционален. */
@@ -76,14 +67,12 @@ const ETA_RE = /eta ~(\d+)\s*мин/g;
 // ---------- чистые хелперы (покрыты тестами) ----------
 
 /**
- * 'ru'/'all'/None -> список языков контура (cosy|vox). Ошибка на мусоре.
- * Контур vox принимает все 11 po-языков (VOX_LANGS), cosy — только ru/en.
+ * 'ru'/'all'/None -> список языков контура VOX (все 11 po-языков). Ошибка на мусоре.
  */
-export function normLangs(arg: string | undefined | null, kind: Kind = "cosy"): string[] {
-  const langs: readonly string[] = kind === "vox" ? VOX_LANGS : LANGS;
-  if (arg === undefined || arg === null || arg === "" || arg === "all" || arg === "both") return [...langs];
-  if ((langs as readonly string[]).includes(arg)) return [arg];
-  throw new Error(`язык: ${langs.join("|")} или 'all', получен '${arg}'`);
+export function normLangs(arg: string | undefined | null): string[] {
+  if (arg === undefined || arg === null || arg === "" || arg === "all" || arg === "both") return [...VOX_LANGS];
+  if ((VOX_LANGS as readonly string[]).includes(arg)) return [arg];
+  throw new Error(`язык: ${VOX_LANGS.join("|")} или 'all', получен '${arg}'`);
 }
 
 /** '[5139/5207] uid Arc Who: текст' -> (done, total) | null. */
@@ -142,48 +131,43 @@ export function countSaved(text: string): number {
   return n;
 }
 
-/** Процесс-очередь языка: bash voice_queue.sh {lang} | node vox_queue.mts {lang}. */
-export function isQueueProc(name: string, cmd: string, lang: string, kind: Kind = "cosy"): boolean {
-  if (kind === "vox") return cmd.includes(VOX_QUEUE_MARK) && cmd.split(/\s+/).includes(lang);
-  return name.toLowerCase() === "bash.exe" && cmd.includes(QUEUE_MARK) && cmd.split(/\s+/).includes(lang);
+/** Процесс-очередь языка: node vox_queue.mts {lang}. */
+export function isQueueProc(cmd: string, lang: string): boolean {
+  return cmd.includes(VOX_QUEUE_MARK) && cmd.split(/\s+/).includes(lang);
 }
 
 /**
  * Оркестратор генерации языка: node voice_batch.mts --lang | node voxcpm_bench.mts --lang.
  *
- * Контур определяется движком: voice_batch.mts несёт --engine (voxcpm2|cosyvoice3),
- * легаси-бенч voxcpm_bench.mts — всегда vox. Без маркера движка voice_batch — cosy
- * (старый контур). Поймано 2026-11-12: пульт показывал STOPPED при живом
- * `voice_batch.mts --engine voxcpm2 --lang ko --demo`.
+ * CosyVoice3-движка больше нет (2026-11-21), поэтому voice_batch.mts без флага
+ * движка — уже VOX. Легаси-бенч voxcpm_bench.mts — всегда vox; `--engine voxcpm`
+ * тоже считается vox (на случай явного флага).
  *
  * Пауза морозит ОРКЕСТРАТОР (ноду), а не python-шим: шим доделывает текущую
- * фразу (файл цел) и замирает в ожидании. Шим (cosyworker.py / voxcpmworker.py)
- * в cmdline не несёт ни маркера, ни --lang — матчить его отдельно нельзя.
+ * фразу (файл цел) и замирает в ожидании. Шим (voxcpmworker.py) в cmdline не
+ * несёт ни маркера, ни --lang — матчить его отдельно нельзя.
  */
-export function isWorkerProc(cmd: string, lang: string, kind: Kind = "cosy"): boolean {
+export function isWorkerProc(cmd: string, lang: string): boolean {
   if (!cmd.includes(`--lang ${lang}`)) return false;
-  const engineVox = /--engine\s+voxcpm/.test(cmd) || cmd.includes(VOX_WORKER_MARK);
-  const engineCosy = /--engine\s+cosyvoice/.test(cmd) || (cmd.includes(WORKER_MARK) && !engineVox);
-  return kind === "vox" ? engineVox : engineCosy;
+  return cmd.includes(VOX_WORKER_MARK) || cmd.includes("voice_batch.mts") || /--engine\s+voxcpm/.test(cmd);
 }
 
 // ---------- процессы Windows ----------
 
 interface ProcRow {
   pid: number;
-  name: string;
   cmd: string;
 }
 
 /**
- * Все процессы: [{pid, name, cmd}] через PowerShell CIM (JSON — надёжнее CSV
+ * Все процессы: [{pid, cmd}] через PowerShell CIM (JSON — надёжнее CSV
  * для cmdline с запятыми/кавычками). Пусто при ошибке/таймауте.
  */
 export function listProcesses(): ProcRow[] {
   const ps =
     "[Console]::OutputEncoding=[Text.Encoding]::UTF8; " +
     "ConvertTo-Json -Compress -InputObject @" +
-    "(Get-CimInstance Win32_Process | Select-Object ProcessId,Name,CommandLine)";
+    "(Get-CimInstance Win32_Process | Select-Object ProcessId,CommandLine)";
   try {
     const r = spawnSync("powershell", ["-NoProfile", "-Command", ps], {
       encoding: "utf-8",
@@ -194,31 +178,28 @@ export function listProcesses(): ProcRow[] {
     if (r.status !== 0 || !r.stdout) return [];
     const data = JSON.parse(r.stdout) as Array<{
       ProcessId: number;
-      Name: string | null;
       CommandLine: string | null;
     }> | null;
     if (!Array.isArray(data)) return [];
     return data.flatMap((row) =>
-      typeof row?.ProcessId === "number"
-        ? [{ pid: row.ProcessId, name: row.Name ?? "", cmd: row.CommandLine ?? "" }]
-        : [],
+      typeof row?.ProcessId === "number" ? [{ pid: row.ProcessId, cmd: row.CommandLine ?? "" }] : [],
     );
   } catch {
     return [];
   }
 }
 
-/** PID очередей языка: bash voice_queue.sh | node vox_queue.mts. */
-export function findQueues(lang: string, kind: Kind = "cosy"): number[] {
+/** PID очередей языка: node vox_queue.mts. */
+export function findQueues(lang: string): number[] {
   return listProcesses()
-    .filter((p) => isQueueProc(p.name, p.cmd, lang, kind))
+    .filter((p) => isQueueProc(p.cmd, lang))
     .map((p) => p.pid);
 }
 
 /** PID оркестраторов генерации языка (voice_batch.mts | voxcpm_bench.mts). */
-export function findWorkers(lang: string, kind: Kind = "cosy"): number[] {
+export function findWorkers(lang: string): number[] {
   return listProcesses()
-    .filter((p) => isWorkerProc(p.cmd, lang, kind))
+    .filter((p) => isWorkerProc(p.cmd, lang))
     .map((p) => p.pid);
 }
 
@@ -263,22 +244,6 @@ export function suspendProcess(pid: number): void {
 
 export function resumeProcess(pid: number): void {
   ntControl(pid, true);
-}
-
-/** Путь к bash.exe (Git for Windows). */
-export function findBash(): string | null {
-  const w = spawnSync("where", ["bash"], { windowsHide: true, encoding: "utf-8", stdio: ["ignore", "pipe", "ignore"] });
-  if (w.status === 0) {
-    const first = w.stdout
-      .split(/\r?\n/)
-      .map((s) => s.trim())
-      .find(Boolean);
-    if (first && existsSync(first)) return first;
-  }
-  for (const c of ["C:\\Program Files\\Git\\bin\\bash.exe", "C:\\Program Files\\Git\\usr\\bin\\bash.exe"]) {
-    if (existsSync(c)) return c;
-  }
-  return null;
 }
 
 /** Понизить приоритет процесса (не фатально при ошибке). */
@@ -338,13 +303,14 @@ if($h -ne [IntPtr]::Zero){
   }
 }
 
-/** Понизить приоритет ВСЕЙ vox-ветки (queue + bench + worker) + EcoQoS + ограничение ядер. */
+/** Понизить приоритет ВСЕЙ VOX-ветки (voice_batch + queue + bench + worker) + EcoQoS + ограничение ядер. */
 export function lowerVoxPriority(cfg?: VoxAutoCfg): void {
   if (!isWin()) return;
   const c = cfg ?? getVoxAutoCfg();
   for (const p of listProcesses()) {
     const cmd = p.cmd.toLowerCase();
     if (
+      cmd.includes("voice_batch.mts") ||
       cmd.includes(VOX_QUEUE_MARK) ||
       cmd.includes(VOX_WORKER_MARK) ||
       cmd.includes("voxcpmworker.py") ||
@@ -373,47 +339,12 @@ export function lowerVoxPriority(cfg?: VoxAutoCfg): void {
 
 const fmt = (t: string, lang: string): string => t.replace("{}", lang);
 
-export function readLog(lang: string, kind: Kind = "cosy"): string {
+export function readLog(lang: string): string {
   try {
-    return readFileSync(fmt(logTmpl(kind), lang), "utf-8");
+    return readFileSync(fmt(logTmpl(), lang), "utf-8");
   } catch {
     return "";
   }
-}
-
-/** Число готовых реплик (стем wav|opus): язык или арка. -1 если папки нет. */
-export function countDone(lang: string, arc?: string | null): number {
-  let base = join(AUDIO_DIR, lang);
-  if (arc) base = join(base, arc);
-  let entries: string[];
-  try {
-    entries = readdirSync(base);
-  } catch {
-    return -1;
-  }
-  const stems = (files: string[]): number =>
-    new Set(
-      files
-        .filter((f) => (f.endsWith(".wav") || f.endsWith(".opus")) && !f.includes(".ln.tmp."))
-        .map((f) => basename(f).replace(/\.[^.]+$/, "")),
-    ).size;
-  if (arc) {
-    try {
-      return stems(entries);
-    } catch {
-      return -1;
-    }
-  }
-  let total = 0;
-  for (const a of entries) {
-    const p = join(base, a);
-    try {
-      if (statSync(p).isDirectory()) total += stems(readdirSync(p));
-    } catch {
-      /* пропуск недоступных */
-    }
-  }
-  return total;
 }
 
 export interface PauseState {
@@ -421,9 +352,9 @@ export interface PauseState {
   at: string;
 }
 
-export function pauseState(lang: string, kind: Kind = "cosy"): PauseState | null {
+export function pauseState(lang: string): PauseState | null {
   try {
-    return JSON.parse(readFileSync(fmt(pauseTmpl(kind), lang), "utf-8")) as PauseState;
+    return JSON.parse(readFileSync(fmt(pauseTmpl(), lang), "utf-8")) as PauseState;
   } catch {
     return null;
   }
@@ -439,88 +370,37 @@ export interface LangStatus {
   paused: PauseState | null;
   arc: string | null;
   prog: [number, number] | null;
-  doneArc: number;
-  total: number;
   logAge: number | null;
   /** Прогноз voice_batch из лога ('eta ~N мин') — только если там есть. */
   etaMin?: number | null;
 }
 
-export function langStatus(lang: string, kind: Kind = "cosy"): LangStatus {
-  const workers = findWorkers(lang, kind);
-  const queues = findQueues(lang, kind);
-  const paused = pauseState(lang, kind);
-  const text = readLog(lang, kind);
-  const [arc, prog] = text ? parseLogState(text) : [null, null];
-  let logAge: number | null = null;
-  try {
-    logAge = Date.now() / 1000 - statSync(fmt(logTmpl(kind), lang)).mtimeMs / 1000;
-  } catch {
-    logAge = null;
-  }
-  const doneArc = arc ? countDone(lang, arc) : -1;
-  const total = countDone(lang);
-  const state: LangStatus["state"] = paused
-    ? "PAUSED"
-    : workers.length > 0
-      ? logAge !== null && logAge < STALE_LOG_SEC
-        ? "RUNNING"
-        : "STALLED"
-      : "STOPPED";
-  return { lang, state, workers, queues, paused, arc, prog, doneArc, total, logAge, etaMin: null };
-}
-
-export function printStatus(langs: string[], kind: Kind = "cosy"): number {
-  console.log(`=== ОЗВУЧКА: ${new Date().toTimeString().slice(0, 8)} ===`);
-  for (const lang of langs) {
-    const s = langStatus(lang, kind);
-    console.log(`--- ${lang.toUpperCase()}: ${s.state} ---`);
-    if (s.workers.length) console.log(`  воркеры: ${s.workers.join(", ")}`);
-    if (s.paused) console.log(`  пауза с: ${s.paused.at} (pids ${s.paused.pids.join(", ")})`);
-    if (s.arc) {
-      let line = `  арка: ${s.arc}`;
-      if (s.prog) {
-        const [d, t] = s.prog;
-        line += ` [${d}/${t}] (${t ? ((100 * d) / t).toFixed(1) : "0.0"}%)`;
-      }
-      if (s.doneArc >= 0) line += `, готово: ${s.doneArc}`;
-      console.log(line);
-    } else if (s.prog) {
-      console.log(`  прогресс: [${s.prog[0]}/${s.prog[1]}]`);
-    }
-    console.log(s.logAge === null ? "  лог: нет" : `  лог: ${formatAge(s.logAge)} назад`);
-    if (s.total >= 0) console.log(`  всего ${lang.toUpperCase()} фраз: ${s.total}`);
-    if (s.state === "STOPPED" && s.arc) console.log(`  встанет на: ${s.arc} (resumable)`);
-  }
-  return 0;
-}
-
-// ---------- vox-контур (vox_queue.mts) ----------
-
-/** Сводка vox-языка или null, если про язык ничего неизвестно (пустых блоков не плодим). */
-export function voxStatusLine(lang: string): LangStatus | null {
-  const workers = findWorkers(lang, "vox");
-  const queues = findQueues(lang, "vox");
-  const paused = pauseState(lang, "vox");
-  // Новый демо-контур (2026-11-12): voice_batch.mts --engine voxcpm2 --lang <l>
-  // пишет общий batch.log, а не vox_gen_{lang}.log — пока его воркер жив,
-  // читаем batch.log (прогресс/ETA там же, где их видит оператор).
-  const ownPath = fmt(logTmpl("vox"), lang);
+/**
+ * Сводка языка или null, если про язык ничего неизвестно (пустых блоков не плодим).
+ *
+ * voice_batch.mts --engine voxcpm2 пишет ОБЩИЙ batch.log, а не vox_gen_{lang}.log —
+ * пока воркер языка жив, читаем batch.log (прогресс/ETA там же, где их видит
+ * оператор); у остановленного языка — свой per-language лог.
+ */
+export function langStatus(lang: string): LangStatus | null {
+  const workers = findWorkers(lang);
+  const queues = findQueues(lang);
+  const paused = pauseState(lang);
+  const ownPath = fmt(logTmpl(), lang);
   const batchPath = join(ROOT, "output", "voice", "batch.log");
-  const useBatch = workers.length > 0 && existsSync(batchPath);
-  const logPath = useBatch ? batchPath : ownPath;
+  const path = workers.length > 0 && existsSync(batchPath) ? batchPath : ownPath;
   let text = "";
   try {
-    text = readFileSync(logPath, "utf-8");
+    text = readFileSync(path, "utf-8");
   } catch {
     text = "";
   }
-  const hasLog = existsSync(logPath);
+  const hasLog = existsSync(path);
   if (!(workers.length || queues.length || paused || text || hasLog)) return null;
   const [arc, prog] = text ? parseLogState(text) : [null, null];
   let logAge: number | null = null;
   try {
-    logAge = Date.now() / 1000 - statSync(logPath).mtimeMs / 1000;
+    logAge = Date.now() / 1000 - statSync(path).mtimeMs / 1000;
   } catch {
     logAge = null;
   }
@@ -531,31 +411,19 @@ export function voxStatusLine(lang: string): LangStatus | null {
         ? "RUNNING"
         : "STALLED"
       : "STOPPED";
-  return {
-    lang,
-    state,
-    workers,
-    queues,
-    paused,
-    arc,
-    prog,
-    doneArc: -1,
-    total: -1,
-    logAge,
-    etaMin: parseEta(text),
-  };
+  return { lang, state, workers, queues, paused, arc, prog, logAge, etaMin: parseEta(text) };
 }
 
-export function printVoxStatus(langs: readonly string[] = VOX_LANGS): number {
+export function printStatus(langs: readonly string[] = VOX_LANGS): number {
   const rows = langs.flatMap((lang) => {
-    const s = voxStatusLine(lang);
+    const s = langStatus(lang);
     return s ? [[lang, s] as const] : [];
   });
   if (!rows.length) {
-    console.log("--- VOX: не запускалась (node voice_ctl.mts vox-start [lang|all]) ---");
+    console.log("--- VOX: не запускалась (node voice_ctl.mts start [lang|all]) ---");
     return 0;
   }
-  console.log("--- VOX ---");
+  console.log(`=== ОЗВУЧКА (VOX): ${new Date().toTimeString().slice(0, 8)} ===`);
   for (const [lang, s] of rows) {
     let line = `  ${lang.toUpperCase()}: ${s.state}`;
     if (s.arc) {
@@ -580,7 +448,7 @@ const isWin = (): boolean => process.platform === "win32";
 export interface CtlArgs {
   cmd?: string;
   lang?: string;
-  kind: Kind;
+  /** Принят ради совместимости (старые вызовы `--vox`): контур всегда один — VOX. */
   vox: boolean;
   timeout: number;
   interval: number;
@@ -589,7 +457,7 @@ export interface CtlArgs {
 
 /** Разбор CLI: команда + позиционный язык + опции (--timeout/--interval/-n/--vox/--lang). */
 export function parseCtlCli(argv: string[]): CtlArgs {
-  const a: CtlArgs = { kind: "cosy", vox: false, timeout: 300, interval: 30, n: 20 };
+  const a: CtlArgs = { vox: false, timeout: 300, interval: 30, n: 20 };
   const positional: string[] = [];
   for (let i = 0; i < argv.length; i++) {
     const arg = argv[i];
@@ -625,29 +493,24 @@ export function parseCtlCli(argv: string[]): CtlArgs {
   }
   a.cmd = positional[0];
   a.lang = a.lang ?? positional[1];
-  if (a.cmd === "logs" && a.vox) a.kind = "vox";
-  if (a.cmd?.startsWith("vox-")) a.kind = "vox";
   return a;
 }
 
-const CTL_HELP = `Пульт очередей озвучки TSSR
+const CTL_HELP = `Пульт очередей озвучки TSSR (контур VOX / VoxCPM2)
 
-  status [lang]                  что сейчас происходит (+ блок VOX)
-  start|stop|pause|resume [lang] управление cosy-очередями (ru|en|all)
+  status [lang|all]              сводка VOX по языкам
+  start|stop|pause|resume [lang|all]  управление очередями (11 языков)
   soft-stop [lang] [--timeout N] доделать текущий файл и встать
   watch [--interval N]           живой мониторинг (Ctrl+C — выход)
-  logs [--lang lang] [-n N] [--vox]  хвост лога
-  lower|vox-lower                понизить приоритет всей VOX-ветки до BelowNormal + EcoQoS + affinity
+  logs [--lang lang] [-n N]      хвост per-language лога (vox_gen_<lang>.log)
+  lower                          понизить приоритет VOX-ветки до BelowNormal + EcoQoS + affinity
   vox-auto start|stop|status      автотроттлинг: пауза при нагрузке, возобновление при простое
-  vox-start|vox-stop|vox-pause|vox-resume [lang]  Vox (voice_batch --engine voxcpm2)`;
+
+  Алиасы (их зовёт планировщик и vox-*.cmd): vox-start|vox-stop|vox-pause|vox-resume,
+  vox-lower, vox-auto. Флаг --vox принимается как no-op (совместимость).`;
 
 function cmdStatus(a: CtlArgs): number {
-  const rc = printStatus(normLangs(a.lang, a.kind), a.kind);
-  // vox-контур в общей сводке: строки только у языков с логом/процессами
-  if (a.kind === "cosy" && (a.lang === undefined || a.lang === "" || a.lang === "all" || a.lang === "both")) {
-    printVoxStatus();
-  }
-  return rc;
+  return printStatus(normLangs(a.lang));
 }
 
 async function cmdStart(a: CtlArgs): Promise<number> {
@@ -655,35 +518,20 @@ async function cmdStart(a: CtlArgs): Promise<number> {
     console.log("start: только Windows");
     return 1;
   }
-  let cmd: string[];
-  let hint: string;
-  if (a.kind === "vox") {
-    // Канон — `voice_batch.mts --engine voxcpm2`: он пишет ФАЙЛЫ ПО КОНТРАКТУ
-    // `{en12}-{state6} {variant}.opus`. Легаси `vox_queue.mts` звал бенч, и тот
-    // складывал в audio/ имена `{uid}__{voice}__Vox_cfg...`, которые движок НЕ
-    // находит (баг 2026-11-20: 1 851 такой файл в audio/en при живом «прогрессе»).
-    cmd = [process.execPath, join(SCRIPTS_DIR, "voice_batch.mts"), "--engine", "voxcpm2"];
-    hint = "запуск: node voice_ctl.mts vox-start [lang|all]";
-  } else {
-    const bash = findBash();
-    if (!bash) {
-      console.log("start: не найден bash.exe (нужен Git for Windows)");
-      return 1;
-    }
-    cmd = [bash, join(SCRIPTS_DIR, "voice_queue.sh")];
-    hint = "смотри voice-status";
-  }
+  // Канон — `voice_batch.mts --engine voxcpm2`: он пишет ФАЙЛЫ ПО КОНТРАКТУ
+  // `{en12}-{state6} {variant}.opus`. Легаси `vox_queue.mts` звал бенч, и тот
+  // складывал в audio/ имена `{uid}__{voice}__Vox_cfg...`, которые движок НЕ
+  // находит (баг 2026-11-20: 1 851 такой файл в audio/en при живом «прогрессе»).
+  const cmd = [process.execPath, join(SCRIPTS_DIR, "voice_batch.mts"), "--engine", "voxcpm2"];
   let rc = 0;
-  for (const lang of normLangs(a.lang, a.kind)) {
-    if (findQueues(lang, a.kind).length || findWorkers(lang, a.kind).length) {
+  for (const lang of normLangs(a.lang)) {
+    if (findQueues(lang).length || findWorkers(lang).length) {
       console.log(`${lang.toUpperCase()}: уже запущено, пропуск`);
       continue;
     }
     let pid: number;
     try {
-      // vox-контур: voice_batch ждёт `--lang <l>`; cosy-очередь — позиционный язык
-      const args = [...cmd.slice(1), ...(a.kind === "vox" ? ["--lang", lang] : [lang])];
-      const p = spawn(cmd[0], args, {
+      const p = spawn(cmd[0], [...cmd.slice(1), "--lang", lang], {
         cwd: ROOT,
         stdio: "ignore",
         detached: true,
@@ -699,29 +547,29 @@ async function cmdStart(a: CtlArgs): Promise<number> {
     }
     setBelowNormal(pid);
     await sleep(5000);
-    if (a.kind === "vox") lowerVoxPriority(getVoxAutoCfg());
-    if (findQueues(lang, a.kind).length || findWorkers(lang, a.kind).length) {
-      // vox-контур пишет ОБЩИЙ batch.log (voice_batch), cosy — свой gen_all_<lang>.log
-      const logName = a.kind === "vox" ? "batch.log" : basename(fmt(logTmpl(a.kind), lang));
-      console.log(`${lang.toUpperCase()}: запущено (pid ${pid}), лог output/voice/${logName}`);
+    lowerVoxPriority(getVoxAutoCfg());
+    if (findQueues(lang).length || findWorkers(lang).length) {
+      console.log(`${lang.toUpperCase()}: запущено (pid ${pid}), лог output/voice/batch.log`);
     } else {
-      console.log(`${lang.toUpperCase()}: стартовал, но очередь не видна — ${hint}`);
+      console.log(
+        `${lang.toUpperCase()}: стартовал, но очередь не видна — запуск: node voice_ctl.mts start [lang|all]`,
+      );
     }
   }
   return rc;
 }
 
-async function killLangTree(lang: string, kind: Kind, label: string): Promise<number> {
+async function killLangTree(lang: string, label: string): Promise<number> {
   let killed = 0;
-  for (const pid of findQueues(lang, kind)) if (taskkill(pid, true)) killed++;
+  for (const pid of findQueues(lang)) if (taskkill(pid, true)) killed++;
   await sleep(2000);
-  for (const pid of findWorkers(lang, kind)) if (taskkill(pid, true)) killed++;
+  for (const pid of findWorkers(lang)) if (taskkill(pid, true)) killed++;
   try {
-    rmSync(fmt(pauseTmpl(kind), lang), { force: true });
+    rmSync(fmt(pauseTmpl(), lang), { force: true });
   } catch {
     /* метки могло не быть */
   }
-  const left = [...findWorkers(lang, kind), ...findQueues(lang, kind)];
+  const left = [...findWorkers(lang), ...findQueues(lang)];
   if (left.length) {
     console.log(`${lang.toUpperCase()}: осталось висеть: ${left.join(", ")} — добей вручную (taskkill)`);
     return 1;
@@ -736,7 +584,7 @@ async function cmdStop(a: CtlArgs): Promise<number> {
     return 1;
   }
   let rc = 0;
-  for (const lang of normLangs(a.lang, a.kind)) rc |= await killLangTree(lang, a.kind, "остановлено");
+  for (const lang of normLangs(a.lang)) rc |= await killLangTree(lang, "остановлено");
   console.log("Готовые файлы целы, рестарт продолжит (resumable).");
   return rc;
 }
@@ -747,12 +595,12 @@ async function cmdPause(a: CtlArgs): Promise<number> {
     return 1;
   }
   let rc = 0;
-  for (const lang of normLangs(a.lang, a.kind)) {
-    if (pauseState(lang, a.kind)) {
+  for (const lang of normLangs(a.lang)) {
+    if (pauseState(lang)) {
       console.log(`${lang.toUpperCase()}: уже на паузе (resume чтобы снять)`);
       continue;
     }
-    const pids = findWorkers(lang, a.kind);
+    const pids = findWorkers(lang);
     if (!pids.length) {
       console.log(`${lang.toUpperCase()}: нечего морозить (воркеров нет)`);
       continue;
@@ -768,7 +616,7 @@ async function cmdPause(a: CtlArgs): Promise<number> {
       }
     }
     writeFileSync(
-      fmt(pauseTmpl(a.kind), lang),
+      fmt(pauseTmpl(), lang),
       JSON.stringify({ pids: frozen, at: new Date().toLocaleString("sv-SE").slice(0, 19).replace("T", " ") }),
       "utf-8",
     );
@@ -783,13 +631,13 @@ async function cmdResume(a: CtlArgs): Promise<number> {
     return 1;
   }
   let rc = 0;
-  for (const lang of normLangs(a.lang, a.kind)) {
-    const st = pauseState(lang, a.kind);
+  for (const lang of normLangs(a.lang)) {
+    const st = pauseState(lang);
     if (!st) {
       console.log(`${lang.toUpperCase()}: не на паузе`);
       continue;
     }
-    const alive = new Set(findWorkers(lang, a.kind));
+    const alive = new Set(findWorkers(lang));
     let resumed = 0;
     for (const pid of st.pids ?? []) {
       if (!alive.has(pid)) {
@@ -805,16 +653,14 @@ async function cmdResume(a: CtlArgs): Promise<number> {
       }
     }
     try {
-      rmSync(fmt(pauseTmpl(a.kind), lang), { force: true });
+      rmSync(fmt(pauseTmpl(), lang), { force: true });
     } catch {
       /* метки могло не быть */
     }
     console.log(`${lang.toUpperCase()}: снято с паузы (${resumed})`);
   }
-  if (a.kind === "vox") {
-    await sleep(2000);
-    lowerVoxPriority(getVoxAutoCfg());
-  }
+  await sleep(2000);
+  lowerVoxPriority(getVoxAutoCfg());
   return rc;
 }
 
@@ -829,7 +675,7 @@ async function cmdSoftStop(a: CtlArgs): Promise<number> {
     return 1;
   }
   let rc = 0;
-  for (const lang of normLangs(a.lang, a.kind)) {
+  for (const lang of normLangs(a.lang)) {
     if (!(findQueues(lang).length || findWorkers(lang).length || pauseState(lang))) {
       console.log(`${lang.toUpperCase()}: уже остановлено`);
       continue;
@@ -850,14 +696,25 @@ async function cmdSoftStop(a: CtlArgs): Promise<number> {
         }
       }
       try {
-        rmSync(fmt(pauseTmpl("cosy"), lang), { force: true });
+        rmSync(fmt(pauseTmpl(), lang), { force: true });
       } catch {
         /* метки могло не быть */
       }
       console.log(`${lang.toUpperCase()}: снято с паузы (${resumed}), жду текущий файл...`);
     }
-    // 2. ждать доделки текущего файла (новый '  saved ' в логе)
-    const base = countSaved(readLog(lang));
+    // 2. ждать доделки текущего файла (новый '  saved ' в логе).
+    // Канон пишет общий batch.log, стенд — per-language vox_gen; считаем оба.
+    const batchLog = join(ROOT, "output", "voice", "batch.log");
+    const savedNow = (): number => {
+      let n = countSaved(readLog(lang));
+      try {
+        n += countSaved(readFileSync(batchLog, "utf-8"));
+      } catch {
+        /* batch.log ещё не создан */
+      }
+      return n;
+    };
+    const base = savedNow();
     const deadline = Date.now() + a.timeout * 1000;
     let finished = false;
     while (Date.now() < deadline) {
@@ -867,7 +724,7 @@ async function cmdSoftStop(a: CtlArgs): Promise<number> {
         finished = true;
         break;
       }
-      if (countSaved(readLog(lang)) > base) {
+      if (savedNow() > base) {
         console.log(`${lang.toUpperCase()}: текущий файл доделан`);
         finished = true;
         break;
@@ -879,14 +736,14 @@ async function cmdSoftStop(a: CtlArgs): Promise<number> {
       );
     }
     // 3. обычная зачистка как в stop
-    rc |= await killLangTree(lang, "cosy", "мягко остановлено");
+    rc |= await killLangTree(lang, "мягко остановлено");
   }
   console.log("Готовые файлы целы, рестарт продолжит (resumable).");
   return rc;
 }
 
 async function cmdWatch(a: CtlArgs): Promise<number> {
-  const langs = normLangs(a.lang, a.kind);
+  const langs = normLangs(a.lang);
   console.log(`Мониторинг каждые ${a.interval} сек, Ctrl+C — выход.`);
   let stop = false;
   process.on("SIGINT", () => {
@@ -894,7 +751,7 @@ async function cmdWatch(a: CtlArgs): Promise<number> {
   });
   while (!stop) {
     spawnSync(isWin() ? "cmd" : "sh", isWin() ? ["/c", "cls"] : ["-c", "clear"], { stdio: "inherit" });
-    printStatus(langs, a.kind);
+    printStatus(langs);
     console.log("\nCtrl+C — выход.");
     await sleep(a.interval * 1000);
   }
@@ -1056,8 +913,8 @@ function killVoxAuto(): boolean {
 function pauseAllVoxLangs(langs: string[]): void {
   for (const lang of langs) {
     try {
-      if (pauseState(lang, "vox")) continue;
-      const pids = findWorkers(lang, "vox");
+      if (pauseState(lang)) continue;
+      const pids = findWorkers(lang);
       if (!pids.length) continue;
       const frozen: number[] = [];
       for (const pid of pids) {
@@ -1068,7 +925,7 @@ function pauseAllVoxLangs(langs: string[]): void {
       }
       if (frozen.length) {
         writeFileSync(
-          fmt(pauseTmpl("vox"), lang),
+          fmt(pauseTmpl(), lang),
           JSON.stringify({ pids: frozen, at: new Date().toLocaleString("sv-SE").slice(0, 19).replace("T", " ") }),
           "utf-8",
         );
@@ -1080,9 +937,9 @@ function pauseAllVoxLangs(langs: string[]): void {
 function resumeAllVoxLangs(langs: string[]): void {
   for (const lang of langs) {
     try {
-      const st = pauseState(lang, "vox");
+      const st = pauseState(lang);
       if (!st) continue;
-      const alive = new Set(findWorkers(lang, "vox"));
+      const alive = new Set(findWorkers(lang));
       for (const pid of st.pids ?? []) {
         if (!alive.has(pid)) continue;
         try {
@@ -1090,7 +947,7 @@ function resumeAllVoxLangs(langs: string[]): void {
         } catch {}
       }
       try {
-        rmSync(fmt(pauseTmpl("vox"), lang), { force: true });
+        rmSync(fmt(pauseTmpl(), lang), { force: true });
       } catch {}
     } catch {}
   }
@@ -1122,7 +979,7 @@ async function voxAutoLoop(): Promise<void> {
       idleSince = Date.now();
       if (busySince === 0) busySince = Date.now();
       // если занят дольше ~10с и не на паузе — ставим на паузу (реактивнее при вводе)
-      const anyRunning = cfg.langs.some((lang) => findWorkers(lang, "vox").length && !pauseState(lang, "vox"));
+      const anyRunning = cfg.langs.some((lang) => findWorkers(lang).length && !pauseState(lang));
       if (anyRunning && Date.now() - busySince > 10_000) {
         console.log(
           `[vox-auto] пауза (input=${inputSec?.toFixed(1) ?? "?"}с cpu=${cpu ?? "?"}% gpu=${gpu.util ?? "?"}%)`,
@@ -1136,7 +993,7 @@ async function voxAutoLoop(): Promise<void> {
       const idleSec = (Date.now() - idleSince) / 1000;
       if (idleSec >= cfg.idleSec) {
         // снимаем с паузы если на паузе
-        if (cfg.langs.some((lang) => pauseState(lang, "vox"))) {
+        if (cfg.langs.some((lang) => pauseState(lang))) {
           console.log(
             `[vox-auto] возобновление (простой ${Math.round(idleSec)}с, input=${inputSec?.toFixed(0) ?? "?"}с, cpu=${cpu ?? "?"}% gpu=${gpu.util ?? "?"}%)`,
           );
@@ -1203,11 +1060,11 @@ function cmdVoxAuto(args: string[]): number {
 }
 
 function cmdLogs(a: CtlArgs): number {
-  const langs = normLangs(a.lang, a.kind);
+  const langs = normLangs(a.lang);
   for (const lang of langs) {
-    console.log(`=== лог ${lang.toUpperCase()} ${a.kind} (последние ${a.n}) ===`);
+    console.log(`=== лог ${lang.toUpperCase()} (последние ${a.n}) ===`);
     try {
-      const lines = readFileSync(fmt(logTmpl(a.kind), lang), "utf-8").split(/\r?\n/);
+      const lines = readLog(lang).split(/\r?\n/);
       for (const line of lines.slice(-a.n)) console.log(line.replace(/\r$/, ""));
     } catch {
       console.log("(нет лога)");

@@ -190,7 +190,7 @@ export function activeArcs(): Map<string, string> {
   const out = new Map<string, string>();
   for (const lang of LANGS) {
     let arc = "?";
-    const log = join(OUTPUT_DIR, "voice", `gen_all_${lang}.log`);
+    const log = join(OUTPUT_DIR, "voice", `vox_gen_${lang}.log`);
     if (existsSync(log)) {
       const text = readFileSync(log, "utf8");
       const starts = [...text.matchAll(new RegExp(`START ${lang} (\\w+)`, "g"))];
@@ -205,7 +205,7 @@ export function activeArcs(): Map<string, string> {
   return out;
 }
 
-/** Число живых инференс-шимов (python cosyworker | voxcpmworker) — приблизительно. */
+/** Число живых инференс-шимов (python voxcpmworker) — приблизительно. */
 export function shimWorkers(): number {
   try {
     const r = spawnSync(
@@ -213,7 +213,7 @@ export function shimWorkers(): number {
       [
         "-NoProfile",
         "-Command",
-        "(Get-CimInstance Win32_Process -Filter \"Name='python.exe'\" | Where-Object { $_.CommandLine -match 'cosyworker|voxcpmworker' }).Count",
+        "(Get-CimInstance Win32_Process -Filter \"Name='python.exe'\" | Where-Object { $_.CommandLine -match 'voxcpmworker' }).Count",
       ],
       { stdio: ["ignore", "pipe", "pipe"], timeout: 20_000, windowsHide: true },
     );
@@ -352,7 +352,7 @@ function cmdDetail(): number {
   console.log();
   const act = activeArcs();
   console.log("=== ВОКЕРЫ ===");
-  console.log(`  процессы шимов (cosy|vox): ${shimWorkers()}`);
+  console.log(`  процессы шимов (voxcpm): ${shimWorkers()}`);
   for (const lang of LANGS) console.log(`  ${lang.toUpperCase()}: арка ${act.get(lang) ?? "?"}`);
   console.log(`  tmp-сирот (loudnorm): ${healthScan().orphans}`);
   return 0;
@@ -457,7 +457,7 @@ export async function main(argv: string[] = process.argv.slice(2)): Promise<numb
   const act = activeArcs();
   console.log("\n=== ВОКЕРЫ ===");
   const workers = shimWorkers();
-  console.log(`  процессы шимов (cosy|vox): ${workers >= 0 ? workers : "? (нет tasklist)"}`);
+  console.log(`  процессы шимов (voxcpm): ${workers >= 0 ? workers : "? (нет tasklist)"}`);
   for (const lang of LANGS) {
     const arc = act.get(lang) ?? "?";
     console.log(`  ${lang.toUpperCase()}: арка ${arc} (всего в арке ${plans.get(lang)!.get(arc) ?? 0})`);

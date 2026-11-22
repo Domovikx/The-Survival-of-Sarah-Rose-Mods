@@ -4,7 +4,7 @@
  * Разделение (tasks/2026-10-21-voice-pipeline-ts-migration.md):
  *   ЭТОТ ФАЙЛ (TS) — каталог, фильтры, эмоции, пропуски/лечения, логи, ETA,
  *     выбор рефов, ffmpeg-лечения;
- *   cosyworker.py (python) — ТОЛЬКО инференс: модель один раз на процесс,
+ *   voxcpmworker.py (python) — ТОЛЬКО инференс: модель один раз на процесс,
  *     протокол v2 отдаёт сырой PCM (base64); opus — voicekit/audio.mts
  *     через voicekit/worker.mts (JSON-lines).
  *
@@ -25,8 +25,8 @@
  *       [--demo]                        только демо-скоуп поставки (патч1)
  *       [--ref path] [--emotion E] [--emotion-tag T] [--emotion-ru R]
  *       [--no-emotion] [--text T] [--device cuda|cpu] [--python PATH]
- *       [--engine voxcpm2|cosyvoice3]   движок (дефолт voxcpm2 — канон;
- *                                       cosyvoice3 — легаси, только явно)
+ *       [--engine voxcpm2]              движок (единственный — VoxCPM2;
+ *                                       флаг оставлен ради совместимости)
  *       [--keep-wav]                оставить исходный wav рядом с opus
  *       [--wav-only]                только wav, opus корпуса не перезаписывать
  *                                   (диагностика конверта wav→opus)
@@ -58,17 +58,15 @@ const CASTS_DIR = join(PKG_ROOT, "casts", "voices");
 const AUDIO_DIR = join(PKG_ROOT, "audio");
 const OUTPUT_DIR = join(ROOT, "output");
 const BATCH_LOG = join(OUTPUT_DIR, "voice", "batch.log");
-/** venv движка по умолчанию (cosyvoice3); свои venv — в ENGINES. */
-export const DEFAULT_PYTHON = "C:/tools/cosyvoice3/.venv/Scripts/python.exe";
 
 /**
- * Движки инференса: свой шим (python, протокол v2) + venv.
+ * Движок инференса: свой шим (python, протокол v2) + venv. Единственный —
+ * VoxCPM2 (CosyVoice3-ветка удалена 2026-11-21).
  *
- * Имя файла = контракту {en12}-{state6} {Спикер}.opus для обоих движков
- * (владелец 2026-11-11: «убираем лишний постфикс» — инфикс движка выпилен).
+ * Имя файла = контракту {en12}-{state6} {Спикер}.opus (владелец 2026-11-11:
+ * «убираем лишний постфикс» — инфикс движка выпилен).
  */
 export const ENGINES = {
-  cosyvoice3: { shim: join(SCRIPTS_DIR, "cosyworker.py"), python: DEFAULT_PYTHON },
   voxcpm2: {
     shim: join(SCRIPTS_DIR, "voxcpmworker.py"),
     python: "C:/tools/voxcpm2/.venv/Scripts/python.exe",
@@ -212,8 +210,10 @@ export interface Args {
   noEmotion: boolean;
   text?: string;
   device: string;
+  /** Параллельные воркеры (каждый — свой процесс с моделью). */
+  workers: number;
   python: string;
-  /** Движок инференса (см. ENGINES); по умолчанию cosyvoice3. */
+  /** Движок инференса (см. ENGINES); единственный — voxcpm2. */
   engine?: EngineName;
   /**
    * Оставить исходный wav рядом с opus (диагностика wav→opus-конверта):
@@ -224,7 +224,7 @@ export interface Args {
   /**
    * Только wav, без opus (voicekit/worker.mts encode, ветка req.wav_only):
    * корпусной `{en12}-{state6} {variant}.opus` НЕ перезаписывается — режим сравнительных
-   * съёмок Vox/Cosy (у keep_wav opus как раз пишется, инцидент 2026-10-27).
+   * съёмок вариантов движка (у keep_wav opus как раз пишется, инцидент 2026-10-27).
    */
   wavOnly: boolean;
 }
@@ -403,8 +403,10 @@ const CLI_OPTIONS = {
   "no-emotion": { type: "boolean", default: false },
   "text": { type: "string" },
   "device": { type: "string", default: "cuda" },
+  // Параллельные воркеры (каждый = свой процесс с моделью). 2 воркера дают
+  // ~1.76x на 16 ГБ VRAM (замер 2026-11-21), но требуют ~15.3 ГБ.
+  "workers": { type: "string", default: "1" },
   // без default: значение считается в parseCli по выбранному движку
-  // (иначе default CLI перебивал venv voxcpm2 своим cosyvoice3)
   "python": { type: "string" },
   "engine": { type: "string", default: "voxcpm2" },
   "keep-wav": { type: "boolean", default: false },
@@ -441,6 +443,7 @@ export function parseCli(argv: string[]): Args {
     noEmotion: values["no-emotion"] ?? false,
     text: values.text,
     device: values.device ?? "cuda",
+    workers: Math.max(1, Math.min(4, parseInt(values.workers ?? "1", 10) || 1)),
     engine,
     keepWav: values["keep-wav"] ?? false,
     wavOnly: values["wav-only"] ?? false,
@@ -463,14 +466,15 @@ export async function main(argv: string[] = process.argv.slice(2)): Promise<numb
   if (phrases.length > 10) log("  ...");
   if (args.dryRun) return 0;
 
-  const w = new VoiceWorker({
-    python: args.python,
-    script: engine.shim,
-    // voxcpm2-шим не принимает --device: CUDA выбирается сама; cfg/timesteps —
-    // дефолты самого шима (вердикт со стенда voxcpm_bench.mts, 2026-10-27)
-    args: (args.engine ?? "voxcpm2") === "cosyvoice3" ? ["--device", args.device] : [],
-    onLog: (l) => log(`[shim] ${l}`),
-  });
+  const mkWorker = (): VoiceWorker =>
+    new VoiceWorker({
+      python: args.python,
+      script: engine.shim,
+      // voxcpm2-шим не принимает --device: CUDA выбирается сама; cfg/timesteps —
+      // дефолты самого шима (вердикт со стенда voxcpm_bench.mts, 2026-10-27)
+      args: [],
+      onLog: (l) => log(`[shim] ${l}`),
+    });
 
   let done = 0;
   let skipped = 0;
@@ -480,50 +484,70 @@ export async function main(argv: string[] = process.argv.slice(2)): Promise<numb
   const total = phrases.length;
   const tStart = Date.now();
 
-  try {
-    const ping = await w.ping();
-    log(`worker: ${ping.device} (model_loaded=${ping.model_loaded})`);
+  // Пул воркеров: N процессов, каждый со своей моделью. Фразы раздаются
+  // по одной (общий курсор) — порядок сохраняется, дублей нет.
+  const all = Array.from({ length: args.workers }, () => mkWorker());
+  let cursor = 0;
+  const stop = { value: false };
 
-    for (let idx = 0; idx < total; idx++) {
-      const p = phrases[idx];
-      const opusPath = p.out.replace(/\.[^.]+$/, ".opus");
-      if (!args.force) {
-        if (existsSync(opusPath)) {
-          skipped++;
-          continue;
-        }
-        if (existsSync(p.out) && healWavToOpus(p.out)) {
-          healed++;
-          continue;
-        }
-      }
-      if (args.limit !== undefined && done >= args.limit) break;
-      log(`[${idx + 1}/${total}] ${p.uid.slice(0, 8)} ${p.arc} ${p.voice}: ${p.text.slice(0, 60)}`);
-      const r = await w.generate({
-        text: p.text,
-        ref: p.ref,
-        emotion: p.emotion,
-        seed: args.seed,
-        out: p.out,
-        keep_wav: args.keepWav || undefined,
-        wav_only: args.wavOnly || undefined,
-      });
-      if (r.ok) {
-        done++;
-        if (typeof r.dur === "number" && runawayDuration(p.text, r.dur)) {
-          suspect++;
-          log(`  !! RUNAWAY: ${r.dur}s на ${p.text.length} символов — подозрительно длинно, проверь файл`);
-        }
-        const elapsed = (Date.now() - tStart) / 1000;
-        const eta = (elapsed / Math.max(done, 1)) * (total - idx - 1);
-        log(`  saved ${r.saved} (${r.dur}s), eta ~${Math.round(eta / 60)} мин`);
-      } else {
-        failed++;
-        log(`  !! FAIL ${p.uid}: ${r.error}`);
-      }
+  try {
+    for (const worker of all) {
+      const ping = await worker.ping();
+      log(`worker: ${ping.device} (model_loaded=${ping.model_loaded})`);
     }
+    log(`воркеров: ${all.length}`);
+
+    const take = (): number | null => (stop.value || cursor >= total ? null : cursor++);
+
+    const runner = async (worker: VoiceWorker): Promise<void> => {
+      for (;;) {
+        const idx = take();
+        if (idx === null) return;
+        const p = phrases[idx]!;
+        const opusPath = p.out.replace(/\.[^.]+$/, ".opus");
+        if (!args.force) {
+          if (existsSync(opusPath)) {
+            skipped++;
+            continue;
+          }
+          if (existsSync(p.out) && healWavToOpus(p.out)) {
+            healed++;
+            continue;
+          }
+        }
+        if (args.limit !== undefined && done >= args.limit) {
+          stop.value = true;
+          return;
+        }
+        log(`[${idx + 1}/${total}] ${p.uid.slice(0, 8)} ${p.arc} ${p.voice}: ${p.text.slice(0, 60)}`);
+        const r = await worker.generate({
+          text: p.text,
+          ref: p.ref,
+          emotion: p.emotion,
+          seed: args.seed,
+          out: p.out,
+          keep_wav: args.keepWav || undefined,
+          wav_only: args.wavOnly || undefined,
+        });
+        if (r.ok) {
+          done++;
+          if (typeof r.dur === "number" && runawayDuration(p.text, r.dur)) {
+            suspect++;
+            log(`  !! RUNAWAY: ${r.dur}s на ${p.text.length} символов — подозрительно длинно, проверь файл`);
+          }
+          const elapsed = (Date.now() - tStart) / 1000;
+          const eta = (elapsed / Math.max(done, 1)) * (total - idx - 1);
+          log(`  saved ${r.saved} (${r.dur}s), eta ~${Math.round(eta / 60)} мин`);
+        } else {
+          failed++;
+          log(`  !! FAIL ${p.uid}: ${r.error}`);
+        }
+      }
+    };
+
+    await Promise.all(all.map((worker) => runner(worker)));
   } finally {
-    await w.quit().catch(() => w.kill());
+    await Promise.all(all.map((worker) => worker.quit().catch(() => worker.kill())));
   }
 
   log(`done=${done} skipped=${skipped} healed=${healed} failed=${failed} suspect=${suspect} total=${total}`);

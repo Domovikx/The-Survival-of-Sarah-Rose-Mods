@@ -1,13 +1,13 @@
 ---
 name: tssr-voice
-description: Generate voice lines for The Survival of Sarah Rose using CosyVoice3 voice cloning. Batch generation, uid mapping, language switching, ref cleaning and loudness normalization.
+description: Generate voice lines for The Survival of Sarah Rose using VoxCPM2 voice cloning. Batch generation, uid mapping, language switching, ref cleaning and loudness normalization.
 ---
 
 # Skill: tssr-voice — Озвучка TSSR
 
 Генерация озвучки TSSR (opus 24k mono; до 2026-10-14 — wav) через
-Fun-CosyVoice3-0.5B (voice clone). Архитектура, решения и тулы — в `AGENTS.md`
-проекта (обязательно читать).
+VoxCPM2 (voice clone; CosyVoice3-ветка удалена 2026-11-21). Архитектура,
+решения и тулы — в `AGENTS.md` проекта (обязательно читать).
 
 ## Ключевая идея: имя файла = два хэша от текста
 
@@ -65,14 +65,14 @@ casts/voices/{Имя}/
 
 ## Тулы
 
-| Тул                            | Назначение                                                                                                                                                                                           |
-| ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `npm run potgen` / `po:update` | ре-инвентарь текстов → po/template.pot + po/ru.po; дельта added/changed/dropped = git diff template.pot (только при апдейте игры)                                                                    |
-| `voice_status.mts`             | статус/прогноз генерации: готово по языкам/аркам, %, воркеры, скорость (ВСЕГДА для «статус?», без ручного подсчёта)                                                                                  |
-| `add_candidate.mts`            | MP3-кандидат → реф: нарезка 10с + чистка + loudnorm, одним прогоном (инкрементально; подключает голос в casts/voices.mts)                                                                            |
-| `clean_refs.mts`               | чистка рефа: highpass+afftdn+deesser+highshelf → loudnorm → фейды                                                                                                                                    |
-| `voice_manage.mts`             | list/status/select: фиксация A/B-варианта `{Имя}_{v}.wav → {Имя}.wav` (voice_list.json — артефакт сборки, реген не нужен)                                                                            |
-| `voice_batch.mts`              | батч-генерация в ai_voice/{lang}/{arc}/{en12}-{state6} {variant}.opus (СРАЗУ opus; движок по умолчанию `--engine voxcpm2` → voxcpmworker.py, `cosyvoice3` — только явно; `--ref` перезаписывает реф) |
+| Тул                            | Назначение                                                                                                                                                                 |
+| ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `npm run potgen` / `po:update` | ре-инвентарь текстов → po/template.pot + po/ru.po; дельта added/changed/dropped = git diff template.pot (только при апдейте игры)                                          |
+| `voice_status.mts`             | статус/прогноз генерации: готово по языкам/аркам, %, воркеры, скорость (ВСЕГДА для «статус?», без ручного подсчёта)                                                        |
+| `add_candidate.mts`            | MP3-кандидат → реф: нарезка 10с + чистка + loudnorm, одним прогоном (инкрементально; подключает голос в casts/voices.mts)                                                  |
+| `clean_refs.mts`               | чистка рефа: highpass+afftdn+deesser+highshelf → loudnorm → фейды                                                                                                          |
+| `voice_manage.mts`             | list/status/select: фиксация A/B-варианта `{Имя}_{v}.wav → {Имя}.wav` (voice_list.json — артефакт сборки, реген не нужен)                                                  |
+| `voice_batch.mts`              | батч-генерация в ai_voice/{lang}/{arc}/{en12}-{state6} {variant}.opus (СРАЗУ opus; движок единственный — `--engine voxcpm2` → voxcpmworker.py; `--ref` перезаписывает реф) |
 
 ## Генерация
 

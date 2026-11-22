@@ -1,5 +1,5 @@
 /**
- * worker.mts — клиент инференс-шима cosyworker.py (JSON-lines через stdin/stdout).
+ * worker.mts — клиент инференс-шима voxcpmworker.py (JSON-lines через stdin/stdout).
  *
  * Протокол v2 (миграция python → TS, 2026-10-23, см. AGENTS.md):
  *   -> {"id": N, "cmd": "gen", "text", "ref", "emotion", "seed", "opts"?}
@@ -91,9 +91,9 @@ export interface PingResult {
 }
 
 export interface WorkerOptions {
-  /** Путь к python (venv CosyVoice: C:/tools/cosyvoice3/.venv/Scripts/python.exe). */
+  /** Путь к python (venv VoxCPM2: C:/tools/voxcpm2/.venv/Scripts/python.exe). */
   python: string;
-  /** Путь к скрипту шима (cosyworker.py). */
+  /** Путь к скрипту шима (voxcpmworker.py). */
   script: string;
   /** Доп. аргументы шима (--device cuda и пр.). */
   args?: string[];
@@ -150,7 +150,7 @@ export class VoiceWorker {
       windowsHide: true,
       // Контракт UTF-8 с обеих сторон: без него stdin шима читал JSON в cp1251
       // (мохибака в тексте фраз, бага 2026-10-23). Двойная защита наряду с
-      // sys.stdin.reconfigure в cosyworker.py.
+      // sys.stdin.reconfigure в шиме.
       env: { ...process.env, PYTHONIOENCODING: "utf-8" },
     });
     const proto = createInterface({ input: this.proc.stdout });
@@ -269,7 +269,7 @@ export class VoiceWorker {
       // Холодный фронтенд wetext: ПЕРВАЯ строка после загрузки модели бьётся
       // о TextEncodeInput (гонка анонимной докачки влажного фронтенда), вторая
       // после — проходит (бага 2026-10-23). Один повтор через 3с — докачка
-      // успевает. Раньше повтор жил в cosyworker.py; в миграции python → TS
+      // успевает. Раньше повтор жил в python-шиме; в миграции python → TS
       // переехал сюда (гард — voice_batch.test.mts, живой тест — WARMUP в
       // fake_worker.mts).
       this.opts.onLog?.("  WARN: фронтенд ещё прогревается (TextEncodeInput) — повтор через 3с");

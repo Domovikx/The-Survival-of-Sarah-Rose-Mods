@@ -18,61 +18,41 @@ import {
   pauseTmpl,
 } from "./voice_ctl.mts";
 
-test("normLangs: cosy — только ru/en, мусор падает", () => {
-  assert.deepEqual(normLangs(undefined), ["ru", "en"]);
-  assert.deepEqual(normLangs("all"), ["ru", "en"]);
-  assert.deepEqual(normLangs("ru"), ["ru"]);
-  assert.deepEqual(normLangs("en"), ["en"]);
-  assert.throws(() => normLangs("de"));
-});
-
-test("normLangs: контур vox принимает все 11 po-языков, cosy — только ru/en", () => {
-  assert.deepEqual(normLangs(null, "vox"), [...VOX_LANGS]);
-  assert.deepEqual(normLangs("all", "vox"), [...VOX_LANGS]);
+test("normLangs: контур VOX — все 11 po-языков, мусор падает", () => {
+  assert.deepEqual(normLangs(undefined), [...VOX_LANGS]);
+  assert.deepEqual(normLangs(null), [...VOX_LANGS]);
+  assert.deepEqual(normLangs("all"), [...VOX_LANGS]);
   assert.equal(VOX_LANGS.length, 11);
   for (const lang of ["ru", "en", "de", "es", "fr", "it", "ja", "ko", "pl", "pt", "zh"]) {
-    assert.deepEqual(normLangs(lang, "vox"), [lang]);
+    assert.deepEqual(normLangs(lang), [lang]);
   }
-  assert.throws(() => normLangs("xx", "vox"));
-  // 'de' в vox допустим, а в cosy — нет
-  assert.deepEqual(normLangs("de", "vox"), ["de"]);
+  assert.throws(() => normLangs("xx"));
 });
 
-test("isQueueProc: bash voice_queue.sh (cosy) | node vox_queue.mts (vox) — по языку", () => {
-  const bash: [string, string] = ["bash.exe", "bash /c tools/generate/scripts/voice_queue.sh ru"];
-  const nodeRu: [string, string] = ["node.exe", "node tools/generate/scripts/vox_queue.mts ru"];
-  const nodeDe: [string, string] = ["node.exe", "node tools/generate/scripts/vox_queue.mts de"];
-  assert.ok(isQueueProc(...bash, "ru"));
-  assert.ok(!isQueueProc(...bash, "en")); // язык другой
-  assert.ok(!isQueueProc(...bash, "ru", "vox")); // это cosy-очередь
-  assert.ok(isQueueProc(...nodeRu, "ru", "vox"));
-  assert.ok(isQueueProc(...nodeDe, "de", "vox"));
-  assert.ok(!isQueueProc(...nodeRu, "de", "vox")); // язык другой
-  assert.ok(!isQueueProc(...nodeRu, "ru")); // vox в cosy не считается
+test("isQueueProc: node vox_queue.mts {lang} — по языку", () => {
+  const ru = "node tools/generate/scripts/vox_queue.mts ru";
+  const de = "node tools/generate/scripts/vox_queue.mts de";
+  assert.ok(isQueueProc(ru, "ru"));
+  assert.ok(!isQueueProc(ru, "en")); // язык другой
+  assert.ok(isQueueProc(de, "de"));
+  // чужая команда того же языка — не очередь
+  assert.ok(!isQueueProc("node tools/generate/scripts/voice_batch.mts --lang ru", "ru"));
 });
 
 test("isWorkerProc: пауза морозит оркестратор (voice_batch | voxcpm_bench) + --lang", () => {
-  const cosy = "node voice_batch.mts --lang ru --engine cosyvoice3";
   const vox = "node voxcpm_bench.mts --lang es --arc WarArc --picks 99999 --resume";
-  assert.ok(isWorkerProc(cosy, "ru"));
-  assert.ok(!isWorkerProc(cosy, "en"));
-  assert.ok(!isWorkerProc(cosy, "ru", "vox"));
-  assert.ok(isWorkerProc(vox, "es", "vox"));
-  assert.ok(!isWorkerProc(vox, "ru", "vox"));
-  assert.ok(!isWorkerProc(vox, "es")); // vox-бенч в cosy не считается
-  // шим (python cosyworker/voxcpmworker) — не оркестратор, без --lang
-  assert.ok(!isWorkerProc("python cosyworker.py --device cuda", "ru"));
+  assert.ok(isWorkerProc(vox, "es"));
+  assert.ok(!isWorkerProc(vox, "ru"));
+  // шим (python voxcpmworker) — не оркестратор, без --lang
+  assert.ok(!isWorkerProc("python voxcpmworker.py --model-dir C:/models", "ru"));
 });
 
-test("isWorkerProc: новый демо-контур voice_batch --engine voxcpm2 — vox, не cosy", () => {
-  // поймано 2026-11-12: пульт показывал STOPPED при живом ko-прогоне
-  const demo = "node voice_batch.mts --engine voxcpm2 --lang ko --demo";
-  assert.ok(isWorkerProc(demo, "ko", "vox"));
-  assert.ok(!isWorkerProc(demo, "ko")); // vox в cosy не считается
-  assert.ok(!isWorkerProc(demo, "ru", "vox")); // язык другой
-  // легаси-запуск voice_batch без движка — по-прежнему cosy
-  assert.ok(isWorkerProc("node voice_batch.mts --lang ru", "ru"));
-  assert.ok(!isWorkerProc("node voice_batch.mts --lang ru", "ru", "vox"));
+test("isWorkerProc: voice_batch без флага движка — уже VOX (cosy удалён)", () => {
+  const plain = "node voice_batch.mts --lang ru";
+  const explicit = "node voice_batch.mts --engine voxcpm2 --lang ko --demo";
+  assert.ok(isWorkerProc(plain, "ru"));
+  assert.ok(isWorkerProc(explicit, "ko"));
+  assert.ok(!isWorkerProc(explicit, "ru")); // язык другой
 });
 
 test("parseProgressLine: таймкод batch.log 'HH:MM:SS [n/m] ...' разбирается", () => {
@@ -94,12 +74,9 @@ test("parseLogState: без меток START арка берётся из стр
   assert.deepEqual(parseLogState(text), ["StoryBeginnings", [751, 1188]]);
 });
 
-test("logTmpl/pauseTmpl: у контуров разные шаблоны (пауза не путается)", () => {
-  assert.ok(logTmpl("vox").includes("vox_gen_"));
-  assert.ok(logTmpl("cosy").includes("gen_all_"));
-  assert.notEqual(logTmpl("vox"), logTmpl("cosy"));
-  assert.ok(pauseTmpl("vox").includes("vox"));
-  assert.notEqual(pauseTmpl("vox"), pauseTmpl("cosy"));
+test("logTmpl/pauseTmpl: единый VOX-шаблон", () => {
+  assert.ok(logTmpl().includes("vox_gen_"));
+  assert.ok(pauseTmpl().includes("ctl_paused_vox_"));
 });
 
 test("parseProgressLine", () => {
@@ -147,13 +124,15 @@ test("countSaved: строки '  saved ' из лога voice_batch", () => {
   assert.equal(countSaved("[1/2] a Arc Who: текст\n"), 0);
 });
 
-test("parseCtlCli: команды, --vox и vox-* включают vox-контур", () => {
+test("parseCtlCli: команды, язык и опции; --vox и vox-* — совместимость", () => {
   assert.equal(parseCtlCli(["status", "ru"]).cmd, "status");
   assert.equal(parseCtlCli(["status", "ru"]).lang, "ru");
-  assert.equal(parseCtlCli(["vox-start", "de"]).kind, "vox");
+  assert.equal(parseCtlCli(["vox-start", "de"]).cmd, "vox-start");
   assert.equal(parseCtlCli(["vox-start", "de"]).lang, "de");
-  assert.equal(parseCtlCli(["logs", "--vox", "--lang", "fr"]).kind, "vox");
-  assert.equal(parseCtlCli(["logs", "--lang", "fr"]).kind, "cosy");
+  // --vox принимается как no-op (контур всегда один — VOX)
+  assert.equal(parseCtlCli(["logs", "--vox", "--lang", "fr"]).vox, true);
+  assert.equal(parseCtlCli(["logs", "--vox", "--lang", "fr"]).lang, "fr");
+  assert.equal(parseCtlCli(["logs", "--lang", "fr"]).vox, false);
   assert.equal(parseCtlCli(["soft-stop", "en", "--timeout", "120"]).timeout, 120);
   assert.equal(parseCtlCli(["watch", "--interval", "10"]).interval, 10);
   assert.equal(parseCtlCli(["logs", "-n", "5"]).n, 5);

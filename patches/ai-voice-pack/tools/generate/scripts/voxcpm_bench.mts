@@ -965,6 +965,7 @@ export async function main(argv: string[] = process.argv.slice(2)): Promise<numb
     keepWav: false,
     wavOnly: false,
     emotionTag: "",
+    workers: 1,
     device: "cuda",
     python: engine.python,
     engine: "voxcpm2",

@@ -238,9 +238,6 @@ describe("детектор runaway-длительности (мусорные в
 
 describe("контракт кодировки UTF-8 (мохибака-бага 2026-10-23)", () => {
   const src = (rel: string): string => readFileSync(join(SCRIPTS_DIR, rel), "utf8");
-  it("cosyworker.py: sys.stdin.reconfigure в UTF-8 — иначе JSON читается в cp1251", () => {
-    assert.match(src("cosyworker.py"), /sys\.stdin\.reconfigure\(encoding=['"]utf-8/);
-  });
   it("voicekit/worker.mts: ретрай первой строки на TextEncodeInput (гонка фронтенда)", () => {
     const worker = src(join("voicekit", "worker.mts"));
     assert.match(worker, /TextEncodeInput/);
@@ -248,9 +245,6 @@ describe("контракт кодировки UTF-8 (мохибака-бага 2
   });
   it("voicekit/worker.mts: spawn шима с PYTHONIOENCODING=utf-8 (страховка)", () => {
     assert.match(src(join("voicekit", "worker.mts")), /PYTHONIOENCODING:\s*"utf-8"/);
-  });
-  it("voice_queue.sh: export PYTHONIOENCODING=utf-8 не убран", () => {
-    assert.match(src("voice_queue.sh"), /export PYTHONIOENCODING=utf-8/);
   });
 });
 
@@ -283,17 +277,6 @@ describe("формат корпуса OpusHead 24000 (расхождение 202
 
 describe("миграция python → TS (кодирование переехало)", () => {
   const src = (rel: string): string => readFileSync(join(SCRIPTS_DIR, rel), "utf8");
-  it("cosyworker.py: чистый инференс-шим v2 — pcm_b64, без аудио-цепочки", () => {
-    const py = src("cosyworker.py");
-    assert.match(py, /pcm_b64/);
-    assert.ok(!py.includes("import subprocess"), "шим не должен кодировать — ffmpeg на TS (voicekit/audio.mts)");
-    assert.ok(
-      !py.includes("tensor_to_opus") && !py.includes("wav_to_opus") && !py.includes("save_wav_chain"),
-      "аудио-цепочка переехала в voicekit/audio.mts",
-    );
-    assert.ok(!py.includes("trim_tail_burst"), "хвостовой трим удалён полностью (2026-11-10) — и в python тоже");
-    assert.ok(!py.includes("torchaudio"), "wav-цепочка переехала в voicekit/audio.mts");
-  });
   it("voicekit/audio.mts: LOUD_ARGS и труба f32le на месте", () => {
     const audio = src(join("voicekit", "audio.mts"));
     assert.match(audio, /loudnorm=I=/);
@@ -303,27 +286,24 @@ describe("миграция python → TS (кодирование перееха�
 
 // ------------------------------------------- движок voxcpm2 (миграция) ---
 
-describe("движок voxcpm2 (2026-10-26: вердикт владельца «однозначно лучший»)", () => {
-  it("parseCli: свой venv на движок; неизвестный движок — throw", () => {
+describe("движок voxcpm2 (единственный; CosyVoice3 удалён 2026-11-21)", () => {
+  it("parseCli: свой venv; неизвестный/удалённый движок — throw", () => {
     const v = parseCli(["--engine", "voxcpm2"]);
     assert.equal(v.engine, "voxcpm2");
-    assert.match(v.python.replace(/\\/g, "/"), /voxcpm2\/\.venv/, "venv VoxCPM2, не cosyvoice3");
+    assert.match(v.python.replace(/\\/g, "/"), /voxcpm2\/\.venv/, "venv VoxCPM2");
 
     // 2026-11-20: дефолт — КАНОН voxcpm2 (контрактные имена + звук как у демо);
-    // легаси CosyVoice3 включается только явным --engine cosyvoice3.
+    // 2026-11-21: cosyvoice3 удалён — флаг с ним обязан падать, а не звать легаси.
     const d = parseCli([]);
     assert.equal(d.engine, "voxcpm2");
     assert.equal(d.python, ENGINES.voxcpm2.python, "дефолт — VoxCPM2");
-    const legacy = parseCli(["--engine", "cosyvoice3"]);
-    assert.equal(legacy.python, ENGINES.cosyvoice3.python, "легаси по явному флагу");
-
+    assert.throws(() => parseCli(["--engine", "cosyvoice3"]), /неизвестный движок/);
     assert.throws(() => parseCli(["--engine", "nope"]), /неизвестный движок/);
   });
 
-  it("ENGINES: у каждого движка свой шим и метка variant", () => {
-    assert.ok(ENGINES.cosyvoice3.shim.endsWith("cosyworker.py"));
+  it("ENGINES: единственный движок — voxcpm2 со своим шимом", () => {
+    assert.deepEqual(Object.keys(ENGINES), ["voxcpm2"]);
     assert.ok(ENGINES.voxcpm2.shim.endsWith("voxcpmworker.py"));
-    assert.notEqual(ENGINES.cosyvoice3.python, ENGINES.voxcpm2.python, "venv разные");
   });
 
   it("selectPhrases: имя = {en12}-{state6} {Спикер}.opus (контракт рантайма, без инфикса движка)", () => {

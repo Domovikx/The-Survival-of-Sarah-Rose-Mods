@@ -1,13 +1,11 @@
 #!/usr/bin/env python
 """voxcpmworker.py — ИНФЕРЕНС-ШИМ VoxCPM2 (OpenBMB), протокол v2.
 
-Роль и протокол — ТА ЖЕ, что у cosyworker.py (см. его докстринг и AGENTS.md
-«Миграция python → TypeScript»): python остаётся только из-за torch;
-TS-клиент (voicekit/worker.mts) шлёт задания JSON-lines, шим отдаёт СЫРОЙ
-PCM, trim/opus делает TS.
+ЕДИНСТВЕННЫЙ python генерации (CosyVoice3-шим удалён 2026-11-21): python
+остаётся только из-за torch; TS-клиент (voicekit/worker.mts) шлёт задания
+JSON-lines, шим отдаёт СЫРОЙ PCM, opus делает TS.
 
-Отличие от cosyworker: инференс VoxCPM2 (Controllable Cloning рефом),
-эмояция подаётся СТИЛЕВЫМ ПРЕФИКСОМ к тексту `(<emotion>)<text>` (формат
+Эмоция подаётся СТИЛЕВЫМ ПРЕФИКСОМ к тексту `(<emotion>)<text>` (формат
 офиц. README; проверено пробой tmp/voxcpm2/voxcpm2_probe.py — вердикт
 владельца: «VoxCPM2 однозначно лучший», задача
 tasks/archive/2026-10-26-voxcpm2-research.md). `seed` шим НЕ принимает:

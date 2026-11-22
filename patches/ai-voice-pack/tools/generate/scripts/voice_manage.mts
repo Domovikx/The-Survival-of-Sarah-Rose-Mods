@@ -2,7 +2,7 @@
  * voice_manage.mts — быстрое управление голосами: list / status / select.
  *
  * Порт python voice_manage.py (2026-10-22: python-оркестраторы выпищены,
- * инференс остаётся в python-шимах cosyworker/voice_design).
+ * инференс остаётся в python-шимах voxcpmworker/voice_design).
  *
  * A/B-цикл: генерируешь вариантом (`voice_batch.mts --ref .../{Имя}_{v}.wav`),
  * слушаешь пары в audio/ru/, победителя фиксируешь:

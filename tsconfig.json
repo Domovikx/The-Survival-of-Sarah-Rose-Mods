@@ -18,6 +18,7 @@
     "patches/ai-voice-pack/casts/**/*.mts",
     "patches/ai-voice-pack/po/**/*.mts",
     "scripts/**/*.mts",
+    "config/**/*.ts",
     "demo/**/*.mts"
   ],
   // tmp/ намеренно НЕ включён: там черновики, одноразовые скрипты и архив,

@@ -36,7 +36,7 @@ python (yaml → mts, миграция 2026-10-21). Добавил/поправ�
 ## Запуск
 
 **Важно:** нужен python с пакетом `qwen_tts` — это venv pinokio-приложения
-Qwen3-TTS (`C:\pinokio\api\Qwen3-TTS-Pinokio.git\app\venv`). В cosyvoice-venv
+Qwen3-TTS (`C:\pinokio\api\Qwen3-TTS-Pinokio.git\app\venv`). В venv VoxCPM2
 пакета нет (там transformers 4.51, а qwen-tts требует 4.57+).
 
 ```bash
@@ -277,7 +277,7 @@ voice_design.py имеет 3 попытки (темп НЕ задаётся — 
    («Бест-практисы для instruct_en»): минимум 4 измерения (пол, возраст,
    тембр, эмоция), физика голоса, а не личность.
 3. **texts** — 100+ символов каждая; один текст = один кандидат.
-4. **≥10с** — рефы CosyVoice3 режутся до 10с (`add_candidate.mts` берёт
+4. **≥10с** — реф голоса режется до 10с (`add_candidate.mts` берёт
    min(10, dur)), поэтому тул сам добирает длину.
 5. Постобработка: срез ведущей тишины (silenceremove), mp3 24 kHz mono 96k.
 

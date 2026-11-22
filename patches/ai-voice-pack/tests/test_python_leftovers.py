@@ -25,8 +25,12 @@ DELETED = (
     'gen_ui_round.py',
     'voice_autocommit.py',
     'voice-autocommit.cmd',
+    'cosyworker.py',
+    'voice_queue.sh',
     os.path.join('voicekit', 'contract.py'),
     os.path.join('voicekit', 'fs.py'),
+    os.path.join('voicekit', 'cv3.py'),
+    os.path.join('voicekit', 'model_dir.py'),
 )
 
 
@@ -50,7 +54,6 @@ def test_all_remaining_py_compile():
                     py_compile.compile(os.path.join(dirpath, f), doraise=True)
                     compiled += 1
     assert compiled >= 10, f'скомпилировано всего {compiled} — остаток python уменьшился?'
-    assert os.path.exists(os.path.join(SCRIPTS, 'cosyworker.py')), 'cosyworker.py — шим инференса'
 
 
 def test_beastify_inlined_loud_constants():
@@ -67,5 +70,5 @@ def test_voicekit_imports_without_contract_fs():
 
     assert not hasattr(voicekit, 'contract'), 'voicekit.contract должен быть удалён'
     assert not hasattr(voicekit, 'fs'), 'voicekit.fs должен быть удалён'
-    for mod in ('paths', 'tts_env', 'model_dir'):
+    for mod in ('paths', 'tts_env'):
         assert hasattr(voicekit, mod), f'voicekit.{mod} обязан остаться'

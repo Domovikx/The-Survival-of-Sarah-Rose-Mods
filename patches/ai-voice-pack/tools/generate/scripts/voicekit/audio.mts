@@ -1,9 +1,9 @@
 /**
- * audio.mts — ffmpeg-цепочка кодирования реплик (порт cosyworker.py
+ * audio.mts — ffmpeg-цепочка кодирования реплик (порт python-шима
  * {tensor_to_opus, wav_to_opus, save_wav_chain} + levelnorm.normalize_file).
  *
  * Миграция python → TS (AGENTS.md «Миграция python → TypeScript»): шим
- * cosyworker.py отдаёт сырой PCM (base64), всё после инференса — здесь
+ * voxcpmworker.py отдаёт сырой PCM (base64), всё после инференса — здесь
  * (worker.mts.generate зовёт эти функции). Python больше ffmpeg не трогает.
  *
  * Формат — корпусный (134k файлов): Opus 24k mono, уровень -16 LUFS / TP -1.5
