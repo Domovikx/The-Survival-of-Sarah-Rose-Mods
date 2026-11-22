@@ -37,6 +37,8 @@ export type Opts = {
   maxTemp: number;
   /** Порог занятой VRAM, %: выше — экономный режим (иначе своп и темп в ноль). */
   maxVram: number;
+  /** Не запускать генерацию до этого времени (ЧЧ:ММ, локально); null — сразу. */
+  startAt: string | null;
 };
 
 export const parseArgs = (argv: string[]): Opts => {
@@ -53,6 +55,7 @@ export const parseArgs = (argv: string[]): Opts => {
     full: Math.max(1, Math.min(4, num("--full", 2))),
     maxTemp: num("--max-temp", 83),
     maxVram: num("--max-vram", 97),
+    startAt: argv.includes("--start-at") ? (argv[argv.indexOf("--start-at") + 1] ?? null) : null,
   };
 };
 
@@ -96,6 +99,16 @@ export const gpuHealth = (): { temp: number; vramPct: number } | null => {
   } catch {
     return null;
   }
+};
+
+/** Ближайшее наступление HH:MM (сегодня или завтра), мс от сейчас. */
+export const msUntil = (hhmm: string, now = new Date()): number => {
+  const m = /^(\d{1,2}):(\d{2})$/.exec(hhmm.trim());
+  if (!m) return 0;
+  const target = new Date(now);
+  target.setHours(Number(m[1]), Number(m[2]), 0, 0);
+  if (target.getTime() <= now.getTime()) target.setDate(target.getDate() + 1);
+  return target.getTime() - now.getTime();
 };
 
 const log = (text: string): void => {
@@ -197,7 +210,12 @@ const main = (): void => {
     log(freed ? "GPU освободилась — можно стартовать" : "VRAM не освободилась за 30 с");
   };
 
+  const quietUntil = opts.startAt ? Date.now() + msUntil(opts.startAt) : 0;
+
   const tick = async (): Promise<void> => {
+    // Тихий режим: до назначенного времени НИЧЕГО не запускаем, даже если
+    // владелец отошёл на 15 минут (замечание 2026-11-22).
+    if (quietUntil && Date.now() < quietUntil) return;
     if (existsSync(stopFlag)) {
       log("найден tmp/voice_adaptive.stop — останавливаюсь");
       child?.kill();
@@ -255,6 +273,9 @@ const main = (): void => {
     }
   };
 
+  if (opts.startAt) {
+    log(`тихий режим: генерация не раньше ${opts.startAt} (через ${Math.round(msUntil(opts.startAt) / 60_000)} мин)`);
+  }
   log(`сторож старт: язык ${opts.lang}, порог простоя ${opts.idle}s, опрос ${opts.poll}s`);
   writeFileSync(join(root, "tmp/voice_adaptive.pid"), String(process.pid), "utf-8");
   void tick();
