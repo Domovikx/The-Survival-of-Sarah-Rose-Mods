@@ -8,7 +8,7 @@
 import type { Stats } from "./stats.types.ts";
 
 export const STATS = {
-    "updatedAt": "2026-11-22T07:57:29.042Z",
+    "updatedAt": "2026-11-22T13:05:09.134Z",
     "packTag": "v2026.11.19-2237",
     "langs": [
       "en",
@@ -36,8 +36,8 @@ export const STATS = {
       },
       "zh": {
         "po": {
-          "filled": 69121,
-          "total": 69121
+          "filled": 69120,
+          "total": 69120
         },
         "voice": {
           "done": 1284,
@@ -46,8 +46,8 @@ export const STATS = {
       },
       "ru": {
         "po": {
-          "filled": 69121,
-          "total": 69121
+          "filled": 69120,
+          "total": 69120
         },
         "voice": {
           "done": 1397,
@@ -56,8 +56,8 @@ export const STATS = {
       },
       "es": {
         "po": {
-          "filled": 69121,
-          "total": 69121
+          "filled": 69120,
+          "total": 69120
         },
         "voice": {
           "done": 1284,
@@ -66,8 +66,8 @@ export const STATS = {
       },
       "pt": {
         "po": {
-          "filled": 69121,
-          "total": 69121
+          "filled": 69120,
+          "total": 69120
         },
         "voice": {
           "done": 1284,
@@ -76,8 +76,8 @@ export const STATS = {
       },
       "de": {
         "po": {
-          "filled": 69121,
-          "total": 69121
+          "filled": 69120,
+          "total": 69120
         },
         "voice": {
           "done": 1284,
@@ -86,8 +86,8 @@ export const STATS = {
       },
       "ja": {
         "po": {
-          "filled": 69121,
-          "total": 69121
+          "filled": 69120,
+          "total": 69120
         },
         "voice": {
           "done": 1173,
@@ -96,8 +96,8 @@ export const STATS = {
       },
       "fr": {
         "po": {
-          "filled": 69121,
-          "total": 69121
+          "filled": 69120,
+          "total": 69120
         },
         "voice": {
           "done": 1171,
@@ -106,8 +106,8 @@ export const STATS = {
       },
       "pl": {
         "po": {
-          "filled": 69121,
-          "total": 69121
+          "filled": 69120,
+          "total": 69120
         },
         "voice": {
           "done": 1171,
@@ -116,8 +116,8 @@ export const STATS = {
       },
       "ko": {
         "po": {
-          "filled": 69121,
-          "total": 69121
+          "filled": 69120,
+          "total": 69120
         },
         "voice": {
           "done": 1171,
@@ -126,8 +126,8 @@ export const STATS = {
       },
       "it": {
         "po": {
-          "filled": 69121,
-          "total": 69121
+          "filled": 69120,
+          "total": 69120
         },
         "voice": {
           "done": 1171,

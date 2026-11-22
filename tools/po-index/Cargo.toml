@@ -1,0 +1,15 @@
+[package]
+name = "po-index"
+version = "0.1.0"
+edition = "2021"
+description = "Индекс POT/PO для пайплайна TSSR: счётчики перевода без повторного парсинга на TS"
+
+[dependencies]
+md-5 = "0.10"
+regex = "1"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort"

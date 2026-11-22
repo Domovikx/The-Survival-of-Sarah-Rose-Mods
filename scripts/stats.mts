@@ -15,7 +15,7 @@
  * Не автоматизируется: числа внутри прозаических переводов сайта («11 языков»
  * в 11 локалях). Их список и порядок обновления — `docs/stats.md`.
  */
-import { readFileSync, writeFileSync } from "node:fs";
+import { readFileSync, statSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -28,6 +28,31 @@ const OUT = join(ROOT, "config", "stats.generated.ts");
 const PO_DIR = join(ROOT, "patches", "ai-voice-pack", "po");
 const PRIORITY = join(ROOT, "config", "language-priority.json");
 const SITE_PACK = join(ROOT, "site", "src", "shared", "config", "pack.ts");
+const PO_INDEX = join(ROOT, "tmp", "po-index.json");
+
+/** Индекс POT/PO, собранный Rust-ускорителем (`scripts/po_index.mts`). */
+type PoStamp = { mtime: number; size: number };
+type PoIndex = {
+  pot: { entries: number; uid: string; stamp: PoStamp };
+  po: Record<string, { entries: number; filled: number; stamp: PoStamp }>;
+};
+
+/**
+ * Счётчики из индекса, ЕСЛИ он свежий: штамп (mtime+size) каждого PO должен
+ * совпадать с файлом. Иначе null — и вызывающий считает сам (TS-оракул).
+ */
+export const fromIndex = (lang: string): { filled: number; total: number } | null => {
+  try {
+    const index = JSON.parse(readFileSync(PO_INDEX, "utf-8")) as PoIndex;
+    const entry = index.po[lang];
+    if (!entry) return null;
+    const st = statSync(join(PO_DIR, `${lang}.po`));
+    const fresh = entry.stamp.mtime === Math.floor(st.mtimeMs / 1000) && entry.stamp.size === st.size;
+    return fresh ? { filled: entry.filled, total: entry.entries } : null;
+  } catch {
+    return null;
+  }
+};
 
 const readJson = <T,>(path: string): T => JSON.parse(readFileSync(path, "utf-8")) as T;
 
@@ -42,12 +67,20 @@ export const computeStats = (now = new Date()): Stats => {
 
   const perLang: Record<string, LangStats> = {};
   for (const lang of langs) {
-    let po = { filled: 0, total: 0 };
-    try {
-      const entries = parsePo(readFileSync(join(PO_DIR, `${lang}.po`), "utf-8"));
-      po = { filled: entries.filter((e) => e.msgstr.trim() !== "").length, total: entries.length };
-    } catch {
-      /* языка ещё нет — нули */
+    let po = fromIndex(lang);
+    if (!po) {
+      po = { filled: 0, total: 0 };
+      try {
+        const entries = parsePo(readFileSync(join(PO_DIR, `${lang}.po`), "utf-8"));
+        // Шапку файла (msgid "") не считаем строкой — как `countPo` в пульте:
+        // иначе каждый po добавлял «+1 перевод» и числа расходились с индексом.
+        po = {
+          filled: entries.filter((e) => e.msgid.trim() !== "" && e.msgstr.trim() !== "").length,
+          total: entries.filter((e) => e.msgid.trim() !== "").length,
+        };
+      } catch {
+        /* языка ещё нет — нули */
+      }
     }
     const planMap = voicePlan(lang);
     perLang[lang] = {

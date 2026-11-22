@@ -54,3 +54,6 @@ nul
 site/public/installer/
 # рантайм-маркеры пульта (пауза очереди), не часть репозитория
 patches/ai-voice-pack/tools/generate/output/voice/ctl_paused_*.json
+# Rust-ускоритель: бинарники не в git
+tools/po-index/target/
+tmp/po-index.json
