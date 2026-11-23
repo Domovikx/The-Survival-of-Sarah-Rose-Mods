@@ -5,19 +5,24 @@
  * запуск опасен — два сторожа начнут перезапускать батчи друг друга. Поэтому
  * сначала проверяем, не работают ли уже, и только потом стартуем.
  *
- *   node scripts/voice_resume.mts          # поднять (если ещё не поднято)
- *   node scripts/voice_resume.mts --dry    # показать, что будет сделано
- *   node scripts/voice_resume.mts --stop   # остановить всё (сторож + автокоммит)
+ *   npm run voice:resume                                  # поднять (если ещё не поднято)
+ *   npm run voice:resume:stop                             # погасить оба демона
+ *   node scripts/voice_resume.mts --dry                    # показать план
+ *   node scripts/voice_resume.mts --not-before 23:00       # не раньше времени
+ *   node scripts/voice_resume.mts --min-free-vram 9000     # не стартовать, если GPU занят
  *
- * Флаги прокидываются в сторож: --lang, --idle, --full, --max-temp, --max-vram.
+ * Планировщик дёргает этот скрипт каждые 10 минут с `--not-before 23:00`:
+ * первый тик после 23:00 стартует, если VRAM свободна, иначе ждёт следующего.
  */
 import { execFileSync, spawn } from "node:child_process";
+import { appendFileSync, mkdirSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const GUARD = join(ROOT, ".opencode", "skills", "tssr-voice-status", "voice_adaptive.mts");
 const AUTO = join(ROOT, ".opencode", "skills", "tssr-voice-status", "voice_autocommit.mts");
+const LOG = join(ROOT, "tmp", "voice_resume.log");
 
 /** PID-ы node-процессов по маркеру в командной строке. */
 export const pidsWith = (marker: string): number[] => {
@@ -38,6 +43,41 @@ export const pidsWith = (marker: string): number[] => {
       .filter((pid) => Number.isInteger(pid) && pid > 0);
   } catch {
     return [];
+  }
+};
+
+/** Свободная VRAM, МиБ (null — nvidia-smi недоступен). */
+export const freeVramMb = (): number | null => {
+  try {
+    const out = execFileSync("nvidia-smi", ["--query-gpu=memory.free", "--format=csv,noheader,nounits"], {
+      encoding: "utf-8",
+      timeout: 4000,
+    }).trim();
+    const first = out.split(/\r?\n/)[0] ?? "";
+    const mb = Number(first.trim());
+    return Number.isFinite(mb) ? mb : null;
+  } catch {
+    return null;
+  }
+};
+
+/** Минуты до HH:MM (0 — время наступило). */
+export const minutesUntil = (hhmm: string, now = new Date()): number => {
+  const m = /^(\d{1,2}):(\d{2})$/.exec(hhmm.trim());
+  if (!m) return 0;
+  const target = new Date(now);
+  target.setHours(Number(m[1]), Number(m[2]), 0, 0);
+  return Math.max(0, Math.round((target.getTime() - now.getTime()) / 60_000));
+};
+
+const log = (text: string): void => {
+  const line = `${new Date().toISOString().slice(0, 19).replace("T", " ")}  ${text}`;
+  console.log(line);
+  try {
+    mkdirSync(dirname(LOG), { recursive: true });
+    appendFileSync(LOG, `${line}\n`, "utf-8");
+  } catch {
+    /* лог не критичен */
   }
 };
 
@@ -77,8 +117,32 @@ const main = (): number => {
         /* уже нет */
       }
     }
-    console.log(`остановлено: сторож ${guards.length}, автокоммит ${autos.length}`);
+    log(`остановлено: сторож ${guards.length}, автокоммит ${autos.length}`);
     return 0;
+  }
+
+  // «Не раньше HH:MM»: планировщик дёргает каждые 10 минут, а стартовать
+  // нужно строго после назначенного времени.
+  const nbIndex = argv.indexOf("--not-before");
+  if (nbIndex >= 0) {
+    const nb = argv[nbIndex + 1] ?? "";
+    const left = minutesUntil(nb);
+    if (left > 0) {
+      log(`рано: до ${nb} ещё ${left} мин — выхожу`);
+      return 0;
+    }
+  }
+
+  // Чужой процесс может держать GPU (другой агент): без запаса VRAM не стартуем,
+  // иначе два хозяина на 16 ГБ уронят оба.
+  const minIndex = argv.indexOf("--min-free-vram");
+  const minFree = minIndex >= 0 ? Number(argv[minIndex + 1]) || 0 : 9000;
+  if (!guards.length && !dry) {
+    const free = freeVramMb();
+    if (free !== null && free < minFree) {
+      log(`VRAM занята: свободно ${free} МиБ < ${minFree} — ждём следующий тик`);
+      return 2;
+    }
   }
 
   const guardArgs = [
@@ -97,18 +161,18 @@ const main = (): number => {
     ...forward(argv, ["--lang", "--idle", "--full", "--max-temp", "--max-vram"]),
   ];
 
-  if (guards.length) console.log(`сторож уже работает (pid ${guards.join(", ")}) — не трогаю`);
-  else if (dry) console.log(`[dry] запустил бы сторож: ${guardArgs.join(" ")}`);
+  if (guards.length) log(`сторож уже работает (pid ${guards.join(", ")}) — не трогаю`);
+  else if (dry) log(`[dry] запустил бы сторож: ${guardArgs.join(" ")}`);
   else {
     launch(GUARD, guardArgs);
-    console.log("сторож запущен (detached)");
+    log("сторож запущен (detached)");
   }
 
-  if (autos.length) console.log(`автокоммит уже работает (pid ${autos.join(", ")}) — не трогаю`);
-  else if (dry) console.log("[dry] запустил бы автокоммит --every 30 --push");
+  if (autos.length) log(`автокоммит уже работает (pid ${autos.join(", ")}) — не трогаю`);
+  else if (dry) log("[dry] запустил бы автокоммит --every 30 --push");
   else {
     launch(AUTO, ["--every", "30", "--push"]);
-    console.log("автокоммит запущен (detached, каждые 30 мин с пушем)");
+    log("автокоммит запущен (detached, каждые 30 мин с пушем)");
   }
   return 0;
 };
