@@ -130,6 +130,23 @@ async function main(): Promise<void> {
     return;
   }
 
+  // `open` работает и на Chrome без единой вкладки: цель создаётся на уровне
+  // браузера. Раньше шли через pickTab -> «вкладка не найдена» на свежем запуске.
+  if (cmd === "open") {
+    const url = pos[1] ?? "about:blank";
+    const ver = (await (await fetch(`http://127.0.0.1:${port}/json/version`)).json()) as {
+      webSocketDebuggerUrl?: string;
+    };
+    if (!ver.webSocketDebuggerUrl) throw new Error("Chrome не отдал webSocketDebuggerUrl");
+    const browser = new Session(ver.webSocketDebuggerUrl);
+    await browser.open();
+    const created = await browser.send<{ targetId?: string }>("Target.createTarget", { url });
+    await sleep(1500);
+    browser.close();
+    console.log("новая вкладка:", created.targetId ?? "?", "→", url);
+    return;
+  }
+
   const target = pickTab(list, tabFilter);
   const session = new Session(target.webSocketDebuggerUrl);
   await session.open();
@@ -172,14 +189,6 @@ async function main(): Promise<void> {
       const text = pos[1] ?? "";
       await session.send("Input.insertText", { text });
       console.log("введено символов:", text.length);
-      break;
-    }
-    case "open": {
-      // Новая вкладка в том же профиле: обход зависшей (заблокированной диалогом) вкладки.
-      const url = pos[1] ?? "about:blank";
-      const created = await session.send<{ targetId?: string }>("Target.createTarget", { url });
-      await sleep(1500);
-      console.log("новая вкладка:", created.targetId ?? "?", "→", url);
       break;
     }
     case "dialog": {
