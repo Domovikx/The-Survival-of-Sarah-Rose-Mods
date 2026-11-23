@@ -52,7 +52,9 @@
     "verify": "node .opencode/skills/renpy-extract/extract_texts.mts verify",
     "voice:adaptive": "node .opencode/skills/tssr-voice-status/voice_adaptive.mts",
     "voice:autocommit": "node .opencode/skills/tssr-voice-status/voice_autocommit.mts",
-    "voice:autocommit:watch": "node .opencode/skills/tssr-voice-status/voice_autocommit.mts --every 30"
+    "voice:autocommit:watch": "node .opencode/skills/tssr-voice-status/voice_autocommit.mts --every 30",
+    "voice:resume": "node scripts/voice_resume.mts",
+    "voice:resume:stop": "node scripts/voice_resume.mts --stop"
   },
   "lint-staged": {
     "*.{js,mjs,cjs,ts,tsx,mts,cts}": [

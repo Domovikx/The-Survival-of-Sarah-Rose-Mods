@@ -18,7 +18,13 @@
 ## Как продолжить (одна команда)
 
 ```bash
+npm run voice:resume          # идемпотентно: сторож + автокоммит (если уже идут — не дублирует)
+npm run voice:resume:stop     # остановить оба
+```
+
+```bash
 # полный режим: 1 воркер пока владелец за ПК, 2 — если отошёл на 15 мин
+# (то же самое, что npm run voice:resume)
 node .opencode/skills/tssr-voice-status/voice_adaptive.mts \
   --lang en --idle 900 --poll 60 --full 2 --max-temp 82 --max-vram 99
 
