@@ -104,19 +104,42 @@ export interface CatalogEntry {
  * Категория: speaker:Narrator -> narration, speaker:* -> dialogue,
  * menu/ui/speaker-name -> не-речь (в selectPhrases отфильтровываются).
  */
-export function loadCatalog(lang = "ru"): CatalogEntry[] {
-  const poFile = lang === "ru" ? RU_PO_FILE : join(PKG_ROOT, "po", `${lang}.po`);
-  const ruByKey = new Map<string, string>();
-  if (existsSync(poFile))
-    for (const e of parsePo(readFileSync(poFile, "utf8"))) {
-      if (e.msgid) ruByKey.set(`${e.msgctxt}\u0000${e.msgid}`, e.msgstr);
-    }
-  const comment = (comments: string[], prefix: string): string | null => {
-    const c = comments.find((x) => x.startsWith(prefix));
-    return c ? c.slice(prefix.length).trim() : null;
-  };
+/**
+ * POT не зависит от языка, а раньше разбирался заново на КАЖДЫЙ вызов
+ * `loadCatalog(lang)` — 68 357 записей × 11 языков. Замер 2026-11-22:
+ * `voice_status --fast` 14 s, из них 41% внутри `loadCatalog`. Теперь POT
+ * разбирается один раз, per-lang — кэш по mtime `po/<lang>.po`.
+ * Правка POT «на живом процессе» не подхватывается: процессы короткие.
+ */
+type PotRow = {
+  key: string;
+  uid: string;
+  msgid: string;
+  arc: string;
+  scene: string | null;
+  category: string;
+  whoName: string | null;
+  emotion: string | null;
+  emotionNew: string | null;
+};
 
-  const out: CatalogEntry[] = [];
+let potRowsCache: PotRow[] | null = null;
+
+const comment = (comments: string[], prefix: string): string | null => {
+  const c = comments.find((x) => x.startsWith(prefix));
+  return c ? c.slice(prefix.length).trim() : null;
+};
+
+const mtimeOf = (file: string): number => {
+  try {
+    return statSync(file).mtimeMs;
+  } catch {
+    return 0;
+  }
+};
+
+function buildPotRows(): PotRow[] {
+  const rows: PotRow[] = [];
   for (const e of parsePo(readFileSync(POT_FILE, "utf8"))) {
     if (!e.msgid) continue; // заголовок
     let category: string;
@@ -130,15 +153,14 @@ export function loadCatalog(lang = "ru"): CatalogEntry[] {
       }
     } else if (e.msgctxt === "menu") category = "menu";
     else category = "ui"; // ui + speaker-name (имена) — не речь
-    out.push({
+    rows.push({
+      key: `${e.msgctxt}\u0000${e.msgid}`,
       uid: createHash("md5").update(e.msgid, "utf8").digest("hex"),
-      old: e.msgid,
-      new: ruByKey.get(`${e.msgctxt}\u0000${e.msgid}`) ?? "",
-      who: null,
-      who_name: whoName,
+      msgid: e.msgid,
       arc: comment(e.comments, "arc:") ?? "_unknown",
       scene: comment(e.comments, "scene:"),
       category,
+      whoName,
       // МИГРАЦИЯ 2026-10-26: действующий тон = `emotion_new` ?? `emotion`
       // (новый тон overlay'ем potgen пишется РЯДОМ со старым — плавный
       // переход: у уже сгенерированного звука остаётся его тональность).
@@ -146,7 +168,59 @@ export function loadCatalog(lang = "ru"): CatalogEntry[] {
       emotionNew: comment(e.comments, "emotion_new:"),
     });
   }
-  return out;
+  return rows;
+}
+
+const potRows = (): PotRow[] => (potRowsCache ??= buildPotRows());
+
+/** msgstr языка: ключ `msgctxt\0msgid` -> текст, кэш по mtime файла. */
+const poCache = new Map<string, { mtime: number; byKey: Map<string, string> }>();
+function poByKey(poFile: string): Map<string, string> {
+  const mtime = mtimeOf(poFile);
+  const hit = poCache.get(poFile);
+  if (hit && hit.mtime === mtime) return hit.byKey;
+  const byKey = new Map<string, string>();
+  if (existsSync(poFile)) {
+    for (const e of parsePo(readFileSync(poFile, "utf8"))) {
+      if (e.msgid) byKey.set(`${e.msgctxt}\u0000${e.msgid}`, e.msgstr);
+    }
+  }
+  poCache.set(poFile, { mtime, byKey });
+  return byKey;
+}
+
+/**
+ * Каталог фраз из po/template.pot (+ переводы из po/<lang>.po по ключу
+ * msgctxt+msgid; lang — параметр функции, по умолчанию ru, en — без po →
+ * new пуст → строка отфильтруется). uid = md5(msgid) — та же формула, что у potgen.
+ * Категория: speaker:Narrator -> narration, speaker:* -> dialogue,
+ * menu/ui/speaker-name -> не-речь (в selectPhrases отфильтровываются).
+ *
+ * Возвращается КЭШИРОВАННЫЙ массив: читать/фильтровать можно, мутировать нет.
+ */
+const catalogCache = new Map<string, { mtime: number; entries: CatalogEntry[] }>();
+
+export function loadCatalog(lang = "ru"): CatalogEntry[] {
+  const poFile = lang === "ru" ? RU_PO_FILE : join(PKG_ROOT, "po", `${lang}.po`);
+  const mtime = mtimeOf(poFile);
+  const hit = catalogCache.get(lang);
+  if (hit && hit.mtime === mtime) return hit.entries;
+
+  const byKey = poByKey(poFile);
+  const entries = potRows().map((r) => ({
+    uid: r.uid,
+    old: r.msgid,
+    new: byKey.get(r.key) ?? "",
+    who: null,
+    who_name: r.whoName,
+    arc: r.arc,
+    scene: r.scene,
+    category: r.category,
+    emotion: r.emotion,
+    emotionNew: r.emotionNew,
+  }));
+  catalogCache.set(lang, { mtime, entries });
+  return entries;
 }
 
 // ------------------------------------------------------------ рефы/спикеры -
