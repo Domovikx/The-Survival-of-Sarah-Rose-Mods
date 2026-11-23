@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://domovikx.github.io/The-Survival-of-Sarah-Rose-Mods/sitemap.xml
