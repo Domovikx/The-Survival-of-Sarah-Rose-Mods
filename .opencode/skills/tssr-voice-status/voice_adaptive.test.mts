@@ -27,6 +27,8 @@ test("parseArgs: дефолты и флаги", () => {
   assert.equal(o.poll, 15);
   assert.equal(o.dry, true);
   assert.equal(o.full, 3);
+  // `--idle 0` должен давать 0 (стартовать сразу), а не откатываться на 900.
+  assert.equal(parseArgs(["--idle", "0"]).idle, 0);
 });
 
 test("msUntil: сегодня или завтра, в зависимости от времени", () => {

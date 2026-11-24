@@ -42,9 +42,13 @@ export type Opts = {
 };
 
 export const parseArgs = (argv: string[]): Opts => {
+  // ВАЖНО: `Number(x) || fallback` съедал ноль (`--idle 0` → 900). Проверяем
+  // конечность числа, а не «истинность».
   const num = (flag: string, fallback: number): number => {
     const i = argv.indexOf(flag);
-    return i >= 0 ? Number(argv[i + 1]) || fallback : fallback;
+    if (i < 0) return fallback;
+    const value = Number(argv[i + 1]);
+    return Number.isFinite(value) ? value : fallback;
   };
   const li = argv.indexOf("--lang");
   return {

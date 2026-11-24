@@ -81,13 +81,14 @@ const log = (text: string): void => {
   }
 };
 
-const forward = (argv: string[], names: string[]): string[] => {
-  const out: string[] = [];
-  for (const name of names) {
-    const i = argv.indexOf(name);
-    if (i >= 0 && argv[i + 1]) out.push(name, argv[i + 1]!);
-  }
-  return out;
+/**
+ * Значение флага из argv поверх дефолта. Раньше «докидывали» флаги в конец —
+ * и `parseArgs` брал ПЕРВОЕ вхождение, поэтому `--idle 0` игнорировался
+ * (сторож стартовал в экономном режиме). Теперь подставляем значение сразу.
+ */
+const pick = (argv: string[], name: string, fallback: string): string => {
+  const i = argv.indexOf(name);
+  return i >= 0 && argv[i + 1] ? argv[i + 1]! : fallback;
 };
 
 const launch = (script: string, args: string[]): void => {
@@ -147,18 +148,17 @@ const main = (): number => {
 
   const guardArgs = [
     "--lang",
-    "en",
+    pick(argv, "--lang", "en"),
     "--idle",
-    "900",
+    pick(argv, "--idle", "900"),
     "--poll",
     "60",
     "--full",
-    "2",
+    pick(argv, "--full", "2"),
     "--max-temp",
-    "82",
+    pick(argv, "--max-temp", "82"),
     "--max-vram",
-    "99",
-    ...forward(argv, ["--lang", "--idle", "--full", "--max-temp", "--max-vram"]),
+    pick(argv, "--max-vram", "99"),
   ];
 
   if (guards.length) log(`сторож уже работает (pid ${guards.join(", ")}) — не трогаю`);
