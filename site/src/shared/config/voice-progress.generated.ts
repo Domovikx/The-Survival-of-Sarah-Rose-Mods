@@ -20,13 +20,13 @@ export type VoiceProgressData = {
 };
 
 export const VOICE_PROGRESS: VoiceProgressData = {
-  "updatedAt": "2026-11-22T07:17:08.621Z",
+  "updatedAt": "2026-11-24T04:29:41.093Z",
   "en": {
-    "done": 9274,
+    "done": 9655,
     "plan": 68357,
-    "arcsDone": 3,
+    "arcsDone": 4,
     "arcsTotal": 19,
-    "ratePerMin": null,
-    "etaMin": null
+    "ratePerMin": 0.9,
+    "etaMin": 62930
   }
 };
