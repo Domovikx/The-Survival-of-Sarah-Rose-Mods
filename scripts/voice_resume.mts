@@ -1,5 +1,5 @@
 /**
- * voice_resume.mts — идемпотентный запуск озвучки: сторож + автокоммит.
+ * voice_resume.mts — идемпотентный запуск озвучки: только сторож.
  *
  * Зачем: запуск нужен и по расписанию, и руками, и после ребута. Двойной
  * запуск опасен — два сторожа начнут перезапускать батчи друг друга. Поэтому
@@ -21,7 +21,6 @@ import { fileURLToPath } from "node:url";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const GUARD = join(ROOT, ".opencode", "skills", "tssr-voice-status", "voice_adaptive.mts");
-const AUTO = join(ROOT, ".opencode", "skills", "tssr-voice-status", "voice_autocommit.mts");
 const LOG = join(ROOT, "tmp", "voice_resume.log");
 
 /** PID-ы node-процессов по маркеру в командной строке. */
@@ -107,10 +106,9 @@ const main = (): number => {
   const stop = argv.includes("--stop");
 
   const guards = pidsWith("voice_adaptive");
-  const autos = pidsWith("voice_autocommit");
 
   if (stop) {
-    for (const pid of [...guards, ...autos]) {
+    for (const pid of guards) {
       if (dry) continue;
       try {
         execFileSync("taskkill", ["/PID", String(pid), "/F"], { stdio: "ignore" });
@@ -118,7 +116,7 @@ const main = (): number => {
         /* уже нет */
       }
     }
-    log(`остановлено: сторож ${guards.length}, автокоммит ${autos.length}`);
+    log(`остановлено: сторож ${guards.length}`);
     return 0;
   }
 
@@ -168,12 +166,6 @@ const main = (): number => {
     log("сторож запущен (detached)");
   }
 
-  if (autos.length) log(`автокоммит уже работает (pid ${autos.join(", ")}) — не трогаю`);
-  else if (dry) log("[dry] запустил бы автокоммит --every 30 --push");
-  else {
-    launch(AUTO, ["--every", "30", "--push"]);
-    log("автокоммит запущен (detached, каждые 30 мин с пушем)");
-  }
   return 0;
 };
 

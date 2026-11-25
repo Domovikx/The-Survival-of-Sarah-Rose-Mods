@@ -1,4 +1,25 @@
 {
+  // Корпус озвучки и артефакты сборки меняются тысячами файлов за ночь.
+  // VS Code ставит на них вотчеры и Extension host умирает («terminated
+  // unexpectedly»): это не исходники, следить не за чем (2026-11-25).
+  "files.watcherExclude": {
+    "**/patches/ai-voice-pack/audio/**": true,
+    "**/patches/ai-voice-pack/tools/generate/output/**": true,
+    "**/patches/ai-voice-pack/catalog/**": true,
+    "**/tmp/**": true,
+    "**/installer/src-tauri/target/**": true,
+    "**/tools/po-index/target/**": true,
+    "**/node_modules/**": true,
+    "**/site/dist/**": true
+  },
+  "search.exclude": {
+    "**/patches/ai-voice-pack/audio/**": true,
+    "**/patches/ai-voice-pack/tools/generate/output/**": true,
+    "**/tmp/**": true,
+    "**/installer/src-tauri/target/**": true,
+    "**/tools/po-index/target/**": true,
+    "**/site/dist/**": true
+  },
   // Репа двуязычная (русские переводы/касты + английский код). VS Code по
   // умолчанию подсвечивает каждую кириллическу lookalike-букву (с/а/е/о/х...)
   // как "could be confused with the ASCII character" — в файлах вроде

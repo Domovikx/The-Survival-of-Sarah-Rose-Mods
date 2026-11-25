@@ -82,7 +82,11 @@ export const idleSeconds = (): number => {
   ].join(" ");
   try {
     return Number(
-      execFileSync("powershell", ["-NoProfile", "-Command", ps], { encoding: "utf-8", timeout: 5000 }).trim(),
+      execFileSync("powershell", ["-NoProfile", "-Command", ps], {
+        encoding: "utf-8",
+        timeout: 5000,
+        windowsHide: true,
+      }).trim(),
     );
   } catch {
     return -1;
@@ -95,7 +99,7 @@ export const gpuHealth = (): { temp: number; vramPct: number } | null => {
     const out = execFileSync(
       "nvidia-smi",
       ["--query-gpu=temperature.gpu,memory.used,memory.total", "--format=csv,noheader,nounits"],
-      { encoding: "utf-8", timeout: 4000 },
+      { encoding: "utf-8", timeout: 4000, windowsHide: true },
     ).trim();
     const [temp, used, total] = out.split(",").map((x) => Number(x.trim()));
     if (!Number.isFinite(temp!) || !Number.isFinite(used!) || !Number.isFinite(total!) || !total) return null;
@@ -132,7 +136,7 @@ const foreignBatches = (lang: string): number[] => {
         "-Command",
         "Get-CimInstance Win32_Process -Filter \"Name='node.exe'\" | Where-Object { $_.CommandLine -match 'voice_batch' } | ForEach-Object { $_.ProcessId }",
       ],
-      { encoding: "utf-8", timeout: 5000 },
+      { encoding: "utf-8", timeout: 5000, windowsHide: true },
     );
     return out
       .split(/\s+/)
@@ -160,7 +164,7 @@ const startBatch = (opts: Opts, workers: number): ChildProcess => {
   for (const pid of foreignBatches(opts.lang)) {
     if (pid !== process.pid) {
       try {
-        execFileSync("taskkill", ["/PID", String(pid), "/F"], { stdio: "ignore" });
+        execFileSync("taskkill", ["/PID", String(pid), "/F"], { stdio: "ignore", windowsHide: true });
         log(`чужой voice_batch ${pid} остановлен (источник истины — этот сторож)`);
       } catch {
         /* уже нет */
@@ -176,6 +180,9 @@ const startBatch = (opts: Opts, workers: number): ChildProcess => {
     {
       cwd: root,
       stdio: ["ignore", "pipe", "pipe"],
+      // Без этого Windows открывает КОНСОЛЬНОЕ ОКНО на каждый батч
+      // («окно ноды висит и дергается», 2026-11-25).
+      windowsHide: true,
     },
   );
   child.stdout?.on("data", (d: Buffer) => appendFileSync(logPath, d.toString(), "utf-8"));

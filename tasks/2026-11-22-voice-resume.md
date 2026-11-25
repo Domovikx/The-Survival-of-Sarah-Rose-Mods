@@ -10,7 +10,7 @@
 
 - `voice_batch` (инференс) — убит, VRAM освобождена;
 - `voice_adaptive` (сторож простоев) — остановлен, в логе «останавливаюсь»;
-- `voice_autocommit` (порции коммитов) — остановлен.
+- `voice_autocommit` — удалён по решению владельца (2026-11-25): коммиты делаем руками/агентом, без фонового автокоммита.
 
 Автозапуска нет: нет ни Windows-задачи, ни демона. `vox-start` из пульта никто
 не вызывает.
@@ -31,8 +31,6 @@ node .opencode/skills/tssr-voice-status/voice_adaptive.mts \
 # стартовать немедленно (не ждать простоя), если ПК свободен
 node .opencode/skills/tssr-voice-status/voice_adaptive.mts --lang en --idle 0 --full 2
 
-# коммиты порциями раз в 30 минут с пушем
-node .opencode/skills/tssr-voice-status/voice_autocommit.mts --every 30 --push
 ```
 
 Проверка: `node patches/ai-voice-pack/tools/generate/scripts/voice_ctl.mts status`
