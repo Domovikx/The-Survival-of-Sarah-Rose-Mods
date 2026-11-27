@@ -8,7 +8,7 @@
 import type { Stats } from "./stats.types.ts";
 
 export const STATS = {
-    "updatedAt": "2026-11-26T18:53:32.366Z",
+    "updatedAt": "2026-11-27T04:29:03.508Z",
     "packTag": "v2026.11.19-2237",
     "langs": [
       "en",
@@ -30,7 +30,7 @@ export const STATS = {
           "total": 0
         },
         "voice": {
-          "done": 20883,
+          "done": 23954,
           "plan": 68357
         }
       },
